@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.common.yaml &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
+        <link rel="next" title="pydrake.examples" href="pydrake.examples.html"/>
+        <link rel="prev" title="pydrake.common.value" href="pydrake.common.value.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.common.html">pydrake.common</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.schema.html">pydrake.common.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.common.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.common.html">pydrake.common</a> &raquo;</li>
+        
+      <li>pydrake.common.yaml</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.common.yaml">
+<span id="pydrake-common-yaml"></span><h1>pydrake.common.yaml<a class="headerlink" href="#module-pydrake.common.yaml" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.common.yaml.yaml_dump">
+<code class="descclassname">pydrake.common.yaml.</code><code class="descname">yaml_dump</code><span class="sig-paren">(</span><em>data</em>, <em>*</em>, <em>filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dumps a yaml object to a string or <cite>filename</cite> (if specified).</p>
+<p>This is the counterpart to <cite>yaml_load(…, private=True)</cite>, and will permit
+re-expressing the same tagged data.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.yaml.yaml_load">
+<code class="descclassname">pydrake.common.yaml.</code><code class="descname">yaml_load</code><span class="sig-paren">(</span><em>*</em>, <em>data=None</em>, <em>filename=None</em>, <em>private=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads either a <cite>data</cite> str xor a <cite>filename</cite> (exactly one must be
+specified) and returns the value as a yaml object.</p>
+<p>This is sugar for calling either yaml_load_data or yaml_load_file;
+refer to those functions for additional details.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.yaml.yaml_load_data">
+<code class="descclassname">pydrake.common.yaml.</code><code class="descname">yaml_load_data</code><span class="sig-paren">(</span><em>data</em>, <em>*</em>, <em>private=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads and returns the given <cite>data</cite> str as a yaml object, while also
+accounting for variant-like type tags.  The known variant yaml tags
+are reported as an extra “_tag” field in the returned dictionary.</p>
+<p>(Alternatively, <cite>data</cite> may be a file-like stream instead of a str.)</p>
+<p>By default, removes any root-level keys that begin with an underscore, so
+that yaml anchors and templates are invisibly easy to use.  Callers that
+wish to receive the private data may pass <cite>private=True</cite>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.yaml.yaml_load_file">
+<code class="descclassname">pydrake.common.yaml.</code><code class="descname">yaml_load_file</code><span class="sig-paren">(</span><em>filename</em>, <em>*</em>, <em>private=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.yaml.yaml_load_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads and returns the given <cite>filename</cite> as a yaml object, while also
+accounting for variant-like type tags.</p>
+<p>See yaml_load_data for full details; this function differs only by reading
+the yaml data from a file instead of memory.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.examples.html" class="btn btn-neutral float-right" title="pydrake.examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.common.value.html" class="btn btn-neutral" title="pydrake.common.value" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

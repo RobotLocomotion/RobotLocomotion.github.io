@@ -1,0 +1,1234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.inverse_kinematics &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.math" href="pydrake.multibody.math.html"/>
+        <link rel="prev" title="pydrake.multibody.benchmarks.all" href="pydrake.multibody.benchmarks.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.optimization.html">pydrake.multibody.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.inverse_kinematics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.inverse_kinematics">
+<span id="pydrake-multibody-inverse-kinematics"></span><h1>pydrake.multibody.inverse_kinematics<a class="headerlink" href="#module-pydrake.multibody.inverse_kinematics" title="Permalink to this headline">¶</a></h1>
+<p>InverseKinematics module</p>
+<dl class="function">
+<dt id="pydrake.multibody.inverse_kinematics.AddUnitQuaternionConstraintOnPlant">
+<code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">AddUnitQuaternionConstraintOnPlant</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AddUnitQuaternionConstraintOnPlant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[float], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram) -&gt; None</li>
+</ol>
+<p>Add unit length constraints to all the variables representing
+quaternion in <code class="docutils literal"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
+joints in <code class="docutils literal"><span class="pre">plant</span></code> will be enforced to have a unit length.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The plant on which we impose the unit quaternion constraints.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_vars</span></code>:</dt>
+<dd>The decision variables for the generalized position of the plant.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dd>The unit quaternion constraints are added to this prog.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>AddUnitQuaternionConstraintOnPlant(plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], q_vars: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram) -&gt; None</li>
+</ol>
+<p>Add unit length constraints to all the variables representing
+quaternion in <code class="docutils literal"><span class="pre">q_vars</span></code>. Namely the quaternions for floating base
+joints in <code class="docutils literal"><span class="pre">plant</span></code> will be enforced to have a unit length.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The plant on which we impose the unit quaternion constraints.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">q_vars</span></code>:</dt>
+<dd>The decision variables for the generalized position of the plant.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dd>The unit quaternion constraints are added to this prog.</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">AngleBetweenVectorsConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains that the angle between a vector <code class="docutils literal"><span class="pre">a</span></code> and another vector
+<code class="docutils literal"><span class="pre">b</span></code> is between [θ_lower, θ_upper]. <code class="docutils literal"><span class="pre">a</span></code> is fixed to a frame A,
+while <code class="docutils literal"><span class="pre">b</span></code> is fixed to a frame B. Mathematically, if we denote
+a_unit_A as <code class="docutils literal"><span class="pre">a</span></code> expressed in frame A after normalization (a_unit_A
+has unit length), and b_unit_B as <code class="docutils literal"><span class="pre">b</span></code> expressed in frame B after
+normalization, the constraint is cos(θ_upper) ≤ a_unit_Aᵀ * R_AB *
+b_unit_B ≤ cos(θ_lower)</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameA: pydrake.multibody.tree.Frame_[float], a_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], b_B: numpy.ndarray[numpy.float64[3, 1]], angle_lower: float, angle_upper: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an AngleBetweenVectorsConstraint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The Frame object for frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">a_A</span></code>:</dt>
+<dd>The vector <code class="docutils literal"><span class="pre">a</span></code> fixed to frame A, expressed in frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The Frame object for frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">b_B</span></code>:</dt>
+<dd>The vector <code class="docutils literal"><span class="pre">b</span></code> fixed to frame B, expressed in frameB.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">angle_lower</span></code>:</dt>
+<dd>The lower bound on the angle between <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code>. It is
+denoted as θ_lower in the class documentation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">angle_upper</span></code>:</dt>
+<dd>The upper bound on the angle between <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code>. it is
+denoted as θ_upper in the class documentation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">frameA</span></code> and <code class="docutils literal"><span class="pre">frameB</span></code> must belong to <code class="docutils literal"><span class="pre">plant</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">a_A</span></code> is close to zero.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">b_B</span></code> is close to zero.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">angle_lower</span></code> is negative.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">angle_upper</span></code> ∉ [<cite>angle_lower</cite>, π].</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.AngleBetweenVectorsConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], a_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], b_B: numpy.ndarray[numpy.float64[3, 1]], angle_lower: float, angle_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">ComInPolyhedronConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains the center of mass to lie within a polyhedron lb &lt;= A *
+p_EC &lt;= ub where p_EC is the position of the center-of-mass (C)
+expressed in a frame E.</p>
+<p>For example, if you set A as identity matrix, then this constraint
+enforces a box-region on the CoM position p_EC. If you set the
+expressed frame E as the robot foot frame, and choose A to describe
+the foot support polygon, this constraint could enforce the projection
+of CoM to be within the foot support polygon, which is commonly used
+to ensure static equilibrium.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], expressed_frame: pydrake.multibody.tree.Frame_[float], A: numpy.ndarray[numpy.float64[m, 3], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs a ComInPolyhedronConstraint object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+must be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instances</span></code>:</dt>
+<dd>The CoM of these model instances are computed. If model_instances
+= std::nullopt, then we compute the CoM of all model instances
+(except the world). Currently if model_instances is not
+std::nullopt, we will throw an error. After github issue #14916 is
+resolved, we will accept model_instances not equal to
+std::nullopt.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">expressed_frame</span></code>:</dt>
+<dd>The frame in which the CoM is expressed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>The CoM position p_EC satisfies lb &lt;= A * p_EC &lt;= ub</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lb</span></code>:</dt>
+<dd>The CoM position p_EC satisfies lb &lt;= A * p_EC &lt;= ub</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">ub</span></code>:</dt>
+<dd>The CoM position p_EC satisfies lb &lt;= A * p_EC &lt;= ub</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> must be alive during the lifetime of this
+constraint.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.ComInPolyhedronConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], expressed_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], A: numpy.ndarray[numpy.float64[m, 3], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.ComPositionConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">ComPositionConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Impose the constraint p_EScm(q) - p_EC = 0, where p_EScm(q) is a
+function that computes the center-of-mass (COM) position from robot
+generalized position q, expressed in a frame E. p_EC ∈ ℝ³ is the
+variable representing robot CoM (C) position expressed in frame E. The
+evaluated variables are [q;r], where q is the generalized position
+vector of the entire plant.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.ComPositionConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.ComPositionConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.ComPositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], expressed_frame: pydrake.multibody.tree.Frame_[float], plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructor, constrain f(q) = p_EC, where f(q) evaluates the CoM
+position expressed in frame E using the generalized position q.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instances</span></code>:</dt>
+<dd>We compute the model with these model instances in <code class="docutils literal"><span class="pre">plant</span></code>. If
+model_instances=std::nullopt, then we compute the CoM position of
+all model instances except the world.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">expressed_frame</span></code>:</dt>
+<dd>The frame in which the CoM position is expressed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> or <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.ComPositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], expressed_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor with MultibodyPlant&lt;AutoDiffXd&gt; and
+Context&lt;AutoDiffXd&gt;. It is preferrable to use the constructor with
+MBP&lt;double&gt; and Context&lt;double&gt;. But if you only have MBP&lt;AutoDiffXd&gt;
+and Context&lt;AutoDiffXd&gt;, then use this constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.DistanceConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">DistanceConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains the distance between a pair of geometries to be within a
+range [distance_lower, distance_upper].</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.DistanceConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.DistanceConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.DistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], geometry_pair: Tuple[pydrake.geometry.GeometryId], plant_context: pydrake.systems.framework.Context_[float], distance_lower: float, distance_upper: float) -&gt; None</li>
+</ol>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The plant to which the pair of geometries belong. <code class="docutils literal"><span class="pre">plant</span></code> should
+outlive this DistanceConstraint object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">geometry_pair</span></code>:</dt>
+<dd>The pair of geometries between which the distance is constrained.
+Notice that we only consider the distance between a static
+geometry and a dynamic geometry, or a pair of dynamic geometries.
+We don’t allow constraining the distance between two static
+geometries.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The context for the plant. <code class="docutils literal"><span class="pre">plant_context</span></code> should outlive this
+DistanceConstraint object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_lower</span></code>:</dt>
+<dd>The lower bound on the distance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_upper</span></code>:</dt>
+<dd>The upper bound on the distance.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.DistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], geometry_pair: Tuple[pydrake.geometry.GeometryId], plant_context: pydrake.systems.framework.Context_[AutoDiffXd], distance_lower: float, distance_upper: float) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.GazeTargetConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">GazeTargetConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains a target point T to be within a cone K. The point T (“T”
+stands for “target”) is fixed in a frame B, with position p_BT. The
+cone originates from a point S (“S” stands for “source”), fixed in
+frame A with position p_AS, with the axis of the cone being n, also
+fixed in frame A. The half angle of the cone is θ. A common usage of
+this constraint is that a camera should gaze at some target; namely
+the target falls within a gaze cone, originating from the camera eye.</p>
+<p>Mathematically the constraint is p_ST_Aᵀ * n_unit_A ≥ 0 (p_ST_Aᵀ *
+n_unit_A)² ≥ (cosθ)²p_ST_Aᵀ * p_ST_A where p_ST_A is the vector from S
+to T, expressed in frame A. n_unit_A is the unit length directional
+vector representing the center ray of the cone.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.GazeTargetConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.GazeTargetConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.GazeTargetConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameA: pydrake.multibody.tree.Frame_[float], p_AS: numpy.ndarray[numpy.float64[3, 1]], n_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BT: numpy.ndarray[numpy.float64[3, 1]], cone_half_angle: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame to which the gaze cone is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AS</span></code>:</dt>
+<dd>The position of the cone source point S, measured and expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">n_A</span></code>:</dt>
+<dd>The directional vector representing the center ray of the cone,
+expressed in frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which the target point T is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BT</span></code>:</dt>
+<dd>The position of the target point T, measured and expressed in
+frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">cone_half_angle</span></code>:</dt>
+<dd>The half angle of the cone. We denote it as θ in the class
+documentation. <code class="docutils literal"><span class="pre">cone_half_angle</span></code> is in radians.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">frameA</span></code> and <code class="docutils literal"><span class="pre">frameB</span></code> must belong to <code class="docutils literal"><span class="pre">plant</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">n_A</span></code> is close to zero.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">cone_half_angle</span></code> ∉ [0, π/2].</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.GazeTargetConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AS: numpy.ndarray[numpy.float64[3, 1]], n_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BT: numpy.ndarray[numpy.float64[3, 1]], cone_half_angle: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">InverseKinematics</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves an inverse kinematics (IK) problem on a MultibodyPlant, to find
+the postures of the robot satisfying certain constraints. The decision
+variables include the generalized position of the robot.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.InverseKinematics, plant: pydrake.multibody.plant.MultibodyPlant_[float], with_joint_limits: bool = True) -&gt; None</li>
+</ol>
+<p>Constructs an inverse kinematics problem for a MultibodyPlant. This
+constructor will create and own a context for</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The robot on which the inverse kinematics problem will be solved.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">with_joint_limits</span></code>:</dt>
+<dd>If set to true, then the constructor imposes the joint limit
+(obtained from plant.GetPositionLowerLimits() and
+plant.GetPositionUpperLimits(). If set to false, then the
+constructor does not impose the joint limit constraints in the
+constructor.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The inverse kinematics problem constructed in this way doesn’t
+permit collision related constraint (such as calling
+AddMinimumDistanceConstraint). To enable collision related
+constraint, call InverseKinematics(const MultibodyPlant&lt;double&gt;&amp;
+plant, systems::Context&lt;double&gt;* plant_context);</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.InverseKinematics, plant: pydrake.multibody.plant.MultibodyPlant_[float], plant_context: pydrake.systems.framework.Context_[float], with_joint_limits: bool = True) -&gt; None</li>
+</ol>
+<p>Constructs an inverse kinematics problem for a MultibodyPlant. If the
+user wants to solve the problem with collision related constraint
+(like calling AddMinimumDistanceConstraint), please use this
+constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The robot on which the inverse kinematics problem will be solved.
+This plant should have been connected to a SceneGraph within a
+Diagram</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context for the plant. This context should be a part of the
+Diagram context. To construct a plant connected to a SceneGraph,
+with the corresponding plant_context, the steps are // 1. Add a
+diagram containing the MultibodyPlant and SceneGraph
+systems::DiagramBuilder&lt;double&gt; builder; auto items =
+AddMultibodyPlantSceneGraph(&amp;builder, 0.0); // 2. Add collision
+geometries to the plant
+Parser(&amp;(items.plant)).AddModelFromFile(“model.sdf”); // 3.
+Construct the diagram auto diagram = builder.Build(); // 4. Create
+diagram context. auto diagram_context=
+diagram-&gt;CreateDefaultContext(); // 5. Get the context for the
+plant. auto plant_context =
+&amp;(diagram-&gt;GetMutableSubsystemContext(items.plant,
+diagram_context.get())); This context will be modified during
+calling ik.prog.Solve(…). When Solve() returns <code class="docutils literal"><span class="pre">result</span></code>,
+context will store the optimized posture, namely
+plant.GetPositions(<a href="#id1"><span class="problematic" id="id2">*</span></a>context) will be the same as in
+result.GetSolution(ik.q()). The user could then use this context
+to perform kinematic computation (like computing the position of
+the end-effector etc.).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">with_joint_limits</span></code>:</dt>
+<dd>If set to true, then the constructor imposes the joint limit
+(obtained from plant.GetPositionLowerLimits() and
+plant.GetPositionUpperLimits(). If set to false, then the
+constructor does not impose the joint limit constraints in the
+constructor.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint">
+<code class="descname">AddAngleBetweenVectorsConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], na_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], nb_B: numpy.ndarray[numpy.float64[3, 1]], angle_lower: float, angle_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddAngleBetweenVectorsConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrains that the angle between a vector na and another vector nb is
+between [θ_lower, θ_upper]. na is fixed to a frame A, while nb is
+fixed to a frame B. Mathematically, if we denote na_unit_A as na
+expressed in frame A after normalization (na_unit_A has unit length),
+and nb_unit_B as nb expressed in frame B after normalization, the
+constraint is cos(θ_upper) ≤ na_unit_Aᵀ * R_AB * nb_unit_B ≤
+cos(θ_lower), where R_AB is the rotation matrix, representing the
+orientation of frame B expressed in frame A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame to which na is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">na_A</span></code>:</dt>
+<dd>The vector na fixed to frame A, expressed in frame A.</dd>
+<dt>Precondition:</dt>
+<dd>na_A should be a non-zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if na_A is close to zero.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which nb is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">nb_B</span></code>:</dt>
+<dd>The vector nb fixed to frame B, expressed in frame B.</dd>
+<dt>Precondition:</dt>
+<dd>nb_B should be a non-zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if nb_B is close to zero.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">angle_lower</span></code>:</dt>
+<dd>The lower bound on the angle between na and nb. It is denoted as
+θ_lower in the documentation. <code class="docutils literal"><span class="pre">angle_lower</span></code> is in radians.</dd>
+<dt>Precondition:</dt>
+<dd>angle_lower &gt;= 0.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if angle_lower is negative.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">angle_upper</span></code>:</dt>
+<dd>The upper bound on the angle between na and nb. it is denoted as
+θ_upper in the class documentation. <code class="docutils literal"><span class="pre">angle_upper</span></code> is in radians.</dd>
+<dt>Precondition:</dt>
+<dd>angle_lower &lt;= angle_upper &lt;= pi.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if angle_upper is outside the bounds.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddDistanceConstraint">
+<code class="descname">AddDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, geometry_pair: Tuple[pydrake.geometry.GeometryId], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the constraint that the distance between a pair of geometries is
+within some bounds.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">geometry_pair</span></code>:</dt>
+<dd>The pair of geometries between which the distance is constrained.
+Notice that we only consider the distance between a static
+geometry and a dynamic geometry, or a pair of dynamic geometries.
+We don’t allow constraining the distance between two static
+geometries.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_lower</span></code>:</dt>
+<dd>The lower bound on the distance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_upper</span></code>:</dt>
+<dd>The upper bound on the distance.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint">
+<code class="descname">AddGazeTargetConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameA: pydrake.multibody.tree.Frame_[float], p_AS: numpy.ndarray[numpy.float64[3, 1]], n_A: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BT: numpy.ndarray[numpy.float64[3, 1]], cone_half_angle: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddGazeTargetConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrains a target point T to be within a cone K. The point T (“T”
+stands for “target”) is fixed in a frame B, with position p_BT. The
+cone originates from a point S (“S” stands for “source”), fixed in
+frame A with position p_AS, with the axis of the cone being n, also
+fixed in frame A. The half angle of the cone is θ. A common usage of
+this constraint is that a camera should gaze at some target; namely
+the target falls within a gaze cone, originating from the camera eye.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame where the gaze cone is fixed to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AS</span></code>:</dt>
+<dd>The position of the cone source point S, measured and expressed in
+frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">n_A</span></code>:</dt>
+<dd>The directional vector representing the center ray of the cone,
+expressed in frame A.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">n_A</span></code> cannot be a zero vector.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError is n_A is close to a zero vector.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame where the target point T is fixed to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BT</span></code>:</dt>
+<dd>The position of the target point T, measured and expressed in
+frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">cone_half_angle</span></code>:</dt>
+<dd>The half angle of the cone. We denote it as θ in the
+documentation. <code class="docutils literal"><span class="pre">cone_half_angle</span></code> is in radians.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">0</span></code> &lt;= cone_half_angle &lt;= pi.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if cone_half_angle is outside of the bound.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceConstraint">
+<code class="descname">AddMinimumDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em>, <em>minimum_distance: float</em>, <em>threshold_distance: float = 1.0</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddMinimumDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the constraint that the pairwise distance between objects should
+be no smaller than <code class="docutils literal"><span class="pre">minimum_distance</span></code>. We consider the distance
+between pairs of 1. Anchored (static) object and a dynamic object. 2.
+A dynamic object and another dynamic object, if one is not the parent
+link of the other.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">minimum_distance</span></code>:</dt>
+<dd>The minimum allowed value, dₘᵢₙ, of the signed distance between
+any candidate pair of geometries.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">influence_distance_offset</span></code>:</dt>
+<dd>The difference (in meters) between the influence distance,
+d_influence, and the minimum distance, dₘᵢₙ. This value must be
+finite and strictly positive, as it is used to scale the signed
+distances between pairs of geometries. Smaller values may improve
+performance, as fewer pairs of geometries need to be considered in
+each constraint evaluation. $*Default:* 1 meter</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MinimumDistanceConstraint for more details on the constraint
+formulation.</p>
+</div>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The MultibodyPlant passed to the constructor of <code class="docutils literal"><span class="pre">this</span></code> has
+registered its geometry with a SceneGraph.</dd>
+<dt>Precondition:</dt>
+<dd>0 &lt; <code class="docutils literal"><span class="pre">influence_distance_offset</span></code> &lt; ∞</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint">
+<code class="descname">AddOrientationConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameAbar: pydrake.multibody.tree.Frame_[float], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[float], R_BbarB: pydrake.math.RotationMatrix_[float], theta_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddOrientationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constrains that the angle difference θ between the orientation of
+frame A and the orientation of frame B to satisfy θ ≤ θ_bound. Frame A
+is fixed to frame A_bar, with orientation R_AbarA measured in frame
+A_bar. Frame B is fixed to frame B_bar, with orientation R_BbarB
+measured in frame B_bar. The angle difference between frame A’s
+orientation R_WA and B’s orientation R_WB is θ, (θ ∈ [0, π]), if there
+exists a rotation axis a, such that rotating frame A by angle θ about
+axis a aligns it with frame B. Namely R_AB = I + sinθ â + (1-cosθ)â²
+(1) where R_AB is the orientation of frame B expressed in frame A. â
+is the skew symmetric matrix of the rotation axis a. Equation (1) is
+the Rodrigues formula that computes the rotation matrix from a
+rotation axis a and an angle θ,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula</a> If the
+users want frame A and frame B to align perfectly, they can set
+θ_bound = 0. Mathematically, this constraint is imposed as trace(R_AB)
+≥ 2cos(θ_bound) + 1 (1) To derive (1), using Rodrigues formula R_AB =
+I + sinθ â + (1-cosθ)â² where trace(R_AB) = 2cos(θ) + 1 ≥
+2cos(θ_bound) + 1</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameAbar</span></code>:</dt>
+<dd>frame A_bar, the frame A is fixed to frame A_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R_AbarA</span></code>:</dt>
+<dd>The orientation of frame A measured in frame A_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameBbar</span></code>:</dt>
+<dd>frame B_bar, the frame B is fixed to frame B_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R_BbarB</span></code>:</dt>
+<dd>The orientation of frame B measured in frame B_bar.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">theta_bound</span></code>:</dt>
+<dd>The bound on the angle difference between frame A’s orientation
+and frame B’s orientation. It is denoted as θ_bound in the
+documentation. <code class="docutils literal"><span class="pre">theta_bound</span></code> is in radians.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">
+<code class="descname">AddPointToPointDistanceConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frame1: pydrake.multibody.tree.Frame_[float], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[float], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a constraint that the distance between point P1 attached to frame
+1 and point P2 attached to frame 2 is within the range
+[distance_lower, distance_upper].</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame1</span></code>:</dt>
+<dd>The frame to which P1 is attached.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_B1P1</span></code>:</dt>
+<dd>The position of P1 measured and expressed in frame 1.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frame2</span></code>:</dt>
+<dd>The frame to which P2 is attached.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_B2P2</span></code>:</dt>
+<dd>The position of P2 measured and expressed in frame 2.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_lower</span></code>:</dt>
+<dd>The lower bound on the distance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_upper</span></code>:</dt>
+<dd>The upper bound on the distance.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">
+<code class="descname">AddPositionConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameA: pydrake.multibody.tree.Frame_[float], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the kinematic constraint that a point Q, fixed in frame B, should
+lie within a bounding box expressed in another frame A as p_AQ_lower
+&lt;= p_AQ &lt;= p_AQ_upper, where p_AQ is the position of point Q measured
+and expressed in frame A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame in which point Q is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q, rigidly attached to frame B, measured
+and expressed in frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which the bounding box p_AQ_lower &lt;= p_AQ &lt;=
+p_AQ_upper is expressed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AQ_lower</span></code>:</dt>
+<dd>The lower bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AQ_upper</span></code>:</dt>
+<dd>The upper bound on the position of point Q, measured and expressed
+in frame A.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.context">
+<code class="descname">context</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Context_[float]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the plant context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_context">
+<code class="descname">get_mutable_context</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Context_[float]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the mutable plant context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog">
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the optimization program constructed by InverseKinematics.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the optimization program constructed by InverseKinematics.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.q">
+<code class="descname">q</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.q" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for q. q is the decision variable for the generalized positions
+of the robot.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">MinimumDistanceConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrain the signed distance between all candidate pairs of
+geometries (according to the logic of
+SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a
+specified minimum distance.</p>
+<p>The formulation of the constraint is</p>
+<p>0 ≤ SmoothMax( φ((dᵢ - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) ) ≤
+1</p>
+<p>where dᵢ is the signed distance of the i-th pair, dₘᵢₙ is the minimum
+allowable distance, d_influence is the “influence distance” (the
+distance below which a pair of geometries influences the constraint),
+φ is a multibody::MinimumDistancePenaltyFunction, and SmoothMax(d) is
+smooth approximation of max(d). We require that dₘᵢₙ &lt; d_influence.
+The input scaling (dᵢ - d_influence)/(d_influence - dₘᵢₙ) ensures that
+at the boundary of the feasible set (when dᵢ == dₘᵢₙ), we evaluate the
+penalty function at -1, where it is required to have a non-zero
+gradient.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], minimum_distance: float, plant_context: pydrake.systems.framework.Context_[float], penalty_function: Callable[[float, float, float], None] = None, influence_distance_offset: float = 1) -&gt; None</li>
+</ol>
+<p>Constructs a MinimumDistanceConstraint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The multibody system on which the constraint will be evaluated.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">minimum_distance</span></code>:</dt>
+<dd>The minimum allowed value, dₘᵢₙ, of the signed distance between
+any candidate pair of geometries.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">penalty_function</span></code>:</dt>
+<dd>The penalty function formulation.</dd>
+<dt><em>Default:</em> QuadraticallySmoothedHinge</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">influence_distance_offset</span></code>:</dd>
+</dl>
+<p>The difference (in meters) between the influence distance,
+d_influence, and the minimum distance, dₘᵢₙ (see class documentation).
+This value must be finite and strictly positive, as it is used to
+scale the signed distances between pairs of geometries. Smaller values
+may improve performance, as fewer pairs of geometries need to be
+considered in each constraint evaluation. $*Default:* 1 meter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>ValueError if <code class="docutils literal"><span class="pre">plant</span></code> has not registered its geometry with a</li>
+<li>SceneGraph object.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">ValueError if influence_distance_offset = ∞.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">ValueError if influence_distance_offset ≤ 0.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], minimum_distance: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd], penalty_function: Callable[[float, float, float], None] = None, influence_distance_offset: float = 1) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.OrientationConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">OrientationConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains that the angle difference θ between the orientation of
+frame A and the orientation of frame B to satisfy θ ≤ θ_bound. The
+angle difference between frame A’s orientation R_WA and B’s
+orientation R_WB is θ (θ ∈ [0, π]), if there exists a rotation axis a,
+such that rotating frame A by angle θ about axis a aligns it with
+frame B. Namely R_AB = I + sinθ â + (1-cosθ)â² (1) where R_AB is the
+orientation of frame B expressed in frame A. â is the skew symmetric
+matrix of the rotation axis a. Equation (1) is the Rodrigues formula
+that computes the rotation matrix froma rotation axis a and an angle
+θ, <a class="reference external" href="https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula">https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula</a> If the
+users want frame A and frame B to align perfectly, they can set
+θ_bound = 0. Mathematically, this constraint is imposed as trace(R_AB)
+≥ 2cos(θ_bound) + 1 (1) To derive (1), using Rodrigues formula R_AB =
+I + sinθ â + (1-cosθ)â² where trace(R_AB) = 2cos(θ) + 1 ≥
+2cos(θ_bound) + 1</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.OrientationConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.OrientationConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.OrientationConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameAbar: pydrake.multibody.tree.Frame_[float], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[float], R_BbarB: pydrake.math.RotationMatrix_[float], theta_bound: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an OrientationConstraint object. The frame A is fixed to a
+frame A̅, with orientatation <code class="docutils literal"><span class="pre">R_AbarA</span></code> measured in frame A̅. The
+frame B is fixed to a frame B̅, with orientation <code class="docutils literal"><span class="pre">R_BbarB</span></code> measured
+in frame B. We constrain the angle between frame A and B to be less
+than <code class="docutils literal"><span class="pre">theta_bound</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameAbar</span></code>:</dt>
+<dd>The frame A̅ in the model to which frame A is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R_AbarA</span></code>:</dt>
+<dd>The orientation of frame A measured in frame A̅.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameBbar</span></code>:</dt>
+<dd>The frame B̅ in the model to which frame B is fixed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">R_BbarB</span></code>:</dt>
+<dd>The orientation of frame B measured in frame B̅.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">theta_bound</span></code>:</dt>
+<dd>The bound on the angle difference between frame A’s orientation
+and frame B’s orientation. It is denoted as θ_bound in the class
+documentation. <code class="docutils literal"><span class="pre">theta_bound</span></code> is in radians.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">frameAbar</span></code> or <code class="docutils literal"><span class="pre">frameBbar</span></code> does not belong to</li>
+<li><code class="docutils literal"><span class="pre">plant</span></code>.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">ValueError if angle_bound &lt; 0.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.OrientationConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], R_AbarA: pydrake.math.RotationMatrix_[float], frameBbar: pydrake.multibody.tree.Frame_[AutoDiffXd], R_BbarB: pydrake.math.RotationMatrix_[float], theta_bound: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">PointToPointDistanceConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrain that the distance between a point P1 on frame B1 and another
+point P2 on frame B2 is within a range [distance_lower,
+distance_upper].</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frame1: pydrake.multibody.tree.Frame_[float], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[float], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float, plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constrain that the distance between a point P1 attached to frame B1
+and another point P2 attached to frame B2 is within the range
+[distance_lower, distance_upper]. Mathematically, we impose the
+constraint distance_lower² &lt;= distance(P1, P2)² &lt;= distance_upper². We
+impose the constraint on the distance square instead of distance
+directly, because the gradient of distance is not well defined at
+distance=0, the the gradient of the distance square is well defined
+everywhere.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frame1</span></code>:</dt>
+<dd>The frame in which P1 is attached to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_B1P1</span></code>:</dt>
+<dd>The position of P1 measured and expressed in B1.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frame2</span></code>:</dt>
+<dd>The frame in which P2 is attached to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_B2P2</span></code>:</dt>
+<dd>The position of P2 measured and expressed in B2.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_lower</span></code>:</dt>
+<dd>The lower bound on the distance, must be non-negative.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">distance_upper</span></code>:</dt>
+<dd>The upper bound on the distance, must be non-negative.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PointToPointDistanceConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame1: pydrake.multibody.tree.Frame_[AutoDiffXd], p_B1P1: numpy.ndarray[numpy.float64[3, 1]], frame2: pydrake.multibody.tree.Frame_[AutoDiffXd], p_B2P2: numpy.ndarray[numpy.float64[3, 1]], distance_lower: float, distance_upper: float, plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.PositionConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">PositionConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains the position of a point Q, rigidly attached to a frame B,
+to be within a bounding box measured and expressed in frame A. Namely
+p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PositionConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameA: pydrake.multibody.tree.Frame_[float], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Constructs PositionConstraint object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameA</span></code>:</dt>
+<dd>The frame in which point Q’s position is measured.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AQ_lower</span></code>:</dt>
+<dd>The lower bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_AQ_upper</span></code>:</dt>
+<dd>The upper bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which point Q is rigidly attached.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q, rigidly attached to frame B, measured
+and expressed in frame B.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">frameA</span></code> and <code class="docutils literal"><span class="pre">frameB</span></code> must belong to <code class="docutils literal"><span class="pre">plant</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.inverse_kinematics.</code><code class="descname">UnitQuaternionConstraint</code><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Constrains the quaternion to have a unit length.</p>
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.math.html" class="btn btn-neutral float-right" title="pydrake.multibody.math" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.benchmarks.all.html" class="btn btn-neutral" title="pydrake.multibody.benchmarks.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

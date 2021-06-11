@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.system_sliders &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.trajectory_optimization" href="pydrake.systems.trajectory_optimization.html"/>
+        <link rel="prev" title="pydrake.systems.sensors" href="pydrake.systems.sensors.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.planar_scenegraph_visualizer.html">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.system_sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.system_sliders</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.system_sliders">
+<span id="pydrake-systems-system-sliders"></span><h1>pydrake.systems.system_sliders<a class="headerlink" href="#module-pydrake.systems.system_sliders" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pydrake.systems.system_sliders.SystemSliders">
+<em class="property">class </em><code class="descclassname">pydrake.systems.system_sliders.</code><code class="descname">SystemSliders</code><span class="sig-paren">(</span><em>port_size</em>, <em>slider_names=None</em>, <em>lower_limit=-10.0</em>, <em>upper_limit=10.0</em>, <em>resolution=-1</em>, <em>length=200</em>, <em>update_period_sec=0.0166</em>, <em>window=None</em>, <em>title='System inputs'</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.system_sliders.SystemSliders" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_[float]" title="pydrake.systems.framework.VectorSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorSystem_[float]</span></code></a></p>
+<p>Provides a set of tcl/tk-based sliders intended to control the values
+of a system’s input port. Each value of the input port gets a float slider.
+Each slider has can be customized with lower_limit, upper_limit, and
+resolution. These values can be set generally across all sliders or
+per slider with a vector of length port_size.</p>
+<p>Note: The sliders can only be manipulated while the simulation is
+advancing time.</p>
+<p>&#64;warning: Do not close the slider GUI while running a simulation. It will
+cause the simulation to crash.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SystemSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; slider_positions</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.system_sliders.SystemSliders.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>port_size</em>, <em>slider_names=None</em>, <em>lower_limit=-10.0</em>, <em>upper_limit=10.0</em>, <em>resolution=-1</em>, <em>length=200</em>, <em>update_period_sec=0.0166</em>, <em>window=None</em>, <em>title='System inputs'</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.system_sliders.SystemSliders.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>port_size</strong> – Size of the input port that’s being controlled. This
+is the number of sliders that will show up.</li>
+<li><strong>slider_names</strong> – A list of strings describing the names of the sliders
+that should be displayed.</li>
+<li><strong>lower_limit</strong> – The value(s) for the lower limits of each slider. See
+class documentation for more details.</li>
+<li><strong>upper_limit</strong> – The value(s) for the upper limits of each slider. See
+class documentation for more details.</li>
+<li><strong>resolution</strong> – A scalar or vector of length port_size
+that specifies the discretization that the slider will
+be rounded to. Use -1 (the default) to disable any
+rounding. For example, a resolution of 0.1 will round
+to the neareset 0.1. See class documentation for more
+details.</li>
+<li><strong>length</strong> – The length of the sliders in pixels.</li>
+<li><strong>update_period_sec</strong> – Specifies how often the window update() method
+gets called. Smaller values will theoretically make
+GUI values available to the simulation more quickly,
+but may require the simulation to take more steps than
+necessary. The default value is suitable for most
+applications.</li>
+<li><strong>window</strong> – Optionally pass in a tkinter.Tk() object to add these
+widgets to.  Default behavior is to create a new
+window.</li>
+<li><strong>title</strong> – The string that appears as the title of the gui
+window.  Default title is “System sliders”  This
+parameter is only used if window is None.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.system_sliders.SystemSliders.DoCalcVectorOutput">
+<code class="descname">DoCalcVectorOutput</code><span class="sig-paren">(</span><em>context</em>, <em>unused</em>, <em>unused2</em>, <em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.system_sliders.SystemSliders.DoCalcVectorOutput" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.system_sliders.SystemSliders.DoPublish">
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.system_sliders.SystemSliders.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.system_sliders.SystemSliders.set_position">
+<code class="descname">set_position</code><span class="sig-paren">(</span><em>q</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.system_sliders.SystemSliders.set_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets all slider positions to the values in q.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>q</strong> – a vector whose length is self.port_size.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.trajectory_optimization.html" class="btn btn-neutral float-right" title="pydrake.systems.trajectory_optimization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.sensors.html" class="btn btn-neutral" title="pydrake.systems.sensors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

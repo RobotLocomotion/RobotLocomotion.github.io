@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: GitHub Issue Management</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>GitHub Issue Management</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>Drake uses <a href="https://github.com/RobotLocomotion/drake/issues">GitHub issues</a>
+to coordinate bug resolution and feature development. We organize issues using
+labels.  Each label uses the format <code class="highlighter-rouge">group: value</code>, where <code class="highlighter-rouge">group</code> is one
+of the following:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">team</code>: Indicates the engineering team that owns the issue.</li>
+  <li><code class="highlighter-rouge">component</code>: Indicates the primary affected feature area.</li>
+  <li><code class="highlighter-rouge">type</code>: Indicates the nature of the issue.</li>
+  <li><code class="highlighter-rouge">priority</code>: Indicates the urgency of resolution.</li>
+  <li><code class="highlighter-rouge">configuration</code>: The supported configurations affected, if applicable.</li>
+  <li><code class="highlighter-rouge">status</code>: PRs only.  Indicates the status of the PR.</li>
+</ul>
+
+<p>Please only assign labels if you are reasonably confident they are correct.
+The Drake development team will apply appropriate labels later as needed.</p>
+
+<h1 id="owner">Owner</h1>
+
+<p>Every issue must have at least one owner assigned.</p>
+
+<h1 id="team">Team</h1>
+
+<p>Every issue must have at least one <code class="highlighter-rouge">team</code> label. The teams, their leads, and
+their responsibilities are:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">dynamics</code>
+    <ul>
+      <li>lead: sherm1</li>
+      <li>responsibilities: physical accuracy, numerical methods, collision,
+systems framework</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">kitware</code>
+    <ul>
+      <li>lead: jamiesnape</li>
+      <li>responsibilities: build, continuous integration</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">manipulation</code>
+    <ul>
+      <li>lead: hongkai-dai</li>
+      <li>responsibilities: optimizers, solvers, symbolic analysis,
+<code class="highlighter-rouge">drake/manipulation/</code> subdirectory</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">robot locomotion group</code>
+    <ul>
+      <li>lead: RussTedrake</li>
+      <li>responsibilities: examples/requests from MIT projects / MIT courses</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="component">Component</h1>
+
+<p>Every issue must have at most one <code class="highlighter-rouge">component</code> label. The components are:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">build system</code>
+    <ul>
+      <li>Bazel, CMake, dependencies, memory checkers, linters, etc.</li>
+      <li>typical team: kitware</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">continuous integration</code>
+    <ul>
+      <li>Jenkins, CDash, mirroring of externals, Drake website, etc.</li>
+      <li>typical team: kitware</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">distribution</code>
+    <ul>
+      <li>Nightly binaries, monthly releases, docker, installation
+via apt or brew, etc.</li>
+      <li>typical team: kitware</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">geometry externals</code>
+    <ul>
+      <li>VTK, FCL, drake_visualizer (core behavior), etc.</li>
+      <li>typical team: kitware</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">geometry general</code>
+    <ul>
+      <li>Geometry infrastructure or topics that defy categorization into other geometry
+components.</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">geometry illustration</code>
+    <ul>
+      <li>What and how geometry gets communicated to external visualizers.</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">geometry perception</code>
+    <ul>
+      <li>How geometry appears in color, depth, and label images (via the RenderEngine API).</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">geometry proximity</code>
+    <ul>
+      <li>Contact, distance, signed distance queries and related properties.</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">jupyter</code>
+    <ul>
+      <li>Jupyter notebook infrastructure, Binder integration, etc.</li>
+      <li><em>Note</em>: This label does not imply content authoring for tutorials.</li>
+      <li>typical team: kitware</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">mathematical program</code>
+    <ul>
+      <li>Formulating and solving mathematical programs through numerical optimization,
+usually in <code class="highlighter-rouge">drake/solvers</code>.</li>
+      <li>typical team: manipulation</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">multibody plant</code>
+    <ul>
+      <li>MultibodyPlant and related code and documentation
+usually in <code class="highlighter-rouge">drake/multibody</code>.</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">pydrake</code>
+    <ul>
+      <li>Python API and documentation under <code class="highlighter-rouge">//bindings/pydrake</code> (and
+its supporting Starlark macros), the <code class="highlighter-rouge">RobotLocomotion/pybind11</code> fork, etc.</li>
+      <li>typical team: kitware</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">simulator</code>
+    <ul>
+      <li>Simulator, integrators, and related code and documentation,
+usually in <code class="highlighter-rouge">drake/systems/analysis</code>.</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">system framework</code>
+    <ul>
+      <li>System, Context, and related code and documentation,
+usually in <code class="highlighter-rouge">drake/systems/framework</code>.</li>
+      <li>typical team: dynamics</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="priority">Priority</h1>
+
+<p>The <code class="highlighter-rouge">emergency</code> priority indicates that the owning team should not work
+on anything else until the issue is resolved.</p>
+
+<p>The other priorities are determined by the owning team. The following rules of
+thumb may be useful for issues:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">priority: high</code> - planned to receive attention within the month.</li>
+  <li><code class="highlighter-rouge">priority: medium</code> - planned to receive attention within the quarter.</li>
+  <li><code class="highlighter-rouge">priority: low</code> - planned for a subsequent quarter.</li>
+  <li><code class="highlighter-rouge">priority: backlog</code> - will be handled on an ad-hoc basis, as time permits.</li>
+</ul>
+
+<h1 id="configuration">Configuration</h1>
+
+<p>An issue may have configuration label(s) such as <code class="highlighter-rouge">linux</code>, <code class="highlighter-rouge">mac</code>,
+<code class="highlighter-rouge">python</code>, etc.  If no <code class="highlighter-rouge">configuration</code> label is present, the issue is
+assumed to affect all configurations.</p>
+
+<h1 id="status">Status</h1>
+
+<p>For the most part, we rely on reviewable.io to communicate PR status.
+Status labels are optional, but Drake developers managing the PR queue
+will respect them.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">do not review</code>: Use this status to indicate you do not want anyone to
+review your PR right now. This is useful if you created the PR to trigger
+CI and plan to iterate on the results. Even if this flag is absent, you
+are responsible for finding reviewers, as documented in <code class="highlighter-rouge">developers</code>.
+This flag simply protects you from unsolicited review.</li>
+  <li><code class="highlighter-rouge">do not merge</code>: Use this status to indicate you do not want anyone to
+merge your PR right now, even if it passes all pre-merge checks. This is
+useful if you have minor post-LGTM changes to make, or if you need to
+coordinate the precise timing of the merge. If pre-merge checks are green
+and this flag is absent, a Drake administrator may merge your PR at any
+time.</li>
+</ul>
+
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Drake Development on macOS</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Drake Development on macOS</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This page contains information that may be useful to people developing on macOS.</p>
+
+<p><em>Note that the applications, tools, and libraries listed below are simply those that some have found useful. They should</em> <strong>not</strong> <em>be interpreted as mandatory.</em></p>
+
+<h1 id="git-tools">Git Tools</h1>
+
+<h2 id="gitk">gitk</h2>
+
+<p>The version of <a href="https://git-scm.com/">Git</a> that comes with Xcode may not include <a href="https://git-scm.com/docs/gitk">gitk</a>, a GUI-based Git repository browser. A workaround is to get a newer version using Homebrew:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    brew update
+    brew install git
+</code></pre></div></div>
+
+<p>If gitk does not start with an <code class="highlighter-rouge">unknown color name "lime"</code> error, upgrade your version of Tcl/Tk:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew cask install tcl
+</code></pre></div></div>
+
+<p>References:</p>
+
+<ol>
+  <li><a href="http://stackoverflow.com/questions/34637896/gitk-will-not-start-on-mac-unknown-color-name-lime">http://stackoverflow.com/questions/34637896/gitk-will-not-start-on-mac-unknown-color-name-lime</a></li>
+  <li><a href="http://stackoverflow.com/questions/17582685/install-gitk-on-mac">http://stackoverflow.com/questions/17582685/install-gitk-on-mac</a></li>
+</ol>
+
+<h2 id="sourcetree">SourceTree</h2>
+
+<p><a href="https://www.sourcetreeapp.com/">SourceTree</a> is a free Git and Mercurial client for Windows and macOS made by Atlassian.</p>
+
+<p>(<em>Notes coming soon</em>)</p>
+
+<h1 id="profiling">Profiling</h1>
+
+<p>A few of us have used the Xcode tool “Instruments” (which should already be installed on your system) with considerable success, but we do not have much experience with it yet.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

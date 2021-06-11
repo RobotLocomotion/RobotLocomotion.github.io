@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Bazel build system</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Bazel build system</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>Drake’s primary build system is Bazel.  For more information about Bazel, see
+<a href="https://bazel.build/">https://bazel.build/</a>.</p>
+
+<p>Drake also offers a CMake build system wrapper that invokes Bazel under the
+hood.</p>
+
+<h1 id="bazel-installation">Bazel Installation</h1>
+
+<p>Follow Drake’s
+<a href="/from_source.html#mandatory-platform-specific-instructions">platform-specific setup instructions</a>
+to install Bazel.</p>
+
+<h1 id="drake-clone-and-platform-setup">Drake clone and platform setup</h1>
+
+<ul>
+  <li>Start with a <strong>git clone</strong> of drake, per the <a href="/from_source.html#getting-drake">Getting Drake</a>
+instructions.</li>
+  <li>Continue with the <em>“Mandatory platform specific instructions”</em> on the same
+page.</li>
+</ul>
+
+<h1 id="developing-drake-using-bazel">Developing Drake using Bazel</h1>
+
+<p>To build or test Drake, run <strong>bazel build</strong> or <strong>bazel test</strong> with the desired
+target label (and optional configuration options if desired).  We give some
+typical examples below; for more reading about target patterns, see:
+<a href="https://docs.bazel.build/versions/master/user-manual.html#target-patterns">https://docs.bazel.build/versions/master/user-manual.html#target-patterns</a>.</p>
+
+<p>On Ubuntu, the default compiler is the first <code class="highlighter-rouge">gcc</code> compiler in the
+<code class="highlighter-rouge">PATH</code>, usually GCC 7.5 on Bionic and GCC 9.3 on Focal. On macOS, the default
+compiler is the Apple LLVM compiler. To use Clang 9 on Ubuntu, set the <code class="highlighter-rouge">CC</code>
+and <code class="highlighter-rouge">CXX</code> environment variables before running <strong>bazel build</strong>, <strong>bazel test</strong>
+or any other <strong>bazel</strong> commands.</p>
+
+<p>Cheat sheet for operating on the entire project:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+bazel build //...                               # Build the entire project.
+bazel test //...                                # Build and test the entire project.
+
+CC=clang-9 CXX=clang++-9 bazel build //...      # Build using Clang 9 on Ubuntu.
+CC=clang-9 CXX=clang++-9 bazel test //...       # Build and test using Clang 9 on Ubuntu.
+</code></pre></div></div>
+
+<ul>
+  <li>The “<code class="highlighter-rouge">//</code>” means “starting from the root of the project”.</li>
+  <li>The “<code class="highlighter-rouge">...</code>” means “everything including the subdirectories’ <code class="highlighter-rouge">BUILD</code> files”.
+    <ul>
+      <li>Contrast with, e.g., the “<code class="highlighter-rouge">bazel build common:*</code>” explained below, where
+only targets declared <em>directly</em> in <code class="highlighter-rouge">drake/common/BUILD</code> are compiled,
+and not the targets in <code class="highlighter-rouge">drake/common/trajectories/BUILD</code>.  The “<code class="highlighter-rouge">*</code>”
+matches targets in that directory; the “<code class="highlighter-rouge">...</code>” also matches down into
+subdirectories.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>You may use relative pathnames if your shell’s working directory is not at the
+project root:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake/common
+bazel build ...                   # Build everything in common and its child subdirectories.
+bazel test ...                    # Test everything in common and its child subdirectories.
+bazel build //...                 # Build the entire project.
+bazel test //...                  # Build and test the entire project.
+</code></pre></div></div>
+
+<ul>
+  <li>As before, the “<code class="highlighter-rouge">...</code>” above means “everything including subdirectories”.
+    <ul>
+      <li>In the first two lines we did not precede “<code class="highlighter-rouge">...</code>” with “<code class="highlighter-rouge">//</code>”, so the
+search begins in the current directory (<code class="highlighter-rouge">common</code>) and not from the
+<code class="highlighter-rouge">drake</code> root.</li>
+      <li>In the second two lines we used the “<code class="highlighter-rouge">//</code>” prefix to specify the project
+root, so we’re back to operating on the entire project even though
+<code class="highlighter-rouge">common</code> is still our shell’s current working directory.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Cheat sheet for operating on specific portions of the project:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+bazel build common/...                               # Build everything in common and its child subdirectories.
+bazel build common                                   # Build libcommon.
+bazel build common:polynomial                        # Build libpolynomial.
+bazel build common:*                                 # Build everything in common but NOT its children.
+
+bazel test common:polynomial_test                    # Run one test.
+bazel test -c dbg common:polynomial_test             # Run one test in debug mode.
+bazel test --config=memcheck common:polynomial_test  # Run one test under memcheck (valgrind).
+bazel test --config=fastmemcheck common:*            # Run common's tests under memcheck, with minimal recompiling.
+bazel test --config=asan common:polynomial_test      # Run one test under AddressSanitizer.
+bazel test --config=kcov common:polynomial_test      # Run one test under kcov (see instructions below).
+bazel build -c dbg common:polynomial_test &amp;&amp; \
+  gdb bazel-bin/common/polynomial_test               # Run one test under gdb.
+
+bazel test --config lint //...                       # Only run style checks; don't build or test anything else.
+</code></pre></div></div>
+
+<ul>
+  <li>The “<code class="highlighter-rouge">:</code>” syntax separates target names from the directory path of the
+<code class="highlighter-rouge">BUILD</code> file they appear in. In this case, for example,
+<code class="highlighter-rouge">drake/common/BUILD</code> specifies <code class="highlighter-rouge">cc_test(name = "polynomial_test")</code>.</li>
+  <li>Note that the configuration switches (<code class="highlighter-rouge">-c</code> and <code class="highlighter-rouge">--config</code>) influence the
+entire command. For example, running a test in <code class="highlighter-rouge">dbg</code> mode means that its
+prerequisite libraries are also compiled and linked in <code class="highlighter-rouge">dbg</code> mode.</li>
+  <li>For the definitions of the “<code class="highlighter-rouge">--config</code>” options see <code class="highlighter-rouge">drake/tools/bazel.rc</code>.</li>
+</ul>
+
+<h2 id="running-with-flags">Running with Flags</h2>
+
+<p>In general, to figure out what binary-specific arguments are available, add
+“<code class="highlighter-rouge">-- --help</code>” to your <code class="highlighter-rouge">bazel run</code> command. If the binary can only run via
+<code class="highlighter-rouge">bazel test</code>, look at <a href="https://docs.bazel.build/versions/master/user-manual.html#flag--test_arg">–test_arg</a>.</p>
+
+<p>If a C++ unittest uses <code class="highlighter-rouge">gtest</code> (e.g. using <code class="highlighter-rouge">drake_cc_googletest</code>),
+you can specify gtest-specific flags. As an example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run multibody/plant:multibody_plant_test -- --gtest_filter='*SimpleModelCreation*'
+</code></pre></div></div>
+
+<p>If a Python unittest is run via <code class="highlighter-rouge">drake_py_unittest_main.py</code> (e.g. using
+<code class="highlighter-rouge">drake_py_unittest</code>), you can specify flags such as <code class="highlighter-rouge">--trace</code> or
+<code class="highlighter-rouge">--deprecation_action</code>. As an example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run bindings/pydrake:py/symbolic_test -- --trace=user --deprecation_action=error
+</code></pre></div></div>
+
+<h2 id="debugging-on-macos">Debugging on macOS</h2>
+
+<p>On macOS, DWARF debug symbols are emitted to a <code class="highlighter-rouge">.dSYM</code> file.  The Bazel
+<code class="highlighter-rouge">cc_binary</code> and <code class="highlighter-rouge">cc_test</code> rules do not natively generate or expose this
+file, so we have implemented a workaround in Drake, <code class="highlighter-rouge">--config=apple_debug</code>.
+This config turns off sandboxing, which allows a <code class="highlighter-rouge">genrule</code> to access the
+<code class="highlighter-rouge">.o</code> files and process them into a <code class="highlighter-rouge">.dSYM</code>.  Use as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build --config=apple_debug path/to/my:binary_or_test_dsym
+lldb ./bazel-bin/path/to/my/binary_or_test
+</code></pre></div></div>
+
+<p>For more information, see <a href="https://github.com/bazelbuild/bazel/issues/2537">https://github.com/bazelbuild/bazel/issues/2537</a>.</p>
+
+<h1 id="updating-build-files">Updating BUILD files</h1>
+
+<p>Please use the “<code class="highlighter-rouge">buildifier</code>” tool to format edits to <code class="highlighter-rouge">BUILD</code> files (in the
+same spirit as <code class="highlighter-rouge">clang-format</code> formatting C++ code):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+bazel-bin/tools/lint/buildifier --all         # Reformat all Bazel files.
+bazel-bin/tools/lint/buildifier common/BUILD  # Only reformat one file.
+</code></pre></div></div>
+
+<p>In most cases the <code class="highlighter-rouge">bazel-bin/tools/lint/buildifier</code> will already be compiled
+by the time you need it.  In case it’s absent, you can compile it via:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+bazel build //tools/lint:buildifier
+</code></pre></div></div>
+
+<h1 id="proprietary-solvers">Proprietary Solvers</h1>
+
+<p>The Drake Bazel build currently supports the following proprietary solvers:</p>
+
+<ul>
+  <li>Gurobi 9.0.2</li>
+  <li>MOSEK 9.2</li>
+  <li>SNOPT 7.4</li>
+</ul>
+
+<h2 id="gurobi-902">Gurobi 9.0.2</h2>
+
+<h3 id="install-on-ubuntu">Install on Ubuntu</h3>
+
+<ol>
+  <li>Register for an account on <a href="https://www.gurobi.com">https://www.gurobi.com</a>.</li>
+  <li>Set up your Gurobi license file in accordance with Gurobi documentation.</li>
+  <li><code class="highlighter-rouge">export GRB_LICENSE_FILE=/path/to/gurobi.lic</code>.</li>
+  <li>Download <code class="highlighter-rouge">gurobi9.0.2_linux64.tar.gz</code></li>
+  <li>Unzip it.  We suggest that you use <code class="highlighter-rouge">/opt/gurobi902</code> to simplify working with Drake installations.</li>
+  <li>If you unzipped into a location other than <code class="highlighter-rouge">/opt/gurobi902</code>, then call <code class="highlighter-rouge">export GUROBI_HOME=GUROBI_UNZIP_PATH/linux64</code> to set the path you used, where in <code class="highlighter-rouge">GUROBI_HOME</code> folder you can find <code class="highlighter-rouge">bin</code> folder.</li>
+</ol>
+
+<h3 id="install-on-macos">Install on macOS</h3>
+
+<ol>
+  <li>Register for an account on <a href="http://www.gurobi.com">http://www.gurobi.com</a>.</li>
+  <li>Set up your Gurobi license file in accordance with Gurobi documentation.</li>
+  <li><code class="highlighter-rouge">export GRB_LICENSE_FILE=/path/to/gurobi.lic</code></li>
+  <li>Download and install <code class="highlighter-rouge">gurobi9.0.2_mac64.pkg</code>.</li>
+</ol>
+
+<p>To confirm that your setup was successful, run the tests that require Gurobi:</p>
+
+<p><code class="highlighter-rouge">bazel test --config gurobi --test_tag_filters=gurobi //...</code></p>
+
+<p>The default value of <code class="highlighter-rouge">--test_tag_filters</code> in Drake’s <code class="highlighter-rouge">bazel.rc</code> excludes
+these tests.  If you will be developing with Gurobi regularly, you may wish
+to specify a more convenient <code class="highlighter-rouge">--test_tag_filters</code> in a local <code class="highlighter-rouge">.bazelrc</code>.
+See <a href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+
+<h2 id="mosek">MOSEK</h2>
+
+<p>The Drake Bazel build system downloads MOSEK 9.2.33 automatically.  No manual
+installation is required.  Set the location of your license file as follows:</p>
+
+<p><code class="highlighter-rouge">export MOSEKLM_LICENSE_FILE=/path/to/mosek.lic</code></p>
+
+<p>To confirm that your setup was successful, run the tests that require MOSEK:</p>
+
+<p><code class="highlighter-rouge">bazel test --config mosek --test_tag_filters=mosek //...</code></p>
+
+<p>The default value of <code class="highlighter-rouge">--test_tag_filters</code> in Drake’s <code class="highlighter-rouge">bazel.rc</code> excludes
+these tests.  If you will be developing with MOSEK regularly, you may wish
+to specify a more convenient <code class="highlighter-rouge">--test_tag_filters</code> in a local <code class="highlighter-rouge">.bazelrc</code>.
+See <a href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+
+<h2 id="snopt">SNOPT</h2>
+
+<p>Drake provides two mechanisms to include the SNOPT sources.  One mechanism is
+to provide your own SNOPT source archive.  The other mechanism is via access to
+a private RobotLocomotion git repository.</p>
+
+<h3 id="using-your-own-source-archive">Using your own source archive</h3>
+
+<ol>
+  <li>Download the SNOPT sources from the distributor in <code class="highlighter-rouge">.tar.gz</code> format (e.g.,
+named <code class="highlighter-rouge">snopt7.4.tar.gz</code>).</li>
+  <li><code class="highlighter-rouge">export SNOPT_PATH=/home/username/Downloads/snopt7.4.tar.gz</code></li>
+</ol>
+
+<p>Using the RobotLocomotion git repository</p>
+
+<ol>
+  <li>Obtain access to the private RobotLocomotion/snopt GitHub repository.</li>
+  <li><a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">Set up SSH access to github.com</a>.</li>
+  <li><code class="highlighter-rouge">export SNOPT_PATH=git</code></li>
+</ol>
+
+<p>Test the build (for either mechanism)</p>
+
+<p>To confirm that your setup was successful, run the tests that require SNOPT:</p>
+
+<p><code class="highlighter-rouge">bazel test --config snopt --test_tag_filters=snopt //...</code></p>
+
+<p>The default value of <code class="highlighter-rouge">--test_tag_filters</code> in Drake’s <code class="highlighter-rouge">bazel.rc</code> excludes
+these tests.  If you will be developing with SNOPT regularly, you may wish
+to specify a more convenient <code class="highlighter-rouge">--test_tag_filters</code> in a local <code class="highlighter-rouge">.bazelrc</code>.
+See <a href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+
+<p>SNOPT support has some known problems on certain programs (see drake issue
+<a href="https://github.com/RobotLocomotion/drake/issues/10422">#10422</a> for a summary).</p>
+
+<h1 id="optional-tools">Optional Tools</h1>
+
+<p>The Drake Bazel build system has integration support for some optional
+development tools:</p>
+
+<ul>
+  <li>kcov – test coverage analysis</li>
+</ul>
+
+<h2 id="kcov">kcov</h2>
+
+<p><code class="highlighter-rouge">kcov</code> can analyze coverage for any binary that contains DWARF format
+debugging symbols, and produce nicely formatted browse-able coverage reports.</p>
+
+<p>Drake’s <code class="highlighter-rouge">kcov</code> build system integration is only supported on Ubuntu, not
+macOS.</p>
+
+<p>To use kcov on Ubuntu 18.04 (Bionic), you must first run Drake’s
+<code class="highlighter-rouge">install_prereqs</code> setup script using the <code class="highlighter-rouge">--with-kcov</code> option. On Ubuntu
+20.04 (Focal), the option is ignored. The macOS <code class="highlighter-rouge">install_prereqs</code> setup
+script does not install kcov, and passing a <code class="highlighter-rouge">--with-kcov</code> option is an error.</p>
+
+<p>To analyze test coverage, run one (or more) tests under <code class="highlighter-rouge">kcov</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test --config=kcov common:polynomial_test
+</code></pre></div></div>
+
+<p>Note that it disables compiler-optimization (<code class="highlighter-rouge">-O0</code>) to have a better and more
+precise coverage report.  If you have trouble with kcov and unoptimized programs,
+you can turn it back on by also supplying <code class="highlighter-rouge">--copt -O2</code>.</p>
+
+<p>For each test program, individual coverage reports are written to per-target
+directories.  Use the <code class="highlighter-rouge">kcov_tool</code> to merge coverage data into a new directory:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tools/dynamic_analysis/kcov_tool merge [OUTPUT-DIR]
+</code></pre></div></div>
+
+<p>To view the merged data, browse to <code class="highlighter-rouge">index.html</code> in the OUTPUT-DIR.</p>
+
+<p>In a local developer workspace, coverage data may accumulate over successive
+build jobs, even if source files or other dependencies have changed. The stale
+data would be scattered within the directory tree linked as
+<code class="highlighter-rouge">bazel-testlogs</code>. To clear out old data, use <code class="highlighter-rouge">kcov_tool clean</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tools/dynamic_analysis/kcov_tool clean
+</code></pre></div></div>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

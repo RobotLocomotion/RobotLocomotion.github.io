@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.meshcat_visualizer &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.perception" href="pydrake.systems.perception.html"/>
+        <link rel="prev" title="pydrake.systems.lcm" href="pydrake.systems.lcm.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.planar_scenegraph_visualizer.html">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.system_sliders.html">pydrake.systems.system_sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.meshcat_visualizer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.meshcat_visualizer">
+<span id="pydrake-systems-meshcat-visualizer"></span><h1>pydrake.systems.meshcat_visualizer<a class="headerlink" href="#module-pydrake.systems.meshcat_visualizer" title="Permalink to this headline">¶</a></h1>
+<p>Provides utilities for communicating with the browser-based visualization
+package, Meshcat:</p>
+<blockquote>
+<div><a class="reference external" href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a></div></blockquote>
+<dl class="function">
+<dt id="pydrake.systems.meshcat_visualizer.AddTriad">
+<code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">AddTriad</code><span class="sig-paren">(</span><em>vis</em>, <em>name</em>, <em>prefix</em>, <em>length=1.0</em>, <em>radius=0.04</em>, <em>opacity=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.AddTriad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes coordinate axes of a frame T. The x-axis is drawn red,
+y-axis green and z-axis blue. The axes point in +x, +y and +z directions,
+respectively.
+TODO(pangtao22): replace cylinder primitives with ArrowHelper or AxesHelper
+one they are bound in meshcat-python.
+:param vis: a meshcat.Visualizer object.
+:param name: (string) the name of the triad in meshcat.
+:param prefix: (string) name of the node in the meshcat tree to which this</p>
+<blockquote>
+<div>triad is added.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>length</strong> – the length of each axis in meters.</li>
+<li><strong>radius</strong> – the radius of each axis in meters.</li>
+<li><strong>opacity</strong> – the opacity of the coordinate axes, between 0 and 1.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.systems.meshcat_visualizer.ConnectMeshcatVisualizer">
+<code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">ConnectMeshcatVisualizer</code><span class="sig-paren">(</span><em>builder</em>, <em>scene_graph=None</em>, <em>output_port=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.ConnectMeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatVisualizer, adds it to the diagram, and
+wires the scene_graph query output port to the input port of the
+visualizer.  Provides an interface comparable to
+DrakeVisualizer.AddToBuilder.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>builder</strong> – The diagram builder used to construct the Diagram.</li>
+<li><strong>scene_graph</strong> – (optional) The SceneGraph in builder containing the
+geometry to be visualized.  At least one of scene_graph or
+output_port must be valid (not None).</li>
+<li><strong>output_port</strong> – (optional) If not None, then output_port will be connected
+to the visualizer input port.  This is required, for instance, when
+the SceneGraph is inside a Diagram, and we must connect the
+exported port to the visualizer instead of the original SceneGraph
+port.</li>
+<li><strong>kwargs are passed through to the MeshcatVisualizer</strong> (<em>Additional</em>) – </li>
+<li><strong>constructor.</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The newly created MeshcatVisualizer object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Passing a scene_graph object also makes it possible to call
+<code class="docutils literal"><span class="pre">visualizer.load()</span></code>, without passing a <code class="docutils literal"><span class="pre">Context</span></code> to the
+constructed visualizer.</p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatContactVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz</em>, <em>force_threshold=0.01</em>, <em>contact_force_scale=10</em>, <em>plant=None</em>, <em>contact_force_radius=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>MeshcatContactVisualizer is a System block that visualizes contact
+forces. It is connected to the contact results output port of
+SceneGraph’s associated MultibodyPlant.</p>
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>meshcat_viz</em>, <em>force_threshold=0.01</em>, <em>contact_force_scale=10</em>, <em>plant=None</em>, <em>contact_force_radius=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>meshcat_viz</strong> – A pydrake MeshcatVisualizer instance.</li>
+<li><strong>force_threshold</strong> – contact forces whose norms are smaller than
+force_threshold are not displayed.</li>
+<li><strong>contact_force_scale</strong> – a contact force with norm F (in Newtons) is
+displayed as a cylinder with length F/contact_force_scale
+(in meters).</li>
+<li><strong>plant</strong> – the MultibodyPlant associated with meshcat_viz.scene_graph.</li>
+<li><strong>contact_force_radius</strong> – sets the constant radius of the cylinder used
+to visualize the forces.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.DoPublish">
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatPointCloudVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03333333333333333, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>MeshcatPointCloudVisualizer is a System block that visualizes a
+PointCloud in meshcat. The PointCloud:</p>
+<ul class="simple">
+<li>Must have XYZ values. Assumed to be in point cloud frame, <code class="docutils literal"><span class="pre">P</span></code>.</li>
+<li>RGB values are optional; if provided, they must be on the range [0..255].</li>
+</ul>
+<p>An example using a pydrake MeshcatVisualizer:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">MeshcatVisualizer</span><span class="p">(</span><span class="n">scene_graph</span><span class="p">))</span>
+<span class="n">pc_viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span>
+    <span class="n">MeshcatPointCloudVisualizer</span><span class="p">(</span><span class="n">viz</span><span class="p">,</span> <span class="n">viz</span><span class="o">.</span><span class="n">draw_period</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Using a native meshcat.Visualizer:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">viz</span> <span class="o">=</span> <span class="n">meshcat</span><span class="o">.</span><span class="n">Visualizer</span><span class="p">()</span>
+<span class="n">pc_viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">MeshcatPointCloudVisualizer</span><span class="p">(</span><span class="n">viz</span><span class="p">))</span>
+</pre></div>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">point_cloud_P&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03333333333333333, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>meshcat_viz</strong> – Either a native meshcat.Visualizer or a pydrake
+MeshcatVisualizer object.</li>
+<li><strong>draw_period</strong> – The rate at which this class publishes to the
+visualizer.</li>
+<li><strong>name</strong> – The string name of the meshcat object.</li>
+<li><strong>X_WP</strong> – Pose of point cloud frame <code class="docutils literal"><span class="pre">P</span></code> in meshcat world frame <code class="docutils literal"><span class="pre">W</span></code>.
+Default is identity.</li>
+<li><strong>default_rgb</strong> – RGB value for published points if the PointCloud does
+not provide RGB values.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.DoPublish">
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>MeshcatVisualizer is a System block that connects to the query output port
+of a SceneGraph and visualizes the scene in Meshcat.</p>
+<p>The most common workflow would be to run:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="nd">@meshcat_python</span><span class="o">//</span><span class="p">:</span><span class="n">meshcat</span><span class="o">-</span><span class="n">server</span>
+</pre></div>
+</div>
+<p>in another terminal, open the url printed in that terminal in your browser,
+then to run drake apps (potentially many times) that publish to that
+default url.</p>
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scene_graph</strong> – A SceneGraph object.  This argument is optional, and
+is only needed to enable calls to <code class="docutils literal"><span class="pre">load()</span></code> without providing
+a Context.</li>
+<li><strong>draw_period</strong> – The rate at which this class publishes to the
+visualizer.</li>
+<li><strong>prefix</strong> – Appears as the root of the tree structure in the meshcat
+data structure</li>
+<li><strong>zmq_url</strong> – Optionally set a url to connect to the visualizer.
+Use <code class="docutils literal"><span class="pre">zmp_url=&quot;default&quot;</span></code> to the value obtained by running a
+single <code class="docutils literal"><span class="pre">meshcat-server</span></code> in another terminal.
+Use <code class="docutils literal"><span class="pre">zmp_url=None</span></code> or <code class="docutils literal"><span class="pre">zmq_url=&quot;new&quot;</span></code> to start a new server
+(as a child of this process); a new web browser will be opened
+(the url will also be printed to the console).
+Use e.g. <code class="docutils literal"><span class="pre">zmq_url=&quot;tcp://127.0.0.1:6000&quot;</span></code> to specify a
+specific address.</li>
+<li><strong>open_browser</strong> – Set to True to open the meshcat browser url in your
+default web browser.  The default value of None will open the
+browser iff a new meshcat server is created as a subprocess.
+Set to False to disable this.</li>
+<li><strong>frames_to_draw</strong> – a list or array containing pydrake.geometry.FrameId
+for which body frames to draw. Note that these are frames
+registered within the scene_graph. For multibody frames, users
+may obtain the ids from plant using GetBodyFrameIdIfExists.
+Currently, frames that are not body frames are not supported
+as they do not exist in the scene_graph yet.</li>
+<li><strong>axis_length and axis_radius are the opacity</strong><strong>, </strong><strong>length</strong> (<em>frames_opacity</em><em>,</em>) – and radius of the coordinate axes to be drawn.</li>
+<li><strong>delete_prefix_on_load</strong> – Specifies whether we should delete the
+visualizer path associated with prefix on our load
+initialization event.  True ensures a clean slate for every
+simulation.  False allows for the possibility of caching object
+meshes on the zmqserver/clients, to avoid repeatedly
+downloading meshes over the websockets link, but will cause
+geometry from previous simulations to remain in the scene.  You
+may call <code class="docutils literal"><span class="pre">delete_prefix()</span></code> manually to clear the scene.</li>
+<li><strong>role</strong> – Renders geometry of the specified pydrake.geometry.Role
+type – defaults to Role.kIllustration to draw visual geometry,
+and also supports Role.kProximity to draw collision geometry.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Additional kwargs will be passed to the meshcat.Visualizer constructor.
+.. note:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>This call will not return until it connects to the
+``meshcat-server``.
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.add_argparse_argument">
+<em class="property">static </em><code class="descname">add_argparse_argument</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.add_argparse_argument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a common command-line interface for including meshcat support
+in a python executable.  Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">MeshcatVisualizer</span><span class="o">.</span><span class="n">add_argparse_argument</span><span class="p">(</span><span class="n">parser</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="o">...</span>
+<span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">meshcat</span><span class="p">:</span>
+    <span class="n">meshcat</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">MeshcatVisualizer</span><span class="p">(</span>
+            <span class="n">scene_graph</span><span class="p">,</span> <span class="n">zmq_url</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">meshcat</span><span class="p">,</span>
+            <span class="n">open_browser</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">open_browser</span><span class="p">))</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.delete_prefix">
+<code class="descname">delete_prefix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.delete_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manually delete the meshcat prefix path specified in the constructor.
+All objects/transforms at or below this path will be removed.  This
+effectively clears all previous visualizations.  You will need to call
+<code class="docutils literal"><span class="pre">load()</span></code> directly, or trigger the initialization event that occurs at
+the beginning of a simulation, to see any visualizations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.DoPublish">
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.get_geometry_query_input_port">
+<code class="descname">get_geometry_query_input_port</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.get_geometry_query_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads <code class="docutils literal"><span class="pre">meshcat</span></code> visualization elements.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Either the context is a valid Context for this system with the
+geometry_query port connected or the <code class="docutils literal"><span class="pre">scene_graph</span></code> passed in the
+constructor must be a valid SceneGraph.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.publish_recording">
+<code class="descname">publish_recording</code><span class="sig-paren">(</span><em>play=True</em>, <em>repetitions=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.publish_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publish any recorded animation to Meshcat.  Use the controls dialog
+in the browser to review it.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>play</strong> – boolean that determines whether the animation will play
+automatically.</li>
+<li><strong>repetitions</strong> – number of times that the animation should play.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.reset_recording">
+<code class="descname">reset_recording</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.reset_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets all recorded data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.set_planar_viewpoint">
+<code class="descname">set_planar_viewpoint</code><span class="sig-paren">(</span><em>camera_position=[0, -1, 0], camera_focus=[0, 0, 0], xmin=-1, xmax=1, ymin=-1, ymax=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.set_planar_viewpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets meshcat to use an orthographic projection with locked out orbit
+controls, and turns off the background, axes, and grid.  This allows
+meshcat to play a role similar to PlanarSceneGraphVisualizer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>camera_position</strong> – a 3 element vector specifying the initial xyz
+location of the camera.</li>
+<li><strong>camera_focus</strong> – a 3 element vector specifying the focal point of the
+camera.</li>
+<li><strong>xmax</strong><strong>, </strong><strong>ymin</strong><strong>, </strong><strong>ymax</strong> (<em>xmin</em><em>,</em>) – Scalars specifying the initial view
+coordinates of the orthographic camera.  (Note that xmax is
+actually ignored because the view is scaled to fit the size of
+the browser window).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note: The orientation of the camera will be locked, but users can still
+pan and zoom interactively in the browser.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.start_recording">
+<code class="descname">start_recording</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.start_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag to record future publish events as animation frames.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.stop_recording">
+<code class="descname">stop_recording</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.stop_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables the recording of future publish events.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.perception.html" class="btn btn-neutral float-right" title="pydrake.systems.perception" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.lcm.html" class="btn btn-neutral" title="pydrake.systems.lcm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

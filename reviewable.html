@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Tips for Participating In Drake Code Reviews using reviewable.io</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Tips for Participating In Drake Code Reviews using reviewable.io</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="introduction">Introduction</h1>
+
+<p>Drake code reviews use <a href="https://reviewable.io">https://reviewable.io</a>. This page documents some
+best practices for communicating effectively in Reviewable.</p>
+
+<h1 id="github-integration">GitHub Integration</h1>
+
+<p>Avoid using the GitHub UI to comment on code during a review. Reviewable will
+import comments from GitHub, but cannot reliably match them to lines of diff.</p>
+
+<p>When you enter comments in Reviewable, they are saved as drafts. Use the
+“publish” button to send them out in a batch. Reviewable will post the
+comments to the GitHub PR in a single, well-formatted block, generating email
+to everyone else following the PR.</p>
+
+<p>Every time you push to your GitHub branch under review, Reviewable will
+snapshot a new diff. Because it maintains an independent diff series, you can
+rebase freely without corrupting the review history.</p>
+
+<h1 id="life-of-a-reviewable-comment">Life of a Reviewable Comment</h1>
+
+<p>All threads in Reviewable must be resolved before you can merge your PR.</p>
+
+<p>The semantics of discussion resolution is more nuanced than GitHub’s default
+code review tool. We recommend to read <a href="https://github.com/Reviewable/Reviewable/issues/510#issue-272337333">this explanation</a> to
+understand the details.</p>
+
+<p>Before commenting on a line of code, reviewers should check to see if there
+is already a resolved discussion addressing the same topic. Resolved
+discussions are indicated by a small white check-mark in a grey circle to
+the left of the line of code.</p>
+
+<p>Reviewers should click the eye-shaped buttons to indicate that they have
+reviewed a file.  Reviewable will remember the revisions at which the file
+was reviewed, and mark them with an eye icon in the file history.</p>
+
+<h1 id="curated-commits">Curated Commits</h1>
+
+<p>Each commit on Drake master should pass all unit tests and lint checks, should
+be logically cohesive (should not require other commits to make sense), and
+should have a meaningful commit message.</p>
+
+<p>Therefore, our reviewable settings by default prevent a PR with more than one
+commit from being merged.</p>
+
+<p>Often a PR may end up with more than one commit, including “work-in-progress”
+checkpoints or “fix review comments” pushes.  In that case, when the PR is
+ready to merge, the author of a PR has three choices for how to proceed:</p>
+
+<ul>
+  <li>Wait for the assigned Platform Reviewer to “Squash and merge” the PR.
+If time is of the essence, post a reminder to the PR.</li>
+  <li>Locally (rebase and) squash the PR down to a single commit, and force-push
+that commit into the PR.</li>
+  <li>Apply the label <code class="highlighter-rouge">status: squashing now</code> and then immediately use the “squash
+and merge” button to merge the PR, being careful to tweak the commit message
+in the web page’s edit box to be a sensible description of the change.</li>
+</ul>
+
+<p>On the other hand, some PR authors carefully curate their commits so that each
+individual commit on a PR meets the acceptance criteria on its own.  In that
+case, the author should apply the label <code class="highlighter-rouge">status: commits are properly
+curated</code>, which removes the single-commit requirement.  PRs with this label
+should be merged to master using the “Create a merge commit” option, not
+“Squash and merge” option.</p>
+
+<h1 id="joint-feature-and-platform-review">Joint Feature and Platform review</h1>
+
+<p>For a review to be considered complete, both Feature Review and Platform Review
+must be completed (see <a href="/developers.html#review-process">Review Process</a>).</p>
+
+<p>Therefore, our reviewable settings require at least two assigned reviewers.  In
+cases where the platform reviewer decides to double-count as feature review,
+the reviewer should apply the label <code class="highlighter-rouge">status: single reviewer ok</code> to note this
+condition, which removes the two-assignee requirement.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

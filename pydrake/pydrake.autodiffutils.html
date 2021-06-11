@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.autodiffutils &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.common" href="pydrake.common.html"/>
+        <link rel="prev" title="pydrake.all" href="pydrake.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.autodiffutils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.autodiffutils">
+<span id="pydrake-autodiffutils"></span><h1>pydrake.autodiffutils<a class="headerlink" href="#module-pydrake.autodiffutils" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for Eigen AutoDiff Scalars</p>
+<dl class="function">
+<dt id="pydrake.autodiffutils.autoDiffToGradientMatrix">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">autoDiffToGradientMatrix</code><span class="sig-paren">(</span><em>autodiff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.autoDiffToGradientMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.autoDiffToValueMatrix">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">autoDiffToValueMatrix</code><span class="sig-paren">(</span><em>autodiff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.autoDiffToValueMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pydrake.autodiffutils.AutoDiffXd">
+<em class="property">class </em><code class="descclassname">pydrake.autodiffutils.</code><code class="descname">AutoDiffXd</code><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.autodiffutils.AutoDiffXd, arg0: float) -&gt; None</li>
+<li>__init__(self: pydrake.autodiffutils.AutoDiffXd, arg0: float, arg1: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.abs">
+<code class="descname">abs</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.abs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.acos">
+<code class="descname">acos</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.acos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.arccos">
+<code class="descname">arccos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.arccos" title="Permalink to this definition">¶</a></dt>
+<dd><p>acos(self: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.arcsin">
+<code class="descname">arcsin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.arcsin" title="Permalink to this definition">¶</a></dt>
+<dd><p>asin(self: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.arctan2">
+<code class="descname">arctan2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.arctan2" title="Permalink to this definition">¶</a></dt>
+<dd><p>atan2(self: pydrake.autodiffutils.AutoDiffXd, arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.autodiffutils.AutoDiffXd</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.asin">
+<code class="descname">asin</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.asin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.atan2">
+<code class="descname">atan2</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em>, <em>arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.atan2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.ceil">
+<code class="descname">ceil</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.ceil" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.cos">
+<code class="descname">cos</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.cosh">
+<code class="descname">cosh</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.cosh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.derivatives">
+<code class="descname">derivatives</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.derivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.exp">
+<code class="descname">exp</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.floor">
+<code class="descname">floor</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.floor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.inv">
+<code class="descname">inv</code><span class="sig-paren">(</span><em>self: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.inv" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.log">
+<code class="descname">log</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.max">
+<code class="descname">max</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em>, <em>arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.min">
+<code class="descname">min</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em>, <em>arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.pow">
+<code class="descname">pow</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.pow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.sin">
+<code class="descname">sin</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.sinh">
+<code class="descname">sinh</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.sinh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.sqrt">
+<code class="descname">sqrt</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.sqrt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.tan">
+<code class="descname">tan</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.tan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.tanh">
+<code class="descname">tanh</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.tanh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.autodiffutils.AutoDiffXd.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.initializeAutoDiff">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiff</code><span class="sig-paren">(</span><em>mat: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = -1, deriv_num_start: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a single autodiff matrix given the corresponding value
+matrix.</p>
+<p>Create autodiff matrix that matches <code class="docutils literal"><span class="pre">mat</span></code> in size with derivatives
+of compile time size <code class="docutils literal"><span class="pre">Nq</span></code> and runtime size <code class="docutils literal"><span class="pre">num_derivatives</span></code>. Set
+its values to be equal to <code class="docutils literal"><span class="pre">val</span></code>, and for each element i of
+<code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>, set derivative number <code class="docutils literal"><span class="pre">deriv_num_start</span></code> + i to
+one (all other derivatives set to zero).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mat</span></code>:</dt>
+<dd>‘regular’ matrix of values</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_derivatives</span></code>:</dt>
+<dd>the size of the derivatives vector $*Default:* the size of mat</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">deriv_num_start</span></code>:</dt>
+<dd>starting index into derivative vector (i.e. element
+deriv_num_start in derivative vector corresponds to mat(0, 0)).</dd>
+<dt><em>Default:</em> 0</dt>
+<dd>$Returns:</dd>
+</dl>
+<p>AutoDiff matrix</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffGivenGradientMatrix</code><span class="sig-paren">(</span><em>val: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates and initializes an autodiff matrix given a matrix of values
+and gradient matrix</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">val</span></code>:</dt>
+<dd>value matrix</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">gradient</span></code>:</dt>
+<dd>gradient matrix; the derivatives of val(j) are stored in row j of
+the gradient matrix.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">autodiff_matrix matrix of AutoDiffScalars with the same size as
+<code class="docutils literal"><span class="pre">val</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.initializeAutoDiffTuple">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffTuple</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffTuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a series of array_like input arguments, create a tuple of
+corresponding AutoDiff matrices with values equal to the input matrices
+and properly initialized derivative vectors.</p>
+<p>The size of the derivative vector of each element of the matrices in the
+output tuple will be the same, and will equal the sum of the number of
+elements of the matrices in args.</p>
+<p>The 0th element of the derivative vectors will correspond to the
+derivative with respect to the 0th element of the first argument.
+Subsequent derivative vector elements correspond first to subsequent
+elements of the first input argument (traversed first by row, then by
+column), and so on for subsequent arguments.</p>
+<p>This is a pythonic implementation of drake::math::initializeAutoDiffTuple
+in C++.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.common.html" class="btn btn-neutral float-right" title="pydrake.common" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.all.html" class="btn btn-neutral" title="pydrake.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.common.schema &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
+        <link rel="next" title="pydrake.common.value" href="pydrake.common.value.html"/>
+        <link rel="prev" title="pydrake.common.pybind11_version" href="pydrake.common.pybind11_version.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.common.html">pydrake.common</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.common.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.common.html">pydrake.common</a> &raquo;</li>
+        
+      <li>pydrake.common.schema</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.common.schema">
+<span id="pydrake-common-schema"></span><h1>pydrake.common.schema<a class="headerlink" href="#module-pydrake.common.schema" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the common.schema package.</p>
+<dl class="class">
+<dt id="pydrake.common.schema.Deterministic">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Deterministic</code><a class="headerlink" href="#pydrake.common.schema.Deterministic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>A single deterministic <code class="docutils literal"><span class="pre">value</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.common.schema.Deterministic.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Deterministic.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.Deterministic) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.Deterministic, value: float) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.Deterministic.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.common.schema.Deterministic.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.DeterministicVectorX">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">DeterministicVectorX</code><a class="headerlink" href="#pydrake.common.schema.DeterministicVectorX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A single deterministic vector <code class="docutils literal"><span class="pre">value</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">Size</span></code>:</dt>
+<dd>rows at compile time (max 6) or else Eigen::Dynamic.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.common.schema.DeterministicVectorX.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.DeterministicVectorX.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.DeterministicVectorX) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.DeterministicVectorX, value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.DeterministicVectorX.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.common.schema.DeterministicVectorX.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.Distribution">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Distribution</code><a class="headerlink" href="#pydrake.common.schema.Distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a single distribution, to be used with YAML archives.
+(See class DistributionVector for vector-valued distributions.)</p>
+<p>See serialize_tips for implementation details, especially the
+unusually public member fields in our subclasses.</p>
+<dl class="attribute">
+<dt id="pydrake.common.schema.Distribution.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.common.schema.Distribution.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Distribution.Mean">
+<code class="descname">Mean</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Distribution</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.schema.Distribution.Mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Distribution.Sample">
+<code class="descname">Sample</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Distribution</em>, <em>generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.schema.Distribution.Sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Distribution.ToSymbolic">
+<code class="descname">ToSymbolic</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Distribution</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.common.schema.Distribution.ToSymbolic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.DistributionVector">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">DistributionVector</code><a class="headerlink" href="#pydrake.common.schema.DistributionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a vector of distributions, to be used with YAML
+archives. (See class Distribution for scalar-valued distributions.)</p>
+<p>See serialize_tips for implementation details, especially the
+unusually public member fields in our subclasses.</p>
+<dl class="attribute">
+<dt id="pydrake.common.schema.DistributionVector.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.common.schema.DistributionVector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.DistributionVector.Mean">
+<code class="descname">Mean</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.DistributionVector</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.common.schema.DistributionVector.Mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.DistributionVector.Sample">
+<code class="descname">Sample</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.DistributionVector</em>, <em>generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.common.schema.DistributionVector.Sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.DistributionVector.ToSymbolic">
+<code class="descname">ToSymbolic</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.DistributionVector</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.common.schema.DistributionVector.ToSymbolic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.Gaussian">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Gaussian</code><a class="headerlink" href="#pydrake.common.schema.Gaussian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>A gaussian distribution with <code class="docutils literal"><span class="pre">mean</span></code> and <code class="docutils literal"><span class="pre">stddev</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.common.schema.Gaussian.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Gaussian.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.Gaussian) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.Gaussian, mean: float, stddev: float) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.Gaussian.mean">
+<code class="descname">mean</code><a class="headerlink" href="#pydrake.common.schema.Gaussian.mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.Gaussian.stddev">
+<code class="descname">stddev</code><a class="headerlink" href="#pydrake.common.schema.Gaussian.stddev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.GaussianVectorX">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">GaussianVectorX</code><a class="headerlink" href="#pydrake.common.schema.GaussianVectorX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A gaussian distribution with vector <code class="docutils literal"><span class="pre">mean</span></code> and vector or scalar
+<code class="docutils literal"><span class="pre">stddev</span></code>.</p>
+<p>When <code class="docutils literal"><span class="pre">mean</span></code> and <code class="docutils literal"><span class="pre">stddev</span></code> both have the same number of elements,
+that denotes an elementwise pairing of the 0th mean with 0th stddev,
+1st mean with 1st stddev, etc.</p>
+<p>Alternatively, <code class="docutils literal"><span class="pre">stddev</span></code> can be a vector with a single element, no
+matter the size of <code class="docutils literal"><span class="pre">mean</span></code>; that denotes the same <code class="docutils literal"><span class="pre">stddev</span></code> value
+applied to every element of <code class="docutils literal"><span class="pre">mean</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">Size</span></code>:</dt>
+<dd>rows at compile time (max 6) or else Eigen::Dynamic.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.common.schema.GaussianVectorX.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GaussianVectorX.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.GaussianVectorX) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.GaussianVectorX, mean: numpy.ndarray[numpy.float64[m, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.GaussianVectorX.mean">
+<code class="descname">mean</code><a class="headerlink" href="#pydrake.common.schema.GaussianVectorX.mean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.GaussianVectorX.stddev">
+<code class="descname">stddev</code><a class="headerlink" href="#pydrake.common.schema.GaussianVectorX.stddev" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.GetDeterministicValue">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">GetDeterministicValue</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.GetDeterministicValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetDeterministicValue(var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]) -&gt; float</li>
+</ol>
+<p>If <code class="docutils literal"><span class="pre">var</span></code> is deterministic, retrieves its value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if <code class="docutils literal"><span class="pre">var</span></code> is not deterministic.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>GetDeterministicValue(vec: Union[numpy.ndarray[numpy.float64[m, 1]], pydrake.common.schema.DeterministicVectorX, pydrake.common.schema.GaussianVectorX, pydrake.common.schema.UniformVectorX, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>If <code class="docutils literal"><span class="pre">vec</span></code> is deterministic, retrieves its value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if <code class="docutils literal"><span class="pre">vec</span></code> is not deterministic.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">Size</span></code>:</dt>
+<dd>rows at compile time (max 6) or else Eigen::Dynamic.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.IsDeterministic">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">IsDeterministic</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.IsDeterministic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>IsDeterministic(var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]) -&gt; bool</li>
+</ol>
+<p>Returns true iff <code class="docutils literal"><span class="pre">var</span></code> is set to a deterministic value.</p>
+<ol class="arabic simple" start="2">
+<li>IsDeterministic(vec: Union[numpy.ndarray[numpy.float64[m, 1]], pydrake.common.schema.DeterministicVectorX, pydrake.common.schema.GaussianVectorX, pydrake.common.schema.UniformVectorX, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]) -&gt; bool</li>
+</ol>
+<p>Returns true iff all of <cite>vec</cite>’s elements are set to a deterministic
+value.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">Size</span></code>:</dt>
+<dd>rows at compile time (max 6) or else Eigen::Dynamic.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.Mean">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">Mean</code><span class="sig-paren">(</span><em>var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.schema.Mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like Distribution::Mean, but on a DistributionVariant instead.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.Rotation">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Rotation</code><a class="headerlink" href="#pydrake.common.schema.Rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specification for an SO(3) rotation, to be used for serialization
+purposes, e.g., to define stochastic scenarios. This structure
+specifies either one specific rotation or else a distribution of
+possible rotations. It does not provide mathematical operators to
+compose or mutate rotations. Instead, users should call either
+GetDeterministicValue() or ToSymbolic() to obtain a RotationMatrix
+value that can be operated on.</p>
+<p>For an overview of configuring stochastic transforms, see
+schema_transform and schema_stochastic.</p>
+<p>See serialize_tips for implementation details, especially the
+unusually public member fields.</p>
+<dl class="method">
+<dt id="pydrake.common.schema.Rotation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.Rotation) -&gt; None</li>
+</ol>
+<p>Constructs the Identity rotation.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.common.schema.Rotation, arg0: pydrake.math.RotationMatrix_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an Rpy rotation with the given value.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.common.schema.Rotation, arg0: pydrake.math.RollPitchYaw_[float]) -&gt; None</li>
+</ol>
+<p>Constructs an Rpy rotation with the given value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Rotation.GetDeterministicValue">
+<code class="descname">GetDeterministicValue</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Rotation</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.common.schema.Rotation.GetDeterministicValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this is deterministic, retrieves its value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if this is not fully deterministic.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Rotation.IsDeterministic">
+<code class="descname">IsDeterministic</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Rotation</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.common.schema.Rotation.IsDeterministic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff this is fully deterministic.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Rotation.set_rpy_deg">
+<code class="descname">set_rpy_deg</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Rotation, rpy_deg: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.schema.Rotation.set_rpy_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets this value to the given deterministic RPY, in degrees.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Rotation.ToSymbolic">
+<code class="descname">ToSymbolic</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Rotation</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[Expression]<a class="headerlink" href="#pydrake.common.schema.Rotation.ToSymbolic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the symbolic form of this rotation. If this is deterministic,
+the result will contain no variables. If this is random, the result
+will contain one or more random variables, based on the distributions
+in use.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.Sample">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">Sample</code><span class="sig-paren">(</span><em>var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete], generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.common.schema.Sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like Distribution::Sample, but on a DistributionVariant instead.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.ToDistribution">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">ToDistribution</code><span class="sig-paren">(</span><em>var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.schema.Distribution<a class="headerlink" href="#pydrake.common.schema.ToDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the given variant into a Distribution base class.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.ToDistributionVector">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">ToDistributionVector</code><span class="sig-paren">(</span><em>vec: Union[numpy.ndarray[numpy.float64[m, 1]], pydrake.common.schema.DeterministicVectorX, pydrake.common.schema.GaussianVectorX, pydrake.common.schema.UniformVectorX, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform]</em><span class="sig-paren">)</span> &#x2192; pydrake.common.schema.DistributionVector<a class="headerlink" href="#pydrake.common.schema.ToDistributionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the given variant into a DistributionVector base class.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">Size</span></code>:</dt>
+<dd>rows at compile time (max 6) or else Eigen::Dynamic.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.schema.ToSymbolic">
+<code class="descclassname">pydrake.common.schema.</code><code class="descname">ToSymbolic</code><span class="sig-paren">(</span><em>var: Union[float, pydrake.common.schema.Deterministic, pydrake.common.schema.Gaussian, pydrake.common.schema.Uniform, pydrake.common.schema.UniformDiscrete]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.common.schema.ToSymbolic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Like Distribution::ToSymbolic, but on a DistributionVariant instead.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.Transform">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Transform</code><a class="headerlink" href="#pydrake.common.schema.Transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>A specification for a 3d rotation and translation, optionally with
+respect to a base frame.</p>
+<p>For an overview of configuring stochastic transforms, see
+schema_transform and schema_stochastic.</p>
+<p>See serialize_tips for implementation details, especially the
+unusually public member fields.</p>
+<dl class="method">
+<dt id="pydrake.common.schema.Transform.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Transform.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.Transform) -&gt; None</li>
+</ol>
+<p>Constructs the Identity transform.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.common.schema.Transform, arg0: pydrake.math.RigidTransform_[float]) -&gt; None</li>
+</ol>
+<p>Constructs the given transform.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.Transform.base_frame">
+<code class="descname">base_frame</code><a class="headerlink" href="#pydrake.common.schema.Transform.base_frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional base frame name for this transform. When left unspecified,
+the default depends on the semantics of the enclosing struct.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Transform.GetDeterministicValue">
+<code class="descname">GetDeterministicValue</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Transform</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.common.schema.Transform.GetDeterministicValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>If this is deterministic, retrieves its value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">exception if this is not fully deterministic.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Transform.IsDeterministic">
+<code class="descname">IsDeterministic</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Transform</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.common.schema.Transform.IsDeterministic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff this is fully deterministic.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Transform.Sample">
+<code class="descname">Sample</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Transform</em>, <em>generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.common.schema.Transform.Sample" title="Permalink to this definition">¶</a></dt>
+<dd><p>Samples this Transform. If this is deterministic, the result is the
+same as GetDeterministicValue.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Transform.set_rotation_rpy_deg">
+<code class="descname">set_rotation_rpy_deg</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Transform, rpy_deg: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.schema.Transform.set_rotation_rpy_deg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the rotation field to the given deterministic RPY, in degrees.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.schema.Transform.ToSymbolic">
+<code class="descname">ToSymbolic</code><span class="sig-paren">(</span><em>self: pydrake.common.schema.Transform</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.common.schema.Transform.ToSymbolic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the symbolic form of this rotation. If this is deterministic,
+the result will contain no variables. If this is random, the result
+will contain one or more random variables, based on the distributions
+in use.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.Uniform">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Uniform</code><a class="headerlink" href="#pydrake.common.schema.Uniform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>A uniform distribution with <code class="docutils literal"><span class="pre">min</span></code> inclusive and <code class="docutils literal"><span class="pre">max</span></code> exclusive.</p>
+<dl class="method">
+<dt id="pydrake.common.schema.Uniform.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Uniform.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.Uniform) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.Uniform, min: float, max: float) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.Uniform.max">
+<code class="descname">max</code><a class="headerlink" href="#pydrake.common.schema.Uniform.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.Uniform.min">
+<code class="descname">min</code><a class="headerlink" href="#pydrake.common.schema.Uniform.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.UniformDiscrete">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">UniformDiscrete</code><a class="headerlink" href="#pydrake.common.schema.UniformDiscrete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.Distribution" title="pydrake.common.schema.Distribution"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.Distribution</span></code></a></p>
+<p>Chooses from among discrete <code class="docutils literal"><span class="pre">values</span></code> with equal probability.</p>
+<dl class="method">
+<dt id="pydrake.common.schema.UniformDiscrete.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformDiscrete.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.UniformDiscrete) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.UniformDiscrete, values: List[float]) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.UniformDiscrete.values">
+<code class="descname">values</code><a class="headerlink" href="#pydrake.common.schema.UniformDiscrete.values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.schema.UniformVectorX">
+<em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">UniformVectorX</code><a class="headerlink" href="#pydrake.common.schema.UniformVectorX" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.schema.DistributionVector" title="pydrake.common.schema.DistributionVector"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.schema.DistributionVector</span></code></a></p>
+<p>A uniform distribution with vector <code class="docutils literal"><span class="pre">min</span></code> inclusive and vector
+<code class="docutils literal"><span class="pre">max</span></code> exclusive.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">Size</span></code>:</dt>
+<dd>rows at compile time (max 6) or else Eigen::Dynamic.</dd>
+</dl>
+<dl class="method">
+<dt id="pydrake.common.schema.UniformVectorX.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.UniformVectorX.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common.schema.UniformVectorX) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.UniformVectorX, min: numpy.ndarray[numpy.float64[m, 1]], max: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.UniformVectorX.max">
+<code class="descname">max</code><a class="headerlink" href="#pydrake.common.schema.UniformVectorX.max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.schema.UniformVectorX.min">
+<code class="descname">min</code><a class="headerlink" href="#pydrake.common.schema.UniformVectorX.min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.common.value.html" class="btn btn-neutral float-right" title="pydrake.common.value" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.common.pybind11_version.html" class="btn btn-neutral" title="pydrake.common.pybind11_version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

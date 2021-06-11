@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Directory Structure</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Directory Structure</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>The current directory structure in Drake is organized to (1) group functional
+components, (2) limit dependencies, and (3) prevent circular dependencies.</p>
+
+<h1 id="dev-directories">Dev Directories</h1>
+
+<p>All code in Drake must adhere to the code standards described in
+<a href="/developers.html#developer-notes">Developer Notes</a> and must be covered by tests, unless
+the code lives in a subdirectory named <code class="highlighter-rouge">dev</code>.</p>
+
+<p>To promote rapid development of research ideas, experimental code may be placed
+in a subdirectory named <code class="highlighter-rouge">dev</code>.  We do not enforce code standards nor test
+coverage within <code class="highlighter-rouge">dev</code> directories.  For pull requests that affect only
+<code class="highlighter-rouge">dev</code> directories, one feature review is sufficient; platform review is not
+required.  If build or test targets in <code class="highlighter-rouge">dev</code> directories break, the response
+from the on-call build cop will be to disable the offending targets.</p>
+
+<p>The <code class="highlighter-rouge">BUILD.bazel</code> file for <code class="highlighter-rouge">dev</code> directories must live within the directory
+itself, not a parent directory.  (For example, <code class="highlighter-rouge">foo/BUILD.bazel</code> must <strong>not</strong>
+say <code class="highlighter-rouge">srcs = ["dev/bar.cc"],</code>; instead, <code class="highlighter-rouge">foo/dev/BUILD.bazel</code> must exist and
+must say <code class="highlighter-rouge">srcs = ["bar.cc"],</code>.)  This ensures that all <code class="highlighter-rouge">dev</code> code has a
+package name (<code class="highlighter-rouge">//foo/dev</code>) that clearly denotes it as such.</p>
+
+<h1 id="controlling-dependencies">Controlling Dependencies</h1>
+
+<p>We would like to avoid circular dependencies in the source code tree.  For
+example, some code in <code class="highlighter-rouge">drake/systems</code> depends on code in <code class="highlighter-rouge">drake/solvers</code>, so
+code in <code class="highlighter-rouge">drake/solvers</code> should <em>not</em> depend on <code class="highlighter-rouge">drake/systems</code>.</p>
+
+<p>The <code class="highlighter-rouge">drake/examples</code> directories are logically after all of the core libraries
+in <code class="highlighter-rouge">drake</code>.  <code class="highlighter-rouge">test</code> directories located throughout the code are logically
+last in the dependency tree – they are allowed to depend on any of the other
+directories.  For example, <code class="highlighter-rouge">test</code> code <strong>is</strong> allowed to use models/code from
+the <code class="highlighter-rouge">examples</code> directories to test core functionality, as long as that
+dependency is explicitly declared in the build system rules for that test.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

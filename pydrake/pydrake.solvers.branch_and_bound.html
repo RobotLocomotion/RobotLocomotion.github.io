@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.solvers.branch_and_bound &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.solvers" href="pydrake.solvers.html"/>
+        <link rel="next" title="pydrake.solvers.clp" href="pydrake.solvers.clp.html"/>
+        <link rel="prev" title="pydrake.solvers.all" href="pydrake.solvers.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.all.html">pydrake.solvers.all</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.solvers.branch_and_bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mathematicalprogram.html">pydrake.solvers.mathematicalprogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.sdpa_free_format.html">pydrake.solvers.sdpa_free_format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.snopt.html">pydrake.solvers.snopt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.solvers.html">pydrake.solvers</a> &raquo;</li>
+        
+      <li>pydrake.solvers.branch_and_bound</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.solvers.branch_and_bound">
+<span id="pydrake-solvers-branch-and-bound"></span><h1>pydrake.solvers.branch_and_bound<a class="headerlink" href="#module-pydrake.solvers.branch_and_bound" title="Permalink to this headline">¶</a></h1>
+<p>branch_and_bound bindings for MathematicalProgram</p>
+<dl class="class">
+<dt id="pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.branch_and_bound.</code><code class="descname">MixedIntegerBranchAndBound</code><a class="headerlink" href="#pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a mixed-integer optimization problem (MIP) (or more accurately,
+mixed binary problem), solve this problem through branch-and-bound
+process. We will first replace all the binary variables with
+continuous variables, and relax the integral constraint on the binary
+variables z ∈ {0, 1} with continuous constraints 0 ≤ z ≤ 1. In the
+subsequent steps, at each node of the tree, we will fix some binary
+variables to either 0 or 1, and solve the rest of the variables.
+Notice that we will create a new set of variables in the
+branch-and-bound process, since we need to replace the binary
+variables with continuous variables.</p>
+<dl class="method">
+<dt id="pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound</em>, <em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>solver_id: pydrake.solvers.mathematicalprogram.SolverId</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a branch-and-bound tree from a mixed-integer optimization
+program.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dd>A mixed-integer optimization program.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">solver_id</span></code>:</dt>
+<dd>The ID of the solver for the optimization.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.GetOptimalCost">
+<code class="descname">GetOptimalCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.GetOptimalCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the optimal cost.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.GetSolution">
+<code class="descname">GetSolution</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.GetSolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetSolution(self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound, mip_var: pydrake.symbolic.Variable, nth_best_solution: int = 0) -&gt; float</li>
+</ol>
+<p>Get the n’th best integral solution for a variable. The best solutions
+are sorted in the ascending order based on their costs. Each solution
+is found in a separate node in the branch-and-bound tree, so the
+values of the binary variables are different in each solution.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mip_var</span></code>:</dt>
+<dd>A variable in the original MIP.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">nth_best_solution</span></code>:</dt>
+<dd>. The index of the best integral solution.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">mip_var</span></code> is a variable in the original MIP.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the preconditions are not satisfied.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>GetSolution(self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound, mip_vars: numpy.ndarray[object[m, 1]], nth_best_solution: int = 0) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>Get the n’th best integral solution for some variables. The best
+solutions are sorted in the ascending order based on their costs. Each
+solution is found in a separate node in the branch-and-bound tree, so</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mip_vars</span></code>:</dt>
+<dd>Variables in the original MIP.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">nth_best_solution</span></code>:</dt>
+<dd>. The index of the best integral solution.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">mip_vars</span></code> are variables in the original MIP.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the preconditions are not satisfied.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>GetSolution(self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound, mip_vars: numpy.ndarray[object[m, n]], nth_best_solution: int = 0) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
+</ol>
+<p>Get the n’th best integral solution for some variables. The best
+solutions are sorted in the ascending order based on their costs. Each
+solution is found in a separate node in the branch-and-bound tree, so</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mip_vars</span></code>:</dt>
+<dd>Variables in the original MIP.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">nth_best_solution</span></code>:</dt>
+<dd>. The index of the best integral solution.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">mip_vars</span></code> are variables in the original MIP.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the preconditions are not satisfied.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.GetSubOptimalCost">
+<code class="descname">GetSubOptimalCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound</em>, <em>nth_suboptimal_cost: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.GetSubOptimalCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the n’th sub-optimal cost. The costs are sorted in the ascending
+order. The sub-optimal costs do not include the optimal cost.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">nth_suboptimal_cost</span></code>:</dt>
+<dd>The n’th sub-optimal cost.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">nth_suboptimal_cost</span></code> is between 0 and solutions().size() - 1.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the precondition is not satisfied.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.Solve">
+<code class="descname">Solve</code><span class="sig-paren">(</span><em>self: pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolutionResult<a class="headerlink" href="#pydrake.solvers.branch_and_bound.MixedIntegerBranchAndBound.Solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve the mixed-integer problem (MIP) through a branch and bound
+process.</p>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">solution_result</span></code>:</dt>
+<dd>If solution_result=SolutionResult::kSolutionFound, then the best
+solutions are stored inside solutions(). The user can access the
+value of each variable(s) through GetSolution(…). If
+solution_result=SolutionResult::kInfeasibleConstraints, then the
+mixed-integer problem is primal infeasible. If
+solution_result=SolutionResult::kUnbounded, then the mixed-integer
+problem is primal unbounded.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.solvers.clp.html" class="btn btn-neutral float-right" title="pydrake.solvers.clp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.solvers.all.html" class="btn btn-neutral" title="pydrake.solvers.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: GitHub PR Interaction with Jenkins</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>GitHub PR Interaction with Jenkins</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>When a new pull request is opened in the project and the author of the pull
+request is not a member of the RobotLocomotion GitHub organization, the Jenkins
+GitHub Pull Request Builder @drake-jenkins-bot will not automatically schedule
+builds.</p>
+
+<p>To allow the pull request to be tested, a member of the RobotLocomotion
+organization may comment:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot ok to test</code> to accept this pull request for testing.</li>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot test this please</code> for a one time test run.</li>
+</ul>
+
+<p>If the build fails for other various reasons you can rebuild:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot retest this please</code> to start a new build.</li>
+</ul>
+
+<p>You can also view the <a href="https://drake-jenkins.csail.mit.edu/">Jenkins UI</a>
+directly.</p>
+
+<h1 id="rebuilding-via-reviewable">Rebuilding via Reviewable</h1>
+
+<p>When posting a <code class="highlighter-rouge">@drake-jenkins-bot ... please</code> comment in Reviewable,
+never use the large green “Publish” button in the upper right corner.</p>
+
+<p>Instead, write the bot comment in the “Review discussion” box immediately below
+the “File Matrix” widget <strong>and</strong> use the “single message send” button to post
+it, in the lower-right corner of the “Review discussion” box.</p>
+
+<p><img src="/images/jenkins_bot_reviewable_comment.png" alt="Jenkins Bot Reviewable Comment" /></p>
+
+<p>(For details, see
+<a href="https://github.com/Reviewable/Reviewable/issues/576">Reviewable#576</a>.)</p>
+
+<h1 id="scheduling-an-on-demand-build">Scheduling an On-Demand Build</h1>
+
+<p>There are a number of Jenkins builds that do not normally run pre-merge, but do
+run post-merge, nightly, or weekly. These builds include lower-priority
+platforms (e.g., macOS), and specialized options (e.g.,
+<a href="https://releases.llvm.org/6.0.0/tools/clang/docs/UndefinedBehaviorSanitizer.html">UndefinedBehaviorSanitizer</a>).
+Members of the RobotLocomotion organization can manually schedule these builds
+on pull requests that have not yet been merged, or on arbitrary commits in the
+<code class="highlighter-rouge">RobotLocomotion/drake</code> repository.</p>
+
+<p>To schedule a build of an open pull request merged with master, comment:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot &lt;job-name&gt; please</code></li>
+</ul>
+
+<p>where <code class="highlighter-rouge">&lt;job-name&gt;</code> is the name of an
+<a href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental job</a>.</p>
+
+<p>For example:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot mac-catalina-clang-bazel-experimental-release please</code></li>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-bionic-clang-bazel-experimental-valgrind-memcheck please</code></li>
+</ul>
+
+<h2 id="scheduling-builds-via-the-jenkins-user-interface">Scheduling Builds via the Jenkins User Interface</h2>
+
+<p>Alternatively, to schedule a build of an open pull request or arbitrary commit
+in the <code class="highlighter-rouge">RobotLocomotion/drake</code> repository:</p>
+
+<ol>
+  <li><strong>Log in</strong> to <a href="https://drake-jenkins.csail.mit.edu/">Jenkins</a> using GitHub OAuth.
+(Make sure that you see your name the upper-right corner, <em>not</em> the words “Log in”.)</li>
+  <li>Go to the list of <a href="https://drake-jenkins.csail.mit.edu/view/Experimental/">experimental builds</a>.</li>
+  <li>Click on the specific build you want to schedule.</li>
+  <li>Click on “Build with Parameters” in the left menu.</li>
+  <li>Enter <code class="highlighter-rouge">pr/XYZ/head</code> (HEAD of pull request), <code class="highlighter-rouge">pr/XYZ/merge</code> (pull request
+merged with master), or the desired commit SHA in the <code class="highlighter-rouge">sha1</code> field.</li>
+  <li>Click <code class="highlighter-rouge">Build</code>.</li>
+</ol>
+
+<p>The list of experimental builds includes builds that automatically run on opened
+and updated pull requests, as well as numerous other builds for on-demand use.
+To help identify the on-demand build you want to run, you can consult the lists
+of <a href="https://drake-jenkins.csail.mit.edu/view/Continuous/">continuous</a>,
+<a href="https://drake-jenkins.csail.mit.edu/view/Nightly/">nightly</a>, and
+<a href="https://drake-jenkins.csail.mit.edu/view/Weekly/">weekly</a> builds,
+but you should not schedule continuous, nightly, or weekly builds directly.</p>
+
+<h2 id="updating-installation-prerequisites">Updating Installation Prerequisites</h2>
+
+<p>Installation prerequisites are packages that are not pulled in Bazel, but
+instead installed on the OS itself using a package manager like <code class="highlighter-rouge">apt</code>,
+Homebrew, or <code class="highlighter-rouge">pip</code> (only on Mac). They are installed via the scripts under
+<code class="highlighter-rouge">setup/</code>, and are split between <code class="highlighter-rouge">binary_distribution</code> (dependencies that
+are necessary for <a href="/from_binary.html">binary installation</a>) and
+<code class="highlighter-rouge">source_distribution</code> (dependencies, in addition to those in
+<code class="highlighter-rouge">binary_distribution</code>, necessary for
+<a href="/from_source.html">source installation</a>). Since
+<code class="highlighter-rouge">source_distribution</code> will also install prerequisites in
+<code class="highlighter-rouge">binary_distribution</code>, you do not need to duplicate binary prerequisites in
+<code class="highlighter-rouge">source_distribution</code>.</p>
+
+<p>Prerequisites of the <code class="highlighter-rouge">source_distribution</code> are further split into three
+parts: those that are needed for building and running the <code class="highlighter-rouge">//:install</code> target
+using <code class="highlighter-rouge">bazel</code> (<code class="highlighter-rouge">bazel run //:install</code>), those additional dependencies for
+building and running tests (<code class="highlighter-rouge">bazel test ...</code>), and those additional
+dependencies for running select maintainer scripts (e.g., <code class="highlighter-rouge">mirror_to_s3.py</code>
+and <code class="highlighter-rouge">new_release.py</code>). Again, it is expected that a given prerequisite will
+only appear in one of these lists.</p>
+
+<p>When updating prerequisites with these scripts, the normal experimental CI will
+most likely fail. To test new prerequisites, you should first request
+unprovisioned experimental builds, e.g.:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-bionic-unprovisioned-gcc-bazel-experimental-release please</code></li>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-release please</code></li>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot mac-catalina-unprovisioned-clang-bazel-experimental-release please</code></li>
+</ul>
+
+<p>After this has passed, go through normal review. Once normal review is done,
+add <code class="highlighter-rouge">@jamiesnape</code> for review and request that the provisioned instances be
+updated. He will then respond on when it is appropriate to merge the PR.</p>
+
+<h2 id="building-binary-packages-on-demand">Building Binary Packages on Demand</h2>
+
+<p>To schedule an “experimental” build of the <a href="/from_binary.html">binary packages</a>,
+comment on an open pull request as follows:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-bionic-unprovisioned-gcc-bazel-experimental-snopt-packaging please</code></li>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-snopt-packaging please</code></li>
+  <li><code class="highlighter-rouge">@drake-jenkins-bot mac-catalina-unprovisioned-clang-bazel-experimental-snopt-packaging please</code></li>
+</ul>
+
+<p>or follow the <a href="#scheduling-builds-via-the-jenkins-user-interface">instructions above</a>
+to schedule a build of one of the following jobs from the Jenkins user
+interface:</p>
+
+<ul>
+  <li>linux-bionic-unprovisioned-gcc-bazel-experimental-snopt-packaging</li>
+  <li>linux-focal-unprovisioned-gcc-bazel-experimental-snopt-packaging</li>
+  <li>mac-catalina-unprovisioned-clang-bazel-experimental-snopt-packaging</li>
+</ul>
+
+<p>The URL from which to download the built package will be indicated in the
+Jenkins console log for the completed build, for example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-- Uploading package archive 1 of 1 to AWS S3...
+
+upload: drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz to s3://drake-packages/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz
+-- Package URL 1 of 1: https://drake-packages.csail.mit.edu/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz
+-- Uploading package archive checksum 1 of 1 to AWS S3...
+
+upload: drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz.sha512 to s3://drake-packages/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz.sha512
+</code></pre></div></div>
+
+<p>where <code class="highlighter-rouge">&lt;platform&gt;</code> is <code class="highlighter-rouge">bionic</code>, <code class="highlighter-rouge">focal</code>, or <code class="highlighter-rouge">mac</code>.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

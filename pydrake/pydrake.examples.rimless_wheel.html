@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.examples.rimless_wheel &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.examples" href="pydrake.examples.html"/>
+        <link rel="next" title="pydrake.examples.van_der_pol" href="pydrake.examples.van_der_pol.html"/>
+        <link rel="prev" title="pydrake.examples.quadrotor" href="pydrake.examples.quadrotor.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.acrobot.html">pydrake.examples.acrobot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.compass_gait.html">pydrake.examples.compass_gait</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.manipulation_station.html">pydrake.examples.manipulation_station</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.multibody.html">pydrake.examples.multibody</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.pendulum.html">pydrake.examples.pendulum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.quadrotor.html">pydrake.examples.quadrotor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.examples.rimless_wheel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.examples.van_der_pol.html">pydrake.examples.van_der_pol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.examples.html">pydrake.examples</a> &raquo;</li>
+        
+      <li>pydrake.examples.rimless_wheel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.examples.rimless_wheel">
+<span id="pydrake-examples-rimless-wheel"></span><h1>pydrake.examples.rimless_wheel<a class="headerlink" href="#module-pydrake.examples.rimless_wheel" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the rimless_wheel example.</p>
+<dl class="class">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheel">
+<em class="property">class </em><code class="descclassname">pydrake.examples.rimless_wheel.</code><code class="descname">RimlessWheel</code><a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Dynamical representation of the idealized hybrid dynamics of a
+“rimless wheel”, as described in
+<a class="reference external" href="http://underactuated.mit.edu/underactuated.html?chapter=simple_legs">http://underactuated.mit.edu/underactuated.html?chapter=simple_legs</a> In
+addition, this model has two additional (discrete) state variables
+that are not required in the mathematical model:</p>
+<ul class="simple">
+<li>the position of the stance toe along the ramp (helpful for outputting
+a floating-base model coordinate, e.g. for visualization),</li>
+<li>a boolean indicator for “double support” (to avoid the numerical
+challenges of simulation around the Zeno phenomenon at the standing
+fixed point).</li>
+</ul>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RimlessWheel</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; minimal_state (theta and thetadot only)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; floating_base_state</td></tr></table></td></tr></table><p>Continuous States: theta, thetadot. Discrete States: stance toe
+position, double support indicator. Parameters: mass, length, number
+of spokes, etc, are all set as Context parameters using
+RimlessWheelParams.</p>
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheel.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the plant.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheel.calc_alpha">
+<em class="property">static </em><code class="descname">calc_alpha</code><span class="sig-paren">(</span><em>params: drake::examples::rimless_wheel::RimlessWheelParams&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheel.calc_alpha" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alpha is half the interleg angle, and is used frequently.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheel.get_floating_base_state_output_port">
+<code class="descname">get_floating_base_state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheel</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheel.get_floating_base_state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns reference to the output port that provides a 12 dimensional
+state (FloatingBaseType::kRollPitchYaw positions then velocities).
+This is useful, e.g., for visualization. θ of the rimless wheel is the
+pitch of the floating base (rotation around global y), and downhill
+moves toward positive x. As always, we use vehicle coordinates (x-y on
+the ground, z is up).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheel.get_minimal_state_output_port">
+<code class="descname">get_minimal_state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheel</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheel.get_minimal_state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return reference to the output port that publishes only [theta,
+thetatdot].</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelContinuousState">
+<em class="property">class </em><code class="descclassname">pydrake.examples.rimless_wheel.</code><code class="descname">RimlessWheelContinuousState</code><a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelContinuousState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<p>Specializes BasicVector with specific getters and setters.</p>
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelContinuousState.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelContinuousState</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelContinuousState.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor. Sets all rows to their default value:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">theta</span></code> defaults to 0.0 radians.</li>
+<li><code class="docutils literal"><span class="pre">thetadot</span></code> defaults to 0.0 rad/sec.</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelContinuousState.set_theta">
+<code class="descname">set_theta</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelContinuousState</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelContinuousState.set_theta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches theta().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelContinuousState.set_thetadot">
+<code class="descname">set_thetadot</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelContinuousState</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelContinuousState.set_thetadot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches thetadot().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelContinuousState.theta">
+<code class="descname">theta</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelContinuousState</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelContinuousState.theta" title="Permalink to this definition">¶</a></dt>
+<dd><p>The orientation of the stance leg, measured clockwise from the
+vertical axis.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">theta</span></code> is expressed in units of radians.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelContinuousState.thetadot">
+<code class="descname">thetadot</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelContinuousState</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelContinuousState.thetadot" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angular velocity of the stance leg.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">thetadot</span></code> is expressed in units of rad/sec.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelGeometry">
+<em class="property">class </em><code class="descclassname">pydrake.examples.rimless_wheel.</code><code class="descname">RimlessWheelGeometry</code><a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Expresses a RimlessWheel’s geometry to a SceneGraph.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">floating_base_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RimlessWheelGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
+static method to create and add it to a DiagramBuilder directly.</p>
+<dl class="attribute">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelGeometry.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelGeometry.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelGeometry.AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelGeometry.AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], floating_base_state_port: pydrake.systems.framework.OutputPort_[float], rimless_wheel_params: pydrake.examples.rimless_wheel.RimlessWheelParams, scene_graph: pydrake.geometry.SceneGraph_[float]) -&gt; pydrake.examples.rimless_wheel.RimlessWheelGeometry</li>
+</ol>
+<p>Creates, adds, and connects a RimlessWheelGeometry system into the
+given <code class="docutils literal"><span class="pre">builder</span></code>. Both the <code class="docutils literal"><span class="pre">floating_base_state_port.get_system()</span></code>
+and <code class="docutils literal"><span class="pre">scene_graph</span></code> systems must have been added to the given
+<code class="docutils literal"><span class="pre">builder</span></code> already. The <code class="docutils literal"><span class="pre">rimless_wheel_params</span></code> sets the parameters
+of the geometry registered with <code class="docutils literal"><span class="pre">scene_graph</span></code>.</p>
+<p>The <code class="docutils literal"><span class="pre">scene_graph</span></code> pointer is not retained by the
+RimlessWheelGeometry system. The return value pointer is an alias of
+the new RimlessWheelGeometry system that is owned by the <code class="docutils literal"><span class="pre">builder</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], floating_base_state_port: pydrake.systems.framework.OutputPort_[float], scene_graph: pydrake.geometry.SceneGraph_[float]) -&gt; pydrake.examples.rimless_wheel.RimlessWheelGeometry</li>
+</ol>
+<p>Creates, adds, and connects a RimlessWheelGeometry system into the
+given <code class="docutils literal"><span class="pre">builder</span></code>. Both the <code class="docutils literal"><span class="pre">floating_base_state_port.get_system()</span></code>
+and <code class="docutils literal"><span class="pre">scene_graph</span></code> systems must have been added to the given
+<code class="docutils literal"><span class="pre">builder</span></code> already. RimlessWheelParams are set to their default
+values.</p>
+<p>The <code class="docutils literal"><span class="pre">scene_graph</span></code> pointer is not retained by the
+RimlessWheelGeometry system. The return value pointer is an alias of
+the new RimlessWheelGeometry system that is owned by the <code class="docutils literal"><span class="pre">builder</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams">
+<em class="property">class </em><code class="descclassname">pydrake.examples.rimless_wheel.</code><code class="descname">RimlessWheelParams</code><a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<p>Specializes BasicVector with specific getters and setters.</p>
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor. Sets all rows to their default value:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">mass</span></code> defaults to 1.0 kg.</li>
+<li><code class="docutils literal"><span class="pre">length</span></code> defaults to 1.0 m.</li>
+<li><code class="docutils literal"><span class="pre">gravity</span></code> defaults to 9.81 m/s^2.</li>
+<li><code class="docutils literal"><span class="pre">number_of_spokes</span></code> defaults to 8 integer.</li>
+<li><code class="docutils literal"><span class="pre">slope</span></code> defaults to 0.08 radians.</li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.gravity">
+<code class="descname">gravity</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.gravity" title="Permalink to this definition">¶</a></dt>
+<dd><p>An approximate value for gravitational acceleration.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">gravity</span></code> is expressed in units of m/s^2.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">gravity</span></code> has a limited domain of [0.0, +Inf].</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.length">
+<code class="descname">length</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>The length of each spoke.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">length</span></code> is expressed in units of m.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">length</span></code> has a limited domain of [0.0, +Inf].</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.mass">
+<code class="descname">mass</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>The rimless wheel has a single point mass at the hub.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">mass</span></code> is expressed in units of kg.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">mass</span></code> has a limited domain of [0.0, +Inf].</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.number_of_spokes">
+<code class="descname">number_of_spokes</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.number_of_spokes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Total number of spokes on the wheel</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">number_of_spokes</span></code> is expressed in units of integer.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">number_of_spokes</span></code> has a limited domain of [4, +Inf].</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.set_gravity">
+<code class="descname">set_gravity</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.set_gravity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches gravity().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.set_length">
+<code class="descname">set_length</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.set_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches length().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.set_mass">
+<code class="descname">set_mass</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.set_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches mass().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.set_number_of_spokes">
+<code class="descname">set_number_of_spokes</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.set_number_of_spokes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches number_of_spokes().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.set_slope">
+<code class="descname">set_slope</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.set_slope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setter that matches slope().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.examples.rimless_wheel.RimlessWheelParams.slope">
+<code class="descname">slope</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheelParams</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheelParams.slope" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angle of the ramp on which the rimless wheel is walking.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">slope</span></code> is expressed in units of radians.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.examples.van_der_pol.html" class="btn btn-neutral float-right" title="pydrake.examples.van_der_pol" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.examples.quadrotor.html" class="btn btn-neutral" title="pydrake.examples.quadrotor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

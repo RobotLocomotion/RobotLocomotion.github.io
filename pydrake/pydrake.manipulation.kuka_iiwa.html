@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.manipulation.kuka_iiwa &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.manipulation" href="pydrake.manipulation.html"/>
+        <link rel="next" title="pydrake.manipulation.planner" href="pydrake.manipulation.planner.html"/>
+        <link rel="prev" title="pydrake.manipulation.all" href="pydrake.manipulation.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.all.html">pydrake.manipulation.all</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.manipulation.kuka_iiwa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.planner.html">pydrake.manipulation.planner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.schunk_wsg.html">pydrake.manipulation.schunk_wsg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.simple_ui.html">pydrake.manipulation.simple_ui</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.manipulation.html">pydrake.manipulation</a> &raquo;</li>
+        
+      <li>pydrake.manipulation.kuka_iiwa</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.manipulation.kuka_iiwa">
+<span id="pydrake-manipulation-kuka-iiwa"></span><h1>pydrake.manipulation.kuka_iiwa<a class="headerlink" href="#module-pydrake.manipulation.kuka_iiwa" title="Permalink to this headline">¶</a></h1>
+<p>Tools for kuka iiwa.</p>
+<dl class="function">
+<dt id="pydrake.manipulation.kuka_iiwa.get_iiwa_max_joint_velocities">
+<code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">get_iiwa_max_joint_velocities</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.get_iiwa_max_joint_velocities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the maximum joint velocities provided by Kuka.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Maximum joint velocities (rad/s).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">IiwaCommandReceiver</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Handles lcmt_iiwa_command message from a LcmSubscriberSystem.</p>
+<p>Note that this system does not actually subscribe to an LCM channel.
+To receive the message, the input of this system should be connected
+to a LcmSubscriberSystem::Make&lt;drake::lcmt_iiwa_command&gt;().</p>
+<p>It has one required input port, “lcmt_iiwa_command”.</p>
+<p>It has two output ports: one for the commanded position for each
+joint, and one for commanded additional feedforward joint torque.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_iiwa_command&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; torque</td></tr></table></td></tr></table><p>&#64;par Output prior to receiving a valid lcmt_iiwa_command message: The
+“position” output initially feeds through from the “position_measured”
+input port – or if not connected, outputs zero. When discrete update
+events are enabled (e.g., during a simulation), the system latches the
+“position_measured” input into state during the first event, and the
+“position” output comes from the latched state, no longer fed through
+from the “position” input. Alternatively, the LatchInitialPosition()
+method is available to achieve the same effect without using events.
+&#64;par The “torque” output will always be a vector of zeros.</p>
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em>, <em>num_joints: int = 7</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_commanded_position_output_port">
+<code class="descname">get_commanded_position_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_commanded_position_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_commanded_torque_output_port">
+<code class="descname">get_commanded_torque_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_commanded_torque_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_message_input_port">
+<code class="descname">get_message_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_message_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_position_measured_input_port">
+<code class="descname">get_position_measured_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandReceiver.get_position_measured_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">IiwaCommandSender</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Creates and outputs lcmt_iiwa_command messages.</p>
+<p>Note that this system does not actually send the message an LCM
+channel. To send the message, the output of this system should be
+connected to a
+systems::lcm::LcmPublisherSystem::Make&lt;lcmt_iiwa_command&gt;().</p>
+<p>This system has two vector-valued input ports, one for the commanded
+position (which must be connected) and one for commanded torque (which
+is optional). If the torque input port is not connected, then no
+torque values will be emitted in the resulting message.</p>
+<p>This system has one abstract-valued output port of type
+lcmt_iiwa_command.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_iiwa_command</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="docutils literal"><span class="pre">lcmt_iiwa_command.lcm</span></code> for additional documentation.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandSender</em>, <em>num_joints: int = 7</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_position_input_port">
+<code class="descname">get_position_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_position_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_torque_input_port">
+<code class="descname">get_torque_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaCommandSender.get_torque_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">IiwaStatusReceiver</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>&#64;system name: IiwaStatusReceiver input_ports: - lcmt_iiwa_status
+output_ports: - position_commanded - position_measured -
+velocity_estimated - torque_commanded - torque_measured -
+torque_external &#64;endsystem</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="docutils literal"><span class="pre">lcmt_iiwa_status.lcm</span></code> for additional documentation.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em>, <em>num_joints: int = 7</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_position_commanded_output_port">
+<code class="descname">get_position_commanded_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_position_commanded_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_position_measured_output_port">
+<code class="descname">get_position_measured_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_position_measured_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_torque_commanded_output_port">
+<code class="descname">get_torque_commanded_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_torque_commanded_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_torque_external_output_port">
+<code class="descname">get_torque_external_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_torque_external_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_torque_measured_output_port">
+<code class="descname">get_torque_measured_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_torque_measured_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_velocity_estimated_output_port">
+<code class="descname">get_velocity_estimated_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_velocity_estimated_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.kuka_iiwa.</code><code class="descname">IiwaStatusSender</code><a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Creates and outputs lcmt_iiwa_status messages.</p>
+<p>Note that this system does not actually send the message an LCM
+channel. To send the message, the output of this system should be
+connected to a
+systems::lcm::LcmPublisherSystem::Make&lt;lcmt_iiwa_status&gt;().</p>
+<p>This system has many vector-valued input ports, each of which has
+exactly num_joints elements.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">position_commanded</span></code>: the most recently received position command.</li>
+<li><code class="docutils literal"><span class="pre">position_measured</span></code>: the plant’s current position.</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">velocity_estimated</span></code> (optional): the plant’s current velocity (this</dt>
+<dd>should be a low-pass filter of the position’s derivative; see detailed
+comments in <code class="docutils literal"><span class="pre">lcmt_iiwa_status.lcm</span></code>); when absent, the output message
+will use zeros.</dd>
+</dl>
+</li>
+<li><code class="docutils literal"><span class="pre">torque_commanded</span></code>: the most recently received joint torque command.</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">torque_measured</span></code> (optional): the plant’s measured joint torque; when</dt>
+<dd>absent, the output message will duplicate torque_commanded.</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">torque_external</span></code> (optional): the plant’s external joint torque; when</dt>
+<dd>absent, the output message will use zeros.</dd>
+</dl>
+</li>
+</ul>
+<p>This system has one abstract-valued output port of type
+lcmt_iiwa_status.</p>
+<p>This system is presently only used in simulation. The robot hardware
+drivers publish directly to LCM and do not make use of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position_commanded&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">position_measured&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">velocity_estimated (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque_commanded&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque_measured (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">torque_external (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>IiwaStatusSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_iiwa_status</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="docutils literal"><span class="pre">lcmt_iiwa_status.lcm</span></code> for additional documentation.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em>, <em>num_joints: int = 7</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_position_commanded_input_port">
+<code class="descname">get_position_commanded_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_position_commanded_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_position_measured_input_port">
+<code class="descname">get_position_measured_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_position_measured_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_torque_commanded_input_port">
+<code class="descname">get_torque_commanded_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_torque_commanded_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_torque_external_input_port">
+<code class="descname">get_torque_external_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_torque_external_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_torque_measured_input_port">
+<code class="descname">get_torque_measured_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_torque_measured_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_velocity_estimated_input_port">
+<code class="descname">get_velocity_estimated_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.kuka_iiwa.IiwaStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.kuka_iiwa.IiwaStatusSender.get_velocity_estimated_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.manipulation.planner.html" class="btn btn-neutral float-right" title="pydrake.manipulation.planner" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.manipulation.all.html" class="btn btn-neutral" title="pydrake.manipulation.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

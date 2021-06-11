@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Using Drake from Python</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Using Drake from Python</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain grid grid-1-2col-nav-and-body">
+      <!--
+      N.B. The page is responsible for including the front + end matter.
+      See "Caveats" in drake/doc/README.txt.
+      -->
+      <!--
+See "Caveats" in drake/doc/README.txt.
+-->
+<div class="sub-nav">
+<div class="sticky">
+    <h5>Table of Contents</h5>
+<ul id="markdown-toc">
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a>    <ul>
+      <li><a href="#binary-installation-for-python" id="markdown-toc-binary-installation-for-python">Binary Installation for Python</a></li>
+      <li><a href="#inside-virtualenv" id="markdown-toc-inside-virtualenv">Inside <code class="highlighter-rouge">virtualenv</code></a></li>
+      <li><a href="#building-the-python-bindings" id="markdown-toc-building-the-python-bindings">Building the Python Bindings</a></li>
+    </ul>
+  </li>
+  <li><a href="#using-the-python-bindings" id="markdown-toc-using-the-python-bindings">Using the Python Bindings</a>    <ul>
+      <li><a href="#check-installation" id="markdown-toc-check-installation">Check Installation</a></li>
+      <li><a href="#whats-available-from-python" id="markdown-toc-whats-available-from-python">What’s Available from Python</a></li>
+      <li><a href="#differences-with-c-api" id="markdown-toc-differences-with-c-api">Differences with C++ API</a></li>
+      <li><a href="#scalar-types" id="markdown-toc-scalar-types">Scalar Types</a></li>
+      <li><a href="#c-function-and-method-template-instantiations-in-python" id="markdown-toc-c-function-and-method-template-instantiations-in-python">C++ Function and Method Template Instantiations in Python</a></li>
+      <li><a href="#debugging-with-the-python-bindings" id="markdown-toc-debugging-with-the-python-bindings">Debugging with the Python Bindings</a></li>
+      <li><a href="#for-developers" id="markdown-toc-for-developers">For Developers</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<article class="markdown-body">
+
+  <h1 id="installation">Installation</h1>
+
+  <p>A substantial subset of the Drake C++ functionality is available from Python.
+The Drake Python bindings are generated using <a href="https://github.com/pybind/pybind11">pybind11</a>,
+which means that every function or
+class which is exposed to C++ has been explicitly enumerated in one of the
+source files inside the <code class="highlighter-rouge">bindings/pydrake</code> folder. These bindings are
+installed as a single package called <code class="highlighter-rouge">pydrake</code>.</p>
+
+  <div class="warning">
+    <p>Drake is incompatible with the Python environment supplied by Anaconda. Please
+uninstall Anaconda or remove the Anaconda bin directory from the <code class="highlighter-rouge">PATH</code> before
+building or using the Drake Python bindings.</p>
+  </div>
+
+  <p>Before attempting installation, please review the
+<a href="/developers.html#supported-configurations">supported configurations</a> to know what
+versions of Python are supported for your platform.</p>
+
+  <h2 id="binary-installation-for-python">Binary Installation for Python</h2>
+
+  <p>First, download and extract an <a href="/from_binary.html">available binary package</a>.</p>
+
+  <p>As an example, here is how to download and extract one of the latest releases
+to <code class="highlighter-rouge">/opt</code> (where <code class="highlighter-rouge">&lt;platform&gt;</code> could be <code class="highlighter-rouge">bionic</code>, <code class="highlighter-rouge">focal</code>, or <code class="highlighter-rouge">mac</code>):</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o</span> drake.tar.gz https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-&lt;platform&gt;.tar.gz
+rm <span class="nt">-rf</span> /opt/drake
+<span class="nb">tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> /opt
+</code></pre></div>  </div>
+
+  <p>Ensure that you have the system dependencies:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/drake/share/drake/setup/install_prereqs
+</code></pre></div>  </div>
+
+  <p>Next, ensure that your <code class="highlighter-rouge">PYTHONPATH</code> is properly configured.</p>
+
+  <p><em>Ubuntu 18.04 (Bionic):</em></p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python3.6/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div>  </div>
+
+  <p><em>Ubuntu 20.04 (Focal):</em></p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div>  </div>
+
+  <p><em>macOS:</em></p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python3.9/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div>  </div>
+
+  <p>See <a href="#using-the-python-bindings">below</a> for usage instructions.</p>
+
+  <h2 id="inside-virtualenv">Inside <code class="highlighter-rouge">virtualenv</code></h2>
+
+  <p>At present, Drake is not installable via <code class="highlighter-rouge">pip</code>. However, you can still
+incorporate its install tree into a <code class="highlighter-rouge">virtualenv</code>
+<a href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">FHS</a>-like
+environment.</p>
+
+  <p>An example, where you should replace <code class="highlighter-rouge">&lt;venv_path&gt;</code> and <code class="highlighter-rouge">&lt;platform&gt;</code>:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Setup drake, and run prerequisites.</span>
+curl <span class="nt">-o</span> drake.tar.gz https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-&lt;platform&gt;.tar.gz
+mkdir <span class="nt">-p</span> &lt;venv_path&gt;
+<span class="nb">tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> &lt;venv_path&gt; <span class="nt">--strip-components</span><span class="o">=</span>1
+<span class="c"># - You may need `sudo` here.</span>
+&lt;venv_path&gt;/share/drake/setup/install_prereqs
+
+<span class="c"># Setup a virtualenv over the drake install.</span>
+python3 <span class="nt">-m</span> virtualenv <span class="nt">-p</span> python3 &lt;venv_path&gt; <span class="nt">--system-site-packages</span>
+</code></pre></div>  </div>
+
+  <div class="note">
+    <p>You can extract Drake into an existing <code class="highlighter-rouge">virtualenv</code> tree if you have already run <code class="highlighter-rouge">install_prereqs</code>; however, you should ensure that you have run <code class="highlighter-rouge">install_prereqs</code>. Before you do this, you should capture / freeze your current requirements to reproduce your environment if there are conflicts.</p>
+  </div>
+
+  <p>To check if this worked, follow the instructions as
+<a href="#using-the-python-bindings">shown below</a>, but either:</p>
+
+  <ul>
+    <li>Use <code class="highlighter-rouge">&lt;venv_path&gt;/bin/python</code> instead of <code class="highlighter-rouge">python3</code>, or</li>
+    <li>Source <code class="highlighter-rouge">&lt;venv_path&gt;/bin/activate</code> in your current shell session.</li>
+  </ul>
+
+  <h2 id="building-the-python-bindings">Building the Python Bindings</h2>
+
+  <p>To use the Python bindings from Drake externally, we recommend using CMake.
+As an example:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/RobotLocomotion/drake.git
+mkdir drake-build
+<span class="nb">cd </span>drake-build
+cmake ../drake
+make <span class="nt">-j</span>
+</code></pre></div>  </div>
+
+  <p>Please note the additional CMake options which affect the Python bindings:</p>
+
+  <ul>
+    <li><code class="highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
+    <li><code class="highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK enabled.</li>
+    <li><code class="highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
+  </ul>
+
+  <p><code class="highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="highlighter-rouge">[...]</code> is
+the default option. An example of building <code class="highlighter-rouge">pydrake</code> with both Gurobi and
+MOSEK, without building tests:</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-DWITH_GUROBI</span><span class="o">=</span>ON <span class="nt">-DWITH_MOSEK</span><span class="o">=</span>ON ../drake
+</code></pre></div>  </div>
+
+  <p>You will also need to have your <code class="highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
+
+  <p><em>Ubuntu 18.04 (Bionic):</em></p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.6/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div>  </div>
+
+  <p><em>Ubuntu 20.04 (Focal):</em></p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div>  </div>
+  <p><em>macOS:</em></p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.9/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div>  </div>
+
+  <h1 id="using-the-python-bindings">Using the Python Bindings</h1>
+
+  <h2 id="check-installation">Check Installation</h2>
+
+  <p>After following the above install steps, check to ensure you can import
+<code class="highlighter-rouge">pydrake</code>.</p>
+
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-c</span> <span class="s1">'import pydrake; print(pydrake.__file__)'</span>
+</code></pre></div>  </div>
+
+  <div class="note">
+    <p>If you are using Gurobi, you must either have it installed in the suggested location under <code class="highlighter-rouge">/opt/...</code>&gt; mentioned in Gurobi 9.0.2, or you must ensure that you define the <code class="highlighter-rouge">${GUROBI_HOME}</code> environment variable, or specify <code class="highlighter-rouge">${GUROBI_INCLUDE_DIR}</code> via CMake.</p>
+  </div>
+
+  <h2 id="whats-available-from-python">What’s Available from Python</h2>
+
+  <p>You should first browse the <a href="https://drake.mit.edu/pydrake/index.html">Python API</a> to see what
+modules are available. The most up-to-date high-level demonstrations of what
+can be done using <code class="highlighter-rouge">pydrake</code> are in Drake’s <a href="/index.html#tutorials">Tutorials</a> and
+the <a href="http://underactuated.mit.edu/">Underactuated Robotics Textbook</a>.</p>
+
+  <p>You can also see lower-level usages of the API in the <code class="highlighter-rouge">pydrake</code> unit tests
+themselves, which you can find inside of the
+<code class="highlighter-rouge">drake/bindings/python/pydrake/**/test</code> folders in the Drake source code.</p>
+
+  <p>Here’s an example snippet of code from <code class="highlighter-rouge">pydrake</code>:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pydrake.common</span> <span class="kn">import</span> <span class="n">FindResourceOrThrow</span>
+<span class="kn">from</span> <span class="nn">pydrake.multibody.parsing</span> <span class="kn">import</span> <span class="n">Parser</span>
+<span class="kn">from</span> <span class="nn">pydrake.multibody.plant</span> <span class="kn">import</span> <span class="n">AddMultibodyPlantSceneGraph</span>
+<span class="kn">from</span> <span class="nn">pydrake.systems.analysis</span> <span class="kn">import</span> <span class="n">Simulator</span>
+<span class="kn">from</span> <span class="nn">pydrake.systems.framework</span> <span class="kn">import</span> <span class="n">DiagramBuilder</span>
+
+<span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">Parser</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span><span class="o">.</span><span class="n">AddModelFromFile</span><span class="p">(</span>
+    <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
+<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>If you are prototyping code in a REPL environment (such as IPython / Jupyter)
+and to reduce the number of import statements, consider using <code class="highlighter-rouge">pydrake.all</code> to
+import a subset of symbols from a flattened namespace or import all modules
+automatically. If you are writing non-prototype code, avoid using
+<code class="highlighter-rouge">pydrake.all</code>; for more details, see <code class="highlighter-rouge">help(pydrake.all)</code>.</p>
+
+  <p>In all cases, try to avoid using <code class="highlighter-rouge">from pydrake.all import *</code>, as it may
+introduce symbol collisions that are difficult to debug.</p>
+
+  <p>The above example, but using <code class="highlighter-rouge">pydrake.all</code>:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pydrake.all</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">,</span> <span class="n">DiagramBuilder</span><span class="p">,</span> <span class="n">FindResourceOrThrow</span><span class="p">,</span>
+    <span class="n">Parser</span><span class="p">,</span> <span class="n">Simulator</span><span class="p">)</span>
+
+<span class="n">builder</span> <span class="o">=</span> <span class="n">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">Parser</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span><span class="o">.</span><span class="n">AddModelFromFile</span><span class="p">(</span>
+    <span class="n">FindResourceOrThrow</span><span class="p">(</span><span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
+<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>An alternative is to use <code class="highlighter-rouge">pydrake.all</code> to import all modules, but then
+explicitly refer to each symbol:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pydrake.all</span>
+
+<span class="n">builder</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">DiagramBuilder</span><span class="p">()</span>
+<span class="n">plant</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">plant</span><span class="o">.</span><span class="n">AddMultibodyPlantSceneGraph</span><span class="p">(</span><span class="n">builder</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
+<span class="n">pydrake</span><span class="o">.</span><span class="n">multibody</span><span class="o">.</span><span class="n">parsing</span><span class="o">.</span><span class="n">Parser</span><span class="p">(</span><span class="n">plant</span><span class="p">)</span><span class="o">.</span><span class="n">AddModelFromFile</span><span class="p">(</span>
+  <span class="n">pydrake</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">FindResourceOrThrow</span><span class="p">(</span>
+      <span class="s">"drake/examples/pendulum/Pendulum.urdf"</span><span class="p">))</span>
+<span class="n">plant</span><span class="o">.</span><span class="n">Finalize</span><span class="p">()</span>
+<span class="n">diagram</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">Build</span><span class="p">()</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">Simulator</span><span class="p">(</span><span class="n">diagram</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <h2 id="differences-with-c-api">Differences with C++ API</h2>
+
+  <p>In general, the <a href="https://drake.mit.edu/pydrake/index.html">Python API</a> should be close to the
+<a href="https://drake.mit.edu/doxygen_cxx/index.html">C++ API</a>. There are some exceptions:</p>
+
+  <h3 id="c-class-template-instantiations-in-python">C++ Class Template Instantiations in Python</h3>
+
+  <p>When you define a general class template, e.g.
+<code class="highlighter-rouge">template &lt;typename T&gt; class Value</code>, something like <code class="highlighter-rouge">Value&lt;std::string&gt;</code> is
+called the instantiation.</p>
+
+  <p>For certain C++ templated types, they are exposed in Pythons also as templates;
+the parameter types (in this case, <code class="highlighter-rouge">T</code>) are the Python-equivalent types to the
+C++ type. Some examples:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>C++</th>
+        <th>Python</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="highlighter-rouge">std::string</code></td>
+        <td><code class="highlighter-rouge">str</code></td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">double</code></td>
+        <td><code class="highlighter-rouge">float, np.double, np.float64, ctypes.c_double</code></td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">drake::AutoDiffXd</code></td>
+        <td><code class="highlighter-rouge">pydrake.autodiffutils.AutoDiffXd</code></td>
+      </tr>
+      <tr>
+        <td><code class="highlighter-rouge">drake::symbolic::Expression</code></td>
+        <td><code class="highlighter-rouge">pydrake.symbolic.Expression</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Thus, the instantiation <code class="highlighter-rouge">Value&lt;std::string&gt;</code> will be bound in Python as
+<code class="highlighter-rouge">Value[str]</code>.</p>
+
+  <h2 id="scalar-types">Scalar Types</h2>
+
+  <p>Most classes in the Systems framework and in the multibody dynamics
+computational framework are templated on a scalar type, <code class="highlighter-rouge">T</code>.
+For convenience (and backwards compatibility) in Python, a slightly different
+binding convention is used.</p>
+
+  <p>For example, <code class="highlighter-rouge">Adder&lt;T&gt;</code> is a Systems primitive which has a user-defined
+number of inputs and outputs a single port which is the sum of all of the
+inputs.</p>
+
+  <p>In C++, you would access the instantiations using <code class="highlighter-rouge">Adder&lt;double&gt;</code>,
+<code class="highlighter-rouge">Adder&lt;AutoDiffXd&gt;</code>, and <code class="highlighter-rouge">Adder&lt;Expression&gt;</code> for common scalar types.</p>
+
+  <p>In Python, <code class="highlighter-rouge">Adder</code> actually refers to the “default” instantiation, the
+<code class="highlighter-rouge">Adder&lt;double&gt;</code> C++ class. To access other instantiations, you should add an
+<code class="highlighter-rouge">_</code> to the end of the C++ class name to get the Python template and then
+provide the parameters in square braces, <code class="highlighter-rouge">[...]</code>. In this example, you should
+use <code class="highlighter-rouge">Adder_[T]</code>.</p>
+
+  <p>To illustrate, you can print out the string representations of <code class="highlighter-rouge">Adder</code>,
+<code class="highlighter-rouge">Adder_</code>, and some of its instantiations in Python:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">pydrake.systems.primitives</span> <span class="kn">import</span> <span class="n">Adder</span><span class="p">,</span> <span class="n">Adder_</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">Adder</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="nc">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span><span class="s">'&gt;</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; print(Adder_)</span><span class="err">
+</span><span class="s">&lt;TemplateClass pydrake.systems.primitives.Adder_&gt;</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; from pydrake.autodiffutils import AutoDiffXd</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; from pydrake.symbolic import Expression</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; print(Adder_[float])</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span><span class="s">'&gt;</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; print(Adder_[AutoDiffXd])</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">]</span><span class="s">'&gt;</span><span class="err">
+</span><span class="s">&gt;&gt;&gt; print(Adder_[Expression])</span><span class="err">
+</span><span class="s">&lt;class '</span><span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">]</span><span class="s">'&gt;</span><span class="err">
+</span></code></pre></div>  </div>
+
+  <p>Additionally, you may convert an instance (if the conversion is available) using
+<code class="highlighter-rouge">System_[T].ToAutoDiffXd</code> and <code class="highlighter-rouge">System_[T].ToSymbolic</code>:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">adder</span> <span class="o">=</span> <span class="n">Adder</span><span class="p">(</span><span class="n">num_inputs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="o">.</span><span class="n">ToAutoDiffXd</span><span class="p">())</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">AutoDiffXd</span><span class="p">]</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">adder</span><span class="o">.</span><span class="n">ToSymbolic</span><span class="p">())</span>
+<span class="o">&lt;</span><span class="n">pydrake</span><span class="o">.</span><span class="n">systems</span><span class="o">.</span><span class="n">primitives</span><span class="o">.</span><span class="n">Adder_</span><span class="p">[</span><span class="n">Expression</span><span class="p">]</span> <span class="nb">object</span> <span class="n">at</span> <span class="mi">0</span><span class="n">x</span><span class="o">...&gt;</span>
+</code></pre></div>  </div>
+
+  <h2 id="c-function-and-method-template-instantiations-in-python">C++ Function and Method Template Instantiations in Python</h2>
+
+  <p>The above section indicates that C++ types are generally registered with
+Python, and a similar approach could be used for function and method templates.
+However, these templates usually fit a certain pattern and can be Pythonized in
+such a way that simplifies implementation, but may change the “feel” of the
+signature.</p>
+
+  <p>Two common (non-metaprogramming) applications of templated functions and
+methods present in Drake are <a href="https://en.cppreference.com/w/cpp/container/vector/emplace">emplace</a>-like
+functionality (using <a href="https://en.cppreference.com/w/cpp/language/parameter_pack">parameter packs</a>) and
+<a href="https://en.wikipedia.org/wiki/Type_erasure">type erasure</a>.
+However, Python doesn’t literally support these C++ language features. So, in
+binding them, they get “Pythonized”.</p>
+
+  <p>C++ APIs which use parameter packs, such as:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DiagramBuilder&lt;T&gt;::AddSystem&lt;SystemType&gt;(args...)
+MultibodyPlant&lt;T&gt;::AddJoint&lt;JointType&gt;(args...)
+MultibodyPlant&lt;T&gt;::AddFrame&lt;FrameType&gt;(args...)
+</code></pre></div>  </div>
+
+  <p>will become the following in Python:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">DiagramBuilder_</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">SystemType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
+<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="n">AddJoint</span><span class="p">(</span><span class="n">JointType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
+<span class="n">MultibodyPlant_</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="n">AddFrame</span><span class="p">(</span><span class="n">FrameType</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="o">...</span><span class="p">))</span>
+</code></pre></div>  </div>
+
+  <p>where the <code class="highlighter-rouge">*Type</code> tokens are replaced with the concrete type in question
+(e.g. <code class="highlighter-rouge">Adder_[T]</code>, <code class="highlighter-rouge">RevoluteJoint_[T]</code>, <code class="highlighter-rouge">FixedOffsetFrame_[T]</code>).</p>
+
+  <p>Similarly, type-erasure C++ APIs that look like:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>InputPort&lt;T&gt;::Eval&lt;ValueType&gt;(context)
+GeometryProperties::AddProperty&lt;ValueType&gt;(group_name, name, value)
+</code></pre></div>  </div>
+
+  <p>will become the following in Python:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">InputPort_</span><span class="p">[</span><span class="n">T</span><span class="p">]</span><span class="o">.</span><span class="n">Eval</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+<span class="n">GeometryProperties</span><span class="o">.</span><span class="n">AddProperty</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <h2 id="debugging-with-the-python-bindings">Debugging with the Python Bindings</h2>
+
+  <p>You may encounter issues with the Python Bindings that may arise from the
+underlying C++ code, and it may not always be obvious what the root cause is.</p>
+
+  <p>The first step to debugging is to consider running your code using the
+<code class="highlighter-rouge">trace</code> module. It is best practice to always have a <code class="highlighter-rouge">main()</code> function, and
+have a <code class="highlighter-rouge">if __name__ == "__main__"</code> clause. If you do this, then it is easy to
+trace. As an example:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">reexecute_if_unbuffered</span><span class="p">():</span>
+    <span class="s">"""Ensures that output is immediately flushed (e.g. for segfaults).
+    ONLY use this at your entrypoint. Otherwise, you may have code be
+    re-executed that will clutter your console."""</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    <span class="kn">import</span> <span class="nn">shlex</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"PYTHONUNBUFFERED"</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="s">""</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">"PYTHONUNBUFFERED"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"1"</span>
+        <span class="n">argv</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">:</span>
+            <span class="n">argv</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="s">" "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">shlex</span><span class="o">.</span><span class="n">quote</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">])</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">execv</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">argv</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">traced</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""Decorates func such that its execution is traced, but filters out any
+     Python code outside of the system prefix."""</span>
+    <span class="kn">import</span> <span class="nn">functools</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="kn">import</span> <span class="nn">trace</span>
+    <span class="k">if</span> <span class="n">ignoredirs</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">ignoredirs</span> <span class="o">=</span> <span class="p">[</span><span class="s">"/usr"</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">]</span>
+    <span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">Trace</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="n">ignoredirs</span><span class="p">)</span>
+
+    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">tracer</span><span class="o">.</span><span class="n">runfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">wrapped</span>
+
+
+<span class="c"># NOTE: You don't have to trace all of your code. If you can identify a</span>
+<span class="c"># single function, then you can just decorate it with this. If you're</span>
+<span class="c"># decorating a class method, then be sure to declare these functions above</span>
+<span class="c"># it.</span>
+<span class="nd">@traced</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">insert_awesome_code_here</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">reexecute_if_unbuffered</span><span class="p">()</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>  </div>
+
+  <div class="note">
+    <p>If you are developing in Drake and are using the <code class="highlighter-rouge">drake_py_unittest</code> macro, you can specify the argument <code class="highlighter-rouge">--trace=user</code> to get the same behavior.</p>
+  </div>
+
+  <p>This generally should help you trace where the code is dying. However, if you
+still need to dig in, you can build the bindings in debug mode, without symbol
+stripping, so you can debug with <code class="highlighter-rouge">gdb</code> or <code class="highlighter-rouge">lldb</code>:</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake -DCMAKE_BUILD_TYPE=Debug ../drake
+</code></pre></div>  </div>
+
+  <div class="warning">
+    <p>If you have SNOPT enabled (either <code class="highlighter-rouge">-DWITH_SNOPT=ON</code> or <code class="highlighter-rouge">-DWITH_ROBOTLOCOMOTION_SNOPT=ON</code>), symbols will <em>still</em> be stripped.</p>
+  </div>
+
+  <h2 id="for-developers">For Developers</h2>
+
+  <p>If you are developing Python bindings, please see the Doxygen page
+<a href="https://drake.mit.edu/doxygen_cxx/group__python__bindings.html">Python Bindings</a> which provides information on programming conventions, documentation, tips
+for debugging, and other advice.</p>
+
+</article>
+
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

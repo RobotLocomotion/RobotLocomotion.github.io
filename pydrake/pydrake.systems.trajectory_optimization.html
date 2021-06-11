@@ -1,0 +1,831 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.trajectory_optimization &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.trajectories" href="pydrake.trajectories.html"/>
+        <link rel="prev" title="pydrake.systems.system_sliders" href="pydrake.systems.system_sliders.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.planar_scenegraph_visualizer.html">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.system_sliders.html">pydrake.systems.system_sliders</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.trajectory_optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.trajectory_optimization">
+<span id="pydrake-systems-trajectory-optimization"></span><h1>pydrake.systems.trajectory_optimization<a class="headerlink" href="#module-pydrake.systems.trajectory_optimization" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint">
+<code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">AddDirectCollocationConstraint</code><span class="sig-paren">(</span><em>constraint: pydrake.systems.trajectory_optimization.DirectCollocationConstraint, timestep: numpy.ndarray[object[m, 1]], state: numpy.ndarray[object[m, 1]], next_state: numpy.ndarray[object[m, 1]], input: numpy.ndarray[object[m, 1]], next_input: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal"><span class="pre">prog</span></code>,
+ensuring that the order of variables in the binding matches the order
+expected by the constraint.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.trajectory_optimization.DirectCollocation">
+<em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">DirectCollocation</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectCollocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="pydrake.systems.trajectory_optimization.MultipleShooting"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.trajectory_optimization.MultipleShooting</span></code></a></p>
+<p>DirectCollocation implements the approach to trajectory optimization
+as described in C. R. Hargraves and S. W. Paris. Direct trajectory
+optimization using nonlinear programming and collocation. J Guidance,
+10(4):338-342, July-August 1987. It assumes a first-order hold on the
+input trajectory and a cubic spline representation of the state
+trajectory, and adds dynamic constraints (and running costs) to the
+midpoints as well as the breakpoints in order to achieve a 3rd order
+integration accuracy.</p>
+<p>Note: This algorithm only works with the continuous states of a
+system.</p>
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.DirectCollocation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.DirectCollocation, system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], num_time_samples: int, minimum_timestep: float, maximum_timestep: float, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, assume_non_continuous_states_are_fixed: bool = False</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectCollocation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the MathematicalProgram% and adds the collocation
+constraints.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dd>A dynamical system to be used in the dynamic constraints. This
+system must support System::ToAutoDiffXd. Note that this is
+aliased for the lifetime of this object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>Required to describe any parameters of the system. The values of
+the state in this context do not have any effect. This context
+will also be “cloned” by the optimization; changes to the context
+after calling this method will NOT impact the trajectory
+optimization.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_time_samples</span></code>:</dt>
+<dd>The number of breakpoints in the trajectory.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">minimum_timestep</span></code>:</dt>
+<dd>Minimum spacing between sample times.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">maximum_timestep</span></code>:</dt>
+<dd>Maximum spacing between sample times.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_port_index</span></code>:</dt>
+<dd>A valid input port index for <code class="docutils literal"><span class="pre">system</span></code> or InputPortSelection. All
+other inputs on the system will be left disconnected (if they are
+disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be fixed to their current
+values (if they are connected/fixed in <code class="docutils literal"><span class="pre">context)</span></code>.</dd>
+<dt><em>Default:</em> kUseFirstInputIfItExists.</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">assume_non_continuous_states_are_fixed</span></code>:</dd>
+</dl>
+<p>Boolean which, if true, allows this algorithm to optimize without
+considering the dynamics of any non-continuous states. This is helpful
+for optimizing systems that might have some additional book-keeping
+variables in their state. Only use this if you are sure that the
+dynamics of the additional state variables cannot impact the dynamics
+of the continuous states. $*Default:* false.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.trajectory_optimization.DirectCollocationConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">DirectCollocationConstraint</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectCollocationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Implements the direct collocation constraints for a first-order hold
+on the input and a cubic polynomial representation of the state
+trajectories.</p>
+<p>Note that the DirectCollocation implementation allocates only ONE of
+these constraints, but binds that constraint multiple times (with
+different decision variables, along the trajectory).</p>
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.DirectCollocationConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.DirectCollocationConstraint, system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;, assume_non_continuous_states_are_fixed: bool = False</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectCollocationConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DirectCollocation constructor for a description of the parameters.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.trajectory_optimization.DirectTranscription">
+<em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">DirectTranscription</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectTranscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="pydrake.systems.trajectory_optimization.MultipleShooting"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.trajectory_optimization.MultipleShooting</span></code></a></p>
+<p>DirectTranscription is perhaps the simplest implementation of a
+multiple shooting method, where we have decision variables
+representing the control and input at every sample time in the
+trajectory, and one-step of numerical integration provides the dynamic
+constraints between those decision variables.</p>
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.DirectTranscription.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectTranscription.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.trajectory_optimization.DirectTranscription, system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], num_time_samples: int, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;) -&gt; None</li>
+</ol>
+<p>Constructs the MathematicalProgram and adds the dynamic constraints.
+This version of the constructor is only for simple discrete-time
+systems (with a single periodic timestep update). Continuous-time
+systems must call one of the constructors that takes bounds on the
+timestep as an argument.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dd>A dynamical system to be used in the dynamic constraints. This
+system must support System::ToAutoDiffXd. Note that this is
+aliased for the lifetime of this object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>Required to describe any parameters of the system. The values of
+the state in this context do not have any effect. This context
+will also be “cloned” by the optimization; changes to the context
+after calling this method will NOT impact the trajectory
+optimization.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_time_samples</span></code>:</dt>
+<dd>The number of breakpoints in the trajectory.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_port_index</span></code>:</dt>
+<dd>A valid input port index or valid InputPortSelection for
+<code class="docutils literal"><span class="pre">system</span></code>. All other inputs on the system will be left
+disconnected (if they are disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be
+set to their current values (if they are connected/fixed in
+<code class="docutils literal"><span class="pre">context)</span></code>.</dd>
+</dl>
+<p><em>Default:</em> kUseFirstInputIfItExists.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.trajectory_optimization.DirectTranscription, system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], num_time_samples: int, fixed_timestep: pydrake.systems.trajectory_optimization.TimeStep, input_port_index: Union[pydrake.systems.framework.InputPortSelection, pydrake.systems.framework.InputPortIndex] = &lt;InputPortSelection.kUseFirstInputIfItExists: -2&gt;) -&gt; None</li>
+</ol>
+<p>Constructs the MathematicalProgram and adds the dynamic constraints.
+This version of the constructor is only for continuous-time systems;
+the dynamics constraints use explicit forward Euler integration.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dd>A dynamical system to be used in the dynamic constraints. This
+system must support System::ToAutoDiffXd. Note that this is
+aliased for the lifetime of this object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>Required to describe any parameters of the system. The values of
+the state in this context do not have any effect. This context
+will also be “cloned” by the optimization; changes to the context
+after calling this method will NOT impact the trajectory
+optimization.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_time_samples</span></code>:</dt>
+<dd>The number of breakpoints in the trajectory.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">fixed_timestep</span></code>:</dt>
+<dd>The spacing between sample times.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_port_index</span></code>:</dt>
+<dd>A valid input port index or valid InputPortSelection for
+<code class="docutils literal"><span class="pre">system</span></code>. All other inputs on the system will be left
+disconnected (if they are disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be
+set to their current values (if they are connected/fixed in
+<code class="docutils literal"><span class="pre">context)</span></code>.</dd>
+</dl>
+<p><em>Default:</em> kUseFirstInputIfItExists.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting">
+<em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">MultipleShooting</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram" title="pydrake.solvers.mathematicalprogram.MathematicalProgram"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.MathematicalProgram</span></code></a></p>
+<p>MultipleShooting is an abstract class for trajectory optimization that
+creates decision variables for inputs, states, and (optionally) sample
+times along the trajectory, then provides a number of methods for
+working with those decision variables.</p>
+<p>Subclasses must implement the abstract methods: DoAddRunningCost()
+ReconstructInputTrajectory() ReconstructStateTrajectory() using all of
+the correct interpolation schemes for the specific transcription
+method, and should add the constraints to impose the System% dynamics
+in their constructor.</p>
+<p>This class assumes that there are a fixed number (N) time
+steps/samples, and that the trajectory is discretized into timesteps h
+(N-1 of these), state x (N of these), and control input u (N of
+these).</p>
+<dl class="attribute">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddCompleteTrajectoryCallback">
+<code class="descname">AddCompleteTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], List[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]]], None], names: List[str]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddCompleteTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback method to visualize intermediate results of all
+variables used in the trajectory optimization. The callback should be
+of the form MyVisualization(sample_times, states, inputs, values),
+where sample_times is an N-by-1 VectorXd of sample times, states is a
+num_states-by-N MatrixXd of the current (intermediate) state
+trajectory at the break points, inputs is a num_inputs-by-N MatrixXd
+of the current (intermediate) input trajectory at the break points and
+values is a vector of num_rows-by-N MatrixXds of the current
+(intermediate) extra sequential variables specified by <code class="docutils literal"><span class="pre">names</span></code> at
+the break points.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Just like other costs/constraints, not all solvers support
+callbacks. Adding a callback here will force
+MathematicalProgram::Solve to select a solver that support
+callbacks. For instance, adding a visualization callback to a
+quadratic programming problem may result in using a nonlinear
+programming solver as the default solver.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints">
+<code class="descname">AddConstraintToAllKnotPoints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>f: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Constraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a constraint to all breakpoints, where any instances of time(),
+state(), and/or input() placeholder variables, as well as placeholder
+variables returned by calls to NewSequentialVariable(), are
+substituted with the relevant variables for each time index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the constraints added to each knot point.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds">
+<code class="descname">AddDurationBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a constraint on the total duration of the trajectory.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_bound</span></code>:</dt>
+<dd>A scalar double lower bound.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_bound</span></code>:</dt>
+<dd>A scalar double upper bound.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The constraint enforcing the duration bounds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if timesteps are not declared as decision variables.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualTimeIntervalsConstraints">
+<code class="descname">AddEqualTimeIntervalsConstraints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearConstraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualTimeIntervalsConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds constraints to enforce that all timesteps have equal duration.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of constraints enforcing all time intervals are equal.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if timesteps are not declared as decision variables.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddFinalCost">
+<code class="descname">AddFinalCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddFinalCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+</ol>
+<p>Adds a cost to the final time, of the form</p>
+<div class="math">
+\[cost = e(t,x,u),\]</div>
+<p>where any instances of time(), state(), and/or input() placeholder
+variables, as well as placeholder variables returned by calls to
+NewSequentialVariable(), are substituted with the relevant variables
+for the final time index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The final cost added to the problem.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, matrix: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+</ol>
+<p>Adds support for passing in a (scalar) matrix Expression, which is a
+common output of most symbolic linear algebra operations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The final cost added to the problem.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Derived classes will need to type using
+MultipleShooting::AddFinalCost; to “unhide” this method.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddInputTrajectoryCallback">
+<code class="descname">AddInputTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], None]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddInputTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback method to visualize intermediate results of input
+variables used in the trajectory optimization. The callback should be
+of the form MyVisualization(sample_times, values), where breaks is a
+N-by-1 VectorXd of sample times, and values is a num_inputs-by-N
+MatrixXd representing the current (intermediate) value of the input
+trajectory at the break points in each column.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Just like other costs/constraints, not all solvers support
+callbacks. Adding a callback here will force
+MathematicalProgram::Solve to select a solver that support
+callbacks. For instance, adding a visualization callback to a
+quadratic programming problem may result in using a nonlinear
+programming solver as the default solver.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddRunningCost">
+<code class="descname">AddRunningCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddRunningCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddRunningCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, g: pydrake.symbolic.Expression) -&gt; None</li>
+</ol>
+<p>Adds an integrated cost to all time steps, of the form</p>
+<div class="math">
+\[cost = \int_0^T g(t,x,u) dt,\]</div>
+<p>where any instances of time(), state(), and/or input() placeholder
+variables, as well as placeholder variables returned by calls to
+NewSequentialVariable(), are substituted with the relevant variables
+for each time index. The particular integration scheme is determined
+by the derived class implementation.</p>
+<ol class="arabic simple" start="2">
+<li>AddRunningCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, g: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Adds support for passing in a (scalar) matrix Expression, which is a
+common output of most symbolic linear algebra operations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddStateTrajectoryCallback">
+<code class="descname">AddStateTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], None]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddStateTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a callback method to visualize intermediate results of state
+variables used in the trajectory optimization. The callback should be
+of the form MyVisualization(sample_times, values), where sample_times
+is a N-by-1 VectorXd of sample times, and values is a num_states-by-N
+MatrixXd representing the current (intermediate) value of the state
+trajectory at the break points in each column.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Just like other costs/constraints, not all solvers support
+callbacks. Adding a callback here will force
+MathematicalProgram::Solve to select a solver that support
+callbacks. For instance, adding a visualization callback to a
+quadratic programming problem may result in using a nonlinear
+programming solver as the default solver.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds">
+<code class="descname">AddTimeIntervalBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds bounds on all time intervals.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_bound</span></code>:</dt>
+<dd>A scalar double lower bound.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_bound</span></code>:</dt>
+<dd>A scalar double upper bound.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bounding box constraint enforcing time interval bounds.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if timesteps are not declared as decision variables.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.final_state">
+<code class="descname">final_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.final_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decision variables associated with the state, x, at the
+final time index.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.fixed_timestep">
+<code class="descname">fixed_timestep</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.fixed_timestep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetInputSamples">
+<code class="descname">GetInputSamples</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetInputSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a matrix containing the input values (arranged in columns) at
+each breakpoint at the solution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSampleTimes">
+<code class="descname">GetSampleTimes</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSampleTimes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector containing the elapsed time at each breakpoint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableAtIndex">
+<code class="descname">GetSequentialVariableAtIndex</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>name: str</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableAtIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decision variables associated with the sequential variable
+<code class="docutils literal"><span class="pre">name</span></code> at time index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">NewSequentialVariable().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableSamples">
+<code class="descname">GetSequentialVariableSamples</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a matrix containing the sequential variable values (arranged
+in columns) at each breakpoint at the solution.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dd>The name of sequential variable to get the results for. Must
+correspond to an already added sequential variable.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetStateSamples">
+<code class="descname">GetStateSamples</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetStateSamples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a matrix containing the state values (arranged in columns) at
+each breakpoint at the solution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.initial_state">
+<code class="descname">initial_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.initial_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decision variables associated with the state, x, at the
+initial time index.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.input">
+<code class="descname">input</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>input(self: pydrake.systems.trajectory_optimization.MultipleShooting) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Returns placeholder decision variables (not actually declared as
+decision variables in the MathematicalProgram) associated with the
+input, u, but with the time-index undetermined. These variables will
+be substituted for real decision variables at particular times in
+methods like AddRunningCost. Passing these variables directly into
+objectives/constraints for the parent classes will result in an error.</p>
+<ol class="arabic simple" start="2">
+<li>input(self: pydrake.systems.trajectory_optimization.MultipleShooting, index: int) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Returns the decision variables associated with the input, u, at time
+index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewSequentialVariable">
+<code class="descname">NewSequentialVariable</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>rows: int</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewSequentialVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a sequential variable (a variable that has associated decision
+variables for each time index) to the optimization problem and returns
+a placeholder variable (not actually declared as a decision variable
+in the MathematicalProgram). This variable will be substituted for
+real decision variables at particular times in methods like
+AddRunningCost(). Passing this variable directly into
+objectives/constraints for the parent classes will result in an error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructInputTrajectory">
+<code class="descname">ReconstructInputTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructInputTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the input trajectory at the solution as a PiecewisePolynomial. The
+order of the trajectory will be determined by the integrator used in
+the dynamic constraints. Requires that the system has at least one
+input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructStateTrajectory">
+<code class="descname">ReconstructStateTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructStateTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the state trajectory at the solution as a PiecewisePolynomial. The
+order of the trajectory will be determined by the integrator used in
+the dynamic constraints.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialTrajectory">
+<code class="descname">SetInitialTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>traj_init_u: pydrake.trajectories.PiecewisePolynomial</em>, <em>traj_init_x: pydrake.trajectories.PiecewisePolynomial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.state">
+<code class="descname">state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>state(self: pydrake.systems.trajectory_optimization.MultipleShooting) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Returns placeholder decision variables (not actually declared as
+decision variables in the MathematicalProgram) associated with the
+state, x, but with the time-index undetermined. These variables will
+be substituted for real decision variables at particular times in
+methods like AddRunningCost. Passing these variables directly into
+objectives/constraints for the parent classes will result in an error.</p>
+<ol class="arabic simple" start="2">
+<li>state(self: pydrake.systems.trajectory_optimization.MultipleShooting, index: int) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Returns the decision variables associated with the state, x, at time
+index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.time">
+<code class="descname">time</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a placeholder decision variable (not actually declared as a
+decision variable in the MathematicalProgram) associated with the
+time, t. This variable will be substituted for real decision variables
+at particular times in methods like AddRunningCost. Passing this
+variable directly into objectives/constraints for the parent classes
+will result in an error.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.MultipleShooting.timestep">
+<code class="descname">timestep</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.timestep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the decision variable associated with the timestep, h, at time
+index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if timesteps are not declared as decision variables.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.trajectory_optimization.TimeStep">
+<em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">TimeStep</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.TimeStep" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.trajectory_optimization.TimeStep.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.TimeStep</em>, <em>value: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.TimeStep.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.trajectory_optimization.TimeStep.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.TimeStep.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.trajectories.html" class="btn btn-neutral float-right" title="pydrake.trajectories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.system_sliders.html" class="btn btn-neutral" title="pydrake.systems.system_sliders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

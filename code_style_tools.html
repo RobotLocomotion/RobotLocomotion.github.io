@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Tools for Code Style Compliance</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Tools for Code Style Compliance</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This section provides a list of tools that some have found useful for ensuring
+their code abides by <a href="/code_style_guide.html">Drake’s coding style</a>. The list
+is by no means comprehensive.
+If your favorite tools or methodologies are not listed, we would be delighted
+to learn about them. Please document your trick and submit a pull request!</p>
+
+<h1 id="automated-style-checks">Automated style checks</h1>
+
+<p>Code style tests are run by default during <code class="highlighter-rouge">bazel test</code> and the results are
+cached so that only edited files are re-checked.  In other words, no special
+action is required by a developer.</p>
+
+<p>However, you may still invoke code style checks directly if desired, as
+follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /path/to/drake
+bazel test --config lint //...         # Only run style checks; don't build or test anything else.
+bazel test --config lint //common/...  # Check common/ and its child subdirectories.
+</code></pre></div></div>
+
+<p>User manuals for the style-checking tools are as follows:</p>
+
+<ul>
+  <li>C/C++: See the cpplint <code class="highlighter-rouge">USAGE</code> string at
+<a href="https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py">https://github.com/google/styleguide/blob/gh-pages/cpplint/cpplint.py</a>.
+    <ul>
+      <li>In particular, note the <code class="highlighter-rouge">// NOLINT(foo/bar)</code> syntax to disable a warning.</li>
+    </ul>
+  </li>
+  <li>Python: See the pycodestyle manual at
+<a href="http://pycodestyle.readthedocs.io/en/latest/intro.html">http://pycodestyle.readthedocs.io/en/latest/intro.html</a>.
+    <ul>
+      <li>The syntax <code class="highlighter-rouge"># noqa</code> can be used to quiet the warning about an overly-long
+line.</li>
+    </ul>
+  </li>
+  <li>Bazel: Uses both pycodestyle like Python, and also <a href="/bazel.html#updating-build-files">buildifier</a>.</li>
+</ul>
+
+<h1 id="manual-style-fixups">Manual style fixups</h1>
+
+<h2 id="cc-clang-format">C/C++: Clang-Format</h2>
+
+<p>The <a href="/from_source.html#mandatory-platform-specific-instructions">Mandatory platform specific instructions</a>
+install Drake’s required version of <code class="highlighter-rouge">clang-format</code>, depending on the platform
+(macOS or Ubuntu).</p>
+
+<p>To run <code class="highlighter-rouge">clang-format</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on macOS:
+/usr/local/opt/llvm@9/bin/clang-format -i -style=file [file name]
+
+# For development on Ubuntu:
+clang-format-9 -i -style=file [file name]
+</code></pre></div></div>
+
+<p>Using <code class="highlighter-rouge">clang-format</code> will modify the entire file that is specified. As an
+alternative, you can use <code class="highlighter-rouge">git clang-format</code> on Ubuntu to change only the
+portions of a file that you have modified. To run <code class="highlighter-rouge">git clang-format</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># For development on Ubuntu: format a file that has been staged in git
+git clang-format-9 --binary=/usr/bin/clang-format-9 -- [file name]
+
+# For development on Ubuntu: format a file that has been modified but not staged
+git clang-format-9 --binary=/usr/bin/clang-format-9 -f -- [file name]
+</code></pre></div></div>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+var classdrake_1_1multibody_1_1_joint_actuator =
+[
+    [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#a51aefd06d016c29ee25018216a7d5ff2", null ],
+    [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ac2abe86d242ea7704d469dcabe028f3f", null ],
+    [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ad0a76a710eff20920ee421eeefc81072", null ],
+    [ "AddInOneForce", "classdrake_1_1multibody_1_1_joint_actuator.html#ac1dd511b968cee9545a54a228020546e", null ],
+    [ "calc_reflected_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a5b0758f9f10b1a8a122a6e3c1ee1ff92", null ],
+    [ "default_gear_ratio", "classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503", null ],
+    [ "default_reflected_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a933d2740c848bc263cbf64089066b275", null ],
+    [ "default_rotor_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#af38616e070c9835a7a902c7d87c4a7b5", null ],
+    [ "effort_limit", "classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb", null ],
+    [ "gear_ratio", "classdrake_1_1multibody_1_1_joint_actuator.html#a544e5bac743e6b9fa43ce300a4386f21", null ],
+    [ "get_actuation_vector", "classdrake_1_1multibody_1_1_joint_actuator.html#a7f583cc35433f57b5096490cbc45f55a", null ],
+    [ "joint", "classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86", null ],
+    [ "name", "classdrake_1_1multibody_1_1_joint_actuator.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_joint_actuator.html#ab74fcb0ef0b21a9444d55353ca835daa", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_joint_actuator.html#a31bc35162130a7675b6c289c5655fb56", null ],
+    [ "rotor_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#ac63a3f2893508b6b53a2afe0f9e87741", null ],
+    [ "set_actuation_vector", "classdrake_1_1multibody_1_1_joint_actuator.html#a0124c80b63b5acc2980e3a57107c43be", null ],
+    [ "set_default_gear_ratio", "classdrake_1_1multibody_1_1_joint_actuator.html#add3616abff99943233fb7dd73786465c", null ],
+    [ "set_default_rotor_inertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a219373564f27d5532ccc5931708a1638", null ],
+    [ "SetGearRatio", "classdrake_1_1multibody_1_1_joint_actuator.html#ab38cff77a3b73d5982cd54dae58eb10f", null ],
+    [ "SetRotorInertia", "classdrake_1_1multibody_1_1_joint_actuator.html#a46550a493387368d4c5244ea6e0d49f9", null ],
+    [ "JointActuator", "classdrake_1_1multibody_1_1_joint_actuator.html#ab3f0ccdbb102d410f4423b6d66f93fb3", null ]
+];

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Drake v0.20.0</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Drake v0.20.0</h1>
+    </div>
+  </header>
+
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <a href="/release_notes/release_notes.html">Back to Release Notes</a>
+        <hr/>
+        <h1 id="announcements">Announcements</h1>
+
+<p>On macOS, Homebrew now symlinks Drake’s compatible version of Python 3 (3.8)
+into <code class="highlighter-rouge">/usr/local/bin/</code>, so it is on the <code class="highlighter-rouge">$PATH</code> by default.  There is no
+longer any need to add <code class="highlighter-rouge">/usr/local/opt/python@3.8/bin</code> to your <code class="highlighter-rouge">$PATH</code>.</p>
+
+<div class="warning">
+  <p>The newly-added feature for JavaScript system diagram visualization
+(<a href="https://github.com/RobotLocomotion/drake/pull/13644">#13644</a>) with function name <code class="highlighter-rouge">drake::systems::GenerateHtml</code> in C++ and
+<code class="highlighter-rouge">pydrake.systems.framework.GenerateHtml</code> in Python fetches the GoJS graph
+library in your browser with only an evaluation license.  We recommend
+avoiding this new feature while we sort out the licensing question
+(<a href="https://github.com/RobotLocomotion/drake/pull/13705">#13705</a>).</p>
+</div>
+
+<h1 id="breaking-changes-since-v0190">Breaking changes since v0.19.0</h1>
+
+<p>There are no breaking changes that did not undergo a deprecation period.</p>
+
+<h1 id="changes-since-v0190">Changes since v0.19.0:</h1>
+
+<h2 id="dynamical-systems">Dynamical Systems</h2>
+
+<p>New features</p>
+
+<ul>
+  <li>Add SystemVisitor to introspect Diagrams (<a href="https://github.com/RobotLocomotion/drake/pull/13628">#13628</a>)</li>
+  <li>Add JavaScript system diagram visualization (<a href="https://github.com/RobotLocomotion/drake/pull/13644">#13644</a>)</li>
+</ul>
+
+<p>Fixes</p>
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="mathematical-program">Mathematical Program</h2>
+
+<p>New features</p>
+
+<ul>
+  <li>Create even or odd degree monomial basis (<a href="https://github.com/RobotLocomotion/drake/pull/13605">#13605</a>)</li>
+  <li>SdpaFreeFormat can remove free variables (<a href="https://github.com/RobotLocomotion/drake/pull/13600">#13600</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13669">#13669</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13685">#13685</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13687">#13687</a>)</li>
+  <li>GenerateSDPA supports removing free variables (<a href="https://github.com/RobotLocomotion/drake/pull/13636">#13636</a>)</li>
+  <li>MathematicalProgram creates even or odd degree polynomials (<a href="https://github.com/RobotLocomotion/drake/pull/13637">#13637</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13641">#13641</a>)</li>
+</ul>
+
+<p>Fixes</p>
+
+<ul>
+  <li>None</li>
+</ul>
+
+<h2 id="multibody-dynamics">Multibody Dynamics</h2>
+
+<p>New features</p>
+
+<ul>
+  <li>Add accelerometer sensor (<a href="https://github.com/RobotLocomotion/drake/pull/13501">#13501</a>)</li>
+  <li>Add gyroscope sensor (<a href="https://github.com/RobotLocomotion/drake/pull/13604">#13604</a>)</li>
+  <li>Enable CalcBiasSpatialAcceleration to have non-world measured-in-frame (<a href="https://github.com/RobotLocomotion/drake/pull/13453">#13453</a>)</li>
+  <li>Enable CalcBiasTranslationalAcceleration for non-world measured-in frame (<a href="https://github.com/RobotLocomotion/drake/pull/13587">#13587</a>)</li>
+  <li>RenderEngineGl is now available (<a href="https://github.com/RobotLocomotion/drake/pull/13584">#13584</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13616">#13616</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13626">#13626</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13629">#13629</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13659">#13659</a>)</li>
+  <li>RenderEngineVtk now uses full camera intrinsics (<a href="https://github.com/RobotLocomotion/drake/pull/13655">#13655</a>)</li>
+  <li>Extend camera intrinsics into geometry and geometry/render (<a href="https://github.com/RobotLocomotion/drake/pull/13557">#13557</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13634">#13634</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13635">#13635</a>)</li>
+  <li>IllustrationProperties can be updated after parsing (<a href="https://github.com/RobotLocomotion/drake/pull/13598">#13598</a>)</li>
+  <li>Allow changing point contact parameters on a per-geometry basis via SceneGraph; these become Systems Framework parameters that live in the Context (<a href="https://github.com/RobotLocomotion/drake/pull/13630">#13630</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13686">#13686</a>)</li>
+</ul>
+
+<p>Fixes</p>
+
+<ul>
+  <li>Fix BeamModel’s scalar conversion constructor (<a href="https://github.com/RobotLocomotion/drake/pull/13615">#13615</a>)</li>
+  <li>Declare SceneGraph related ports in MultibodyPlant constructor (<a href="https://github.com/RobotLocomotion/drake/pull/13558">#13558</a>)</li>
+  <li>Fix MultibodyPlant overflow with &gt;128 contact points (<a href="https://github.com/RobotLocomotion/drake/pull/13676">#13676</a>)</li>
+</ul>
+
+<h2 id="tutorials-and-examples">Tutorials and examples</h2>
+
+<ul>
+  <li>Use JavaScript system diagram visualization in dynamical_system.ipynb (<a href="https://github.com/RobotLocomotion/drake/pull/13644">#13644</a>)</li>
+  <li>Move manipulation station clutter clearing bins lower relative to robot to dramatically improve kinematic feasibility (<a href="https://github.com/RobotLocomotion/drake/pull/13666">#13666</a>)</li>
+</ul>
+
+<h2 id="miscellaneous-features-and-fixes">Miscellaneous features and fixes</h2>
+
+<ul>
+  <li>yaml: Add retain_map_defaults to YamlReadArchive::Options (<a href="https://github.com/RobotLocomotion/drake/pull/13590">#13590</a>)</li>
+  <li>yaml: Permit writing variant values beyond the 0’th index (<a href="https://github.com/RobotLocomotion/drake/pull/13631">#13631</a>)</li>
+  <li>yaml: Correctly write out empty sub-structs (<a href="https://github.com/RobotLocomotion/drake/pull/13679">#13679</a>)</li>
+  <li>planar_gripper: Add additional lcm message types (<a href="https://github.com/RobotLocomotion/drake/pull/13554">#13554</a>)</li>
+</ul>
+
+<h2 id="pydrake-bindings">pydrake bindings</h2>
+
+<p>New features</p>
+
+<ul>
+  <li>Add ConnectMeshcatVisualizer sugar (<a href="https://github.com/RobotLocomotion/drake/pull/13632">#13632</a>)</li>
+</ul>
+
+<p>Fixes</p>
+
+<ul>
+  <li>Pass animation arguments through to meshcat (<a href="https://github.com/RobotLocomotion/drake/pull/13643">#13643</a>)</li>
+  <li>Size the CalcJacobianTranslationalVelocity output matrix correctly (<a href="https://github.com/RobotLocomotion/drake/pull/13653">#13653</a>)</li>
+</ul>
+
+<p>Newly bound</p>
+
+<ul>
+  <li>pydrake.examples.acrobot.AcrobotPlant.get_mutable_parameters (<a href="https://github.com/RobotLocomotion/drake/pull/13556">#13556</a>)</li>
+  <li>pydrake.examples.acrobot.AcrobotPlant.get_mutable_state (<a href="https://github.com/RobotLocomotion/drake/pull/13556">#13556</a>)</li>
+  <li>pydrake.examples.acrobot.AcrobotPlant.get_parameters (<a href="https://github.com/RobotLocomotion/drake/pull/13556">#13556</a>)</li>
+  <li>pydrake.examples.acrobot.AcrobotPlant.get_state (<a href="https://github.com/RobotLocomotion/drake/pull/13556">#13556</a>)</li>
+  <li>pydrake.geometry.Capsule (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.Ellipsoid (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.QueryObject.X_PF (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.QueryObject.X_WF (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.QueryObject.X_WG (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.GetName (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.GetPoseInParent (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.GetSourceName (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.NumAnchoredGeometries (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.NumDynamicGeometries (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.NumDynamicGeometries (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.NumGeometriesWithRole (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.SourceIsRegistered (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.multibody.plant.MultibodyPlant.CalcBiasSpatialAcceleration (<a href="https://github.com/RobotLocomotion/drake/pull/13638">#13638</a>)</li>
+  <li>pydrake.multibody.plant.MultibodyPlant.CalcBiasTranslationalAcceleration (<a href="https://github.com/RobotLocomotion/drake/pull/13638">#13638</a>)</li>
+  <li>pydrake.multibody.plant.MultibodyPlant.CalcCenterOfMassPosition (<a href="https://github.com/RobotLocomotion/drake/pull/13594">#13594</a>)</li>
+  <li>pydrake.solvers.MathematicalProgramResult.set_x_val (<a href="https://github.com/RobotLocomotion/drake/pull/13577">#13577</a>)</li>
+</ul>
+
+<h2 id="build-system-and-dependencies">Build system and dependencies</h2>
+
+<ul>
+  <li>On macOS, use Sphinx from Homebrew instead of PyPI (<a href="https://github.com/RobotLocomotion/drake/pull/13551">#13551</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13575">#13575</a>)</li>
+  <li>On macOS, Drake’s supported python3.8 is now on the default PATH (<a href="https://github.com/RobotLocomotion/drake/pull/13660">#13660</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13668">#13668</a>)</li>
+  <li>On Ubuntu, the minimum GCC version is now 7.5 (<a href="https://github.com/RobotLocomotion/drake/pull/13611">#13611</a>)</li>
+  <li>On Ubuntu, the supported Clang version is now 9 (<a href="https://github.com/RobotLocomotion/drake/pull/13650">#13650</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13656">#13656</a>)</li>
+  <li>On Ubuntu, GL-related dependencies are more precise and use libOpenGL instead of libGL (<a href="https://github.com/RobotLocomotion/drake/pull/13649">#13649</a>)</li>
+  <li>Rebuild VTK and drake-visualizer against OpenGL (<a href="https://github.com/RobotLocomotion/drake/pull/13649">#13649</a>)</li>
+  <li>Fix Ubuntu Focal 20.04 to use C++ flavor of nlopt (<a href="https://github.com/RobotLocomotion/drake/pull/13633">#13633</a>)</li>
+  <li>Upgrade buildifier to latest release 3.3.0 (<a href="https://github.com/RobotLocomotion/drake/pull/13620">#13620</a>)</li>
+  <li>Upgrade fcl to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/13621">#13621</a>)</li>
+  <li>Upgrade fmt to latest release 7.0.1 (<a href="https://github.com/RobotLocomotion/drake/pull/13667">#13667</a>)</li>
+  <li>Upgrade googlebenchmark to latest release 1.5.1 (<a href="https://github.com/RobotLocomotion/drake/pull/13623">#13623</a>)</li>
+  <li>Upgrade lcm to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/13622">#13622</a>)</li>
+  <li>Upgrade pybind11 fork to latest commit (<a href="https://github.com/RobotLocomotion/drake/pull/13579">#13579</a>)</li>
+  <li>Upgrade spdlog to latest release 1.7.0 (<a href="https://github.com/RobotLocomotion/drake/pull/13667">#13667</a>)</li>
+</ul>
+
+<h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
+
+<ul>
+  <li>Automatic conversion and interop between RigidTransform/Isometry3 (<a href="https://github.com/RobotLocomotion/drake/pull/13595">#13595</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13607">#13607</a>, <a href="https://github.com/RobotLocomotion/drake/pull/13608">#13608</a>)
+    <ul>
+      <li>drake::math::RigidTransform::linear</li>
+      <li>drake::math::RigidTransform::matrix</li>
+      <li>drake::math::RigidTransform::operator Isometry3</li>
+    </ul>
+  </li>
+  <li>All functions within manipulation/util/bot_core_lcm_encode_decode.h (<a href="https://github.com/RobotLocomotion/drake/pull/13596">#13596</a>)
+    <ul>
+      <li>::EncodeVector3d</li>
+      <li>::DecodeVector3d</li>
+      <li>::EncodeQuaternion</li>
+      <li>::DecodeQuaternion</li>
+      <li>::EncodePose</li>
+      <li>::DecodePose</li>
+      <li>::EncodeTwist</li>
+      <li>::DecodeTwist</li>
+    </ul>
+  </li>
+  <li>manipulation/models/wsg_50_description URDF and meshes (<a href="https://github.com/RobotLocomotion/drake/pull/13693">#13693</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.GetNameByFrameId (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+  <li>pydrake.geometry.SceneGraphInspector.GetNameByGeometryId (<a href="https://github.com/RobotLocomotion/drake/pull/13559">#13559</a>)</li>
+</ul>
+
+<h2 id="removal-of-deprecated-items">Removal of deprecated items</h2>
+
+<ul>
+  <li>::Polynomial<T> ([#13610][_#13610])</T></li>
+  <li>::Polynomiald (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>::TrigPoly<T> ([#13610][_#13610])</T></li>
+  <li>::TrigPolyd (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>::VectorXPoly (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>::VectorXTrigPoly (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::examples::kuka_iiwa_arm::ApplyJointVelocityLimits (<a href="https://github.com/RobotLocomotion/drake/pull/13612">#13612</a>)</li>
+  <li>drake::examples::kuka_iiwa_arm::EncodeKeyFrames (<a href="https://github.com/RobotLocomotion/drake/pull/13612">#13612</a>)</li>
+  <li>drake::symbolic::Expression::ToPolynomial (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::systems::AntiderivativeFunction::SpecifiedValues (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::systems::InitialValueProblem::ODEFunction (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::systems::InitialValueProblem::SpecifiedValues (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::systems::ScalarInitialValueProblem::ScalarODEFunction (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::systems::ScalarInitialValueProblem::SpecifiedValues (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::trajectories::PiecewisePolynomial::Cubic (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::trajectories::PiecewisePolynomial::Pchip (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li><code class="highlighter-rouge">drake::trajectories::PiecewisePolynomial&lt;T&gt;::PolynomialType</code> (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+  <li>drake::trajectories::PiecewiseQuaternionSlerp::get_quaternion_knots (<a href="https://github.com/RobotLocomotion/drake/pull/13610">#13610</a>)</li>
+</ul>
+
+<h1 id="notes">Notes</h1>
+
+<p>This release provides
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.20.0">pre-compiled binaries</a>
+named <code class="highlighter-rouge">drake-20200717-{bionic|focal|mac}.tar.gz</code>. See
+<a href="/from_binary.html#nightly-releases">Nightly Releases</a> for instructions on how to use them.</p>
+
+<p>Drake binary releases incorporate a pre-compiled version of
+<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
+<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
+Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
+
+
+      </article>
+    </div>
+  </section>
+
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

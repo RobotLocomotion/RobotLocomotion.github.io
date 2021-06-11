@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Release Playbook</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Release Playbook</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This document explains the steps related to publishing a version-numbered Drake
+binary release.  It is intended only for use by the few Drake Developer experts
+who regularly handle the release process.</p>
+
+<p>We publish a minor release approximately once per month in the middle of the
+calendar month, with version number is <code class="highlighter-rouge">v0.N.0</code> where <code class="highlighter-rouge">N</code> is monotonically
+increasing.</p>
+
+<h1 id="minor-releases">Minor releases</h1>
+
+<p>Begin this process around 1 week prior to the intended release date.</p>
+
+<h2 id="prior-to-release">Prior to release</h2>
+
+<ol>
+  <li>Choose the next version number.</li>
+  <li>Create a local Drake branch named <code class="highlighter-rouge">release_notes-v0.N.0</code> (so that others
+can easily find and push to it after the PR is opened).</li>
+  <li>As the first commit on the branch, mimic the commit
+(<a href="https://github.com/RobotLocomotion/drake/pull/14208/commits/674b84877bc08448b59a2243f3b910a7b6dbab43">link</a>
+from <a href="https://github.com/RobotLocomotion/drake/pull/14208">PR 14208</a>
+in order to disable CI.  A quick way to do this might be:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch upstream pull/14208/head
+git cherry-pick 674b84877bc08448b59a2243f3b910a7b6dbab43
+</code></pre></div>    </div>
+  </li>
+  <li>Push that branch and then open a new pull request titled:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>doc: Add release notes v0.N.0
+</code></pre></div>    </div>
+    <p>Make sure that “Allow edits from maintainers” on the GitHub PR page is
+enabled (the checkbox is checked).</p>
+  </li>
+  <li>For release notes, on an ongoing basis, add recent commit messages to the
+release notes draft using the <code class="highlighter-rouge">tools/release_engineering/relnotes</code> tooling.
+(Instructions can be found atop its source code: <a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/relnotes.py"><code class="highlighter-rouge">relnotes.py</code></a>)
+    <ol>
+      <li>On the first run, use <code class="highlighter-rouge">--action=create</code> to bootstrap the file.
+        <ul>
+          <li>The output is draft release notes in <code class="highlighter-rouge">doc/_release-notes/v0.N.0.md</code>.</li>
+        </ul>
+      </li>
+      <li>On the subsequent runs, use <code class="highlighter-rouge">--action=update</code> to refresh the file.</li>
+    </ol>
+  </li>
+  <li>For release notes, on an ongoing basis, clean up and relocate the commit
+notes to properly organized and wordsmithed bullet points. See <a href="#polishing-the-release-notes">Polishing
+the release notes</a>.</li>
+  <li>From time to time, merge <code class="highlighter-rouge">upstream/master</code> into your
+<code class="highlighter-rouge">origin/release_notes-v0.N.0</code> branch (so that it doesn’t go stale).
+Never rebase or force-push to the branch.  We expect that several people
+will clone and push to it concurrently.</li>
+  <li>As the release is nearly ready, post a call for action for feature teams to
+look at the draft document and provide suggestions (in reviewable) or fixes
+(as pushes).
+    <ol>
+      <li>To help ensure that the “newly deprecated APIs” section is accurate, grep
+the code for <code class="highlighter-rouge">YYYY-MM-01</code> deprecation notations, for the <code class="highlighter-rouge">MM</code> values
+that would have been associated with our +3 months typical period.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="polishing-the-release-notes">Polishing the release notes</h2>
+
+<p>Here are some guidelines for bringing commit notes from the relnotes tool into
+the main body of the document:</p>
+
+<ul>
+  <li>Many commit messages can be cut down to their summary strings and used as-is.</li>
+  <li>Expand all acronyms (eg, MBP -&gt; MultibodyPlant, SG -&gt; SceneGraph).</li>
+  <li>Commits can be omitted if they only affect tests or non-installed examples.</li>
+  <li>In general you should mention new bindings and deprecated/removed classes and
+methods using their exact name (for easier searching).
+    <ul>
+      <li>In the pydrake and deprecation sections in fact you can just put the
+  fully-qualified name as the whole line item; the meaning is clear from
+  context.</li>
+      <li>This may mean having a long list of items for a single commit.  That is
+fine.</li>
+    </ul>
+  </li>
+  <li>We have four common grammatical forms for our commit messages:
+    <ul>
+      <li>Past tense (“Added new method foo”) is acceptable</li>
+      <li>Noun phrase (“Ability to foo the bar”) is acceptable</li>
+      <li>Imperative (“Add new method foo”, i.e. PEP-8 style) is acceptable</li>
+      <li>Present tense (“Adds new method foo”, i.e. Google styleguide style) is
+discouraged</li>
+    </ul>
+  </li>
+  <li>Use exactly the same wording for the boilerplate items:
+    <ul>
+      <li>Every dependency upgrade line should be “Upgrade libfoobar to latest
+release 1.2.3” or “Upgrade funrepo to latest commit”.</li>
+      <li>Dependencies should be referred to by their workspace name.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Some features under development (eg, hydroelastic as of this writing) may
+have no-release-notes policies, as their APIs although public are not yet
+fully supported.  Be sure to take note of which these are, or ask on
+<code class="highlighter-rouge">#platform_review</code> slack.</p>
+  </li>
+  <li>Keep all bullet points to one line.
+    <ul>
+      <li>Using hard linebreaks to stay under 80 columns makes the bullet lists hard
+to maintain over time.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="cutting-the-release">Cutting the release</h2>
+
+<ol>
+  <li>Find a plausible build to use
+    <ol>
+      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Production/">https://drake-jenkins.csail.mit.edu/view/Production/</a> is clean</li>
+      <li>Make sure <a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/</a>
+has nothing still running (modulo the <code class="highlighter-rouge">*-coverage</code> builds, which we can
+ignore)</li>
+      <li>Open the latest builds from the following builds:
+        <ol>
+          <li>https://drake-jenkins.csail.mit.edu/view/Packaging/job/mac-catalina-unprovisioned-clang-bazel-nightly-snopt-packaging/</li>
+          <li>https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-bionic-unprovisioned-gcc-bazel-nightly-snopt-packaging/</li>
+          <li>https://drake-jenkins.csail.mit.edu/view/Packaging/job/linux-focal-unprovisioned-gcc-bazel-nightly-snopt-packaging/</li>
+        </ol>
+      </li>
+      <li>Check the logs for those packaging builds and find the URLs they posted
+to (open the latest build, go to “View as plain text”, and search for
+<code class="highlighter-rouge">drake/nightly/drake-20</code>), and find the date.  It will be <code class="highlighter-rouge">YYYYMMDD</code>
+with today’s date (they kick off after midnight).  All of the builds
+should have the same date. If not, wait until the following night.</li>
+      <li>Use the
+<code class="highlighter-rouge">tools/release_engineering/download_release_candidate</code> tool to download
+and verify that all the release candidates are built from the same
+commit.  (It’s usage
+instructions are atop its source code:
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/release_engineering/download_release_candidate.py">download_release_candidate.py</a>.)</li>
+    </ol>
+  </li>
+  <li>Update the release notes to have the <code class="highlighter-rouge">YYYYMMDD</code> we choose, and to make
+sure that the nightly build git sha from the prior step matches the
+<code class="highlighter-rouge">newest_commit</code> whose changes are enumerated in the notes.  Some dates
+are YYYYMMDD format, some are YYYY-MM-DD format; be sure to fix them all.</li>
+  <li>Merge the release notes PR</li>
+  <li>After merge, go to <a href="https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-bionic-unprovisioned-gcc-bazel-nightly-documentation/">https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-bionic-unprovisioned-gcc-bazel-nightly-documentation/</a> and push “Build now”.
+    <ul>
+      <li>If you don’t have “Build now” click “Log in” first in upper right.</li>
+    </ul>
+  </li>
+  <li>Open <a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a> and choose “Draft a
+new release”.  Note that this page does has neither history nor undo.  Be
+slow and careful!
+    <ol>
+      <li>Tag version is: v0.N.0</li>
+      <li>Target is: [the git sha from above]
+        <ul>
+          <li>You should select the commit from Target &gt; Recent Commits. The search
+  via commit does not work if you don’t use the correct length.</li>
+        </ul>
+      </li>
+      <li>Release title is: Drake v0.N.0</li>
+      <li>The body of the release should be forked from the prior release (open the
+prior release’s web page and click “Edit” to get the markdown), with
+appropriate edits as follows:
+        <ul>
+          <li>The version number</li>
+        </ul>
+      </li>
+      <li>Into the box labeled “Attach binaries by dropping them here or selecting
+them.”, drag and drop the 9 release binary artifacts from above (the 3
+tarballs, and their 6 checksums)</li>
+      <li>Choose “Save draft” and take a deep breath.</li>
+    </ol>
+  </li>
+  <li>Once the documentation build finishes, release!
+    <ol>
+      <li>Check that the link to drake.mit.edu docs from the GitHub release draft
+page actually works.</li>
+      <li>Click “Publish release”</li>
+      <li>Notify @jamiesnape via a GitHub comment to manually tag docker images
+and upload the releases to S3. Be sure to provide him with the binary
+date, commit SHA, and release tag in the same ping.</li>
+      <li>Announce on Drake Slack, <code class="highlighter-rouge">#general</code>.</li>
+      <li>Party on, Wayne.</li>
+    </ol>
+  </li>
+</ol>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

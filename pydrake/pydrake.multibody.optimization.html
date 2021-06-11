@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.optimization &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.parsing" href="pydrake.multibody.parsing.html"/>
+        <link rel="prev" title="pydrake.multibody.math" href="pydrake.multibody.math.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.optimization">
+<span id="pydrake-multibody-optimization"></span><h1>pydrake.multibody.optimization<a class="headerlink" href="#module-pydrake.multibody.optimization" title="Permalink to this headline">¶</a></h1>
+<p>Optimization module for MultibodyPlant motion planning</p>
+<dl class="class">
+<dt id="pydrake.multibody.optimization.CentroidalMomentumConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">CentroidalMomentumConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with
+decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) -
+k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial
+momentum (linear and angular momentum about the center of mass C)
+expressed in the world frame (W). k_WC is the 3D vector representing
+the angular momentum about the center of mass C expressed in the world
+frame W.</p>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.CentroidalMomentumConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.CentroidalMomentumConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd], angular_only: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct centroidal momentum constraint If <code class="docutils literal"><span class="pre">angular_only</span></code> = false,
+we impose the constraint CentroidalMomentum(q, v) - h_WC = 0 where
+CentroidalMomentum computes the spatial momentum of the robot about
+its center-of-mass, expressed in the world frame. The decision
+variables are [q;v;h_WC]. If <code class="docutils literal"><span class="pre">angular_only</span></code> = true, we impose the
+constraint CentroidalAngularMomentum(q, v) - k_WC = 0 where
+CentroidalAngularMomentum(q, v) computes the angular momentum of the
+robot about its center-of-mass, expressed in the world frame. The
+decision varaibles are [q; v; k_WC]</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, we can only construct this constraint using
+MultibodyPlant&lt;AutoDiffXd&gt; instead of MultibodyPlant&lt;double&gt;,
+since we can’t compute the Jacobian of the momentum using
+MultibodyPlant&lt;double&gt; yet.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The plant for which the constraint is imposed.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">model_instances</span></code>:</dt>
+<dd>We compute the model with these model instances in <code class="docutils literal"><span class="pre">plant</span></code>. If
+model_instances=std::nullopt, then we compute the momentum of all
+model instances except the world.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.optimization.ContactWrench">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">ContactWrench</code><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the contact wrench (spatial force) from Body A to Body B
+applied at point Cb.</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ContactWrench.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ContactWrench.bodyA_index">
+<code class="descname">bodyA_index</code><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.bodyA_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of Body A.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ContactWrench.bodyB_index">
+<code class="descname">bodyB_index</code><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.bodyB_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>The index of Body B.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ContactWrench.F_Cb_W">
+<code class="descname">F_Cb_W</code><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.F_Cb_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>F_Cb_W_in The wrench (spatial force) applied at point Cb from Body A
+to Body B, measured in the world frame.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ContactWrench.p_WCb_W">
+<code class="descname">p_WCb_W</code><a class="headerlink" href="#pydrake.multibody.optimization.ContactWrench.p_WCb_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>The position of the point Cb (where the wrench is applied) expressed
+in the world frame W.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">QuaternionEulerIntegrationConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<p>If we have a body with orientation quaternion z₁ at time t₁, and a
+quaternion z₂ at time t₂ = t₁ + h, with the angular velocity ω
+(expressed in the world frame), we impose the constraint that the body
+rotates at a constant velocity ω from quaternion z₁ to quaternion z₂
+within time interval h. Namely we want to enforce the relationship
+that z₂ and Δz⊗z₁ represent the same orientation, where Δz is the
+quaternion [cos(<a href="#id1"><span class="problematic" id="id2">|</span></a>ω|h/2), ω/<a href="#id3"><span class="problematic" id="id4">|</span></a>ω|*sin(<a href="#id5"><span class="problematic" id="id6">|</span></a>ω|h/2)], and ⊗ is the Hamiltonian
+product between quaternions.</p>
+<p>It is well-known that for any quaternion z, its element-wise negation
+-z correspond to the same rotation matrix as z does. One way to
+undertand this is that -z represents the rotation that first rotate
+the frame by a quaternion z, and then continue to rotate about that
+axis for 360 degress. We provide the option
+<code class="docutils literal"><span class="pre">allow_quaternion_negation</span></code> flag, that if set to true, then we
+require that the quaternion z₂ = ±Δz⊗z₁. Otherwise we require z₂ =
+Δz⊗z₁. Mathematically, the constraint we impose is</p>
+<p>If allow_quaternion_negation = true:</p>
+<p>(z₂ • (Δz⊗z₁))² = 1</p>
+<p>else</p>
+<p>z₂ • (Δz⊗z₁) = 1</p>
+<p>If your robot link orientation only changes slightly, and you are free
+to search for both z₁ and z₂, then we would recommend to set
+allow_quaternion_negation to false, as the left hand side of
+constraint z₂ • (Δz⊗z₁) = 1 is less nonlinear than the left hand side
+of (z₂ • (Δz⊗z₁))² = 1.</p>
+<p>The operation • is the dot product between two quaternions, which
+computes the cosine of the half angle between these two orientations.
+Dot product equals to ±1 means that angle between the two quaternions
+are 2kπ, hence they represent the same orientation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The constraint is not differentiable at ω=0 (due to the
+non-differentiability of <a href="#id7"><span class="problematic" id="id8">|ω|</span></a> at ω = 0). So it is better to
+initialize the angular velocity to a non-zero value in the
+optimization.</p>
+</div>
+<p>The decision variables of this constraint are [z₁, z₂, ω, h]</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We need to evaluate sin(<a href="#id9"><span class="problematic" id="id10">|ω|h/2)/|ω|</span></a>, when h is huge (larger than
+1/machine_epsilon), and <a href="#id11"><span class="problematic" id="id12">|ω|</span></a> is tiny (less than machine epsilon),
+this evaluation is inaccurate. So don’t use this constraint if you
+have a huge h (which would be bad practice in trajectory
+optimization anyway).</p>
+</div>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint</em>, <em>allow_quaternion_negation: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">allow_quaternion_negation</span></code>:</dt>
+<dd>. Refer to the class documentation.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">StaticEquilibriumProblem</code><a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the static equilibrium pose of a multibody system through
+optimization. The constraints are 1. 0 = g(q) + Bu + ∑ᵢ JᵢᵀFᵢ_AB_W(λᵢ)
+(generalized force equals to 0). 2. Fᵢ_AB_W(λᵢ) is within the
+admissible contact wrench (for example, contact force is in the
+friction cone). 3. sdf(q) &gt;= 0 (signed distance function is no smaller
+than 0, hence no penetration). 4. complementarity condition between
+the contact force and the signed distance. 5. q within the joint
+limit. TODO(hongkai.dai): add the bounds on the input u, and other
+position constraint (such as unit length constraint on quaternion).</p>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], ignored_collision_pairs: Set[Tuple[pydrake.geometry.GeometryId, pydrake.geometry.GeometryId]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The plant for which the static equilibrium posture is computed.
+<code class="docutils literal"><span class="pre">plant</span></code> should remain alive as long as this
+StaticEquilibriumProblem exists.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context for <code class="docutils literal"><span class="pre">plant</span></code>. <code class="docutils literal"><span class="pre">context</span></code> should remain alive as long
+as this StaticEquilibriumProblem exists.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">ignored_collision_pairs</span></code>:</dt>
+<dd>The contact between the pair of geometry in
+<code class="docutils literal"><span class="pre">ignored_collision_pairs</span></code> will be ignored. We will not impose
+non-penetration constraint between these pairs, and no contact
+wrench will be applied between these pairs.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog">
+<code class="descname">get_mutable_prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.get_mutable_prog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution">
+<code class="descname">GetContactWrenchSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.optimization.ContactWrench]<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the solution to all contact wrenches.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">result</span></code>:</dt>
+<dd>The result of solving prog().</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.prog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for the immutable optimization program.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.q_vars">
+<code class="descname">q_vars</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.q_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for q, the decision variable for the generalized position.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.u_vars">
+<code class="descname">u_vars</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.u_vars" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for u, the decision variable for the input.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.UpdateComplementarityTolerance">
+<code class="descname">UpdateComplementarityTolerance</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em>, <em>tol: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.UpdateComplementarityTolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the tolerance on all the complementarity constraints α * β =
+0. The complementarity constraint is relaxed as 0 ≤ α * β ≤ tol. See
+AddStaticFrictionConeComplementarityConstraint() for more details.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.parsing.html" class="btn btn-neutral float-right" title="pydrake.multibody.parsing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.math.html" class="btn btn-neutral" title="pydrake.multibody.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

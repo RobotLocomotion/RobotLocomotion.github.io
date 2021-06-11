@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Documentation Generation Instructions</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Documentation Generation Instructions</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This page contains instructions on how to locally regenerate Drake’s website.</p>
+
+<p>The website infrastructure uses a combination of
+<a href="https://jekyllrb.com/">Jekyll</a> for the
+<a href="https://drake.mit.edu/">main site</a> and
+<a href="https://drake.mit.edu/styleguide/cppguide.html">Style Guide</a>,
+<a href="https://www.doxygen.nl/">Doxygen</a> for the
+<a href="https://drake.mit.edu/doxygen_cxx/">C++ API reference</a>, and
+<a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> for the
+<a href="https://drake.mit.edu/pydrake/">Python API reference</a>.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<p>Documentation generation and preview as described in this document are
+supported on <strong>Ubuntu only</strong>.</p>
+
+<p>Before getting started, install Drake’s prerequisites with the additional
+<code class="highlighter-rouge">--with-doc-only</code> command line option, i.e.:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>setup/ubuntu/install_prereqs.sh <span class="nt">--with-doc-only</span>
+</code></pre></div></div>
+
+<h1 id="previewing-changes">Previewing changes</h1>
+
+<p>To easily preview your changes, run the <code class="highlighter-rouge">//doc:build --serve</code> command.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Read the usage message.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--help</span>
+
+<span class="c"># Preview the entire site, exactly how it will appear online.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span>
+
+<span class="c"># Speed up the preview by limiting it to major section(s):</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> pages       <span class="c"># Only the main site.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> doxygen     <span class="c"># Only the C++ API reference.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> pydrake     <span class="c"># Only the Python API reference.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> styleguide  <span class="c"># Only the Style Guide.</span>
+
+<span class="c"># Further speed up preview generating only some API modules, e.g., math:</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> drake.math            <span class="c"># C++ math API.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> pydrake.math          <span class="c"># Python math API.</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> <span class="o">{</span>drake,pydrake<span class="o">}</span>.math  <span class="c"># Both at once.</span>
+
+<span class="c"># Further speed up preview by omitting expensive `dot` graphs:</span>
+<span class="nv">$ </span>bazel run //doc:build <span class="nt">--</span> <span class="nt">--serve</span> <span class="nt">--quick</span> drake.math
+
+<span class="c"># Further speed up preview by avoiding rebuilding pydrake:</span>
+<span class="nv">$ </span>bazel run //doc/doxygen_cxx:build <span class="nt">--</span> <span class="nt">--serve</span> <span class="nt">--quick</span> drake.math
+</code></pre></div></div>
+
+<p>To preview using a local branch of the styleguide instead of our pinned
+revision, be sure to set the
+<a href="https://github.com/RobotLocomotion/drake/blob/master/tools/workspace/README.md#exploring-github_archive-changes-from-a-local-clone">local_repository_override</a>
+option in <code class="highlighter-rouge">drake/tools/workspace/styleguide/repository.bzl</code> before running
+the preview command.</p>
+
+<h1 id="testing-locally">Testing locally</h1>
+
+<p>The website is not part of Drake’s default local build nor tests, because it
+requires heavy prerequisites to be installed (see <code class="highlighter-rouge">--with-doc-only</code> above).
+Therefore, a simple <code class="highlighter-rouge">bazel test //...</code> will not provide any feedback about
+local documentation edits.</p>
+
+<p>To check locally that documentation changes pass all build and test rules, run:</p>
+
+<!-- Don't use "sh" literal mode here; it mis-colors the "test" non-keyword. -->
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bazel test //doc/... //doc:manual_tests
+</code></pre></div></div>
+
+<h1 id="testing-in-ci">Testing in CI</h1>
+
+<p>Only the Jenkins builds whose name ends with <code class="highlighter-rouge">-documentation</code> will run the
+documentation build steps and related tests.  By default, those builds run on
+the Continuous (i.e., post-merge) and Nightly schedules, not on pull requests.
+If you would like to check Jenkins results on a pull request, you need to
+<a href="/jenkins.html#scheduling-an-on-demand-build">schedule an on-demand build</a>
+by posting a comment</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@drake-jenkins-bot linux-bionic-unprovisioned-gcc-bazel-experimental-documentation please
+</code></pre></div></div>
+
+<h1 id="advanced-building">Advanced Building</h1>
+
+<p>This section contains details aimed at documentation infrastructure
+maintainers.</p>
+
+<p>There are in fact five available commands:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bazel run //doc:build               <span class="c"># Entire website (i.e., all of the below).</span>
+<span class="nv">$ </span>bazel run //doc:pages_build         <span class="c"># Main site only.</span>
+<span class="nv">$ </span>bazel run //doc/doxygen_cxx:build   <span class="c"># C++ API reference subdir only.</span>
+<span class="nv">$ </span>bazel run //doc/pydrake:build       <span class="c"># Python API reference subdir only.</span>
+<span class="nv">$ </span>bazel run //doc/styleguide:build    <span class="c"># Style Guide subdir only.</span>
+</code></pre></div></div>
+
+<p>The first command provides options to rebuild subsets of the website, and so
+offers one-stop shopping for developers, as explained in the prior section.
+The latter commands are used for focused regression testing, and might be
+more convenient while modifying the documentation tooling.</p>
+
+<p>Each build command can be run in either “generate” mode (writing the files into
+a scratch folder) or “serve” mode (http serving for web browser preview).  The
+automated website deployment pipeline uses the former; most developers will use
+the latter.</p>
+
+<p>Each build command has a corresponding test defined as part of the
+<code class="highlighter-rouge">//doc:manual_tests</code> test suite.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

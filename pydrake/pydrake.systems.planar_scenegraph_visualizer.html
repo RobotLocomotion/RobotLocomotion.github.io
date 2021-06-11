@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.planar_scenegraph_visualizer &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.primitives" href="pydrake.systems.primitives.html"/>
+        <link rel="prev" title="pydrake.systems.perception" href="pydrake.systems.perception.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.rendering.html">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.system_sliders.html">pydrake.systems.system_sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.planar_scenegraph_visualizer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.planar_scenegraph_visualizer">
+<span id="pydrake-systems-planar-scenegraph-visualizer"></span><h1>pydrake.systems.planar_scenegraph_visualizer<a class="headerlink" href="#module-pydrake.systems.planar_scenegraph_visualizer" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydrake.systems.planar_scenegraph_visualizer.ConnectPlanarSceneGraphVisualizer">
+<code class="descclassname">pydrake.systems.planar_scenegraph_visualizer.</code><code class="descname">ConnectPlanarSceneGraphVisualizer</code><span class="sig-paren">(</span><em>builder</em>, <em>scene_graph</em>, <em>output_port=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.ConnectPlanarSceneGraphVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of PlanarSceneGraphVisualizer, adds it to the
+diagram, and wires the scene_graph pose bundle output port to the input
+port of the visualizer.  Provides an interface comparable to
+DrakeVisualizer.AddToBuilder.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>builder</strong> – The diagram builder used to construct the Diagram.</li>
+<li><strong>scene_graph</strong> – The SceneGraph in builder containing the geometry to be
+visualized.</li>
+<li><strong>output_port</strong> – (optional) If not None, then output_port will be connected
+to the visualizer input port instead of the scene_graph.
+get_pose_bundle_output_port().  This is required, for instance,
+when the SceneGraph is inside a Diagram, and we must connect the
+exposed port to the visualizer instead of the original SceneGraph
+port.</li>
+<li><strong>kwargs are passed through to the PlanarSceneGraphVisualizer</strong> (<em>Additional</em>) – </li>
+<li><strong>constructor.</strong> – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The newly created PlanarSceneGraphVisualizer object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.planar_scenegraph_visualizer.</code><code class="descname">PlanarSceneGraphVisualizer</code><span class="sig-paren">(</span><em>scene_graph, draw_period=0.03333333333333333, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.pyplot_visualizer.html#pydrake.systems.pyplot_visualizer.PyPlotVisualizer" title="pydrake.systems.pyplot_visualizer.PyPlotVisualizer"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.pyplot_visualizer.PyPlotVisualizer</span></code></a></p>
+<p>Given a SceneGraph and a view plane, provides a view of the robot by
+projecting all geometry onto the view plane.</p>
+<p>This is intended to be used for robots that operate in the plane, but
+should render any robot approximately correctly. It has the following
+caveats:
+- z-ordering of objects is done based on the object centroid, which
+is not perfect for non-planar scenes.
+- Object geometry is projected onto the view plane, then a chull is taken,
+and finally that chull is drawn as a patch. Nonconvex geometry will thus be
+drawn incorrectly, and geometry with many vertices will slow down the
+visualizer.</p>
+<blockquote>
+<div>Specifics on view setup:</div></blockquote>
+<p>T_VW specifies the 3x4 view projection matrix. For planar orthographic
+projection, use:
+[ &lt;x axis select&gt; x_axis_shift</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>&lt;y axis select&gt; y_axis_shift</dt>
+<dd>0, 0, 0, 1]  % homogenizer</dd>
+</dl>
+</div></blockquote>
+<p>e.g.</p>
+<dl class="docutils">
+<dt>[ 1 0 0 0.5</dt>
+<dd>0 1 0 0
+0 0 0 1].</dd>
+</dl>
+<p>would give a top-down view (i.e squashing the z axis), and would shift
+things in the x axis positively by 0.5.</p>
+<p>T_VW can be any valid view projection matrix. If the bottom row is
+[0, 0, 0, 1], the view projection will be an orthographic projection.</p>
+<p>xlim and ylim don’t technically provide extra functionality, but it’s
+easier to keep handling scaling with xlim, ylim, and view plane selection
+and <em>maybe</em> offsetting with the projection matrix.</p>
+<dl class="method">
+<dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph, draw_period=0.03333333333333333, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scene_graph</strong> – A SceneGraph object.</li>
+<li><strong>draw_period</strong> – The rate at which this class publishes to the
+visualizer.</li>
+<li><strong>T_VW</strong> – The view projection matrix from world to view coordinates.</li>
+<li><strong>xlim</strong> – View limit into the scene.</li>
+<li><strong>ylim</strong> – View limit into the scene.</li>
+<li><strong>facecolor</strong> – Passed through to figure() and sets background color.
+Both color name strings and RGB triplets are allowed. Defaults
+to white.</li>
+<li><strong>use_random_colors</strong> – If set to True, will render each body with a
+different color. (Multiple visual elements on the same body
+will be the same color.)</li>
+<li><strong>substitute_collocated_mesh_files</strong> – If True, then a mesh file
+specified with an unsupported filename extension may be
+replaced by a file of the same base name in the same directory,
+but with a supported filename extension.  Currently only .obj
+files are supported.</li>
+<li><strong>ax</strong> – If supplied, the visualizer will draw onto those axes instead
+of creating a new set of axes. The visualizer will still change
+the view range and figure size of those axes.</li>
+<li><strong>show</strong> – Opens a window during initialization / publish iff True.
+Default is None, which implies show=True unless
+matplotlib.get_backend() is ‘template’.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides base with the implementation.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.primitives.html" class="btn btn-neutral float-right" title="pydrake.systems.primitives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.perception.html" class="btn btn-neutral" title="pydrake.systems.perception" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

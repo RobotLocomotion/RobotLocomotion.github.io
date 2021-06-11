@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.solvers.sdpa_free_format &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.solvers" href="pydrake.solvers.html"/>
+        <link rel="next" title="pydrake.solvers.snopt" href="pydrake.solvers.snopt.html"/>
+        <link rel="prev" title="pydrake.solvers.osqp" href="pydrake.solvers.osqp.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.all.html">pydrake.solvers.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.branch_and_bound.html">pydrake.solvers.branch_and_bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mathematicalprogram.html">pydrake.solvers.mathematicalprogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.solvers.sdpa_free_format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.snopt.html">pydrake.solvers.snopt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.solvers.html">pydrake.solvers</a> &raquo;</li>
+        
+      <li>pydrake.solvers.sdpa_free_format</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.solvers.sdpa_free_format">
+<span id="pydrake-solvers-sdpa-free-format"></span><h1>pydrake.solvers.sdpa_free_format<a class="headerlink" href="#module-pydrake.solvers.sdpa_free_format" title="Permalink to this headline">¶</a></h1>
+<p>SdpaFreeFormat bindings for MathematicalProgram</p>
+<dl class="function">
+<dt id="pydrake.solvers.sdpa_free_format.GenerateSDPA">
+<code class="descclassname">pydrake.solvers.sdpa_free_format.</code><code class="descname">GenerateSDPA</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>file_name: str</em>, <em>method: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod = &lt;RemoveFreeVariableMethod.kNullspace: 1&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.sdpa_free_format.GenerateSDPA" title="Permalink to this definition">¶</a></dt>
+<dd><p>SDPA is a format to record an SDP problem</p>
+<p>max tr(C*X) s.t tr(Aᵢ*X) = gᵢ X ≽ 0</p>
+<p>or the dual of the problem</p>
+<p>min gᵀy s.t ∑ᵢ yᵢAᵢ - C ≽ 0</p>
+<p>where X is a symmetric block diagonal matrix. The format is described
+in <a class="reference external" href="http://plato.asu.edu/ftp/sdpa_format.txt">http://plato.asu.edu/ftp/sdpa_format.txt</a>. Many solvers, such as
+CSDP, DSDP, SDPA, sedumi and SDPT3, accept an SDPA format file as the
+input. This function reads a MathematicalProgram that can be
+formulated as above, and write an SDPA file.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dd>a program that contains an optimization program.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">file_name</span></code>:</dt>
+<dd>The name of the file, note that the extension will be added
+automatically.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">method</span></code>:</dt>
+<dd>If <code class="docutils literal"><span class="pre">prog</span></code> contains free variables (i.e., variables without
+bounds), then we need to remove these free variables to write the
+program in the SDPA format. Please refer to
+RemoveFreeVariableMethod for details on how to remove the free
+variables. $*Default:* is RemoveFreeVariableMethod::kNullspace.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">is_success</span></code>:</dt>
+<dd>. Returns true if we can generate the SDPA file. The failure could
+be 1. <code class="docutils literal"><span class="pre">prog</span></code> cannot be captured by the formulation above. 2.
+<code class="docutils literal"><span class="pre">prog</span></code> cannot create a file with the given name, etc.</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.sdpa_free_format.</code><code class="descname">RemoveFreeVariableMethod</code><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>SDPA format doesn’t accept free variables, namely the problem it
+solves is in this form P1</p>
+<p>max tr(C * X) s.t tr(Aᵢ*X) = aᵢ X ≽ 0.</p>
+<p>Notice that the decision variable X has to be in the proper cone X ≽
+0, and it doesn’t accept free variable (without the conic constraint).
+On the other hand, most real-world applications require free
+variables, namely problems in this form P2</p>
+<p>max tr(C * X) + dᵀs s.t tr(Aᵢ*X) + bᵢᵀs = aᵢ X ≽ 0 s is free.</p>
+<p>In order to remove the free variables, we consider three approaches.
+1. Replace a free variable s with two variables s = p - q, p ≥ 0, q ≥
+0. 2. First write the dual of the problem P2 as D2</p>
+<p>min aᵀy s.t ∑ᵢ yᵢAᵢ - C = Z Z ≽ 0 Bᵀ * y = d,</p>
+<p>where bᵢᵀ is the i’th row of B. The last constraint Bᵀ * y = d means y
+= ŷ + Nt, where Bᵀ * ŷ = d, and N is the null space of Bᵀ. Hence, D2
+is equivalent to the following problem, D3</p>
+<p>min aᵀNt + aᵀŷ s.t ∑ᵢ tᵢFᵢ - (C -∑ᵢ ŷᵢAᵢ) = Z Z ≽ 0,</p>
+<p>where Fᵢ = ∑ⱼ NⱼᵢAⱼ. D3 is the dual of the following primal problem P3
+without free variables</p>
+<p>max tr((C-∑ᵢ ŷᵢAᵢ)*X̂) + aᵀŷ s.t tr(FᵢX̂) = (Nᵀa)(i) X̂ ≽ 0.</p>
+<p>Then (X, s) = (X̂, B⁻¹(a - tr(Aᵢ X̂))) is the solution to the original
+problem P2. 3. Add a slack variable t, with the Lorentz cone
+constraint t ≥ sqrt(sᵀs).</p>
+<p>Members:</p>
+<blockquote>
+<div>kNullspace : Approach 2, reformulate the dual problem by considering the nullspace</div></blockquote>
+<p>of the linear constraint in the dual.</p>
+<blockquote>
+<div><p>kTwoSlackVariables : Approach 1, replace a free variable s as s = y⁺ - y⁻, y⁺ ≥ 0, y⁻ ≥ 0.</p>
+<p>kLorentzConeSlack : Approach 3, add a slack variable t with the lorentz cone constraint t</p>
+</div></blockquote>
+<p>≥ sqrt(sᵀs).</p>
+<dl class="method">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kLorentzConeSlack">
+<code class="descname">kLorentzConeSlack</code><em class="property"> = &lt;RemoveFreeVariableMethod.kLorentzConeSlack: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kLorentzConeSlack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kNullspace">
+<code class="descname">kNullspace</code><em class="property"> = &lt;RemoveFreeVariableMethod.kNullspace: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kNullspace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kTwoSlackVariables">
+<code class="descname">kTwoSlackVariables</code><em class="property"> = &lt;RemoveFreeVariableMethod.kTwoSlackVariables: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.kTwoSlackVariables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.solvers.snopt.html" class="btn btn-neutral float-right" title="pydrake.solvers.snopt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.solvers.osqp.html" class="btn btn-neutral" title="pydrake.solvers.osqp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

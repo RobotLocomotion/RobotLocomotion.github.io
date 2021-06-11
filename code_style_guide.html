@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Code Style Guide</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Code Style Guide</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>This section defines a style guide which should be followed by all code that is
+written in Drake. Being consistent with this style will make the code easier to
+read, debug, and maintain. To ensure your code is style compliant, consider
+using <a href="/code_style_tools.html">tools for complying with coding style</a>.</p>
+
+<p>See also the brief
+<a href="/code_review_checklist.html">Code Review Checklist</a>,
+where a list of the most frequent problems are collected.</p>
+
+<p>Note: Many of the files in the repository were written before this style guide,
+or did not follow it precisely.  If you find style errors, go ahead and change
+it and submit a pull request.</p>
+
+<h1 id="c-style">C++ Style</h1>
+
+<p>The Drake C++ style guide (which is derived from the Google C++ style guide)
+can be found
+<a href="https://drake.mit.edu/styleguide/cppguide.html">on its own page</a>.
+Its source lives in
+<a href="https://github.com/RobotLocomotion/styleguide">the styleguide repository</a>.</p>
+
+<h1 id="python-style">Python Style</h1>
+
+<p>Drake strictly follows <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 – Style Guide for Python Code</a> except for the specific
+clarifications, exceptions, and additional rules noted below. Since PEP 8
+incorporates <a href="https://www.python.org/dev/peps/pep-0257/">PEP 257 – Docstring Conventions</a>, Drake follows its
+recommendations as well.</p>
+
+<p>Drake also follows the
+<a href="https://drake.mit.edu/styleguide/pyguide.html">RobotLocomotion fork</a>
+of the Google Python Style Guide. Please refer to that page for the sections
+that are adhered to, and the relevant exceptions.</p>
+
+<p>See <a href="/code_style_tools.html">tools for complying with coding style</a> for details
+about the automated style checks.</p>
+
+<h2 id="clarifications">Clarifications</h2>
+
+<ul>
+  <li>External, third-party, and auto-generated source files are not to be checked
+for style.</li>
+  <li>Always prefer long, human-readable variable/method/class names to short
+acronyms.</li>
+</ul>
+
+<h2 id="exceptions">Exceptions</h2>
+
+<ul>
+  <li>Lines containing a long URL may be longer than 80 columns if necessary to
+avoid splitting the URL.</li>
+</ul>
+
+<h2 id="additional-rules">Additional Rules</h2>
+
+<ul>
+  <li>When importing in-tree modules, always use absolute import paths; explicit
+relative import paths are disallowed. See the <a href="https://www.python.org/dev/peps/pep-0008/#imports">PEP 8 discussion of imports</a> for more detail.</li>
+  <li>Sometimes <code class="highlighter-rouge">__init__.py</code> files are necessary, for Python’s <code class="highlighter-rouge">import</code>
+mechanism; these files should be non-empty (via a copyright notice, for
+example). Rationale: 0-byte files can be mistakenly perceived as the result
+of some error or accident.</li>
+  <li>When using the <code class="highlighter-rouge">logging</code> module, avoid its lazy-formatting
+syntax. Rationale: exceptions raised in lazy formatting get printed to
+<code class="highlighter-rouge">stderr</code>, but are otherwise ignored, and thus may escape notice.</li>
+  <li>Executable Python files should be limited to <em>only</em> scripts which are not run
+via Bazel-generated Python proxy scripts. (The proxy scripts are those
+run via <code class="highlighter-rouge">bazel run</code>, <code class="highlighter-rouge">bazel test</code>, or <code class="highlighter-rouge">./bazel-bin/...</code>.)
+If a script qualifies, use the following “shebang” line:<br />
+<code class="highlighter-rouge"><span class="c">#!/usr/bin/env python3</span></code><br />
+Rationale: <code class="highlighter-rouge">/usr/bin/env</code> enables a <code class="highlighter-rouge">PATH</code> search for the Python 3
+executable. This is also recommended by
+<a href="https://www.python.org/dev/peps/pep-0394/">PEP 394</a>.</li>
+</ul>
+
+<h1 id="java-style">Java Style</h1>
+
+<p>We also strictly follow the <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>.
+Here are some additional comments:</p>
+
+<ul>
+  <li>Every class and method should have a brief <code class="highlighter-rouge">_javadoc_</code> associated with it.</li>
+  <li>All Java classes should be in packages relative to the Drake root,
+ e.g.: package drake.examples.Pendulum</li>
+</ul>
+
+<h1 id="lcm-style">LCM Style</h1>
+
+<ul>
+  <li>LCM types are under_scored with a leading <code class="highlighter-rouge">lcmt_</code> added. If the type is
+specific to a particular robot, then it begins with <code class="highlighter-rouge">lcmt_robotname_</code>.</li>
+  <li>Variable names in LCM types follow the rules above.</li>
+</ul>
+
+<h1 id="packagexml-style">package.xml Style</h1>
+
+<p><a href="http://www.ros.org/">Robot Operating System (ROS)</a> organizes code and data
+into packages. Each package is located in its own directory, which contains a
+file called <code class="highlighter-rouge">package.xml</code>. The official instructions on what this file should
+contain is given <a href="http://wiki.ros.org/catkin/package.xml">here</a>. Drake uses
+this same file for defining and finding packages. Specifically, it is searched
+for by
+<a href="https://github.com/RobotLocomotion/drake/blob/7bbcb0728a06c0abdd695fd8a5db1879bb5354bb/drake/systems/plants/xmlUtil.h#L160">populatePackageMap()</a>.
+Note that <code class="highlighter-rouge">package.xml</code> files are necessary even if you’re <em>not</em> using Drake
+with ROS because the model files used by Drake (e.g., URDF and SDF), frequently
+refer to resources like mesh files via a <code class="highlighter-rouge">package://</code> syntax, whose full paths
+are resolved by the <code class="highlighter-rouge">package.xml</code> files.</p>
+
+<p>When adding a model to Drake
+(typically in <a href="https://github.com/RobotLocomotion/drake/tree/master/examples&gt;">drake/examples/</a>),
+you will need to add a <code class="highlighter-rouge">package.xml</code> file to the example’s directory to enable
+modeling files like URDF and SDF to refer to resources like mesh files contained
+within the example’s directory. Please ensure that your <code class="highlighter-rouge">package.xml</code> file
+contains every
+<a href="http://wiki.ros.org/catkin/package.xml#Required_Tags">required field</a>.
+The following minimal <code class="highlighter-rouge">package.xml</code> file can get you started:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;!--
+    This XML file is used by:
+      drake/systems/plants/xmlUtil.cpp
+    Method:
+      searchDirectory()
+    --&gt;
+
+    &lt;package format="2"&gt;
+      &lt;name&gt;package_name&lt;/name&gt;
+      &lt;version&gt;0.0.0&lt;/version&gt;
+      &lt;description&gt;
+        A description of your package.
+      &lt;/description&gt;
+      &lt;maintainer email="drake-users@mit.edu"&gt;Drake Users&lt;/maintainer&gt;
+      &lt;license&gt;BSD&lt;/license&gt;
+    &lt;/package&gt;
+</code></pre></div></div>
+
+<p>In the above example, replace “package_name” with the name of your package. This
+is typically the name of the directory holding the <code class="highlighter-rouge">package.xml</code> file.</p>
+
+<h1 id="shell-script-style">Shell Script Style</h1>
+
+<p>We follow the <a href="https://google.github.io/styleguide/shell.xml">Google Shell Style Guide</a>.</p>
+
+<h1 id="version-numbers">Version numbers</h1>
+
+<p>We’ll adopt the following convention for version numbers in Drake:
+The version number will have the format W.X.Y.Z where</p>
+
+<ul>
+  <li>W = major release number</li>
+  <li>X = minor release number</li>
+  <li>Y = development stage*</li>
+  <li>Z = build</li>
+</ul>
+
+<p>Development stage is one of four values:</p>
+
+<ul>
+  <li>0 = alpha (buggy, not for use)</li>
+  <li>1 = beta (mostly bug-free, needs more testing)</li>
+  <li>2 = release candidate (rc) (stable)</li>
+  <li>3 = release</li>
+</ul>
+
+<p>Z (build) is optional. This is probably not needed but could just refer to the
+revision of the repository at the time of snapshot. Numbered versions should be
+referenced via tags.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

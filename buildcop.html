@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Build Cop</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Build Cop</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="overview">Overview</h1>
+
+<p>The Drake build cop monitors <a href="https://drake-jenkins.csail.mit.edu/view/Continuous%20Production/">continuous</a>,
+<a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">nightly</a>, and
+<a href="https://drake-jenkins.csail.mit.edu/view/Weekly%20Production/">weekly</a>
+production continuous integration failures in the
+<a href="https://github.com/RobotLocomotion/drake">RobotLocomotion/drake</a> GitHub
+repo.</p>
+
+<p>The build cop will rotate on a weekly basis. The
+<a href="https://github.com/RobotLocomotion/drake-ci/wiki/Build-Cop-Rotation">schedule</a>
+is maintained on the
+<a href="https://github.com/RobotLocomotion/drake-ci">RobotLocomotion/drake-ci</a> wiki.</p>
+
+<h1 id="process">Process</h1>
+
+<p>The build cop is expected to be on duty during normal business hours Eastern
+Time, approximately 9am to 5pm on weekdays, holidays excepted. Developers are
+encouraged, but not required, to merge pull requests during times when the build
+cop is on duty. Nightly and weekly build failures will be addressed the
+following weekday morning.</p>
+
+<p>When a CI build failure occurs, the build cop will be notified by email.
+Notifications are sent to <code class="highlighter-rouge">drake-alerts+jenkins@tri.global</code> and
+<code class="highlighter-rouge">drake-developers+build-cop@kitware.com</code>. To receive these notifications,
+subscribe to the <code class="highlighter-rouge">drake-alerts</code> Google Group at TRI or the
+<code class="highlighter-rouge">drake-developers</code> Google Group at Kitware. The build cop will triage the
+failure by identifying the recent commits or other problem that caused the CI
+build to fail.</p>
+
+<p>In the case of an issue with the CI infrastructure, Kitware will be responsible
+for fixing the issue.</p>
+
+<p>In the case of an issue with recent commits, the build cop will contact the
+authors of the commits and prepare a new pull request that reverts those
+commits. If the authors are not responsive within 15 minutes, or are unable to
+fix the failure within 60 minutes, the build cop will merge the pull request to
+revert the commits and verify that the continuous builds triggered by that merge
+pass.</p>
+
+<p>Use the <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">DrakeDevelopers Slack channel #buildcop</a>
+to discuss build issues with your partner build cop and other Drake
+contributors.</p>
+
+<p>At the end of each rotation, the build cop should complete the
+<a href="https://docs.google.com/document/d/120AOAaamIMO-SM1UaJ6vfzpA15LnXHexDF4a7MLAS3o/edit#heading=h.sxk1djc2v0yg">build cop review and retrospective</a>,
+and should notify the next build cop on the <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">DrakeDevelopers Slack channel #buildcop</a>.</p>
+
+<h1 id="revert-template">Revert Template</h1>
+
+<p>When creating a revert PR, the build cop will assign that PR to the original
+author, and include the following template in the PR description.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+ Dear $AUTHOR,
+
+ The on-call build cop, $BUILD_COP, believes that your PR $NUMBER may have
+ broken one or more of Drake's continuous integration builds [1]. It is
+ possible to break a build even if your PR passed continuous integration
+ pre-merge because additional platforms are tested post-merge.
+
+ The specific build failures under investigation are:
+ $LINK_TO_BROKEN_BUILD_ON_JENKINS
+ $LINK_TO_BROKEN_BUILD_ON_JENKINS
+
+ Therefore, the build cop has created this revert PR and started a complete
+ post-merge build to determine whether your PR was in fact the cause of the
+ problem. If that build passes, this revert PR will be merged 60 minutes from
+ now. You can then fix the problem at your leisure, and send a new PR to
+ reinstate your change.
+
+ If you believe your original PR did not actually break the build, please
+ explain on this thread.
+
+ If you believe you can fix the break promptly in lieu of a revert, please
+ explain on this thread, and send a PR to the build cop for review ASAP.
+
+ If you believe your original PR definitely did break the build and should be
+ reverted, please review and LGTM this PR. This allows the build cop to merge
+ without waiting for CI results.
+
+ For advice on how to handle a build cop revert, see [2].
+
+ Thanks!
+ Your Friendly On-call Build Cop
+
+ [1] CI Production Dashboard: https://drake-jenkins.csail.mit.edu/view/Production/
+ [2] https://drake.mit.edu/buildcop.html#workflow-for-handling-a-build-cop-revert
+</code></pre></div></div>
+
+<h1 id="workflow-for-handling-a-build-cop-revert">Workflow for Handling a Build Cop Revert</h1>
+
+<p>Suppose your merged PR was reverted on the master branch. What do you do?</p>
+
+<p>Here’s one workflow:</p>
+
+<ol>
+  <li>Create a new development branch based off of the <code class="highlighter-rouge">HEAD</code> of master.</li>
+  <li><a href="https://git-scm.com/docs/git-revert">Revert</a> the revert of your
+originally-merged PR to get your changes back.</li>
+  <li>Debug the problem. This may require you to
+<a href="/jenkins.html#scheduling-an-on-demand-build">run on-demand continuous integration</a> to
+ensure the problem that caused your PR to be reverted was actually fixed.</li>
+  <li>Commit your changes into your new branch.</li>
+  <li>Issue a new PR containing your fixes. Be sure to link to the build cop revert
+PR in your new PR.</li>
+</ol>
+
+<h1 id="build-cop-playbook">Build Cop Playbook</h1>
+
+<p>This section is a quick-reference manual for the on-call build cop.</p>
+
+<h2 id="monitor-the-build">Monitor the Build</h2>
+
+<p>Check the <a href="https://drake-jenkins.csail.mit.edu/view/Continuous%20Production/">Continuous Production</a>
+build dashboard in Jenkins at least once an hour during on-call hours. These
+builds run after every merge to Drake. Also check the
+<a href="https://drake-jenkins.csail.mit.edu/view/Nightly%20Production/">Nightly Production</a>
+build dashboard every morning and
+<a href="https://drake-jenkins.csail.mit.edu/view/Weekly%20Production/">Weekly Production</a>
+build dashboard on Monday morning. These builds are unusually
+resource-intensive, and therefore run at most once per day.</p>
+
+<p>If any Continuous, Nightly, or Weekly Production builds turn yellow or red, you
+need to act.</p>
+
+<p>In Jenkins, builds that are in progress (blinking on and off) will show the
+color of the previous build.</p>
+
+<p>Note that CDash pages may take a minute to populate.</p>
+
+<h2 id="respond-to-breakage">Respond to Breakage</h2>
+
+<p>There are various reasons the build might break. Diagnose the failure, and
+then take appropriate action. This section lists some common failures and
+recommended responses. However, build cops often have to address unexpected
+circumstances. Do not expect this list to be complete, and always apply your
+own judgment.</p>
+
+<p>In almost any build breakage, the first information-gathering step is to
+click on the build that is yellow or red in Jenkins, then click on the first
+breaking change in the Build History. You will see a list of the new commits
+in that particular run.</p>
+
+<p>Determine if an open GitHub Drake issue describes the situation. For example,
+some tests are flaky for reasons that have no known resolution, but are
+described by Drake issues. If you find that your broken build is described by
+such an issue, consider adding the build information to the issue for future
+analysis. The <a href="https://docs.google.com/document/d/120AOAaamIMO-SM1UaJ6vfzpA15LnXHexDF4a7MLAS3o/edit#heading=h.sxk1djc2v0yg">build cop review and retrospective</a>
+also describes current build issues.</p>
+
+<h2 id="broken-compile-or-test">Broken Compile or Test</h2>
+
+<p>Sometimes people merge code that doesn’t compile, or that fails a test.
+This can happen for several reasons:</p>
+
+<ul>
+  <li>The platform or test case only runs post-merge.</li>
+  <li>An administrator performed an override-merge of the culprit PR,
+circumventing pre-merge checks.</li>
+  <li>The failure is an interaction between the culprit PR and some other
+recent change to master.</li>
+</ul>
+
+<p>Compile failures will be red in Jenkins. Test failures will be yellow.
+Consult the list of commits in the breaking change to identify possible culprit
+PRs. Try to rule out some of those PRs by comparing their contents to the
+specifics of the failure. For any PRs you cannot rule out, create a rollback
+by clicking “Revert” in the GitHub UI. Use the
+<a href="/buildcop.html#revert-template">template message</a> to communicate  with the author, and
+proceed as specified in that message.</p>
+
+<p><a href="/jenkins.html#run-specific-build">Manually schedule</a> the failing build as an
+experimental build on the rollback PR. If it passes, the odds are good that you
+have found the culprit. Proceed as specified in the template message.</p>
+
+<h2 id="flaky-test">Flaky Test</h2>
+
+<p>Sometimes people introduce code that makes a test non-deterministic, failing
+on some runs and passing on others. You cannot reliably attribute a flaky test
+failure to the first failing build, because it may have passed by chance for
+the first few continuous builds after the culprit PR landed.</p>
+
+<p>Test failures will be yellow in Jenkins. If the list of commits in the breaking
+change does not include any plausible culprits, you may be looking at a flaky
+test.  Look through earlier commits one-by-one for plausible culprits.
+After you identify one, create a rollback by clicking “Revert” in the
+GitHub UI. Use the <a href="/buildcop.html#revert-template">template message</a> to communicate
+with the author, and proceed as specified in that message.</p>
+
+<h2 id="restarting-mac-nightly-builds">Restarting Mac Nightly Builds</h2>
+
+<p>Occasionally there will be flaky tests or timeouts in the Mac nightly builds.
+While it is tempting to restart these builds to clear the errors, Mac resources
+are limited and restarting the long-running nightly builds may tie up resources
+needed for continuous builds. In addition, too many simultaneous Mac builds
+will increase the chances of timeouts and other flakes. Build cops should use
+their best judgement, keeping in mind the following guidelines:</p>
+
+<ul>
+  <li>If the nightly job is mirrored by a continuous job, don’t re-run.</li>
+  <li>If the test passed last build, don’t re-run.</li>
+  <li>If it is a linter only timeout, don’t re-run.</li>
+  <li>If there are many timeouts, you may consider re-running.</li>
+  <li>If the timed-out test failed last build (not just timed out), you may consider re-running.</li>
+</ul>
+
+<h2 id="broken-ci-script">Broken CI Script</h2>
+
+<p>Sometimes people merge changes to the Drake CI scripts that result in spurious
+CI failures. The list of commits in Jenkins for each continuous build includes
+the <a href="https://github.com/RobotLocomotion/drake-ci">drake-ci</a> repository as well
+as Drake proper. Consider whether those changes are possible culprits.</p>
+
+<p>If you believe a CI script change is the culprit, contact the author.
+If they are not responsive, revert the commit yourself and see what happens on
+the next continuous build. There are no pre-merge builds you can run that
+exercise changes to the CI scripts themselves.</p>
+
+<h2 id="infrastructure-flake">Infrastructure Flake</h2>
+
+<p>The machinery of the CI system itself sometimes fails for reasons unrelated to
+any code change. The most common infrastructure flakes include:</p>
+
+<ul>
+  <li>Unable to obtain a Gurobi license.</li>
+  <li>Broken connection to a Mac build agent.</li>
+</ul>
+
+<p>Infrastructure flakes will be red in Jenkins. If you believe you are looking at
+an infrastructure flake, run the build manually at HEAD. If it passes, you are
+definitely looking at an infrastructure flake, and no further action is
+required. If you believe the rate of a particular infrastructure flake has
+increased, alert Kitware by assigning a GitHub issue to both @BetsyMcPhail and
+@jamiesnape.</p>
+
+<p>Note that “slow read” warnings during Bazel builds are due to the relative
+slowness of the remote storage used by the CI infrastructure when compared to
+storage connected to the local bus on a local developer workstation build and
+can be safely ignored.</p>
+
+<p>If you see “All nodes of label <label> are offline”, this should disappear
+eventually and the build should run, once Jenkins gets a node booted up.</label></p>
+
+<h2 id="infrastructure-collapse">Infrastructure Collapse</h2>
+
+<p>Occasionally, some piece of CI infrastructure completely stops working. For
+instance, GitHub, AWS, or MacStadium could have an outage, or our Jenkins server
+could crash or become wedged.  During infrastructure collapses, lots of builds
+will turn red and stay red.</p>
+
+<p>Attempt to figure out what infrastructure collapsed. If it’s under our control,
+alert Kitware by assigning a GitHub issue to both @BetsyMcPhail and
+@jamiesnape. If it’s under a vendor’s control, spread the news and simply wait
+it out.</p>
+
+<h2 id="drake-external-examples">Drake External Examples</h2>
+
+<p>Details of failures in the <a href="https://github.com/RobotLocomotion/drake-external-examples/">drake-external-examples</a>
+repository, which may be denoted by red “build failing” icons at the top of the build
+dashboard on Jenkins, should be posted to the <a href="https://drakedevelopers.slack.com/messages/buildcop/details/">#buildcop</a>
+channel on Slack, ensuring that @jamiesnape is mentioned in the message.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

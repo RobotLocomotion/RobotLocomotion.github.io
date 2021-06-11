@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.manipulation.schunk_wsg &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.manipulation" href="pydrake.manipulation.html"/>
+        <link rel="next" title="pydrake.manipulation.simple_ui" href="pydrake.manipulation.simple_ui.html"/>
+        <link rel="prev" title="pydrake.manipulation.planner" href="pydrake.manipulation.planner.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.all.html">pydrake.manipulation.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.kuka_iiwa.html">pydrake.manipulation.kuka_iiwa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.planner.html">pydrake.manipulation.planner</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.manipulation.schunk_wsg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.manipulation.simple_ui.html">pydrake.manipulation.simple_ui</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.manipulation.html">pydrake.manipulation</a> &raquo;</li>
+        
+      <li>pydrake.manipulation.schunk_wsg</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.manipulation.schunk_wsg">
+<span id="pydrake-manipulation-schunk-wsg"></span><h1>pydrake.manipulation.schunk_wsg<a class="headerlink" href="#module-pydrake.manipulation.schunk_wsg" title="Permalink to this headline">¶</a></h1>
+<p>Tools for schunk wsg.</p>
+<dl class="function">
+<dt id="pydrake.manipulation.schunk_wsg.GetSchunkWsgOpenPosition">
+<code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">GetSchunkWsgOpenPosition</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.GetSchunkWsgOpenPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position vector corresponding to the open position of the
+gripper.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.manipulation.schunk_wsg.MakeMultibodyStateToWsgStateSystem">
+<code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">MakeMultibodyStateToWsgStateSystem</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; drake::systems::MatrixGain&lt;double&gt;<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.MakeMultibodyStateToWsgStateSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract the distance between the fingers (and its time derivative) out
+of the plant model which pretends the two fingers are independent.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgCommandReceiver</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Handles the command for the Schunk WSG gripper from a
+LcmSubscriberSystem.</p>
+<p>It has one input port: “command_message” for lcmt_schunk_wsg_command
+abstract values.</p>
+<p>It has two output ports: one for the commanded finger position
+represented as the desired distance between the fingers in meters, and
+one for the commanded force limit. The commanded position and force
+limit are scalars (BasicVector&lt;double&gt; of size 1).</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">command_message&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgCommandReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force_limit</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver</em>, <em>initial_position: float = 0.02</em>, <em>initial_force: float = 40.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">initial_position</span></code>:</dt>
+<dd>the commanded position to output if no LCM message has been
+received yet.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">initial_force</span></code>:</dt>
+<dd>the commanded force limit to output if no LCM message has been
+received yet.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.get_force_limit_output_port">
+<code class="descname">get_force_limit_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.get_force_limit_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.get_position_output_port">
+<code class="descname">get_position_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.get_position_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgCommandSender</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper. Has
+two input ports: one for the commanded finger position represented as
+the desired signed distance between the fingers in meters, and one for
+the commanded force limit. The commanded position and force limit are
+scalars (BasicVector&lt;double&gt; of size 1).</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_schunk_wsg_command</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender</em>, <em>default_force_limit: float = 40.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_command_output_port">
+<code class="descname">get_command_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_command_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_force_limit_input_port">
+<code class="descname">get_force_limit_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_force_limit_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_position_input_port">
+<code class="descname">get_position_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.get_position_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgPositionController</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<p>This class implements a controller for a Schunk WSG gripper in
+position control mode adding a discrete-derivative to estimate the
+desired velocity from the desired position commands. It is a thin
+wrapper around SchunkWsgPdController.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">desired_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWSGPositionController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; grip_force</td></tr></table></td></tr></table><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SchunkWsgPdController</p>
+</div>
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgPositionController</em>, <em>time_step: float = 0.05</em>, <em>kp_command: float = 200.0</em>, <em>kd_command: float = 5.0</em>, <em>kp_constraint: float = 2000.0</em>, <em>kd_constraint: float = 5.0</em>, <em>default_force_limit: float = 40.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the controller. The default <code class="docutils literal"><span class="pre">time_step</span></code> is set to match
+the update rate of the wsg firmware. The gain parameters are set based
+limited tuning in simulation with a kuka picking up small objects.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SchunkWsgPdController::SchunkWsgPdController()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_desired_position_input_port">
+<code class="descname">get_desired_position_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgPositionController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_desired_position_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_force_limit_input_port">
+<code class="descname">get_force_limit_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgPositionController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_force_limit_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_generalized_force_output_port">
+<code class="descname">get_generalized_force_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgPositionController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_generalized_force_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_grip_force_output_port">
+<code class="descname">get_grip_force_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgPositionController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_grip_force_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_state_input_port">
+<code class="descname">get_state_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgPositionController</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgPositionController.get_state_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgStatusReceiver</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Handles lcmt_schunk_wsg_status messages from a LcmSubscriberSystem.
+Has two output ports: one for the measured state of the gripper,
+represented as the signed distance between the fingers in meters and
+its corresponding velocity, and one for the measured force.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">lcmt_schunk_wsg_status&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgStatusReceiver</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.get_force_output_port">
+<code class="descname">get_force_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.get_force_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.get_state_output_port">
+<code class="descname">get_state_output_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.get_state_output_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.get_status_input_port">
+<code class="descname">get_status_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusReceiver.get_status_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender">
+<em class="property">class </em><code class="descclassname">pydrake.manipulation.schunk_wsg.</code><code class="descname">SchunkWsgStatusSender</code><a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Sends lcmt_schunk_wsg_status messages for a Schunk WSG. This system
+has one input port for the current state of the WSG, and one optional
+input port for the measured gripping force.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkStatusSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_schunk_wsg_status</td></tr></table></td></tr></table><p>The state input is a BasicVector&lt;double&gt; of size 2 – with one
+position and one velocity – representing the distance between the
+fingers (positive implies non-penetration).</p>
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender.get_force_input_port">
+<code class="descname">get_force_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender.get_force_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender.get_state_input_port">
+<code class="descname">get_state_input_port</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgStatusSender.get_state_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.manipulation.simple_ui.html" class="btn btn-neutral float-right" title="pydrake.manipulation.simple_ui" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.manipulation.planner.html" class="btn btn-neutral" title="pydrake.manipulation.planner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

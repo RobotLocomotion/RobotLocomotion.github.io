@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Vim/Neovim Notes</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Vim/Neovim Notes</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="introduction">Introduction</h1>
+
+<p>This page contains notes on ways to use <a href="https://www.vim.org/">Vim</a> or
+<a href="https://neovim.io/">Neovim</a> with Drake. Wherever there are differences
+between the two the Neovim value will be given in curly braces after the Vim
+value (e.g. <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">.config/nvim/init.vim</code>}).</p>
+
+<h1 id="installing-neovim">Installing Neovim</h1>
+
+<p>If you want to use Neovim, follow the instructions on the Neovim wiki
+(<a href="https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu">Ubuntu</a>,
+<a href="https://github.com/neovim/neovim/wiki/Installing-Neovim#homebrew-macos--linuxbrew-linux">Homebrew</a>).
+Ubuntu users should make sure that they install the Python modules as well.</p>
+
+<h1 id="configuration-files">Configuration Files</h1>
+
+<p><code class="highlighter-rouge">sample_vimrc</code> (<a href="/sample_vimrc">download</a>) provides a sample
+configuration file that sets up some plugins and key-mappings that users may
+find useful for working with Drake. It should work out of the box if copied
+to <code class="highlighter-rouge">~/.vimrc</code> {<code class="highlighter-rouge">~/.config/nvim/init.vim</code>}. Be sure to back up any existing
+<code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>} before copying! Users with existing Vim
+configurations are, of course, free to cherry-pick whatever portions of
+<code class="highlighter-rouge">sample_vimrc</code> they’d like.</p>
+
+<p>If you do copy <code class="highlighter-rouge">sample_vimrc</code> to <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>}, your next step
+is to install the plugins that it specifies.</p>
+
+<ol>
+  <li>Open a terminal and launch Vim. The plugin manager
+(<a href="https://github.com/junegunn/vim-plug">vim-plug</a>) will be automatically
+installed (to disable this behavior, delete the four lines following the
+comment “Remove these lines …”).</li>
+  <li>In Vim, type <code class="highlighter-rouge">:PlugInstall</code> and press “Enter”. vim-plug will download
+the specified plugins from GitHub. If you later decide to stop using
+vim-plug, you can remove it along with the plugins it installs by
+deleting the following
+    <ul>
+      <li><code class="highlighter-rouge">~/.vim/autoload/plug.vim</code>
+ {<code class="highlighter-rouge">~/.local/share/nvim/site/autoload/plug.vim</code>}</li>
+      <li><code class="highlighter-rouge">~/.vim/plugged</code> {<code class="highlighter-rouge">~/.local/share/nvim/plugged</code>}</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="setting-up-code-completionlintingjump-to-declaration">Setting up Code-Completion/Linting/Jump To Declaration</h1>
+
+<p><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a> is a plugin that
+provides real-time linting + jump-to-declaration functionality. It has a
+compiled component, which needs to be built before the plugin can be used.</p>
+
+<ol>
+  <li>Let <code class="highlighter-rouge">&lt;YouCompleteMe-location&gt;</code> be the directory in which the plugin is
+  located. If you’re using the provided <code class="highlighter-rouge">sample_vimrc</code>, you can determine
+  <code class="highlighter-rouge">&lt;YouCompleteMe-location&gt;</code> by running <code class="highlighter-rouge">:echo g:plug_home</code> in Vim and
+  appending <code class="highlighter-rouge">/YouCompleteMe</code> to the result.</li>
+  <li>In a terminal, run
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd &lt;YouCompleteMe-location&gt;
+git submodule update --init --recursive
+./install.py --clang-completer
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>In order for YouCompleteMe to provide code-completion and linting for Drake’s
+C++ files, it needs to know what flags to use when compiling them. Fortunately,
+<a href="https://github.com/grailbio/bazel-compilation-database">bazel-compilation-database</a>
+provides a way for YouCompleteMe to get this information from Bazel. The
+following steps should get this working in Drake:</p>
+
+<ol>
+  <li>Download the bazel-compilation-database 0.2.2
+  <a href="https://github.com/grailbio/bazel-compilation-database/archive/0.2.2.tar.gz">tarball</a>.</li>
+  <li>Extract the contents of the tarball to some directory. We will refer to
+  this directory as <code class="highlighter-rouge">&lt;bcd-location&gt;</code>.</li>
+  <li>From the root of your Drake repository run:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir bazel
+ln -s &lt;bcd-location&gt; bazel/compilation_database
+</code></pre></div>    </div>
+  </li>
+  <li>Add the following line to your <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>}:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let g:ycm_global_ycm_extra_conf = '&lt;bcd-location&gt;/.ycm_extra_conf.py'
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Now, when you open a Drake C++ file, you should get real-time linting and
+completion, as well as jump-to functionality (through the <code class="highlighter-rouge">:YcmCompeter GoTo</code>
+command). If it appears not to be working, try running <code class="highlighter-rouge">:YcmDiags</code> to force
+YouCompleteMe to compile the current file. Note that for YouCompleteMe to see
+a given Drake header file, the corresponding Bazel target must have been built.
+See also, <a href="#linting-and-jump-to-declaration-mappings">Linting and Jump-to-Declaration Mappings</a>.</p>
+
+<h1 id="additional-mappings">Additional Mappings</h1>
+
+<p>The aforementioned <code class="highlighter-rouge">sample_vimrc</code> file pulls in several plugins and defines
+mappings for working with them. It also defines some general-purpose mappings.
+Here are some highlights. A lot of these start with <code class="highlighter-rouge">&lt;leader&gt;</code>, which in the
+attached file is mapped to <code class="highlighter-rouge">;</code> (so <code class="highlighter-rouge">&lt;leader&gt;gv</code> becomes <code class="highlighter-rouge">;gv</code>). You can, of course,
+change <code class="highlighter-rouge">&lt;leader&gt;</code> to whatever you prefer in your <code class="highlighter-rouge">.vimrc</code> {<code class="highlighter-rouge">init.vim</code>} file.</p>
+
+<h2 id="git-mappings">Git Mappings</h2>
+
+<p>These mappings use <a href="https://github.com/tpope/vim-fugitive">fugitive.git</a> and
+<a href="https://github.com/gregsexton/gitv">Gitv</a> to perform Git-related tasks.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;leader&gt;gd</code> shows the git diff for the current file. You can move hunks into
+ the index using Vim’s diff commands.</li>
+  <li><code class="highlighter-rouge">&lt;leader&gt;gs</code> shows the current git status using fugitive.git.You can stage
+ files by moving the cursor to the line and pressing “-“. Press cc to start
+ editing the commit message. Save and exit in the commit message to commit.</li>
+  <li><code class="highlighter-rouge">&lt;leader&gt;gv</code> launches gitv, a Gitk clone for Vim. You can use this to inspect
+ commits, switch branches, cherry-pick, and more</li>
+</ul>
+
+<h2 id="linting-and-jump-to-declaration-mappings">Linting and Jump-to-Declaration Mappings</h2>
+
+<p>These mappings use <a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a>
+and <a href="https://github.com/Valloric/ListToggle">ListToggle</a>.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;leader&gt;gg</code> jumps to the declaration of the class/function under the cursor
+ (mnemonic “go go!”). Use the standard jump command Ctrl+o to go back.</li>
+  <li><code class="highlighter-rouge">&lt;leader&gt;fi</code> applies the “fix-it” action listed at the bottom of the buffer
+ (mnemonic “fix it!”).</li>
+  <li><code class="highlighter-rouge">&lt;leader&gt;lo</code> toggles the Location List on and off (mnemonic “LOcation”). All
+ errors found by YouCompleteMe are listed in the location list, which can
+ make it easy to go from one to the next.</li>
+</ul>
+
+<h2 id="file-tree-explorer-mappings">File Tree Explorer Mappings</h2>
+
+<p>These mappings use <a href="https://github.com/scrooloose/nerdtree">NERDTree</a> to
+provide a file tree explorer in Vim.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;leader&gt;nt</code> launches NERDTree for the current working directory</li>
+  <li><code class="highlighter-rouge">&lt;leader&gt;nf</code> launches NERDTree with the current file selected. This is
+ particularly useful for getting to the appropriate <code class="highlighter-rouge">BUILD.bazel</code> file for a
+ given source file.</li>
+</ul>
+
+<h2 id="fuzzy-finder-mappings">Fuzzy Finder Mappings</h2>
+
+<p>These mappings use <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlp.vim</a> to
+provide fuzzy file lookup in Vim.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;leader&gt;ff</code> launches CtrlP in file mode (mnemonic “find file”). Start typing
+ any portions of the file path (they don’t have to be contiguous!) and select
+ the file you want once the choices are narrowed down sufficiently.</li>
+</ul>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

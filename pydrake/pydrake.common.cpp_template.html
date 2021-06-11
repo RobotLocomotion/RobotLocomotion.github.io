@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.common.cpp_template &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
+        <link rel="next" title="pydrake.common.deprecation" href="pydrake.common.deprecation.html"/>
+        <link rel="prev" title="pydrake.common.cpp_param" href="pydrake.common.cpp_param.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.common.html">pydrake.common</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.schema.html">pydrake.common.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.common.html">pydrake.common</a> &raquo;</li>
+        
+      <li>pydrake.common.cpp_template</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.common.cpp_template">
+<span id="pydrake-common-cpp-template"></span><h1>pydrake.common.cpp_template<a class="headerlink" href="#module-pydrake.common.cpp_template" title="Permalink to this headline">¶</a></h1>
+<p>Provides containers for tracking instantiations of C++ templates.</p>
+<dl class="function">
+<dt id="pydrake.common.cpp_template.get_or_init">
+<code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">get_or_init</code><span class="sig-paren">(</span><em>scope</em>, <em>name</em>, <em>template_cls</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.get_or_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an existing template from a scope if it exists; otherwise, it will
+be created and registered.</p>
+<p>If <cite>scope</cite> does not have the attribute <cite>name</cite>, then it will be created as
+<cite>template_cls(name, *args, **kwargs)</cite>.
+(<cite>module_name=…</cite> is also set, but should not be important).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scope</strong> – Scope that contains the template object (this may not
+necessarily be the scope of the instantiation).</li>
+<li><strong>name</strong> – Name of the template object.</li>
+<li><strong>template_cls</strong> – Class (either <cite>TemplateBase</cite> or a derivative).</li>
+<li><strong>kwargs</strong> (<em>args</em><em>,</em>) – Passed to the template class’s constructor.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The existing (or newly created) template object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.cpp_template.TemplateBase">
+<em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateBase</code><span class="sig-paren">(</span><em>name</em>, <em>allow_default=True</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Provides a mechanism to map parameters (types or literals) to
+instantiations, following C++ mechanics.</p>
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>allow_default=True</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – Name of the template object.</li>
+<li><strong>allow_default</strong> – Allow a default value (None) to resolve to the
+parameters of the instantiation that was first added.</li>
+<li><strong>scope</strong> – Parent scope for the template object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.add_instantiation">
+<code class="descname">add_instantiation</code><span class="sig-paren">(</span><em>param</em>, <em>instantiation</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.add_instantiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a unique instantiation.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><cite>param</cite> must not have already been added.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.add_instantiations">
+<code class="descname">add_instantiations</code><span class="sig-paren">(</span><em>instantiation_func</em>, <em>param_list</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.add_instantiations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a set of instantiations given a function and a list of
+parameter sets.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method can only be called once.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instantiation_func</strong> – Function of the form <cite>f(template, param)</cite>,
+where <cite>template</cite> is the current template and <cite>param</cite> is the
+parameter set for the current instantiation.</li>
+<li><strong>param_list</strong> – Ordered container of parameter sets that these</li>
+<li><strong>should be produced for.</strong> (<em>instantiations</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pydrake.common.cpp_template.TemplateBase.define">
+<em class="property">classmethod </em><code class="descname">define</code><span class="sig-paren">(</span><em>name</em>, <em>param_list</em>, <em>*args</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.define" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a decorator for functions that defines a template using
+<cite>name</cite>. The template instantiations are added using
+<cite>add_instantiations</cite>, where the instantiation function is the decorated
+function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> – Name of the template. This should generally match the name
+of the object being decorated for clarity.</li>
+<li><strong>param_list</strong> – Ordered container of parameter sets. For more
+information, see <cite>add_instantiations</cite>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The name of the inner class will not matter as it will be
+overwritten with the template instantiation name. In the below
+example, <cite>Impl</cite> will be renamed to <cite>MyTemplate[int]</cite> when
+<cite>param=(int,)</cite>.</p>
+</div>
+<p class="rubric">Example</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@TemplateClass</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="s2">&quot;MyTemplate&quot;</span><span class="p">,</span>
+                      <span class="n">param_list</span><span class="o">=</span><span class="p">[(</span><span class="nb">int</span><span class="p">,),</span> <span class="p">(</span><span class="nb">float</span><span class="p">,)])</span>
+<span class="k">def</span> <span class="nf">MyTemplate</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
+    <span class="n">T</span><span class="p">,</span> <span class="o">=</span> <span class="n">param</span>
+    <span class="k">class</span> <span class="nc">Impl</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">T</span> <span class="o">=</span> <span class="n">T</span>
+    <span class="k">return</span> <span class="n">Impl</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.deprecate_instantiation">
+<code class="descname">deprecate_instantiation</code><span class="sig-paren">(</span><em>param</em>, <em>message</em>, <em>*</em>, <em>date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.deprecate_instantiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecates an instantiation for the given set of parameters.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method can only be called once for a given instantiation.</p>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>param</strong> – Parameters for an instantiation that is already registered.</li>
+<li><strong>message</strong> – Message to be shown when issuing a deprecation warning.</li>
+<li><strong>date</strong> – (Optional) String of the form “YYYY-MM-DD”.
+If supplied, will reformat the message to add the date as is
+done with DRAKE_DEPRECATED and its processing in mkdoc.py. This
+must be present if <code class="docutils literal"><span class="pre">message</span></code> does not contain the date
+itself.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(instantiation, param), where <code class="docutils literal"><span class="pre">param</span></code> is the resolved parameters.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.get_instantiation">
+<code class="descname">get_instantiation</code><span class="sig-paren">(</span><em>param=None</em>, <em>throw_error=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.get_instantiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the instantiation for the given parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>param</strong> – Can be None, a single parameter, or a tuple/list of
+parameters.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(instantiation, param), where <cite>param</cite> is the resolved set of
+parameters.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.get_param_set">
+<code class="descname">get_param_set</code><span class="sig-paren">(</span><em>instantiation</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.get_param_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all parameters for a given <cite>instantiation</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A set of instantiations.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateBase.is_instantiation">
+<code class="descname">is_instantiation</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase.is_instantiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if an object is an instantion of the given template.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.cpp_template.TemplateClass">
+<em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateClass</code><span class="sig-paren">(</span><em>name</em>, <em>override_meta=True</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
+<p>Extension of <cite>TemplateBase</cite> for classes.</p>
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateClass.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>override_meta=True</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateClass.is_subclass_of_instantiation">
+<code class="descname">is_subclass_of_instantiation</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass.is_subclass_of_instantiation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if <cite>obj</cite> is a subclass of one of the instantiations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The first instantiation of which <cite>obj</cite> is a subclass.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.cpp_template.TemplateFunction">
+<em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateFunction</code><span class="sig-paren">(</span><em>name</em>, <em>allow_default=True</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
+<p>Extension of <cite>TemplateBase</cite> for functions.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.cpp_template.TemplateMethod">
+<em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateMethod</code><span class="sig-paren">(</span><em>name</em>, <em>cls</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateMethod" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
+<p>Extension of <cite>TemplateBase</cite> for class methods.</p>
+<dl class="method">
+<dt id="pydrake.common.cpp_template.TemplateMethod.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>cls</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateMethod.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.common.deprecation.html" class="btn btn-neutral float-right" title="pydrake.common.deprecation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.common.cpp_param.html" class="btn btn-neutral" title="pydrake.common.cpp_param" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

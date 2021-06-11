@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.systems.rendering &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
+        <link rel="next" title="pydrake.systems.scalar_conversion" href="pydrake.systems.scalar_conversion.html"/>
+        <link rel="prev" title="pydrake.systems.pyplot_visualizer" href="pydrake.systems.pyplot_visualizer.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.all.html">pydrake.systems.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.analysis.html">pydrake.systems.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.controllers.html">pydrake.systems.controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.drawing.html">pydrake.systems.drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.framework.html">pydrake.systems.framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.lcm.html">pydrake.systems.lcm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.meshcat_visualizer.html">pydrake.systems.meshcat_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.perception.html">pydrake.systems.perception</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.planar_scenegraph_visualizer.html">pydrake.systems.planar_scenegraph_visualizer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.primitives.html">pydrake.systems.primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.pyplot_visualizer.html">pydrake.systems.pyplot_visualizer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.systems.rendering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.scalar_conversion.html">pydrake.systems.scalar_conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.sensors.html">pydrake.systems.sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.system_sliders.html">pydrake.systems.system_sliders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.systems.trajectory_optimization.html">pydrake.systems.trajectory_optimization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.systems.html">pydrake.systems</a> &raquo;</li>
+        
+      <li>pydrake.systems.rendering</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.systems.rendering">
+<span id="pydrake-systems-rendering"></span><h1>pydrake.systems.rendering<a class="headerlink" href="#module-pydrake.systems.rendering" title="Permalink to this headline">¶</a></h1>
+<p>Bindings for the rendering portion of the Systems framework.</p>
+<dl class="class">
+<dt id="pydrake.systems.rendering.FrameVelocity">
+<em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">FrameVelocity</code><a class="headerlink" href="#pydrake.systems.rendering.FrameVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<p>A 6-vector representing the derivatives of the position transform of
+frame A in the world frame, Xdot_WA, in the form <code class="docutils literal"><span class="pre">{R_WA,</span> <span class="pre">p_WA}</span></code>,
+where <code class="docutils literal"><span class="pre">p</span></code> is the derivatives of x-y-z translation, and <code class="docutils literal"><span class="pre">R</span></code> is the
+derivatives of x-y-z rotation.</p>
+<p>The exact order of elements is <code class="docutils literal"><span class="pre">{ωx,</span> <span class="pre">ωy,</span> <span class="pre">ωz,</span> <span class="pre">vx,</span> <span class="pre">vy,</span> <span class="pre">vz}</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.systems.rendering.FrameVelocity.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.rendering.FrameVelocity.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.rendering.FrameVelocity) -&gt; None</li>
+</ol>
+<p>Default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.rendering.FrameVelocity, velocity: pydrake.multibody.math.SpatialVelocity_[float]) -&gt; None</li>
+</ol>
+<p>Fully-parameterized constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">velocity</span></code>:</dt>
+<dd>the entire spatial velocity V_WA.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.FrameVelocity.get_velocity">
+<code class="descname">get_velocity</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.FrameVelocity</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[float]<a class="headerlink" href="#pydrake.systems.rendering.FrameVelocity.get_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire spatial velocity V_WA.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.rendering.FrameVelocity.kSize">
+<code class="descname">kSize</code><em class="property"> = 6</em><a class="headerlink" href="#pydrake.systems.rendering.FrameVelocity.kSize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.FrameVelocity.set_velocity">
+<code class="descname">set_velocity</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.FrameVelocity, velocity: pydrake.multibody.math.SpatialVelocity_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.FrameVelocity.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns the entire spatial velocity V_WA.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.rendering.MultibodyPositionToGeometryPose">
+<em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">MultibodyPositionToGeometryPose</code><a class="headerlink" href="#pydrake.systems.rendering.MultibodyPositionToGeometryPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A direct-feedthrough system that converts a vector of joint positions
+directly to a geometry::FramePoseVector&lt;T&gt; to behave like a
+MultibodyPlant::get_geometry_pose_output_port().</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPositionToGeometryPose</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>The position input must be a vector whose length matches either the
+number of positions in the MultibodyPlant or the number of states
+(based on the optional argument in the constructor). This option to
+pass the full state vector is provided only for convenience – only
+the position values will affect the outputs.</p>
+<dl class="method">
+<dt id="pydrake.systems.rendering.MultibodyPositionToGeometryPose.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.MultibodyPositionToGeometryPose, plant: pydrake.multibody.plant.MultibodyPlant_[float], input_multibody_state: bool = False</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.MultibodyPositionToGeometryPose.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>The MultibodyPositionToGeometryPose holds an internal, non-owned
+reference to the MultibodyPlant object so you must ensure that
+<code class="docutils literal"><span class="pre">plant</span></code> has a longer lifetime than <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPositionToGeometryPose system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_multibody_state</span></code>:</dt>
+<dd>If true, the vector input port will be the size of the <code class="docutils literal"><span class="pre">plant</span></code>
+<em>state</em> vector. If false, it will be the size of the <code class="docutils literal"><span class="pre">plant</span></code>
+<em>position</em> vector. In both cases, only the positions will affect
+the output. $*Default:* false.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">if <code class="docutils literal"><span class="pre">plant</span></code> is not finalized and registered with a SceneGraph.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.rendering.PoseAggregator">
+<em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">PoseAggregator</code><a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>PoseAggregator is a multiplexer for heterogeneous sources of poses and
+the velocities of those poses. Supported sources are:</p>
+<ul class="simple">
+<li>A PoseVector input, which is a single pose {R, p}, and is vector-valued.</li>
+<li>A FrameVelocity input, which corresponds to a PoseVector input, and
+contains a single velocity {ω, v}, and is vector-valued.</li>
+<li>A PoseBundle input, which is a collection of poses and velocities, and is
+abstract-valued.</li>
+</ul>
+<p>PoseAggregator is stateless.</p>
+<p>The output is a flat PoseBundle that contains all the poses and
+velocities from all the inputs. Unspecified velocities are zero. By
+convention, each aggregated pose or velocity is in the same world
+frame of reference.</p>
+<p>The output poses are named in the form <code class="docutils literal"><span class="pre">&lt;source&gt;</span></code> or
+<code class="docutils literal"><span class="pre">&lt;source&gt;::&lt;pose&gt;</span></code>.</p>
+<ul class="simple">
+<li>For poses derived from a PoseVector input, &lt;source&gt; is the bundle name
+provided at construction time, and “::&lt;pose&gt;” is omitted.</li>
+<li>For poses derived from a PoseBundle input, &lt;source&gt; is the bundle name
+provided at construction time, and &lt;pose&gt; is the name found in the input
+PoseBundle at output evaluation time. In any sane use case, the input
+names will be stable during a simulation, but PoseAggregator is stateless
+and therefore can’t check whether this is actually true.</li>
+</ul>
+<p>The output poses are also each assigned a model instance ID, which
+must be an integer that is greater than or equal to zero. All poses
+with the same model instance ID must have unique names. This enables
+PoseAggregator to aggregate multiple instances of the same model.</p>
+<ul class="simple">
+<li>For poses derived from a PoseVector input, the instance ID is specified
+when the input is declared.</li>
+<li>For poses derived from a PoseBundle input, the instance ID is obtained
+directly from the PoseBundle.</li>
+</ul>
+<p>In typical usage, Diagrams should contain just one PoseAggregator, and
+every pose in the Diagram should appear as an input to it. Then,
+Systems that need to ingest every pose in the universe, such as
+renderers or sensor models, can simply depend on the output.</p>
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseAggregator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseAggregator</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a default aggregator (with no inputs).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseAggregator.AddBundleInput">
+<code class="descname">AddBundleInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseAggregator</em>, <em>arg0: str</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator.AddBundleInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an input for a PoseBundle containing <code class="docutils literal"><span class="pre">num_poses</span></code> poses.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseAggregator.AddSingleInput">
+<code class="descname">AddSingleInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseAggregator</em>, <em>arg0: str</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator.AddSingleInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an input for a PoseVector. <code class="docutils literal"><span class="pre">name</span></code> must be unique for all inputs
+with the same <code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseAggregator.AddSinglePoseAndVelocityInput">
+<code class="descname">AddSinglePoseAndVelocityInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseAggregator</em>, <em>arg0: str</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.rendering.PoseVelocityInputPorts<a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator.AddSinglePoseAndVelocityInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an input for a PoseVector, and a corresponding input for a
+FrameVelocity. <code class="docutils literal"><span class="pre">name</span></code> must be unique for all inputs with the same
+<code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Input ports for pose and velocity.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.rendering.PoseBundle">
+<em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">PoseBundle</code><a class="headerlink" href="#pydrake.systems.rendering.PoseBundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>PoseBundle is a container for a set of poses, represented by an
+Isometry3, and corresponding velocities, represented by a
+FrameVelocity. The poses and velocities are expressed in the world
+frame: X_WFi, V_WFi. Each pose has a name and a model instance ID. If
+two poses in the bundle have the same model instance ID, they must not
+have the same name.</p>
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>num_poses: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.get_model_instance_id">
+<code class="descname">get_model_instance_id</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.get_model_instance_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.get_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.get_num_poses">
+<code class="descname">get_num_poses</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.get_num_poses" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.get_transform">
+<code class="descname">get_transform</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.get_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.get_velocity">
+<code class="descname">get_velocity</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.rendering.FrameVelocity<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.get_velocity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.set_model_instance_id">
+<code class="descname">set_model_instance_id</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.set_model_instance_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.set_name">
+<code class="descname">set_name</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em>, <em>arg1: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.set_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.set_transform">
+<code class="descname">set_transform</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle, arg0: int, arg1: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.set_transform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseBundle.set_velocity">
+<code class="descname">set_velocity</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>arg0: int</em>, <em>arg1: pydrake.systems.rendering.FrameVelocity</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.rendering.PoseVector">
+<em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">PoseVector</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<p>A 7-vector representing the transform of frame A in the world frame,
+X_WA, in the form <code class="docutils literal"><span class="pre">{p_WA,</span> <span class="pre">R_WA}</span></code>, where <code class="docutils literal"><span class="pre">p</span></code> is represented as an
+x-y-z translation, and <code class="docutils literal"><span class="pre">R</span></code> is represented as a quaternion. The exact
+order of elements is <code class="docutils literal"><span class="pre">{x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">qw,</span> <span class="pre">qx,</span> <span class="pre">qy,</span> <span class="pre">qz}</span></code>.</p>
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.rendering.PoseVector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.rendering.PoseVector) -&gt; None</li>
+</ol>
+<p>Default constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.rendering.PoseVector, rotation: pydrake.common.eigen_geometry.Quaternion_[float], translation: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</li>
+</ol>
+<p>Fully-parameterized constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">rotation</span></code>:</dt>
+<dd>the orientation R_WA of frame A in the world frame W.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">translation</span></code>:</dt>
+<dd>the position vector p_WA giving A’s origin measured from W’s
+origin, expressed in W.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.get_rotation">
+<code class="descname">get_rotation</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseVector</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.Quaternion_[float]<a class="headerlink" href="#pydrake.systems.rendering.PoseVector.get_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the rotation R_WA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.get_transform">
+<code class="descname">get_transform</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseVector</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.systems.rendering.PoseVector.get_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the transform X_WA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.get_translation">
+<code class="descname">get_translation</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseVector</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.systems.rendering.PoseVector.get_translation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the translation p_WA.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.rendering.PoseVector.kSize">
+<code class="descname">kSize</code><em class="property"> = 7</em><a class="headerlink" href="#pydrake.systems.rendering.PoseVector.kSize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.set_rotation">
+<code class="descname">set_rotation</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseVector, arg0: pydrake.common.eigen_geometry.Quaternion_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseVector.set_rotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns the rotation R_WA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.set_transform">
+<code class="descname">set_transform</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseVector, arg0: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseVector.set_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns the transform X_WA.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.rendering.PoseVector.set_translation">
+<code class="descname">set_translation</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseVector, arg0: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseVector.set_translation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assigns the translation p_WA.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.rendering.PoseVelocityInputPorts">
+<em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">PoseVelocityInputPorts</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVelocityInputPorts" title="Permalink to this definition">¶</a></dt>
+<dd><p>A container with references to the input port for the pose input, and
+a reference to the input port for the velocity input.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.rendering.PoseVelocityInputPorts.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVelocityInputPorts.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.rendering.PoseVelocityInputPorts.pose_input_port">
+<code class="descname">pose_input_port</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVelocityInputPorts.pose_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.rendering.PoseVelocityInputPorts.velocity_input_port">
+<code class="descname">velocity_input_port</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVelocityInputPorts.velocity_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.systems.scalar_conversion.html" class="btn btn-neutral float-right" title="pydrake.systems.scalar_conversion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.systems.pyplot_visualizer.html" class="btn btn-neutral" title="pydrake.systems.pyplot_visualizer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Sublime Text Notes</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Sublime Text Notes</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <h1 id="introduction">Introduction</h1>
+
+<p>This page contains notes on how to use
+<a href="https://www.sublimetext.com/">Sublime Text</a> with Drake.</p>
+
+<h1 id="packages">Packages</h1>
+
+<p>This subsection lists various <a href="https://packagecontrol.io/">packages</a> that we
+recommend you install.</p>
+
+<h2 id="cpplint">cpplint</h2>
+
+<p><a href="https://packagecontrol.io/packages/SublimeLinter-cpplint">https://packagecontrol.io/packages/SublimeLinter-cpplint</a></p>
+
+<h2 id="trailing-spaces">Trailing Spaces</h2>
+
+<p><a href="https://packagecontrol.io/packages/TrailingSpaces">https://packagecontrol.io/packages/TrailingSpaces</a></p>
+
+<h1 id="user-preferences">User Preferences</h1>
+
+<p>To change your custom user preferences, go to “Sublime Text”, “Preferences”,
+“Settings - User.” Then add the following:</p>
+
+<h2 id="full-file-path-display">Full File Path Display</h2>
+
+<p>Note that this only needs to be done on macOS since the full path appears by
+default on Linux machines.</p>
+
+<p>To display the current file’s full path in the title bar on macOS:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"show_full_path": true,
+</code></pre></div></div>
+
+<h2 id="show-sdf-files-in-side-bar">Show *.sdf Files in Side Bar</h2>
+
+<p>To show <code class="highlighter-rouge">*.sdf</code> files in the side bar:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"file_exclude_patterns":
+[
+    "*.pyc",
+    "*.pyo",
+    "*.exe",
+    "*.dll",
+    "*.obj",
+    "*.o",
+    "*.a",
+    "*.lib",
+    "*.so",
+    "*.dylib",
+    "*.ncb",
+    "*.suo",
+    "*.pdb",
+    "*.idb",
+    ".DS_Store",
+    "*.class",
+    "*.psd",
+    "*.db",
+    "*.sublime-workspace"
+],
+</code></pre></div></div>
+
+<p>Note that the above list does not include <code class="highlighter-rouge">*.sdf</code>. This is expected since by
+default <code class="highlighter-rouge">*.sdf</code> does show up in the list.</p>
+
+<h2 id="automatically-show-an-80-character-ruler">Automatically Show an 80-character Ruler</h2>
+
+<p>To view an 80 character-wide ruler:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"rulers": [80],
+</code></pre></div></div>
+
+<p>Always displaying a ruler is useful to conform to
+<a href="/code_style_guide.html">Drake’s coding style</a>.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

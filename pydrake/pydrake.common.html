@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.common &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="next" title="pydrake.common.all" href="pydrake.common.all.html"/>
+        <link rel="prev" title="pydrake.autodiffutils" href="pydrake.autodiffutils.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pydrake.common</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.schema.html">pydrake.common.schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>pydrake.common</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pydrake-common">
+<h1>pydrake.common<a class="headerlink" href="#pydrake-common" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.all.html">pydrake.common.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.compatibility.html">pydrake.common.compatibility</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.containers.html">pydrake.common.containers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.cpp_param.html">pydrake.common.cpp_param</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.cpp_template.html">pydrake.common.cpp_template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.deprecation.html">pydrake.common.deprecation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.eigen_geometry.html">pydrake.common.eigen_geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.pybind11_version.html">pydrake.common.pybind11_version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.schema.html">pydrake.common.schema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.value.html">pydrake.common.value</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.yaml.html">pydrake.common.yaml</a></li>
+</ul>
+</div>
+<span class="target" id="module-pydrake.common"></span><dl class="function">
+<dt id="pydrake.common.FindResourceOrThrow">
+<code class="descclassname">pydrake.common.</code><code class="descname">FindResourceOrThrow</code><span class="sig-paren">(</span><em>resource_path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.common.FindResourceOrThrow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenient wrapper for querying FindResource(resource_path) followed
+by FindResourceResult::get_absolute_path_or_throw().</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.GetDrakePath">
+<code class="descclassname">pydrake.common.</code><code class="descname">GetDrakePath</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.common.GetDrakePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns the fully-qualified path to the first folder
+containing Drake resources as located by FindResource, or nullopt if
+none is found. For example
+<code class="docutils literal"><span class="pre">${result}/examples/pendulum/Pendulum.urdf</span></code> would be the path to the
+Pendulum example’s URDF resource.</p>
+<p>Most users should prefer FindResource() or FindResourceOrThrow() to
+locate Drake resources for a specific resource filename. This method
+only exists for legacy compatibility reasons, and might eventually be
+removed.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.RandomDistribution">
+<em class="property">class </em><code class="descclassname">pydrake.common.</code><code class="descname">RandomDistribution</code><a class="headerlink" href="#pydrake.common.RandomDistribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Drake supports explicit reasoning about a few carefully chosen random
+distributions.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kUniform : Vector elements are independent and uniformly distributed</p>
+<p>kGaussian : Vector elements are independent and drawn from a</p>
+<p>kExponential : Vector elements are independent and drawn from an</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.common.RandomDistribution.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.common._module_py.RandomDistribution</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.RandomDistribution.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.RandomDistribution.kExponential">
+<code class="descname">kExponential</code><em class="property"> = &lt;RandomDistribution.kExponential: 2&gt;</em><a class="headerlink" href="#pydrake.common.RandomDistribution.kExponential" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.RandomDistribution.kGaussian">
+<code class="descname">kGaussian</code><em class="property"> = &lt;RandomDistribution.kGaussian: 1&gt;</em><a class="headerlink" href="#pydrake.common.RandomDistribution.kGaussian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.RandomDistribution.kUniform">
+<code class="descname">kUniform</code><em class="property"> = &lt;RandomDistribution.kUniform: 0&gt;</em><a class="headerlink" href="#pydrake.common.RandomDistribution.kUniform" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.RandomDistribution.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.common.RandomDistribution.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.RandomDistribution.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.common.RandomDistribution.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.RandomGenerator">
+<em class="property">class </em><code class="descclassname">pydrake.common.</code><code class="descname">RandomGenerator</code><a class="headerlink" href="#pydrake.common.RandomGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines Drake’s canonical implementation of the
+UniformRandomBitGenerator C++ concept (as well as a few conventional
+extras beyond the concept, e.g., seeds). This uses the 32-bit Mersenne
+Twister mt19937 by Matsumoto and Nishimura, 1998. For more
+information, see
+<a class="reference external" href="https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine">https://en.cppreference.com/w/cpp/numeric/random/mersenne_twister_engine</a></p>
+<p>Note: For many workflows in drake, we aim to have computations that are fully
+deterministic given a single random seed.  This is accomplished by passing a
+RandomGenerator object.  To generate random numbers in numpy that are
+deterministic given the C++ random seed (see drake issue #12632 for the
+discussion), use e.g.</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">common</span><span class="o">.</span><span class="n">RandomGenerator</span><span class="p">()</span>
+<span class="n">random_state</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">generator</span><span class="p">())</span>
+
+<span class="n">my_random_value</span> <span class="o">=</span> <span class="n">random_state</span><span class="o">.</span><span class="n">uniform</span><span class="p">()</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="pydrake.common.RandomGenerator.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.RandomGenerator.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.common._module_py.RandomGenerator) -&gt; None</li>
+</ol>
+<p>Default constructor. Seeds the engine with the default_seed.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.common._module_py.RandomGenerator, arg0: int) -&gt; None</li>
+</ol>
+<p>Constructs the engine and initializes the state with a given value.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.set_assertion_failure_to_throw_exception">
+<code class="descclassname">pydrake.common.</code><code class="descname">set_assertion_failure_to_throw_exception</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.set_assertion_failure_to_throw_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set Drake’s assertion failure mechanism to be exceptions</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.set_log_level">
+<code class="descclassname">pydrake.common.</code><code class="descname">set_log_level</code><span class="sig-paren">(</span><em>level: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.common.set_log_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes <code class="docutils literal"><span class="pre">drake::log()-&gt;set_level(level)</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">level</span></code>:</dt>
+<dd>Must be a string from spdlog enumerations: <code class="docutils literal"><span class="pre">trace</span></code>, <cite>debug</cite>,
+<code class="docutils literal"><span class="pre">info</span></code>, <cite>warn</cite>, <code class="docutils literal"><span class="pre">err</span></code>, <cite>critical</cite>, <code class="docutils literal"><span class="pre">off</span></code>, or <code class="docutils literal"><span class="pre">unchanged</span></code>
+(not an enum, but useful for command-line).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The string value of the previous log level. If SPDLOG is disabled,
+then this returns an empty string.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.temp_directory">
+<code class="descclassname">pydrake.common.</code><code class="descname">temp_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.common.temp_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a directory location suitable for temporary files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The value of the environment variable TEST_TMPDIR if defined or
+otherwise ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX where each
+X is replaced by a character from the portable filename character
+set. Any trailing / will be stripped from the output.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError If the path referred to by TEST_TMPDIR or</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">${TMPDIR</span></code> – -/tmp}/robotlocomotion_drake_XXXXXX cannot be created,</li>
+<li>does not exist, or is not a directory.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.common.ToleranceType">
+<em class="property">class </em><code class="descclassname">pydrake.common.</code><code class="descname">ToleranceType</code><a class="headerlink" href="#pydrake.common.ToleranceType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kAbsolute :</p>
+<p>kRelative :</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.common.ToleranceType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.common._module_py.ToleranceType</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.ToleranceType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.ToleranceType.kAbsolute">
+<code class="descname">kAbsolute</code><em class="property"> = &lt;ToleranceType.kAbsolute: 0&gt;</em><a class="headerlink" href="#pydrake.common.ToleranceType.kAbsolute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.ToleranceType.kRelative">
+<code class="descname">kRelative</code><em class="property"> = &lt;ToleranceType.kRelative: 1&gt;</em><a class="headerlink" href="#pydrake.common.ToleranceType.kRelative" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.ToleranceType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.common.ToleranceType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.common.ToleranceType.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.common.ToleranceType.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.common.trigger_an_assertion_failure">
+<code class="descclassname">pydrake.common.</code><code class="descname">trigger_an_assertion_failure</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.trigger_an_assertion_failure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trigger a Drake C++ assertion failure</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.common.all.html" class="btn btn-neutral float-right" title="pydrake.common.all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.autodiffutils.html" class="btn btn-neutral" title="pydrake.autodiffutils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
