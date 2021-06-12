@@ -191,6 +191,17 @@
 <dt id="pydrake.solvers.snopt.SnoptSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.snopt.</code><code class="descname">SnoptSolver</code><a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
+<p>An implementation of SolverInterface for the commercially-licensed
+SNOPT solver (<a class="reference external" href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">https://ccom.ucsd.edu/~optimizers/solvers/snopt/</a>).</p>
+<p>Builds of Drake from source do not compile SNOPT by default, so
+therefore SolverInterface::available() will return false. You must
+opt-in to build SNOPT per the documentation at
+<a class="reference external" href="https://drake.mit.edu/bazel.html#snopt">https://drake.mit.edu/bazel.html#snopt</a>.</p>
+<p><a class="reference external" href="https://drake.mit.edu/from_binary.html">Drake’s pre-compiled binary releases</a> do incorporate SNOPT, so
+therefore SolverInterface::available() will return true. Thanks to
+Philip E. Gill and Elizabeth Wong for their kind support.</p>
+<p>There is no license configuration required to use SNOPT, so
+SolverInterface::enabled() will always return true.</p>
 <dl class="method">
 <dt id="pydrake.solvers.snopt.SnoptSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.snopt.SnoptSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.snopt.SnoptSolver.__init__" title="Permalink to this definition">¶</a></dt>

@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('cost_8h.html','');});
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;Eigen/SparseCore&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="evaluator__base_8h.html">drake/solvers/evaluator_base.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for cost.h:</div>
@@ -161,6 +162,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4bad4d69748b5e84448a51d04f672f76"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; QuadraticCost &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4bad4d69748b5e84448a51d04f672f76">MakeL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
 <tr class="memdesc:a4bad4d69748b5e84448a51d04f672f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cost term of the form | Ax - b |^2.  <a href="namespacedrake_1_1solvers.html#a4bad4d69748b5e84448a51d04f672f76">More...</a><br /></td></tr>
 <tr class="separator:a4bad4d69748b5e84448a51d04f672f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62744a5e355fa26fa97169acfc946128"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; QuadraticCost &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a62744a5e355fa26fa97169acfc946128">Make2NormSquaredCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
+<tr class="memdesc:a62744a5e355fa26fa97169acfc946128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a quadratic cost of the form |Ax-b|²=(Ax-b)ᵀ(Ax-b)  <a href="namespacedrake_1_1solvers.html#a62744a5e355fa26fa97169acfc946128">More...</a><br /></td></tr>
+<tr class="separator:a62744a5e355fa26fa97169acfc946128"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d268ea8150fb094f1499a958c50defb"><td class="memTemplParams" colspan="2">template&lt;typename FF &gt; </td></tr>
 <tr class="memitem:a9d268ea8150fb094f1499a958c50defb"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; Cost &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a9d268ea8150fb094f1499a958c50defb">MakeFunctionCost</a> (FF &amp;&amp;f)</td></tr>
 <tr class="memdesc:a9d268ea8150fb094f1499a958c50defb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an input of type <code>F</code> to a nonlinear cost.  <a href="namespacedrake_1_1solvers.html#a9d268ea8150fb094f1499a958c50defb">More...</a><br /></td></tr>

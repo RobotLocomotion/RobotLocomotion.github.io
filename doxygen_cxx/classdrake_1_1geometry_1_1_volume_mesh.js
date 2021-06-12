@@ -4,6 +4,7 @@ var classdrake_1_1geometry_1_1_volume_mesh =
     [ "ElementIndex", "classdrake_1_1geometry_1_1_volume_mesh.html#a07bb4dc37395ceb95e7ae1b722ef80f0", null ],
     [ "ScalarType", "classdrake_1_1geometry_1_1_volume_mesh.html#a6aec7d49d25322d8fae54028059d27aa", null ],
     [ "VertexIndex", "classdrake_1_1geometry_1_1_volume_mesh.html#a690188133367040442c5f946a69c859c", null ],
+    [ "VertexType", "classdrake_1_1geometry_1_1_volume_mesh.html#aef61c96d537a1731194b9f1ff31a28d9", null ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html#ae1f54ec7a16209f802cc46f406f5764b", null ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html#ad1233e4b20b349fa520335f175a1e2f5", null ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html#ae272007bc38e40a5c2ae5989dd353340", null ],
@@ -12,7 +13,7 @@ var classdrake_1_1geometry_1_1_volume_mesh =
     [ "CalcTetrahedronVolume", "classdrake_1_1geometry_1_1_volume_mesh.html#ad8bc734c832b3100f9da68904efcaca3", null ],
     [ "CalcVolume", "classdrake_1_1geometry_1_1_volume_mesh.html#a54e9b34e14078d808320820e0369c210", null ],
     [ "element", "classdrake_1_1geometry_1_1_volume_mesh.html#a7c5e4af31645f67b92a81eafa0eca03b", null ],
-    [ "Equal", "classdrake_1_1geometry_1_1_volume_mesh.html#a1899ebe43e1aff7f79e338d2b9843dcc", null ],
+    [ "Equal", "classdrake_1_1geometry_1_1_volume_mesh.html#a106843ecf8c1cd5203dfacb5817bc41d", null ],
     [ "num_elements", "classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc", null ],
     [ "num_vertices", "classdrake_1_1geometry_1_1_volume_mesh.html#a319e621fc359dd8daad48247f95b12fa", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_volume_mesh.html#a6e573ccac8cb33547bebe17dce6f44da", null ],
@@ -20,6 +21,7 @@ var classdrake_1_1geometry_1_1_volume_mesh =
     [ "tetrahedra", "classdrake_1_1geometry_1_1_volume_mesh.html#a895d67540aff2cb88a555048a1fa7e90", null ],
     [ "vertex", "classdrake_1_1geometry_1_1_volume_mesh.html#a275b3a6a1f5f0483f54c832626e90201", null ],
     [ "vertices", "classdrake_1_1geometry_1_1_volume_mesh.html#ad82be71426f4fffeec9cd491a90fc523", null ],
+    [ "internal::MeshDeformer< VolumeMesh< T > >", "classdrake_1_1geometry_1_1_volume_mesh.html#ad5fa7e42f3d3992a89ade0cf5846fc21", null ],
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh.html#a1ef9213b7d36a15416383fbd2e68fb2f", null ],
     [ "kVertexPerElement", "classdrake_1_1geometry_1_1_volume_mesh.html#a39b0509ce7179535d6b30f11fb305dc6", null ]
 ];

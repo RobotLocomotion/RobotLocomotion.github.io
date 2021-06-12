@@ -4,6 +4,7 @@ var classdrake_1_1geometry_1_1_surface_mesh =
     [ "ElementIndex", "classdrake_1_1geometry_1_1_surface_mesh.html#a48adb138392ceecf5c0bf71621b112c2", null ],
     [ "ScalarType", "classdrake_1_1geometry_1_1_surface_mesh.html#a6aec7d49d25322d8fae54028059d27aa", null ],
     [ "VertexIndex", "classdrake_1_1geometry_1_1_surface_mesh.html#a6a6d6a4887cc355b6024af7a2a5417a2", null ],
+    [ "VertexType", "classdrake_1_1geometry_1_1_surface_mesh.html#a19cde33dda9c13a37f1192b0a2cf0a32", null ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html#afdbad8c2048d841ad236bd4d21bf8020", null ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html#ae0b8c0082bf0fb73fd0bfb583f7c4576", null ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html#a30a54b7961f852a906a1c169e54a175f", null ],
@@ -27,6 +28,7 @@ var classdrake_1_1geometry_1_1_surface_mesh =
     [ "TransformVertices", "classdrake_1_1geometry_1_1_surface_mesh.html#a505ea28f0f6274285a379c870c44bb37", null ],
     [ "vertex", "classdrake_1_1geometry_1_1_surface_mesh.html#a08759e7bd27a84cbdc4a70d758f3ef15", null ],
     [ "vertices", "classdrake_1_1geometry_1_1_surface_mesh.html#a7aa18284a3b4e4ccc62ad2bd88625c47", null ],
+    [ "internal::MeshDeformer< SurfaceMesh< T > >", "classdrake_1_1geometry_1_1_surface_mesh.html#a078f09c85e0286978572a6624027b71b", null ],
     [ "SurfaceMeshTester< T >", "classdrake_1_1geometry_1_1_surface_mesh.html#a58584b0686ae529c43df85ba38cef480", null ],
     [ "kVertexPerElement", "classdrake_1_1geometry_1_1_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6", null ]
 ];

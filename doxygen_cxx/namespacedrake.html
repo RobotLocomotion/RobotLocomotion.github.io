@@ -275,10 +275,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aca2ad496fcfd4aab65f4f9eaf50759cb"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aca2ad496fcfd4aab65f4f9eaf50759cb">type_check_always_true</a> = std::true_type</td></tr>
 <tr class="memdesc:aca2ad496fcfd4aab65f4f9eaf50759cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a check which will return true for any type.  <a href="#aca2ad496fcfd4aab65f4f9eaf50759cb">More...</a><br /></td></tr>
 <tr class="separator:aca2ad496fcfd4aab65f4f9eaf50759cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18b3378e99b86b40c4cb9a9ac0d19e1f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a18b3378e99b86b40c4cb9a9ac0d19e1f"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a18b3378e99b86b40c4cb9a9ac0d19e1f">negation</a> = std::integral_constant&lt; bool, !T::value &gt;</td></tr>
-<tr class="memdesc:a18b3378e99b86b40c4cb9a9ac0d19e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides backport of C++17 <code>std::negation</code>.  <a href="#a18b3378e99b86b40c4cb9a9ac0d19e1f">More...</a><br /></td></tr>
-<tr class="separator:a18b3378e99b86b40c4cb9a9ac0d19e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1c657c4d2cf400649123a7c2573d5b"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a1f1c657c4d2cf400649123a7c2573d5b"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a> = typename <a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt; T &gt;::type</td></tr>
 <tr class="memdesc:a1f1c657c4d2cf400649123a7c2573d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">An alias for a boolean-like value, conditioned on the scalar type <code>T</code>.  <a href="#a1f1c657c4d2cf400649123a7c2573d5b">More...</a><br /></td></tr>
@@ -570,18 +566,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ae65839d11c343c02ff41aec068e4ff28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_rlocation_or_error.html">RlocationOrError</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae65839d11c343c02ff41aec068e4ff28">FindRunfile</a> (const std::string &amp;resource_path)</td></tr>
 <tr class="memdesc:ae65839d11c343c02ff41aec068e4ff28"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns the absolute path to the given resource_path from Bazel runfiles, or else an error message when not found.  <a href="#ae65839d11c343c02ff41aec068e4ff28">More...</a><br /></td></tr>
 <tr class="separator:ae65839d11c343c02ff41aec068e4ff28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a820665bdf5332e913c6bf67e38549d6b"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
-<tr class="memitem:a820665bdf5332e913c6bf67e38549d6b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral&lt; T &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a820665bdf5332e913c6bf67e38549d6b">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
-<tr class="memdesc:a820665bdf5332e913c6bf67e38549d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for integral constants.  <a href="#a820665bdf5332e913c6bf67e38549d6b">More...</a><br /></td></tr>
-<tr class="separator:a820665bdf5332e913c6bf67e38549d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51419dc11e1165f062e90cb9241b6dca"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
-<tr class="memitem:a51419dc11e1165f062e90cb9241b6dca"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_enum&lt; T &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a51419dc11e1165f062e90cb9241b6dca">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
-<tr class="memdesc:a51419dc11e1165f062e90cb9241b6dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for enumerations.  <a href="#a51419dc11e1165f062e90cb9241b6dca">More...</a><br /></td></tr>
-<tr class="separator:a51419dc11e1165f062e90cb9241b6dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f077927b3589bef8694c7d92e53710"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
-<tr class="memitem:ad7f077927b3589bef8694c7d92e53710"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_floating_point&lt; T &gt;::value &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad7f077927b3589bef8694c7d92e53710">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
-<tr class="memdesc:ad7f077927b3589bef8694c7d92e53710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for floating point values.  <a href="#ad7f077927b3589bef8694c7d92e53710">More...</a><br /></td></tr>
-<tr class="separator:ad7f077927b3589bef8694c7d92e53710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
+<tr class="memitem:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ace5b5f07e7cce19025b862a56d85e6aa">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
+<tr class="memdesc:ace5b5f07e7cce19025b862a56d85e6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for integral constants.  <a href="#ace5b5f07e7cce19025b862a56d85e6aa">More...</a><br /></td></tr>
+<tr class="separator:ace5b5f07e7cce19025b862a56d85e6aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacd6804761e9fb9f0fa26a6766f1444"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
+<tr class="memitem:aeacd6804761e9fb9f0fa26a6766f1444"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_enum_v&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aeacd6804761e9fb9f0fa26a6766f1444">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
+<tr class="memdesc:aeacd6804761e9fb9f0fa26a6766f1444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for enumerations.  <a href="#aeacd6804761e9fb9f0fa26a6766f1444">More...</a><br /></td></tr>
+<tr class="separator:aeacd6804761e9fb9f0fa26a6766f1444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04ca99007a983e597a71955c96c5925"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class T &gt; </td></tr>
+<tr class="memitem:ae04ca99007a983e597a71955c96c5925"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_floating_point_v&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae04ca99007a983e597a71955c96c5925">hash_append</a> (HashAlgorithm &amp;hasher, const T &amp;item) noexcept</td></tr>
+<tr class="memdesc:ae04ca99007a983e597a71955c96c5925"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for floating point values.  <a href="#ae04ca99007a983e597a71955c96c5925">More...</a><br /></td></tr>
+<tr class="separator:ae04ca99007a983e597a71955c96c5925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"><td class="memTemplParams" colspan="2">template&lt;class HashAlgorithm , class Traits , class Allocator &gt; </td></tr>
 <tr class="memitem:a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b">hash_append</a> (HashAlgorithm &amp;hasher, const std::basic_string&lt; char, Traits, Allocator &gt; &amp;item) noexcept</td></tr>
 <tr class="memdesc:a0abcb9a7b5df5dcf6f77d4dd1fa1f05b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides <a class="el" href="group__hash__append.html">hash_append generic hashing</a> for std::string.  <a href="#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b">More...</a><br /></td></tr>
@@ -641,6 +637,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ad2b506cc6aeddf8e5f52b327382d0b13"><td class="memTemplParams" colspan="2">template&lt;typename T , int Rows, int Cols&gt; </td></tr>
 <tr class="memitem:ad2b506cc6aeddf8e5f52b327382d0b13"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ad2b506cc6aeddf8e5f52b327382d0b13">operator&lt;&lt;</a> (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;, Rows, Cols &gt; &amp;poly_mat)</td></tr>
 <tr class="separator:ad2b506cc6aeddf8e5f52b327382d0b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2cd15bd61a427917d479a38a1a3580"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:adc2cd15bd61a427917d479a38a1a3580"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#adc2cd15bd61a427917d479a38a1a3580">CalcProbabilityDensity</a> (<a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> distribution, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;x)</td></tr>
+<tr class="memdesc:adc2cd15bd61a427917d479a38a1a3580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the density (probability density function) of the multivariate distribution.  <a href="#adc2cd15bd61a427917d479a38a1a3580">More...</a><br /></td></tr>
+<tr class="separator:adc2cd15bd61a427917d479a38a1a3580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9ab1dd8eeeb9910b3755b238fc8907e9">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;pair)</td></tr>
 <tr class="memdesc:a9ab1dd8eeeb9910b3755b238fc8907e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support writing a <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">SortedPair</a> to a stream (conditional on the support of writing the underlying type T to a stream).  <a href="#a9ab1dd8eeeb9910b3755b238fc8907e9">More...</a><br /></td></tr>
@@ -715,24 +715,24 @@ Functions</h2></td></tr>
 <tr class="memitem:a726304f0129c6db7864e4ff5cfe4cdd7"><td class="memTemplParams" colspan="2">template&lt;typename T , int Rows, int Cols&gt; </td></tr>
 <tr class="memitem:a726304f0129c6db7864e4ff5cfe4cdd7"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a726304f0129c6db7864e4ff5cfe4cdd7">operator&lt;&lt;</a> (std::ostream &amp;os, const Eigen::Matrix&lt; <a class="el" href="classdrake_1_1_trig_poly.html">TrigPoly</a>&lt; T &gt;, Rows, Cols &gt; &amp;tp_mat)</td></tr>
 <tr class="separator:a726304f0129c6db7864e4ff5cfe4cdd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a284550e79594f3112b7619c3f1be0be9"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
-<tr class="memitem:a284550e79594f3112b7619c3f1be0be9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a284550e79594f3112b7619c3f1be0be9">operator==</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
-<tr class="separator:a284550e79594f3112b7619c3f1be0be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a188637f54c49ee7427a3315f1f1a6f96"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
-<tr class="memitem:a188637f54c49ee7427a3315f1f1a6f96"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a188637f54c49ee7427a3315f1f1a6f96">operator!=</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
-<tr class="separator:a188637f54c49ee7427a3315f1f1a6f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f92deeaa12f6173717e9f15297ce03f"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
-<tr class="memitem:a6f92deeaa12f6173717e9f15297ce03f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6f92deeaa12f6173717e9f15297ce03f">operator&lt;</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
-<tr class="separator:a6f92deeaa12f6173717e9f15297ce03f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23da26daef061510be0f06706a4c486d"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
-<tr class="memitem:a23da26daef061510be0f06706a4c486d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a23da26daef061510be0f06706a4c486d">operator&lt;=</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
-<tr class="separator:a23da26daef061510be0f06706a4c486d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad63634f4f0e3ea3ff76babb7569736b"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
-<tr class="memitem:aad63634f4f0e3ea3ff76babb7569736b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aad63634f4f0e3ea3ff76babb7569736b">operator&gt;</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
-<tr class="separator:aad63634f4f0e3ea3ff76babb7569736b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3c515436fc115aad7d71d9bd403d0a1"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
-<tr class="memitem:af3c515436fc115aad7d71d9bd403d0a1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#af3c515436fc115aad7d71d9bd403d0a1">operator&gt;=</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
-<tr class="separator:af3c515436fc115aad7d71d9bd403d0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc6fee0f84a9d283d208d778fcefe34"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
+<tr class="memitem:a1bc6fee0f84a9d283d208d778fcefe34"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1bc6fee0f84a9d283d208d778fcefe34">operator==</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
+<tr class="separator:a1bc6fee0f84a9d283d208d778fcefe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a46686cf3db66aa614a6f5abb705765"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
+<tr class="memitem:a4a46686cf3db66aa614a6f5abb705765"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a4a46686cf3db66aa614a6f5abb705765">operator!=</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
+<tr class="separator:a4a46686cf3db66aa614a6f5abb705765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac468f00a772f27cad9dacff36a83e443"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
+<tr class="memitem:ac468f00a772f27cad9dacff36a83e443"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac468f00a772f27cad9dacff36a83e443">operator&lt;</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
+<tr class="separator:ac468f00a772f27cad9dacff36a83e443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f40e086a1c732bfe51b4938754c3e36"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
+<tr class="memitem:a9f40e086a1c732bfe51b4938754c3e36"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9f40e086a1c732bfe51b4938754c3e36">operator&lt;=</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
+<tr class="separator:a9f40e086a1c732bfe51b4938754c3e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2400c6e4da6e035486720985558890cb"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
+<tr class="memitem:a2400c6e4da6e035486720985558890cb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a2400c6e4da6e035486720985558890cb">operator&gt;</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
+<tr class="separator:a2400c6e4da6e035486720985558890cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6e5cf21ed0ea9014bd179a4813d56d2"><td class="memTemplParams" colspan="2">template&lt;typename Tag , typename U &gt; </td></tr>
+<tr class="memitem:ac6e5cf21ed0ea9014bd179a4813d56d2"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac6e5cf21ed0ea9014bd179a4813d56d2">operator&gt;=</a> (const U &amp;value, const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;tag)</td></tr>
+<tr class="separator:ac6e5cf21ed0ea9014bd179a4813d56d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade20b7bf635eecb13adbaac4df980af0"><td class="memTemplParams" colspan="2">template&lt;typename ... Args&gt; </td></tr>
 <tr class="memitem:ade20b7bf635eecb13adbaac4df980af0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ade20b7bf635eecb13adbaac4df980af0">unused</a> (const Args &amp;...)</td></tr>
 <tr class="memdesc:ade20b7bf635eecb13adbaac4df980af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Documents the argument(s) as unused, placating GCC's -Wunused-parameter warning.  <a href="#ade20b7bf635eecb13adbaac4df980af0">More...</a><br /></td></tr>
@@ -1171,22 +1171,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A matrix of dynamic size, templated on scalar type. </p>
-
-</div>
-</div>
-<a id="a18b3378e99b86b40c4cb9a9ac0d19e1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18b3378e99b86b40c4cb9a9ac0d19e1f">&#9670;&nbsp;</a></span>negation</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#a18b3378e99b86b40c4cb9a9ac0d19e1f">negation</a> =  std::integral_constant&lt;bool, !T::value&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Provides backport of C++17 <code>std::negation</code>. </p>
 
 </div>
 </div>
@@ -1911,6 +1895,50 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="adc2cd15bd61a427917d479a38a1a3580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2cd15bd61a427917d479a38a1a3580">&#9670;&nbsp;</a></span>CalcProbabilityDensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T drake::CalcProbabilityDensity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a>&#160;</td>
+          <td class="paramname"><em>distribution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the density (probability density function) of the multivariate distribution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">distribution</td><td>The distribution type. </td></tr>
+    <tr><td class="paramname">x</td><td>The value of the sampled vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When instantiating this function, the user needs to explicitly pass in the scalar type, for example CalcProbabilityDensity&lt;double&gt;(...), the compiler might have problem to deduce the scalar type automatically. </dd></dl>
+
+</div>
+</div>
 <a id="a886235c479e3d60c4d088505191293bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a886235c479e3d60c4d088505191293bc">&#9670;&nbsp;</a></span>CompareMatrices()</h2>
 
@@ -2388,8 +2416,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a820665bdf5332e913c6bf67e38549d6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a820665bdf5332e913c6bf67e38549d6b">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[1/8]</span></h2>
+<a id="ace5b5f07e7cce19025b862a56d85e6aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5b5f07e7cce19025b862a56d85e6aa">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2398,7 +2426,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_integral&lt;T&gt;::value&gt; drake::hash_append </td>
+          <td class="memname">std::enable_if_t&lt;std::is_integral_v&lt;T&gt; &gt; drake::hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -2426,8 +2454,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a51419dc11e1165f062e90cb9241b6dca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51419dc11e1165f062e90cb9241b6dca">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[2/8]</span></h2>
+<a id="aeacd6804761e9fb9f0fa26a6766f1444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacd6804761e9fb9f0fa26a6766f1444">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2436,7 +2464,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_enum&lt;T&gt;::value&gt; drake::hash_append </td>
+          <td class="memname">std::enable_if_t&lt;std::is_enum_v&lt;T&gt; &gt; drake::hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -2464,8 +2492,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad7f077927b3589bef8694c7d92e53710"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7f077927b3589bef8694c7d92e53710">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[3/8]</span></h2>
+<a id="ae04ca99007a983e597a71955c96c5925"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04ca99007a983e597a71955c96c5925">&#9670;&nbsp;</a></span>hash_append() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2474,7 +2502,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_floating_point&lt;T&gt;::value&gt; drake::hash_append </td>
+          <td class="memname">std::enable_if_t&lt;std::is_floating_point_v&lt;T&gt; &gt; drake::hash_append </td>
           <td>(</td>
           <td class="paramtype">HashAlgorithm &amp;&#160;</td>
           <td class="paramname"><em>hasher</em>, </td>
@@ -3191,14 +3219,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a188637f54c49ee7427a3315f1f1a6f96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a188637f54c49ee7427a3315f1f1a6f96">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
+<a id="a4a46686cf3db66aa614a6f5abb705765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a46686cf3db66aa614a6f5abb705765">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type drake::operator!= </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; drake::operator!= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -3249,14 +3277,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f92deeaa12f6173717e9f15297ce03f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f92deeaa12f6173717e9f15297ce03f">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[2/2]</span></h2>
+<a id="ac468f00a772f27cad9dacff36a83e443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac468f00a772f27cad9dacff36a83e443">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type drake::operator&lt; </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; drake::operator&lt; </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -3393,14 +3421,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a23da26daef061510be0f06706a4c486d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23da26daef061510be0f06706a4c486d">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/2]</span></h2>
+<a id="a9f40e086a1c732bfe51b4938754c3e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f40e086a1c732bfe51b4938754c3e36">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type drake::operator&lt;= </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; drake::operator&lt;= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -3451,14 +3479,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a284550e79594f3112b7619c3f1be0be9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a284550e79594f3112b7619c3f1be0be9">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
+<a id="a1bc6fee0f84a9d283d208d778fcefe34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc6fee0f84a9d283d208d778fcefe34">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type drake::operator== </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; drake::operator== </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -3509,14 +3537,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aad63634f4f0e3ea3ff76babb7569736b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad63634f4f0e3ea3ff76babb7569736b">&#9670;&nbsp;</a></span>operator&gt;() <span class="overload">[2/2]</span></h2>
+<a id="a2400c6e4da6e035486720985558890cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2400c6e4da6e035486720985558890cb">&#9670;&nbsp;</a></span>operator&gt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type drake::operator&gt; </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; drake::operator&gt; </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>
@@ -3567,14 +3595,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af3c515436fc115aad7d71d9bd403d0a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3c515436fc115aad7d71d9bd403d0a1">&#9670;&nbsp;</a></span>operator&gt;=() <span class="overload">[2/2]</span></h2>
+<a id="ac6e5cf21ed0ea9014bd179a4813d56d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6e5cf21ed0ea9014bd179a4813d56d2">&#9670;&nbsp;</a></span>operator&gt;=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type drake::operator&gt;= </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; drake::operator&gt;= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em>, </td>

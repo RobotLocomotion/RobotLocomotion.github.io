@@ -13,5 +13,6 @@ var searchData=
   ['simulation',['Simulation',['../group__simulation.html',1,'']]],
   ['simulator_20configuration',['Simulator configuration',['../group__simulator__configuration.html',1,'']]],
   ['stochastic_20systems',['Stochastic Systems',['../group__stochastic__systems.html',1,'']]],
+  ['system_20compatibility',['System Compatibility',['../group__system__compatibility.html',1,'']]],
   ['system_20scalar_20conversion',['System Scalar Conversion',['../group__system__scalar__conversion.html',1,'']]]
 ];

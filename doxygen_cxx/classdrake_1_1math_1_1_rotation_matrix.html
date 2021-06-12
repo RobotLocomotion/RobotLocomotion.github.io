@@ -93,7 +93,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1math_1_1_rotation_matrix
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -170,7 +169,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abcb263978b339adbbfb419ba422aef80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> rotation matrix <code>R_AB</code> multiplied by <code>other</code> rotation matrix <code>R_BC</code>, returning the composition <code>R_AB * R_BC</code>.  <a href="#abcb263978b339adbbfb419ba422aef80">More...</a><br /></td></tr>
 <tr class="separator:abcb263978b339adbbfb419ba422aef80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42527fefb7158a155c8b2e21c98b95e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a42527fefb7158a155c8b2e21c98b95e5">InvertAndCompose</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a>&lt; T &gt; &amp;other) const</td></tr>
-<tr class="memdesc:a42527fefb7158a155c8b2e21c98b95e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the product of <code>this</code> inverted times another RotationMatrix.  <a href="#a42527fefb7158a155c8b2e21c98b95e5">More...</a><br /></td></tr>
+<tr class="memdesc:a42527fefb7158a155c8b2e21c98b95e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the product of <code>this</code> inverted and another RotationMatrix.  <a href="#a42527fefb7158a155c8b2e21c98b95e5">More...</a><br /></td></tr>
 <tr class="separator:a42527fefb7158a155c8b2e21c98b95e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56cef20bb84fd64eef3c37c98e1ef7e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a56cef20bb84fd64eef3c37c98e1ef7e9">operator *</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;v_B) const</td></tr>
 <tr class="memdesc:a56cef20bb84fd64eef3c37c98e1ef7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> rotation matrix <code>R_AB</code> multiplied by an arbitrary Vector3 expressed in the B frame.  <a href="#a56cef20bb84fd64eef3c37c98e1ef7e9">More...</a><br /></td></tr>
@@ -206,6 +205,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6baddfa26e9183d21c69cc1f55a17521"><td class="memItemLeft" align="right" valign="top">Eigen::AngleAxis&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a6baddfa26e9183d21c69cc1f55a17521">ToAngleAxis</a> () const</td></tr>
 <tr class="memdesc:a6baddfa26e9183d21c69cc1f55a17521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an AngleAxis <code>theta_lambda</code> containing an angle <code>theta</code> and unit vector (axis direction) <code>lambda</code> that represents <code>this</code> RotationMatrix.  <a href="#a6baddfa26e9183d21c69cc1f55a17521">More...</a><br /></td></tr>
 <tr class="separator:a6baddfa26e9183d21c69cc1f55a17521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9b6932fb53dba370feb79ae6f567fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a2f9b6932fb53dba370feb79ae6f567fe">RotationMatrix</a> (internal::DoNotInitializeMemberFields)</td></tr>
+<tr class="memdesc:a2f9b6932fb53dba370feb79ae6f567fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> without initializing the underlying 3x3 matrix.  <a href="#a2f9b6932fb53dba370feb79ae6f567fe">More...</a><br /></td></tr>
+<tr class="separator:a2f9b6932fb53dba370feb79ae6f567fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a64fa29fa97b01b5f9fd75720fad74f7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a64fa29fa97b01b5f9fd75720fad74f7f">RotationMatrix</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a> &amp;)=default</td></tr>
 <tr class="separator:a64fa29fa97b01b5f9fd75720fad74f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -283,7 +285,7 @@ Related Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a64fa29fa97b01b5f9fd75720fad74f7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64fa29fa97b01b5f9fd75720fad74f7f">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a64fa29fa97b01b5f9fd75720fad74f7f">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -309,7 +311,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a22247b3e379fee1e9b9dda9952d78fd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22247b3e379fee1e9b9dda9952d78fd9">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a22247b3e379fee1e9b9dda9952d78fd9">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,7 +337,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a10729b40d2b64359d6b25c64fb6297e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10729b40d2b64359d6b25c64fb6297e0">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a10729b40d2b64359d6b25c64fb6297e0">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -354,7 +356,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a02349fa508ba55fd7df957169498e824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02349fa508ba55fd7df957169498e824">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a02349fa508ba55fd7df957169498e824">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +396,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7f6eb5993bd83412f92e82aa49873ae6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f6eb5993bd83412f92e82aa49873ae6">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f6eb5993bd83412f92e82aa49873ae6">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -435,7 +437,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="aeb8205e6418bc644739b23879344135b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb8205e6418bc644739b23879344135b">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8205e6418bc644739b23879344135b">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +477,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a05183386f55111df27e380877a9f11b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05183386f55111df27e380877a9f11b2">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a05183386f55111df27e380877a9f11b2">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,6 +518,35 @@ In this discussion, A is the Space frame and D is the Body frame. One way to vis
 </dd>
 <dd>
 This method constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> from a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a>. Vice-versa, there are high-accuracy <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> constructor/methods that form a <a class="el" href="classdrake_1_1math_1_1_roll_pitch_yaw.html" title="This class represents the orientation between two arbitrary frames A and D associated with a Space-fi...">RollPitchYaw</a> from a rotation matrix. </dd></dl>
+
+</div>
+</div>
+<a id="a2f9b6932fb53dba370feb79ae6f567fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9b6932fb53dba370feb79ae6f567fe">&#9670;&nbsp;</a></span>RotationMatrix() <span class="overload">[8/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">RotationMatrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">internal::DoNotInitializeMemberFields&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Constructs a <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html" title="This class represents a 3x3 rotation matrix between two arbitrary frames A and B and helps ensure use...">RotationMatrix</a> without initializing the underlying 3x3 matrix. </p>
+<p>Here for use by <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html" title="This class represents a proper rigid transform between two frames which can be regarded in two ways.">RigidTransform</a> but no one else. </p>
 
 </div>
 </div>
@@ -741,8 +772,8 @@ To orthonormalize a 3x3 matrix, use <a class="el" href="classdrake_1_1math_1_1_r
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the product of <code>this</code> inverted times another RotationMatrix. </p>
-<p>If you consider <code>this</code> to be the rotation matrix R_AB, and <code>other</code> to be R_AC, then this method returns R_BC = R_AB⁻¹ * R_AC. For T==double, this method can be <em>much</em> faster than inverting first and then performing the composition. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Calculates the product of <code>this</code> inverted and another RotationMatrix. </p>
+<p>If you consider <code>this</code> to be the rotation matrix R_AB, and <code>other</code> to be R_AC, then this method returns R_BC = R_AB⁻¹ * R_AC. For T==double, this method can be <em>much</em> faster than inverting first and then performing the composition because it can take advantage of the orthogonality of rotation matrices. On some platforms it can use SIMD instructions for further speedups. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RotationMatrix that post-multiplies <code>this</code> inverted. </td></tr>
   </table>

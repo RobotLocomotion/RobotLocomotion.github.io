@@ -193,12 +193,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac9268f6e13f208019d9131cbe98dde0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#ac9268f6e13f208019d9131cbe98dde0d">CopyToVector</a> () const</td></tr>
 <tr class="memdesc:ac9268f6e13f208019d9131cbe98dde0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of the entire continuous state vector into an Eigen vector.  <a href="#ac9268f6e13f208019d9131cbe98dde0d">More...</a><br /></td></tr>
 <tr class="separator:ac9268f6e13f208019d9131cbe98dde0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
-<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id of the subsystem that created this state.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
-<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
-<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Records the id of the subsystem that created this state.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
-<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a60497c713d4726f442dda3e6ffc7b8c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#a60497c713d4726f442dda3e6ffc7b8c4">ContinuousState</a> (const <a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a> &amp;)=delete</td></tr>
 <tr class="separator:a60497c713d4726f442dda3e6ffc7b8c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +202,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac06d214ff02e0d9f5ed636e55743bcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56f39aebb24abcfe7c42677b90d98763"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#a56f39aebb24abcfe7c42677b90d98763">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_continuous_state.html">ContinuousState</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a56f39aebb24abcfe7c42677b90d98763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">System compatibility</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>.</p>
+</div></td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id of the subsystem that created this state.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
+<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_continuous_state.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
+<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Records the id of the subsystem that created this state.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
+<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>

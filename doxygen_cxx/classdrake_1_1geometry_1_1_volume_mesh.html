@@ -144,9 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7c63c0eb1065ee899847e5ec6af74ccf"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a7c63c0eb1065ee899847e5ec6af74ccf">CalcBarycentric</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;p_MQ, <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a07bb4dc37395ceb95e7ae1b722ef80f0">ElementIndex</a> e) const</td></tr>
 <tr class="memdesc:a7c63c0eb1065ee899847e5ec6af74ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate barycentric coordinates with respect to the tetrahedron <code>e</code> of the point Q.  <a href="#a7c63c0eb1065ee899847e5ec6af74ccf">More...</a><br /></td></tr>
 <tr class="separator:a7c63c0eb1065ee899847e5ec6af74ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1899ebe43e1aff7f79e338d2b9843dcc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a1899ebe43e1aff7f79e338d2b9843dcc">Equal</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;mesh) const</td></tr>
-<tr class="memdesc:a1899ebe43e1aff7f79e338d2b9843dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a> object is equal via deep exact comparison.  <a href="#a1899ebe43e1aff7f79e338d2b9843dcc">More...</a><br /></td></tr>
-<tr class="separator:a1899ebe43e1aff7f79e338d2b9843dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106843ecf8c1cd5203dfacb5817bc41d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a106843ecf8c1cd5203dfacb5817bc41d">Equal</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;mesh, double vertex_tolerance=0) const</td></tr>
+<tr class="memdesc:a106843ecf8c1cd5203dfacb5817bc41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a> object is equal via deep comparison (up to a tolerance).  <a href="#a106843ecf8c1cd5203dfacb5817bc41d">More...</a><br /></td></tr>
+<tr class="separator:a106843ecf8c1cd5203dfacb5817bc41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e1452083acb6b1b873773505c9dbf2c"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue &gt; </td></tr>
 <tr class="memitem:a4e1452083acb6b1b873773505c9dbf2c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, FieldValue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a4e1452083acb6b1b873773505c9dbf2c">CalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 4 &gt; &amp;field_value, <a class="el" href="namespacedrake_1_1geometry.html#a521e6b89e03b3021766886e2270056b6">VolumeElementIndex</a> e) const</td></tr>
 <tr class="memdesc:a4e1452083acb6b1b873773505c9dbf2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the tetrahedron <code>e</code>.  <a href="#a4e1452083acb6b1b873773505c9dbf2c">More...</a><br /></td></tr>
@@ -163,6 +163,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:ad5fa7e42f3d3992a89ade0cf5846fc21"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ad5fa7e42f3d3992a89ade0cf5846fc21">internal::MeshDeformer&lt; VolumeMesh&lt; T &gt; &gt;</a></td></tr>
+<tr class="separator:ad5fa7e42f3d3992a89ade0cf5846fc21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ef9213b7d36a15416383fbd2e68fb2f"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a1ef9213b7d36a15416383fbd2e68fb2f">VolumeMeshTester&lt; T &gt;</a></td></tr>
 <tr class="separator:a1ef9213b7d36a15416383fbd2e68fb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -176,6 +178,9 @@ Mesh type traits</h2></td></tr>
 <tr class="memitem:a690188133367040442c5f946a69c859c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a690188133367040442c5f946a69c859c">VertexIndex</a> = <a class="el" href="namespacedrake_1_1geometry.html#a2aba540a75351aad1e183ae9accf234c">VolumeVertexIndex</a></td></tr>
 <tr class="memdesc:a690188133367040442c5f946a69c859c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for identifying a vertex.  <a href="#a690188133367040442c5f946a69c859c">More...</a><br /></td></tr>
 <tr class="separator:a690188133367040442c5f946a69c859c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef61c96d537a1731194b9f1ff31a28d9"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
+<tr class="memitem:aef61c96d537a1731194b9f1ff31a28d9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#aef61c96d537a1731194b9f1ff31a28d9">VertexType</a> = <a class="el" href="classdrake_1_1geometry_1_1_volume_vertex.html">VolumeVertex</a>&lt; U &gt;</td></tr>
+<tr class="separator:aef61c96d537a1731194b9f1ff31a28d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07bb4dc37395ceb95e7ae1b722ef80f0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a07bb4dc37395ceb95e7ae1b722ef80f0">ElementIndex</a> = <a class="el" href="namespacedrake_1_1geometry.html#a521e6b89e03b3021766886e2270056b6">VolumeElementIndex</a></td></tr>
 <tr class="memdesc:a07bb4dc37395ceb95e7ae1b722ef80f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for identifying a tetrahedral element.  <a href="#a07bb4dc37395ceb95e7ae1b722ef80f0">More...</a><br /></td></tr>
 <tr class="separator:a07bb4dc37395ceb95e7ae1b722ef80f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,6 +253,20 @@ Mesh type traits</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Index for identifying a vertex. </p>
+
+</div>
+</div>
+<a id="aef61c96d537a1731194b9f1ff31a28d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef61c96d537a1731194b9f1ff31a28d9">&#9670;&nbsp;</a></span>VertexType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#aef61c96d537a1731194b9f1ff31a28d9">VertexType</a> =  <a class="el" href="classdrake_1_1geometry_1_1_volume_vertex.html">VolumeVertex</a>&lt;U&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -465,8 +484,8 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
-<a id="a1899ebe43e1aff7f79e338d2b9843dcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1899ebe43e1aff7f79e338d2b9843dcc">&#9670;&nbsp;</a></span>Equal()</h2>
+<a id="a106843ecf8c1cd5203dfacb5817bc41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106843ecf8c1cd5203dfacb5817bc41d">&#9670;&nbsp;</a></span>Equal()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,16 +494,27 @@ Mesh type traits</h2></td></tr>
           <td class="memname">bool Equal </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mesh</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>vertex_tolerance</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a> object is equal via deep exact comparison. </p>
-<p>NaNs are treated as not equal as per the IEEE standard. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a> object is equal via deep comparison (up to a tolerance). </p>
+<p>NaNs are treated as not equal as per the IEEE standard. The tolerance is applied to corresponding vertex positions; the ith vertex in each mesh can have a distance of no more than <code>vertex_tolerance</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td>The mesh for comparison. </td></tr>
+    <tr><td class="paramname">vertex_tolerance</td><td>The maximum distance allowed between two vertices to be considered equal. </td></tr>
   </table>
   </dd>
 </dl>
@@ -644,6 +674,28 @@ Mesh type traits</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="ad5fa7e42f3d3992a89ade0cf5846fc21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5fa7e42f3d3992a89ade0cf5846fc21">&#9670;&nbsp;</a></span>internal::MeshDeformer&lt; VolumeMesh&lt; T &gt; &gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::MeshDeformer&lt; <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1ef9213b7d36a15416383fbd2e68fb2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ef9213b7d36a15416383fbd2e68fb2f">&#9670;&nbsp;</a></span>VolumeMeshTester&lt; T &gt;</h2>
 

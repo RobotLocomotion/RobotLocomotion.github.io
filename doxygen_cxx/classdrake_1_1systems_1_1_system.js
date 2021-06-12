@@ -48,8 +48,8 @@ var classdrake_1_1systems_1_1_system =
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system.html#a72cf4ad323350419dfcc5a6601fa0449", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system.html#a4076a7594095a9ca6936dd70c7254f84", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system.html#a690a31266a408ea23593fac8e2ea1804", null ],
-    [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system.html#ad291a98842b04b626d781e4e86e7fdfb", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system.html#a7d078e4f799ae50f07ae35389352835f", null ],
+    [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system.html#ad291a98842b04b626d781e4e86e7fdfb", null ],
     [ "DeclareInputPort", "classdrake_1_1systems_1_1_system.html#a0d747ee5f8bee477f7177840bd242e81", null ],
     [ "DeclareInputPort", "classdrake_1_1systems_1_1_system.html#aae9836a83ff1792978f3bb855606884a", null ],
     [ "discrete_state_ticket", "classdrake_1_1systems_1_1_system.html#adf86073429b07d388b0157956bfdbac6", null ],
@@ -93,6 +93,7 @@ var classdrake_1_1systems_1_1_system =
     [ "get_mutable_forced_discrete_update_events", "classdrake_1_1systems_1_1_system.html#afed229e14777bd82382dc3ed6e715bd3", null ],
     [ "get_mutable_forced_publish_events", "classdrake_1_1systems_1_1_system.html#ac7af4df5b72b50d255dc99cddb67e4a6", null ],
     [ "get_mutable_forced_unrestricted_update_events", "classdrake_1_1systems_1_1_system.html#ad856b6c5b4d66151f1f28d8645bf215c", null ],
+    [ "get_mutable_system_scalar_converter", "classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd", null ],
     [ "get_output_port", "classdrake_1_1systems_1_1_system.html#a9d32474ac975155d1289d564016a8a13", null ],
     [ "get_output_port", "classdrake_1_1systems_1_1_system.html#a08e2c5bab385f7c5e1069d61c45600c3", null ],
     [ "get_output_port_selection", "classdrake_1_1systems_1_1_system.html#ac1c533e37ae8ec2b84dfe2cbc0086cac", null ],
@@ -172,6 +173,5 @@ var classdrake_1_1systems_1_1_system =
     [ "xcdot_ticket", "classdrake_1_1systems_1_1_system.html#ab42cd3bff14253894eb0a29edf843b3f", null ],
     [ "xd_ticket", "classdrake_1_1systems_1_1_system.html#a64938d044107c8eedc97f89aaf0e4a32", null ],
     [ "z_ticket", "classdrake_1_1systems_1_1_system.html#a340a9b088fc407f703a9e21ed9dee32e", null ],
-    [ "System", "classdrake_1_1systems_1_1_system.html#a70a6f9e15c48813e173ebd6d48770fa1", null ],
-    [ "SystemImpl", "classdrake_1_1systems_1_1_system.html#a711f9256206b0eb48db02088a645e6a9", null ]
+    [ "System", "classdrake_1_1systems_1_1_system.html#a70a6f9e15c48813e173ebd6d48770fa1", null ]
 ];

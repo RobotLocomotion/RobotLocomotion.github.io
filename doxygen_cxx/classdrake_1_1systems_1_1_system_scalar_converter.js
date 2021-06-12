@@ -17,5 +17,6 @@ var classdrake_1_1systems_1_1_system_scalar_converter =
     [ "IsConvertible", "classdrake_1_1systems_1_1_system_scalar_converter.html#a8baa6c61f01430d61236235b8af457c0", null ],
     [ "operator=", "classdrake_1_1systems_1_1_system_scalar_converter.html#adf65090c179909b60285b47e141a7dc6", null ],
     [ "operator=", "classdrake_1_1systems_1_1_system_scalar_converter.html#ac1f7de2c8a59a6bbe6086049f7c4a49b", null ],
+    [ "Remove", "classdrake_1_1systems_1_1_system_scalar_converter.html#a2819519f2d4e709f5a957b365b034f46", null ],
     [ "RemoveUnlessAlsoSupportedBy", "classdrake_1_1systems_1_1_system_scalar_converter.html#a9016c7efc7525c57ed373c3e00b47151", null ]
 ];

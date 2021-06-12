@@ -110,10 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abf3f7966f1746f4f30c609c769f8b906"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906">~SolverInterface</a> ()</td></tr>
 <tr class="separator:abf3f7966f1746f4f30c609c769f8b906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e8fcd942e045810b3847510fd0528fa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa">available</a> () const =0</td></tr>
-<tr class="memdesc:a1e8fcd942e045810b3847510fd0528fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this solver was enabled at compile-time.  <a href="#a1e8fcd942e045810b3847510fd0528fa">More...</a><br /></td></tr>
+<tr class="memdesc:a1e8fcd942e045810b3847510fd0528fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff support for this solver has been compiled into Drake.  <a href="#a1e8fcd942e045810b3847510fd0528fa">More...</a><br /></td></tr>
 <tr class="separator:a1e8fcd942e045810b3847510fd0528fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90e60f81a12700b6f94e534d625ba25"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25">enabled</a> () const =0</td></tr>
-<tr class="memdesc:ac90e60f81a12700b6f94e534d625ba25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this solver is enabled at runtime.  <a href="#ac90e60f81a12700b6f94e534d625ba25">More...</a><br /></td></tr>
+<tr class="memdesc:ac90e60f81a12700b6f94e534d625ba25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff this solver is properly configured for use at runtime.  <a href="#ac90e60f81a12700b6f94e534d625ba25">More...</a><br /></td></tr>
 <tr class="separator:ac90e60f81a12700b6f94e534d625ba25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec933bef2f8c7a702a6fd5c59feac5ec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a> *result) const =0</td></tr>
 <tr class="memdesc:aec933bef2f8c7a702a6fd5c59feac5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves an optimization program with optional initial guess and solver options.  <a href="#aec933bef2f8c7a702a6fd5c59feac5ec">More...</a><br /></td></tr>
@@ -299,8 +299,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns true iff this solver was enabled at compile-time. </p>
-<p>Certain solvers may be excluded at compile-time due to licensing or linking restrictions. When this method returns false, the Solve method will throw. </p>
+<p>Returns true iff support for this solver has been compiled into Drake. </p>
+<p>When this method returns false, the Solve method will throw.</p>
+<p>Most solver implementations will always return true, but certain solvers may have been excluded at compile-time due to licensing restrictions, or to narrow Drake's dependency footprint. In Drake's default build, only commercially-licensed solvers might return false.</p>
+<p>Contrast this with <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25" title="Returns true iff this solver is properly configured for use at runtime.">enabled()</a>, which reflects whether a solver has been configured for use at runtime (not compile-time).</p>
+<p>For details on linking commercial solvers, refer to the solvers' class overview documentation, e.g., <a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html" title="An implementation of SolverInterface for the commercially-licensed SNOPT solver (https://ccom....">SnoptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html" title="An implementation of SolverInterface for the commercially-licensed MOSEK solver (https://www....">MosekSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html" title="An implementation of SolverInterface for the commercially-licensed Gurobi solver (https://www....">GurobiSolver</a>. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#ac910159108658c34a743b0806d81ab10">SolverBase</a>.</p>
 
@@ -329,8 +332,11 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns true iff this solver is enabled at runtime. </p>
-<p>The toggle mechanism is specific to the solver in question, but typically uses an environment variable. When this method returns false, the Solve method will throw. </p>
+<p>Returns true iff this solver is properly configured for use at runtime. </p>
+<p>When this method returns false, the Solve method will throw.</p>
+<p>Most solver implementation will always return true, but certain solvers require additional configuration before they may be used, e.g., setting an environment variable to specify a license file or license server. In Drake's default build, only commercially-licensed solvers might return false.</p>
+<p>Contrast this with <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa" title="Returns true iff support for this solver has been compiled into Drake.">available()</a>, which reflects whether a solver has been incorporated into Drake at compile-time (and has nothing to do with the runtime configuration). A solver where <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa" title="Returns true iff support for this solver has been compiled into Drake.">available()</a> returns false may still return true for <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25" title="Returns true iff this solver is properly configured for use at runtime.">enabled()</a> if it is properly configured.</p>
+<p>The mechanism to configure a particular solver implementation is specific to the solver in question, but typically uses an environment variable. For details on configuring commercial solvers, refer to the solvers' class overview documentation, e.g., <a class="el" href="classdrake_1_1solvers_1_1_snopt_solver.html" title="An implementation of SolverInterface for the commercially-licensed SNOPT solver (https://ccom....">SnoptSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html" title="An implementation of SolverInterface for the commercially-licensed MOSEK solver (https://www....">MosekSolver</a>, <a class="el" href="classdrake_1_1solvers_1_1_gurobi_solver.html" title="An implementation of SolverInterface for the commercially-licensed Gurobi solver (https://www....">GurobiSolver</a>. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#a4420a962b7baa94708051d493e790797">SolverBase</a>.</p>
 

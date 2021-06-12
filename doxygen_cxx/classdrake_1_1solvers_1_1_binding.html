@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a029d0047d449cc59d92f3951167aba3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#a029d0047d449cc59d92f3951167aba3a">Binding</a> (const std::shared_ptr&lt; C &gt; &amp;c, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;v)</td></tr>
 <tr class="memdesc:a029d0047d449cc59d92f3951167aba3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenates each VectorDecisionVariable object in <code>v</code> into a single column vector, binds this column vector of decision variables with the constraint <code>c</code>.  <a href="#a029d0047d449cc59d92f3951167aba3a">More...</a><br /></td></tr>
 <tr class="separator:a029d0047d449cc59d92f3951167aba3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2552599281f242a091a08ca9de5ce5ea"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a2552599281f242a091a08ca9de5ce5ea"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#a2552599281f242a091a08ca9de5ce5ea">Binding</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; U &gt; &amp;b, typename std::enable_if&lt; std::is_convertible&lt; std::shared_ptr&lt; U &gt;, std::shared_ptr&lt; C &gt;&gt;::value &gt;::type *=nullptr)</td></tr>
-<tr class="separator:a2552599281f242a091a08ca9de5ce5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68e788f7f1c64b6be5fe4de2ea36706"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:af68e788f7f1c64b6be5fe4de2ea36706"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#af68e788f7f1c64b6be5fe4de2ea36706">Binding</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; U &gt; &amp;b, typename std::enable_if_t&lt; std::is_convertible_v&lt; std::shared_ptr&lt; U &gt;, std::shared_ptr&lt; C &gt;&gt;&gt; *=nullptr)</td></tr>
+<tr class="separator:af68e788f7f1c64b6be5fe4de2ea36706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94d0d01fcb647eb14ca2484fbef2595a"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; C &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#a94d0d01fcb647eb14ca2484fbef2595a">evaluator</a> () const</td></tr>
 <tr class="separator:a94d0d01fcb647eb14ca2484fbef2595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f319f0d50c3403278af24eb88d8fb61"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html#a6f319f0d50c3403278af24eb88d8fb61">variables</a> () const</td></tr>
@@ -265,8 +265,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2552599281f242a091a08ca9de5ce5ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2552599281f242a091a08ca9de5ce5ea">&#9670;&nbsp;</a></span>Binding() <span class="overload">[5/5]</span></h2>
+<a id="af68e788f7f1c64b6be5fe4de2ea36706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68e788f7f1c64b6be5fe4de2ea36706">&#9670;&nbsp;</a></span>Binding() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -280,7 +280,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">typename std::enable_if&lt; std::is_convertible&lt; std::shared_ptr&lt; U &gt;, std::shared_ptr&lt; C &gt;&gt;::value &gt;::type *&#160;</td>
+          <td class="paramtype">typename std::enable_if_t&lt; std::is_convertible_v&lt; std::shared_ptr&lt; U &gt;, std::shared_ptr&lt; C &gt;&gt;&gt; *&#160;</td>
           <td class="paramname"> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>

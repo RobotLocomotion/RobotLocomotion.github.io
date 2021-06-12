@@ -191,8 +191,19 @@
 <dt id="pydrake.solvers.mosek.MosekSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mosek.</code><code class="descname">MosekSolver</code><a class="headerlink" href="#pydrake.solvers.mosek.MosekSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
-<p>Note:
-Mosek only cares about the initial guess of integer variables. The
+<p>An implementation of SolverInterface for the commercially-licensed
+MOSEK solver (<a class="reference external" href="https://www.mosek.com/">https://www.mosek.com/</a>).</p>
+<p>The default build of Drake is not configured to use MOSEK, so
+therefore SolverInterface::available() will return false. You must
+compile Drake from source in order to link against MOSEK. For details,
+refer to the documentation at <a class="reference external" href="https://drake.mit.edu/bazel.html#mosek">https://drake.mit.edu/bazel.html#mosek</a>.</p>
+<p>The MOSEKLM_LICENSE_FILE environment variable controls whether or not
+SolverInterface::enabled() returns true. Iff it is set to any
+non-empty value, then the solver is enabled; otherwise, the solver is
+not enabled.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Mosek only cares about the initial guess of integer variables. The
 initial guess of continuous variables are not passed to MOSEK. If
 all the integer variables are set to some integer values, then
 MOSEK will be forced to compute the remaining continuous variable
@@ -201,6 +212,7 @@ integer/binary variables in the subsequent iterations.) If the
 specified integer solution is infeasible or incomplete, MOSEK will
 simply ignore it. For more details, check
 <a class="reference external" href="https://docs.mosek.com/9.2/capi/tutorial-mio-shared.html?highlight=initial">https://docs.mosek.com/9.2/capi/tutorial-mio-shared.html?highlight=initial</a></p>
+</div>
 <dl class="method">
 <dt id="pydrake.solvers.mosek.MosekSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mosek.MosekSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mosek.MosekSolver.__init__" title="Permalink to this definition">¶</a></dt>

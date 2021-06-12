@@ -147,17 +147,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae2907eb511a4430de927ebee2d8b0ecd"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2907eb511a4430de927ebee2d8b0ecd">GetSolution</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;mip_var, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
 <tr class="memdesc:ae2907eb511a4430de927ebee2d8b0ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the n'th best integral solution for a variable.  <a href="#ae2907eb511a4430de927ebee2d8b0ecd">More...</a><br /></td></tr>
 <tr class="separator:ae2907eb511a4430de927ebee2d8b0ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a470ed922895720ee7a04841f950140a3"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a470ed922895720ee7a04841f950140a3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;::value, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a470ed922895720ee7a04841f950140a3">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mip_vars, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
-<tr class="memdesc:a470ed922895720ee7a04841f950140a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the n'th best integral solution for some variables.  <a href="#a470ed922895720ee7a04841f950140a3">More...</a><br /></td></tr>
-<tr class="separator:a470ed922895720ee7a04841f950140a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b334676662aa14ff708998760120401"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a4b334676662aa14ff708998760120401"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a4b334676662aa14ff708998760120401">GetSolution</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mip_vars, <a class="el" href="classint.html">int</a> nth_best_solution=0) const</td></tr>
+<tr class="memdesc:a4b334676662aa14ff708998760120401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the n'th best integral solution for some variables.  <a href="#a4b334676662aa14ff708998760120401">More...</a><br /></td></tr>
+<tr class="separator:a4b334676662aa14ff708998760120401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4b404e4ea0df894df0931ebe69a369"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#abc4b404e4ea0df894df0931ebe69a369">GetNewVariable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;old_variable) const</td></tr>
 <tr class="memdesc:abc4b404e4ea0df894df0931ebe69a369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an old variable in the original mixed-integer program, return the corresponding new variable in the branch-and-bound process.  <a href="#abc4b404e4ea0df894df0931ebe69a369">More...</a><br /></td></tr>
 <tr class="separator:abc4b404e4ea0df894df0931ebe69a369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44ac81bcfcfaecedadefd91aaa24b1df"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a44ac81bcfcfaecedadefd91aaa24b1df"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; Derived::RowsAtCompileTime, Derived::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a44ac81bcfcfaecedadefd91aaa24b1df">GetNewVariables</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;old_variables) const</td></tr>
-<tr class="memdesc:a44ac81bcfcfaecedadefd91aaa24b1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of old variables in the original mixed-integer program, return a matrix of corresponding new variables in the branch-and-bound process.  <a href="#a44ac81bcfcfaecedadefd91aaa24b1df">More...</a><br /></td></tr>
-<tr class="separator:a44ac81bcfcfaecedadefd91aaa24b1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e6b79ddc2e1acd0780cb01f8c0de056"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a6e6b79ddc2e1acd0780cb01f8c0de056"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt; Derived::RowsAtCompileTime, Derived::ColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a6e6b79ddc2e1acd0780cb01f8c0de056">GetNewVariables</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;old_variables) const</td></tr>
+<tr class="memdesc:a6e6b79ddc2e1acd0780cb01f8c0de056"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of old variables in the original mixed-integer program, return a matrix of corresponding new variables in the branch-and-bound process.  <a href="#a6e6b79ddc2e1acd0780cb01f8c0de056">More...</a><br /></td></tr>
+<tr class="separator:a6e6b79ddc2e1acd0780cb01f8c0de056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a29da9736a4e5e52beabbbd98c7938a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a6a29da9736a4e5e52beabbbd98c7938a">SetNodeSelectionMethod</a> (<a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0">NodeSelectionMethod</a> node_selection_method)</td></tr>
 <tr class="memdesc:a6a29da9736a4e5e52beabbbd98c7938a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The user can choose the method to pick a node for branching.  <a href="#a6a29da9736a4e5e52beabbbd98c7938a">More...</a><br /></td></tr>
 <tr class="separator:a6a29da9736a4e5e52beabbbd98c7938a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -464,14 +464,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a44ac81bcfcfaecedadefd91aaa24b1df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ac81bcfcfaecedadefd91aaa24b1df">&#9670;&nbsp;</a></span>GetNewVariables()</h2>
+<a id="a6e6b79ddc2e1acd0780cb01f8c0de056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e6b79ddc2e1acd0780cb01f8c0de056">&#9670;&nbsp;</a></span>GetNewVariables()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt;Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt;::type GetNewVariables </td>
+          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;::value, <a class="el" href="namespacedrake_1_1solvers.html#acf84184cb10b49233b007295d1880e17">MatrixDecisionVariable</a>&lt;Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; GetNewVariables </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>old_variables</em></td><td>)</td>
@@ -561,14 +561,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a470ed922895720ee7a04841f950140a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a470ed922895720ee7a04841f950140a3">&#9670;&nbsp;</a></span>GetSolution() <span class="overload">[2/2]</span></h2>
+<a id="a4b334676662aa14ff708998760120401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b334676662aa14ff708998760120401">&#9670;&nbsp;</a></span>GetSolution() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;::value, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt;::type GetSolution </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; GetSolution </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>mip_vars</em>, </td>

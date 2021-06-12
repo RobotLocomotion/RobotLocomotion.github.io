@@ -1,7 +1,7 @@
 var searchData=
 [
   ['less_3c_20solverid_20_3e',['less&lt; SolverId &gt;',['../classdrake_1_1solvers_1_1_solver_id.html#a8c448cbeb1e52bcb8dff99684d127ef0',1,'drake::solvers::SolverId']]],
-  ['scenegraph',['SceneGraph',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a7f408c13e8463078ca2edea35a11abc2',1,'drake::geometry::CollisionFilterManager::SceneGraph()'],['../classdrake_1_1geometry_1_1_scene_graph.html#a7f408c13e8463078ca2edea35a11abc2',1,'drake::geometry::SceneGraph::SceneGraph()']]],
+  ['scenegraph',['SceneGraph',['../classdrake_1_1geometry_1_1_scene_graph.html#a7f408c13e8463078ca2edea35a11abc2',1,'drake::geometry::SceneGraph']]],
   ['scenegraph_3c_20t_20_3e',['SceneGraph&lt; T &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html#a09e32deb354fd5ca0cc04c6f6110bcb7',1,'drake::geometry::GeometryState::SceneGraph&lt; T &gt;()'],['../classdrake_1_1geometry_1_1_query_object.html#a09e32deb354fd5ca0cc04c6f6110bcb7',1,'drake::geometry::QueryObject::SceneGraph&lt; T &gt;()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a09e32deb354fd5ca0cc04c6f6110bcb7',1,'drake::geometry::SceneGraphInspector::SceneGraph&lt; T &gt;()']]],
   ['scenegraphinspectortester',['SceneGraphInspectorTester',['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a6e9f389685137462f277662ef2937886',1,'drake::geometry::SceneGraphInspector']]],
   ['scenegraphtester',['SceneGraphTester',['../classdrake_1_1geometry_1_1_scene_graph.html#abecd6179d212b5bacfd7ca6c44d17224',1,'drake::geometry::SceneGraph']]],
@@ -14,6 +14,5 @@ var searchData=
   ['swap',['swap',['../classdrake_1_1symbolic_1_1_expression.html#ac36260fe42c812627ad0979214777e5b',1,'drake::symbolic::Expression::swap()'],['../classdrake_1_1symbolic_1_1_formula.html#a2eeeeba05a6af9aa74731c6b0c815ac7',1,'drake::symbolic::Formula::swap()']]],
   ['system',['System',['../classdrake_1_1systems_1_1_system.html#a70a6f9e15c48813e173ebd6d48770fa1',1,'drake::systems::System']]],
   ['system_3c_20t_20_3e',['System&lt; T &gt;',['../classdrake_1_1systems_1_1_system_output.html#acc101f7fb3a61892369e9d49e46d2793',1,'drake::systems::SystemOutput']]],
-  ['systemimpl',['SystemImpl',['../classdrake_1_1systems_1_1_system.html#a711f9256206b0eb48db02088a645e6a9',1,'drake::systems::System']]],
   ['systemoutputtest',['SystemOutputTest',['../classdrake_1_1systems_1_1_system_output.html#a473f76ec31b905f85f545e2ee3ec3d42',1,'drake::systems::SystemOutput']]]
 ];

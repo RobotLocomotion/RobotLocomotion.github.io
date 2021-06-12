@@ -2706,6 +2706,363 @@ following dimensions: | Matrix | Num Rows | Num Columns |
 
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.LinearTransformDensity">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearTransformDensity</code><a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.LinearTransformDensity_[float]" title="pydrake.systems.primitives.LinearTransformDensity_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.LinearTransformDensity_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearTransformDensity_</code><a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.primitives.LinearTransformDensity_[float]" title="pydrake.systems.primitives.LinearTransformDensity_[float]"><code class="xref py py-class docutils literal"><span class="pre">LinearTransformDensity_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]" title="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">LinearTransformDensity_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float]">
+<em class="property">class </em><code class="descname">LinearTransformDensity_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Performs linear transformation on the random signal w_in as w_out =
+A*w_in + b. The user can obtain the probability density of w_out. When
+the class is instantiated with autodiff scalar, the user can also
+obtain the gradient of the probability density of w_out.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+zero.</p>
+<p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
+<p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
+from the output port of a RandomSource with the same distribution. A
+recommended way is to use <code class="docutils literal"><span class="pre">AddRandomInputs()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The code cannot verify that the distribution type of w_in matches
+between where w_in comes from and the w_in input port of this
+sytem. This class will quitely produce incorrect behavior if the
+distribution types don’t match.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">stochastic_systems</p>
+</div>
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], distribution: pydrake.common._module_py.RandomDistribution, input_size: int, output_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">distribution</span></code>:</dt>
+<dd>The random input w_in should satisfy this distribution.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>The dimension of the input w_in.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">output_size</span></code>:</dt>
+<dd>The dimension of the output w_out.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The matrix A will have <code class="docutils literal"><span class="pre">output_size</span></code> columns and <code class="docutils literal"><span class="pre">input_size</span></code>
+rows. The vector b will have <code class="docutils literal"><span class="pre">output_size</span></code> columns.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].CalcDensity">
+<code class="descname">CalcDensity</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].CalcDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the density (pdf) of a sampled output w_out.</p>
+<p>When T=AutoDiffXd, this function computes the gradient of the function
+density(w_out_sample). Namely given an output sample, we want to know
+how the probability of drawing this sample would change, when the
+parameters of the distribution (like A and b) change. Such information
+is locally expressed in the gradient. Note this is different from
+computing the density of the input.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if A is not an invertible matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].FixConstantA">
+<code class="descname">FixConstantA</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], context: pydrake.systems.framework.Context_[float], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.FixedInputPortValue<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].FixConstantA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the input port <code class="docutils literal"><span class="pre">A</span></code> to a constant value in a given context.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context into which A’s value is set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>The value to which the port is fixed. The matrix A has num_output
+rows and num_input columns, note that A is column-majored.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].FixConstantB">
+<code class="descname">FixConstantB</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], context: pydrake.systems.framework.Context_[float], b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.FixedInputPortValue<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].FixConstantB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the input port <code class="docutils literal"><span class="pre">b</span></code> to a constant value in a given context.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context into which b’s value is set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">b</span></code>:</dt>
+<dd>The value to which the port is fixed. The vector b has num_output
+rows.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_distribution">
+<code class="descname">get_distribution</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common._module_py.RandomDistribution<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the random distribution type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_input_port_A">
+<code class="descname">get_input_port_A</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_input_port_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for A.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_input_port_b">
+<code class="descname">get_input_port_b</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_input_port_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for b.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_input_port_w_in">
+<code class="descname">get_input_port_w_in</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_input_port_w_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for w_in.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearTransformDensity_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>Performs linear transformation on the random signal w_in as w_out =
+A*w_in + b. The user can obtain the probability density of w_out. When
+the class is instantiated with autodiff scalar, the user can also
+obtain the gradient of the probability density of w_out.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+zero.</p>
+<p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
+<p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
+from the output port of a RandomSource with the same distribution. A
+recommended way is to use <code class="docutils literal"><span class="pre">AddRandomInputs()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The code cannot verify that the distribution type of w_in matches
+between where w_in comes from and the w_in input port of this
+sytem. This class will quitely produce incorrect behavior if the
+distribution types don’t match.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">stochastic_systems</p>
+</div>
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd], distribution: pydrake.common._module_py.RandomDistribution, input_size: int, output_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">distribution</span></code>:</dt>
+<dd>The random input w_in should satisfy this distribution.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>The dimension of the input w_in.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">output_size</span></code>:</dt>
+<dd>The dimension of the output w_out.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The matrix A will have <code class="docutils literal"><span class="pre">output_size</span></code> columns and <code class="docutils literal"><span class="pre">input_size</span></code>
+rows. The vector b will have <code class="docutils literal"><span class="pre">output_size</span></code> columns.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].CalcDensity">
+<code class="descname">CalcDensity</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].CalcDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the density (pdf) of a sampled output w_out.</p>
+<p>When T=AutoDiffXd, this function computes the gradient of the function
+density(w_out_sample). Namely given an output sample, we want to know
+how the probability of drawing this sample would change, when the
+parameters of the distribution (like A and b) change. Such information
+is locally expressed in the gradient. Note this is different from
+computing the density of the input.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if A is not an invertible matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].FixConstantA">
+<code class="descname">FixConstantA</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], A: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.FixedInputPortValue<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].FixConstantA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the input port <code class="docutils literal"><span class="pre">A</span></code> to a constant value in a given context.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context into which A’s value is set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>The value to which the port is fixed. The matrix A has num_output
+rows and num_input columns, note that A is column-majored.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].FixConstantB">
+<code class="descname">FixConstantB</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], b: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.FixedInputPortValue<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].FixConstantB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the input port <code class="docutils literal"><span class="pre">b</span></code> to a constant value in a given context.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context into which b’s value is set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">b</span></code>:</dt>
+<dd>The value to which the port is fixed. The vector b has num_output
+rows.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_distribution">
+<code class="descname">get_distribution</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.common._module_py.RandomDistribution<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the random distribution type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_input_port_A">
+<code class="descname">get_input_port_A</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_input_port_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for A.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_input_port_b">
+<code class="descname">get_input_port_b</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_input_port_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for b.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_input_port_w_in">
+<code class="descname">get_input_port_w_in</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_input_port_w_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for w_in.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearTransformDensity_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Performs linear transformation on the random signal w_in as w_out =
+A*w_in + b. The user can obtain the probability density of w_out. When
+the class is instantiated with autodiff scalar, the user can also
+obtain the gradient of the probability density of w_out.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+zero.</p>
+<p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
+<p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
+from the output port of a RandomSource with the same distribution. A
+recommended way is to use <code class="docutils literal"><span class="pre">AddRandomInputs()</span></code>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The code cannot verify that the distribution type of w_in matches
+between where w_in comes from and the w_in input port of this
+sytem. This class will quitely produce incorrect behavior if the
+distribution types don’t match.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">stochastic_systems</p>
+</div>
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], distribution: pydrake.common._module_py.RandomDistribution, input_size: int, output_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">distribution</span></code>:</dt>
+<dd>The random input w_in should satisfy this distribution.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>The dimension of the input w_in.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">output_size</span></code>:</dt>
+<dd>The dimension of the output w_out.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The matrix A will have <code class="docutils literal"><span class="pre">output_size</span></code> columns and <code class="docutils literal"><span class="pre">input_size</span></code>
+rows. The vector b will have <code class="docutils literal"><span class="pre">output_size</span></code> columns.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].CalcDensity">
+<code class="descname">CalcDensity</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].CalcDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the density (pdf) of a sampled output w_out.</p>
+<p>When T=AutoDiffXd, this function computes the gradient of the function
+density(w_out_sample). Namely given an output sample, we want to know
+how the probability of drawing this sample would change, when the
+parameters of the distribution (like A and b) change. Such information
+is locally expressed in the gradient. Note this is different from
+computing the density of the input.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if A is not an invertible matrix.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].FixConstantA">
+<code class="descname">FixConstantA</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], context: pydrake.systems.framework.Context_[float], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.FixedInputPortValue<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].FixConstantA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the input port <code class="docutils literal"><span class="pre">A</span></code> to a constant value in a given context.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context into which A’s value is set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>The value to which the port is fixed. The matrix A has num_output
+rows and num_input columns, note that A is column-majored.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].FixConstantB">
+<code class="descname">FixConstantB</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float], context: pydrake.systems.framework.Context_[float], b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.FixedInputPortValue<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].FixConstantB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix the input port <code class="docutils literal"><span class="pre">b</span></code> to a constant value in a given context.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context into which b’s value is set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">b</span></code>:</dt>
+<dd>The value to which the port is fixed. The vector b has num_output
+rows.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].get_distribution">
+<code class="descname">get_distribution</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.common._module_py.RandomDistribution<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the random distribution type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_A">
+<code class="descname">get_input_port_A</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for A.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_b">
+<code class="descname">get_input_port_b</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for b.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_w_in">
+<code class="descname">get_input_port_w_in</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_w_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the input port for w_in.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="template">
 <dt id="pydrake.systems.primitives.LogOutput">
 <em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LogOutput</code><a class="headerlink" href="#pydrake.systems.primitives.LogOutput" title="Permalink to this definition">¶</a></dt>

@@ -18,7 +18,8 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "eigen_sparse_triplet.h", "eigen__sparse__triplet_8h.html", "eigen__sparse__triplet_8h" ],
     [ "evenly_distributed_pts_on_sphere.h", "evenly__distributed__pts__on__sphere_8h.html", "evenly__distributed__pts__on__sphere_8h" ],
     [ "fast_pose_composition_functions.h", "fast__pose__composition__functions_8h.html", [
-      [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ]
+      [ "RotationMatrix", "classdrake_1_1math_1_1_rotation_matrix.html", "classdrake_1_1math_1_1_rotation_matrix" ],
+      [ "RigidTransform", "classdrake_1_1math_1_1_rigid_transform.html", "classdrake_1_1math_1_1_rigid_transform" ]
     ] ],
     [ "gradient.h", "gradient_8h.html", [
       [ "Gradient", "structdrake_1_1math_1_1_gradient.html", "structdrake_1_1math_1_1_gradient" ],

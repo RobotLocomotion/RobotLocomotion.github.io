@@ -98,25 +98,34 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <div class="contents">
 <div class="textblock"><dl class="reflist">
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html#ae7a3d053de473868ad44be854e41aff6">CompositeEventCollection&lt; T &gt;::add_discrete_update_event</a>  (std::unique_ptr&lt; DiscreteUpdateEvent&lt; T &gt;&gt; event)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>"Use AddDiscreteUpdateEvent instead." <br />
+<dd><a class="anchor" id="_deprecated000011"></a>"Use AddDiscreteUpdateEvent instead." <br />
  This will be removed from Drake on or after "2021-09-01" . </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html#a8b232e01727d983c1b37f18abee2c492">CompositeEventCollection&lt; T &gt;::add_publish_event</a>  (std::unique_ptr&lt; PublishEvent&lt; T &gt;&gt; event)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>"Use AddPublishEvent instead." <br />
+<dd><a class="anchor" id="_deprecated000010"></a>"Use AddPublishEvent instead." <br />
  This will be removed from Drake on or after "2021-09-01" . </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_composite_event_collection.html#a6c1b2cdf8ff46be861700d7492b73076">CompositeEventCollection&lt; T &gt;::add_unrestricted_update_event</a>  (std::unique_ptr&lt; UnrestrictedUpdateEvent&lt; T &gt;&gt; event)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>"Use AddUnrestrictedUpdateEvent instead." <br />
+<dd><a class="anchor" id="_deprecated000012"></a>"Use AddUnrestrictedUpdateEvent instead." <br />
+ This will be removed from Drake on or after "2021-09-01" . </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a4bad4d69748b5e84448a51d04f672f76">drake::solvers::MakeL2NormCost</a>  (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>"Use Make2NormSquaredCost instead" <br />
  This will be removed from Drake on or after "2021-09-01" . </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_event_collection.html#a441779b587accb79f832dd172ddb3285">EventCollection&lt; EventType &gt;::add_event</a>  (std::unique_ptr&lt; EventType &gt; event)=0</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>"Use AddEvent instead." <br />
+<dd><a class="anchor" id="_deprecated000009"></a>"Use AddEvent instead." <br />
+ This will be removed from Drake on or after "2021-09-01" . </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae12e1f27eb841aef6de75e3e7e5a96fe">MathematicalProgram::AddL2NormCost</a>  (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const VectorXDecisionVariable &gt; &amp;vars)</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>"Please use Add2NormSquaredCost instead" <br />
+ This will be removed from Drake on or after "2021-09-01" . </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a2a915ebc93c14da19b845df70e95bf6c">MathematicalProgram::AddL2NormCost</a>  (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const VariableRefList &amp;vars)</dt>
+<dd><a class="anchor" id="_deprecated000007"></a>"Please use Add2NormSquaredCost instead" <br />
  This will be removed from Drake on or after "2021-09-01" . </dd>
 <dt>Member <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a24254ec1c785a4340f6985643206bd5b">SignedDistancePair&lt; T &gt;::is_nhat_BA_W_unique</a>  </dt>
 <dd><a class="anchor" id="_deprecated000003"></a>"SignedDistancePair will no longer report uniqueness. " "If you require knowledge of uniqueness, please contact the " "Drake team." <br />
  This will be removed from Drake on or after "2021-08-01" . </dd>
-<dt>Member <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#aec40b3acb34bcf9cb494dffef2034cca">SignedDistancePair&lt; T &gt;::SignedDistancePair</a>  (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> a, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> b, const Vector3&lt; T &gt; &amp;p_ACa_in, const Vector3&lt; T &gt; &amp;p_BCb_in, const T &amp;dist)</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>"Please use default or full constructor instead." <br />
- This will be removed from Drake on or after "2021-08-01" . </dd>
 <dt>Member <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a8d67f7de122fad315abf7186decbd07f">SignedDistancePair&lt; T &gt;::SignedDistancePair</a>  (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> a, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> b, const Vector3&lt; T &gt; &amp;p_ACa_in, const Vector3&lt; T &gt; &amp;p_BCb_in, const T &amp;dist, const Vector3&lt; T &gt; &amp;nhat_BA_W_in, bool is_nhat_BA_W_unique_in)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>"SignedDistancePair will no longer report uniqueness. " "If you require knowledge of uniqueness, please contact the " "Drake team." <br />
+ This will be removed from Drake on or after "2021-08-01" . </dd>
+<dt>Member <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#aec40b3acb34bcf9cb494dffef2034cca">SignedDistancePair&lt; T &gt;::SignedDistancePair</a>  (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> a, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a> b, const Vector3&lt; T &gt; &amp;p_ACa_in, const Vector3&lt; T &gt; &amp;p_BCb_in, const T &amp;dist)</dt>
+<dd><a class="anchor" id="_deprecated000002"></a>"Please use default or full constructor instead." <br />
  This will be removed from Drake on or after "2021-08-01" . </dd>
 <dt>Member <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_to_point.html#a06f327d319781169d6d14b6b60db92e1">SignedDistanceToPoint&lt; T &gt;::is_grad_W_unique</a>  </dt>
 <dd><a class="anchor" id="_deprecated000005"></a>"SignedDistanceToPoint will no longer report uniqueness. " "If you require knowledge of uniqueness, please contact the " "Drake team." <br />
@@ -125,7 +134,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000004"></a>"SignedDistanceToPoint will no longer report uniqueness. " "If you require knowledge of uniqueness, please contact the " "Drake team." <br />
  This will be removed from Drake on or after "2021-08-01" . </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a88d780ac96e83eadd765f5c2fd1abbb4">System&lt; T &gt;::ValidateChildOfContext</a>  (const Clazz&lt; T &gt; *object) const</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>"Please use ValidateCreatedForThisSystem instead." <br />
+<dd><a class="anchor" id="_deprecated000013"></a>"Please use ValidateCreatedForThisSystem instead." <br />
  This will be removed from Drake on or after "2021-09-01" .</dd>
 </dl>
 </div></div><!-- PageDoc -->

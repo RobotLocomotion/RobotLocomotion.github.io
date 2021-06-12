@@ -160,12 +160,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a148d3864f35c71287e491482722a8c61"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#a148d3864f35c71287e491482722a8c61">SetFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a148d3864f35c71287e491482722a8c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this state from a <a class="el" href="classdrake_1_1systems_1_1_state.html" title="State is a container for all the data comprising the complete state of a particular System at a parti...">State</a><u>. </u> <a href="#a148d3864f35c71287e491482722a8c61">More...</a><br /></td></tr>
 <tr class="separator:a148d3864f35c71287e491482722a8c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
-<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gets the id of the subsystem that created this state.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
-<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
-<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Records the id of the subsystem that created this state.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
-<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a14e7b568c69d3e9a1978962ec008138c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#a14e7b568c69d3e9a1978962ec008138c">State</a> (const <a class="el" href="classdrake_1_1systems_1_1_state.html">State</a> &amp;)=delete</td></tr>
 <tr class="separator:a14e7b568c69d3e9a1978962ec008138c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,6 +169,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad927e361adb396aadd58db6e5bad2d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acaa518478e9d794479b1f529c7d71b18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_state.html">State</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#acaa518478e9d794479b1f529c7d71b18">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_state.html">State</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:acaa518478e9d794479b1f529c7d71b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">System compatibility</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>.</p>
+</div></td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gets the id of the subsystem that created this state.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
+<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_state.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
+<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Records the id of the subsystem that created this state.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
+<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a14e7b568c69d3e9a1978962ec008138c"></a>

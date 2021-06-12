@@ -22,6 +22,7 @@ var classdrake_1_1math_1_1_rigid_transform =
     [ "GetMaximumAbsoluteTranslationDifference", "classdrake_1_1math_1_1_rigid_transform.html#aa8b1205e300a07901a70079bbbd1e566", null ],
     [ "Identity", "classdrake_1_1math_1_1_rigid_transform.html#a9af123d3a901431db4b446e542b55b98", null ],
     [ "inverse", "classdrake_1_1math_1_1_rigid_transform.html#a5adbc50055d9a59126602077013cf04e", null ],
+    [ "InvertAndCompose", "classdrake_1_1math_1_1_rigid_transform.html#a99a1dbbf28ce938bb2ff6e2672f61ead", null ],
     [ "IsExactlyEqualTo", "classdrake_1_1math_1_1_rigid_transform.html#a2ff306c43d124f530d5dfbf6793a3741", null ],
     [ "IsExactlyIdentity", "classdrake_1_1math_1_1_rigid_transform.html#ac804feef1db1925cdb41771475381a17", null ],
     [ "IsIdentityToEpsilon", "classdrake_1_1math_1_1_rigid_transform.html#ae4c29dcfbeeb594af24ae82cff87f35f", null ],

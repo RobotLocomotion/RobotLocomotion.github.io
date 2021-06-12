@@ -156,12 +156,12 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>If type T is a pointer, these exist and return the pointed-to object.</p>
 <p>For non-pointer types these methods are not instantiated. </p>
 </div></td></tr>
-<tr class="memitem:a7a86c842aa6696f1df9f50f8328b7d71"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
-<tr class="memitem:a7a86c842aa6696f1df9f50f8328b7d71"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_pointer&lt; T1 &gt;::value, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#a7a86c842aa6696f1df9f50f8328b7d71">operator-&gt;</a> () const</td></tr>
-<tr class="separator:a7a86c842aa6696f1df9f50f8328b7d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77608aac42e16b1ad4be9bb30e1c298b"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
-<tr class="memitem:a77608aac42e16b1ad4be9bb30e1c298b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_pointer&lt; T1 &gt;::value, std::add_lvalue_reference_t&lt; std::remove_pointer_t&lt; T &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#a77608aac42e16b1ad4be9bb30e1c298b">operator *</a> () const</td></tr>
-<tr class="separator:a77608aac42e16b1ad4be9bb30e1c298b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ab1c910fbe75474c2d4f1488c71497"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
+<tr class="memitem:af4ab1c910fbe75474c2d4f1488c71497"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_pointer_v&lt; T1 &gt;, T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#af4ab1c910fbe75474c2d4f1488c71497">operator-&gt;</a> () const</td></tr>
+<tr class="separator:af4ab1c910fbe75474c2d4f1488c71497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e964756d74a635a00d3ece8abede3d"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
+<tr class="memitem:aa2e964756d74a635a00d3ece8abede3d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_pointer_v&lt; T1 &gt;, std::add_lvalue_reference_t&lt; std::remove_pointer_t&lt; T &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1reset__after__move.html#aa2e964756d74a635a00d3ece8abede3d">operator *</a> () const</td></tr>
+<tr class="separator:aa2e964756d74a635a00d3ece8abede3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a618d7060619365cb63f5a0c8b615d752"></a>
@@ -250,14 +250,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a77608aac42e16b1ad4be9bb30e1c298b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77608aac42e16b1ad4be9bb30e1c298b">&#9670;&nbsp;</a></span>operator *()</h2>
+<a id="aa2e964756d74a635a00d3ece8abede3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e964756d74a635a00d3ece8abede3d">&#9670;&nbsp;</a></span>operator *()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_pointer&lt;T1&gt;::value, std::add_lvalue_reference_t&lt;std::remove_pointer_t&lt;T&gt; &gt; &gt; operator * </td>
+          <td class="memname">std::enable_if_t&lt;std::is_pointer_v&lt;T1&gt;, std::add_lvalue_reference_t&lt;std::remove_pointer_t&lt;T&gt; &gt; &gt; operator * </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -301,14 +301,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7a86c842aa6696f1df9f50f8328b7d71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a86c842aa6696f1df9f50f8328b7d71">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
+<a id="af4ab1c910fbe75474c2d4f1488c71497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ab1c910fbe75474c2d4f1488c71497">&#9670;&nbsp;</a></span>operator-&gt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_pointer&lt;T1&gt;::value, T&gt; operator-&gt; </td>
+          <td class="memname">std::enable_if_t&lt;std::is_pointer_v&lt;T1&gt;, T&gt; operator-&gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

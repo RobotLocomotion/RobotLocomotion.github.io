@@ -619,6 +619,26 @@ the fields indicated this parameter.</dd>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.perception.PointCloudToLcm">
+<em class="property">class </em><code class="descclassname">pydrake.perception.</code><code class="descname">PointCloudToLcm</code><a class="headerlink" href="#pydrake.perception.PointCloudToLcm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Converts PointCloud inputs to lcmt_point_cloud output messages. The
+message can be transmitted to other processes using
+LcmPublisherSystem.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">point_cloud&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PointCloudToLcm</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_point_cloud</td></tr></table></td></tr></table><p>Any descriptor channels of the PointCloud will currently be ignored,
+though may be added in a future revision.</p>
+<p>Only the finite points from the cloud are copied into the message
+(too-close or too-far points from a depth sensor are omitted).</p>
+<dl class="method">
+<dt id="pydrake.perception.PointCloudToLcm.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloudToLcm</em>, <em>frame_name: str = ''</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.PointCloudToLcm.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a system that outputs messages using the given
+<code class="docutils literal"><span class="pre">frame_name</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

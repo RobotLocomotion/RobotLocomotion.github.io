@@ -5772,6 +5772,51 @@ get_internal_tolerance_for_orthonormality().</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.math.RotationMatrix_.RotationMatrix_[float].MakeFromOneVector">
+<em class="property">static </em><code class="descname">MakeFromOneVector</code><span class="sig-paren">(</span><em>b_A: numpy.ndarray[numpy.float64[3, 1]], axis_index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_.RotationMatrix_[float].MakeFromOneVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a 3D right-handed orthonormal basis B from a given vector b_A,
+returned as a rotation matrix R_AB. It consists of orthogonal unit
+vectors u_A, v_A, w_A where u_A is the normalized b_A in the
+axis_index column of R_AB and v_A has one element which is zero. If an
+element of b_A is zero, then one element of w_A is 1 and the other two
+elements are 0.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">b_A</span></code>:</dt>
+<dd>vector expressed in frame A that when normalized as u_A =
+b_A.normalized() represents Bx, By, or Bz (depending on
+axis_index).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">axis_index</span></code>:</dt>
+<dd>The index ∈ {0, 1, 2} of the unit vector associated with u_A, 0
+means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
+<dt>Precondition:</dt>
+<dd>axis_index is 0 or 1 or 2.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
+<li>contains a NaN or infinity or <a href="#id11"><span class="problematic" id="id12">|b_A|</span></a> &lt; 1.0E-10.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MakeFromOneUnitVector() if b_A is known to already be unit length.</p>
+</div>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">R_AB</span></code>:</dt>
+<dd>the rotation matrix with properties as described above.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.math.RotationMatrix_.RotationMatrix_[float].MakeXRotation">
 <em class="property">static </em><code class="descname">MakeXRotation</code><span class="sig-paren">(</span><em>theta: float</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_.RotationMatrix_[float].MakeXRotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes the RotationMatrix <code class="docutils literal"><span class="pre">R_AB</span></code> associated with rotating a frame B
@@ -6398,6 +6443,51 @@ get_internal_tolerance_for_orthonormality().</p>
 </dd></dl>
 
 <dl class="staticmethod">
+<dt id="pydrake.math.RotationMatrix_[AutoDiffXd].MakeFromOneVector">
+<em class="property">static </em><code class="descname">MakeFromOneVector</code><span class="sig-paren">(</span><em>b_A: numpy.ndarray[object[3, 1]], axis_index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[AutoDiffXd]<a class="headerlink" href="#pydrake.math.RotationMatrix_[AutoDiffXd].MakeFromOneVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a 3D right-handed orthonormal basis B from a given vector b_A,
+returned as a rotation matrix R_AB. It consists of orthogonal unit
+vectors u_A, v_A, w_A where u_A is the normalized b_A in the
+axis_index column of R_AB and v_A has one element which is zero. If an
+element of b_A is zero, then one element of w_A is 1 and the other two
+elements are 0.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">b_A</span></code>:</dt>
+<dd>vector expressed in frame A that when normalized as u_A =
+b_A.normalized() represents Bx, By, or Bz (depending on
+axis_index).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">axis_index</span></code>:</dt>
+<dd>The index ∈ {0, 1, 2} of the unit vector associated with u_A, 0
+means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
+<dt>Precondition:</dt>
+<dd>axis_index is 0 or 1 or 2.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
+<li>contains a NaN or infinity or <a href="#id13"><span class="problematic" id="id14">|b_A|</span></a> &lt; 1.0E-10.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MakeFromOneUnitVector() if b_A is known to already be unit length.</p>
+</div>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">R_AB</span></code>:</dt>
+<dd>the rotation matrix with properties as described above.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="pydrake.math.RotationMatrix_[AutoDiffXd].MakeXRotation">
 <em class="property">static </em><code class="descname">MakeXRotation</code><span class="sig-paren">(</span><em>theta: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[AutoDiffXd]<a class="headerlink" href="#pydrake.math.RotationMatrix_[AutoDiffXd].MakeXRotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes the RotationMatrix <code class="docutils literal"><span class="pre">R_AB</span></code> associated with rotating a frame B
@@ -7019,6 +7109,51 @@ get_internal_tolerance_for_orthonormality().</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.math.RotationMatrix_[Expression].MakeFromOneVector">
+<em class="property">static </em><code class="descname">MakeFromOneVector</code><span class="sig-paren">(</span><em>b_A: numpy.ndarray[object[3, 1]], axis_index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[Expression]<a class="headerlink" href="#pydrake.math.RotationMatrix_[Expression].MakeFromOneVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a 3D right-handed orthonormal basis B from a given vector b_A,
+returned as a rotation matrix R_AB. It consists of orthogonal unit
+vectors u_A, v_A, w_A where u_A is the normalized b_A in the
+axis_index column of R_AB and v_A has one element which is zero. If an
+element of b_A is zero, then one element of w_A is 1 and the other two
+elements are 0.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">b_A</span></code>:</dt>
+<dd>vector expressed in frame A that when normalized as u_A =
+b_A.normalized() represents Bx, By, or Bz (depending on
+axis_index).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">axis_index</span></code>:</dt>
+<dd>The index ∈ {0, 1, 2} of the unit vector associated with u_A, 0
+means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
+<dt>Precondition:</dt>
+<dd>axis_index is 0 or 1 or 2.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
+<li>contains a NaN or infinity or <a href="#id15"><span class="problematic" id="id16">|b_A|</span></a> &lt; 1.0E-10.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MakeFromOneUnitVector() if b_A is known to already be unit length.</p>
+</div>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">R_AB</span></code>:</dt>
+<dd>the rotation matrix with properties as described above.</dd>
+</dl>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -7691,6 +7826,51 @@ get_internal_tolerance_for_orthonormality().</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.math.RotationMatrix_[float].MakeFromOneVector">
+<em class="property">static </em><code class="descname">MakeFromOneVector</code><span class="sig-paren">(</span><em>b_A: numpy.ndarray[numpy.float64[3, 1]], axis_index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_[float].MakeFromOneVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a 3D right-handed orthonormal basis B from a given vector b_A,
+returned as a rotation matrix R_AB. It consists of orthogonal unit
+vectors u_A, v_A, w_A where u_A is the normalized b_A in the
+axis_index column of R_AB and v_A has one element which is zero. If an
+element of b_A is zero, then one element of w_A is 1 and the other two
+elements are 0.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">b_A</span></code>:</dt>
+<dd>vector expressed in frame A that when normalized as u_A =
+b_A.normalized() represents Bx, By, or Bz (depending on
+axis_index).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">axis_index</span></code>:</dt>
+<dd>The index ∈ {0, 1, 2} of the unit vector associated with u_A, 0
+means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
+<dt>Precondition:</dt>
+<dd>axis_index is 0 or 1 or 2.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
+<li>contains a NaN or infinity or <a href="#id17"><span class="problematic" id="id18">|b_A|</span></a> &lt; 1.0E-10.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MakeFromOneUnitVector() if b_A is known to already be unit length.</p>
+</div>
+<dl class="docutils">
+<dt>Returns <code class="docutils literal"><span class="pre">R_AB</span></code>:</dt>
+<dd>the rotation matrix with properties as described above.</dd>
+</dl>
 </dd></dl>
 
 <dl class="staticmethod">

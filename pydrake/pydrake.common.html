@@ -198,6 +198,40 @@
 </ul>
 </div>
 <span class="target" id="module-pydrake.common"></span><dl class="function">
+<dt id="pydrake.common.CalcProbabilityDensity">
+<code class="descclassname">pydrake.common.</code><code class="descname">CalcProbabilityDensity</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.CalcProbabilityDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcProbabilityDensity(distribution: pydrake.common._module_py.RandomDistribution, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; float</li>
+</ol>
+<p>Calculates the density (probability density function) of the
+multivariate distribution.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">distribution</span></code>:</dt>
+<dd>The distribution type.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">x</span></code>:</dt>
+<dd>The value of the sampled vector. $Note:</dd>
+</dl>
+<p>When instantiating this function, the user needs to explicitly pass in
+the scalar type, for example CalcProbabilityDensity&lt;double&gt;(…), the
+compiler might have problem to deduce the scalar type automatically.</p>
+<ol class="arabic simple" start="2">
+<li>CalcProbabilityDensity(distribution: pydrake.common._module_py.RandomDistribution, x: numpy.ndarray[object[m, 1]]) -&gt; Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt;</li>
+</ol>
+<p>Calculates the density (probability density function) of the
+multivariate distribution.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">distribution</span></code>:</dt>
+<dd>The distribution type.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">x</span></code>:</dt>
+<dd>The value of the sampled vector. $Note:</dd>
+</dl>
+<p>When instantiating this function, the user needs to explicitly pass in
+the scalar type, for example CalcProbabilityDensity&lt;double&gt;(…), the
+compiler might have problem to deduce the scalar type automatically.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.common.FindResourceOrThrow">
 <code class="descclassname">pydrake.common.</code><code class="descname">FindResourceOrThrow</code><span class="sig-paren">(</span><em>resource_path: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.common.FindResourceOrThrow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenient wrapper for querying FindResource(resource_path) followed

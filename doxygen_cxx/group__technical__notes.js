@@ -8,5 +8,6 @@ var group__technical__notes =
     [ "Template MetaProgramming", "group__templates.html", null ],
     [ "System Cache Design and Implementation Notes", "group__cache__design__notes.html", null ],
     [ "Event Callbacks", "group__event__callbacks.html", null ],
+    [ "System Compatibility", "group__system__compatibility.html", null ],
     [ "System Scalar Conversion", "group__system__scalar__conversion.html", null ]
 ];

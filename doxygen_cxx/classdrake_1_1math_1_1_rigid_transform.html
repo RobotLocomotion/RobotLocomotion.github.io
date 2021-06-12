@@ -232,6 +232,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5ba8ece1175e9cb229649a048096e79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#af5ba8ece1175e9cb229649a048096e79">operator *</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;other) const</td></tr>
 <tr class="memdesc:af5ba8ece1175e9cb229649a048096e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <code>this</code> RigidTransform <code>X_AB</code> by the <code>other</code> RigidTransform <code>X_BC</code> and returns the RigidTransform <code>X_AC = X_AB * X_BC</code>.  <a href="#af5ba8ece1175e9cb229649a048096e79">More...</a><br /></td></tr>
 <tr class="separator:af5ba8ece1175e9cb229649a048096e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a1dbbf28ce938bb2ff6e2672f61ead"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a99a1dbbf28ce938bb2ff6e2672f61ead">InvertAndCompose</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;other) const</td></tr>
+<tr class="memdesc:a99a1dbbf28ce938bb2ff6e2672f61ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the product of <code>this</code> inverted and another RigidTransform.  <a href="#a99a1dbbf28ce938bb2ff6e2672f61ead">More...</a><br /></td></tr>
+<tr class="separator:a99a1dbbf28ce938bb2ff6e2672f61ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7408076cfba12eda75c0c354d70c6a96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#a7408076cfba12eda75c0c354d70c6a96">operator *</a> (const Eigen::Translation&lt; T, 3 &gt; &amp;X_BBq) const</td></tr>
 <tr class="memdesc:a7408076cfba12eda75c0c354d70c6a96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplies <code>this</code> RigidTransform <code>X_AB</code> by the translation-only transform <code>X_BBq</code> and returns the RigidTransform <code>X_ABq = X_AB * X_BBq</code>.  <a href="#a7408076cfba12eda75c0c354d70c6a96">More...</a><br /></td></tr>
 <tr class="separator:a7408076cfba12eda75c0c354d70c6a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1002,6 +1005,39 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
+<a id="a99a1dbbf28ce938bb2ff6e2672f61ead"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a1dbbf28ce938bb2ff6e2672f61ead">&#9670;&nbsp;</a></span>InvertAndCompose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt;T&gt; InvertAndCompose </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the product of <code>this</code> inverted and another RigidTransform. </p>
+<p>If you consider <code>this</code> to be the transform X_AB, and <code>other</code> to be X_AC, then this method returns X_BC = X_AB⁻¹ * X_AC. For T==double, this method can be <em>much</em> faster than inverting first and then performing the composition, because it can take advantage of the special structure of a rigid transform to avoid unnecessary memory and floating point operations. On some platforms it can use SIMD instructions for further speedups. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>RigidTransform that post-multiplies <code>this</code> inverted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">X_BC</td><td>where X_BC = this⁻¹ * other. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It is possible (albeit improbable) to create an invalid rigid transform by accumulating round-off error with a large number of multiplies. </dd></dl>
+
+</div>
+</div>
 <a id="a2ff306c43d124f530d5dfbf6793a3741"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ff306c43d124f530d5dfbf6793a3741">&#9670;&nbsp;</a></span>IsExactlyEqualTo()</h2>
 
@@ -1693,7 +1729,8 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>drake/math/<a class="el" href="fast__pose__composition__functions_8h.html">fast_pose_composition_functions.h</a></li>
 <li>drake/math/<a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></li>
 </ul>
 </div><!-- contents -->

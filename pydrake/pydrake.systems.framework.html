@@ -573,8 +573,9 @@ Systems) and DiagramContext (for composite System Diagrams). Users are
 forbidden to extend DiagramContext and are discouraged from
 subclassing LeafContext.</p>
 <p>A Context is designed to be used only with the System that created it.
-State and Parameter data can be copied between contexts for compatible
-systems as necessary.</p>
+Data encapsulated with State and Parameter objects can be copied
+between contexts for compatible systems with some restrictions. For
+details, see system_compatibility.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.framework.Context_.Context_[float].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1244,8 +1245,9 @@ Systems) and DiagramContext (for composite System Diagrams). Users are
 forbidden to extend DiagramContext and are discouraged from
 subclassing LeafContext.</p>
 <p>A Context is designed to be used only with the System that created it.
-State and Parameter data can be copied between contexts for compatible
-systems as necessary.</p>
+Data encapsulated with State and Parameter objects can be copied
+between contexts for compatible systems with some restrictions. For
+details, see system_compatibility.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.framework.Context_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1913,8 +1915,9 @@ Systems) and DiagramContext (for composite System Diagrams). Users are
 forbidden to extend DiagramContext and are discouraged from
 subclassing LeafContext.</p>
 <p>A Context is designed to be used only with the System that created it.
-State and Parameter data can be copied between contexts for compatible
-systems as necessary.</p>
+Data encapsulated with State and Parameter objects can be copied
+between contexts for compatible systems with some restrictions. For
+details, see system_compatibility.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.framework.Context_[Expression].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2582,8 +2585,9 @@ Systems) and DiagramContext (for composite System Diagrams). Users are
 forbidden to extend DiagramContext and are discouraged from
 subclassing LeafContext.</p>
 <p>A Context is designed to be used only with the System that created it.
-State and Parameter data can be copied between contexts for compatible
-systems as necessary.</p>
+Data encapsulated with State and Parameter objects can be copied
+between contexts for compatible systems with some restrictions. For
+details, see system_compatibility.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.framework.Context_[float].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.Context_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -9447,7 +9451,7 @@ is out of bounds.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Parameters_.Parameters_[float].SetFrom">
 <code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], arg0: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_.Parameters_[float].SetFrom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes this state from <code class="docutils literal"><span class="pre">other</span></code>.</p>
+<dd><p>Initializes this object from <code class="docutils literal"><span class="pre">other</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -9564,7 +9568,7 @@ is out of bounds.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Parameters_[AutoDiffXd].SetFrom">
 <code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[AutoDiffXd], arg0: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_[AutoDiffXd].SetFrom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes this state from <code class="docutils literal"><span class="pre">other</span></code>.</p>
+<dd><p>Initializes this object from <code class="docutils literal"><span class="pre">other</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -9679,7 +9683,7 @@ is out of bounds.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Parameters_[Expression].SetFrom">
 <code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[Expression], arg0: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_[Expression].SetFrom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes this state from <code class="docutils literal"><span class="pre">other</span></code>.</p>
+<dd><p>Initializes this object from <code class="docutils literal"><span class="pre">other</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -9794,7 +9798,7 @@ is out of bounds.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.Parameters_[float].SetFrom">
 <code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Parameters_[float], arg0: pydrake.systems.framework.Parameters_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Parameters_[float].SetFrom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initializes this state from <code class="docutils literal"><span class="pre">other</span></code>.</p>
+<dd><p>Initializes this object from <code class="docutils literal"><span class="pre">other</span></code>.</p>
 </dd></dl>
 
 </dd></dl>

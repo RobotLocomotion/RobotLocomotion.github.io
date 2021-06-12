@@ -5,13 +5,6 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "query_results", "dir_3ff34c62de56b2df4097a6c50ce2d7ff.html", "dir_3ff34c62de56b2df4097a6c50ce2d7ff" ],
     [ "render", "dir_05142ce2278c744298ef3f06d9e628a4.html", "dir_05142ce2278c744298ef3f06d9e628a4" ],
     [ "test_utilities", "dir_dd40e4ced6d50249f5b665722b0662c5.html", "dir_dd40e4ced6d50249f5b665722b0662c5" ],
-    [ "collision_filter_declaration.h", "collision__filter__declaration_8h.html", [
-      [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", "classdrake_1_1geometry_1_1_collision_filter_declaration" ]
-    ] ],
-    [ "collision_filter_manager.h", "collision__filter__manager_8h.html", [
-      [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_state.html", "classdrake_1_1geometry_1_1_geometry_state" ],
-      [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", "classdrake_1_1geometry_1_1_collision_filter_manager" ]
-    ] ],
     [ "drake_visualizer.h", "drake__visualizer_8h.html", "drake__visualizer_8h" ],
     [ "frame_kinematics_vector.h", "frame__kinematics__vector_8h.html", "frame__kinematics__vector_8h" ],
     [ "geometry_doxygen.h", "geometry__doxygen_8h.html", null ],

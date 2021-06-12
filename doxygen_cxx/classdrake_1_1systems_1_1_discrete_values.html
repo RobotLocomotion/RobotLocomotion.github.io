@@ -152,12 +152,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4af818ddd91ebbee04c8354fe32df917"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a4af818ddd91ebbee04c8354fe32df917">Clone</a> () const</td></tr>
 <tr class="memdesc:a4af818ddd91ebbee04c8354fe32df917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of this object with the same substructure but with all data owned by the copy.  <a href="#a4af818ddd91ebbee04c8354fe32df917">More...</a><br /></td></tr>
 <tr class="separator:a4af818ddd91ebbee04c8354fe32df917"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
-<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gets the id of the subsystem that created this object.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
-<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
-<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Records the id of the subsystem that created this object.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
-<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af2c93dd12894b04a397e76602919f84a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#af2c93dd12894b04a397e76602919f84a">DiscreteValues</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a> &amp;)=delete</td></tr>
 <tr class="separator:af2c93dd12894b04a397e76602919f84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,6 +179,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae86dd78ddf0ff1f879ae4b6d42e026b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#aae86dd78ddf0ff1f879ae4b6d42e026b">get_mutable_vector</a> ()</td></tr>
 <tr class="memdesc:aae86dd78ddf0ff1f879ae4b6d42e026b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> containing the values for the <em>only</em> group.  <a href="#aae86dd78ddf0ff1f879ae4b6d42e026b">More...</a><br /></td></tr>
 <tr class="separator:aae86dd78ddf0ff1f879ae4b6d42e026b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">System compatibility</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>.</p>
+</div></td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gets the id of the subsystem that created this object.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
+<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
+<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Records the id of the subsystem that created this object.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
+<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af2c93dd12894b04a397e76602919f84a"></a>

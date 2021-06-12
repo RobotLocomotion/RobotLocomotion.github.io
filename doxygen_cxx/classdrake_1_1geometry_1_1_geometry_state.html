@@ -128,13 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d0d78e60bcdc0948d45eb96af6a08e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a8d0d78e60bcdc0948d45eb96af6a08e0">GeometryState</a> ()</td></tr>
 <tr class="memdesc:a8d0d78e60bcdc0948d45eb96af6a08e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a8d0d78e60bcdc0948d45eb96af6a08e0">More...</a><br /></td></tr>
 <tr class="separator:a8d0d78e60bcdc0948d45eb96af6a08e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97bbda06111247df8ec9bdaa5bab22a"><td class="memTemplParams" colspan="2">template&lt;class T1  = T&gt; </td></tr>
-<tr class="memitem:ae97bbda06111247df8ec9bdaa5bab22a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_same&lt; T1, double &gt;::value, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ae97bbda06111247df8ec9bdaa5bab22a">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; double &gt; &amp;other)</td></tr>
-<tr class="memdesc:ae97bbda06111247df8ec9bdaa5bab22a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow assignment from a GeometryState&lt;double&gt; to a GeometryState&lt;T&gt;.  <a href="#ae97bbda06111247df8ec9bdaa5bab22a">More...</a><br /></td></tr>
-<tr class="separator:ae97bbda06111247df8ec9bdaa5bab22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7f6b9db697d300f21df030fef5a56fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ad7f6b9db697d300f21df030fef5a56fa">ApplyFilterDeclaration</a> (const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;declaration)</td></tr>
-<tr class="memdesc:ad7f6b9db697d300f21df030fef5a56fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of CollisionFilterManager::ApplyFilterDeclaration().  <a href="#ad7f6b9db697d300f21df030fef5a56fa">More...</a><br /></td></tr>
-<tr class="separator:ad7f6b9db697d300f21df030fef5a56fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42aa02fd500e7cca72c02d29808d003b"><td class="memTemplParams" colspan="2">template&lt;class T1  = T&gt; </td></tr>
+<tr class="memitem:a42aa02fd500e7cca72c02d29808d003b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!std::is_same_v&lt; T1, double &gt;, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a42aa02fd500e7cca72c02d29808d003b">operator=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; double &gt; &amp;other)</td></tr>
+<tr class="memdesc:a42aa02fd500e7cca72c02d29808d003b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow assignment from a GeometryState&lt;double&gt; to a GeometryState&lt;T&gt;.  <a href="#a42aa02fd500e7cca72c02d29808d003b">More...</a><br /></td></tr>
+<tr class="separator:a42aa02fd500e7cca72c02d29808d003b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a74d61e236854868478ec1213e02f9c25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a74d61e236854868478ec1213e02f9c25">GeometryState</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a> &amp;)=default</td></tr>
 <tr class="separator:a74d61e236854868478ec1213e02f9c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -515,26 +512,6 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a72f7d830f6776bb7403c6bbc66d1d676" title="Adds a new render engine to this SceneGraph.">SceneGraph::AddRenderer()</a>. </p>
-
-</div>
-</div>
-<a id="ad7f6b9db697d300f21df030fef5a56fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7f6b9db697d300f21df030fef5a56fa">&#9670;&nbsp;</a></span>ApplyFilterDeclaration()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ApplyFilterDeclaration </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;&#160;</td>
-          <td class="paramname"><em>declaration</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Implementation of CollisionFilterManager::ApplyFilterDeclaration(). </p>
 
 </div>
 </div>
@@ -1866,14 +1843,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ae97bbda06111247df8ec9bdaa5bab22a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae97bbda06111247df8ec9bdaa5bab22a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/3]</span></h2>
+<a id="a42aa02fd500e7cca72c02d29808d003b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42aa02fd500e7cca72c02d29808d003b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;!std::is_same&lt;T1, double&gt;::value, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;T&gt;&amp;&gt;::type operator= </td>
+          <td class="memname">std::enable_if_t&lt;!std::is_same_v&lt;T1, double&gt;, <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;T&gt;&amp;&gt; operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em></td><td>)</td>
@@ -2538,7 +2515,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>drake/geometry/<a class="el" href="collision__filter__manager_8h.html">collision_filter_manager.h</a></li>
+<li>drake/geometry/<a class="el" href="geometry__set_8h.html">geometry_set.h</a></li>
 <li>drake/geometry/<a class="el" href="geometry__state_8h.html">geometry_state.h</a></li>
 </ul>
 </div><!-- contents -->

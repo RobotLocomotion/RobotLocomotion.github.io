@@ -174,7 +174,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae99dbe4930cb71a5cf842f03ecfc00b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a071f6f8fa672e8180460bf636d7e2a10"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a071f6f8fa672e8180460bf636d7e2a10"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_parameters.html#a071f6f8fa672e8180460bf636d7e2a10">SetFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a>&lt; U &gt; &amp;other)</td></tr>
-<tr class="memdesc:a071f6f8fa672e8180460bf636d7e2a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this state from <code>other</code>.  <a href="#a071f6f8fa672e8180460bf636d7e2a10">More...</a><br /></td></tr>
+<tr class="memdesc:a071f6f8fa672e8180460bf636d7e2a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this object from <code>other</code>.  <a href="#a071f6f8fa672e8180460bf636d7e2a10">More...</a><br /></td></tr>
 <tr class="separator:a071f6f8fa672e8180460bf636d7e2a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aa7af9c81fcdc295f61aafa99ea63bfed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_parameters.html#aa7af9c81fcdc295f61aafa99ea63bfed">Parameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a> &amp;)=delete</td></tr>
@@ -185,6 +185,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afe060e1a0e586fd7434ede61e89d0327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6edeb15fadd08d1724a780c08401ef6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_parameters.html#af6edeb15fadd08d1724a780c08401ef6">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:af6edeb15fadd08d1724a780c08401ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">System compatibility</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>.</p>
+</div></td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_parameters.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Gets the id of the subsystem that created this object.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
+<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3965cbaa8df39799338ac0838f8306a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_parameters.html#a3965cbaa8df39799338ac0838f8306a7">set_system_id</a> (internal::SystemId id)</td></tr>
+<tr class="memdesc:a3965cbaa8df39799338ac0838f8306a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Records the id of the subsystem that created this object.  <a href="#a3965cbaa8df39799338ac0838f8306a7">More...</a><br /></td></tr>
+<tr class="separator:a3965cbaa8df39799338ac0838f8306a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa7af9c81fcdc295f61aafa99ea63bfed"></a>
@@ -605,6 +614,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1b3f9382208d13e11984a54afa711577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3f9382208d13e11984a54afa711577">&#9670;&nbsp;</a></span>get_system_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::SystemId get_system_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Gets the id of the subsystem that created this object. </p>
+
+</div>
+</div>
 <a id="a0232523ac7f8337a392b321ffd282187"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0232523ac7f8337a392b321ffd282187">&#9670;&nbsp;</a></span>num_abstract_parameters()</h2>
 
@@ -727,6 +755,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3965cbaa8df39799338ac0838f8306a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3965cbaa8df39799338ac0838f8306a7">&#9670;&nbsp;</a></span>set_system_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_system_id </td>
+          <td>(</td>
+          <td class="paramtype">internal::SystemId&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Records the id of the subsystem that created this object. </p>
+
+</div>
+</div>
 <a id="a071f6f8fa672e8180460bf636d7e2a10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a071f6f8fa672e8180460bf636d7e2a10">&#9670;&nbsp;</a></span>SetFrom()</h2>
 
@@ -743,7 +791,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes this state from <code>other</code>. </p>
+<p>Initializes this object from <code>other</code>. </p>
 
 </div>
 </div>

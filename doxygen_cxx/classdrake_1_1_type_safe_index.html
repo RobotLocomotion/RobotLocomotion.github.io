@@ -207,10 +207,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4eaadb58ee892d3700d3666f336c157e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a4eaadb58ee892d3700d3666f336c157e">operator==</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a4eaadb58ee892d3700d3666f336c157e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow equality test with indices of this tag.  <a href="#a4eaadb58ee892d3700d3666f336c157e">More...</a><br /></td></tr>
 <tr class="separator:a4eaadb58ee892d3700d3666f336c157e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9a3b526e8657837859687706b26d9f4"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:ac9a3b526e8657837859687706b26d9f4"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#ac9a3b526e8657837859687706b26d9f4">operator==</a> (const U &amp;value) const</td></tr>
-<tr class="memdesc:ac9a3b526e8657837859687706b26d9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow equality test with unsigned integers.  <a href="#ac9a3b526e8657837859687706b26d9f4">More...</a><br /></td></tr>
-<tr class="separator:ac9a3b526e8657837859687706b26d9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f99bc048f1d5fc4554f1e130d21f04a"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a2f99bc048f1d5fc4554f1e130d21f04a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a2f99bc048f1d5fc4554f1e130d21f04a">operator==</a> (const U &amp;value) const</td></tr>
+<tr class="memdesc:a2f99bc048f1d5fc4554f1e130d21f04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow equality test with unsigned integers.  <a href="#a2f99bc048f1d5fc4554f1e130d21f04a">More...</a><br /></td></tr>
+<tr class="separator:a2f99bc048f1d5fc4554f1e130d21f04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81b9e8a975a58ee6aeec611e7aec8078"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a81b9e8a975a58ee6aeec611e7aec8078"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a81b9e8a975a58ee6aeec611e7aec8078">operator==</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; U &gt; &amp;u) const =delete</td></tr>
 <tr class="memdesc:a81b9e8a975a58ee6aeec611e7aec8078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent equality tests with indices of other tags.  <a href="#a81b9e8a975a58ee6aeec611e7aec8078">More...</a><br /></td></tr>
@@ -218,10 +218,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b06a7c55812c1c18a4aecf76d318525"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a9b06a7c55812c1c18a4aecf76d318525">operator!=</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a9b06a7c55812c1c18a4aecf76d318525"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow inequality test with indices of this tag.  <a href="#a9b06a7c55812c1c18a4aecf76d318525">More...</a><br /></td></tr>
 <tr class="separator:a9b06a7c55812c1c18a4aecf76d318525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a481319876b466437ae49e6f1d6a595"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a2a481319876b466437ae49e6f1d6a595"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a2a481319876b466437ae49e6f1d6a595">operator!=</a> (const U &amp;value) const</td></tr>
-<tr class="memdesc:a2a481319876b466437ae49e6f1d6a595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow inequality test with unsigned integers.  <a href="#a2a481319876b466437ae49e6f1d6a595">More...</a><br /></td></tr>
-<tr class="separator:a2a481319876b466437ae49e6f1d6a595"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdbaf78f95d7a5ab8059510807ecf3f"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a9fdbaf78f95d7a5ab8059510807ecf3f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a9fdbaf78f95d7a5ab8059510807ecf3f">operator!=</a> (const U &amp;value) const</td></tr>
+<tr class="memdesc:a9fdbaf78f95d7a5ab8059510807ecf3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow inequality test with unsigned integers.  <a href="#a9fdbaf78f95d7a5ab8059510807ecf3f">More...</a><br /></td></tr>
+<tr class="separator:a9fdbaf78f95d7a5ab8059510807ecf3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa77ea52bfb8c2c46a8d4e4e8c303fb63"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:aa77ea52bfb8c2c46a8d4e4e8c303fb63"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#aa77ea52bfb8c2c46a8d4e4e8c303fb63">operator!=</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; U &gt; &amp;u) const =delete</td></tr>
 <tr class="memdesc:aa77ea52bfb8c2c46a8d4e4e8c303fb63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent inequality test with indices of other tags.  <a href="#aa77ea52bfb8c2c46a8d4e4e8c303fb63">More...</a><br /></td></tr>
@@ -229,10 +229,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f100af0f05d43221c6825bde6f7da1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a2f100af0f05d43221c6825bde6f7da1f">operator&lt;</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a2f100af0f05d43221c6825bde6f7da1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less than test with indices of this tag.  <a href="#a2f100af0f05d43221c6825bde6f7da1f">More...</a><br /></td></tr>
 <tr class="separator:a2f100af0f05d43221c6825bde6f7da1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6d7be101d0085f361dada1400dc0537"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:af6d7be101d0085f361dada1400dc0537"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#af6d7be101d0085f361dada1400dc0537">operator&lt;</a> (const U &amp;value) const</td></tr>
-<tr class="memdesc:af6d7be101d0085f361dada1400dc0537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less than test with unsigned integers.  <a href="#af6d7be101d0085f361dada1400dc0537">More...</a><br /></td></tr>
-<tr class="separator:af6d7be101d0085f361dada1400dc0537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5e311bbe92ddb45bbc2fd021ba8e15a"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:ab5e311bbe92ddb45bbc2fd021ba8e15a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#ab5e311bbe92ddb45bbc2fd021ba8e15a">operator&lt;</a> (const U &amp;value) const</td></tr>
+<tr class="memdesc:ab5e311bbe92ddb45bbc2fd021ba8e15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less than test with unsigned integers.  <a href="#ab5e311bbe92ddb45bbc2fd021ba8e15a">More...</a><br /></td></tr>
+<tr class="separator:ab5e311bbe92ddb45bbc2fd021ba8e15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a51eedb20a929b7ef5b76f7fb37e33"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:aa7a51eedb20a929b7ef5b76f7fb37e33"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#aa7a51eedb20a929b7ef5b76f7fb37e33">operator&lt;</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; U &gt; &amp;u) const =delete</td></tr>
 <tr class="memdesc:aa7a51eedb20a929b7ef5b76f7fb37e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent less than test with indices of other tags.  <a href="#aa7a51eedb20a929b7ef5b76f7fb37e33">More...</a><br /></td></tr>
@@ -240,10 +240,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c6625bb1b0a6191fe40c39910c3f2ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a6c6625bb1b0a6191fe40c39910c3f2ff">operator&lt;=</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a6c6625bb1b0a6191fe40c39910c3f2ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less than or equals test with indices of this tag.  <a href="#a6c6625bb1b0a6191fe40c39910c3f2ff">More...</a><br /></td></tr>
 <tr class="separator:a6c6625bb1b0a6191fe40c39910c3f2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42dc787f7ab9d020ab6daac31cb31bef"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a42dc787f7ab9d020ab6daac31cb31bef"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a42dc787f7ab9d020ab6daac31cb31bef">operator&lt;=</a> (const U &amp;value) const</td></tr>
-<tr class="memdesc:a42dc787f7ab9d020ab6daac31cb31bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less than or equals test test with unsigned integers.  <a href="#a42dc787f7ab9d020ab6daac31cb31bef">More...</a><br /></td></tr>
-<tr class="separator:a42dc787f7ab9d020ab6daac31cb31bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5c8299ead2768b8cc3bdc7864b3998"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:afc5c8299ead2768b8cc3bdc7864b3998"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#afc5c8299ead2768b8cc3bdc7864b3998">operator&lt;=</a> (const U &amp;value) const</td></tr>
+<tr class="memdesc:afc5c8299ead2768b8cc3bdc7864b3998"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow less than or equals test test with unsigned integers.  <a href="#afc5c8299ead2768b8cc3bdc7864b3998">More...</a><br /></td></tr>
+<tr class="separator:afc5c8299ead2768b8cc3bdc7864b3998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a2f21bbdbe979bea71eb9b65ad617da"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a9a2f21bbdbe979bea71eb9b65ad617da"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a9a2f21bbdbe979bea71eb9b65ad617da">operator&lt;=</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; U &gt; &amp;u) const =delete</td></tr>
 <tr class="memdesc:a9a2f21bbdbe979bea71eb9b65ad617da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent less than or equals test with indices of other tags.  <a href="#a9a2f21bbdbe979bea71eb9b65ad617da">More...</a><br /></td></tr>
@@ -251,10 +251,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f1c61a6f9bd5307c6bac7f0ff1b6d99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a7f1c61a6f9bd5307c6bac7f0ff1b6d99">operator&gt;</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a7f1c61a6f9bd5307c6bac7f0ff1b6d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow greater than test with indices of this tag.  <a href="#a7f1c61a6f9bd5307c6bac7f0ff1b6d99">More...</a><br /></td></tr>
 <tr class="separator:a7f1c61a6f9bd5307c6bac7f0ff1b6d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a401fcbd35610ac3dbba070db6c2d9273"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:a401fcbd35610ac3dbba070db6c2d9273"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a401fcbd35610ac3dbba070db6c2d9273">operator&gt;</a> (const U &amp;value) const</td></tr>
-<tr class="memdesc:a401fcbd35610ac3dbba070db6c2d9273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow greater than test with unsigned integers.  <a href="#a401fcbd35610ac3dbba070db6c2d9273">More...</a><br /></td></tr>
-<tr class="separator:a401fcbd35610ac3dbba070db6c2d9273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef6daea7dee12e46de4085848ec068e"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:a7ef6daea7dee12e46de4085848ec068e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a7ef6daea7dee12e46de4085848ec068e">operator&gt;</a> (const U &amp;value) const</td></tr>
+<tr class="memdesc:a7ef6daea7dee12e46de4085848ec068e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow greater than test with unsigned integers.  <a href="#a7ef6daea7dee12e46de4085848ec068e">More...</a><br /></td></tr>
+<tr class="separator:a7ef6daea7dee12e46de4085848ec068e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac03aaa9b62f800418cef6fbe1a688839"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:ac03aaa9b62f800418cef6fbe1a688839"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#ac03aaa9b62f800418cef6fbe1a688839">operator&gt;</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; U &gt; &amp;u) const =delete</td></tr>
 <tr class="memdesc:ac03aaa9b62f800418cef6fbe1a688839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent greater than test with indices of other tags.  <a href="#ac03aaa9b62f800418cef6fbe1a688839">More...</a><br /></td></tr>
@@ -262,10 +262,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a74f0a0724242bb9df75f9b9026421ee8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#a74f0a0724242bb9df75f9b9026421ee8">operator&gt;=</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; Tag &gt; &amp;other) const</td></tr>
 <tr class="memdesc:a74f0a0724242bb9df75f9b9026421ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow greater than or equals test with indices of this tag.  <a href="#a74f0a0724242bb9df75f9b9026421ee8">More...</a><br /></td></tr>
 <tr class="separator:a74f0a0724242bb9df75f9b9026421ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85104f8db0951eab0fd371861e9177d"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
-<tr class="memitem:ad85104f8db0951eab0fd371861e9177d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_integral&lt; U &gt;::value &amp;&amp;std::is_unsigned&lt; U &gt;::value, bool &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#ad85104f8db0951eab0fd371861e9177d">operator&gt;=</a> (const U &amp;value) const</td></tr>
-<tr class="memdesc:ad85104f8db0951eab0fd371861e9177d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow greater than or equals test with unsigned integers.  <a href="#ad85104f8db0951eab0fd371861e9177d">More...</a><br /></td></tr>
-<tr class="separator:ad85104f8db0951eab0fd371861e9177d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe34c4fe3aa9d425e15bac95a84f3af"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
+<tr class="memitem:affe34c4fe3aa9d425e15bac95a84f3af"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_integral_v&lt; U &gt; &amp;&amp;std::is_unsigned_v&lt; U &gt;, bool &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#affe34c4fe3aa9d425e15bac95a84f3af">operator&gt;=</a> (const U &amp;value) const</td></tr>
+<tr class="memdesc:affe34c4fe3aa9d425e15bac95a84f3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allow greater than or equals test with unsigned integers.  <a href="#affe34c4fe3aa9d425e15bac95a84f3af">More...</a><br /></td></tr>
+<tr class="separator:affe34c4fe3aa9d425e15bac95a84f3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa730876d99ffdad4139b54689421c93c"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:aa730876d99ffdad4139b54689421c93c"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_type_safe_index.html#aa730876d99ffdad4139b54689421c93c">operator&gt;=</a> (const <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; U &gt; &amp;u) const =delete</td></tr>
 <tr class="memdesc:aa730876d99ffdad4139b54689421c93c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevent greater than or equals test with indices of other tags.  <a href="#aa730876d99ffdad4139b54689421c93c">More...</a><br /></td></tr>
@@ -467,14 +467,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a481319876b466437ae49e6f1d6a595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a481319876b466437ae49e6f1d6a595">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/3]</span></h2>
+<a id="a9fdbaf78f95d7a5ab8059510807ecf3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fdbaf78f95d7a5ab8059510807ecf3f">&#9670;&nbsp;</a></span>operator!=() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type operator!= </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; operator!= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -753,14 +753,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af6d7be101d0085f361dada1400dc0537"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6d7be101d0085f361dada1400dc0537">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[2/3]</span></h2>
+<a id="ab5e311bbe92ddb45bbc2fd021ba8e15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5e311bbe92ddb45bbc2fd021ba8e15a">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type operator&lt; </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; operator&lt; </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -801,8 +801,28 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="afc5c8299ead2768b8cc3bdc7864b3998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc5c8299ead2768b8cc3bdc7864b3998">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const U &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allow less than or equals test test with unsigned integers. </p>
+
+</div>
+</div>
 <a id="a6c6625bb1b0a6191fe40c39910c3f2ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c6625bb1b0a6191fe40c39910c3f2ff">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c6625bb1b0a6191fe40c39910c3f2ff">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -818,26 +838,6 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allow less than or equals test with indices of this tag. </p>
-
-</div>
-</div>
-<a id="a42dc787f7ab9d020ab6daac31cb31bef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42dc787f7ab9d020ab6daac31cb31bef">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type operator&lt;= </td>
-          <td>(</td>
-          <td class="paramtype">const U &amp;&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Allow less than or equals test test with unsigned integers. </p>
 
 </div>
 </div>
@@ -941,14 +941,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ac9a3b526e8657837859687706b26d9f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9a3b526e8657837859687706b26d9f4">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/3]</span></h2>
+<a id="a2f99bc048f1d5fc4554f1e130d21f04a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f99bc048f1d5fc4554f1e130d21f04a">&#9670;&nbsp;</a></span>operator==() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type operator== </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; operator== </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -1009,14 +1009,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a401fcbd35610ac3dbba070db6c2d9273"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a401fcbd35610ac3dbba070db6c2d9273">&#9670;&nbsp;</a></span>operator&gt;() <span class="overload">[2/3]</span></h2>
+<a id="a7ef6daea7dee12e46de4085848ec068e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef6daea7dee12e46de4085848ec068e">&#9670;&nbsp;</a></span>operator&gt;() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type operator&gt; </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; operator&gt; </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
@@ -1077,14 +1077,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ad85104f8db0951eab0fd371861e9177d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad85104f8db0951eab0fd371861e9177d">&#9670;&nbsp;</a></span>operator&gt;=() <span class="overload">[2/3]</span></h2>
+<a id="affe34c4fe3aa9d425e15bac95a84f3af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe34c4fe3aa9d425e15bac95a84f3af">&#9670;&nbsp;</a></span>operator&gt;=() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_integral&lt;U&gt;::value &amp;&amp; std::is_unsigned&lt;U&gt;::value, bool&gt;::type operator&gt;= </td>
+          <td class="memname">std::enable_if_t&lt; std::is_integral_v&lt;U&gt; &amp;&amp; std::is_unsigned_v&lt;U&gt;, bool&gt; operator&gt;= </td>
           <td>(</td>
           <td class="paramtype">const U &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>

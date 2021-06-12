@@ -769,6 +769,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:afd0aacb96a01eb38099ac6cd4d12037b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75c5ab861b2f08ff5a29066458747b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a75c5ab861b2f08ff5a29066458747b9a">set_forced_unrestricted_update_events</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt;&gt; forced)</td></tr>
 <tr class="separator:a75c5ab861b2f08ff5a29066458747b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86649644cbbb5db1a63f2ef6dde59edd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">get_mutable_system_scalar_converter</a> ()</td></tr>
+<tr class="memdesc:a86649644cbbb5db1a63f2ef6dde59edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> for <code>this</code> system.  <a href="#a86649644cbbb5db1a63f2ef6dde59edd">More...</a><br /></td></tr>
+<tr class="separator:a86649644cbbb5db1a63f2ef6dde59edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4a28033b6bf85b93f34e9ecb6dd2dc7"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class Clazz&gt; </td></tr>
 <tr class="memitem:ac4a28033b6bf85b93f34e9ecb6dd2dc7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ac4a28033b6bf85b93f34e9ecb6dd2dc7">ValidateCreatedForThisSystem</a> (const Clazz&lt; T &gt; *object) const</td></tr>
 <tr class="memdesc:ac4a28033b6bf85b93f34e9ecb6dd2dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given object was created for this system.  <a href="#ac4a28033b6bf85b93f34e9ecb6dd2dc7">More...</a><br /></td></tr>
@@ -952,8 +955,6 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a711f9256206b0eb48db02088a645e6a9"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a711f9256206b0eb48db02088a645e6a9">SystemImpl</a></td></tr>
-<tr class="separator:a711f9256206b0eb48db02088a645e6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a6f9e15c48813e173ebd6d48770fa1"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
 <tr class="memitem:a70a6f9e15c48813e173ebd6d48770fa1"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a70a6f9e15c48813e173ebd6d48770fa1">System</a></td></tr>
 <tr class="separator:a70a6f9e15c48813e173ebd6d48770fa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2393,45 +2394,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ad291a98842b04b626d781e4e86e7fdfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad291a98842b04b626d781e4e86e7fdfb">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[5/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
-          <td>(</td>
-          <td class="paramtype">class MySystem&lt; T &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">class MyContext&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">typename ValueType&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
-<div class="fragment"><div class="line">ValueType MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;) <span class="keyword">const</span>;</div></div><!-- fragment --><p> Other than the calculator method's signature, this is identical to the other <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_calc_only">calculator-only signature</a>; please look there for more information. </p>
-
-</div>
-</div>
 <a id="a7d078e4f799ae50f07ae35389352835f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2466,6 +2430,43 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a3c667dbd4793b66db1e339d623b0c537" title="Declares a new CacheEntry in this System using the least-restrictive definitions for the associated f...">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
 <dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad291a98842b04b626d781e4e86e7fdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad291a98842b04b626d781e4e86e7fdfb">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
+          <td>(</td>
+          <td class="paramtype">class MySystem&lt; T &gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">class MyContext&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename ValueType&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
+<div class="fragment"><div class="line">ValueType MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;) <span class="keyword">const</span>;</div></div><!-- fragment --><p> Other than the calculator method's signature, this is identical to the other <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_calc_only">calculator-only signature</a>; please look there for more information. </p>
 
 </div>
 </div>
@@ -3960,6 +3961,33 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86649644cbbb5db1a63f2ef6dde59edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86649644cbbb5db1a63f2ef6dde59edd">&#9670;&nbsp;</a></span>get_mutable_system_scalar_converter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a>&amp; get_mutable_system_scalar_converter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> for <code>this</code> system. </p>
 
 </div>
 </div>
@@ -6004,7 +6032,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
  This will be removed from Drake on or after "2021-09-01" .</dd></dl>
 
 </div>
@@ -6174,28 +6202,6 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
       <table class="memname">
         <tr>
           <td class="memname">friend class <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a711f9256206b0eb48db02088a645e6a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a711f9256206b0eb48db02088a645e6a9">&#9670;&nbsp;</a></span>SystemImpl</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class SystemImpl</td>
         </tr>
       </table>
   </td>

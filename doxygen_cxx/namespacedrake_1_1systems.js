@@ -67,6 +67,7 @@ var namespacedrake_1_1systems =
     [ "LeafOutputPort", "classdrake_1_1systems_1_1_leaf_output_port.html", "classdrake_1_1systems_1_1_leaf_output_port" ],
     [ "LeafSystem", "classdrake_1_1systems_1_1_leaf_system.html", "classdrake_1_1systems_1_1_leaf_system" ],
     [ "LinearSystem", "classdrake_1_1systems_1_1_linear_system.html", "classdrake_1_1systems_1_1_linear_system" ],
+    [ "LinearTransformDensity", "classdrake_1_1systems_1_1_linear_transform_density.html", "classdrake_1_1systems_1_1_linear_transform_density" ],
     [ "MatrixGain", "classdrake_1_1systems_1_1_matrix_gain.html", "classdrake_1_1systems_1_1_matrix_gain" ],
     [ "Multiplexer", "classdrake_1_1systems_1_1_multiplexer.html", "classdrake_1_1systems_1_1_multiplexer" ],
     [ "MyVector", "classdrake_1_1systems_1_1_my_vector.html", "classdrake_1_1systems_1_1_my_vector" ],

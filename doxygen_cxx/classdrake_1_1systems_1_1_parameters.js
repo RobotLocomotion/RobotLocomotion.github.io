@@ -18,11 +18,13 @@ var classdrake_1_1systems_1_1_parameters =
     [ "get_mutable_numeric_parameter", "classdrake_1_1systems_1_1_parameters.html#acaf28140c1221d5a0a6e3bbd44b62787", null ],
     [ "get_numeric_parameter", "classdrake_1_1systems_1_1_parameters.html#a1882d7ad5c503e04bd2aab9de4d196e3", null ],
     [ "get_numeric_parameters", "classdrake_1_1systems_1_1_parameters.html#a93b9608b1b54533ea48f96f50af98969", null ],
+    [ "get_system_id", "classdrake_1_1systems_1_1_parameters.html#a1b3f9382208d13e11984a54afa711577", null ],
     [ "num_abstract_parameters", "classdrake_1_1systems_1_1_parameters.html#a0232523ac7f8337a392b321ffd282187", null ],
     [ "num_numeric_parameter_groups", "classdrake_1_1systems_1_1_parameters.html#aff6508ca0ff8f5e886e63fb9c830e36a", null ],
     [ "operator=", "classdrake_1_1systems_1_1_parameters.html#af6edeb15fadd08d1724a780c08401ef6", null ],
     [ "operator=", "classdrake_1_1systems_1_1_parameters.html#a4ce532e658bd05dcc673e2fb6e6c166c", null ],
     [ "set_abstract_parameters", "classdrake_1_1systems_1_1_parameters.html#af307c1548f6335a967ff1828af6b5f05", null ],
     [ "set_numeric_parameters", "classdrake_1_1systems_1_1_parameters.html#ae647e3639684ddfb3492e5d8c7cb009e", null ],
+    [ "set_system_id", "classdrake_1_1systems_1_1_parameters.html#a3965cbaa8df39799338ac0838f8306a7", null ],
     [ "SetFrom", "classdrake_1_1systems_1_1_parameters.html#a071f6f8fa672e8180460bf636d7e2a10", null ]
 ];

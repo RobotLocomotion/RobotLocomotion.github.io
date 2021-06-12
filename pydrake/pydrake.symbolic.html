@@ -1316,14 +1316,18 @@ coefficient part of a monomial.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Monomial.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
+<li>__init__(self: pydrake.symbolic.Monomial) -&gt; None</li>
+</ol>
+<p>Constructs a monomial equal to 1. Namely the total degree is zero.</p>
+<ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.symbolic.Monomial, arg0: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from <code class="docutils literal"><span class="pre">var</span></code>.</p>
-<ol class="arabic simple" start="2">
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.symbolic.Monomial, arg0: pydrake.symbolic.Variable, arg1: int) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from <code class="docutils literal"><span class="pre">var</span></code> and <code class="docutils literal"><span class="pre">exponent</span></code>.</p>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.symbolic.Monomial, arg0: Dict[pydrake.symbolic.Variable, int]) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from <code class="docutils literal"><span class="pre">powers</span></code>.</p>
@@ -1335,7 +1339,7 @@ coefficient part of a monomial.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li>__init__(self: pydrake.symbolic.Monomial, vars: numpy.ndarray[object[m, 1]], exponents: numpy.ndarray[numpy.int32[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from a vector of variables <code class="docutils literal"><span class="pre">vars</span></code> and their

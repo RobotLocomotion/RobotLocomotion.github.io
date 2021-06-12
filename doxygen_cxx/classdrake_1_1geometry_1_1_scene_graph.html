@@ -355,16 +355,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a46b7433ff54eba8bae914099283a09cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2135ff8bc7d0e646f5cb5cf44a6afae9">RemoveRole()</a> for individual geometries.  <a href="#a46b7433ff54eba8bae914099283a09cb">More...</a><br /></td></tr>
 <tr class="separator:a46b7433ff54eba8bae914099283a09cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Collision filtering</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filter_manager"></a> Control over "collision filtering" is handled by the <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a>. SceneGraph provides access to the manager. As with other geometry data, collision filters can be configured in SceneGraph's <em>model</em> or in the copy stored in a particular context. These methods provide access to the manager for the data stored in either location.</p>
-<p>Generally, it should be considered a bad practice to hang onto the instance of <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> returned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a57538a6d935661eb2329e4b200b807e0" title="Returns the collision filter manager for this SceneGraph instance&#39;s model*.">collision_filter_manager()</a>. It is not immediately clear whether a particular <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> instance refers to the SceneGraph model or the Context data and persisting the reference may lead to confusion. Keeping the reference for the duration of a function is appropriate, but allowing it to persist outside of the scope of acquisition is dangerous. Acquiring a new <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> is <em>very</em> cheap, so feel free to discard and reacquire. </p>
-</div></td></tr>
-<tr class="memitem:a57538a6d935661eb2329e4b200b807e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a57538a6d935661eb2329e4b200b807e0">collision_filter_manager</a> ()</td></tr>
-<tr class="memdesc:a57538a6d935661eb2329e4b200b807e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the collision filter manager for this SceneGraph instance's model*.  <a href="#a57538a6d935661eb2329e4b200b807e0">More...</a><br /></td></tr>
-<tr class="separator:a57538a6d935661eb2329e4b200b807e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bded8d90c0cf337aabc20cf5b32295c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a6bded8d90c0cf337aabc20cf5b32295c">collision_filter_manager</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
-<tr class="memdesc:a6bded8d90c0cf337aabc20cf5b32295c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the collision filter manager for data stored in <code>context</code>.  <a href="#a6bded8d90c0cf337aabc20cf5b32295c">More...</a><br /></td></tr>
-<tr class="separator:a6bded8d90c0cf337aabc20cf5b32295c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Collision filtering (legacy)</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filtering"></a>The interface for limiting the scope of penetration queries (i.e., "filtering
 collisions").</p>
 <p>The scene graph consists of the set of geometry <code>G = D ⋃ A = {g₀, g₁, ..., gₙ}</code>, where D is the set of dynamic geometry and A is the set of anchored geometry (by definition <code>D ⋂ A = ∅</code>). Collision occurs between pairs of geometries (e.g., (gᵢ, gⱼ)). The set of collision candidate pairs is initially defined as <code>C = (G × G) - (A × A) - F - I</code>, where:</p><ul>
@@ -1269,10 +1259,10 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a2a848b1098292e9cf46c11d45f73efe7 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a2a848b1098292e9cf46c11d45f73efe7">DeclareVectorOutputPort</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;model_vector, typename <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">LeafOutputPort</a>&lt; T &gt;::CalcVectorCallback vector_calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
 <tr class="memdesc:a2a848b1098292e9cf46c11d45f73efe7 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">See the nearly identical signature with an additional (first) argument specifying the port name.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a2a848b1098292e9cf46c11d45f73efe7">More...</a><br /></td></tr>
 <tr class="separator:a2a848b1098292e9cf46c11d45f73efe7 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bd23bce540ff0cd0bc36074422b80ea inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , typename OutputType &gt; </td></tr>
-<tr class="memitem:a9bd23bce540ff0cd0bc36074422b80ea inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!std::is_same&lt; OutputType, std::string &gt;::value, <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">LeafOutputPort</a>&lt; T &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a9bd23bce540ff0cd0bc36074422b80ea">DeclareAbstractOutputPort</a> (const OutputType &amp;model_value, void(MySystem::*calc)(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, OutputType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a9bd23bce540ff0cd0bc36074422b80ea inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">See the nearly identical signature with an additional (first) argument specifying the port name.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a9bd23bce540ff0cd0bc36074422b80ea">More...</a><br /></td></tr>
-<tr class="separator:a9bd23bce540ff0cd0bc36074422b80ea inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da9170c102179fa0799d24bc62141e1 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , typename OutputType &gt; </td></tr>
+<tr class="memitem:a3da9170c102179fa0799d24bc62141e1 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!std::is_same_v&lt; OutputType, std::string &gt;, <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">LeafOutputPort</a>&lt; T &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a3da9170c102179fa0799d24bc62141e1">DeclareAbstractOutputPort</a> (const OutputType &amp;model_value, void(MySystem::*calc)(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, OutputType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a3da9170c102179fa0799d24bc62141e1 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">See the nearly identical signature with an additional (first) argument specifying the port name.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a3da9170c102179fa0799d24bc62141e1">More...</a><br /></td></tr>
+<tr class="separator:a3da9170c102179fa0799d24bc62141e1 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5399d5518ba8953095e797b9ec9e3aa8 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , typename OutputType &gt; </td></tr>
 <tr class="memitem:a5399d5518ba8953095e797b9ec9e3aa8 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html">LeafOutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a5399d5518ba8953095e797b9ec9e3aa8">DeclareAbstractOutputPort</a> (void(MySystem::*calc)(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, OutputType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
 <tr class="memdesc:a5399d5518ba8953095e797b9ec9e3aa8 inherit pro_methods_classdrake_1_1systems_1_1_leaf_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">See the nearly identical signature with an additional (first) argument specifying the port name.  <a href="classdrake_1_1systems_1_1_leaf_system.html#a5399d5518ba8953095e797b9ec9e3aa8">More...</a><br /></td></tr>
@@ -1341,6 +1331,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:afd0aacb96a01eb38099ac6cd4d12037b inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75c5ab861b2f08ff5a29066458747b9a inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a75c5ab861b2f08ff5a29066458747b9a">set_forced_unrestricted_update_events</a> (std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_event_collection.html">EventCollection</a>&lt; <a class="el" href="classdrake_1_1systems_1_1_unrestricted_update_event.html">UnrestrictedUpdateEvent</a>&lt; T &gt;&gt;&gt; forced)</td></tr>
 <tr class="separator:a75c5ab861b2f08ff5a29066458747b9a inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">get_mutable_system_scalar_converter</a> ()</td></tr>
+<tr class="memdesc:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> for <code>this</code> system.  <a href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">More...</a><br /></td></tr>
+<tr class="separator:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4a28033b6bf85b93f34e9ecb6dd2dc7 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class Clazz&gt; </td></tr>
 <tr class="memitem:ac4a28033b6bf85b93f34e9ecb6dd2dc7 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ac4a28033b6bf85b93f34e9ecb6dd2dc7">ValidateCreatedForThisSystem</a> (const Clazz&lt; T &gt; *object) const</td></tr>
 <tr class="memdesc:ac4a28033b6bf85b93f34e9ecb6dd2dc7 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given object was created for this system.  <a href="classdrake_1_1systems_1_1_system.html#ac4a28033b6bf85b93f34e9ecb6dd2dc7">More...</a><br /></td></tr>
@@ -1938,46 +1931,6 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a57538a6d935661eb2329e4b200b807e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57538a6d935661eb2329e4b200b807e0">&#9670;&nbsp;</a></span>collision_filter_manager() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&lt;T&gt; collision_filter_manager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the collision filter manager for this SceneGraph instance's model*. </p>
-
-</div>
-</div>
-<a id="a6bded8d90c0cf337aabc20cf5b32295c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bded8d90c0cf337aabc20cf5b32295c">&#9670;&nbsp;</a></span>collision_filter_manager() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&lt;T&gt; collision_filter_manager </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the collision filter manager for data stored in <code>context</code>. </p>
-<p>The context must remain alive for at least as long as the returned manager. </p>
-
-</div>
-</div>
 <a id="a822b987f8d0fed87bcd53dd90345bce1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a822b987f8d0fed87bcd53dd90345bce1">&#9670;&nbsp;</a></span>ExcludeCollisionsBetween() <span class="overload">[1/2]</span></h2>
 
@@ -2215,8 +2168,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2227,7 +2180,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2241,8 +2194,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2253,7 +2206,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -3055,7 +3008,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>drake/geometry/<a class="el" href="collision__filter__manager_8h.html">collision_filter_manager.h</a></li>
+<li>drake/geometry/<a class="el" href="geometry__state_8h.html">geometry_state.h</a></li>
 <li>drake/geometry/<a class="el" href="scene__graph_8h.html">scene_graph.h</a></li>
 </ul>
 </div><!-- contents -->

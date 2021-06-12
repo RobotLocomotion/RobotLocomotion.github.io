@@ -14,6 +14,9 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "gain.h", "gain_8h.html", null ],
     [ "integrator.h", "integrator_8h.html", null ],
     [ "linear_system.h", "linear__system_8h.html", "linear__system_8h" ],
+    [ "linear_transform_density.h", "linear__transform__density_8h.html", [
+      [ "Traits< LinearTransformDensity >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html", null ]
+    ] ],
     [ "matrix_gain.h", "matrix__gain_8h.html", null ],
     [ "multiplexer.h", "multiplexer_8h.html", null ],
     [ "pass_through.h", "pass__through_8h.html", null ],

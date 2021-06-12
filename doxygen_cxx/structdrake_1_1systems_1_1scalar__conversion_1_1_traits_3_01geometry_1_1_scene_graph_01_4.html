@@ -104,19 +104,19 @@ $(document).ready(function(){initNavTree('structdrake_1_1systems_1_1scalar__conv
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a787e3060a054d77e9da64878567dc862"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:a787e3060a054d77e9da64878567dc862"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html#a787e3060a054d77e9da64878567dc862">supported</a> = typename std::conditional&lt;!std::is_same&lt; T, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;::value &amp;&amp;std::is_same&lt; U, double &gt;::value, std::true_type, std::false_type &gt;::type</td></tr>
-<tr class="separator:a787e3060a054d77e9da64878567dc862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75b5365d2592d4eced95a68bc553417"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:aa75b5365d2592d4eced95a68bc553417"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html#aa75b5365d2592d4eced95a68bc553417">supported</a> = typename std::bool_constant&lt; std::is_same_v&lt; U, double &gt; &amp;&amp;!std::is_same_v&lt; T, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;</td></tr>
+<tr class="separator:aa75b5365d2592d4eced95a68bc553417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a787e3060a054d77e9da64878567dc862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a787e3060a054d77e9da64878567dc862">&#9670;&nbsp;</a></span>supported</h2>
+<a id="aa75b5365d2592d4eced95a68bc553417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa75b5365d2592d4eced95a68bc553417">&#9670;&nbsp;</a></span>supported</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html#a787e3060a054d77e9da64878567dc862">supported</a> =  typename std::conditional&lt;!std::is_same&lt;T, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;::value &amp;&amp; std::is_same&lt;U, double&gt;::value, std::true_type, std::false_type&gt;::type</td>
+          <td class="memname">using <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html#aa75b5365d2592d4eced95a68bc553417">supported</a> =  typename std::bool_constant&lt; std::is_same_v&lt;U, double&gt; &amp;&amp; !std::is_same_v&lt;T, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
