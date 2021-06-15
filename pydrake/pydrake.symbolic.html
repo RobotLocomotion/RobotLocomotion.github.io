@@ -1815,6 +1815,24 @@ the polynomial. Here is an example.</p>
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">tanh</code><span class="sig-paren">(</span><em>arg0: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.tanh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="function">
+<dt id="pydrake.symbolic.TaylorExpand">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">TaylorExpand</code><span class="sig-paren">(</span><em>f: drake::symbolic::Expression, a: Dict[pydrake.symbolic.Variable, float], order: int</em><span class="sig-paren">)</span> &#x2192; drake::symbolic::Expression<a class="headerlink" href="#pydrake.symbolic.TaylorExpand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Taylor series expansion of <code class="docutils literal"><span class="pre">f</span></code> around <code class="docutils literal"><span class="pre">a</span></code> of order
+<code class="docutils literal"><span class="pre">order</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">f</span></code>:</dt>
+<dd>Symbolic expression to approximate using Taylor series expansion.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">a</span></code>:</dt>
+<dd>Symbolic environment which specifies the point of approximation.
+If a partial environment is provided, the unspecified variables
+are treated as symbolic variables (e.g. decision variable).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">order</span></code>:</dt>
+<dd>Positive integer which specifies the maximum order of the
+resulting polynomial approximating <code class="docutils literal"><span class="pre">f</span></code> around <code class="docutils literal"><span class="pre">a</span></code>.</dd>
+</dl>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.symbolic.Variable">
 <em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">Variable</code><a class="headerlink" href="#pydrake.symbolic.Variable" title="Permalink to this definition">¶</a></dt>

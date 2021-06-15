@@ -815,12 +815,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0d747ee5f8bee477f7177840bd242e81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a0d747ee5f8bee477f7177840bd242e81">DeclareInputPort</a> (std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; name, <a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> type, <a class="el" href="classint.html">int</a> size, std::optional&lt; <a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> &gt; random_type=std::nullopt)</td></tr>
 <tr class="memdesc:a0d747ee5f8bee477f7177840bd242e81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a port with the specified <code>type</code> and <code>size</code> to the input topology.  <a href="#a0d747ee5f8bee477f7177840bd242e81">More...</a><br /></td></tr>
 <tr class="separator:a0d747ee5f8bee477f7177840bd242e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">To-be-deprecated declarations</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Deprecated declarations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods in this section leave out the port name parameter and are the same as invoking the corresponding method with <code>kUseDefaultName</code> as the name.</p>
 <p>We intend to make specifying the name required and will deprecate these soon. Don't use them. </p>
 </div></td></tr>
 <tr class="memitem:aae9836a83ff1792978f3bb855606884a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aae9836a83ff1792978f3bb855606884a">DeclareInputPort</a> (<a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> type, <a class="el" href="classint.html">int</a> size, std::optional&lt; <a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a> &gt; random_type=std::nullopt)</td></tr>
-<tr class="memdesc:aae9836a83ff1792978f3bb855606884a"><td class="mdescLeft">&#160;</td><td class="mdescRight">See the nearly identical signature with an additional (first) argument specifying the port name.  <a href="#aae9836a83ff1792978f3bb855606884a">More...</a><br /></td></tr>
+<tr class="memdesc:aae9836a83ff1792978f3bb855606884a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aae9836a83ff1792978f3bb855606884a">More...</a><br /></td></tr>
 <tr class="separator:aae9836a83ff1792978f3bb855606884a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Virtual methods for calculations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These virtuals allow concrete systems to implement the calculations defined by the <code>Calc</code> methods in the public interface.</p>
@@ -2569,8 +2569,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>See the nearly identical signature with an additional (first) argument specifying the port name. </p>
-<p>This version will be deprecated as discussed in #9447. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>"Pass a port name as the first argument." <br />
+ This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
 </div>
@@ -6032,7 +6033,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
  This will be removed from Drake on or after "2021-09-01" .</dd></dl>
 
 </div>

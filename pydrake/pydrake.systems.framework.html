@@ -7031,16 +7031,14 @@ signatures.</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
+<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
 </ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
-allocator and calculator functions provided in their most generic
-forms. If you have a member function available use one of the other
-signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7322,16 +7320,12 @@ member function available use one of the other signatures.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.BasicVector_[float], arg1: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
 </ol>
-<p>(Advanced) Declares a vector-valued output port using the given
-<code class="docutils literal"><span class="pre">model_vector</span></code> and a function for calculating the port’s value at
-runtime. The port’s size will be model_vector.size(), and the default
-allocator for the port will be model_vector.Clone(). Note that this
-takes the calculator function in its most generic form; if you have a
-member function available use one of the other signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::CalcVectorCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7494,16 +7488,14 @@ signatures.</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</li>
+<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[AutoDiffXd]</li>
 </ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
-allocator and calculator functions provided in their most generic
-forms. If you have a member function available use one of the other
-signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7785,16 +7777,12 @@ member function available use one of the other signatures.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], arg0: pydrake.systems.framework.BasicVector_[AutoDiffXd], arg1: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.BasicVector_[AutoDiffXd]], None]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</li>
 </ol>
-<p>(Advanced) Declares a vector-valued output port using the given
-<code class="docutils literal"><span class="pre">model_vector</span></code> and a function for calculating the port’s value at
-runtime. The port’s size will be model_vector.size(), and the default
-allocator for the port will be model_vector.Clone(). Note that this
-takes the calculator function in its most generic form; if you have a
-member function available use one of the other signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::CalcVectorCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7955,16 +7943,14 @@ signatures.</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</li>
+<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[Expression]</li>
 </ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
-allocator and calculator functions provided in their most generic
-forms. If you have a member function available use one of the other
-signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8246,16 +8232,12 @@ member function available use one of the other signatures.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], arg0: pydrake.systems.framework.BasicVector_[Expression], arg1: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.BasicVector_[Expression]], None]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</li>
 </ol>
-<p>(Advanced) Declares a vector-valued output port using the given
-<code class="docutils literal"><span class="pre">model_vector</span></code> and a function for calculating the port’s value at
-runtime. The port’s size will be model_vector.size(), and the default
-allocator for the port will be model_vector.Clone(). Note that this
-takes the calculator function in its most generic form; if you have a
-member function available use one of the other signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::CalcVectorCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8416,16 +8398,14 @@ signatures.</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
+<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
 </ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
-allocator and calculator functions provided in their most generic
-forms. If you have a member function available use one of the other
-signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8707,16 +8687,12 @@ member function available use one of the other signatures.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.BasicVector_[float], arg1: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
 </ol>
-<p>(Advanced) Declares a vector-valued output port using the given
-<code class="docutils literal"><span class="pre">model_vector</span></code> and a function for calculating the port’s value at
-runtime. The port’s size will be model_vector.size(), and the default
-allocator for the port will be model_vector.Clone(). Note that this
-takes the calculator function in its most generic form; if you have a
-member function available use one of the other signatures.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">LeafOutputPort::CalcVectorCallback</p>
-</div>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -10621,6 +10597,12 @@ input ports are assumed to be statistically independent.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareInputPort(self: pydrake.systems.framework.System_[float], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
 </ol>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -11396,6 +11378,12 @@ input ports are assumed to be statistically independent.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareInputPort(self: pydrake.systems.framework.System_[AutoDiffXd], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</li>
 </ol>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -12169,6 +12157,12 @@ input ports are assumed to be statistically independent.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareInputPort(self: pydrake.systems.framework.System_[Expression], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[Expression]</li>
 </ol>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -12942,6 +12936,12 @@ input ports are assumed to be statistically independent.</p>
 <ol class="arabic simple" start="2">
 <li>DeclareInputPort(self: pydrake.systems.framework.System_[float], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
 </ol>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Pass a port name as the first argument. This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
