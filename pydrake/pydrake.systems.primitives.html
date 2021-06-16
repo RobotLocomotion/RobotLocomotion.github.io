@@ -2724,7 +2724,7 @@ following dimensions: | Matrix | Num Rows | Num Columns |
 A*w_in + b. The user can obtain the probability density of w_out. When
 the class is instantiated with autodiff scalar, the user can also
 obtain the gradient of the probability density of w_out.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
 zero.</p>
 <p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
 <p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
@@ -2829,6 +2829,16 @@ rows.</dd>
 <dd><p>Gets the input port for w_in.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_output_port_w_out">
+<code class="descname">get_output_port_w_out</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_output_port_w_out" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_output_port_w_out_density">
+<code class="descname">get_output_port_w_out_density</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_.LinearTransformDensity_[float].get_output_port_w_out_density" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -2841,7 +2851,7 @@ rows.</dd>
 A*w_in + b. The user can obtain the probability density of w_out. When
 the class is instantiated with autodiff scalar, the user can also
 obtain the gradient of the probability density of w_out.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
 zero.</p>
 <p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
 <p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
@@ -2946,6 +2956,16 @@ rows.</dd>
 <dd><p>Gets the input port for w_in.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_output_port_w_out">
+<code class="descname">get_output_port_w_out</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_output_port_w_out" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_output_port_w_out_density">
+<code class="descname">get_output_port_w_out_density</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[AutoDiffXd].get_output_port_w_out_density" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -2956,7 +2976,7 @@ rows.</dd>
 A*w_in + b. The user can obtain the probability density of w_out. When
 the class is instantiated with autodiff scalar, the user can also
 obtain the gradient of the probability density of w_out.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
 zero.</p>
 <p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
 <p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
@@ -3060,6 +3080,16 @@ rows.</dd>
 <code class="descname">get_input_port_w_in</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_input_port_w_in" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the input port for w_in.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].get_output_port_w_out">
+<code class="descname">get_output_port_w_out</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_output_port_w_out" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.LinearTransformDensity_[float].get_output_port_w_out_density">
+<code class="descname">get_output_port_w_out_density</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.LinearTransformDensity_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.primitives.LinearTransformDensity_[float].get_output_port_w_out_density" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

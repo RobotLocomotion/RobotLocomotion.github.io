@@ -41,6 +41,7 @@ var eigen__types_8h =
     [ "Vector3", "eigen__types_8h.html#a0ad29daab565ce347c4d1c5aae6a76c2", null ],
     [ "Vector4", "eigen__types_8h.html#af7e96394aef85f13f3fc84d3c3c238b3", null ],
     [ "Vector6", "eigen__types_8h.html#a14aa433aedda321a15238f2d4074d4c3", null ],
+    [ "Vector6d", "eigen__types_8h.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28", null ],
     [ "VectorUpTo6", "eigen__types_8h.html#adfbacdba0566fe8958cfafd659b4373f", null ],
     [ "VectorX", "eigen__types_8h.html#a77dd228fb4dd66a2c17dd3f7f38ffd85", null ],
     [ "WrenchVector", "eigen__types_8h.html#af98fed5f98c376f4d45fff56bb96c8e1", null ]

@@ -145,6 +145,8 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr>
 <tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr>
+<tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; ...</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr>
@@ -152,6 +154,8 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">pose_bundle</b></td></tr>
 <tr>
@@ -167,6 +171,7 @@ class drake::examples::manipulation_station::ManipulationStation&lt; T &gt;</h3>
 </table>
 <p>Each pixel in the output image from <code>depth_image</code> is a 16bit unsigned short in millimeters.</p>
 <p>Note that outputs in <b style="color:orange">orange</b> are available in the simulation, but not on the real robot. The distinction between q_measured and v_estimated is because the Kuka FRI reports positions directly, but we have estimated v in our code that wraps the FRI.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The "camera_[NAME]_point_cloud" data currently has registration errors per issue <a href="https://github.com/RobotLocomotion/drake/issues/12125">https://github.com/RobotLocomotion/drake/issues/12125</a>.</dd></dl>
 <p>Consider the robot dynamics M(q)vdot + C(q,v)v = τ_g(q) + τ_commanded + τ_joint_friction + τ_external, where q == position, v == velocity, and τ == torque.</p>
 <p>This model of the IIWA internal controller in the FRI software's <code>JointImpedanceControlMode</code> is: </p><pre>
   τ_commanded = Mₑ(qₑ)vdot_desired + Cₑ(qₑ, vₑ)vₑ - τₑ_g(q) -

@@ -189,6 +189,7 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07", null ],
       [ "operator=", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f", null ]
     ] ],
+    [ "AddRelaxNonConvexQuadraticConstraintInTrustRegion", "group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9", null ],
     [ "AddSlidingFrictionComplementarityExplicitContactConstraint", "group__solver__evaluators.html#gaa1fd44e85ab30519ef7a904a4ebeb82d", null ],
     [ "AddSlidingFrictionComplementarityImplicitContactConstraint", "group__solver__evaluators.html#gad168321c6009ddda8ee2ca9abbef90b1", null ],
     [ "AddStaticFrictionConeComplementarityConstraint", "group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a", null ]

@@ -168,19 +168,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a2131d12e81399c3201b29118d59adc87"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a2131d12e81399c3201b29118d59adc87"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_value_matrix.html">AutoDiffToValueMatrix</a>&lt; Derived &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2131d12e81399c3201b29118d59adc87">autoDiffToValueMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
 <tr class="separator:a2131d12e81399c3201b29118d59adc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fc937230e65e9d6bcc7f64f9121d876"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a1fc937230e65e9d6bcc7f64f9121d876"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !std::is_same&lt; typename Derived::Scalar, double &gt;::value, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a1fc937230e65e9d6bcc7f64f9121d876">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
-<tr class="memdesc:a1fc937230e65e9d6bcc7f64f9121d876"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardGradient(A)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, explicitly throwing away any gradient information.  <a href="#a1fc937230e65e9d6bcc7f64f9121d876">More...</a><br /></td></tr>
-<tr class="separator:a1fc937230e65e9d6bcc7f64f9121d876"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfa073cea3a21484021ae39541671549"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:adfa073cea3a21484021ae39541671549"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same&lt; typename Derived::Scalar, double &gt;::value, const Eigen::MatrixBase&lt; Derived &gt; &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#adfa073cea3a21484021ae39541671549">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
-<tr class="separator:adfa073cea3a21484021ae39541671549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2d9583177e64caf842b9ca82899d9ad"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:ad2d9583177e64caf842b9ca82899d9ad"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !std::is_same&lt; _Scalar, double &gt;::value, Eigen::Transform&lt; typename _Scalar::Scalar, _Dim, _Mode, _Options &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ad2d9583177e64caf842b9ca82899d9ad">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform)</td></tr>
-<tr class="separator:ad2d9583177e64caf842b9ca82899d9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4868fa25c958b604954155feba6effb"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:ae4868fa25c958b604954155feba6effb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same&lt; _Scalar, double &gt;::value, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ae4868fa25c958b604954155feba6effb">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</td></tr>
-<tr class="separator:ae4868fa25c958b604954155feba6effb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc21793a127ffbebcb28a2442123390"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:abdc21793a127ffbebcb28a2442123390"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
+<tr class="memdesc:abdc21793a127ffbebcb28a2442123390"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardGradient(A)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, explicitly throwing away any gradient information.  <a href="#abdc21793a127ffbebcb28a2442123390">More...</a><br /></td></tr>
+<tr class="separator:abdc21793a127ffbebcb28a2442123390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e58f14dcca01f3684a820cff4c61b0"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a04e58f14dcca01f3684a820cff4c61b0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, const Eigen::MatrixBase&lt; Derived &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a04e58f14dcca01f3684a820cff4c61b0">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="separator:a04e58f14dcca01f3684a820cff4c61b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6368b8ff52fa8c7df0b3548b77615363"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
+<tr class="memitem:a6368b8ff52fa8c7df0b3548b77615363"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; _Scalar, double &gt;, Eigen::Transform&lt; typename _Scalar::Scalar, _Dim, _Mode, _Options &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6368b8ff52fa8c7df0b3548b77615363">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform)</td></tr>
+<tr class="separator:a6368b8ff52fa8c7df0b3548b77615363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
+<tr class="memitem:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; _Scalar, double &gt;, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</td></tr>
+<tr class="separator:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32d860f5fd00b3004e866af6f73a1362"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedAutoDiff &gt; </td></tr>
 <tr class="memitem:a32d860f5fd00b3004e866af6f73a1362"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a32d860f5fd00b3004e866af6f73a1362">initializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;val, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</td></tr>
 <tr class="memdesc:a32d860f5fd00b3004e866af6f73a1362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a single autodiff matrix given the corresponding value matrix.  <a href="#a32d860f5fd00b3004e866af6f73a1362">More...</a><br /></td></tr>
@@ -211,19 +211,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplParams" colspan="2">template&lt;typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
 <tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">gradientMatrixToAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</td></tr>
 <tr class="separator:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44dafc4c3502cdb9bc73393bd7460f49"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a44dafc4c3502cdb9bc73393bd7460f49"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !std::is_same&lt; typename Derived::Scalar, double &gt;::value, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a44dafc4c3502cdb9bc73393bd7460f49">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, const typename Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::dummy_precision())</td></tr>
-<tr class="memdesc:a44dafc4c3502cdb9bc73393bd7460f49"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardZeroGradient(A, precision)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, but first checking that the gradient matrix is empty or zero.  <a href="#a44dafc4c3502cdb9bc73393bd7460f49">More...</a><br /></td></tr>
-<tr class="separator:a44dafc4c3502cdb9bc73393bd7460f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2c18d1e6fa89e66ed1e7c83239cda96"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:aa2c18d1e6fa89e66ed1e7c83239cda96"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same&lt; typename Derived::Scalar, double &gt;::value, const Eigen::MatrixBase&lt; Derived &gt; &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aa2c18d1e6fa89e66ed1e7c83239cda96">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, double precision=0.)</td></tr>
-<tr class="separator:aa2c18d1e6fa89e66ed1e7c83239cda96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61b824ea80b3f2ac8891dc02b0730367"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:a61b824ea80b3f2ac8891dc02b0730367"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !std::is_same&lt; _Scalar, double &gt;::value, Eigen::Transform&lt; typename _Scalar::Scalar, _Dim, _Mode, _Options &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a61b824ea80b3f2ac8891dc02b0730367">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform, const typename Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::dummy_precision())</td></tr>
-<tr class="separator:a61b824ea80b3f2ac8891dc02b0730367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a286452ec0226092c95d7436b487b0ace"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:a286452ec0226092c95d7436b487b0ace"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same&lt; _Scalar, double &gt;::value, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a286452ec0226092c95d7436b487b0ace">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</td></tr>
-<tr class="separator:a286452ec0226092c95d7436b487b0ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, const typename Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::dummy_precision())</td></tr>
+<tr class="memdesc:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardZeroGradient(A, precision)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, but first checking that the gradient matrix is empty or zero.  <a href="#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">More...</a><br /></td></tr>
+<tr class="separator:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f4c633cee6230932aa3be941609ebed"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a2f4c633cee6230932aa3be941609ebed"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, const Eigen::MatrixBase&lt; Derived &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2f4c633cee6230932aa3be941609ebed">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, double precision=0.)</td></tr>
+<tr class="separator:a2f4c633cee6230932aa3be941609ebed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1dbe26c9179a94ca05db1b84528b47"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
+<tr class="memitem:a0e1dbe26c9179a94ca05db1b84528b47"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; _Scalar, double &gt;, Eigen::Transform&lt; typename _Scalar::Scalar, _Dim, _Mode, _Options &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a0e1dbe26c9179a94ca05db1b84528b47">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform, const typename Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::dummy_precision())</td></tr>
+<tr class="separator:a0e1dbe26c9179a94ca05db1b84528b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51e012b12b2183ef633c86c51d8e0677"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
+<tr class="memitem:a51e012b12b2183ef633c86c51d8e0677"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; _Scalar, double &gt;, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</td></tr>
+<tr class="separator:a51e012b12b2183ef633c86c51d8e0677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a480ac0ac10adfac21eab2d72f8694704"><td class="memTemplParams" colspan="2">template&lt;typename DerivedX , typename DerivedY , typename DerivedCalcX &gt; </td></tr>
 <tr class="memitem:a480ac0ac10adfac21eab2d72f8694704"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename DerivedX::Scalar, DerivedY::RowsAtCompileTime, DerivedX::RowsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a480ac0ac10adfac21eab2d72f8694704">ComputeNumericalGradient</a> (std::function&lt; void(const DerivedCalcX &amp;, DerivedY *y)&gt; calc_fun, const DerivedX &amp;x, const <a class="el" href="classdrake_1_1math_1_1_numerical_gradient_option.html">NumericalGradientOption</a> &amp;option=<a class="el" href="classdrake_1_1math_1_1_numerical_gradient_option.html">NumericalGradientOption</a>{ <a class="el" href="namespacedrake_1_1math.html#a33f67c50b300b399043477a51861400aae7c3602dce09c755e09250077a601a51">NumericalGradientMethod::kForward</a>})</td></tr>
 <tr class="memdesc:a480ac0ac10adfac21eab2d72f8694704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the gradient of a function f(x) through numerical difference.  <a href="#a480ac0ac10adfac21eab2d72f8694704">More...</a><br /></td></tr>
@@ -907,10 +907,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the norm of <code>axis_W</code> is within 1e-10 to zero or <code>axis_index</code> does not lie in the range [0,2]. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>if the norm of <code>axis_W</code> is within 1e-10 to zero or <code>axis_index</code> does not lie in the range [0,2]. (Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
+ This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
 </div>
@@ -1237,14 +1239,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1fc937230e65e9d6bcc7f64f9121d876"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fc937230e65e9d6bcc7f64f9121d876">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[1/4]</span></h2>
+<a id="abdc21793a127ffbebcb28a2442123390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc21793a127ffbebcb28a2442123390">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; !std::is_same&lt;typename Derived::Scalar, double&gt;::value, Eigen::Matrix&lt;typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt;::type drake::math::DiscardGradient </td>
+          <td class="memname">std::enable_if_t&lt; !std::is_same_v&lt;typename Derived::Scalar, double&gt;, Eigen::Matrix&lt;typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt; drake::math::DiscardGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>auto_diff_matrix</em></td><td>)</td>
@@ -1256,18 +1258,18 @@ Functions</h2></td></tr>
 <p><code>B = DiscardGradient(A)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, explicitly throwing away any gradient information. </p>
 <p>For a matrix of type, e.g. <code>MatrixX&lt;AutoDiffXd&gt; A</code>, the comparable operation <code>B = A.cast&lt;double&gt;()</code> should (and does) fail to compile. Use <code>DiscardGradient(A)</code> if you want to force the cast (and explicitly declare that information is lost).</p>
 <p>This method is overloaded to permit the user to call it for double types and AutoDiffScalar types (to avoid the calling function having to handle the two cases differently).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a44dafc4c3502cdb9bc73393bd7460f49" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient</a> </dd></dl>
 
 </div>
 </div>
-<a id="adfa073cea3a21484021ae39541671549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfa073cea3a21484021ae39541671549">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[2/4]</span></h2>
+<a id="a04e58f14dcca01f3684a820cff4c61b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e58f14dcca01f3684a820cff4c61b0">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same&lt;typename Derived::Scalar, double&gt;::value, const Eigen::MatrixBase&lt;Derived&gt;&amp;&gt;::type drake::math::DiscardGradient </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, double&gt;, const Eigen::MatrixBase&lt;Derived&gt;&amp;&gt; drake::math::DiscardGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em></td><td>)</td>
@@ -1275,18 +1277,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1fc937230e65e9d6bcc7f64f9121d876" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="ad2d9583177e64caf842b9ca82899d9ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2d9583177e64caf842b9ca82899d9ad">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[3/4]</span></h2>
+<a id="a6368b8ff52fa8c7df0b3548b77615363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6368b8ff52fa8c7df0b3548b77615363">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; !std::is_same&lt;_Scalar, double&gt;::value, Eigen::Transform&lt;typename _Scalar::Scalar, _Dim, _Mode, _Options&gt; &gt;::type drake::math::DiscardGradient </td>
+          <td class="memname">std::enable_if_t&lt; !std::is_same_v&lt;_Scalar, double&gt;, Eigen::Transform&lt;typename _Scalar::Scalar, _Dim, _Mode, _Options&gt; &gt; drake::math::DiscardGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
           <td class="paramname"><em>auto_diff_transform</em></td><td>)</td>
@@ -1294,18 +1296,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1fc937230e65e9d6bcc7f64f9121d876" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="ae4868fa25c958b604954155feba6effb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4868fa25c958b604954155feba6effb">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[4/4]</span></h2>
+<a id="aaf276d6a032d9a1ec3ea0f0f29fc1111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf276d6a032d9a1ec3ea0f0f29fc1111">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;std::is_same&lt;_Scalar, double&gt;::value, const Eigen::Transform&lt;_Scalar, _Dim, _Mode, _Options&gt;&amp;&gt;::type drake::math::DiscardGradient </td>
+          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;_Scalar, double&gt;, const Eigen::Transform&lt;_Scalar, _Dim, _Mode, _Options&gt;&amp;&gt; drake::math::DiscardGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
           <td class="paramname"><em>transform</em></td><td>)</td>
@@ -1313,18 +1315,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1fc937230e65e9d6bcc7f64f9121d876" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a44dafc4c3502cdb9bc73393bd7460f49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44dafc4c3502cdb9bc73393bd7460f49">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[1/4]</span></h2>
+<a id="a1ea20cd66ae96c7e1390e7ebb3e2f8a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; !std::is_same&lt;typename Derived::Scalar, double&gt;::value, Eigen::Matrix&lt;typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt;::type drake::math::DiscardZeroGradient </td>
+          <td class="memname">std::enable_if_t&lt; !std::is_same_v&lt;typename Derived::Scalar, double&gt;, Eigen::Matrix&lt;typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt; drake::math::DiscardZeroGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>auto_diff_matrix</em>, </td>
@@ -1358,18 +1360,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1fc937230e65e9d6bcc7f64f9121d876" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient</a> </dd></dl>
 
 </div>
 </div>
-<a id="aa2c18d1e6fa89e66ed1e7c83239cda96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2c18d1e6fa89e66ed1e7c83239cda96">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[2/4]</span></h2>
+<a id="a2f4c633cee6230932aa3be941609ebed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4c633cee6230932aa3be941609ebed">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt;std::is_same&lt;typename Derived::Scalar, double&gt;::value, const Eigen::MatrixBase&lt;Derived&gt;&amp;&gt;::type drake::math::DiscardZeroGradient </td>
+          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;typename Derived::Scalar, double&gt;, const Eigen::MatrixBase&lt;Derived&gt;&amp;&gt; drake::math::DiscardZeroGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>matrix</em>, </td>
@@ -1387,18 +1389,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a44dafc4c3502cdb9bc73393bd7460f49" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a61b824ea80b3f2ac8891dc02b0730367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61b824ea80b3f2ac8891dc02b0730367">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[3/4]</span></h2>
+<a id="a0e1dbe26c9179a94ca05db1b84528b47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e1dbe26c9179a94ca05db1b84528b47">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; !std::is_same&lt;_Scalar, double&gt;::value, Eigen::Transform&lt;typename _Scalar::Scalar, _Dim, _Mode, _Options&gt; &gt;::type drake::math::DiscardZeroGradient </td>
+          <td class="memname">std::enable_if_t&lt; !std::is_same_v&lt;_Scalar, double&gt;, Eigen::Transform&lt;typename _Scalar::Scalar, _Dim, _Mode, _Options&gt; &gt; drake::math::DiscardZeroGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
           <td class="paramname"><em>auto_diff_transform</em>, </td>
@@ -1416,18 +1418,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a44dafc4c3502cdb9bc73393bd7460f49" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a286452ec0226092c95d7436b487b0ace"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a286452ec0226092c95d7436b487b0ace">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[4/4]</span></h2>
+<a id="a51e012b12b2183ef633c86c51d8e0677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51e012b12b2183ef633c86c51d8e0677">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same&lt;_Scalar, double&gt;::value, const Eigen::Transform&lt;_Scalar, _Dim, _Mode, _Options&gt;&amp;&gt;::type drake::math::DiscardZeroGradient </td>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;_Scalar, double&gt;, const Eigen::Transform&lt;_Scalar, _Dim, _Mode, _Options&gt;&amp;&gt; drake::math::DiscardZeroGradient </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
           <td class="paramname"><em>transform</em>, </td>
@@ -1445,7 +1447,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a44dafc4c3502cdb9bc73393bd7460f49" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
 
 </div>
 </div>

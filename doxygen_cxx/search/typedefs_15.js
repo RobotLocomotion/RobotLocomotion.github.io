@@ -15,6 +15,7 @@ var searchData=
   ['vector3',['Vector3',['../namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2',1,'drake']]],
   ['vector4',['Vector4',['../namespacedrake.html#af7e96394aef85f13f3fc84d3c3c238b3',1,'drake']]],
   ['vector6',['Vector6',['../namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3',1,'drake']]],
+  ['vector6d',['Vector6d',['../namespacedrake.html#a44f103cf5fdeb3f539ceeeb9cd3a0a28',1,'drake']]],
   ['vectordecisionvariable',['VectorDecisionVariable',['../namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967',1,'drake::solvers']]],
   ['vectorindeterminate',['VectorIndeterminate',['../namespacedrake_1_1solvers.html#ac0943cc7cf2cc9bf7db6facfe53a8568',1,'drake::solvers']]],
   ['vectorupto6',['VectorUpTo6',['../namespacedrake.html#adfbacdba0566fe8958cfafd659b4373f',1,'drake']]],

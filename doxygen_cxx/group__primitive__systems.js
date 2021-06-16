@@ -191,6 +191,8 @@ var group__primitive__systems =
       [ "get_input_port_A", "classdrake_1_1systems_1_1_linear_transform_density.html#a43e04097e800126794d5716c5747e04e", null ],
       [ "get_input_port_b", "classdrake_1_1systems_1_1_linear_transform_density.html#a4315878b92e73e5860766fbbe8431ea1", null ],
       [ "get_input_port_w_in", "classdrake_1_1systems_1_1_linear_transform_density.html#abd8f96a13ed260878f15d932e383b4a8", null ],
+      [ "get_output_port_w_out", "classdrake_1_1systems_1_1_linear_transform_density.html#ab91efa27d20298e9a71fe6ae1cdcfd63", null ],
+      [ "get_output_port_w_out_density", "classdrake_1_1systems_1_1_linear_transform_density.html#a086487c22ae3d8ec31df6d7858c53b61", null ],
       [ "operator=", "classdrake_1_1systems_1_1_linear_transform_density.html#a93360445a007ffa8fb557cfa08e8782d", null ],
       [ "operator=", "classdrake_1_1systems_1_1_linear_transform_density.html#aeb4e2971ee7a06f63699420801626843", null ]
     ] ],

@@ -2280,6 +2280,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2317,6 +2318,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Declares a cache entry by specifying member functions to use both for the allocator and calculator. </p>
 <p>The signatures are:</p><div class="fragment"><div class="line">ValueType MySystem::MakeValueType() <span class="keyword">const</span>;</div><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2354,6 +2356,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
 <p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2390,7 +2393,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
-<div class="fragment"><div class="line">ValueType MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;) <span class="keyword">const</span>;</div></div><!-- fragment --><p> Other than the calculator signature, this is identical to the other <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_model_and_calc">model and calculator signature</a>, please look there for more information. </p>
+<div class="fragment"><div class="line">ValueType MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;) <span class="keyword">const</span>;</div></div><!-- fragment --><p> Other than the calculator signature, this is identical to the other <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_model_and_calc">model and calculator signature</a>, please look there for more information. </p><dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2430,6 +2433,7 @@ Additional Inherited Members</h2></td></tr>
 <p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a3c667dbd4793b66db1e339d623b0c537" title="Declares a new CacheEntry in this System using the least-restrictive definitions for the associated f...">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
 <dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2466,7 +2470,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
-<div class="fragment"><div class="line">ValueType MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;) <span class="keyword">const</span>;</div></div><!-- fragment --><p> Other than the calculator method's signature, this is identical to the other <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_calc_only">calculator-only signature</a>; please look there for more information. </p>
+<div class="fragment"><div class="line">ValueType MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;) <span class="keyword">const</span>;</div></div><!-- fragment --><p> Other than the calculator method's signature, this is identical to the other <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_calc_only">calculator-only signature</a>; please look there for more information. </p><dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2570,7 +2574,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>"Pass a port name as the first argument." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>"Pass a port name as the first argument." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -6033,7 +6037,7 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
  This will be removed from Drake on or after "2021-09-01" .</dd></dl>
 
 </div>

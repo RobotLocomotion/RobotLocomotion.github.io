@@ -208,50 +208,6 @@ specific to a particular robot, then it begins with <code class="highlighter-rou
   <li>Variable names in LCM types follow the rules above.</li>
 </ul>
 
-<h1 id="packagexml-style">package.xml Style</h1>
-
-<p><a href="http://www.ros.org/">Robot Operating System (ROS)</a> organizes code and data
-into packages. Each package is located in its own directory, which contains a
-file called <code class="highlighter-rouge">package.xml</code>. The official instructions on what this file should
-contain is given <a href="http://wiki.ros.org/catkin/package.xml">here</a>. Drake uses
-this same file for defining and finding packages. Specifically, it is searched
-for by
-<a href="https://github.com/RobotLocomotion/drake/blob/7bbcb0728a06c0abdd695fd8a5db1879bb5354bb/drake/systems/plants/xmlUtil.h#L160">populatePackageMap()</a>.
-Note that <code class="highlighter-rouge">package.xml</code> files are necessary even if you’re <em>not</em> using Drake
-with ROS because the model files used by Drake (e.g., URDF and SDF), frequently
-refer to resources like mesh files via a <code class="highlighter-rouge">package://</code> syntax, whose full paths
-are resolved by the <code class="highlighter-rouge">package.xml</code> files.</p>
-
-<p>When adding a model to Drake
-(typically in <a href="https://github.com/RobotLocomotion/drake/tree/master/examples&gt;">drake/examples/</a>),
-you will need to add a <code class="highlighter-rouge">package.xml</code> file to the example’s directory to enable
-modeling files like URDF and SDF to refer to resources like mesh files contained
-within the example’s directory. Please ensure that your <code class="highlighter-rouge">package.xml</code> file
-contains every
-<a href="http://wiki.ros.org/catkin/package.xml#Required_Tags">required field</a>.
-The following minimal <code class="highlighter-rouge">package.xml</code> file can get you started:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;!--
-    This XML file is used by:
-      drake/systems/plants/xmlUtil.cpp
-    Method:
-      searchDirectory()
-    --&gt;
-
-    &lt;package format="2"&gt;
-      &lt;name&gt;package_name&lt;/name&gt;
-      &lt;version&gt;0.0.0&lt;/version&gt;
-      &lt;description&gt;
-        A description of your package.
-      &lt;/description&gt;
-      &lt;maintainer email="drake-users@mit.edu"&gt;Drake Users&lt;/maintainer&gt;
-      &lt;license&gt;BSD&lt;/license&gt;
-    &lt;/package&gt;
-</code></pre></div></div>
-
-<p>In the above example, replace “package_name” with the name of your package. This
-is typically the name of the directory holding the <code class="highlighter-rouge">package.xml</code> file.</p>
-
 <h1 id="shell-script-style">Shell Script Style</h1>
 
 <p>We follow the <a href="https://google.github.io/styleguide/shell.xml">Google Shell Style Guide</a>.</p>

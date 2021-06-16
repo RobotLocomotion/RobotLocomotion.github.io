@@ -1092,12 +1092,17 @@ it.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the norm of <code class="docutils literal"><span class="pre">axis_W</span></code> is within 1e-10 to zero or</li>
-<li><code class="docutils literal"><span class="pre">axis_index</span></code> does not lie in the range [0,2].</li>
+<li><code class="docutils literal"><span class="pre">axis_index</span></code> does not lie in the range [0,2]. (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use RotationMatrix::MakeFromOneVector(). This will be removed from
+Drake on or after 2021-10-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">

@@ -387,6 +387,8 @@ var searchData=
   ['get_5foutput_5fport_5fiiwa_5fcommand',['get_output_port_iiwa_command',['../classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html#adc262ed08e03cd3b36cc231c674da6e3',1,'drake::examples::kuka_iiwa_arm::LcmPlanInterpolator']]],
   ['get_5foutput_5fport_5flocator',['get_output_port_locator',['../classdrake_1_1systems_1_1_diagram.html#aaaa1d40ab4e1efaefce88bbca610bc69',1,'drake::systems::Diagram']]],
   ['get_5foutput_5fport_5fselection',['get_output_port_selection',['../classdrake_1_1systems_1_1_system.html#ac1c533e37ae8ec2b84dfe2cbc0086cac',1,'drake::systems::System']]],
+  ['get_5foutput_5fport_5fw_5fout',['get_output_port_w_out',['../classdrake_1_1systems_1_1_linear_transform_density.html#ab91efa27d20298e9a71fe6ae1cdcfd63',1,'drake::systems::LinearTransformDensity']]],
+  ['get_5foutput_5fport_5fw_5fout_5fdensity',['get_output_port_w_out_density',['../classdrake_1_1systems_1_1_linear_transform_density.html#a086487c22ae3d8ec31df6d7858c53b61',1,'drake::systems::LinearTransformDensity']]],
   ['get_5foutput_5fports_5fsizes',['get_output_ports_sizes',['../classdrake_1_1systems_1_1_demultiplexer.html#a12f80a32502008138b77ad790d0be9cc',1,'drake::systems::Demultiplexer']]],
   ['get_5foutput_5fvalues',['get_output_values',['../classdrake_1_1systems_1_1_barycentric_mesh_system.html#aef5feb3fc99a7cb89e4c956858b9eaf9',1,'drake::systems::BarycentricMeshSystem']]],
   ['get_5fowning_5fcontext',['get_owning_context',['../classdrake_1_1systems_1_1_fixed_input_port_value.html#ae75a0c643ca43797ef55f6da7c56fc98',1,'drake::systems::FixedInputPortValue']]],

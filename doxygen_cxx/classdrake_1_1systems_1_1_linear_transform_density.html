@@ -118,6 +118,8 @@ class drake::systems::LinearTransformDensity&lt; T &gt;</h3>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_linear_transform_density.html" title="Performs linear transformation on the random signal w_in as w_out = A*w_in + b.">LinearTransformDensity</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr>
 </table>
 </td></tr>
 </table>
@@ -152,6 +154,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4315878b92e73e5860766fbbe8431ea1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_linear_transform_density.html#a4315878b92e73e5860766fbbe8431ea1">get_input_port_b</a> () const</td></tr>
 <tr class="memdesc:a4315878b92e73e5860766fbbe8431ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the input port for b.  <a href="#a4315878b92e73e5860766fbbe8431ea1">More...</a><br /></td></tr>
 <tr class="separator:a4315878b92e73e5860766fbbe8431ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab91efa27d20298e9a71fe6ae1cdcfd63"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_linear_transform_density.html#ab91efa27d20298e9a71fe6ae1cdcfd63">get_output_port_w_out</a> () const</td></tr>
+<tr class="separator:ab91efa27d20298e9a71fe6ae1cdcfd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086487c22ae3d8ec31df6d7858c53b61"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_linear_transform_density.html#a086487c22ae3d8ec31df6d7858c53b61">get_output_port_w_out_density</a> () const</td></tr>
+<tr class="separator:a086487c22ae3d8ec31df6d7858c53b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafef02ce0c7ee9bbd4418d817d7809c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a72383be4710d27584d0821effc6506a5">RandomDistribution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_linear_transform_density.html#aafef02ce0c7ee9bbd4418d817d7809c6">get_distribution</a> () const</td></tr>
 <tr class="memdesc:aafef02ce0c7ee9bbd4418d817d7809c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the random distribution type.  <a href="#aafef02ce0c7ee9bbd4418d817d7809c6">More...</a><br /></td></tr>
 <tr class="separator:aafef02ce0c7ee9bbd4418d817d7809c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1551,6 +1557,40 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the input port for w_in. </p>
+
+</div>
+</div>
+<a id="ab91efa27d20298e9a71fe6ae1cdcfd63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91efa27d20298e9a71fe6ae1cdcfd63">&#9670;&nbsp;</a></span>get_output_port_w_out()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;T&gt;&amp; get_output_port_w_out </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a086487c22ae3d8ec31df6d7858c53b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086487c22ae3d8ec31df6d7858c53b61">&#9670;&nbsp;</a></span>get_output_port_w_out_density()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt;T&gt;&amp; get_output_port_w_out_density </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
