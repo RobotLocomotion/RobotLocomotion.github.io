@@ -136,15 +136,21 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a599c5d0a78c6a9ef6537d10103ab36e1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#a599c5d0a78c6a9ef6537d10103ab36e1">PortBase</a> (const char *kind_string, internal::SystemMessageInterface *owning_system, std::string name, <a class="el" href="classint.html">int</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, <a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> data_type, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a>)</td></tr>
-<tr class="memdesc:a599c5d0a78c6a9ef6537d10103ab36e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides derived classes the ability to set the base class members at construction.  <a href="#a599c5d0a78c6a9ef6537d10103ab36e1">More...</a><br /></td></tr>
-<tr class="separator:a599c5d0a78c6a9ef6537d10103ab36e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd0ea14dfead265bf6d20364f76a506"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#a0dd0ea14dfead265bf6d20364f76a506">PortBase</a> (const char *kind_string, internal::SystemMessageInterface *owning_system, internal::SystemId owning_system_id, std::string name, <a class="el" href="classint.html">int</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, <a class="el" href="namespacedrake_1_1systems.html#ae516fceb67f15f61c7a232b9cc483fbe">PortDataType</a> data_type, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1systems_1_1_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a>)</td></tr>
+<tr class="memdesc:a0dd0ea14dfead265bf6d20364f76a506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides derived classes the ability to set the base class members at construction.  <a href="#a0dd0ea14dfead265bf6d20364f76a506">More...</a><br /></td></tr>
+<tr class="separator:a0dd0ea14dfead265bf6d20364f76a506"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00ef4ed887cdf7f89bd4d0eb345e4f3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#a00ef4ed887cdf7f89bd4d0eb345e4f3c">get_int_index</a> () const</td></tr>
 <tr class="memdesc:a00ef4ed887cdf7f89bd4d0eb345e4f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index of this port within the owning <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> (i.e., an InputPortIndex or OutputPortIndex, but as a bare integer).  <a href="#a00ef4ed887cdf7f89bd4d0eb345e4f3c">More...</a><br /></td></tr>
 <tr class="separator:a00ef4ed887cdf7f89bd4d0eb345e4f3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cb2ad85551ec86525ba002ef414cb2c"><td class="memItemLeft" align="right" valign="top">internal::SystemMessageInterface &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#a8cb2ad85551ec86525ba002ef414cb2c">get_mutable_system_interface</a> ()</td></tr>
 <tr class="memdesc:a8cb2ad85551ec86525ba002ef414cb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns get_system_interface(), but without the const.  <a href="#a8cb2ad85551ec86525ba002ef414cb2c">More...</a><br /></td></tr>
 <tr class="separator:a8cb2ad85551ec86525ba002ef414cb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a239cf605c02cee65948c53a451d78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#a20a239cf605c02cee65948c53a451d78">ValidateSystemId</a> (internal::SystemId id) const</td></tr>
+<tr class="memdesc:a20a239cf605c02cee65948c53a451d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Checks whether the given id (nominally obtained from a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> passed to this port) was created for the system that owns this port.  <a href="#a20a239cf605c02cee65948c53a451d78">More...</a><br /></td></tr>
+<tr class="separator:a20a239cf605c02cee65948c53a451d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d92a27ab15f81ceee423df5e91b6ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#ab9d92a27ab15f81ceee423df5e91b6ce">ThrowValidateContextMismatch</a> () const</td></tr>
+<tr class="memdesc:ab9d92a27ab15f81ceee423df5e91b6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception with a message that the sanity check(s) related to ValidateContext have failed.  <a href="#ab9d92a27ab15f81ceee423df5e91b6ce">More...</a><br /></td></tr>
+<tr class="separator:ab9d92a27ab15f81ceee423df5e91b6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06cc3b285f945ec351eef2f7a34cc5fb"><td class="memTemplParams" colspan="2">template&lt;typename ValueType &gt; </td></tr>
 <tr class="memitem:a06cc3b285f945ec351eef2f7a34cc5fb"><td class="memTemplItemLeft" align="right" valign="top">const ValueType &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_port_base.html#a06cc3b285f945ec351eef2f7a34cc5fb">PortEvalCast</a> (const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;abstract) const</td></tr>
 <tr class="memdesc:a06cc3b285f945ec351eef2f7a34cc5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pull a value of a given type from an abstract value or issue a nice message if the type is not correct.  <a href="#a06cc3b285f945ec351eef2f7a34cc5fb">More...</a><br /></td></tr>
@@ -243,8 +249,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a599c5d0a78c6a9ef6537d10103ab36e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a599c5d0a78c6a9ef6537d10103ab36e1">&#9670;&nbsp;</a></span>PortBase() <span class="overload">[3/3]</span></h2>
+<a id="a0dd0ea14dfead265bf6d20364f76a506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd0ea14dfead265bf6d20364f76a506">&#9670;&nbsp;</a></span>PortBase() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,6 +269,12 @@ Protected Member Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">internal::SystemMessageInterface *&#160;</td>
           <td class="paramname"><em>owning_system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">internal::SystemId&#160;</td>
+          <td class="paramname"><em>owning_system_id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -312,6 +324,7 @@ Protected Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">kind_string</td><td>Either "Input" or "Output", depending on the kind of subclass. </td></tr>
     <tr><td class="paramname">owning_system</td><td>The <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that owns this port. </td></tr>
+    <tr><td class="paramname">owning_system_id</td><td>The ID of owning_system. </td></tr>
     <tr><td class="paramname">name</td><td>A name for the port. Port names should be non-empty and unique within a single <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </td></tr>
     <tr><td class="paramname">index</td><td>The index to be assigned to this port. Input ports and output ports each have their own pool of indices (InputPortIndex and OutputPortIndex); this is just that <a class="el" href="classdrake_1_1_type_safe_index.html" title="A type-safe non-negative index class.">TypeSafeIndex</a> passed as a bare int. </td></tr>
     <tr><td class="paramname">ticket</td><td>The DependencyTicket to be assigned to this port. </td></tr>
@@ -660,6 +673,33 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ab9d92a27ab15f81ceee423df5e91b6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d92a27ab15f81ceee423df5e91b6ce">&#9670;&nbsp;</a></span>ThrowValidateContextMismatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ThrowValidateContextMismatch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Throws std::exception with a message that the sanity check(s) related to ValidateContext have failed. </p>
+
+</div>
+</div>
 <a id="a65af7fcc4d673554e5fa127b1cf1382b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65af7fcc4d673554e5fa127b1cf1382b">&#9670;&nbsp;</a></span>ticket()</h2>
 
@@ -676,6 +716,36 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Advanced.) Returns the DependencyTicket for this port within the owning <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </p>
+
+</div>
+</div>
+<a id="a20a239cf605c02cee65948c53a451d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a239cf605c02cee65948c53a451d78">&#9670;&nbsp;</a></span>ValidateSystemId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ValidateSystemId </td>
+          <td>(</td>
+          <td class="paramtype">internal::SystemId&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Checks whether the given id (nominally obtained from a <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> passed to this port) was created for the system that owns this port. </p>
+<p>This is similar in spirit to <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7622a0fb573704de7505804d57e66a79" title="Checks whether the given context was created for this system.">SystemBase::ValidateContext</a>, but ports cannot use <a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a>.</p>
+<dl class="section note"><dt>Note</dt><dd>This method is sufficiently fast for performance sensitive code. </dd></dl>
 
 </div>
 </div>
