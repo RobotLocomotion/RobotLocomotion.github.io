@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.solvers.dreal &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.solvers" href="pydrake.solvers.html"/>
+        <link rel="next" title="pydrake.solvers.gurobi" href="pydrake.solvers.gurobi.html"/>
+        <link rel="prev" title="pydrake.solvers.csdp" href="pydrake.solvers.csdp.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.all.html">pydrake.solvers.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.branch_and_bound.html">pydrake.solvers.branch_and_bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.solvers.dreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mathematicalprogram.html">pydrake.solvers.mathematicalprogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.sdpa_free_format.html">pydrake.solvers.sdpa_free_format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.snopt.html">pydrake.solvers.snopt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.solvers.html">pydrake.solvers</a> &raquo;</li>
+        
+      <li>pydrake.solvers.dreal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.solvers.dreal">
+<span id="pydrake-solvers-dreal"></span><h1>pydrake.solvers.dreal<a class="headerlink" href="#module-pydrake.solvers.dreal" title="Permalink to this headline">¶</a></h1>
+<p>dReal solver bindings for MathematicalProgram</p>
+<dl class="class">
+<dt id="pydrake.solvers.dreal.DrealSolver">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.dreal.</code><code class="descname">DrealSolver</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.solvers.dreal.DrealSolver.CheckSatisfiability">
+<em class="property">static </em><code class="descname">CheckSatisfiability</code><span class="sig-paren">(</span><em>f: pydrake.symbolic.Formula</em>, <em>delta: float</em><span class="sig-paren">)</span> &#x2192; Optional[Dict[pydrake.symbolic.Variable, pydrake.solvers.dreal.DrealSolver.Interval]]<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.CheckSatisfiability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks the satisfiability of a given formula <code class="docutils literal"><span class="pre">f</span></code> with a given
+precision <code class="docutils literal"><span class="pre">delta</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a model, a mapping from a variable to an interval, if <code class="docutils literal"><span class="pre">f</span></code> is
+δ-satisfiable.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a nullopt, if <code class="docutils literal"><span class="pre">is</span></code> unsatisfiable.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.dreal.DrealSolver.Interval">
+<em class="property">class </em><code class="descname">Interval</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class representing an interval of doubles.</p>
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.Interval.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver.Interval</em>, <em>low: float</em>, <em>high: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Interval.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an interval [low, high].</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Its lower bound <code class="docutils literal"><span class="pre">low</span></code> must be less than or equal to its upper
+bound <code class="docutils literal"><span class="pre">high</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.Interval.diam">
+<code class="descname">diam</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver.Interval</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Interval.diam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns its diameter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.Interval.high">
+<code class="descname">high</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver.Interval</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Interval.high" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns its upper bound.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.Interval.low">
+<code class="descname">low</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver.Interval</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Interval.low" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns its lower bound.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.Interval.mid">
+<code class="descname">mid</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver.Interval</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Interval.mid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns its mid-point.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.dreal.DrealSolver.LocalOptimization">
+<em class="property">class </em><code class="descname">LocalOptimization</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.LocalOptimization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates whether to use dReal’s –local-optimization option or not.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kUse : Use “–local-optimization” option.</p>
+<p>kNotUse : Do not use “–local-optimization” option.</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.solvers.dreal.DrealSolver.LocalOptimization.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver.LocalOptimization</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.LocalOptimization.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.dreal.DrealSolver.LocalOptimization.kNotUse">
+<code class="descname">kNotUse</code><em class="property"> = &lt;LocalOptimization.kNotUse: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.LocalOptimization.kNotUse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.dreal.DrealSolver.LocalOptimization.kUse">
+<code class="descname">kUse</code><em class="property"> = &lt;LocalOptimization.kUse: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.LocalOptimization.kUse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.dreal.DrealSolver.LocalOptimization.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.LocalOptimization.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.dreal.DrealSolver.LocalOptimization.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.LocalOptimization.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.solvers.dreal.DrealSolver.Minimize">
+<em class="property">static </em><code class="descname">Minimize</code><span class="sig-paren">(</span><em>objective: pydrake.symbolic.Expression</em>, <em>constraint: pydrake.symbolic.Formula</em>, <em>delta: float</em>, <em>local_optimization: pydrake.solvers.dreal.DrealSolver.LocalOptimization</em><span class="sig-paren">)</span> &#x2192; Optional[Dict[pydrake.symbolic.Variable, pydrake.solvers.dreal.DrealSolver.Interval]]<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Minimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds a solution to minimize <code class="docutils literal"><span class="pre">objective</span></code> function while satisfying a
+given <code class="docutils literal"><span class="pre">constraint</span></code> using <code class="docutils literal"><span class="pre">delta</span></code>. When <code class="docutils literal"><span class="pre">local_optimization</span></code> is
+Localoptimization::kUse, enable “–local-optimization” dReal option
+which uses NLopt’s local-optimization algorithms to refine
+counterexamples in the process of global optimization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a model, a mapping from a variable to an interval, if a solution
+exists.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">nullopt, if there is no solution.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.solvers.gurobi.html" class="btn btn-neutral float-right" title="pydrake.solvers.gurobi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.solvers.csdp.html" class="btn btn-neutral" title="pydrake.solvers.csdp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
