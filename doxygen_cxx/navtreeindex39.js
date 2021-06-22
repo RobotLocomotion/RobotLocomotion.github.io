@@ -1,13 +1,12 @@
 var NAVTREEINDEX39 =
 {
-"functions_m.html":[3,3,0,12],
 "functions_n.html":[3,3,0,13],
 "functions_o.html":[3,3,0,14],
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6,0],
 "functions_rela.html":[3,3,6],
+"functions_rela.html":[3,3,6,0],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX39 =
 "group__solver__evaluators.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[1,2,0,20],
 "group__solver__evaluators.html#gad168321c6009ddda8ee2ca9abbef90b1":[1,2,0,21],
 "group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9":[1,2,0,19],
-"group__solvers.html":[1,2]
+"group__solvers.html":[1,2],
+"group__stochastic__systems.html":[1,3,10]
 };
