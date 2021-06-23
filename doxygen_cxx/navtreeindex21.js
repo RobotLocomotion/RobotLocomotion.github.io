@@ -1,5 +1,6 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1symbolic_1_1_expression_constant.html#a3ef4381c3fe2cdb5b514865f6e66dcff":[3,0,0,13,16,9],
 "classdrake_1_1symbolic_1_1_expression_constant.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,13,16,8],
 "classdrake_1_1symbolic_1_1_expression_constant.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,13,16,1],
 "classdrake_1_1symbolic_1_1_expression_constant.html#a8487ef9a8abbf5226130e0275ffa5331":[3,0,0,13,16,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1symbolic_1_1_formula_cell.html#abeb58283e4798f074fd2784126888f2c":[3,0,0,13,39,13],
 "classdrake_1_1symbolic_1_1_formula_cell.html#ac3bf12550b459c9bf4839dc30332917b":[3,0,0,13,39,7],
 "classdrake_1_1symbolic_1_1_formula_cell.html#ac42eafe7251d04dd039c23a1d1156ad0":[3,0,0,13,39,9],
-"classdrake_1_1symbolic_1_1_formula_cell.html#ac513aece9c800680f2a6cb06caca555a":[3,0,0,13,39,1],
-"classdrake_1_1symbolic_1_1_formula_eq.html":[3,0,0,13,40]
+"classdrake_1_1symbolic_1_1_formula_cell.html#ac513aece9c800680f2a6cb06caca555a":[3,0,0,13,39,1]
 };

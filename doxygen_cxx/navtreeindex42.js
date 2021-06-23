@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"namespacedrake_1_1systems_1_1estimators.html":[2,0,0,14,4],
 "namespacedrake_1_1systems_1_1estimators.html":[3,0,0,14,3],
 "namespacedrake_1_1systems_1_1implicit__integrator__test.html":[3,0,0,14,4],
 "namespacedrake_1_1systems_1_1implicit__integrator__test.html":[2,0,0,14,5],
@@ -29,8 +30,8 @@ var NAVTREEINDEX42 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
-"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func.html":[2,1,1,0],
+"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func_b.html":[2,1,1,1],
 "namespacemembers_func_c.html":[2,1,1,2],
 "namespacemembers_func_d.html":[2,1,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,21,3],
 "proximity__properties_8h.html#a994429610a1aadf4521959e996c5cfac":[4,0,0,4,21,1],
 "proximity__properties_8h.html#ab8c01c8e61753cdc77272c430c452968":[4,0,0,4,21,4],
-"proximity__properties_8h.html#ad22f40ec627443c415b558cee11e111e":[4,0,0,4,21,6],
-"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,21,2]
+"proximity__properties_8h.html#ad22f40ec627443c415b558cee11e111e":[4,0,0,4,21,6]
 };

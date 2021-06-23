@@ -1,5 +1,6 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a7ac486efb96e05a296c7d114d64f2ead":[3,0,0,12,50,1],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a8f99a12c084358b7a5c4cc6ec1722450":[3,0,0,12,50,3],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[3,0,0,12,50,0],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#ab934f3e9477d69de1b7e4d21adaa59c1":[3,0,0,12,50,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,2,6],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html":[3,0,0,12,0,3],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a00e05e1bb6f3185b1a40728679be5274":[3,0,0,12,0,3,8],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a051a0096a00db2a286963dde8b8b7bab":[3,0,0,12,0,3,6],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a0cd8d736321ae73d617ee0f756492bc6":[3,0,0,12,0,3,18]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a051a0096a00db2a286963dde8b8b7bab":[3,0,0,12,0,3,6]
 };

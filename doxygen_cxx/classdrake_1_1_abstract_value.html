@@ -156,6 +156,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5f71775acbd3f977d7c4ae6ada21d703"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703">Make</a> ()</td></tr>
+<tr class="memdesc:a5f71775acbd3f977d7c4ae6ada21d703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> using T's default constructor, if available.  <a href="#a5f71775acbd3f977d7c4ae6ada21d703">More...</a><br /></td></tr>
+<tr class="separator:a5f71775acbd3f977d7c4ae6ada21d703"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae04aca7fdcdacc332f74779d5538eda"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:aae04aca7fdcdacc332f74779d5538eda"><td class="memTemplItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_abstract_value.html#aae04aca7fdcdacc332f74779d5538eda">Make</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:aae04aca7fdcdacc332f74779d5538eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> containing the given <code>value</code>.  <a href="#aae04aca7fdcdacc332f74779d5538eda">More...</a><br /></td></tr>
@@ -287,7 +290,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> as mutable reference. </p>
 <p>The reference remains valid only until this object is set or destroyed. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#aae04aca7fdcdacc332f74779d5538eda" title="Returns an AbstractValue containing the given value.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, a std::logic_error will be thrown with a helpful error message. </td></tr>
+    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703" title="Constructs an AbstractValue using T&#39;s default constructor, if available.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, a std::logic_error will be thrown with a helpful error message. </td></tr>
   </table>
   </dd>
 </dl>
@@ -312,7 +315,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> as a const reference. </p>
 <p>The reference remains valid only until this object is set or destroyed. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#aae04aca7fdcdacc332f74779d5538eda" title="Returns an AbstractValue containing the given value.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, a std::logic_error will be thrown with a helpful error message. </td></tr>
+    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703" title="Constructs an AbstractValue using T&#39;s default constructor, if available.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, a std::logic_error will be thrown with a helpful error message. </td></tr>
   </table>
   </dd>
 </dl>
@@ -339,8 +342,36 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5f71775acbd3f977d7c4ae6ada21d703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f71775acbd3f977d7c4ae6ada21d703">&#9670;&nbsp;</a></span>Make() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt;<a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&gt; Make </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> using T's default constructor, if available. </p>
+<p>This is only available for T's that support default construction. </p>
+
+</div>
+</div>
 <a id="aae04aca7fdcdacc332f74779d5538eda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae04aca7fdcdacc332f74779d5538eda">&#9670;&nbsp;</a></span>Make()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aae04aca7fdcdacc332f74779d5538eda">&#9670;&nbsp;</a></span>Make() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -385,7 +416,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Returns the value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, if T matches the originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#aae04aca7fdcdacc332f74779d5538eda" title="Returns an AbstractValue containing the given value.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, returns nullptr. </td></tr>
+    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703" title="Constructs an AbstractValue using T&#39;s default constructor, if available.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, returns nullptr. </td></tr>
   </table>
   </dd>
 </dl>
@@ -463,7 +494,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Sets the value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#aae04aca7fdcdacc332f74779d5538eda" title="Returns an AbstractValue containing the given value.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, a std::logic_error will be thrown with a helpful error message. </td></tr>
+    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703" title="Constructs an AbstractValue using T&#39;s default constructor, if available.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, a std::logic_error will be thrown with a helpful error message. </td></tr>
   </table>
   </dd>
 </dl>

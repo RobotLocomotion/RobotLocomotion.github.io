@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1multibody_1_1_coulomb_friction.html#a76e290d9e06bff006cd385765e8f965f":[3,0,0,8,19,6],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a87fae0c02525bbeacea7ade6fb1b1fde":[3,0,0,8,19,8],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#a91980ef764c2fa43ebf7e60dd52c36e1":[3,0,0,8,19,1],
 "classdrake_1_1multibody_1_1_coulomb_friction.html#aa95ec70abea05997f50b5372501baacb":[3,0,0,8,19,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a6ea959631c28d8f76b3e44b60e0ac4de":[3,0,0,8,37,1],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a8c287d611eb8e6efc4afbc58ad39d0fb":[3,0,0,8,37,25],
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a9a9591f454445acd72e2d67532d0d943":[3,0,0,8,37,21],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa0575e0cf14a1364e61f353eb16a22fd":[3,0,0,8,37,0],
-"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa793ea4831b91b9086a8ae701754b5c4":[3,0,0,8,37,14]
+"classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aa0575e0cf14a1364e61f353eb16a22fd":[3,0,0,8,37,0]
 };

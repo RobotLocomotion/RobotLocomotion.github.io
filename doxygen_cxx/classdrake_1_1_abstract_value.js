@@ -7,6 +7,7 @@ var classdrake_1_1_abstract_value =
     [ "get_mutable_value", "classdrake_1_1_abstract_value.html#aec24e257e780275fea15908f4fdd2634", null ],
     [ "get_value", "classdrake_1_1_abstract_value.html#a70d8bf67bf07153f0992c9c8ffb4a42d", null ],
     [ "GetNiceTypeName", "classdrake_1_1_abstract_value.html#a7fda3b2dfb60c909cd978753dd57c279", null ],
+    [ "Make", "classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703", null ],
     [ "Make", "classdrake_1_1_abstract_value.html#aae04aca7fdcdacc332f74779d5538eda", null ],
     [ "maybe_get_value", "classdrake_1_1_abstract_value.html#a84730fcef956d79b853944c792644a73", null ],
     [ "operator=", "classdrake_1_1_abstract_value.html#ac5663a22227e015f12466656929915a7", null ],
