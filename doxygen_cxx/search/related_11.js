@@ -5,6 +5,7 @@ var searchData=
   ['scenegraph_3c_20t_20_3e',['SceneGraph&lt; T &gt;',['../classdrake_1_1geometry_1_1_geometry_state.html#a09e32deb354fd5ca0cc04c6f6110bcb7',1,'drake::geometry::GeometryState::SceneGraph&lt; T &gt;()'],['../classdrake_1_1geometry_1_1_query_object.html#a09e32deb354fd5ca0cc04c6f6110bcb7',1,'drake::geometry::QueryObject::SceneGraph&lt; T &gt;()'],['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a09e32deb354fd5ca0cc04c6f6110bcb7',1,'drake::geometry::SceneGraphInspector::SceneGraph&lt; T &gt;()']]],
   ['scenegraphinspectortester',['SceneGraphInspectorTester',['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#a6e9f389685137462f277662ef2937886',1,'drake::geometry::SceneGraphInspector']]],
   ['scenegraphtester',['SceneGraphTester',['../classdrake_1_1geometry_1_1_scene_graph.html#abecd6179d212b5bacfd7ca6c44d17224',1,'drake::geometry::SceneGraph']]],
+  ['screwjoint',['ScrewJoint',['../classdrake_1_1multibody_1_1_screw_joint.html#aa99d7a93fe68876b2b47b6c83fe51e1a',1,'drake::multibody::ScrewJoint']]],
   ['signallogger',['SignalLogger',['../classdrake_1_1systems_1_1_signal_logger.html#af12bcd11a1532eda18aef6000c10e2fe',1,'drake::systems::SignalLogger']]],
   ['sin',['sin',['../classdrake_1_1symbolic_1_1_expression.html#af3cd13d5472028f31c2e70f1b0e08b5d',1,'drake::symbolic::Expression::sin()'],['../classdrake_1_1_trig_poly.html#a0f939c21b49ed68025b71ebc7b37943d',1,'drake::TrigPoly::sin()']]],
   ['sinh',['sinh',['../classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0',1,'drake::symbolic::Expression']]],

@@ -23,6 +23,7 @@ var searchData=
   ['schunkwsgtrajectorygenerator',['SchunkWsgTrajectoryGenerator',['../classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html',1,'drake::manipulation::schunk_wsg']]],
   ['scopedname',['ScopedName',['../structdrake_1_1multibody_1_1parsing_1_1_scoped_name.html',1,'drake::multibody::parsing']]],
   ['scopeexit',['ScopeExit',['../classdrake_1_1_scope_exit.html',1,'drake']]],
+  ['screwjoint',['ScrewJoint',['../classdrake_1_1multibody_1_1_screw_joint.html',1,'drake::multibody']]],
   ['scssolver',['ScsSolver',['../classdrake_1_1solvers_1_1_scs_solver.html',1,'drake::solvers']]],
   ['scssolverdetails',['ScsSolverDetails',['../structdrake_1_1solvers_1_1_scs_solver_details.html',1,'drake::solvers']]],
   ['semiexpliciteulerintegrator',['SemiExplicitEulerIntegrator',['../classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html',1,'drake::systems']]],

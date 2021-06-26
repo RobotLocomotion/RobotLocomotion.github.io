@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.geometry.optimization &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.geometry" href="pydrake.geometry.html"/>
+        <link rel="next" title="pydrake.geometry.render" href="pydrake.geometry.render.html"/>
+        <link rel="prev" title="pydrake.geometry.all" href="pydrake.geometry.all.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.geometry.all.html">pydrake.geometry.all</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.geometry.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.geometry.render.html">pydrake.geometry.render</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.geometry.html">pydrake.geometry</a> &raquo;</li>
+        
+      <li>pydrake.geometry.optimization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.geometry.optimization">
+<span id="pydrake-geometry-optimization"></span><h1>pydrake.geometry.optimization<a class="headerlink" href="#module-pydrake.geometry.optimization" title="Permalink to this headline">¶</a></h1>
+<p>Local bindings for <cite>drake::geometry::optimization</cite></p>
+<dl class="class">
+<dt id="pydrake.geometry.optimization.ConvexSet">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">ConvexSet</code><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract base class for defining a convex set.</p>
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.ConvexSet.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraint">
+<code class="descname">AddPointInSetConstraint</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a constraint to an existing MathematicalProgram enforcing that
+the point defined by vars is inside the set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.ambient_dimension">
+<code class="descname">ambient_dimension</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.ambient_dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the dimension of the vector space in which the elements of
+this set are evaluated. Contrast this with the <code class="docutils literal"><span class="pre">affine</span> <span class="pre">dimension</span></code>:
+the dimension of the smallest affine subset of the ambient space that
+contains our set. For example, if we define a set using <code class="docutils literal"><span class="pre">A*x</span> <span class="pre">=</span> <span class="pre">b</span></code>,
+where <code class="docutils literal"><span class="pre">A</span></code> has linearly independent rows, then the ambient dimension
+is the dimension of <code class="docutils literal"><span class="pre">x</span></code>, but the affine dimension of the set is
+<code class="docutils literal"><span class="pre">ambient_dimension()</span> <span class="pre">-</span> <span class="pre">rank(A)</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.PointInSet">
+<code class="descname">PointInSet</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, x: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-08</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.PointInSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the point x is contained in the set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.ToShapeWithPose">
+<code class="descname">ToShapeWithPose</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.geometry.Shape, pydrake.math.RigidTransform_[float]]<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.ToShapeWithPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a Shape and a pose of the set in the world frame for use in
+the SceneGraph geometry ecosystem.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if ambient_dimension() != 3 or if the functionality</li>
+<li>for a particular set has not been implemented yet.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.HPolyhedron">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">HPolyhedron</code><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>Implements a polyhedral convex set using the half-space
+representation: <code class="docutils literal"><span class="pre">{x|</span> <span class="pre">A</span> <span class="pre">x</span> <span class="pre">≤</span> <span class="pre">b}</span></code>. Note: This set may be unbounded.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.optimization.HPolyhedron, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs the polyhedron.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>A.rows() == b.size().</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.HPolyhedron, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, expressed_in: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
+</ol>
+<p>Constructs a new HPolyhedron from a SceneGraph geometry and pose in
+the <code class="docutils literal"><span class="pre">expressed_in</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal"><span class="pre">expressed_in</span></code> frame is std::nullopt, then it will be expressed in
+the world frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError the geometry is not a convex polytope.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the half-space representation matrix A.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.b">
+<code class="descname">b</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the half-space representation vector b.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.HyperEllipsoid">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">HyperEllipsoid</code><a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>Implements an ellipsoidal convex set represented by the quadratic form
+<code class="docutils literal"><span class="pre">{x</span> <span class="pre">|</span> <span class="pre">(x-center)ᵀAᵀA(x-center)</span> <span class="pre">≤</span> <span class="pre">1}</span></code>. Note that <code class="docutils literal"><span class="pre">A</span></code> need not be
+square; we require only that the matrix AᵀA is positive semi-definite.</p>
+<p>Compare this with an alternative (very useful) parameterization of the
+ellipsoid: <code class="docutils literal"><span class="pre">{Bu</span> <span class="pre">+</span> <span class="pre">center</span> <span class="pre">|</span> <span class="pre">|u|₂</span> <span class="pre">≤</span> <span class="pre">1}</span></code>, which is an affine scaling of
+the unit ball. This is related to the quadratic form by <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">A⁻¹</span></code>,
+when <code class="docutils literal"><span class="pre">A</span></code> is invertible, but the quadratic form can also represent
+unbounded sets.</p>
+<p>Note: the name HyperEllipsoid was taken here to avoid conflicting with
+geometry::Ellipsoid and to distinguish that this class supports N
+dimensions.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HyperEllipsoid.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.optimization.HyperEllipsoid, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], center: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs the ellipsoid.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>A.cols() == center.size().</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.HyperEllipsoid, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, expressed_in: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
+</ol>
+<p>Constructs a HyperEllipsoid from a SceneGraph geometry and pose in the
+<code class="docutils literal"><span class="pre">expressed_in</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal"><span class="pre">expressed_in</span></code> frame is std::nullopt, then it will be expressed in
+the world frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if geometry_id does not represent a shape that can be</li>
+<li>described as an HyperEllipsoid.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HyperEllipsoid.A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HyperEllipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the quadratic form matrix A.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HyperEllipsoid.center">
+<code class="descname">center</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HyperEllipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the center of the ellipsoid.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.geometry.render.html" class="btn btn-neutral float-right" title="pydrake.geometry.render" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.geometry.all.html" class="btn btn-neutral" title="pydrake.geometry.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

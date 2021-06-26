@@ -1,5 +1,6 @@
 var namespacedrake_1_1geometry =
 [
+    [ "optimization", "namespacedrake_1_1geometry_1_1optimization.html", "namespacedrake_1_1geometry_1_1optimization" ],
     [ "render", "namespacedrake_1_1geometry_1_1render.html", "namespacedrake_1_1geometry_1_1render" ],
     [ "Box", "classdrake_1_1geometry_1_1_box.html", "classdrake_1_1geometry_1_1_box" ],
     [ "Capsule", "classdrake_1_1geometry_1_1_capsule.html", "classdrake_1_1geometry_1_1_capsule" ],

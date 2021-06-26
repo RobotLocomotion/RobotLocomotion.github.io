@@ -50,6 +50,7 @@ var searchData=
   ['continuousstate_3c_20double_20_3e',['ContinuousState&lt; double &gt;',['../classdrake_1_1systems_1_1_continuous_state.html',1,'drake::systems']]],
   ['continuousstate_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['ContinuousState&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_continuous_state.html',1,'drake::systems']]],
   ['convex',['Convex',['../classdrake_1_1geometry_1_1_convex.html',1,'drake::geometry']]],
+  ['convexset',['ConvexSet',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html',1,'drake::geometry::optimization']]],
   ['copyable_5funique_5fptr',['copyable_unique_ptr',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3aabstractvalue_20_3e',['copyable_unique_ptr&lt; drake::AbstractValue &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3ageometry_3a_3arender_3a_3arenderengine_20_3e',['copyable_unique_ptr&lt; drake::geometry::render::RenderEngine &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],

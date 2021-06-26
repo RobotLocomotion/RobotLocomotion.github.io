@@ -1,6 +1,7 @@
 var dir_d739e095b49d8b72164589d00310017d =
 [
     [ "benchmarking", "dir_e67b9cd7d1b691e5dc83f84c637cb8c7.html", "dir_e67b9cd7d1b691e5dc83f84c637cb8c7" ],
+    [ "optimization", "dir_3d84dd5e420c33a089db2aba1794a356.html", "dir_3d84dd5e420c33a089db2aba1794a356" ],
     [ "proximity", "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html", "dir_ffd084df0f71d68f8337a7d6f3dcd2dc" ],
     [ "query_results", "dir_3ff34c62de56b2df4097a6c50ce2d7ff.html", "dir_3ff34c62de56b2df4097a6c50ce2d7ff" ],
     [ "render", "dir_05142ce2278c744298ef3f06d9e628a4.html", "dir_05142ce2278c744298ef3f06d9e628a4" ],

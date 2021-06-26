@@ -60,6 +60,7 @@ var namespacedrake_1_1multibody =
     [ "RevoluteSpring", "classdrake_1_1multibody_1_1_revolute_spring.html", "classdrake_1_1multibody_1_1_revolute_spring" ],
     [ "RigidBody", "classdrake_1_1multibody_1_1_rigid_body.html", "classdrake_1_1multibody_1_1_rigid_body" ],
     [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ],
+    [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html", "classdrake_1_1multibody_1_1_screw_joint" ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative" ],
     [ "SpatialAcceleration", "classdrake_1_1multibody_1_1_spatial_acceleration.html", "classdrake_1_1multibody_1_1_spatial_acceleration" ],
     [ "SpatialForce", "classdrake_1_1multibody_1_1_spatial_force.html", "classdrake_1_1multibody_1_1_spatial_force" ],

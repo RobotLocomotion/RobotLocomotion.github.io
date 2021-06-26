@@ -12,6 +12,7 @@ var searchData=
   ['add_5fweld',['add_weld',['../structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40',1,'drake::multibody::parsing::ModelDirective']]],
   ['allow_5fcpp_5fwith_5fno_5fyaml',['allow_cpp_with_no_yaml',['../structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#aa4ca52e888e12f7fd01ae981e6b63275',1,'drake::yaml::YamlReadArchive::Options']]],
   ['allow_5fyaml_5fwith_5fno_5fcpp',['allow_yaml_with_no_cpp',['../structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#aea27c3ce8aaf9792e86b006e57659938',1,'drake::yaml::YamlReadArchive::Options']]],
+  ['ambient_5fdimension_5f',['ambient_dimension_',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a',1,'drake::geometry::optimization::ConvexSet']]],
   ['angle_5fdeg',['angle_deg',['../structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8',1,'drake::schema::Rotation::AngleAxis']]],
   ['approach',['approach',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a070d67fe6a2aec68937b130e4e36afbf',1,'drake::multibody::GlobalInverseKinematics::Options']]],
   ['assume_5fnon_5fcontinuous_5fstates_5fare_5ffixed',['assume_non_continuous_states_are_fixed',['../structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c',1,'drake::systems::controllers::DynamicProgrammingOptions']]],

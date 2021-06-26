@@ -21,6 +21,8 @@ var searchData=
   ['hash_3c_20drake_3a_3asystems_3a_3asensors_3a_3apixeltype_20_3e',['hash&lt; drake::systems::sensors::PixelType &gt;',['../structstd_1_1hash_3_01drake_1_1systems_1_1sensors_1_1_pixel_type_01_4.html',1,'std']]],
   ['hash_3c_20drake_3a_3atypesafeindex_3c_20tag_20_3e_20_3e',['hash&lt; drake::TypeSafeIndex&lt; Tag &gt; &gt;',['../structstd_1_1hash_3_01drake_1_1_type_safe_index_3_01_tag_01_4_01_4.html',1,'std']]],
   ['hermitiandenseoutput',['HermitianDenseOutput',['../classdrake_1_1systems_1_1_hermitian_dense_output.html',1,'drake::systems']]],
+  ['hpolyhedron',['HPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html',1,'drake::geometry::optimization']]],
   ['hydroelasticcontactinfo',['HydroelasticContactInfo',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info.html',1,'drake::multibody']]],
-  ['hydroelasticquadraturepointdata',['HydroelasticQuadraturePointData',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html',1,'drake::multibody']]]
+  ['hydroelasticquadraturepointdata',['HydroelasticQuadraturePointData',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html',1,'drake::multibody']]],
+  ['hyperellipsoid',['HyperEllipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html',1,'drake::geometry::optimization']]]
 ];

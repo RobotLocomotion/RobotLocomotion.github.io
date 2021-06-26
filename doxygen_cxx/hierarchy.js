@@ -484,6 +484,7 @@ var hierarchy =
         [ "PlanarJoint< T >", "classdrake_1_1multibody_1_1_planar_joint.html", null ],
         [ "PrismaticJoint< T >", "classdrake_1_1multibody_1_1_prismatic_joint.html", null ],
         [ "RevoluteJoint< T >", "classdrake_1_1multibody_1_1_revolute_joint.html", null ],
+        [ "ScrewJoint< T >", "classdrake_1_1multibody_1_1_screw_joint.html", null ],
         [ "UniversalJoint< T >", "classdrake_1_1multibody_1_1_universal_joint.html", null ],
         [ "WeldJoint< T >", "classdrake_1_1multibody_1_1_weld_joint.html", null ]
       ] ]
@@ -570,8 +571,8 @@ var hierarchy =
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
-    [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
+    [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
@@ -633,6 +634,10 @@ var hierarchy =
       [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", null ]
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
+      [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
+        [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
+        [ "HyperEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html", null ]
+      ] ],
       [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", [
         [ "RenderEngineGl", "classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html", null ],
         [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]

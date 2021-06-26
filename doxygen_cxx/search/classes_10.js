@@ -1,7 +1,7 @@
 var searchData=
 [
   ['qpdata',['QPData',['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html',1,'FBstabDense::QPData'],['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html',1,'FBstabMpc::QPData']]],
-  ['qpvariable',['QPVariable',['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html',1,'FBstabMpc::QPVariable'],['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html',1,'FBstabDense::QPVariable']]],
+  ['qpvariable',['QPVariable',['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html',1,'FBstabDense::QPVariable'],['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html',1,'FBstabMpc::QPVariable']]],
   ['quadraticconstraint',['QuadraticConstraint',['../classdrake_1_1solvers_1_1_quadratic_constraint.html',1,'drake::solvers']]],
   ['quadraticcost',['QuadraticCost',['../classdrake_1_1solvers_1_1_quadratic_cost.html',1,'drake::solvers']]],
   ['quadraticscalarsystem',['QuadraticScalarSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html',1,'drake::systems::analysis_test']]],

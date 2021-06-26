@@ -1,6 +1,7 @@
 var group__solvers =
 [
     [ "Costs and Constraints", "group__solver__evaluators.html", "group__solver__evaluators" ],
+    [ "Geometry Optimization", "group__geometry__optimization.html", "group__geometry__optimization" ],
     [ "MathematicalProgram", "classdrake_1_1solvers_1_1_mathematical_program.html", [
       [ "VarType", "classdrake_1_1solvers_1_1_mathematical_program.html#aaed05d048d1ac7b1d4960e328c20d02f", null ],
       [ "NonnegativePolynomial", "classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818", [

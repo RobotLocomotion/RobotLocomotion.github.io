@@ -96,6 +96,10 @@ var dir_3f9cb8dbb3b4911cb2ecb548acd672c3 =
     [ "rotational_inertia.h", "rotational__inertia_8h.html", [
       [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html", "classdrake_1_1multibody_1_1_rotational_inertia" ]
     ] ],
+    [ "screw_joint.h", "screw__joint_8h.html", [
+      [ "ScrewJoint", "classdrake_1_1multibody_1_1_screw_joint.html", "classdrake_1_1multibody_1_1_screw_joint" ]
+    ] ],
+    [ "screw_mobilizer.h", "screw__mobilizer_8h.html", null ],
     [ "space_xyz_floating_mobilizer.h", "space__xyz__floating__mobilizer_8h.html", null ],
     [ "space_xyz_mobilizer.h", "space__xyz__mobilizer_8h.html", null ],
     [ "spatial_inertia.h", "spatial__inertia_8h.html", [

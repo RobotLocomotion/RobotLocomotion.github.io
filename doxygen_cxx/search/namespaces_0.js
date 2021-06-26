@@ -36,6 +36,7 @@ var searchData=
   ['mass_5fspring_5fcloth',['mass_spring_cloth',['../namespacedrake_1_1examples_1_1mass__spring__cloth.html',1,'drake::examples']]],
   ['math',['math',['../namespacedrake_1_1math.html',1,'drake']]],
   ['multibody',['multibody',['../namespacedrake_1_1examples_1_1multibody.html',1,'drake::examples::multibody'],['../namespacedrake_1_1multibody.html',1,'drake::multibody']]],
+  ['optimization',['optimization',['../namespacedrake_1_1geometry_1_1optimization.html',1,'drake::geometry']]],
   ['parsing',['parsing',['../namespacedrake_1_1multibody_1_1parsing.html',1,'drake::multibody']]],
   ['particles',['particles',['../namespacedrake_1_1examples_1_1particles.html',1,'drake::examples']]],
   ['pc_5fflags',['pc_flags',['../namespacedrake_1_1perception_1_1pc__flags.html',1,'drake::perception']]],
