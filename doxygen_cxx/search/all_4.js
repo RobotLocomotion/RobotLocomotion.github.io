@@ -409,6 +409,8 @@ var searchData=
   ['drake_5fdefault_5fcopy_5fand_5fmove_5fand_5fassign',['DRAKE_DEFAULT_COPY_AND_MOVE_AND_ASSIGN',['../drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e',1,'drake_copyable.h']]],
   ['drake_5fdefine_5fclass_5ftemplate_5finstantiations_5fon_5fdefault_5fnonsymbolic_5fscalars',['DRAKE_DEFINE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS',['../group__default__scalars.html#gab6234c37b7596964a364d799933f4a17',1,'default_scalars.h']]],
   ['drake_5fdefine_5fclass_5ftemplate_5finstantiations_5fon_5fdefault_5fscalars',['DRAKE_DEFINE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS',['../group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c',1,'default_scalars.h']]],
+  ['drake_5fdefine_5ffunction_5ftemplate_5finstantiations_5fon_5fdefault_5fnonsymbolic_5fscalars',['DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS',['../group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e',1,'default_scalars.h']]],
+  ['drake_5fdefine_5ffunction_5ftemplate_5finstantiations_5fon_5fdefault_5fscalars',['DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS',['../group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6',1,'default_scalars.h']]],
   ['drake_5fdemand',['DRAKE_DEMAND',['../drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674',1,'drake_assert.h']]],
   ['drake_5fdeprecated',['DRAKE_DEPRECATED',['../drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96',1,'drake_deprecated.h']]],
   ['drake_5fdeprecated_2eh',['drake_deprecated.h',['../drake__deprecated_8h.html',1,'']]],

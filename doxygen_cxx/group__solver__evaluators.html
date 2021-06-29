@@ -153,8 +153,71 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constraint is a function + lower and upper bounds.  <a href="classdrake_1_1solvers_1_1_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_constraint.html">QuadraticConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a symmetric matrix Q.  <a href="classdrake_1_1solvers_1_1_quadratic_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constraining the linear expression \( z=Ax+b \) lies within the Lorentz cone.  <a href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constraining that the linear expression \( z=Ax+b \) lies within rotated Lorentz cone.  <a href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_constraint.html">EvaluatorConstraint&lt; EvaluatorType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constraint that may be specified using another (potentially nonlinear) evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_polynomial_constraint.html">PolynomialConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constraint on the values of multivariate polynomials.  <a href="classdrake_1_1solvers_1_1_polynomial_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form \( lb &lt;= Ax &lt;= ub \).  <a href="classdrake_1_1solvers_1_1_linear_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html">LinearEqualityConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form \( Ax = b \).  <a href="classdrake_1_1solvers_1_1_linear_equality_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_bounding_box_constraint.html">BoundingBoxConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form \( lb &lt;= x &lt;= ub \).  <a href="classdrake_1_1solvers_1_1_bounding_box_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form:  <a href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html">PositiveSemidefiniteConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a positive semidefinite constraint on a symmetric matrix S </p><p class="formulaDsp">
+\[\text{ S is p.s.d }\]
+</p>
+<p> namely, all eigen values of S are non-negative.  <a href="classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html">LinearMatrixInequalityConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose the matrix inequality constraint on variable x<p class="formulaDsp">
+\[ F_0 + x_1 F_1 + ... + x_n F_n \text{ is p.s.d} \]
+</p>
+<p> where p.s.d stands for positive semidefinite.  <a href="classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html">ExpressionConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose a generic (potentially nonlinear) constraint represented as a vector of symbolic Expression.  <a href="classdrake_1_1solvers_1_1_expression_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html">ExponentialConeConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An exponential cone constraint is a special type of convex cone constraint.  <a href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an abstract base for all costs.  <a href="classdrake_1_1solvers_1_1_cost.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a cost of the form </p><p class="formulaDsp">
+\[ a&#39;x + b \]
+</p>
+<p>.  <a href="classdrake_1_1solvers_1_1_linear_cost.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a cost of the form </p><p class="formulaDsp">
+\[ .5 x&#39;Qx + b&#39;x + c \]
+</p>
+<p>.  <a href="classdrake_1_1solvers_1_1_quadratic_cost.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_cost.html">EvaluatorCost&lt; EvaluatorType &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A cost that may be specified using another (potentially nonlinear) evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_cost.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_polynomial_cost.html">PolynomialCost</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a cost of the form P(x, y...) where P is a multivariate polynomial in x, y, ...  <a href="classdrake_1_1solvers_1_1_polynomial_cost.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_constraint_adapter.html">SystemConstraintAdapter</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class is a factory class to generate <a class="el" href="classdrake_1_1systems_1_1_system_constraint_wrapper.html" title="This wrapper class wraps a SystemConstraint object to the format of solvers::Constraint.">SystemConstraintWrapper</a>.  <a href="classdrake_1_1systems_1_1_system_constraint_adapter.html#details">More...</a><br /></td></tr>
@@ -174,6 +237,16 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4508ec670196c3fe45e9b52af8a73d4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; internal::StaticFrictionConeComplementarityNonlinearConstraint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a">AddStaticFrictionConeComplementarityConstraint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_contact_wrench_evaluator.html">ContactWrenchEvaluator</a> *contact_wrench_evaluator, double complementarity_tolerance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;q_vars, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;lambda_vars, <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog)</td></tr>
 <tr class="memdesc:ga4508ec670196c3fe45e9b52af8a73d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the complementarity constraint on the static friction force between a pair of contacts |ft_W| &lt;= μ * n_Wᵀ * f_W (static friction force in the friction cone).  <a href="group__solver__evaluators.html#ga4508ec670196c3fe45e9b52af8a73d4a">More...</a><br /></td></tr>
 <tr class="separator:ga4508ec670196c3fe45e9b52af8a73d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f972e77c40a9afab91907620c621e11"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">MakeQuadraticErrorCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_desired)</td></tr>
+<tr class="memdesc:ga5f972e77c40a9afab91907620c621e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cost term of the form (x-x_desired)'<em>Q</em>(x-x_desired).  <a href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">More...</a><br /></td></tr>
+<tr class="separator:ga5f972e77c40a9afab91907620c621e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62744a5e355fa26fa97169acfc946128"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga62744a5e355fa26fa97169acfc946128">Make2NormSquaredCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
+<tr class="memdesc:ga62744a5e355fa26fa97169acfc946128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a quadratic cost of the form |Ax-b|²=(Ax-b)ᵀ(Ax-b)  <a href="group__solver__evaluators.html#ga62744a5e355fa26fa97169acfc946128">More...</a><br /></td></tr>
+<tr class="separator:ga62744a5e355fa26fa97169acfc946128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d268ea8150fb094f1499a958c50defb"><td class="memTemplParams" colspan="2">template&lt;typename FF &gt; </td></tr>
+<tr class="memitem:ga9d268ea8150fb094f1499a958c50defb"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga9d268ea8150fb094f1499a958c50defb">MakeFunctionCost</a> (FF &amp;&amp;f)</td></tr>
+<tr class="memdesc:ga9d268ea8150fb094f1499a958c50defb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an input of type <code>F</code> to a nonlinear cost.  <a href="group__solver__evaluators.html#ga9d268ea8150fb094f1499a958c50defb">More...</a><br /></td></tr>
+<tr class="separator:ga9d268ea8150fb094f1499a958c50defb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea88a3c59172c77e8537633348a057a9"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;, std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt; &gt;, <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9">AddRelaxNonConvexQuadraticConstraintInTrustRegion</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;x, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q1, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q2, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;y, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;p, double lower_bound, double upper_bound, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;linearization_point, double trust_region_gap)</td></tr>
 <tr class="memdesc:gaea88a3c59172c77e8537633348a057a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a non-convex quadratic constraint lb ≤ xᵀQ₁x - xᵀQ₂x + pᵀy ≤ ub where Q₁, Q₂ are both positive semidefinite matrices.  <a href="group__solver__evaluators.html#gaea88a3c59172c77e8537633348a057a9">More...</a><br /></td></tr>
 <tr class="separator:gaea88a3c59172c77e8537633348a057a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -514,6 +587,92 @@ sdf(q) = β                                                     (3)
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>binding The binding containing the nonlinear constraints (1)-(4). </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>Both <code>q_vars</code> and <code>lambda_vars</code> have been added to <code>prog</code> before calling this function. </dd></dl>
+
+</div>
+</div>
+<a id="ga62744a5e355fa26fa97169acfc946128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62744a5e355fa26fa97169acfc946128">&#9670;&nbsp;</a></span>Make2NormSquaredCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a>&gt; drake::solvers::Make2NormSquaredCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a quadratic cost of the form |Ax-b|²=(Ax-b)ᵀ(Ax-b) </p>
+
+</div>
+</div>
+<a id="ga9d268ea8150fb094f1499a958c50defb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d268ea8150fb094f1499a958c50defb">&#9670;&nbsp;</a></span>MakeFunctionCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a>&gt; drake::solvers::MakeFunctionCost </td>
+          <td>(</td>
+          <td class="paramtype">FF &amp;&amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts an input of type <code>F</code> to a nonlinear cost. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">FF</td><td>The forwarded function type (e.g., <code>const F&amp;,</code>F&amp;&amp;<code>, ...). The class</code>F` should have functions numInputs(), numOutputs(), and eval(x, y). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5f972e77c40a9afab91907620c621e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f972e77c40a9afab91907620c621e11">&#9670;&nbsp;</a></span>MakeQuadraticErrorCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a>&gt; drake::solvers::MakeQuadraticErrorCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x_desired</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a cost term of the form (x-x_desired)'<em>Q</em>(x-x_desired). </p>
 
 </div>
 </div>

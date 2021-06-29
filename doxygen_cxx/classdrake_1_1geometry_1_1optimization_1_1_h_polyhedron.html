@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">HPolyhedron Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div>  </div>
@@ -121,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae45694d3595659922653fd027d15cb6"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6">b</a> () const</td></tr>
 <tr class="memdesc:aae45694d3595659922653fd027d15cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the half-space representation vector b.  <a href="#aae45694d3595659922653fd027d15cb6">More...</a><br /></td></tr>
 <tr class="separator:aae45694d3595659922653fd027d15cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78eed3db39167055a9bb7a3b308e095b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a78eed3db39167055a9bb7a3b308e095b">MaximumVolumeInscribedEllipsoid</a> () const</td></tr>
+<tr class="memdesc:a78eed3db39167055a9bb7a3b308e095b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a semi-definite program to compute the inscribed ellipsoid.  <a href="#a78eed3db39167055a9bb7a3b308e095b">More...</a><br /></td></tr>
+<tr class="separator:a78eed3db39167055a9bb7a3b308e095b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a849b5ec6e368282a2416294dc6f0863a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a849b5ec6e368282a2416294dc6f0863a">HPolyhedron</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;)=default</td></tr>
 <tr class="separator:a849b5ec6e368282a2416294dc6f0863a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +164,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a27b822cc5aaf8f0b2d34b6576c52ec83 inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f19e61b141f9a59b12d686271a57116 inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5f19e61b141f9a59b12d686271a57116">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;convex, void *user_data)</td></tr>
 <tr class="separator:a5f19e61b141f9a59b12d686271a57116 inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a90a3c53754fc20d77419aae25ed1b1c1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1">MakeBox</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:a90a3c53754fc20d77419aae25ed1b1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a polyhedron as an axis-aligned box from the lower and upper corners.  <a href="#a90a3c53754fc20d77419aae25ed1b1c1">More...</a><br /></td></tr>
+<tr class="separator:a90a3c53754fc20d77419aae25ed1b1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad362319489a2c5507a34d9b5c0a6e696"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696">MakeUnitBox</a> (<a class="el" href="classint.html">int</a> dim)</td></tr>
+<tr class="memdesc:ad362319489a2c5507a34d9b5c0a6e696"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L∞-norm unit box in <code>dim</code> dimensions, {x | |x|∞ &lt;= 1 }.  <a href="#ad362319489a2c5507a34d9b5c0a6e696">More...</a><br /></td></tr>
+<tr class="separator:ad362319489a2c5507a34d9b5c0a6e696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -380,6 +393,103 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the half-space representation vector b. </p>
+
+</div>
+</div>
+<a id="a90a3c53754fc20d77419aae25ed1b1c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a3c53754fc20d77419aae25ed1b1c1">&#9670;&nbsp;</a></span>MakeBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> MakeBox </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a polyhedron as an axis-aligned box from the lower and upper corners. </p>
+
+</div>
+</div>
+<a id="ad362319489a2c5507a34d9b5c0a6e696"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad362319489a2c5507a34d9b5c0a6e696">&#9670;&nbsp;</a></span>MakeUnitBox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> MakeUnitBox </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the L∞-norm unit box in <code>dim</code> dimensions, {x | |x|∞ &lt;= 1 }. </p>
+<p>This is an axis-aligned box, centered at the origin, with edge length 2. </p>
+
+</div>
+</div>
+<a id="a78eed3db39167055a9bb7a3b308e095b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78eed3db39167055a9bb7a3b308e095b">&#9670;&nbsp;</a></span>MaximumVolumeInscribedEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a> MaximumVolumeInscribedEllipsoid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Solves a semi-definite program to compute the inscribed ellipsoid. </p>
+<p>From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve </p><pre class="fragment">max_{C,d} log det (C)
+      s.t. |aᵢC|₂ ≤ bᵢ - aᵢd, ∀i
+          C ≽ 0
+</pre><p> where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = { Cx + d | |x|₂ ≤ 1}.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> is bounded. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the solver fails to solve the problem. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

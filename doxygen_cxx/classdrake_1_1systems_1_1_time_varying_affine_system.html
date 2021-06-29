@@ -95,6 +95,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_time_varying
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_time_varying_affine_system-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TimeVaryingAffineSystem&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span><div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a> &raquo; <a class="el" href="group__primitive__systems.html">Primitives</a></div></div>  </div>
@@ -665,7 +666,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a8c7d00b4d45acc45ba938111b5a8735f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a878b6d313b8097b1fee90c1929299229"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a878b6d313b8097b1fee90c1929299229"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#a878b6d313b8097b1fee90c1929299229">ConfigureDefaultAndRandomStateFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html">TimeVaryingAffineSystem</a>&lt; U &gt; &amp;other)</td></tr>
-<tr class="memdesc:a878b6d313b8097b1fee90c1929299229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method. Derived classes should call this from the.  <a href="#a878b6d313b8097b1fee90c1929299229">More...</a><br /></td></tr>
+<tr class="memdesc:a878b6d313b8097b1fee90c1929299229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper method.  <a href="#a878b6d313b8097b1fee90c1929299229">More...</a><br /></td></tr>
 <tr class="separator:a878b6d313b8097b1fee90c1929299229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f5babb3509ba1e9221d70f8703e554"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#a67f5babb3509ba1e9221d70f8703e554">CalcOutputY</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; *output_vector) const</td></tr>
 <tr class="memdesc:a67f5babb3509ba1e9221d70f8703e554"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes </p><p class="formulaDsp">
@@ -1126,6 +1127,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1b3f9382208d13e11984a54afa711577 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
 <tr class="memdesc:a1b3f9382208d13e11984a54afa711577 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id used to tag context data as being created by this system.  <a href="classdrake_1_1systems_1_1_system_base.html#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
 <tr class="separator:a1b3f9382208d13e11984a54afa711577 inherit pro_methods_classdrake_1_1systems_1_1_system_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:aedb3a4bc9859caa7cc548bb6d315892a"><td class="memTemplParams" colspan="2">template&lt;typename , typename &gt; </td></tr>
+<tr class="memitem:aedb3a4bc9859caa7cc548bb6d315892a"><td class="memTemplItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_time_varying_affine_system.html#aedb3a4bc9859caa7cc548bb6d315892a">Make_Function_Pointers</a> ()</td></tr>
+<tr class="separator:aedb3a4bc9859caa7cc548bb6d315892a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -1608,7 +1615,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Helper method. Derived classes should call this from the. </p>
+<p>Helper method. </p>
+<p>Derived classes should call this from the scalar-converting copy constructor. </p>
 
 </div>
 </div>
@@ -2068,6 +2076,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_affine_system.html#a75939c59506633bf76199742eda9736f">AffineSystem&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_affine_system.html#a75939c59506633bf76199742eda9736f">AffineSystem&lt; double &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_trajectory_affine_system.html#aa1eb085945decc376044a1ade7279027">TrajectoryAffineSystem&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="aedb3a4bc9859caa7cc548bb6d315892a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb3a4bc9859caa7cc548bb6d315892a">&#9670;&nbsp;</a></span>Make_Function_Pointers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto Make_Function_Pointers </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

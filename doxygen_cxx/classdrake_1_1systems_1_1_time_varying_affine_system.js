@@ -26,5 +26,6 @@ var classdrake_1_1systems_1_1_time_varying_affine_system =
     [ "SetDefaultState", "classdrake_1_1systems_1_1_time_varying_affine_system.html#ac920e22e905b83dbc0abaaa57d2c0251", null ],
     [ "SetRandomState", "classdrake_1_1systems_1_1_time_varying_affine_system.html#aa6c1de9b14d8feed0e50ac1e49c9a661", null ],
     [ "time_period", "classdrake_1_1systems_1_1_time_varying_affine_system.html#a7763ec8fc770efd6f91faf6cafb3db18", null ],
-    [ "y0", "classdrake_1_1systems_1_1_time_varying_affine_system.html#a9cb7c755e351d00e7922223dbb6f50b3", null ]
+    [ "y0", "classdrake_1_1systems_1_1_time_varying_affine_system.html#a9cb7c755e351d00e7922223dbb6f50b3", null ],
+    [ "Make_Function_Pointers", "classdrake_1_1systems_1_1_time_varying_affine_system.html#aedb3a4bc9859caa7cc548bb6d315892a", null ]
 ];

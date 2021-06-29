@@ -1,5 +1,11 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc":[3,0,0,8,66,28],
+"classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b":[3,0,0,8,66,9],
+"classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233":[3,0,0,8,66,8],
+"classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a":[3,0,0,8,66,11],
+"classdrake_1_1multibody_1_1_spatial_vector.html#ab13f5ae55803f77298c3bb1ca0cc6f36":[3,0,0,8,66,36],
+"classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43":[3,0,0,8,66,25],
 "classdrake_1_1multibody_1_1_spatial_vector.html#abb042fa391ff71b369dd7e50f0c9fbc2":[3,0,0,8,66,18],
 "classdrake_1_1multibody_1_1_spatial_vector.html#abfcc7772c9a75439b094cd2477f45e2f":[3,0,0,8,66,35],
 "classdrake_1_1multibody_1_1_spatial_vector.html#ad0d7127cbe1d6be05f4bd47af2508c89":[3,0,0,8,66,33],
@@ -243,11 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a6abcadacdf03165ccd4517e929b485e5":[3,0,0,8,0,1,0,12],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a744199d465a259b68439db88e664f3f0":[3,0,0,8,0,1,0,20],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8696222319acdad543fd736ce6e71ba0":[3,0,0,8,0,1,0,19],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa40126fd3d5fd6a6a4df7a7257cccef4":[3,0,0,8,0,1,0,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa4225efc34525bb490ba5f5a22885f82":[3,0,0,8,0,1,0,17],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aac0785ee2738a3557e0fa509ced5c90a":[3,0,0,8,0,1,0,11],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[3,0,0,8,0,1,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[3,0,0,8,0,1,0,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[3,0,0,8,0,1,0,13],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acf6a22cc6dde41e4e400173d030d0cc5":[3,0,0,8,0,1,0,4]
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa40126fd3d5fd6a6a4df7a7257cccef4":[3,0,0,8,0,1,0,2]
 };

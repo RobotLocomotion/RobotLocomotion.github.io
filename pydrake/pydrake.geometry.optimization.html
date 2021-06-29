@@ -281,6 +281,47 @@ the world frame.</p>
 <dd><p>Returns the half-space representation vector b.</p>
 </dd></dl>
 
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.HPolyhedron.MakeBox">
+<em class="property">static </em><code class="descname">MakeBox</code><span class="sig-paren">(</span><em>lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a polyhedron as an axis-aligned box from the lower and
+upper corners.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.HPolyhedron.MakeUnitBox">
+<em class="property">static </em><code class="descname">MakeUnitBox</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeUnitBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal"><span class="pre">dim</span></code> dimensions, {x | <a href="#id1"><span class="problematic" id="id2">|</span></a>x|∞ &lt;= 1
+}. This is an axis-aligned box, centered at the origin, with edge
+length 2.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid">
+<code class="descname">MaximumVolumeInscribedEllipsoid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; drake::geometry::optimization::HyperEllipsoid<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
+From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
+s.t. |aᵢC|₂ ≤ bᵢ - aᵢd, ∀i
+C ≽ 0
+</pre></div>
+</div>
+<p>where aᵢ and bᵢ denote the ith row. This defines the ellipsoid E = {
+Cx + d | <a href="#id3"><span class="problematic" id="id4">|</span></a>x|₂ ≤ 1}.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the HPolyhedron is bounded.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the solver fails to solve the problem.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">

@@ -15,21 +15,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "ClpSolver", "classdrake_1_1solvers_1_1_clp_solver.html", "classdrake_1_1solvers_1_1_clp_solver" ]
     ] ],
     [ "common_solver_option.h", "common__solver__option_8h.html", "common__solver__option_8h" ],
-    [ "constraint.h", "constraint_8h.html", [
-      [ "QuadraticConstraint", "classdrake_1_1solvers_1_1_quadratic_constraint.html", "classdrake_1_1solvers_1_1_quadratic_constraint" ],
-      [ "LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html", "classdrake_1_1solvers_1_1_lorentz_cone_constraint" ],
-      [ "RotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint" ],
-      [ "EvaluatorConstraint", "classdrake_1_1solvers_1_1_evaluator_constraint.html", "classdrake_1_1solvers_1_1_evaluator_constraint" ],
-      [ "PolynomialConstraint", "classdrake_1_1solvers_1_1_polynomial_constraint.html", "classdrake_1_1solvers_1_1_polynomial_constraint" ],
-      [ "LinearConstraint", "classdrake_1_1solvers_1_1_linear_constraint.html", "classdrake_1_1solvers_1_1_linear_constraint" ],
-      [ "LinearEqualityConstraint", "classdrake_1_1solvers_1_1_linear_equality_constraint.html", "classdrake_1_1solvers_1_1_linear_equality_constraint" ],
-      [ "BoundingBoxConstraint", "classdrake_1_1solvers_1_1_bounding_box_constraint.html", "classdrake_1_1solvers_1_1_bounding_box_constraint" ],
-      [ "LinearComplementarityConstraint", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html", "classdrake_1_1solvers_1_1_linear_complementarity_constraint" ],
-      [ "PositiveSemidefiniteConstraint", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html", "classdrake_1_1solvers_1_1_positive_semidefinite_constraint" ],
-      [ "LinearMatrixInequalityConstraint", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html", "classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint" ],
-      [ "ExpressionConstraint", "classdrake_1_1solvers_1_1_expression_constraint.html", "classdrake_1_1solvers_1_1_expression_constraint" ],
-      [ "ExponentialConeConstraint", "classdrake_1_1solvers_1_1_exponential_cone_constraint.html", "classdrake_1_1solvers_1_1_exponential_cone_constraint" ]
-    ] ],
+    [ "constraint.h", "constraint_8h.html", null ],
     [ "cost.h", "cost_8h.html", "cost_8h" ],
     [ "create_constraint.h", "create__constraint_8h.html", null ],
     [ "create_cost.h", "create__cost_8h.html", null ],

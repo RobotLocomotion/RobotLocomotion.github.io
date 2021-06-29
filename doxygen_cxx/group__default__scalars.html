@@ -115,13 +115,13 @@ $(document).ready(function(){initNavTree('group__default__scalars.html','');});
 <p>All three commands assume that the template parameter is named <code>T</code>. When possible, prefer to use these commands instead of writing out a <code>@tparam</code> line manually. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Template instantiation macros</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp1f90338643d69846eeed35107adbd078"></a>These macros either declare or define class template instantiations for Drake's supported scalar types (see <a class="el" href="group__default__scalars.html">Default Scalars</a>), either "default
+Class template instantiation macros</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp06828fa52b4ace1e6d8b55247f08e0ea"></a>These macros either declare or define class template instantiations for Drake's supported scalar types (see <a class="el" href="group__default__scalars.html">Default Scalars</a>), either "default
 scalars" or "default nonsymbolic scalars".</p>
 <p>Use the <code>DECLARE</code> macros only in .h files; use the <code>DEFINE</code> macros only in .cc files.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">SomeType</td><td>the template typename to instantiate, <em>including</em> the leading <code>class</code> or <code>struct</code> keyword.</td></tr>
+    <tr><td class="paramname">SomeType</td><td>the template typename to instantiate, <em>including</em> the leading <code>class</code> or <code>struct</code> keyword, but <em>excluding</em> the template argument for the scalar type.</td></tr>
   </table>
   </dd>
 </dl>
@@ -139,6 +139,25 @@ scalars" or "default nonsymbolic scalars".</p>
 <tr class="memitem:ga6333534b3097a37c55fbacf434491e2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e">DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a>(SomeType)</td></tr>
 <tr class="memdesc:ga6333534b3097a37c55fbacf434491e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that template instantiations exist for Drake's default nonsymbolic scalars.  <a href="#ga6333534b3097a37c55fbacf434491e2e">More...</a><br /></td></tr>
 <tr class="separator:ga6333534b3097a37c55fbacf434491e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Function template instantiation macros</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp1f44d3fd30fbe0c8d2d87e80f4a8bd18"></a>These macros define template function instantiations for Drake's supported scalar types (see <a class="el" href="group__default__scalars.html">Default Scalars</a>), either "default scalars" or "default nonsymbolic scalars".</p>
+<p>Use the <code>DEFINE</code> macros only in .cc files.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FunctionPointersTuple</td><td>a parenthesized, comma-separated list of functions to instantiate (provided as function pointers), <em>including</em> the template argument(s) for the scalar type. The template arguments <code>T</code> and <code>U</code> will be provided by the macro; the function will be instantiated for all combinations of <code>T</code> and <code>U</code> over the default scalars.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Example <code>example.h</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">namespace </span>sample {</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keywordtype">double</span> Func1(<span class="keyword">const</span> T&amp;);</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div><div class="line"><span class="keywordtype">double</span> Func2(<span class="keyword">const</span> T&amp;, <span class="keyword">const</span> U&amp;);</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>SomeClass {</div><div class="line">  ...</div><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">  SomeClass cast() <span class="keyword">const</span>;</div><div class="line">  ...</div><div class="line">};</div><div class="line"></div><div class="line">}  <span class="comment">// namespace sample</span></div></div><!-- fragment --><p>Example <code>example.cc</code>: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;example.h&quot;</span></div><div class="line"></div><div class="line"><span class="keyword">namespace </span>sample {</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keywordtype">double</span> Func1(<span class="keyword">const</span> T&amp;) {</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt;</div><div class="line"><span class="keywordtype">double</span> Func2(<span class="keyword">const</span> T&amp;, <span class="keyword">const</span> U&amp;) {</div><div class="line">  ...</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">SomeClass&lt;T&gt;::SomeClass::cast()<span class="keyword"> const </span>{</div><div class="line">  ...</div><div class="line">};</div><div class="line"></div><div class="line"><span class="comment">// N.B. Place the macro invocation inside the functions&#39; namespace.</span></div><div class="line"><a class="code" href="group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6">DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</a>((</div><div class="line">    &amp;Func1&lt;T&gt;,</div><div class="line">    &amp;Func2&lt;T, U&gt;,</div><div class="line">    &amp;SomeClass&lt;T&gt;::template cast&lt;U&gt;</div><div class="line">))</div><div class="line"></div><div class="line">}  <span class="comment">// namespace sample</span></div></div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>In the case of an overloaded function, the <code>&amp;FunctionName&lt;T&gt;</code> syntax is ambiguous. To resolve the ambiguity, you will need a <a href="https://en.cppreference.com/w/cpp/language/static_cast#Notes">static_cast</a>. </dd></dl>
+</td></tr>
+<tr class="memitem:ga3273477e81e9dcb7d96cfb28382798b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6">DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</a>(FunctionPointersTuple)</td></tr>
+<tr class="memdesc:ga3273477e81e9dcb7d96cfb28382798b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines template instantiations for Drake's default scalars.  <a href="#ga3273477e81e9dcb7d96cfb28382798b6">More...</a><br /></td></tr>
+<tr class="separator:ga3273477e81e9dcb7d96cfb28382798b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f6a41d03cbe6efaef098ae88ccbed6e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e">DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</a>(FunctionPointersTuple)</td></tr>
+<tr class="memdesc:ga9f6a41d03cbe6efaef098ae88ccbed6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines template instantiations for Drake's default nonsymbolic scalars.  <a href="#ga9f6a41d03cbe6efaef098ae88ccbed6e">More...</a><br /></td></tr>
+<tr class="separator:ga9f6a41d03cbe6efaef098ae88ccbed6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga6333534b3097a37c55fbacf434491e2e"></a>
@@ -220,6 +239,51 @@ scalars" or "default nonsymbolic scalars".</p>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> SomeType&lt;double&gt;; \</div><div class="line">template SomeType&lt;::drake::AutoDiffXd&gt;; \</div><div class="line">template SomeType&lt;::drake::symbolic::Expression&gt;;</div></div><!-- fragment -->
+<p>Defines template instantiations for Drake's default scalars. </p>
+<p>This should only be used in .cc files, never in .h files. </p>
+
+</div>
+</div>
+<a id="ga9f6a41d03cbe6efaef098ae88ccbed6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f6a41d03cbe6efaef098ae88ccbed6e">&#9670;&nbsp;</a></span>DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FunctionPointersTuple</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt; \</div><div class="line">constexpr <span class="keyword">auto</span> Make_Function_Pointers_Nonsym() { \</div><div class="line">  return std::make_tuple FunctionPointersTuple ; \</div><div class="line">} \</div><div class="line">template&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Us&gt; \</div><div class="line">constexpr <span class="keyword">auto</span> Make_Function_Pointers_Nonsym_Pack2() { \</div><div class="line">  return std::tuple_cat(Make_Function_Pointers_Nonsym&lt;T, Us&gt;()...); \</div><div class="line">} \</div><div class="line">template&lt;<span class="keyword">typename</span>... Ts&gt; \</div><div class="line">constexpr <span class="keyword">auto</span> Make_Function_Pointers_Nonsym_Pack1() { \</div><div class="line">  return std::tuple_cat(Make_Function_Pointers_Nonsym_Pack2&lt;Ts, Ts...&gt;()...); \</div><div class="line">} \</div><div class="line">static constexpr <span class="keyword">auto</span> Function_Templates_Nonsym __attribute__((used)) = \</div><div class="line">    Make_Function_Pointers_Nonsym_Pack1&lt; \</div><div class="line">        double, \</div><div class="line">        <a class="code" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">::drake::AutoDiffXd</a>&gt;();</div><div class="ttc" id="namespacedrake_html_a35725b277b02aeb79f24fd7f724e6dbc"><div class="ttname"><a href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">drake::AutoDiffXd</a></div><div class="ttdeci">Eigen::AutoDiffScalar&lt; Eigen::VectorXd &gt; AutoDiffXd</div><div class="ttdoc">An autodiff variable with a dynamic number of partials.</div><div class="ttdef"><b>Definition:</b> eigen_autodiff_types.h:22</div></div>
+</div><!-- fragment -->
+<p>Defines template instantiations for Drake's default nonsymbolic scalars. </p>
+<p>This should only be used in .cc files, never in .h files. </p>
+
+</div>
+</div>
+<a id="ga3273477e81e9dcb7d96cfb28382798b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3273477e81e9dcb7d96cfb28382798b6">&#9670;&nbsp;</a></span>DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DRAKE_DEFINE_FUNCTION_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FunctionPointersTuple</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span> U&gt; \</div><div class="line">constexpr <span class="keyword">auto</span> Make_Function_Pointers() { \</div><div class="line">  return std::make_tuple FunctionPointersTuple ; \</div><div class="line">} \</div><div class="line">template&lt;<span class="keyword">typename</span> T, <span class="keyword">typename</span>... Us&gt; \</div><div class="line">constexpr <span class="keyword">auto</span> Make_Function_Pointers_Pack2() { \</div><div class="line">  return std::tuple_cat(Make_Function_Pointers&lt;T, Us&gt;()...); \</div><div class="line">} \</div><div class="line">template&lt;<span class="keyword">typename</span>... Ts&gt; \</div><div class="line">constexpr <span class="keyword">auto</span> Make_Function_Pointers_Pack1() { \</div><div class="line">  return std::tuple_cat(Make_Function_Pointers_Pack2&lt;Ts, Ts...&gt;()...); \</div><div class="line">} \</div><div class="line">static constexpr <span class="keyword">auto</span> Function_Femplates __attribute__((used)) = \</div><div class="line">    Make_Function_Pointers_Pack1&lt; \</div><div class="line">        double, \</div><div class="line">        <a class="code" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">::drake::AutoDiffXd</a>, \</div><div class="line">        <a class="code" href="classdrake_1_1symbolic_1_1_expression.html">::drake::symbolic::Expression</a>&gt;();</div><div class="ttc" id="namespacedrake_html_a35725b277b02aeb79f24fd7f724e6dbc"><div class="ttname"><a href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">drake::AutoDiffXd</a></div><div class="ttdeci">Eigen::AutoDiffScalar&lt; Eigen::VectorXd &gt; AutoDiffXd</div><div class="ttdoc">An autodiff variable with a dynamic number of partials.</div><div class="ttdef"><b>Definition:</b> eigen_autodiff_types.h:22</div></div>
+<div class="ttc" id="classdrake_1_1symbolic_1_1_expression_html"><div class="ttname"><a href="classdrake_1_1symbolic_1_1_expression.html">drake::symbolic::Expression</a></div><div class="ttdoc">Represents a symbolic form of an expression.</div><div class="ttdef"><b>Definition:</b> symbolic_expression.h:194</div></div>
+</div><!-- fragment -->
 <p>Defines template instantiations for Drake's default scalars. </p>
 <p>This should only be used in .cc files, never in .h files. </p>
 
