@@ -105,7 +105,16 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_scala
 <div class="textblock"><p>Helper class to convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;, intended for internal use by the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> framework, not directly by users. </u></p>
 <p>For user-facing documentation see <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a>.</p>
 <p>Because it is not templated on a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> subclass, this class can be used by <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> without any direct knowledge of the subtypes being converted. In other words, it enables a runtime flavor of the CRTP.</p>
-<p>Throughout this class, the template type <code>S</code> must be the most-derived concrete <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> subclass. This object may only be used to convert <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> objects of runtime type S<u>, not subclasses of S<u>. </u></u></u></p>
+<p>Throughout this class, the following template naming convention applies:</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">S</td><td>is the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> subclass that this object will convert from and to. </td></tr>
+    <tr><td class="paramname">U</td><td>the source scalar type (to convert from), which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>the resulting scalar type (to convert into), which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Conversions where <code>T</code> and <code>U</code> type are the same are not supported. Template functions such as <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a8baa6c61f01430d61236235b8af457c0" title="Returns true iff this object can convert a System into a System&lt;T&gt;, i.e., whether Convert() will retu...">IsConvertible&lt;T, U&gt;()</a> are still callable, but will always return false, null, etc. </dd></dl>
 </div>
 <p><code>#include &lt;drake/systems/framework/system_scalar_converter.h&gt;</code></p>
 <table class="memberdecls">
@@ -118,17 +127,16 @@ Public Types</h2></td></tr>
 <tr class="separator:aa5deb46f2141a0937f577705ba822e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &gt;(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;)&gt;</td></tr>
-<tr class="memdesc:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::function used to convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;. </u> <a href="#a2370ce4ad203ecc3b866db8c79ad6d34">More...</a><br /></td></tr>
 <tr class="separator:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a3834c7f6d8a065ef95436cfc0b0ebaa5">SystemScalarConverter</a> ()</td></tr>
-<tr class="memdesc:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an object that returns nullptr for all <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a16f9a4430d4f9d2c9dc4228524f17b5b" title="Converts a System into a System&lt;T&gt;.">Convert()</a> requests.  <a href="#a3834c7f6d8a065ef95436cfc0b0ebaa5">More...</a><br /></td></tr>
+<tr class="memdesc:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a converter that supports no conversions.  <a href="#a3834c7f6d8a065ef95436cfc0b0ebaa5">More...</a><br /></td></tr>
 <tr class="separator:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a206f17b407c523e19a1481df7bd85d49"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
 <tr class="memitem:a206f17b407c523e19a1481df7bd85d49"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a206f17b407c523e19a1481df7bd85d49">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt; tag)</td></tr>
-<tr class="memdesc:a206f17b407c523e19a1481df7bd85d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an object that uses S's scalar-type converting copy constructor.  <a href="#a206f17b407c523e19a1481df7bd85d49">More...</a><br /></td></tr>
+<tr class="memdesc:a206f17b407c523e19a1481df7bd85d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a converter that uses S's scalar-converting copy constructor to perform system scalar conversion.  <a href="#a206f17b407c523e19a1481df7bd85d49">More...</a><br /></td></tr>
 <tr class="separator:a206f17b407c523e19a1481df7bd85d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50f1eb9fba3231d646cc1892782429dd"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
 <tr class="memitem:a50f1eb9fba3231d646cc1892782429dd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a50f1eb9fba3231d646cc1892782429dd">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;, <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a> subtype_preservation)</td></tr>
@@ -139,11 +147,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab688111bb39aa17b3c4937fb3dc1327c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:ab688111bb39aa17b3c4937fb3dc1327c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#ab688111bb39aa17b3c4937fb3dc1327c">Add</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a>&lt; T, U &gt; &amp;)</td></tr>
-<tr class="memdesc:ab688111bb39aa17b3c4937fb3dc1327c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers the std::function to be used to convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;. </u> <a href="#ab688111bb39aa17b3c4937fb3dc1327c">More...</a><br /></td></tr>
+<tr class="memdesc:ab688111bb39aa17b3c4937fb3dc1327c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab688111bb39aa17b3c4937fb3dc1327c">More...</a><br /></td></tr>
 <tr class="separator:ab688111bb39aa17b3c4937fb3dc1327c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741ce0f7af95f7085627930436dab249"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S, typename T , typename U &gt; </td></tr>
 <tr class="memitem:a741ce0f7af95f7085627930436dab249"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a741ce0f7af95f7085627930436dab249">AddIfSupported</a> ()</td></tr>
-<tr class="memdesc:a741ce0f7af95f7085627930436dab249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds converter for an S<u> into an S&lt;T&gt;, iff <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> says its supported. </u> <a href="#a741ce0f7af95f7085627930436dab249">More...</a><br /></td></tr>
+<tr class="memdesc:a741ce0f7af95f7085627930436dab249"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a741ce0f7af95f7085627930436dab249">More...</a><br /></td></tr>
 <tr class="separator:a741ce0f7af95f7085627930436dab249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9016c7efc7525c57ed373c3e00b47151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a9016c7efc7525c57ed373c3e00b47151">RemoveUnlessAlsoSupportedBy</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;other)</td></tr>
 <tr class="memdesc:a9016c7efc7525c57ed373c3e00b47151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes from this converter all pairs where <code>other.IsConvertible&lt;T, U&gt;</code> is false.  <a href="#a9016c7efc7525c57ed373c3e00b47151">More...</a><br /></td></tr>
@@ -182,8 +190,6 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>A std::function used to convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;. </u></p>
 
 </div>
 </div>
@@ -287,8 +293,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an object that returns nullptr for all <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a16f9a4430d4f9d2c9dc4228524f17b5b" title="Converts a System into a System&lt;T&gt;.">Convert()</a> requests. </p>
-<p>The single-argument constructor below is the typical way to create a useful instance of this type. </p>
+<p>(Advanced) Creates a converter that supports no conversions. </p>
+<p>The single- argument constructor below is the overload intended for users. </p>
 
 </div>
 </div>
@@ -308,16 +314,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an object that uses S's scalar-type converting copy constructor. </p>
-<p>That constructor takes the form of, e.g.:</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>Foo {</div><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">  <span class="keyword">explicit</span> Foo(<span class="keyword">const</span> Foo&lt;U&gt;&amp; other);</div><div class="line">};</div></div><!-- fragment --><p>This constructor only creates a converter between a limited set of types, specifically the <a class="el" href="group__default__scalars.html">default scalars</a>.</p>
-<p>By default, all non-identity pairs (pairs where T and U differ) drawn from the above list can be used for T and U. Systems may specialize <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> to disable support for some or all of these conversions, or after construction may call <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#ab688111bb39aa17b3c4937fb3dc1327c" title="Registers the std::function to be used to convert a System into a System&lt;T&gt;.">Add&lt;T, U&gt;()</a> on the returned object to enable support for additional custom types.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">S</td><td>is the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> type to convert</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Creates a converter that uses S's scalar-converting copy constructor to perform system scalar conversion. </p>
+<p>That constructor takes the form of:</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>FooSystem final : <span class="keyword">public</span> LeafSystem&lt;T&gt; {</div><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">  <span class="keyword">explicit</span> FooSystem(<span class="keyword">const</span> FooSystem&lt;U&gt;&amp; other);</div><div class="line">};</div></div><!-- fragment --><p>By default, the converter supports conversions to and from all of the <a class="el" href="group__default__scalars.html">default scalars</a>, but systems may specialize the <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> to disable support for some or all of these conversions.</p>
 <p>This an implicit conversion constructor (not marked <code>explicit</code>), in order to make calling code substantially more readable, with relatively little risk of an unwanted accidental conversion happening.</p>
 <p>See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a> for additional overview documentation. </p>
 
@@ -350,7 +349,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Advanced) Creates using S's scalar-type converting copy constructor. </p>
-<p>Behaves exactly like <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a206f17b407c523e19a1481df7bd85d49" title="Creates an object that uses S&#39;s scalar-type converting copy constructor.">SystemScalarConverter(SystemTypeTag&lt;S&gt;)</a>, but with the additional option to turn off guaranteed subtype preservation of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> being converted. In general, subtype preservation is an important invariant during scalar conversion, so be cautious about disabling it. </p>
+<p>Behaves exactly like <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a206f17b407c523e19a1481df7bd85d49" title="Creates a converter that uses S&#39;s scalar-converting copy constructor to perform system scalar convers...">SystemScalarConverter(SystemTypeTag&lt;S&gt;)</a>, but with the additional option to turn off guaranteed subtype preservation of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> being converted. In general, subtype preservation is an important invariant during scalar conversion, so be cautious about disabling it. </p>
 
 </div>
 </div>
@@ -371,8 +370,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Registers the std::function to be used to convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;. </u></p>
-<p>A pair of types can be registered (added) at most once. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>"Only scalar-converting copy constructors are supported." <br />
+ This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
 </div>
@@ -391,8 +391,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Adds converter for an S<u> into an S&lt;T&gt;, iff <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> says its supported. </u></p>
-<p>The converter uses S's scalar-type converting copy constructor. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>"User-defined scalar types cannot be added." <br />
+ This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
 </div>
@@ -413,14 +414,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Converts a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;. </u></p>
-<p>This is the API that <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> uses to provide a default implementation of DoToAutoDiffXd, etc.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">U</td><td>the donor scalar type (to convert from) </td></tr>
-    <tr><td class="paramname">T</td><td>the resulting scalar type (to convert into) </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>This is the API that <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> uses to provide a default implementation of DoToAutoDiffXd, etc. </p>
 
 </div>
 </div>
@@ -460,13 +454,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true iff this object can convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;, i.e., whether <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a16f9a4430d4f9d2c9dc4228524f17b5b" title="Converts a System into a System&lt;T&gt;.">Convert()</a> will return non-null. </u></p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">U</td><td>the donor scalar type (to convert from) </td></tr>
-    <tr><td class="paramname">T</td><td>the resulting scalar type (to convert into) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
