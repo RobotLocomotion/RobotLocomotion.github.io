@@ -3776,7 +3776,14 @@ options.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">initial_guess</span></code>:</dt>
 <dd>The initial guess for the decision variables.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">solver_options</span></code>:</dt>
-<dd>The options in addition to those stored in <code class="docutils literal"><span class="pre">prog</span></code>.</dd>
+<dd>The options in addition to those stored in <code class="docutils literal"><span class="pre">prog</span></code>. For each
+option entry (like print out), there are 4 ways to set that
+option, and the priority given to the solver options is as follows
+(from lowest / least, to highest / most): 1. common option set on
+the MathematicalProgram itself 2. common option passed as an
+argument to Solve 3. solver-specific option set on the
+MathematicalProgram itself 4. solver-specific option passed as an
+argument to Solve</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

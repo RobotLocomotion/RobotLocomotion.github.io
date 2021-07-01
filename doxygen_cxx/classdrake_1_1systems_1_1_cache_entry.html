@@ -117,18 +117,21 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_cache_entry.
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a451b30ae2de34d5852363135f73861e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a451b30ae2de34d5852363135f73861e1">AllocCallback</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;()&gt;</td></tr>
-<tr class="memdesc:a451b30ae2de34d5852363135f73861e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for allocating an object that can hold a value of a particular cache entry.  <a href="#a451b30ae2de34d5852363135f73861e1">More...</a><br /></td></tr>
-<tr class="separator:a451b30ae2de34d5852363135f73861e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3947b9d8e95098739aaaea55af1d1ead"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt;</td></tr>
-<tr class="memdesc:a3947b9d8e95098739aaaea55af1d1ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for calculating a value of a particular cache entry, given a place to put the value.  <a href="#a3947b9d8e95098739aaaea55af1d1ead">More...</a><br /></td></tr>
-<tr class="separator:a3947b9d8e95098739aaaea55af1d1ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5ccbce07472be60249987b19f02ee3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#aec5ccbce07472be60249987b19f02ee3">AllocCallback</a> = <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">ValueProducer::AllocateCallback</a></td></tr>
+<tr class="memdesc:aec5ccbce07472be60249987b19f02ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for allocating an object that can hold a value of a particular cache entry.  <a href="#aec5ccbce07472be60249987b19f02ee3">More...</a><br /></td></tr>
+<tr class="separator:aec5ccbce07472be60249987b19f02ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94bf79e57c65c23b01139c804d9b89e5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a94bf79e57c65c23b01139c804d9b89e5">CalcCallback</a> = <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">ValueProducer::CalcCallback</a></td></tr>
+<tr class="memdesc:a94bf79e57c65c23b01139c804d9b89e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for calculating a value of a particular cache entry, given a place to put the value.  <a href="#a94bf79e57c65c23b01139c804d9b89e5">More...</a><br /></td></tr>
+<tr class="separator:a94bf79e57c65c23b01139c804d9b89e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a97b38327abeca06ae8c12b6ff177b085"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a97b38327abeca06ae8c12b6ff177b085">CacheEntry</a> (const internal::SystemMessageInterface *owning_system, <a class="el" href="namespacedrake_1_1systems.html#a06ac9ad764b14ccff79b6feb393be498">CacheIndex</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, std::string <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a69c497e09fe90969c3f9d46692eb668f">description</a>, <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a451b30ae2de34d5852363135f73861e1">AllocCallback</a> alloc_function, <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc)</td></tr>
-<tr class="memdesc:a97b38327abeca06ae8c12b6ff177b085"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructs a cache entry within a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> and specifies the resources it needs.  <a href="#a97b38327abeca06ae8c12b6ff177b085">More...</a><br /></td></tr>
-<tr class="separator:a97b38327abeca06ae8c12b6ff177b085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4ad3e2391c9fb99f24523aa9968b73a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#ad4ad3e2391c9fb99f24523aa9968b73a">CacheEntry</a> (const internal::SystemMessageInterface *owning_system, <a class="el" href="namespacedrake_1_1systems.html#a06ac9ad764b14ccff79b6feb393be498">CacheIndex</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, std::string <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a69c497e09fe90969c3f9d46692eb668f">description</a>, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc)</td></tr>
+<tr class="memdesc:ad4ad3e2391c9fb99f24523aa9968b73a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructs a cache entry within a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> and specifies the resources it needs.  <a href="#ad4ad3e2391c9fb99f24523aa9968b73a">More...</a><br /></td></tr>
+<tr class="separator:ad4ad3e2391c9fb99f24523aa9968b73a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e7d97cb88f009a4c6e8c22728daf0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#ae1e7d97cb88f009a4c6e8c22728daf0c">CacheEntry</a> (const internal::SystemMessageInterface *owning_system, <a class="el" href="namespacedrake_1_1systems.html#a06ac9ad764b14ccff79b6feb393be498">CacheIndex</a> index, <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a65af7fcc4d673554e5fa127b1cf1382b">ticket</a>, std::string <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a69c497e09fe90969c3f9d46692eb668f">description</a>, std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;()&gt; alloc_function, std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt; calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc)</td></tr>
+<tr class="memdesc:ae1e7d97cb88f009a4c6e8c22728daf0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ae1e7d97cb88f009a4c6e8c22728daf0c">More...</a><br /></td></tr>
+<tr class="separator:ae1e7d97cb88f009a4c6e8c22728daf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada0878eaab2f34c50f8527852ed119d1"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#ada0878eaab2f34c50f8527852ed119d1">prerequisites</a> () const</td></tr>
 <tr class="memdesc:ada0878eaab2f34c50f8527852ed119d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the set of prerequisites needed by this cache entry's <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a9a6411f5a003b17d0e355bf02d89def7" title="Unconditionally computes the value this cache entry should have given a particular context,...">Calc()</a> function.  <a href="#ada0878eaab2f34c50f8527852ed119d1">More...</a><br /></td></tr>
 <tr class="separator:ada0878eaab2f34c50f8527852ed119d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,14 +205,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac869d60ec9e3222d748c44e929d8612e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a451b30ae2de34d5852363135f73861e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a451b30ae2de34d5852363135f73861e1">&#9670;&nbsp;</a></span>AllocCallback</h2>
+<a id="aec5ccbce07472be60249987b19f02ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5ccbce07472be60249987b19f02ee3">&#9670;&nbsp;</a></span>AllocCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a451b30ae2de34d5852363135f73861e1">AllocCallback</a> =  std::function&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&gt;()&gt;</td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#aec5ccbce07472be60249987b19f02ee3">AllocCallback</a> =  <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">ValueProducer::AllocateCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -219,14 +222,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3947b9d8e95098739aaaea55af1d1ead"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3947b9d8e95098739aaaea55af1d1ead">&#9670;&nbsp;</a></span>CalcCallback</h2>
+<a id="a94bf79e57c65c23b01139c804d9b89e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94bf79e57c65c23b01139c804d9b89e5">&#9670;&nbsp;</a></span>CalcCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> =  std::function&lt;void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a>&amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>*)&gt;</td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a94bf79e57c65c23b01139c804d9b89e5">CalcCallback</a> =  <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">ValueProducer::CalcCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -237,7 +240,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2e0fbae42a1194fe93c90cc5c6d73b89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e0fbae42a1194fe93c90cc5c6d73b89">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0fbae42a1194fe93c90cc5c6d73b89">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +266,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a0f6bbca5891a252d0ddbe3a89b5dad02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f6bbca5891a252d0ddbe3a89b5dad02">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6bbca5891a252d0ddbe3a89b5dad02">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,8 +291,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a97b38327abeca06ae8c12b6ff177b085"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97b38327abeca06ae8c12b6ff177b085">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[3/3]</span></h2>
+<a id="ad4ad3e2391c9fb99f24523aa9968b73a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ad3e2391c9fb99f24523aa9968b73a">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,14 +324,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a451b30ae2de34d5852363135f73861e1">AllocCallback</a>&#160;</td>
-          <td class="paramname"><em>alloc_function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a>&#160;</td>
-          <td class="paramname"><em>calc_function</em>, </td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a>&#160;</td>
+          <td class="paramname"><em>value_producer</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -346,7 +343,7 @@ Public Member Functions</h2></td></tr>
 
 <p>(Advanced) Constructs a cache entry within a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> and specifies the resources it needs. </p>
 <p>This method is intended only for use by the framework which provides much nicer APIs for end users. See <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_documentation">DeclareCacheEntry</a> for the user-facing API documentation.</p>
-<p>The supplied allocator must return a suitable <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> in which to hold the result. The supplied calculator function must write to an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> of the same underlying concrete type as is returned by the allocator. The allocator function is not invoked here during construction of the cache entry. Instead allocation is deferred until the allocator can be provided with a complete <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, which cannot occur until the full <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> containing this subsystem has been completed. That way the initial type, size, or value can be Context-dependent. The supplied prerequisite tickets are interpreted as belonging to the same subsystem that owns this CacheEntry.</p>
+<p>The <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a> embeds both an allocator and calculator function. The supplied allocator must return a suitable <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> in which to hold the result. The supplied calculator function must write to an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> of the same underlying concrete type as is returned by the allocator. The allocator function is not invoked here during construction of the cache entry. Instead allocation is deferred until the allocator can be provided with a complete <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, which cannot occur until the full <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> containing this subsystem has been completed. That way the initial type, size, or value can be Context-dependent. The supplied prerequisite tickets are interpreted as belonging to the same subsystem that owns this CacheEntry.</p>
 <p>The list of prerequisites cannot be empty &ndash; a cache entry that really has no prerequisites must say so explicitly by providing a list containing only <code>nothing_ticket()</code> as a prerequisite. The subsystem pointer must not be null, and the cache index and ticket must be valid. The description is an arbitrary string not interpreted in any way by Drake.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
@@ -354,7 +351,69 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a3c667dbd4793b66db1e339d623b0c537" title="Declares a new CacheEntry in this System using the least-restrictive definitions for the associated f...">drake::systems::SystemBase::DeclareCacheEntry()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">drake::systems::SystemBase::DeclareCacheEntry()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ae1e7d97cb88f009a4c6e8c22728daf0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e7d97cb88f009a4c6e8c22728daf0c">&#9670;&nbsp;</a></span>CacheEntry() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> </td>
+          <td>(</td>
+          <td class="paramtype">const internal::SystemMessageInterface *&#160;</td>
+          <td class="paramname"><em>owning_system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a06ac9ad764b14ccff79b6feb393be498">CacheIndex</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td>
+          <td class="paramname"><em>ticket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;()&gt;&#160;</td>
+          <td class="paramname"><em>alloc_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt;&#160;</td>
+          <td class="paramname"><em>calc_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt;&#160;</td>
+          <td class="paramname"><em>prerequisites_of_calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>"Use the ValueProducer overload instead." <br />
+ This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
 </div>

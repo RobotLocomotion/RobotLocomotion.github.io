@@ -1,6 +1,7 @@
 var dir_2186f45272e5c29e3ac18ec762ab7501 =
 [
     [ "test_utilities", "dir_d3895d447a0b4ed0132fd543feb284e9.html", "dir_d3895d447a0b4ed0132fd543feb284e9" ],
+    [ "abstract_value_cloner.h", "abstract__value__cloner_8h.html", null ],
     [ "abstract_values.h", "abstract__values_8h.html", [
       [ "AbstractValues", "classdrake_1_1systems_1_1_abstract_values.html", "classdrake_1_1systems_1_1_abstract_values" ]
     ] ],
@@ -148,6 +149,9 @@ var dir_2186f45272e5c29e3ac18ec762ab7501 =
       [ "SystemVisitor", "classdrake_1_1systems_1_1_system_visitor.html", "classdrake_1_1systems_1_1_system_visitor" ]
     ] ],
     [ "value_checker.h", "value__checker_8h.html", null ],
+    [ "value_producer.h", "value__producer_8h.html", [
+      [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html", "classdrake_1_1systems_1_1_value_producer" ]
+    ] ],
     [ "value_to_abstract_value.h", "value__to__abstract__value_8h.html", null ],
     [ "vector_base.h", "vector__base_8h.html", "vector__base_8h" ],
     [ "vector_system.h", "vector__system_8h.html", [

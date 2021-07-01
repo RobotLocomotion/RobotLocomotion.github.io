@@ -4,9 +4,10 @@ var group__geometry__optimization =
       [ "~ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa19f9770fdca8fc14ee1dec1cec39710", null ],
       [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f", null ],
       [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8070665ccaa5579890f30fa70c1d8137", null ],
-      [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9101996a1470abfbf0d1b44a69baa4b8", null ],
+      [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae6b2b9aaa889daabb279bbdb960f8f87", null ],
       [ "AddPointInSetConstraint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a16859f4c6e90e06faad9ffbd4db7e59f", null ],
       [ "ambient_dimension", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e", null ],
+      [ "Clone", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9", null ],
       [ "DoAddPointInSetConstraint", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a42a7661ec6883b47e2c9c7a8c65294ed", null ],
       [ "DoPointInSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5", null ],
       [ "DoToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2da746fed405258f0af4dc5c385f6e2a", null ],
@@ -14,7 +15,8 @@ var group__geometry__optimization =
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aaf56e31cd3546020503a8d7b3b359703", null ],
       [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
       [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87", null ],
-      [ "ambient_dimension_", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a", null ]
+      [ "ambient_dimension_", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a", null ],
+      [ "cloner_", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0382c0146a79fe4657004654da0489cc", null ]
     ] ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", [
       [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a849b5ec6e368282a2416294dc6f0863a", null ],

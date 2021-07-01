@@ -4,6 +4,7 @@ var namespacedrake_1_1geometry =
     [ "render", "namespacedrake_1_1geometry_1_1render.html", "namespacedrake_1_1geometry_1_1render" ],
     [ "Box", "classdrake_1_1geometry_1_1_box.html", "classdrake_1_1geometry_1_1_box" ],
     [ "Capsule", "classdrake_1_1geometry_1_1_capsule.html", "classdrake_1_1geometry_1_1_capsule" ],
+    [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", "classdrake_1_1geometry_1_1_collision_filter_declaration" ],
     [ "ContactSurface", "classdrake_1_1geometry_1_1_contact_surface.html", "classdrake_1_1geometry_1_1_contact_surface" ],
     [ "Convex", "classdrake_1_1geometry_1_1_convex.html", "classdrake_1_1geometry_1_1_convex" ],
     [ "Cylinder", "classdrake_1_1geometry_1_1_cylinder.html", "classdrake_1_1geometry_1_1_cylinder" ],

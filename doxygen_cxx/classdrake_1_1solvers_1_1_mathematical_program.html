@@ -643,6 +643,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0eb46a0ff11d6f6d22d69d9c16bfce94"><td class="memTemplItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0eb46a0ff11d6f6d22d69d9c16bfce94">EvalBindingAtInitialGuess</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; C &gt; &amp;binding) const</td></tr>
 <tr class="memdesc:a0eb46a0ff11d6f6d22d69d9c16bfce94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the evaluator in <code>binding</code> at the initial guess.  <a href="#a0eb46a0ff11d6f6d22d69d9c16bfce94">More...</a><br /></td></tr>
 <tr class="separator:a0eb46a0ff11d6f6d22d69d9c16bfce94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92eb16be90ba1765547a715ec244fe00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a92eb16be90ba1765547a715ec244fe00">CheckSatisfied</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &amp;binding, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;prog_var_vals, double tol=1e-6) const</td></tr>
+<tr class="memdesc:a92eb16be90ba1765547a715ec244fe00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates CheckSatisfied for the constraint in <code>binding</code> using the value of ALL of the decision variables in this program.  <a href="#a92eb16be90ba1765547a715ec244fe00">More...</a><br /></td></tr>
+<tr class="separator:a92eb16be90ba1765547a715ec244fe00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c2467d1ef4671955b66dd8ddfac39e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a3c2467d1ef4671955b66dd8ddfac39e4">CheckSatisfied</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt;&gt; &amp;bindings, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;prog_var_vals, double tol=1e-6) const</td></tr>
+<tr class="memdesc:a3c2467d1ef4671955b66dd8ddfac39e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates CheckSatisfied for the all of the constraints in <code>binding</code> using the value of ALL of the decision variables in this program.  <a href="#a3c2467d1ef4671955b66dd8ddfac39e4">More...</a><br /></td></tr>
+<tr class="separator:a3c2467d1ef4671955b66dd8ddfac39e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e98056457ab5ff0855a167b2a057dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a40e98056457ab5ff0855a167b2a057dc">CheckSatisfiedAtInitialGuess</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &amp;binding, double tol=1e-6) const</td></tr>
+<tr class="memdesc:a40e98056457ab5ff0855a167b2a057dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates CheckSatisfied for the constraint in <code>binding</code> at the initial guess.  <a href="#a40e98056457ab5ff0855a167b2a057dc">More...</a><br /></td></tr>
+<tr class="separator:a40e98056457ab5ff0855a167b2a057dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe6687c1f407124c9bd88777ed71144"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#acbe6687c1f407124c9bd88777ed71144">CheckSatisfiedAtInitialGuess</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt;&gt; &amp;bindings, double tol=1e-6) const</td></tr>
+<tr class="memdesc:acbe6687c1f407124c9bd88777ed71144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates CheckSatisfied for the all of the constraints in <code>bindings</code> at the initial guess.  <a href="#acbe6687c1f407124c9bd88777ed71144">More...</a><br /></td></tr>
+<tr class="separator:acbe6687c1f407124c9bd88777ed71144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24b7242d08574fad6a8b10cfc8e54bca"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a24b7242d08574fad6a8b10cfc8e54bca">decision_variables</a> () const</td></tr>
 <tr class="memdesc:a24b7242d08574fad6a8b10cfc8e54bca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for all decision variables in the program.  <a href="#a24b7242d08574fad6a8b10cfc8e54bca">More...</a><br /></td></tr>
 <tr class="separator:a24b7242d08574fad6a8b10cfc8e54bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4638,6 +4650,152 @@ x+y &gt;= 0
 
 </div>
 </div>
+<a id="a92eb16be90ba1765547a715ec244fe00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92eb16be90ba1765547a715ec244fe00">&#9670;&nbsp;</a></span>CheckSatisfied() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckSatisfied </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prog_var_vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates CheckSatisfied for the constraint in <code>binding</code> using the value of ALL of the decision variables in this program. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3c2467d1ef4671955b66dd8ddfac39e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c2467d1ef4671955b66dd8ddfac39e4">&#9670;&nbsp;</a></span>CheckSatisfied() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckSatisfied </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>bindings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>prog_var_vals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates CheckSatisfied for the all of the constraints in <code>binding</code> using the value of ALL of the decision variables in this program. </p>
+<dl class="section return"><dt>Returns</dt><dd>true iff all of the constraints are satisfied. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40e98056457ab5ff0855a167b2a057dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e98056457ab5ff0855a167b2a057dc">&#9670;&nbsp;</a></span>CheckSatisfiedAtInitialGuess() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckSatisfiedAtInitialGuess </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binding</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates CheckSatisfied for the constraint in <code>binding</code> at the initial guess. </p>
+
+</div>
+</div>
+<a id="acbe6687c1f407124c9bd88777ed71144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe6687c1f407124c9bd88777ed71144">&#9670;&nbsp;</a></span>CheckSatisfiedAtInitialGuess() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CheckSatisfiedAtInitialGuess </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>bindings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em> = <code>1e-6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates CheckSatisfied for the all of the constraints in <code>bindings</code> at the initial guess. </p>
+<dl class="section return"><dt>Returns</dt><dd>true iff all of the constraints are satisfied. </dd></dl>
+
+</div>
+</div>
 <a id="aa73c34779cac8f3d622aa353c8212d38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa73c34779cac8f3d622aa353c8212d38">&#9670;&nbsp;</a></span>Clone()</h2>
 
@@ -6569,8 +6727,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6581,7 +6739,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6595,8 +6753,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6607,7 +6765,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

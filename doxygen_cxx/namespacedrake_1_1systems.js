@@ -124,6 +124,7 @@ var namespacedrake_1_1systems =
     [ "TrajectorySource", "classdrake_1_1systems_1_1_trajectory_source.html", "classdrake_1_1systems_1_1_trajectory_source" ],
     [ "UnrestrictedUpdateEvent", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],
     [ "UseDefaultName", "structdrake_1_1systems_1_1_use_default_name.html", null ],
+    [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html", "classdrake_1_1systems_1_1_value_producer" ],
     [ "VectorBase", "classdrake_1_1systems_1_1_vector_base.html", "classdrake_1_1systems_1_1_vector_base" ],
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html", "classdrake_1_1systems_1_1_vector_system" ],
     [ "VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator" ],

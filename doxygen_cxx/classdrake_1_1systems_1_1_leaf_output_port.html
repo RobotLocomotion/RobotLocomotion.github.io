@@ -118,9 +118,9 @@ class drake::systems::LeafOutputPort&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a451b30ae2de34d5852363135f73861e1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html#a451b30ae2de34d5852363135f73861e1">AllocCallback</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;()&gt;</td></tr>
-<tr class="memdesc:a451b30ae2de34d5852363135f73861e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for allocating an object that can hold a value of a particular output port.  <a href="#a451b30ae2de34d5852363135f73861e1">More...</a><br /></td></tr>
-<tr class="separator:a451b30ae2de34d5852363135f73861e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec5ccbce07472be60249987b19f02ee3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html#aec5ccbce07472be60249987b19f02ee3">AllocCallback</a> = <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">ValueProducer::AllocateCallback</a></td></tr>
+<tr class="memdesc:aec5ccbce07472be60249987b19f02ee3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for allocating an object that can hold a value of a particular output port.  <a href="#aec5ccbce07472be60249987b19f02ee3">More...</a><br /></td></tr>
+<tr class="separator:aec5ccbce07472be60249987b19f02ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d5f163d1b760a1c54a9880762d26ece"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html#a1d5f163d1b760a1c54a9880762d26ece">CalcCallback</a> = std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt;</td></tr>
 <tr class="memdesc:a1d5f163d1b760a1c54a9880762d26ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of a function suitable for calculating a value of a particular output port, given a place to put the value.  <a href="#a1d5f163d1b760a1c54a9880762d26ece">More...</a><br /></td></tr>
 <tr class="separator:a1d5f163d1b760a1c54a9880762d26ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,14 +301,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a48ccdb92a406dbc24791fef6352883b1 inherit pro_static_methods_classdrake_1_1systems_1_1_output_port"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a451b30ae2de34d5852363135f73861e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a451b30ae2de34d5852363135f73861e1">&#9670;&nbsp;</a></span>AllocCallback</h2>
+<a id="aec5ccbce07472be60249987b19f02ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec5ccbce07472be60249987b19f02ee3">&#9670;&nbsp;</a></span>AllocCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html#a451b30ae2de34d5852363135f73861e1">AllocCallback</a> =  std::function&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a>&gt;()&gt;</td>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_leaf_output_port.html#aec5ccbce07472be60249987b19f02ee3">AllocCallback</a> =  <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">ValueProducer::AllocateCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

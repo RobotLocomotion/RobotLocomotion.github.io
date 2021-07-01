@@ -57,6 +57,7 @@ var hierarchy =
     [ "ClippingRange", "classdrake_1_1geometry_1_1render_1_1_clipping_range.html", null ],
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
+    [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", null ],
     [ "Color< T >", "structdrake_1_1systems_1_1sensors_1_1_color.html", null ],
     [ "ColorPalette< IdType >", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html", null ],
     [ "ColorRenderCamera", "classdrake_1_1geometry_1_1render_1_1_color_render_camera.html", null ],
@@ -440,8 +441,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
+    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -1030,6 +1031,7 @@ var hierarchy =
     [ "UseDefaultName", "structdrake_1_1systems_1_1_use_default_name.html", null ],
     [ "ValueConverter< T, U >", "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html", null ],
     [ "ValueConverter< T, T >", "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html", null ],
+    [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html", null ],
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html", null ],
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html", null ],
     [ "VectorBase< T >", "classdrake_1_1systems_1_1_vector_base.html", [

@@ -110,6 +110,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa19f9770fdca8fc14ee1dec1cec39710"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa19f9770fdca8fc14ee1dec1cec39710">~ConvexSet</a> ()</td></tr>
 <tr class="separator:aa19f9770fdca8fc14ee1dec1cec39710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6982e731d7838abcf4dfd0f4821210f9"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9">Clone</a> () const</td></tr>
+<tr class="memdesc:a6982e731d7838abcf4dfd0f4821210f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a unique deep copy of this set.  <a href="#a6982e731d7838abcf4dfd0f4821210f9">More...</a><br /></td></tr>
+<tr class="separator:a6982e731d7838abcf4dfd0f4821210f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79ab6fe34900a8391301b23abd29e10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a> () const</td></tr>
 <tr class="memdesc:a79ab6fe34900a8391301b23abd29e10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dimension of the vector space in which the elements of this set are evaluated.  <a href="#a79ab6fe34900a8391301b23abd29e10e">More...</a><br /></td></tr>
 <tr class="separator:a79ab6fe34900a8391301b23abd29e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,8 +147,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a9101996a1470abfbf0d1b44a69baa4b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9101996a1470abfbf0d1b44a69baa4b8">ConvexSet</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>)</td></tr>
-<tr class="separator:a9101996a1470abfbf0d1b44a69baa4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b2b9aaa889daabb279bbdb960f8f87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae6b2b9aaa889daabb279bbdb960f8f87">ConvexSet</a> (std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;(const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)&gt; cloner, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>)</td></tr>
+<tr class="memdesc:ae6b2b9aaa889daabb279bbdb960f8f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by derived classes to construct a ConvexSet.  <a href="#ae6b2b9aaa889daabb279bbdb960f8f87">More...</a><br /></td></tr>
+<tr class="separator:ae6b2b9aaa889daabb279bbdb960f8f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, double tol) const =0</td></tr>
 <tr class="separator:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a7661ec6883b47e2c9c7a8c65294ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a42a7661ec6883b47e2c9c7a8c65294ed">DoAddPointInSetConstraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
@@ -178,6 +182,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a0382c0146a79fe4657004654da0489cc"><td class="memItemLeft" align="right" valign="top">std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0382c0146a79fe4657004654da0489cc">cloner_</a></td></tr>
+<tr class="separator:a0382c0146a79fe4657004654da0489cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a14fb3bdc8b47e2276d458b61b0633a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a">ambient_dimension_</a> {0}</td></tr>
 <tr class="separator:a4a14fb3bdc8b47e2276d458b61b0633a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -259,8 +265,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9101996a1470abfbf0d1b44a69baa4b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9101996a1470abfbf0d1b44a69baa4b8">&#9670;&nbsp;</a></span>ConvexSet() <span class="overload">[3/3]</span></h2>
+<a id="ae6b2b9aaa889daabb279bbdb960f8f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b2b9aaa889daabb279bbdb960f8f87">&#9670;&nbsp;</a></span>ConvexSet() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,18 +277,36 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>ambient_dimension</em></td><td>)</td>
+          <td class="paramtype">std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;(const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>cloner</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>ambient_dimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
+<p>For use by derived classes to construct a ConvexSet. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cloner</td><td>Function pointer to implement <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">Clone()</a>, typically of the form <code>&amp;ConvexSetCloner&lt;Derived&gt;</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Here is a typical example: </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyConvexSet final : <span class="keyword">public</span> <a class="code" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a> {</div><div class="line"> <span class="keyword">public</span>:</div><div class="line">  MyConvexSet() : <a class="code" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet</a>(&amp;<a class="code" href="namespacedrake_1_1geometry_1_1optimization.html#a648b8ba350611eefa73db9327240049b">ConvexSetCloner</a>&lt;MyConvexSet&gt;, 3) {}</div><div class="line">  ...</div><div class="line">};</div></div><!-- fragment --> 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -333,6 +357,25 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the dimension of the vector space in which the elements of this set are evaluated. </p>
 <p>Contrast this with the <code>affine dimension</code>: the dimension of the smallest affine subset of the ambient space that contains our set. For example, if we define a set using <code>A*x = b</code>, where <code>A</code> has linearly independent rows, then the ambient dimension is the dimension of <code>x</code>, but the affine dimension of the set is <code><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a> - rank(A)</code>. </p>
+
+</div>
+</div>
+<a id="a6982e731d7838abcf4dfd0f4821210f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6982e731d7838abcf4dfd0f4821210f9">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a unique deep copy of this set. </p>
 
 </div>
 </div>
@@ -552,6 +595,28 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classint.html">int</a> ambient_dimension_ {0}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0382c0146a79fe4657004654da0489cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0382c0146a79fe4657004654da0489cc">&#9670;&nbsp;</a></span>cloner_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::function&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&gt;const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp;)&gt; cloner_</td>
         </tr>
       </table>
   </td>

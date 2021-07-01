@@ -3,6 +3,7 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "aabb.h", "aabb_8h.html", null ],
     [ "boxes_overlap.h", "boxes__overlap_8h.html", null ],
     [ "bvh.h", "bvh_8h.html", null ],
+    [ "collision_filter.h", "collision__filter_8h.html", null ],
     [ "collision_filter_legacy.h", "collision__filter__legacy_8h.html", null ],
     [ "collisions_exist_callback.h", "collisions__exist__callback_8h.html", null ],
     [ "contact_surface_doxygen.h", "contact__surface__doxygen_8h.html", null ],

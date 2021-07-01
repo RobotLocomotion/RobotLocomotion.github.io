@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1optimiza
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::optimization Namespace Reference</div>  </div>
 </div><!--header-->
@@ -110,7 +111,36 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements an ellipsoidal convex set represented by the quadratic form <code>{x | (x-center)ᵀAᵀA(x-center) ≤ 1}</code>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a648b8ba350611eefa73db9327240049b">ConvexSetCloner</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other)</td></tr>
+<tr class="memdesc:a648b8ba350611eefa73db9327240049b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Implementation helper for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">ConvexSet::Clone</a>.  <a href="#a648b8ba350611eefa73db9327240049b">More...</a><br /></td></tr>
+<tr class="separator:a648b8ba350611eefa73db9327240049b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a648b8ba350611eefa73db9327240049b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a648b8ba350611eefa73db9327240049b">&#9670;&nbsp;</a></span>ConvexSetCloner()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&gt; drake::geometry::optimization::ConvexSetCloner </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Implementation helper for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">ConvexSet::Clone</a>. </p>
+<p>Refer to the <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aee74f49fab7ccaabd8661e516c7a8d9f">ConvexSet::ConvexSet()</a> constructor documentation for an example. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.15 -->
