@@ -514,11 +514,10 @@ play this role. But this class enforces that it is ONLY a bounding box
 constraint, and not something more general. Some solvers use this
 information to handle bounding box constraints differently than
 general constraints, so use of this form is encouraged.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.BoundingBoxConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.BoundingBoxConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.BoundingBoxConstraint, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.BoundingBoxConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -740,10 +739,27 @@ is possible that the nonlinear solver can accidentally set z₁ = 0,
 where the constraint is not well defined. Instead, the user should
 consider to solve the program through conic solvers that can exploit
 exponential cone, such as Mosek and SCS.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.ExponentialConeConstraint, A: numpy.ndarray[numpy.float64[m, n]], b: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for exponential cone. Constrains A * x + b to be in the
+exponential cone.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>A has 3 rows.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.ExponentialConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for matrix A.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.b">
+<code class="descname">b</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.ExponentialConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ExponentialConeConstraint.b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for vector b.</p>
 </dd></dl>
 
 </dd></dl>
@@ -897,10 +913,18 @@ constraint. The updated constraint is</p>
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">LinearEqualityConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearEqualityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.LinearConstraint" title="pydrake.solvers.mathematicalprogram.LinearConstraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.LinearConstraint</span></code></a></p>
 <p>Implements a constraint of the form <span class="math">\(Ax = b\)</span></p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearEqualityConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearEqualityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearEqualityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.solvers.mathematicalprogram.LinearEqualityConstraint, Aeq: numpy.ndarray[numpy.float64[m, n]], beq: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs the linear equality constraint Aeq * x = beq</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.solvers.mathematicalprogram.LinearEqualityConstraint, a: numpy.ndarray[numpy.float64[1, n]], beq: float) -&gt; None</li>
+</ol>
+<p>Constructs the linear equality constraint a.dot(x) = beq</p>
 </dd></dl>
 
 <dl class="method">
@@ -919,10 +943,20 @@ constraint. The updated constraint is</p>
 \[F_0 + x_1  F_1 + ... + x_n  F_n \text{ is p.s.d}\]</div>
 <p>where p.s.d stands for positive semidefinite. <span class="math">\(F_0, F_1, ...,
 F_n\)</span> are all given symmetric matrices of the same size.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearMatrixInequalityConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearMatrixInequalityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearMatrixInequalityConstraint, F: List[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], symmetry_tolerance: float = 1e-10</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearMatrixInequalityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">F</span></code>:</dt>
+<dd>Each symmetric matrix F[i] should be of the same size.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">symmetry_tolerance</span></code>:</dt>
+<dd>The precision to determine if the input matrices Fi are all
+symmetric.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">math::IsSymmetric().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -961,11 +995,10 @@ everywhere, but z₀²-(z₁²+…+zₙ₋₁²) ≥ 0 is non-convex. The defaul
 to use the first formulation. For more information and visualization,
 please refer to
 <a class="reference external" href="https://inst.eecs.berkeley.edu/~ee127a/book/login/l_socp_soc.html">https://inst.eecs.berkeley.edu/~ee127a/book/login/l_socp_soc.html</a></p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LorentzConeConstraint, A: numpy.ndarray[numpy.float64[m, n]], b: numpy.ndarray[numpy.float64[m, 1]], eval_type: pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType = &lt;EvalType.kConvex: 0&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.A">
@@ -977,6 +1010,50 @@ please refer to
 <dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.b">
 <code class="descname">b</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.b" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for b.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType">
+<em class="property">class </em><code class="descname">EvalType</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType" title="Permalink to this definition">¶</a></dt>
+<dd><p>We provide three possible Eval functions to represent the Lorentz cone
+constraint z₀ ≥ sqrt(z₁² + … + zₙ₋₁²). For more explanation on the
+three formulations, refer to LorentzConeConstraint documentation.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kConvex : The constraint is g(z) = z₀ - sqrt(z₁² + … + zₙ₋₁²) ≥ 0</p>
+<p>kConvexSmooth : Same as kConvex1, but with approximated gradient.</p>
+<p>kNonconvex : Nonconvex constraint z₀²-(z₁²+…+zₙ₋₁²) ≥ 0 and z₀ ≥ 0</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.kConvex">
+<code class="descname">kConvex</code><em class="property"> = &lt;EvalType.kConvex: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.kConvex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.kConvexSmooth">
+<code class="descname">kConvexSmooth</code><em class="property"> = &lt;EvalType.kConvexSmooth: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.kConvexSmooth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.kNonconvex">
+<code class="descname">kNonconvex</code><em class="property"> = &lt;EvalType.kNonconvex: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.kNonconvex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -3537,11 +3614,70 @@ status.</p>
 S is p.s.d\]</div>
 <p>}</p>
 <p>namely, all eigen values of S are non-negative.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint</em>, <em>rows: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Impose the constraint that a symmetric matrix with size <code class="docutils literal"><span class="pre">rows</span></code> x
+<code class="docutils literal"><span class="pre">rows</span></code> is positive semidefinite.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">MathematicalProgram::AddPositiveSemidefiniteConstraint() for how
+to use this constraint on some decision variables. We currently
+use this constraint as a place holder in MathematicalProgram, to
+indicate the positive semidefiniteness of some decision variables.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dd>The number of rows (and columns) of the symmetric matrix.</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">MathematicalProgram</span> <span class="nb">object</span><span class="o">.</span>
+<span class="n">auto</span> <span class="n">prog</span> <span class="o">=</span> <span class="n">MathematicalProgram</span><span class="p">();</span>
+
+<span class="o">//</span> <span class="n">Add</span> <span class="n">a</span> <span class="mi">2</span> <span class="n">x</span> <span class="mi">2</span> <span class="n">symmetric</span> <span class="n">matrix</span> <span class="n">S</span> <span class="n">to</span> <span class="n">optimization</span> <span class="n">program</span> <span class="k">as</span> <span class="n">new</span> <span class="n">decision</span>
+<span class="o">//</span> <span class="n">variables</span><span class="o">.</span>
+<span class="n">auto</span> <span class="n">S</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewSymmetricContinuousVariables</span><span class="o">&lt;</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;S&quot;</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Impose</span> <span class="n">a</span> <span class="n">positive</span> <span class="n">semidefinite</span> <span class="n">constraint</span> <span class="n">on</span> <span class="n">S</span><span class="o">.</span>
+<span class="n">std</span><span class="p">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">PositiveSemidefiniteConstraint</span><span class="o">&gt;</span> <span class="n">psd_constraint</span> <span class="o">=</span>
+    <span class="n">prog</span><span class="o">.</span><span class="n">AddPositiveSemidefiniteConstraint</span><span class="p">(</span><span class="n">S</span><span class="p">);</span>
+
+<span class="o">/////////////////////////////////////////////////////////////</span>
+<span class="o">//</span> <span class="n">Add</span> <span class="n">more</span> <span class="n">constraints</span> <span class="n">to</span> <span class="n">make</span> <span class="n">the</span> <span class="n">program</span> <span class="n">more</span> <span class="n">interesting</span><span class="p">,</span>
+<span class="o">//</span> <span class="n">but</span> <span class="n">this</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">needed</span><span class="o">.</span>
+
+<span class="o">//</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">constraint</span> <span class="n">that</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span>
+<span class="n">prog</span><span class="o">.</span><span class="n">AddBoundingBoxConstraint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+
+<span class="o">//</span> <span class="n">Minimize</span> <span class="n">S</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span>
+<span class="n">prog</span><span class="o">.</span><span class="n">AddLinearCost</span><span class="p">(</span><span class="n">Eigen</span><span class="p">::</span><span class="n">RowVector2d</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">{</span><span class="n">S</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()});</span>
+
+<span class="o">/////////////////////////////////////////////////////////////</span>
+
+<span class="o">//</span> <span class="n">Now</span> <span class="n">solve</span> <span class="n">the</span> <span class="n">program</span><span class="o">.</span>
+<span class="n">auto</span> <span class="n">result</span> <span class="o">=</span> <span class="n">Solve</span><span class="p">(</span><span class="n">prog</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Retrieve</span> <span class="n">the</span> <span class="n">solution</span> <span class="n">of</span> <span class="n">matrix</span> <span class="n">S</span><span class="o">.</span>
+<span class="n">auto</span> <span class="n">S_value</span> <span class="o">=</span> <span class="n">GetSolution</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+
+<span class="o">//</span> <span class="n">Compute</span> <span class="n">the</span> <span class="n">eigen</span> <span class="n">values</span> <span class="n">of</span> <span class="n">the</span> <span class="n">solution</span><span class="p">,</span> <span class="n">to</span> <span class="n">see</span> <span class="k">if</span> <span class="n">they</span> <span class="n">are</span>
+<span class="o">//</span> <span class="nb">all</span> <span class="n">non</span><span class="o">-</span><span class="n">negative</span><span class="o">.</span>
+<span class="n">Eigen</span><span class="p">::</span><span class="n">Vector4d</span> <span class="n">S_stacked</span><span class="p">;</span>
+<span class="n">S_stacked</span> <span class="o">&lt;&lt;</span> <span class="n">S_value</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">S_value</span><span class="o">.</span><span class="n">col</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="n">Eigen</span><span class="p">::</span><span class="n">VectorXd</span> <span class="n">S_eigen_values</span><span class="p">;</span>
+<span class="n">psd_constraint</span><span class="o">-&gt;</span><span class="n">Eval</span><span class="p">(</span><span class="n">S_stacked</span><span class="p">,</span> <span class="n">S_eigen_values</span><span class="p">);</span>
+
+<span class="n">std</span><span class="p">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s2">&quot;S solution is: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">S</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="n">std</span><span class="p">::</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="s2">&quot;The eigen value of S is &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">S_eigen_values</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.matrix_rows">
+<code class="descname">matrix_rows</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.matrix_rows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -3670,11 +3806,10 @@ cone, if</p>
 <p>where A ∈ ℝ ⁿˣᵐ, b ∈ ℝ ⁿ are given matrices.</p>
 <p>For more information and visualization, please refer to
 <a class="reference external" href="https://inst.eecs.berkeley.edu/~ee127a/book/login/l_socp_soc.html">https://inst.eecs.berkeley.edu/~ee127a/book/login/l_socp_soc.html</a></p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint, A: numpy.ndarray[numpy.float64[m, n]], b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.A">

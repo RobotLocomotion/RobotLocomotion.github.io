@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">HyperEllipsoid Class Reference<span class="mlabels"><span class="mlabel">final</span></span><div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a> &raquo; <a class="el" href="group__geometry__optimization.html">Geometry Optimization</a></div></div>  </div>
@@ -105,7 +106,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 <p>Compare this with an alternative (very useful) parameterization of the ellipsoid: <code>{Bu + center | |u|₂ ≤ 1}</code>, which is an affine scaling of the unit ball. This is related to the quadratic form by <code>B = A⁻¹</code>, when <code>A</code> is invertible, but the quadratic form can also represent unbounded sets.</p>
 <p>Note: the name <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">HyperEllipsoid</a> was taken here to avoid conflicting with <a class="el" href="classdrake_1_1geometry_1_1_ellipsoid.html" title="Definition of an ellipsoid.">geometry::Ellipsoid</a> and to distinguish that this class supports N dimensions. </p>
 </div>
-<p><code>#include &lt;drake/geometry/optimization/convex_set.h&gt;</code></p>
+<p><code>#include &lt;drake/geometry/optimization/hyperellipsoid.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,8 +116,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af24343468b92a23b7447cefcc2c55601"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html#af24343468b92a23b7447cefcc2c55601">HyperEllipsoid</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;query_object, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; expressed_in=std::nullopt)</td></tr>
 <tr class="memdesc:af24343468b92a23b7447cefcc2c55601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html" title="Implements an ellipsoidal convex set represented by the quadratic form {x | (x-center)ᵀAᵀA(x-center) ...">HyperEllipsoid</a> from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry and pose in the <code>expressed_in</code> frame, obtained via the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="#af24343468b92a23b7447cefcc2c55601">More...</a><br /></td></tr>
 <tr class="separator:af24343468b92a23b7447cefcc2c55601"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84932d2648563f044430a900faf05cd6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html#a84932d2648563f044430a900faf05cd6">~HyperEllipsoid</a> ()</td></tr>
-<tr class="separator:a84932d2648563f044430a900faf05cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951332cb6de2c0f208031e5cc76a6720"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html#a951332cb6de2c0f208031e5cc76a6720">~HyperEllipsoid</a> () final</td></tr>
+<tr class="separator:a951332cb6de2c0f208031e5cc76a6720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace583a472a3bdc1b67f05d6a6571a903"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html#ace583a472a3bdc1b67f05d6a6571a903">A</a> () const</td></tr>
 <tr class="memdesc:ace583a472a3bdc1b67f05d6a6571a903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the quadratic form matrix A.  <a href="#ace583a472a3bdc1b67f05d6a6571a903">More...</a><br /></td></tr>
 <tr class="separator:ace583a472a3bdc1b67f05d6a6571a903"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +151,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16859f4c6e90e06faad9ffbd4db7e59f inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a16859f4c6e90e06faad9ffbd4db7e59f">AddPointInSetConstraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
 <tr class="memdesc:a16859f4c6e90e06faad9ffbd4db7e59f inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a16859f4c6e90e06faad9ffbd4db7e59f">More...</a><br /></td></tr>
 <tr class="separator:a16859f4c6e90e06faad9ffbd4db7e59f inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb1329a9d7f2b0adf69ae203a9be035 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035">AddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const</td></tr>
+<tr class="memdesc:a1fb1329a9d7f2b0adf69ae203a9be035 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let S be this convex set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035">More...</a><br /></td></tr>
+<tr class="separator:a1fb1329a9d7f2b0adf69ae203a9be035 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7add202067720eb1a04fac8f1781c87 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87">ToShapeWithPose</a> () const</td></tr>
 <tr class="memdesc:af7add202067720eb1a04fac8f1781c87 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> and a pose of the set in the world frame for use in the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry ecosystem.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87">More...</a><br /></td></tr>
 <tr class="separator:af7add202067720eb1a04fac8f1781c87 inherit pub_methods_classdrake_1_1geometry_1_1optimization_1_1_convex_set"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,6 +172,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a27b822cc5aaf8f0b2d34b6576c52ec83 inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f19e61b141f9a59b12d686271a57116 inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_shape_reifier.html#a5f19e61b141f9a59b12d686271a57116">ImplementGeometry</a> (const <a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a> &amp;convex, void *user_data)</td></tr>
 <tr class="separator:a5f19e61b141f9a59b12d686271a57116 inherit pub_methods_classdrake_1_1geometry_1_1_shape_reifier"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae0fc9f35dfe1998920bbb5bde00926db"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html#ae0fc9f35dfe1998920bbb5bde00926db">MakeUnitBall</a> (<a class="el" href="classint.html">int</a> dim)</td></tr>
+<tr class="memdesc:ae0fc9f35dfe1998920bbb5bde00926db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the L₂-norm unit ball in <code>dim</code> dimensions, {x | |x|₂ &lt;= 1 }.  <a href="#ae0fc9f35dfe1998920bbb5bde00926db">More...</a><br /></td></tr>
+<tr class="separator:ae0fc9f35dfe1998920bbb5bde00926db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -330,8 +340,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a84932d2648563f044430a900faf05cd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84932d2648563f044430a900faf05cd6">&#9670;&nbsp;</a></span>~HyperEllipsoid()</h2>
+<a id="a951332cb6de2c0f208031e5cc76a6720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951332cb6de2c0f208031e5cc76a6720">&#9670;&nbsp;</a></span>~HyperEllipsoid()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +350,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual ~<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a> </td>
+          <td class="memname">~<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -348,7 +358,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -391,6 +401,34 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the center of the ellipsoid. </p>
+
+</div>
+</div>
+<a id="ae0fc9f35dfe1998920bbb5bde00926db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0fc9f35dfe1998920bbb5bde00926db">&#9670;&nbsp;</a></span>MakeUnitBall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html">HyperEllipsoid</a> MakeUnitBall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the L₂-norm unit ball in <code>dim</code> dimensions, {x | |x|₂ &lt;= 1 }. </p>
 
 </div>
 </div>
@@ -471,7 +509,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>drake/geometry/optimization/<a class="el" href="convex__set_8h.html">convex_set.h</a></li>
+<li>drake/geometry/optimization/<a class="el" href="hyperellipsoid_8h.html">hyperellipsoid.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

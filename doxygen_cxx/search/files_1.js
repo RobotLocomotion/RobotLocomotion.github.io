@@ -22,5 +22,6 @@ var searchData=
   ['bspline_5fbasis_2eh',['bspline_basis.h',['../bspline__basis_8h.html',1,'']]],
   ['bspline_5ftrajectory_2eh',['bspline_trajectory.h',['../bspline__trajectory_8h.html',1,'']]],
   ['buffer_5fdim_2eh',['buffer_dim.h',['../buffer__dim_8h.html',1,'']]],
-  ['bvh_2eh',['bvh.h',['../bvh_8h.html',1,'']]]
+  ['bvh_2eh',['bvh.h',['../bvh_8h.html',1,'']]],
+  ['bvh_5fupdater_2eh',['bvh_updater.h',['../bvh__updater_8h.html',1,'']]]
 ];

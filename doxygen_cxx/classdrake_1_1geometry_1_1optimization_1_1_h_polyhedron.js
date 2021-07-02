@@ -4,7 +4,7 @@ var classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron =
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a49baca0390a3ae23b173c34429982fcc", null ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#addeb00deb2fcdb452b7c6f7c416fec36", null ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a0dd019f88083a7de57b7336274e4e9dd", null ],
-    [ "~HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad61ca4d333d57bd0b382da82f59e8337", null ],
+    [ "~HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a15f9b02bca9548dd4497de6693fa3a51", null ],
     [ "A", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
     [ "b", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aae45694d3595659922653fd027d15cb6", null ],
     [ "MakeBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1", null ],

@@ -1,5 +1,12 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1math_1_1_barycentric_mesh.html#a1cfc0b35660295a470104fc07d11fbd0":[3,0,0,7,2,15],
+"classdrake_1_1math_1_1_barycentric_mesh.html#a1d2bb19d26672557477391f5a217dc41":[3,0,0,7,2,3],
+"classdrake_1_1math_1_1_barycentric_mesh.html#a247ef286093cfe5b95164c5fbced2737":[3,0,0,7,2,8],
+"classdrake_1_1math_1_1_barycentric_mesh.html#a29f6050f9d7eee48c6475c53071d71db":[3,0,0,7,2,7],
+"classdrake_1_1math_1_1_barycentric_mesh.html#a2d6527a00bfe67cbba218d07c0136f6b":[3,0,0,7,2,16],
+"classdrake_1_1math_1_1_barycentric_mesh.html#a4618e2ba4dde382cce4aa0a7f1845b02":[3,0,0,7,2,5],
+"classdrake_1_1math_1_1_barycentric_mesh.html#a4792beb0b182b31d0a9149e145518bf7":[3,0,0,7,2,6],
 "classdrake_1_1math_1_1_barycentric_mesh.html#a5ccf591c4dbbaeddaced253543ffbdbb":[3,0,0,7,2,11],
 "classdrake_1_1math_1_1_barycentric_mesh.html#a7ea41cbb48fc9d917b91e47c90775638":[3,0,0,7,2,0],
 "classdrake_1_1math_1_1_barycentric_mesh.html#a8d730fb1ba51f34452aacd4ac083a170":[3,0,0,7,2,13],
@@ -242,12 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1multibody_1_1_body.html#a87451694c9fdf67303c1550f11bdf3c2":[3,0,0,8,9,14],
 "classdrake_1_1multibody_1_1_body.html#a8e98e34e5da5ecfc7e03086b70cf5489":[3,0,0,8,9,16],
 "classdrake_1_1multibody_1_1_body.html#a92f958ac0c25a9b239ba93ef5164ef3d":[3,0,0,8,9,10],
-"classdrake_1_1multibody_1_1_body.html#a9c07832f25dde3f8403e98c73dd24d1b":[3,0,0,8,9,15],
-"classdrake_1_1multibody_1_1_body.html#aa46153851db12c78debe3460b545a6e1":[3,0,0,8,9,19],
-"classdrake_1_1multibody_1_1_body.html#abd26dede9af88af24e2971996b18a5a4":[3,0,0,8,9,29],
-"classdrake_1_1multibody_1_1_body.html#ac30c4ad9b052699cd01568d8bf024a3c":[3,0,0,8,9,11],
-"classdrake_1_1multibody_1_1_body.html#ac492376d260219d3231f554c0875c5f0":[3,0,0,8,9,2],
-"classdrake_1_1multibody_1_1_body.html#ace24ab6283a1ad4f7585fa3aabc79f12":[3,0,0,8,9,22],
-"classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31":[3,0,0,8,9,23],
-"classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1":[3,0,0,8,9,25]
+"classdrake_1_1multibody_1_1_body.html#a9c07832f25dde3f8403e98c73dd24d1b":[3,0,0,8,9,15]
 };

@@ -123,5 +123,6 @@ var searchData=
   ['buildinto',['BuildInto',['../classdrake_1_1systems_1_1_diagram_builder.html#ab9083fea37e8137d3ef54c13bb51cdc4',1,'drake::systems::DiagramBuilder']]],
   ['buildtrackerpointermap',['BuildTrackerPointerMap',['../classdrake_1_1systems_1_1_context_base.html#a0bc286597677a6e760c75a6c80387fea',1,'drake::systems::ContextBase']]],
   ['bushingtester',['BushingTester',['../classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a636a62839c85c9f4f10aa1cbf5518e4b',1,'drake::multibody::LinearBushingRollPitchYaw']]],
-  ['bvh_2eh',['bvh.h',['../bvh_8h.html',1,'']]]
+  ['bvh_2eh',['bvh.h',['../bvh_8h.html',1,'']]],
+  ['bvh_5fupdater_2eh',['bvh_updater.h',['../bvh__updater_8h.html',1,'']]]
 ];

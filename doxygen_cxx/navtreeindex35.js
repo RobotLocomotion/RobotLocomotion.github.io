@@ -1,5 +1,12 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a375c317ecbe5638d1494f4f90039f9ff":[3,0,0,14,6,2,10],
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a3d27b694387d0b58735731fa9a430946":[3,0,0,14,6,2,0],
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a45480e28d49abd0211b6ebf724d2ec94":[3,0,0,14,6,2,1],
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a4d21b379fb137aac7d3e7f5cd60acb31":[3,0,0,14,6,2,5],
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a5d200811e068ba3a049eab77cb39fd36":[3,0,0,14,6,2,7],
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a6caca218537c3449224e6eec5b0883fe":[3,0,0,14,6,2,9],
+"classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#a980b26ce0130b5c1dbfd93e914f16316":[3,0,0,14,6,2,2],
 "classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#aa3dcc6e555a951c9502d9b396f2042d6":[3,0,0,14,6,2,8],
 "classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#aa502d9f303438b4b6c33a9936e0bb7f4":[3,0,0,14,6,2,4],
 "classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html#ac28de6f439b617d22ed7ec6e3626720e":[3,0,0,14,6,2,3],
@@ -242,12 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a395b5067b1fffc57a604f7d5ff6b6df4":[1,5,2,5,2],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4af045674d7737ba9da18fbe2b604743":[1,5,2,5,5],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,5,2,5,6],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[1,5,2,5,1],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,5,2,5,4],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,5,2,5,3],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,5,2,5,0],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[1,2,0,35],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,2,0,35,8],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[1,2,0,35,9],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a581b17083c0cf2685271136830b65104":[1,2,0,35,2]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[1,5,2,5,1]
 };

@@ -122,6 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16859f4c6e90e06faad9ffbd4db7e59f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a16859f4c6e90e06faad9ffbd4db7e59f">AddPointInSetConstraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
 <tr class="memdesc:a16859f4c6e90e06faad9ffbd4db7e59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <a href="#a16859f4c6e90e06faad9ffbd4db7e59f">More...</a><br /></td></tr>
 <tr class="separator:a16859f4c6e90e06faad9ffbd4db7e59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035">AddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const</td></tr>
+<tr class="memdesc:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let S be this convex set.  <a href="#a1fb1329a9d7f2b0adf69ae203a9be035">More...</a><br /></td></tr>
+<tr class="separator:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7add202067720eb1a04fac8f1781c87"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#af7add202067720eb1a04fac8f1781c87">ToShapeWithPose</a> () const</td></tr>
 <tr class="memdesc:af7add202067720eb1a04fac8f1781c87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> and a pose of the set in the world frame for use in the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry ecosystem.  <a href="#af7add202067720eb1a04fac8f1781c87">More...</a><br /></td></tr>
 <tr class="separator:af7add202067720eb1a04fac8f1781c87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,6 +157,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42a7661ec6883b47e2c9c7a8c65294ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a42a7661ec6883b47e2c9c7a8c65294ed">DoAddPointInSetConstraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
 <tr class="separator:a42a7661ec6883b47e2c9c7a8c65294ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37ae169eed6681dbf5d82ddc4137420"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae37ae169eed6681dbf5d82ddc4137420">DoAddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const =0</td></tr>
+<tr class="separator:ae37ae169eed6681dbf5d82ddc4137420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da746fed405258f0af4dc5c385f6e2a"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2da746fed405258f0af4dc5c385f6e2a">DoToShapeWithPose</a> () const =0</td></tr>
 <tr class="separator:a2da746fed405258f0af4dc5c385f6e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
@@ -310,6 +315,46 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1fb1329a9d7f2b0adf69ae203a9be035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb1329a9d7f2b0adf69ae203a9be035">&#9670;&nbsp;</a></span>AddPointInNonnegativeScalingConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; AddPointInNonnegativeScalingConstraints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Let S be this convex set. </p>
+<p>When S is bounded, this method adds the convex constraints to imply </p><pre class="fragment">x ∈ t S,
+t ≥ 0,
+</pre><p> where x is a point in ℜⁿ (with n the ambient_dimension) and t is a scalar.</p>
+<p>When S is unbounded, then the behavior is almost identical, except when t=0. In this case, the constraints imply t ≥ 0, x ∈ t S ⊕ rec(S), where rec(S) is the recession cone of S (the asymptotic directions in which S is not bounded) and ⊕ is the Minkowski sum. For t &gt; 0, this is equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S). </p>
+
+</div>
+</div>
 <a id="a16859f4c6e90e06faad9ffbd4db7e59f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16859f4c6e90e06faad9ffbd4db7e59f">&#9670;&nbsp;</a></span>AddPointInSetConstraint()</h2>
 
@@ -376,6 +421,48 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a unique deep copy of this set. </p>
+
+</div>
+</div>
+<a id="ae37ae169eed6681dbf5d82ddc4137420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae37ae169eed6681dbf5d82ddc4137420">&#9670;&nbsp;</a></span>DoAddPointInNonnegativeScalingConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a>&gt; &gt; DoAddPointInNonnegativeScalingConstraints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
+          <td class="paramname"><em>prog</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

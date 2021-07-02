@@ -80,6 +80,7 @@ var NAVTREEINDEX0 =
 "bspline__trajectory_8h.html":[4,0,0,1,3,0],
 "buffer__dim_8h.html":[4,0,0,4,4,0,0],
 "bvh_8h.html":[4,0,0,4,2,2],
+"bvh__updater_8h.html":[4,0,0,4,2,3],
 "cache_8h.html":[4,0,0,11,3,4],
 "cache__doxygen_8h.html":[4,0,0,11,3,5],
 "cache__entry_8h.html":[4,0,0,11,3,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial_1_1_term.html#a3c0813942263106700a29e522a224006":[3,0,0,40,2,3],
 "classdrake_1_1_polynomial_1_1_term.html#a5c98542968a765a4da1cf13b71e2eaaa":[3,0,0,40,2,0],
 "classdrake_1_1_polynomial_1_1_term.html#ac1257eb15b653872d1754f9731e7b1f2":[3,0,0,40,2,1],
-"classdrake_1_1_polynomial_1_1_term.html#ac1824026fd6513f52dbf078e21746c5d":[3,0,0,40,2,2],
-"classdrake_1_1_random_generator.html":[3,0,0,41]
+"classdrake_1_1_polynomial_1_1_term.html#ac1824026fd6513f52dbf078e21746c5d":[3,0,0,40,2,2]
 };

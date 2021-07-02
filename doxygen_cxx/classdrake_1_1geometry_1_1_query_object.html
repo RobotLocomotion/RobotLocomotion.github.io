@@ -650,13 +650,14 @@ Friends</h2></td></tr>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadCenter">Scalar  </th><th class="markdownTableHeadCenter">Box  </th><th class="markdownTableHeadCenter">Capsule  </th><th class="markdownTableHeadCenter">Convex  </th><th class="markdownTableHeadCenter">Cylinder  </th><th class="markdownTableHeadCenter">Ellipsoid  </th><th class="markdownTableHeadCenter">HalfSpace  </th><th class="markdownTableHeadCenter">Mesh  </th><th class="markdownTableHeadCenter">Sphere   </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyCenter">double  </td><td class="markdownTableBodyCenter">2e-15  </td><td class="markdownTableBodyCenter">4e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">3e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">4e-15   </td></tr>
+<td class="markdownTableBodyCenter">double  </td><td class="markdownTableBodyCenter">2e-15  </td><td class="markdownTableBodyCenter">4e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">3e-15  </td><td class="markdownTableBodyCenter">3e-5ᵇ  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">4e-15   </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">ADXd  </td><td class="markdownTableBodyCenter">1e-15  </td><td class="markdownTableBodyCenter">4e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">5e-15  </td><td class="markdownTableBodyCenter">ᵃ  </td><td class="markdownTableBodyCenter">3e-15   </td></tr>
 </table>
 <p><b><em>Table 5</em></b>: Worst observed error (in m) for 2mm penetration/separation between geometry approximately 20cm in size and a point.</p>
 <ul>
 <li>ᵃ Unsupported geometry/scalar combinations are simply ignored; no results are reported for that geometry.</li>
+<li>ᵇ This uses an <em>iterative</em> algorithm which introduces a relatively large and variable error. For example, as the eccentricity of the ellipsoid increases, this error may get worse. It also depends on the location of the projection of the query point on the ellipsoid; the closer that point is to the high curvature area, the bigger the effect. It is not immediately clear how much worse the answer will get.</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>For a sphere G, the signed distance function φᵢ(p) has an undefined gradient vector at the center of the sphere&ndash;every point on the sphere's surface has the same distance to the center. In this case, we will assign ∇φᵢ(p) the unit vector Gx (x-directional vector of G's frame) expressed in World frame.</dd>
 <dd>

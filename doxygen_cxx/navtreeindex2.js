@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a1f10a2b1baf36686c44e02b801a85ec4":[3,0,0,2,4,0,10],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a2bba3b1f2592aec7f02721c5acb7b3fc":[3,0,0,2,4,0,3],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a3226490ca836fd291bd0b786e8613014":[3,0,0,2,4,0,15],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a43358c549f2a9b4ab97a14a35c167d8e":[3,0,0,2,4,0,9],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a3395d3677f489b407c8d4b8c3766a3b8":[3,0,0,2,14,0,1],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a453546b6fa93f44c6591fd58facbeb4f":[3,0,0,2,14,0,10],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a5252c771b8036e25a1a90b8233253196":[3,0,0,2,14,0,13],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a55eb0104b1a307f1b516c2611e167eaf":[3,0,0,2,14,0,17],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a7b2600a026cd7481ed538cd452feb3c3":[3,0,0,2,14,0,6]
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a55eb0104b1a307f1b516c2611e167eaf":[3,0,0,2,14,0,17]
 };
