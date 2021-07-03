@@ -118,6 +118,7 @@ var searchData=
   ['_7epiecewisequaternionslerp',['~PiecewiseQuaternionSlerp',['../classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e',1,'drake::trajectories::PiecewiseQuaternionSlerp']]],
   ['_7epiecewisetrajectory',['~PiecewiseTrajectory',['../classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534',1,'drake::trajectories::PiecewiseTrajectory']]],
   ['_7eplanarmanipulandstatusdecoder',['~PlanarManipulandStatusDecoder',['../classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html#a3c2ef280d10d0acafe8dac0a745362a2',1,'drake::examples::planar_gripper::PlanarManipulandStatusDecoder']]],
+  ['_7epoint',['~Point',['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2c488b3f2c926826a61b925810cee8ae',1,'drake::geometry::optimization::Point']]],
   ['_7epointcloud',['~PointCloud',['../classdrake_1_1perception_1_1_point_cloud.html#a863ab09124e612352191ecc27f5f11be',1,'drake::perception::PointCloud']]],
   ['_7epointcloudtolcm',['~PointCloudToLcm',['../classdrake_1_1perception_1_1_point_cloud_to_lcm.html#af93b4c87b94fc5b66d94411cc065c7da',1,'drake::perception::PointCloudToLcm']]],
   ['_7epointtopointdistanceconstraint',['~PointToPointDistanceConstraint',['../classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a55fd03edcd5b6162e5df17463d4a94b9',1,'drake::multibody::PointToPointDistanceConstraint']]],

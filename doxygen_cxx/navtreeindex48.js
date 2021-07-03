@@ -1,5 +1,16 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1type__visit__with__default.html":[3,0,0,54],
+"structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,54,0],
+"structdrake_1_1type__visit__with__tag.html":[3,0,0,55],
+"structdrake_1_1type__visit__with__tag.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,55,0],
+"structdrake_1_1uhash.html":[3,0,0,57],
+"structdrake_1_1uhash.html#ac98906b29c4381d0121f715fac155440":[3,0,0,57,1],
+"structdrake_1_1uhash.html#aec09227295d6a2c005ec578d42120039":[3,0,0,57,0],
+"structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html":[3,0,0,17,0,0],
+"structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,17,0,0,3],
+"structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#aa4ca52e888e12f7fd01ae981e6b63275":[3,0,0,17,0,0,1],
+"structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,17,0,0,2],
 "structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#afcf03c1d7facd07abeb941be18cc75b2":[3,0,0,17,0,0,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,1,0,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX48 =
 "symbolic__expression__cell_8h.html#a790f1dea22ffa64d7c75849403aae060":[4,0,0,1,57,54],
 "symbolic__expression__cell_8h.html#a7be1d5cbdfe80024dcbf36264504f720":[4,0,0,1,57,66],
 "symbolic__expression__cell_8h.html#a7cf591075325809961d0975a0bad30a0":[4,0,0,1,57,79],
-"symbolic__expression__cell_8h.html#a7eaf3f36c1f3fdf51121f77083894794":[4,0,0,1,57,57],
-"symbolic__expression__cell_8h.html#a859d0e7196b00ffd99a347ff8a7d4d76":[4,0,0,1,57,52],
-"symbolic__expression__cell_8h.html#a8e6c5829257cf5c28c162ffad2bd3f58":[4,0,0,1,57,32],
-"symbolic__expression__cell_8h.html#a9539581f8f57306f69ae74a4e2b50a0b":[4,0,0,1,57,85],
-"symbolic__expression__cell_8h.html#a9729350280d57ceaa1fd4c01c46ab48c":[4,0,0,1,57,41],
-"symbolic__expression__cell_8h.html#aa47a95b03c275d9687461839c5612472":[4,0,0,1,57,59],
-"symbolic__expression__cell_8h.html#aa70b034dae56512552b00315c20edaf4":[4,0,0,1,57,33],
-"symbolic__expression__cell_8h.html#ab3f6cc91aa5d1f9133526887cec35cd4":[4,0,0,1,57,35],
-"symbolic__expression__cell_8h.html#abacb0e6cb526379b60fd156af4b527cf":[4,0,0,1,57,70],
-"symbolic__expression__cell_8h.html#ac06c87629b60cbdc34b8e2a9f715cd41":[4,0,0,1,57,58],
-"symbolic__expression__cell_8h.html#ac1daeae1984840b825c4a2a00bad31ac":[4,0,0,1,57,61],
-"symbolic__expression__cell_8h.html#ac1eddc430d6a33fc13db8d53a51bdfd3":[4,0,0,1,57,42]
+"symbolic__expression__cell_8h.html#a7eaf3f36c1f3fdf51121f77083894794":[4,0,0,1,57,57]
 };

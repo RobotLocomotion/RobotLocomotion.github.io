@@ -1,5 +1,16 @@
 var NAVTREEINDEX49 =
 {
+"symbolic__expression__cell_8h.html#a859d0e7196b00ffd99a347ff8a7d4d76":[4,0,0,1,57,52],
+"symbolic__expression__cell_8h.html#a8e6c5829257cf5c28c162ffad2bd3f58":[4,0,0,1,57,32],
+"symbolic__expression__cell_8h.html#a9539581f8f57306f69ae74a4e2b50a0b":[4,0,0,1,57,85],
+"symbolic__expression__cell_8h.html#a9729350280d57ceaa1fd4c01c46ab48c":[4,0,0,1,57,41],
+"symbolic__expression__cell_8h.html#aa47a95b03c275d9687461839c5612472":[4,0,0,1,57,59],
+"symbolic__expression__cell_8h.html#aa70b034dae56512552b00315c20edaf4":[4,0,0,1,57,33],
+"symbolic__expression__cell_8h.html#ab3f6cc91aa5d1f9133526887cec35cd4":[4,0,0,1,57,35],
+"symbolic__expression__cell_8h.html#abacb0e6cb526379b60fd156af4b527cf":[4,0,0,1,57,70],
+"symbolic__expression__cell_8h.html#ac06c87629b60cbdc34b8e2a9f715cd41":[4,0,0,1,57,58],
+"symbolic__expression__cell_8h.html#ac1daeae1984840b825c4a2a00bad31ac":[4,0,0,1,57,61],
+"symbolic__expression__cell_8h.html#ac1eddc430d6a33fc13db8d53a51bdfd3":[4,0,0,1,57,42],
 "symbolic__expression__cell_8h.html#acb998316cfc15506d72b2f2843b4fa62":[4,0,0,1,57,37],
 "symbolic__expression__cell_8h.html#ad0aaf128d1ed75cbab9c4ca238e0ae6c":[4,0,0,1,57,46],
 "symbolic__expression__cell_8h.html#ad3ef10c460bfd3356304cfc4ddd45871":[4,0,0,1,57,77],
@@ -238,16 +249,5 @@ var NAVTREEINDEX49 =
 "symbolic__polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,68,0],
 "symbolic__polynomial__basis__element_8h.html":[4,0,0,1,69],
 "symbolic__rational__function_8h.html":[4,0,0,1,70],
-"symbolic__rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,70,11],
-"symbolic__rational__function_8h.html#a0ec6e83953a4663403fcb08592e16b01":[4,0,0,1,70,13],
-"symbolic__rational__function_8h.html#a1611c62700b00b9861c339879899a121":[4,0,0,1,70,4],
-"symbolic__rational__function_8h.html#a167d0d14d66effceeb5834371626452b":[4,0,0,1,70,10],
-"symbolic__rational__function_8h.html#a185c9ab6bca14a042a837aadf2064546":[4,0,0,1,70,9],
-"symbolic__rational__function_8h.html#a1c5c62b680b89f6fe992e5bc6b01e6c7":[4,0,0,1,70,3],
-"symbolic__rational__function_8h.html#a22f74050260696325581c3087d07fab7":[4,0,0,1,70,16],
-"symbolic__rational__function_8h.html#a267c5d854d55ce16b1e58490ff426661":[4,0,0,1,70,6],
-"symbolic__rational__function_8h.html#a27ad135e8775cf9d721b1223218fff2d":[4,0,0,1,70,19],
-"symbolic__rational__function_8h.html#a347249d56768661c610bf3bafb5ff167":[4,0,0,1,70,5],
-"symbolic__rational__function_8h.html#a3c8b6db1763f8f7a5d98de636b9cd7c9":[4,0,0,1,70,17],
-"symbolic__rational__function_8h.html#a43d86ae3f21714ef199febddf60550fe":[4,0,0,1,70,22]
+"symbolic__rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,70,11]
 };

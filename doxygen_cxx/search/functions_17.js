@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['x',['x',['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point']]],
   ['x_5fbc',['X_BC',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644',1,'drake::systems::sensors::RgbdSensor']]],
   ['x_5fbd',['X_BD',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a',1,'drake::systems::sensors::RgbdSensor']]],
   ['x_5fpc',['X_PC',['../classdrake_1_1multibody_1_1_weld_joint.html#a4374412fa825a46abdc4b2484b9c1630',1,'drake::multibody::WeldJoint']]],
