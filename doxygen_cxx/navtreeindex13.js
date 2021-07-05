@@ -1,5 +1,17 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a87068d58ff4a71b1d3d9795e9fed4aa6":[3,0,0,8,64,20],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a8f02d78a11a4fd918699c75b48573520":[3,0,0,8,64,0],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee":[3,0,0,8,64,23],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#aa43ccc9d77b74b64c25cfcaf3deeaf0b":[3,0,0,8,64,19],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#aa7fbc3778a7090443b7b5102861ebe9a":[3,0,0,8,64,10],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#ab0efcd599640dacc6ef37cf640143fdc":[3,0,0,8,64,15],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#acc3f6e6102f427a8624f86758eb536fd":[3,0,0,8,64,16],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,64,14],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539":[3,0,0,8,64,24],
+"classdrake_1_1multibody_1_1_spatial_momentum.html":[3,0,0,8,65],
+"classdrake_1_1multibody_1_1_spatial_momentum.html#a0ec5bf8e478ee9107bc9c58275e4d162":[3,0,0,8,65,9],
+"classdrake_1_1multibody_1_1_spatial_momentum.html#a443c65e3aa700e20cffca0d6530abd2f":[3,0,0,8,65,4],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a44c99dee3119fc8e7afc1f92231e641d":[3,0,0,8,65,8],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a6042fc1fe4f8b4f29d50a5f73c506ee0":[3,0,0,8,65,0],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a65232f2bac94fd25f787168e85246a76":[3,0,0,8,65,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a5360f3f5943cf0e9167389b24e89cfaf":[3,0,0,8,0,5,8],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a74e2e6506982cee0c16c6048d0baa5b9":[3,0,0,8,0,5,6],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a92034e198c5f1536526bcf712b19c621":[3,0,0,8,0,5,5],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ac838a518ac00451aa6326291afbaccae":[3,0,0,8,0,5,9],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ada0551b1763f4c7c250d02616417e569":[3,0,0,8,0,5,3],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ae1ed7863c45788f035096ed919d55238":[3,0,0,8,0,5,7],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#aedd9e5f19cb6e54ee59a0f82059967a6":[3,0,0,8,0,5,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#af79bb349e7f805159cc268dba69b847c":[3,0,0,8,0,5,4],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#afa066ebd39d93abd3cb0487769ab2e1d":[3,0,0,8,0,5,1],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html":[3,0,0,8,0,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a03099360262748cd998175ca60abf26f":[3,0,0,8,0,0,0,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1a3992e1b22120aa3e84dbdf5187557b":[3,0,0,8,0,0,0,19],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1c96c484fc90e224def3000dedfbe08d":[3,0,0,8,0,0,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a20e45c25697497d9741c632a673bebfa":[3,0,0,8,0,0,0,21],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a22899889fb8a91c6c17ecce04bdf69f8":[3,0,0,8,0,0,0,20],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a264f439a113b5cd82be61ba4de3f8c2a":[3,0,0,8,0,0,0,23]
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ac838a518ac00451aa6326291afbaccae":[3,0,0,8,0,5,9]
 };

@@ -6,5 +6,8 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     [ "point.h", "point_8h.html", [
       [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", "classdrake_1_1geometry_1_1optimization_1_1_point" ]
     ] ],
-    [ "test_utilities.h", "test__utilities_8h.html", null ]
+    [ "test_utilities.h", "test__utilities_8h.html", null ],
+    [ "vpolytope.h", "vpolytope_8h.html", [
+      [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope" ]
+    ] ]
 ];

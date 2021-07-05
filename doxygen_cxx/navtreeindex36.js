@@ -1,5 +1,17 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ae506e99f31653fd9861c90d1623163fd":[3,0,0,14,8,41,5],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aea1c4f5f5823d9fd788df60be071025a":[3,0,0,14,8,41,6],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afaf00d756e556d58e224c3cb82bd9987":[3,0,0,14,8,41,11],
+"classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afd0368849f35be23e914079d5373ee2c":[3,0,0,14,8,41,8],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html":[1,3,4,4],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a4d897b58fab20fca728b82f9101cb7d3":[1,3,4,4,3],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a51a52e381e9b808c5dca3613dc01270f":[1,3,4,4,5],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a6222323e48c49f2c425557b79716478d":[1,3,4,4,1],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a79f0a3343cb3e5d1e952982989e513e3":[1,3,4,4,4],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a8c0ff1bb8149d8b123c52ce2c6c5615e":[1,3,4,4,8],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a986d3a37418853352dd6b89a461cda8e":[1,3,4,4,9],
+"classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#aab9f68ba747ce2d23132a1348d1604e7":[1,3,4,4,7],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ac176d4045cf1c192da06959abadc2a03":[1,3,4,4,6],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ad59feb45c891897205200a1a186b86f1":[1,3,4,4,2],
 "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#adddc16fb008fab4bdbc6c83e00033c0a":[1,3,4,4,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,16,4,3],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,16,4,2],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,16,4,7],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,4,13],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,16,4,12],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,16,4,0],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,4,20],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,16,4,1],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,16,4,19],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,4,14],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c":[3,0,0,16,4,5],
-"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b":[3,0,0,16,4,8],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html":[3,0,0,16,5],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401":[3,0,0,16,5,21],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0a4ac30a258a47b6ea610f16f4accece":[3,0,0,16,5,17],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0f1bc48c32072f8a84aa295528a66440":[3,0,0,16,5,18]
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,4,13]
 };

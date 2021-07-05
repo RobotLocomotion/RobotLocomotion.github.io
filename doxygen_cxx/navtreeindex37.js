@@ -1,5 +1,17 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a89e113d205dc5ec5eff6d7f331a8c156":[3,0,0,16,4,12],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a97e610bb883f37a631873104d8f6209d":[3,0,0,16,4,0],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,4,20],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a9efee334e7a31b81c6056b8a0bb2cad1":[3,0,0,16,4,1],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#ab787e9c02a03724506130824c403f3af":[3,0,0,16,4,19],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,4,14],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#add41849231c25a154e54d762f55c488c":[3,0,0,16,4,5],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#af2a0658eb97b715c3c7066f1b24dd00b":[3,0,0,16,4,8],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html":[3,0,0,16,5],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401":[3,0,0,16,5,21],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0a4ac30a258a47b6ea610f16f4accece":[3,0,0,16,5,17],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0f1bc48c32072f8a84aa295528a66440":[3,0,0,16,5,18],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0":[3,0,0,16,5,19],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a205b86a6552919d515ba544c185c04c3":[3,0,0,16,5,4],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a293c775020a0b5f25770dd398ea14f1d":[3,0,0,16,5,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX37 =
 "dense__output_8h.html":[4,0,0,11,0,3],
 "dense__residual_8h.html":[4,0,0,10,0,0,3],
 "dense__variable_8h.html":[4,0,0,10,0,0,4],
-"dependency__tracker_8h.html":[4,0,0,11,3,10],
-"deprecated.html":[0],
-"deprecation__pybind_8h.html":[4,0,0,0,0,0,3],
-"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,0,3,5],
-"deprecation__pybind_8h.html#a36e0f3795b29cfb57c0940ffc8780120":[4,0,0,0,0,0,3,2],
-"deprecation__pybind_8h.html#a40a674f4af53caa963b98daa8d85af39":[4,0,0,0,0,0,3,3],
-"deprecation__pybind_8h.html#a88a20567ddf6e5978a874a3cb46353f4":[4,0,0,0,0,0,3,4],
-"deprecation__pybind_8h.html#aa542768548608eefe8534a3bdc5c1cd4":[4,0,0,0,0,0,3,1],
-"deprecation__pybind_8h.html#ab0b68ce63cf178e7d4e91f95e0e483e1":[4,0,0,0,0,0,3,0],
-"depth__image__to__point__cloud_8h.html":[4,0,0,9,0],
-"depth__shaders_8h.html":[4,0,0,4,4,1,0],
-"depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1],
-"depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,1,0,0]
+"dependency__tracker_8h.html":[4,0,0,11,3,10]
 };

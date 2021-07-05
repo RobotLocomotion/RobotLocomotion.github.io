@@ -1,5 +1,17 @@
 var NAVTREEINDEX45 =
 {
+"spatial__force_8h.html":[4,0,0,8,5,2],
+"spatial__inertia_8h.html":[4,0,0,8,11,44],
+"spatial__kinematics_8h.html":[4,0,0,8,9,3],
+"spatial__momentum_8h.html":[4,0,0,8,5,3],
+"spatial__vector_8h.html":[4,0,0,8,5,4],
+"spatial__velocity_8h.html":[4,0,0,8,5,5],
+"spong__controller_8h.html":[4,0,0,3,0,3],
+"spring__mass__damper__system_8h.html":[4,0,0,11,0,0,14],
+"spring__mass__system_8h.html":[4,0,0,11,0,0,15],
+"state_8h.html":[4,0,0,11,3,36],
+"state__feedback__controller__interface_8h.html":[4,0,0,11,1,10],
+"stateless__system_8h.html":[4,0,0,11,0,0,16],
 "static__equilibrium__constraint_8h.html":[4,0,0,8,6,6],
 "static__equilibrium__problem_8h.html":[4,0,0,8,6,7],
 "static__friction__cone__complementarity__constraint_8h.html":[4,0,0,8,6,8],
@@ -237,17 +249,5 @@ var NAVTREEINDEX45 =
 "structdrake_1_1multibody_1_1_propeller_info.html#a6c7969c7bd07717edfa11d012a9a0129":[3,0,0,8,54,2],
 "structdrake_1_1multibody_1_1_propeller_info.html#ac154ef8cde7d8d7431d15790225c5b4d":[3,0,0,8,54,7],
 "structdrake_1_1multibody_1_1_propeller_info.html#ac5003148a2f359ec7e4f16c792be2662":[3,0,0,8,54,3],
-"structdrake_1_1multibody_1_1_propeller_info.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,8,54,5],
-"structdrake_1_1multibody_1_1_propeller_info.html#ada4bf070125ac43cd7e0a086be12d049":[3,0,0,8,54,8],
-"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html":[3,0,0,8,61],
-"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a334cc1e5b77e7a37f0c16559f202a652":[3,0,0,8,61,1],
-"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[3,0,0,8,61,0],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,8,72],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,8,72,0],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71":[3,0,0,8,72,3],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab789f8c5c51c6c3bbd3d2d7737c95b29":[3,0,0,8,72,1],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acad1162320925e1bba6171c41831504e":[3,0,0,8,72,2],
-"structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988":[3,0,0,8,72,4],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html":[3,0,0,8,73],
-"structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a0f73b758fdc6b763190aa6ea76e014c2":[3,0,0,8,73,2]
+"structdrake_1_1multibody_1_1_propeller_info.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,8,54,5]
 };

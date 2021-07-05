@@ -196,5 +196,6 @@ var searchData=
   ['_7evectorbase',['~VectorBase',['../classdrake_1_1systems_1_1_vector_base.html#abc19c2584a73f03bd1e31277d11315b4',1,'drake::systems::VectorBase']]],
   ['_7evectorsystem',['~VectorSystem',['../classdrake_1_1systems_1_1_vector_system.html#af3507e495301a272961cd1b5af222164',1,'drake::systems::VectorSystem']]],
   ['_7evelocityimpliciteulerintegrator',['~VelocityImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html#a6cfdb1188fe401e8397af9ed6e80b309',1,'drake::systems::VelocityImplicitEulerIntegrator']]],
+  ['_7evpolytope',['~VPolytope',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da',1,'drake::geometry::optimization::VPolytope']]],
   ['_7ezeroorderhold',['~ZeroOrderHold',['../classdrake_1_1systems_1_1_zero_order_hold.html#a709c0abe05f56d7498c71bbcb4279b97',1,'drake::systems::ZeroOrderHold']]]
 ];
