@@ -7,7 +7,7 @@ var classdrake_1_1solvers_1_1_lorentz_cone_constraint =
     ] ],
     [ "LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a0f8abae50cace5781a2b3e60b7b65eaf", null ],
     [ "LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#aeaa74b6ec7485e4ea56cf8e006218929", null ],
-    [ "LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a5521e832fe0aabecde9864797854aae5", null ],
+    [ "LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a9c5acd778635703b28653301d0a5f9fd", null ],
     [ "~LorentzConeConstraint", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a1fbc02ca0fa36307860a1d68b5bbcdad", null ],
     [ "A", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a2bc29ebb595afdf08aab81950b31640b", null ],
     [ "A_dense", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a16722a3fa6c094a05d2d1dd8ebcc7454", null ],

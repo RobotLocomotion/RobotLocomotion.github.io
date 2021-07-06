@@ -124,8 +124,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5521e832fe0aabecde9864797854aae5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a5521e832fe0aabecde9864797854aae5">LorentzConeConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a2bc29ebb595afdf08aab81950b31640b">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#aae45694d3595659922653fd027d15cb6">b</a>, <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4">EvalType</a> eval_type=<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4ad597fc01c79cc256d0a9fe5211c62573">EvalType::kConvex</a>)</td></tr>
-<tr class="separator:a5521e832fe0aabecde9864797854aae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5acd778635703b28653301d0a5f9fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a9c5acd778635703b28653301d0a5f9fd">LorentzConeConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a2bc29ebb595afdf08aab81950b31640b">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#aae45694d3595659922653fd027d15cb6">b</a>, <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4">EvalType</a> eval_type=<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1">EvalType::kConvexSmooth</a>)</td></tr>
+<tr class="separator:a9c5acd778635703b28653301d0a5f9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fbc02ca0fa36307860a1d68b5bbcdad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a1fbc02ca0fa36307860a1d68b5bbcdad">~LorentzConeConstraint</a> () override</td></tr>
 <tr class="separator:a1fbc02ca0fa36307860a1d68b5bbcdad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bc29ebb595afdf08aab81950b31640b"><td class="memItemLeft" align="right" valign="top">const Eigen::SparseMatrix&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a2bc29ebb595afdf08aab81950b31640b">A</a> () const</td></tr>
@@ -275,11 +275,15 @@ Additional Inherited Members</h2></td></tr>
 <li>zₙ₋₁²). For more explanation on the three formulations, refer to <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html" title="Constraining the linear expression  lies within the Lorentz cone.">LorentzConeConstraint</a> documentation. </li>
 </ul>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e69b5efb34e150cd2b2422e1e943da4ad597fc01c79cc256d0a9fe5211c62573"></a>kConvex&#160;</td><td class="fielddoc"><p>The constraint is g(z) = z₀ - sqrt(z₁² + ... + zₙ₋₁²) ≥ 0. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7e69b5efb34e150cd2b2422e1e943da4ad597fc01c79cc256d0a9fe5211c62573"></a>kConvex&#160;</td><td class="fielddoc"><p>The constraint is g(z) = z₀ - sqrt(z₁² + ... </p>
+<ul>
+<li>zₙ₋₁²) ≥ 0. Note this formulation is non-differentiable at z₁= ...= zₙ₋₁=0 </li>
+</ul>
 </td></tr>
-<tr><td class="fieldname"><a id="a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1"></a>kConvexSmooth&#160;</td><td class="fielddoc"><p>Same as kConvex1, but with approximated gradient. </p>
+<tr><td class="fieldname"><a id="a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1"></a>kConvexSmooth&#160;</td><td class="fielddoc"><p>Same as kConvex, but with approximated gradient that exists everywhere. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a7e69b5efb34e150cd2b2422e1e943da4afa9ab8d116c77d49dee47845f12f5725"></a>kNonconvex&#160;</td><td class="fielddoc"><p>Nonconvex constraint z₀²-(z₁²+...+zₙ₋₁²) ≥ 0 and z₀ ≥ 0. </p>
+<p>Note this formulation is differentiable, but at z₁= ...= zₙ₋₁=0 the gradient is also 0, so a gradient-based nonlinear solver can get stuck. </p>
 </td></tr>
 </table>
 
@@ -338,8 +342,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5521e832fe0aabecde9864797854aae5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5521e832fe0aabecde9864797854aae5">&#9670;&nbsp;</a></span>LorentzConeConstraint() <span class="overload">[3/3]</span></h2>
+<a id="a9c5acd778635703b28653301d0a5f9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5acd778635703b28653301d0a5f9fd">&#9670;&nbsp;</a></span>LorentzConeConstraint() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -360,7 +364,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4">EvalType</a>&#160;</td>
-          <td class="paramname"><em>eval_type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4ad597fc01c79cc256d0a9fe5211c62573">EvalType::kConvex</a></code>&#160;</td>
+          <td class="paramname"><em>eval_type</em> = <code><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7e69b5efb34e150cd2b2422e1e943da4a6d5ca2cdc67e830f77b77110a22b23a1">EvalType::kConvexSmooth</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
