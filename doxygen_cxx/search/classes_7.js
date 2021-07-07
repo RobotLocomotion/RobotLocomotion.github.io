@@ -24,5 +24,5 @@ var searchData=
   ['hpolyhedron',['HPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html',1,'drake::geometry::optimization']]],
   ['hydroelasticcontactinfo',['HydroelasticContactInfo',['../classdrake_1_1multibody_1_1_hydroelastic_contact_info.html',1,'drake::multibody']]],
   ['hydroelasticquadraturepointdata',['HydroelasticQuadraturePointData',['../structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html',1,'drake::multibody']]],
-  ['hyperellipsoid',['HyperEllipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html',1,'drake::geometry::optimization']]]
+  ['hyperellipsoid',['Hyperellipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html',1,'drake::geometry::optimization']]]
 ];

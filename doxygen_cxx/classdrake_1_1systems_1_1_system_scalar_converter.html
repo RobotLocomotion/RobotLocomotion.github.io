@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_scala
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_system_scalar_converter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SystemScalarConverter Class Reference</div>  </div>
@@ -114,7 +115,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_scala
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Conversions where <code>T</code> and <code>U</code> type are the same are not supported. Template functions such as <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a8baa6c61f01430d61236235b8af457c0" title="Returns true iff this object can convert a System into a System&lt;T&gt;, i.e., whether Convert() will retu...">IsConvertible&lt;T, U&gt;()</a> are still callable, but will always return false, null, etc. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Conversions where <code>T</code> and <code>U</code> types are the same are not supported. Template functions such as <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a8baa6c61f01430d61236235b8af457c0" title="Returns true iff this object can convert a System into a System&lt;T&gt;, i.e., whether Convert() will retu...">IsConvertible&lt;T, U&gt;()</a> are still callable, but will always return false, null, etc. </dd></dl>
 </div>
 <p><code>#include &lt;drake/systems/framework/system_scalar_converter.h&gt;</code></p>
 <table class="memberdecls">
@@ -123,7 +124,6 @@ Public Types</h2></td></tr>
 <tr class="memitem:aa5deb46f2141a0937f577705ba822e63"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a> { <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63ade1ec1870756a80dffbdc4cda53153e0">kEnabled</a>, 
 <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63a7b04d8795f5fd03c761ce70dab985fee">kDisabled</a>
  }</td></tr>
-<tr class="memdesc:aa5deb46f2141a0937f577705ba822e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">A configuration option for our constructor, controlling whether or not the Convert implementation requires that the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> subclass type is preserved.  <a href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">More...</a><br /></td></tr>
 <tr class="separator:aa5deb46f2141a0937f577705ba822e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &gt;(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;)&gt;</td></tr>
@@ -134,14 +134,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a3834c7f6d8a065ef95436cfc0b0ebaa5">SystemScalarConverter</a> ()</td></tr>
 <tr class="memdesc:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a converter that supports no conversions.  <a href="#a3834c7f6d8a065ef95436cfc0b0ebaa5">More...</a><br /></td></tr>
 <tr class="separator:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a206f17b407c523e19a1481df7bd85d49"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
-<tr class="memitem:a206f17b407c523e19a1481df7bd85d49"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a206f17b407c523e19a1481df7bd85d49">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt; tag)</td></tr>
-<tr class="memdesc:a206f17b407c523e19a1481df7bd85d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a converter that uses S's scalar-converting copy constructor to perform system scalar conversion.  <a href="#a206f17b407c523e19a1481df7bd85d49">More...</a><br /></td></tr>
-<tr class="separator:a206f17b407c523e19a1481df7bd85d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50f1eb9fba3231d646cc1892782429dd"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
-<tr class="memitem:a50f1eb9fba3231d646cc1892782429dd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a50f1eb9fba3231d646cc1892782429dd">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;, <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a> subtype_preservation)</td></tr>
-<tr class="memdesc:a50f1eb9fba3231d646cc1892782429dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates using S's scalar-type converting copy constructor.  <a href="#a50f1eb9fba3231d646cc1892782429dd">More...</a><br /></td></tr>
-<tr class="separator:a50f1eb9fba3231d646cc1892782429dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
+<tr class="memitem:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a04fcaa98c869b8ff1c345bb5e98f2561">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;)</td></tr>
+<tr class="memdesc:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a converter that uses S's scalar-converting copy constructor to perform system scalar conversion.  <a href="#a04fcaa98c869b8ff1c345bb5e98f2561">More...</a><br /></td></tr>
+<tr class="separator:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39bc263bfa369d811ee1c1ef60850d5b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
+<tr class="memitem:a39bc263bfa369d811ee1c1ef60850d5b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a39bc263bfa369d811ee1c1ef60850d5b">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;, <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a> sub)</td></tr>
+<tr class="memdesc:a39bc263bfa369d811ee1c1ef60850d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a39bc263bfa369d811ee1c1ef60850d5b">More...</a><br /></td></tr>
+<tr class="separator:a39bc263bfa369d811ee1c1ef60850d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff no conversions are supported.  <a href="#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +177,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a17edf10fa38c2580f3d6aadd3b4a8b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf65090c179909b60285b47e141a7dc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#adf65090c179909b60285b47e141a7dc6">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:adf65090c179909b60285b47e141a7dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
+<tr class="memitem:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a6275b6e3f7ef323d21f726c6f093d1dd">MakeWithoutSubtypeChecking</a> ()</td></tr>
+<tr class="memdesc:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a converter similar to the single-argument constructor, with the built-in checks for guaranteed subtype preservation of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> turned off.  <a href="#a6275b6e3f7ef323d21f726c6f093d1dd">More...</a><br /></td></tr>
+<tr class="separator:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a2370ce4ad203ecc3b866db8c79ad6d34"></a>
@@ -213,8 +220,6 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>A configuration option for our constructor, controlling whether or not the Convert implementation requires that the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> subclass type is preserved. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa5deb46f2141a0937f577705ba822e63ade1ec1870756a80dffbdc4cda53153e0"></a>kEnabled&#160;</td><td class="fielddoc"><p>The argument to Convert must be of the exact type S that was used to populate the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a>. </p>
 </td></tr>
@@ -298,8 +303,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a206f17b407c523e19a1481df7bd85d49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a206f17b407c523e19a1481df7bd85d49">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[4/5]</span></h2>
+<a id="a04fcaa98c869b8ff1c345bb5e98f2561"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fcaa98c869b8ff1c345bb5e98f2561">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +313,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;&#160;</td>
-          <td class="paramname"><em>tag</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -316,14 +321,14 @@ Public Member Functions</h2></td></tr>
 
 <p>Creates a converter that uses S's scalar-converting copy constructor to perform system scalar conversion. </p>
 <p>That constructor takes the form of:</p>
-<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>FooSystem final : <span class="keyword">public</span> LeafSystem&lt;T&gt; {</div><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">  <span class="keyword">explicit</span> FooSystem(<span class="keyword">const</span> FooSystem&lt;U&gt;&amp; other);</div><div class="line">};</div></div><!-- fragment --><p>By default, the converter supports conversions to and from all of the <a class="el" href="group__default__scalars.html">default scalars</a>, but systems may specialize the <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> to disable support for some or all of these conversions.</p>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>FooSystem final : <span class="keyword">public</span> LeafSystem&lt;T&gt; {</div><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">  <span class="keyword">explicit</span> FooSystem(<span class="keyword">const</span> FooSystem&lt;U&gt;&amp; other);</div><div class="line">};</div></div><!-- fragment --><p>By default, the converter supports conversions to and from all of the <a class="el" href="group__default__scalars.html">default scalars</a>, but systems may specialize the <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> to disable support for some or all of these conversions. Conversions where <code>T</code> and <code>U</code> types are the same are not supported.</p>
 <p>This an implicit conversion constructor (not marked <code>explicit</code>), in order to make calling code substantially more readable, with relatively little risk of an unwanted accidental conversion happening.</p>
 <p>See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a> for additional overview documentation. </p>
 
 </div>
 </div>
-<a id="a50f1eb9fba3231d646cc1892782429dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50f1eb9fba3231d646cc1892782429dd">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[5/5]</span></h2>
+<a id="a39bc263bfa369d811ee1c1ef60850d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39bc263bfa369d811ee1c1ef60850d5b">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +343,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a>&#160;</td>
-          <td class="paramname"><em>subtype_preservation</em>&#160;</td>
+          <td class="paramname"><em>sub</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -348,8 +353,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Creates using S's scalar-type converting copy constructor. </p>
-<p>Behaves exactly like <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a206f17b407c523e19a1481df7bd85d49" title="Creates a converter that uses S&#39;s scalar-converting copy constructor to perform system scalar convers...">SystemScalarConverter(SystemTypeTag&lt;S&gt;)</a>, but with the additional option to turn off guaranteed subtype preservation of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> being converted. In general, subtype preservation is an important invariant during scalar conversion, so be cautious about disabling it. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>"Use MakeWithoutSubtypeChecking instead of kDisabled." <br />
+ This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>
@@ -371,7 +377,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>"Only scalar-converting copy constructors are supported." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>"Only scalar-converting copy constructors are supported." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -392,7 +398,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>"User-defined scalar types cannot be added." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>"User-defined scalar types cannot be added." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -454,6 +460,34 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true iff this object can convert a <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a><u> into a System&lt;T&gt;, i.e., whether <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a16f9a4430d4f9d2c9dc4228524f17b5b" title="Converts a System into a System&lt;T&gt;.">Convert()</a> will return non-null. </u></p>
+
+</div>
+</div>
+<a id="a6275b6e3f7ef323d21f726c6f093d1dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6275b6e3f7ef323d21f726c6f093d1dd">&#9670;&nbsp;</a></span>MakeWithoutSubtypeChecking()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> MakeWithoutSubtypeChecking </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Advanced) Creates a converter similar to the single-argument constructor, with the built-in checks for guaranteed subtype preservation of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> turned off. </p>
+<p>In general, subtype preservation is an important invariant of scalar conversion, so be extremely cautious about disabling it. </p>
 
 </div>
 </div>

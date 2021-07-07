@@ -489,6 +489,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac0a32aadfdc1241e4e39f206479b6000"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ac0a32aadfdc1241e4e39f206479b6000">MakeSolver</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;id)</td></tr>
 <tr class="memdesc:ac0a32aadfdc1241e4e39f206479b6000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the solver ID, create the solver with the matching ID.  <a href="#ac0a32aadfdc1241e4e39f206479b6000">More...</a><br /></td></tr>
 <tr class="separator:ac0a32aadfdc1241e4e39f206479b6000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e">MakeFirstAvailableSolver</a> (const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt; &amp;solver_ids)</td></tr>
+<tr class="memdesc:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the first available and enabled solver.  <a href="#a99ce5167dfbdc1a1f84e2e7cc52cba4e">More...</a><br /></td></tr>
+<tr class="separator:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed794af38e7da9270528fd2185861862"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aed794af38e7da9270528fd2185861862">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a> common_solver_option)</td></tr>
 <tr class="separator:aed794af38e7da9270528fd2185861862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5f972e77c40a9afab91907620c621e11"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">MakeQuadraticErrorCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_desired)</td></tr>
@@ -2588,6 +2591,27 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
+<a id="a99ce5167dfbdc1a1f84e2e7cc52cba4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ce5167dfbdc1a1f84e2e7cc52cba4e">&#9670;&nbsp;</a></span>MakeFirstAvailableSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a>&gt; drake::solvers::MakeFirstAvailableSolver </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solver_ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Makes the first available and enabled solver. </p>
+<p>If no solvers are available, throws a std::exception. </p>
+
+</div>
+</div>
 <a id="a4bad4d69748b5e84448a51d04f672f76"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bad4d69748b5e84448a51d04f672f76">&#9670;&nbsp;</a></span>MakeL2NormCost()</h2>
 
@@ -2760,36 +2784,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="af22da0124afc42f58ae6e42e1a97b724"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af22da0124afc42f58ae6e42e1a97b724">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/10]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5fa3414cee7c7ef46d8549673b42e344"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa3414cee7c7ef46d8549673b42e344">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa3414cee7c7ef46d8549673b42e344">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2804,6 +2800,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95f">ProgramAttribute</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af22da0124afc42f58ae6e42e1a97b724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22da0124afc42f58ae6e42e1a97b724">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;&#160;</td>
           <td class="paramname">&#160;</td>
         </tr>
         <tr>

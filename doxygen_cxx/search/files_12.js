@@ -36,7 +36,6 @@ var searchData=
   ['signal_5flogger_2eh',['signal_logger.h',['../signal__logger_8h.html',1,'']]],
   ['signed_5fdistance_5fpair_2eh',['signed_distance_pair.h',['../signed__distance__pair_8h.html',1,'']]],
   ['signed_5fdistance_5fto_5fpoint_2eh',['signed_distance_to_point.h',['../signed__distance__to__point_8h.html',1,'']]],
-  ['signed_5fdistance_5fto_5fpoint_5fwith_5fgradient_2eh',['signed_distance_to_point_with_gradient.h',['../signed__distance__to__point__with__gradient_8h.html',1,'']]],
   ['simulator_2eh',['simulator.h',['../simulator_8h.html',1,'']]],
   ['simulator_5fconfig_2eh',['simulator_config.h',['../simulator__config_8h.html',1,'']]],
   ['simulator_5fconfig_5ffunctions_2eh',['simulator_config_functions.h',['../simulator__config__functions_8h.html',1,'']]],

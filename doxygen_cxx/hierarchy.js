@@ -95,6 +95,7 @@ var hierarchy =
     [ "ContinuousState< AutoDiffXd >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< double >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
+    [ "ConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html", null ],
     [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CoulombFriction< double >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", null ],
@@ -637,7 +638,7 @@ var hierarchy =
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
       [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
         [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
-        [ "HyperEllipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyper_ellipsoid.html", null ],
+        [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
         [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
         [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
       ] ],
@@ -651,7 +652,6 @@ var hierarchy =
     [ "SignalLog< T >", "classdrake_1_1systems_1_1_signal_log.html", null ],
     [ "SignedDistancePair< T >", "structdrake_1_1geometry_1_1_signed_distance_pair.html", null ],
     [ "SignedDistanceToPoint< T >", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", null ],
-    [ "SignedDistanceToPointWithGradient", "structdrake_1_1geometry_1_1_signed_distance_to_point_with_gradient.html", null ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", null ],
     [ "Simulator< T >", "classdrake_1_1systems_1_1_simulator.html", null ],
     [ "SimulatorConfig", "structdrake_1_1systems_1_1_simulator_config.html", null ],
@@ -1013,6 +1013,7 @@ var hierarchy =
     [ "uniform_real_distribution< drake::symbolic::Expression >", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "unique_ptr< T >", null, [
       [ "copyable_unique_ptr< drake::AbstractValue >", "classdrake_1_1copyable__unique__ptr.html", null ],
+      [ "copyable_unique_ptr< drake::geometry::optimization::ConvexSet >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::render::RenderEngine >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::Shape >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::systems::CacheEntryValue >", "classdrake_1_1copyable__unique__ptr.html", null ],

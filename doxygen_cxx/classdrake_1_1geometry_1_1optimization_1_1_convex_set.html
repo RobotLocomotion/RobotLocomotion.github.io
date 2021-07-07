@@ -116,12 +116,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79ab6fe34900a8391301b23abd29e10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a> () const</td></tr>
 <tr class="memdesc:a79ab6fe34900a8391301b23abd29e10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dimension of the vector space in which the elements of this set are evaluated.  <a href="#a79ab6fe34900a8391301b23abd29e10e">More...</a><br /></td></tr>
 <tr class="separator:a79ab6fe34900a8391301b23abd29e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
+<tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
+<tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, double tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the point x is contained in the set.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16859f4c6e90e06faad9ffbd4db7e59f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a16859f4c6e90e06faad9ffbd4db7e59f">AddPointInSetConstraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
-<tr class="memdesc:a16859f4c6e90e06faad9ffbd4db7e59f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <a href="#a16859f4c6e90e06faad9ffbd4db7e59f">More...</a><br /></td></tr>
-<tr class="separator:a16859f4c6e90e06faad9ffbd4db7e59f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc952b29c3cc22980f9a3fffe0d23ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff">AddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const</td></tr>
+<tr class="memdesc:accc952b29c3cc22980f9a3fffe0d23ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to an existing MathematicalProgram enforcing that the point defined by vars is inside the set.  <a href="#accc952b29c3cc22980f9a3fffe0d23ff">More...</a><br /></td></tr>
+<tr class="separator:accc952b29c3cc22980f9a3fffe0d23ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035">AddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const</td></tr>
 <tr class="memdesc:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Let S be this convex set.  <a href="#a1fb1329a9d7f2b0adf69ae203a9be035">More...</a><br /></td></tr>
 <tr class="separator:a1fb1329a9d7f2b0adf69ae203a9be035"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,10 +156,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae6b2b9aaa889daabb279bbdb960f8f87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae6b2b9aaa889daabb279bbdb960f8f87">ConvexSet</a> (std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;(const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;)&gt; cloner, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a>)</td></tr>
 <tr class="memdesc:ae6b2b9aaa889daabb279bbdb960f8f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use by derived classes to construct a ConvexSet.  <a href="#ae6b2b9aaa889daabb279bbdb960f8f87">More...</a><br /></td></tr>
 <tr class="separator:ae6b2b9aaa889daabb279bbdb960f8f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a8dab5a4504816ff943e184bdc8f2cb5f">DoIsBounded</a> () const =0</td></tr>
+<tr class="separator:a8dab5a4504816ff943e184bdc8f2cb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ade78c2696e0f7afdf38c59bf7b12ada5">DoPointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, double tol) const =0</td></tr>
 <tr class="separator:ade78c2696e0f7afdf38c59bf7b12ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42a7661ec6883b47e2c9c7a8c65294ed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a42a7661ec6883b47e2c9c7a8c65294ed">DoAddPointInSetConstraint</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
-<tr class="separator:a42a7661ec6883b47e2c9c7a8c65294ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb1e034a963f31045c5667256013afb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cb1e034a963f31045c5667256013afb">DoAddPointInSetConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;vars) const =0</td></tr>
+<tr class="separator:a1cb1e034a963f31045c5667256013afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae37ae169eed6681dbf5d82ddc4137420"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#ae37ae169eed6681dbf5d82ddc4137420">DoAddPointInNonnegativeScalingConstraints</a> (<a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *prog, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">solvers::VectorXDecisionVariable</a> &gt; &amp;x, const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;t) const =0</td></tr>
 <tr class="separator:ae37ae169eed6681dbf5d82ddc4137420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da746fed405258f0af4dc5c385f6e2a"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &gt;, math::RigidTransformd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2da746fed405258f0af4dc5c385f6e2a">DoToShapeWithPose</a> () const =0</td></tr>
@@ -355,14 +360,14 @@ t ≥ 0,
 
 </div>
 </div>
-<a id="a16859f4c6e90e06faad9ffbd4db7e59f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16859f4c6e90e06faad9ffbd4db7e59f">&#9670;&nbsp;</a></span>AddPointInSetConstraint()</h2>
+<a id="accc952b29c3cc22980f9a3fffe0d23ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accc952b29c3cc22980f9a3fffe0d23ff">&#9670;&nbsp;</a></span>AddPointInSetConstraints()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddPointInSetConstraint </td>
+          <td class="memname">void AddPointInSetConstraints </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
           <td class="paramname"><em>prog</em>, </td>
@@ -466,8 +471,8 @@ t ≥ 0,
 
 </div>
 </div>
-<a id="a42a7661ec6883b47e2c9c7a8c65294ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42a7661ec6883b47e2c9c7a8c65294ed">&#9670;&nbsp;</a></span>DoAddPointInSetConstraint()</h2>
+<a id="a1cb1e034a963f31045c5667256013afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb1e034a963f31045c5667256013afb">&#9670;&nbsp;</a></span>DoAddPointInSetConstraints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +481,7 @@ t ≥ 0,
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void DoAddPointInSetConstraint </td>
+          <td class="memname">virtual void DoAddPointInSetConstraints </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">solvers::MathematicalProgram</a> *&#160;</td>
           <td class="paramname"><em>prog</em>, </td>
@@ -491,6 +496,31 @@ t ≥ 0,
           <td></td>
           <td>)</td>
           <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dab5a4504816ff943e184bdc8f2cb5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dab5a4504816ff943e184bdc8f2cb5f">&#9670;&nbsp;</a></span>DoIsBounded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool DoIsBounded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -560,6 +590,26 @@ t ≥ 0,
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f010e733bd63adb8352995624362b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f010e733bd63adb8352995624362b65">&#9670;&nbsp;</a></span>IsBounded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsBounded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the set is bounded, e.g. </p>
+<p>there exists an element-wise finite lower and upper bound for the set. Note: for some derived classes, this check is trivial, but for others it can require solving an (typically small) optimization problem. Check the derived class documentation for any notes. </p>
 
 </div>
 </div>

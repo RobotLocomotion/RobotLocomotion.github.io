@@ -1064,6 +1064,13 @@ also 0, so a gradient-based nonlinear solver can get stuck.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pydrake.solvers.mathematicalprogram.MakeFirstAvailableSolver">
+<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">MakeFirstAvailableSolver</code><span class="sig-paren">(</span><em>solver_ids: List[pydrake.solvers.mathematicalprogram.SolverId]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverInterface<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MakeFirstAvailableSolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the first available and enabled solver. If no solvers are
+available, throws a RuntimeError.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.solvers.mathematicalprogram.MakeSolver">
 <code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">MakeSolver</code><span class="sig-paren">(</span><em>id: pydrake.solvers.mathematicalprogram.SolverId</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverInterface<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MakeSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the solver ID, create the solver with the matching ID.</p>
@@ -2882,10 +2889,6 @@ semidefinite. - if type = kSdsos, we impose the Gramian matrix being
 scaled diagonally dominant. - if type = kDsos, we impose the Gramian
 matrix being positive diagonally dominant.</p>
 <ol class="arabic simple" start="3">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, grammian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: drake::solvers::MathematicalProgram::NonnegativePolynomial) -&gt; pydrake.symbolic.Polynomial</li>
-</ol>
-<p>Same as NewNonnegativePolynomial, but the argument name is incorrectly spelled as grammian</p>
-<ol class="arabic simple" start="4">
 <li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: drake::solvers::MathematicalProgram::NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Overloads NewNonnegativePolynomial(). Instead of passing the monomial

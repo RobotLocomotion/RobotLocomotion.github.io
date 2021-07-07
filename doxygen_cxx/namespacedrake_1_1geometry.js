@@ -39,7 +39,6 @@ var namespacedrake_1_1geometry =
     [ "ShapeTag", "structdrake_1_1geometry_1_1_shape_tag.html", null ],
     [ "SignedDistancePair", "structdrake_1_1geometry_1_1_signed_distance_pair.html", "structdrake_1_1geometry_1_1_signed_distance_pair" ],
     [ "SignedDistanceToPoint", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", "structdrake_1_1geometry_1_1_signed_distance_to_point" ],
-    [ "SignedDistanceToPointWithGradient", "structdrake_1_1geometry_1_1_signed_distance_to_point_with_gradient.html", "structdrake_1_1geometry_1_1_signed_distance_to_point_with_gradient" ],
     [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", "classdrake_1_1geometry_1_1_sphere" ],
     [ "SurfaceFace", "classdrake_1_1geometry_1_1_surface_face.html", "classdrake_1_1geometry_1_1_surface_face" ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html", "classdrake_1_1geometry_1_1_surface_mesh" ],

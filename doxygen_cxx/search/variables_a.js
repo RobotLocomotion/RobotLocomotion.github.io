@@ -62,6 +62,7 @@ var searchData=
   ['kschunkwsgvelocityindex',['kSchunkWsgVelocityIndex',['../namespacedrake_1_1manipulation_1_1schunk__wsg.html#ad3478526c69fa04f5dff9ad3c2ebf055',1,'drake::manipulation::schunk_wsg']]],
   ['ksetloglevelhelpmessage',['kSetLogLevelHelpMessage',['../namespacedrake_1_1logging.html#abc074aead70b88bf38e18993bf9c28c3',1,'drake::logging']]],
   ['ksetloglevelunchanged',['kSetLogLevelUnchanged',['../namespacedrake_1_1logging.html#ae6e439f4584cc1f0a6dd0990378604a5',1,'drake::logging']]],
+  ['ksetlogpatternhelpmessage',['kSetLogPatternHelpMessage',['../namespacedrake_1_1logging.html#a60321c9dbf7c1ebe763371ab00262d68',1,'drake::logging']]],
   ['ksize',['kSize',['../classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a5d9346b399b0ab493c0cd6c17e64d08a',1,'drake::systems::rendering::FrameVelocity::kSize()'],['../classdrake_1_1systems_1_1rendering_1_1_pose_vector.html#a5d9346b399b0ab493c0cd6c17e64d08a',1,'drake::systems::rendering::PoseVector::kSize()']]],
   ['kspacedimension',['kSpaceDimension',['../namespacedrake.html#af869092c52ed7cc9d2db40ce56050c7c',1,'drake']]],
   ['kspringk',['kSpringK',['../structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a6aa3dc95330ca350010af07f6fc6a3d9',1,'drake::systems::analysis_test::ExplicitErrorControlledIntegratorTest']]],

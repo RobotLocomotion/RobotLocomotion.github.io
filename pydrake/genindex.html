@@ -885,7 +885,7 @@
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.__init__">(pydrake.geometry.optimization.HPolyhedron method)</a>
 </li>
-        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HyperEllipsoid.__init__">(pydrake.geometry.optimization.HyperEllipsoid method)</a>
+        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid.__init__">(pydrake.geometry.optimization.Hyperellipsoid method)</a>
 </li>
         <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.__init__">(pydrake.geometry.render.ClippingRange method)</a>
 </li>
@@ -1771,7 +1771,7 @@
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.A">A() (pydrake.geometry.optimization.HPolyhedron method)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HyperEllipsoid.A">(pydrake.geometry.optimization.HyperEllipsoid method)</a>
+        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid.A">(pydrake.geometry.optimization.Hyperellipsoid method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Rgba.a">a() (pydrake.geometry.Rgba method)</a>
@@ -2148,7 +2148,7 @@
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.AddPackageXml">AddPackageXml() (pydrake.multibody.parsing.PackageMap method)</a>
 </li>
-      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraint">AddPointInSetConstraint() (pydrake.geometry.optimization.ConvexSet method)</a>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints">AddPointInSetConstraints() (pydrake.geometry.optimization.ConvexSet method)</a>
 </li>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPointToPointDistanceConstraint">AddPointToPointDistanceConstraint() (pydrake.multibody.inverse_kinematics.InverseKinematics method)</a>
 </li>
@@ -3506,7 +3506,7 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.ceil">(pydrake.symbolic.Variable method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HyperEllipsoid.center">center() (pydrake.geometry.optimization.HyperEllipsoid method)</a>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid.center">center() (pydrake.geometry.optimization.Hyperellipsoid method)</a>
 </li>
       <li><a href="pydrake.examples.compass_gait.html#pydrake.examples.compass_gait.CompassGaitParams.center_of_mass_leg">center_of_mass_leg() (pydrake.examples.compass_gait.CompassGaitParams method)</a>
 </li>
@@ -8880,7 +8880,7 @@
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.HydroelasticContactInfo_[float]">HydroelasticContactInfo_[float] (class in pydrake.multibody.plant)</a>
 </li>
-      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HyperEllipsoid">HyperEllipsoid (class in pydrake.geometry.optimization)</a>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid">Hyperellipsoid (class in pydrake.geometry.optimization)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -8896,6 +8896,22 @@
 
       <ul>
         <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryInstance.id">(pydrake.geometry.GeometryInstance method)</a>
+</li>
+        <li><a href="pydrake.solvers.clp.html#pydrake.solvers.clp.ClpSolver.id">(pydrake.solvers.clp.ClpSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.csdp.html#pydrake.solvers.csdp.CsdpSolver.id">(pydrake.solvers.csdp.CsdpSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.dreal.html#pydrake.solvers.dreal.DrealSolver.id">(pydrake.solvers.dreal.DrealSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.gurobi.html#pydrake.solvers.gurobi.GurobiSolver.id">(pydrake.solvers.gurobi.GurobiSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.ipopt.html#pydrake.solvers.ipopt.IpoptSolver.id">(pydrake.solvers.ipopt.IpoptSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.mosek.html#pydrake.solvers.mosek.MosekSolver.id">(pydrake.solvers.mosek.MosekSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.osqp.html#pydrake.solvers.osqp.OsqpSolver.id">(pydrake.solvers.osqp.OsqpSolver static method)</a>
+</li>
+        <li><a href="pydrake.solvers.snopt.html#pydrake.solvers.snopt.SnoptSolver.id">(pydrake.solvers.snopt.SnoptSolver static method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.PenetrationAsPointPair_.PenetrationAsPointPair_[float].id_A">id_A (pydrake.geometry.PenetrationAsPointPair_.PenetrationAsPointPair_[float] attribute)</a>
@@ -9198,6 +9214,8 @@
 </li>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.RenderCameraCore.intrinsics">intrinsics() (pydrake.geometry.render.RenderCameraCore method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.math.html#pydrake.math.inv">inv() (in module pydrake.math)</a>
 
       <ul>
@@ -9210,8 +9228,6 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.inv">(pydrake.symbolic.Variable method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.InvalidDepth">InvalidDepth (class in pydrake.systems.sensors)</a>
 </li>
       <li><a href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.AngleAxis_.AngleAxis_[float].inverse">inverse() (pydrake.common.eigen_geometry.AngleAxis_.AngleAxis_[float] method)</a>
@@ -10171,6 +10187,8 @@
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.Trajectory.MakeDerivative">MakeDerivative() (pydrake.trajectories.Trajectory method)</a>
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.MakeFiniteHorizonLinearQuadraticRegulator">MakeFiniteHorizonLinearQuadraticRegulator() (in module pydrake.systems.controllers)</a>
+</li>
+      <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MakeFirstAvailableSolver">MakeFirstAvailableSolver() (in module pydrake.solvers.mathematicalprogram)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.SpatialInertia_.SpatialInertia_[float].MakeFromCentralInertia">MakeFromCentralInertia() (pydrake.multibody.tree.SpatialInertia_.SpatialInertia_[float] static method)</a>
 

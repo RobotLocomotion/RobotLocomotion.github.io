@@ -189,8 +189,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraint">
-<code class="descname">AddPointInSetConstraint</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints">
+<code class="descname">AddPointInSetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint to an existing MathematicalProgram enforcing that
 the point defined by vars is inside the set.</p>
 </dd></dl>
@@ -253,12 +253,12 @@ representation: <code class="docutils literal"><span class="pre">{x|</span> <spa
 <dd>A.rows() == b.size().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.geometry.optimization.HPolyhedron, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, expressed_in: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.optimization.HPolyhedron, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
 <p>Constructs a new HPolyhedron from a SceneGraph geometry and pose in
-the <code class="docutils literal"><span class="pre">expressed_in</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">expressed_in</span></code> frame is std::nullopt, then it will be expressed in
-the world frame.</p>
+the <code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+in the world frame.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -298,7 +298,7 @@ length 2.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid">
-<code class="descname">MaximumVolumeInscribedEllipsoid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; drake::geometry::optimization::HyperEllipsoid<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">MaximumVolumeInscribedEllipsoid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; drake::geometry::optimization::Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
 From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
@@ -325,8 +325,8 @@ Cx + d | <a href="#id3"><span class="problematic" id="id4">|</span></a>x|₂ ≤
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.geometry.optimization.HyperEllipsoid">
-<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">HyperEllipsoid</code><a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.optimization.Hyperellipsoid">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Hyperellipsoid</code><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>Implements an ellipsoidal convex set represented by the quadratic form
 <code class="docutils literal"><span class="pre">{x</span> <span class="pre">|</span> <span class="pre">(x-center)ᵀAᵀA(x-center)</span> <span class="pre">≤</span> <span class="pre">1}</span></code>. Note that <code class="docutils literal"><span class="pre">A</span></code> need not be
@@ -336,15 +336,15 @@ ellipsoid: <code class="docutils literal"><span class="pre">{Bu</span> <span cla
 the unit ball. This is related to the quadratic form by <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">A⁻¹</span></code>,
 when <code class="docutils literal"><span class="pre">A</span></code> is invertible, but the quadratic form can also represent
 unbounded sets.</p>
-<p>Note: the name HyperEllipsoid was taken here to avoid conflicting with
+<p>Note: the name Hyperellipsoid was taken here to avoid conflicting with
 geometry::Ellipsoid and to distinguish that this class supports N
 dimensions.</p>
 <dl class="method">
-<dt id="pydrake.geometry.optimization.HyperEllipsoid.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.geometry.optimization.HyperEllipsoid, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], center: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], center: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs the ellipsoid.</p>
 <dl class="docutils">
@@ -352,19 +352,19 @@ dimensions.</p>
 <dd>A.cols() == center.size().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.geometry.optimization.HyperEllipsoid, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, expressed_in: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
-<p>Constructs a HyperEllipsoid from a SceneGraph geometry and pose in the
-<code class="docutils literal"><span class="pre">expressed_in</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">expressed_in</span></code> frame is std::nullopt, then it will be expressed in
-the world frame.</p>
+<p>Constructs a Hyperellipsoid from a SceneGraph geometry and pose in the
+<code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+in the world frame.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if geometry_id does not represent a shape that can be</li>
-<li>described as an HyperEllipsoid.</li>
+<li>described as an Hyperellipsoid.</li>
 </ul>
 </td>
 </tr>
@@ -373,14 +373,14 @@ the world frame.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.optimization.HyperEllipsoid.A">
-<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HyperEllipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid.A" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.A" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the quadratic form matrix A.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.optimization.HyperEllipsoid.center">
-<code class="descname">center</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HyperEllipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.HyperEllipsoid.center" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.center">
+<code class="descname">center</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the center of the ellipsoid.</p>
 </dd></dl>
 

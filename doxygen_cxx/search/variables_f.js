@@ -3,7 +3,7 @@ var searchData=
   ['p_5faca',['p_ACa',['../structdrake_1_1geometry_1_1_signed_distance_pair.html#a46d806554c238e27db8575ae5965b55e',1,'drake::geometry::SignedDistancePair']]],
   ['p_5fbcb',['p_BCb',['../structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28',1,'drake::geometry::SignedDistancePair']]],
   ['p_5fbobq_5fb',['p_BoBq_B',['../structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa431e4aae58cdaabaca8b4a4117a20c',1,'drake::multibody::ExternallyAppliedSpatialForce']]],
-  ['p_5fgn',['p_GN',['../structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64',1,'drake::geometry::SignedDistanceToPoint::p_GN()'],['../structdrake_1_1geometry_1_1_signed_distance_to_point_with_gradient.html#a833b23374857c6021395a65bcac05113',1,'drake::geometry::SignedDistanceToPointWithGradient::p_GN()']]],
+  ['p_5fgn',['p_GN',['../structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64',1,'drake::geometry::SignedDistanceToPoint']]],
   ['p_5fwca',['p_WCa',['../structdrake_1_1geometry_1_1_penetration_as_point_pair.html#af9a4b1783a2afea62e90cec7c0364a16',1,'drake::geometry::PenetrationAsPointPair']]],
   ['p_5fwcb',['p_WCb',['../structdrake_1_1geometry_1_1_penetration_as_point_pair.html#a03dd077d6a46472c4cbcc37ba07e6655',1,'drake::geometry::PenetrationAsPointPair']]],
   ['p_5fwcb_5fw',['p_WCb_W',['../structdrake_1_1multibody_1_1_contact_wrench.html#a982d01ffb51aa88a41a2ae238ef4b608',1,'drake::multibody::ContactWrench']]],

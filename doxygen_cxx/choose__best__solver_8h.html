@@ -101,6 +101,7 @@ $(document).ready(function(){initNavTree('choose__best__solver_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;set&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="mathematical__program_8h.html">drake/solvers/mathematical_program.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="solver__id_8h.html">drake/solvers/solver_id.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="solver__interface_8h.html">drake/solvers/solver_interface.h</a>&quot;</code><br />
@@ -129,6 +130,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac0a32aadfdc1241e4e39f206479b6000"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; SolverInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#ac0a32aadfdc1241e4e39f206479b6000">MakeSolver</a> (const SolverId &amp;id)</td></tr>
 <tr class="memdesc:ac0a32aadfdc1241e4e39f206479b6000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the solver ID, create the solver with the matching ID.  <a href="namespacedrake_1_1solvers.html#ac0a32aadfdc1241e4e39f206479b6000">More...</a><br /></td></tr>
 <tr class="separator:ac0a32aadfdc1241e4e39f206479b6000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; SolverInterface &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e">MakeFirstAvailableSolver</a> (const std::vector&lt; SolverId &gt; &amp;solver_ids)</td></tr>
+<tr class="memdesc:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the first available and enabled solver.  <a href="namespacedrake_1_1solvers.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e">More...</a><br /></td></tr>
+<tr class="separator:a99ce5167dfbdc1a1f84e2e7cc52cba4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

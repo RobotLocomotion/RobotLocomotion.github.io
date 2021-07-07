@@ -5217,36 +5217,6 @@ C.name().</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
-<p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
-pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
-value <code class="docutils literal"><span class="pre">X_PC</span></code>. If <code class="docutils literal"><span class="pre">X_PC</span></code> is omitted, the identity transform will be
-used. The call to this method creates and adds a new WeldJoint to the
-model. The new WeldJoint is named as: P.name() + “_welds_to_” +
-C.name().</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to the WeldJoint welding frames P and C.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the weld produces a duplicate joint name.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[float]</li>
 </ol>
 <p>This API using Isometry3 is / will be deprecated soon with the resolution of
@@ -9040,36 +9010,6 @@ C.name().</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], A: pydrake.multibody.tree.Frame_[AutoDiffXd], B: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AB: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</p>
-<p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
-pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
-value <code class="docutils literal"><span class="pre">X_PC</span></code>. If <code class="docutils literal"><span class="pre">X_PC</span></code> is omitted, the identity transform will be
-used. The call to this method creates and adds a new WeldJoint to the
-model. The new WeldJoint is named as: P.name() + “_welds_to_” +
-C.name().</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to the WeldJoint welding frames P and C.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the weld produces a duplicate joint name.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], A: pydrake.multibody.tree.Frame_[AutoDiffXd], B: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</li>
 </ol>
 <p>This API using Isometry3 is / will be deprecated soon with the resolution of
@@ -12861,36 +12801,6 @@ C.name().</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], A: pydrake.multibody.tree.Frame_[Expression], B: pydrake.multibody.tree.Frame_[Expression], X_AB: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</p>
-<p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
-pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
-value <code class="docutils literal"><span class="pre">X_PC</span></code>. If <code class="docutils literal"><span class="pre">X_PC</span></code> is omitted, the identity transform will be
-used. The call to this method creates and adds a new WeldJoint to the
-model. The new WeldJoint is named as: P.name() + “_welds_to_” +
-C.name().</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to the WeldJoint welding frames P and C.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the weld produces a duplicate joint name.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], A: pydrake.multibody.tree.Frame_[Expression], B: pydrake.multibody.tree.Frame_[Expression], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</li>
 </ol>
 <p>This API using Isometry3 is / will be deprecated soon with the resolution of
@@ -16682,36 +16592,6 @@ C.name().</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
-<dt>R=RotationMatrix([</dt>
-<dd>[1.0, 0.0, 0.0],
-[0.0, 1.0, 0.0],
-[0.0, 0.0, 1.0],</dd>
-</dl>
-<p>]),
-p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
-<p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
-<p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
-pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
-value <code class="docutils literal"><span class="pre">X_PC</span></code>. If <code class="docutils literal"><span class="pre">X_PC</span></code> is omitted, the identity transform will be
-used. The call to this method creates and adds a new WeldJoint to the
-model. The new WeldJoint is named as: P.name() + “_welds_to_” +
-C.name().</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a constant reference to the WeldJoint welding frames P and C.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the weld produces a duplicate joint name.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[float]</li>
 </ol>
 <p>This API using Isometry3 is / will be deprecated soon with the resolution of
