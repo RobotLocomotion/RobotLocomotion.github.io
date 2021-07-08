@@ -1352,7 +1352,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The constraint enforcing the duration bounds. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1378,7 +1378,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A vector of constraints enforcing all time intervals are equal. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1556,7 +1556,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The bounding box constraint enforcing time interval bounds. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2114,7 +2114,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <p>If time steps are decision variables, then the initial guess for the time steps are evenly distributed to match the duration of the <code>traj_init_u</code> and <code>traj_init_x</code>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>traj_init_u</code> and <code>traj_init_x</code> are both empty, or if <code>traj_init_u</code> and <code>traj_init_x</code> are both non-empty, and have different start and end times. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>traj_init_u</code> and <code>traj_init_x</code> are both empty, or if <code>traj_init_u</code> and <code>traj_init_x</code> are both non-empty, and have different start and end times. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2278,7 +2278,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the decision variable associated with the timestep, h, at time index <code>index</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if timesteps are not declared as decision variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if timesteps are not declared as decision variables. </td></tr>
   </table>
   </dd>
 </dl>

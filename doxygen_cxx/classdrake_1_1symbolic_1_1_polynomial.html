@@ -443,7 +443,7 @@ Friends</h2></td></tr>
 <p>Note that all variables in <code>e</code> are considered as indeterminates.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>e</code> is not a polynomial. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>e</code> is not a polynomial. </td></tr>
   </table>
   </dd>
 </dl>
@@ -480,7 +480,7 @@ Friends</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>It collects the intersection of the variables appeared in <code>e</code> and the provided <code>indeterminates</code>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>e</code> is not a polynomial in <code>indeterminates</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>e</code> is not a polynomial in <code>indeterminates</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -667,7 +667,7 @@ Friends</h2></td></tr>
 <p>Evaluates this polynomial under a given environment <code>env</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td>if there is a variable in this polynomial whose assignment is not provided by <code>env</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is a variable in this polynomial whose assignment is not provided by <code>env</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -693,7 +693,7 @@ Friends</h2></td></tr>
 <p>Partially evaluates this polynomial using an environment <code>env</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -729,7 +729,7 @@ Friends</h2></td></tr>
 <p>Partially evaluates this polynomial by substituting <code>var</code> with <code>c</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected at any point during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected at any point during evaluation. </td></tr>
   </table>
   </dd>
 </dl>

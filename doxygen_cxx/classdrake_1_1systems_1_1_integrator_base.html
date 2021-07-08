@@ -327,7 +327,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a59add268d553fd546ffb04eca70b693b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the requested minimum step size <code>h_min</code> for this integrator.  <a href="#a59add268d553fd546ffb04eca70b693b">More...</a><br /></td></tr>
 <tr class="separator:a59add268d553fd546ffb04eca70b693b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78773e63a07381351e18380040f5fc13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a78773e63a07381351e18380040f5fc13">set_throw_on_minimum_step_size_violation</a> (bool throws)</td></tr>
-<tr class="memdesc:a78773e63a07381351e18380040f5fc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the integrator should throw a std::runtime_error exception when the integrator's step size selection algorithm determines that it must take a step smaller than the minimum step size (for, e.g., purposes of error control).  <a href="#a78773e63a07381351e18380040f5fc13">More...</a><br /></td></tr>
+<tr class="memdesc:a78773e63a07381351e18380040f5fc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the integrator should throw a std::exception when the integrator's step size selection algorithm determines that it must take a step smaller than the minimum step size (for, e.g., purposes of error control).  <a href="#a78773e63a07381351e18380040f5fc13">More...</a><br /></td></tr>
 <tr class="separator:a78773e63a07381351e18380040f5fc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b89a6384ec3f94a33c8fd2f4c384369"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5b89a6384ec3f94a33c8fd2f4c384369">get_throw_on_minimum_step_size_violation</a> () const</td></tr>
 <tr class="memdesc:a5b89a6384ec3f94a33c8fd2f4c384369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the current setting of the throw_on_minimum_step_size_violation flag.  <a href="#a5b89a6384ec3f94a33c8fd2f4c384369">More...</a><br /></td></tr>
@@ -1547,7 +1547,7 @@ get_working_minimum_step_size(T) </dd></dl>
 </div><div class="memdoc">
 
 <p>Reports the current setting of the throw_on_minimum_step_size_violation flag. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a78773e63a07381351e18380040f5fc13" title="Sets whether the integrator should throw a std::runtime_error exception when the integrator&#39;s step si...">set_throw_on_minimum_step_size_violation()</a>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a78773e63a07381351e18380040f5fc13" title="Sets whether the integrator should throw a std::exception when the integrator&#39;s step size selection a...">set_throw_on_minimum_step_size_violation()</a>. </dd></dl>
 
 </div>
 </div>
@@ -1587,9 +1587,9 @@ get_working_minimum_step_size(T) </dd></dl>
 </div><div class="memdoc">
 
 <p>An integrator must be initialized before being used. </p>
-<p>The pointer to the context must be set before <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> is called (or an std::logic_error will be thrown). If <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> is not called, an exception will be thrown when attempting to call <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a02875acba81c8be7dd0c7a2ae89db212" title="(Internal use only) Integrates the system forward in time by a single step with step size subject to ...">IntegrateNoFurtherThanTime()</a>. To reinitialize the integrator, <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a372de693ad40b3f42839c8ec6ac845f4" title="Resets the integrator to initial values, i.e., default construction values.">Reset()</a> should be called followed by <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>The pointer to the context must be set before <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> is called (or an std::exception will be thrown). If <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a> is not called, an exception will be thrown when attempting to call <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a02875acba81c8be7dd0c7a2ae89db212" title="(Internal use only) Integrates the system forward in time by a single step with step size subject to ...">IntegrateNoFurtherThanTime()</a>. To reinitialize the integrator, <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a372de693ad40b3f42839c8ec6ac845f4" title="Resets the integrator to initial values, i.e., default construction values.">Reset()</a> should be called followed by <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a98b1050f09da390896f964fb7a892391" title="An integrator must be initialized before being used.">Initialize()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If the context has not been set or a user-set parameter has been set illogically (i.e., one of the weighting matrix coefficients is set to a negative value- this check is only performed for integrators that support error estimation; the maximum step size is smaller than the minimum step size; the requested initial step size is outside of the interval [minimum step size, maximum step size]). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the context has not been set or a user-set parameter has been set illogically (i.e., one of the weighting matrix coefficients is set to a negative value- this check is only performed for integrators that support error estimation; the maximum step size is smaller than the minimum step size; the requested initial step size is outside of the interval [minimum step size, maximum step size]). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1640,7 +1640,7 @@ get_working_minimum_step_size(T) </dd></dl>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If the integrator has not been initialized or one of publish_time, update_time, or boundary_time is in the past. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the integrator has not been initialized or one of publish_time, update_time, or boundary_time is in the past. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1681,7 +1681,7 @@ get_working_minimum_step_size(T) </dd></dl>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If the integrator has not been initialized or t_final is in the past. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the integrator has not been initialized or t_final is in the past. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1722,7 +1722,7 @@ get_working_minimum_step_size(T) </dd></dl>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If the integrator has not been initialized or <code>t_target</code> is in the past or the integrator is not operating in fixed step mode. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the integrator has not been initialized or <code>t_target</code> is in the past or the integrator is not operating in fixed step mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1827,9 +1827,9 @@ get_working_minimum_step_size(T) </dd></dl>
 </div><div class="memdoc">
 
 <p>Request that the first attempted integration step have a particular size. </p>
-<p>If no request is made, the integrator will estimate a suitable size for the initial step attempt. <em>If the integrator does not support error control</em>, this method will throw a std::logic_error (call <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5fa66573f5abb1dc153098d2920c32b7" title="Derived classes must override this function to indicate whether the integrator supports error estimat...">supports_error_estimation()</a> to verify before calling this method). For variable-step integration, the initial target will be treated as a maximum step size subject to accuracy requirements and event occurrences. You can find out what size <em>actually</em> worked with <code><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a0ada2c620af585fefd269bbf0a7ff1e9" title="The actual size of the successful first step.">get_actual_initial_step_size_taken()</a></code>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>If no request is made, the integrator will estimate a suitable size for the initial step attempt. <em>If the integrator does not support error control</em>, this method will throw a std::exception (call <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5fa66573f5abb1dc153098d2920c32b7" title="Derived classes must override this function to indicate whether the integrator supports error estimat...">supports_error_estimation()</a> to verify before calling this method). For variable-step integration, the initial target will be treated as a maximum step size subject to accuracy requirements and event occurrences. You can find out what size <em>actually</em> worked with <code><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a0ada2c620af585fefd269bbf0a7ff1e9" title="The actual size of the successful first step.">get_actual_initial_step_size_taken()</a></code>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If the integrator does not support error estimation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the integrator does not support error estimation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1978,7 +1978,7 @@ get_working_minimum_step_size(T) </dd></dl>
 <p>If the integrator runs in fixed step mode, it will always take the maximum step size directed (which may be that determined by <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a0dafbc057f2a5a4828813e7ea5e3f99e" title="Gets the maximum step size that may be taken by this integrator.">get_maximum_step_size()</a>, or may be smaller, as directed by, e.g., <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> for event handling purposes). </p><dl class="section warning"><dt>Warning</dt><dd>The error estimation process will still be active (so <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a91c0da3a86a705e44833ec423e513971" title="Gets the error estimate (used only for integrators that support error estimation).">get_error_estimate()</a> will still return a correct result), meaning that the additional (typically, but not necessarily small) computation required for error estimation will still be performed. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if integrator does not support error estimation and <code>flag</code> is set to <code>false</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if integrator does not support error estimation and <code>flag</code> is set to <code>false</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2135,7 +2135,7 @@ get_working_minimum_step_size(T) </dd></dl>
 <p>Otherwise a default accuracy is chosen for you. This may be ignored for fixed-step integration since accuracy control requires variable step sizes. You should call <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#a5fa66573f5abb1dc153098d2920c32b7" title="Derived classes must override this function to indicate whether the integrator supports error estimat...">supports_error_estimation()</a> to ensure that the integrator supports this capability before calling this function; if the integrator does not support it, this method will throw an exception.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if integrator does not support error estimation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if integrator does not support error estimation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2158,7 +2158,7 @@ get_working_minimum_step_size(T) </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Sets whether the integrator should throw a std::runtime_error exception when the integrator's step size selection algorithm determines that it must take a step smaller than the minimum step size (for, e.g., purposes of error control). </p>
+<p>Sets whether the integrator should throw a std::exception when the integrator's step size selection algorithm determines that it must take a step smaller than the minimum step size (for, e.g., purposes of error control). </p>
 <p>Default is <code>true</code>. If <code>false</code>, the integrator will advance time and state using the minimum specified step size in such situations. See <a class="el" href="classdrake_1_1systems_1_1_integrator_base.html#integrator-minstep">this section</a> for more detail. </p>
 
 </div>
@@ -2186,7 +2186,7 @@ The system being integrated has continuous state. </dd>
 No dense integration is in progress (no dense output is held by the integrator) </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2227,7 +2227,7 @@ No dense integration is in progress (no dense output is held by the integrator) 
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if integrator does not support error estimation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if integrator does not support error estimation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2258,7 +2258,7 @@ No dense integration is in progress (no dense output is held by the integrator) 
 <dl class="section post"><dt>Postcondition</dt><dd>Previously held dense output is not updated nor referenced by the integrator anymore. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>

@@ -99,12 +99,13 @@ $(document).ready(function(){initNavTree('expect__throws__message_8h.html','');}
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;regex&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for expect_throws_message.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="expect__throws__message_8h__incl.svg" width="339" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="expect__throws__message_8h__incl.svg" width="451" height="216"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -231,7 +232,8 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Unit test helper macro for "expecting" an exception to be thrown but also testing the error message against a provided regular expression. </p>
-<p>This is like GTest's <code>EXPECT_THROW</code> but is fussier about the particular error message. Usage example:</p><div class="fragment"><div class="line"><a class="code" href="expect__throws__message_8h.html#aa74c5ca3daeb1e31077efbb2e5e319c4">DRAKE_EXPECT_THROWS_MESSAGE</a>(</div><div class="line">    StatementUnderTest(), <span class="comment">// You expect this statement to throw ...</span></div><div class="line">    std::logic_error,     <span class="comment">// ... this exception with ...</span></div><div class="line">    <span class="stringliteral">&quot;.*some important.*phrases.*that must appear.*&quot;</span>);  <span class="comment">// ... this message.</span></div></div><!-- fragment --><p> The regular expression must match the entire error message. If there is boilerplate you don't care to match at the beginning and end, surround with with <code>.*</code> to ignore in single-line messages or <code>[\s\S]*</code> for multiline messages.</p>
+<p>This is like GTest's <code>EXPECT_THROW</code> but is fussier about the particular error message. Usage example:</p><div class="fragment"><div class="line"><a class="code" href="expect__throws__message_8h.html#aa74c5ca3daeb1e31077efbb2e5e319c4">DRAKE_EXPECT_THROWS_MESSAGE</a>(</div><div class="line">    StatementUnderTest(), <span class="comment">// You expect this statement to throw ...</span></div><div class="line">    <span class="stringliteral">&quot;.*some important.*phrases.*that must appear.*&quot;</span>);  <span class="comment">// ... this message.</span></div></div><!-- fragment --><p> The regular expression must match the entire error message. If there is boilerplate you don't care to match at the beginning and end, surround with with <code>.*</code> to ignore in single-line messages or <code>[\s\S]*</code> for multiline messages.</p>
+<p>The "exception" argument is optional and defaults to "std::exception" when omitted. In other words, if your test doesn't care what kind of exception was thrown, then call this macro as (expression, regexp) without the middle argument.</p>
 <p>Following GTest's conventions, failure to perform as expected here is a non-fatal test error. An <code>ASSERT</code> variant is provided to make it fatal. There are also <code>*_IF_ARMED</code> variants. These require an exception in Debug builds (or any builds where <code>DRAKE_ENABLE_ASSERTS</code> has been defined). In Release builds, the expression will pass if it <em>doesn't</em> throw or if it throws an exception that would pass the same test as in Debug builds. There is no mechanism for testing <em>exclusive</em> throwing behavior (i.e., only throws in Debug). </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="expect__throws__message_8h.html#a6998ae8e94de7f2305a8e90e2f108d7f" title="Fatal error version of DRAKE_EXPECT_THROWS_MESSAGE.">DRAKE_ASSERT_THROWS_MESSAGE</a> </dd>
 <dd>
 <a class="el" href="expect__throws__message_8h.html#a54f58abfffc9eb33036fb5897911017e" title="Same as DRAKE_EXPECT_THROWS_MESSAGE in Debug builds, but doesn&#39;t require a throw in Release builds.">DRAKE_EXPECT_THROWS_MESSAGE_IF_ARMED</a>, <a class="el" href="expect__throws__message_8h.html#a92ea4ce5690987ffdcb6a9cc868c1eeb" title="Same as DRAKE_ASSERT_THROWS_MESSAGE in Debug builds, but doesn&#39;t require a throw in Release builds.">DRAKE_ASSERT_THROWS_MESSAGE_IF_ARMED</a> </dd></dl>

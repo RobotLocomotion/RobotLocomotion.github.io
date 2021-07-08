@@ -592,7 +592,7 @@ Friends</h2></td></tr>
 <p>Variant of <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#a359a32149ff74ea25f4f381533bf67de" title="Given the offset pose X_FQ of a frame Q in this frame F, this method computes the pose X_BQ of frame ...">CalcOffsetPoseInBody()</a> that given the offset pose <code>X_FQ</code> of a frame Q in <code>this</code> frame F, returns the pose <code>X_BQ</code> of frame Q in the body frame B to which this frame is attached. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if called on a Frame that does not have a fixed offset in the body frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called on a Frame that does not have a fixed offset in the body frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -627,7 +627,7 @@ Friends</h2></td></tr>
 <p>Variant of <a class="el" href="classdrake_1_1multibody_1_1_body_frame.html#af545520bafbd67a7e6c8b3c0bf4aae6f" title="Returns the pose X_BF of this frame F in the body frame B associated with this frame.">CalcPoseInBodyFrame()</a> that returns the fixed pose <code>X_BF</code> of <code>this</code> frame F in the body frame B associated with this frame. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if called on a Frame that does not have a fixed offset in the body frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called on a Frame that does not have a fixed offset in the body frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -669,7 +669,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>this</code> frame F is a Frame that does not have a fixed offset in the body frame B (i.e., <code>R_BF</code> is not constant). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> frame F is a Frame that does not have a fixed offset in the body frame B (i.e., <code>R_BF</code> is not constant). </td></tr>
   </table>
   </dd>
 </dl>
@@ -704,7 +704,7 @@ Friends</h2></td></tr>
 <p>Returns the rotation matrix <code>R_BF</code> that relates body frame B to <code>this</code> frame F (B is the body frame to which <code>this</code> frame F is attached). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>this</code> frame F is a Frame that does not have a fixed offset in the body frame B (i.e., <code>R_BF</code> is not constant). Frame sub-classes that have a constant <code>R_BF</code> must override this method. An example of a frame sub-class not implementing this method would be that of a frame on a soft body, for which its pose in the body frame depends on the state of deformation of the body. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this</code> frame F is a Frame that does not have a fixed offset in the body frame B (i.e., <code>R_BF</code> is not constant). Frame sub-classes that have a constant <code>R_BF</code> must override this method. An example of a frame sub-class not implementing this method would be that of a frame on a soft body, for which its pose in the body frame depends on the state of deformation of the body. </td></tr>
   </table>
   </dd>
 </dl>

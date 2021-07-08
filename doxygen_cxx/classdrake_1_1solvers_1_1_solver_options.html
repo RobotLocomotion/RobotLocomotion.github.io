@@ -117,10 +117,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ed5b563dbc1aeae6e6396cf04dc3d63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a6ed5b563dbc1aeae6e6396cf04dc3d63">SolverOptions</a> ()=default</td></tr>
 <tr class="separator:a6ed5b563dbc1aeae6e6396cf04dc3d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64f5a75df2c33b77454e88fae4d08047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047">SetOption</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::string &amp;solver_option, double option_value)</td></tr>
+<tr class="memdesc:a64f5a75df2c33b77454e88fae4d08047"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a double-valued solver option for a specific solver.  <a href="#a64f5a75df2c33b77454e88fae4d08047">More...</a><br /></td></tr>
 <tr class="separator:a64f5a75df2c33b77454e88fae4d08047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ab5717db6c3382362d3622a187cfaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#ac1ab5717db6c3382362d3622a187cfaa">SetOption</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::string &amp;solver_option, <a class="el" href="classint.html">int</a> option_value)</td></tr>
+<tr class="memdesc:ac1ab5717db6c3382362d3622a187cfaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets an integer-valued solver option for a specific solver.  <a href="#ac1ab5717db6c3382362d3622a187cfaa">More...</a><br /></td></tr>
 <tr class="separator:ac1ab5717db6c3382362d3622a187cfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a258cce4598dc127dfe730f366371a8f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a258cce4598dc127dfe730f366371a8f4">SetOption</a> (const <a class="el" href="classdrake_1_1solvers_1_1_solver_id.html">SolverId</a> &amp;solver_id, const std::string &amp;solver_option, const std::string &amp;option_value)</td></tr>
+<tr class="memdesc:a258cce4598dc127dfe730f366371a8f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a string-valued solver option for a specific solver.  <a href="#a258cce4598dc127dfe730f366371a8f4">More...</a><br /></td></tr>
 <tr class="separator:a258cce4598dc127dfe730f366371a8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a971939dc2a0b53343d01632de19abca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a971939dc2a0b53343d01632de19abca9">SetOption</a> (<a class="el" href="namespacedrake_1_1solvers.html#ae07229124cd16e9d8b62fe359c7d0b40">CommonSolverOption</a> key, const std::variant&lt; double, <a class="el" href="classint.html">int</a>, std::string &gt; &amp;value)</td></tr>
 <tr class="memdesc:a971939dc2a0b53343d01632de19abca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set common options for all solvers supporting that option (for example, printing the progress in each iteration).  <a href="#a971939dc2a0b53343d01632de19abca9">More...</a><br /></td></tr>
@@ -291,7 +294,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td>if the solver contains un-allowed options. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the solver contains un-allowed options. </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,6 +557,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets a double-valued solver option for a specific solver. </p>
+
 </div>
 </div>
 <a id="ac1ab5717db6c3382362d3622a187cfaa"></a>
@@ -588,6 +593,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Sets an integer-valued solver option for a specific solver. </p>
+
 </div>
 </div>
 <a id="a258cce4598dc127dfe730f366371a8f4"></a>
@@ -621,6 +628,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets a string-valued solver option for a specific solver. </p>
 
 </div>
 </div>

@@ -382,7 +382,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if <code>frame_id</code> was registered on <code>source_id</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If <code>frame_id</code> does not map to a registered frame or <code>source_id</code> does not map to a registered source. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <code>frame_id</code> does not map to a registered frame or <code>source_id</code> does not map to a registered source. </td></tr>
   </table>
   </dd>
 </dl>
@@ -426,7 +426,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if <code>geometry_id</code> was registered on <code>source_id</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If <code>geometry_id</code> does not map to a registered geometry or <code>source_id</code> does not map to a registered source. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <code>geometry_id</code> does not map to a registered geometry or <code>source_id</code> does not map to a registered source. </td></tr>
   </table>
   </dd>
 </dl>
@@ -453,7 +453,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A new <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html" title="A geometry instance combines a geometry definition (i.e., a shape of some sort), a pose (relative to ...">GeometryInstance</a> that is ready to be added as a new geometry. All roles/properties will be copied, the shape will be cloned based off of the original, but the returned id() will completely unique. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the <code>geometry_id</code> does not refer to a valid geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the <code>geometry_id</code> does not refer to a valid geometry. </td></tr>
   </table>
   </dd>
 </dl>
@@ -489,7 +489,7 @@ Friends</h2></td></tr>
 <p>Reports true if the two geometries with given ids <code>geometry_id1</code> and <code>geometry_id2</code>, define a collision pair that has been filtered out. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if either id does not map to a registered geometry or if any of the geometries do not have a proximity role. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if either id does not map to a registered geometry or if any of the geometries do not have a proximity role. </td></tr>
   </table>
   </dd>
 </dl>
@@ -515,7 +515,7 @@ Friends</h2></td></tr>
 <p>Reports the ids of all of the frames registered to the source with the given source <code>source_id</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>source_id</code> does not map to a registered source. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>source_id</code> does not map to a registered source. </td></tr>
   </table>
   </dd>
 </dl>
@@ -601,7 +601,7 @@ Friends</h2></td></tr>
 <p>Reports the frame group for the frame with the given <code>frame_id</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -627,7 +627,7 @@ Friends</h2></td></tr>
 <p>Reports the id of the frame to which the given geometry with the given <code>geometry_id</code> is registered. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
   </table>
   </dd>
 </dl>
@@ -671,7 +671,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The requested unique geometry ids in a consistent order. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -722,7 +722,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The id of the queried geometry. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if no such geometry exists, multiple geometries have that name, or if the <code>frame_id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if no such geometry exists, multiple geometries have that name, or if the <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -847,7 +847,7 @@ Friends</h2></td></tr>
 <p>Reports the name of the frame with the given <code>frame_id</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -873,7 +873,7 @@ Friends</h2></td></tr>
 <p>Reports the stored, canonical name of the geometry with the given <code>geometry_id</code> (see <a class="el" href="classdrake_1_1geometry_1_1_geometry_instance.html#canonicalized_geometry_names">GeometryInstance</a> for details). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
   </table>
   </dd>
 </dl>
@@ -899,7 +899,7 @@ Friends</h2></td></tr>
 <p>Reports the <em>name</em> of the geometry source that registered the frame with the given <code>frame_id</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If <code>frame_id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -925,7 +925,7 @@ Friends</h2></td></tr>
 <p>Reports the <em>name</em> of the geometry source that registered the geometry with the given <code>geometry_id</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If <code>geometry_id</code> does not map to a registered geometry. </td></tr>
   </table>
   </dd>
 </dl>
@@ -985,7 +985,7 @@ Friends</h2></td></tr>
 <p>If the geometry was registered directly to the frame F, then <code>X_PG = X_FG</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55" title="Reports the pose of the geometry G with the given geometry_id in its registered topological parent P,...">GetPoseInParent()</a> </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1012,7 +1012,7 @@ Friends</h2></td></tr>
 <p>That topological parent may be a frame F or another geometry. If the geometry was registered directly to F, then <code>X_PG = X_FG</code>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d" title="Reports the pose of the geometry G with the given geometry_id in its registered frame F (regardless o...">GetPoseInFrame()</a> </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>geometry_id</code> does not map to a registered geometry. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1233,7 +1233,7 @@ Friends</h2></td></tr>
 <p>Reports the number of frames registered to the source with the given <code>source_id</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>source_id</code> does not map to a registered source. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>source_id</code> does not map to a registered source. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1259,7 +1259,7 @@ Friends</h2></td></tr>
 <p>Reports the number of geometries affixed to the frame with the given <code>frame_id</code>. </p>
 <p>This count does <em>not</em> include geometries attached to frames that are descendants of this frame. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1295,7 +1295,7 @@ Friends</h2></td></tr>
 <p>Reports the total number of geometries with the given <code>role</code> directly registered to the frame with the given <code>frame_id</code>. </p>
 <p>This count does <em>not</em> include geometries attached to frames that are descendants of this frame. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1403,7 +1403,7 @@ Friends</h2></td></tr>
 <p>Introspects the geometry indicated by the given <code>geometry_id</code>. </p>
 <p>The geometry will be passed into the provided <code>reifier</code>. This is the mechanism by which external code can discover and respond to the different types of geometries stored in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>. See ShapeToString as an example. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the <code>geometry_id</code> does not refer to a valid geometry. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the <code>geometry_id</code> does not refer to a valid geometry. </td></tr>
   </table>
   </dd>
 </dl>

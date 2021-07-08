@@ -292,7 +292,7 @@ Friends</h2></td></tr>
 <p>The default render label is applied to geometries that have not otherwise specified a (label, id) property. The value <em>must</em> be either <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be" title="See Reserved labels.">RenderLabel::kDontCare</a>. (See <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html#render_engine_default_label">this section</a> for more details.)</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the default render label is not one of the two allowed labels. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the default render label is not one of the two allowed labels. </td></tr>
   </table>
   </dd>
 </dl>
@@ -793,7 +793,7 @@ Friends</h2></td></tr>
 <p>Extracts the <code>(label, id)</code> <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> property from the given <code>properties</code> and validates it (or the configured default if no such property is defined). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>If the tested render label value is deemed invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the tested render label value is deemed invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -960,7 +960,7 @@ Friends</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>True if the RenderEngine implementation accepted the shape for registration. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the shape is an unsupported type, the shape's <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value is <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">RenderLabel::kEmpty</a>, or a geometry has already been registered with the given <code>id</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the shape is an unsupported type, the shape's <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html" title="Class representing object &quot;labels&quot; for rendering.">RenderLabel</a> value is <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8" title="See Reserved labels.">RenderLabel::kUnspecified</a> or <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_label.html#a52e35c3e406b848a0b2f35560d66f450" title="See Reserved labels.">RenderLabel::kEmpty</a>, or a geometry has already been registered with the given <code>id</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1030,7 +1030,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>color_image_out</code> is <code>nullptr</code> or the size of the given input image doesn't match the size declared in <code>camera</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>color_image_out</code> is <code>nullptr</code> or the size of the given input image doesn't match the size declared in <code>camera</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1074,7 +1074,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>depth_image_out</code> is <code>nullptr</code> or the size of the given input image doesn't match the size declared in <code>camera</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>depth_image_out</code> is <code>nullptr</code> or the size of the given input image doesn't match the size declared in <code>camera</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1118,7 +1118,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>label_image_out</code> is <code>nullptr</code> or the size of the given input image doesn't match the size declared in <code>camera</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>label_image_out</code> is <code>nullptr</code> or the size of the given input image doesn't match the size declared in <code>camera</code>. </td></tr>
   </table>
   </dd>
 </dl>

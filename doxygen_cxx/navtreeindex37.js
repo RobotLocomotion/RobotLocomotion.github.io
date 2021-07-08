@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797":[3,0,0,16,2,0],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9fc93abbb14c2b7d6702fadcc72baff6":[3,0,0,16,2,45],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa360cbd2285db12eb014dc6e34868814":[3,0,0,16,2,17],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[3,0,0,16,2,29],
@@ -176,8 +177,7 @@ var NAVTREEINDEX37 =
 "clp__solver_8h.html":[4,0,0,10,7],
 "collision__filter_8h.html":[4,0,0,4,2,4],
 "collision__filter__declaration_8h.html":[4,0,0,4,6],
-"collision__filter__legacy_8h.html":[4,0,0,4,2,5],
-"collisions__exist__callback_8h.html":[4,0,0,4,2,6],
+"collisions__exist__callback_8h.html":[4,0,0,4,2,5],
 "color__palette_8h.html":[4,0,0,11,8,3],
 "color__palette_8h.html#a30f975f4523ec7683dd1e04a2291095b":[4,0,0,11,8,3,5],
 "color__palette_8h.html#a5e531a9bcdca4559d154a05e2d6fbe58":[4,0,0,11,8,3,4],
@@ -234,8 +234,8 @@ var NAVTREEINDEX37 =
 "contact__solver__results_8h.html":[4,0,0,8,2,2],
 "contact__solver__utils_8h.html":[4,0,0,8,2,3],
 "contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,7],
-"contact__surface__utility_8h.html":[4,0,0,4,2,8],
+"contact__surface__doxygen_8h.html":[4,0,0,4,2,6],
+"contact__surface__utility_8h.html":[4,0,0,4,2,7],
 "contact__wrench_8h.html":[4,0,0,8,6,1],
 "contact__wrench__evaluator_8h.html":[4,0,0,8,6,2],
 "context_8h.html":[4,0,0,11,3,7],

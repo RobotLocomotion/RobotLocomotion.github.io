@@ -745,7 +745,7 @@ Static Protected Member Functions</h2></td></tr>
 <p>Returns a deep copy of this <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1834,7 +1834,7 @@ the abstract state's type must match the template argument. </dd></dl>
 <p>Returns the total dimension of all of the basic vector states (as if they were muxed). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the system contains any abstract state. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the system contains any abstract state. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2052,7 +2052,7 @@ the abstract state's type must match the template argument. </dd></dl>
 </ul>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2174,7 +2174,7 @@ the abstract state's type must match the template argument. </dd></dl>
 <p>Sets the current time in seconds. </p>
 <p>Sends out of date notifications for all time-dependent computations (at least if the time has actually changed). Time must have the same value in every subcontext within the same <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> context tree so may only be modified at the root context of the tree. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2210,7 +2210,7 @@ the abstract state's type must match the template argument. </dd></dl>
 <p>Sets time to <code>time_sec</code> and continuous state to <code>xc</code>. </p>
 <p>Performs a single notification sweep to avoid duplicate notifications for computations that depend on both time and state. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2236,7 +2236,7 @@ the abstract state's type must match the template argument. </dd></dl>
 <p>(Advanced) Sets time and returns a mutable reference to the continuous state xc (including q, v, z) as a <a class="el" href="classdrake_1_1systems_1_1_vector_base.html" title="VectorBase is an abstract base class that real-valued signals between Systems and real-valued System ...">VectorBase</a>. </p>
 <p>Performs a single notification sweep to avoid duplicate notifications for computations that depend on both time and state. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2265,7 +2265,7 @@ SetTimeAndGetMutableContinuousState() </dd></dl>
 <p>(Advanced) Sets time and returns a mutable reference to the second-order continuous state partition q from xc. </p>
 <p>Performs a single notification sweep to avoid duplicate notifications for computations that depend on both time and q. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2294,7 +2294,7 @@ SetTimeAndGetMutableContinuousState() </dd></dl>
 <p>(Advanced) Sets time and registers an intention to modify the continuous state xc. </p>
 <p>Intended use is for integrators that are already holding a mutable reference to xc which they are going to modify. Performs a single notification sweep to avoid duplicate notifications for computations that depend on both time and state. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this is not the root context. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this is not the root context. </td></tr>
   </table>
   </dd>
 </dl>

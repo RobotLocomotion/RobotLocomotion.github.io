@@ -218,7 +218,7 @@ Public Member Functions</h2></td></tr>
 <p>Usually all cache entries are disabled or enabled together using higher-level methods that invoke these ones, but you can disable just a single entry if necessary. </p>
 </div></td></tr>
 <tr class="memitem:ab5508eba32d5d670dc79329a86999e23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#ab5508eba32d5d670dc79329a86999e23">ThrowIfBadCacheEntryValue</a> (const internal::ContextMessageInterface *owning_subcontext=nullptr) const</td></tr>
-<tr class="memdesc:ab5508eba32d5d670dc79329a86999e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an std::logic_error if there is something clearly wrong with this CacheEntryValue object.  <a href="#ab5508eba32d5d670dc79329a86999e23">More...</a><br /></td></tr>
+<tr class="memdesc:ab5508eba32d5d670dc79329a86999e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an std::exception if there is something clearly wrong with this CacheEntryValue object.  <a href="#ab5508eba32d5d670dc79329a86999e23">More...</a><br /></td></tr>
 <tr class="separator:ab5508eba32d5d670dc79329a86999e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83c30194ce6fef57b521aef913429369"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#a83c30194ce6fef57b521aef913429369">disable_caching</a> ()</td></tr>
 <tr class="memdesc:a83c30194ce6fef57b521aef913429369"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Disables caching for just this cache entry value.  <a href="#a83c30194ce6fef57b521aef913429369">More...</a><br /></td></tr>
@@ -435,7 +435,7 @@ Friends</h2></td></tr>
 <p>Returns a const reference to the contained abstract value, which must not be out of date with respect to any of its prerequisites. </p>
 <p>It is an error to call this if there is no stored value object, or if the value is out of date. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no value or it is out of date. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no value or it is out of date. </td></tr>
   </table>
   </dd>
 </dl>
@@ -461,8 +461,8 @@ Friends</h2></td></tr>
 <p>(Advanced) Returns a mutable reference to the contained value after incrementing the serial number. </p>
 <p>This is for the purpose of performing an update or extended computation in place. If possible, use the safer and more straightforward method <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#a891ad1a24c8f26e0c31eb243cd55b32a" title="Assigns a new value to a cache entry and marks it up to date.">SetValueOrThrow()</a> rather than this method. Mutable access is only permitted if the value is already marked out of date (meaning that all downstream dependents have already been notified). It is an error to call this if there is no stored value, or it is already up to date. Since this is intended for relatively expensive computations, these preconditions are checked even in Release builds. If you have a small, fast computation to perform, use <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#a8a5dce6cd1fc7aa0ca81ca0029aa5c73" title="Assigns a new value to a cache entry and marks it up to date.">set_value()</a> instead. If your computation completes successfully, you must mark the entry up to date yourself using <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#a7435bb44bc643e221c92877a7b15f63d" title="(Advanced) Marks the cache entry value as up to date with respect to its prerequisites,...">mark_up_to_date()</a> if you want anyone to be able to use the new value. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no value, or if the value is already up to date. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the cache is frozen. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no value, or if the value is already up to date. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the cache is frozen. </td></tr>
   </table>
   </dd>
 </dl>
@@ -488,8 +488,8 @@ Friends</h2></td></tr>
 <p>(Advanced) Convenience method that returns a mutable reference to the contained value downcast to its known concrete type. </p>
 <p>Throws an exception if the contained value does not have the indicated concrete type. Note that you must call <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#a7435bb44bc643e221c92877a7b15f63d" title="(Advanced) Marks the cache entry value as up to date with respect to its prerequisites,...">mark_up_to_date()</a> after modifying the value through the returned reference. See <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#ae8e3b48baae296b1353b3f7714817517" title="(Advanced) Returns a mutable reference to the contained value after incrementing the serial number.">GetMutableAbstractValueOrThrow()</a> above for more information. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no value, or if the value is already up to date, of it doesn't actually have type V. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the cache is frozen. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no value, or if the value is already up to date, of it doesn't actually have type V. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the cache is frozen. </td></tr>
   </table>
   </dd>
 </dl>
@@ -540,7 +540,7 @@ Friends</h2></td></tr>
 <p>Returns a const reference to the contained value of known type V. </p>
 <p>It is an error to call this if there is no stored value, or the value is out of date, or the value doesn't actually have type V. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no stored value, or if it is out of date, or it doesn't actually have type V. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no stored value, or if it is out of date, or it doesn't actually have type V. </td></tr>
   </table>
   </dd>
 </dl>
@@ -740,7 +740,7 @@ Friends</h2></td></tr>
 <p>(Advanced) Returns a reference to the contained value <em>without</em> checking whether the value is out of date. </p>
 <p>This can be used to check type and size information but should not be used to look at the value unless you <em>really</em> know what you're doing. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no contained value. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no contained value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -765,7 +765,7 @@ Friends</h2></td></tr>
 <p>(Advanced) Convenience method that provides access to the contained value downcast to its known concrete type, <em>without</em> checking whether the value is out of date. </p>
 <p>This can be used to check type and size information but should not be used to look at the value unless you <em>really</em> know what you're doing. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no contained value, or if the contained value does not actually have type V. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no contained value, or if the contained value does not actually have type V. </td></tr>
   </table>
   </dd>
 </dl>
@@ -817,7 +817,7 @@ Friends</h2></td></tr>
 <p>Assigns a new value to a cache entry and marks it up to date. </p>
 <p>The cache value must already have a value object of type V to which the new value is assigned, and that value must not already be up to date. The new value is assumed to be up to date with its prerequisites, so the <code>out_of_date</code> flag is cleared. No out-of-date notifications are issued by this method; we assume downstream dependents were marked out of date at the time this value went out of date. The serial number is incremented. If you are not in a performance-critical situation (and you probably are not!), use <code>SetValueOrThrow&lt;V&gt;()</code> instead. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the cache is frozen. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the cache is frozen. </td></tr>
   </table>
   </dd>
 </dl>
@@ -850,7 +850,7 @@ Friends</h2></td></tr>
 <p>This value is marked out of date. It is an error to call this if there is already a value here; use <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#a78ae320e307335bd655f8767da418e36" title="Returns true if this CacheEntryValue currently contains a value object at all, regardless of whether ...">has_value()</a> if you want to check first. Also, the given initial value may not be null. The serial number is set to 1. No out-of-date notifications are sent to downstream dependents. Operation of this initialization method is not affected by whether the cache is currently frozen. However, the corresponding value won't be accessible while the cache remains frozen (since it is out of date).</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the given value is null or if there is already a value, or if this CacheEntryValue is malformed in some detectable way. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the given value is null or if there is already a value, or if this CacheEntryValue is malformed in some detectable way. </td></tr>
   </table>
   </dd>
 </dl>
@@ -877,8 +877,8 @@ Friends</h2></td></tr>
 <p>The cache entry must already contain a value object of type V to which the new value is assigned, and that value must currently be marked out of date. The supplied new value <em>must</em> have been calculated using the current values in the owning <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, and we assume that here although this method cannot check that assumption. Consequently, this method clears the <code>out_of_date</code> flag. No out-of-date notifications are issued by this method; we assume downstream dependents were marked out of date at the time this value went out of date. The serial number is incremented.</p>
 <p>This method is the safest and most convenient way to assign a new value. However it requires that a new value be computed and then copied into the cache entry, which is fine for small types V but may be too expensive for large ones. You can alternatively obtain a mutable reference to the value already contained in the cache entry and update it in place via <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html#adce90f980211f3c087c17466bdb961fe" title="(Advanced) Convenience method that returns a mutable reference to the contained value downcast to its...">GetMutableValueOrThrow()</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no value, or the value is already up to date, of it doesn't actually have type V. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the cache is frozen. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no value, or the value is already up to date, of it doesn't actually have type V. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the cache is frozen. </td></tr>
   </table>
   </dd>
 </dl>
@@ -905,7 +905,7 @@ Friends</h2></td></tr>
 <p>(Advanced) Swaps ownership of the stored value object with the given one. </p>
 <p>The value is marked out of date and the serial number is incremented. This is useful for discrete updates of abstract state variables that contain large objects. Both values must be non-null and of the same concrete type but we won't check for errors except in Debug builds. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the cache is frozen. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the cache is frozen. </td></tr>
   </table>
   </dd>
 </dl>
@@ -928,10 +928,10 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Throws an std::logic_error if there is something clearly wrong with this CacheEntryValue object. </p>
+<p>Throws an std::exception if there is something clearly wrong with this CacheEntryValue object. </p>
 <p>If the owning subcontext is known, provide a pointer to it here and we'll check that this cache entry agrees. In addition we check for other internal inconsistencies. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>for anything that goes wrong, with an appropriate explanatory message. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for anything that goes wrong, with an appropriate explanatory message. </td></tr>
   </table>
   </dd>
 </dl>

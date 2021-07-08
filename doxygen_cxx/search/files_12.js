@@ -59,7 +59,6 @@ var searchData=
   ['sorted_5fpair_2eh',['sorted_pair.h',['../sorted__pair_8h.html',1,'']]],
   ['sorted_5fpair_5fpybind_2eh',['sorted_pair_pybind.h',['../sorted__pair__pybind_8h.html',1,'']]],
   ['sorted_5ftriplet_2eh',['sorted_triplet.h',['../sorted__triplet_8h.html',1,'']]],
-  ['sorted_5fvectors_5fhave_5fintersection_2eh',['sorted_vectors_have_intersection.h',['../sorted__vectors__have__intersection_8h.html',1,'']]],
   ['sos_5fbasis_5fgenerator_2eh',['sos_basis_generator.h',['../sos__basis__generator_8h.html',1,'']]],
   ['space_5fxyz_5ffloating_5fmobilizer_2eh',['space_xyz_floating_mobilizer.h',['../space__xyz__floating__mobilizer_8h.html',1,'']]],
   ['space_5fxyz_5fmobilizer_2eh',['space_xyz_mobilizer.h',['../space__xyz__mobilizer_8h.html',1,'']]],

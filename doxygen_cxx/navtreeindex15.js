@@ -1,7 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a6a8a8e63ea2983821e3762d423f46b1a":[3,0,0,9,3,0],
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a88f7988b26cd2ca1943376053309e2ce":[3,0,0,9,3,5],
 "classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a95f9d564671ec58a65c3dcb51be44f5b":[3,0,0,9,3,2],
 "classdrake_1_1perception_1_1_point_cloud_to_lcm.html#af93b4c87b94fc5b66d94411cc065c7da":[3,0,0,9,3,3],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html":[3,0,0,9,0,0],
@@ -249,5 +247,7 @@ var NAVTREEINDEX15 =
 "classdrake_1_1solvers_1_1_clp_solver.html#a5a8d092d93a349d34f2a16631ef6de55":[3,0,0,12,5,0],
 "classdrake_1_1solvers_1_1_clp_solver.html#a5e8be6cbcc05ae5b195b15b0ea040039":[3,0,0,12,5,4],
 "classdrake_1_1solvers_1_1_clp_solver.html#a606861b43d96b23fe439c905aaf715a0":[3,0,0,12,5,13],
-"classdrake_1_1solvers_1_1_clp_solver.html#a6d9659b7aaca23524a9d038f8afde4df":[3,0,0,12,5,9]
+"classdrake_1_1solvers_1_1_clp_solver.html#a6d9659b7aaca23524a9d038f8afde4df":[3,0,0,12,5,9],
+"classdrake_1_1solvers_1_1_clp_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[3,0,0,12,5,10],
+"classdrake_1_1solvers_1_1_clp_solver.html#a7daaea53457d97de85abc24ec72686ac":[3,0,0,12,5,2]
 };

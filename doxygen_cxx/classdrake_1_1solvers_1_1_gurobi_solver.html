@@ -414,7 +414,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Call this ONLY if you must use different <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a> instances at different instances in time, and repeatedly acquiring the license is costly (e.g., requires contacting a license server). </p><dl class="section return"><dt>Returns</dt><dd>A shared pointer to a license environment that will stay valid as long as any shared_ptr returned by this function is alive. If Gurobi not available in your build, this will return a null (empty) shared_ptr. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Gurobi is available but a license cannot be obtained. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Gurobi is available but a license cannot be obtained. </td></tr>
   </table>
   </dd>
 </dl>

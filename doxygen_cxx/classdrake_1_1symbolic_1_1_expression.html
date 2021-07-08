@@ -684,7 +684,7 @@ Friends</h2></td></tr>
 <p>Differentiates this symbolic expression with respect to the variable <code>var</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if it is not differentiable. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if it is not differentiable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -773,9 +773,9 @@ Friends</h2></td></tr>
 <p>If there is a random variable in this expression which is unassigned in <code>env</code>, this method uses <code>random_generator</code> to sample a value and use the value to substitute all occurrences of the variable in this expression.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if there exists a non-random variable in this expression whose assignment is not provided by <code>env</code>. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if an unassigned random variable is detected while <code>random_generator</code> is <code>nullptr</code>. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there exists a non-random variable in this expression whose assignment is not provided by <code>env</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if an unassigned random variable is detected while <code>random_generator</code> is <code>nullptr</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -824,7 +824,7 @@ Friends</h2></td></tr>
 <p>Internally, this method promotes <code>env</code> into a substitution (<a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">Variable</a> → <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>) and call Evaluate::Substitute with it.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -850,7 +850,7 @@ Friends</h2></td></tr>
 <p>For example, <code>(x + 1) * (x - 1)</code> is expanded to <code>x^2 - 1</code> and <code>(x + y)^2</code> is expanded to <code>x^2 + 2xy + y^2</code>. Note that Expand applies recursively to sub-expressions. For instance, <code>sin(2 * (x + y))</code> is expanded to <code>sin(2x + 2y)</code>. It also simplifies "division by constant" cases. See "drake/common/test/symbolic_expansion_test.cc" to find the examples.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during expansion. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during expansion. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1221,7 +1221,7 @@ Friends</h2></td></tr>
 <p>Returns a copy of this expression replacing all occurrences of <code>var</code> with <code>e</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during substitution. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during substitution. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1247,7 +1247,7 @@ Friends</h2></td></tr>
 <p>Returns a copy of this expression replacing all occurrences of the variables in <code>s</code> with corresponding expressions in <code>s</code>. </p>
 <p>Note that the substitutions occur simultaneously. For example, (x / y).Substitute({{x, y}, {y, x}}) gets (y / x). </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during substitution. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during substitution. </td></tr>
   </table>
   </dd>
 </dl>

@@ -64,7 +64,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     ] ],
     [ "scoped_singleton.h", "scoped__singleton_8h.html", null ],
     [ "sorted_pair.h", "sorted__pair_8h.html", "sorted__pair_8h" ],
-    [ "sorted_vectors_have_intersection.h", "sorted__vectors__have__intersection_8h.html", "sorted__vectors__have__intersection_8h" ],
     [ "symbolic.h", "symbolic_8h.html", "symbolic_8h" ],
     [ "symbolic_chebyshev_basis_element.h", "symbolic__chebyshev__basis__element_8h.html", "symbolic__chebyshev__basis__element_8h" ],
     [ "symbolic_chebyshev_polynomial.h", "symbolic__chebyshev__polynomial_8h.html", "symbolic__chebyshev__polynomial_8h" ],

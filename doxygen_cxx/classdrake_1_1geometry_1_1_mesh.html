@@ -239,7 +239,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs a mesh specification from the mesh file located at the given <em>absolute</em> file path. </p>
 <p>Optionally uniformly scaled by the given scale factor. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>
   </table>
   </dd>
 </dl>

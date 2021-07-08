@@ -384,7 +384,7 @@ Protected Member Functions</h2></td></tr>
 <p>Goes through each subevent collection of <code>this</code> and adds the corresponding one in <code>other_collection</code> to the subevent collection in <code>this</code>. </p>
 <p>Aborts if <code>this</code> does not have the same number of subevent collections as <code>other_collection</code>. In addition, this method assumes that <code>this</code> and <code>other_collection</code> have the exact same topology (i.e. both are created for the same <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>.) </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::bad_cast</td><td>if <code>other_collection</code> is not an instance of <a class="el" href="classdrake_1_1systems_1_1_diagram_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a Diagram.">DiagramEventCollection</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>other_collection</code> is not an instance of <a class="el" href="classdrake_1_1systems_1_1_diagram_event_collection.html" title="A concrete class that holds all simultaneous homogeneous events for a Diagram.">DiagramEventCollection</a>. </td></tr>
   </table>
   </dd>
 </dl>

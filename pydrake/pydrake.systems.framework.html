@@ -4039,6 +4039,25 @@ necessarily <code class="docutils literal"><span class="pre">num_q</span> <span 
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.systems.framework.ContinuousStateIndex">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">ContinuousStateIndex</code><a class="headerlink" href="#pydrake.systems.framework.ContinuousStateIndex" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.systems.framework.ContinuousStateIndex.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContinuousStateIndex</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContinuousStateIndex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default constructor; the result is an <em>invalid</em> index. This only
+exists to serve applications which require a default constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContinuousStateIndex.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContinuousStateIndex</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.ContinuousStateIndex.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the index is valid–the only operation on an invalid index
+that doesn’t throw an exception in Debug builds.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.systems.framework.DependencyTicket">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DependencyTicket</code><a class="headerlink" href="#pydrake.systems.framework.DependencyTicket" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
@@ -7073,25 +7092,49 @@ parameter.</p>
 <code class="descname">DeclareContinuousState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareContinuousState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_state_variables: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_state_variables: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_state_variables</span></code> state variables, which have no second-order
 structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal"><span class="pre">num_z</span></code> miscellaneous state variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="3">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float]) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float]) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">model_vector</span></code>.size() miscellaneous state variables, stored in a
 vector cloned from <code class="docutils literal"><span class="pre">model_vector</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="4">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
@@ -7100,6 +7143,14 @@ from <code class="docutils literal"><span class="pre">model_vector</span></code>
 If the <code class="docutils literal"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -7280,6 +7331,32 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareStateOutputPort">
+<code class="descname">DeclareStateOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareStateOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.ContinuousStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the continuous
+state of this system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">state_index</span></code>:</dt>
+<dd>must be ContinuousStateIndex(0) for now, since LeafSystem only
+supports a single continuous state group at the moment.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.DiscreteStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the given discrete
+state group of this system.</p>
+<ol class="arabic simple" start="3">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.AbstractStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
+</ol>
+<p>Declares an abstract-valued output port whose value is the given
+abstract state of this system.</p>
 </dd></dl>
 
 <dl class="method">
@@ -7530,25 +7607,49 @@ parameter.</p>
 <code class="descname">DeclareContinuousState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareContinuousState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], num_state_variables: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], num_state_variables: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_state_variables</span></code> state variables, which have no second-order
 structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal"><span class="pre">num_z</span></code> miscellaneous state variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="3">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd]) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd]) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">model_vector</span></code>.size() miscellaneous state variables, stored in a
 vector cloned from <code class="docutils literal"><span class="pre">model_vector</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="4">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
@@ -7557,6 +7658,14 @@ from <code class="docutils literal"><span class="pre">model_vector</span></code>
 If the <code class="docutils literal"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -7737,6 +7846,32 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareStateOutputPort">
+<code class="descname">DeclareStateOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareStateOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.ContinuousStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[AutoDiffXd]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the continuous
+state of this system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">state_index</span></code>:</dt>
+<dd>must be ContinuousStateIndex(0) for now, since LeafSystem only
+supports a single continuous state group at the moment.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.DiscreteStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[AutoDiffXd]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the given discrete
+state group of this system.</p>
+<ol class="arabic simple" start="3">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.AbstractStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[AutoDiffXd]</li>
+</ol>
+<p>Declares an abstract-valued output port whose value is the given
+abstract state of this system.</p>
 </dd></dl>
 
 <dl class="method">
@@ -7985,25 +8120,49 @@ parameter.</p>
 <code class="descname">DeclareContinuousState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareContinuousState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], num_state_variables: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], num_state_variables: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_state_variables</span></code> state variables, which have no second-order
 structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal"><span class="pre">num_z</span></code> miscellaneous state variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="3">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], model_vector: pydrake.systems.framework.BasicVector_[Expression]) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], model_vector: pydrake.systems.framework.BasicVector_[Expression]) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">model_vector</span></code>.size() miscellaneous state variables, stored in a
 vector cloned from <code class="docutils literal"><span class="pre">model_vector</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="4">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], model_vector: pydrake.systems.framework.BasicVector_[Expression], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[Expression], model_vector: pydrake.systems.framework.BasicVector_[Expression], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
@@ -8012,6 +8171,14 @@ from <code class="docutils literal"><span class="pre">model_vector</span></code>
 If the <code class="docutils literal"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -8192,6 +8359,32 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareStateOutputPort">
+<code class="descname">DeclareStateOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareStateOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.ContinuousStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[Expression]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the continuous
+state of this system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">state_index</span></code>:</dt>
+<dd>must be ContinuousStateIndex(0) for now, since LeafSystem only
+supports a single continuous state group at the moment.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.DiscreteStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[Expression]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the given discrete
+state group of this system.</p>
+<ol class="arabic simple" start="3">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.AbstractStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[Expression]</li>
+</ol>
+<p>Declares an abstract-valued output port whose value is the given
+abstract state of this system.</p>
 </dd></dl>
 
 <dl class="method">
@@ -8440,25 +8633,49 @@ parameter.</p>
 <code class="descname">DeclareContinuousState</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareContinuousState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_state_variables: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_state_variables: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_state_variables</span></code> state variables, which have no second-order
 structure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
 <code class="docutils literal"><span class="pre">num_z</span></code> miscellaneous state variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="3">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float]) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float]) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">model_vector</span></code>.size() miscellaneous state variables, stored in a
 vector cloned from <code class="docutils literal"><span class="pre">model_vector</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="4">
-<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float], num_q: int, num_v: int, num_z: int) -&gt; None</li>
+<li>DeclareContinuousState(self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float], num_q: int, num_v: int, num_z: int) -&gt; pydrake.systems.framework.ContinuousStateIndex</li>
 </ol>
 <p>Declares that this System should reserve continuous state with
 <code class="docutils literal"><span class="pre">num_q</span></code> generalized positions, <code class="docutils literal"><span class="pre">num_v</span></code> generalized velocities, and
@@ -8467,6 +8684,14 @@ from <code class="docutils literal"><span class="pre">model_vector</span></code>
 If the <code class="docutils literal"><span class="pre">model_vector</span></code> declares any VectorBase::GetElementBounds()
 constraints, they will be re-declared as inequality constraints on
 this system (see DeclareInequalityConstraint()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">index of the declared state (currently always zero).</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -8647,6 +8872,32 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareStateOutputPort">
+<code class="descname">DeclareStateOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareStateOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.ContinuousStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the continuous
+state of this system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">state_index</span></code>:</dt>
+<dd>must be ContinuousStateIndex(0) for now, since LeafSystem only
+supports a single continuous state group at the moment.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.DiscreteStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued output port whose value is the given discrete
+state group of this system.</p>
+<ol class="arabic simple" start="3">
+<li>DeclareStateOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], state_index: pydrake.systems.framework.AbstractStateIndex) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
+</ol>
+<p>Declares an abstract-valued output port whose value is the given
+abstract state of this system.</p>
 </dd></dl>
 
 <dl class="method">

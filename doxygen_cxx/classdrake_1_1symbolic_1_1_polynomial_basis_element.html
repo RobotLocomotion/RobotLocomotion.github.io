@@ -286,7 +286,7 @@ Protected Member Functions</h2></td></tr>
 <p>Constructs a polynomial basis given the variable and the degree of that variable. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the degree is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the degree is negative. </td></tr>
   </table>
   </dd>
 </dl>
@@ -323,8 +323,8 @@ Protected Member Functions</h2></td></tr>
 <p>Constructs a polynomial basis, such that it contains the variable-to-degree map vars(i)→degrees(i). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td>if <code>vars</code> contains repeated variables. </td></tr>
-    <tr><td class="paramname">logic_error</td><td>if any degree is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>vars</code> contains repeated variables. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any degree is negative. </td></tr>
   </table>
   </dd>
 </dl>
@@ -494,7 +494,7 @@ Protected Member Functions</h2></td></tr>
 <p>Evaluates under a given environment <code>env</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>exception if there is a variable in this monomial whose assignment is not provided by <code>env</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>exception if there is a variable in this monomial whose assignment is not provided by <code>env</code>. </td></tr>
   </table>
   </dd>
 </dl>

@@ -561,7 +561,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a535bb41fc091d96d7de06b87e68c9afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to locate a Drake resource named by the given <code>resource_path</code>.  <a href="#a535bb41fc091d96d7de06b87e68c9afb">More...</a><br /></td></tr>
 <tr class="separator:a535bb41fc091d96d7de06b87e68c9afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6">FindResourceOrThrow</a> (const std::string &amp;resource_path)</td></tr>
-<tr class="memdesc:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::runtime_error.">FindResourceResult::get_absolute_path_or_throw()</a>.  <a href="#ac72eb43ba982b5a4d188c85aa14e0cc6">More...</a><br /></td></tr>
+<tr class="memdesc:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>.  <a href="#ac72eb43ba982b5a4d188c85aa14e0cc6">More...</a><br /></td></tr>
 <tr class="separator:ac72eb43ba982b5a4d188c85aa14e0cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bdf00a0f32970352a90afbae0f4114a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a9bdf00a0f32970352a90afbae0f4114a">HasRunfiles</a> ()</td></tr>
 <tr class="memdesc:a9bdf00a0f32970352a90afbae0f4114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Returns true iff this process has Bazel runfiles available.  <a href="#a9bdf00a0f32970352a90afbae0f4114a">More...</a><br /></td></tr>
@@ -631,7 +631,7 @@ Functions</h2></td></tr>
 <tr class="separator:ab53bd4a15e73e524b3f73c625ea88176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd10687a188332bb1f67fb3acf28f208"><td class="memTemplParams" colspan="2">template&lt;class T , class U &gt; </td></tr>
 <tr class="memitem:acd10687a188332bb1f67fb3acf28f208"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acd10687a188332bb1f67fb3acf28f208">dynamic_pointer_cast_or_throw</a> (std::unique_ptr&lt; U &gt; &amp;&amp;other)</td></tr>
-<tr class="memdesc:acd10687a188332bb1f67fb3acf28f208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts the object owned by the std::unique_ptr <code>other</code> from type <code>U</code> to <code>T</code>; if <code>other</code> is nullptr or the cast fails, throws a std::logic_error.  <a href="#acd10687a188332bb1f67fb3acf28f208">More...</a><br /></td></tr>
+<tr class="memdesc:acd10687a188332bb1f67fb3acf28f208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts the object owned by the std::unique_ptr <code>other</code> from type <code>U</code> to <code>T</code>; if <code>other</code> is nullptr or the cast fails, throws a std::exception.  <a href="#acd10687a188332bb1f67fb3acf28f208">More...</a><br /></td></tr>
 <tr class="separator:acd10687a188332bb1f67fb3acf28f208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cb9413bd3124511459d856f6eef5f3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a95cb9413bd3124511459d856f6eef5f3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a95cb9413bd3124511459d856f6eef5f3">pow</a> (const <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt; &amp;base, typename <a class="el" href="classdrake_1_1_polynomial.html">Polynomial</a>&lt; T &gt;::PowerType exponent)</td></tr>
@@ -676,10 +676,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a87d5210878ec865ee82bb87786eb996d"><td class="memTemplItemLeft" align="right" valign="top">constexpr <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; typename std::decay&lt; T &gt;::type &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a87d5210878ec865ee82bb87786eb996d">MakeSortedPair</a> (T &amp;&amp;x, T &amp;&amp;y)</td></tr>
 <tr class="memdesc:a87d5210878ec865ee82bb87786eb996d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience wrapper for creating a sorted pair from two objects.  <a href="#a87d5210878ec865ee82bb87786eb996d">More...</a><br /></td></tr>
 <tr class="separator:a87d5210878ec865ee82bb87786eb996d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24b4f4d56e6ad4e7f40d8d1010c577aa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a24b4f4d56e6ad4e7f40d8d1010c577aa"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a24b4f4d56e6ad4e7f40d8d1010c577aa">SortedVectorsHaveIntersection</a> (const std::vector&lt; T &gt; &amp;a, const std::vector&lt; T &gt; &amp;b)</td></tr>
-<tr class="memdesc:a24b4f4d56e6ad4e7f40d8d1010c577aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for the existence of a non-empty intersection between two sorted <code>std::vector</code>'s.  <a href="#a24b4f4d56e6ad4e7f40d8d1010c577aa">More...</a><br /></td></tr>
-<tr class="separator:a24b4f4d56e6ad4e7f40d8d1010c577aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab24b40e467980140b850478ea0b9e766"><td class="memTemplParams" colspan="2">template&lt;typename... Rest&gt; </td></tr>
 <tr class="memitem:ab24b40e467980140b850478ea0b9e766"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ab24b40e467980140b850478ea0b9e766">cond</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f_cond, double v_then, Rest... rest)</td></tr>
 <tr class="memdesc:ab24b40e467980140b850478ea0b9e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides specialization of <code>cond</code> function defined in <a class="el" href="cond_8h.html">drake/common/cond.h</a> file.  <a href="#ab24b40e467980140b850478ea0b9e766">More...</a><br /></td></tr>
@@ -2227,11 +2223,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Casts the object owned by the std::unique_ptr <code>other</code> from type <code>U</code> to <code>T</code>; if <code>other</code> is nullptr or the cast fails, throws a std::logic_error. </p>
+<p>Casts the object owned by the std::unique_ptr <code>other</code> from type <code>U</code> to <code>T</code>; if <code>other</code> is nullptr or the cast fails, throws a std::exception. </p>
 <p>Casting is performed using <code>dynamic_cast</code> on the managed value (i.e., the result of <code>other.get()</code>). On success, <code>other</code>'s managed value is transferred to the result and <code>other</code> is empty; on failure, <code>other</code> will retain its original managed value.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the cast fails.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the cast fails.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2410,7 +2406,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::runtime_error.">FindResourceResult::get_absolute_path_or_throw()</a>. </p>
+<p>Convenient wrapper for querying FindResource(resource_path) followed by <a class="el" href="classdrake_1_1_find_resource_result.html#a85ae127f2c62d94a37ba9190bb9ed0cf" title="Either returns the get_absolute_path() iff the resource was found, or else throws std::exception.">FindResourceResult::get_absolute_path_or_throw()</a>. </p>
 
 </div>
 </div>
@@ -3672,55 +3668,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a24b4f4d56e6ad4e7f40d8d1010c577aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24b4f4d56e6ad4e7f40d8d1010c577aa">&#9670;&nbsp;</a></span>SortedVectorsHaveIntersection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool drake::SortedVectorsHaveIntersection </td>
-          <td>(</td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks for the existence of a non-empty intersection between two sorted <code>std::vector</code>'s. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>First vector. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>Second vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of the elements in the input vectors <code>a</code> and <code>b</code>. This is expected to be an integral type or a pointer type. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if there is a non-empty intersection between vectors; <code>false</code> otherwise.</dd></dl>
-<p>Elements are compared using <code>operator&lt;</code> and the vectors must be sorted with respect to the same operator.</p>
-<p>This algorithm only works on <code>std::vector</code>'s to take advantage of their fast and random access.</p>
-<p>Entries can be repeated as long as they are sorted. For vector <code>a</code> of size <code>Na</code> and vector <code>b</code> of size <code>Nb</code> the complexity is at most Order(Na + Nb). The algorithm executes in constant time for vectors with disjoint entries. An example of the worst case scenario is given below: </p><pre class="fragment"> a = (10, 20, 30)
- b = (15, 25, 35)
-</pre><p>In this case the algorithm needs to scan both vectors from start to end. </p>
-
-</div>
-</div>
 <a id="a983e5f23fd0a884e01038572bd3e24a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a983e5f23fd0a884e01038572bd3e24a2">&#9670;&nbsp;</a></span>static_pointer_cast()</h2>
 
@@ -3770,7 +3717,7 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The value of the environment variable TEST_TMPDIR if defined or otherwise ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX where each X is replaced by a character from the portable filename character set. Any trailing / will be stripped from the output. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>If the path referred to by TEST_TMPDIR or ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX cannot be created, does not exist, or is not a directory. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the path referred to by TEST_TMPDIR or ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX cannot be created, does not exist, or is not a directory. </td></tr>
   </table>
   </dd>
 </dl>

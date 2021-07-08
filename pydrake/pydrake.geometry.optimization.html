@@ -189,6 +189,24 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.AddPointInNonnegativeScalingConstraints">
+<code class="descname">AddPointInNonnegativeScalingConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, x: numpy.ndarray[object[m, 1]], t: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInNonnegativeScalingConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Let S be this convex set. When S is bounded, this method adds the
+convex constraints to imply</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>x ∈ t S,
+t ≥ 0,
+</pre></div>
+</div>
+<p>where x is a point in ℜⁿ (with n the ambient_dimension) and t is a
+scalar.</p>
+<p>When S is unbounded, then the behavior is almost identical, except
+when t=0. In this case, the constraints imply t ≥ 0, x ∈ t S ⊕ rec(S),
+where rec(S) is the recession cone of S (the asymptotic directions in
+which S is not bounded) and ⊕ is the Minkowski sum. For t &gt; 0, this is
+equivalent to x ∈ t S, but for t = 0, we have only x ∈ rec(S).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints">
 <code class="descname">AddPointInSetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInSetConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint to an existing MathematicalProgram enforcing that
@@ -205,6 +223,22 @@ contains our set. For example, if we define a set using <code class="docutils li
 where <code class="docutils literal"><span class="pre">A</span></code> has linearly independent rows, then the ambient dimension
 is the dimension of <code class="docutils literal"><span class="pre">x</span></code>, but the affine dimension of the set is
 <code class="docutils literal"><span class="pre">ambient_dimension()</span> <span class="pre">-</span> <span class="pre">rank(A)</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.Clone">
+<code class="descname">Clone</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.Clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a unique deep copy of this set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.IsBounded">
+<code class="descname">IsBounded</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.IsBounded" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the set is bounded, e.g. there exists an element-wise
+finite lower and upper bound for the set. Note: for some derived
+classes, this check is trivial, but for others it can require solving
+an (typically small) optimization problem. Check the derived class
+documentation for any notes.</p>
 </dd></dl>
 
 <dl class="method">
@@ -230,6 +264,32 @@ the SceneGraph geometry ecosystem.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.ConvexSets">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">ConvexSets</code><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wraps a collection of owned ConvexSet objects.</p>
+<p>Use the move operator/constructor on this collection to transfer
+ownership without forcing a copy of the underlying sets.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSets.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSets</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSets.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an empty collection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSets.emplace_back">
+<code class="descname">emplace_back</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSets</em>, <em>set: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSets.emplace_back" title="Permalink to this definition">¶</a></dt>
+<dd><p>Emplaces a copy of <code class="docutils literal"><span class="pre">set</span></code> at the end of the collection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSets.size">
+<code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSets</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSets.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the collection.</p>
 </dd></dl>
 
 </dd></dl>
@@ -382,6 +442,236 @@ in the world frame.</p>
 <dt id="pydrake.geometry.optimization.Hyperellipsoid.center">
 <code class="descname">center</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the center of the ellipsoid.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.MakeAxisAligned">
+<em class="property">static </em><code class="descname">MakeAxisAligned</code><span class="sig-paren">(</span><em>radius: numpy.ndarray[numpy.float64[m, 1]], center: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeAxisAligned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the an axis-aligned Hyperellipsoid with the implicit form
+(x₀-c₀)²/r₀² + (x₁-c₁)²/r₁² + … + (x_N - c_N)²/r_N² ≤ 1, where c is
+shorthand for <code class="docutils literal"><span class="pre">center</span></code> and r is shorthand for <code class="docutils literal"><span class="pre">radius</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.MakeHypersphere">
+<em class="property">static </em><code class="descname">MakeHypersphere</code><span class="sig-paren">(</span><em>radius: float, center: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeHypersphere" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a hypersphere with <code class="docutils literal"><span class="pre">radius</span></code> and <code class="docutils literal"><span class="pre">center</span></code>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall">
+<em class="property">static </em><code class="descname">MakeUnitBall</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal"><span class="pre">dim</span></code> dimensions, {x | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₂ &lt;= 1
+}.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.MinimumUniformScalingToTouch">
+<code class="descname">MinimumUniformScalingToTouch</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em>, <em>other: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; Tuple[float, numpy.ndarray[numpy.float64[m, 1]]]<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MinimumUniformScalingToTouch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the smallest uniform scaling of this ellipsoid for which it
+still intersects <code class="docutils literal"><span class="pre">other</span></code>. √ minₓ (x-center)ᵀAᵀA(x-center) s.t. x ∈
+other. Note that if center ∈ other, then we expect scaling = 0 and x =
+center (up to precision).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">other</span></code> must have the same ambient_dimension as this.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the minimal scaling and the witness point, x, on other.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Hyperellipsoid.Volume">
+<code class="descname">Volume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.Volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the volume of the hyperellipsoid (in Euclidean space).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.geometry.optimization.Iris">
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: pydrake.geometry.optimization.ConvexSets, sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7f53cbedbdb0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
+algorithm, as described in</p>
+<p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
+obstacle-free space through semidefinite programming,” Workshop on the
+Algorithmic Fundamentals of Robotics, Istanbul, Aug. 2014.
+<a class="reference external" href="http://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf">http://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf</a></p>
+<p>This algorithm attempts to locally maximize the volume of a convex
+polytope representing obstacle-free space given a sample point and
+list of convex obstacles. Rather than compute the volume of the
+polytope directly, the algorithm maximizes the volume of an inscribed
+ellipsoid. It alternates between finding separating hyperplanes
+between the ellipsoid and the obstacles and then finding a new
+maximum-volume inscribed ellipsoid.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">obstacles</span></code>:</dt>
+<dd>is a vector of convex sets representing the occupied space.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">sample</span></code>:</dt>
+<dd>provides a point in the space; the algorithm is initialized using
+a tiny sphere around this point. The algorithm is only guaranteed
+to succeed if this sample point is collision free (outside of all
+obstacles), but in practice the algorithm can often escape bad
+initialization (assuming the require_sample_point_is_contained
+option is false).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">domain</span></code>:</dt>
+<dd>describes the total region of interest; computed IRIS regions will
+be inside this domain. It must be bounded, and is typically a
+simple bounding box (e.g. from HPolyhedron::MakeBox).</dd>
+</dl>
+<p>The <code class="docutils literal"><span class="pre">obstacles</span></code>, <code class="docutils literal"><span class="pre">sample</span></code>, and the <code class="docutils literal"><span class="pre">domain</span></code> must describe
+elements in the same ambient dimension (but that dimension can be any
+positive integer).</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.IrisOptions">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisOptions</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration options for the IRIS algorithm.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.IrisOptions.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.IrisOptions</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.iteration_limit">
+<code class="descname">iteration_limit</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.iteration_limit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of iterations.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.require_sample_point_is_contained">
+<code class="descname">require_sample_point_is_contained</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.require_sample_point_is_contained" title="Permalink to this definition">¶</a></dt>
+<dd><p>The initial polytope is guaranteed to contain the point if that point
+is collision-free. However, the IRIS alternation objectives do not
+include (and can not easily include) a constraint that the original
+sample point is contained. Therefore, the IRIS paper recommends that
+if containment is a requirement, then the algorithm should simply
+terminate early if alternations would ever cause the set to not
+contain the point.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.termination_threshold">
+<code class="descname">termination_threshold</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.termination_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>IRIS will terminate if the change in the <em>volume</em> of the
+hyperellipsoid between iterations is less that this threshold.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.geometry.optimization.MakeIrisObstacles">
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">MakeIrisObstacles</code><span class="sig-paren">(</span><em>query_object: pydrake.geometry.QueryObject_[float], reference_frame: Optional[pydrake.geometry.FrameId] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSets<a class="headerlink" href="#pydrake.geometry.optimization.MakeIrisObstacles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs ConvexSet representations of obstacles for IRIS in 3D using
+the geometry from a SceneGraph QueryObject. All geometry in the scene
+with a proximity role, both anchored and dynamic, are consider to be
+<em>fixed</em> obstacles frozen in the poses captured in the context used to
+create the QueryObject.</p>
+<p>When multiple representations are available for a particular geometry
+(e.g. a Box can be represented as either an HPolyhedron or a
+VPolytope), then this method will prioritize the representation that
+we expect is most performant for the current implementation of the
+IRIS algorithm.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.Point">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Point</code><a class="headerlink" href="#pydrake.geometry.optimization.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>A convex set that contains exactly one element. Also known as a
+singleton or unit set.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Point.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Point.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.optimization.Point, x: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs a Point.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.Point, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None, maximum_allowable_radius: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs a Point from a SceneGraph geometry and pose in the
+<code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+in the world frame.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if geometry_id does not correspond to a Sphere or if</li>
+<li>the Sphere has radius greater than <code class="docutils literal"><span class="pre">maximum_allowable_radius</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Point.x">
+<code class="descname">x</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Point</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.Point.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the point.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.VPolytope">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">VPolytope</code><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>A polytope described using the vertex representation. The set is
+defined as the convex hull of the vertices. The vertices are not
+guaranteed to be in any particular order, nor to be minimal (some
+vertices could be strictly in the interior of the set).</p>
+<p>Note: Unlike the half-space representation, this definition means the
+set is always bounded (hence the name polytope, instead of
+polyhedron).</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.VPolytope.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.optimization.VPolytope, vertices: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Constructs the polytope from a d-by-n matrix, where d is the ambient
+dimension, and n is the number of vertices. The vertices do not have
+to be ordered, nor minimal (they can contain points inside their
+convex hull).</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.VPolytope, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
+</ol>
+<p>Construct the polytope from a SceneGraph geometry.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.VPolytope.MakeBox">
+<em class="property">static </em><code class="descname">MakeBox</code><span class="sig-paren">(</span><em>lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.VPolytope<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a polyhedron as an axis-aligned box from the lower and
+upper corners.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.VPolytope.MakeUnitBox">
+<em class="property">static </em><code class="descname">MakeUnitBox</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.VPolytope<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeUnitBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal"><span class="pre">dim</span></code> dimensions, {x | <a href="#id7"><span class="problematic" id="id8">|</span></a>x|∞ &lt;= 1
+}. This is an axis-aligned box, centered at the origin, with edge
+length 2.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.VPolytope.vertices">
+<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.VPolytope</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertices in a d-by-n matrix, where d is the ambient
+dimension, and n is the number of vertices.</p>
 </dd></dl>
 
 </dd></dl>

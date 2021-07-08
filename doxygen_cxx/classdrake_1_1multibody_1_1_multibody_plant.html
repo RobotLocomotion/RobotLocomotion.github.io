@@ -1389,7 +1389,7 @@ Related Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A constant reference to the new <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a> just added, which will remain valid for the lifetime of <code>this</code> MultibodyPlant. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if additional model instances have been created beyond the world and default instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if additional model instances have been created beyond the world and default instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1453,7 +1453,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Ccm does not exist, which occurs if there are no massive bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Ccm does not exist, which occurs if there are no massive bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </td></tr>
     <tr><td class="paramname">std::exception</td><td>if composite_mass &lt;= 0, where composite_mass is the total mass of all bodies except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if frame_A is not the world frame. </td></tr>
   </table>
@@ -2144,7 +2144,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if CCm does not exist, which occurs if there are no massive bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if CCm does not exist, which occurs if there are no massive bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </td></tr>
     <tr><td class="paramname">std::exception</td><td>if composite_mass &lt;= 0, where composite_mass is the total mass of all bodies except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
   </table>
   </dd>
@@ -2461,7 +2461,7 @@ Related Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Both <code>p_BQi</code> and <code>p_AQi</code> must have three rows. Otherwise this method will throw a std::runtime_error exception. This method also throws a std::runtime_error exception if <code>p_BQi</code> and <code>p_AQi</code> differ in the number of columns. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Both <code>p_BQi</code> and <code>p_AQi</code> must have three rows. Otherwise this method will throw a std::exception. This method also throws a std::exception if <code>p_BQi</code> and <code>p_AQi</code> differ in the number of columns. </dd></dl>
 
 </div>
 </div>
@@ -2892,7 +2892,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was not called on <code>this</code> model or if <code>body_B</code> does not belong to this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was not called on <code>this</code> model or if <code>body_B</code> does not belong to this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2941,7 +2941,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was not called on <code>this</code> model or if <code>body_B</code> does not belong to this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was not called on <code>this</code> model or if <code>body_B</code> does not belong to this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2991,7 +2991,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was not called on <code>this</code> model or if <code>body_B</code> does not belong to this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> was not called on <code>this</code> model or if <code>body_B</code> does not belong to this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3083,7 +3083,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840" title="Returns true if this MultibodyPlant was finalized with a call to Finalize().">is_finalized()</a>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the MultibodyPlant has already been finalized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3393,7 +3393,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to the force element with unique index <code>force_element_index</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>when <code>force_element_index</code> does not correspond to a force element in this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>when <code>force_element_index</code> does not correspond to a force element in this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3566,7 +3566,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to the joint with unique index <code>joint_index</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>when <code>joint_index</code> does not correspond to a joint in this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>when <code>joint_index</code> does not correspond to a joint in this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3618,7 +3618,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a mutable reference to the joint with unique index <code>joint_index</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>when <code>joint_index</code> does not correspond to a joint in this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>when <code>joint_index</code> does not correspond to a joint in this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3770,7 +3770,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a vector of size <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a></code> containing the lower acceleration limits for every generalized velocity coordinate. </p>
 <p>These include joint and free body coordinates. Any unbounded or unspecified limits will be -infinity. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3881,8 +3881,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to a body that is identified by the string <code>name</code> in <code>this</code> MultibodyPlant. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no body with the requested name. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the body name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no body with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the body name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3919,7 +3919,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to the body that is uniquely identified by the string <code>name</code> and <code>model_instance</code> in <code>this</code> MultibodyPlant. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no body with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no body with the requested name. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4112,7 +4112,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the force element is not of type <code>ForceElementType</code> or if there is no <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.">ForceElement</a> with that index. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the force element is not of type <code>ForceElementType</code> or if there is no <a class="el" href="classdrake_1_1multibody_1_1_force_element.html" title="A ForceElement allows modeling state and time dependent forces in a MultibodyTree model.">ForceElement</a> with that index. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4138,8 +4138,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to a frame that is identified by the string <code>name</code> in <code>this</code> model. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no frame with the requested name. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the frame name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no frame with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the frame name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4176,8 +4176,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to the frame that is uniquely identified by the string <code>name</code> in <code>model_instance</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no frame with the requested name. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no frame with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4242,8 +4242,8 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to an actuator that is identified by the string <code>name</code> in <code>this</code> MultibodyPlant. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no actuator with the requested name. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the actuator name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no actuator with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the actuator name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4280,7 +4280,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to the actuator that is uniquely identified by the string <code>name</code> and <code>model_instance</code> in <code>this</code> MultibodyPlant. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no actuator with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no actuator with the requested name. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
   </table>
   </dd>
@@ -4324,7 +4324,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the named joint is not of type <code>JointType</code> or if there is no <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> with that name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the named joint is not of type <code>JointType</code> or if there is no <a class="el" href="classdrake_1_1multibody_1_1_joint.html" title="A Joint models the kinematical relationship which characterizes the possible relative motion between ...">Joint</a> with that name. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
   </table>
   </dd>
@@ -4372,7 +4372,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns the index to the model instance that is uniquely identified by the string <code>name</code> in <code>this</code> MultibodyPlant. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no instance with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no instance with the requested name. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4399,7 +4399,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns the name of a <code>model_instance</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>when <code>model_instance</code> does not correspond to a model in this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>when <code>model_instance</code> does not correspond to a model in this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4608,7 +4608,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a vector of size <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a></code> containing the lower position limits for every generalized position coordinate. </p>
 <p>These include joint and free body coordinates. Any unbounded or unspecified limits will be -infinity. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4813,9 +4813,9 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to a rigid body that is identified by the string <code>name</code> in <code>this</code> model. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no body with the requested name. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the body name occurs in multiple model instances. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the requested body is not a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no body with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the body name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the requested body is not a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4852,9 +4852,9 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a constant reference to the rigid body that is uniquely identified by the string <code>name</code> in <code>model_instance</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is no body with the requested name. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if the requested body is not a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no body with the requested name. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the requested body is not a <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html" title="The term rigid body implies that the deformations of the body under consideration are so small that t...">RigidBody</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>model_instance</code> is not valid for this model. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5018,7 +5018,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns a vector of size <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a></code> containing the lower velocity limits for every generalized velocity coordinate. </p>
 <p>These include joint and free body coordinates. Any unbounded or unspecified limits will be -infinity. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5105,7 +5105,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f6a68c31772eaa0c855ebb44eeaa0b7" title="Creates a rigid body with the provided name and spatial inertia.">AddRigidBody()</a>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the body name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the body name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5167,7 +5167,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a474c90a0b3e4f9349533207026413186" title="This method adds a Frame of type FrameType&lt;T&gt;.">AddFrame()</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the frame name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the frame name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5229,7 +5229,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af528f7747dc75227fdec76aba89e7d2b" title="Creates and adds a JointActuator model for an actuator acting on a given joint.">AddJointActuator()</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the actuator name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the actuator name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5291,7 +5291,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a437f86026a2268c0fb06936b899ba8d7" title="This method adds a Joint of type JointType between two bodies.">AddJoint()</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the joint name occurs in multiple model instances. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the joint name occurs in multiple model instances. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5489,7 +5489,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Alternative signature to build an actuation selector matrix <code>Su</code> such that <code>u = Su⋅uₛ</code>, where u is the vector of actuation values for the full model (ordered by JointActuatorIndex) and uₛ is a vector of actuation values for the actuators acting on the joints listed by <code>user_to_joint_index_map</code>. </p>
 <p>It is assumed that all joints referenced by <code>user_to_joint_index_map</code> are actuated. See MakeActuatorSelectorMatrix(const std::vector&lt;JointActuatorIndex&gt;&amp;) for details. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the joints in <code>user_to_joint_index_map</code> does not have an actuator. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the joints in <code>user_to_joint_index_map</code> does not have an actuator. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5518,7 +5518,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>A user specifies the preferred order in xₛ via <code>user_to_joint_index_map</code>. The selected state is built such that selected positions are followed by selected velocities, as in <code>xₛ = [qₛ, vₛ]</code>. The positions in qₛ are a concatenation of the positions for each joint in the order they appear in <code>user_to_joint_index_map</code>. That is, the positions for <code>user_to_joint_index_map[0]</code> are first, followed by the positions for <code>user_to_joint_index_map[1]</code>, etc. Similarly for the selected velocities vₛ.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there are repeated indexes in <code>user_to_joint_index_map</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there are repeated indexes in <code>user_to_joint_index_map</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6362,7 +6362,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 <p>Refer to the section <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_penalty_method">Contact by penalty method</a> for further details.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if penetration_allowance is not positive. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if penetration_allowance is not positive. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6656,8 +6656,8 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
 <p>Updates <code>context</code> to store the pose <code>X_FB</code> of a given <code>body</code> B in a frame F. </p>
 <p><a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> F must be anchored, meaning that it is either directly welded to the world frame W or, more generally, that there is a kinematic path between frame F and the world frame W that only includes weld joints. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if called pre-finalize. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if frame F is not anchored to the world. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if frame F is not anchored to the world. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6714,7 +6714,7 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>body</code> is not a free body in the model. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if called pre-finalize. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
   </table>
   </dd>
 </dl>

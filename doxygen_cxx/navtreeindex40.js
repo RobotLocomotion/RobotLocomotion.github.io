@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"functions_rela_s.html":[3,3,6,17],
 "functions_rela_t.html":[3,3,6,18],
 "functions_rela_u.html":[3,3,6,19],
 "functions_rela_v.html":[3,3,6,20],
@@ -10,8 +11,8 @@ var NAVTREEINDEX40 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
+"functions_vars.html":[3,3,2],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -160,8 +161,8 @@ var NAVTREEINDEX40 =
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,12,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,12,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,12,2],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,12,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
 "group__discrete__systems.html":[1,3,9],
@@ -180,6 +181,10 @@ var NAVTREEINDEX40 =
 "group__geometry__infrastructure.html":[1,6,0],
 "group__geometry__optimization.html":[1,6,4],
 "group__geometry__optimization.html":[1,2,1],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,6,4,7],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,2,1,7],
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,6,4,6],
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,2,1,6],
 "group__geometry__roles.html":[1,6,1],
 "group__hash__append.html":[1,0,2,0],
 "group__identification.html":[1,5,5],
@@ -244,10 +249,5 @@ var NAVTREEINDEX40 =
 "group__templates.html":[1,0,5],
 "group__terminology__and__notation.html":[1,1],
 "group__visualization.html":[1,3,11],
-"group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f":[1,3,11,2],
-"group__visualization.html#gac7c07596e19e7537c3f08fd94ba8e153":[1,3,11,1],
-"gurobi__qp_8h.html":[4,0,0,10,21],
-"gurobi__qp_8h.html#a0a12ac8a773158c91a75d797b9191c70":[4,0,0,10,21,1],
-"gurobi__qp_8h.html#a447699fbd5eef5296f9fc14b34195ce8":[4,0,0,10,21,2],
-"gurobi__qp_8h.html#a814877dec98d6d4cf4dfe93f686a0e8c":[4,0,0,10,21,0]
+"group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f":[1,3,11,2]
 };

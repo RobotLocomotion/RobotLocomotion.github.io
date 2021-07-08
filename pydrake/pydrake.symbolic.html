@@ -1380,7 +1380,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>ValueError exception if there is a variable in this monomial whose</li>
+<li>RuntimeError if there is a variable in this monomial whose</li>
 <li>assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
 </ul>
 </td>
@@ -1605,7 +1605,7 @@ indeterminate.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>ValueError if there is a variable in this polynomial whose</li>
+<li>RuntimeError if there is a variable in this polynomial whose</li>
 <li>assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
 </ul>
 </td>

@@ -4,6 +4,7 @@ var searchData=
   ['relative_5fduality_5fgap',['relative_duality_gap',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a6f09fca6f296d95b8b62f288f10f5c09',1,'drake::solvers::ScsSolverDetails']]],
   ['relative_5ftolerance',['relative_tolerance',['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8',1,'drake::multibody::TamsiSolverParameters']]],
   ['reported_5fruntime',['reported_runtime',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#ae91d6264528898aea42defb33f87f6b8',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
+  ['require_5fsample_5fpoint_5fis_5fcontained',['require_sample_point_is_contained',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d',1,'drake::geometry::optimization::IrisOptions']]],
   ['rescode',['rescode',['../structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003',1,'drake::solvers::MosekSolverDetails']]],
   ['residual',['residual',['../structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html#a6998d64b1d5b8fec0d92a0b294062e3d',1,'drake::solvers::fbstab::SolverOut']]],
   ['residuals',['residuals',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988',1,'drake::multibody::TamsiSolverIterationStats']]],

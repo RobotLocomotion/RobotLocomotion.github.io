@@ -48,6 +48,7 @@ var searchData=
   ['inversekinematics',['InverseKinematics',['../classdrake_1_1multibody_1_1_inverse_kinematics.html',1,'drake::multibody']]],
   ['ipoptsolver',['IpoptSolver',['../classdrake_1_1solvers_1_1_ipopt_solver.html',1,'drake::solvers']]],
   ['ipoptsolverdetails',['IpoptSolverDetails',['../structdrake_1_1solvers_1_1_ipopt_solver_details.html',1,'drake::solvers']]],
+  ['irisoptions',['IrisOptions',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html',1,'drake::geometry::optimization']]],
   ['is_5feigen_5fnonvector_5fexpression_5fdouble_5fpair',['is_eigen_nonvector_expression_double_pair',['../structdrake_1_1is__eigen__nonvector__expression__double__pair.html',1,'drake']]],
   ['is_5feigen_5fnonvector_5fof',['is_eigen_nonvector_of',['../structdrake_1_1is__eigen__nonvector__of.html',1,'drake']]],
   ['is_5feigen_5fscalar_5fsame',['is_eigen_scalar_same',['../structdrake_1_1is__eigen__scalar__same.html',1,'drake']]],

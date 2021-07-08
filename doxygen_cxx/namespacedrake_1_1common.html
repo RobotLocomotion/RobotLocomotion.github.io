@@ -177,7 +177,7 @@ Functions</h2></td></tr>
 <p>Initializes <code>CallPython</code> for a given file. </p>
 <p>If this function is not called, then the filename defaults to <code>/tmp/python_rpc</code>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>If either this function or <code>CallPython</code> have already been called. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If either this function or <code>CallPython</code> have already been called. </td></tr>
   </table>
   </dd>
 </dl>
@@ -203,7 +203,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The value of the environment variable TEST_TMPDIR if defined or otherwise /tmp. Any trailing / will be stripped from the output. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>If the path referred to by TEST_TMPDIR or /tmp does not exist or is not a directory. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>If the path referred to by TEST_TMPDIR or /tmp does not exist or is not a directory. </td></tr>
   </table>
   </dd>
 </dl>

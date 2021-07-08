@@ -336,8 +336,8 @@ This method does <em>not</em> (yet) set the initial conditions (default nor rand
 <dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a> that approximates the original system in the vicinity of the operating point. See note below. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the operating point is not an equilibrium point of the system (within the specified tolerance) </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if the system is not (only) continuous or (only) discrete time with a single periodic update.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the operating point is not an equilibrium point of the system (within the specified tolerance) </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the system is not (only) continuous or (only) discrete time with a single periodic update.</td></tr>
   </table>
   </dd>
 </dl>

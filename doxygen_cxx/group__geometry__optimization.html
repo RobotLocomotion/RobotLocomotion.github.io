@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('group__geometry__optimization.html',''
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Geometry Optimization<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &#124; <a class="el" href="group__solvers.html">Formulating and Solving Optimization Problems</a></div></div>  </div>
 </div><!--header-->
@@ -125,13 +126,111 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html">Hyperellipsoid</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements an ellipsoidal convex set represented by the quadratic form <code>{x | (x-center)ᵀAᵀA(x-center) ≤ 1}</code>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration options for the IRIS algorithm.  <a href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html">Point</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convex set that contains exactly one element.  <a href="classdrake_1_1geometry_1_1optimization_1_1_point.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A polytope described using the vertex representation.  <a href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
+<tr class="separator:gafd8111a93cb3461e05bec3477ee736f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad54a224f37c1a0dc86eaec300ef874af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">MakeIrisObstacles</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;query_object, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
+<tr class="memdesc:gad54a224f37c1a0dc86eaec300ef874af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">More...</a><br /></td></tr>
+<tr class="separator:gad54a224f37c1a0dc86eaec300ef874af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gafd8111a93cb3461e05bec3477ee736f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd8111a93cb3461e05bec3477ee736f6">&#9670;&nbsp;</a></span>Iris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> drake::geometry::optimization::Iris </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a> &amp;&#160;</td>
+          <td class="paramname"><em>obstacles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sample</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>domain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in. </p>
+<p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of obstacle-free space through semidefinite programming,” Workshop on the Algorithmic Fundamentals of Robotics, Istanbul, Aug. 2014. <a href="http://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf">http://groups.csail.mit.edu/robotics-center/public_papers/Deits14.pdf</a></p>
+<p>This algorithm attempts to locally maximize the volume of a convex polytope representing obstacle-free space given a sample point and list of convex obstacles. Rather than compute the volume of the polytope directly, the algorithm maximizes the volume of an inscribed ellipsoid. It alternates between finding separating hyperplanes between the ellipsoid and the obstacles and then finding a new maximum-volume inscribed ellipsoid.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obstacles</td><td>is a vector of convex sets representing the occupied space. </td></tr>
+    <tr><td class="paramname">sample</td><td>provides a point in the space; the algorithm is initialized using a tiny sphere around this point. The algorithm is only guaranteed to succeed if this sample point is collision free (outside of all obstacles), but in practice the algorithm can often escape bad initialization (assuming the require_sample_point_is_contained option is false). </td></tr>
+    <tr><td class="paramname">domain</td><td>describes the total region of interest; computed IRIS regions will be inside this domain. It must be bounded, and is typically a simple bounding box (e.g. from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1" title="Constructs a polyhedron as an axis-aligned box from the lower and upper corners.">HPolyhedron::MakeBox</a>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The <code>obstacles</code>, <code>sample</code>, and the <code>domain</code> must describe elements in the same ambient dimension (but that dimension can be any positive integer). </p>
+
+</div>
+</div>
+<a id="gad54a224f37c1a0dc86eaec300ef874af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad54a224f37c1a0dc86eaec300ef874af">&#9670;&nbsp;</a></span>MakeIrisObstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a> drake::geometry::optimization::MakeIrisObstacles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>query_object</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt;&#160;</td>
+          <td class="paramname"><em>reference_frame</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>. </p>
+<p>All geometry in the scene with a proximity role, both anchored and dynamic, are consider to be <em>fixed</em> obstacles frozen in the poses captured in the context used to create the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.</p>
+<p>When multiple representations are available for a particular geometry (e.g. a <a class="el" href="classdrake_1_1geometry_1_1_box.html" title="Definition of a box.">Box</a> can be represented as either an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> or a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html" title="A polytope described using the vertex representation.">VPolytope</a>), then this method will prioritize the representation that we expect is most performant for the current implementation of the IRIS algorithm. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.15 -->

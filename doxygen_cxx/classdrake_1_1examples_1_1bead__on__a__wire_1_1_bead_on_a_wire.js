@@ -8,7 +8,6 @@ var classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire =
     ] ],
     [ "BeadOnAWire", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ac775b4b38fca6202a84dd9be58442b71", null ],
     [ "CalcVelocityChangeFromConstraintImpulses", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a3354557be04354641f4041e953c15ab8", null ],
-    [ "CopyStateOut", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#ab2bd8df4c8162484707a06dc59ddd1a7", null ],
     [ "DoCalcTimeDerivatives", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a9bb4bae7c1e4b222c226d8a67b03d1c8", null ],
     [ "EvalConstraintEquations", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a75daa8fabd8f79d79f35066e0429968f", null ],
     [ "EvalConstraintEquationsDot", "classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a8eedc9d39ca170084678e5ef28c29b20", null ],

@@ -292,7 +292,7 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Coefficient-based construction methods.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="coefficient_construction_methods"></a> Various methods for constructing a PiecewisePolynomial using samples of coefficient matrices. Under the hood, PiecewisePolynomial constructs interpolating <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> objects that pass through the sample points. These methods differ by the continuity constraints that they enforce at break points and whether each sample represents a full matrix (versions taking <code>const std::vector&lt;MatrixX&lt;T&gt;&gt;&amp;</code>) or a column vector (versions taking <code>const Eigen::Ref&lt;const MatrixX&lt;T&gt;&gt;&amp;</code>).</p>
-<p>These methods will throw <code>std::runtime_error</code> if:</p><ul>
+<p>These methods will throw <code>std::exception</code> if:</p><ul>
 <li>the breaks and samples have different length,</li>
 <li>the breaks are not strictly increasing,</li>
 <li>the samples have inconsistent dimensions (i.e., the matrices do not all have identical dimensions),</li>
@@ -766,7 +766,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the column count of the output matrices. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc" title="Returns true if this trajectory has no breaks/samples/polynomials.">empty()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc" title="Returns true if this trajectory has no breaks/samples/polynomials.">empty()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -801,8 +801,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if trajectories' dimensions do not match each other (either <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9" title="Returns the row count of the output matrices.">rows()</a> or <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b" title="Returns the column count of the output matrices.">cols()</a> does not match between this and <code>other</code>). </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507">end_time()</a></code> and <code>other-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0">start_time()</a></code> are not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory&lt;T&gt;::kEpsilonTime</a> from each other. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if trajectories' dimensions do not match each other (either <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9" title="Returns the row count of the output matrices.">rows()</a> or <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b" title="Returns the column count of the output matrices.">cols()</a> does not match between this and <code>other</code>). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4c1604e170d921c073e4fba715622507">end_time()</a></code> and <code>other-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a1019f41dcfe440c98c91029f4b0b0bc0">start_time()</a></code> are not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory&lt;T&gt;::kEpsilonTime</a> from each other. </td></tr>
   </table>
   </dd>
 </dl>
@@ -991,12 +991,12 @@ Interpolating Polynomial"), and provides a nice description in their documentati
 <p>If <code>zero_end_point_derivatives</code> is <code>true</code>, <code>breaks</code> and <code>samples</code> may have 2 or more elements. For the 2 elements case, the result is equivalent to computing a cubic polynomial whose values are given by <code>samples</code>, and derivatives set to zero.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if:<ul>
+    <tr><td class="paramname">std::exception</td><td>if:<ul>
 <li><code>breaks</code> has length smaller than 3 and <code>zero_end_point_derivatives</code> is <code>false</code>,</li>
 <li><code>breaks</code> has length smaller than 2 and <code>zero_end_point_derivatives</code> is true.</li>
 </ul>
 </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1048,7 +1048,7 @@ Interpolating Polynomial"), and provides a nice description in their documentati
 <dl class="section pre"><dt>Precondition</dt><dd><code>samples.cols() == breaks.size()</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1105,8 +1105,8 @@ Interpolating Polynomial"), and provides a nice description in their documentati
 <p>The PiecewisePolynomial is constructed such that the interior segments have the same value, first and second derivatives at <code>breaks</code>. <code>sample_dot_at_start</code> and <code>sample_dot_at_end</code> are used for the first and last first derivatives.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>sample_dot_at_start</code> or <code>sample_dot_at_end</code> and <code>samples</code> have inconsistent dimensions. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>sample_dot_at_start</code> or <code>sample_dot_at_end</code> and <code>samples</code> have inconsistent dimensions. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1164,7 +1164,7 @@ Interpolating Polynomial"), and provides a nice description in their documentati
 <dl class="section pre"><dt>Precondition</dt><dd><code>samples.cols() == breaks.size()</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1347,7 +1347,7 @@ Interpolating Polynomial"), and provides a nice description in their documentati
 <p>Constructs a piecewise linear PiecewisePolynomial using matrix samples. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1393,7 +1393,7 @@ Interpolating Polynomial"), and provides a nice description in their documentati
 <dl class="section pre"><dt>Precondition</dt><dd><code>samples.cols() == breaks.size()</code> </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1677,7 +1677,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Multiplies each <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>other</code> by the corresponding <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>this</code> (i.e., a coefficient-wise multiplication). </p>
 <p>If <code>this</code> corresponds to t² and <code>other</code> corresponds to t³, <code>this *= other</code> will correspond to t⁵. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>1. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1703,7 +1703,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Multiplies each <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>other</code> by the corresponding <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>this</code> (i.e., a coefficient-wise multiplication), storing the result in <code>this</code>. </p>
 <p>If <code>this</code> corresponds to t² and <code>other</code> corresponds to t³, <code>this *= other</code> will correspond to t⁵. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1729,7 +1729,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Adds each <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>other</code> to the corresponding <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>this</code>. </p>
 <p>If <code>this</code> corresponds to t² and <code>other</code> corresponds to t³, <code>this + other</code> will correspond to t³ + t². </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1773,7 +1773,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Adds each <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>other</code> to the corresponding <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>this</code>, storing the result in <code>this</code>. </p>
 <p>If <code>this</code> corresponds to t² and <code>other</code> corresponds to t³, <code>this += other</code> will correspond to t³ + t². </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1817,7 +1817,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Subtracts each <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>other</code> from the corresponding <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>this</code>. </p>
 <p>If <code>this</code> corresponds to t² and <code>other</code> corresponds to t³, <code>this - other</code> will correspond to t² - t³. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1881,7 +1881,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Subtracts each <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>other</code> from the corresponding <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> in the PolynomialMatrix of <code>this</code>, storing the result in <code>this</code>. </p>
 <p>If <code>this</code> corresponds to t² and <code>other</code> corresponds to t³, <code>this -= other</code> will correspond to t² - t³. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if every element of <code>other.get_segment_times()</code> is not within <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0539f01602cd1ab9b25989206d302401" title="Minimum delta quantity used for comparing time.">PiecewiseTrajectory::kEpsilonTime</a> from `this-&gt;<a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5">get_segment_times()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2056,7 +2056,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <p>Returns the row count of the output matrices. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc" title="Returns true if this trajectory has no breaks/samples/polynomials.">empty()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc" title="Returns true if this trajectory has no breaks/samples/polynomials.">empty()</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2300,7 +2300,7 @@ See warning in polynomial_construction_warning. </dd></dl>
 <p>Note that constructing a PiecewisePolynomial requires at least two sample points, although in this case, the second sample point's value is ignored, and only its break time is used.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2346,7 +2346,7 @@ See warning in polynomial_construction_warning. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code>samples.cols() == breaks.size()</code> </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>under the conditions specified under <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#coefficient_construction_methods">coefficient_construction_methods</a>. </td></tr>
   </table>
   </dd>
 </dl>

@@ -361,7 +361,7 @@ Protected Member Functions</h2></td></tr>
 Time extents covered by updates can be evaluated (via <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ace0ac0b974686b7e2c00fd22912bceeb" title="Returns output&#39;s start time, or in other words, the oldest time t that it can be evaluated at e....">start_time()</a>/end_time()). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>
@@ -624,7 +624,7 @@ Time extents covered by updates can be evaluated (via <a class="el" href="classd
 <dl class="section pre"><dt>Precondition</dt><dd>Updates have taken place since instantiation or last consolidation (via <a class="el" href="classdrake_1_1systems_1_1_hermitian_dense_output.html#a1cf328ae201f839c19f23ef9e8354502" title="Consolidates latest updates.">Consolidate()</a>). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>
@@ -659,7 +659,7 @@ Time extents covered by updates can be evaluated (via <a class="el" href="classd
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if given <code>step</code> has zero length.<br />
+    <tr><td class="paramname">std::exception</td><td>if given <code>step</code> has zero length.<br />
  if given <code>step</code> does not ensure C1 continuity at the end of this dense output.<br />
  if given <code>step</code> dimensions does not match this dense output dimensions. </td></tr>
   </table>

@@ -387,6 +387,7 @@ var hierarchy =
     [ "InvalidDepth", "classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html", null ],
     [ "InverseKinematics", "classdrake_1_1multibody_1_1_inverse_kinematics.html", null ],
     [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", null ],
+    [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", null ],
     [ "is_base_of", null, [
       [ "is_eigen_type< Derived >", "structdrake_1_1is__eigen__type.html", null ]
     ] ],
@@ -573,8 +574,8 @@ var hierarchy =
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
-    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
+    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],

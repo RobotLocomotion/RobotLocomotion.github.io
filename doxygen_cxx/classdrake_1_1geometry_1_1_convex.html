@@ -245,8 +245,8 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the .obj file doesn't define a single object. This can happen if it is empty, if there are multiple object-name statements (e.g., "o object_name"), or if there are faces defined outside a single object-name statement. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the .obj file doesn't define a single object. This can happen if it is empty, if there are multiple object-name statements (e.g., "o object_name"), or if there are faces defined outside a single object-name statement. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if |scale| &lt; 1e-8. Note that a negative scale is considered valid. We want to preclude scales near zero but recognise that scale is a convenience tool for "tweaking" models. 8 orders of magnitude should be plenty without considering revisiting the model itself. </td></tr>
   </table>
   </dd>
 </dl>

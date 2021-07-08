@@ -271,7 +271,7 @@ Friends</h2></td></tr>
 <p>Returns the last-saved value of output port <code>index</code> as a <code><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a>&lt;T&gt;</code>, although the actual concrete type is preserved from the actual output port. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::bad_cast</td><td>if the port is not vector-valued. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the port is not vector-valued. </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,7 +318,7 @@ Friends</h2></td></tr>
 <p>(Advanced) Returns mutable access to a <code><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a>&lt;T&gt;</code> object that is suitable for holding the value of output port <code>index</code> of the allocating <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </p>
 <p>The object's concrete type is preserved from the output port. Most users should just call <code><a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>&lt;T&gt;::CalcOutputs()</code> to get all the output port values at once. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::bad_cast</td><td>if the port is not vector-valued. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the port is not vector-valued. </td></tr>
   </table>
   </dd>
 </dl>

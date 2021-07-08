@@ -263,7 +263,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Differentiates this symbolic expression with respect to the variable <code>var</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if it is not differentiable. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if it is not differentiable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -328,7 +328,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Expands out products and positive integer powers in expression. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during expansion. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during expansion. </td></tr>
   </table>
   </dd>
 </dl>
@@ -364,7 +364,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> obtained by replacing all occurrences of the variables in <code>s</code> in the current expression cell with the corresponding expressions in <code>s</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during substitution. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during substitution. </td></tr>
   </table>
   </dd>
 </dl>

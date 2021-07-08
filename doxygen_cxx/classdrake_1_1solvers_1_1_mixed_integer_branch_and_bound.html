@@ -457,7 +457,7 @@ Friends</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>old_variable is a variable in the mixed-integer program, passed in the constructor of this <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html" title="Given a mixed-integer optimization problem (MIP) (or more accurately, mixed binary problem),...">MixedIntegerBranchAndBound</a>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the pre-condition fails. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the pre-condition fails. </td></tr>
   </table>
   </dd>
 </dl>
@@ -554,7 +554,7 @@ Friends</h2></td></tr>
 <code>nth_best_solution</code> is between 0 and <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2f75e9f12c5f7c50128e358aeb50fe8" title="Getter for the solutions.">solutions()</a>.size(). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the preconditions are not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the preconditions are not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -600,7 +600,7 @@ Friends</h2></td></tr>
 <code>nth_best_solution</code> is between 0 and <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2f75e9f12c5f7c50128e358aeb50fe8" title="Getter for the solutions.">solutions()</a>.size(). </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the preconditions are not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the preconditions are not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -633,7 +633,7 @@ Friends</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd><code>nth_suboptimal_cost</code> is between 0 and <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ae2f75e9f12c5f7c50128e358aeb50fe8" title="Getter for the solutions.">solutions()</a>.size() - 1. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the precondition is not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the precondition is not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -673,7 +673,7 @@ Friends</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>The node should be a leaf node. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the precondition is not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the precondition is not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -850,7 +850,7 @@ Friends</h2></td></tr>
 <p>For example, if the user has defined a function LeftMostNode that would return the left-most unfathomed node in the tree, then the user could do </p><div class="fragment"><div class="line">MixedIntegerBranchAndBoundNode* LeftMostNodeInSubTree(</div><div class="line">    <span class="keyword">const</span> <a class="code" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a8fb43bf4aad3cc83a2eae32d96fab6b3">MixedIntegerBranchAndBound</a>&amp; branch_and_bound,</div><div class="line">    <span class="keyword">const</span> MixedIntegerBranchAndBoundNode&amp; subtree_root) {</div><div class="line">  <span class="comment">// Starting from the subtree root, find the left most leaf node that is</span></div><div class="line">not fathomed.</div><div class="line">  blah</div><div class="line">}</div><div class="line"></div><div class="line"><a class="code" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a8fb43bf4aad3cc83a2eae32d96fab6b3">MixedIntegerBranchAndBound</a> bnb(...);</div><div class="line">bnb.SetNodeSelectionMethod(</div><div class="line">    <a class="code" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#ad3bb376a6d6d2164492750a2ee33fbd0a6d0e92592f596eacaa92b16042a2ecc3">MixedIntegerBranchAndBound::NodeSelectionMethod::kUserDefined</a>);</div><div class="line"><span class="comment">// Use a lambda function as the NodeSelectionFun</span></div><div class="line">bnb-&gt;SetUserDefinedNodeSelectionFunction([](</div><div class="line">    <span class="keyword">const</span> <a class="code" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a8fb43bf4aad3cc83a2eae32d96fab6b3">MixedIntegerBranchAndBound</a>&amp; branch_and_bound) {</div><div class="line">  <span class="keywordflow">return</span> LeftMostNodeInSubTree(branch_and_bound,</div><div class="line">*(branch_and_bound.root()));</div></div><!-- fragment --><p> A more detailed example can be found in solvers/test/branch_and_bound_test.cc in TestSetUserDefinedNodeSelectionFunction. </p><dl class="section note"><dt>Note</dt><dd>The user defined function should pick an un-fathomed leaf node for branching. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::_runtime</td><td>error if the node is not a leaf node, or it is fathomed. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the node is not a leaf node, or it is fathomed. </td></tr>
   </table>
   </dd>
 </dl>

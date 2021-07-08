@@ -54,6 +54,12 @@ var group__geometry__optimization =
       [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87", null ],
       [ "Volume", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a678f606b1ff10c8959240d2985e022ad", null ]
     ] ],
+    [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", [
+      [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac", null ],
+      [ "iteration_limit", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72", null ],
+      [ "require_sample_point_is_contained", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
+      [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ]
+    ] ],
     [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", [
       [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#af95f28bbee2634f1891a382a0839f874", null ],
       [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html#ab6d8843112be555009c92fa609554255", null ],
@@ -77,5 +83,7 @@ var group__geometry__optimization =
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a27ac7192a38685b7263b3d5a225f7b9d", null ],
       [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
       [ "vertices", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4", null ]
-    ] ]
+    ] ],
+    [ "Iris", "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6", null ],
+    [ "MakeIrisObstacles", "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af", null ]
 ];

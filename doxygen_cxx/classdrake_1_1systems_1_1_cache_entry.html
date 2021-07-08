@@ -347,7 +347,7 @@ Public Member Functions</h2></td></tr>
 <p>The list of prerequisites cannot be empty &ndash; a cache entry that really has no prerequisites must say so explicitly by providing a list containing only <code>nothing_ticket()</code> as a prerequisite. The subsystem pointer must not be null, and the cache index and ticket must be valid. The description is an arbitrary string not interpreted in any way by Drake.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the prerequisite list is empty.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the prerequisite list is empty.</td></tr>
   </table>
   </dd>
 </dl>
@@ -436,7 +436,7 @@ Public Member Functions</h2></td></tr>
 <p>Invokes this cache entry's allocator function to allocate a concrete object suitable for holding the value to be held in this cache entry, and returns that as an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </p>
 <p>The returned object will never be null. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the allocator function returned null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the allocator function returned null. </td></tr>
   </table>
   </dd>
 </dl>
@@ -595,7 +595,7 @@ Public Member Functions</h2></td></tr>
 <p>This is the preferred way to obtain a cached value. If the value is not already up to date with respect to its prerequisites, or if caching is disabled for this entry, then this entry's <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a9a6411f5a003b17d0e355bf02d89def7" title="Unconditionally computes the value this cache entry should have given a particular context,...">Calc()</a> method is used first to update the value before the reference is returned. The <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#a9a6411f5a003b17d0e355bf02d89def7" title="Unconditionally computes the value this cache entry should have given a particular context,...">Calc()</a> method may be arbitrarily expensive, but this method is constant time and <em>very</em> fast if the value is already up to date. If you are certain the value should be up to date already, you may use the <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#afa9b55a7a43bdb10ea04f9621dbd8979" title="Returns a reference to the known up-to-date value of this cache entry contained in the given Context.">GetKnownUpToDate()</a> method instead. </p><dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is a subcontext that is compatible with the subsystem that owns this cache entry. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the value doesn't actually have type V. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the value doesn't actually have type V. </td></tr>
   </table>
   </dd>
 </dl>
@@ -685,7 +685,7 @@ Public Member Functions</h2></td></tr>
 <p>The purpose of this method is to avoid unexpected recomputations in circumstances where you believe the value must already be up to date. Unlike <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#ac18938729319bb35b0085f5e54fa9fff" title="Returns a reference to the up-to-date value of this cache entry contained in the given Context.">Eval()</a>, this method will throw an exception if the value is out of date; it will never attempt a recomputation. The behavior here is unaffected if caching is disabled for this cache entry &ndash; it looks only at the out_of_date flag which is still maintained when caching is disabled. This method is constant time and <em>very</em> fast if it succeeds. </p><dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is a subcontext that is compatible with the subsystem that owns this cache entry. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the value is out of date or if it does not actually have type <code>ValueType</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the value is out of date or if it does not actually have type <code>ValueType</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -712,7 +712,7 @@ Public Member Functions</h2></td></tr>
 <p>See <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html#afa9b55a7a43bdb10ea04f9621dbd8979" title="Returns a reference to the known up-to-date value of this cache entry contained in the given Context.">GetKnownUpToDate()</a> for more information. </p><dl class="section pre"><dt>Precondition</dt><dd><code>context</code> is a subcontext that is compatible with the subsystem that owns this cache entry. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the value is not up to date. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the value is not up to date. </td></tr>
   </table>
   </dd>
 </dl>

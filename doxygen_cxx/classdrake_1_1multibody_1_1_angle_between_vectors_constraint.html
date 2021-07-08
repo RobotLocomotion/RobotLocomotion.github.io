@@ -359,12 +359,12 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd><code>frameA</code> and <code>frameB</code> must belong to <code>plant</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::invalid_argument</td><td>if <code>plant</code> is nullptr. </td></tr>
-    <tr><td class="paramname">std::invalid_argument</td><td>if <code>a_A</code> is close to zero. </td></tr>
-    <tr><td class="paramname">std::invalid_argument</td><td>if <code>b_B</code> is close to zero. </td></tr>
-    <tr><td class="paramname">std::invalid_argument</td><td>if <code>angle_lower</code> is negative. </td></tr>
-    <tr><td class="paramname">std::invalid_argument</td><td>if <code>angle_upper</code> ∉ [<code>angle_lower</code>, π]. </td></tr>
-    <tr><td class="paramname">std::invalid_argument</td><td>if <code>plant_context</code> is nullptr. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>plant</code> is nullptr. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>a_A</code> is close to zero. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>b_B</code> is close to zero. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>angle_lower</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>angle_upper</code> ∉ [<code>angle_lower</code>, π]. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>plant_context</code> is nullptr. </td></tr>
   </table>
   </dd>
 </dl>

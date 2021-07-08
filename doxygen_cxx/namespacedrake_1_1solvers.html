@@ -896,7 +896,7 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 <p>CommonSolverOption contain the names of these supported options. The user can use these options as "key" in SolverOption::SetOption(). </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8"></a>kPrintFileName&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to a file. </p>
-<p>The user can call SolverOptions::SetOption(kPrintFileName, file_name) where file_name is a string. If the user doesn't want to print to a file, then use <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047">SolverOptions::SetOption</a>(kPrintFileName, ""), where the empty string "" indicates no print. </p>
+<p>The user can call SolverOptions::SetOption(kPrintFileName, file_name) where file_name is a string. If the user doesn't want to print to a file, then use <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html#a64f5a75df2c33b77454e88fae4d08047" title="Sets a double-valued solver option for a specific solver.">SolverOptions::SetOption</a>(kPrintFileName, ""), where the empty string "" indicates no print. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100"></a>kPrintToConsole&#160;</td><td class="fielddoc"><p>Many solvers support printing the progress of each iteration to the console, the user can call SolverOptions::SetOption(kPrintToConsole, 1) to turn on printing to the console, or SolverOptions::SetOption(kPrintToConsole, 0) to turn off printing to the console. </p>
 </td></tr>
@@ -1407,7 +1407,7 @@ Model".</p>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>binary_encoding</code> has a non-binary entry (0, 1). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>binary_encoding</code> has a non-binary entry (0, 1). </td></tr>
   </table>
   </dd>
 </dl>
@@ -1995,7 +1995,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 <p>Choose the best solver given the formulation in the optimization program and the availability of the solvers. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td>if there is no available solver for <code>prog</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no available solver for <code>prog</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2297,7 +2297,7 @@ The particular representation/algorithm here was developed in an attempt:<ul>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Q is not square. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Q is not square. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2547,7 +2547,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 <dl class="section return"><dt>Returns</dt><dd>variable_values(variable_index[var.get_id()]) if var.get_id() is a valid key of <code>variable_index</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">an</td><td>invalid_argument error if var.get_id() is not a valid key of <code>variable_index</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if var.get_id() is not a valid key of <code>variable_index</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2663,7 +2663,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 <p>Given the solver ID, create the solver with the matching ID. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">invalid_argument</td><td>if there is no matching solver. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is no matching solver. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2898,36 +2898,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="ad58cede9876421e050ac44deee7804ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[7/10]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac9bfa8de91e5e18137f387121fb80933"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9bfa8de91e5e18137f387121fb80933">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[8/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bfa8de91e5e18137f387121fb80933">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[7/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2943,6 +2915,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a> &amp;&#160;</td>
           <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad58cede9876421e050ac44deee7804ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -3130,20 +3130,20 @@ Labels." by Jason Rennie and Nathan Srebro, Proceedings of IJCAI multidisciplina
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>x</code> contains duplicate entries. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>x</code> contains duplicate entries. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">y</td><td>The bilinear product between <code>x</code> and <code>y</code> will be replaced by the corresponding term in <code>W. @throws std::runtime_error if</code>y` contains duplicate entries. </td></tr>
+    <tr><td class="paramname">y</td><td>The bilinear product between <code>x</code> and <code>y</code> will be replaced by the corresponding term in <code>W. @throws std::exception if</code>y` contains duplicate entries. </td></tr>
     <tr><td class="paramname">W</td><td>Bilinear product term x(i) * y(j) will be replaced by W(i, j). If W(i,j) is not a single variable, but an expression, then this expression cannot contain a variable in either x or y. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error,if</td><td>W(i, j) is not a single variable, and also contains a variable in x or y. </td></tr>
+    <tr><td class="paramname">std::exception,if</td><td>W(i, j) is not a single variable, and also contains a variable in x or y. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3304,26 +3304,8 @@ Labels." by Jason Rennie and Nathan Srebro, Proceedings of IJCAI multidisciplina
 
 </div>
 </div>
-<a id="a16445fc3b260d8c58ea9082a3594f85f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16445fc3b260d8c58ea9082a3594f85f">&#9670;&nbsp;</a></span>to_string() <span class="overload">[4/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string drake::solvers::to_string </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="abd1311acfcf14624ea4089d19783d824"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd1311acfcf14624ea4089d19783d824">&#9670;&nbsp;</a></span>to_string() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd1311acfcf14624ea4089d19783d824">&#9670;&nbsp;</a></span>to_string() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3333,6 +3315,24 @@ Labels." by Jason Rennie and Nathan Srebro, Proceedings of IJCAI multidisciplina
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ff">MixedIntegerRotationConstraintGenerator::Approach</a>&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16445fc3b260d8c58ea9082a3594f85f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16445fc3b260d8c58ea9082a3594f85f">&#9670;&nbsp;</a></span>to_string() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string drake::solvers::to_string </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

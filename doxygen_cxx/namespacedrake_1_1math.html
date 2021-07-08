@@ -907,7 +907,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the norm of <code>axis_W</code> is within 1e-10 to zero or <code>axis_index</code> does not lie in the range [0,2]. (Deprecated.) </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the norm of <code>axis_W</code> is within 1e-10 to zero or <code>axis_index</code> does not lie in the range [0,2]. (Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1018,7 +1018,7 @@ Functions</h2></td></tr>
 </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if R is not positive definite.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if R is not positive definite.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1178,7 +1178,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the precondition is not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the precondition is not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1231,7 +1231,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>when the pre-conditions are not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>when the pre-conditions are not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1356,7 +1356,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the gradients were not empty nor zero.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the gradients were not empty nor zero.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1495,8 +1495,8 @@ Functions</h2></td></tr>
 </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Q is not positive semi-definite. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if R is not positive definite.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Q is not positive semi-definite. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if R is not positive definite.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2619,7 +2619,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Rotation angle θ of the projected matrix, angle_lb &lt;= θ &lt;= angle_ub </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if axis is the zero vector or if angle_lb &gt; angle_ub. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if axis is the zero vector or if angle_lb &gt; angle_ub. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2873,20 +2873,20 @@ else
 <dl class="section pre"><dt>Precondition</dt><dd>Q is a symmetric matrix.</dd></dl>
 <p>Computes a unique solution X to the continuous Lyapunov equation: <code>AᵀX + XA + Q = 0</code>, where A is real and square, and Q is real, symmetric and of equal size as A. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if A or Q are not square matrices or do not have the same size.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if A or Q are not square matrices or do not have the same size.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Limitations: Given the Eigenvalues of A as λ₁, ..., λₙ, there exists a unique solution if and only if λᵢ + λ̅ⱼ ≠ 0 ∀ i,j, where λ̅ⱼ is the complex conjugate of λⱼ. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the solution is not unique.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the solution is not unique.</td></tr>
   </table>
   </dd>
 </dl>
 <p>There are no further limitations on the eigenvalues of A. Further, if all λᵢ have negative real parts, and if Q is positive semi-definite, then X is also positive semi-definite [1]. Therefore, if one searches for a Lyapunov function V(z) = zᵀXz for the stable linear system ż = Az, then the solution of the Lyapunov Equation <code>AᵀX + XA + Q = 0</code> only returns a valid Lyapunov function if Q is positive semi-definite.</p>
 <p>The implementation is based on SLICOT routine SB03MD [2]. Note the transformation Q = -C. The complexity of this routine is O(n³). If A is larger than 2-by-2, then a Schur factorization is performed. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Schur factorization failed.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Schur factorization failed.</td></tr>
   </table>
   </dd>
 </dl>
@@ -2932,20 +2932,20 @@ else
 <dl class="section pre"><dt>Precondition</dt><dd>Q is a symmetric matrix.</dd></dl>
 <p>Computes the unique solution X to the discrete Lyapunov equation: <code>AᵀXA - X + Q = 0</code>, where A is real and square, and Q is real, symmetric and of equal size as A. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if A or Q are not square matrices or do not have the same size.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if A or Q are not square matrices or do not have the same size.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Limitations: Given the Eigenvalues of A as λ₁, ..., λₙ, there exists a unique solution if and only if λᵢ * λⱼ ≠ 1 ∀ i,j and λᵢ ≠ ±1, ∀ i [1]. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the solution is not unique.[3]</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the solution is not unique.[3]</td></tr>
   </table>
   </dd>
 </dl>
 <p>There are no further limitations on the eigenvalues of A. Further, if |λᵢ|&lt;1, ∀ i, and if Q is positive semi-definite, then X is also positive semi-definite [2]. Therefore, if one searches for a Lyapunov function V(z) = zᵀXz for the stable linear system zₙ₊₁ = Azₙ, then the solution of the Lyapunov Equation <code>AᵀXA - X + Q = 0</code> only returns a valid Lyapunov function if Q is positive semi-definite.</p>
 <p>The implementation is based on SLICOT routine SB03MD [2]. Note the transformation Q = -C. The complexity of this routine is O(n³). If A is larger than 2-by-2, then a Schur factorization is performed. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if Schur factorization fails.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if Schur factorization fails.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3468,7 +3468,7 @@ else
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The generated points. </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>num_samples &gt;= 1. Throw std::runtime_error if num_points &lt; 1 </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>num_samples &gt;= 1. Throw std::exception if num_points &lt; 1 </dd></dl>
 
 </div>
 </div>

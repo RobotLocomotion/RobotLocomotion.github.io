@@ -4,6 +4,7 @@ var framework__common_8h =
     [ "AbstractParameterIndex", "framework__common_8h.html#a86b350169906f6d5e07e9db46e36d57a", null ],
     [ "AbstractStateIndex", "framework__common_8h.html#a8c3a27f43e356726f770159944adb929", null ],
     [ "CacheIndex", "framework__common_8h.html#a06ac9ad764b14ccff79b6feb393be498", null ],
+    [ "ContinuousStateIndex", "framework__common_8h.html#a180dfb39dc60232f4dacf555d1ed2582", null ],
     [ "DependencyTicket", "framework__common_8h.html#a4dead03a05139d2c4dfc0a7042a936ee", null ],
     [ "DiscreteStateIndex", "framework__common_8h.html#acf2a50397e9fa764d32553cf98460ba7", null ],
     [ "InputPortIndex", "framework__common_8h.html#aa53feaf560f7ff6cfa4add8dc6ff0db0", null ],

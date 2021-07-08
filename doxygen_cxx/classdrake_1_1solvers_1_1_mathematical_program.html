@@ -2067,7 +2067,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 Each entry in <code>decision_variables</code> should not be a dummy variable. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the preconditions are not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the preconditions are not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3346,7 +3346,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the preconditions are not satisfied.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the preconditions are not satisfied.</td></tr>
   </table>
   </dd>
 </dl>
@@ -3791,7 +3791,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 <p>Adds a positive semidefinite constraint on a symmetric matrix. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>in Debug mode if <code>symmetric_matrix_var</code> is not symmetric. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in Debug mode if <code>symmetric_matrix_var</code> is not symmetric. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3880,7 +3880,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime</td><td>error if the expression is not quadratic. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the expression is not quadratic. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4178,7 +4178,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the preconditions are not satisfied.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the preconditions are not satisfied.</td></tr>
   </table>
   </dd>
 </dl>
@@ -4923,7 +4923,7 @@ x+y &gt;= 0
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -4989,7 +4989,7 @@ x+y &gt;= 0
 <dl class="section return"><dt>Returns</dt><dd>All binding values, concatenated into a single vector. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the size of <code>prog_var_vals</code> is invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5021,7 +5021,7 @@ x+y &gt;= 0
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the size does not match. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the size does not match. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5268,7 +5268,7 @@ x+y &gt;= 0
 <dl class="section pre"><dt>Precondition</dt><dd><code>decision_variable</code> has been registered in the optimization program. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the pre condition is not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the pre condition is not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5295,7 +5295,7 @@ x+y &gt;= 0
 <dl class="section pre"><dt>Precondition</dt><dd>Each variable in <code>decision_variable_mat</code> has been registered in the optimization program. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the pre condition is not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the pre condition is not satisfied. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6600,7 +6600,7 @@ x+y &gt;= 0
 <p>For example, <code>NewSosPolynomial({x}, 4)</code> returns a pair of a polynomial p = Q₍₀,₀₎x⁴ + 2Q₍₁,₀₎ x³ + (2Q₍₂,₀₎ + Q₍₁,₁₎)x² + 2Q₍₂,₁₎x + Q₍₂,₂₎ and Q.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>degree</code> is not a positive even integer. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>degree</code> is not a positive even integer. </td></tr>
   </table>
   </dd>
 </dl>
@@ -6993,7 +6993,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 <p>The guess is stored as part of this program. </p><dl class="section pre"><dt>Precondition</dt><dd>decision_variable is a registered decision variable in the program. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if precondition is not satisfied. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if precondition is not satisfied. </td></tr>
   </table>
   </dd>
 </dl>

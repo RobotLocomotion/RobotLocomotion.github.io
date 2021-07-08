@@ -1,6 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a09afd13e64f4dfb7defbb727d34840cc":[3,0,0,2,4,0,12],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a1f10a2b1baf36686c44e02b801a85ec4":[3,0,0,2,4,0,10],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a2bba3b1f2592aec7f02721c5acb7b3fc":[3,0,0,2,4,0,3],
 "classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html#a3226490ca836fd291bd0b786e8613014":[3,0,0,2,4,0,15],
@@ -119,13 +118,12 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html#a5c1435a3635d0ab87dbd637ed984b9ea":[3,0,0,2,8,1,3],
 "classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html#afa07ff2c31aaffe8b533add6ec7cd5f2":[3,0,0,2,8,1,4],
 "classdrake_1_1examples_1_1particles_1_1_particle.html":[3,0,0,2,10,0],
-"classdrake_1_1examples_1_1particles_1_1_particle.html#a037ab871b95a609ec856eb51913f9a90":[3,0,0,2,10,0,5],
+"classdrake_1_1examples_1_1particles_1_1_particle.html#a037ab871b95a609ec856eb51913f9a90":[3,0,0,2,10,0,4],
 "classdrake_1_1examples_1_1particles_1_1_particle.html#a04ba0fb72d94f6dd9601c7168b35464b":[3,0,0,2,10,0,1],
-"classdrake_1_1examples_1_1particles_1_1_particle.html#a16194bba51d7c5d3c390272f2c7b33f4":[3,0,0,2,10,0,6],
+"classdrake_1_1examples_1_1particles_1_1_particle.html#a16194bba51d7c5d3c390272f2c7b33f4":[3,0,0,2,10,0,5],
 "classdrake_1_1examples_1_1particles_1_1_particle.html#a1dab45f01e7757062c09406fc7b53398":[3,0,0,2,10,0,0],
-"classdrake_1_1examples_1_1particles_1_1_particle.html#a9bb4bae7c1e4b222c226d8a67b03d1c8":[3,0,0,2,10,0,4],
+"classdrake_1_1examples_1_1particles_1_1_particle.html#a9bb4bae7c1e4b222c226d8a67b03d1c8":[3,0,0,2,10,0,3],
 "classdrake_1_1examples_1_1particles_1_1_particle.html#aa5fdd1a1b5f8db1e86c854916705e5aa":[3,0,0,2,10,0,2],
-"classdrake_1_1examples_1_1particles_1_1_particle.html#ab2bd8df4c8162484707a06dc59ddd1a7":[3,0,0,2,10,0,3],
 "classdrake_1_1examples_1_1particles_1_1_particle_geometry.html":[3,0,0,2,10,1],
 "classdrake_1_1examples_1_1particles_1_1_particle_geometry.html#a43997c1a2e8cb8105a9be6eb40980c08":[3,0,0,2,10,1,2],
 "classdrake_1_1examples_1_1particles_1_1_particle_geometry.html#a6ce3f3e9ea07c1bdfd4e60bf2e53de5b":[3,0,0,2,10,1,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX2 =
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a2913da3e8bfc64780eabce978f042dca":[3,0,0,2,14,0,5],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a3395d3677f489b407c8d4b8c3766a3b8":[3,0,0,2,14,0,1],
 "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a453546b6fa93f44c6591fd58facbeb4f":[3,0,0,2,14,0,10],
-"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a5252c771b8036e25a1a90b8233253196":[3,0,0,2,14,0,13]
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a5252c771b8036e25a1a90b8233253196":[3,0,0,2,14,0,13],
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a55eb0104b1a307f1b516c2611e167eaf":[3,0,0,2,14,0,17],
+"classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html#a7b2600a026cd7481ed538cd452feb3c3":[3,0,0,2,14,0,6]
 };

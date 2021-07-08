@@ -483,7 +483,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>in debug builds if the rotation matrix that is built from <code>quaternion</code> is invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the rotation matrix that is built from <code>quaternion</code> is invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -527,7 +527,7 @@ Related Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>in debug builds if the rotation matrix that is built from <code>theta_lambda</code> is invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the rotation matrix that is built from <code>theta_lambda</code> is invalid. </td></tr>
   </table>
   </dd>
 </dl>
@@ -665,7 +665,7 @@ This constructor provides an implicit conversion from Translation to RigidTransf
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>in debug builds if R_AB is not a proper orthonormal 3x3 rotation matrix. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in debug builds if R_AB is not a proper orthonormal 3x3 rotation matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -710,7 +710,7 @@ This constructor provides an implicit conversion from Translation to RigidTransf
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>in debug builds if the <code>R_AB</code> part of <code>pose</code> is not a proper orthonormal 3x3 rotation matrix. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the <code>R_AB</code> part of <code>pose</code> is not a proper orthonormal 3x3 rotation matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -757,7 +757,7 @@ This constructor provides an implicit conversion from Translation to RigidTransf
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>in debug builds if the <code>R_AB</code> part of <code>pose</code> is not a proper orthonormal 3x3 rotation matrix or if <code>pose</code> is a 4x4 matrix whose final row is not <code>[0, 0, 0, 1]</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in debug builds if the <code>R_AB</code> part of <code>pose</code> is not a proper orthonormal 3x3 rotation matrix or if <code>pose</code> is a 4x4 matrix whose final row is not <code>[0, 0, 0, 1]</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -798,7 +798,7 @@ This constructor provides an implicit conversion from Translation to RigidTransf
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if the Eigen <b>expression</b> in pose does not resolve to a Vector3 or 3x4 matrix or 4x4 matrix or if the rotational part of <code>pose</code> is not a proper orthonormal 3x3 rotation matrix or if <code>pose</code> is a 4x4 matrix whose final row is not <code>[0, 0, 0, 1]</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the Eigen <b>expression</b> in pose does not resolve to a Vector3 or 3x4 matrix or 4x4 matrix or if the rotational part of <code>pose</code> is not a proper orthonormal 3x3 rotation matrix or if <code>pose</code> is a 4x4 matrix whose final row is not <code>[0, 0, 0, 1]</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1557,7 +1557,7 @@ This constructor prevents ambiguity that would otherwise exist for a RigidTransf
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>in debug builds if R_AB is not a proper orthonormal 3x3 rotation matrix. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>in debug builds if R_AB is not a proper orthonormal 3x3 rotation matrix. </td></tr>
   </table>
   </dd>
 </dl>

@@ -452,7 +452,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a unit inertia with moments of inertia <code>Ixx</code>, <code>Iyy</code>, <code>Izz</code>, and with each product of inertia set to zero. </p>
-<p>In debug builds, throws std::logic_error if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
+<p>In debug builds, throws std::exception if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
 
 </div>
 </div>
@@ -507,7 +507,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a unit inertia with moments of inertia <code>Ixx</code>, <code>Iyy</code>, <code>Izz</code>, and with products of inertia <code>Ixy</code>, <code>Ixz</code>, <code>Iyz</code>. </p>
-<p>In debug builds, throws std::logic_error if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
+<p>In debug builds, throws std::exception if unit inertia constructed from these arguments violates <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">RotationalInertia::CouldBePhysicallyValid()</a>. </p>
 
 </div>
 </div>
@@ -587,7 +587,7 @@ Additional Inherited Members</h2></td></tr>
 </pre><p> where <code>Id</code> is the identity matrix and ⊗ denotes the tensor product operator. See Mitiguy, P., 2016. Advanced Dynamics &amp; Motion Simulation.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td><ul>
+    <tr><td class="paramname">std::exception</td><td><ul>
 <li>J is negative. J can be zero.</li>
 <li>K is negative. K can be zero.</li>
 <li>J ≤ 2 * K, this corresponds to the triangle inequality, see <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a>.</li>
@@ -1209,7 +1209,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td><ul>
+    <tr><td class="paramname">std::exception</td><td><ul>
 <li>Radius r is negative.</li>
 <li>Length L is negative.</li>
 <li><code>b_E</code> is the zero vector. That is if <code>‖b_E‖₂ ≤ ε</code>, where ε is the machine epsilon. </li>
@@ -1425,7 +1425,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a unit inertia with equal moments of inertia along its diagonal and with each product of inertia set to zero. </p>
-<p>This factory is useful for the unit inertia of a uniform-density sphere or cube. In debug builds, throws std::logic_error if I_triaxial is negative/NaN. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#adf3d4bf1e85ad1942c12478e5e3aa906" title="Computes the unit inertia for a unit-mass solid sphere of uniform density and radius r taken about it...">UnitInertia::SolidSphere()</a> and <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a224f50a8d9351914db96e47ddb5767fb" title="Computes the unit inertia for a unit-mass solid cube (a box with equal-sized sides) of uniform densit...">UnitInertia::SolidCube()</a> for <a class="el" href="namespacedrake_1_1examples.html">examples</a>. </dd></dl>
+<p>This factory is useful for the unit inertia of a uniform-density sphere or cube. In debug builds, throws std::exception if I_triaxial is negative/NaN. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#adf3d4bf1e85ad1942c12478e5e3aa906" title="Computes the unit inertia for a unit-mass solid sphere of uniform density and radius r taken about it...">UnitInertia::SolidSphere()</a> and <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a224f50a8d9351914db96e47ddb5767fb" title="Computes the unit inertia for a unit-mass solid cube (a box with equal-sized sides) of uniform densit...">UnitInertia::SolidCube()</a> for <a class="el" href="namespacedrake_1_1examples.html">examples</a>. </dd></dl>
 
 </div>
 </div>

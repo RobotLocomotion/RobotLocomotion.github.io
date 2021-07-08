@@ -261,7 +261,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if unable to open file. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if unable to open file. </td></tr>
   </table>
   </dd>
 </dl>
@@ -289,7 +289,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Then, this function advances the log by exactly one message. This function does nothing if <code>MSG</code> is null (end of log) or <code>current_time</code> does not match <code>MSG</code>'s timestamp.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this instance is not constructed in read-only mode. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this instance is not constructed in read-only mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -314,7 +314,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Returns the time in seconds for the next logged message's occurrence time or infinity if there are no more messages in the current log. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this instance is not constructed in read-only mode. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this instance is not constructed in read-only mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -480,7 +480,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this instance is not constructed in write-only mode. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this instance is not constructed in write-only mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -547,7 +547,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Multiple handlers can subscribe to the same channel.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if this instance is not constructed in read-only mode.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this instance is not constructed in read-only mode.</td></tr>
   </table>
   </dd>
 </dl>

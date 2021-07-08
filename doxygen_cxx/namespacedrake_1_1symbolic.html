@@ -2195,7 +2195,7 @@ Functions</h2></td></tr>
 <p>Decomposes <code>expressions</code> into <code>M</code> * <code>vars</code> + <code>v</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>expressions</code> is not affine in <code>vars</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>expressions</code> is not affine in <code>vars</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2291,7 +2291,7 @@ v.rows() == expressions.rows(). </dd></dl>
 <p>Decomposes <code>expressions</code> into <code>M</code> * <code>vars</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>expressions</code> is not linear in <code>vars</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>expressions</code> is not linear in <code>vars</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2440,7 +2440,7 @@ parameter vector", α, which depends only on <code>parameters:</code> f = W(n)*�
 <dl class="section return"><dt>Returns</dt><dd>a matrix of double whose size is the size of <code>m</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2484,8 +2484,8 @@ parameter vector", α, which depends only on <code>parameters:</code> f = W(n)*�
 <dl class="section return"><dt>Returns</dt><dd>a matrix of double whose size is the size of <code>m</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>m</code> includes unassigned random variables but <code>random_generator</code> is <code>nullptr</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>m</code> includes unassigned random variables but <code>random_generator</code> is <code>nullptr</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2521,8 +2521,8 @@ parameter vector", α, which depends only on <code>parameters:</code> f = W(n)*�
 <p>Evaluates <code>m</code> using a given environment (by default, an empty environment). </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if there exists a variable in <code>m</code> whose value is not provided by <code>env</code>. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there exists a variable in <code>m</code> whose value is not provided by <code>env</code>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3243,7 +3243,7 @@ parameter vector", α, which depends only on <code>parameters:</code> f = W(n)*�
 <p>Constructs a vector of variables from the vector of variable expressions. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if there is an expression in <code>vec</code> which is not a variable. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if there is an expression in <code>vec</code> which is not a variable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5282,7 +5282,7 @@ More information about the C++'s conditional expression and ternary operator is 
 <p>Returns a <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a> determining if the given expression <code>e</code> has a finite value. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5308,7 +5308,7 @@ More information about the C++'s conditional expression and ternary operator is 
 <p>Returns a <a class="el" href="classdrake_1_1symbolic_1_1_formula.html" title="Represents a symbolic form of a first-order logic formula.">Formula</a> determining if the given expression <code>e</code> is a positive or negative infinity. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during evaluation. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during evaluation. </td></tr>
   </table>
   </dd>
 </dl>
@@ -5335,7 +5335,7 @@ More information about the C++'s conditional expression and ternary operator is 
 <p>This serves as the argument-dependent lookup related to std::isnan(double).</p>
 <p>When this formula is evaluated, there are two possible outcomes:</p><ul>
 <li>Returns false if the <a class="el" href="namespacedrake_1_1symbolic.html#a0815de04668fe582ccad768a12845dab" title="Evaluates a symbolic matrix m using env and random_generator.">e.Evaluate()</a> is not NaN.</li>
-<li>Throws std::runtime_error if NaN is detected during evaluation. Note that the evaluation of <code>isnan(e)</code> never returns true. </li>
+<li>Throws std::exception if NaN is detected during evaluation. Note that the evaluation of <code>isnan(e)</code> never returns true. </li>
 </ul>
 
 </div>
@@ -11447,7 +11447,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <p>By definition, a symmetric matrix <code>m</code> is positive-semidefinte if xᵀ m x ≥ 0 for all vector x ∈ ℝⁿ.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>m</code> is not symmetric.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>m</code> is not symmetric.</td></tr>
   </table>
   </dd>
 </dl>
@@ -11482,7 +11482,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div><div class="memdoc">
 
 <p>Constructs and returns a symbolic positive-semidefinite formula from <code>m</code>. </p>
-<p>If <code>mode</code> is Eigen::Lower, it's using the lower-triangular part of <code>m</code> to construct a positive-semidefinite formula. If <code>mode</code> is Eigen::Upper, the upper-triangular part of <code>m</code> is used. It throws std::runtime_error if <code>has</code> other values. See the following code snippet.</p>
+<p>If <code>mode</code> is Eigen::Lower, it's using the lower-triangular part of <code>m</code> to construct a positive-semidefinite formula. If <code>mode</code> is Eigen::Upper, the upper-triangular part of <code>m</code> is used. It throws std::exception if <code>has</code> other values. See the following code snippet.</p>
 <div class="fragment"><div class="line">Eigen::Matrix&lt;Expression, 2, 2&gt; m;</div><div class="line">m &lt;&lt; 1.0, 2.0,</div><div class="line">     3.0, 4.0;</div><div class="line"></div><div class="line"><span class="keyword">const</span> Formula psd_l{<a class="code" href="namespacedrake_1_1symbolic.html#a648f540fa40e1e281133b972e394574a">positive_semidefinite</a>(m, Eigen::Lower)};</div><div class="line"><span class="comment">// psd_l includes [1.0 3.0]</span></div><div class="line"><span class="comment">//                [3.0 4.0].</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> Formula psd_u{<a class="code" href="namespacedrake_1_1symbolic.html#a648f540fa40e1e281133b972e394574a">positive_semidefinite</a>(m, Eigen::Upper)};</div><div class="line"><span class="comment">// psd_u includes [1.0 2.0]</span></div><div class="line"><span class="comment">//                [2.0 4.0].</span></div></div><!-- fragment --> 
 </div>
 </div>
@@ -11557,7 +11557,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <p>Returns <code>m1</code> raised to <code>p</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>p</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>p</code> is negative. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11625,7 +11625,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <dl class="section note"><dt>Note</dt><dd>that we return a map from the monomial power to its coefficient. This map has size 1, and the coefficient is also 1. We return a map instead of the <a class="el" href="classdrake_1_1symbolic_1_1_monomial_basis_element.html" title="MonomialBasisElement represents a monomial, a product of powers of variables with non-negative intege...">MonomialBasisElement</a> directly, because we want <a class="el" href="namespacedrake_1_1symbolic.html#a3abe49c1083796a8b370bab55535aa72">pow()</a> to have the same return signature as other <a class="el" href="classdrake_1_1symbolic_1_1_polynomial_basis_element.html" title="Each polynomial p(x) can be written as a linear combination of its basis elements p(x) = ∑ᵢ cᵢ * ϕᵢ(x...">PolynomialBasisElement</a>. For example, the power of a <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html" title="ChebyshevBasisElement represents an element of Chebyshev polynomial basis, written as the product of ...">ChebyshevBasisElement</a> object is a weighted sum of <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html" title="ChebyshevBasisElement represents an element of Chebyshev polynomial basis, written as the product of ...">ChebyshevBasisElement</a> objects. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>p</code> is negative. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>p</code> is negative. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11812,7 +11812,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <dl class="section return"><dt>Returns</dt><dd>a matrix of symbolic expressions whose size is the size of <code>m</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during substitution. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during substitution. </td></tr>
   </table>
   </dd>
 </dl>
@@ -11855,7 +11855,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <dl class="section return"><dt>Returns</dt><dd>a matrix of symbolic expressions whose size is the size of <code>m</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during substitution. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during substitution. </td></tr>
   </table>
   </dd>
 </dl>
@@ -12982,7 +12982,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <p>Visitor object is expected to implement the following methods which take <code>f</code> and <code>args:</code> <code>VisitConstant</code>, <code>VisitVariable</code>, <code>VisitAddition</code>, <code>VisitMultiplication</code>, <code>VisitDivision</code>, <code>VisitLog</code>, <code>VisitAbs</code>, <code>VisitExp</code>, <code>VisitSqrt</code>, <code>VisitPow</code>, <code>VisitSin</code>, <code>VisitCos</code>, <code>VisitTan</code>, <code>VisitAsin</code>, <code>VisitAtan</code>, <code>VisitAtan2</code>, <code>VisitSinh</code>, <code>VisitCosh</code>, <code>VisitTanh</code>, <code>VisitMin</code>, <code>VisitMax</code>, <code>VisitCeil</code>, <code>VisitFloor</code>, <code>VisitIfThenElse</code>, `VisitUninterpretedFunction.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during a visit. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during a visit. </td></tr>
   </table>
   </dd>
 </dl>
@@ -13063,7 +13063,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 <p>Visitor object is expected to implement the following methods which take <code>f</code> and <code>args:</code> <code>VisitConstant</code>, <code>VisitVariable</code>, <code>VisitAddition</code>, <code>VisitMultiplication</code>, <code>VisitDivision</code>, <code>VisitPow</code>.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if NaN is detected during a visit.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if NaN is detected during a visit.</td></tr>
   </table>
   </dd>
 </dl>

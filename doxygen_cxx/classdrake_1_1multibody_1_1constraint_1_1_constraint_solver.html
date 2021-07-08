@@ -406,7 +406,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>contact_forces</code> is null, if <code>contact_forces</code> is not empty, if <code>cf</code> is not the proper size, if the number of tangent directions is not one per non-sliding contact (indicating that the contact problem might not be 2D), if the number of contact frames is not equal to the number of contacts, or if a contact frame does not appear to be orthonormal. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>contact_forces</code> is null, if <code>contact_forces</code> is not empty, if <code>cf</code> is not the proper size, if the number of tangent directions is not one per non-sliding contact (indicating that the contact problem might not be 2D), if the number of contact frames is not equal to the number of contacts, or if a contact frame does not appear to be orthonormal. </td></tr>
   </table>
   </dd>
 </dl>
@@ -472,7 +472,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>contact_forces</code> is null, if <code>contact_forces</code> is not empty, if <code>cf</code> is not the proper size, if the number of tangent directions is not one per contact (indicating that the contact problem might not be 2D), if the number of contact frames is not equal to the number of contacts, or if a contact frame does not appear to be orthonormal. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>contact_forces</code> is null, if <code>contact_forces</code> is not empty, if <code>cf</code> is not the proper size, if the number of tangent directions is not one per contact (indicating that the contact problem might not be 2D), if the number of contact frames is not equal to the number of contacts, or if a contact frame does not appear to be orthonormal. </td></tr>
   </table>
   </dd>
 </dl>
@@ -531,7 +531,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -604,7 +604,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 <dl class="section warning"><dt>Warning</dt><dd>This method uses the method <code>problem_data.solve_inertia()</code> in order to compute <code>v(t+dt)</code>, so the computational demands may be significant. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -661,7 +661,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -717,7 +717,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_acceleration</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -775,7 +775,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_force</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_force</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -836,7 +836,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_force</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_force</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -895,7 +895,7 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if <code>generalized_delta_v</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>generalized_delta_v</code> is null or <code>cf</code> vector is incorrectly sized. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1127,8 +1127,8 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 <dl class="section pre"><dt>Precondition</dt><dd>Constraint data has been computed. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the constraint forces cannot be computed (due to, e.g., an "inconsistent" rigid contact configuration). </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if <code>cf</code> is null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the constraint forces cannot be computed (due to, e.g., an "inconsistent" rigid contact configuration). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>cf</code> is null. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1172,8 +1172,8 @@ MM ≡ | hNCNᵀ+γᴺ  hNCDᵀ   0   hNCLᵀ    |
 <dl class="section pre"><dt>Precondition</dt><dd>Constraint data has been computed. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if the constraint forces cannot be computed (due to, e.g., the effects of roundoff error in attempting to solve a complementarity problem); in such cases, it is recommended to increase regularization and attempt again. </td></tr>
-    <tr><td class="paramname">std::logic_error</td><td>if <code>cf</code> is null. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the constraint forces cannot be computed (due to, e.g., the effects of roundoff error in attempting to solve a complementarity problem); in such cases, it is recommended to increase regularization and attempt again. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>cf</code> is null. </td></tr>
   </table>
   </dd>
 </dl>

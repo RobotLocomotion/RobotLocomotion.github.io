@@ -530,10 +530,58 @@ program and the availability of the solvers.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">invalid_argument if there is no available solver for <code class="docutils literal"><span class="pre">prog</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no available solver for <code class="docutils literal"><span class="pre">prog</span></code>.</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.CommonSolverOption">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">CommonSolverOption</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.CommonSolverOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Some options can be applied to not one solver, but many solvers (for
+example, many solvers support printing out the progress in each
+iteration). CommonSolverOption contain the names of these supported
+options. The user can use these options as “key” in
+SolverOption::SetOption().</p>
+<p>Members:</p>
+<blockquote>
+<div>kPrintFileName : Many solvers support printing the progress of each iteration to a</div></blockquote>
+<p>file. The user can call SolverOptions::SetOption(kPrintFileName,
+file_name) where file_name is a string. If the user doesn’t want to
+print to a file, then use SolverOptions::SetOption(kPrintFileName,
+“”), where the empty string “” indicates no print.</p>
+<blockquote>
+<div>kPrintToConsole : Many solvers support printing the progress of each iteration to the</div></blockquote>
+<p>console, the user can call SolverOptions::SetOption(kPrintToConsole,
+1) to turn on printing to the console, or
+SolverOptions::SetOption(kPrintToConsole, 0) to turn off printing to
+the console.</p>
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.CommonSolverOption.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.CommonSolverOption</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.CommonSolverOption.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.CommonSolverOption.kPrintFileName">
+<code class="descname">kPrintFileName</code><em class="property"> = &lt;CommonSolverOption.kPrintFileName: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.CommonSolverOption.kPrintFileName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.CommonSolverOption.kPrintToConsole">
+<code class="descname">kPrintToConsole</code><em class="property"> = &lt;CommonSolverOption.kPrintToConsole: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.CommonSolverOption.kPrintToConsole" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.CommonSolverOption.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.CommonSolverOption.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.CommonSolverOption.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.CommonSolverOption.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -1078,7 +1126,7 @@ available, throws a RuntimeError.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">invalid_argument if there is no matching solver.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no matching solver.</td>
 </tr>
 </tbody>
 </table>
@@ -1914,7 +1962,7 @@ whether the cost is convex or not.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">std::runtime error if the expression is not quadratic.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the expression is not quadratic.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The newly added cost together with the bound variables.</td>
 </tr>
@@ -3432,7 +3480,7 @@ best-effort solution.</td>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>invalid_argument if <code class="docutils literal"><span class="pre">var</span></code> is not captured in the mapping</li>
+<li>RuntimeError if <code class="docutils literal"><span class="pre">var</span></code> is not captured in the mapping</li>
 <li><code class="docutils literal"><span class="pre">decision_variable_index</span></code>, as the input argument of</li>
 <li><code class="xref py py-exc docutils literal"><span class="pre">set_decision_variable_index().</span></code></li>
 </ul>
@@ -4137,6 +4185,13 @@ used in Drake.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.SolverOptions.common_solver_options">
+<code class="descname">common_solver_options</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.SolverOptions</em><span class="sig-paren">)</span> &#x2192; Dict[drake::solvers::CommonSolverOption, Union[float, int, str]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.SolverOptions.common_solver_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the common options for all solvers. Refer to CommonSolverOption
+for more details.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.SolverOptions.GetOptions">
 <code class="descname">GetOptions</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.SolverOptions</em>, <em>solver_id: pydrake.solvers.mathematicalprogram.SolverId</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.SolverOptions.GetOptions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -4148,17 +4203,17 @@ used in Drake.</p>
 <ol class="arabic simple">
 <li>SetOption(self: pydrake.solvers.mathematicalprogram.SolverOptions, solver_id: pydrake.solvers.mathematicalprogram.SolverId, solver_option: str, option_value: float) -&gt; None</li>
 </ol>
-<p>Set common options for all solvers supporting that option (for
-example, printing the progress in each iteration). If the solver
-doesn’t support the option, the option is ignored.</p>
+<p>Sets a double-valued solver option for a specific solver.</p>
 <ol class="arabic simple" start="2">
 <li>SetOption(self: pydrake.solvers.mathematicalprogram.SolverOptions, solver_id: pydrake.solvers.mathematicalprogram.SolverId, solver_option: str, option_value: int) -&gt; None</li>
 </ol>
-<p>Set common options for all solvers supporting that option (for
-example, printing the progress in each iteration). If the solver
-doesn’t support the option, the option is ignored.</p>
+<p>Sets an integer-valued solver option for a specific solver.</p>
 <ol class="arabic simple" start="3">
 <li>SetOption(self: pydrake.solvers.mathematicalprogram.SolverOptions, solver_id: pydrake.solvers.mathematicalprogram.SolverId, solver_option: str, option_value: str) -&gt; None</li>
+</ol>
+<p>Sets a string-valued solver option for a specific solver.</p>
+<ol class="arabic simple" start="4">
+<li>SetOption(self: pydrake.solvers.mathematicalprogram.SolverOptions, key: drake::solvers::CommonSolverOption, value: Union[float, int, str]) -&gt; None</li>
 </ol>
 <p>Set common options for all solvers supporting that option (for
 example, printing the progress in each iteration). If the solver

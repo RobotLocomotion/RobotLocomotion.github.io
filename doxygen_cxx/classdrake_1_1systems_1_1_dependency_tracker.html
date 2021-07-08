@@ -214,7 +214,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Methods used in test cases or for debugging.</p>
 </div></td></tr>
 <tr class="memitem:a7d0b9fb8012fb26b22ad7a16dd1d0d2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_dependency_tracker.html#a7d0b9fb8012fb26b22ad7a16dd1d0d2b">ThrowIfBadDependencyTracker</a> (const internal::ContextMessageInterface *owning_subcontext=nullptr, const <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html">CacheEntryValue</a> *cache_value=nullptr) const</td></tr>
-<tr class="memdesc:a7d0b9fb8012fb26b22ad7a16dd1d0d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an std::logic_error if there is something clearly wrong with this DependencyTracker object.  <a href="#a7d0b9fb8012fb26b22ad7a16dd1d0d2b">More...</a><br /></td></tr>
+<tr class="memdesc:a7d0b9fb8012fb26b22ad7a16dd1d0d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws an std::exception if there is something clearly wrong with this DependencyTracker object.  <a href="#a7d0b9fb8012fb26b22ad7a16dd1d0d2b">More...</a><br /></td></tr>
 <tr class="separator:a7d0b9fb8012fb26b22ad7a16dd1d0d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -749,10 +749,10 @@ No cache entry value has previously been assigned. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Throws an std::logic_error if there is something clearly wrong with this DependencyTracker object. </p>
+<p>Throws an std::exception if there is something clearly wrong with this DependencyTracker object. </p>
 <p>If the owning subcontext is known, provide a pointer to it here and we'll check that this tracker agrees. If you know which cache entry is supposed to be associated with this tracker, supply a pointer to that and we'll check it (trackers that are not associated with a real cache entry are still associated with the CacheEntryValue::dummy()). In addition we check for other internal inconsistencies. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>for anything that goes wrong, with an appropriate explanatory message. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for anything that goes wrong, with an appropriate explanatory message. </td></tr>
   </table>
   </dd>
 </dl>

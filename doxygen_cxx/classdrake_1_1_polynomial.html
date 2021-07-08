@@ -730,7 +730,7 @@ Friends</h2></td></tr>
 <p>Evaluate a multivariate <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> at a specific point. </p>
 <p>Evaluates a <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> with the given values for each variable. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::out_of_range</td><td>if the <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> contains variables for which values were not provided.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> contains variables for which values were not provided.</td></tr>
   </table>
   </dd>
 </dl>
@@ -789,7 +789,7 @@ Friends</h2></td></tr>
 <p>Evaluate a univariate <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> at a specific point. </p>
 <p>Evaluates a univariate <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> at the given x. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if this <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> is not univariate.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if this <a class="el" href="classdrake_1_1_polynomial.html" title="A scalar multi-variate polynomial, modeled after the msspoly in spotless.">Polynomial</a> is not univariate.</td></tr>
   </table>
   </dd>
 </dl>
@@ -827,7 +827,7 @@ Friends</h2></td></tr>
 <p>Note that the ID of a variable is preserved in this translation.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if <code>e</code> is not polynomial-convertible. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>e</code> is not polynomial-convertible. </td></tr>
   </table>
   </dd>
 </dl>

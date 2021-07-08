@@ -272,7 +272,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if given <code>initial_state</code> 𝐱₀ is not a column matrix.<br />
+    <tr><td class="paramname">std::exception</td><td>if given <code>initial_state</code> 𝐱₀ is not a column matrix.<br />
  if given <code>initial_state_derivative</code> d𝐱/t₀ is not a column matrix.<br />
  if given <code>initial_state</code> 𝐱₀ and <code>initial_state_derivative</code> d𝐱/dt₀ do not match each other's dimension. </td></tr>
   </table>
@@ -345,7 +345,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::runtime_error</td><td>if given <code>state</code> 𝐱ᵢ is not a column matrix.<br />
+    <tr><td class="paramname">std::exception</td><td>if given <code>state</code> 𝐱ᵢ is not a column matrix.<br />
  if given <code>state_derivative</code> d𝐱/dtᵢ is not a column matrix.<br />
  if given <code>time</code> tᵢ is not greater than the previous time tᵢ₋₁ in the step.<br />
  if given <code>state</code> 𝐱ᵢ dimension does not match the dimension of the previous state 𝐱ᵢ₋₁.<br />

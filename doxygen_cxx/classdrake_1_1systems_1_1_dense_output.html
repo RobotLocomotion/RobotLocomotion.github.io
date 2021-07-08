@@ -475,7 +475,7 @@ Protected Member Functions</h2></td></tr>
 <p>via <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5f2d82fca3a304b1c4c277618a4a1d8b" title="Evaluates the output at the given time t.">Evaluate()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>Output is not empty i.e. <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5a2b7a58dc85678d08752945ff655362" title="Checks whether the output is empty or not.">is_empty()</a> equals false. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>
@@ -509,8 +509,8 @@ Protected Member Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>Output is not empty i.e. <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5a2b7a58dc85678d08752945ff655362" title="Checks whether the output is empty or not.">is_empty()</a> equals false. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions are not met. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if given <code>t</code> is not within output's domain i.e. <code>t</code> ∉ [<a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ace0ac0b974686b7e2c00fd22912bceeb" title="Returns output&#39;s start time, or in other words, the oldest time t that it can be evaluated at e....">start_time()</a>, <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ad6c6c44f9070bc963b88512fbab24d8b" title="Returns output&#39;s end time, or in other words, the newest time t that it can be evaluated at e....">end_time()</a>]. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions are not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if given <code>t</code> is not within output's domain i.e. <code>t</code> ∉ [<a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ace0ac0b974686b7e2c00fd22912bceeb" title="Returns output&#39;s start time, or in other words, the oldest time t that it can be evaluated at e....">start_time()</a>, <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ad6c6c44f9070bc963b88512fbab24d8b" title="Returns output&#39;s end time, or in other words, the newest time t that it can be evaluated at e....">end_time()</a>]. </td></tr>
   </table>
   </dd>
 </dl>
@@ -556,9 +556,9 @@ Protected Member Functions</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>Output is not empty i.e. <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5a2b7a58dc85678d08752945ff655362" title="Checks whether the output is empty or not.">is_empty()</a> equals false. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions are not met. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if given <code>t</code> is not within output's domain i.e. <code>t</code> ∉ [<a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ace0ac0b974686b7e2c00fd22912bceeb" title="Returns output&#39;s start time, or in other words, the oldest time t that it can be evaluated at e....">start_time()</a>, <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ad6c6c44f9070bc963b88512fbab24d8b" title="Returns output&#39;s end time, or in other words, the newest time t that it can be evaluated at e....">end_time()</a>]. </td></tr>
-    <tr><td class="paramname">std::runtime_error</td><td>if given <code>n</code> does not refer to a valid output dimension i.e. <code>n</code> ∉ [0, <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#af9593d4a5ff4274efaf429cb4f9e57cc" title="Returns the output size (i.e.">size()</a>). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions are not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if given <code>t</code> is not within output's domain i.e. <code>t</code> ∉ [<a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ace0ac0b974686b7e2c00fd22912bceeb" title="Returns output&#39;s start time, or in other words, the oldest time t that it can be evaluated at e....">start_time()</a>, <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#ad6c6c44f9070bc963b88512fbab24d8b" title="Returns output&#39;s end time, or in other words, the newest time t that it can be evaluated at e....">end_time()</a>]. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if given <code>n</code> does not refer to a valid output dimension i.e. <code>n</code> ∉ [0, <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#af9593d4a5ff4274efaf429cb4f9e57cc" title="Returns the output size (i.e.">size()</a>). </td></tr>
   </table>
   </dd>
 </dl>
@@ -655,7 +655,7 @@ Protected Member Functions</h2></td></tr>
 <p>the number of elements in an output value). </p><dl class="section pre"><dt>Precondition</dt><dd>Output is not empty i.e. <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5a2b7a58dc85678d08752945ff655362" title="Checks whether the output is empty or not.">is_empty()</a> equals false. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>
@@ -681,7 +681,7 @@ Protected Member Functions</h2></td></tr>
 <p>via <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5f2d82fca3a304b1c4c277618a4a1d8b" title="Evaluates the output at the given time t.">Evaluate()</a>. </p><dl class="section pre"><dt>Precondition</dt><dd>Output is not empty i.e. <a class="el" href="classdrake_1_1systems_1_1_dense_output.html#a5a2b7a58dc85678d08752945ff655362" title="Checks whether the output is empty or not.">is_empty()</a> equals false. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::logic_error</td><td>if any of the preconditions is not met. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if any of the preconditions is not met. </td></tr>
   </table>
   </dd>
 </dl>

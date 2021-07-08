@@ -266,17 +266,17 @@ constraint.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">a_A</span></code> is close to zero.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">a_A</span></code> is close to zero.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">b_B</span></code> is close to zero.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">b_B</span></code> is close to zero.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">angle_lower</span></code> is negative.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">angle_lower</span></code> is negative.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">angle_upper</span></code> ∉ [<cite>angle_lower</cite>, π].</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">angle_upper</span></code> ∉ [<cite>angle_lower</cite>, π].</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
 </tr>
 </tbody>
 </table>
@@ -381,7 +381,7 @@ constraint.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> or <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant</span></code> or <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
 </tr>
 </tbody>
 </table>
@@ -489,13 +489,13 @@ constraint.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">n_A</span></code> is close to zero.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">n_A</span></code> is close to zero.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">cone_half_angle</span></code> ∉ [0, π/2].</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">cone_half_angle</span></code> ∉ [0, π/2].</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
 </tr>
 </tbody>
 </table>
@@ -607,7 +607,7 @@ orientation of frame B expressed in frame A.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if na_A is close to zero.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if na_A is close to zero.</td>
 </tr>
 </tbody>
 </table>
@@ -623,7 +623,7 @@ orientation of frame B expressed in frame A.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if nb_B is close to zero.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if nb_B is close to zero.</td>
 </tr>
 </tbody>
 </table>
@@ -638,7 +638,7 @@ orientation of frame B expressed in frame A.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if angle_lower is negative.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if angle_lower is negative.</td>
 </tr>
 </tbody>
 </table>
@@ -653,7 +653,7 @@ orientation of frame B expressed in frame A.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if angle_upper is outside the bounds.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if angle_upper is outside the bounds.</td>
 </tr>
 </tbody>
 </table>
@@ -704,7 +704,7 @@ expressed in frame A.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError is n_A is close to a zero vector.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError is n_A is close to a zero vector.</td>
 </tr>
 </tbody>
 </table>
@@ -724,7 +724,7 @@ documentation. <code class="docutils literal"><span class="pre">cone_half_angle<
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if cone_half_angle is outside of the bound.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if cone_half_angle is outside of the bound.</td>
 </tr>
 </tbody>
 </table>
@@ -931,15 +931,15 @@ considered in each constraint evaluation. $*Default:* 1 meter</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>ValueError if <code class="docutils literal"><span class="pre">plant</span></code> has not registered its geometry with a</li>
+<li>RuntimeError if <code class="docutils literal"><span class="pre">plant</span></code> has not registered its geometry with a</li>
 <li>SceneGraph object.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">ValueError if influence_distance_offset = ∞.</p>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if influence_distance_offset = ∞.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">ValueError if influence_distance_offset ≤ 0.</p>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if influence_distance_offset ≤ 0.</p>
 </td>
 </tr>
 </tbody>
@@ -1009,7 +1009,7 @@ constraint.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</p>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
@@ -1018,10 +1018,10 @@ constraint.</dd>
 </ul>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">ValueError if angle_bound &lt; 0.</p>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if angle_bound &lt; 0.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</p>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</p>
 </td>
 </tr>
 </tbody>
@@ -1132,9 +1132,9 @@ constraint.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant</span></code> is nullptr.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">plant_context</span></code> is nullptr.</td>
 </tr>
 </tbody>
 </table>
