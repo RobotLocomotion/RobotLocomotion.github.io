@@ -762,6 +762,12 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 <tr class="memitem:af4b4542d7067f6d60ea801b3b00c591f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af4b4542d7067f6d60ea801b3b00c591f">SetVariableScaling</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, double s)</td></tr>
 <tr class="memdesc:af4b4542d7067f6d60ea801b3b00c591f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for the scaling of decision variables starting from index <code>idx_start</code> to <code>idx_end</code> (including <code>idx_end</code>).  <a href="#af4b4542d7067f6d60ea801b3b00c591f">More...</a><br /></td></tr>
 <tr class="separator:af4b4542d7067f6d60ea801b3b00c591f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Remove costs or constraints</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="remove_cost_constraint"></a> Removes costs or constraints from this program. If this program contains multiple costs/constraints objects matching the given argument, then all of these costs/constraints are removed. If this program doesn't contain the specified cost/constraint, then the code does nothing. We regard two costs/constraints being equal, if their evaluators point to the same object, and the associated variables are also the same. </p><dl class="section note"><dt>Note</dt><dd>If two costs/constraints represent the same expression, but their evaluators point to different objects, then they are NOT regarded the same. For example, if we have <div class="fragment"><div class="line"><span class="keyword">auto</span> cost1 = prog.AddLinearCost(x[0] + x[1]);</div><div class="line"><span class="keyword">auto</span> cost2 = prog.AddLinearCost(x[0] + x[1]);</div><div class="line"><span class="comment">// cost1 and cost2 represent the same cost, but cost1.evaluator() and</span></div><div class="line"><span class="comment">// cost2.evaluator() point to different objects. So after removing cost1,</span></div><div class="line"><span class="comment">// cost2 still lives in prog.</span></div><div class="line">prog.RemoveCost(cost1);</div><div class="line"><span class="comment">// This will print true.</span></div><div class="line">std::cout &lt;&lt; (prog.linear_costs()[0] == cost2) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div></div><!-- fragment --> </dd></dl>
+</div></td></tr>
+<tr class="memitem:a776ae5f3bb0dc9a705c584e511aff067"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a776ae5f3bb0dc9a705c584e511aff067">RemoveCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &gt; &amp;cost)</td></tr>
+<tr class="memdesc:a776ae5f3bb0dc9a705c584e511aff067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes <code>cost</code> from this mathematical program.  <a href="#a776ae5f3bb0dc9a705c584e511aff067">More...</a><br /></td></tr>
+<tr class="separator:a776ae5f3bb0dc9a705c584e511aff067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -6727,8 +6733,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6739,7 +6745,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6753,8 +6759,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6765,7 +6771,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6814,6 +6820,27 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 </div><div class="memdoc">
 
 <p>Getter for quadratic costs. </p>
+
+</div>
+</div>
+<a id="a776ae5f3bb0dc9a705c584e511aff067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a776ae5f3bb0dc9a705c584e511aff067">&#9670;&nbsp;</a></span>RemoveCost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> RemoveCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cost</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes <code>cost</code> from this mathematical program. </p>
+<p>See <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#remove_cost_constraint">Remove costs or constraints</a> for more details. </p><dl class="section return"><dt>Returns</dt><dd>number of cost objects removed from this program. If this program doesn't contain <code>cost</code>, then returns 0. If this program contains multiple <code>cost</code> objects, then returns the repetition of <code>cost</code> in this program. </dd></dl>
 
 </div>
 </div>

@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"functions_rela_o.html":[3,3,6,13],
+"functions_rela_p.html":[3,3,6,14],
+"functions_rela_q.html":[3,3,6,15],
+"functions_rela_r.html":[3,3,6,16],
 "functions_rela_s.html":[3,3,6,17],
 "functions_rela_t.html":[3,3,6,18],
 "functions_rela_u.html":[3,3,6,19],
@@ -11,8 +15,8 @@ var NAVTREEINDEX40 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2,0],
 "functions_vars.html":[3,3,2],
+"functions_vars.html":[3,3,2,0],
 "functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
@@ -163,8 +167,8 @@ var NAVTREEINDEX40 =
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,12,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,12,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,12,3],
 "group__discrete__systems.html":[1,3,9],
 "group__drake__contacts.html":[1,4,1],
 "group__estimation.html":[1,5,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "group__system__scalar__conversion.html":[1,0,9],
 "group__systems.html":[1,3],
 "group__systems.html#ga3e4e6a211dd145828511de57c117c5aa":[1,3,15],
-"group__technical__notes.html":[1,0],
-"group__templates.html":[1,0,5],
-"group__terminology__and__notation.html":[1,1],
-"group__visualization.html":[1,3,11],
-"group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f":[1,3,11,2]
+"group__technical__notes.html":[1,0]
 };

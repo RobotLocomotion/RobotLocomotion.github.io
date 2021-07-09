@@ -109,7 +109,7 @@ class drake::copyable_unique_ptr&lt; T &gt;</h3>
 <ol type="1">
 <li>It always uses a default deleter.</li>
 <li>There is no array version.</li>
-<li>To allow for future copy-on-write optimizations, there is a distinction between writable and const access, the <a class="el" href="classdrake_1_1copyable__unique__ptr.html#a76c791981969a90b67778f87036b032e" title="Return a const pointer to the contained object if any, or nullptr.">get()</a> method is modified to return only a const pointer, with <a class="el" href="classdrake_1_1copyable__unique__ptr.html#ac684d04fadf2a6b636c98e38aabf7ccb" title="Return a writable pointer to the contained object if any, or nullptr.">get_mutable()</a> added to return a writable pointer.</li>
+<li>To allow for future copy-on-write optimizations, there is a distinction between writable and const access, the <a class="el" href="classdrake_1_1copyable__unique__ptr.html#a76c791981969a90b67778f87036b032e" title="Return a const pointer to the contained object if any, or nullptr.">get()</a> method is modified to return only a const pointer, with <a class="el" href="classdrake_1_1copyable__unique__ptr.html#ac684d04fadf2a6b636c98e38aabf7ccb" title="Return a writable pointer to the contained object if any, or nullptr.">get_mutable()</a> added to return a writable pointer. Furthermore, derefencing (<a class="el" href="classdrake_1_1copyable__unique__ptr.html#acd9f2ee3a1bcd0468bba24f98905b00f" title="Return a writable reference to the contained object (if T is itself not const).">operator*()</a>) a mutable pointer will give a mutable reference (in so far as T is not declared const), and dereferencing a const pointer will give a const reference.</li>
 </ol>
 <p>This class is entirely inline and has no computational or space overhead except when copying is required; it contains just a single pointer and does no reference counting.</p>
 <p><b>Usage</b></p>
@@ -140,6 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac67cae08914b16290d64a748fb64d6dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ac67cae08914b16290d64a748fb64d6dc">copyable_unique_ptr</a> (T *ptr) noexcept</td></tr>
 <tr class="memdesc:ac67cae08914b16290d64a748fb64d6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pointer to a writable heap-allocated object, take over ownership of that object.  <a href="#ac67cae08914b16290d64a748fb64d6dc">More...</a><br /></td></tr>
 <tr class="separator:ac67cae08914b16290d64a748fb64d6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad454f66aaeaf4bff4953937c55634298"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ad454f66aaeaf4bff4953937c55634298">copyable_unique_ptr</a> (const T &amp;value)</td></tr>
+<tr class="memdesc:ad454f66aaeaf4bff4953937c55634298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a unique instance of T as a copy of the provided model value.  <a href="#ad454f66aaeaf4bff4953937c55634298">More...</a><br /></td></tr>
+<tr class="separator:ad454f66aaeaf4bff4953937c55634298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9efa09fdc8aad69db06b649c447d9806"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#a9efa09fdc8aad69db06b649c447d9806">copyable_unique_ptr</a> (const <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a> &amp;cu_ptr)</td></tr>
 <tr class="memdesc:a9efa09fdc8aad69db06b649c447d9806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor is deep; the new copyable_unique_ptr object contains a new copy of the object in the source, created via the source object's copy constructor or <code>Clone()</code> method.  <a href="#a9efa09fdc8aad69db06b649c447d9806">More...</a><br /></td></tr>
 <tr class="separator:a9efa09fdc8aad69db06b649c447d9806"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -202,6 +205,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac684d04fadf2a6b636c98e38aabf7ccb"><td class="memItemLeft" align="right" valign="top">T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ac684d04fadf2a6b636c98e38aabf7ccb">get_mutable</a> () noexcept</td></tr>
 <tr class="memdesc:ac684d04fadf2a6b636c98e38aabf7ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a writable pointer to the contained object if any, or <code>nullptr</code>.  <a href="#ac684d04fadf2a6b636c98e38aabf7ccb">More...</a><br /></td></tr>
 <tr class="separator:ac684d04fadf2a6b636c98e38aabf7ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbce0832fe3d1de72e719f60db3a9aa"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#acdbce0832fe3d1de72e719f60db3a9aa">operator *</a> () const</td></tr>
+<tr class="memdesc:acdbce0832fe3d1de72e719f60db3a9aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a const reference to the contained object.  <a href="#acdbce0832fe3d1de72e719f60db3a9aa">More...</a><br /></td></tr>
+<tr class="separator:acdbce0832fe3d1de72e719f60db3a9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9f2ee3a1bcd0468bba24f98905b00f"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#acd9f2ee3a1bcd0468bba24f98905b00f">operator *</a> ()</td></tr>
+<tr class="memdesc:acd9f2ee3a1bcd0468bba24f98905b00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a writable reference to the contained object (if T is itself not const).  <a href="#acd9f2ee3a1bcd0468bba24f98905b00f">More...</a><br /></td></tr>
+<tr class="separator:acd9f2ee3a1bcd0468bba24f98905b00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
@@ -214,7 +223,7 @@ Related Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a38cdcb23181ad1c554ef0209a29cd768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38cdcb23181ad1c554ef0209a29cd768">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a38cdcb23181ad1c554ef0209a29cd768">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +251,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac67cae08914b16290d64a748fb64d6dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac67cae08914b16290d64a748fb64d6dc">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67cae08914b16290d64a748fb64d6dc">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,8 +279,36 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad454f66aaeaf4bff4953937c55634298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad454f66aaeaf4bff4953937c55634298">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[3/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a> </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a unique instance of T as a copy of the provided model value. </p>
+
+</div>
+</div>
 <a id="a9efa09fdc8aad69db06b649c447d9806"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9efa09fdc8aad69db06b649c447d9806">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9efa09fdc8aad69db06b649c447d9806">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,7 +329,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a1774b97188ce9c5a5cd47c5c4ff63fc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1774b97188ce9c5a5cd47c5c4ff63fc0">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1774b97188ce9c5a5cd47c5c4ff63fc0">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[5/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +358,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac60d2d174b5ce39e94bf59719c997250"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac60d2d174b5ce39e94bf59719c997250">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60d2d174b5ce39e94bf59719c997250">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[6/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -350,7 +387,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5a34341a71b340b3af3ee3d18e9d09bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a34341a71b340b3af3ee3d18e9d09bc">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a34341a71b340b3af3ee3d18e9d09bc">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -379,7 +416,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="ad0b538a9c4ca822d4212226ba51dc0aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0b538a9c4ca822d4212226ba51dc0aa">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0b538a9c4ca822d4212226ba51dc0aa">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,6 +526,51 @@ Related Functions</h2></td></tr>
 <p>Return a writable pointer to the contained object if any, or <code>nullptr</code>. </p>
 <p>Note that you need write access to this container in order to get write access to the object it contains.</p>
 <dl class="section warning"><dt>Warning</dt><dd>If copyable_unique_ptr is instantiated on a const template parameter (e.g., <code><a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a>&lt;const Foo&gt;</code>), then <a class="el" href="classdrake_1_1copyable__unique__ptr.html#ac684d04fadf2a6b636c98e38aabf7ccb" title="Return a writable pointer to the contained object if any, or nullptr.">get_mutable()</a> returns a const pointer. </dd></dl>
+
+</div>
+</div>
+<a id="acdbce0832fe3d1de72e719f60db3a9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbce0832fe3d1de72e719f60db3a9aa">&#9670;&nbsp;</a></span>operator *() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; operator * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a const reference to the contained object. </p>
+<p>Note that this is different from <code><a class="el" href="namespacedrake_1_1symbolic.html#a76deccd3cd3f64d9b875dd5116792c07" title="Returns the product of two Chebyshev basis elements.">std::unique_ptr::operator*()</a></code> which would return a non-const reference (if <code>T</code> is non-const), even if the container itself is const. For a const copyable_unique_ptr will always return a const reference to its contained value.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Currently copyable_unique_ptr is a std::unique_ptr. As such, a const copyable_unique_ptr&lt;Foo&gt; can be upcast to a const unique_ptr&lt;Foo&gt; and the parent's behavior will provide a mutable reference. This is strongly discouraged and will break as the implementation of this class changes to shore up this gap in the const correctness protection.</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>this != nullptr</code> reports <code>true</code>. </dd></dl>
+
+</div>
+</div>
+<a id="acd9f2ee3a1bcd0468bba24f98905b00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9f2ee3a1bcd0468bba24f98905b00f">&#9670;&nbsp;</a></span>operator *() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; operator * </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a writable reference to the contained object (if T is itself not const). </p>
+<p>Note that you need write access to this container in order to get write access to the object it contains.</p>
+<p>We <em>strongly</em> recommend, that, if dereferencing a copyable_unique_ptr without the intention of mutating the underlying value, prefer to dereference a <em>const</em> copyable_unique_ptr (or use *my_ptr.<a class="el" href="classdrake_1_1copyable__unique__ptr.html#a76c791981969a90b67778f87036b032e" title="Return a const pointer to the contained object if any, or nullptr.">get()</a>) and not a mutable copyable_unique_ptr. As "copy-on-write" behavior is introduced in the future, this recommended practice will prevent unwanted copies of the underlying value.</p>
+<p>If copyable_unique_ptr is instantiated on a const template parameter (e.g., <code><a class="el" href="classdrake_1_1copyable__unique__ptr.html" title="A smart pointer with deep copy semantics.">copyable_unique_ptr</a>&lt;const Foo&gt;</code>), then <a class="el" href="classdrake_1_1copyable__unique__ptr.html#acd9f2ee3a1bcd0468bba24f98905b00f" title="Return a writable reference to the contained object (if T is itself not const).">operator*()</a> must return a const reference.</p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>this != nullptr</code> reports <code>true</code>. </dd></dl>
 
 </div>
 </div>

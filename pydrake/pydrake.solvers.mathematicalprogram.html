@@ -3133,6 +3133,60 @@ with arXiv link <a class="reference external" href="https://arxiv.org/abs/1706.0
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost">
+<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, cost: drake::solvers::Binding&lt;drake::solvers::LinearCost&gt;) -&gt; int</li>
+</ol>
+<p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
+remove_cost_constraint “Remove costs or constraints” for more details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of cost objects removed from this program. If this program
+doesn’t contain <code class="docutils literal"><span class="pre">cost</span></code>, then returns 0. If this program contains
+multiple <code class="docutils literal"><span class="pre">cost</span></code> objects, then returns the repetition of <code class="docutils literal"><span class="pre">cost</span></code>
+in this program.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>RemoveCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, cost: drake::solvers::Binding&lt;drake::solvers::QuadraticCost&gt;) -&gt; int</li>
+</ol>
+<p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
+remove_cost_constraint “Remove costs or constraints” for more details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of cost objects removed from this program. If this program
+doesn’t contain <code class="docutils literal"><span class="pre">cost</span></code>, then returns 0. If this program contains
+multiple <code class="docutils literal"><span class="pre">cost</span></code> objects, then returns the repetition of <code class="docutils literal"><span class="pre">cost</span></code>
+in this program.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>RemoveCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: drake::solvers::Binding&lt;drake::solvers::Cost&gt;) -&gt; int</li>
+</ol>
+<p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
+remove_cost_constraint “Remove costs or constraints” for more details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of cost objects removed from this program. If this program
+doesn’t contain <code class="docutils literal"><span class="pre">cost</span></code>, then returns 0. If this program contains
+multiple <code class="docutils literal"><span class="pre">cost</span></code> objects, then returns the repetition of <code class="docutils literal"><span class="pre">cost</span></code>
+in this program.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.Reparse">
 <code class="descname">Reparse</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>p: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.Reparse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reparses the polynomial <code class="docutils literal"><span class="pre">p</span></code> using this MathematicalProgram’s
