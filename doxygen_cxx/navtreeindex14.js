@@ -1,5 +1,7 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_unit_quaternion_constraint.html#adf975a10a8694ea50eeb490e6f0caf6c":[1,2,0,8,3],
+"classdrake_1_1multibody_1_1_universal_joint.html":[3,0,0,8,79],
 "classdrake_1_1multibody_1_1_universal_joint.html#a320e136a1460c2d5c74a7cdf42637da4":[3,0,0,8,79,15],
 "classdrake_1_1multibody_1_1_universal_joint.html#a32b3165a92b6b04a9412bfcea8e8eb5e":[3,0,0,8,79,2],
 "classdrake_1_1multibody_1_1_universal_joint.html#a3ee99e5caebd93c526148ddd98bc5325":[3,0,0,8,79,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1perception_1_1_point_cloud.html#af1ac2a91848342b7787b4e9b47f8b023":[3,0,0,9,2,30],
 "classdrake_1_1perception_1_1_point_cloud.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,9,2,40],
 "classdrake_1_1perception_1_1_point_cloud.html#afc4df8c734872593efbc6c722b866764":[3,0,0,9,2,25],
-"classdrake_1_1perception_1_1_point_cloud.html#afdd6c6a1f7d8ff561217b55d7e5eb61c":[3,0,0,9,2,44],
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html":[3,0,0,9,3],
-"classdrake_1_1perception_1_1_point_cloud_to_lcm.html#a208857b41352ca62963c80a56884e1c7":[3,0,0,9,3,1]
+"classdrake_1_1perception_1_1_point_cloud.html#afdd6c6a1f7d8ff561217b55d7e5eb61c":[3,0,0,9,2,44]
 };

@@ -341,6 +341,38 @@ in the world frame.</p>
 <dd><p>Returns the half-space representation vector b.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.ChebyshevCenter">
+<code class="descname">ChebyshevCenter</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ChebyshevCenter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves a linear program to compute the center of the largest inscribed
+ball in the polyhedron. This is often the recommended way to find some
+interior point of the set, for example, as a step towards computing
+the convex hull or a vertex-representation of the set.</p>
+<p>Note that the Chebyshev center is not necessarily unique, and may not
+conform to the point that one might consider the “visual center” of
+the set. For example, for a long thin rectangle, any point in the
+center line segment illustrated below would be a valid center point.
+The solver may return any point on that line segment.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>┌──────────────────────────────────┐
+│                                  │
+│   ────────────────────────────   │
+│                                  │
+└──────────────────────────────────┘
+</pre></div>
+</div>
+<p>To find the visual center, consider using the more expensive
+MaximumVolumeInscribedEllipsoid() method, and then taking the center
+of the returned Hyperellipsoid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the solver fails to solve the problem.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.HPolyhedron.MakeBox">
 <em class="property">static </em><code class="descname">MakeBox</code><span class="sig-paren">(</span><em>lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeBox" title="Permalink to this definition">¶</a></dt>
@@ -496,7 +528,7 @@ center (up to precision).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: pydrake.geometry.optimization.ConvexSets, sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7fe429792170&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: pydrake.geometry.optimization.ConvexSets, sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7f10922b0030&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of

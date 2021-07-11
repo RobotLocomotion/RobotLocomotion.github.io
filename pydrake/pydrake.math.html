@@ -1149,10 +1149,40 @@ algebraic Riccati equation:</p>
 <dl class="function">
 <dt id="pydrake.math.DecomposePositiveQuadraticForm">
 <code class="descclassname">pydrake.math.</code><code class="descname">DecomposePositiveQuadraticForm</code><span class="sig-paren">(</span><em>Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: float, tol: float = 0</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, n]]]<a class="headerlink" href="#pydrake.math.DecomposePositiveQuadraticForm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where RᵀR = Q
-Rᵀd = b / 2 Notice that this decomposition is not unique. For example,
-with any permutation matrix P, we can define R₁ = P*R d₁ = P*d Then
-(R₁*x+d₁)ᵀ(R₁*x+d₁) gives the same quadratic form.</p>
+<dd><p>Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RᵀR</span> <span class="o">=</span> <span class="n">Q</span>
+<span class="n">Rᵀd</span> <span class="o">=</span> <span class="n">b</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">dᵀd</span> <span class="o">=</span> <span class="n">c</span>
+</pre></div>
+</div>
+<p>This decomposition requires the matrix</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>⌈Q     b/2⌉
+⌊bᵀ/2    c⌋
+</pre></div>
+</div>
+<p>to be positive semidefinite.</p>
+<p>We return R and d with the minimal number of rows, namely the rows of
+R and d equal to the rank of the matrix</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>⌈Q     b/2⌉
+⌊bᵀ/2    c⌋
+</pre></div>
+</div>
+<p>Notice that R might have more rows than Q, For example, the quadratic
+expression x² + 2x + 5 =(x+1)² + 2², it can be decomposed as</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>⎛⌈1⌉ * x + ⌈1⌉⎞ᵀ * ⎛⌈1⌉ * x + ⌈1⌉⎞
+⎝⌊0⌋       ⌊2⌋⎠    ⎝⌊0⌋       ⌊2⌋⎠
+</pre></div>
+</div>
+<p>Here R has 2 rows while Q only has 1 row.</p>
+<p>On the other hand the quadratic expression x² + 2x + 1 can be
+decomposed as (x+1) * (x+1), where R has 1 row, same as Q.</p>
+<p>Also notice that this decomposition is not unique. For example, with
+any permutation matrix P, we can define</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>R₁ = P*R
+d₁ = P*d
+</pre></div>
+</div>
+<p>Then (R₁*x+d₁)ᵀ(R₁*x+d₁) gives the same quadratic form.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
 <dd>The square matrix.</dd>
@@ -1166,7 +1196,7 @@ by checking the Eigen values of the matrix [Q b/2] [bᵀ/2 c] are
 all greater than -tol. $*Default:* is 0.</dd>
 <dt>Returns <code class="docutils literal"><span class="pre">(R</span></code>:</dt>
 <dd>, d). R and d have the same number of rows. R.cols() == x.rows().
-The matrix X = [R d] has the same number of rows as the rank of</dd>
+R.rows() equals to the rank of the matrix</dd>
 </dl>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Q</span>    <span class="n">b</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
    <span class="p">[</span><span class="n">bᵀ</span><span class="o">/</span><span class="mi">2</span>   <span class="n">c</span><span class="p">]</span>

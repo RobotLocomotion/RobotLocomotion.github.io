@@ -1,9 +1,11 @@
 var NAVTREEINDEX43 =
 {
+"namespacedrake_1_1systems_1_1controllers.html":[3,0,0,14,2],
+"namespacedrake_1_1systems_1_1controllers__test.html":[2,0,0,14,3],
 "namespacedrake_1_1systems_1_1estimators.html":[2,0,0,14,4],
 "namespacedrake_1_1systems_1_1estimators.html":[3,0,0,14,3],
-"namespacedrake_1_1systems_1_1implicit__integrator__test.html":[2,0,0,14,5],
 "namespacedrake_1_1systems_1_1implicit__integrator__test.html":[3,0,0,14,4],
+"namespacedrake_1_1systems_1_1implicit__integrator__test.html":[2,0,0,14,5],
 "namespacedrake_1_1systems_1_1lcm.html":[2,0,0,14,6],
 "namespacedrake_1_1systems_1_1lcm.html":[3,0,0,14,5],
 "namespacedrake_1_1systems_1_1rendering.html":[2,0,0,14,7],
@@ -17,8 +19,8 @@ var NAVTREEINDEX43 =
 "namespacedrake_1_1systems_1_1trajectory__optimization.html":[3,0,0,14,9],
 "namespacedrake_1_1test.html":[2,0,0,15],
 "namespacedrake_1_1test.html":[3,0,0,15],
-"namespacedrake_1_1trajectories.html":[2,0,0,16],
 "namespacedrake_1_1trajectories.html":[3,0,0,16],
+"namespacedrake_1_1trajectories.html":[2,0,0,16],
 "namespacedrake_1_1yaml.html":[2,0,0,17],
 "namespacedrake_1_1yaml.html":[3,0,0,17],
 "namespacemembers.html":[2,1,0],
@@ -30,8 +32,8 @@ var NAVTREEINDEX43 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
-"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func.html":[2,1,1,0],
+"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func_b.html":[2,1,1,1],
 "namespacemembers_func_c.html":[2,1,1,2],
 "namespacemembers_func_d.html":[2,1,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "proximity__properties_8h.html":[4,0,0,4,23],
 "proximity__properties_8h.html#a43d4f8a99b181dd9968667b7d4daefdf":[4,0,0,4,23,5],
 "proximity__properties_8h.html#a75b8bc3ef835424639b5aa5e0874121b":[4,0,0,4,23,0],
-"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,23,3],
-"proximity__properties_8h.html#a994429610a1aadf4521959e996c5cfac":[4,0,0,4,23,1],
-"proximity__properties_8h.html#ab8c01c8e61753cdc77272c430c452968":[4,0,0,4,23,4]
+"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,23,3]
 };

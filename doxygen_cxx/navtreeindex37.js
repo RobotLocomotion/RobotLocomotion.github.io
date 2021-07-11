@@ -1,5 +1,7 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[3,0,0,16,2,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[3,0,0,16,2,53],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a97030415f23deb1b1244d33b95c1b0fb":[3,0,0,16,2,46],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add":[3,0,0,16,2,54],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,2,51],
@@ -247,7 +249,5 @@ var NAVTREEINDEX37 =
 "context__base_8h.html":[4,0,0,11,3,8],
 "continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,5],
 "continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,5,1],
-"continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0],
-"continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
-"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0]
+"continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0]
 };

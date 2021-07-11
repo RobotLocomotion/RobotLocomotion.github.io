@@ -350,7 +350,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a2fccff311f09a5a35afac17388541c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a symmetric positive semidefinite matrix Y, decompose it into XᵀX, where the number of rows in X equals to the rank of Y.  <a href="#a2fccff311f09a5a35afac17388541c7f">More...</a><br /></td></tr>
 <tr class="separator:a2fccff311f09a5a35afac17388541c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a296872692791b1e6d9e27311fc55a694"><td class="memItemLeft" align="right" valign="top">std::pair&lt; Eigen::MatrixXd, Eigen::MatrixXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a296872692791b1e6d9e27311fc55a694">DecomposePositiveQuadraticForm</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, double c, double tol=0)</td></tr>
-<tr class="memdesc:a296872692791b1e6d9e27311fc55a694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where RᵀR = Q Rᵀd = b / 2 Notice that this decomposition is not unique.  <a href="#a296872692791b1e6d9e27311fc55a694">More...</a><br /></td></tr>
+<tr class="memdesc:a296872692791b1e6d9e27311fc55a694"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where.  <a href="#a296872692791b1e6d9e27311fc55a694">More...</a><br /></td></tr>
 <tr class="separator:a296872692791b1e6d9e27311fc55a694"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c66e16411c4f0d53e005658a49ccf6a"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8c66e16411c4f0d53e005658a49ccf6a">BalanceQuadraticForms</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;S, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;P)</td></tr>
 <tr class="memdesc:a8c66e16411c4f0d53e005658a49ccf6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given two quadratic forms, x'Sx &gt; 0 and x'Px, (with P symmetric and full rank), finds a change of variables x = Ty, which simultaneously diagonalizes both forms (as inspired by "balanced truncation" in model-order reduction [1]).  <a href="#a8c66e16411c4f0d53e005658a49ccf6a">More...</a><br /></td></tr>
@@ -1148,8 +1148,27 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where RᵀR = Q Rᵀd = b / 2 Notice that this decomposition is not unique. </p>
-<p>For example, with any permutation matrix P, we can define R₁ = P*R d₁ = P*d Then (R₁*x+d₁)ᵀ(R₁*x+d₁) gives the same quadratic form. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Rewrite a quadratic form xᵀQx + bᵀx + c to (Rx+d)ᵀ(Rx+d) where. </p>
+<pre>
+RᵀR = Q
+Rᵀd = b / 2
+dᵀd = c
+</pre><p>This decomposition requires the matrix </p><pre>
+⌈Q     b/2⌉
+⌊bᵀ/2    c⌋
+</pre><p> to be positive semidefinite.</p>
+<p>We return R and d with the minimal number of rows, namely the rows of R and d equal to the rank of the matrix </p><pre>
+⌈Q     b/2⌉
+⌊bᵀ/2    c⌋
+</pre><p>Notice that R might have more rows than Q, For example, the quadratic expression x² + 2x + 5 =(x+1)² + 2², it can be decomposed as </p><pre>
+⎛⌈1⌉ * x + ⌈1⌉⎞ᵀ * ⎛⌈1⌉ * x + ⌈1⌉⎞
+⎝⌊0⌋       ⌊2⌋⎠    ⎝⌊0⌋       ⌊2⌋⎠
+</pre><p> Here R has 2 rows while Q only has 1 row.</p>
+<p>On the other hand the quadratic expression x² + 2x + 1 can be decomposed as (x+1) * (x+1), where R has 1 row, same as Q.</p>
+<p>Also notice that this decomposition is not unique. For example, with any permutation matrix P, we can define </p><pre>
+R₁ = P*R
+d₁ = P*d
+</pre><p> Then (R₁*x+d₁)ᵀ(R₁*x+d₁) gives the same quadratic form. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Q</td><td>The square matrix. </td></tr>
     <tr><td class="paramname">b</td><td>The vector containing the linear coefficients. </td></tr>
@@ -1161,7 +1180,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">(R,d).</td><td>R and d have the same number of rows. R.cols() == x.rows(). The matrix X = [R d] has the same number of rows as the rank of <pre>
+    <tr><td class="paramname">(R,d).</td><td>R and d have the same number of rows. R.cols() == x.rows(). R.rows() equals to the rank of the matrix <pre>
    [Q    b/2]
    [bᵀ/2   c]
 </pre> </td></tr>

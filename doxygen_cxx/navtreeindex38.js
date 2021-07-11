@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
+"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0],
 "continuous__state_8h.html":[4,0,0,11,3,9],
 "controlled__spring__mass__system_8h.html":[4,0,0,11,0,0,0],
 "convert__time__derivative_8h.html":[4,0,0,7,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "dummy__render__engine_8h.html":[4,0,0,4,5,0],
 "dummy__value_8h.html":[4,0,0,1,23],
 "dynamic__programming_8h.html":[4,0,0,11,1,1],
-"dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,11,1,1,2],
-"dynamic__programming_8h.html#gae068476fdb8f21578acb538f70ec3e14":[4,0,0,11,1,1,3],
-"eigen__autodiff__types_8h.html":[4,0,0,1,24]
+"dynamic__programming_8h.html#gaa8b65fac47fdb50bd891e36bae1cc7d6":[4,0,0,11,1,1,2]
 };
