@@ -18,5 +18,6 @@ var searchData=
   ['contextconstraintcalc',['ContextConstraintCalc',['../namespacedrake_1_1systems.html#afb8f89bae1d60315dd16a46224febd21',1,'drake::systems']]],
   ['continuousstateindex',['ContinuousStateIndex',['../namespacedrake_1_1systems.html#a180dfb39dc60232f4dacf555d1ed2582',1,'drake::systems']]],
   ['converterfunction',['ConverterFunction',['../classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34',1,'drake::systems::SystemScalarConverter']]],
+  ['convexsets',['ConvexSets',['../namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956',1,'drake::geometry::optimization']]],
   ['coordinates',['Coordinates',['../classdrake_1_1math_1_1_barycentric_mesh.html#a7ea41cbb48fc9d917b91e47c90775638',1,'drake::math::BarycentricMesh']]]
 ];

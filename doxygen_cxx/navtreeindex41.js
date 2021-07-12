@@ -1,16 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"group__systems.html#ga3e4e6a211dd145828511de57c117c5aa":[1,3,15],
-"group__technical__notes.html":[1,0],
-"group__templates.html":[1,0,5],
-"group__terminology__and__notation.html":[1,1],
-"group__visualization.html":[1,3,11],
-"group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f":[1,3,11,2],
-"group__visualization.html#gac7c07596e19e7537c3f08fd94ba8e153":[1,3,11,1],
-"gurobi__qp_8h.html":[4,0,0,10,21],
-"gurobi__qp_8h.html#a0a12ac8a773158c91a75d797b9191c70":[4,0,0,10,21,1],
-"gurobi__qp_8h.html#a447699fbd5eef5296f9fc14b34195ce8":[4,0,0,10,21,2],
-"gurobi__qp_8h.html#a814877dec98d6d4cf4dfe93f686a0e8c":[4,0,0,10,21,0],
 "gurobi__solver_8h.html":[4,0,0,10,22],
 "gyroscope_8h.html":[4,0,0,11,8,4],
 "hash_8h.html":[4,0,0,1,32],
@@ -249,5 +238,16 @@ var NAVTREEINDEX41 =
 "manipulation__station__hardware__interface_8h.html":[4,0,0,3,7,1],
 "manipulator__equation__constraint_8h.html":[4,0,0,8,6,3],
 "mass__damper__spring__analytical__solution_8h.html":[4,0,0,8,0,4,0],
-"math_2autodiff_8h.html":[4,0,0,7,0]
+"math_2autodiff_8h.html":[4,0,0,7,0],
+"math_2autodiff_8h.html#a04e58f14dcca01f3684a820cff4c61b0":[4,0,0,7,0,4],
+"math_2autodiff_8h.html#a2131d12e81399c3201b29118d59adc87":[4,0,0,7,0,2],
+"math_2autodiff_8h.html#a32d860f5fd00b3004e866af6f73a1362":[4,0,0,7,0,7],
+"math_2autodiff_8h.html#a6368b8ff52fa8c7df0b3548b77615363":[4,0,0,7,0,5],
+"math_2autodiff_8h.html#a65ee44eb97ff7373bd2b6b088b8390b6":[4,0,0,7,0,1],
+"math_2autodiff_8h.html#a6e5c76a80b6a785f91dd3e06200e3f83":[4,0,0,7,0,9],
+"math_2autodiff_8h.html#a7fc1b9bbef766b25c3e3684df19eee0c":[4,0,0,7,0,10],
+"math_2autodiff_8h.html#aaf276d6a032d9a1ec3ea0f0f29fc1111":[4,0,0,7,0,6],
+"math_2autodiff_8h.html#ab773f7c582bc83dd2f26c0965de1e427":[4,0,0,7,0,8],
+"math_2autodiff_8h.html#abdc21793a127ffbebcb28a2442123390":[4,0,0,7,0,3],
+"mathematical__program_8h.html":[4,0,0,10,28]
 };

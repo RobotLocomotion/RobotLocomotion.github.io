@@ -1,17 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"classdrake_1_1math_1_1_rotation_matrix.html#abcb263978b339adbbfb419ba422aef80":[3,0,0,7,14,32],
-"classdrake_1_1math_1_1_rotation_matrix.html#abd982e9a592eef1b86ff6db747f01098":[3,0,0,7,14,29],
-"classdrake_1_1math_1_1_rotation_matrix.html#ac5347f3aae9669cd2242300fb05104ef":[3,0,0,7,14,36],
-"classdrake_1_1math_1_1_rotation_matrix.html#ac804feef1db1925cdb41771475381a17":[3,0,0,7,14,17],
-"classdrake_1_1math_1_1_rotation_matrix.html#aceeffb4f32ea6d3eb8e17c2919d5cfe9":[3,0,0,7,14,30],
-"classdrake_1_1math_1_1_rotation_matrix.html#aeb8205e6418bc644739b23879344135b":[3,0,0,7,14,5],
-"classdrake_1_1math_1_1_rotation_matrix.html#af6346cc9235f2cedd86a802d0d4a8451":[3,0,0,7,14,22],
-"classdrake_1_1math_1_1_rotation_matrix.html#afa3f1ea791e60612a37e57dcf8b4187c":[3,0,0,7,14,31],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html":[1,2,0,0],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a0b7d46ac767f2268ee98b417dfebe34a":[1,2,0,0,2],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a1efb2de54a80607fd7cac4b6760071bc":[1,2,0,0,1],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62":[1,2,0,0,4],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a98fb2abd442bf1476402c2bc628828af":[1,2,0,0,5],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a9a29c3df53244b679800b206a5949f2b":[1,2,0,0,3],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#aaa11fd69bb834bc3695b005832bee7f8":[1,2,0,0,0],
@@ -249,5 +237,17 @@ var NAVTREEINDEX9 =
 "classdrake_1_1multibody_1_1_frame.html#a21a1267a3cceabc6d0bec7768cd6f2c7":[3,0,0,8,26,19],
 "classdrake_1_1multibody_1_1_frame.html#a2c96f5b61a2a9047007f24f74b2ad63f":[3,0,0,8,26,13],
 "classdrake_1_1multibody_1_1_frame.html#a2e26d78710628e036f86e991d3434d4b":[3,0,0,8,26,15],
-"classdrake_1_1multibody_1_1_frame.html#a306cd244c02c230ad6642efcdc5ba312":[3,0,0,8,26,11]
+"classdrake_1_1multibody_1_1_frame.html#a306cd244c02c230ad6642efcdc5ba312":[3,0,0,8,26,11],
+"classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332":[3,0,0,8,26,27],
+"classdrake_1_1multibody_1_1_frame.html#a4a070ee83deb89bd6cca65946a5f8f37":[3,0,0,8,26,20],
+"classdrake_1_1multibody_1_1_frame.html#a5d48b5a6c31b367eb3fff952fcefe648":[3,0,0,8,26,5],
+"classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22":[3,0,0,8,26,25],
+"classdrake_1_1multibody_1_1_frame.html#a652a1d7c4d9d502fffcec5b9d27dd3ec":[3,0,0,8,26,18],
+"classdrake_1_1multibody_1_1_frame.html#a6681a8def9431af1311063721c46fe14":[3,0,0,8,26,24],
+"classdrake_1_1multibody_1_1_frame.html#a693cd211e3eb5fc7d2ffdaa5af8b3e4a":[3,0,0,8,26,6],
+"classdrake_1_1multibody_1_1_frame.html#a72750ba8b4de6270d8625462a7453e85":[3,0,0,8,26,16],
+"classdrake_1_1multibody_1_1_frame.html#a823f61b343f8646b35b8035a6a1ee4a9":[3,0,0,8,26,8],
+"classdrake_1_1multibody_1_1_frame.html#a8a0a86b14a720059603e2529def64353":[3,0,0,8,26,2],
+"classdrake_1_1multibody_1_1_frame.html#a8d6b793a9b933ba18d670f763ca90eb4":[3,0,0,8,26,12],
+"classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361":[3,0,0,8,26,28]
 };

@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1optimiza
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::geometry::optimization Namespace Reference</div>  </div>
@@ -104,9 +105,6 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1geometry_1_1optimiza
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base class for defining a convex set.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a collection of owned <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> objects.  <a href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a polyhedral convex set using the half-space representation: <code>{x| A x ≤ b}</code>.  <a href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#details">More...</a><br /></td></tr>
@@ -124,19 +122,42 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A polytope described using the vertex representation.  <a href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a></td></tr>
+<tr class="memdesc:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the recommended container for passing a collection of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> instances.  <a href="#a3c7f9b75df3ac22becb7bb5cb03bf956">More...</a><br /></td></tr>
+<tr class="separator:a3c7f9b75df3ac22becb7bb5cb03bf956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a648b8ba350611eefa73db9327240049b"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a648b8ba350611eefa73db9327240049b">ConvexSetCloner</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other)</td></tr>
 <tr class="memdesc:a648b8ba350611eefa73db9327240049b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Implementation helper for <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a6982e731d7838abcf4dfd0f4821210f9" title="Creates a unique deep copy of this set.">ConvexSet::Clone</a>.  <a href="#a648b8ba350611eefa73db9327240049b">More...</a><br /></td></tr>
 <tr class="separator:a648b8ba350611eefa73db9327240049b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
+<tr class="memitem:gafd8111a93cb3461e05bec3477ee736f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">Iris</a> (const <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a> &amp;obstacles, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;domain, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a> &amp;options=<a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html">IrisOptions</a>())</td></tr>
 <tr class="memdesc:gafd8111a93cb3461e05bec3477ee736f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The IRIS (Iterative Region Inflation by Semidefinite programming) algorithm, as described in.  <a href="group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6">More...</a><br /></td></tr>
 <tr class="separator:gafd8111a93cb3461e05bec3477ee736f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad54a224f37c1a0dc86eaec300ef874af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_sets.html">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">MakeIrisObstacles</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;query_object, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
+<tr class="memitem:gad54a224f37c1a0dc86eaec300ef874af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">MakeIrisObstacles</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;query_object, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
 <tr class="memdesc:gad54a224f37c1a0dc86eaec300ef874af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> representations of obstacles for IRIS in 3D using the geometry from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>.  <a href="group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af">More...</a><br /></td></tr>
 <tr class="separator:gad54a224f37c1a0dc86eaec300ef874af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a3c7f9b75df3ac22becb7bb5cb03bf956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7f9b75df3ac22becb7bb5cb03bf956">&#9670;&nbsp;</a></span>ConvexSets</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::vector&lt;<a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&gt; &gt; <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html#a3c7f9b75df3ac22becb7bb5cb03bf956">ConvexSets</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides the recommended container for passing a collection of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html" title="Abstract base class for defining a convex set.">ConvexSet</a> instances. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a648b8ba350611eefa73db9327240049b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a648b8ba350611eefa73db9327240049b">&#9670;&nbsp;</a></span>ConvexSetCloner()</h2>
