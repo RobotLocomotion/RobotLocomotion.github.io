@@ -75,6 +75,7 @@ var searchData=
   ['_7einversekinematics',['~InverseKinematics',['../classdrake_1_1multibody_1_1_inverse_kinematics.html#a17e545f30ae2d1bf7fd15e14f6198fa9',1,'drake::multibody::InverseKinematics']]],
   ['_7eipoptsolver',['~IpoptSolver',['../classdrake_1_1solvers_1_1_ipopt_solver.html#ae3ba02c661d1f13cf2059642d34b5792',1,'drake::solvers::IpoptSolver']]],
   ['_7ejoint',['~Joint',['../classdrake_1_1multibody_1_1_joint.html#a957e1244b568a12cd191dd93c613a3c9',1,'drake::multibody::Joint']]],
+  ['_7el2normcost',['~L2NormCost',['../classdrake_1_1solvers_1_1_l2_norm_cost.html#acebf6030f544a5558f5530b22ef42d62',1,'drake::solvers::L2NormCost']]],
   ['_7elcminterfacesystem',['~LcmInterfaceSystem',['../classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html#a57794be791f7bb9fae7ed4fd42453315',1,'drake::systems::lcm::LcmInterfaceSystem']]],
   ['_7elcmlogplaybacksystem',['~LcmLogPlaybackSystem',['../classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html#a019504319572625c773bcc58967db1d8',1,'drake::systems::lcm::LcmLogPlaybackSystem']]],
   ['_7elcmpublishersystem',['~LcmPublisherSystem',['../classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a07b0cd6338cce59ac34ac8293f8741c3',1,'drake::systems::lcm::LcmPublisherSystem']]],

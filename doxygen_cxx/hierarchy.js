@@ -206,6 +206,7 @@ var hierarchy =
       ] ],
       [ "Cost", "classdrake_1_1solvers_1_1_cost.html", [
         [ "EvaluatorCost< EvaluatorType >", "classdrake_1_1solvers_1_1_evaluator_cost.html", null ],
+        [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html", null ],
         [ "LinearCost", "classdrake_1_1solvers_1_1_linear_cost.html", null ],
         [ "QuadraticCost", "classdrake_1_1solvers_1_1_quadratic_cost.html", null ],
         [ "EvaluatorCost< PolynomialEvaluator >", "classdrake_1_1solvers_1_1_evaluator_cost.html", [
@@ -571,8 +572,8 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
+    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],

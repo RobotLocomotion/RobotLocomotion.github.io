@@ -103,11 +103,14 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_value_produc
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ValueProducer computes an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> output based on a <a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a> input. </p>
+<p>This is commonly used for declaring output ports and cache entries.</p>
 <p>It provides two functions for that purpose:</p><ul>
 <li><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a2efe26650e3867a83766c7da14260ef5" title="Invokes the allocate function provided to the constructor.">Allocate()</a> returns new storage that is suitably typed to hold the output.</li>
 <li><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a9a4f2d22f653bb5cd0ba5af224cfaf58" title="Invokes the calc function provided to the constructor.">Calc()</a> takes a context as input and writes to an output pointer.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>At the moment, this class only serves to consolidate its two function objects within single class. In the future, we will add more convenient syntactic sugar in support of simpler callback functions. </dd></dl>
+<p>For example, given this example calculator lambda:</p>
+<div class="fragment"><div class="line">std::function calc = [](<span class="keyword">const</span> Context&lt;T&gt;&amp; context, std::string* output) {</div><div class="line">  *output = <a class="code" href="namespacedrake.html#a75fb496e078e67e4dcafd6ae9e624f30">std::to_string</a>(context.get_time());</div><div class="line">};</div></div><!-- fragment --><p>We can capture it into a producer and then call it:</p>
+<div class="fragment"><div class="line"><a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a> producer(calc);</div><div class="line">std::unique_ptr&lt;AbstractValue&gt; storage = producer.Allocate();</div><div class="line"><span class="keyword">const</span> LeafContext&lt;T&gt; context;</div><div class="line">producer.Calc(context, storage.get());</div><div class="line">EXPECT_THAT(storage-&gt;get_value&lt;std::string&gt;(), ::testing::StartsWith(<span class="stringliteral">&quot;0.0&quot;</span>));</div></div><!-- fragment --><p>Sugar is provided to create ValueProducer objects from function pointers that operate on un-erased types, so that the user can ignore the details of type erasure and Context&lt;T&gt; downcasting. Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
 </div>
 <p><code>#include &lt;drake/systems/framework/value_producer.h&gt;</code></p>
 <table class="memberdecls">
@@ -125,9 +128,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a37a48e32198e33c6e6e2a5eb82e7e501"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a> ()</td></tr>
 <tr class="memdesc:a37a48e32198e33c6e6e2a5eb82e7e501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an invalid object; calls to Allocate or Calc will throw.  <a href="#a37a48e32198e33c6e6e2a5eb82e7e501">More...</a><br /></td></tr>
 <tr class="separator:a37a48e32198e33c6e6e2a5eb82e7e501"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74eb4d5adf5946eb974a38c8183f5cda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a74eb4d5adf5946eb974a38c8183f5cda">ValueProducer</a> (<a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc)</td></tr>
-<tr class="memdesc:a74eb4d5adf5946eb974a38c8183f5cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an object that allocates and calculates using the given functors.  <a href="#a74eb4d5adf5946eb974a38c8183f5cda">More...</a><br /></td></tr>
-<tr class="separator:a74eb4d5adf5946eb974a38c8183f5cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58721f46775c64faf8620a927020ebc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a58721f46775c64faf8620a927020ebc2">~ValueProducer</a> ()</td></tr>
 <tr class="separator:a58721f46775c64faf8620a927020ebc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ca0e76fa665125f1e50bd1ed8dbd213"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a8ca0e76fa665125f1e50bd1ed8dbd213">is_valid</a> () const</td></tr>
@@ -148,6 +148,127 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a70b7b04855343c4e95da5080b15af7da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb6ef2afe451b542ce94b31fca6ae94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a1fb6ef2afe451b542ce94b31fca6ae94">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a1fb6ef2afe451b542ce94b31fca6ae94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Constructor overloads</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="ValueProducer_constructors"></a> Create a <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a> by providing it a with calculation callback and (if necessary) a way to allocate storage, in cases where the storage cannot be default constructed.</p>
+<p>In many cases, your calculator function would be a class member function like this: </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyClass {</div><div class="line">  <span class="keywordtype">void</span> MyCalc(<span class="keyword">const</span> Context&lt;T&gt;&amp; context, std::string* output)<span class="keyword"> const </span>{</div><div class="line">    *output = <a class="code" href="namespacedrake.html#a75fb496e078e67e4dcafd6ae9e624f30">std::to_string</a>(context.get_time());</div><div class="line">  }</div><div class="line">};</div></div><!-- fragment --><p> and wrapping it would look like this: </p><div class="fragment"><div class="line">MyClass my_class;</div><div class="line"><a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a> foo = <a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a>(&amp;my_class, &amp;MyClass::MyCalc);</div></div><!-- fragment --><p>If the type of the output value is cheap to copy, then the function may return it by-value, instead of as an output argument: </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyClass {</div><div class="line">  <span class="keywordtype">double</span> MyCalc(<span class="keyword">const</span> Context&lt;double&gt;&amp; context)<span class="keyword"> const </span>{</div><div class="line">    <span class="keywordflow">return</span> context.get_time();</div><div class="line">  }</div><div class="line">};</div><div class="line"></div><div class="line">MyClass my_class;</div><div class="line"><a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a> foo = <a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a>(&amp;my_class, &amp;MyClass::MyCalc);</div></div><!-- fragment --><p>If the type of the output is not default constructible, then you must provide <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a> with an example value to use for pre-allocation: </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyClass {</div><div class="line">  <span class="keywordtype">void</span> MyCalc(<span class="keyword">const</span> Context&lt;T&gt;&amp; context, BasicVector&lt;T&gt;* output)<span class="keyword"> const </span>{</div><div class="line">    output-&gt;get_mutable_value()[0] = context.get_time();</div><div class="line">  }</div><div class="line">};</div><div class="line"></div><div class="line">MyClass my_class;</div><div class="line">BasicVector&lt;T&gt; model_value(1);</div><div class="line"><a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a> foo = <a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a>(</div><div class="line">    &amp;my_class, model_value, &amp;MyClass::MyCalc);</div></div><!-- fragment --><p>In the rare case that you cannot provide an example value when creating the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a>, you may instead provide an allocation callback. Refer to more specific documentation below for an example.</p>
+<p>For ease of use, the constructor offers overloads to specify the allocate and calc functions.</p>
+<p>The permitted argument types to specify Calc are:</p>
+<ul>
+<li>(1) <code>calc</code> is a member function pointer with an output argument.</li>
+<li>(2) <code>calc</code> is a member function pointer with a return value †.</li>
+<li>(3) <code>calc</code> is a std::function with an output argument.</li>
+<li>(4) <code>calc</code> is a std::function with a return value †.</li>
+<li>(5) <code>calc</code> is a generic CalcCallback.</li>
+</ul>
+<p>† Do not use (2) nor (4) unless the return value is cheap to copy.</p>
+<p>The permitted argument types to specify Allocate are:</p>
+<ul>
+<li>(a) <code>allocate</code> is via the default constructor.</li>
+<li>(b) <code>allocate</code> is via user-supplied model_value.</li>
+<li>(c) <code>allocate</code> is a member function pointer.</li>
+<li>(d) <code>allocate</code> is a generic AllocateCallback.</li>
+</ul>
+<p>All combinations of (1..5) x (a..d) are permitted, except for (5a) because the output type cannot be inferred from a generic CalcCallback.</p>
+<p>All member function pointers must refer to member functions declared <em>const</em>.</p>
+<p>For <code>calc</code> types (3) and (4), to pass bare non-member function pointer instead of a lambda, you must explicitly convert the pointer to a <code>std::function</code>:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> MyCalc(<span class="keyword">const</span> Context&lt;T&gt;&amp; context, std::string* output) { ... }</div><div class="line"></div><div class="line"><a class="code" href="classdrake_1_1systems_1_1_value_producer.html#a37a48e32198e33c6e6e2a5eb82e7e501">ValueProducer</a> producer{std::function(&amp;MyCalc)};</div></div><!-- fragment --><p>The constructors take the following arguments, in order:</p>
+<ul>
+<li>The <code>instance</code> pointer (iff member function callback(s) are used).</li>
+<li>The <code>model_value</code> example or <code>allocate</code> callback (may be omitted).</li>
+<li>The <code>calc</code> callback (required).</li>
+</ul>
+<p>If either <code>allocate</code> or <code>calc</code> is a member function pointer, then the class <code>instance</code> to bind must be the first argument. This <code>instance</code> pointer is aliased by the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a>, so must outlive this object. (In practice, this happens automatically because the SomeClass <code>instance</code> will typically own all <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a> objects that call back into it.)</p>
+<p>The <code>model_value</code> and <code>allocate</code> callback may be omitted when the OutputType is default constructible; this is the most common case. The need for a custom <code>allocate</code> function (i.e., options c or d, above) is extremely rare; prefer to use the default constructor (option a) or model_value (option b) in almost all cases.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">SomeContext</td><td>the subclass of <a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a> required by the calc callback </td></tr>
+    <tr><td class="paramname">SomeOutput</td><td>the output type of the calc callback </td></tr>
+    <tr><td class="paramname">SomeClass</td><td>the static type of the class to receive the callback(s) </td></tr>
+    <tr><td class="paramname">SomeInstance</td><td>the type of the instance to receive the callback(s); must be castable into SomeClass</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any argument is null. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div></td></tr>
+<tr class="memitem:a65c1eb6ca885a75e413b03b7e1e56d7f"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a65c1eb6ca885a75e413b03b7e1e56d7f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a65c1eb6ca885a75e413b03b7e1e56d7f">ValueProducer</a> (const SomeInstance *instance, void(SomeClass::*calc)(const SomeContext &amp;, SomeOutput *) const)</td></tr>
+<tr class="memdesc:a65c1eb6ca885a75e413b03b7e1e56d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (1a).  <a href="#a65c1eb6ca885a75e413b03b7e1e56d7f">More...</a><br /></td></tr>
+<tr class="separator:a65c1eb6ca885a75e413b03b7e1e56d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a3c398eafd51a9db9822c7f261e232"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:af3a3c398eafd51a9db9822c7f261e232"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#af3a3c398eafd51a9db9822c7f261e232">ValueProducer</a> (const SomeInstance *instance, const SomeOutput &amp;model_value, void(SomeClass::*calc)(const SomeContext &amp;, SomeOutput *) const)</td></tr>
+<tr class="memdesc:af3a3c398eafd51a9db9822c7f261e232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (1b).  <a href="#af3a3c398eafd51a9db9822c7f261e232">More...</a><br /></td></tr>
+<tr class="separator:af3a3c398eafd51a9db9822c7f261e232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a06d103b5c91e1b390c1f6090e3e34e"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a8a06d103b5c91e1b390c1f6090e3e34e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a8a06d103b5c91e1b390c1f6090e3e34e">ValueProducer</a> (const SomeInstance *instance, std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*allocate)() const, void(SomeClass::*calc)(const SomeContext &amp;, SomeOutput *) const)</td></tr>
+<tr class="memdesc:a8a06d103b5c91e1b390c1f6090e3e34e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (1c).  <a href="#a8a06d103b5c91e1b390c1f6090e3e34e">More...</a><br /></td></tr>
+<tr class="separator:a8a06d103b5c91e1b390c1f6090e3e34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ba6c329027557ff2e69631a36862d4a"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a0ba6c329027557ff2e69631a36862d4a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a0ba6c329027557ff2e69631a36862d4a">ValueProducer</a> (const SomeInstance *instance, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, void(SomeClass::*calc)(const SomeContext &amp;, SomeOutput *) const)</td></tr>
+<tr class="separator:a0ba6c329027557ff2e69631a36862d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a135a073f26ba8996ba7b9a2189728508"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a135a073f26ba8996ba7b9a2189728508"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a135a073f26ba8996ba7b9a2189728508">ValueProducer</a> (const SomeInstance *instance, SomeOutput(SomeClass::*calc)(const SomeContext &amp;) const)</td></tr>
+<tr class="memdesc:a135a073f26ba8996ba7b9a2189728508"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (2a).  <a href="#a135a073f26ba8996ba7b9a2189728508">More...</a><br /></td></tr>
+<tr class="separator:a135a073f26ba8996ba7b9a2189728508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50e361ef4c709cd7903d9a5e9464bfc1"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a50e361ef4c709cd7903d9a5e9464bfc1"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a50e361ef4c709cd7903d9a5e9464bfc1">ValueProducer</a> (const SomeInstance *instance, const SomeOutput &amp;model_value, SomeOutput(SomeClass::*calc)(const SomeContext &amp;) const)</td></tr>
+<tr class="memdesc:a50e361ef4c709cd7903d9a5e9464bfc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (2b).  <a href="#a50e361ef4c709cd7903d9a5e9464bfc1">More...</a><br /></td></tr>
+<tr class="separator:a50e361ef4c709cd7903d9a5e9464bfc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e64b07c1ad09e85a4a5fab86d7147a"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a44e64b07c1ad09e85a4a5fab86d7147a"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a44e64b07c1ad09e85a4a5fab86d7147a">ValueProducer</a> (const SomeInstance *instance, std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*allocate)() const, SomeOutput(SomeClass::*calc)(const SomeContext &amp;) const)</td></tr>
+<tr class="memdesc:a44e64b07c1ad09e85a4a5fab86d7147a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (2c).  <a href="#a44e64b07c1ad09e85a4a5fab86d7147a">More...</a><br /></td></tr>
+<tr class="separator:a44e64b07c1ad09e85a4a5fab86d7147a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4166ab7527fa4c7eab6bc89454e8b400"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a4166ab7527fa4c7eab6bc89454e8b400"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4166ab7527fa4c7eab6bc89454e8b400">ValueProducer</a> (const SomeInstance *instance, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, SomeOutput(SomeClass::*calc)(const SomeContext &amp;) const)</td></tr>
+<tr class="memdesc:a4166ab7527fa4c7eab6bc89454e8b400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (2d).  <a href="#a4166ab7527fa4c7eab6bc89454e8b400">More...</a><br /></td></tr>
+<tr class="separator:a4166ab7527fa4c7eab6bc89454e8b400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa519e63ccfbde7fbd77e22d01459f613"><td class="memTemplParams" colspan="2">template&lt;typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:aa519e63ccfbde7fbd77e22d01459f613"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#aa519e63ccfbde7fbd77e22d01459f613">ValueProducer</a> (std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt; calc)</td></tr>
+<tr class="memdesc:aa519e63ccfbde7fbd77e22d01459f613"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (3a).  <a href="#aa519e63ccfbde7fbd77e22d01459f613">More...</a><br /></td></tr>
+<tr class="separator:aa519e63ccfbde7fbd77e22d01459f613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2c8899b6e32b9e066d86d7b5fbfa539"><td class="memTemplParams" colspan="2">template&lt;typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:ae2c8899b6e32b9e066d86d7b5fbfa539"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ae2c8899b6e32b9e066d86d7b5fbfa539">ValueProducer</a> (const SomeOutput &amp;model_value, std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt; calc)</td></tr>
+<tr class="memdesc:ae2c8899b6e32b9e066d86d7b5fbfa539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (3b).  <a href="#ae2c8899b6e32b9e066d86d7b5fbfa539">More...</a><br /></td></tr>
+<tr class="separator:ae2c8899b6e32b9e066d86d7b5fbfa539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39685ab5b27e68f5236bd779c388546"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:ac39685ab5b27e68f5236bd779c388546"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ac39685ab5b27e68f5236bd779c388546">ValueProducer</a> (const SomeInstance *instance, std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*allocate)() const, std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt; calc)</td></tr>
+<tr class="memdesc:ac39685ab5b27e68f5236bd779c388546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (3c).  <a href="#ac39685ab5b27e68f5236bd779c388546">More...</a><br /></td></tr>
+<tr class="separator:ac39685ab5b27e68f5236bd779c388546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b455919faa9e40dee7085e285fa6a3"><td class="memTemplParams" colspan="2">template&lt;typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a65b455919faa9e40dee7085e285fa6a3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a65b455919faa9e40dee7085e285fa6a3">ValueProducer</a> (<a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt; calc)</td></tr>
+<tr class="memdesc:a65b455919faa9e40dee7085e285fa6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (3d).  <a href="#a65b455919faa9e40dee7085e285fa6a3">More...</a><br /></td></tr>
+<tr class="separator:a65b455919faa9e40dee7085e285fa6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcd71ed3b0b0d71223b07f82b8586e71"><td class="memTemplParams" colspan="2">template&lt;typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:abcd71ed3b0b0d71223b07f82b8586e71"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#abcd71ed3b0b0d71223b07f82b8586e71">ValueProducer</a> (std::function&lt; SomeOutput(const SomeContext &amp;)&gt; calc)</td></tr>
+<tr class="memdesc:abcd71ed3b0b0d71223b07f82b8586e71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (4a).  <a href="#abcd71ed3b0b0d71223b07f82b8586e71">More...</a><br /></td></tr>
+<tr class="separator:abcd71ed3b0b0d71223b07f82b8586e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd69f8e0e4471d50579a3e2fe55551b"><td class="memTemplParams" colspan="2">template&lt;typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:afbd69f8e0e4471d50579a3e2fe55551b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#afbd69f8e0e4471d50579a3e2fe55551b">ValueProducer</a> (const SomeOutput &amp;model_value, std::function&lt; SomeOutput(const SomeContext &amp;)&gt; calc)</td></tr>
+<tr class="memdesc:afbd69f8e0e4471d50579a3e2fe55551b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (4b).  <a href="#afbd69f8e0e4471d50579a3e2fe55551b">More...</a><br /></td></tr>
+<tr class="separator:afbd69f8e0e4471d50579a3e2fe55551b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b615f1e89450ff74cd425ddc864c46f"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a7b615f1e89450ff74cd425ddc864c46f"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a7b615f1e89450ff74cd425ddc864c46f">ValueProducer</a> (const SomeInstance *instance, std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*allocate)() const, std::function&lt; SomeOutput(const SomeContext &amp;)&gt; calc)</td></tr>
+<tr class="memdesc:a7b615f1e89450ff74cd425ddc864c46f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (4c).  <a href="#a7b615f1e89450ff74cd425ddc864c46f">More...</a><br /></td></tr>
+<tr class="separator:a7b615f1e89450ff74cd425ddc864c46f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b211916a59d93d6c9667a40561e7157"><td class="memTemplParams" colspan="2">template&lt;typename SomeContext , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a8b211916a59d93d6c9667a40561e7157"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a8b211916a59d93d6c9667a40561e7157">ValueProducer</a> (<a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, std::function&lt; SomeOutput(const SomeContext &amp;)&gt; calc)</td></tr>
+<tr class="memdesc:a8b211916a59d93d6c9667a40561e7157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (4d).  <a href="#a8b211916a59d93d6c9667a40561e7157">More...</a><br /></td></tr>
+<tr class="separator:a8b211916a59d93d6c9667a40561e7157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7086fc8a4e3feac182df7564855bfdaf"><td class="memTemplParams" colspan="2">template&lt;typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a7086fc8a4e3feac182df7564855bfdaf"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a7086fc8a4e3feac182df7564855bfdaf">ValueProducer</a> (const SomeOutput &amp;model_value, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc, std::enable_if_t&lt;!std::is_convertible_v&lt; SomeOutput, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> &gt;&gt; *=0)</td></tr>
+<tr class="memdesc:a7086fc8a4e3feac182df7564855bfdaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (5b).  <a href="#a7086fc8a4e3feac182df7564855bfdaf">More...</a><br /></td></tr>
+<tr class="separator:a7086fc8a4e3feac182df7564855bfdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51474bff3a734ddb28e1dcdca9200fb3"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeOutput &gt; </td></tr>
+<tr class="memitem:a51474bff3a734ddb28e1dcdca9200fb3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a51474bff3a734ddb28e1dcdca9200fb3">ValueProducer</a> (const SomeInstance *instance, std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*allocate)() const, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc)</td></tr>
+<tr class="memdesc:a51474bff3a734ddb28e1dcdca9200fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (5c).  <a href="#a51474bff3a734ddb28e1dcdca9200fb3">More...</a><br /></td></tr>
+<tr class="separator:a51474bff3a734ddb28e1dcdca9200fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74eb4d5adf5946eb974a38c8183f5cda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a74eb4d5adf5946eb974a38c8183f5cda">ValueProducer</a> (<a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc)</td></tr>
+<tr class="memdesc:a74eb4d5adf5946eb974a38c8183f5cda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (5d).  <a href="#a74eb4d5adf5946eb974a38c8183f5cda">More...</a><br /></td></tr>
+<tr class="separator:a74eb4d5adf5946eb974a38c8183f5cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -192,7 +313,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab69e078e5a7d69ac4da04a8d2bc453e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab69e078e5a7d69ac4da04a8d2bc453e8">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab69e078e5a7d69ac4da04a8d2bc453e8">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[1/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +339,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a70b7b04855343c4e95da5080b15af7da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70b7b04855343c4e95da5080b15af7da">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b7b04855343c4e95da5080b15af7da">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[2/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +365,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a37a48e32198e33c6e6e2a5eb82e7e501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37a48e32198e33c6e6e2a5eb82e7e501">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a48e32198e33c6e6e2a5eb82e7e501">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[3/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,8 +383,619 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a65c1eb6ca885a75e413b03b7e1e56d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c1eb6ca885a75e413b03b7e1e56d7f">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[4/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(SomeClass::*)(const SomeContext &amp;, SomeOutput *) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (1a). </p>
+<p>This is the best choice. Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="af3a3c398eafd51a9db9822c7f261e232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a3c398eafd51a9db9822c7f261e232">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[5/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SomeOutput &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(SomeClass::*)(const SomeContext &amp;, SomeOutput *) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (1b). </p>
+<p>This is the second-best choice. Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a8a06d103b5c91e1b390c1f6090e3e34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a06d103b5c91e1b390c1f6090e3e34e">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[6/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*)() const&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(SomeClass::*)(const SomeContext &amp;, SomeOutput *) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (1c). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a0ba6c329027557ff2e69631a36862d4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba6c329027557ff2e69631a36862d4a">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[7/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a>&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(SomeClass::*)(const SomeContext &amp;, SomeOutput *) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a135a073f26ba8996ba7b9a2189728508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a135a073f26ba8996ba7b9a2189728508">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[8/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SomeOutput(SomeClass::*)(const SomeContext &amp;) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (2a). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a50e361ef4c709cd7903d9a5e9464bfc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50e361ef4c709cd7903d9a5e9464bfc1">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[9/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SomeOutput &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SomeOutput(SomeClass::*)(const SomeContext &amp;) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (2b). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a44e64b07c1ad09e85a4a5fab86d7147a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e64b07c1ad09e85a4a5fab86d7147a">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[10/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*)() const&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SomeOutput(SomeClass::*)(const SomeContext &amp;) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (2c). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a4166ab7527fa4c7eab6bc89454e8b400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4166ab7527fa4c7eab6bc89454e8b400">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[11/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a>&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SomeOutput(SomeClass::*)(const SomeContext &amp;) const&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (2d). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="aa519e63ccfbde7fbd77e22d01459f613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa519e63ccfbde7fbd77e22d01459f613">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[12/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload (3a). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="ae2c8899b6e32b9e066d86d7b5fbfa539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2c8899b6e32b9e066d86d7b5fbfa539">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[13/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeOutput &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (3b). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="ac39685ab5b27e68f5236bd779c388546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39685ab5b27e68f5236bd779c388546">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[14/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*)() const&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (3c). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a65b455919faa9e40dee7085e285fa6a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b455919faa9e40dee7085e285fa6a3">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[15/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a>&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(const SomeContext &amp;, SomeOutput *)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (3d). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="abcd71ed3b0b0d71223b07f82b8586e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcd71ed3b0b0d71223b07f82b8586e71">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[16/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; SomeOutput(const SomeContext &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overload (4a). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="afbd69f8e0e4471d50579a3e2fe55551b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbd69f8e0e4471d50579a3e2fe55551b">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[17/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeOutput &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; SomeOutput(const SomeContext &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (4b). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a7b615f1e89450ff74cd425ddc864c46f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b615f1e89450ff74cd425ddc864c46f">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[18/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*)() const&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; SomeOutput(const SomeContext &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (4c). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a8b211916a59d93d6c9667a40561e7157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b211916a59d93d6c9667a40561e7157">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[19/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a>&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; SomeOutput(const SomeContext &amp;)&gt;&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (4d). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a7086fc8a4e3feac182df7564855bfdaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7086fc8a4e3feac182df7564855bfdaf">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[20/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeOutput &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a>&#160;</td>
+          <td class="paramname"><em>calc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::enable_if_t&lt;!std::is_convertible_v&lt; SomeOutput, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> &gt;&gt; *&#160;</td>
+          <td class="paramname"> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (5b). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
+<a id="a51474bff3a734ddb28e1dcdca9200fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51474bff3a734ddb28e1dcdca9200fb3">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[21/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const SomeInstance *&#160;</td>
+          <td class="paramname"><em>instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*)() const&#160;</td>
+          <td class="paramname"><em>allocate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a>&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overload (5c). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
+
+</div>
+</div>
 <a id="a74eb4d5adf5946eb974a38c8183f5cda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a74eb4d5adf5946eb974a38c8183f5cda">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a74eb4d5adf5946eb974a38c8183f5cda">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[22/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,13 +1020,8 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates an object that allocates and calculates using the given functors. </p>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if either argument is nullptr. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Overload (5d). </p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#ValueProducer_constructors">Constructor overloads</a> for details. </p>
 
 </div>
 </div>

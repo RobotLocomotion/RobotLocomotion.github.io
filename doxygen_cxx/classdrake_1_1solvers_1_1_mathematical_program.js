@@ -201,6 +201,7 @@ var classdrake_1_1solvers_1_1_mathematical_program =
     [ "SetSolverOptions", "classdrake_1_1solvers_1_1_mathematical_program.html#aed5ce186e378a8fbf9f0924b2e55994c", null ],
     [ "SetVariableScaling", "classdrake_1_1solvers_1_1_mathematical_program.html#af4b4542d7067f6d60ea801b3b00c591f", null ],
     [ "solver_options", "classdrake_1_1solvers_1_1_mathematical_program.html#a4737cb6ed52094f3d292e0ed4ca187da", null ],
+    [ "to_string", "classdrake_1_1solvers_1_1_mathematical_program.html#aac993ecccd3d88aafefb6b8e3caa1dee", null ],
     [ "visualization_callbacks", "classdrake_1_1solvers_1_1_mathematical_program.html#a744f8ed184bc9260b5970f7b8e12812a", null ],
     [ "kGlobalInfeasibleCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a78994b92c87719287528546dc12538bb", null ],
     [ "kUnboundedCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ab953e201d71c0ce608e7c95607a4f256", null ]

@@ -128,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa73c34779cac8f3d622aa353c8212d38"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa73c34779cac8f3d622aa353c8212d38">Clone</a> () const</td></tr>
 <tr class="memdesc:aa73c34779cac8f3d622aa353c8212d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clones an optimization program.  <a href="#aa73c34779cac8f3d622aa353c8212d38">More...</a><br /></td></tr>
 <tr class="separator:aa73c34779cac8f3d622aa353c8212d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aac993ecccd3d88aafefb6b8e3caa1dee">to_string</a> () const</td></tr>
+<tr class="memdesc:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns string representation of this program, listing the decision variables, costs, and constraints.  <a href="#aac993ecccd3d88aafefb6b8e3caa1dee">More...</a><br /></td></tr>
+<tr class="separator:aac993ecccd3d88aafefb6b8e3caa1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53949966a66a6f53ba90596fc5a439ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a53949966a66a6f53ba90596fc5a439ef">NewContinuousVariables</a> (<a class="el" href="classint.html">int</a> rows, const std::string &amp;name=&quot;x&quot;)</td></tr>
 <tr class="memdesc:a53949966a66a6f53ba90596fc5a439ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds continuous variables, appending them to an internal vector of any existing vars.  <a href="#a53949966a66a6f53ba90596fc5a439ef">More...</a><br /></td></tr>
 <tr class="separator:a53949966a66a6f53ba90596fc5a439ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -7269,6 +7272,26 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 </div><div class="memdoc">
 
 <p>Returns the solver options stored inside <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. </p>
+
+</div>
+</div>
+<a id="aac993ecccd3d88aafefb6b8e3caa1dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac993ecccd3d88aafefb6b8e3caa1dee">&#9670;&nbsp;</a></span>to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string to_string </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns string representation of this program, listing the decision variables, costs, and constraints. </p>
+<p>Note that by default, we do not require variables to have unique names. Providing useful variable names and calling Evaluator::set_description() to describe the costs and constraints can dramatically improve the readability of the output. See the tutorial <code>debug_mathematical_program.ipynb</code> for more information. </p>
 
 </div>
 </div>

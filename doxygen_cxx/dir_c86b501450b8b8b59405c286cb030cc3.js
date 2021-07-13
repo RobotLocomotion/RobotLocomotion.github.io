@@ -51,12 +51,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "linear_system_solver.h", "linear__system__solver_8h.html", [
       [ "LinearSystemSolver", "classdrake_1_1solvers_1_1_linear_system_solver.html", "classdrake_1_1solvers_1_1_linear_system_solver" ]
     ] ],
-    [ "mathematical_program.h", "mathematical__program_8h.html", [
-      [ "NewVariableNames", "structdrake_1_1solvers_1_1_new_variable_names.html", null ],
-      [ "NewVariableNames< Size >", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4" ],
-      [ "NewVariableNames< Rows, Cols >", "structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html", null ],
-      [ "NewSymmetricVariableNames", "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html", null ]
-    ] ],
+    [ "mathematical_program.h", "mathematical__program_8h.html", "mathematical__program_8h" ],
     [ "mathematical_program_doxygen.h", "mathematical__program__doxygen_8h.html", null ],
     [ "mathematical_program_result.h", "mathematical__program__result_8h.html", "mathematical__program__result_8h" ],
     [ "minimum_value_constraint.h", "minimum__value__constraint_8h.html", "minimum__value__constraint_8h" ],

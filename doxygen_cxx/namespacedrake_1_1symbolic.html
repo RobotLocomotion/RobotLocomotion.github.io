@@ -737,6 +737,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a2196a9e544a94c2e7c277b18c7b7716b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2196a9e544a94c2e7c277b18c7b7716b">is_variable</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;c)</td></tr>
 <tr class="memdesc:a2196a9e544a94c2e7c277b18c7b7716b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>c</code> is a variable expression.  <a href="#a2196a9e544a94c2e7c277b18c7b7716b">More...</a><br /></td></tr>
 <tr class="separator:a2196a9e544a94c2e7c277b18c7b7716b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac919050a36dacd7f943da0813c91f400"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac919050a36dacd7f943da0813c91f400">is_unary</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;c)</td></tr>
+<tr class="memdesc:ac919050a36dacd7f943da0813c91f400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>c</code> is a unary expression.  <a href="#ac919050a36dacd7f943da0813c91f400">More...</a><br /></td></tr>
+<tr class="separator:ac919050a36dacd7f943da0813c91f400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82da118fd73ba6ccc41e3eb2f00125b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab82da118fd73ba6ccc41e3eb2f00125b">is_binary</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;c)</td></tr>
+<tr class="memdesc:ab82da118fd73ba6ccc41e3eb2f00125b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>c</code> is a binary expression.  <a href="#ab82da118fd73ba6ccc41e3eb2f00125b">More...</a><br /></td></tr>
+<tr class="separator:ab82da118fd73ba6ccc41e3eb2f00125b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9dfc929a3e771ece5e5d20312e96abd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae9dfc929a3e771ece5e5d20312e96abd">is_addition</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;c)</td></tr>
 <tr class="memdesc:ae9dfc929a3e771ece5e5d20312e96abd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>c</code> is an addition expression.  <a href="#ae9dfc929a3e771ece5e5d20312e96abd">More...</a><br /></td></tr>
 <tr class="separator:ae9dfc929a3e771ece5e5d20312e96abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -809,90 +815,6 @@ Functions</h2></td></tr>
 <tr class="memitem:aa47a95b03c275d9687461839c5612472"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aa47a95b03c275d9687461839c5612472">is_uninterpreted_function</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;c)</td></tr>
 <tr class="memdesc:aa47a95b03c275d9687461839c5612472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if <code>c</code> is an uninterpreted-function expression.  <a href="#aa47a95b03c275d9687461839c5612472">More...</a><br /></td></tr>
 <tr class="separator:aa47a95b03c275d9687461839c5612472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2708aa3cdfbd35a6c8dfdf846102093"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html">ExpressionConstant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af2708aa3cdfbd35a6c8dfdf846102093">to_constant</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:af2708aa3cdfbd35a6c8dfdf846102093"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionConstant&gt;</code>.  <a href="#af2708aa3cdfbd35a6c8dfdf846102093">More...</a><br /></td></tr>
-<tr class="separator:af2708aa3cdfbd35a6c8dfdf846102093"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fb2ff65bada4e39d74027f409d240e6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0fb2ff65bada4e39d74027f409d240e6">to_variable</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a0fb2ff65bada4e39d74027f409d240e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionVar&gt;</code>.  <a href="#a0fb2ff65bada4e39d74027f409d240e6">More...</a><br /></td></tr>
-<tr class="separator:a0fb2ff65bada4e39d74027f409d240e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a765d0812ec1409b35dd5a483d6d8e145"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a765d0812ec1409b35dd5a483d6d8e145">to_unary</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a765d0812ec1409b35dd5a483d6d8e145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;UnaryExpressionCell&gt;</code>.  <a href="#a765d0812ec1409b35dd5a483d6d8e145">More...</a><br /></td></tr>
-<tr class="separator:a765d0812ec1409b35dd5a483d6d8e145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9e480e796a36c2988ef23e83f24a08"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aee9e480e796a36c2988ef23e83f24a08">to_binary</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:aee9e480e796a36c2988ef23e83f24a08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;BinaryExpressionCell&gt;</code>.  <a href="#aee9e480e796a36c2988ef23e83f24a08">More...</a><br /></td></tr>
-<tr class="separator:aee9e480e796a36c2988ef23e83f24a08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aee978a40d6518b2821b2c1a91f43b6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html">ExpressionAdd</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6aee978a40d6518b2821b2c1a91f43b6">to_addition</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a6aee978a40d6518b2821b2c1a91f43b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAdd&gt;</code>.  <a href="#a6aee978a40d6518b2821b2c1a91f43b6">More...</a><br /></td></tr>
-<tr class="separator:a6aee978a40d6518b2821b2c1a91f43b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf591075325809961d0975a0bad30a0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7cf591075325809961d0975a0bad30a0">to_multiplication</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a7cf591075325809961d0975a0bad30a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionMul&gt;</code>.  <a href="#a7cf591075325809961d0975a0bad30a0">More...</a><br /></td></tr>
-<tr class="separator:a7cf591075325809961d0975a0bad30a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66792167f2936394301f9322b77104f8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html">ExpressionDiv</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a66792167f2936394301f9322b77104f8">to_division</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a66792167f2936394301f9322b77104f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionDiv&gt;</code>.  <a href="#a66792167f2936394301f9322b77104f8">More...</a><br /></td></tr>
-<tr class="separator:a66792167f2936394301f9322b77104f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42be92856b50af12f40ccffe4a8634da"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html">ExpressionLog</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a42be92856b50af12f40ccffe4a8634da">to_log</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a42be92856b50af12f40ccffe4a8634da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionLog&gt;</code>.  <a href="#a42be92856b50af12f40ccffe4a8634da">More...</a><br /></td></tr>
-<tr class="separator:a42be92856b50af12f40ccffe4a8634da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d2926554ca1c6ffd9e4a433c870eb3e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html">ExpressionExp</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0d2926554ca1c6ffd9e4a433c870eb3e">to_exp</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a0d2926554ca1c6ffd9e4a433c870eb3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionExp&gt;</code>.  <a href="#a0d2926554ca1c6ffd9e4a433c870eb3e">More...</a><br /></td></tr>
-<tr class="separator:a0d2926554ca1c6ffd9e4a433c870eb3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1daeae1984840b825c4a2a00bad31ac"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html">ExpressionAbs</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ac1daeae1984840b825c4a2a00bad31ac">to_abs</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:ac1daeae1984840b825c4a2a00bad31ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAbs&gt;</code>.  <a href="#ac1daeae1984840b825c4a2a00bad31ac">More...</a><br /></td></tr>
-<tr class="separator:ac1daeae1984840b825c4a2a00bad31ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce18aa6183f7c0c9109f6217fed8e69"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html">ExpressionSqrt</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6ce18aa6183f7c0c9109f6217fed8e69">to_sqrt</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a6ce18aa6183f7c0c9109f6217fed8e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionSqrt&gt;</code>.  <a href="#a6ce18aa6183f7c0c9109f6217fed8e69">More...</a><br /></td></tr>
-<tr class="separator:a6ce18aa6183f7c0c9109f6217fed8e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bd9338e5ca18182888de1ea5f5da1b9"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html">ExpressionPow</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0bd9338e5ca18182888de1ea5f5da1b9">to_pow</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a0bd9338e5ca18182888de1ea5f5da1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionPow&gt;</code>.  <a href="#a0bd9338e5ca18182888de1ea5f5da1b9">More...</a><br /></td></tr>
-<tr class="separator:a0bd9338e5ca18182888de1ea5f5da1b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f0ee9736a5612de981fc34c959b83a"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html">ExpressionSin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a63f0ee9736a5612de981fc34c959b83a">to_sin</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a63f0ee9736a5612de981fc34c959b83a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionSin&gt;</code>.  <a href="#a63f0ee9736a5612de981fc34c959b83a">More...</a><br /></td></tr>
-<tr class="separator:a63f0ee9736a5612de981fc34c959b83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abacb0e6cb526379b60fd156af4b527cf"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html">ExpressionCos</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#abacb0e6cb526379b60fd156af4b527cf">to_cos</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:abacb0e6cb526379b60fd156af4b527cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionCos&gt;</code>.  <a href="#abacb0e6cb526379b60fd156af4b527cf">More...</a><br /></td></tr>
-<tr class="separator:abacb0e6cb526379b60fd156af4b527cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af04f9840044b92df4e44eca238c8cd62"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html">ExpressionTan</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#af04f9840044b92df4e44eca238c8cd62">to_tan</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:af04f9840044b92df4e44eca238c8cd62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionTan&gt;</code>.  <a href="#af04f9840044b92df4e44eca238c8cd62">More...</a><br /></td></tr>
-<tr class="separator:af04f9840044b92df4e44eca238c8cd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec94d5786975e5d7a7e1b7946e4fcb3f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html">ExpressionAsin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#aec94d5786975e5d7a7e1b7946e4fcb3f">to_asin</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:aec94d5786975e5d7a7e1b7946e4fcb3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAsin&gt;</code>.  <a href="#aec94d5786975e5d7a7e1b7946e4fcb3f">More...</a><br /></td></tr>
-<tr class="separator:aec94d5786975e5d7a7e1b7946e4fcb3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ecd824b675e48cb348b880f5023673e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html">ExpressionAcos</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0ecd824b675e48cb348b880f5023673e">to_acos</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a0ecd824b675e48cb348b880f5023673e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAcos&gt;</code>.  <a href="#a0ecd824b675e48cb348b880f5023673e">More...</a><br /></td></tr>
-<tr class="separator:a0ecd824b675e48cb348b880f5023673e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4abe6ed64006a6caf5b8ffd016d9d564"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html">ExpressionAtan</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4abe6ed64006a6caf5b8ffd016d9d564">to_atan</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a4abe6ed64006a6caf5b8ffd016d9d564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAtan&gt;</code>.  <a href="#a4abe6ed64006a6caf5b8ffd016d9d564">More...</a><br /></td></tr>
-<tr class="separator:a4abe6ed64006a6caf5b8ffd016d9d564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7be1d5cbdfe80024dcbf36264504f720"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html">ExpressionAtan2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a7be1d5cbdfe80024dcbf36264504f720">to_atan2</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a7be1d5cbdfe80024dcbf36264504f720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAtan2&gt;</code>.  <a href="#a7be1d5cbdfe80024dcbf36264504f720">More...</a><br /></td></tr>
-<tr class="separator:a7be1d5cbdfe80024dcbf36264504f720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97fb68eaad141cc6177a44b2e77135f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html">ExpressionSinh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae97fb68eaad141cc6177a44b2e77135f">to_sinh</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:ae97fb68eaad141cc6177a44b2e77135f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionSinh&gt;</code>.  <a href="#ae97fb68eaad141cc6177a44b2e77135f">More...</a><br /></td></tr>
-<tr class="separator:ae97fb68eaad141cc6177a44b2e77135f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9e124af49dfeefbaecdb2b062413e40"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html">ExpressionCosh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ae9e124af49dfeefbaecdb2b062413e40">to_cosh</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:ae9e124af49dfeefbaecdb2b062413e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionCosh&gt;</code>.  <a href="#ae9e124af49dfeefbaecdb2b062413e40">More...</a><br /></td></tr>
-<tr class="separator:ae9e124af49dfeefbaecdb2b062413e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9539581f8f57306f69ae74a4e2b50a0b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html">ExpressionTanh</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a9539581f8f57306f69ae74a4e2b50a0b">to_tanh</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a9539581f8f57306f69ae74a4e2b50a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionTanh&gt;</code>.  <a href="#a9539581f8f57306f69ae74a4e2b50a0b">More...</a><br /></td></tr>
-<tr class="separator:a9539581f8f57306f69ae74a4e2b50a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe59d85af6a0957d2ffedf731cd2c518"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html">ExpressionMin</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#afe59d85af6a0957d2ffedf731cd2c518">to_min</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:afe59d85af6a0957d2ffedf731cd2c518"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionMin&gt;</code>.  <a href="#afe59d85af6a0957d2ffedf731cd2c518">More...</a><br /></td></tr>
-<tr class="separator:afe59d85af6a0957d2ffedf731cd2c518"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3ef10c460bfd3356304cfc4ddd45871"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html">ExpressionMax</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ad3ef10c460bfd3356304cfc4ddd45871">to_max</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:ad3ef10c460bfd3356304cfc4ddd45871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionMax&gt;</code>.  <a href="#ad3ef10c460bfd3356304cfc4ddd45871">More...</a><br /></td></tr>
-<tr class="separator:ad3ef10c460bfd3356304cfc4ddd45871"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b27dc7be5ef0b7ed9d9da76141fd06"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a67b27dc7be5ef0b7ed9d9da76141fd06">to_ceil</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a67b27dc7be5ef0b7ed9d9da76141fd06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionCeiling&gt;</code>.  <a href="#a67b27dc7be5ef0b7ed9d9da76141fd06">More...</a><br /></td></tr>
-<tr class="separator:a67b27dc7be5ef0b7ed9d9da76141fd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ca6d0b50c8894d1c59c94f738a86d8e"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html">ExpressionFloor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a1ca6d0b50c8894d1c59c94f738a86d8e">to_floor</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a1ca6d0b50c8894d1c59c94f738a86d8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionFloor&gt;</code>.  <a href="#a1ca6d0b50c8894d1c59c94f738a86d8e">More...</a><br /></td></tr>
-<tr class="separator:a1ca6d0b50c8894d1c59c94f738a86d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6913fad5224e9e1eab2396bdd20db92b"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html">ExpressionIfThenElse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6913fad5224e9e1eab2396bdd20db92b">to_if_then_else</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a6913fad5224e9e1eab2396bdd20db92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionIfThenElse&gt;</code>.  <a href="#a6913fad5224e9e1eab2396bdd20db92b">More...</a><br /></td></tr>
-<tr class="separator:a6913fad5224e9e1eab2396bdd20db92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de0c0fabeedb18688b94ce9d85a21d1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4de0c0fabeedb18688b94ce9d85a21d1">to_uninterpreted_function</a> (const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;expr_ptr)</td></tr>
-<tr class="memdesc:a4de0c0fabeedb18688b94ce9d85a21d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionUninterpretedFunction&gt;</code>.  <a href="#a4de0c0fabeedb18688b94ce9d85a21d1">More...</a><br /></td></tr>
-<tr class="separator:a4de0c0fabeedb18688b94ce9d85a21d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a61c45c20176e91159639186b26e35e"><td class="memTemplParams" colspan="2">template&lt;typename Result , typename Visitor , typename... Args&gt; </td></tr>
 <tr class="memitem:a0a61c45c20176e91159639186b26e35e"><td class="memTemplItemLeft" align="right" valign="top">Result&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a0a61c45c20176e91159639186b26e35e">VisitPolynomial</a> (Visitor *v, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e, Args &amp;&amp;... args)</td></tr>
 <tr class="memdesc:a0a61c45c20176e91159639186b26e35e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls visitor object <code>v</code> with a polynomial symbolic-expression <code>e</code>, and arguments <code>args</code>.  <a href="#a0a61c45c20176e91159639186b26e35e">More...</a><br /></td></tr>
@@ -3567,6 +3489,26 @@ More information about the C++'s conditional expression and ternary operator is 
 
 </div>
 </div>
+<a id="ab82da118fd73ba6ccc41e3eb2f00125b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82da118fd73ba6ccc41e3eb2f00125b">&#9670;&nbsp;</a></span>is_binary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drake::symbolic::is_binary </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if <code>c</code> is a binary expression. </p>
+
+</div>
+</div>
 <a id="a1525a5e26f678130b369bc1414d9891a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1525a5e26f678130b369bc1414d9891a">&#9670;&nbsp;</a></span>is_ceil() <span class="overload">[1/2]</span></h2>
 
@@ -5068,6 +5010,26 @@ More information about the C++'s conditional expression and ternary operator is 
 </div><div class="memdoc">
 
 <p>Checks if <code>e</code> is 2.0. </p>
+
+</div>
+</div>
+<a id="ac919050a36dacd7f943da0813c91f400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac919050a36dacd7f943da0813c91f400">&#9670;&nbsp;</a></span>is_unary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool drake::symbolic::is_unary </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &amp;&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if <code>c</code> is a unary expression. </p>
 
 </div>
 </div>
@@ -10253,38 +10215,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a40dd892a8b6492f65a8995abc666b3f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40dd892a8b6492f65a8995abc666b3f3">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedA&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedB&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename DerivedA::Scalar() &lt; typename DerivedB::Scalar()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, typename internal::RelationalOpTraits&lt;DerivedA, DerivedB&gt;::ReturnType&gt; drake::symbolic::operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const DerivedA &amp;&#160;</td>
-          <td class="paramname"><em>a1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const DerivedB &amp;&#160;</td>
-          <td class="paramname"><em>a2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than operator (&lt;). </p>
-
-</div>
-</div>
 <a id="a528367e2321df46235c2fed21eb0d433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10311,6 +10243,36 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
+
+</div>
+</div>
+<a id="a40dd892a8b6492f65a8995abc666b3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40dd892a8b6492f65a8995abc666b3f3">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedA&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedB&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename DerivedA::Scalar() &lt; typename DerivedB::Scalar()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, typename internal::RelationalOpTraits&lt;DerivedA, DerivedB&gt;::ReturnType&gt; drake::symbolic::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const DerivedA &amp;&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DerivedB &amp;&#160;</td>
+          <td class="paramname"><em>a2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than operator (&lt;). </p>
 
 </div>
 </div>
@@ -10636,38 +10598,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="ad0de903abee4a9e39dbc9148d86c770c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedA&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedB&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename DerivedA::Scalar() &lt;= typename DerivedB::Scalar()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, typename internal::RelationalOpTraits&lt;DerivedA, DerivedB&gt;::ReturnType&gt; drake::symbolic::operator&lt;= </td>
-          <td>(</td>
-          <td class="paramtype">const DerivedA &amp;&#160;</td>
-          <td class="paramname"><em>a1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const DerivedB &amp;&#160;</td>
-          <td class="paramname"><em>a2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than-or-equal operator (&lt;=). </p>
-
-</div>
-</div>
 <a id="a6718d0b755c47edc3fade14221574a03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6718d0b755c47edc3fade14221574a03">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6718d0b755c47edc3fade14221574a03">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10694,6 +10626,36 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than-or-equal operator (&lt;=). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt;= v)</code> has a symbolic formula <code>a(i, j) &lt;= v</code>. </p>
+
+</div>
+</div>
+<a id="ad0de903abee4a9e39dbc9148d86c770c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedA&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;typename Eigen::internal::traits&lt;DerivedB&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename DerivedA::Scalar() &lt;= typename DerivedB::Scalar()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, typename internal::RelationalOpTraits&lt;DerivedA, DerivedB&gt;::ReturnType&gt; drake::symbolic::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const DerivedA &amp;&#160;</td>
+          <td class="paramname"><em>a1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const DerivedB &amp;&#160;</td>
+          <td class="paramname"><em>a2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison of two arrays <code>a1</code> and <code>a2</code> using less-than-or-equal operator (&lt;=). </p>
 
 </div>
 </div>
@@ -11970,174 +11932,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="ac1daeae1984840b825c4a2a00bad31ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1daeae1984840b825c4a2a00bad31ac">&#9670;&nbsp;</a></span>to_abs()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html">ExpressionAbs</a>&gt; drake::symbolic::to_abs </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAbs&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_abs.html" title="Symbolic expression representing absolute value function.">ExpressionAbs</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a0ecd824b675e48cb348b880f5023673e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ecd824b675e48cb348b880f5023673e">&#9670;&nbsp;</a></span>to_acos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html">ExpressionAcos</a>&gt; drake::symbolic::to_acos </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAcos&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_acos.html" title="Symbolic expression representing arccosine function.">ExpressionAcos</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a6aee978a40d6518b2821b2c1a91f43b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6aee978a40d6518b2821b2c1a91f43b6">&#9670;&nbsp;</a></span>to_addition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html">ExpressionAdd</a>&gt; drake::symbolic::to_addition </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAdd&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_add.html" title="Symbolic expression representing an addition which is a sum of products.">ExpressionAdd</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="aec94d5786975e5d7a7e1b7946e4fcb3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec94d5786975e5d7a7e1b7946e4fcb3f">&#9670;&nbsp;</a></span>to_asin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html">ExpressionAsin</a>&gt; drake::symbolic::to_asin </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAsin&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_asin.html" title="Symbolic expression representing arcsine function.">ExpressionAsin</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a4abe6ed64006a6caf5b8ffd016d9d564"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4abe6ed64006a6caf5b8ffd016d9d564">&#9670;&nbsp;</a></span>to_atan()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html">ExpressionAtan</a>&gt; drake::symbolic::to_atan </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAtan&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_atan.html" title="Symbolic expression representing arctangent function.">ExpressionAtan</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a7be1d5cbdfe80024dcbf36264504f720"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7be1d5cbdfe80024dcbf36264504f720">&#9670;&nbsp;</a></span>to_atan2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html">ExpressionAtan2</a>&gt; drake::symbolic::to_atan2 </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionAtan2&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_atan2.html" title="Symbolic expression representing atan2 function (arctangent function with two arguments).">ExpressionAtan2</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="aee9e480e796a36c2988ef23e83f24a08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee9e480e796a36c2988ef23e83f24a08">&#9670;&nbsp;</a></span>to_binary()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html">BinaryExpressionCell</a>&gt; drake::symbolic::to_binary </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;BinaryExpressionCell&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_binary_expression_cell.html" title="Represents the base class for binary expressions.">BinaryExpressionCell</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a67b27dc7be5ef0b7ed9d9da76141fd06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67b27dc7be5ef0b7ed9d9da76141fd06">&#9670;&nbsp;</a></span>to_ceil()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html">ExpressionCeiling</a>&gt; drake::symbolic::to_ceil </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionCeiling&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_ceiling.html" title="Symbolic expression representing ceil function.">ExpressionCeiling</a></code>. </dd></dl>
-
-</div>
-</div>
 <a id="a180aa6c7637801b158099a87a59a4185"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a180aa6c7637801b158099a87a59a4185">&#9670;&nbsp;</a></span>to_conjunction()</h2>
 
@@ -12156,69 +11950,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaAnd&gt;</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>is_conjunction(*f_ptr)</code> is true. </dd></dl>
-
-</div>
-</div>
-<a id="af2708aa3cdfbd35a6c8dfdf846102093"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2708aa3cdfbd35a6c8dfdf846102093">&#9670;&nbsp;</a></span>to_constant()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html">ExpressionConstant</a>&gt; drake::symbolic::to_constant </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionConstant&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_constant.html" title="Symbolic expression representing a constant.">ExpressionConstant</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="abacb0e6cb526379b60fd156af4b527cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abacb0e6cb526379b60fd156af4b527cf">&#9670;&nbsp;</a></span>to_cos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html">ExpressionCos</a>&gt; drake::symbolic::to_cos </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionCos&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_cos.html" title="Symbolic expression representing cosine function.">ExpressionCos</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="ae9e124af49dfeefbaecdb2b062413e40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9e124af49dfeefbaecdb2b062413e40">&#9670;&nbsp;</a></span>to_cosh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html">ExpressionCosh</a>&gt; drake::symbolic::to_cosh </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionCosh&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_cosh.html" title="Symbolic expression representing hyperbolic cosine function.">ExpressionCosh</a></code>. </dd></dl>
 
 </div>
 </div>
@@ -12243,27 +11974,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a66792167f2936394301f9322b77104f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66792167f2936394301f9322b77104f8">&#9670;&nbsp;</a></span>to_division()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html">ExpressionDiv</a>&gt; drake::symbolic::to_division </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionDiv&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_div.html" title="Symbolic expression representing division.">ExpressionDiv</a></code>. </dd></dl>
-
-</div>
-</div>
 <a id="a10a6204418091c1fbf26c9d2ad03389f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10a6204418091c1fbf26c9d2ad03389f">&#9670;&nbsp;</a></span>to_equal_to()</h2>
 
@@ -12285,27 +11995,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a0d2926554ca1c6ffd9e4a433c870eb3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d2926554ca1c6ffd9e4a433c870eb3e">&#9670;&nbsp;</a></span>to_exp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html">ExpressionExp</a>&gt; drake::symbolic::to_exp </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionExp&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_exp.html" title="Symbolic expression representing exponentiation using the base of natural logarithms.">ExpressionExp</a></code>. </dd></dl>
-
-</div>
-</div>
 <a id="a1ba2673fe37620dcc2a3b06ab7b72bec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ba2673fe37620dcc2a3b06ab7b72bec">&#9670;&nbsp;</a></span>to_false()</h2>
 
@@ -12324,27 +12013,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaFalse&gt;</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>is_false(*f_ptr)</code> is true. </dd></dl>
-
-</div>
-</div>
-<a id="a1ca6d0b50c8894d1c59c94f738a86d8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ca6d0b50c8894d1c59c94f738a86d8e">&#9670;&nbsp;</a></span>to_floor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html">ExpressionFloor</a>&gt; drake::symbolic::to_floor </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionFloor&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_floor.html" title="Symbolic expression representing floor function.">ExpressionFloor</a></code>. </dd></dl>
 
 </div>
 </div>
@@ -12411,27 +12079,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a6913fad5224e9e1eab2396bdd20db92b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6913fad5224e9e1eab2396bdd20db92b">&#9670;&nbsp;</a></span>to_if_then_else()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html">ExpressionIfThenElse</a>&gt; drake::symbolic::to_if_then_else </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionIfThenElse&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_if_then_else.html" title="Symbolic expression representing if-then-else expression.">ExpressionIfThenElse</a></code>. </dd></dl>
-
-</div>
-</div>
 <a id="ad4f46f5ae1e9130eb9214a2ae0611f52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4f46f5ae1e9130eb9214a2ae0611f52">&#9670;&nbsp;</a></span>to_isnan()</h2>
 
@@ -12492,90 +12139,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaLeq&gt;</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>is_less_than_or_equal_to(*f_ptr)</code> is true. </dd></dl>
-
-</div>
-</div>
-<a id="a42be92856b50af12f40ccffe4a8634da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42be92856b50af12f40ccffe4a8634da">&#9670;&nbsp;</a></span>to_log()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html">ExpressionLog</a>&gt; drake::symbolic::to_log </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionLog&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_log.html" title="Symbolic expression representing logarithms.">ExpressionLog</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="ad3ef10c460bfd3356304cfc4ddd45871"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3ef10c460bfd3356304cfc4ddd45871">&#9670;&nbsp;</a></span>to_max()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html">ExpressionMax</a>&gt; drake::symbolic::to_max </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionMax&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_max.html" title="Symbolic expression representing max function.">ExpressionMax</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="afe59d85af6a0957d2ffedf731cd2c518"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe59d85af6a0957d2ffedf731cd2c518">&#9670;&nbsp;</a></span>to_min()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html">ExpressionMin</a>&gt; drake::symbolic::to_min </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionMin&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_min.html" title="Symbolic expression representing min function.">ExpressionMin</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a7cf591075325809961d0975a0bad30a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cf591075325809961d0975a0bad30a0">&#9670;&nbsp;</a></span>to_multiplication()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html">ExpressionMul</a>&gt; drake::symbolic::to_multiplication </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionMul&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_mul.html" title="Symbolic expression representing a multiplication of powers.">ExpressionMul</a></code>. </dd></dl>
 
 </div>
 </div>
@@ -12663,27 +12226,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a0bd9338e5ca18182888de1ea5f5da1b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bd9338e5ca18182888de1ea5f5da1b9">&#9670;&nbsp;</a></span>to_pow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html">ExpressionPow</a>&gt; drake::symbolic::to_pow </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionPow&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_pow.html" title="Symbolic expression representing power function.">ExpressionPow</a></code>. </dd></dl>
-
-</div>
-</div>
 <a id="a259612bbd9405f24d4ac3b60d54575e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a259612bbd9405f24d4ac3b60d54575e6">&#9670;&nbsp;</a></span>to_relational()</h2>
 
@@ -12702,111 +12244,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Casts <code>f_ptr</code> to <code>shared_ptr&lt;const RelationalFormulaCell&gt;</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>is_relational(*f_ptr)</code> is true. </dd></dl>
-
-</div>
-</div>
-<a id="a63f0ee9736a5612de981fc34c959b83a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63f0ee9736a5612de981fc34c959b83a">&#9670;&nbsp;</a></span>to_sin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html">ExpressionSin</a>&gt; drake::symbolic::to_sin </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionSin&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_sin.html" title="Symbolic expression representing sine function.">ExpressionSin</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="ae97fb68eaad141cc6177a44b2e77135f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae97fb68eaad141cc6177a44b2e77135f">&#9670;&nbsp;</a></span>to_sinh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html">ExpressionSinh</a>&gt; drake::symbolic::to_sinh </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionSinh&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_sinh.html" title="Symbolic expression representing hyperbolic sine function.">ExpressionSinh</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a6ce18aa6183f7c0c9109f6217fed8e69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ce18aa6183f7c0c9109f6217fed8e69">&#9670;&nbsp;</a></span>to_sqrt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html">ExpressionSqrt</a>&gt; drake::symbolic::to_sqrt </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionSqrt&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_sqrt.html" title="Symbolic expression representing square-root.">ExpressionSqrt</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="af04f9840044b92df4e44eca238c8cd62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af04f9840044b92df4e44eca238c8cd62">&#9670;&nbsp;</a></span>to_tan()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html">ExpressionTan</a>&gt; drake::symbolic::to_tan </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionTan&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_tan.html" title="Symbolic expression representing tangent function.">ExpressionTan</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a9539581f8f57306f69ae74a4e2b50a0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9539581f8f57306f69ae74a4e2b50a0b">&#9670;&nbsp;</a></span>to_tanh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html">ExpressionTanh</a>&gt; drake::symbolic::to_tanh </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionTanh&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_tanh.html" title="Symbolic expression representing hyperbolic tangent function.">ExpressionTanh</a></code>. </dd></dl>
 
 </div>
 </div>
@@ -12831,50 +12268,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a765d0812ec1409b35dd5a483d6d8e145"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a765d0812ec1409b35dd5a483d6d8e145">&#9670;&nbsp;</a></span>to_unary()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a>&gt; drake::symbolic::to_unary </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;UnaryExpressionCell&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html" title="Represents the base class for unary expressions.">UnaryExpressionCell</a></code>. </dd></dl>
-
-</div>
-</div>
-<a id="a4de0c0fabeedb18688b94ce9d85a21d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4de0c0fabeedb18688b94ce9d85a21d1">&#9670;&nbsp;</a></span>to_uninterpreted_function()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html">ExpressionUninterpretedFunction</a>&gt; drake::symbolic::to_uninterpreted_function </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionUninterpretedFunction&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_uninterpreted_function.html" title="Symbolic expression representing an uninterpreted function.">ExpressionUninterpretedFunction</a></code>. </dd></dl>
-
-</div>
-</div>
 <a id="a3b78dde9ca32fe1ee12cc232a9a4e85c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b78dde9ca32fe1ee12cc232a9a4e85c">&#9670;&nbsp;</a></span>to_variable() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b78dde9ca32fe1ee12cc232a9a4e85c">&#9670;&nbsp;</a></span>to_variable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -12891,27 +12286,6 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Casts <code>f_ptr</code> to <code>shared_ptr&lt;const FormulaVar&gt;</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>is_variable(*f_ptr)</code> is true. </dd></dl>
-
-</div>
-</div>
-<a id="a0fb2ff65bada4e39d74027f409d240e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fb2ff65bada4e39d74027f409d240e6">&#9670;&nbsp;</a></span>to_variable() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html">ExpressionVar</a>&gt; drake::symbolic::to_variable </td>
-          <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression_cell.html">ExpressionCell</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expr_ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Casts <code>expr_ptr</code> to <code>shared_ptr&lt;ExpressionVar&gt;</code>. </p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>*expr_ptr</code> is of <code><a class="el" href="classdrake_1_1symbolic_1_1_expression_var.html" title="Symbolic expression representing a variable.">ExpressionVar</a></code>. </dd></dl>
 
 </div>
 </div>

@@ -23,6 +23,7 @@ var namespacedrake_1_1solvers =
     [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", "structdrake_1_1solvers_1_1_gurobi_solver_details" ],
     [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", "classdrake_1_1solvers_1_1_ipopt_solver" ],
     [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", "structdrake_1_1solvers_1_1_ipopt_solver_details" ],
+    [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html", "classdrake_1_1solvers_1_1_l2_norm_cost" ],
     [ "LinearComplementarityConstraint", "classdrake_1_1solvers_1_1_linear_complementarity_constraint.html", "classdrake_1_1solvers_1_1_linear_complementarity_constraint" ],
     [ "LinearConstraint", "classdrake_1_1solvers_1_1_linear_constraint.html", "classdrake_1_1solvers_1_1_linear_constraint" ],
     [ "LinearCost", "classdrake_1_1solvers_1_1_linear_cost.html", "classdrake_1_1solvers_1_1_linear_cost" ],

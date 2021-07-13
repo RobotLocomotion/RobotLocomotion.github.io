@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['l2normcost',['L2NormCost',['../classdrake_1_1solvers_1_1_l2_norm_cost.html',1,'drake::solvers']]],
   ['label',['Label',['../classdrake_1_1systems_1_1sensors_1_1_label.html',1,'drake::systems::sensors']]],
   ['lcmimagearraytoimages',['LcmImageArrayToImages',['../classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html',1,'drake::systems::sensors']]],
   ['lcmimagetraits',['LcmImageTraits',['../structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html',1,'drake::systems::sensors']]],

@@ -175,6 +175,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_ipopt_solver_details.html">IpoptSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Ipopt solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_ipopt_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a cost of the form </p><p class="formulaDsp">
+\[ |Ax + b|₂ \]
+</p>
+<p>.  <a href="classdrake_1_1solvers_1_1_l2_norm_cost.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a constraint of the form:  <a href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -531,6 +537,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a1460b4c245321e57b234a724d774fc50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a1460b4c245321e57b234a724d774fc50">CreateBinaryCodeMatchConstraint</a> (const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &amp;code, const Eigen::Ref&lt; const Eigen::VectorXi &gt; &amp;expected, const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;match)</td></tr>
 <tr class="memdesc:a1460b4c245321e57b234a724d774fc50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create linear constraints such that, when these constraints are satisfied, match = 1 if and only if code == expected, otherwise match = 0.  <a href="#a1460b4c245321e57b234a724d774fc50">More...</a><br /></td></tr>
 <tr class="separator:a1460b4c245321e57b234a724d774fc50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0cd38a406880348f0c7fda298c66c2"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#abf0cd38a406880348f0c7fda298c66c2">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog)</td></tr>
+<tr class="separator:abf0cd38a406880348f0c7fda298c66c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a014d2838aa5fae12520da4ebf46005ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a014d2838aa5fae12520da4ebf46005ca">GetVariableValue</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, const std::optional&lt; std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c">symbolic::Variable::Id</a>, <a class="el" href="classint.html">int</a> &gt;&gt; &amp;variable_index, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;variable_values)</td></tr>
 <tr class="memdesc:a014d2838aa5fae12520da4ebf46005ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the value of a single variable <code>var</code> from <code>variable_values</code>.  <a href="#a014d2838aa5fae12520da4ebf46005ca">More...</a><br /></td></tr>
 <tr class="separator:a014d2838aa5fae12520da4ebf46005ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2729,7 +2737,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="a269b7066a168f80390ed6c496829ffcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a269b7066a168f80390ed6c496829ffcd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a269b7066a168f80390ed6c496829ffcd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2757,7 +2765,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="aed794af38e7da9270528fd2185861862"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed794af38e7da9270528fd2185861862">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed794af38e7da9270528fd2185861862">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2785,7 +2793,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="a5fa3414cee7c7ef46d8549673b42e344"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa3414cee7c7ef46d8549673b42e344">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fa3414cee7c7ef46d8549673b42e344">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2813,7 +2821,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="af22da0124afc42f58ae6e42e1a97b724"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af22da0124afc42f58ae6e42e1a97b724">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af22da0124afc42f58ae6e42e1a97b724">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2841,7 +2849,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="a3d9c2c72528e25a82932f03228d9c867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d9c2c72528e25a82932f03228d9c867">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[5/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d9c2c72528e25a82932f03228d9c867">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[5/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2869,7 +2877,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="aab097e2ddc8c73cd83a8ae0e801b9071"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab097e2ddc8c73cd83a8ae0e801b9071">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[6/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aab097e2ddc8c73cd83a8ae0e801b9071">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[6/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2899,7 +2907,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="ac9bfa8de91e5e18137f387121fb80933"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac9bfa8de91e5e18137f387121fb80933">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[7/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bfa8de91e5e18137f387121fb80933">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[7/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2927,7 +2935,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="ad58cede9876421e050ac44deee7804ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[8/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[8/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2955,7 +2963,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="a6c59daf7e576403f76128d2063303e9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2983,7 +2991,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div>
 </div>
 <a id="a82dddde3ce550bdc321a2240ab12cec0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82dddde3ce550bdc321a2240ab12cec0">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a82dddde3ce550bdc321a2240ab12cec0">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/11]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3009,6 +3017,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div><div class="memdoc">
 
 <p>Print out the evaluator. </p>
+
+</div>
+</div>
+<a id="abf0cd38a406880348f0c7fda298c66c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0cd38a406880348f0c7fda298c66c2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramname"><em>prog</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

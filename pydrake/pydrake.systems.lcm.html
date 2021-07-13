@@ -312,6 +312,44 @@ in C++ via <cite>BindCppSerializer</cite>.</li>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.systems.lcm.LcmScopeSystem">
+<em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">LcmScopeSystem</code><a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dl class="method">
+<dt id="pydrake.systems.lcm.LcmScopeSystem.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmScopeSystem</em>, <em>size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced.) Most users will use AddToBuilder instead of this
+constructor. On its own, this constructor does not publish anything.</p>
+<p>Creates a system with one input port and one output port. The input
+accepts a vector of the given <code class="docutils literal"><span class="pre">size</span></code>. The output produces an
+lcmt_scope message.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.lcm.LcmScopeSystem.AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], lcm: pydrake.lcm.DrakeLcmInterface, signal: pydrake.systems.framework.OutputPort_[float], channel: str, publish_period: float</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.systems.lcm.LcmScopeSystem.AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an LcmScopeSystem and LcmPublisherSystem to the given
+<code class="docutils literal"><span class="pre">builder</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
+<dd>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of <code class="docutils literal"><span class="pre">builder</span></code>. This will typically be an instance of
+an LcmInterfaceSystem that’s already been added to the
+<code class="docutils literal"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">signal</span></code>:</dt>
+<dd>The output port to be scoped. Must be an OutputPort of a system
+that’s already been added to the <code class="docutils literal"><span class="pre">builder</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dd>The LCM channel on which to publish.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Specifies how often messages will be published. If the period is
+zero, the LcmPublisherSystem will publish every step.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.systems.lcm.LcmSubscriberSystem">
 <em class="property">class </em><code class="descclassname">pydrake.systems.lcm.</code><code class="descname">LcmSubscriberSystem</code><a class="headerlink" href="#pydrake.systems.lcm.LcmSubscriberSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>

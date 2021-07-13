@@ -214,11 +214,10 @@ top-level documentation for <a class="reference internal" href="pydrake.math.htm
 <dl class="class">
 <dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_Constraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
+<dd><dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Constraint</em>, <em>arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint.evaluator">
@@ -290,6 +289,27 @@ top-level documentation for <a class="reference internal" href="pydrake.math.htm
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.variables">
 <code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_L2NormCost</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost.evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_L2NormCost</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.L2NormCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost.evaluator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost.variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_L2NormCost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost.variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -813,6 +833,54 @@ exponential cone.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.L2NormCost">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">L2NormCost</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.L2NormCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Cost" title="pydrake.solvers.mathematicalprogram.Cost"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Cost</span></code></a></p>
+<p>Implements a cost of the form</p>
+<div class="math">
+\[|Ax + b|₂\]</div>
+<p>.</p>
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.L2NormCost.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.L2NormCost, A: numpy.ndarray[numpy.float64[m, n]], b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.L2NormCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a cost of the form</p>
+<div class="math">
+\[|Ax + b|₂\]</div>
+<p>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dd>Linear term.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">b</span></code>:</dt>
+<dd>Constant term.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.L2NormCost.A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.L2NormCost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.L2NormCost.A" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.L2NormCost.b">
+<code class="descname">b</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.L2NormCost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.L2NormCost.b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.L2NormCost.UpdateCoefficients">
+<code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.L2NormCost, new_A: numpy.ndarray[numpy.float64[m, n]], new_b: numpy.ndarray[numpy.float64[m, 1]] = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.L2NormCost.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the coefficients of the cost. Note that the number of
+variables (columns of A) cannot change.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">new_A</span></code>:</dt>
+<dd>New linear term.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">new_b</span></code>:</dt>
+<dd>New constant term.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.solvers.mathematicalprogram.LinearComplementarityConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">LinearComplementarityConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
@@ -941,11 +1009,8 @@ Constraint::UpdateUpperBound, as in LinearConstraint.</p>
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearCost.UpdateCoefficients">
 <code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearCost, new_a: numpy.ndarray[numpy.float64[m, 1]], new_b: float = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearCost.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates the linear term, upper and lower bounds in the linear
-constraint. The updated constraint is</p>
-<div class="math">
-\[a_new' x + b_new\]</div>
-<p>. Note that the number of variables (number of cols) cannot change.</p>
+<dd><p>Updates the coefficients of the cost. Note that the number of
+variables (size of a) cannot change.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">new_a</span></code>:</dt>
 <dd>New linear term.</dd>
@@ -2250,6 +2315,64 @@ representing the bound decision variables.</dd>
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.bounding_box_constraints">
 <code class="descname">bounding_box_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::BoundingBoxConstraint&gt;]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.bounding_box_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for all bounding box constraints</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.CheckSatisfied">
+<code class="descname">CheckSatisfied</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.CheckSatisfied" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CheckSatisfied(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: drake::solvers::Binding&lt;drake::solvers::Constraint&gt;, prog_var_vals: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-06) -&gt; bool</li>
+</ol>
+<p>Evaluates CheckSatisfied for the constraint in <code class="docutils literal"><span class="pre">binding</span></code> using the
+value of ALL of the decision variables in this program.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the size of <code class="docutils literal"><span class="pre">prog_var_vals</span></code> is invalid.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>CheckSatisfied(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-06) -&gt; bool</li>
+</ol>
+<p>Evaluates CheckSatisfied for the all of the constraints in <code class="docutils literal"><span class="pre">binding</span></code>
+using the value of ALL of the decision variables in this program.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">true iff all of the constraints are satisfied.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the size of <code class="docutils literal"><span class="pre">prog_var_vals</span></code> is invalid.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.CheckSatisfiedAtInitialGuess">
+<code class="descname">CheckSatisfiedAtInitialGuess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.CheckSatisfiedAtInitialGuess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CheckSatisfiedAtInitialGuess(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: drake::solvers::Binding&lt;drake::solvers::Constraint&gt;, tol: float = 1e-06) -&gt; bool</li>
+</ol>
+<p>Evaluates CheckSatisfied for the constraint in <code class="docutils literal"><span class="pre">binding</span></code> at the
+initial guess.</p>
+<ol class="arabic simple" start="2">
+<li>CheckSatisfiedAtInitialGuess(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;], tol: float = 1e-06) -&gt; bool</li>
+</ol>
+<p>Evaluates CheckSatisfied for the all of the constraints in
+<code class="docutils literal"><span class="pre">bindings</span></code> at the initial guess.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">true iff all of the constraints are satisfied.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

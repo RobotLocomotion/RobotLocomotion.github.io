@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2bbc76aeadab8a326a08ddab7aae3412"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#a2bbc76aeadab8a326a08ddab7aae3412">b</a> () const</td></tr>
 <tr class="separator:a2bbc76aeadab8a326a08ddab7aae3412"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a083d486bad895d52d44b5ae214379ec0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#a083d486bad895d52d44b5ae214379ec0">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_a, double new_b=0.)</td></tr>
-<tr class="memdesc:a083d486bad895d52d44b5ae214379ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the linear term, upper and lower bounds in the linear constraint.  <a href="#a083d486bad895d52d44b5ae214379ec0">More...</a><br /></td></tr>
+<tr class="memdesc:a083d486bad895d52d44b5ae214379ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients of the cost.  <a href="#a083d486bad895d52d44b5ae214379ec0">More...</a><br /></td></tr>
 <tr class="separator:a083d486bad895d52d44b5ae214379ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a93525196254bc68d569c78064eadb500"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html#a93525196254bc68d569c78064eadb500">LinearCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &amp;)=delete</td></tr>
@@ -651,11 +651,8 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Updates the linear term, upper and lower bounds in the linear constraint. </p>
-<p>The updated constraint is </p><p class="formulaDsp">
-\[ a_new&#39; x + b_new \]
-</p>
-<p>. Note that the number of variables (number of cols) cannot change. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Updates the coefficients of the cost. </p>
+<p>Note that the number of variables (size of a) cannot change. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">new_a</td><td>New linear term. </td></tr>
     <tr><td class="paramname">new_b</td><td>(optional) New constant term. </td></tr>
