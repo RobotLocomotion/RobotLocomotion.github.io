@@ -135,7 +135,7 @@ analysis.
   </li>
   <li>Drake has upgraded its libsdformat version; the more recent sdformat libraries are stricter (<a href="https://github.com/RobotLocomotion/drake/pull/15075">#15075</a>)
     <ul>
-      <li>Drake now enforces stricter validation of SDFormat attributes. Before, any unrecognized attributes previously printed a warning to the console. Now, unrecognized attributes will cause an exception to be thrown. Please note that unrecognized <em>elements</em> do not yet cause a warning or error to be issued.</li>
+      <li>Drake now enforces stricter validation of SDFormat attributes. Before, any unrecognized attributes previously printed a warning to the console. Now, unrecognized attributes will cause an exception to be thrown. Please note that unrecognized <strong>elements</strong> do not yet cause a warning or error to be issued.</li>
     </ul>
   </li>
   <li>ExpressionCell’s API has been adjusted to be more const-correct (<a href="https://github.com/RobotLocomotion/drake/pull/15364">#15364</a>)
@@ -249,7 +249,7 @@ analysis.
   <li>Change NiceTypeName’s internal caching to be opt-in (<a href="https://github.com/RobotLocomotion/drake/pull/15269">#15269</a>)</li>
   <li>Remove use of deprecated Eigen function (<a href="https://github.com/RobotLocomotion/drake/pull/15321">#15321</a>)</li>
   <li>Add set_log_pattern and –spdlog_pattern to our text logging (<a href="https://github.com/RobotLocomotion/drake/pull/15240">#15240</a>)</li>
-  <li>Use [[noreturn]] instead of <strong>attribute</strong>((noreturn)) (<a href="https://github.com/RobotLocomotion/drake/pull/15351">#15351</a>)</li>
+  <li>Use [[noreturn]] instead of __attribute__((noreturn)) (<a href="https://github.com/RobotLocomotion/drake/pull/15351">#15351</a>)</li>
   <li>Extend copyable_unique_ptr const correctness (<a href="https://github.com/RobotLocomotion/drake/pull/15346">#15346</a>)</li>
   <li>Prepare uses of TypeSafeIndex for Eigen 3.4 compatibility (<a href="https://github.com/RobotLocomotion/drake/pull/15335">#15335</a>)</li>
   <li>Make reset_after_move be conditionally noexcept (<a href="https://github.com/RobotLocomotion/drake/pull/15362">#15362</a>)</li>
@@ -274,10 +274,10 @@ analysis.
 <p>Newly bound</p>
 
 <ul>
-  <li>pydrake.solvers.CsdpSolver.<strong>init</strong> argument “method” (<a href="https://github.com/RobotLocomotion/drake/pull/15274">#15274</a>)</li>
-  <li>pydrake.solvers.SolverId.<strong>hash</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15276">#15276</a>)</li>
-  <li>pydrake.solvers.SolverId.<strong>eq</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15276">#15276</a>)</li>
-  <li>pydrake.solvers.SolverId.<strong>ne</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15276">#15276</a>)</li>
+  <li>pydrake.solvers.CsdpSolver.__init__ argument “method” (<a href="https://github.com/RobotLocomotion/drake/pull/15274">#15274</a>)</li>
+  <li>pydrake.solvers.SolverId.__hash__ (<a href="https://github.com/RobotLocomotion/drake/pull/15276">#15276</a>)</li>
+  <li>pydrake.solvers.SolverId.__eq__ (<a href="https://github.com/RobotLocomotion/drake/pull/15276">#15276</a>)</li>
+  <li>pydrake.solvers.SolverId.__ne__ (<a href="https://github.com/RobotLocomotion/drake/pull/15276">#15276</a>)</li>
   <li>pydrake.solvers.QuadraticConstraint (<a href="https://github.com/RobotLocomotion/drake/pull/15313">#15313</a>)</li>
   <li>pydrake.solvers.CdspSolver.id (<a href="https://github.com/RobotLocomotion/drake/pull/15326">#15326</a>)</li>
   <li>pydrake.solvers.DrealSolver.id (<a href="https://github.com/RobotLocomotion/drake/pull/15326">#15326</a>)</li>
@@ -295,14 +295,14 @@ analysis.
   <li>pydrake.solvers.CommonSolverOption (<a href="https://github.com/RobotLocomotion/drake/pull/15312">#15312</a>)</li>
   <li>pydrake.solvers.Constraint (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
   <li>pydrake.solvers.LorentzConeConstraint.EvalType (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.LorentzConeConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.RotatedLorentzConeConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.LinearEqualityConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.BoundingBoxConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.PositiveSemidefiniteConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.LinearMatrixInequalityConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.ExponentialConeConstraint.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
-  <li>pydrake.solvers.QuadraticCost.<strong>init</strong> (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.LorentzConeConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.RotatedLorentzConeConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.LinearEqualityConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.BoundingBoxConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.PositiveSemidefiniteConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.LinearMatrixInequalityConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.ExponentialConeConstraint.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
+  <li>pydrake.solvers.QuadraticCost.__init__ (<a href="https://github.com/RobotLocomotion/drake/pull/15304">#15304</a>)</li>
 </ul>
 
 <h2 id="build-system">Build system</h2>
@@ -343,7 +343,7 @@ analysis.
   <li>@semantic_version external (<a href="https://github.com/RobotLocomotion/drake/pull/15275">#15275</a>)</li>
   <li>@tinyxml external (<a href="https://github.com/RobotLocomotion/drake/pull/15275">#15275</a>)</li>
   <li>pydrake.multibody.plant.MultibodyPlant.WeldFrames (<a href="https://github.com/RobotLocomotion/drake/pull/15277">#15277</a>)</li>
-  <li>pydrake.multibody.tree.WeldJoint.<strong>init</strong>(4 args) (<a href="https://github.com/RobotLocomotion/drake/pull/15277">#15277</a>)</li>
+  <li>pydrake.multibody.tree.WeldJoint.__init__(4 args) (<a href="https://github.com/RobotLocomotion/drake/pull/15277">#15277</a>)</li>
   <li>pydrake.solvers.mathematicalprogram.NewNonnegativePolynomial(3 args) (<a href="https://github.com/RobotLocomotion/drake/pull/15277">#15277</a>)</li>
   <li>geometry::SignedDistanceToPointWithGradient (<a href="https://github.com/RobotLocomotion/drake/pull/15277">#15277</a>)</li>
 </ul>
