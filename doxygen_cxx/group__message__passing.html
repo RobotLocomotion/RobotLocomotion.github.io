@@ -93,8 +93,7 @@ $(document).ready(function(){initNavTree('group__message__passing.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">Message Passing<div class="ingroups"><a class="el" href="group__systems.html">Modeling Dynamical Systems</a></div></div>  </div>
 </div><!--header-->
@@ -116,66 +115,7 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html">LcmSubscriberSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives LCM messages from a given channel and outputs them to a <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt;double&gt;</a>'s port.  <a href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ga4aa98e140c3e8e4afdc8535f884e82d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html">LcmPublisherSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__message__passing.html#ga4aa98e140c3e8e4afdc8535f884e82d0">ConnectLcmScope</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; double &gt; &amp;src, const std::string &amp;channel, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm, double publish_period=0.0)</td></tr>
-<tr class="memdesc:ga4aa98e140c3e8e4afdc8535f884e82d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(To be deprecated.) Prefer to use <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#ad6fc9bbde61e385e95afbc2ec0e80201" title="Adds an LcmScopeSystem and LcmPublisherSystem to the given builder.">LcmScopeSystem::AddToBuilder</a> instead of this function; the <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html" title="LcmScopeSystem provides the ability to convert any vector output port to a simple LCM message and pub...">LcmScopeSystem</a> provides more detailed timestamps.  <a href="group__message__passing.html#ga4aa98e140c3e8e4afdc8535f884e82d0">More...</a><br /></td></tr>
-<tr class="separator:ga4aa98e140c3e8e4afdc8535f884e82d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ga4aa98e140c3e8e4afdc8535f884e82d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4aa98e140c3e8e4afdc8535f884e82d0">&#9670;&nbsp;</a></span>ConnectLcmScope()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html">LcmPublisherSystem</a>* drake::systems::lcm::ConnectLcmScope </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>channel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *&#160;</td>
-          <td class="paramname"><em>lcm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>publish_period</em> = <code>0.0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(To be deprecated.) Prefer to use <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html#ad6fc9bbde61e385e95afbc2ec0e80201" title="Adds an LcmScopeSystem and LcmPublisherSystem to the given builder.">LcmScopeSystem::AddToBuilder</a> instead of this function; the <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html" title="LcmScopeSystem provides the ability to convert any vector output port to a simple LCM message and pub...">LcmScopeSystem</a> provides more detailed timestamps. </p>
-<p>Provides the ability to publish any vector-valued output port to the LCM <code>channel</code>, using the drake::lcmt_drake_signal LCM message type, by adding an appropriate <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html" title="Publishes an LCM message containing information from its input port.">LcmPublisherSystem</a> to the <code>builder</code>. If <code>lcm</code> is null, then an LCM instance will be created automatically (but this is expensive, and creating multiple LCM instances in a single process should be avoided).</p>
-<p>The intention is to enable logging and debugging in complex diagrams using external tools like <code>lcm-spy</code>.</p>
-<p>The optional <code>publish_period</code> specifies how often messages will be published. If the period is zero (the default), then the underlying <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html" title="Publishes an LCM message containing information from its input port.">LcmPublisherSystem</a> will publish every step.</p>
-<dl class="section pre"><dt>Precondition</dt><dd><code>src</code> must be an <a class="el" href="classdrake_1_1systems_1_1_output_port.html" title="An OutputPort belongs to a System and represents the properties of one of that System&#39;s output ports.">OutputPort</a> of a system that has already been added to the <code>builder</code>. </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.15 -->

@@ -50,6 +50,5 @@ var group__message__passing =
       [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a80ab41196eab910b0ef24291b9709206", null ],
       [ "operator=", "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#a7bfb6765f107458027f7aefe056a4967", null ],
       [ "WaitForMessage", "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039", null ]
-    ] ],
-    [ "ConnectLcmScope", "group__message__passing.html#ga4aa98e140c3e8e4afdc8535f884e82d0", null ]
+    ] ]
 ];

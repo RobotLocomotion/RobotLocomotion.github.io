@@ -2619,6 +2619,28 @@ References:
   <li><a href="https://stackoverflow.com/questions/10231349/are-the-days-of-passing-const-stdstring-as-a-parameter-over">Stack Overflow: Are the days of passing const std::string& as a parameter over?</a></li>
 </ul>
 </p>
+
+<h4 id="Pass_By_Value_Primitives">Pass by Value: Primitives</h4>
+
+<p>Prefer to pass primitives (e.g., <code>int</code> or <code>double</code>)
+by value, not by const reference.</p>
+
+<p>The same goes for copyable types that are tantamount to primitives,
+such as type-safe integers (e.g., <code>drake::TypeSafeIndex</code> or
+<code>drake::Identifier</code>) and thin wrappers
+(e.g., <code>std::optional&lt;double&gt;</code>, because it's akin to a
+pair of <code>(bool, double)</code>).
+
+<p>Drake's
+<a href="/doxygen_cxx/group__default__scalars.html">default scalars</a>
+(known conventionally as <code>&lt;typename T&gt;</code>) are often thought
+of as a <code>double</code> because they denote a mathematical scalar,
+but because scalar types other than <code>double</code> are not primitives,
+templated scalars should be passed as <code>const T&</code>, not by value.</p>
+
+<p>See also <a href="#Use_of_const">Use of const</a> for an explanation of
+whether arguments passed by-value may be declared <code>const</code>.</p>
+
 </div>
 
 <h3 id="Friends">Friends</h3>
@@ -2651,13 +2673,6 @@ reporting only.  Catching exceptions is forbidden except in unit tests as
 noted below.</p>
 
 <div class="stylebody">
-  <p class="drake">Unit tests may catch exceptions using
-  <a href="https://github.com/google/googletest/blob/master/googletest/docs/AdvancedGuide.md#exception-assertions">EXPECT_THROW</a>
-  or
-  <a href="https://github.com/RobotLocomotion/drake/blob/master/common/test_utilities/expect_throws_message.h">DRAKE_EXPECT_THROWS_MESSAGE</a>,
-  but only if the tested function's Doxygen documentation mentions that the
-  function throws an exception.</p>
-
   <p class="drake">When documenting exceptions in an API, only state that
   the function will throw <code>std::exception</code>; never promise a more
   specific subclass:</p>
@@ -2667,11 +2682,28 @@ noted below.</p>
   to refactor the code in ways that keeps the subclass unchanged.</li>
   <li>There's no great way to deprecate a particular exception signature.</li>
   <li>Since we can't catch exceptions anyway, nevermind use a multi-layer-catch
-  by specific subclasses, the only purpose of a subclass is for improved error
-  reporting -- this purpose is still met by throwing a subclass, but we don't
-  need to document it in Doxygen for this purpose.</li>
+  by specific subclasses, the only purpose of choosing a specific subclass is
+  for improved error reporting -- this purpose is still met by throwing a
+  subclass, but we don't need to document it in the API for this purpose.</li>
   </ul>
-  </p>
+
+  <p class="drake">When throwing and there is no particular reason to choose
+  any particular subclass of <code>std::exception</code> to be thrown, prefer
+  to use <code>std::logic_error</code> as our nominal concrete type. The
+  clarity of the error message string matters more than the subtype choice.</p>
+
+  <p class="drake">Unit tests may catch exceptions using
+  <a href="https://github.com/google/googletest/blob/master/googletest/docs/AdvancedGuide.md#exception-assertions">EXPECT_THROW</a>
+  or
+  <a href="https://github.com/RobotLocomotion/drake/blob/master/common/test_utilities/expect_throws_message.h">DRAKE_EXPECT_THROWS_MESSAGE</a>:</p>
+  <ul class="drake">
+  <li>Only test for exceptions under the conditions where the tested function's
+  API documentation promises that the function throws an exception.</li>
+  <li>Only test for a specific subtype of <code>std::exception</code> when the
+  subtype is <em>necessary</em> to determine whether the code behaved correctly,
+  e.g., in cases where the code may throw several different types of exception
+  and the subtype fully disambiguates which condition was triggered. (This is
+  rare.)</li>
 </div>
 
 <p class="pros"></p>
@@ -4716,12 +4748,15 @@ parameters should follow the rules for <a href="#Variable_Names">
 variable names</a>.</p>
 
 <p class="exception drake">
-  Method names may violate both the name structure standard and the “long,
-  human-readable” standard above if a short, non-compliant name more closely
-  matches the common conventions of the field. For instance, the matrix
-  portion of a linear complementarity constraint is traditionally ‘M’ (one
-  letter, upper-case); it is not mandatory to downcase it or give it a more
-  verbose name.
+  Variable and method names may violate both the capitalization standard and
+  the “long, human-readable” standard above if a short, non-compliant name
+  more closely matches the common conventions of the field. For instance, the
+  matrix portion of a linear complementarity constraint is traditionally ‘M’
+  (one letter, upper-case); it is not mandatory to downcase it or give it a
+  more verbose name. However, even if a variable name is capitalized to
+  match common conventions, we still use underscores ("snake case") to delimit
+  its words, not "camel case". For instance, <code>Ai_triplets</code> would
+  be the code spelling of the phrase “Aᵢ triplets”.
 </p>
 <p class="exception drake">
   Note that the Drake multibody tree and related types have their own naming
@@ -4858,6 +4893,46 @@ see <a href="http://en.cppreference.com/w/cpp/language/storage_duration#Storage_
 Storage Duration</a> for details) should be named this way.  This
 convention is optional for variables of other storage classes, e.g., automatic
 variables, otherwise the usual variable naming rules apply.</p>
+
+<div class="drake">
+
+<p>Never use <code>kMixedCase</code> style for template arguments. In the
+typical case, a template argument will refer to differing values within the
+same program, so is not a program-wide constant.</p>
+
+<pre>// OK - num_stages names to a value that is not a program-wide constant.
+
+template &lt;typename T, int num_stages = 2&gt;
+class RadauIntegrator { ... };
+</pre>
+
+<pre class="badcode">// BAD - kNumStages is not a program-wide constant.
+
+template &lt;typename T, int kNumStages = 2&gt;
+class RadauIntegrator { ... };
+</pre>
+
+<p>Even in the case of class data members (whether static or non-static),
+never add a trailing underscore to a <code>kMixedCase</code> name.</p>
+
+<pre>class Foo {
+  ...
+ private:
+  const std::string default_name_{"name"};  // OK - snake_case_ member.
+  const std::string kDefaultName{"name"};   // OK - program-wide constant.
+  static const int kDefaultValue{1000};     // OK - static constant.
+};
+</pre>
+
+<pre class="badcode">class Foo {
+  ...
+ private:
+  const std::string kDefaultName_{"name"};  // Bad - underscore.
+  static const int kDefaultValue_{1000};    // Bad - underscore.
+};
+</pre>
+
+</div>
 
 <h3 id="Function_Names">Function Names</h3>
 

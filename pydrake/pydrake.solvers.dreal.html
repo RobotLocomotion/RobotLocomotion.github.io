@@ -192,6 +192,21 @@
 <dt id="pydrake.solvers.dreal.DrealSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.dreal.</code><code class="descname">DrealSolver</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
+<p>An implementation of SolverInterface for the dReal4 solver
+(<a class="reference external" href="https://github.com/dreal/dreal4">https://github.com/dreal/dreal4</a>).</p>
+<p>Currently this implementation supports the following options: *
+precision &lt;double&gt;: This value is used as a termination condition.
+When the ICP algorithm finds an interval box whose width is smaller
+than this value, it concludes that the query is delta-satisfiable and
+provides the interval box as a witness. Default value = 0.001.</p>
+<ul class="simple">
+<li>use_local_optimization &lt;bool&gt;: Use local-optimization algorithms in</li>
+</ul>
+<p>solving exists-forall problem. For now, the solver is using NLopt. See
+<a class="reference external" href="https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15">https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15</a> for
+details. Default value = True.</p>
+<p>To see the full list of dReal4 options, visit
+<a class="reference external" href="https://github.com/dreal/dreal4#command-line-options">https://github.com/dreal/dreal4#command-line-options</a>.</p>
 <dl class="method">
 <dt id="pydrake.solvers.dreal.DrealSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.dreal.DrealSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.__init__" title="Permalink to this definition">¶</a></dt>

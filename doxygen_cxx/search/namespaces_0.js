@@ -19,6 +19,7 @@ var searchData=
   ['estimators',['estimators',['../namespacedrake_1_1systems_1_1estimators.html',1,'drake::systems']]],
   ['examples',['examples',['../namespacedrake_1_1examples.html',1,'drake']]],
   ['fbstab',['fbstab',['../namespacedrake_1_1solvers_1_1fbstab.html',1,'drake::solvers']]],
+  ['fem',['fem',['../namespacedrake_1_1multibody_1_1fem.html',1,'drake::multibody']]],
   ['fibonacci',['fibonacci',['../namespacedrake_1_1examples_1_1fibonacci.html',1,'drake::examples']]],
   ['free_5fbody',['free_body',['../namespacedrake_1_1multibody_1_1benchmarks_1_1free__body.html',1,'drake::multibody::benchmarks']]],
   ['geometry',['geometry',['../namespacedrake_1_1geometry.html',1,'drake']]],

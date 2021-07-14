@@ -102,7 +102,14 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_dreal_solver
 <div class="title">DrealSolver Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the dReal4 solver (<a href="https://github.com/dreal/dreal4">https://github.com/dreal/dreal4</a>). </p>
+<p>Currently this implementation supports the following options:</p><ul>
+<li>precision &lt;double&gt;: This value is used as a termination condition. When the ICP algorithm finds an interval box whose width is smaller than this value, it concludes that the query is delta-satisfiable and provides the interval box as a witness. Default value = 0.001.</li>
+<li>use_local_optimization &lt;bool&gt;: Use local-optimization algorithms in solving exists-forall problem. For now, the solver is using NLopt. See <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15">https://link.springer.com/chapter/10.1007%2F978-3-319-96142-2_15</a> for details. Default value = True.</li>
+</ul>
+<p>To see the full list of dReal4 options, visit <a href="https://github.com/dreal/dreal4#command-line-options">https://github.com/dreal/dreal4#command-line-options</a>. </p>
+</div>
 <p><code>#include &lt;drake/solvers/dreal_solver.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>

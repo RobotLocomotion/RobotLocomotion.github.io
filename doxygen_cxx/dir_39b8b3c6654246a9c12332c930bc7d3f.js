@@ -3,6 +3,7 @@ var dir_39b8b3c6654246a9c12332c930bc7d3f =
     [ "benchmarks", "dir_5d8dbe7a82c2c188fa06f6391bb290bd.html", "dir_5d8dbe7a82c2c188fa06f6391bb290bd" ],
     [ "constraint", "dir_cb63546e0aebdabb2027b3ff3a92f98a.html", "dir_cb63546e0aebdabb2027b3ff3a92f98a" ],
     [ "contact_solvers", "dir_30e7b54ca9ab48df25430eaeedb2e703.html", "dir_30e7b54ca9ab48df25430eaeedb2e703" ],
+    [ "fem", "dir_2cf971462d0dc9c1092ce69736cd713e.html", "dir_2cf971462d0dc9c1092ce69736cd713e" ],
     [ "hydroelastics", "dir_7ab4c64e4cc60ae42d6a2af801e650d6.html", "dir_7ab4c64e4cc60ae42d6a2af801e650d6" ],
     [ "inverse_kinematics", "dir_da11cd43e7bab310171e778f62212487.html", "dir_da11cd43e7bab310171e778f62212487" ],
     [ "math", "dir_7d55c3d5b8b0444a3d9934d2594c5211.html", "dir_7d55c3d5b8b0444a3d9934d2594c5211" ],

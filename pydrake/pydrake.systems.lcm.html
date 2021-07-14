@@ -193,24 +193,12 @@
 <dl class="function">
 <dt id="pydrake.systems.lcm.ConnectLcmScope">
 <code class="descclassname">pydrake.systems.lcm.</code><code class="descname">ConnectLcmScope</code><span class="sig-paren">(</span><em>src: pydrake.systems.framework.OutputPort_[float], channel: str, builder: pydrake.systems.framework.DiagramBuilder_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, publish_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.lcm.LcmPublisherSystem<a class="headerlink" href="#pydrake.systems.lcm.ConnectLcmScope" title="Permalink to this definition">¶</a></dt>
-<dd><p>(To be deprecated.) Prefer to use LcmScopeSystem::AddToBuilder instead
-of this function; the LcmScopeSystem provides more detailed
-timestamps.</p>
-<p>Provides the ability to publish any vector-valued output port to the
-LCM <code class="docutils literal"><span class="pre">channel</span></code>, using the drake::lcmt_drake_signal LCM message type,
-by adding an appropriate LcmPublisherSystem to the <code class="docutils literal"><span class="pre">builder</span></code>. If
-<code class="docutils literal"><span class="pre">lcm</span></code> is null, then an LCM instance will be created automatically
-(but this is expensive, and creating multiple LCM instances in a
-single process should be avoided).</p>
-<p>The intention is to enable logging and debugging in complex diagrams
-using external tools like <code class="docutils literal"><span class="pre">lcm-spy</span></code>.</p>
-<p>The optional <code class="docutils literal"><span class="pre">publish_period</span></code> specifies how often messages will be
-published. If the period is zero (the default), then the underlying
-LcmPublisherSystem will publish every step.</p>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">src</span></code> must be an OutputPort of a system that has already been
-added to the <code class="docutils literal"><span class="pre">builder</span></code>.</dd>
+<dt>Deprecated:</dt>
+<dd>Prefer to use LcmScopeSystem::AddToBuilder instead of this
+function; the LcmScopeSystem provides more detailed timestamps.
+This will be removed from Drake on or after 2021-11-01.</dd>
 </dl>
 </dd></dl>
 

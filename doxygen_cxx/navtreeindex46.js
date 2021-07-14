@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html":[3,0,0,7,0],
+"structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html#a21348e29bb1c2afd6ca653f663394d49":[3,0,0,7,0,0],
+"structdrake_1_1math_1_1_auto_diff_to_value_matrix.html":[3,0,0,7,1],
 "structdrake_1_1math_1_1_auto_diff_to_value_matrix.html#af305efdc2919b4ec48cf0a6eb515ebcf":[3,0,0,7,1,0],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,7,4],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,7,4,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,12,3,1],
 "structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,12,6],
 "structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,6,0],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,12,10],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,12,10,0],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,12,10,1],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,12,10,2]
+"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,12,10]
 };
