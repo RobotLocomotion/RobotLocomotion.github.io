@@ -64,6 +64,7 @@ var NAVTREEINDEX0 =
 "bilinear__product__util_8h.html#ab9867f403bc6e247a2b55c9022f6fa3a":[4,0,0,10,3,0],
 "binding_8h.html":[4,0,0,10,4],
 "binding_8h.html#aab097e2ddc8c73cd83a8ae0e801b9071":[4,0,0,10,4,2],
+"bit__cast_8h.html":[4,0,0,1,9],
 "block__sparse__matrix_8h.html":[4,0,0,8,2,0],
 "body_8h.html":[4,0,0,8,12,5],
 "body__node_8h.html":[4,0,0,8,12,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial_1_1_monomial.html#accdf0d016bac585ac8deb1ad2dcad4b1":[3,0,0,40,0,7],
 "classdrake_1_1_polynomial_1_1_term.html":[3,0,0,40,2],
 "classdrake_1_1_polynomial_1_1_term.html#a3c0813942263106700a29e522a224006":[3,0,0,40,2,3],
-"classdrake_1_1_polynomial_1_1_term.html#a5c98542968a765a4da1cf13b71e2eaaa":[3,0,0,40,2,0],
-"classdrake_1_1_polynomial_1_1_term.html#ac1257eb15b653872d1754f9731e7b1f2":[3,0,0,40,2,1]
+"classdrake_1_1_polynomial_1_1_term.html#a5c98542968a765a4da1cf13b71e2eaaa":[3,0,0,40,2,0]
 };

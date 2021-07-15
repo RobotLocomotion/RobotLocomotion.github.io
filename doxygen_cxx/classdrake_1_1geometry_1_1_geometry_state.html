@@ -328,17 +328,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3f702eb73e7464c00b82974d0c5ff6c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a3f702eb73e7464c00b82974d0c5ff6c9">HasCollisions</a> () const</td></tr>
 <tr class="memdesc:a3f702eb73e7464c00b82974d0c5ff6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a3f702eb73e7464c00b82974d0c5ff6c9" title="Reports true if there are any collisions between unfiltered pairs in the world.">QueryObject::HasCollisions()</a>.  <a href="#a3f702eb73e7464c00b82974d0c5ff6c9">More...</a><br /></td></tr>
 <tr class="separator:a3f702eb73e7464c00b82974d0c5ff6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Proximity filters</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>This interface allows control over which pairs of geometries can even be considered for proximity queries.</p>
-<p>This affects all queries that depend on geometries with a proximity role.</p>
-<p>See <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filtering">Scene Graph Collision Filtering</a> for more details. </p>
-</div></td></tr>
-<tr class="memitem:a91e9026cf3cd253a4e7260c6dc054921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a91e9026cf3cd253a4e7260c6dc054921">ExcludeCollisionsWithin</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;set)</td></tr>
-<tr class="memdesc:a91e9026cf3cd253a4e7260c6dc054921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">SceneGraph::ExcludeCollisionsWithin()</a>.  <a href="#a91e9026cf3cd253a4e7260c6dc054921">More...</a><br /></td></tr>
-<tr class="separator:a91e9026cf3cd253a4e7260c6dc054921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a822b987f8d0fed87bcd53dd90345bce1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a822b987f8d0fed87bcd53dd90345bce1">ExcludeCollisionsBetween</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;setB)</td></tr>
-<tr class="memdesc:a822b987f8d0fed87bcd53dd90345bce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">SceneGraph::ExcludeCollisionsBetween()</a>.  <a href="#a822b987f8d0fed87bcd53dd90345bce1">More...</a><br /></td></tr>
-<tr class="separator:a822b987f8d0fed87bcd53dd90345bce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Collision filtering</div></td></tr>
+<tr class="memitem:a76a5871dd4432de7e8225f334765729f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a76a5871dd4432de7e8225f334765729f">collision_filter_manager</a> ()</td></tr>
+<tr class="memdesc:a76a5871dd4432de7e8225f334765729f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f" title="Returns the collision filter manager for this SceneGraph instance&#39;s model*.">SceneGraph::collision_filter_manager()</a>.  <a href="#a76a5871dd4432de7e8225f334765729f">More...</a><br /></td></tr>
+<tr class="separator:a76a5871dd4432de7e8225f334765729f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Signed Distance Queries</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#signed_distance_query">Signed Distance Queries</a> for more details. </p>
 </div></td></tr>
@@ -701,6 +694,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a76a5871dd4432de7e8225f334765729f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a5871dd4432de7e8225f334765729f">&#9670;&nbsp;</a></span>collision_filter_manager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a> collision_filter_manager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f" title="Returns the collision filter manager for this SceneGraph instance&#39;s model*.">SceneGraph::collision_filter_manager()</a>. </p>
+
+</div>
+</div>
 <a id="af4db95ba77c24795f0671d5f9989e83d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4db95ba77c24795f0671d5f9989e83d">&#9670;&nbsp;</a></span>CollisionFiltered()</h2>
 
@@ -876,56 +888,6 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aa4c7754ca66a8593b182ae990643875c" title="Computes the signed distances and gradients to a query point from each geometry in the scene.">QueryObject::ComputeSignedDistanceToPoint()</a>. </p>
-
-</div>
-</div>
-<a id="a822b987f8d0fed87bcd53dd90345bce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a822b987f8d0fed87bcd53dd90345bce1">&#9670;&nbsp;</a></span>ExcludeCollisionsBetween()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExcludeCollisionsBetween </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>setA</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>setB</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">SceneGraph::ExcludeCollisionsBetween()</a>. </p>
-
-</div>
-</div>
-<a id="a91e9026cf3cd253a4e7260c6dc054921"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91e9026cf3cd253a4e7260c6dc054921">&#9670;&nbsp;</a></span>ExcludeCollisionsWithin()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExcludeCollisionsWithin </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>set</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">SceneGraph::ExcludeCollisionsWithin()</a>. </p>
 
 </div>
 </div>
@@ -2515,7 +2477,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>drake/geometry/<a class="el" href="geometry__set_8h.html">geometry_set.h</a></li>
+<li>drake/geometry/<a class="el" href="collision__filter__manager_8h.html">collision_filter_manager.h</a></li>
 <li>drake/geometry/<a class="el" href="geometry__state_8h.html">geometry_state.h</a></li>
 </ul>
 </div><!-- contents -->

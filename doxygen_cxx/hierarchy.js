@@ -58,6 +58,7 @@ var hierarchy =
     [ "ClpSolverDetails", "structdrake_1_1solvers_1_1_clp_solver_details.html", null ],
     [ "CodeGenVisitor", "classdrake_1_1symbolic_1_1_code_gen_visitor.html", null ],
     [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", null ],
+    [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", null ],
     [ "Color< T >", "structdrake_1_1systems_1_1sensors_1_1_color.html", null ],
     [ "ColorPalette< IdType >", "classdrake_1_1systems_1_1sensors_1_1_color_palette.html", null ],
     [ "ColorRenderCamera", "classdrake_1_1geometry_1_1render_1_1_color_render_camera.html", null ],

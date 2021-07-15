@@ -276,6 +276,153 @@ parallel with the frame’s z-axis.</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.geometry.CollisionFilterDeclaration">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">CollisionFilterDeclaration</code><a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for articulating changes to the configuration of SceneGraph’s
+“collision filters”; collision filters limit the scope of various
+proximity queries.</p>
+<p>This class provides the basis for <em>declaring</em> what pairs should or
+should not be included in the set of proximity query candidates C (see
+documentation for CollisionFilterManager for details on the set C).</p>
+<p>A declaration consists of zero or more <em>statements</em>. Each statement
+can declare, for example, that the pair (g₁, g₂) should be excluded
+from C (also known as “filtering the pair”). That statement is added
+to the declaration by invoking the corresponding statement method (see
+below), and the result of the invocation, is that the statement is
+appended to the declaration.</p>
+<p>Each statement method returns a reference to the declaration instance,
+so a number of statements can be chained together, i.e.,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">collision_filter_manager</span><span class="o">.</span><span class="n">Apply</span><span class="p">(</span>
+<span class="n">CollisionFilterDeclaration</span><span class="p">()</span>
+<span class="o">.</span><span class="n">ExcludeWithin</span><span class="p">(</span><span class="n">some_geometry_set</span><span class="p">)</span>
+<span class="o">.</span><span class="n">ExcludeBetween</span><span class="p">(</span><span class="n">set_A</span><span class="p">,</span> <span class="n">set_B</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>It’s worth noting, that the statements are evaluated in <em>invocation</em>
+order such that a later statement can partially or completely undo the
+effect of an earlier statement. The full declaration is evaluated by
+CollisionFilterManager::Apply().</p>
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterDeclaration.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterDeclaration</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterDeclaration.ExcludeBetween">
+<code class="descname">ExcludeBetween</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterDeclaration</em>, <em>set_A: drake::geometry::GeometrySet</em>, <em>set_B: drake::geometry::GeometrySet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.CollisionFilterDeclaration<a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.ExcludeBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Excludes geometry pairs from proximity evaluation by updating the
+candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">←</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(a,</span> <span class="pre">b)},</span> <span class="pre">∀</span> <span class="pre">a</span> <span class="pre">∈</span> <span class="pre">A,</span> <span class="pre">b</span> <span class="pre">∈</span>
+<span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">{a₀,</span> <span class="pre">a₁,</span> <span class="pre">...,</span> <span class="pre">aₘ}</span></code> and <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">{b₀,</span> <span class="pre">b₁,</span> <span class="pre">...,</span> <span class="pre">bₙ}</span></code> are
+the input sets of geometries <code class="docutils literal"><span class="pre">set_A</span></code> and <code class="docutils literal"><span class="pre">set_B</span></code>, respectively.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterDeclaration.ExcludeWithin">
+<code class="descname">ExcludeWithin</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterDeclaration</em>, <em>geometry_set: drake::geometry::GeometrySet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.CollisionFilterDeclaration<a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.ExcludeWithin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Excludes geometry pairs from proximity evaluation by updating the
+candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">←</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span>
+<span class="pre">G</span></code> and <code class="docutils literal"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">{g₀,</span> <span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₘ}</span></code> is the input <code class="docutils literal"><span class="pre">geometry_set</span></code> of
+geometries.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.CollisionFilterManager">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">CollisionFilterManager</code><a class="headerlink" href="#pydrake.geometry.CollisionFilterManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for configuring “collision filters”; collision filters limit the
+scope of various proximity queries.</p>
+<p>The sole source of CollisionFilterManager instances is SceneGraph. See
+scene_graph_collision_filter_manager “SceneGraph’s documentation” for
+details on acquiring an instance.</p>
+<p>A SceneGraph instance contains the set of geometry <code class="docutils literal"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">D</span> <span class="pre">⋃</span> <span class="pre">A</span> <span class="pre">=</span> <span class="pre">{g₀,</span>
+<span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₙ}</span></code>, where D is the set of dynamic geometries and A is the
+set of anchored geometries (by definition <code class="docutils literal"><span class="pre">D</span> <span class="pre">⋂</span> <span class="pre">A</span> <span class="pre">=</span> <span class="pre">∅</span></code>). <cite>Gₚ ⊂ G</cite> is
+the subset of geometries that have a proximity role (with an analogous
+interpretation of <code class="docutils literal"><span class="pre">Dₚ</span></code> and <code class="docutils literal"><span class="pre">Aₚ</span></code>). Many proximity queries operate
+on pairs of geometries (e.g., (gᵢ, gⱼ)). The set of proximity
+candidate pairs for such queries is initially defined as <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">(Gₚ</span> <span class="pre">×</span>
+<span class="pre">Gₚ)</span> <span class="pre">-</span> <span class="pre">(Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ)</span> <span class="pre">-</span> <span class="pre">Fₚ</span> <span class="pre">-</span> <span class="pre">Iₚ</span></code>, where:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Gₚ</span> <span class="pre">×</span> <span class="pre">Gₚ</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span> <span class="pre">Gₚ</span></code> is the Cartesian product of the set</li>
+</ul>
+<p>of SceneGraph proximity geometries.
+- <code class="docutils literal"><span class="pre">Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ</span></code> represents all pairs consisting only of anchored geometries;
+an anchored geometry is never tested against another anchored geometry.
+- <code class="docutils literal"><span class="pre">Fₚ</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)}</span> <span class="pre">∀</span> <span class="pre">i,</span> <span class="pre">j</span></code>, such that <code class="docutils literal"><span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span> <span class="pre">Dₚ</span></code> and
+<code class="docutils literal"><span class="pre">frame(gᵢ)</span> <span class="pre">==</span> <span class="pre">frame(gⱼ)</span></code>; the pairs where both geometries are rigidly
+affixed to the same frame.
+- <code class="docutils literal"><span class="pre">Iₚ</span> <span class="pre">=</span> <span class="pre">{(g,</span> <span class="pre">g)},</span> <span class="pre">∀</span> <span class="pre">g</span> <span class="pre">∈</span> <span class="pre">Gₚ</span></code> is the set of all pairs consisting of a
+geometry with itself; there is no meaningful proximity query on a
+geometry with itself.</p>
+<p>Only pairs contained in C will be included in pairwise proximity
+operations.</p>
+<p>The manager provides an interface to modify the set C. Changes to C
+are articulated with CollisionFilterDeclaration. Once a change has
+been <em>declared</em> it is applied via the manager’s API to change the
+configuration of C.</p>
+<p>There are limits to how C can be modified.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">∀</span> <span class="pre">(gᵢ,</span> <span class="pre">gⱼ)</span> <span class="pre">∈</span> <span class="pre">C</span></code>, both gᵢ and gⱼ must be registered with SceneGraph; you</li>
+</ul>
+<p>can’t inject arbitrary ids. Attempting to do so will result in an error.</p>
+<p>The current configuration of C depends on the sequence of filter
+declarations that have been applied in the manager. Changing the order
+can change the end result.</p>
+<p>A CollisionFilterManager is a view into geometry data (either that
+owned by a SceneGraph instance or a SceneGraph context). The manager
+instance can be copied or moved and the resulting instance is a view
+into the same data. For both the original and the copy (or just the
+target when moving the manager), the source data must stay alive for
+at least as long as the manager instance.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The effect of applying a declaration is based on the state of
+SceneGraph’s geometry data at the time of application. More
+concretely: - For a particular FrameId in a GeometrySet instance,
+only those geometries attached to the identified frame with the
+proximity role assigned at the time of the call will be included
+in the filter. If geometries are subsequently added or assigned
+the proximity role, they will not be retroactively added to the
+user-declared filter. - If the geometry set in a declaration
+statement includes geometries which have <em>not</em> been assigned a
+proximity role, those geometries will be ignored. If a proximity
+role is subsequently assigned, those geometries will <em>still</em> not
+be part of any user-declared collision filters. - In general,
+adding collisions and assigning proximity roles should happen
+prior to collision filter configuration.</p>
+</div>
+<dl class="attribute">
+<dt id="pydrake.geometry.CollisionFilterManager.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterManager.Apply">
+<code class="descname">Apply</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>declaration: pydrake.geometry.CollisionFilterDeclaration</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.Apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the given <code class="docutils literal"><span class="pre">declaration</span></code> to the geometry state managed by
+<code class="docutils literal"><span class="pre">this</span></code> instance.</p>
+<p>The process of <em>applying</em> the collision filter data also validates it.
+The following polices are implemented during application:</p>
+<ul class="simple">
+<li>Referencing an invalid id (FrameId or GeometryId): throws.</li>
+<li>Declaring a filtered pair that is already filtered: no discernible</li>
+</ul>
+<p>change.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the <code class="docutils literal"><span class="pre">declaration</span></code> references invalid ids.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.geometry.ContactSurface">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">ContactSurface</code><a class="headerlink" href="#pydrake.geometry.ContactSurface" title="Permalink to this definition">¶</a></dt>
@@ -2313,10 +2460,11 @@ explicit GeometryId enumeration; GeometryId values can be added to the
 set by adding the <code class="docutils literal"><span class="pre">FrameId</span></code> for the frame to which the geometries
 are rigidly affixed.</p>
 <p>This class does no validation; it is a simple collection. Ultimately,
-it serves as the operand of SceneGraph operations (e.g.,
-SceneGraph::ExcludeCollisionsWithin()). If the <em>operation</em> has a
-particular prerequisite on the members of a GeometrySet, it is the
-operation’s responsibility to enforce that requirement.</p>
+it serves as the operand of various geometry operations (e.g.,
+CollisionFilterDeclaration and CollisionFilterManager::Apply(). If the
+<em>operation</em> has a particular prerequisite on the members of a
+GeometrySet, it is the operation’s responsibility to enforce that
+requirement.</p>
 <p>More formally, the SceneGraph consists of a set of geometries, each
 associated with a unique identifier. As such, we can consider the set
 of all identifiers <code class="docutils literal"><span class="pre">SG</span> <span class="pre">=</span> <span class="pre">{g₀,</span> <span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₙ}</span></code> that belong to a
@@ -5026,6 +5174,23 @@ prior to allocating the context.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].collision_filter_manager">
+<code class="descname">collision_filter_manager</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].collision_filter_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>collision_filter_manager(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float]) -&gt; pydrake.geometry.CollisionFilterManager</li>
+</ol>
+<p>Returns the collision filter manager for data stored in <code class="docutils literal"><span class="pre">context</span></code>.
+The context must remain alive for at least as long as the returned
+manager.</p>
+<ol class="arabic simple" start="2">
+<li>collision_filter_manager(self: pydrake.geometry.SceneGraph_[float]) -&gt; pydrake.geometry.CollisionFilterManager</li>
+</ol>
+<p>Returns the collision filter manager for this SceneGraph instance’s
+model*.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].ExcludeCollisionsBetween">
 <code class="descname">ExcludeCollisionsBetween</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].ExcludeCollisionsBetween" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -5725,6 +5890,23 @@ systems::Context will not have any apparent effect in, at least,
 drake_visualizer. Please change the illustration role in the model
 prior to allocating the context.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].collision_filter_manager">
+<code class="descname">collision_filter_manager</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].collision_filter_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>collision_filter_manager(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; pydrake.geometry.CollisionFilterManager</li>
+</ol>
+<p>Returns the collision filter manager for data stored in <code class="docutils literal"><span class="pre">context</span></code>.
+The context must remain alive for at least as long as the returned
+manager.</p>
+<ol class="arabic simple" start="2">
+<li>collision_filter_manager(self: pydrake.geometry.SceneGraph_[AutoDiffXd]) -&gt; pydrake.geometry.CollisionFilterManager</li>
+</ol>
+<p>Returns the collision filter manager for this SceneGraph instance’s
+model*.</p>
 </dd></dl>
 
 <dl class="method">
@@ -6428,6 +6610,23 @@ prior to allocating the context.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.SceneGraph_[float].collision_filter_manager">
+<code class="descname">collision_filter_manager</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].collision_filter_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>collision_filter_manager(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float]) -&gt; pydrake.geometry.CollisionFilterManager</li>
+</ol>
+<p>Returns the collision filter manager for data stored in <code class="docutils literal"><span class="pre">context</span></code>.
+The context must remain alive for at least as long as the returned
+manager.</p>
+<ol class="arabic simple" start="2">
+<li>collision_filter_manager(self: pydrake.geometry.SceneGraph_[float]) -&gt; pydrake.geometry.CollisionFilterManager</li>
+</ol>
+<p>Returns the collision filter manager for this SceneGraph instance’s
+model*.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_[float].ExcludeCollisionsBetween">
 <code class="descname">ExcludeCollisionsBetween</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].ExcludeCollisionsBetween" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -7019,12 +7218,12 @@ removal or addition of geometry/frames).</p>
 <dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetCollisionCandidates">
 <code class="descname">GetCollisionCandidates</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; Set[Tuple[pydrake.geometry.GeometryId, pydrake.geometry.GeometryId]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetCollisionCandidates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all pairs of geometries that are candidates for collision (in
-no particular order). See SceneGraph::ExcludeCollisionsBetween() or
-SceneGraph::ExcludeCollisionsWithin() for information on why a
-particular pair may <em>not</em> be a candidate. For candidate pair (A, B),
-the candidate is always guaranteed to be reported in a fixed order
-(i.e., always (A, B) and <em>never</em> (B, A)). This is the same ordering as
-would be returned by, e.g.,
+no particular order). See CollisionFilterDeclaration and
+CollisionFilterManager::Apply() for information on why a particular
+pair may <em>not</em> be a candidate.</p>
+<p>For candidate pair (A, B), the candidate is always guaranteed to be
+reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)).
+This is the same ordering as would be returned by, e.g.,
 QueryObject::ComputePointPairPenetration().</p>
 </dd></dl>
 
@@ -7715,12 +7914,12 @@ removal or addition of geometry/frames).</p>
 <dt id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetCollisionCandidates">
 <code class="descname">GetCollisionCandidates</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; Set[Tuple[pydrake.geometry.GeometryId, pydrake.geometry.GeometryId]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetCollisionCandidates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all pairs of geometries that are candidates for collision (in
-no particular order). See SceneGraph::ExcludeCollisionsBetween() or
-SceneGraph::ExcludeCollisionsWithin() for information on why a
-particular pair may <em>not</em> be a candidate. For candidate pair (A, B),
-the candidate is always guaranteed to be reported in a fixed order
-(i.e., always (A, B) and <em>never</em> (B, A)). This is the same ordering as
-would be returned by, e.g.,
+no particular order). See CollisionFilterDeclaration and
+CollisionFilterManager::Apply() for information on why a particular
+pair may <em>not</em> be a candidate.</p>
+<p>For candidate pair (A, B), the candidate is always guaranteed to be
+reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)).
+This is the same ordering as would be returned by, e.g.,
 QueryObject::ComputePointPairPenetration().</p>
 </dd></dl>
 
@@ -8409,12 +8608,12 @@ removal or addition of geometry/frames).</p>
 <dt id="pydrake.geometry.SceneGraphInspector_[float].GetCollisionCandidates">
 <code class="descname">GetCollisionCandidates</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; Set[Tuple[pydrake.geometry.GeometryId, pydrake.geometry.GeometryId]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].GetCollisionCandidates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all pairs of geometries that are candidates for collision (in
-no particular order). See SceneGraph::ExcludeCollisionsBetween() or
-SceneGraph::ExcludeCollisionsWithin() for information on why a
-particular pair may <em>not</em> be a candidate. For candidate pair (A, B),
-the candidate is always guaranteed to be reported in a fixed order
-(i.e., always (A, B) and <em>never</em> (B, A)). This is the same ordering as
-would be returned by, e.g.,
+no particular order). See CollisionFilterDeclaration and
+CollisionFilterManager::Apply() for information on why a particular
+pair may <em>not</em> be a candidate.</p>
+<p>For candidate pair (A, B), the candidate is always guaranteed to be
+reported in a fixed order (i.e., always (A, B) and <em>never</em> (B, A)).
+This is the same ordering as would be returned by, e.g.,
 QueryObject::ComputePointPairPenetration().</p>
 </dd></dl>
 

@@ -355,8 +355,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a46b7433ff54eba8bae914099283a09cb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a2135ff8bc7d0e646f5cb5cf44a6afae9">RemoveRole()</a> for individual geometries.  <a href="#a46b7433ff54eba8bae914099283a09cb">More...</a><br /></td></tr>
 <tr class="separator:a46b7433ff54eba8bae914099283a09cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Collision filtering</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filtering"></a>The interface for limiting the scope of penetration queries (i.e., "filtering
-collisions").</p>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filter_manager"></a> Control over "collision filtering" is handled by the <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a>. SceneGraph provides access to the manager. As with other geometry data, collision filters can be configured in SceneGraph's <em>model</em> or in the copy stored in a particular Context. These methods provide access to the manager for the data stored in either location.</p>
+<p>Generally, it should be considered a bad practice to hang onto the instance of <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> returned by <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f" title="Returns the collision filter manager for this SceneGraph instance&#39;s model*.">collision_filter_manager()</a>. It is not immediately clear whether a particular <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> instance refers to the SceneGraph model or the Context data and persisting the reference may lead to confusion. Keeping the reference for the duration of a function is appropriate, but allowing it to persist outside of the scope of acquisition is dangerous. Acquiring a new <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> is <em>very</em> cheap, so feel free to discard and reacquire.</p>
+<p>Simply acquiring an instance of <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html" title="Class for configuring &quot;collision filters&quot;; collision filters limit the scope of various proximity que...">CollisionFilterManager</a> will advance the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">proximity version</a> for the related geometry data (model or context). </p>
+</div></td></tr>
+<tr class="memitem:a76a5871dd4432de7e8225f334765729f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a76a5871dd4432de7e8225f334765729f">collision_filter_manager</a> ()</td></tr>
+<tr class="memdesc:a76a5871dd4432de7e8225f334765729f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the collision filter manager for this SceneGraph instance's model*.  <a href="#a76a5871dd4432de7e8225f334765729f">More...</a><br /></td></tr>
+<tr class="separator:a76a5871dd4432de7e8225f334765729f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5bf882337dfed524c1da91fb96f618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618">collision_filter_manager</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:a3d5bf882337dfed524c1da91fb96f618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the collision filter manager for data stored in <code>context</code>.  <a href="#a3d5bf882337dfed524c1da91fb96f618">More...</a><br /></td></tr>
+<tr class="separator:a3d5bf882337dfed524c1da91fb96f618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Collision filtering (Legacy)</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filtering"></a>The <em>legacy</em> interface for limiting the scope of penetration queries (i.e., "filtering collisions").</p>
+<p>Please use the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filter_manager">new API</a> instead.</p>
 <p>The scene graph consists of the set of geometry <code>G = D ⋃ A = {g₀, g₁, ..., gₙ}</code>, where D is the set of dynamic geometry and A is the set of anchored geometry (by definition <code>D ⋂ A = ∅</code>). Collision occurs between pairs of geometries (e.g., (gᵢ, gⱼ)). The set of collision candidate pairs is initially defined as <code>C = (G × G) - (A × A) - F - I</code>, where:</p><ul>
 <li><code>G × G = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G</code> is the cartesian product of the set of SceneGraph geometries.</li>
 <li><code>A × A</code> represents all pairs consisting only of anchored geometry; anchored geometry is never tested against other anchored geometry.</li>
@@ -1946,6 +1957,46 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
+<a id="a76a5871dd4432de7e8225f334765729f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a5871dd4432de7e8225f334765729f">&#9670;&nbsp;</a></span>collision_filter_manager() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a> collision_filter_manager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the collision filter manager for this SceneGraph instance's model*. </p>
+
+</div>
+</div>
+<a id="a3d5bf882337dfed524c1da91fb96f618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5bf882337dfed524c1da91fb96f618">&#9670;&nbsp;</a></span>collision_filter_manager() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a> collision_filter_manager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the collision filter manager for data stored in <code>context</code>. </p>
+<p>The context must remain alive for at least as long as the returned manager. </p>
+
+</div>
+</div>
 <a id="a822b987f8d0fed87bcd53dd90345bce1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a822b987f8d0fed87bcd53dd90345bce1">&#9670;&nbsp;</a></span>ExcludeCollisionsBetween() <span class="overload">[1/2]</span></h2>
 
@@ -2183,8 +2234,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2195,7 +2246,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2209,8 +2260,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2221,7 +2272,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

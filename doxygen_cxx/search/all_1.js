@@ -273,6 +273,7 @@ var searchData=
   ['appendfirstordersegment',['AppendFirstOrderSegment',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23',1,'drake::trajectories::PiecewisePolynomial']]],
   ['appendgroup',['AppendGroup',['../classdrake_1_1systems_1_1_discrete_values.html#a1921190f40a3b6421e6a7b4311b03623',1,'drake::systems::DiscreteValues']]],
   ['appendtotrackerpointermap',['AppendToTrackerPointerMap',['../classdrake_1_1systems_1_1_dependency_graph.html#a32f801ebc60ebd200bf0f9dd9ae6ce32',1,'drake::systems::DependencyGraph']]],
+  ['apply',['Apply',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386',1,'drake::geometry::CollisionFilterManager']]],
   ['applydiscretevariableupdate',['ApplyDiscreteVariableUpdate',['../classdrake_1_1systems_1_1_system.html#a3873890578a88001255c795f20f01e3f',1,'drake::systems::System']]],
   ['applyjointvelocitylimits',['ApplyJointVelocityLimits',['../namespacedrake_1_1manipulation_1_1util.html#a03defeaacd8e6e4a43260eb910c1913c',1,'drake::manipulation::util']]],
   ['applysimulatorconfig',['ApplySimulatorConfig',['../group__simulator__configuration.html#ga3fb5bb9390aba71982dd3b282548d68b',1,'drake::systems']]],

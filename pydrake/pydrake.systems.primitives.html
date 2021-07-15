@@ -5677,6 +5677,225 @@ positive semi-definite.</p>
 
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">TrajectoryLinearSystem</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float]" title="pydrake.systems.primitives.TrajectoryLinearSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.TrajectoryLinearSystem_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">TrajectoryLinearSystem_</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float]" title="pydrake.systems.primitives.TrajectoryLinearSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">TrajectoryLinearSystem_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd]" title="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">TrajectoryLinearSystem_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float]">
+<em class="property">class </em><code class="descname">TrajectoryLinearSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A continuous- or discrete-time Linear Time-Varying system with system
+matrices described by trajectories.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], A: pydrake.trajectories.Trajectory, B: pydrake.trajectories.Trajectory, C: pydrake.trajectories.Trajectory, D: pydrake.trajectories.Trajectory, time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a PiecewisePolynomialLinearSystem from a
+LinearTimeVaryingData structure.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time_period</span></code>:</dt>
+<dd>Defines the period of the discrete time system; use
+time_period=0.0 to denote a continuous time system. $*Default:*
+0.0</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].A" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;name Implementations of PiecewisePolynomialLinearSystem&lt;T&gt;’s pure
+virtual methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].B">
+<code class="descname">B</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].C">
+<code class="descname">C</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].configure_default_state">
+<code class="descname">configure_default_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], x0: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].configure_default_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the value that will be assigned to the state vector in
+<code class="docutils literal"><span class="pre">SetDefaultContext</span></code>. <cite>x0</cite> must be a vector of length <code class="docutils literal"><span class="pre">num_states</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].configure_random_state">
+<code class="descname">configure_random_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], covariance: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].configure_random_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the Gaussian distribution over state vectors used in the
+<code class="docutils literal"><span class="pre">SetRandomContext</span></code> methods. The mean of the distribution will be the
+default state (</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">configure_default_state()). <code class="docutils literal"><span class="pre">covariance</span></code> must have size
+<code class="docutils literal"><span class="pre">num_states</span></code> by <code class="docutils literal"><span class="pre">num_states</span></code> and must be symmetric and
+positive semi-definite.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].D">
+<code class="descname">D</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].time_period">
+<code class="descname">time_period</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].time_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">TrajectoryLinearSystem_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>A continuous- or discrete-time Linear Time-Varying system with system
+matrices described by trajectories.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], A: pydrake.trajectories.Trajectory, B: pydrake.trajectories.Trajectory, C: pydrake.trajectories.Trajectory, D: pydrake.trajectories.Trajectory, time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a PiecewisePolynomialLinearSystem from a
+LinearTimeVaryingData structure.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time_period</span></code>:</dt>
+<dd>Defines the period of the discrete time system; use
+time_period=0.0 to denote a continuous time system. $*Default:*
+0.0</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].A" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;name Implementations of PiecewisePolynomialLinearSystem&lt;T&gt;’s pure
+virtual methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].B">
+<code class="descname">B</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].C">
+<code class="descname">C</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].configure_default_state">
+<code class="descname">configure_default_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], x0: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].configure_default_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the value that will be assigned to the state vector in
+<code class="docutils literal"><span class="pre">SetDefaultContext</span></code>. <cite>x0</cite> must be a vector of length <code class="docutils literal"><span class="pre">num_states</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].configure_random_state">
+<code class="descname">configure_random_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], covariance: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].configure_random_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the Gaussian distribution over state vectors used in the
+<code class="docutils literal"><span class="pre">SetRandomContext</span></code> methods. The mean of the distribution will be the
+default state (</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">configure_default_state()). <code class="docutils literal"><span class="pre">covariance</span></code> must have size
+<code class="docutils literal"><span class="pre">num_states</span></code> by <code class="docutils literal"><span class="pre">num_states</span></code> and must be symmetric and
+positive semi-definite.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].D">
+<code class="descname">D</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].time_period">
+<code class="descname">time_period</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].time_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">TrajectoryLinearSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A continuous- or discrete-time Linear Time-Varying system with system
+matrices described by trajectories.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], A: pydrake.trajectories.Trajectory, B: pydrake.trajectories.Trajectory, C: pydrake.trajectories.Trajectory, D: pydrake.trajectories.Trajectory, time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a PiecewisePolynomialLinearSystem from a
+LinearTimeVaryingData structure.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time_period</span></code>:</dt>
+<dd>Defines the period of the discrete time system; use
+time_period=0.0 to denote a continuous time system. $*Default:*
+0.0</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].A">
+<code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].A" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#64;name Implementations of PiecewisePolynomialLinearSystem&lt;T&gt;’s pure
+virtual methods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].B">
+<code class="descname">B</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].B" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].C">
+<code class="descname">C</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].configure_default_state">
+<code class="descname">configure_default_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], x0: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].configure_default_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the value that will be assigned to the state vector in
+<code class="docutils literal"><span class="pre">SetDefaultContext</span></code>. <cite>x0</cite> must be a vector of length <code class="docutils literal"><span class="pre">num_states</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].configure_random_state">
+<code class="descname">configure_random_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], covariance: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].configure_random_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the Gaussian distribution over state vectors used in the
+<code class="docutils literal"><span class="pre">SetRandomContext</span></code> methods. The mean of the distribution will be the
+default state (</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">configure_default_state()). <code class="docutils literal"><span class="pre">covariance</span></code> must have size
+<code class="docutils literal"><span class="pre">num_states</span></code> by <code class="docutils literal"><span class="pre">num_states</span></code> and must be symmetric and
+positive semi-definite.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].D">
+<code class="descname">D</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].D" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].time_period">
+<code class="descname">time_period</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].time_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.systems.primitives.TrajectorySource">
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">TrajectorySource</code><a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource" title="Permalink to this definition">¶</a></dt>
