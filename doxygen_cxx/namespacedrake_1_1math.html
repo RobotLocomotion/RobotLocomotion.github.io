@@ -246,6 +246,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8cd8a0787e886faf633f2c1f5be2365e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8cd8a0787e886faf633f2c1f5be2365e">DiscreteAlgebraicRiccatiEquation</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R)</td></tr>
 <tr class="memdesc:a8cd8a0787e886faf633f2c1f5be2365e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unique stabilizing solution X to the discrete-time algebraic Riccati equation:  <a href="#a8cd8a0787e886faf633f2c1f5be2365e">More...</a><br /></td></tr>
 <tr class="separator:a8cd8a0787e886faf633f2c1f5be2365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa957c0c1b13e62f96ae84dd8abe45dd9"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aa957c0c1b13e62f96ae84dd8abe45dd9">DiscreteAlgebraicRiccatiEquation</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;N)</td></tr>
+<tr class="memdesc:aa957c0c1b13e62f96ae84dd8abe45dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unique stabilizing solution X to the discrete-time algebraic Riccati equation:  <a href="#aa957c0c1b13e62f96ae84dd8abe45dd9">More...</a><br /></td></tr>
+<tr class="separator:aa957c0c1b13e62f96ae84dd8abe45dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41733a5b284046800224cd293e055ff7"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a41733a5b284046800224cd293e055ff7">RealDiscreteLyapunovEquation</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q)</td></tr>
 <tr class="separator:a41733a5b284046800224cd293e055ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a866d4d3082e830e8eb0c91cb5bf91ef1"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
@@ -911,7 +914,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -1471,7 +1474,7 @@ d₁ = P*d
 </div>
 </div>
 <a id="a8cd8a0787e886faf633f2c1f5be2365e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cd8a0787e886faf633f2c1f5be2365e">&#9670;&nbsp;</a></span>DiscreteAlgebraicRiccatiEquation()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd8a0787e886faf633f2c1f5be2365e">&#9670;&nbsp;</a></span>DiscreteAlgebraicRiccatiEquation() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1509,9 +1512,7 @@ d₁ = P*d
 </div><div class="memdoc">
 
 <p>Computes the unique stabilizing solution X to the discrete-time algebraic Riccati equation: </p>
-<p class="formulaDsp">
-\[ A&#39;XA - X - A&#39;XB(B&#39;XB+R)^{-1}B&#39;XA + Q = 0 \]
-</p>
+<p>AᵀXA − X − AᵀXB(BᵀXB + R)⁻¹BᵀXA + Q = 0</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if Q is not positive semi-definite. </td></tr>
@@ -1521,6 +1522,73 @@ d₁ = P*d
 </dl>
 <p>Based on the Schur Vector approach outlined in this paper: "On the Numerical Solution of the Discrete-Time Algebraic Riccati Equation" by Thrasyvoulos Pappas, Alan J. Laub, and Nils R. Sandell </p>
 
+</div>
+</div>
+<a id="aa957c0c1b13e62f96ae84dd8abe45dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa957c0c1b13e62f96ae84dd8abe45dd9">&#9670;&nbsp;</a></span>DiscreteAlgebraicRiccatiEquation() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd drake::math::DiscreteAlgebraicRiccatiEquation </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>B</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>R</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>N</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the unique stabilizing solution X to the discrete-time algebraic Riccati equation: </p>
+<p>AᵀXA − X − (AᵀXB + N)(BᵀXB + R)⁻¹(BᵀXA + Nᵀ) + Q = 0</p>
+<p>This is equivalent to solving the original DARE:</p>
+<p>A₂ᵀXA₂ − X − A₂ᵀXB(BᵀXB + R)⁻¹BᵀXA₂ + Q₂ = 0</p>
+<p>where A₂ and Q₂ are a change of variables:</p>
+<p>A₂ = A − BR⁻¹Nᵀ and Q₂ = Q − NR⁻¹Nᵀ</p>
+<p>This overload of the DARE is useful for finding the control law uₖ that minimizes the following cost function subject to xₖ₊₁ = Axₖ + Buₖ.</p>
+<pre class="fragment">///     ∞ [xₖ]ᵀ[Q  N][xₖ]
+/// J = Σ [uₖ] [Nᵀ R][uₖ] ΔT
+///    k=0
+/// </pre> <pre class="fragment">This is a more general form of the following. The linear-quadratic regulator
+is the feedback control law uₖ that minimizes the following cost function
+subject to xₖ₊₁ = Axₖ + Buₖ:
+
+@verbatim
+</pre><p> /// ∞ /// J = Σ (xₖᵀQxₖ + uₖᵀRuₖ) ΔT /// k=0 ///  </p><pre class="fragment">This can be refactored as:
+
+@verbatim
+</pre><p> /// ∞ [xₖ]ᵀ[Q 0][xₖ] /// J = Σ [uₖ] [0 R][uₖ] ΔT /// k=0 ///  </p><pre class="fragment">@throws std::runtime_error if Q − NR⁻¹Nᵀ is not positive semi-definite.
+@throws std::runtime_error if R is not positive definite.
+</pre> 
 </div>
 </div>
 <a id="a00f832c0837ee2ac76c713ed23440e8e"></a>

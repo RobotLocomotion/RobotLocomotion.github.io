@@ -2900,15 +2900,15 @@ body has repeated occurrence (instance) in model_instances.</p>
 <code class="descname">CollectRegisteredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], bodies: List[pydrake.multibody.tree.Body_[float]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometrySet<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CollectRegisteredGeometries" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each of the provided <code class="docutils literal"><span class="pre">bodies</span></code>, collects up all geometries that
 have been registered to that body. Intended to be used in conjunction
-with SceneGraph::ExcludeCollisionsWithin() and
-SceneGraph::ExcludeCollisionsBetween() to filter collisions between
-the geometries registered to the bodies.</p>
+with CollisionFilterDeclaration and CollisionFilterManager::Apply() to
+filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>// Don&#39;t report on collisions between geometries affixed to ``body1``,
 // ``body2``, or ``body3``.
 std::vector&lt;const RigidBody&lt;T&gt;*&gt; bodies{&amp;body1, &amp;body2, &amp;body3};
 geometry::GeometrySet set = plant.CollectRegisteredGeometries(bodies);
-scene_graph.ExcludeCollisionsWithin(set);
+scene_graph.collision_filter_manager().Apply(
+    CollisionFilterDeclaration().ExcludeWithin(set));
 </pre></div>
 </div>
 <div class="admonition note">
@@ -6693,15 +6693,15 @@ body has repeated occurrence (instance) in model_instances.</p>
 <code class="descname">CollectRegisteredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], bodies: List[pydrake.multibody.tree.Body_[AutoDiffXd]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometrySet<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CollectRegisteredGeometries" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each of the provided <code class="docutils literal"><span class="pre">bodies</span></code>, collects up all geometries that
 have been registered to that body. Intended to be used in conjunction
-with SceneGraph::ExcludeCollisionsWithin() and
-SceneGraph::ExcludeCollisionsBetween() to filter collisions between
-the geometries registered to the bodies.</p>
+with CollisionFilterDeclaration and CollisionFilterManager::Apply() to
+filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>// Don&#39;t report on collisions between geometries affixed to ``body1``,
 // ``body2``, or ``body3``.
 std::vector&lt;const RigidBody&lt;T&gt;*&gt; bodies{&amp;body1, &amp;body2, &amp;body3};
 geometry::GeometrySet set = plant.CollectRegisteredGeometries(bodies);
-scene_graph.ExcludeCollisionsWithin(set);
+scene_graph.collision_filter_manager().Apply(
+    CollisionFilterDeclaration().ExcludeWithin(set));
 </pre></div>
 </div>
 <div class="admonition note">
@@ -10484,15 +10484,15 @@ body has repeated occurrence (instance) in model_instances.</p>
 <code class="descname">CollectRegisteredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], bodies: List[pydrake.multibody.tree.Body_[Expression]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometrySet<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CollectRegisteredGeometries" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each of the provided <code class="docutils literal"><span class="pre">bodies</span></code>, collects up all geometries that
 have been registered to that body. Intended to be used in conjunction
-with SceneGraph::ExcludeCollisionsWithin() and
-SceneGraph::ExcludeCollisionsBetween() to filter collisions between
-the geometries registered to the bodies.</p>
+with CollisionFilterDeclaration and CollisionFilterManager::Apply() to
+filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>// Don&#39;t report on collisions between geometries affixed to ``body1``,
 // ``body2``, or ``body3``.
 std::vector&lt;const RigidBody&lt;T&gt;*&gt; bodies{&amp;body1, &amp;body2, &amp;body3};
 geometry::GeometrySet set = plant.CollectRegisteredGeometries(bodies);
-scene_graph.ExcludeCollisionsWithin(set);
+scene_graph.collision_filter_manager().Apply(
+    CollisionFilterDeclaration().ExcludeWithin(set));
 </pre></div>
 </div>
 <div class="admonition note">
@@ -14275,15 +14275,15 @@ body has repeated occurrence (instance) in model_instances.</p>
 <code class="descname">CollectRegisteredGeometries</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], bodies: List[pydrake.multibody.tree.Body_[float]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometrySet<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CollectRegisteredGeometries" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each of the provided <code class="docutils literal"><span class="pre">bodies</span></code>, collects up all geometries that
 have been registered to that body. Intended to be used in conjunction
-with SceneGraph::ExcludeCollisionsWithin() and
-SceneGraph::ExcludeCollisionsBetween() to filter collisions between
-the geometries registered to the bodies.</p>
+with CollisionFilterDeclaration and CollisionFilterManager::Apply() to
+filter collisions between the geometries registered to the bodies.</p>
 <p>For example:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span>// Don&#39;t report on collisions between geometries affixed to ``body1``,
 // ``body2``, or ``body3``.
 std::vector&lt;const RigidBody&lt;T&gt;*&gt; bodies{&amp;body1, &amp;body2, &amp;body3};
 geometry::GeometrySet set = plant.CollectRegisteredGeometries(bodies);
-scene_graph.ExcludeCollisionsWithin(set);
+scene_graph.collision_filter_manager().Apply(
+    CollisionFilterDeclaration().ExcludeWithin(set));
 </pre></div>
 </div>
 <div class="admonition note">

@@ -763,7 +763,7 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id4"><span class="problematic" id="id5">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id28"><span class="problematic" id="id29">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -1438,7 +1438,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id6"><span class="problematic" id="id7">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id30"><span class="problematic" id="id31">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -1570,7 +1570,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id8"><span class="problematic" id="id9">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id32"><span class="problematic" id="id33">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -1700,7 +1700,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id10"><span class="problematic" id="id11">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id34"><span class="problematic" id="id35">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2666,7 +2666,7 @@ scale factor.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id12"><span class="problematic" id="id13">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id36"><span class="problematic" id="id37">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -3162,7 +3162,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id14"><span class="problematic" id="id15">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id38"><span class="problematic" id="id39">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -3172,7 +3172,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id16"><span class="problematic" id="id17">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id40"><span class="problematic" id="id41">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -3278,8 +3278,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id18"><span class="problematic" id="id19">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id20"><span class="problematic" id="id21">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id42"><span class="problematic" id="id43">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id44"><span class="problematic" id="id45">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -3741,7 +3741,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id22"><span class="problematic" id="id23">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id46"><span class="problematic" id="id47">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -3751,7 +3751,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id24"><span class="problematic" id="id25">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id48"><span class="problematic" id="id49">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -3857,8 +3857,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id26"><span class="problematic" id="id27">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id28"><span class="problematic" id="id29">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id52"><span class="problematic" id="id53">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -4318,7 +4318,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id30"><span class="problematic" id="id31">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id54"><span class="problematic" id="id55">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -4328,7 +4328,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id32"><span class="problematic" id="id33">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id56"><span class="problematic" id="id57">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -4434,8 +4434,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id34"><span class="problematic" id="id35">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id36"><span class="problematic" id="id37">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id60"><span class="problematic" id="id61">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -4680,7 +4680,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id44"><span class="problematic" id="id45">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id68"><span class="problematic" id="id69">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -5214,18 +5214,28 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph.</li>
+<li>scene graph. <a href="#id2"><span class="problematic" id="id3">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager().Apply() instead This will
+be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context.</p>
+model stored in the provided context. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager(context).Apply() instead This
+will be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -5252,18 +5262,28 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">graph.</span></code></li>
+<li>graph. <a href="#id6"><span class="problematic" id="id7">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager().Apply() instead This will
+be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], set: pydrake.geometry.GeometrySet) -&gt; None</li>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context.</p>
+model stored in the provided context. <a href="#id8"><span class="problematic" id="id9">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager(context).Apply() instead This
+will be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -5933,18 +5953,28 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph.</li>
+<li>scene graph. <a href="#id11"><span class="problematic" id="id12">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager().Apply() instead This will
+be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context.</p>
+model stored in the provided context. <a href="#id13"><span class="problematic" id="id14">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager(context).Apply() instead This
+will be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -5971,18 +6001,28 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">graph.</span></code></li>
+<li>graph. <a href="#id15"><span class="problematic" id="id16">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager().Apply() instead This will
+be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], set: pydrake.geometry.GeometrySet) -&gt; None</li>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context.</p>
+model stored in the provided context. <a href="#id17"><span class="problematic" id="id18">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager(context).Apply() instead This
+will be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -6650,18 +6690,28 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph.</li>
+<li>scene graph. <a href="#id20"><span class="problematic" id="id21">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager().Apply() instead This will
+be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context.</p>
+model stored in the provided context. <a href="#id22"><span class="problematic" id="id23">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager(context).Apply() instead This
+will be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -6688,18 +6738,28 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">graph.</span></code></li>
+<li>graph. <a href="#id24"><span class="problematic" id="id25">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager().Apply() instead This will
+be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], set: pydrake.geometry.GeometrySet) -&gt; None</li>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context.</p>
+model stored in the provided context. <a href="#id26"><span class="problematic" id="id27">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please call collision_filter_manager(context).Apply() instead This
+will be removed from Drake on or after 2021-11-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -9484,7 +9544,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id38"><span class="problematic" id="id39">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id62"><span class="problematic" id="id63">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9571,7 +9631,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id40"><span class="problematic" id="id41">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id64"><span class="problematic" id="id65">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9656,7 +9716,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id42"><span class="problematic" id="id43">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id66"><span class="problematic" id="id67">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result

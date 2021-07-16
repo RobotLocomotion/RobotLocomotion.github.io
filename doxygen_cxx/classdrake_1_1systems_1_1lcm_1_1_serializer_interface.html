@@ -110,6 +110,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1lcm_1_1_seria
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fccdf5e8b33a94fdaf1a9b8826aa684"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a2fccdf5e8b33a94fdaf1a9b8826aa684">~SerializerInterface</a> ()</td></tr>
 <tr class="separator:a2fccdf5e8b33a94fdaf1a9b8826aa684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbee7f3497ff5244da916e6997c54872"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#acbee7f3497ff5244da916e6997c54872">Clone</a> () const =0</td></tr>
+<tr class="memdesc:acbee7f3497ff5244da916e6997c54872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a deep copy of this.  <a href="#acbee7f3497ff5244da916e6997c54872">More...</a><br /></td></tr>
+<tr class="separator:acbee7f3497ff5244da916e6997c54872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bfe2467e0ea22bbb13e0c4b9afa98a4"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a5bfe2467e0ea22bbb13e0c4b9afa98a4">CreateDefaultValue</a> () const =0</td></tr>
 <tr class="memdesc:a5bfe2467e0ea22bbb13e0c4b9afa98a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a value-initialized (zeroed) instance of the message object.  <a href="#a5bfe2467e0ea22bbb13e0c4b9afa98a4">More...</a><br /></td></tr>
 <tr class="separator:a5bfe2467e0ea22bbb13e0c4b9afa98a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,8 +134,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aa33760f0d4b5089a8e2a72c029272cb0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#aa33760f0d4b5089a8e2a72c029272cb0">SerializerInterface</a> ()</td></tr>
-<tr class="separator:aa33760f0d4b5089a8e2a72c029272cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a128de9914660c56b522f67d6bae412b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html#a128de9914660c56b522f67d6bae412b2">SerializerInterface</a> ()=default</td></tr>
+<tr class="separator:a128de9914660c56b522f67d6bae412b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acf0fec4b7afc9415a7441b0bb4e9cf33"></a>
@@ -212,8 +215,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa33760f0d4b5089a8e2a72c029272cb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa33760f0d4b5089a8e2a72c029272cb0">&#9670;&nbsp;</a></span>SerializerInterface() <span class="overload">[3/3]</span></h2>
+<a id="a128de9914660c56b522f67d6bae412b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a128de9914660c56b522f67d6bae412b2">&#9670;&nbsp;</a></span>SerializerInterface() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,7 +233,7 @@ Protected Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -238,6 +241,35 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="acbee7f3497ff5244da916e6997c54872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbee7f3497ff5244da916e6997c54872">&#9670;&nbsp;</a></span>Clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer_interface.html">SerializerInterface</a>&gt; Clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a deep copy of this. </p>
+
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_serializer.html#a4497ca6ec8ea51e6a64f26985d7e41c0">Serializer&lt; LcmMessage &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a5bfe2467e0ea22bbb13e0c4b9afa98a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5bfe2467e0ea22bbb13e0c4b9afa98a4">&#9670;&nbsp;</a></span>CreateDefaultValue()</h2>
 

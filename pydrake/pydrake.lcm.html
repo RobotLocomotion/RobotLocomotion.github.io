@@ -188,6 +188,21 @@ or else LCM_DEFAULT_URL environment variable if it is set).</p>
 </ol>
 <p>Constructs using the given URL. If empty, it will use the default URL
 as per the no-argument constructor.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.lcm.DrakeLcm, lcm_url: str, defer_initialization: bool) -&gt; None</li>
+</ol>
+<p>(Advanced) Constructs using the given URL, but with the ability to
+defer launching the receive thread.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">defer_initialization</span></code>:</dt>
+<dd>controls whether or not LCM’s background receive thread will be
+launched immediately during the constructor (when false) or
+deferred until the first time it’s needed (when true). This can be
+useful if the scheduling configuration for new threads varies
+between the construction time and and first use. For other
+constructor overloads, this setting defaults to <code class="docutils literal"><span class="pre">False</span></code> – the
+thread is launched immediately.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

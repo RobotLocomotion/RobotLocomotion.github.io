@@ -365,7 +365,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d5bf882337dfed524c1da91fb96f618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618">collision_filter_manager</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a3d5bf882337dfed524c1da91fb96f618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the collision filter manager for data stored in <code>context</code>.  <a href="#a3d5bf882337dfed524c1da91fb96f618">More...</a><br /></td></tr>
 <tr class="separator:a3d5bf882337dfed524c1da91fb96f618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Collision filtering (Legacy)</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Collision filtering (Deprecated)</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filtering"></a>The <em>legacy</em> interface for limiting the scope of penetration queries (i.e., "filtering collisions").</p>
 <p>Please use the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filter_manager">new API</a> instead.</p>
 <p>The scene graph consists of the set of geometry <code>G = D ⋃ A = {g₀, g₁, ..., gₙ}</code>, where D is the set of dynamic geometry and A is the set of anchored geometry (by definition <code>D ⋂ A = ∅</code>). Collision occurs between pairs of geometries (e.g., (gᵢ, gⱼ)). The set of collision candidate pairs is initially defined as <code>C = (G × G) - (A × A) - F - I</code>, where:</p><ul>
@@ -2028,10 +2028,12 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filtering">scene_graph_collision_filtering</a> for requirements and how collision filtering works.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the groups include ids that don't exist in the scene graph. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the groups include ids that don't exist in the scene graph. (Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager().Apply() " "instead" <br />
+ This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>
@@ -2068,7 +2070,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsBetween()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager(context).Apply()" " instead" <br />
+ This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>
@@ -2093,10 +2096,12 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filtering">scene_graph_collision_filtering</a> for requirements and how collision filtering works.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the set includes ids that don't exist in the scene graph. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the set includes ids that don't exist in the scene graph. (Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager().Apply() " "instead" <br />
+ This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>
@@ -2127,7 +2132,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsWithin()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. </p>
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager(context).Apply() " "instead" <br />
+ This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>

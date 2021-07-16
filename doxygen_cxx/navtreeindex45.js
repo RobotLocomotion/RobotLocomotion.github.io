@@ -1,5 +1,13 @@
 var NAVTREEINDEX45 =
 {
+"shape__meshes_8h.html":[4,0,0,4,4,0,10],
+"shape__specification_8h.html":[4,0,0,4,29],
+"shape__to__string_8h.html":[4,0,0,4,30],
+"signal__log_8h.html":[4,0,0,11,6,19],
+"signal__logger_8h.html":[4,0,0,11,6,20],
+"signed__distance__pair_8h.html":[4,0,0,4,3,2],
+"signed__distance__to__point_8h.html":[4,0,0,4,3,3],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,1],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -229,10 +237,10 @@ var NAVTREEINDEX45 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,2,1,3,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,6,4,3,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,2,1,3,2],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,6,4,3,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,2,1,3,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,2,1,3,0],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,6,4,3,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,6,4,3,0],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,2,1,3,0],
 "structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,3,28],
 "structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,3,28,0],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html":[3,0,0,3,1,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX45 =
 "structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#aebb830a8d1d43f282fde08aad2b4adca":[3,0,0,3,1,7,2],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html":[3,0,0,3,1,9],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[3,0,0,3,1,9,0],
-"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,3,1,9,1],
-"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#af07157dad706c34acd6d255451d6a08d":[3,0,0,3,1,9,2],
-"structdrake_1_1is__eigen__nonvector__expression__double__pair.html":[3,0,0,29],
-"structdrake_1_1is__eigen__nonvector__of.html":[3,0,0,30],
-"structdrake_1_1is__eigen__scalar__same.html":[3,0,0,31],
-"structdrake_1_1is__eigen__type.html":[3,0,0,32],
-"structdrake_1_1is__eigen__vector.html":[3,0,0,33],
-"structdrake_1_1is__eigen__vector__expression__double__pair.html":[3,0,0,34],
-"structdrake_1_1is__eigen__vector__of.html":[3,0,0,35]
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,3,1,9,1]
 };

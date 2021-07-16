@@ -1,5 +1,13 @@
 var NAVTREEINDEX50 =
 {
+"symbolic__generic__polynomial_8h.html#a46745f049faa36c24020902f121e900c":[4,0,0,1,62,6],
+"symbolic__generic__polynomial_8h.html#a4af9f402cc780cda79d4f27807f75d39":[4,0,0,1,62,13],
+"symbolic__generic__polynomial_8h.html#a4e5300a119664e3092e90248af90a376":[4,0,0,1,62,8],
+"symbolic__generic__polynomial_8h.html#a51133160077bdcba90013d1f21b88410":[4,0,0,1,62,29],
+"symbolic__generic__polynomial_8h.html#a580ca04916246340e08ec69b45276827":[4,0,0,1,62,20],
+"symbolic__generic__polynomial_8h.html#a5935b2c56af883d2bacdfa61998c0d2e":[4,0,0,1,62,10],
+"symbolic__generic__polynomial_8h.html#a5e9f5fa3d4c2770a38947956973fe27e":[4,0,0,1,62,22],
+"symbolic__generic__polynomial_8h.html#a673a4c5428fa87d2279c587959d5e3e7":[4,0,0,1,62,34],
 "symbolic__generic__polynomial_8h.html#a687f88372c74f4500af3df50cb687b88":[4,0,0,1,62,12],
 "symbolic__generic__polynomial_8h.html#a6a635f8429c26e19e7582b7753751636":[4,0,0,1,62,16],
 "symbolic__generic__polynomial_8h.html#a6e51bfc83d5ab488518b664db9e5cd34":[4,0,0,1,62,11],
@@ -241,13 +249,5 @@ var NAVTREEINDEX50 =
 "type__safe__index__pybind_8h.html#a236143263d0a18d6ec439f707140d7e1":[4,0,0,0,0,0,9,0],
 "uniform__gravity__field__element_8h.html":[4,0,0,8,12,46],
 "unit__inertia_8h.html":[4,0,0,8,12,47],
-"unit__quaternion__constraint_8h.html":[4,0,0,8,5,13],
-"unit__quaternion__constraint_8h.html#a4a29f222bbff1590d2fa6ecb35f87492":[4,0,0,8,5,13,0],
-"universal__joint_8h.html":[4,0,0,8,12,48],
-"universal__mobilizer_8h.html":[4,0,0,8,12,49],
-"unrevised__lemke__solver_8h.html":[4,0,0,10,55],
-"unused_8h.html":[4,0,0,1,78],
-"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,78,0],
-"utilities_8h.html":[4,0,0,4,31],
-"value_8h.html":[4,0,0,1,79]
+"unit__quaternion__constraint_8h.html":[4,0,0,8,5,13]
 };

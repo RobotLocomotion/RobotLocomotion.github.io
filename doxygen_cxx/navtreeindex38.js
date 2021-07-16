@@ -1,5 +1,12 @@
 var NAVTREEINDEX38 =
 {
+"constants_8h.html#a63c55e4d8662e0986e79d11486334486":[4,0,0,1,11,1],
+"constants_8h.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8":[4,0,0,1,11,6],
+"constants_8h.html#ace32fe90adc0d2100ad4fc9f4bc6f79a":[4,0,0,1,11,3],
+"constants_8h.html#aeab5b0d99cafc2f6ae5812128cea27a3":[4,0,0,1,11,4],
+"constants_8h.html#af869092c52ed7cc9d2db40ce56050c7c":[4,0,0,1,11,5],
+"constants_8h.html#af8777bc10296f9d39d52753861110e26":[4,0,0,1,11,0],
+"constants_8h.html#af8777bc10296f9d39d52753861110e26abab0767e88027de9944aa55c24c8387a":[4,0,0,1,11,0,0],
 "constants_8h.html#af8777bc10296f9d39d52753861110e26af460a96ab20647996c15854794763384":[4,0,0,1,11,0,1],
 "constraint_8h.html":[4,0,0,10,9],
 "constraint__doxygen_8h.html":[4,0,0,8,1,0],
@@ -221,6 +228,7 @@ var NAVTREEINDEX38 =
 "discontinuous__spring__mass__damper__system_8h.html":[4,0,0,11,0,0,2],
 "discrete__algebraic__riccati__equation_8h.html":[4,0,0,7,9],
 "discrete__algebraic__riccati__equation_8h.html#a8cd8a0787e886faf633f2c1f5be2365e":[4,0,0,7,9,0],
+"discrete__algebraic__riccati__equation_8h.html#aa957c0c1b13e62f96ae84dd8abe45dd9":[4,0,0,7,9,1],
 "discrete__contact__pair_8h.html":[4,0,0,8,9,7],
 "discrete__derivative_8h.html":[4,0,0,11,6,6],
 "discrete__lyapunov__equation_8h.html":[4,0,0,7,10],
@@ -241,13 +249,5 @@ var NAVTREEINDEX38 =
 "doxygen_8h.html":[4,0,0,2,0,0],
 "doxygen__cxx_8h.html":[4,0,0,1,15],
 "drake__assert_8h.html":[4,0,0,1,16],
-"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,16,0],
-"drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,16,1],
-"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,16,2],
-"drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a":[4,0,0,1,16,3],
-"drake__assertion__error_8h.html":[4,0,0,1,17],
-"drake__bool_8h.html":[4,0,0,1,18],
-"drake__bool_8h.html#a01aa931c5cbfd4b09d847cc4d7b4c699":[4,0,0,1,18,6],
-"drake__bool_8h.html#a1f1c657c4d2cf400649123a7c2573d5b":[4,0,0,1,18,1],
-"drake__bool_8h.html#a624916a36af99a1ddfed08a25047cbea":[4,0,0,1,18,4]
+"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,16,0]
 };

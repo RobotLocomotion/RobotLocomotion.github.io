@@ -1,5 +1,13 @@
 var NAVTREEINDEX41 =
 {
+"group__planning.html":[1,5,2],
+"group__planning.html#ga1419d6264a35506905a455d205a3af13":[1,5,2,10],
+"group__planning.html#ga6106c9d0180a87d59f7a36709f7d6785":[1,5,2,9],
+"group__planning.html#gab53fd2e1578db60ceb43b754671ae539":[1,5,2,8],
+"group__primitive__systems.html":[1,3,1],
+"group__primitive__systems.html#ga14e2725af4ae2110baaf69555a49b591":[1,3,1,27],
+"group__primitive__systems.html#ga80a6af98e4258a474416aae6ab3abdd8":[1,3,1,28],
+"group__proximity__queries.html":[1,6,2],
 "group__python__bindings.html":[1,0,0],
 "group__render__benchmarks.html":[1,6,3,0],
 "group__render__engine__benchmarks.html":[1,6,3,0,0],
@@ -241,13 +249,5 @@ var NAVTREEINDEX41 =
 "logistic__system_8h.html":[4,0,0,11,0,0,7],
 "luenberger__observer_8h.html":[4,0,0,11,2,1],
 "lyapunov_8h.html":[4,0,0,11,0,10],
-"lyapunov_8h.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[4,0,0,11,0,10,0],
-"make__acrobot__plant_8h.html":[4,0,0,8,0,0,1],
-"make__acrobot__plant_8h.html#a71f510705bd91a2b7a0440a62dc4df47":[4,0,0,8,0,0,1,1],
-"make__box__field_8h.html":[4,0,0,4,2,14],
-"make__box__mesh_8h.html":[4,0,0,4,2,15],
-"make__capsule__field_8h.html":[4,0,0,4,2,16],
-"make__capsule__mesh_8h.html":[4,0,0,4,2,17],
-"make__cylinder__field_8h.html":[4,0,0,4,2,18],
-"make__cylinder__mesh_8h.html":[4,0,0,4,2,19]
+"lyapunov_8h.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[4,0,0,11,0,10,0]
 };

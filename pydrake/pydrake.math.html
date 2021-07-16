@@ -1257,11 +1257,14 @@ we deem that value as 0.</dd>
 
 <dl class="function">
 <dt id="pydrake.math.DiscreteAlgebraicRiccatiEquation">
-<code class="descclassname">pydrake.math.</code><code class="descname">DiscreteAlgebraicRiccatiEquation</code><span class="sig-paren">(</span><em>A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.DiscreteAlgebraicRiccatiEquation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the unique stabilizing solution X to the discrete-time
+<code class="descclassname">pydrake.math.</code><code class="descname">DiscreteAlgebraicRiccatiEquation</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.DiscreteAlgebraicRiccatiEquation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DiscreteAlgebraicRiccatiEquation(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
+</ol>
+<p>Computes the unique stabilizing solution X to the discrete-time
 algebraic Riccati equation:</p>
-<div class="math">
-\[A'XA - X - A'XB(B'XB+R)^{-1}B'XA + Q = 0\]</div>
+<p>AᵀXA − X − AᵀXB(BᵀXB + R)⁻¹BᵀXA + Q = 0</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1275,6 +1278,48 @@ algebraic Riccati equation:</p>
 <p>Based on the Schur Vector approach outlined in this paper: “On the
 Numerical Solution of the Discrete-Time Algebraic Riccati Equation” by
 Thrasyvoulos Pappas, Alan J. Laub, and Nils R. Sandell</p>
+<ol class="arabic simple" start="2">
+<li>DiscreteAlgebraicRiccatiEquation(A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
+</ol>
+<p>Computes the unique stabilizing solution X to the discrete-time
+algebraic Riccati equation:</p>
+<p>AᵀXA − X − (AᵀXB + N)(BᵀXB + R)⁻¹(BᵀXA + Nᵀ) + Q = 0</p>
+<p>This is equivalent to solving the original DARE:</p>
+<p>A₂ᵀXA₂ − X − A₂ᵀXB(BᵀXB + R)⁻¹BᵀXA₂ + Q₂ = 0</p>
+<p>where A₂ and Q₂ are a change of variables:</p>
+<p>A₂ = A − BR⁻¹Nᵀ and Q₂ = Q − NR⁻¹Nᵀ</p>
+<p>This overload of the DARE is useful for finding the control law uₖ
+that minimizes the following cost function subject to xₖ₊₁ = Axₖ +
+Buₖ.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>∞ [xₖ]ᵀ[Q  N][xₖ]
+J = Σ [uₖ] [Nᵀ R][uₖ] ΔT
+   k=0
+</pre></div>
+</div>
+<p>This is a more general form of the following. The linear-quadratic
+regulator is the feedback control law uₖ that minimizes the following
+cost function subject to xₖ₊₁ = Axₖ + Buₖ:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>∞
+J = Σ (xₖᵀQxₖ + uₖᵀRuₖ) ΔT
+   k=0
+</pre></div>
+</div>
+<p>This can be refactored as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>∞ [xₖ]ᵀ[Q 0][xₖ]
+J = Σ [uₖ] [0 R][uₖ] ΔT
+   k=0
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if Q − NR⁻¹Nᵀ is not positive semi-definite.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if R is not positive definite.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">

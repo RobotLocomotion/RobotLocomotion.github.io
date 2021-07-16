@@ -1368,11 +1368,21 @@ throws an exception for any f ∈ formulas.</p>
 <ol class="arabic simple">
 <li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, func: function, vars: numpy.ndarray[object[m, 1]], description: str = ‘’) -&gt; drake::solvers::Binding&lt;drake::solvers::Cost&gt;</li>
 </ol>
-<p>Adds a cost function</p>
+<p>Adds a cost function.</p>
 <ol class="arabic simple" start="2">
 <li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression) -&gt; drake::solvers::Binding&lt;drake::solvers::Cost&gt;</li>
 </ol>
-<p>Adds a cost expression</p>
+<p>Adds a cost expression.</p>
+<ol class="arabic simple" start="3">
+<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, obj: drake::solvers::Cost, vars: numpy.ndarray[object[m, 1]]) -&gt; drake::solvers::Binding&lt;drake::solvers::Cost&gt;</li>
+</ol>
+<p>Adds a cost type to the optimization program.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">obj</span></code>:</dt>
+<dd>The added objective.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vars</span></code>:</dt>
+<dd>The decision variables on which the cost depend.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

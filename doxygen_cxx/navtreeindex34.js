@@ -1,5 +1,10 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#adfb97422619ce05f36cd5a728be0255a":[3,0,0,14,0,0,2,4],
+"classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html#afc5251913437ef2de4b6e8b5a2cbfbed":[3,0,0,14,0,0,2,9],
+"classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html":[3,0,0,14,1,0],
+"classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html#a5d10bc0c5eae442bf40d94e8200b3460":[3,0,0,14,1,0,1],
+"classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html#a7a03b8870d44742ad1da82331acb81dd":[3,0,0,14,1,0,0],
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html":[3,0,0,14,1,3],
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#a074eb28dc29e8b0c21ad7ae4e1939c87":[3,0,0,14,1,3,11],
 "classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#a0fa2f275c58257b06b2de1c8064a8cf4":[3,0,0,14,1,3,8],
@@ -244,10 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a2de6ac5fe79e0790fe817ff72a2def68":[3,0,0,14,4,0,7],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a3078e101635c4ac23eca6d3cbd67e753":[3,0,0,14,4,0,5],
 "classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#a9f86bbb8c7f135386d1f1c25948ca148":[3,0,0,14,4,0,1],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#aa38c82f977eb04f5803246021a29a6c1":[3,0,0,14,4,0,6],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#abca7635ee26b04657f33e54df6ad96bb":[3,0,0,14,4,0,0],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#ae7414d4994d75a7747546e8427ce4ff8":[3,0,0,14,4,0,2],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html":[3,0,0,14,4,1],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#a13a36da4035188b35a84883ea366d2b9":[3,0,0,14,4,1,7],
-"classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html#a18737529bba0537a9fa06a649378b1a8":[3,0,0,14,4,1,5]
+"classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html#aa38c82f977eb04f5803246021a29a6c1":[3,0,0,14,4,0,6]
 };
