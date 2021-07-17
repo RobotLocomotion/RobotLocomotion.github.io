@@ -8,5 +8,6 @@ var classdrake_1_1geometry_1_1optimization_1_1_point =
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_point.html#a04d7ca865997dfcd84716a26e7272c10", null ],
     [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa6eed9c1eff2ff8f5635d62e6db1e119", null ],
     [ "PointInSet", "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa7a4d7c125954dfde3c15238c852eeed", null ],
+    [ "set_x", "classdrake_1_1geometry_1_1optimization_1_1_point.html#abeff1f260f066803152817686aaf33a0", null ],
     [ "x", "classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766", null ]
 ];

@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"constants_8h.html":[4,0,0,1,11],
+"constants_8h.html#a07869e660ffe730425feca7595de2273":[4,0,0,1,11,2],
 "constants_8h.html#a63c55e4d8662e0986e79d11486334486":[4,0,0,1,11,1],
 "constants_8h.html#ac9ce1d9cce0ad61dd2f5a295c1a10fc8":[4,0,0,1,11,6],
 "constants_8h.html#ace32fe90adc0d2100ad4fc9f4bc6f79a":[4,0,0,1,11,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "double__overloads_8h.html":[4,0,0,1,14],
 "double__overloads_8h.html#ad14dd00683f82b89dc0f08f9adec904e":[4,0,0,1,14,0],
 "doxygen_8h.html":[4,0,0,2,0,0],
-"doxygen__cxx_8h.html":[4,0,0,1,15],
-"drake__assert_8h.html":[4,0,0,1,16],
-"drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,16,0]
+"doxygen__cxx_8h.html":[4,0,0,1,15]
 };

@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fc93d35ec165e7a8ebd31b025a5f766"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766">x</a> () const</td></tr>
 <tr class="memdesc:a2fc93d35ec165e7a8ebd31b025a5f766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the point.  <a href="#a2fc93d35ec165e7a8ebd31b025a5f766">More...</a><br /></td></tr>
 <tr class="separator:a2fc93d35ec165e7a8ebd31b025a5f766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeff1f260f066803152817686aaf33a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#abeff1f260f066803152817686aaf33a0">set_x</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766">x</a>)</td></tr>
+<tr class="memdesc:abeff1f260f066803152817686aaf33a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the element <code>x</code> describing the set.  <a href="#abeff1f260f066803152817686aaf33a0">More...</a><br /></td></tr>
+<tr class="separator:abeff1f260f066803152817686aaf33a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766">x</a>, double tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the point is within <code>tol</code> of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766" title="Retrieves the point.">x()</a>, under the L∞-norm.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -427,6 +430,27 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if the point is within <code>tol</code> of <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766" title="Retrieves the point.">x()</a>, under the L∞-norm. </p>
+
+</div>
+</div>
+<a id="abeff1f260f066803152817686aaf33a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeff1f260f066803152817686aaf33a0">&#9670;&nbsp;</a></span>set_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_x </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the element <code>x</code> describing the set. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code>x</code> must be of size <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e" title="Returns the dimension of the vector space in which the elements of this set are evaluated.">ambient_dimension()</a>. </dd></dl>
 
 </div>
 </div>

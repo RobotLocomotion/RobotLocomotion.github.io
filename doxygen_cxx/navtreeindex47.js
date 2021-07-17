@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,6,2,5],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,11,6,2,6],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,11,6,3],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[3,0,0,11,6,3,0],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,11,6,3,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,14,7,2],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,7,2,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,14,7,8],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,14,7,10],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,14,7,11],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,14,7,3]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,14,7,10]
 };

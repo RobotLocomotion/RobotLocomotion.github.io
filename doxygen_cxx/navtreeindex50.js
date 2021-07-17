@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"symbolic__generic__polynomial_8h.html#a34397d7d032b5c4214a92123e3c6752d":[4,0,0,1,62,19],
+"symbolic__generic__polynomial_8h.html#a434f1953d9800d1c40dc223609904ecf":[4,0,0,1,62,18],
 "symbolic__generic__polynomial_8h.html#a46745f049faa36c24020902f121e900c":[4,0,0,1,62,6],
 "symbolic__generic__polynomial_8h.html#a4af9f402cc780cda79d4f27807f75d39":[4,0,0,1,62,13],
 "symbolic__generic__polynomial_8h.html#a4e5300a119664e3092e90248af90a376":[4,0,0,1,62,8],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "type__safe__index_8h.html#ac6e5cf21ed0ea9014bd179a4813d56d2":[4,0,0,1,77,7],
 "type__safe__index__pybind_8h.html":[4,0,0,0,0,0,9],
 "type__safe__index__pybind_8h.html#a236143263d0a18d6ec439f707140d7e1":[4,0,0,0,0,0,9,0],
-"uniform__gravity__field__element_8h.html":[4,0,0,8,12,46],
-"unit__inertia_8h.html":[4,0,0,8,12,47],
-"unit__quaternion__constraint_8h.html":[4,0,0,8,5,13]
+"uniform__gravity__field__element_8h.html":[4,0,0,8,12,46]
 };

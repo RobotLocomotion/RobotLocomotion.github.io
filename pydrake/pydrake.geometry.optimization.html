@@ -512,7 +512,7 @@ center (up to precision).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7f32bc16dfb0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7ff991073f70&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
@@ -630,6 +630,16 @@ in the world frame.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Point.set_x">
+<code class="descname">set_x</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Point, x: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.Point.set_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the element <code class="docutils literal"><span class="pre">x</span></code> describing the set.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">x</span></code> must be of size ambient_dimension().</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

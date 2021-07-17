@@ -1,5 +1,7 @@
 var NAVTREEINDEX18 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#aeb8ffa00352e1b2d8f1e8cfa720dc88c":[1,2,2,185],
+"classdrake_1_1solvers_1_1_mathematical_program.html#aed5ce186e378a8fbf9f0924b2e55994c":[1,2,2,194],
 "classdrake_1_1solvers_1_1_mathematical_program.html#aed941c57116fdf9186a3f0ad7f55b5a8":[1,2,2,28],
 "classdrake_1_1solvers_1_1_mathematical_program.html#aee9493ea7d08a35395634bfbfd5713dd":[1,2,2,183],
 "classdrake_1_1solvers_1_1_mathematical_program.html#aefb8281bc9e90a665dab64afa9749542":[1,2,2,48],
@@ -247,7 +249,5 @@ var NAVTREEINDEX18 =
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95":[1,2,0,25,7],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f":[1,2,0,25,9],
 "classdrake_1_1solvers_1_1_quadratic_constraint.html":[1,2,0,16],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5":[1,2,0,16,4],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a342bf500f07e30d92a924b308ae7c5ec":[1,2,0,16,6],
-"classdrake_1_1solvers_1_1_quadratic_constraint.html#a4461b576454d2193c040fa0c8b78e889":[1,2,0,16,2]
+"classdrake_1_1solvers_1_1_quadratic_constraint.html#a0a6cbf2b2482a80c78e51a04f29aefe5":[1,2,0,16,4]
 };
