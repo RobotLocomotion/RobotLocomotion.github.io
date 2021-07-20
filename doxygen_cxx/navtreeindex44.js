@@ -1,5 +1,9 @@
 var NAVTREEINDEX44 =
 {
+"pose__bundle_8h.html":[4,0,0,11,7,3],
+"pose__bundle__to__draw__message_8h.html":[4,0,0,11,7,4],
+"pose__smoother_8h.html":[4,0,0,6,2,1],
+"pose__vector_8h.html":[4,0,0,11,7,5],
 "posed__half__space_8h.html":[4,0,0,4,2,37],
 "position__constraint_8h.html":[4,0,0,8,5,12],
 "position__kinematics__cache_8h.html":[4,0,0,8,12,31],
@@ -245,9 +249,5 @@ var NAVTREEINDEX44 =
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,10,43,0,1],
 "sdpa__free__format_8h.html#aeb2470f8cacd8e5f5a473b10d0acf6cc":[4,0,0,10,43,1],
 "semi__explicit__euler__integrator_8h.html":[4,0,0,11,0,20],
-"sequential__expression__manager_8h.html":[4,0,0,11,9,4],
-"serializer_8h.html":[4,0,0,11,4,6],
-"setpoint_8h.html":[4,0,0,11,1,9],
-"setpoint_8h.html#aaba057485dc4c132a7a7d0f36d2c79a3":[4,0,0,11,1,9,3],
-"setpoint_8h.html#adb22f9d1fe222ce02c4af337253f7fe3":[4,0,0,11,1,9,2]
+"sequential__expression__manager_8h.html":[4,0,0,11,9,4]
 };

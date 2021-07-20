@@ -129,6 +129,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a84730fcef956d79b853944c792644a73"><td class="memTemplItemLeft" align="right" valign="top">const T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_abstract_value.html#a84730fcef956d79b853944c792644a73">maybe_get_value</a> () const</td></tr>
 <tr class="memdesc:a84730fcef956d79b853944c792644a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, if T matches the originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>.  <a href="#a84730fcef956d79b853944c792644a73">More...</a><br /></td></tr>
 <tr class="separator:a84730fcef956d79b853944c792644a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac9d18171482a953ac5fbc5746dc4fa"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8ac9d18171482a953ac5fbc5746dc4fa"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1_abstract_value.html#a8ac9d18171482a953ac5fbc5746dc4fa">maybe_get_mutable_value</a> ()</td></tr>
+<tr class="memdesc:a8ac9d18171482a953ac5fbc5746dc4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mutable value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, if T matches the originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>.  <a href="#a8ac9d18171482a953ac5fbc5746dc4fa">More...</a><br /></td></tr>
+<tr class="separator:a8ac9d18171482a953ac5fbc5746dc4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b7affc0f279efe9dc63f414b2958b85"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_abstract_value.html#a7b7affc0f279efe9dc63f414b2958b85">Clone</a> () const =0</td></tr>
 <tr class="memdesc:a7b7affc0f279efe9dc63f414b2958b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a copy of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>.  <a href="#a7b7affc0f279efe9dc63f414b2958b85">More...</a><br /></td></tr>
 <tr class="separator:a7b7affc0f279efe9dc63f414b2958b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -395,6 +399,31 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> containing the given <code>value</code>. </p>
+
+</div>
+</div>
+<a id="a8ac9d18171482a953ac5fbc5746dc4fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac9d18171482a953ac5fbc5746dc4fa">&#9670;&nbsp;</a></span>maybe_get_mutable_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* maybe_get_mutable_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the mutable value wrapped in this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, if T matches the originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The originally declared type of this <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>, e.g., from <a class="el" href="classdrake_1_1_abstract_value.html#a5f71775acbd3f977d7c4ae6ada21d703" title="Constructs an AbstractValue using T&#39;s default constructor, if available.">AbstractValue::Make&lt;T&gt;()</a> or <a class="el" href="classdrake_1_1_value.html#abe8b5f7eee6b178c99c13b92f7ce85d4" title="Constructs a Value&lt;T&gt; using T&#39;s default constructor, if available.">Value&lt;T&gt;::Value()</a>. If T does not match, returns nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

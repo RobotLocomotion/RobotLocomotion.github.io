@@ -116,6 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79ab6fe34900a8391301b23abd29e10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e">ambient_dimension</a> () const</td></tr>
 <tr class="memdesc:a79ab6fe34900a8391301b23abd29e10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dimension of the vector space in which the elements of this set are evaluated.  <a href="#a79ab6fe34900a8391301b23abd29e10e">More...</a><br /></td></tr>
 <tr class="separator:a79ab6fe34900a8391301b23abd29e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf0f6eaece284fabedbab39956a0938"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a9cf0f6eaece284fabedbab39956a0938">IntersectsWith</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;other) const</td></tr>
+<tr class="memdesc:a9cf0f6eaece284fabedbab39956a0938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the intersection between <code>this</code> and <code>other</code> is non-empty.  <a href="#a9cf0f6eaece284fabedbab39956a0938">More...</a><br /></td></tr>
+<tr class="separator:a9cf0f6eaece284fabedbab39956a0938"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
 <tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
 <tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -593,6 +596,32 @@ t ≥ 0,
 
 </div>
 </div>
+<a id="a9cf0f6eaece284fabedbab39956a0938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf0f6eaece284fabedbab39956a0938">&#9670;&nbsp;</a></span>IntersectsWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IntersectsWith </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true iff the intersection between <code>this</code> and <code>other</code> is non-empty. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the ambient dimension of <code>other</code> is not the same as that of <code>this</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2f010e733bd63adb8352995624362b65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f010e733bd63adb8352995624362b65">&#9670;&nbsp;</a></span>IsBounded()</h2>
 
@@ -613,8 +642,8 @@ t ≥ 0,
 
 </div>
 </div>
-<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -625,7 +654,7 @@ t ≥ 0,
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -639,8 +668,8 @@ t ≥ 0,
 
 </div>
 </div>
-<a id="aaf56e31cd3546020503a8d7b3b359703"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf56e31cd3546020503a8d7b3b359703">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a35e9f9166891aeacbca14f74e73018f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e9f9166891aeacbca14f74e73018f3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -651,7 +680,7 @@ t ≥ 0,
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_convex_set.html">ConvexSet</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

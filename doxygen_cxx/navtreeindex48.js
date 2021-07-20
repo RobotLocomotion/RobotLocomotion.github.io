@@ -1,5 +1,9 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,14,7,2],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,7,2,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,14,7,8],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,14,7,10],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,14,7,11],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,14,7,3],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,14,7,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX48 =
 "symbolic__expression_8h.html#a9084a43cdfa02b10cb216c7bfff0dcb3":[4,0,0,1,56,99],
 "symbolic__expression_8h.html#a90efdc7cf4be8bddc1fa365fb78b8e4a":[4,0,0,1,56,113],
 "symbolic__expression_8h.html#a911dd37b6ac155198d923500bbc97135":[4,0,0,1,56,62],
-"symbolic__expression_8h.html#a92b9f0534ca861f03dbaa96ec1712f7f":[4,0,0,1,56,64],
-"symbolic__expression_8h.html#a93e09e7b40ee56f60a121014f02603fb":[4,0,0,1,56,55],
-"symbolic__expression_8h.html#a942b47a07cae421b3152f11536e6579c":[4,0,0,1,56,45],
-"symbolic__expression_8h.html#a96d1119f8ec23bd6d918a984ce5820b9":[4,0,0,1,56,114],
-"symbolic__expression_8h.html#a979582c00c744ebe1c719e57c6f738b8":[4,0,0,1,56,26]
+"symbolic__expression_8h.html#a92b9f0534ca861f03dbaa96ec1712f7f":[4,0,0,1,56,64]
 };

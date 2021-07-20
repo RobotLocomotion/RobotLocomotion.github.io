@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1pydrake.html','');})
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>For more high-level information, see the <a class="el" href="group__python__bindings.html">Python Bindings</a> technical notes. </p>
+<div class="textblock"><p>For more high-level information, see the Python Bindings technical notes. </p>
 <p>Drake developers should prefer any aliases defined here over their full spellings in <code>pybind11</code>.</p>
 <p><code>namespace py</code> is a shorthand alias to <code>pybind11</code> for consistency. (This symbol cannot be exposed directly in Doxygen.)</p>
 <dl class="section note"><dt>Note</dt><dd>Downstream users should avoid <code>using namespace <a class="el" href="namespacedrake_1_1pydrake.html" title="For more high-level information, see the Python Bindings technical notes.">drake::pydrake</a></code>, as this may create ambiguous aliases (especially for GCC). Instead, consider using your own alias directly to the <code>pybind11</code> namespace. </dd></dl>
@@ -333,7 +333,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Shortened alias for py::return_value_policy. </p>
-<p>For more information, see the <a class="el" href="group__python__bindings.html#PydrakeReturnValuePolicy">Return Value Policy</a> section. </p>
+<p>For more information, see the Return Value Policy section. </p>
 
 </div>
 </div>
@@ -1470,7 +1470,7 @@ Ts cannot be a <code>py::</code> symbol (e.g. <code>py::object</code>). On Mac, 
 <p>The input should be the first and only argument to trigger reshaping.</p>
 <p>This preserves the original docstrings so that they still indicate the shapes of the input and output arrays.</p>
 <p>Example:</p>
-<div class="fragment"><div class="line">cls  <span class="comment">// BR</span></div><div class="line">  .def(<span class="stringliteral">&quot;multiply&quot;</span>, [](<span class="keyword">const</span> Class&amp; <span class="keyword">self</span>, <span class="keyword">const</span> Class&amp; other) { ... })</div><div class="line">  .def(<span class="stringliteral">&quot;multiply&quot;</span>, [](<span class="keyword">const</span> Class&amp; <span class="keyword">self</span>, <span class="keyword">const</span> Vector3&lt;T&gt;&amp; p) { ... })</div><div class="line">  .def(<span class="stringliteral">&quot;multiply&quot;</span>, [](<span class="keyword">const</span> Class&amp; <span class="keyword">self</span>, <span class="keyword">const</span> Matrix3X&lt;T&gt;&amp; plist) { ... });</div><div class="line">cls.attr(<span class="stringliteral">&quot;multiply&quot;</span>) = <a class="code" href="namespacedrake_1_1pydrake.html#af5f81d7315477aaa1694d9aa02a1346b">WrapToMatchInputShape</a>(cls.attr(<span class="stringliteral">&quot;multiply&quot;</span>));</div></div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__python__bindings.html#PydrakeReturnVectorsOrMatrices">PydrakeReturnVectorsOrMatrices</a> </dd></dl>
+<div class="fragment"><div class="line">cls  <span class="comment">// BR</span></div><div class="line">  .def(<span class="stringliteral">&quot;multiply&quot;</span>, [](<span class="keyword">const</span> Class&amp; <span class="keyword">self</span>, <span class="keyword">const</span> Class&amp; other) { ... })</div><div class="line">  .def(<span class="stringliteral">&quot;multiply&quot;</span>, [](<span class="keyword">const</span> Class&amp; <span class="keyword">self</span>, <span class="keyword">const</span> Vector3&lt;T&gt;&amp; p) { ... })</div><div class="line">  .def(<span class="stringliteral">&quot;multiply&quot;</span>, [](<span class="keyword">const</span> Class&amp; <span class="keyword">self</span>, <span class="keyword">const</span> Matrix3X&lt;T&gt;&amp; plist) { ... });</div><div class="line">cls.attr(<span class="stringliteral">&quot;multiply&quot;</span>) = <a class="code" href="namespacedrake_1_1pydrake.html#af5f81d7315477aaa1694d9aa02a1346b">WrapToMatchInputShape</a>(cls.attr(<span class="stringliteral">&quot;multiply&quot;</span>));</div></div><!-- fragment --><dl class="section see"><dt>See also</dt><dd>PydrakeReturnVectorsOrMatrices </dd></dl>
 
 </div>
 </div>
