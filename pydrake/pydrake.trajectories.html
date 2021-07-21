@@ -710,14 +710,37 @@ validate <code class="docutils literal"><span class="pre">segment_index</span></
 
 <dl class="staticmethod">
 <dt id="pydrake.trajectories.PiecewisePolynomial.ZeroOrderHold">
-<em class="property">static </em><code class="descname">ZeroOrderHold</code><span class="sig-paren">(</span><em>arg0: numpy.ndarray[numpy.float64[m, 1]], arg1: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.ZeroOrderHold" title="Permalink to this definition">¶</a></dt>
-<dd><p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
+<em class="property">static </em><code class="descname">ZeroOrderHold</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.ZeroOrderHold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ZeroOrderHold(breaks: List[float], samples: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Version of ZeroOrderHold(breaks, samples) that uses vector samples and
 Eigen VectorXd/MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></dd>
 </dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError under the conditions specified under</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">coefficient_construction_methods.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>ZeroOrderHold(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a piecewise constant PiecewisePolynomial using matrix
+samples. Note that constructing a PiecewisePolynomial requires at
+least two sample points, although in this case, the second sample
+point’s value is ignored, and only its break time is used.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

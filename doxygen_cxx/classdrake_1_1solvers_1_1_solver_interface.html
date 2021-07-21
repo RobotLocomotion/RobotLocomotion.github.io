@@ -472,7 +472,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Solves an optimization program with optional initial guess and solver options. </p>
-<p>Note that these initial guess and solver options are not written to <code>prog</code>. If the <code>prog</code> has set an option for a solver, and <code>solver_options</code> contains a different value for the same option on the same solver, then <code>solver_options</code> takes priority. </p>
+<p>Note that these initial guess and solver options are not written to <code>prog</code>. If the <code>prog</code> has set an option for a solver, and <code>solver_options</code> contains a different value for the same option on the same solver, then <code>solver_options</code> takes priority. Derived implementations of this interface may elect to throw std::exception for badly formed programs. </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1solvers_1_1_solver_base.html#af2ff6a250a78bb79ef64f7527c51b01c">SolverBase</a>.</p>
 

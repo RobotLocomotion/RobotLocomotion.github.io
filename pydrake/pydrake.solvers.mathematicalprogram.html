@@ -4293,7 +4293,9 @@ string.</p>
 options. Note that these initial guess and solver options are not
 written to <code class="docutils literal"><span class="pre">prog</span></code>. If the <code class="docutils literal"><span class="pre">prog</span></code> has set an option for a solver,
 and <code class="docutils literal"><span class="pre">solver_options</span></code> contains a different value for the same option
-on the same solver, then <code class="docutils literal"><span class="pre">solver_options</span></code> takes priority.</p>
+on the same solver, then <code class="docutils literal"><span class="pre">solver_options</span></code> takes priority. Derived
+implementations of this interface may elect to throw RuntimeError for
+badly formed programs.</p>
 <ol class="arabic simple" start="2">
 <li>Solve(self: pydrake.solvers.mathematicalprogram.SolverInterface, prog: drake::solvers::MathematicalProgram, initial_guess: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, solver_options: Optional[drake::solvers::SolverOptions] = None) -&gt; drake::solvers::MathematicalProgramResult</li>
 </ol>
