@@ -3265,45 +3265,27 @@ with arXiv link <a class="reference external" href="https://arxiv.org/abs/1706.0
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveConstraint">
+<code class="descname">RemoveConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>constraint: pydrake.solvers.mathematicalprogram.Binding_Constraint</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes <code class="docutils literal"><span class="pre">constraint</span></code> from this mathematical program. See
+remove_cost_constraint “Remove costs or constraints” for more details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of constraint objects removed from this program. If this
+program doesn’t contain <code class="docutils literal"><span class="pre">constraint</span></code>, then returns 0. If this
+program contains multiple <code class="docutils literal"><span class="pre">constraint</span></code> objects, then returns the
+repetition of <code class="docutils literal"><span class="pre">constraint</span></code> in this program.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost">
-<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>RemoveCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, cost: pydrake.solvers.mathematicalprogram.Binding_LinearCost) -&gt; int</li>
-</ol>
-<p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
-remove_cost_constraint “Remove costs or constraints” for more details.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of cost objects removed from this program. If this program
-doesn’t contain <code class="docutils literal"><span class="pre">cost</span></code>, then returns 0. If this program contains
-multiple <code class="docutils literal"><span class="pre">cost</span></code> objects, then returns the repetition of <code class="docutils literal"><span class="pre">cost</span></code>
-in this program.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="2">
-<li>RemoveCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, cost: pydrake.solvers.mathematicalprogram.Binding_QuadraticCost) -&gt; int</li>
-</ol>
-<p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
-remove_cost_constraint “Remove costs or constraints” for more details.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">number of cost objects removed from this program. If this program
-doesn’t contain <code class="docutils literal"><span class="pre">cost</span></code>, then returns 0. If this program contains
-multiple <code class="docutils literal"><span class="pre">cost</span></code> objects, then returns the repetition of <code class="docutils literal"><span class="pre">cost</span></code>
-in this program.</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
-<li>RemoveCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.solvers.mathematicalprogram.Binding_Cost) -&gt; int</li>
-</ol>
-<p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
+<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>cost: pydrake.solvers.mathematicalprogram.Binding_Cost</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
 remove_cost_constraint “Remove costs or constraints” for more details.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

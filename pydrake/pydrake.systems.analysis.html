@@ -1556,9 +1556,20 @@ in <code class="docutils literal"><span class="pre">context</span></code> repres
 </tr>
 </tbody>
 </table>
-<p>Note: There are more numerical techniques that we know how to apply
-here. Do report an issue if you discover a system for which this code
-does not perform well.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>For the given <code class="docutils literal"><span class="pre">system</span></code> and <code class="docutils literal"><span class="pre">context</span></code>, any required input ports
+on <code class="docutils literal"><span class="pre">system</span></code> must be “defined”, i.e., connected to other systems
+in a larger diagram or holding fixed values; see
+System::FixInputPortsFrom for possible caveats. Analyzing a
+closed-loop system would typically be accomplished by having both
+the plant and the controller in a diagram (which then has no input
+ports), and passing the diagram into this method as <code class="docutils literal"><span class="pre">system</span></code>.</dd>
+</dl>
+<p>Note: There are more numerical recipes for region of attraction
+analysis that could extend the current implementation. Do report an
+issue if you discover a system for which this code does not perform
+well.</p>
 </dd></dl>
 
 <dl class="class">

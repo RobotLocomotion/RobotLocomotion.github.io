@@ -1,5 +1,8 @@
 var NAVTREEINDEX47 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,11,6,1,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,11,6,2],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,11,6,2,1],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[3,0,0,11,6,2,2],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a48fd1a491d4b55da113c50ad56ac0e0b":[3,0,0,11,6,2,3],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,11,6,2,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html":[3,0,0,14,6,6],
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#abc9564688bbee2a18b20e2e0c10ee252":[3,0,0,14,6,6,1],
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#af1a58b1ce15865c2470ca4b646f3ab83":[3,0,0,14,6,6,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,14,7,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,14,7,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,14,7,1,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0]
 };

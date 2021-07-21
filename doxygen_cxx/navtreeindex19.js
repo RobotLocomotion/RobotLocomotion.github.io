@@ -1,5 +1,7 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#a93b9495de294e391dc2411455d35125c":[1,2,0,25,0],
+"classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,2,0,25,5],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#aa2789d79ee441d9c90e1234b5f08f801":[1,2,0,25,2],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#ac070804dddf0300f7245aa6692940d95":[1,2,0,25,7],
 "classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html#af6182a9803c81d9ef793685fd891082f":[1,2,0,25,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,3,13],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#ae517e799de9ba659f1d4d2ad70564add":[3,0,0,12,0,3,19],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#aeb4aa933c3d6d3f27523a77ab2c7c3d1":[3,0,0,12,0,3,11],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#af6b3924448e9c96c54386025fddd2c5b":[3,0,0,12,0,3,7],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_variable.html":[3,0,0,12,0,4],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_variable.html#a01d84f74684c0a542d9545650712e38d":[3,0,0,12,0,4,14]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#af6b3924448e9c96c54386025fddd2c5b":[3,0,0,12,0,3,7]
 };
