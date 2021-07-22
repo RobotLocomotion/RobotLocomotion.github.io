@@ -686,8 +686,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae2516569f5a2cc27e76ee0cc8b728746"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each point Bi affixed/welded to a frame B, calculates J𝑠_v_ABi, Bi's translational velocity Jacobian in frame A with respect to "speeds" 𝑠.  <a href="#ae2516569f5a2cc27e76ee0cc8b728746">More...</a><br /></td></tr>
 <tr class="separator:ae2516569f5a2cc27e76ee0cc8b728746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e686199a5e9ddee98538741b7a0382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa4e686199a5e9ddee98538741b7a0382">CalcJacobianCenterOfMassTranslationalVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; Js_v_ACcm_E) const</td></tr>
-<tr class="memdesc:aa4e686199a5e9ddee98538741b7a0382"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method computes J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Ccm is the composite center of mass of the system of all bodies in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>).  <a href="#aa4e686199a5e9ddee98538741b7a0382">More...</a><br /></td></tr>
+<tr class="memdesc:aa4e686199a5e9ddee98538741b7a0382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point CCm is the center of mass of the system of all non-world bodies contained in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#aa4e686199a5e9ddee98538741b7a0382">More...</a><br /></td></tr>
 <tr class="separator:aa4e686199a5e9ddee98538741b7a0382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab5cf2a636d29dd5b05225fab9b72de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afab5cf2a636d29dd5b05225fab9b72de">CalcJacobianCenterOfMassTranslationalVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;model_instances, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt; Js_v_ACcm_E) const</td></tr>
+<tr class="memdesc:afab5cf2a636d29dd5b05225fab9b72de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point CCm is the center of mass of the system of all non-world bodies contained in model_instances.  <a href="#afab5cf2a636d29dd5b05225fab9b72de">More...</a><br /></td></tr>
+<tr class="separator:afab5cf2a636d29dd5b05225fab9b72de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a029b22a36d5c6ee85247b9c1cfe84c6b">CalcBiasCenterOfMassTranslationalAcceleration</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a> with_respect_to, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_A, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;frame_E) const</td></tr>
 <tr class="memdesc:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates abias_ACcm_E, point Ccm's translational "bias" acceleration term in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Ccm is the composite center of mass of the system of all bodies (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>) in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="#a029b22a36d5c6ee85247b9c1cfe84c6b">More...</a><br /></td></tr>
 <tr class="separator:a029b22a36d5c6ee85247b9c1cfe84c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2088,7 +2091,7 @@ Related Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa4e686199a5e9ddee98538741b7a0382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4e686199a5e9ddee98538741b7a0382">&#9670;&nbsp;</a></span>CalcJacobianCenterOfMassTranslationalVelocity()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e686199a5e9ddee98538741b7a0382">&#9670;&nbsp;</a></span>CalcJacobianCenterOfMassTranslationalVelocity() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2131,10 +2134,10 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This method computes J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point Ccm is the composite center of mass of the system of all bodies in the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </p>
+<p>Calculates J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point CCm is the center of mass of the system of all non-world bodies contained in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the model. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the Jacobian <code>J𝑠_v_ACcm_E</code> is partial derivatives with respect to 𝑠 = q̇ (time-derivatives of generalized positions) or with respect to 𝑠 = v (generalized velocities). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which the translational velocity v_ACcm and its Jacobian J𝑠_v_ACcm are measured. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output. </td></tr>
@@ -2145,10 +2148,83 @@ Related Functions</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if CCm does not exist, which occurs if there are no massive bodies in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> (except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a>). </td></tr>
-    <tr><td class="paramname">std::exception</td><td>if composite_mass &lt;= 0, where composite_mass is the total mass of all bodies except <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> in <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if mₛ ≤ 0 (where mₛ is the mass of all non-world bodies contained in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>). </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="afab5cf2a636d29dd5b05225fab9b72de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab5cf2a636d29dd5b05225fab9b72de">&#9670;&nbsp;</a></span>CalcJacobianCenterOfMassTranslationalVelocity() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CalcJacobianCenterOfMassTranslationalVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>model_instances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658">JacobianWrtVariable</a>&#160;</td>
+          <td class="paramname"><em>with_respect_to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>frame_E</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#acfe2dee57bc492bfbd96fe078b65ab00">Matrix3X</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>Js_v_ACcm_E</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates J𝑠_v_ACcm_E, point Ccm's translational velocity Jacobian in frame A with respect to "speeds" 𝑠, expressed in frame E, where point CCm is the center of mass of the system of all non-world bodies contained in model_instances. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the model. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_instances</td><td>Vector of selected model instances. If a model instance is repeated in the vector (unusual), it is only counted once. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">with_respect_to</td><td>Enum equal to <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a08a6dd2b7a7e7a0a13886a70c696f72b" title="J = ∂V/∂q̇">JacobianWrtVariable::kQDot</a> or <a class="el" href="namespacedrake_1_1multibody.html#ad95b5f6a8d72582ad91a1aca26d76658a63b39853c60d1092c257c1ab898bad0a" title="J = ∂V/∂v.">JacobianWrtVariable::kV</a>, indicating whether the Jacobian <code>J𝑠_v_ACcm_E</code> is partial derivatives with respect to 𝑠 = q̇ (time-derivatives of generalized positions) or with respect to 𝑠 = v (generalized velocities). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_A</td><td>The frame in which the translational velocity v_ACcm and its Jacobian J𝑠_v_ACcm are measured. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_E</td><td>The frame in which the Jacobian J𝑠_v_ACcm is expressed on output. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">J𝑠_v_ACcm_E</td><td>Point Ccm's translational velocity Jacobian in frame A with respect to speeds 𝑠 (𝑠 = q̇ or 𝑠 = v), expressed in frame E. J𝑠_v_ACcm_E is a 3 x n matrix, where n is the number of elements in 𝑠. The Jacobian is a function of only generalized positions q (which are pulled from the context). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if mₛ ≤ 0 (where mₛ is the mass of all non-world bodies contained in model_instances). </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if model_instances is empty or only has world body. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a29ef779ddfeea96c5d80c27d68a4f864" title="Returns a constant reference to the world body.">world_body()</a> is ignored. J𝑠_v_ACcm_ = ∑ (mᵢ Jᵢ) / mₛ, where mₛ = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in model_instances, and Jᵢ is Bcm's translational velocity Jacobian in frame A, expressed in frame E (Bcm is the center of mass of the iᵗʰ body). </dd></dl>
 
 </div>
 </div>
@@ -5960,8 +6036,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5972,7 +6048,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -5986,8 +6062,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5998,7 +6074,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

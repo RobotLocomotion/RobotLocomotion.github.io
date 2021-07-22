@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"group__multibody__frames__and__bodies.html":[1,1,1,1],
 "group__multibody__notation.html":[1,1,1],
 "group__multibody__notation__basics.html":[1,1,1,0],
 "group__multibody__quantities.html":[1,1,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "linear__spring__damper_8h.html":[4,0,0,8,12,17],
 "linear__system_8h.html":[4,0,0,11,6,11],
 "linear__system_8h.html#ga14e2725af4ae2110baaf69555a49b591":[4,0,0,11,6,11,1],
-"linear__system_8h.html#ga80a6af98e4258a474416aae6ab3abdd8":[4,0,0,11,6,11,4],
-"linear__system_8h.html#ga8bc6169b50b1b127ed5f1b70afcb64ca":[4,0,0,11,6,11,2]
+"linear__system_8h.html#ga80a6af98e4258a474416aae6ab3abdd8":[4,0,0,11,6,11,4]
 };

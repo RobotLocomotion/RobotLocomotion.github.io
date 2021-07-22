@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_identity.html#af4fb026178fdf3ce0a371f9f21f7ab9c":[3,0,0,11,6,1,3],
 "structdrake_1_1schema_1_1_rotation_1_1_identity.html#af7bbb7bd985ee9193d77994218614e17":[3,0,0,11,6,1,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,11,6,2],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,11,6,2,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,3,2,3,0,0],
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html":[3,0,0,14,6,6],
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#abc9564688bbee2a18b20e2e0c10ee252":[3,0,0,14,6,6,1],
-"structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#af1a58b1ce15865c2470ca4b646f3ab83":[3,0,0,14,6,6,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0]
+"structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#af1a58b1ce15865c2470ca4b646f3ab83":[3,0,0,14,6,6,0]
 };

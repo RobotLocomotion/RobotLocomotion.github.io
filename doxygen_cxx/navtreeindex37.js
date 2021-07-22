@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#abfc9a61381e3e22126ab92fff4a9bc33":[3,0,0,16,1,5],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,1,7],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ae7aaaebd7e27434069ba5af047713628":[3,0,0,16,1,12],
 "classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#aee0d01536c69b892fb45553cf4b67bb7":[3,0,0,16,1,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa5cc7cc1518100eae9e3f2d83673a74ed":[4,0,0,7,4,1,1],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aae7c3602dce09c755e09250077a601a51":[4,0,0,7,4,1,0],
 "compute__numerical__gradient_8h.html#a480ac0ac10adfac21eab2d72f8694704":[4,0,0,7,4,2],
-"compute__torque_8h.html":[4,0,0,11,1,0,0],
-"compute__torque_8h.html#a66eda6d10bb53572748c1f28aaf5d6ab":[4,0,0,11,1,0,0,0]
+"compute__torque_8h.html":[4,0,0,11,1,0,0]
 };

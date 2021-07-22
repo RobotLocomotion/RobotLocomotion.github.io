@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"compute__torque_8h.html#a66eda6d10bb53572748c1f28aaf5d6ab":[4,0,0,11,1,0,0,0],
 "cond_8h.html":[4,0,0,1,10],
 "cond_8h.html#a0b6d557a3ef060688cb028f17975ffca":[4,0,0,1,10,0],
 "cond_8h.html#a1d122c5050b7d174b5a35e39c52bfb09":[4,0,0,1,10,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "discrete__update__manager_8h.html":[4,0,0,8,9,8],
 "discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,9,8,0],
 "discrete__values_8h.html":[4,0,0,11,3,18],
-"distance__constraint_8h.html":[4,0,0,8,5,3],
-"distance__constraint__utilities_8h.html":[4,0,0,8,5,4]
+"distance__constraint_8h.html":[4,0,0,8,5,3]
 };

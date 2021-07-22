@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"polynomial__types__pybind_8h.html#adbc17196068f19a5cd168e56d49d9231":[4,0,0,0,0,4,0],
 "port__base_8h.html":[4,0,0,11,3,33],
 "port__switch_8h.html":[4,0,0,11,6,16],
 "pose__aggregator_8h.html":[4,0,0,11,7,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "sdpa__free__format_8h.html":[4,0,0,10,43],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,10,43,0],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a268e3bfe4e48f70785a46a8d3552e552":[4,0,0,10,43,0,0],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec":[4,0,0,10,43,0,2],
-"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a54b9d7601ece96fc42e2ffd67aae2690":[4,0,0,10,43,0,1]
+"sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3a2992c87df2428b480924bf6c6509edec":[4,0,0,10,43,0,2]
 };

@@ -2503,13 +2503,13 @@ of elements in 𝑠.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcJacobianCenterOfMassTranslationalVelocity">
 <code class="descname">CalcJacobianCenterOfMassTranslationalVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[float], frame_E: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcJacobianCenterOfMassTranslationalVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method computes J𝑠_v_ACcm_E, point Ccm’s translational velocity
-Jacobian in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies in the MultibodyPlant (except world_body()).</p>
+<dd><p>Calculates J𝑠_v_ACcm_E, point Ccm’s translational velocity Jacobian in
+frame A with respect to “speeds” 𝑠, expressed in frame E, where point
+CCm is the center of mass of the system of all non-world bodies
+contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The state of the multibody system.</dd>
+<dd>contains the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">with_respect_to</span></code>:</dt>
 <dd>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the Jacobian
@@ -2539,8 +2539,8 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if composite_mass &lt;= 0, where composite_mass is the</li>
-<li>total mass of all bodies except world_body() in MultibodyPlant.</li>
+<li>RuntimeError if mₛ ≤ 0 (where mₛ is the mass of all non-world</li>
+<li>bodies contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant).</li>
 </ul>
 </td>
 </tr>
@@ -6296,13 +6296,13 @@ of elements in 𝑠.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcJacobianCenterOfMassTranslationalVelocity">
 <code class="descname">CalcJacobianCenterOfMassTranslationalVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_E: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcJacobianCenterOfMassTranslationalVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method computes J𝑠_v_ACcm_E, point Ccm’s translational velocity
-Jacobian in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies in the MultibodyPlant (except world_body()).</p>
+<dd><p>Calculates J𝑠_v_ACcm_E, point Ccm’s translational velocity Jacobian in
+frame A with respect to “speeds” 𝑠, expressed in frame E, where point
+CCm is the center of mass of the system of all non-world bodies
+contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The state of the multibody system.</dd>
+<dd>contains the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">with_respect_to</span></code>:</dt>
 <dd>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the Jacobian
@@ -6332,8 +6332,8 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if composite_mass &lt;= 0, where composite_mass is the</li>
-<li>total mass of all bodies except world_body() in MultibodyPlant.</li>
+<li>RuntimeError if mₛ ≤ 0 (where mₛ is the mass of all non-world</li>
+<li>bodies contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant).</li>
 </ul>
 </td>
 </tr>
@@ -10087,13 +10087,13 @@ of elements in 𝑠.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcJacobianCenterOfMassTranslationalVelocity">
 <code class="descname">CalcJacobianCenterOfMassTranslationalVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[Expression], frame_E: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcJacobianCenterOfMassTranslationalVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method computes J𝑠_v_ACcm_E, point Ccm’s translational velocity
-Jacobian in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies in the MultibodyPlant (except world_body()).</p>
+<dd><p>Calculates J𝑠_v_ACcm_E, point Ccm’s translational velocity Jacobian in
+frame A with respect to “speeds” 𝑠, expressed in frame E, where point
+CCm is the center of mass of the system of all non-world bodies
+contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The state of the multibody system.</dd>
+<dd>contains the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">with_respect_to</span></code>:</dt>
 <dd>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the Jacobian
@@ -10123,8 +10123,8 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if composite_mass &lt;= 0, where composite_mass is the</li>
-<li>total mass of all bodies except world_body() in MultibodyPlant.</li>
+<li>RuntimeError if mₛ ≤ 0 (where mₛ is the mass of all non-world</li>
+<li>bodies contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant).</li>
 </ul>
 </td>
 </tr>
@@ -13878,13 +13878,13 @@ of elements in 𝑠.</dd>
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcJacobianCenterOfMassTranslationalVelocity">
 <code class="descname">CalcJacobianCenterOfMassTranslationalVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], with_respect_to: pydrake.multibody.tree.JacobianWrtVariable, frame_A: pydrake.multibody.tree.Frame_[float], frame_E: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcJacobianCenterOfMassTranslationalVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method computes J𝑠_v_ACcm_E, point Ccm’s translational velocity
-Jacobian in frame A with respect to “speeds” 𝑠, expressed in frame E,
-where point Ccm is the composite center of mass of the system of all
-bodies in the MultibodyPlant (except world_body()).</p>
+<dd><p>Calculates J𝑠_v_ACcm_E, point Ccm’s translational velocity Jacobian in
+frame A with respect to “speeds” 𝑠, expressed in frame E, where point
+CCm is the center of mass of the system of all non-world bodies
+contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The state of the multibody system.</dd>
+<dd>contains the state of the model.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">with_respect_to</span></code>:</dt>
 <dd>Enum equal to JacobianWrtVariable::kQDot or
 JacobianWrtVariable::kV, indicating whether the Jacobian
@@ -13914,8 +13914,8 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if composite_mass &lt;= 0, where composite_mass is the</li>
-<li>total mass of all bodies except world_body() in MultibodyPlant.</li>
+<li>RuntimeError if mₛ ≤ 0 (where mₛ is the mass of all non-world</li>
+<li>bodies contained in <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant).</li>
 </ul>
 </td>
 </tr>
