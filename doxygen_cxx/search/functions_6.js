@@ -692,6 +692,7 @@ var searchData=
   ['getpositionsfromarray',['GetPositionsFromArray',['../classdrake_1_1multibody_1_1_multibody_plant.html#a9b8a17ef762452f820bdd351f8bb41b4',1,'drake::multibody::MultibodyPlant']]],
   ['getpositionupperlimits',['GetPositionUpperLimits',['../classdrake_1_1multibody_1_1_multibody_plant.html#a3fdbea9ebcb04bc6a5f3d62cffd35b1e',1,'drake::multibody::MultibodyPlant']]],
   ['getpreferredjointordering',['GetPreferredJointOrdering',['../namespacedrake_1_1examples_1_1allegro__hand.html#a4b2d121f2271515f2b2210c4876af2b0',1,'drake::examples::allegro_hand']]],
+  ['getprogramtype',['GetProgramType',['../namespacedrake_1_1solvers.html#acb5fa6010c00dad4d5867183f35a2f70',1,'drake::solvers']]],
   ['getproperties',['GetProperties',['../classdrake_1_1geometry_1_1_scene_graph_inspector.html#ade53caab293c947c586f4ff3ddcf9ca2',1,'drake::geometry::SceneGraphInspector']]],
   ['getpropertiesingroup',['GetPropertiesInGroup',['../classdrake_1_1geometry_1_1_geometry_properties.html#a1faa50f8c98b05093c22e7d1ce5ee630',1,'drake::geometry::GeometryProperties']]],
   ['getproperty',['GetProperty',['../classdrake_1_1geometry_1_1_geometry_properties.html#aaaa9388bc0cffeef445272cc5234b087',1,'drake::geometry::GeometryProperties']]],

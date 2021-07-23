@@ -192,7 +192,7 @@
 <span id="pydrake-systems-trajectory-optimization"></span><h1>pydrake.systems.trajectory_optimization<a class="headerlink" href="#module-pydrake.systems.trajectory_optimization" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint">
-<code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">AddDirectCollocationConstraint</code><span class="sig-paren">(</span><em>constraint: pydrake.systems.trajectory_optimization.DirectCollocationConstraint, timestep: numpy.ndarray[object[m, 1]], state: numpy.ndarray[object[m, 1]], next_state: numpy.ndarray[object[m, 1]], input: numpy.ndarray[object[m, 1]], next_input: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_Constraint<a class="headerlink" href="#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">AddDirectCollocationConstraint</code><span class="sig-paren">(</span><em>constraint: pydrake.systems.trajectory_optimization.DirectCollocationConstraint, timestep: numpy.ndarray[object[m, 1]], state: numpy.ndarray[object[m, 1]], next_state: numpy.ndarray[object[m, 1]], input: numpy.ndarray[object[m, 1]], next_input: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal"><span class="pre">prog</span></code>,
 ensuring that the order of variables in the binding matches the order
 expected by the constraint.</p>
@@ -373,7 +373,7 @@ these).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddCompleteTrajectoryCallback">
-<code class="descname">AddCompleteTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], List[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]]], None], names: List[str]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddCompleteTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddCompleteTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], List[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]]], None], names: List[str]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddCompleteTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a callback method to visualize intermediate results of all
 variables used in the trajectory optimization. The callback should be
 of the form MyVisualization(sample_times, states, inputs, values),
@@ -397,7 +397,7 @@ programming solver as the default solver.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints">
-<code class="descname">AddConstraintToAllKnotPoints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>f: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Constraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddConstraintToAllKnotPoints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>f: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint to all breakpoints, where any instances of time(),
 state(), and/or input() placeholder variables, as well as placeholder
 variables returned by calls to NewSequentialVariable(), are
@@ -414,7 +414,7 @@ substituted with the relevant variables for each time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds">
-<code class="descname">AddDurationBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddDurationBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint on the total duration of the trajectory.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">lower_bound</span></code>:</dt>
@@ -436,7 +436,7 @@ substituted with the relevant variables for each time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualTimeIntervalsConstraints">
-<code class="descname">AddEqualTimeIntervalsConstraints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearConstraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualTimeIntervalsConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddEqualTimeIntervalsConstraints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualTimeIntervalsConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds constraints to enforce that all timesteps have equal duration.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -455,7 +455,7 @@ substituted with the relevant variables for each time index.</p>
 <code class="descname">AddFinalCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddFinalCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+<li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding[Cost]</li>
 </ol>
 <p>Adds a cost to the final time, of the form</p>
 <div class="math">
@@ -473,7 +473,7 @@ for the final time index.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, matrix: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+<li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, matrix: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Cost]</li>
 </ol>
 <p>Adds support for passing in a (scalar) matrix Expression, which is a
 common output of most symbolic linear algebra operations.</p>
@@ -494,7 +494,7 @@ MultipleShooting::AddFinalCost; to “unhide” this method.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddInputTrajectoryCallback">
-<code class="descname">AddInputTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], None]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddInputTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddInputTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], None]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddInputTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a callback method to visualize intermediate results of input
 variables used in the trajectory optimization. The callback should be
 of the form MyVisualization(sample_times, values), where breaks is a
@@ -536,7 +536,7 @@ common output of most symbolic linear algebra operations.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddStateTrajectoryCallback">
-<code class="descname">AddStateTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], None]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddStateTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddStateTrajectoryCallback</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, callback: Callable[[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], None]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddStateTrajectoryCallback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a callback method to visualize intermediate results of state
 variables used in the trajectory optimization. The callback should be
 of the form MyVisualization(sample_times, values), where sample_times
@@ -556,7 +556,7 @@ programming solver as the default solver.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds">
-<code class="descname">AddTimeIntervalBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddTimeIntervalBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds bounds on all time intervals.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">lower_bound</span></code>:</dt>

@@ -190,335 +190,361 @@
 <span class="target" id="module-pydrake.solvers.mathematicalprogram"></span><p>Bindings for MathematicalProgram</p>
 <p>If you are formulating constraints using symbolic formulas, please review the
 top-level documentation for <a class="reference internal" href="pydrake.math.html#module-pydrake.math" title="pydrake.math"><code class="xref py py-mod docutils literal"><span class="pre">pydrake.math</span></code></a>.</p>
+<dl class="template">
+<dt id="pydrake.solvers.mathematicalprogram.Binding">
+<em class="property">template </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]" title="pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]"><code class="xref py py-class docutils literal"><span class="pre">Binding[EvaluatorBase]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[Constraint]" title="pydrake.solvers.mathematicalprogram.Binding[Constraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[Constraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[LinearConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[LorentzConeConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[RotatedLorentzConeConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[LinearEqualityConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[BoundingBoxConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[PositiveSemidefiniteConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[LinearMatrixInequalityConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[LinearComplementarityConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]" title="pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]"><code class="xref py py-class docutils literal"><span class="pre">Binding[ExponentialConeConstraint]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[Cost]" title="pydrake.solvers.mathematicalprogram.Binding[Cost]"><code class="xref py py-class docutils literal"><span class="pre">Binding[Cost]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[LinearCost]" title="pydrake.solvers.mathematicalprogram.Binding[LinearCost]"><code class="xref py py-class docutils literal"><span class="pre">Binding[LinearCost]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]" title="pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]"><code class="xref py py-class docutils literal"><span class="pre">Binding[QuadraticCost]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[L2NormCost]" title="pydrake.solvers.mathematicalprogram.Binding[L2NormCost]"><code class="xref py py-class docutils literal"><span class="pre">Binding[L2NormCost]</span></code></a>, <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]" title="pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]"><code class="xref py py-class docutils literal"><span class="pre">Binding[VisualizationCallback]</span></code></a></p>
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_BoundingBoxConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.BoundingBoxConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint.variables" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_Constraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase]">
+<em class="property">class </em><code class="descname">Binding[EvaluatorBase]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Constraint</em>, <em>arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase], arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase].__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Constraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Constraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.EvaluatorBase<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Constraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Constraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Constraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding.Binding[EvaluatorBase].variables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[BoundingBoxConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.BoundingBoxConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Cost">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_Cost</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Cost" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Constraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[Constraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Constraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Cost.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Cost</em>, <em>arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Cost.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Constraint].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[Constraint], arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Constraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Cost.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Cost</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Cost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Cost.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Constraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[Constraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Constraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Constraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_Cost.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_Cost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_Cost.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Constraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[Constraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Constraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_EvaluatorBase</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Cost]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[Cost]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Cost]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase</em>, <em>arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Cost].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[Cost], arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Cost].__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.EvaluatorBase<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Cost].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[Cost]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Cost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Cost].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase.variables" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_ExponentialConeConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.ExponentialConeConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[Cost].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[Cost]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[Cost].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_L2NormCost</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_L2NormCost</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.L2NormCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[EvaluatorBase]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase], arg0: object</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase].__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_L2NormCost.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_L2NormCost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_L2NormCost.variables" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_LinearComplementarityConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearComplementarityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.EvaluatorBase<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_LinearConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[ExponentialConeConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.ExponentialConeConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearCost">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_LinearCost</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearCost" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[L2NormCost]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[L2NormCost]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[L2NormCost]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearCost.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[L2NormCost].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[L2NormCost].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearCost.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearCost</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearCost.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[L2NormCost].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[L2NormCost]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.L2NormCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[L2NormCost].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearCost.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearCost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearCost.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[L2NormCost].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[L2NormCost]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[L2NormCost].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_LinearEqualityConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[LinearComplementarityConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearEqualityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearComplementarityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_LinearMatrixInequalityConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[LinearConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearMatrixInequalityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_LorentzConeConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearCost]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[LinearCost]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearCost]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearCost].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearCost].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LorentzConeConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearCost].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearCost]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearCost].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearCost].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearCost]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearCost].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_PositiveSemidefiniteConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[LinearEqualityConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearEqualityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_QuadraticCost">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_QuadraticCost</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_QuadraticCost" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[LinearMatrixInequalityConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_QuadraticCost.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_QuadraticCost.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_QuadraticCost.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_QuadraticCost</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.QuadraticCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_QuadraticCost.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LinearMatrixInequalityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_QuadraticCost.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_QuadraticCost</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_QuadraticCost.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_RotatedLorentzConeConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[LorentzConeConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LorentzConeConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding_VisualizationCallback</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[PositiveSemidefiniteConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="attribute">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback.evaluator">
-<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.VisualizationCallback<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback.evaluator" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback.variables">
-<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback.variables" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint].variables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[QuadraticCost]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[QuadraticCost].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[QuadraticCost].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[QuadraticCost].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.QuadraticCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[QuadraticCost].evaluator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[QuadraticCost].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[QuadraticCost].variables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[RotatedLorentzConeConstraint]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint].evaluator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint].variables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Binding[VisualizationCallback]</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback].__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback].evaluator">
+<code class="descname">evaluator</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.VisualizationCallback<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback].evaluator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback].variables">
+<code class="descname">variables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback].variables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -829,6 +855,18 @@ exponential cone.</p>
 <dd><p>Getter for vector b.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.solvers.mathematicalprogram.GetProgramType">
+<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">GetProgramType</code><span class="sig-paren">(</span><em>arg0: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.ProgramType<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.GetProgramType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the type of the optimization program (LP, QP, etc), based on
+the properties of its cost/constraints/variables. Each mathematical
+program should be characterized by a unique type. If a program can be
+characterized as either type A or type B (for example, a program with
+linear constraint and linear costs can be characterized as either an
+LP or an SDP), then we choose the type corresponding to a smaller set
+of programs (LP in this case).</p>
 </dd></dl>
 
 <dl class="class">
@@ -1210,7 +1248,7 @@ optimization.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.Add2NormSquaredCost">
-<code class="descname">Add2NormSquaredCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_QuadraticCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.Add2NormSquaredCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Add2NormSquaredCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.Add2NormSquaredCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a quadratic cost of the form <a href="#id1"><span class="problematic" id="id2">|</span></a>Ax-b|²=(Ax-b)ᵀ(Ax-b)</p>
 </dd></dl>
 
@@ -1219,7 +1257,7 @@ optimization.</p>
 <code class="descname">AddBoundingBoxConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddBoundingBoxConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, 1]], arg1: numpy.ndarray[numpy.float64[m, 1]], arg2: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint</li>
+<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, 1]], arg1: numpy.ndarray[numpy.float64[m, 1]], arg2: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</li>
 </ol>
 <p>Adds bounding box constraints referencing potentially a subset of the
 decision variables.</p>
@@ -1240,7 +1278,7 @@ decision variables.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: float, arg1: float, arg2: pydrake.symbolic.Variable) -&gt; pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint</li>
+<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: float, arg1: float, arg2: pydrake.symbolic.Variable) -&gt; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</li>
 </ol>
 <p>Adds bounds for a single variable.</p>
 <dl class="docutils">
@@ -1252,7 +1290,7 @@ decision variables.</p>
 <dd>The decision variable.</dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: float, arg1: float, arg2: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint</li>
+<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: float, arg1: float, arg2: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</li>
 </ol>
 <p>Adds the same scalar lower and upper bound to every variable in
 <code class="docutils literal"><span class="pre">vars</span></code>.</p>
@@ -1275,11 +1313,11 @@ column.</dd>
 <code class="descname">AddConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, func: function, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], description: str = ‘’) -&gt; pydrake.solvers.mathematicalprogram.Binding_Constraint</li>
+<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, func: function, lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], description: str = ‘’) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
 </ol>
 <p>Adds a constraint using a Python function.</p>
 <ol class="arabic simple" start="2">
-<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression, arg1: float, arg2: float) -&gt; pydrake.solvers.mathematicalprogram.Binding_Constraint</li>
+<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression, arg1: float, arg2: float) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
 </ol>
 <p>Adds one row of constraint lb &lt;= e &lt;= ub where <code class="docutils literal"><span class="pre">e</span></code> is a symbolic
 expression.</p>
@@ -1311,7 +1349,7 @@ could be created as a BoundingBoxConstraint or
 LinearEqualityConstraint) will be constructed as a
 LinearEqualityConstraint.</p>
 <ol class="arabic simple" start="3">
-<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Formula) -&gt; pydrake.solvers.mathematicalprogram.Binding_Constraint</li>
+<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Formula) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
 </ol>
 <p>Add a constraint represented by a symbolic formula to the program. The
 input formula <code class="docutils literal"><span class="pre">f</span></code> can be of the following forms:</p>
@@ -1336,13 +1374,13 @@ allow <code class="docutils literal"><span class="pre">e1</span></code> and <cod
 terms. For example, <code class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">∞</span></code> is allowed. However, <code class="docutils literal"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">∞</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> is
 not allowed because <code class="docutils literal"><span class="pre">x</span> <span class="pre">↦</span> <span class="pre">∞</span></code> introduces <code class="docutils literal"><span class="pre">nan</span></code> in the evaluation.</p>
 <ol class="arabic simple" start="4">
-<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, constraint: pydrake.solvers.mathematicalprogram.Constraint, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_Constraint</li>
+<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, constraint: pydrake.solvers.mathematicalprogram.Constraint, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
 </ol>
 <p>Adds a generic constraint to the program. This should only be used if
 a more specific type of constraint is not available, as it may require
 the use of a significantly more expensive solver.</p>
 <ol class="arabic simple" start="5">
-<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding_Constraint</li>
+<li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
 </ol>
 <p>Add a constraint represented by an Eigen::Matrix&lt;symbolic::Formula&gt; to
 the program.</p>
@@ -1365,15 +1403,15 @@ throws an exception for any f ∈ formulas.</p>
 <code class="descname">AddCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, func: function, vars: numpy.ndarray[object[m, 1]], description: str = ‘’) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, func: function, vars: numpy.ndarray[object[m, 1]], description: str = ‘’) -&gt; pydrake.solvers.mathematicalprogram.Binding[Cost]</li>
 </ol>
 <p>Adds a cost function.</p>
 <ol class="arabic simple" start="2">
-<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding[Cost]</li>
 </ol>
 <p>Adds a cost expression.</p>
 <ol class="arabic simple" start="3">
-<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, obj: pydrake.solvers.mathematicalprogram.Cost, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_Cost</li>
+<li>AddCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, obj: pydrake.solvers.mathematicalprogram.Cost, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Cost]</li>
 </ol>
 <p>Adds a cost type to the optimization program.</p>
 <dl class="docutils">
@@ -1440,7 +1478,7 @@ MathematicalProgram’s indeterminates.</p>
 <code class="descname">AddExponentialConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddExponentialConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddExponentialConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[3, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint</li>
+<li>AddExponentialConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[3, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]</li>
 </ol>
 <p>Adds an exponential cone constraint, that z = A * vars + b should be
 in the exponential cone. Namely {z₀, z₁, z₂ | z₀ ≥ z₁ * exp(z₂ / z₁),
@@ -1454,7 +1492,7 @@ z₁ &gt; 0}.</p>
 <dd>The variables bound with this constraint.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>AddExponentialConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, z: numpy.ndarray[object[3, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint</li>
+<li>AddExponentialConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, z: numpy.ndarray[object[3, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]</li>
 </ol>
 <p>Add the constraint that z is in the exponential cone.</p>
 <dl class="docutils">
@@ -1487,12 +1525,12 @@ indeterminates or decision variables.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddL2NormCost">
-<code class="descname">AddL2NormCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_QuadraticCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddL2NormCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddL2NormCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddL2NormCost" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearComplementarityConstraint">
-<code class="descname">AddLinearComplementarityConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg1: numpy.ndarray[numpy.float64[m, 1]], arg2: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearComplementarityConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg1: numpy.ndarray[numpy.float64[m, 1]], arg2: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a linear complementarity constraints referencing a subset of the
 decision variables.</p>
 </dd></dl>
@@ -1502,12 +1540,12 @@ decision variables.</p>
 <code class="descname">AddLinearConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Adds linear constraints referencing potentially a subset of the
 decision variables (defined in the vars parameter).</p>
 <ol class="arabic simple" start="2">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, lb: float, ub: float) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, lb: float, ub: float) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Adds one row of linear constraint lb &lt;= e &lt;= ub where <code class="docutils literal"><span class="pre">e</span></code> is a
 symbolic expression.</p>
@@ -1534,13 +1572,13 @@ symbolic expression.</p>
 <dd>A scalar, the upper bound.</dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Adds linear constraints represented by symbolic expressions to the
 program. It throws if &#64;v includes a non-linear expression or <code class="docutils literal"><span class="pre">lb</span> <span class="pre">&lt;=</span> <span class="pre">v</span>
 <span class="pre">&lt;=</span> <span class="pre">ub</span></code> includes trivial/unsatisfiable constraints.</p>
 <ol class="arabic simple" start="4">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Add a linear constraint represented by a symbolic formula to the
 program. The input formula <code class="docutils literal"><span class="pre">f</span></code> can be of the following forms:</p>
@@ -1564,7 +1602,7 @@ be infinite but only if there are no other terms. For example, <code class="docu
 <span class="pre">∞</span></code> is allowed. However, <code class="docutils literal"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">∞</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> is not allowed because <code class="docutils literal"><span class="pre">x</span> <span class="pre">↦</span>
 <span class="pre">∞</span></code> introduces <code class="docutils literal"><span class="pre">nan</span></code> in the evaluation.</p>
 <ol class="arabic simple" start="5">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearConstraint</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Add a linear constraint represented by an
 Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case of
@@ -1596,7 +1634,7 @@ f) throws an exception for f ∈ <code class="docutils literal"><span class="pre
 <code class="descname">AddLinearCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearCost</li>
+<li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
 <p>Adds a linear cost term of the form a’<a href="#id7"><span class="problematic" id="id8">*</span></a>x + b.</p>
 <dl class="docutils">
@@ -1616,12 +1654,12 @@ variables.</td>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, a: numpy.ndarray[numpy.float64[m, 1]], b: float, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearCost</li>
+<li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, a: numpy.ndarray[numpy.float64[m, 1]], b: float, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
 <p>Adds a linear cost term of the form a’<a href="#id11"><span class="problematic" id="id12">*</span></a>x + b. Applied to a subset of
 the variables and pushes onto the linear cost data structure.</p>
 <ol class="arabic simple" start="3">
-<li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, a: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearCost</li>
+<li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, a: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
 <p>Adds a linear cost term of the form a’<a href="#id13"><span class="problematic" id="id14">*</span></a>x. Applied to a subset of the
 variables and pushes onto the linear cost data structure.</p>
@@ -1632,7 +1670,7 @@ variables and pushes onto the linear cost data structure.</p>
 <code class="descname">AddLinearEqualityConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearEqualityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Aeq: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], beq: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint</li>
+<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Aeq: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], beq: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]</li>
 </ol>
 <p>AddLinearEqualityConstraint</p>
 <p>Adds linear equality constraints referencing potentially a subset of
@@ -1651,7 +1689,7 @@ the elements of x, you could use</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, b: float) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint</li>
+<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, b: float) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]</li>
 </ol>
 <p>Adds one row of linear constraint e = b where <code class="docutils literal"><span class="pre">e</span></code> is a symbolic
 expression.</p>
@@ -1684,7 +1722,7 @@ bound variable.</td>
 </tbody>
 </table>
 <ol class="arabic simple" start="3">
-<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint</li>
+<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, f: pydrake.symbolic.Formula) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]</li>
 </ol>
 <p>Adds a linear equality constraint represented by a symbolic formula to
 the program. The input formula <code class="docutils literal"><span class="pre">f</span></code> is either an equality formula
@@ -1695,7 +1733,7 @@ the program. The input formula <code class="docutils literal"><span class="pre">
 <li><code class="docutils literal"><span class="pre">f</span></code> includes a non-linear expression.</li>
 </ol>
 <ol class="arabic simple" start="4">
-<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint</li>
+<li>AddLinearEqualityConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]</li>
 </ol>
 <p>Adds linear equality constraints <span class="math">\(v = b\)</span>, where <code class="docutils literal"><span class="pre">v(i)</span></code> is a
 symbolic linear expression.</p>
@@ -1736,7 +1774,7 @@ bound variables.</td>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearMatrixInequalityConstraint">
-<code class="descname">AddLinearMatrixInequalityConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, F: List[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearMatrixInequalityConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearMatrixInequalityConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, F: List[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearMatrixInequalityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a linear matrix inequality constraint to the program.</p>
 </dd></dl>
 
@@ -1745,7 +1783,7 @@ bound variables.</td>
 <code class="descname">AddLorentzConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint</li>
+<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
 decision variables.</p>
@@ -1772,7 +1810,7 @@ call</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, linear_expression: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0.0) -&gt; pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint</li>
+<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, linear_expression: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0.0) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
 </ol>
 <p>Adds Lorentz cone constraint on the linear expression v1 and quadratic
 expression v2, such that v1 &gt;= sqrt(v2)</p>
@@ -1826,7 +1864,7 @@ the Lorentz cone constraint</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]] = 0.0) -&gt; pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint</li>
+<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]] = 0.0) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
 decision variables (defined in the vars parameter). The linear
@@ -1956,7 +1994,7 @@ symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</td>
 <code class="descname">AddPositiveSemidefiniteConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddPositiveSemidefiniteConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddPositiveSemidefiniteConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint</li>
+<li>AddPositiveSemidefiniteConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]</li>
 </ol>
 <p>Adds a positive semidefinite constraint on a symmetric matrix.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1976,7 +2014,7 @@ symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</td>
 <dd>A symmetric MatrixDecisionVariable object.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>AddPositiveSemidefiniteConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint</li>
+<li>AddPositiveSemidefiniteConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]</li>
 </ol>
 <p>Adds a positive semidefinite constraint on a symmetric matrix of
 symbolic expressions <code class="docutils literal"><span class="pre">e</span></code>. We create a new symmetric matrix of
@@ -2017,7 +2055,7 @@ The user could call</p>
 <code class="descname">AddQuadraticCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddQuadraticCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding_QuadraticCost</li>
+<li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</li>
 </ol>
 <p>Add a quadratic cost term of the form 0.5*x’<a href="#id23"><span class="problematic" id="id24">*</span></a>Q*x + b’<a href="#id25"><span class="problematic" id="id26">*</span></a>x + c. Notice
 that in the optimization program, the constant term <code class="docutils literal"><span class="pre">c</span></code> in the cost
@@ -2043,7 +2081,7 @@ whether the cost is convex or not.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding_QuadraticCost</li>
+<li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</li>
 </ol>
 <p>Adds a cost term of the form 0.5*x’<a href="#id27"><span class="problematic" id="id28">*</span></a>Q*x + b’x Applied to subset of the
 variables.</p>
@@ -2056,7 +2094,7 @@ speed, the user can set is_convex if the user knows whether the
 cost is convex or not.</dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: float, vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding_QuadraticCost</li>
+<li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: float, vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</li>
 </ol>
 <p>Adds a cost term of the form 0.5*x’<a href="#id29"><span class="problematic" id="id30">*</span></a>Q*x + b’x + c Applied to subset of
 the variables.</p>
@@ -2072,7 +2110,7 @@ cost is convex or not.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddQuadraticErrorCost">
-<code class="descname">AddQuadraticErrorCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], x_desired: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_QuadraticCost<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddQuadraticErrorCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddQuadraticErrorCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], x_desired: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddQuadraticErrorCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a cost term of the form (x-x_desired)’<a href="#id31"><span class="problematic" id="id32">*</span></a>Q*(x-x_desired).</p>
 </dd></dl>
 
@@ -2081,7 +2119,7 @@ cost is convex or not.</dd>
 <code class="descname">AddRotatedLorentzConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddRotatedLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddRotatedLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, linear_expression1: pydrake.symbolic.Expression, linear_expression2: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0) -&gt; pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint</li>
+<li>AddRotatedLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, linear_expression1: pydrake.symbolic.Expression, linear_expression2: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0) -&gt; pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]</li>
 </ol>
 <p>Adds rotated Lorentz cone constraint on the linear expression v1, v2
 and quadratic expression u, such that v1 * v2 &gt;= u, v1 &gt;= 0, v2 &gt;= 0</p>
@@ -2139,7 +2177,7 @@ non-negative for any x.</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li>AddRotatedLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint</li>
+<li>AddRotatedLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]</li>
 </ol>
 <p>Adds a constraint that a symbolic expression</p>
 <dl class="docutils">
@@ -2168,7 +2206,7 @@ could call</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li>AddRotatedLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint</li>
+<li>AddRotatedLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]</li>
 </ol>
 <p>Adds a rotated Lorentz cone constraint referencing potentially a
 subset of decision variables, The linear expression <span class="math">\(z=Ax+b\)</span> is
@@ -2299,7 +2337,7 @@ expressing:</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddVisualizationCallback">
-<code class="descname">AddVisualizationCallback</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: Callable[[numpy.ndarray[numpy.float64[m, 1]]], None], arg1: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding_VisualizationCallback<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddVisualizationCallback" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddVisualizationCallback</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: Callable[[numpy.ndarray[numpy.float64[m, 1]]], None], arg1: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[VisualizationCallback]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddVisualizationCallback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a callback method to visualize intermediate results of the
 optimization.</p>
 <div class="admonition note">
@@ -2322,7 +2360,7 @@ representing the bound decision variables.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.bounding_box_constraints">
-<code class="descname">bounding_box_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_BoundingBoxConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.bounding_box_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">bounding_box_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.bounding_box_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for all bounding box constraints</p>
 </dd></dl>
 
@@ -2331,7 +2369,7 @@ representing the bound decision variables.</dd>
 <code class="descname">CheckSatisfied</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.CheckSatisfied" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>CheckSatisfied(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding_Constraint, prog_var_vals: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-06) -&gt; bool</li>
+<li>CheckSatisfied(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding[Constraint], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-06) -&gt; bool</li>
 </ol>
 <p>Evaluates CheckSatisfied for the constraint in <code class="docutils literal"><span class="pre">binding</span></code> using the
 value of ALL of the decision variables in this program.</p>
@@ -2344,7 +2382,7 @@ value of ALL of the decision variables in this program.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>CheckSatisfied(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding_Constraint], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-06) -&gt; bool</li>
+<li>CheckSatisfied(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding[Constraint]], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]], tol: float = 1e-06) -&gt; bool</li>
 </ol>
 <p>Evaluates CheckSatisfied for the all of the constraints in <code class="docutils literal"><span class="pre">binding</span></code>
 using the value of ALL of the decision variables in this program.</p>
@@ -2365,12 +2403,12 @@ using the value of ALL of the decision variables in this program.</p>
 <code class="descname">CheckSatisfiedAtInitialGuess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.CheckSatisfiedAtInitialGuess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>CheckSatisfiedAtInitialGuess(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding_Constraint, tol: float = 1e-06) -&gt; bool</li>
+<li>CheckSatisfiedAtInitialGuess(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding[Constraint], tol: float = 1e-06) -&gt; bool</li>
 </ol>
 <p>Evaluates CheckSatisfied for the constraint in <code class="docutils literal"><span class="pre">binding</span></code> at the
 initial guess.</p>
 <ol class="arabic simple" start="2">
-<li>CheckSatisfiedAtInitialGuess(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding_Constraint], tol: float = 1e-06) -&gt; bool</li>
+<li>CheckSatisfiedAtInitialGuess(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding[Constraint]], tol: float = 1e-06) -&gt; bool</li>
 </ol>
 <p>Evaluates CheckSatisfied for the all of the constraints in
 <code class="docutils literal"><span class="pre">bindings</span></code> at the initial guess.</p>
@@ -2414,7 +2452,7 @@ program.</p>
 <code class="descname">EvalBinding</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.EvalBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>EvalBinding(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase, prog_var_vals: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+<li>EvalBinding(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
 </ol>
 <p>Evaluates the value of some binding, for some input value for all
 decision variables.</p>
@@ -2433,7 +2471,7 @@ decision variables.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>EvalBinding(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase, prog_var_vals: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+<li>EvalBinding(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase], prog_var_vals: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
 </ol>
 <p>Evaluates the value of some binding, for some input value for all
 decision variables.</p>
@@ -2458,7 +2496,7 @@ decision variables.</p>
 <code class="descname">EvalBindings</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.EvalBindings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>EvalBindings(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+<li>EvalBindings(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
 </ol>
 <p>Evaluates a set of bindings (plural version of <code class="docutils literal"><span class="pre">EvalBinding</span></code>).</p>
 <dl class="docutils">
@@ -2479,7 +2517,7 @@ decision variables.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>EvalBindings(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase], prog_var_vals: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+<li>EvalBindings(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, bindings: List[pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]], prog_var_vals: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, 1]]</li>
 </ol>
 <p>Evaluates a set of bindings (plural version of <code class="docutils literal"><span class="pre">EvalBinding</span></code>).</p>
 <dl class="docutils">
@@ -2503,14 +2541,14 @@ decision variables.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.EvalBindingVectorized">
-<code class="descname">EvalBindingVectorized</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase, prog_var_vals: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.EvalBindingVectorized" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvalBindingVectorized</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase], prog_var_vals: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.EvalBindingVectorized" title="Permalink to this definition">¶</a></dt>
 <dd><p>A “vectorized” version of EvalBinding.  It evaluates the binding
 for every column of <code class="docutils literal"><span class="pre">prog_var_vals</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.exponential_cone_constraints">
-<code class="descname">exponential_cone_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_ExponentialConeConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.exponential_cone_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">exponential_cone_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[ExponentialConeConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.exponential_cone_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for exponential cone constraints.</p>
 </dd></dl>
 
@@ -2558,19 +2596,19 @@ this function throws a runtime error.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.generic_constraints">
-<code class="descname">generic_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Constraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.generic_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generic_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.generic_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for all generic constraints</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.generic_costs">
-<code class="descname">generic_costs</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Cost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.generic_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generic_costs</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Cost]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.generic_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for all generic costs.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.GetAllConstraints">
-<code class="descname">GetAllConstraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Constraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetAllConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetAllConstraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetAllConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for returning all constraints.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2588,7 +2626,7 @@ this function throws a runtime error.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.GetAllCosts">
-<code class="descname">GetAllCosts</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Cost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetAllCosts" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetAllCosts</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Cost]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetAllCosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter returning all costs.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2606,7 +2644,7 @@ this function throws a runtime error.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.GetBindingVariableValues">
-<code class="descname">GetBindingVariableValues</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase, prog_var_vals: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetBindingVariableValues" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetBindingVariableValues</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, binding: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase], prog_var_vals: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetBindingVariableValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the value of all decision variables, namely
 this.decision_variable(i) takes the value prog_var_vals(i), returns
 the vector that contains the value of the variables in
@@ -2688,7 +2726,7 @@ the optimization program.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.GetLinearConstraints">
-<code class="descname">GetLinearConstraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetLinearConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetLinearConstraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.GetLinearConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter returning all linear constraints (both linear equality and
 inequality constraints).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2738,37 +2776,37 @@ vector containing all the indeterminates in the mathematical program.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_complementarity_constraints">
-<code class="descname">linear_complementarity_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearComplementarityConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_complementarity_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_complementarity_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_complementarity_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for all linear complementarity constraints.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_constraints">
-<code class="descname">linear_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for linear constraints.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_costs">
-<code class="descname">linear_costs</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearCost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_costs</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearCost]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for linear costs.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_equality_constraints">
-<code class="descname">linear_equality_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearEqualityConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_equality_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_equality_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_equality_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for linear equality constraints.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_matrix_inequality_constraints">
-<code class="descname">linear_matrix_inequality_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LinearMatrixInequalityConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_matrix_inequality_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_matrix_inequality_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.linear_matrix_inequality_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for linear matrix inequality constraints.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.lorentz_cone_constraints">
-<code class="descname">lorentz_cone_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_LorentzConeConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">lorentz_cone_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for Lorentz cone constraints.</p>
 </dd></dl>
 
@@ -3254,19 +3292,19 @@ with arXiv link <a class="reference external" href="https://arxiv.org/abs/1706.0
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.positive_semidefinite_constraints">
-<code class="descname">positive_semidefinite_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_PositiveSemidefiniteConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.positive_semidefinite_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">positive_semidefinite_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[PositiveSemidefiniteConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.positive_semidefinite_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for positive semidefinite constraints.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.quadratic_costs">
-<code class="descname">quadratic_costs</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_QuadraticCost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.quadratic_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">quadratic_costs</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.quadratic_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for quadratic costs.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveConstraint">
-<code class="descname">RemoveConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>constraint: pydrake.solvers.mathematicalprogram.Binding_Constraint</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RemoveConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, constraint: pydrake.solvers.mathematicalprogram.Binding[Constraint]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes <code class="docutils literal"><span class="pre">constraint</span></code> from this mathematical program. See
 remove_cost_constraint “Remove costs or constraints” for more details.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3284,7 +3322,7 @@ repetition of <code class="docutils literal"><span class="pre">constraint</span>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost">
-<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>cost: pydrake.solvers.mathematicalprogram.Binding_Cost</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, cost: pydrake.solvers.mathematicalprogram.Binding[Cost]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes <code class="docutils literal"><span class="pre">cost</span></code> from this mathematical program. See
 remove_cost_constraint “Remove costs or constraints” for more details.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3309,7 +3347,7 @@ indeterminates.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.rotated_lorentz_cone_constraints">
-<code class="descname">rotated_lorentz_cone_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_RotatedLorentzConeConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.rotated_lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotated_lorentz_cone_constraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[RotatedLorentzConeConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.rotated_lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for rotated Lorentz cone constraints.</p>
 </dd></dl>
 
@@ -3450,7 +3488,7 @@ variables, the optimal cost, and solver specific details.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgramResult.EvalBinding">
-<code class="descname">EvalBinding</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em>, <em>arg0: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.EvalBinding" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvalBinding</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgramResult, arg0: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.EvalBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate a Binding at the solution.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">binding</span></code>:</dt>
@@ -3511,7 +3549,7 @@ num_suboptimal_solution()).</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgramResult.GetDualSolution">
-<code class="descname">GetDualSolution</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em>, <em>arg0: pydrake.solvers.mathematicalprogram.Binding_EvaluatorBase</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.GetDualSolution" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetDualSolution</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgramResult, arg0: pydrake.solvers.mathematicalprogram.Binding[EvaluatorBase]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.GetDualSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the dual solution associated with a constraint.</p>
 <p>For constraints in the form lower &lt;= f(x) &lt;= upper (including linear
 inequality, linear equality, bounding box constraints, and general
@@ -3600,7 +3638,7 @@ specific/useful.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgramResult.GetInfeasibleConstraints">
-<code class="descname">GetInfeasibleConstraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em>, <em>prog: drake::solvers::MathematicalProgram</em>, <em>tol: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding_Constraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.GetInfeasibleConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetInfeasibleConstraints</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em>, <em>prog: drake::solvers::MathematicalProgram</em>, <em>tol: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.GetInfeasibleConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>See get_infeasible_constraints for more information.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
@@ -3829,6 +3867,35 @@ status.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.ModuleShim">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">ModuleShim</code><span class="sig-paren">(</span><em>orig_module</em>, <em>handler</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ModuleShim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Provides a shim for automatically resolving extra variables.</p>
+<p>This can be used to deprecate import alias in modules to simplify
+dependencies.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="https://stackoverflow.com/a/7668273/7829525">https://stackoverflow.com/a/7668273/7829525</a></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This is not necessary in Python &gt;= 3.7 due to PEP 562.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This will not work if called on a cc module during import (e.g. using
+ExecuteExtraPythonCode). Instead, you should rename the module from
+<cite>{name}</cite> to <cite>_{name}</cite>, and import the symbols into the new module using
+_import_cc_module_vars.</p>
+</div>
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.ModuleShim.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>orig_module</em>, <em>handler</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ModuleShim.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">PositiveSemidefiniteConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
@@ -3901,6 +3968,135 @@ indicate the positive semidefiniteness of some decision variables.</p>
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.matrix_rows">
 <code class="descname">matrix_rows</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint.matrix_rows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">ProgramType</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kLP : Linear Programming, with a linear cost and linear constraints.</p>
+<p>kQP : Quadratic Programming, with a convex quadratic cost and linear</p>
+</div></blockquote>
+<p>constraints.</p>
+<blockquote>
+<div>kSOCP : Second-order Cone Programming, with a linear cost and second-order</div></blockquote>
+<p>cone constraints.</p>
+<blockquote>
+<div>kSDP : Semidefinite Programming, with a linear cost and positive semidefinite</div></blockquote>
+<p>matrix constraints.</p>
+<blockquote>
+<div>kGP : Geometric Programming, with a linear cost and exponential cone</div></blockquote>
+<p>constraints.</p>
+<blockquote>
+<div>kCGP : Conic Geometric Programming, this is a superset that unifies GP and</div></blockquote>
+<p>SDP. Refer to <a class="reference external" href="http://people.lids.mit.edu/pari/cgp_preprint.pdf">http://people.lids.mit.edu/pari/cgp_preprint.pdf</a> for
+more details.</p>
+<blockquote>
+<div>kMILP : Mixed-integer Linear Programming. LP with some variables taking binary</div></blockquote>
+<p>values.</p>
+<blockquote>
+<div>kMIQP : Mixed-integer Quadratic Programming. QP with some variables taking</div></blockquote>
+<p>binary values.</p>
+<blockquote>
+<div>kMISOCP : Mixed-integer Second-order Cone Programming. SOCP with some variables</div></blockquote>
+<p>taking binary values.</p>
+<blockquote>
+<div>kMISDP : Mixed-integer Semidefinite Programming. SDP with some variables taking</div></blockquote>
+<p>binary values.</p>
+<blockquote>
+<div><p>kQuadraticCostConicConstraint : convex quadratic cost with nonlinear conic constraints.</p>
+<p>kNLP : nonlinear programming. Programs with generic costs or constraints.</p>
+<p>kLCP : Linear Complementarity Programs. Programs with linear complementary</p>
+</div></blockquote>
+<p>constraints and no cost.</p>
+<blockquote>
+<div>kUnknown : Does not fall into any of the types above.</div></blockquote>
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.ProgramType</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kCGP">
+<code class="descname">kCGP</code><em class="property"> = &lt;ProgramType.kCGP: 5&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kCGP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kGP">
+<code class="descname">kGP</code><em class="property"> = &lt;ProgramType.kGP: 4&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kGP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kLCP">
+<code class="descname">kLCP</code><em class="property"> = &lt;ProgramType.kLCP: 12&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kLCP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kLP">
+<code class="descname">kLP</code><em class="property"> = &lt;ProgramType.kLP: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kLP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kMILP">
+<code class="descname">kMILP</code><em class="property"> = &lt;ProgramType.kMILP: 6&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kMILP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kMIQP">
+<code class="descname">kMIQP</code><em class="property"> = &lt;ProgramType.kMIQP: 7&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kMIQP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kMISDP">
+<code class="descname">kMISDP</code><em class="property"> = &lt;ProgramType.kMISDP: 9&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kMISDP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kMISOCP">
+<code class="descname">kMISOCP</code><em class="property"> = &lt;ProgramType.kMISOCP: 8&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kMISOCP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kNLP">
+<code class="descname">kNLP</code><em class="property"> = &lt;ProgramType.kNLP: 11&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kNLP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kQP">
+<code class="descname">kQP</code><em class="property"> = &lt;ProgramType.kQP: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kQP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kQuadraticCostConicConstraint">
+<code class="descname">kQuadraticCostConicConstraint</code><em class="property"> = &lt;ProgramType.kQuadraticCostConicConstraint: 10&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kQuadraticCostConicConstraint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kSDP">
+<code class="descname">kSDP</code><em class="property"> = &lt;ProgramType.kSDP: 3&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kSDP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kSOCP">
+<code class="descname">kSOCP</code><em class="property"> = &lt;ProgramType.kSOCP: 2&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kSOCP" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.kUnknown">
+<code class="descname">kUnknown</code><em class="property"> = &lt;ProgramType.kUnknown: 13&gt;</em><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.kUnknown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mathematicalprogram.ProgramType.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType.value" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
