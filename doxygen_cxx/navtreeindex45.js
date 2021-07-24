@@ -1,16 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"schunk__wsg__lcm_8h.html":[4,0,0,6,4,2],
-"schunk__wsg__plain__controller_8h.html":[4,0,0,6,4,3],
-"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,4,3,0],
-"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcba5f1cd95b5107d0b426a753a484765cc9":[4,0,0,6,4,3,0,1],
-"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
-"schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
-"schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
-"scope__exit_8h.html":[4,0,0,1,47],
-"scoped__names_8h.html":[4,0,0,8,8,12],
-"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,8,12,5],
-"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,8,12,6],
 "scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,8,12,3],
 "scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,8,12,4],
 "scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,8,12,1],
@@ -249,5 +238,16 @@ var NAVTREEINDEX45 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,3,38,0],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,3,38,3],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ae3895f2acaff5697b963464c52619a85":[3,0,0,3,38,6],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#aec40b3acb34bcf9cb494dffef2034cca":[3,0,0,3,38,5]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#aec40b3acb34bcf9cb494dffef2034cca":[3,0,0,3,38,5],
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,3,38,15],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,3,39],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a06f327d319781169d6d14b6b60db92e1":[3,0,0,3,39,10],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,3,39,11],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a26d83b56e8bc142afd669d7bf865b4cb":[3,0,0,3,39,7],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a281a7a37f51d7fd8f524305c5cfa1f27":[3,0,0,3,39,6],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a290af0717367b3262df2b000dc2f5fad":[3,0,0,3,39,1],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a44c1ee5d5d67b834f0cbe26246231680":[3,0,0,3,39,4],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a563410412b037001c7799621ac51d6ac":[3,0,0,3,39,5],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a79cdf6ba5fded027dba5f24168719ef1":[3,0,0,3,39,8],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,3,39,0]
 };

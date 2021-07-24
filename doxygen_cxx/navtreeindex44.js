@@ -1,16 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"polynomial_8h.html":[4,0,0,1,43],
-"polynomial_8h.html#a00cbebcd97766579bb36e35abcf44acf":[4,0,0,1,43,5],
-"polynomial_8h.html#a95cb9413bd3124511459d856f6eef5f3":[4,0,0,1,43,7],
-"polynomial_8h.html#ab0a2621977171e1d2d5b64c55141b9b2":[4,0,0,1,43,4],
-"polynomial_8h.html#ad2b506cc6aeddf8e5f52b327382d0b13":[4,0,0,1,43,6],
-"polynomial__types__pybind_8h.html":[4,0,0,0,0,4],
-"polynomial__types__pybind_8h.html#adbc17196068f19a5cd168e56d49d9231":[4,0,0,0,0,4,0],
-"port__base_8h.html":[4,0,0,11,3,33],
-"port__switch_8h.html":[4,0,0,11,6,16],
-"pose__aggregator_8h.html":[4,0,0,11,7,2],
-"pose__bundle_8h.html":[4,0,0,11,7,3],
 "pose__bundle__to__draw__message_8h.html":[4,0,0,11,7,4],
 "pose__smoother_8h.html":[4,0,0,6,2,1],
 "pose__vector_8h.html":[4,0,0,11,7,5],
@@ -249,5 +238,16 @@ var NAVTREEINDEX44 =
 "schunk__wsg__constants_8h.html#ad3478526c69fa04f5dff9ad3c2ebf055":[4,0,0,6,4,0,8],
 "schunk__wsg__constants_8h.html#ga4466f959f6516ddf231455e01f6ce3df":[4,0,0,6,4,0,2],
 "schunk__wsg__constants_8h.html#ga9d4acc482bc52a69383e884679887402":[4,0,0,6,4,0,1],
-"schunk__wsg__controller_8h.html":[4,0,0,6,4,1]
+"schunk__wsg__controller_8h.html":[4,0,0,6,4,1],
+"schunk__wsg__lcm_8h.html":[4,0,0,6,4,2],
+"schunk__wsg__plain__controller_8h.html":[4,0,0,6,4,3],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcb":[4,0,0,6,4,3,0],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcba5f1cd95b5107d0b426a753a484765cc9":[4,0,0,6,4,3,0,1],
+"schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
+"schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
+"schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
+"scope__exit_8h.html":[4,0,0,1,47],
+"scoped__names_8h.html":[4,0,0,8,8,12],
+"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,8,12,5],
+"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,8,12,6]
 };

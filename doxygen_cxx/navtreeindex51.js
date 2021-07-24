@@ -1,16 +1,5 @@
 var NAVTREEINDEX51 =
 {
-"text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,75,8],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,75,2],
-"text__logging__pybind_8h.html":[4,0,0,0,0,0,7],
-"texture__library_8h.html":[4,0,0,4,4,0,11],
-"trajectory_8h.html":[4,0,0,1,3,7],
-"trajectory__affine__system_8h.html":[4,0,0,11,6,23],
-"trajectory__linear__system_8h.html":[4,0,0,11,6,24],
-"trajectory__source_8h.html":[4,0,0,11,6,25],
-"transform_8h.html":[4,0,0,1,1,2],
-"triangle__quadrature_8h.html":[4,0,0,8,13,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,13,2],
 "trig__poly_8h.html":[4,0,0,1,76],
 "trig__poly_8h.html#a43c35aa3bb5ef6f19e6316bb98cc2daf":[4,0,0,1,76,4],
 "trig__poly_8h.html#a69f6fee91b95862e81e39506cae6dc22":[4,0,0,1,76,3],

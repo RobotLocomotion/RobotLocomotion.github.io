@@ -203,6 +203,21 @@ details, refer to the documentation at
 SolverInterface::enabled() returns true. If it is set to any non-empty
 value, then the solver is enabled; otherwise, the solver is not
 enabled.</p>
+<p>Gurobi solver supports options/parameters listed in
+<a class="reference external" href="https://www.gurobi.com/documentation/9.1/refman/parameters.html">https://www.gurobi.com/documentation/9.1/refman/parameters.html</a>. On
+top of these options, we provide the following additional options 1.
+“GRBwrite”, set to a file name so that Gurobi solver will write the
+optimization model to this file, check
+<a class="reference external" href="https://www.gurobi.com/documentation/9.1/refman/py_model_write.html">https://www.gurobi.com/documentation/9.1/refman/py_model_write.html</a>
+for more details, such as all supported file extensions. Set this
+option to “” if you don’t want to write to file. Default is not to
+write to a file. 2. “GRBcomputeIIS”, set to 1 to compute an
+Irreducible Inconsistent Subsystem (IIS) when the problem is
+infeasible. Refer to
+<a class="reference external" href="https://www.gurobi.com/documentation/9.1/refman/py_model_computeiis.html">https://www.gurobi.com/documentation/9.1/refman/py_model_computeiis.html</a>
+for more details. Often this method is called together with setting
+GRBwrite to “FILENAME.ilp” to write IIS to a file with extension
+“ilp”. Default is not to compute IIS.</p>
 <dl class="method">
 <dt id="pydrake.solvers.gurobi.GurobiSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.gurobi.GurobiSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.gurobi.GurobiSolver.__init__" title="Permalink to this definition">¶</a></dt>
