@@ -154,6 +154,7 @@ var hierarchy =
     [ "dummy_value< int >", "structdrake_1_1dummy__value_3_01int_01_4.html", null ],
     [ "dummy_value< symbolic::Expression >", "structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html", null ],
     [ "DynamicProgrammingOptions", "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html", null ],
+    [ "GraphOfConvexSets::Edge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html", null ],
     [ "EigenPtr< PlainObjectType >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const MatrixX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
     [ "EigenPtr< const VectorX< T > >", "classdrake_1_1_eigen_ptr.html", null ],
@@ -337,6 +338,7 @@ var hierarchy =
     [ "GradedReverseLexOrder< VariableOrder >", "structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html", null ],
     [ "Gradient< Derived, Nq, DerivativeOrder >", "structdrake_1_1math_1_1_gradient.html", null ],
     [ "Gradient< Derived, Nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4.html", null ],
+    [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html", null ],
     [ "GrayCodesMatrix< NumDigits >", "structdrake_1_1math_1_1_gray_codes_matrix.html", null ],
     [ "GripperBrickHelper< T >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
     [ "GripperBrickHelper< double >", "classdrake_1_1examples_1_1planar__gripper_1_1_gripper_brick_helper.html", null ],
@@ -1058,6 +1060,7 @@ var hierarchy =
       [ "BasicVector< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
     [ "VectorSetpoint< Scalar >", "classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html", null ],
+    [ "GraphOfConvexSets::Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", null ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", null ],
     [ "VolumeMesh< T >", "classdrake_1_1geometry_1_1_volume_mesh.html", null ],
     [ "VolumeMeshTester< T >", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],

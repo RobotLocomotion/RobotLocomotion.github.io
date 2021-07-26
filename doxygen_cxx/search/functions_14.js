@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['u',['u',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a70f4c533eb1879f1674ab4b2b8083d4c',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
   ['u_5fvars',['u_vars',['../classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a3e9e39c3838a0bd70efe3fa22b41af59',1,'drake::multibody::StaticEquilibriumProblem::u_vars()'],['../classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ad0da7cef1acfba329513b0c072bbe784',1,'drake::systems::trajectory_optimization::MultipleShooting::u_vars()']]],
   ['unaryexpressioncell',['UnaryExpressionCell',['../classdrake_1_1symbolic_1_1_unary_expression_cell.html#a1846b343a25f0364bb0468dc20b6a98a',1,'drake::symbolic::UnaryExpressionCell']]],
   ['unfreeze_5fcache',['unfreeze_cache',['../classdrake_1_1systems_1_1_cache.html#a6f5b663ff08441b49015a0dd6bb3d75e',1,'drake::systems::Cache']]],

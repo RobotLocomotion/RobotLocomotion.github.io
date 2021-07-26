@@ -14,6 +14,7 @@ var searchData=
   ['vectorsetpoint',['VectorSetpoint',['../classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html',1,'drake::systems::controllers']]],
   ['vectorsystem',['VectorSystem',['../classdrake_1_1systems_1_1_vector_system.html',1,'drake::systems']]],
   ['velocityimpliciteulerintegrator',['VelocityImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html',1,'drake::systems']]],
+  ['vertex',['Vertex',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html',1,'drake::geometry::optimization::GraphOfConvexSets']]],
   ['visualizationcallback',['VisualizationCallback',['../classdrake_1_1solvers_1_1_visualization_callback.html',1,'drake::solvers']]],
   ['volumeelement',['VolumeElement',['../classdrake_1_1geometry_1_1_volume_element.html',1,'drake::geometry']]],
   ['volumemesh',['VolumeMesh',['../classdrake_1_1geometry_1_1_volume_mesh.html',1,'drake::geometry']]],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['x',['x',['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point']]],
+  ['x',['x',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::x()'],['../classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766',1,'drake::geometry::optimization::Point::x()']]],
   ['x_5fbc',['X_BC',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644',1,'drake::systems::sensors::RgbdSensor']]],
   ['x_5fbd',['X_BD',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a',1,'drake::systems::sensors::RgbdSensor']]],
   ['x_5fpc',['X_PC',['../classdrake_1_1multibody_1_1_weld_joint.html#a4374412fa825a46abdc4b2484b9c1630',1,'drake::multibody::WeldJoint']]],
@@ -15,6 +15,8 @@ var searchData=
   ['xcf',['xcf',['../classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c',1,'drake::systems::WitnessTriggeredEventData']]],
   ['xd_5fticket',['xd_ticket',['../classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32',1,'drake::systems::SystemBase']]],
   ['xrelativetolerancename',['XRelativeToleranceName',['../classdrake_1_1solvers_1_1_nlopt_solver.html#ae7ee35ef18027156f5cb7b485de8d574',1,'drake::solvers::NloptSolver']]],
+  ['xu',['xu',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aeacbc2abb655b394b863536ddcd78036',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
+  ['xv',['xv',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a09f1477bfa664da452fb472f7c1959cc',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
   ['xyz',['xyz',['../classdrake_1_1perception_1_1_point_cloud.html#a10564c9ccfebe2b5b4bd6002152c68b3',1,'drake::perception::PointCloud']]],
   ['xyzs',['xyzs',['../classdrake_1_1perception_1_1_point_cloud.html#aa7fb4973dd8e9a6b29d1ca00ca3c5476',1,'drake::perception::PointCloud']]]
 ];
