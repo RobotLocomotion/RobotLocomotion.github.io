@@ -210,6 +210,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5eea9354674efc1c07bf537319628ead"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html#a5eea9354674efc1c07bf537319628ead">DoEval</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;x, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; *y) const override</td></tr>
 <tr class="memdesc:a5eea9354674efc1c07bf537319628ead"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements expression evaluation for scalar type <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.  <a href="#a5eea9354674efc1c07bf537319628ead">More...</a><br /></td></tr>
 <tr class="separator:a5eea9354674efc1c07bf537319628ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5ade712b02fa2e71e8c26811c9494a"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_expression_constraint.html#afd5ade712b02fa2e71e8c26811c9494a">DoDisplay</a> (std::ostream &amp;, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;) const override</td></tr>
+<tr class="memdesc:afd5ade712b02fa2e71e8c26811c9494a"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI implementation of Display.  <a href="#afd5ade712b02fa2e71e8c26811c9494a">More...</a><br /></td></tr>
+<tr class="separator:afd5ade712b02fa2e71e8c26811c9494a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1solvers_1_1_constraint"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1solvers_1_1_constraint')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a></td></tr>
 <tr class="memitem:a4f01849f46f82b2f890dd1264125d52f inherit pro_methods_classdrake_1_1solvers_1_1_constraint"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_constraint.html#a4f01849f46f82b2f890dd1264125d52f">UpdateLowerBound</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb)</td></tr>
 <tr class="memdesc:a4f01849f46f82b2f890dd1264125d52f inherit pro_methods_classdrake_1_1solvers_1_1_constraint"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the lower bound.  <a href="classdrake_1_1solvers_1_1_constraint.html#a4f01849f46f82b2f890dd1264125d52f">More...</a><br /></td></tr>
@@ -230,9 +233,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a02a07120f7c6129f84805da698628514">EvaluatorBase</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a224e4c35014e87139f73f9a517866796">num_vars</a>, const std::string &amp;description=&quot;&quot;)</td></tr>
 <tr class="memdesc:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a evaluator.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a02a07120f7c6129f84805da698628514">More...</a><br /></td></tr>
 <tr class="separator:a02a07120f7c6129f84805da698628514 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3999c2d5247045f02ba7e732ca5b6a81 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">virtual std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a3999c2d5247045f02ba7e732ca5b6a81">DoDisplay</a> (std::ostream &amp;os, const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;vars) const</td></tr>
-<tr class="memdesc:a3999c2d5247045f02ba7e732ca5b6a81 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVI implementation of Display.  <a href="classdrake_1_1solvers_1_1_evaluator_base.html#a3999c2d5247045f02ba7e732ca5b6a81">More...</a><br /></td></tr>
-<tr class="separator:a3999c2d5247045f02ba7e732ca5b6a81 inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a6a5844a758fb9db2cbf63e64cafe833a">set_num_outputs</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a25e4d5af707e93ac3ee4f0b749da86a5">num_outputs</a>)</td></tr>
 <tr class="separator:a6a5844a758fb9db2cbf63e64cafe833a inherit pro_methods_classdrake_1_1solvers_1_1_evaluator_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -324,6 +324,47 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="afd5ade712b02fa2e71e8c26811c9494a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd5ade712b02fa2e71e8c26811c9494a">&#9670;&nbsp;</a></span>DoDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; DoDisplay </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NVI implementation of Display. </p>
+<p>The default implementation will report the <a class="el" href="classdrake_1_1_nice_type_name.html" title="Obtains canonicalized, platform-independent, human-readable names for arbitrarily-complicated C++ typ...">NiceTypeName</a>, get_description, and list the bound variables. Subclasses may override to customize the message. </p><dl class="section pre"><dt>Precondition</dt><dd>vars size is consistent with num_vars". </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1solvers_1_1_evaluator_base.html#a3999c2d5247045f02ba7e732ca5b6a81">EvaluatorBase</a>.</p>
+
+</div>
+</div>
 <a id="a863f7df9d3ee10378794b4c6842a4377"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a863f7df9d3ee10378794b4c6842a4377">&#9670;&nbsp;</a></span>DoEval() <span class="overload">[1/3]</span></h2>
 

@@ -600,29 +600,32 @@ details, see system_compatibility.</p>
 <dt id="pydrake.systems.framework.Context_.Context_[float].DisableCaching">
 <code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].DisableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Disabling forces every <code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a
-full calculation rather than returning the cached one. Results should
-be identical with or without caching, except for performance. If they
-are not, there is likely a problem with (a) the specified dependencies
-for some calculation, or (b) a misuse of references into cached values
-that hides modifications from the caching system, or (c) a bug in the
-caching system. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored).</p>
+subcontexts. Caching is enabled by default. Disabling forces every
+<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
+the cached one. Results should be identical with or without caching,
+except for performance. If they are not, there is likely a problem
+with (a) the specified dependencies for some calculation, or (b) a
+misuse of references into cached values that hides modifications from
+the caching system, or (c) a bug in the caching system. The
+<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
+which continue to be maintained even when caching is disabled (though
+they are ignored). Caching can be re-enabled using EnableCaching().</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.Context_.Context_[float].EnableCaching">
 <code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].EnableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored). Hence re-enabling the
-cache with this method may result in some entries being already
-considered up to date. See SetAllCacheEntriesOutOfDate() if you want
-to ensure that caching restarts with everything out of date. You might
-want to do that, for example, for repeatability or because you
-modified something in the debugger and want to make sure it gets used.</p>
+its subcontexts. Caching is enabled by default but may have been
+disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
+independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
+maintained even when caching is disabled (though they are ignored).
+Hence re-enabling the cache with this method may result in some
+entries being already considered up to date. See
+SetAllCacheEntriesOutOfDate() if you want to ensure that caching
+restarts with everything out of date. You might want to do that, for
+example, for repeatability or because you modified something in the
+debugger and want to make sure it gets used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1272,29 +1275,32 @@ details, see system_compatibility.</p>
 <dt id="pydrake.systems.framework.Context_[AutoDiffXd].DisableCaching">
 <code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].DisableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Disabling forces every <code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a
-full calculation rather than returning the cached one. Results should
-be identical with or without caching, except for performance. If they
-are not, there is likely a problem with (a) the specified dependencies
-for some calculation, or (b) a misuse of references into cached values
-that hides modifications from the caching system, or (c) a bug in the
-caching system. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored).</p>
+subcontexts. Caching is enabled by default. Disabling forces every
+<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
+the cached one. Results should be identical with or without caching,
+except for performance. If they are not, there is likely a problem
+with (a) the specified dependencies for some calculation, or (b) a
+misuse of references into cached values that hides modifications from
+the caching system, or (c) a bug in the caching system. The
+<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
+which continue to be maintained even when caching is disabled (though
+they are ignored). Caching can be re-enabled using EnableCaching().</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.Context_[AutoDiffXd].EnableCaching">
 <code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].EnableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored). Hence re-enabling the
-cache with this method may result in some entries being already
-considered up to date. See SetAllCacheEntriesOutOfDate() if you want
-to ensure that caching restarts with everything out of date. You might
-want to do that, for example, for repeatability or because you
-modified something in the debugger and want to make sure it gets used.</p>
+its subcontexts. Caching is enabled by default but may have been
+disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
+independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
+maintained even when caching is disabled (though they are ignored).
+Hence re-enabling the cache with this method may result in some
+entries being already considered up to date. See
+SetAllCacheEntriesOutOfDate() if you want to ensure that caching
+restarts with everything out of date. You might want to do that, for
+example, for repeatability or because you modified something in the
+debugger and want to make sure it gets used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1942,29 +1948,32 @@ details, see system_compatibility.</p>
 <dt id="pydrake.systems.framework.Context_[Expression].DisableCaching">
 <code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].DisableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Disabling forces every <code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a
-full calculation rather than returning the cached one. Results should
-be identical with or without caching, except for performance. If they
-are not, there is likely a problem with (a) the specified dependencies
-for some calculation, or (b) a misuse of references into cached values
-that hides modifications from the caching system, or (c) a bug in the
-caching system. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored).</p>
+subcontexts. Caching is enabled by default. Disabling forces every
+<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
+the cached one. Results should be identical with or without caching,
+except for performance. If they are not, there is likely a problem
+with (a) the specified dependencies for some calculation, or (b) a
+misuse of references into cached values that hides modifications from
+the caching system, or (c) a bug in the caching system. The
+<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
+which continue to be maintained even when caching is disabled (though
+they are ignored). Caching can be re-enabled using EnableCaching().</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.Context_[Expression].EnableCaching">
 <code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].EnableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored). Hence re-enabling the
-cache with this method may result in some entries being already
-considered up to date. See SetAllCacheEntriesOutOfDate() if you want
-to ensure that caching restarts with everything out of date. You might
-want to do that, for example, for repeatability or because you
-modified something in the debugger and want to make sure it gets used.</p>
+its subcontexts. Caching is enabled by default but may have been
+disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
+independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
+maintained even when caching is disabled (though they are ignored).
+Hence re-enabling the cache with this method may result in some
+entries being already considered up to date. See
+SetAllCacheEntriesOutOfDate() if you want to ensure that caching
+restarts with everything out of date. You might want to do that, for
+example, for repeatability or because you modified something in the
+debugger and want to make sure it gets used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2612,29 +2621,32 @@ details, see system_compatibility.</p>
 <dt id="pydrake.systems.framework.Context_[float].DisableCaching">
 <code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].DisableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Disabling forces every <code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a
-full calculation rather than returning the cached one. Results should
-be identical with or without caching, except for performance. If they
-are not, there is likely a problem with (a) the specified dependencies
-for some calculation, or (b) a misuse of references into cached values
-that hides modifications from the caching system, or (c) a bug in the
-caching system. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored).</p>
+subcontexts. Caching is enabled by default. Disabling forces every
+<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
+the cached one. Results should be identical with or without caching,
+except for performance. If they are not, there is likely a problem
+with (a) the specified dependencies for some calculation, or (b) a
+misuse of references into cached values that hides modifications from
+the caching system, or (c) a bug in the caching system. The
+<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
+which continue to be maintained even when caching is disabled (though
+they are ignored). Caching can be re-enabled using EnableCaching().</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.Context_[float].EnableCaching">
 <code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].EnableCaching" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the
-<code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be maintained even when
-caching is disabled (though they are ignored). Hence re-enabling the
-cache with this method may result in some entries being already
-considered up to date. See SetAllCacheEntriesOutOfDate() if you want
-to ensure that caching restarts with everything out of date. You might
-want to do that, for example, for repeatability or because you
-modified something in the debugger and want to make sure it gets used.</p>
+its subcontexts. Caching is enabled by default but may have been
+disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
+independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
+maintained even when caching is disabled (though they are ignored).
+Hence re-enabling the cache with this method may result in some
+entries being already considered up to date. See
+SetAllCacheEntriesOutOfDate() if you want to ensure that caching
+restarts with everything out of date. You might want to do that, for
+example, for repeatability or because you modified something in the
+debugger and want to make sure it gets used.</p>
 </dd></dl>
 
 <dl class="method">
@@ -10988,10 +11000,17 @@ values in <code class="docutils literal"><span class="pre">other_context</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError unless <code class="docutils literal"><span class="pre">other_context</span></code> and <code class="docutils literal"><span class="pre">target_context</span></code> both</li>
 <li>have the same shape as this System, and the <code class="docutils literal"><span class="pre">other_system</span></code>.</li>
 <li>Ignores disconnected inputs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">this</span></code> system’s scalar type T != double and</li>
+<li><code class="docutils literal"><span class="pre">other_system</span></code> has any abstract input ports whose contained type</li>
+<li>depends on scalar type.</li>
 </ul>
 </td>
 </tr>
@@ -11769,10 +11788,17 @@ values in <code class="docutils literal"><span class="pre">other_context</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError unless <code class="docutils literal"><span class="pre">other_context</span></code> and <code class="docutils literal"><span class="pre">target_context</span></code> both</li>
 <li>have the same shape as this System, and the <code class="docutils literal"><span class="pre">other_system</span></code>.</li>
 <li>Ignores disconnected inputs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">this</span></code> system’s scalar type T != double and</li>
+<li><code class="docutils literal"><span class="pre">other_system</span></code> has any abstract input ports whose contained type</li>
+<li>depends on scalar type.</li>
 </ul>
 </td>
 </tr>
@@ -12548,10 +12574,17 @@ values in <code class="docutils literal"><span class="pre">other_context</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError unless <code class="docutils literal"><span class="pre">other_context</span></code> and <code class="docutils literal"><span class="pre">target_context</span></code> both</li>
 <li>have the same shape as this System, and the <code class="docutils literal"><span class="pre">other_system</span></code>.</li>
 <li>Ignores disconnected inputs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">this</span></code> system’s scalar type T != double and</li>
+<li><code class="docutils literal"><span class="pre">other_system</span></code> has any abstract input ports whose contained type</li>
+<li>depends on scalar type.</li>
 </ul>
 </td>
 </tr>
@@ -13327,10 +13360,17 @@ values in <code class="docutils literal"><span class="pre">other_context</span><
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError unless <code class="docutils literal"><span class="pre">other_context</span></code> and <code class="docutils literal"><span class="pre">target_context</span></code> both</li>
 <li>have the same shape as this System, and the <code class="docutils literal"><span class="pre">other_system</span></code>.</li>
 <li>Ignores disconnected inputs.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">this</span></code> system’s scalar type T != double and</li>
+<li><code class="docutils literal"><span class="pre">other_system</span></code> has any abstract input ports whose contained type</li>
+<li>depends on scalar type.</li>
 </ul>
 </td>
 </tr>

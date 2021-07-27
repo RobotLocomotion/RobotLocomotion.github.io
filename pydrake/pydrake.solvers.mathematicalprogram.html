@@ -4568,6 +4568,20 @@ for more details.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.SolverOptions.get_print_file_name">
+<code class="descname">get_print_file_name</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.SolverOptions</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.SolverOptions.get_print_file_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the kPrintFileName set via CommonSolverOption, or else an
+empty string if the option has not been set.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.SolverOptions.get_print_to_console">
+<code class="descname">get_print_to_console</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.SolverOptions</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.SolverOptions.get_print_to_console" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the kPrintToConsole set via CommonSolverOption, or else false
+if the option has not been set.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.SolverOptions.GetOptions">
 <code class="descname">GetOptions</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.SolverOptions</em>, <em>solver_id: pydrake.solvers.mathematicalprogram.SolverId</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.SolverOptions.GetOptions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -4591,7 +4605,7 @@ for more details.</p>
 <ol class="arabic simple" start="4">
 <li>SetOption(self: pydrake.solvers.mathematicalprogram.SolverOptions, key: drake::solvers::CommonSolverOption, value: Union[float, int, str]) -&gt; None</li>
 </ol>
-<p>Set common options for all solvers supporting that option (for
+<p>Sets a common option for all solvers supporting that option (for
 example, printing the progress in each iteration). If the solver
 doesn’t support the option, the option is ignored.</p>
 </dd></dl>

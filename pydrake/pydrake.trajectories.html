@@ -444,8 +444,12 @@ discontinuous derivatives at breaks in derivative().</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.trajectories.PiecewisePolynomial.CubicHermite">
-<em class="property">static </em><code class="descname">CubicHermite</code><span class="sig-paren">(</span><em>breaks: numpy.ndarray[numpy.float64[m, 1]], samples: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], samples_dot: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicHermite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Version of CubicHermite(breaks, samples, samples_dot) that uses vector
+<em class="property">static </em><code class="descname">CubicHermite</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicHermite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CubicHermite(breaks: List[float], samples: List[List[float]], samples_dot: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Version of CubicHermite(breaks, samples, samples_dot) that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Corresponding
 columns of <code class="docutils literal"><span class="pre">samples</span></code> and <code class="docutils literal"><span class="pre">samples_dot</span></code> are used as the sample
 point and independent variable derivative, respectively.</p>
@@ -453,12 +457,26 @@ point and independent variable derivative, respectively.</p>
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">samples_dot.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code>.</dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li>CubicHermite(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], samples_dot: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a third order PiecewisePolynomial using matrix samples and
+derivatives of samples (<code class="docutils literal"><span class="pre">samples_dot</span></code>); each matrix element of
+<code class="docutils literal"><span class="pre">samples_dot</span></code> represents the derivative with respect to the
+independent variable (e.g., the time derivative) of the corresponding
+entry in <code class="docutils literal"><span class="pre">samples</span></code>. Each segment is fully specified by <code class="docutils literal"><span class="pre">samples</span></code>
+and <code class="docutils literal"><span class="pre">sample_dot</span></code> at both ends. Second derivatives are not
+continuous.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.trajectories.PiecewisePolynomial.CubicShapePreserving">
-<em class="property">static </em><code class="descname">CubicShapePreserving</code><span class="sig-paren">(</span><em>breaks: numpy.ndarray[numpy.float64[m, 1]], samples: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], zero_end_point_derivatives: bool = False</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicShapePreserving" title="Permalink to this definition">¶</a></dt>
-<dd><p>Version of CubicShapePreserving(breaks, samples,
+<em class="property">static </em><code class="descname">CubicShapePreserving</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicShapePreserving" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CubicShapePreserving(breaks: List[float], samples: List[List[float]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Version of CubicShapePreserving(breaks, samples,
 zero_end_point_derivatives) that uses vector samples and Eigen
 VectorXd and MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal"><span class="pre">samples</span></code>
 represents a sample point.</p>
@@ -478,6 +496,51 @@ represents a sample point.</p>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>CubicShapePreserving(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], zero_end_point_derivatives: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a third order PiecewisePolynomial using vector samples,
+where each column of <code class="docutils literal"><span class="pre">samples</span></code> represents a sample point. First
+derivatives are chosen to be “shape preserving”, i.e. if <code class="docutils literal"><span class="pre">samples</span></code>
+is monotonic within some interval, the interpolated data will also be
+monotonic. The second derivative is not guaranteed to be smooth across
+the entire spline.</p>
+<p>MATLAB calls this method “pchip” (short for “Piecewise Cubic Hermite
+Interpolating Polynomial”), and provides a nice description in their
+documentation.
+<a class="reference external" href="http://home.uchicago.edu/~sctchoi/courses/cs138/interp.pdf">http://home.uchicago.edu/~sctchoi/courses/cs138/interp.pdf</a> is also a
+good reference.</p>
+<p>If <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is <code class="docutils literal"><span class="pre">False</span></code>, the first and last
+first derivative is chosen using a non-centered, shape-preserving
+three-point formulae. See equation (2.10) in the following reference
+for more details. <a class="reference external" href="http://www.mi.sanu.ac.rs/~gvm/radovi/mon.pdf">http://www.mi.sanu.ac.rs/~gvm/radovi/mon.pdf</a> If
+<code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is <code class="docutils literal"><span class="pre">True</span></code>, they are set to zeros.</p>
+<p>If <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is <code class="docutils literal"><span class="pre">False</span></code>, <cite>breaks</cite> and
+<code class="docutils literal"><span class="pre">samples</span></code> must have at least 3 elements for the algorithm to
+determine the first derivatives.</p>
+<p>If <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is <code class="docutils literal"><span class="pre">True</span></code>, <cite>breaks</cite> and
+<code class="docutils literal"><span class="pre">samples</span></code> may have 2 or more elements. For the 2 elements case, the
+result is equivalent to computing a cubic polynomial whose values are
+given by <code class="docutils literal"><span class="pre">samples</span></code>, and derivatives set to zero.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li><em>RuntimeError if</em> – - <code class="docutils literal"><span class="pre">breaks</span></code> has length smaller than 3 and</li>
+<li><code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is <code class="docutils literal"><span class="pre">False</span></code>, - <cite>breaks</cite> has length</li>
+<li>smaller than 2 and <code class="docutils literal"><span class="pre">zero_end_point_derivatives</span></code> is true.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError under the conditions specified under</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">coefficient_construction_methods.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -485,7 +548,7 @@ represents a sample point.</p>
 <em class="property">static </em><code class="descname">CubicWithContinuousSecondDerivatives</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.CubicWithContinuousSecondDerivatives" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>CubicWithContinuousSecondDerivatives(breaks: numpy.ndarray[numpy.float64[m, 1]], samples: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], sample_dot_at_start: numpy.ndarray[numpy.float64[m, 1]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+<li>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[List[float]], sample_dot_at_start: numpy.ndarray[numpy.float64[m, n]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives() that uses vector
 samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
@@ -507,7 +570,33 @@ samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>CubicWithContinuousSecondDerivatives(breaks: numpy.ndarray[numpy.float64[m, 1]], samples: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+<li>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], sample_dot_at_start: numpy.ndarray[numpy.float64[m, n]], sample_dot_at_end: numpy.ndarray[numpy.float64[m, n]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a third order PiecewisePolynomial using matrix samples. The
+PiecewisePolynomial is constructed such that the interior segments
+have the same value, first and second derivatives at <code class="docutils literal"><span class="pre">breaks</span></code>.
+<cite>sample_dot_at_start</cite> and <code class="docutils literal"><span class="pre">sample_dot_at_end</span></code> are used for the first
+and last first derivatives.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">sample_dot_at_start</span></code> or <code class="docutils literal"><span class="pre">sample_dot_at_end</span></code></li>
+<li>and <code class="docutils literal"><span class="pre">samples</span></code> have inconsistent dimensions.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError under the conditions specified under</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">coefficient_construction_methods.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[List[float]], periodic_end_condition: bool = False) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
 </ol>
 <p>Version of CubicWithContinuousSecondDerivatives(breaks, samples) that
 uses vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each
@@ -515,6 +604,33 @@ column of <code class="docutils literal"><span class="pre">samples</span></code>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code>.</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li>CubicWithContinuousSecondDerivatives(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]], periodic_end: bool) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a third order PiecewisePolynomial using matrix samples. The
+PiecewisePolynomial is constructed such that the interior segments
+have the same value, first and second derivatives at <code class="docutils literal"><span class="pre">breaks</span></code>. If
+<code class="docutils literal"><span class="pre">periodic_end_condition</span></code> is <code class="docutils literal"><span class="pre">False</span></code> (default), then the
+“Not-a-sample” end condition is used here, which means the third
+derivatives are continuous for the first two and last two segments. If
+<code class="docutils literal"><span class="pre">periodic_end_condition</span></code> is <code class="docutils literal"><span class="pre">True</span></code>, then the first and second
+derivatives between the end of the last segment and the beginning of
+the first segment will be continuous. Note that the periodic end
+condition does not require the first and last sample to be collocated,
+nor does it add an additional sample to connect the first and last
+segments. Only first and second derivative continuity is enforced. See
+<a class="reference external" href="https://en.wikipedia.org/wiki/Spline_interpolation">https://en.wikipedia.org/wiki/Spline_interpolation</a> and
+<a class="reference external" href="https://www.math.uh.edu/~jingqiu/math4364/spline.pdf">https://www.math.uh.edu/~jingqiu/math4364/spline.pdf</a> for more about
+cubic splines and their end conditions. The MATLAB docs for methods
+“spline” and “csape” are also good references.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">breaks</span></code> and <code class="docutils literal"><span class="pre">samples</span></code> must have at least 3 elements. If
+<code class="docutils literal"><span class="pre">periodic_end_condition</span></code> is <code class="docutils literal"><span class="pre">True</span></code>, then for two samples, it
+would produce a straight line (use <code class="docutils literal"><span class="pre">FirstOrderHold</span></code> for this
+instead), and if <code class="docutils literal"><span class="pre">periodic_end_condition</span></code> is <code class="docutils literal"><span class="pre">False</span></code> the
+problem is ill-defined.</dd>
 </dl>
 </dd></dl>
 
@@ -541,14 +657,35 @@ break) will be the one that is evaluated at the break.</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.trajectories.PiecewisePolynomial.FirstOrderHold">
-<em class="property">static </em><code class="descname">FirstOrderHold</code><span class="sig-paren">(</span><em>arg0: numpy.ndarray[numpy.float64[m, 1]], arg1: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.FirstOrderHold" title="Permalink to this definition">¶</a></dt>
-<dd><p>Version of FirstOrderHold(breaks, samples) that uses vector samples
+<em class="property">static </em><code class="descname">FirstOrderHold</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.FirstOrderHold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>FirstOrderHold(breaks: List[float], samples: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Version of FirstOrderHold(breaks, samples) that uses vector samples
 and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column of <code class="docutils literal"><span class="pre">samples</span></code>
 represents a sample point.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">breaks.size()</span></code></dd>
 </dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError under the conditions specified under</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">coefficient_construction_methods.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>FirstOrderHold(breaks: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a piecewise linear PiecewisePolynomial using matrix
+samples.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -609,13 +746,30 @@ element of every segment.</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.trajectories.PiecewisePolynomial.LagrangeInterpolatingPolynomial">
-<em class="property">static </em><code class="descname">LagrangeInterpolatingPolynomial</code><span class="sig-paren">(</span><em>times: numpy.ndarray[numpy.float64[m, 1]], samples: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.LagrangeInterpolatingPolynomial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Version of LagrangeInterpolatingPolynomial(times, samples) that uses
+<em class="property">static </em><code class="descname">LagrangeInterpolatingPolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePolynomial.LagrangeInterpolatingPolynomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>LagrangeInterpolatingPolynomial(times: List[float], samples: List[List[float]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Version of LagrangeInterpolatingPolynomial(times, samples) that uses
 vector samples and Eigen VectorXd / MatrixX&lt;T&gt; arguments. Each column
 of <code class="docutils literal"><span class="pre">samples</span></code> represents a sample point.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">samples.cols()</span> <span class="pre">==</span> <span class="pre">times.size()</span></code>.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>LagrangeInterpolatingPolynomial(times: List[float], samples: List[numpy.ndarray[numpy.float64[m, n]]]) -&gt; pydrake.trajectories.PiecewisePolynomial</li>
+</ol>
+<p>Constructs a polynomial with a <em>single segment</em> of the lowest possible
+degree that passes through all of the sample points. See “polynomial
+interpolation” and/or “Lagrange polynomial” on Wikipedia for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">times</span></code> must be monotonically increasing.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">samples.size()</span> <span class="pre">==</span> <span class="pre">times.size()</span></code>.</dd>
 </dl>
 </dd></dl>
 

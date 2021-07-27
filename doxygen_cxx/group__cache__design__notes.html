@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('group__cache__design__notes.html','');
 <li><em>every</em> access to a computed value first ensures that it is up to date.</li>
 </ul>
 <p>Accessing computed values is a critical, inner-loop activity during simulation (many times per step) so the implementation is designed to provide validity-checked access at minimal computational cost. Marking computations out of date as prerequisites change is also frequent (at least once per step), and potentially expensive, so must be efficient; the implementation goes to great lengths to minimize the cost of that operation.</p>
+<p>Caching is enabled by default in Drake. Methods are provided for disabling and otherwise manipulating cache entries. See <a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a> for more information.</p>
 <p><a class="anchor" id="cache_design_goals"></a></p><h2>Design Constraints and Goals</h2>
 <p>Caching is entirely about performance. Hence, other than correctness, the performance goals listed above are the primary architectural constraints. Other goals also influenced the design. Here are the main goals in roughly descending order of importance.</p>
 <ol type="1">

@@ -448,6 +448,8 @@ var searchData=
   ['get_5fposition_5ftrajectory',['get_position_trajectory',['../classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b',1,'drake::trajectories::PiecewisePose']]],
   ['get_5fpowers',['get_powers',['../classdrake_1_1symbolic_1_1_monomial.html#a1d0553f396185535b2ba95351ac4902c',1,'drake::symbolic::Monomial::get_powers()'],['../classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a1d0553f396185535b2ba95351ac4902c',1,'drake::symbolic::PolynomialBasisElement::get_powers()']]],
   ['get_5fprevious_5fintegration_5fstep_5fsize',['get_previous_integration_step_size',['../classdrake_1_1systems_1_1_integrator_base.html#a9442cfd0320da3227579970a3ea0b506',1,'drake::systems::IntegratorBase']]],
+  ['get_5fprint_5ffile_5fname',['get_print_file_name',['../classdrake_1_1solvers_1_1_solver_options.html#ac2adda584ed29a23b6e0bced598f22c3',1,'drake::solvers::SolverOptions']]],
+  ['get_5fprint_5fto_5fconsole',['get_print_to_console',['../classdrake_1_1solvers_1_1_solver_options.html#a2894ce2c8df835376f1df65dabc7d321',1,'drake::solvers::SolverOptions']]],
   ['get_5fproducts',['get_products',['../classdrake_1_1multibody_1_1_rotational_inertia.html#a73703796210df51bb25acbb19168913a',1,'drake::multibody::RotationalInertia']]],
   ['get_5fprogram_5ftype_2eh',['get_program_type.h',['../get__program__type_8h.html',1,'']]],
   ['get_5fpublish_5fcount',['get_publish_count',['../classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html#a776e4bf4dc31f6fdde18d632632ce856',1,'drake::systems::analysis_test::MySpringMassSystem']]],

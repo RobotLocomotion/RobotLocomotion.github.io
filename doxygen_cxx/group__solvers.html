@@ -105,10 +105,11 @@ $(document).ready(function(){initNavTree('group__solvers.html','');});
   minₓ f(x)
   s.t x ∈ S.
 </pre><p> Depending on the formulation of the objective function f, and the structure of the constraint set S, this optimization problem can be grouped into different categories (linear programming, quadratic programming, nonconvex nonlinear programming, etc). Drake will call suitable solvers for each category of optimization problem.</p>
-<p>Drake wraps a number of commercial solvers (+ a few custom solvers) to provide a common interface for convex optimization, mixed-integer convex optimization, and other non-convex mathematical programs.</p>
+<p>Drake wraps a number of open source and commercial solvers (+ a few custom solvers) to provide a common interface for convex optimization, mixed-integer convex optimization, and other non-convex mathematical programs.</p>
 <p>The MathematicalProgram class handles the coordination of decision variables, objectives, and constraints. The <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92">Solve()</a> method reflects on the accumulated objectives and constraints and will dispatch to the most appropriate solver. Alternatively, one can invoke specific solver by instantiating its <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">SolverInterface</a> and passing the MathematicalProgram directly to the <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec">SolverInterface::Solve()</a> method.</p>
 <p>Our solver coverage still has many gaps, but is under active development.</p>
-<p><b>Closed-form solutions</b> When the mathematical problem is formulated as the following linear system </p><pre>
+<h2>Closed-form solutions</h2>
+<p>When the mathematical problem is formulated as the following linear system </p><pre>
 find x
 s.t Ax = b,
 </pre><p> then <a class="el" href="classdrake_1_1solvers_1_1_linear_system_solver.html">LinearSystemSolver</a> provides efficient closed form solution.</p>
@@ -116,52 +117,66 @@ s.t Ax = b,
 min 0.5 xᵀHx + aᵀx + b
 s.t Ax = b,
 </pre><p> then <a class="el" href="classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html">EqualityConstraintQPSolver</a> provides efficient closed form solution.</p>
-<p><b>Convex Optimization</b></p>
+<h2>Convex Optimization</h2>
 <table class="doxtable">
 <tr>
 <td>Solver </td><td><a href="https://en.wikipedia.org/wiki/Linear_programming">LP</a> </td><td><a href="https://en.wikipedia.org/wiki/Quadratic_programming">QP</a> </td><td><a href="https://en.wikipedia.org/wiki/Second-order_cone_programming">SOCP</a> </td><td><a href="https://en.wikipedia.org/wiki/Semidefinite_programming">SDP</a> </td><td><a href="https://en.wikipedia.org/wiki/Sum-of-squares_optimization">SOS</a>  </td></tr>
 <tr>
-<td>&dagger; <a href="https://www.gurobi.com/products/gurobi-optimizer">Gurobi</a> </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td></td><td></td></tr>
+<td><a href="https://www.gurobi.com/products/gurobi-optimizer">Gurobi</a> † </td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦ </td><td></td><td></td></tr>
 <tr>
-<td>&dagger; <a href="https://www.mosek.com/products/mosek">Mosek</a> </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams;  </td></tr>
+<td><a href="https://www.mosek.com/products/mosek">Mosek</a> † </td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦  </td></tr>
 <tr>
-<td><a href="https://github.com/cvxgrp/scs">SCS</a> </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams;  </td></tr>
+<td><a href="https://github.com/coin-or/Clp">CLP</a> </td><td align="center">♦ </td><td align="center">♦ </td><td></td><td></td><td></td></tr>
 <tr>
-<td><a href="https://github.com/coin-or/Clp">CLP</a> </td><td align="center">&diams; </td><td align="center">&diams; </td><td></td><td></td><td></td></tr>
+<td><a href="https://github.com/coin-or/Csdp">CSDP</a> </td><td align="center">♦ </td><td></td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦  </td></tr>
 <tr>
-<td><a href="https://github.com/oxfordcontrol/osqp">OSQP</a> </td><td></td><td align="center">&diams; </td><td></td><td></td><td></td></tr>
+<td><a href="https://github.com/cvxgrp/scs">SCS</a> </td><td align="center">△ </td><td align="center">△ </td><td align="center">△ </td><td align="center">△ </td><td align="center">△  </td></tr>
 <tr>
-<td><a href="https://github.com/coin-or/Csdp">CSDP</a> </td><td align="center">&diams; </td><td></td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams;  </td></tr>
+<td><a href="https://github.com/oxfordcontrol/osqp">OSQP</a> </td><td></td><td align="center">△ </td><td></td><td></td><td></td></tr>
+<tr>
+<td><a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> † ‡ </td><td align="center">▢ </td><td align="center">▢ </td><td></td><td></td><td></td></tr>
+<tr>
+<td><a href="https://projects.coin-or.org/Ipopt">Ipopt</a> </td><td align="center">▢ </td><td align="center">▢ </td><td></td><td></td><td></td></tr>
+<tr>
+<td><a href="http://ab-initio.mit.edu/wiki/index.php/NLopt">NLopt</a> </td><td align="center">▢ </td><td align="center">▢ </td><td></td><td></td><td></td></tr>
 </table>
-<p><b>Mixed-Integer Convex Optimization</b></p>
+<p>† This is a commercial solver which requires a license (note that some have free licenses for academics).</p>
+<p>‡ <a href="https://drake.mit.edu/from_binary.html">Drake's pre-compiled binary releases</a> incorporate a private build of SNOPT that does not require a license when invoked via Drake's SnoptSolver wrapper class.</p>
+<p>♦ A preferred solver for the given category.</p>
+<p>△ These solvers are not accurate. They implement ADMM algorithm, which converges quickly to a low-accuracy solution, and requires many iterations to achieve high accuracy.</p>
+<p>▢ These solvers can solve the convex problems, but are not good at it. They treat the convex problems as general nonlinear optimization problems.</p>
+<h2>Mixed-Integer Convex Optimization</h2>
 <table class="doxtable">
 <tr>
 <td>Solver </td><td>MILP </td><td>MIQP </td><td>MISOCP </td><td>MISDP  </td></tr>
 <tr>
-<td>&dagger; <a href="https://www.gurobi.com/products/gurobi-optimizer">Gurobi</a> </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td></td></tr>
+<td><a href="https://www.gurobi.com/products/gurobi-optimizer">Gurobi</a> † </td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦ </td><td></td></tr>
 <tr>
-<td>&dagger; <a href="https://www.mosek.com/products/mosek">Mosek</a> </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td></td></tr>
+<td><a href="https://www.mosek.com/products/mosek">Mosek</a> † </td><td align="center">♦ </td><td align="center">♦ </td><td align="center">♦ </td><td></td></tr>
 <tr>
-<td>&loz; <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html">naive branch-and-bound</a>  </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td><td align="center">&diams; </td></tr>
+<td><a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html">naive branch-and-bound</a>  </td><td align="center">◊ </td><td align="center">◊ </td><td align="center">◊ </td><td align="center">◊ </td></tr>
 </table>
-<p>&loz; We implement only the basic branch-and-bound algorithm, without cutting planes nor advanced branching heuristics. Its usefulness is likely restricted to small-sized problems with dozens of binary variables.</p>
-<p><b>Nonconvex Programming</b></p>
+<p>† This is a commercial solver which requires a license (note that some have free licenses for academics).</p>
+<p>♦ A preferred solver for the given category.</p>
+<p>◊ The naive solver's usefulness is likely restricted to small-sized problems with dozens of binary variables. We implement only the basic branch-and-bound algorithm, without cutting planes nor advanced branching heuristics.</p>
+<h2>Nonconvex Programming</h2>
 <table class="doxtable">
 <tr>
 <td>Solver </td><td><a href="https://en.wikipedia.org/wiki/Nonlinear_programming">Nonlinear Program</a> </td><td><a href="https://en.wikipedia.org/wiki/Linear_complementarity_problem">LCP</a> </td><td><a href="https://en.wikipedia.org/wiki/Satisfiability_modulo_theories">SMT</a>  </td></tr>
 <tr>
-<td>&dagger; &Dagger; <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> </td><td align="center">&diams; </td><td></td><td></td></tr>
+<td><a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> † ‡ </td><td align="center">♦ </td><td></td><td></td></tr>
 <tr>
-<td><a href="https://projects.coin-or.org/Ipopt">Ipopt</a> </td><td align="center">&diams; </td><td></td><td></td></tr>
+<td><a href="https://projects.coin-or.org/Ipopt">Ipopt</a> </td><td align="center">♦ </td><td></td><td></td></tr>
 <tr>
-<td><a href="http://ab-initio.mit.edu/wiki/index.php/NLopt">NLopt</a> </td><td align="center">&diams; </td><td></td><td></td></tr>
+<td><a href="http://ab-initio.mit.edu/wiki/index.php/NLopt">NLopt</a> </td><td align="center">♦ </td><td></td><td></td></tr>
 <tr>
-<td><a href="https://github.com/PositronicsLab/Moby">Moby LCP</a> </td><td></td><td align="center">&diams; </td><td></td></tr>
+<td><a href="https://github.com/PositronicsLab/Moby">Moby LCP</a> </td><td></td><td align="center">♦ </td><td></td></tr>
 <tr>
-<td><a href="https://dreal.github.io/">dReal</a> </td><td></td><td></td><td align="center">&diams;  </td></tr>
+<td><a href="https://dreal.github.io/">dReal</a> </td><td></td><td></td><td align="center">♦  </td></tr>
 </table>
-<p>&dagger; indicates that this is a commercial solver which requires a license (note that some have free licenses for academics).</p>
-<p>&Dagger; Note that <a href="https://drake.mit.edu/from_binary.html">Drake's pre-compiled binary releases</a> provide SNOPT. </p>
+<p>† This is a commercial solver which requires a license (note that some have free licenses for academics).</p>
+<p>‡ <a href="https://drake.mit.edu/from_binary.html">Drake's pre-compiled binary releases</a> incorporate a private build of SNOPT that does not require a license when invoked via Drake's SnoptSolver wrapper class.</p>
+<p>♦ A preferred solver for the given category. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
