@@ -2256,7 +2256,7 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 <dl class="section pre"><dt>Precondition</dt><dd>If T == <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, <code><a class="el" href="namespacedrake_1_1symbolic.html#ae0f809da2a5c679df2b90aadedde5350" title="Checks if e is a constant expression.">t.is_constant()</a></code> must be true.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>If t does not lie in the range that the polynomial is defined over, the polynomial will silently be evaluated at the closest point to t. For example, <code>value(-1)</code> will return <code>value(0)</code> for a polynomial defined over [0, 1]. </dd>
 <dd>
-See warning in polynomial_construction_warning. </dd></dl>
+See warning in the <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#polynomial_warning">constructor overview</a> above. </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9">Trajectory&lt; T &gt;</a>.</p>
 

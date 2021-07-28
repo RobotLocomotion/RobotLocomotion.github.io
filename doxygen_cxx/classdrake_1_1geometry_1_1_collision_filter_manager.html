@@ -115,6 +115,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_collision_f
 <p>There are limits to how C can be modified.</p>
 <ul>
 <li><code>∀ (gᵢ, gⱼ) ∈ C</code>, both gᵢ and gⱼ must be registered with <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>; you can't inject arbitrary ids. Attempting to do so will result in an error.</li>
+<li>No pairs in <code>Aₚ × Aₚ</code>, <code>Fₚ</code>, or <code>Iₚ</code> can ever be added to C. Excluding those pairs is a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> invariant. Attempts to do so will be ignored.</li>
 </ul>
 <p>The current configuration of C depends on the sequence of filter declarations that have been applied in the manager. Changing the order can change the end result.</p>
 <p>A CollisionFilterManager is a view into geometry data (either that owned by a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> instance or a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> context). The manager instance can be copied or moved and the resulting instance is a view into the same data. For both the original and the copy (or just the target when moving the manager), the source data must stay alive for at least as long as the manager instance.</p>
@@ -223,6 +224,7 @@ Friends</h2></td></tr>
 <ul>
 <li>Referencing an invalid id (FrameId or <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html" title="Type used to identify geometry instances in SceneGraph.">GeometryId</a>): throws.</li>
 <li>Declaring a filtered pair that is already filtered: no discernible change.</li>
+<li>Attempts to "allow" collision between a pair that is strictly excluded (e.g., between two anchored geometries) will be ignored.</li>
 </ul>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">

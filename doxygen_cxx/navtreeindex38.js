@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1yaml_1_1_yaml_write_archive.html#adb2b0520524752843b0b4adb6dcda87c":[3,0,0,17,1,0],
+"classdrake_1_1yaml_1_1_yaml_write_archive.html#aed2a3370d019639c501af0a383a2da01":[3,0,0,17,1,6],
 "classdrake_1_1yaml_1_1_yaml_write_archive.html#af98867e5146bdd5ce4faa20597595dd3":[3,0,0,17,1,8],
 "classes.html":[3,1],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "dir_41feb80e12a36dca7cd3992ad22e20a8.html":[4,0,0,3,0],
 "dir_44483f0323bd602a0990582f52e44742.html":[4,0,0,4,4,0],
 "dir_474aa644b99dd5481f12728ecfc3f855.html":[4,0,0,3,9,1],
-"dir_47be7cb145c8f2c349a22ea5364e6acd.html":[4,0,0,3,4],
-"dir_48e4d4a473e039105b12a2118c672ffe.html":[4,0,0,1,0],
-"dir_4aa43041a9cb7441d26dd3284a5677ba.html":[4,0,0,3,3]
+"dir_47be7cb145c8f2c349a22ea5364e6acd.html":[4,0,0,3,4]
 };

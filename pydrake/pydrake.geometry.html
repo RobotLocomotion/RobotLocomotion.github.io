@@ -309,6 +309,32 @@ CollisionFilterManager::Apply().</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.CollisionFilterDeclaration.AllowBetween">
+<code class="descname">AllowBetween</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterDeclaration</em>, <em>set_A: drake::geometry::GeometrySet</em>, <em>set_B: drake::geometry::GeometrySet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.CollisionFilterDeclaration<a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.AllowBetween" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows geometry pairs in proximity evaluation by updating the
+candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">←</span> <span class="pre">C</span> <span class="pre">⋃</span> <span class="pre">P*</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(a,</span> <span class="pre">b)},</span> <span class="pre">∀</span> <span class="pre">a</span> <span class="pre">∈</span> <span class="pre">A,</span> <span class="pre">b</span> <span class="pre">∈</span>
+<span class="pre">B,</span> <span class="pre">a</span> <span class="pre">≠</span> <span class="pre">b</span></code> and <code class="docutils literal"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">{a₀,</span> <span class="pre">a₁,</span> <span class="pre">...,</span> <span class="pre">aₘ}</span></code> and <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">{b₀,</span> <span class="pre">b₁,</span> <span class="pre">...,</span> <span class="pre">bₙ}</span></code>
+are the input sets of geometries <code class="docutils literal"><span class="pre">set_A</span></code> and <code class="docutils literal"><span class="pre">set_B</span></code>,
+respectively. Where <code class="docutils literal"><span class="pre">P*</span> <span class="pre">=</span> <span class="pre">P</span> <span class="pre">-</span> <span class="pre">(Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ)</span> <span class="pre">-</span> <span class="pre">Fₚ</span> <span class="pre">-</span> <span class="pre">Iₚ</span></code>, the set of pairs
+after we remove the SceneGraph-mandated invariants (see
+CollisionFilterManager for details on those invariants).</p>
+<p>To be explicit, in contrast to AllowWithin, this does <em>not</em> clear
+filters between members of the <em>same</em> set (e.g., <code class="docutils literal"><span class="pre">(aᵢ,</span> <span class="pre">aⱼ)</span></code> or
+<code class="docutils literal"><span class="pre">(bᵢ,</span> <span class="pre">bⱼ)</span></code>).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterDeclaration.AllowWithin">
+<code class="descname">AllowWithin</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterDeclaration</em>, <em>geometry_set: drake::geometry::GeometrySet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.CollisionFilterDeclaration<a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.AllowWithin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allows geometry pairs in proximity evaluation by updating the
+candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">←</span> <span class="pre">C</span> <span class="pre">⋃</span> <span class="pre">P*</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span>
+<span class="pre">G,</span> <span class="pre">i</span> <span class="pre">≠</span> <span class="pre">j</span></code> and <code class="docutils literal"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">{g₀,</span> <span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₘ}</span></code> is the input <code class="docutils literal"><span class="pre">geometry_set</span></code>
+of geometries. Where <code class="docutils literal"><span class="pre">P*</span> <span class="pre">=</span> <span class="pre">P</span> <span class="pre">-</span> <span class="pre">(Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ)</span> <span class="pre">-</span> <span class="pre">Fₚ</span> <span class="pre">-</span> <span class="pre">Iₚ</span></code>, the set of
+pairs after we remove the SceneGraph-mandated invariants (see
+CollisionFilterManager for details on those invariants).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.CollisionFilterDeclaration.ExcludeBetween">
 <code class="descname">ExcludeBetween</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterDeclaration</em>, <em>set_A: drake::geometry::GeometrySet</em>, <em>set_B: drake::geometry::GeometrySet</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.CollisionFilterDeclaration<a class="headerlink" href="#pydrake.geometry.CollisionFilterDeclaration.ExcludeBetween" title="Permalink to this definition">¶</a></dt>
 <dd><p>Excludes geometry pairs from proximity evaluation by updating the
@@ -366,7 +392,9 @@ configuration of C.</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">∀</span> <span class="pre">(gᵢ,</span> <span class="pre">gⱼ)</span> <span class="pre">∈</span> <span class="pre">C</span></code>, both gᵢ and gⱼ must be registered with SceneGraph; you</li>
 </ul>
-<p>can’t inject arbitrary ids. Attempting to do so will result in an error.</p>
+<p>can’t inject arbitrary ids. Attempting to do so will result in an error.
+- No pairs in <code class="docutils literal"><span class="pre">Aₚ</span> <span class="pre">×</span> <span class="pre">Aₚ</span></code>, <cite>Fₚ</cite>, or <code class="docutils literal"><span class="pre">Iₚ</span></code> can ever be added to C. Excluding
+those pairs is a SceneGraph invariant. Attempts to do so will be ignored.</p>
 <p>The current configuration of C depends on the sequence of filter
 declarations that have been applied in the manager. Changing the order
 can change the end result.</p>
@@ -410,7 +438,9 @@ The following polices are implemented during application:</p>
 <li>Referencing an invalid id (FrameId or GeometryId): throws.</li>
 <li>Declaring a filtered pair that is already filtered: no discernible</li>
 </ul>
-<p>change.</p>
+<p>change.
+- Attempts to “allow” collision between a pair that is strictly excluded
+(e.g., between two anchored geometries) will be ignored.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -736,7 +766,10 @@ measured and expressed in the world frame.</p>
 <dt id="pydrake.geometry.Convex">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">Convex</code><a class="headerlink" href="#pydrake.geometry.Convex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
-<p>Support for convex shapes.</p>
+<p>Definition of a <em>convex</em> surface mesh.</p>
+<p>The mesh is defined in a canonical frame C, implicit in the file
+parsed. Upon loading it in SceneGraph it can be scaled around the
+origin of C by a given <code class="docutils literal"><span class="pre">scale</span></code> amount.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Convex.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Convex</em>, <em>absolute_filename: str</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Convex.__init__" title="Permalink to this definition">¶</a></dt>
@@ -2651,10 +2684,14 @@ drake_visualizer_role_consumer “drake::geometry::DrakeVisualizer”</p>
 <dt id="pydrake.geometry.Mesh">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">Mesh</code><a class="headerlink" href="#pydrake.geometry.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
-<p>Limited support for meshes. Meshes are supported in Rendering and
-Illustration roles. For Proximity role, Meshes are supported in
-ComputeContactSurfaces() query only. No other proximity queries are
-supported.</p>
+<p>Definition of a general (possibly non-convex) triangular surface mesh.
+Meshes can be used for illustration and perception roles, but have
+limited proximity support. See the documentation of QueryObject’s
+proximity queries to see how meshes are used in each type of proximity
+query.</p>
+<p>The mesh is defined in a canonical frame C, implicit in the file
+parsed. Upon loading it in SceneGraph it can be scaled around the
+origin of C by a given <code class="docutils literal"><span class="pre">scale</span></code> amount.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Mesh.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Mesh</em>, <em>absolute_filename: str</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Mesh.__init__" title="Permalink to this definition">¶</a></dt>

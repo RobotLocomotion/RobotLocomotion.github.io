@@ -111,7 +111,7 @@ g̈ₚ(q,v,v̇) = nᵀ(p̈ᵢ - p̈ⱼ) + 2ṅᵀ(ṗᵢ - ṗⱼ) + n̈ᵀ(pᵢ
 <div class="caption">
 Figure 1: Illustration of the interpretation of non-interpenetration constraints when two boxes are interpenetrating (right). The boxes prior to contact are shown at left, and are shown in the middle figure at the initial time of contact; the surface normal n̂ is shown in this figure as well. The bodies interpenetrate over time as the constraint becomes violated (e.g., by constraint drift). Nevertheless, n̂ is tracked over time from its initial direction (and definition relative to the blue body). σ represents the signed distance the bodies must be translated along n̂ so that they are osculating (kissing).</div></div>
  <h4>Constraint softening</h4>
-<p>As discussed in discretization, the non-interpenetration constraint can be softened by adding a term to the time derivative of the equation: </p><pre>
+<p>As discussed in <a class="el" href="group__discretization.html">A stable discretization strategy</a>, the non-interpenetration constraint can be softened by adding a term to the time derivative of the equation: </p><pre>
 0 ≤ ġₚ  ⊥  λ ≥ 0
 </pre><p> resulting in:</p><pre>
 0 ≤ ġₚ + γλ  ⊥  λ ≥ 0

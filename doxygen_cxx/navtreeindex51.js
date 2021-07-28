@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,7,4],
+"symbolic__types__pybind_8h.html#a368506c847873cc7fae62074bdebf337":[4,0,0,0,0,7,2],
+"symbolic__types__pybind_8h.html#a694fa2ee2cdef72bcfcffdb381053dbe":[4,0,0,0,0,7,3],
 "symbolic__types__pybind_8h.html#aa93f2aa731d1ec9b8e8474d8aecc28b6":[4,0,0,0,0,7,0],
 "symbolic__types__pybind_8h.html#aeaf23055b93c04213228b573558f347b":[4,0,0,0,0,7,1],
 "symbolic__variable_8h.html":[4,0,0,1,72],

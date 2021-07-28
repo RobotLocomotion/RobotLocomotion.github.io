@@ -1135,15 +1135,14 @@ Lorentz cone. A vector z ∈ ℝ ⁿ lies within Lorentz cone if</p>
 should be handled by a second-order cone solver. In case the user
 wants to enforce this constraint through general nonlinear
 optimization, we provide three different formulations on the Lorentz
-cone constraint 1. g(z) = z₀ - sqrt(z₁² + … + zₙ₋₁²) ≥ 0 This
-formulation is not differentiable at z₁=…=zₙ₋₁=0 2. g(z) = z₀ -
-sqrt(z₁² + … + zₙ₋₁²) ≥ 0 but the gradient of g(z) is approximated
-as ∂g(z)/∂z = [1, -z₁/sqrt(z₁² + … zₙ₋₁² + ε), …,
--zₙ₋₁/sqrt(z₁²+…+zₙ₋₁²+ε)] where ε is a small positive number. 3.
-z₀²-(z₁²+…+zₙ₋₁²) ≥ 0 z₀ ≥ 0 This constraint is differentiable
-everywhere, but z₀²-(z₁²+…+zₙ₋₁²) ≥ 0 is non-convex. The default is
-to use the first formulation. For more information and visualization,
-please refer to
+cone constraint 1. [kConvex] g(z) = z₀ - sqrt(z₁² + … + zₙ₋₁²) ≥ 0
+This formulation is not differentiable at z₁=…=zₙ₋₁=0 2.
+[kConvexSmooth] g(z) = z₀ - sqrt(z₁² + … + zₙ₋₁²) ≥ 0 but the
+gradient of g(z) is approximated as ∂g(z)/∂z = [1, -z₁/sqrt(z₁² + …
+zₙ₋₁² + ε), …, -zₙ₋₁/sqrt(z₁²+…+zₙ₋₁²+ε)] where ε is a small
+positive number. 3. [kNonconvex] z₀²-(z₁²+…+zₙ₋₁²) ≥ 0 z₀ ≥ 0 This
+constraint is differentiable everywhere, but z₀²-(z₁²+…+zₙ₋₁²) ≥ 0
+is non-convex. For more information and visualization, please refer to
 <a class="reference external" href="https://www.epfl.ch/labs/disopt/wp-content/uploads/2018/09/7.pdf">https://www.epfl.ch/labs/disopt/wp-content/uploads/2018/09/7.pdf</a> and
 <a class="reference external" href="https://docs.mosek.com/modeling-cookbook/cqo.html">https://docs.mosek.com/modeling-cookbook/cqo.html</a> (Fig 3.1)</p>
 <dl class="method">

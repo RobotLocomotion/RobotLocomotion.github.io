@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,10,26,1],
+"integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,10,26,2],
+"integration__constraint_8h.html":[4,0,0,11,9,2],
 "integrator_8h.html":[4,0,0,11,6,10],
 "integrator__base_8h.html":[4,0,0,11,0,9],
 "internal__frame_8h.html":[4,0,0,4,21],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "my__vector_8h.html#a6cdee9b315771980e549ea647ac4a1b0":[4,0,0,11,3,0,0,1],
 "my__vector_8h.html#abb55fc11f1deac636394a2231637ab47":[4,0,0,11,3,0,0,4],
 "name__value_8h.html":[4,0,0,1,38],
-"name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,38,1],
-"name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,38,2],
-"namespacedrake.html":[2,0,0],
-"namespacedrake.html":[3,0,0]
+"name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,38,1]
 };

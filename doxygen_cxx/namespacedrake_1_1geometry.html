@@ -130,7 +130,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with a scalar field and a vector field, whose purpose is to support the hydroelastic pressure field contact model as described in:  <a href="classdrake_1_1geometry_1_1_contact_surface.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_convex.html">Convex</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Support for convex shapes.  <a href="classdrake_1_1geometry_1_1_convex.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a <em>convex</em> surface mesh.  <a href="classdrake_1_1geometry_1_1_convex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_cylinder.html">Cylinder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a cylinder.  <a href="classdrake_1_1geometry_1_1_cylinder.html#details">More...</a><br /></td></tr>
@@ -179,7 +179,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of properties for geometry used in an "illustration" role.  <a href="classdrake_1_1geometry_1_1_illustration_properties.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limited support for meshes.  <a href="classdrake_1_1geometry_1_1_mesh.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a general (possibly non-convex) triangular surface mesh.  <a href="classdrake_1_1geometry_1_1_mesh.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MeshFieldLinear represents a continuous piecewise-linear scalar field <code>f</code> defined on a (triangular or tetrahedral) mesh; the field value changes linearly within each element E (triangle or tetrahedron), and the gradient ∇f is constant within each element.  <a href="classdrake_1_1geometry_1_1_mesh_field_linear.html#details">More...</a><br /></td></tr>
@@ -329,7 +329,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:af76ed94bef3f81765a1b3ce069562e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds properties to the given set of proximity properties sufficient to cause the associated geometry to generate a rigid hydroelastic representation.  <a href="#af76ed94bef3f81765a1b3ce069562e00">More...</a><br /></td></tr>
 <tr class="separator:af76ed94bef3f81765a1b3ce069562e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d24de26748b70a3c802fd171b150fc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a7d24de26748b70a3c802fd171b150fc2">AddRigidHydroelasticProperties</a> (<a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
-<tr class="memdesc:a7d24de26748b70a3c802fd171b150fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload, intended for shapes that don't get tessellated in their hydroelastic representation (e.g., <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> and <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Limited support for meshes.">Mesh</a>).  <a href="#a7d24de26748b70a3c802fd171b150fc2">More...</a><br /></td></tr>
+<tr class="memdesc:a7d24de26748b70a3c802fd171b150fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload, intended for shapes that don't get tessellated in their hydroelastic representation (e.g., <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> and <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a>).  <a href="#a7d24de26748b70a3c802fd171b150fc2">More...</a><br /></td></tr>
 <tr class="separator:a7d24de26748b70a3c802fd171b150fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8c01c8e61753cdc77272c430c452968"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ab8c01c8e61753cdc77272c430c452968">AddSoftHydroelasticProperties</a> (double resolution_hint, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:ab8c01c8e61753cdc77272c430c452968"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds properties to the given set of proximity properties sufficient to cause the associated geometry to generate a soft hydroelastic representation.  <a href="#ab8c01c8e61753cdc77272c430c452968">More...</a><br /></td></tr>
@@ -810,7 +810,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overload, intended for shapes that don't get tessellated in their hydroelastic representation (e.g., <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> and <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Limited support for meshes.">Mesh</a>). </p>
+<p>Overload, intended for shapes that don't get tessellated in their hydroelastic representation (e.g., <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> and <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a>). </p>
 <p>See MODULE_NOT_WRITTEN_YET. </p>
 
 </div>

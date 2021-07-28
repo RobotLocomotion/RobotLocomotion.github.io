@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_rigid_body.html":[3,0,0,8,58],
+"classdrake_1_1multibody_1_1_rigid_body.html#a0414c6bdcc5f19b63d3a91f327914b8b":[3,0,0,8,58,13],
 "classdrake_1_1multibody_1_1_rigid_body.html#a15af58ffad71aa6693541c0b2feab069":[3,0,0,8,58,27],
 "classdrake_1_1multibody_1_1_rigid_body.html#a1629488a18416e68a51859a53c6e9917":[3,0,0,8,58,25],
 "classdrake_1_1multibody_1_1_rigid_body.html#a217875f885ddfab306102f74f6a112d9":[3,0,0,8,58,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad23bfbe321eba0ecfded8e1a4c62da0a":[1,5,2,3,1],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad3245e4e2851513cc645dd1fdc103d36":[1,5,2,3,6],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ad5f8f5a00b12a48cf5bd4f5a55ba1133":[1,5,2,3,5],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ae4ab2d64e1aa8207be5be089fc9d6a61":[1,5,2,3,11],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,5,2,3,8],
-"classdrake_1_1multibody_1_1_static_friction_cone_constraint.html":[1,2,0,14]
+"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ae4ab2d64e1aa8207be5be089fc9d6a61":[1,5,2,3,11]
 };

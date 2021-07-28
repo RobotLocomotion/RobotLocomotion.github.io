@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1render_1_1_depth_render_camera.html#ae163432da02370288b7fa80685e17914":[3,0,0,3,1,3,5],
+"classdrake_1_1geometry_1_1render_1_1_render_camera_core.html":[3,0,0,3,1,4],
 "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a17f1ab313a7632ff4c52ace05a661259":[3,0,0,3,1,4,4],
 "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a3a8c19541d922259826324e7d41dc370":[3,0,0,3,1,4,1],
 "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#a4d8e39cd554d816aa7d5998af0389302":[3,0,0,3,1,4,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#ac27d72548e04d961df7e17a7459b7904":[3,0,0,6,1,3,4],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#acd6f4e4db626cf155bf661ee390a5a6c":[3,0,0,6,1,3,11],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html#ae51ba8b22af8a2bf33ec5695b10b52d1":[3,0,0,6,1,3,1],
-"classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html":[1,3,5,0],
-"classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html#a0f3aceb1ff5b93b5c48e7c400b3960cd":[1,3,5,0,4],
-"classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html#a2dcce767e53c9238d8f9af4d1a96d6c1":[1,3,5,0,5]
+"classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html":[1,3,5,0]
 };

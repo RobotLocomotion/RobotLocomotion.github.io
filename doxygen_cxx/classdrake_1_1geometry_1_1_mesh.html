@@ -100,8 +100,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_mesh.html',
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Limited support for meshes. </p>
-<p>Meshes are supported in Rendering and Illustration roles. For Proximity role, Meshes are supported in ComputeContactSurfaces() query only. No other proximity queries are supported. </p>
+<div class="textblock"><p>Definition of a general (possibly non-convex) triangular surface mesh. </p>
+<p>Meshes can be used for illustration and perception roles, but have limited proximity support. See the documentation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>'s proximity queries to see how meshes are used in each type of proximity query.</p>
+<p>The mesh is defined in a canonical frame C, implicit in the file parsed. Upon loading it in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> it can be scaled around the origin of C by a given <code>scale</code> amount. </p>
 </div>
 <p><code>#include &lt;drake/geometry/shape_specification.h&gt;</code></p>
 <table class="memberdecls">

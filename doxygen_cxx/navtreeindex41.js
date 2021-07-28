@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"gripper__brick__planning__constraint__helper_8h.html#a7f53972e9a8f6cf5791b197c02b89a5a":[4,0,0,3,12,2,0],
+"gripper__brick__planning__constraint__helper_8h.html#a9d215b1f96ef0f7ae036b271f795e8d0":[4,0,0,3,12,2,2],
 "gripper__brick__planning__constraint__helper_8h.html#ab45d8eefc741ecd1de8a808665fdf0d2":[4,0,0,3,12,2,3],
 "gripper__brick__planning__constraint__helper_8h.html#ab6421a917c787a1ace8ca8f4e8c82627":[4,0,0,3,12,2,1],
 "group___dt__multibody__quantities.html":[1,1,1,3],
@@ -19,7 +21,7 @@ var NAVTREEINDEX41 =
 "group__codegen.html#gada538db5c08eaa47546d2df1c6f442cb":[1,0,4,2],
 "group__constraint___jacobians.html":[1,4,0,3],
 "group__constraint__overview.html":[1,4,0],
-"group__constraint__references.html":[1,4,0,5],
+"group__constraint__references.html":[1,4,0,6],
 "group__constraint__stabilization.html":[1,4,0,2],
 "group__constraint__types.html":[1,4,0,1],
 "group__constraint__variable__defs.html":[1,4,0,0],
@@ -44,15 +46,16 @@ var NAVTREEINDEX41 =
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,0,1,1],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,13,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,0,1,5],
-"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,0,1,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,13,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,0,1,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
 "group__discrete__systems.html":[1,3,9],
+"group__discretization.html":[1,4,0,5],
 "group__drake__contacts.html":[1,4,1],
 "group__estimation.html":[1,5,4],
 "group__estimator__systems.html":[1,3,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX41 =
 "integer__inequality__solver_8h.html#a897158ddd3d5fd975edd151850ecc639":[4,0,0,10,25,0],
 "integer__optimization__util_8h.html":[4,0,0,10,26],
 "integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,10,26,0],
-"integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,10,26,3],
-"integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,10,26,1],
-"integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,10,26,2],
-"integration__constraint_8h.html":[4,0,0,11,9,2]
+"integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,10,26,3]
 };

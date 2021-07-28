@@ -207,7 +207,7 @@ DrakeVisualizer.AddToBuilder.</p>
 visualized.</li>
 <li><strong>output_port</strong> – (optional) If not None, then output_port will be connected
 to the visualizer input port instead of the scene_graph.
-get_pose_bundle_output_port().  This is required, for instance,
+get_query_output_port().  This is required, for instance,
 when the SceneGraph is inside a Diagram, and we must connect the
 exposed port to the visualizer instead of the original SceneGraph
 port.</li>
@@ -238,8 +238,7 @@ is not perfect for non-planar scenes.
 and finally that chull is drawn as a patch. Nonconvex geometry will thus be
 drawn incorrectly, and geometry with many vertices will slow down the
 visualizer.</p>
-<blockquote>
-<div>Specifics on view setup:</div></blockquote>
+<p>Specifics on view setup:</p>
 <p>T_VW specifies the 3x4 view projection matrix. For planar orthographic
 projection, use:
 [ &lt;x axis select&gt; x_axis_shift</p>
@@ -305,6 +304,17 @@ matplotlib.get_backend() is ‘template’.</li>
 <code class="descname">draw</code><span class="sig-paren">(</span><em>context</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.draw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides base with the implementation.</p>
 </dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.frame_name">
+<em class="property">static </em><code class="descname">frame_name</code><span class="sig-paren">(</span><em>frame_id</em>, <em>inspector</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.frame_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produces a visualizer name for a frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.get_geometry_query_input_port">
+<code class="descname">get_geometry_query_input_port</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.get_geometry_query_input_port" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
