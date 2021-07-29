@@ -126,6 +126,7 @@ var namespacedrake_1_1systems =
     [ "UseDefaultName", "structdrake_1_1systems_1_1_use_default_name.html", null ],
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html", "classdrake_1_1systems_1_1_value_producer" ],
     [ "VectorBase", "classdrake_1_1systems_1_1_vector_base.html", "classdrake_1_1systems_1_1_vector_base" ],
+    [ "VectorLog", "classdrake_1_1systems_1_1_vector_log.html", "classdrake_1_1systems_1_1_vector_log" ],
     [ "VectorSystem", "classdrake_1_1systems_1_1_vector_system.html", "classdrake_1_1systems_1_1_vector_system" ],
     [ "VelocityImplicitEulerIntegrator", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html", "classdrake_1_1systems_1_1_velocity_implicit_euler_integrator" ],
     [ "WitnessFunction", "classdrake_1_1systems_1_1_witness_function.html", "classdrake_1_1systems_1_1_witness_function" ],

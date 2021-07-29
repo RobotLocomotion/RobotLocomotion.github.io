@@ -590,6 +590,7 @@ var hierarchy =
     [ "RenderLabel", "classdrake_1_1geometry_1_1render_1_1_render_label.html", null ],
     [ "reset_after_move< T >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_after_move< int >", "classdrake_1_1reset__after__move.html", null ],
+    [ "reset_after_move< int64_t >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_on_copy< T >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< const internal::ContextMessageInterface * >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< const MeshType * >", "classdrake_1_1reset__on__copy.html", null ],
@@ -1059,6 +1060,7 @@ var hierarchy =
     [ "VectorBase< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
+    [ "VectorLog< T >", "classdrake_1_1systems_1_1_vector_log.html", null ],
     [ "VectorSetpoint< Scalar >", "classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html", null ],
     [ "GraphOfConvexSets::Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", null ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", null ],

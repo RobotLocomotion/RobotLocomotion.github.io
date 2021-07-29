@@ -11,6 +11,7 @@ var searchData=
   ['vectorbase_3c_20autodiffxd_20_3e',['VectorBase&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorbase_3c_20double_20_3e',['VectorBase&lt; double &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
   ['vectorbase_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['VectorBase&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_vector_base.html',1,'drake::systems']]],
+  ['vectorlog',['VectorLog',['../classdrake_1_1systems_1_1_vector_log.html',1,'drake::systems']]],
   ['vectorsetpoint',['VectorSetpoint',['../classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html',1,'drake::systems::controllers']]],
   ['vectorsystem',['VectorSystem',['../classdrake_1_1systems_1_1_vector_system.html',1,'drake::systems']]],
   ['velocityimpliciteulerintegrator',['VelocityImplicitEulerIntegrator',['../classdrake_1_1systems_1_1_velocity_implicit_euler_integrator.html',1,'drake::systems']]],

@@ -1,5 +1,13 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1symbolic_1_1_expression_add.html#a05fdc56be2bae58a250b0528b539f0ad":[3,0,0,13,9,8],
+"classdrake_1_1symbolic_1_1_expression_add.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,9,11],
+"classdrake_1_1symbolic_1_1_expression_add.html#a17a687a22fc3792625f3e48fff7f0269":[3,0,0,13,9,3],
+"classdrake_1_1symbolic_1_1_expression_add.html#a362a34c17e187d2da8c17b87d0583a8d":[3,0,0,13,9,6],
+"classdrake_1_1symbolic_1_1_expression_add.html#a392952d2b1e97639a03ad0d14e31834f":[3,0,0,13,9,7],
+"classdrake_1_1symbolic_1_1_expression_add.html#a3ef4381c3fe2cdb5b514865f6e66dcff":[3,0,0,13,9,10],
+"classdrake_1_1symbolic_1_1_expression_add.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,13,9,9],
+"classdrake_1_1symbolic_1_1_expression_add.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,13,9,1],
 "classdrake_1_1symbolic_1_1_expression_add.html#a82a57a03e33d6450ee3475b25ffbdf63":[3,0,0,13,9,0],
 "classdrake_1_1symbolic_1_1_expression_add.html#aa3acb8f966e8bcc451ccd870c82c103b":[3,0,0,13,9,4],
 "classdrake_1_1symbolic_1_1_expression_add.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,9,2],
@@ -241,13 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1symbolic_1_1_formula.html#a0537c1c8cab1a9b0602d89344112c416":[3,0,0,13,37,14],
 "classdrake_1_1symbolic_1_1_formula.html#a0f798bcb11546ef845f45a8e5c6f7667":[3,0,0,13,37,51],
 "classdrake_1_1symbolic_1_1_formula.html#a17bcce256c183bd275030b06c04c213b":[3,0,0,13,37,40],
-"classdrake_1_1symbolic_1_1_formula.html#a1860e7373cbab3826845de76f4c6fc6a":[3,0,0,13,37,25],
-"classdrake_1_1symbolic_1_1_formula.html#a1b1a31f8bdefad7e9e4065fc269628b7":[3,0,0,13,37,1],
-"classdrake_1_1symbolic_1_1_formula.html#a1f8c7ae31ed94ab09a569f60591eb23e":[3,0,0,13,37,52],
-"classdrake_1_1symbolic_1_1_formula.html#a2432e9208d372f955c14f2465cea9512":[3,0,0,13,37,3],
-"classdrake_1_1symbolic_1_1_formula.html#a243e973d421c5a8df4e8b6c80f4b61da":[3,0,0,13,37,16],
-"classdrake_1_1symbolic_1_1_formula.html#a25bef67cdba7a3575080ee23c4a49c24":[3,0,0,13,37,26],
-"classdrake_1_1symbolic_1_1_formula.html#a2bca52504f0f43792652781f5503e3a5":[3,0,0,13,37,47],
-"classdrake_1_1symbolic_1_1_formula.html#a2c47fe8730033da7f330c9d2a279c100":[3,0,0,13,37,20],
-"classdrake_1_1symbolic_1_1_formula.html#a2eeeeba05a6af9aa74731c6b0c815ac7":[3,0,0,13,37,38]
+"classdrake_1_1symbolic_1_1_formula.html#a1860e7373cbab3826845de76f4c6fc6a":[3,0,0,13,37,25]
 };

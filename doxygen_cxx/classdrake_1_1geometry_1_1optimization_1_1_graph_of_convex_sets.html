@@ -140,6 +140,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a81ea7713f9f22abdf0861f8d5b5c58b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a81ea7713f9f22abdf0861f8d5b5c58b1">AddEdge</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;u, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;v, std::string name=&quot;&quot;)</td></tr>
 <tr class="memdesc:a81ea7713f9f22abdf0861f8d5b5c58b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an edge to the graph from <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>u</code> to <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html" title="Each vertex in the graph has a corresponding ConvexSet, and a std::string name.">Vertex</a> <code>v</code>.  <a href="#a81ea7713f9f22abdf0861f8d5b5c58b1">More...</a><br /></td></tr>
 <tr class="separator:a81ea7713f9f22abdf0861f8d5b5c58b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264ba3330324d15cb8df2c5ccb38926d"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a264ba3330324d15cb8df2c5ccb38926d">VertexIds</a> () const</td></tr>
+<tr class="memdesc:a264ba3330324d15cb8df2c5ccb38926d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the VertexIds of the vertices stored in the graph.  <a href="#a264ba3330324d15cb8df2c5ccb38926d">More...</a><br /></td></tr>
+<tr class="separator:a264ba3330324d15cb8df2c5ccb38926d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a4ca3f3943b2bc5463a8c0fc0dd758"><td class="memItemLeft" align="right" valign="top">std::unordered_set&lt; <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ad4a4ca3f3943b2bc5463a8c0fc0dd758">Edges</a> () const</td></tr>
+<tr class="memdesc:ad4a4ca3f3943b2bc5463a8c0fc0dd758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns pointers to the edges stored in the graph.  <a href="#ad4a4ca3f3943b2bc5463a8c0fc0dd758">More...</a><br /></td></tr>
+<tr class="separator:ad4a4ca3f3943b2bc5463a8c0fc0dd758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73aedf84a8e642602bbab30ac5d70dff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a73aedf84a8e642602bbab30ac5d70dff">SolveShortestPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> &amp;source_id, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> &amp;target_id, bool convex_relaxation=false) const</td></tr>
+<tr class="memdesc:a73aedf84a8e642602bbab30ac5d70dff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph, as discussed in detail in.  <a href="#a73aedf84a8e642602bbab30ac5d70dff">More...</a><br /></td></tr>
+<tr class="separator:a73aedf84a8e642602bbab30ac5d70dff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9aac92c45a2a9f8b02ef817cad7aa6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af9aac92c45a2a9f8b02ef817cad7aa6e">SolveShortestPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, bool convex_relaxation=false) const</td></tr>
+<tr class="memdesc:af9aac92c45a2a9f8b02ef817cad7aa6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that takes const reference arguments for source and target.  <a href="#af9aac92c45a2a9f8b02ef817cad7aa6e">More...</a><br /></td></tr>
+<tr class="separator:af9aac92c45a2a9f8b02ef817cad7aa6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aee71a4d66e8a29651242b12019c0a30e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aee71a4d66e8a29651242b12019c0a30e">GraphOfConvexSets</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;)=delete</td></tr>
 <tr class="separator:aee71a4d66e8a29651242b12019c0a30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -376,8 +388,54 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad4a4ca3f3943b2bc5463a8c0fc0dd758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a4ca3f3943b2bc5463a8c0fc0dd758">&#9670;&nbsp;</a></span>Edges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_set&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html">Edge</a>*&gt; Edges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns pointers to the edges stored in the graph. </p>
+<p>Note that the order of the elements is not guaranteed. </p>
+
+</div>
+</div>
+<a id="a5a86ee0b1b2dea70ae192ecb3acb9ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a86ee0b1b2dea70ae192ecb3acb9ca7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a788cd0d235aa941ef4fa5c923ef9607b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a788cd0d235aa941ef4fa5c923ef9607b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a788cd0d235aa941ef4fa5c923ef9607b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,29 +460,110 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a86ee0b1b2dea70ae192ecb3acb9ca7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a86ee0b1b2dea70ae192ecb3acb9ca7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a73aedf84a8e642602bbab30ac5d70dff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73aedf84a8e642602bbab30ac5d70dff">&#9670;&nbsp;</a></span>SolveShortestPath() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> SolveShortestPath </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> &amp;&#160;</td>
+          <td class="paramname"><em>source_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> &amp;&#160;</td>
+          <td class="paramname"><em>target_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>convex_relaxation</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph, as discussed in detail in. </p>
+<p>"Shortest Paths in Graphs of Convex Sets" by Tobia Marcucci, Jack Umenberger, Pablo A. Parrilo, Russ Tedrake. <a href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>specifies the source set. The solver will choose any point in that set; to start at a particular continuous state consider adding a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html" title="A convex set that contains exactly one element.">Point</a> set to the graph and using that as the source. </td></tr>
+    <tr><td class="paramname">target</td><td>specifies the target set. The solver will choose any point in that set. </td></tr>
+    <tr><td class="paramname">convex_relaxation</td><td>will solve the relaxed version of the problem. As discussed in the paper, we know that this relaxation cannot solve the original NP-hard problem for all instances, but there are also many instances for which the convex relaxation is tight.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if any of the costs or constraints in the graph are incompatible with the shortest path formulation or otherwise unsupported. All costs must be non-negative (for all values of the continuous variables). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af9aac92c45a2a9f8b02ef817cad7aa6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9aac92c45a2a9f8b02ef817cad7aa6e">&#9670;&nbsp;</a></span>SolveShortestPath() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> SolveShortestPath </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>convex_relaxation</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convenience overload that takes const reference arguments for source and target. </p>
+
+</div>
+</div>
+<a id="a264ba3330324d15cb8df2c5ccb38926d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264ba3330324d15cb8df2c5ccb38926d">&#9670;&nbsp;</a></span>VertexIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_set&lt;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a>&gt; VertexIds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the VertexIds of the vertices stored in the graph. </p>
+<p>Note that the order of the elements is not guaranteed. </p>
 
 </div>
 </div>

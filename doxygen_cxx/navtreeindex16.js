@@ -1,5 +1,13 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1schema_1_1_gaussian_vector.html#aad76eefa2c3b5000ba443edb351e4ed7":[3,0,0,11,5,12],
+"classdrake_1_1schema_1_1_gaussian_vector.html#ab8f4a0a862347c0c2fac23e5b74c5636":[3,0,0,11,5,7],
+"classdrake_1_1schema_1_1_gaussian_vector.html#ad80934fe58016c8c45ace203e14bdc43":[3,0,0,11,5,10],
+"classdrake_1_1schema_1_1_gaussian_vector.html#ae95cf7a39aa08458214a983fac456fbf":[3,0,0,11,5,0],
+"classdrake_1_1schema_1_1_gaussian_vector.html#af487612def275073e40c03b5271a6fa7":[3,0,0,11,5,1],
+"classdrake_1_1schema_1_1_rotation.html":[3,0,0,11,6],
+"classdrake_1_1schema_1_1_rotation.html#a0af6024b49102086643f32d1f175a273":[3,0,0,11,6,15],
+"classdrake_1_1schema_1_1_rotation.html#a1e3f7c33806a7b0f289b6fdaf58110bc":[3,0,0,11,6,17],
 "classdrake_1_1schema_1_1_rotation.html#a2420ac9dadffdc94f504a1ac146def9c":[3,0,0,11,6,13],
 "classdrake_1_1schema_1_1_rotation.html#a2efdc7d120a60532613625edf2b20ea1":[3,0,0,11,6,10],
 "classdrake_1_1schema_1_1_rotation.html#a4034e07fad8c97f6d5466d48b8bbcdc3":[3,0,0,11,6,11],
@@ -241,13 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,2,0,28,6],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,2,0,28,7],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ab693a7669cf23e60b7ee4ae9678c6510":[1,2,0,28,10],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#abef24e9a5f88d1bf2cac8a829f0e1062":[1,2,0,28,3],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ad895dd4ffcf4c774b7586beb1cbdda69":[1,2,0,28,9],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ada8fc4ff50c67b2b2c41b39d1a4f2b45":[1,2,0,28,2],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7":[1,2,0,28,11],
-"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#afc4fd02c78b0475748c1f1c4aaabc6eb":[1,2,0,28,1],
-"classdrake_1_1solvers_1_1_expression_constraint.html":[1,2,0,27],
-"classdrake_1_1solvers_1_1_expression_constraint.html#a0bdb5058e54f26856026de3d1acf9cf4":[1,2,0,27,10],
-"classdrake_1_1solvers_1_1_expression_constraint.html#a35eeaf52452208584e709bf25c5d615b":[1,2,0,27,1],
-"classdrake_1_1solvers_1_1_expression_constraint.html#a46caf4fead07a0f09be7a6658294bb39":[1,2,0,27,0]
+"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#abef24e9a5f88d1bf2cac8a829f0e1062":[1,2,0,28,3]
 };

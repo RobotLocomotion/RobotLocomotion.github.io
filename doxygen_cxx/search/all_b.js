@@ -37,7 +37,7 @@ var searchData=
   ['kcsdp',['kCsdp',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81',1,'drake::solvers']]],
   ['kd',['Kd',['../classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#aecf39c9bb6a78f4fe9b695659bb6bb43',1,'drake::systems::controllers::CartesianSetpoint::Kd()'],['../classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#af2a5f78e0179ac6f4753b7e0742ef1e1',1,'drake::systems::controllers::VectorSetpoint::Kd()']]],
   ['kdefaultaccuracy',['kDefaultAccuracy',['../classdrake_1_1systems_1_1_initial_value_problem.html#a35ff185e17772e89c9353aa86ef63c83',1,'drake::systems::InitialValueProblem']]],
-  ['kdefaultcapacity',['kDefaultCapacity',['../classdrake_1_1systems_1_1_leaf_event_collection.html#a01a70fefefbd2e056e9de49ebc19fead',1,'drake::systems::LeafEventCollection']]],
+  ['kdefaultcapacity',['kDefaultCapacity',['../classdrake_1_1systems_1_1_leaf_event_collection.html#a01a70fefefbd2e056e9de49ebc19fead',1,'drake::systems::LeafEventCollection::kDefaultCapacity()'],['../classdrake_1_1systems_1_1_vector_log.html#a8cebbbcba14a806da45600ccc3443095',1,'drake::systems::VectorLog::kDefaultCapacity()']]],
   ['kdefaultcolor',['kDefaultColor',['../classdrake_1_1perception_1_1_point_cloud.html#a358b13be8641b30f83e093f66cdbabba',1,'drake::perception::PointCloud']]],
   ['kdefaultperiod',['kDefaultPeriod',['../classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a79737f07b9834cf08fd55925be76944d',1,'drake::systems::sensors::RgbdSensorDiscrete']]],
   ['kdefaultstrength',['kDefaultStrength',['../classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#a8555862636cf3c684394b26aac1cb69b',1,'drake::multibody::UniformGravityFieldElement']]],

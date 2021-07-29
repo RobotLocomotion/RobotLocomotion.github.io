@@ -17,6 +17,7 @@ var searchData=
   ['renderposetogeometrypose',['RenderPoseToGeometryPose',['../classdrake_1_1systems_1_1rendering_1_1_render_pose_to_geometry_pose.html',1,'drake::systems::rendering']]],
   ['reset_5fafter_5fmove',['reset_after_move',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fafter_5fmove_3c_20int_20_3e',['reset_after_move&lt; int &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
+  ['reset_5fafter_5fmove_3c_20int64_5ft_20_3e',['reset_after_move&lt; int64_t &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fon_5fcopy',['reset_on_copy',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20const_20internal_3a_3acontextmessageinterface_20_2a_20_3e',['reset_on_copy&lt; const internal::ContextMessageInterface * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20const_20meshtype_20_2a_20_3e',['reset_on_copy&lt; const MeshType * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],

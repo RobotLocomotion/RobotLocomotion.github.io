@@ -65,8 +65,12 @@ var group__geometry__optimization =
       [ "AddEdge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a3ee33a4bf97c40a946a4588cd2cdbd6a", null ],
       [ "AddEdge", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a81ea7713f9f22abdf0861f8d5b5c58b1", null ],
       [ "AddVertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aeba7aff29aca456ae71805286f6547ea", null ],
+      [ "Edges", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#ad4a4ca3f3943b2bc5463a8c0fc0dd758", null ],
+      [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5a86ee0b1b2dea70ae192ecb3acb9ca7", null ],
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a788cd0d235aa941ef4fa5c923ef9607b", null ],
-      [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a5a86ee0b1b2dea70ae192ecb3acb9ca7", null ]
+      [ "SolveShortestPath", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a73aedf84a8e642602bbab30ac5d70dff", null ],
+      [ "SolveShortestPath", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af9aac92c45a2a9f8b02ef817cad7aa6e", null ],
+      [ "VertexIds", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a264ba3330324d15cb8df2c5ccb38926d", null ]
     ] ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", [
       [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a849b5ec6e368282a2416294dc6f0863a", null ],
@@ -104,6 +108,7 @@ var group__geometry__optimization =
     ] ],
     [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", [
       [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac", null ],
+      [ "configuration_space_margin", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db", null ],
       [ "iteration_limit", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72", null ],
       [ "require_sample_point_is_contained", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
       [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ]
@@ -134,5 +139,6 @@ var group__geometry__optimization =
       [ "vertices", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4", null ]
     ] ],
     [ "Iris", "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6", null ],
+    [ "IrisInConfigurationSpace", "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b", null ],
     [ "MakeIrisObstacles", "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af", null ]
 ];
