@@ -502,6 +502,10 @@ Functions</h2></td></tr>
 <tr class="memitem:aa9721f3a5897b05ef2168f7a6d886dc8"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aa9721f3a5897b05ef2168f7a6d886dc8">ExtractDoubleOrThrow</a> (const Eigen::AutoDiffScalar&lt; DerType &gt; &amp;scalar)</td></tr>
 <tr class="memdesc:aa9721f3a5897b05ef2168f7a6d886dc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the autodiff scalar's value() as a double.  <a href="#aa9721f3a5897b05ef2168f7a6d886dc8">More...</a><br /></td></tr>
 <tr class="separator:aa9721f3a5897b05ef2168f7a6d886dc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff59561e63256fd202070185754cdb4c"><td class="memTemplParams" colspan="2">template&lt;typename DerType , int RowsAtCompileTime, int ColsAtCompileTime, int Options, int MaxRowsAtCompileTime, int MaxColsAtCompileTime&gt; </td></tr>
+<tr class="memitem:aff59561e63256fd202070185754cdb4c"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#aff59561e63256fd202070185754cdb4c">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Eigen::Matrix&lt; Eigen::AutoDiffScalar&lt; DerType &gt;, RowsAtCompileTime, ColsAtCompileTime, Options, MaxRowsAtCompileTime, MaxColsAtCompileTime &gt;&gt; &amp;matrix)</td></tr>
+<tr class="memdesc:aff59561e63256fd202070185754cdb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#aff59561e63256fd202070185754cdb4c">More...</a><br /></td></tr>
+<tr class="separator:aff59561e63256fd202070185754cdb4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af52cba62721f6b29c99a83ec9b192873"><td class="memTemplParams" colspan="2">template&lt;typename DerType1 , typename DerType2 &gt; </td></tr>
 <tr class="memitem:af52cba62721f6b29c99a83ec9b192873"><td class="memTemplItemLeft" align="right" valign="top">Eigen::AutoDiffScalar&lt; typename Eigen::internal::remove_all&lt; DerType1 &gt;::type::PlainObject &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#af52cba62721f6b29c99a83ec9b192873">if_then_else</a> (bool f_cond, const Eigen::AutoDiffScalar&lt; DerType1 &gt; &amp;x, const Eigen::AutoDiffScalar&lt; DerType2 &gt; &amp;y)</td></tr>
 <tr class="memdesc:af52cba62721f6b29c99a83ec9b192873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides if-then-else expression for Eigen::AutoDiffScalar type.  <a href="#af52cba62721f6b29c99a83ec9b192873">More...</a><br /></td></tr>
@@ -547,13 +551,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a3d3b9fa09763df2a9013eec2cf87df7b">MaybeGetDrakePath</a> ()</td></tr>
 <tr class="memdesc:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the fully-qualified path to the first folder containing Drake resources as located by FindResource, or nullopt if none is found.  <a href="#a3d3b9fa09763df2a9013eec2cf87df7b">More...</a><br /></td></tr>
 <tr class="separator:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76fc6417d486672a49d923f8965b9fd3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a76fc6417d486672a49d923f8965b9fd3"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a76fc6417d486672a49d923f8965b9fd3">ExtractDoubleOrThrow</a> (const T &amp;)</td></tr>
-<tr class="memdesc:a76fc6417d486672a49d923f8965b9fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a ScalarType value to a double, failing at runtime (not compile time) if the type cannot be converted to a double.  <a href="#a76fc6417d486672a49d923f8965b9fd3">More...</a><br /></td></tr>
-<tr class="separator:a76fc6417d486672a49d923f8965b9fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4bf256d86fde2cb6f9db36919a6031f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac4bf256d86fde2cb6f9db36919a6031f"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!<a class="el" href="structdrake_1_1is__eigen__type.html">is_eigen_type</a>&lt; T &gt;::value, double &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ac4bf256d86fde2cb6f9db36919a6031f">ExtractDoubleOrThrow</a> (const T &amp;)</td></tr>
+<tr class="memdesc:ac4bf256d86fde2cb6f9db36919a6031f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a ScalarType value to a double, failing at runtime (not compile time) if the type cannot be converted to a double.  <a href="#ac4bf256d86fde2cb6f9db36919a6031f">More...</a><br /></td></tr>
+<tr class="separator:ac4bf256d86fde2cb6f9db36919a6031f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acffe42a683dd67544fb4d499d082b16d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acffe42a683dd67544fb4d499d082b16d">ExtractDoubleOrThrow</a> (double scalar)</td></tr>
 <tr class="memdesc:acffe42a683dd67544fb4d499d082b16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>scalar</code> as a double. Never throws.  <a href="#acffe42a683dd67544fb4d499d082b16d">More...</a><br /></td></tr>
 <tr class="separator:acffe42a683dd67544fb4d499d082b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e788a402c70aad068fe90501312a701"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a1e788a402c70aad068fe90501312a701"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a1e788a402c70aad068fe90501312a701">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a1e788a402c70aad068fe90501312a701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#a1e788a402c70aad068fe90501312a701">More...</a><br /></td></tr>
+<tr class="separator:a1e788a402c70aad068fe90501312a701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba0205c520f270cd638f7fb39fb5576"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#adba0205c520f270cd638f7fb39fb5576">LoadedLibraryPath</a> (const std::string &amp;library_name)</td></tr>
 <tr class="memdesc:adba0205c520f270cd638f7fb39fb5576"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the absolute path of the library with the name <code>library_name</code> if that library was loaded in the current running process.  <a href="#adba0205c520f270cd638f7fb39fb5576">More...</a><br /></td></tr>
 <tr class="separator:adba0205c520f270cd638f7fb39fb5576"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -683,6 +691,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a979582c00c744ebe1c719e57c6f738b8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a979582c00c744ebe1c719e57c6f738b8">ExtractDoubleOrThrow</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a979582c00c744ebe1c719e57c6f738b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression's value() as a double.  <a href="#a979582c00c744ebe1c719e57c6f738b8">More...</a><br /></td></tr>
 <tr class="separator:a979582c00c744ebe1c719e57c6f738b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b70866fb9b52404035926454e2ce88b"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a6b70866fb9b52404035926454e2ce88b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6b70866fb9b52404035926454e2ce88b">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a6b70866fb9b52404035926454e2ce88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="#a6b70866fb9b52404035926454e2ce88b">More...</a><br /></td></tr>
+<tr class="separator:a6b70866fb9b52404035926454e2ce88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">temp_directory</a> ()</td></tr>
 <tr class="memdesc:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a directory location suitable for temporary files.  <a href="#a107ff2f218f356d05f8cdc3b7d254eb2">More...</a><br /></td></tr>
 <tr class="separator:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2272,14 +2284,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a76fc6417d486672a49d923f8965b9fd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76fc6417d486672a49d923f8965b9fd3">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[1/4]</span></h2>
+<a id="ac4bf256d86fde2cb6f9db36919a6031f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4bf256d86fde2cb6f9db36919a6031f">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double drake::ExtractDoubleOrThrow </td>
+          <td class="memname">std::enable_if_t&lt;!<a class="el" href="structdrake_1_1is__eigen__type.html">is_eigen_type</a>&lt;T&gt;::value, double&gt; drake::ExtractDoubleOrThrow </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -2291,12 +2303,13 @@ Variables</h2></td></tr>
 <p>Converts a ScalarType value to a double, failing at runtime (not compile time) if the type cannot be converted to a double. </p>
 <p>This function is useful for writing ScalarType-generic code that (1) can reasonably discard any supplemental scalar data, e.g., the derivatives of an AutoDiffScalar, and (2) is reasonable to fail at runtime if the extraction fails.</p>
 <p>The default implementation throws an exception. ScalarTypes that can hold a numeric value must overload this method to provide an appropriate extraction. An overload for <code>double</code> is already provided.</p>
-<p>See <a class="el" href="autodiff__overloads_8h.html" title="Overloads for STL mathematical operations on AutoDiffScalar.">autodiff_overloads.h</a> to use this with Eigen's AutoDiffScalar. See <a class="el" href="symbolic__expression_8h.html">symbolic_expression.h</a> to use this with <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. </p>
+<p>See <a class="el" href="autodiff__overloads_8h.html" title="Overloads for STL mathematical operations on AutoDiffScalar.">autodiff_overloads.h</a> to use this with Eigen's AutoDiffScalar. See <a class="el" href="symbolic__expression_8h.html">symbolic_expression.h</a> to use this with <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>"Provide a specific overload of ExtractDoubleOrThrow for any " "type that really is sensible at compile time and should " "defer failure to runtime; this version was too generic." <br />
+ This will be removed from Drake on or after "2020-08-01" .</dd></dl>
 
 </div>
 </div>
 <a id="acffe42a683dd67544fb4d499d082b16d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acffe42a683dd67544fb4d499d082b16d">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acffe42a683dd67544fb4d499d082b16d">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2315,8 +2328,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a1e788a402c70aad068fe90501312a701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e788a402c70aad068fe90501312a701">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, double&gt;, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt; drake::ExtractDoubleOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>. </p>
+<p>Calls ExtractDoubleOrThrow on each element of the matrix, and therefore throws if any one of the extractions fail. </p>
+
+</div>
+</div>
 <a id="aa9721f3a5897b05ef2168f7a6d886dc8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9721f3a5897b05ef2168f7a6d886dc8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9721f3a5897b05ef2168f7a6d886dc8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2336,8 +2370,29 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aff59561e63256fd202070185754cdb4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff59561e63256fd202070185754cdb4c">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto drake::ExtractDoubleOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Eigen::Matrix&lt; Eigen::AutoDiffScalar&lt; DerType &gt;, RowsAtCompileTime, ColsAtCompileTime, Options, MaxRowsAtCompileTime, MaxColsAtCompileTime &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>. </p>
+<p>Calls ExtractDoubleOrThrow on each element of the matrix, and therefore throws if any one of the extractions fail. </p>
+
+</div>
+</div>
 <a id="a979582c00c744ebe1c719e57c6f738b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979582c00c744ebe1c719e57c6f738b8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a979582c00c744ebe1c719e57c6f738b8">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2359,6 +2414,27 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6b70866fb9b52404035926454e2ce88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b70866fb9b52404035926454e2ce88b">&#9670;&nbsp;</a></span>ExtractDoubleOrThrow() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Derived::Scalar, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;, Eigen::Matrix&lt;double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; &gt; drake::ExtractDoubleOrThrow </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>. </p>
+<p>Calls ExtractDoubleOrThrow on each element of the matrix, and therefore throws if any one of the extractions fail. </p>
 
 </div>
 </div>

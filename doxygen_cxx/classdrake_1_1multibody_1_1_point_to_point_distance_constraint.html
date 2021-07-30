@@ -342,7 +342,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constrain that the distance between a point P1 attached to frame B1 and another point P2 attached to frame B2 is within the range [distance_lower, distance_upper]. </p>
-<p>Mathematically, we impose the constraint distance_lower² &lt;= distance(P1, P2)² &lt;= distance_upper². We impose the constraint on the distance square instead of distance directly, because the gradient of distance is not well defined at distance=0, the the gradient of the distance square is well defined everywhere. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Mathematically, we impose the constraint distance_lower² &lt;= distance(P1, P2)² &lt;= distance_upper². We impose the constraint on the distance square instead of distance directly, because the gradient of distance is not well defined at distance=0, the gradient of the distance square is well defined everywhere. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">plant</td><td>The <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> on which the constraint is imposed. <code>plant</code> should be alive during the lifetime of this constraint. </td></tr>
     <tr><td class="paramname">frame1</td><td>The frame in which P1 is attached to. </td></tr>

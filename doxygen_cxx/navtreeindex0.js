@@ -45,8 +45,9 @@ var NAVTREEINDEX0 =
 "autodiff__gradient_8h.html#af00cd34bea44b187b01da164d5207ae3":[4,0,0,7,1,1],
 "autodiff__overloads_8h.html":[4,0,0,1,6],
 "autodiff__overloads_8h.html#aa9721f3a5897b05ef2168f7a6d886dc8":[4,0,0,1,6,1],
-"autodiff__overloads_8h.html#af52cba62721f6b29c99a83ec9b192873":[4,0,0,1,6,2],
+"autodiff__overloads_8h.html#af52cba62721f6b29c99a83ec9b192873":[4,0,0,1,6,3],
 "autodiff__overloads_8h.html#af8c0e9e4214ab7f97568cc8792859e32":[4,0,0,1,6,0],
+"autodiff__overloads_8h.html#aff59561e63256fd202070185754cdb4c":[4,0,0,1,6,2],
 "autodiff__types__pybind_8h.html":[4,0,0,0,0,3],
 "autodiff__types__pybind_8h.html#a37d1df365240af0e1d20d1a5668eed71":[4,0,0,0,0,3,0],
 "autodiffxd_8h.html":[4,0,0,1,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial_1_1_monomial.html#a8e7b10a07a1df37f95789d09cfe0e831":[3,0,0,40,0,5],
 "classdrake_1_1_polynomial_1_1_monomial.html#aa13862903d5f48177be04d2a293e2e17":[3,0,0,40,0,4],
 "classdrake_1_1_polynomial_1_1_monomial.html#ab8282237674bfa40903297054ee5a845":[3,0,0,40,0,0],
-"classdrake_1_1_polynomial_1_1_monomial.html#accdf0d016bac585ac8deb1ad2dcad4b1":[3,0,0,40,0,7],
-"classdrake_1_1_polynomial_1_1_term.html":[3,0,0,40,2]
+"classdrake_1_1_polynomial_1_1_monomial.html#accdf0d016bac585ac8deb1ad2dcad4b1":[3,0,0,40,0,7]
 };

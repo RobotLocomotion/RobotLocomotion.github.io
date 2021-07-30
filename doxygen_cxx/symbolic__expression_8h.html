@@ -528,6 +528,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a979582c00c744ebe1c719e57c6f738b8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a979582c00c744ebe1c719e57c6f738b8">ExtractDoubleOrThrow</a> (const symbolic::Expression &amp;e)</td></tr>
 <tr class="memdesc:a979582c00c744ebe1c719e57c6f738b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the symbolic expression's value() as a double.  <a href="namespacedrake.html#a979582c00c744ebe1c719e57c6f738b8">More...</a><br /></td></tr>
 <tr class="separator:a979582c00c744ebe1c719e57c6f738b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b70866fb9b52404035926454e2ce88b"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a6b70866fb9b52404035926454e2ce88b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, symbolic::Expression &gt;, Eigen::Matrix&lt; double, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, Derived::Options, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a6b70866fb9b52404035926454e2ce88b">ExtractDoubleOrThrow</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a6b70866fb9b52404035926454e2ce88b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>matrix</code> as an Eigen::Matrix&lt;double, ...&gt; with the same size allocation as <code>matrix</code>.  <a href="namespacedrake.html#a6b70866fb9b52404035926454e2ce88b">More...</a><br /></td></tr>
+<tr class="separator:a6b70866fb9b52404035926454e2ce88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="file_a996064aacae33fb26d67c20617c764ee"></a>

@@ -186,7 +186,7 @@ Model versus Context</h1>
 <p>Many (and eventually all) methods that configure the population of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> have two variants that differ by whether they accept a mutable Context or not. When no Context is provided, <em>this</em> SceneGraph instance's underlying model is modified. When the SceneGraph instance allocates a context, its model is copied into that context.</p>
 <p>The second variant causes SceneGraph to modify the data stored in the provided Context to be modified <em>instead of the internal model</em>.</p>
 <p>The two interfaces <em>can</em> be used interchangeably. However, modifications to <code>this</code> SceneGraph's underlying model will <em>not</em> affect previously allocated Context instances. A new Context should be allocated after modifying the model.</p>
-<dl class="section note"><dt>Note</dt><dd>In this initial version, the only methods with the Context-modifying variant are those methods that <em>do not</em> change the the semantics of the input or output ports. Modifications that make such changes must be coordinated across systems.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In this initial version, the only methods with the Context-modifying variant are those methods that <em>do not</em> change the semantics of the input or output ports. Modifications that make such changes must be coordinated across systems.</dd></dl>
 <h1><a class="anchor" id="scene_graph_versioning"></a>
 Detecting changes</h1>
 <p>The geometry data associated with SceneGraph is coarsely versioned. Consumers of the geometry can query for the version of the data and recognize if the data has been modified since last examined.</p>
@@ -2032,7 +2032,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager().Apply() " "instead" <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager().Apply() " "instead" <br />
  This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
@@ -2070,7 +2070,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsBetween()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager(context).Apply()" " instead" <br />
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager(context).Apply()" " instead" <br />
  This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
@@ -2100,7 +2100,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager().Apply() " "instead" <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager().Apply() " "instead" <br />
  This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
@@ -2132,7 +2132,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 </div><div class="memdoc">
 
 <p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsWithin()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager(context).Apply() " "instead" <br />
+<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>"Please call collision_filter_manager(context).Apply() " "instead" <br />
  This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>

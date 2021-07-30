@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1solvers_1_1_system_identification.html#ad27f9bb464277698bfb71c3b1d4eddc4":[3,0,0,12,66,2],
 "classdrake_1_1solvers_1_1_system_identification.html#ad767a7cfddfc033e91563c29dff97bf1":[3,0,0,12,66,1],
 "classdrake_1_1solvers_1_1_system_identification.html#af0be6254e3411979207404b04b4f97a5":[3,0,0,12,66,3],
 "classdrake_1_1solvers_1_1_unrevised_lemke_solver.html":[3,0,0,12,67],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#a96cc4970ea7bcb0ea0655d9d809797f4":[3,0,0,12,0,12,8],
 "classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#aae7a1cfcbeb94caf4977a4b56c9d34c2":[3,0,0,12,0,12,1],
 "classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#abfd4ff8f51bb694de90f77579c419bb7":[3,0,0,12,0,12,3],
-"classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,12,6],
-"classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#af4ad86f2e1df1574a4ebfa1e90b9363f":[3,0,0,12,0,12,2]
+"classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,12,6]
 };

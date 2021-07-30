@@ -55,6 +55,7 @@ var symbolic__expression_8h =
     [ "Evaluate", "symbolic__expression_8h.html#a8f0355c03127b4d0312e5f761a0f530a", null ],
     [ "exp", "symbolic__expression_8h.html#a683b7c0db1ce737fc0e3af3323a4fed1", null ],
     [ "ExtractDoubleOrThrow", "symbolic__expression_8h.html#a979582c00c744ebe1c719e57c6f738b8", null ],
+    [ "ExtractDoubleOrThrow", "symbolic__expression_8h.html#a6b70866fb9b52404035926454e2ce88b", null ],
     [ "floor", "symbolic__expression_8h.html#a56b28c66fdf5d2b582a677660936abca", null ],
     [ "get_argument", "symbolic__expression_8h.html#af785f16951e394debcd11a9225ef469c", null ],
     [ "get_base_to_exponent_map_in_multiplication", "symbolic__expression_8h.html#acffaee70b54f60b4d1b9f1771f78ddf7", null ],

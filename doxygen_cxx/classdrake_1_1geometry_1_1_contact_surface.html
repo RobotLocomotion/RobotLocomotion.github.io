@@ -118,7 +118,7 @@ and moment between nominally rigid objects. IROS 2019: 8238-8245.
          eₘₙ(Q) = eₘ(Q) = eₙ(Q).
 </pre><p>We can also define the scalar field hₘₙ on 𝕄 ∩ ℕ as the difference between eₘ and eₙ: </p><pre class="fragment">         hₘₙ : 𝕄 ∩ ℕ → ℝ,
          hₘₙ(Q) = eₘ(Q) - eₙ(Q).
-</pre><p>It follows that the gradient vector field ∇hₘₙ on 𝕄 ∩ ℕ equals the difference between the the gradient vector fields ∇eₘ and ∇eₙ: </p><pre class="fragment">         ∇hₘₙ : 𝕄 ∩ ℕ → ℝ³,
+</pre><p>It follows that the gradient vector field ∇hₘₙ on 𝕄 ∩ ℕ equals the difference between the gradient vector fields ∇eₘ and ∇eₙ: </p><pre class="fragment">         ∇hₘₙ : 𝕄 ∩ ℕ → ℝ³,
          ∇hₘₙ(Q) = ∇eₘ(Q) - ∇eₙ(Q).
 </pre><p>By construction, Q ∈ 𝕊ₘₙ if and only if hₘₙ(Q) = 0. In other words, 𝕊ₘₙ is the zero level set of hₘₙ. It follows that, for Q ∈ 𝕊ₘₙ, ∇hₘₙ(Q) is orthogonal to the surface 𝕊ₘₙ at Q in the direction of increasing eₘ - eₙ.</p>
 <p>Notice that the domain of eₘₙ is the two-dimensional surface 𝕊ₘₙ, while the domain of ∇hₘₙ is the three-dimensional compact set 𝕄 ∩ ℕ. Even though eₘₙ and ∇hₘₙ are defined on different domains (𝕊ₘₙ and 𝕄 ∩ ℕ), our implementation only represents them on their common domain, i.e., 𝕊ₘₙ.</p>

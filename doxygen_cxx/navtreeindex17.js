@@ -1,5 +1,6 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1solvers_1_1_exponential_cone_constraint.html#abef24e9a5f88d1bf2cac8a829f0e1062":[1,2,0,28,3],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ad895dd4ffcf4c774b7586beb1cbdda69":[1,2,0,28,9],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#ada8fc4ff50c67b2b2c41b39d1a4f2b45":[1,2,0,28,2],
 "classdrake_1_1solvers_1_1_exponential_cone_constraint.html#af595bfd9e53d96bd88850eba12fa82a7":[1,2,0,28,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#a53e872544e169f9b66f499bc06eb4641":[1,2,2,122],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a560472e41de2cce737d4622ae22758d4":[1,2,2,39],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a579bccc0dc41e5b6bf662c9aeb994fc4":[1,2,2,74],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a58ba7cf747dd35fbbbd4ea7c2baa4da7":[1,2,2,120],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a5c41563c9fea14a00330000b42a682fc":[1,2,2,10]
+"classdrake_1_1solvers_1_1_mathematical_program.html#a58ba7cf747dd35fbbbd4ea7c2baa4da7":[1,2,2,120]
 };

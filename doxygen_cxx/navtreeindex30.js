@@ -1,5 +1,6 @@
 var NAVTREEINDEX30 =
 {
+"classdrake_1_1systems_1_1_output_port.html#ac3e41b97ff6292115048f9cf0f104ecd":[3,0,0,14,71,1],
 "classdrake_1_1systems_1_1_output_port.html#aea1591b1773209f55ccc85356efb639a":[3,0,0,14,71,12],
 "classdrake_1_1systems_1_1_output_port.html#aec11c25e1727cfb34267f023c55523b8":[3,0,0,14,71,14],
 "classdrake_1_1systems_1_1_output_port.html#aed197f7c9bc394a53f78d5fe695a11d1":[3,0,0,14,71,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX30 =
 "classdrake_1_1systems_1_1_signal_logger.html#a0b517e025fbc2265483bad85efb28e65":[1,3,1,20,9],
 "classdrake_1_1systems_1_1_signal_logger.html#a0fdd88c3c5eb22121178d7091645e109":[1,3,1,20,7],
 "classdrake_1_1systems_1_1_signal_logger.html#a15742b4b9541c20c7beec8bcda888e2a":[1,3,1,20,2],
-"classdrake_1_1systems_1_1_signal_logger.html#a16f68e98d0fe5d308ee4afee21efce3c":[1,3,1,20,5],
-"classdrake_1_1systems_1_1_signal_logger.html#a3b36477ccd5d5763a6fd9093ffb75b23":[1,3,1,20,12]
+"classdrake_1_1systems_1_1_signal_logger.html#a16f68e98d0fe5d308ee4afee21efce3c":[1,3,1,20,5]
 };

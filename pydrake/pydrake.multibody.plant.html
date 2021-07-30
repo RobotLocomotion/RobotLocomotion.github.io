@@ -796,7 +796,7 @@ will easily slide on ice.</li>
 <p>See CalcContactFrictionFromSurfaceProperties(), which implements this
 law. More complex combination laws could also be a function of other
 parameters such as the mechanical properties of the interacting
-surfaces or even their roughnesses. For instance, if the the rubber
+surfaces or even their roughnesses. For instance, if the rubber
 surface above has metal studs (somehow making the surface “rougher”),
 it will definitely have a better grip on an ice surface. Therefore
 this new variable should be taken into account in the combination law.
@@ -892,7 +892,7 @@ will easily slide on ice.</li>
 <p>See CalcContactFrictionFromSurfaceProperties(), which implements this
 law. More complex combination laws could also be a function of other
 parameters such as the mechanical properties of the interacting
-surfaces or even their roughnesses. For instance, if the the rubber
+surfaces or even their roughnesses. For instance, if the rubber
 surface above has metal studs (somehow making the surface “rougher”),
 it will definitely have a better grip on an ice surface. Therefore
 this new variable should be taken into account in the combination law.
@@ -986,7 +986,7 @@ will easily slide on ice.</li>
 <p>See CalcContactFrictionFromSurfaceProperties(), which implements this
 law. More complex combination laws could also be a function of other
 parameters such as the mechanical properties of the interacting
-surfaces or even their roughnesses. For instance, if the the rubber
+surfaces or even their roughnesses. For instance, if the rubber
 surface above has metal studs (somehow making the surface “rougher”),
 it will definitely have a better grip on an ice surface. Therefore
 this new variable should be taken into account in the combination law.
@@ -1080,7 +1080,7 @@ will easily slide on ice.</li>
 <p>See CalcContactFrictionFromSurfaceProperties(), which implements this
 law. More complex combination laws could also be a function of other
 parameters such as the mechanical properties of the interacting
-surfaces or even their roughnesses. For instance, if the the rubber
+surfaces or even their roughnesses. For instance, if the rubber
 surface above has metal studs (somehow making the surface “rougher”),
 it will definitely have a better grip on an ice surface. Therefore
 this new variable should be taken into account in the combination law.
@@ -2680,9 +2680,69 @@ respect to q.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrix">
+<code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model, as
+a function of the generalized positions q stored in <code class="docutils literal"><span class="pre">context</span></code>. This
+method employs the Composite Body Algorithm, which is known to be the
+fastest O(n²) algorithm to compute the mass matrix of a multibody
+system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if M is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model
+using inverse dynamics, where the generalized positions q are stored
+in <code class="docutils literal"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<p>Use CalcMassMatrix() for a faster implementation using the Composite
+Body Algorithm.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if H is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<p>The algorithm used to build <code class="docutils literal"><span class="pre">M(q)</span></code> consists in computing one column
+of <code class="docutils literal"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
+dynamics, with no applied forces, is the vector of generalized forces:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>where q and v are the generalized positions and velocities,
+respectively. When <code class="docutils literal"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">0</span></code> the Coriolis and gyroscopic forces term
+<code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is zero. Therefore the <code class="docutils literal"><span class="pre">i-th</span></code> column of <code class="docutils literal"><span class="pre">M(q)</span></code> can be
+obtained performing inverse dynamics with an acceleration vector <code class="docutils literal"><span class="pre">v̇</span>
+<span class="pre">=</span> <span class="pre">eᵢ</span></code>, with <code class="docutils literal"><span class="pre">eᵢ</span></code> the standard (or natural) basis of <code class="docutils literal"><span class="pre">ℛⁿ</span></code> with n
+the number of generalized velocities. We write this as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">ᵢ</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">e_i</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M.ᵢ(q)</span></code> (notice the dot for the rows index) denotes the
+<code class="docutils literal"><span class="pre">i-th</span></code> column in M(q).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcPointsPositions">
@@ -6473,9 +6533,69 @@ respect to q.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrix">
+<code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model, as
+a function of the generalized positions q stored in <code class="docutils literal"><span class="pre">context</span></code>. This
+method employs the Composite Body Algorithm, which is known to be the
+fastest O(n²) algorithm to compute the mass matrix of a multibody
+system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if M is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model
+using inverse dynamics, where the generalized positions q are stored
+in <code class="docutils literal"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<p>Use CalcMassMatrix() for a faster implementation using the Composite
+Body Algorithm.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if H is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<p>The algorithm used to build <code class="docutils literal"><span class="pre">M(q)</span></code> consists in computing one column
+of <code class="docutils literal"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
+dynamics, with no applied forces, is the vector of generalized forces:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>where q and v are the generalized positions and velocities,
+respectively. When <code class="docutils literal"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">0</span></code> the Coriolis and gyroscopic forces term
+<code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is zero. Therefore the <code class="docutils literal"><span class="pre">i-th</span></code> column of <code class="docutils literal"><span class="pre">M(q)</span></code> can be
+obtained performing inverse dynamics with an acceleration vector <code class="docutils literal"><span class="pre">v̇</span>
+<span class="pre">=</span> <span class="pre">eᵢ</span></code>, with <code class="docutils literal"><span class="pre">eᵢ</span></code> the standard (or natural) basis of <code class="docutils literal"><span class="pre">ℛⁿ</span></code> with n
+the number of generalized velocities. We write this as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">ᵢ</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">e_i</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M.ᵢ(q)</span></code> (notice the dot for the rows index) denotes the
+<code class="docutils literal"><span class="pre">i-th</span></code> column in M(q).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].CalcPointsPositions">
@@ -10264,9 +10384,69 @@ respect to q.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrix">
+<code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model, as
+a function of the generalized positions q stored in <code class="docutils literal"><span class="pre">context</span></code>. This
+method employs the Composite Body Algorithm, which is known to be the
+fastest O(n²) algorithm to compute the mass matrix of a multibody
+system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if M is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model
+using inverse dynamics, where the generalized positions q are stored
+in <code class="docutils literal"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<p>Use CalcMassMatrix() for a faster implementation using the Composite
+Body Algorithm.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if H is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<p>The algorithm used to build <code class="docutils literal"><span class="pre">M(q)</span></code> consists in computing one column
+of <code class="docutils literal"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
+dynamics, with no applied forces, is the vector of generalized forces:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>where q and v are the generalized positions and velocities,
+respectively. When <code class="docutils literal"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">0</span></code> the Coriolis and gyroscopic forces term
+<code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is zero. Therefore the <code class="docutils literal"><span class="pre">i-th</span></code> column of <code class="docutils literal"><span class="pre">M(q)</span></code> can be
+obtained performing inverse dynamics with an acceleration vector <code class="docutils literal"><span class="pre">v̇</span>
+<span class="pre">=</span> <span class="pre">eᵢ</span></code>, with <code class="docutils literal"><span class="pre">eᵢ</span></code> the standard (or natural) basis of <code class="docutils literal"><span class="pre">ℛⁿ</span></code> with n
+the number of generalized velocities. We write this as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">ᵢ</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">e_i</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M.ᵢ(q)</span></code> (notice the dot for the rows index) denotes the
+<code class="docutils literal"><span class="pre">i-th</span></code> column in M(q).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].CalcPointsPositions">
@@ -14055,9 +14235,69 @@ respect to q.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrix">
+<code class="descname">CalcMassMatrix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model, as
+a function of the generalized positions q stored in <code class="docutils literal"><span class="pre">context</span></code>. This
+method employs the Composite Body Algorithm, which is known to be the
+fastest O(n²) algorithm to compute the mass matrix of a multibody
+system.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if M is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics">
 <code class="descname">CalcMassMatrixViaInverseDynamics</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].CalcMassMatrixViaInverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Performs the computation of the mass matrix <code class="docutils literal"><span class="pre">M(q)</span></code> of the model
+using inverse dynamics, where the generalized positions q are stored
+in <code class="docutils literal"><span class="pre">context</span></code>. See CalcInverseDynamics().</p>
+<p>Use CalcMassMatrix() for a faster implementation using the Composite
+Body Algorithm.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The context containing the state of the model.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">M</span></code>:</dt>
+<dd>A valid (non-null) pointer to a squared matrix in <code class="docutils literal"><span class="pre">ℛⁿˣⁿ</span></code> with n
+the number of generalized velocities (num_velocities()) of the
+model. This method aborts if H is nullptr or if it does not have
+the proper size.</dd>
+</dl>
+<p>The algorithm used to build <code class="docutils literal"><span class="pre">M(q)</span></code> consists in computing one column
+of <code class="docutils literal"><span class="pre">M(q)</span></code> at a time using inverse dynamics. The result from inverse
+dynamics, with no applied forces, is the vector of generalized forces:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">v̇</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>where q and v are the generalized positions and velocities,
+respectively. When <code class="docutils literal"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">0</span></code> the Coriolis and gyroscopic forces term
+<code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is zero. Therefore the <code class="docutils literal"><span class="pre">i-th</span></code> column of <code class="docutils literal"><span class="pre">M(q)</span></code> can be
+obtained performing inverse dynamics with an acceleration vector <code class="docutils literal"><span class="pre">v̇</span>
+<span class="pre">=</span> <span class="pre">eᵢ</span></code>, with <code class="docutils literal"><span class="pre">eᵢ</span></code> the standard (or natural) basis of <code class="docutils literal"><span class="pre">ℛⁿ</span></code> with n
+the number of generalized velocities. We write this as:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">M</span><span class="o">.</span><span class="n">ᵢ</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">*</span> <span class="n">e_i</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">M.ᵢ(q)</span></code> (notice the dot for the rows index) denotes the
+<code class="docutils literal"><span class="pre">i-th</span></code> column in M(q).</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is an O(n²) algorithm. Avoid the explicit computation of the
+mass matrix whenever possible.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].CalcPointsPositions">

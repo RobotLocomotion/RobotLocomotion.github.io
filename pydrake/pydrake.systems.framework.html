@@ -4333,9 +4333,12 @@ get_name().</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float]">
 <em class="property">class </em><code class="descname">DiagramBuilder_[float]</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>DiagramBuilder is a factory class for Diagram. It is single use: after
-calling Build or BuildInto, DiagramBuilder gives up ownership of the
-constituent systems, and should therefore be discarded.</p>
+<dd><p>DiagramBuilder is a factory class for Diagram.</p>
+<p>It is single use: after calling Build or BuildInto, DiagramBuilder
+gives up ownership of the constituent systems, and should therefore be
+discarded.</p>
+<p>When a Diagram (or DiagramBuilder) that owns systems is destroyed, the
+systems will be destroyed in the reverse of the order they were added.</p>
 <p>A system must be added to the DiagramBuilder with AddSystem or
 AddNamedSystem before it can be wired up in any way. Every system must
 have a unique, non-empty name.</p>
@@ -4531,9 +4534,12 @@ provided.</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiagramBuilder_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>DiagramBuilder is a factory class for Diagram. It is single use: after
-calling Build or BuildInto, DiagramBuilder gives up ownership of the
-constituent systems, and should therefore be discarded.</p>
+<dd><p>DiagramBuilder is a factory class for Diagram.</p>
+<p>It is single use: after calling Build or BuildInto, DiagramBuilder
+gives up ownership of the constituent systems, and should therefore be
+discarded.</p>
+<p>When a Diagram (or DiagramBuilder) that owns systems is destroyed, the
+systems will be destroyed in the reverse of the order they were added.</p>
 <p>A system must be added to the DiagramBuilder with AddSystem or
 AddNamedSystem before it can be wired up in any way. Every system must
 have a unique, non-empty name.</p>
@@ -4727,9 +4733,12 @@ provided.</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.DiagramBuilder_[Expression]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiagramBuilder_[Expression]</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression]" title="Permalink to this definition">¶</a></dt>
-<dd><p>DiagramBuilder is a factory class for Diagram. It is single use: after
-calling Build or BuildInto, DiagramBuilder gives up ownership of the
-constituent systems, and should therefore be discarded.</p>
+<dd><p>DiagramBuilder is a factory class for Diagram.</p>
+<p>It is single use: after calling Build or BuildInto, DiagramBuilder
+gives up ownership of the constituent systems, and should therefore be
+discarded.</p>
+<p>When a Diagram (or DiagramBuilder) that owns systems is destroyed, the
+systems will be destroyed in the reverse of the order they were added.</p>
 <p>A system must be added to the DiagramBuilder with AddSystem or
 AddNamedSystem before it can be wired up in any way. Every system must
 have a unique, non-empty name.</p>
@@ -4923,9 +4932,12 @@ provided.</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.DiagramBuilder_[float]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">DiagramBuilder_[float]</code><a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>DiagramBuilder is a factory class for Diagram. It is single use: after
-calling Build or BuildInto, DiagramBuilder gives up ownership of the
-constituent systems, and should therefore be discarded.</p>
+<dd><p>DiagramBuilder is a factory class for Diagram.</p>
+<p>It is single use: after calling Build or BuildInto, DiagramBuilder
+gives up ownership of the constituent systems, and should therefore be
+discarded.</p>
+<p>When a Diagram (or DiagramBuilder) that owns systems is destroyed, the
+systems will be destroyed in the reverse of the order they were added.</p>
 <p>A system must be added to the DiagramBuilder with AddSystem or
 AddNamedSystem before it can be wired up in any way. Every system must
 have a unique, non-empty name.</p>
@@ -5971,8 +5983,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6026,8 +6038,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6180,8 +6192,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6235,8 +6247,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6387,8 +6399,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6442,8 +6454,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6594,8 +6606,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
@@ -6649,8 +6661,8 @@ port’s data type.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the the FixedInputPortValue object in the Context
-that contains this port’s value.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the FixedInputPortValue object in the Context that
+contains this port’s value.</td>
 </tr>
 </tbody>
 </table>
