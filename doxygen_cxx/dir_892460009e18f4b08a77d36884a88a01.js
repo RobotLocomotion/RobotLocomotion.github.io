@@ -43,6 +43,5 @@ var dir_892460009e18f4b08a77d36884a88a01 =
     [ "rgbd_sensor.h", "rgbd__sensor_8h.html", [
       [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete" ]
     ] ],
-    [ "robotlocomotion_compat.h", "robotlocomotion__compat_8h.html", "robotlocomotion__compat_8h" ],
     [ "rotary_encoders.h", "rotary__encoders_8h.html", null ]
 ];

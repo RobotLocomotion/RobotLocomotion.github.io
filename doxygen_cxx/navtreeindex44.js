@@ -1,6 +1,5 @@
 var NAVTREEINDEX44 =
 {
-"normalize__vector_8h.html":[4,0,0,7,21],
 "normalize__vector_8h.html#a48484009086db12d881bea6bcaab2514":[4,0,0,7,21,0],
 "obb_8h.html":[4,0,0,4,2,32],
 "obj__to__surface__mesh_8h.html":[4,0,0,4,2,33],
@@ -249,5 +248,6 @@ var NAVTREEINDEX44 =
 "region__of__attraction_8h.html":[4,0,0,11,0,13],
 "region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,11,0,13,1],
 "render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
-"render__camera_8h.html":[4,0,0,4,4,2]
+"render__camera_8h.html":[4,0,0,4,4,2],
+"render__doxygen_8h.html":[4,0,0,4,4,3]
 };

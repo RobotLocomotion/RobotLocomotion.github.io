@@ -79,7 +79,6 @@ var searchData=
   ['hasunrestrictedupdateevents',['HasUnrestrictedUpdateEvents',['../classdrake_1_1systems_1_1_composite_event_collection.html#ac782ac71ddc07579467afdd4372fa11d',1,'drake::systems::CompositeEventCollection']]],
   ['hasvalue',['HasValue',['../classdrake_1_1systems_1_1_input_port.html#a5536b94a4642fa4cf47164437dc66ae8',1,'drake::systems::InputPort']]],
   ['hasvariable',['HasVariable',['../classdrake_1_1_polynomial_1_1_monomial.html#aa13862903d5f48177be04d2a293e2e17',1,'drake::Polynomial::Monomial']]],
-  ['header_5ft',['header_t',['../namespacerobotlocomotion.html#ab218162d0b63050506f49fe66a1a2874',1,'robotlocomotion']]],
   ['height',['height',['../classdrake_1_1geometry_1_1_box.html#a4a7b88988ccd08949b9be2e7de101e8c',1,'drake::geometry::Box::height()'],['../classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f',1,'drake::systems::sensors::CameraInfo::height()'],['../classdrake_1_1systems_1_1sensors_1_1_image.html#ad3774f6419003470f54fd495124ef51f',1,'drake::systems::sensors::Image::height()']]],
   ['helix_5ffunction',['helix_function',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a888a2b1c1ae633d50cfceb0d99b31cbf',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
   ['hermitian_5fdense_5foutput_2eh',['hermitian_dense_output.h',['../hermitian__dense__output_8h.html',1,'']]],

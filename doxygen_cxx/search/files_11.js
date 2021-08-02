@@ -34,7 +34,6 @@ var searchData=
   ['robertson_5fsystem_2eh',['robertson_system.h',['../robertson__system_8h.html',1,'']]],
   ['robot_5fplan_5finterpolator_2eh',['robot_plan_interpolator.h',['../robot__plan__interpolator_8h.html',1,'']]],
   ['robot_5fplan_5futils_2eh',['robot_plan_utils.h',['../robot__plan__utils_8h.html',1,'']]],
-  ['robotlocomotion_5fcompat_2eh',['robotlocomotion_compat.h',['../robotlocomotion__compat_8h.html',1,'']]],
   ['rod2d_2eh',['rod2d.h',['../rod2d_8h.html',1,'']]],
   ['rod2d_5fgeometry_2eh',['rod2d_geometry.h',['../rod2d__geometry_8h.html',1,'']]],
   ['roll_5fpitch_5fyaw_2eh',['roll_pitch_yaw.h',['../roll__pitch__yaw_8h.html',1,'']]],

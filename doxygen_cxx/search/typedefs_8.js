@@ -2,8 +2,6 @@ var searchData=
 [
   ['id',['Id',['../classdrake_1_1symbolic_1_1_variable.html#ad045777573c866588ca72937e92c1a2c',1,'drake::symbolic::Variable']]],
   ['idtoindexmap',['IdToIndexMap',['../classdrake_1_1symbolic_1_1_code_gen_visitor.html#a4c56baca15487270c31db085683d6637',1,'drake::symbolic::CodeGenVisitor']]],
-  ['image_5farray_5ft',['image_array_t',['../namespacerobotlocomotion.html#a49a525ee3b8cb6c6069d3d2ff04fd729',1,'robotlocomotion']]],
-  ['image_5ft',['image_t',['../namespacerobotlocomotion.html#a44c560c865810563ebc66e4a1b956e0e',1,'robotlocomotion']]],
   ['imagebgr8u',['ImageBgr8U',['../namespacedrake_1_1systems_1_1sensors.html#ad6764dabff337ef74ed1871b8a2c2ffd',1,'drake::systems::sensors']]],
   ['imagebgra8u',['ImageBgra8U',['../namespacedrake_1_1systems_1_1sensors.html#a746567d80e8e7ae22cae20c9dbe78f3b',1,'drake::systems::sensors']]],
   ['imagedepth16u',['ImageDepth16U',['../namespacedrake_1_1systems_1_1sensors.html#a12ae113c6f13e4c9c37430a988afeef8',1,'drake::systems::sensors']]],
