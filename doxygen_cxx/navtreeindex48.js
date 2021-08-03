@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#ac16cd7b41023caaef86f6139df3da40e":[3,0,0,12,0,7,0,2],
+"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#ac398f23f442f485a744b957ea27d4749":[3,0,0,12,0,7,0,8],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#ac80f466ba4de9666501bc983e0a3d893":[3,0,0,12,0,7,0,1],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#aee32e8e170503d8b19b2f5703619b0ad":[3,0,0,12,0,7,0,7],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#af02e44a9cbc4d0a9ea490704fbe74114":[3,0,0,12,0,7,0,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,52,2],
 "structdrake_1_1type__tag.html":[3,0,0,53],
 "structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,53,0],
-"structdrake_1_1type__visit__with__default.html":[3,0,0,54],
-"structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,54,0],
-"structdrake_1_1type__visit__with__tag.html":[3,0,0,55]
+"structdrake_1_1type__visit__with__default.html":[3,0,0,54]
 };

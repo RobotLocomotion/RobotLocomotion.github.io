@@ -1,5 +1,12 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a504d1e8555223689975a43c0c485b411":[3,0,0,14,6,3,3],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a61c52c65b8af5519f18514db96034832":[3,0,0,14,6,3,8],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a726b03d9cdd89cddb0c7e122ca6672e2":[3,0,0,14,6,3,13],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a736b9f1cf7e39662fdd5fa4401e90b6b":[3,0,0,14,6,3,4],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a8cfd4c6528941ee03ed6faedb40cf3db":[3,0,0,14,6,3,1],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a8f2e9f8ca84b298c2362015f2fa7ed42":[3,0,0,14,6,3,5],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a94acb03354accc961018cddd20c6adf6":[3,0,0,14,6,3,14],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#aae5ad967a10e6b2a02e1888cf171f901":[3,0,0,14,6,3,9],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#ac9dfd688f13227f3c011ba3f6b67ac62":[3,0,0,14,6,3,0],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#ad08c0e6b677fd36d35a12494b580c853":[3,0,0,14,6,3,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,2,0,36,5],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a89e2693c8bf829dbf08466fca0f15e07":[1,2,0,36,10],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#aa2431c2dbd82437d8f621033d8af8231":[1,2,0,36,6],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ac6326e597490a24805947c96623d6891":[1,2,0,36,4],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ae3f1c577ee698959014f42a2937d6730":[1,2,0,36,3],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html":[1,5,2,6],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a167c6e03556d42ea16011cb93061104e":[1,5,2,6,9],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a2257e99613e8e2241db334b2a3a4c6ad":[1,5,2,6,1],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a22a7433c13b1c3710731b688e73d6e66":[1,5,2,6,7],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a336445379d572c9b6818d533734a1f8d":[1,5,2,6,4],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,5,2,6,8]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#ac6326e597490a24805947c96623d6891":[1,2,0,36,4]
 };

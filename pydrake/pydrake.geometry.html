@@ -796,7 +796,7 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id28"><span class="problematic" id="id29">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id34"><span class="problematic" id="id35">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -890,7 +890,7 @@ illustration role (see geometry_roles for more details). It can be
 configured to visualize geometries with other roles (see
 DrakeVisualizerParams). Only one role can be specified.</p>
 <p>The appearance of the geometry in the visualizer is typically defined
-by the the geometry’s properties for the visualized role.</p>
+by the geometry’s properties for the visualized role.</p>
 <ul class="simple">
 <li>For the visualized role, if a geometry has the (“phong”, “diffuse”)</li>
 </ul>
@@ -1033,7 +1033,7 @@ illustration role (see geometry_roles for more details). It can be
 configured to visualize geometries with other roles (see
 DrakeVisualizerParams). Only one role can be specified.</p>
 <p>The appearance of the geometry in the visualizer is typically defined
-by the the geometry’s properties for the visualized role.</p>
+by the geometry’s properties for the visualized role.</p>
 <ul class="simple">
 <li>For the visualized role, if a geometry has the (“phong”, “diffuse”)</li>
 </ul>
@@ -1174,7 +1174,7 @@ illustration role (see geometry_roles for more details). It can be
 configured to visualize geometries with other roles (see
 DrakeVisualizerParams). Only one role can be specified.</p>
 <p>The appearance of the geometry in the visualizer is typically defined
-by the the geometry’s properties for the visualized role.</p>
+by the geometry’s properties for the visualized role.</p>
 <ul class="simple">
 <li>For the visualized role, if a geometry has the (“phong”, “diffuse”)</li>
 </ul>
@@ -1471,7 +1471,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id30"><span class="problematic" id="id31">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id36"><span class="problematic" id="id37">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -1603,7 +1603,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id32"><span class="problematic" id="id33">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id38"><span class="problematic" id="id39">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -1733,7 +1733,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id34"><span class="problematic" id="id35">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id40"><span class="problematic" id="id41">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2703,7 +2703,7 @@ scale factor.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id36"><span class="problematic" id="id37">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id42"><span class="problematic" id="id43">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -3199,7 +3199,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id38"><span class="problematic" id="id39">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id44"><span class="problematic" id="id45">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -3209,7 +3209,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id40"><span class="problematic" id="id41">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id46"><span class="problematic" id="id47">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -3315,8 +3315,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id42"><span class="problematic" id="id43">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id44"><span class="problematic" id="id45">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id48"><span class="problematic" id="id49">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -3367,13 +3367,13 @@ tolerance from them.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">For a box B, if a point p is inside the box, and it is equidistant
-to to multiple nearest faces, the signed distance function φᵢ(p)
-at p will have an undefined gradient vector. There is a nearest
-point candidate associated with each nearest face. In this case,
-we arbitrarily pick the point Nᵢ associated with one of the
-nearest faces. Please note that, due to the possible round off
-error arising from applying a pose X_WG to B, there is no
-guarantee which of the nearest faces will be used.</p>
+to multiple nearest faces, the signed distance function φᵢ(p) at p
+will have an undefined gradient vector. There is a nearest point
+candidate associated with each nearest face. In this case, we
+arbitrarily pick the point Nᵢ associated with one of the nearest
+faces. Please note that, due to the possible round off error
+arising from applying a pose X_WG to B, there is no guarantee
+which of the nearest faces will be used.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -3778,7 +3778,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id46"><span class="problematic" id="id47">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id52"><span class="problematic" id="id53">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -3788,7 +3788,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id48"><span class="problematic" id="id49">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id54"><span class="problematic" id="id55">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -3894,8 +3894,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id52"><span class="problematic" id="id53">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id56"><span class="problematic" id="id57">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -3946,13 +3946,13 @@ tolerance from them.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">For a box B, if a point p is inside the box, and it is equidistant
-to to multiple nearest faces, the signed distance function φᵢ(p)
-at p will have an undefined gradient vector. There is a nearest
-point candidate associated with each nearest face. In this case,
-we arbitrarily pick the point Nᵢ associated with one of the
-nearest faces. Please note that, due to the possible round off
-error arising from applying a pose X_WG to B, there is no
-guarantee which of the nearest faces will be used.</p>
+to multiple nearest faces, the signed distance function φᵢ(p) at p
+will have an undefined gradient vector. There is a nearest point
+candidate associated with each nearest face. In this case, we
+arbitrarily pick the point Nᵢ associated with one of the nearest
+faces. Please note that, due to the possible round off error
+arising from applying a pose X_WG to B, there is no guarantee
+which of the nearest faces will be used.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -4355,7 +4355,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id54"><span class="problematic" id="id55">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id60"><span class="problematic" id="id61">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -4365,7 +4365,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id56"><span class="problematic" id="id57">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id62"><span class="problematic" id="id63">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -4471,8 +4471,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id60"><span class="problematic" id="id61">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id66"><span class="problematic" id="id67">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -4523,13 +4523,13 @@ tolerance from them.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">For a box B, if a point p is inside the box, and it is equidistant
-to to multiple nearest faces, the signed distance function φᵢ(p)
-at p will have an undefined gradient vector. There is a nearest
-point candidate associated with each nearest face. In this case,
-we arbitrarily pick the point Nᵢ associated with one of the
-nearest faces. Please note that, due to the possible round off
-error arising from applying a pose X_WG to B, there is no
-guarantee which of the nearest faces will be used.</p>
+to multiple nearest faces, the signed distance function φᵢ(p) at p
+will have an undefined gradient vector. There is a nearest point
+candidate associated with each nearest face. In this case, we
+arbitrarily pick the point Nᵢ associated with one of the nearest
+faces. Please note that, due to the possible round off error
+arising from applying a pose X_WG to B, there is no guarantee
+which of the nearest faces will be used.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -4717,7 +4717,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id68"><span class="problematic" id="id69">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id74"><span class="problematic" id="id75">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -7173,7 +7173,12 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame.</p>
+<p>This includes the id for the world frame. <a href="#id28"><span class="problematic" id="id29">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please use GetAllFrameIds() instead. This will be removed from
+Drake on or after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7300,6 +7305,15 @@ given source <code class="docutils literal"><span class="pre">source_id</span></
 geometry data associated with geometry roles. The reference returned
 should not be persisted. If it needs to be persisted, it should be
 copied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetAllFrameIds">
+<code class="descname">GetAllFrameIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetAllFrameIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all of the frame ids in the scene graph. The order is not
+guaranteed; but it will be consistent across invocations as long as
+there are no changes to the topology. The ids includes the world
+frame’s id.</p>
 </dd></dl>
 
 <dl class="method">
@@ -7869,7 +7883,12 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame.</p>
+<p>This includes the id for the world frame. <a href="#id30"><span class="problematic" id="id31">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please use GetAllFrameIds() instead. This will be removed from
+Drake on or after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7996,6 +8015,15 @@ given source <code class="docutils literal"><span class="pre">source_id</span></
 geometry data associated with geometry roles. The reference returned
 should not be persisted. If it needs to be persisted, it should be
 copied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllFrameIds">
+<code class="descname">GetAllFrameIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].GetAllFrameIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all of the frame ids in the scene graph. The order is not
+guaranteed; but it will be consistent across invocations as long as
+there are no changes to the topology. The ids includes the world
+frame’s id.</p>
 </dd></dl>
 
 <dl class="method">
@@ -8563,7 +8591,12 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame.</p>
+<p>This includes the id for the world frame. <a href="#id32"><span class="problematic" id="id33">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please use GetAllFrameIds() instead. This will be removed from
+Drake on or after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8690,6 +8723,15 @@ given source <code class="docutils literal"><span class="pre">source_id</span></
 geometry data associated with geometry roles. The reference returned
 should not be persisted. If it needs to be persisted, it should be
 copied.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SceneGraphInspector_[float].GetAllFrameIds">
+<code class="descname">GetAllFrameIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.FrameId]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].GetAllFrameIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all of the frame ids in the scene graph. The order is not
+guaranteed; but it will be consistent across invocations as long as
+there are no changes to the topology. The ids includes the world
+frame’s id.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9256,7 +9298,6 @@ length and always point outward from B’s surface).</p>
 <li>When A and B are touching or penetrating, distance &lt;= 0.</li>
 <li>By definition, nhat_AB_W must be in the opposite direction of nhat_BA_W.</li>
 <li>(p_WCa - p_Wcb) = distance · nhat_BA_W.</li>
-<li>In some cases, nhat_BA_W is not unique, and is_nhat_BA_W_unique is false.</li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -9313,12 +9354,6 @@ NaN values.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pydrake.geometry.SignedDistancePair_.SignedDistancePair_[float].is_nhat_BA_W_unique">
-<code class="descname">is_nhat_BA_W_unique</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair_.SignedDistancePair_[float].is_nhat_BA_W_unique" title="Permalink to this definition">¶</a></dt>
-<dd><p>SignedDistancePair will no longer report uniqueness. If you require knowledge of uniqueness, please contact the Drake team. This will be removed on or after 2021-08-01.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pydrake.geometry.SignedDistancePair_.SignedDistancePair_[float].nhat_BA_W">
 <code class="descname">nhat_BA_W</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair_.SignedDistancePair_[float].nhat_BA_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>A direction of fastest increasing distance.</p>
@@ -9353,7 +9388,6 @@ length and always point outward from B’s surface).</p>
 <li>When A and B are touching or penetrating, distance &lt;= 0.</li>
 <li>By definition, nhat_AB_W must be in the opposite direction of nhat_BA_W.</li>
 <li>(p_WCa - p_Wcb) = distance · nhat_BA_W.</li>
-<li>In some cases, nhat_BA_W is not unique, and is_nhat_BA_W_unique is false.</li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -9410,12 +9444,6 @@ NaN values.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pydrake.geometry.SignedDistancePair_[AutoDiffXd].is_nhat_BA_W_unique">
-<code class="descname">is_nhat_BA_W_unique</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair_[AutoDiffXd].is_nhat_BA_W_unique" title="Permalink to this definition">¶</a></dt>
-<dd><p>SignedDistancePair will no longer report uniqueness. If you require knowledge of uniqueness, please contact the Drake team. This will be removed on or after 2021-08-01.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pydrake.geometry.SignedDistancePair_[AutoDiffXd].nhat_BA_W">
 <code class="descname">nhat_BA_W</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair_[AutoDiffXd].nhat_BA_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>A direction of fastest increasing distance.</p>
@@ -9448,7 +9476,6 @@ length and always point outward from B’s surface).</p>
 <li>When A and B are touching or penetrating, distance &lt;= 0.</li>
 <li>By definition, nhat_AB_W must be in the opposite direction of nhat_BA_W.</li>
 <li>(p_WCa - p_Wcb) = distance · nhat_BA_W.</li>
-<li>In some cases, nhat_BA_W is not unique, and is_nhat_BA_W_unique is false.</li>
 </ul>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -9502,12 +9529,6 @@ NaN values.</p>
 <dt id="pydrake.geometry.SignedDistancePair_[float].id_B">
 <code class="descname">id_B</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair_[float].id_B" title="Permalink to this definition">¶</a></dt>
 <dd><p>The id of the second geometry in the pair.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.geometry.SignedDistancePair_[float].is_nhat_BA_W_unique">
-<code class="descname">is_nhat_BA_W_unique</code><a class="headerlink" href="#pydrake.geometry.SignedDistancePair_[float].is_nhat_BA_W_unique" title="Permalink to this definition">¶</a></dt>
-<dd><p>SignedDistancePair will no longer report uniqueness. If you require knowledge of uniqueness, please contact the Drake team. This will be removed on or after 2021-08-01.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -9581,7 +9602,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id62"><span class="problematic" id="id63">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id68"><span class="problematic" id="id69">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9668,7 +9689,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id64"><span class="problematic" id="id65">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id70"><span class="problematic" id="id71">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9753,7 +9774,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id66"><span class="problematic" id="id67">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id72"><span class="problematic" id="id73">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9848,7 +9869,7 @@ given radius.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if <code class="docutils literal"><span class="pre">radius</span></code> is negative. Note that a zero radius is</li>
-<li>is considered valid.</li>
+<li>considered valid.</li>
 </ul>
 </td>
 </tr>

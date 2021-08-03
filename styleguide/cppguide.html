@@ -2213,9 +2213,50 @@ C++ that may differ from what you see elsewhere.</p>
 <h3 id="Memory Allocation">Memory Allocation</h3>
 
 <div class="summary">
-  <p>No dynamic allocation in the inner simulation/control loops. Code should
-    be still be thread-safe (e.g. be careful with pre-allocations).
+<p>It's often important to avoid dynamic memory allocation within
+performance-critical code regions (e.g., simulation steps, control loops). Code
+that pre-allocates must be thread-safe, within common Drake thread use idioms
+(see below).  Performance-critical code that promises to avoid allocations must
+have an automated acceptance test using the the Drake
+<a href="https://github.com/RobotLocomotion/drake/blob/master/common/test_utilities/limit_malloc.h">LimitMalloc</a>
+tool.
 </p>
+</div>
+
+<div class="stylebody">
+
+<p>Pre-allocating memory for use in high-performance code avoids potentially
+expensive operations to obtain memory from the heap. Importantly, since the
+heap is a process-global resource, heap operations can incur synchronization
+costs, such as waiting on a mutex. So, heap operations are not only expensive,
+but also have a non-deterministic run-time cost.</p>
+
+<p>In some situations, it may be necessary to allocate memory inside a function
+executed in a performance-critical loop. This may be acceptable if that
+initialization occurs in the first few loop invocations and the function
+subsequently ceases to allocate.</p>
+
+<p>One big advantage of conventional heap operations (e.g. a std::vector as a
+function-local variable) is that they <i>are</i> thread-safe, and their wide
+use ensures that the implementations are efficient and high-quality. When
+pre-allocating, the code is likely to reuse the storage in less common ways. Be
+careful to avoid situations where the storage could be accessed from multiple
+threads without synchronization.</p>
+
+<h4>Systems, Contexts, and Threading</h4>
+
+<p>In Drake, the most common thread use idiom is the single-system,
+multiple-context idiom. Multiple threads each own a Drake context, and they
+reuse a shared system (or diagram). To support this, system (or diagram)
+classes must only store data necessary to maintain the structure of the system,
+but not any data related to computation of inputs, outputs, or system state. If
+persistent storage is needed to compute without requiring heap operations, that
+storage should be obtained via a Drake cache entry. Cache entries will be
+allocated on a per-context basis, so that there is no thread safety hazard when
+using context-per-thread multithreading. An example of this technique can be
+found in <a href="https://github.com/RobotLocomotion/drake/pull/14929">PR
+#14929</a>.</p>
+
 </div>
 
 </div>

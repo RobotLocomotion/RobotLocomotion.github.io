@@ -1,5 +1,12 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1systems_1_1_vector_log.html#a0533954b4eb29aa69d4078b0512e518f":[3,0,0,14,126,3],
+"classdrake_1_1systems_1_1_vector_log.html#a0b517e025fbc2265483bad85efb28e65":[3,0,0,14,126,11],
+"classdrake_1_1systems_1_1_vector_log.html#a16f68e98d0fe5d308ee4afee21efce3c":[3,0,0,14,126,7],
+"classdrake_1_1systems_1_1_vector_log.html#a2092a77a3f3f240841ef25c810342769":[3,0,0,14,126,8],
+"classdrake_1_1systems_1_1_vector_log.html#a68d774a585cf94543a4a9930f7e9efc2":[3,0,0,14,126,5],
+"classdrake_1_1systems_1_1_vector_log.html#a8cebbbcba14a806da45600ccc3443095":[3,0,0,14,126,12],
+"classdrake_1_1systems_1_1_vector_log.html#aa71d36872f416feaa853788a7a7a7ef8":[3,0,0,14,126,4],
 "classdrake_1_1systems_1_1_vector_log.html#ab2e824b1c2e43c93e68de2e1c4d930b6":[3,0,0,14,126,1],
 "classdrake_1_1systems_1_1_vector_log.html#abc2c34877cce7a1a0efd7b926a691743":[3,0,0,14,126,0],
 "classdrake_1_1systems_1_1_vector_log.html#ac17a6d8ef67a6ab2df61f14c12651c54":[3,0,0,14,126,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html":[1,3,2,2],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3229f07b7f9c224cc442fe7921cfb44a":[1,3,2,2,5],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3ed94567c4365ecb7253a9f4b0df5cc6":[1,3,2,2,3],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a575cafd239d48f8fe814d550d368b1bf":[1,3,2,2,4],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82":[1,3,2,2,1],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#acdebbe41c8d9735aeee1920ac69b07e1":[1,3,2,2,6],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#ae549539f28012cd0081d886d117aed5a":[1,3,2,2,0],
-"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,3,2,2,2],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,3,2,3],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,3,2,3,17],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,3,2,3,4]
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a575cafd239d48f8fe814d550d368b1bf":[1,3,2,2,4]
 };

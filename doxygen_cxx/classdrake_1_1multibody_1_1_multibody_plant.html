@@ -5686,7 +5686,7 @@ Mobilizer::MapQDotToVelocity() </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The context containing the state of the model. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A vector of of generalized velocities for this model. This method aborts if v is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>A vector of generalized velocities for this model. This method aborts if v is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">num_velocities()</a>. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">qdot</td><td>A valid (non-null) pointer to a vector in <code>ℝⁿ</code> with n being the number of generalized positions in this model, given by <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a></code>. This method aborts if <code>qdot</code> is nullptr or if it is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">num_positions()</a>.</td></tr>
   </table>
   </dd>

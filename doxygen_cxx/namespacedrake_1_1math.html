@@ -191,7 +191,7 @@ Functions</h2></td></tr>
 <tr class="separator:ab773f7c582bc83dd2f26c0965de1e427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a7fc1b9bbef766b25c3e3684df19eee0c">resizeDerivativesToMatchScalar</a> (Eigen::MatrixBase&lt; Derived &gt; &amp;mat, const typename Derived::Scalar &amp;scalar)</td></tr>
-<tr class="memdesc:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize derivatives vector of each element of a matrix to to match the size of the derivatives vector of a given scalar.  <a href="#a7fc1b9bbef766b25c3e3684df19eee0c">More...</a><br /></td></tr>
+<tr class="memdesc:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize derivatives vector of each element of a matrix to match the size of the derivatives vector of a given scalar.  <a href="#a7fc1b9bbef766b25c3e3684df19eee0c">More...</a><br /></td></tr>
 <tr class="separator:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5c76a80b6a785f91dd3e06200e3f83"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
 <tr class="memitem:a6e5c76a80b6a785f91dd3e06200e3f83"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt; Deriveds, internal::totalSizeAtCompileTime&lt; Deriveds... &gt;)&gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6e5c76a80b6a785f91dd3e06200e3f83">initializeAutoDiffTuple</a> (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</td></tr>
@@ -914,7 +914,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -3069,7 +3069,7 @@ else
       </table>
 </div><div class="memdoc">
 
-<p>Resize derivatives vector of each element of a matrix to to match the size of the derivatives vector of a given scalar. </p>
+<p>Resize derivatives vector of each element of a matrix to match the size of the derivatives vector of a given scalar. </p>
 <p>If the mat and scalar inputs are AutoDiffScalars, resize the derivatives vector of each element of the matrix mat to match the number of derivatives of the scalar. This is useful in functions that return matrices that do not depend on an AutoDiffScalar argument (e.g. a function with a constant output), while it is desired that information about the number of derivatives is preserved. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mat</td><td>matrix, for which the derivative vectors of the elements will be resized </td></tr>

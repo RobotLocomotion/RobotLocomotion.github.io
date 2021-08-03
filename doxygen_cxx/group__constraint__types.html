@@ -111,7 +111,7 @@ gₚ(t,q;λ)
 <h4>Constraints with velocity-level unknowns</h4>
 <p>This documentation distinguishes between equations that are posed at the position level but are differentiated once with respect to time (i.e., to reduce the Differential Algebraic Equation or Differential Complementarity Problem index <a class="el" href="group__constraint__references.html#Ascher1998">[Ascher 1998]</a>): </p><pre>
 d/dt gₚ(t; q) = ġₚ(t, q; v)
-</pre><p> vs. equations that <b>must</b> be posed at at the velocity-level (i.e., nonholonomic constraints):</p><pre>
+</pre><p> vs. equations that <b>must</b> be posed at the velocity-level (i.e., nonholonomic constraints):</p><pre>
 gᵥ(t, q; v).
 </pre><p> Both cases yield a constraint with velocity-level unknowns, thereby allowing the constraint to be used in a velocity-level constraint formulation (e.g., an Index-2 DAE or Index-2 DCP). <em>Only the former constraint may "drift" from zero over time</em>, due to truncation and discretization errors, unless corrected. See <a class="el" href="group__constraint__stabilization.html">Constraint stabilization</a> for further information.</p>
 <h4>Constraints with force and acceleration-level unknowns</h4>

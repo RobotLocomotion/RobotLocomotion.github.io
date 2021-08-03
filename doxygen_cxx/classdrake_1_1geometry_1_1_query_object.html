@@ -734,7 +734,7 @@ Friends</h2></td></tr>
 <dd>
 For a box, at a point p on an edge or a corner of the box, the signed distance function φᵢ(p) has an undefined gradient vector. In this case, we will assign a unit vector in the direction of the average of the outward face unit normals of the incident faces of the edge or the corner. A point p is considered being on a face, or an edge, or a corner of the box if it lies within a certain tolerance from them.</dd>
 <dd>
-For a box B, if a point p is inside the box, and it is equidistant to to multiple nearest faces, the signed distance function φᵢ(p) at p will have an undefined gradient vector. There is a nearest point candidate associated with each nearest face. In this case, we arbitrarily pick the point Nᵢ associated with one of the nearest faces. Please note that, due to the possible round off error arising from applying a pose X_WG to B, there is no guarantee which of the nearest faces will be used.</dd>
+For a box B, if a point p is inside the box, and it is equidistant to multiple nearest faces, the signed distance function φᵢ(p) at p will have an undefined gradient vector. There is a nearest point candidate associated with each nearest face. In this case, we arbitrarily pick the point Nᵢ associated with one of the nearest faces. Please note that, due to the possible round off error arising from applying a pose X_WG to B, there is no guarantee which of the nearest faces will be used.</dd>
 <dd>
 The signed distance function is a continuous function with respect to the position of the query point, but its gradient vector field may not be continuous. Specifically at a position equidistant to multiple nearest points, its gradient vector field is not continuous.</dd>
 <dd>

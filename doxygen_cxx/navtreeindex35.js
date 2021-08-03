@@ -1,5 +1,12 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82":[1,3,2,2,1],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#acdebbe41c8d9735aeee1920ac69b07e1":[1,3,2,2,6],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#ae549539f28012cd0081d886d117aed5a":[1,3,2,2,0],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,3,2,2,2],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,3,2,3],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,3,2,3,17],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,3,2,3,4],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a31d6809bd4837dbc26ad2ff734737a21":[1,3,2,3,5],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a32fdf6494a6c073762c1866cf8f4fcc9":[1,3,2,3,1],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a510ef5819faf7dbd367d7bd569a9a9c8":[1,3,2,3,7],
@@ -242,12 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a0070474d1a9cf6c11d8c15a6df118f94":[3,0,0,14,6,3,6],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a2e94640282fb6d7b9b8e8c114fb3b6cc":[3,0,0,14,6,3,12],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a37d847755931c68c88e6fcc3c74c47f1":[3,0,0,14,6,3,11],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a4b7ae0d8a4c42a8f7dd7f47cba74fa6d":[3,0,0,14,6,3,7],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a504d1e8555223689975a43c0c485b411":[3,0,0,14,6,3,3],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a61c52c65b8af5519f18514db96034832":[3,0,0,14,6,3,8],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a726b03d9cdd89cddb0c7e122ca6672e2":[3,0,0,14,6,3,13],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a736b9f1cf7e39662fdd5fa4401e90b6b":[3,0,0,14,6,3,4],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a8cfd4c6528941ee03ed6faedb40cf3db":[3,0,0,14,6,3,1],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a8f2e9f8ca84b298c2362015f2fa7ed42":[3,0,0,14,6,3,5],
-"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a94acb03354accc961018cddd20c6adf6":[3,0,0,14,6,3,14]
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html#a4b7ae0d8a4c42a8f7dd7f47cba74fa6d":[3,0,0,14,6,3,7]
 };

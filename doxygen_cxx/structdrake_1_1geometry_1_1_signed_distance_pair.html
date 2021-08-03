@@ -110,8 +110,7 @@ struct drake::geometry::SignedDistancePair&lt; T &gt;</h3>
 <li>When A and B are separated, distance &gt; 0.</li>
 <li>When A and B are touching or penetrating, distance &lt;= 0.</li>
 <li>By definition, nhat_AB_W must be in the opposite direction of nhat_BA_W.</li>
-<li>(p_WCa - p_Wcb) = distance · nhat_BA_W.</li>
-<li>In some cases, nhat_BA_W is not unique, and is_nhat_BA_W_unique is false. <dl class="section warning"><dt>Warning</dt><dd>For two geometries that are just touching (i.e., distance = 0), the underlying code can guarantee a correct value for nhat_BA_W only when one geometry is a sphere, and the other geometry is a sphere, a box, or a cylinder. Otherwise, the underlying code is not in place yet to guarantee a correct value for nhat_BA_W when surfaces are just touching, and the vector will be populated by NaN values. </dd></dl>
+<li>(p_WCa - p_Wcb) = distance · nhat_BA_W. <dl class="section warning"><dt>Warning</dt><dd>For two geometries that are just touching (i.e., distance = 0), the underlying code can guarantee a correct value for nhat_BA_W only when one geometry is a sphere, and the other geometry is a sphere, a box, or a cylinder. Otherwise, the underlying code is not in place yet to guarantee a correct value for nhat_BA_W when surfaces are just touching, and the vector will be populated by NaN values. </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The underlying scalar type. Must be a valid Eigen scalar. </td></tr>
@@ -130,26 +129,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7be539d413dd4d5146310c350a2d858"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858">SignedDistancePair</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> a, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> b, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_ACa_in, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BCb_in, const T &amp;dist, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;nhat_BA_W_in)</td></tr>
 <tr class="memdesc:ad7be539d413dd4d5146310c350a2d858"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad7be539d413dd4d5146310c350a2d858">More...</a><br /></td></tr>
 <tr class="separator:ad7be539d413dd4d5146310c350a2d858"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d67f7de122fad315abf7186decbd07f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a8d67f7de122fad315abf7186decbd07f">SignedDistancePair</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> a, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> b, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_ACa_in, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BCb_in, const T &amp;dist, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;nhat_BA_W_in, bool is_nhat_BA_W_unique_in)</td></tr>
-<tr class="memdesc:a8d67f7de122fad315abf7186decbd07f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8d67f7de122fad315abf7186decbd07f">More...</a><br /></td></tr>
-<tr class="separator:a8d67f7de122fad315abf7186decbd07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec40b3acb34bcf9cb494dffef2034cca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#aec40b3acb34bcf9cb494dffef2034cca">SignedDistancePair</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> a, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> b, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_ACa_in, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BCb_in, const T &amp;dist)</td></tr>
-<tr class="memdesc:aec40b3acb34bcf9cb494dffef2034cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aec40b3acb34bcf9cb494dffef2034cca">More...</a><br /></td></tr>
-<tr class="separator:aec40b3acb34bcf9cb494dffef2034cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09d9dc26f5ad9558065022d1cdab2b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a09d9dc26f5ad9558065022d1cdab2b27">SwapAAndB</a> ()</td></tr>
 <tr class="memdesc:a09d9dc26f5ad9558065022d1cdab2b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps the interpretation of geometries A and B.  <a href="#a09d9dc26f5ad9558065022d1cdab2b27">More...</a><br /></td></tr>
 <tr class="separator:a09d9dc26f5ad9558065022d1cdab2b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible,</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>MoveAssignable </p>
-</div></td></tr>
-<tr class="memitem:ab016e6fc0bd50f0d73f0ba91e3757d94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#ab016e6fc0bd50f0d73f0ba91e3757d94">SignedDistancePair</a> (const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;other)=default</td></tr>
-<tr class="separator:ab016e6fc0bd50f0d73f0ba91e3757d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a663af8ea7706567b33b6d1e5cda561"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a2a663af8ea7706567b33b6d1e5cda561">SignedDistancePair</a> (<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&amp;other)=default</td></tr>
-<tr class="separator:a2a663af8ea7706567b33b6d1e5cda561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3895f2acaff5697b963464c52619a85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#ae3895f2acaff5697b963464c52619a85">operator=</a> (const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;other)=default</td></tr>
-<tr class="separator:ae3895f2acaff5697b963464c52619a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60ccf35912eb5075445602c14faaab75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a60ccf35912eb5075445602c14faaab75">operator=</a> (<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&amp;other)=default</td></tr>
-<tr class="separator:a60ccf35912eb5075445602c14faaab75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a6a81fe1b9849db6994426e8a756f2ff5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a6a81fe1b9849db6994426e8a756f2ff5">SignedDistancePair</a> (const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;)=default</td></tr>
+<tr class="separator:a6a81fe1b9849db6994426e8a756f2ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b0d3895f2cd2cbeed07c2b2af575e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a01b0d3895f2cd2cbeed07c2b2af575e6">operator=</a> (const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;)=default</td></tr>
+<tr class="separator:a01b0d3895f2cd2cbeed07c2b2af575e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f3197be7cd4b4cecd2d173e15561fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd">SignedDistancePair</a> (<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ab2f3197be7cd4b4cecd2d173e15561fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3720ec8b826234c6e32a484ec2b23d43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a3720ec8b826234c6e32a484ec2b23d43">operator=</a> (<a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:a3720ec8b826234c6e32a484ec2b23d43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -171,13 +162,62 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4363c84b7dd5fd7fa52fc4367809ca08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a4363c84b7dd5fd7fa52fc4367809ca08">nhat_BA_W</a></td></tr>
 <tr class="memdesc:a4363c84b7dd5fd7fa52fc4367809ca08"><td class="mdescLeft">&#160;</td><td class="mdescRight">A direction of fastest increasing distance.  <a href="#a4363c84b7dd5fd7fa52fc4367809ca08">More...</a><br /></td></tr>
 <tr class="separator:a4363c84b7dd5fd7fa52fc4367809ca08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24254ec1c785a4340f6985643206bd5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html#a24254ec1c785a4340f6985643206bd5b">is_nhat_BA_W_unique</a> {false}</td></tr>
-<tr class="memdesc:a24254ec1c785a4340f6985643206bd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a24254ec1c785a4340f6985643206bd5b">More...</a><br /></td></tr>
-<tr class="separator:a24254ec1c785a4340f6985643206bd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6a81fe1b9849db6994426e8a756f2ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a81fe1b9849db6994426e8a756f2ff5">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2f3197be7cd4b4cecd2d173e15561fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f3197be7cd4b4cecd2d173e15561fd">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac7b001303ef94448442c885d0854f99e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7b001303ef94448442c885d0854f99e">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b001303ef94448442c885d0854f99e">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,60 +241,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab016e6fc0bd50f0d73f0ba91e3757d94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab016e6fc0bd50f0d73f0ba91e3757d94">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[2/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2a663af8ea7706567b33b6d1e5cda561"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a663af8ea7706567b33b6d1e5cda561">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad7be539d413dd4d5146310c350a2d858"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7be539d413dd4d5146310c350a2d858">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7be539d413dd4d5146310c350a2d858">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,144 +307,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d67f7de122fad315abf7186decbd07f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d67f7de122fad315abf7186decbd07f">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[5/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_ACa_in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BCb_in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>dist</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>nhat_BA_W_in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>is_nhat_BA_W_unique_in</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The id of the first geometry (A). </td></tr>
-    <tr><td class="paramname">b</td><td>The id of the second geometry (B). </td></tr>
-    <tr><td class="paramname">p_ACa_in</td><td>The witness point on geometry A's surface, in A's frame. </td></tr>
-    <tr><td class="paramname">p_BCb_in</td><td>The witness point on geometry B's surface, in B's frame. </td></tr>
-    <tr><td class="paramname">dist</td><td>The signed distance between p_A and p_B. </td></tr>
-    <tr><td class="paramname">nhat_BA_W_in</td><td>A direction of fastest increasing distance. </td></tr>
-    <tr><td class="paramname">is_nhat_BA_W_unique_in</td><td>True if nhat_BA_W is unique. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>nhat_BA_W_in is unit-length. (Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>"SignedDistancePair will no longer report uniqueness. " "If you require knowledge of uniqueness, please contact the " "Drake team." <br />
- This will be removed from Drake on or after "2021-08-01" .</dd></dl>
-
-</div>
-</div>
-<a id="aec40b3acb34bcf9cb494dffef2034cca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec40b3acb34bcf9cb494dffef2034cca">&#9670;&nbsp;</a></span>SignedDistancePair() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_ACa_in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BCb_in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const T &amp;&#160;</td>
-          <td class="paramname"><em>dist</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<p>We keep this constructor temporarily for backward compatibility. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">a</td><td>The id of the first geometry (A). </td></tr>
-    <tr><td class="paramname">b</td><td>The id of the second geometry (B). </td></tr>
-    <tr><td class="paramname">p_ACa_in</td><td>The witness point on geometry A's surface, in A's frame. </td></tr>
-    <tr><td class="paramname">p_BCb_in</td><td>The witness point on geometry B's surface, in B's frame. </td></tr>
-    <tr><td class="paramname">dist</td><td>The signed distance between p_A and p_B. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>"Please use default or full constructor instead." <br />
- This will be removed from Drake on or after "2021-08-01" .</dd></dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae3895f2acaff5697b963464c52619a85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3895f2acaff5697b963464c52619a85">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a01b0d3895f2cd2cbeed07c2b2af575e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b0d3895f2cd2cbeed07c2b2af575e6">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -468,7 +321,7 @@ Public Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&amp; operator= </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -481,8 +334,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a60ccf35912eb5075445602c14faaab75"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60ccf35912eb5075445602c14faaab75">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a3720ec8b826234c6e32a484ec2b23d43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3720ec8b826234c6e32a484ec2b23d43">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,7 +347,7 @@ Public Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&amp; operator= </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structdrake_1_1geometry_1_1_signed_distance_pair.html">SignedDistancePair</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"><em>other</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -572,24 +425,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The id of the second geometry in the pair. </p>
-
-</div>
-</div>
-<a id="a24254ec1c785a4340f6985643206bd5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24254ec1c785a4340f6985643206bd5b">&#9670;&nbsp;</a></span>is_nhat_BA_W_unique</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool is_nhat_BA_W_unique {false}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>"SignedDistancePair will no longer report uniqueness. " "If you require knowledge of uniqueness, please contact the " "Drake team." <br />
- This will be removed from Drake on or after "2021-08-01" .</dd></dl>
 
 </div>
 </div>

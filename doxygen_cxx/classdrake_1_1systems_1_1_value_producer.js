@@ -21,7 +21,7 @@ var classdrake_1_1systems_1_1_value_producer =
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#afbd69f8e0e4471d50579a3e2fe55551b", null ],
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a7b615f1e89450ff74cd425ddc864c46f", null ],
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a8b211916a59d93d6c9667a40561e7157", null ],
-    [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a7086fc8a4e3feac182df7564855bfdaf", null ],
+    [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a97c61a7e38441244d660d2f2cdc0e1cd", null ],
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a51474bff3a734ddb28e1dcdca9200fb3", null ],
     [ "ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a74eb4d5adf5946eb974a38c8183f5cda", null ],
     [ "~ValueProducer", "classdrake_1_1systems_1_1_value_producer.html#a58721f46775c64faf8620a927020ebc2", null ],

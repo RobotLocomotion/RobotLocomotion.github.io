@@ -5300,9 +5300,24 @@ entry must be non-null.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector for the indicated group as a mutable
+Eigen::VectorBlock, which allows mutation of the values, but does not
+allow resize() to be called on the vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a mutable reference to the vector holding data for the
+indicated group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
 indicated group.</p>
 </dd></dl>
 
@@ -5317,6 +5332,20 @@ group.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].num_groups">
 <code class="descname">num_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].num_groups" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[float], value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the <em>only</em> group.</p>
+<ol class="arabic simple" start="2">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[float], index: int, value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the indicated group.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].SetFrom">
@@ -5383,9 +5412,24 @@ entry must be non-null.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector for the indicated group as a mutable
+Eigen::VectorBlock, which allows mutation of the values, but does not
+allow resize() to be called on the vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a mutable reference to the vector holding data for the
+indicated group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
 indicated group.</p>
 </dd></dl>
 
@@ -5400,6 +5444,20 @@ group.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].num_groups">
 <code class="descname">num_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].num_groups" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], value: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the <em>only</em> group.</p>
+<ol class="arabic simple" start="2">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int, value: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the indicated group.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].SetFrom">
@@ -5464,9 +5522,24 @@ entry must be non-null.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[Expression].get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector for the indicated group as a mutable
+Eigen::VectorBlock, which allows mutation of the values, but does not
+allow resize() to be called on the vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[Expression]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a mutable reference to the vector holding data for the
+indicated group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[Expression].get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
 indicated group.</p>
 </dd></dl>
 
@@ -5481,6 +5554,20 @@ group.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].num_groups">
 <code class="descname">num_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].num_groups" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[Expression].set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[Expression], value: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the <em>only</em> group.</p>
+<ol class="arabic simple" start="2">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[Expression], index: int, value: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the indicated group.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].SetFrom">
@@ -5545,9 +5632,24 @@ entry must be non-null.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[float].get_mutable_value">
+<code class="descname">get_mutable_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].get_mutable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector for the indicated group as a mutable
+Eigen::VectorBlock, which allows mutation of the values, but does not
+allow resize() to be called on the vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[float].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a mutable reference to the vector holding data for the
+indicated group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[float].get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
 indicated group.</p>
 </dd></dl>
 
@@ -5562,6 +5664,20 @@ group.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_[float].num_groups">
 <code class="descname">num_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].num_groups" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[float].set_value">
+<code class="descname">set_value</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[float], value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the <em>only</em> group.</p>
+<ol class="arabic simple" start="2">
+<li>set_value(self: pydrake.systems.framework.DiscreteValues_[float], index: int, value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Sets the vector to the given value for the indicated group.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[float].SetFrom">

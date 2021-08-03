@@ -258,10 +258,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8b211916a59d93d6c9667a40561e7157"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a8b211916a59d93d6c9667a40561e7157">ValueProducer</a> (<a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> allocate, std::function&lt; SomeOutput(const SomeContext &amp;)&gt; calc)</td></tr>
 <tr class="memdesc:a8b211916a59d93d6c9667a40561e7157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (4d).  <a href="#a8b211916a59d93d6c9667a40561e7157">More...</a><br /></td></tr>
 <tr class="separator:a8b211916a59d93d6c9667a40561e7157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7086fc8a4e3feac182df7564855bfdaf"><td class="memTemplParams" colspan="2">template&lt;typename SomeOutput &gt; </td></tr>
-<tr class="memitem:a7086fc8a4e3feac182df7564855bfdaf"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a7086fc8a4e3feac182df7564855bfdaf">ValueProducer</a> (const SomeOutput &amp;model_value, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc, std::enable_if_t&lt;!std::is_convertible_v&lt; SomeOutput, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> &gt;&gt; *=0)</td></tr>
-<tr class="memdesc:a7086fc8a4e3feac182df7564855bfdaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (5b).  <a href="#a7086fc8a4e3feac182df7564855bfdaf">More...</a><br /></td></tr>
-<tr class="separator:a7086fc8a4e3feac182df7564855bfdaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c61a7e38441244d660d2f2cdc0e1cd"><td class="memTemplParams" colspan="2">template&lt;typename SomeOutput , typename  = std::enable_if_t&lt;!std::is_convertible_v&lt;          SomeOutput, AllocateCallback&gt;&gt;&gt; </td></tr>
+<tr class="memitem:a97c61a7e38441244d660d2f2cdc0e1cd"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a97c61a7e38441244d660d2f2cdc0e1cd">ValueProducer</a> (const SomeOutput &amp;model_value, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc)</td></tr>
+<tr class="memdesc:a97c61a7e38441244d660d2f2cdc0e1cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (5b).  <a href="#a97c61a7e38441244d660d2f2cdc0e1cd">More...</a><br /></td></tr>
+<tr class="separator:a97c61a7e38441244d660d2f2cdc0e1cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51474bff3a734ddb28e1dcdca9200fb3"><td class="memTemplParams" colspan="2">template&lt;class SomeInstance , typename SomeClass , typename SomeOutput &gt; </td></tr>
 <tr class="memitem:a51474bff3a734ddb28e1dcdca9200fb3"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a51474bff3a734ddb28e1dcdca9200fb3">ValueProducer</a> (const SomeInstance *instance, std::unique_ptr&lt; SomeOutput &gt;(SomeClass::*allocate)() const, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a> calc)</td></tr>
 <tr class="memdesc:a51474bff3a734ddb28e1dcdca9200fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload (5c).  <a href="#a51474bff3a734ddb28e1dcdca9200fb3">More...</a><br /></td></tr>
@@ -920,8 +920,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7086fc8a4e3feac182df7564855bfdaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7086fc8a4e3feac182df7564855bfdaf">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[20/22]</span></h2>
+<a id="a97c61a7e38441244d660d2f2cdc0e1cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c61a7e38441244d660d2f2cdc0e1cd">&#9670;&nbsp;</a></span>ValueProducer() <span class="overload">[20/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -936,13 +936,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a3947b9d8e95098739aaaea55af1d1ead">CalcCallback</a>&#160;</td>
-          <td class="paramname"><em>calc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::enable_if_t&lt;!std::is_convertible_v&lt; SomeOutput, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html#a4df060317da95358cd76822bd802de72">AllocateCallback</a> &gt;&gt; *&#160;</td>
-          <td class="paramname"> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>calc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

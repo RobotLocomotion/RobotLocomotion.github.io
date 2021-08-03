@@ -1,5 +1,12 @@
 var NAVTREEINDEX44 =
 {
+"nice__type__name_8h.html":[4,0,0,1,40],
+"nice__type__name__override_8h.html":[4,0,0,1,41],
+"nlopt__solver_8h.html":[4,0,0,10,38],
+"non__convex__optimization__util_8h.html":[4,0,0,10,39],
+"non__convex__optimization__util_8h.html#af6b2d302506a6a2fe144c79bd2598131":[4,0,0,10,39,1],
+"non__convex__optimization__util_8h.html#gaea88a3c59172c77e8537633348a057a9":[4,0,0,10,39,0],
+"normalize__vector_8h.html":[4,0,0,7,21],
 "normalize__vector_8h.html#a48484009086db12d881bea6bcaab2514":[4,0,0,7,21,0],
 "obb_8h.html":[4,0,0,4,2,32],
 "obj__to__surface__mesh_8h.html":[4,0,0,4,2,33],
@@ -242,12 +249,5 @@ var NAVTREEINDEX44 =
 "random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4":[4,0,0,7,25,3],
 "random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f":[4,0,0,7,25,0],
 "random__rotation_8h.html#af27920d083eb816f24f832091a662f28":[4,0,0,7,25,2],
-"random__source_8h.html":[4,0,0,11,6,17],
-"random__source_8h.html#a0545ab65838b464875abb7385495531a":[4,0,0,11,6,17,2],
-"random__source_8h.html#a1c2bfc060c7ef377cd46e15cd3d88dbe":[4,0,0,11,6,17,1],
-"region__of__attraction_8h.html":[4,0,0,11,0,13],
-"region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,11,0,13,1],
-"render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
-"render__camera_8h.html":[4,0,0,4,4,2],
-"render__doxygen_8h.html":[4,0,0,4,4,3]
+"random__source_8h.html":[4,0,0,11,6,17]
 };

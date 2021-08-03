@@ -245,7 +245,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0441681fa380dda6c70fe5b5a001bb90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the 3x3 identity RotationMatrix.  <a href="#a0441681fa380dda6c70fe5b5a001bb90">More...</a><br /></td></tr>
 <tr class="separator:a0441681fa380dda6c70fe5b5a001bb90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca9317cbeb6cef80d12e0dee4fd179d"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a6ca9317cbeb6cef80d12e0dee4fd179d">GetMeasureOfOrthonormality</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R)</td></tr>
-<tr class="memdesc:a6ca9317cbeb6cef80d12e0dee4fd179d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how close the matrix R is to to being a 3x3 orthonormal matrix by computing <code>‖R ⋅ Rᵀ - I‖∞</code> (i.e., the maximum absolute value of the difference between the elements of R ⋅ Rᵀ and the 3x3 identity matrix).  <a href="#a6ca9317cbeb6cef80d12e0dee4fd179d">More...</a><br /></td></tr>
+<tr class="memdesc:a6ca9317cbeb6cef80d12e0dee4fd179d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns how close the matrix R is to being a 3x3 orthonormal matrix by computing <code>‖R ⋅ Rᵀ - I‖∞</code> (i.e., the maximum absolute value of the difference between the elements of R ⋅ Rᵀ and the 3x3 identity matrix).  <a href="#a6ca9317cbeb6cef80d12e0dee4fd179d">More...</a><br /></td></tr>
 <tr class="separator:a6ca9317cbeb6cef80d12e0dee4fd179d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a5e8235ea5f9bb34bfa71b745546864"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a7a5e8235ea5f9bb34bfa71b745546864">IsOrthonormal</a> (const <a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt; &amp;R, double tolerance)</td></tr>
 <tr class="memdesc:a7a5e8235ea5f9bb34bfa71b745546864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if a generic Matrix3 has orthonormal vectors to within the threshold specified by <code>tolerance</code>.  <a href="#a7a5e8235ea5f9bb34bfa71b745546864">More...</a><br /></td></tr>
@@ -698,7 +698,7 @@ To orthonormalize a 3x3 matrix, use <a class="el" href="classdrake_1_1math_1_1_r
 </table>
 </div><div class="memdoc">
 
-<p>Returns how close the matrix R is to to being a 3x3 orthonormal matrix by computing <code>‖R ⋅ Rᵀ - I‖∞</code> (i.e., the maximum absolute value of the difference between the elements of R ⋅ Rᵀ and the 3x3 identity matrix). </p>
+<p>Returns how close the matrix R is to being a 3x3 orthonormal matrix by computing <code>‖R ⋅ Rᵀ - I‖∞</code> (i.e., the maximum absolute value of the difference between the elements of R ⋅ Rᵀ and the 3x3 identity matrix). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">R</td><td>matrix being checked for orthonormality. </td></tr>

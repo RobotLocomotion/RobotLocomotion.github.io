@@ -1,5 +1,12 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#a50929a6273d23c3db2a0ba8d431fa9d9":[3,0,0,16,6,17],
+"classdrake_1_1trajectories_1_1_trajectory.html#a51223614aa5ad65e500cce2625aaf328":[3,0,0,16,6,13],
+"classdrake_1_1trajectories_1_1_trajectory.html#a5921e7a9f7532c682fd111d829f0258e":[3,0,0,16,6,4],
+"classdrake_1_1trajectories_1_1_trajectory.html#a6a03dfabaf0999ebcae4cbf8cde49083":[3,0,0,16,6,14],
+"classdrake_1_1trajectories_1_1_trajectory.html#a6b15b4592b800d6cf4d9273f46a2774b":[3,0,0,16,6,1],
+"classdrake_1_1trajectories_1_1_trajectory.html#a7607cc5c56514557ed9441479ae70e71":[3,0,0,16,6,18],
+"classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e":[3,0,0,16,6,15],
 "classdrake_1_1trajectories_1_1_trajectory.html#a9507f1cc6b538dc632d20e3d681bbaba":[3,0,0,16,6,11],
 "classdrake_1_1trajectories_1_1_trajectory.html#ac51b842ba9d2ee39e9398c86fdc38a75":[3,0,0,16,6,8],
 "classdrake_1_1trajectories_1_1_trajectory.html#ae4c7cdf72ed60fd130e1985ecd8c3846":[3,0,0,16,6,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX38 =
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdca7dbb41ec30548b5703863365ae83a5dc":[4,0,0,6,3,1,2,1],
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9":[4,0,0,6,3,1,2,0],
 "differential__inverse__kinematics_8h.html#ga1419d6264a35506905a455d205a3af13":[4,0,0,6,3,1,6],
-"differential__inverse__kinematics_8h.html#ga6106c9d0180a87d59f7a36709f7d6785":[4,0,0,6,3,1,5],
-"differential__inverse__kinematics_8h.html#gab53fd2e1578db60ceb43b754671ae539":[4,0,0,6,3,1,4],
-"differential__inverse__kinematics__integrator_8h.html":[4,0,0,6,3,2],
-"dir_0200b18f7e83ea48cc715228d7cee9aa.html":[4,0,0,11,1,0],
-"dir_05142ce2278c744298ef3f06d9e628a4.html":[4,0,0,4,4],
-"dir_0767593f2fce2cf954de79364fec17e6.html":[4,0,0,8,0,1],
-"dir_0897ed8fd6dd400fbb3f13ca4cf30fd4.html":[4,0,0,9],
-"dir_0d10be3e24b4d05732d552ad443cc60a.html":[4,0,0,1,2]
+"differential__inverse__kinematics_8h.html#ga6106c9d0180a87d59f7a36709f7d6785":[4,0,0,6,3,1,5]
 };

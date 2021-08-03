@@ -145,6 +145,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a808120e3bb3ff14125effe132ea4b954"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a808120e3bb3ff14125effe132ea4b954">get_mutable_vector</a> (<a class="el" href="classint.html">int</a> index)</td></tr>
 <tr class="memdesc:a808120e3bb3ff14125effe132ea4b954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the vector holding data for the indicated group.  <a href="#a808120e3bb3ff14125effe132ea4b954">More...</a><br /></td></tr>
 <tr class="separator:a808120e3bb3ff14125effe132ea4b954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf7c6a1b4908c67e28bf45cfc58965a"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#abaf7c6a1b4908c67e28bf45cfc58965a">get_value</a> (<a class="el" href="classint.html">int</a> index) const</td></tr>
+<tr class="memdesc:abaf7c6a1b4908c67e28bf45cfc58965a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entire vector as a const Eigen::VectorBlock for the indicated group.  <a href="#abaf7c6a1b4908c67e28bf45cfc58965a">More...</a><br /></td></tr>
+<tr class="separator:abaf7c6a1b4908c67e28bf45cfc58965a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4080d4c479eb0baf14cec74d44374b8"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#aa4080d4c479eb0baf14cec74d44374b8">get_mutable_value</a> (<a class="el" href="classint.html">int</a> index)</td></tr>
+<tr class="memdesc:aa4080d4c479eb0baf14cec74d44374b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entire vector for the indicated group as a mutable Eigen::VectorBlock, which allows mutation of the values, but does not allow resize() to be called on the vector.  <a href="#aa4080d4c479eb0baf14cec74d44374b8">More...</a><br /></td></tr>
+<tr class="separator:aa4080d4c479eb0baf14cec74d44374b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfa3897316b313139081b8cf8487576"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a2bfa3897316b313139081b8cf8487576">set_value</a> (<a class="el" href="classint.html">int</a> index, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;value)</td></tr>
+<tr class="memdesc:a2bfa3897316b313139081b8cf8487576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector to the given value for the indicated group.  <a href="#a2bfa3897316b313139081b8cf8487576">More...</a><br /></td></tr>
+<tr class="separator:a2bfa3897316b313139081b8cf8487576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04f99bc8d40ae24884981b17f4801866"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a04f99bc8d40ae24884981b17f4801866"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a04f99bc8d40ae24884981b17f4801866">SetFrom</a> (const <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html">DiscreteValues</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a04f99bc8d40ae24884981b17f4801866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the values in this <a class="el" href="classdrake_1_1systems_1_1_discrete_values.html" title="DiscreteValues is a container for numerical but non-continuous state and parameters.">DiscreteValues</a> from the values in <code>other</code>, possibly writing through to unowned data.  <a href="#a04f99bc8d40ae24884981b17f4801866">More...</a><br /></td></tr>
@@ -179,6 +188,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae86dd78ddf0ff1f879ae4b6d42e026b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#aae86dd78ddf0ff1f879ae4b6d42e026b">get_mutable_vector</a> ()</td></tr>
 <tr class="memdesc:aae86dd78ddf0ff1f879ae4b6d42e026b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> containing the values for the <em>only</em> group.  <a href="#aae86dd78ddf0ff1f879ae4b6d42e026b">More...</a><br /></td></tr>
 <tr class="separator:aae86dd78ddf0ff1f879ae4b6d42e026b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a95cee47ba175ab6b8fd8f7cb2f82ab96">set_value</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;value)</td></tr>
+<tr class="memdesc:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector to the given value for the <em>only</em> group.  <a href="#a95cee47ba175ab6b8fd8f7cb2f82ab96">More...</a><br /></td></tr>
+<tr class="separator:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d33aecde019e5f62d662aa2ef142b34"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a4d33aecde019e5f62d662aa2ef142b34">get_value</a> () const</td></tr>
+<tr class="memdesc:a4d33aecde019e5f62d662aa2ef142b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entire vector as a const Eigen::VectorBlock for the <em>only</em> group.  <a href="#a4d33aecde019e5f62d662aa2ef142b34">More...</a><br /></td></tr>
+<tr class="separator:a4d33aecde019e5f62d662aa2ef142b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0db2779927764099fa8878ccaea85e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_discrete_values.html#a1b0db2779927764099fa8878ccaea85e">get_mutable_value</a> ()</td></tr>
+<tr class="memdesc:a1b0db2779927764099fa8878ccaea85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entire vector for the <em>only</em> group as a mutable Eigen::VectorBlock, which allows mutation of the values, but does not allow resize() to be called on the vector.  <a href="#a1b0db2779927764099fa8878ccaea85e">More...</a><br /></td></tr>
+<tr class="separator:a1b0db2779927764099fa8878ccaea85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">System compatibility</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>.</p>
 </div></td></tr>
@@ -431,6 +449,45 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1b0db2779927764099fa8878ccaea85e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0db2779927764099fa8878ccaea85e">&#9670;&nbsp;</a></span>get_mutable_value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; get_mutable_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the entire vector for the <em>only</em> group as a mutable Eigen::VectorBlock, which allows mutation of the values, but does not allow resize() to be called on the vector. </p>
+
+</div>
+</div>
+<a id="aa4080d4c479eb0baf14cec74d44374b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4080d4c479eb0baf14cec74d44374b8">&#9670;&nbsp;</a></span>get_mutable_value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; get_mutable_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the entire vector for the indicated group as a mutable Eigen::VectorBlock, which allows mutation of the values, but does not allow resize() to be called on the vector. </p>
+
+</div>
+</div>
 <a id="aae86dd78ddf0ff1f879ae4b6d42e026b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae86dd78ddf0ff1f879ae4b6d42e026b">&#9670;&nbsp;</a></span>get_mutable_vector() <span class="overload">[1/2]</span></h2>
 
@@ -486,6 +543,45 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Internal use only) Gets the id of the subsystem that created this object. </p>
+
+</div>
+</div>
+<a id="a4d33aecde019e5f62d662aa2ef142b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d33aecde019e5f62d662aa2ef142b34">&#9670;&nbsp;</a></span>get_value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; get_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the entire vector as a const Eigen::VectorBlock for the <em>only</em> group. </p>
+
+</div>
+</div>
+<a id="abaf7c6a1b4908c67e28bf45cfc58965a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf7c6a1b4908c67e28bf45cfc58965a">&#9670;&nbsp;</a></span>get_value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; get_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the entire vector as a const Eigen::VectorBlock for the indicated group. </p>
 
 </div>
 </div>
@@ -654,6 +750,56 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Internal use only) Records the id of the subsystem that created this object. </p>
+
+</div>
+</div>
+<a id="a95cee47ba175ab6b8fd8f7cb2f82ab96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cee47ba175ab6b8fd8f7cb2f82ab96">&#9670;&nbsp;</a></span>set_value() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_value </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vector to the given value for the <em>only</em> group. </p>
+
+</div>
+</div>
+<a id="a2bfa3897316b313139081b8cf8487576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfa3897316b313139081b8cf8487576">&#9670;&nbsp;</a></span>set_value() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the vector to the given value for the indicated group. </p>
 
 </div>
 </div>
