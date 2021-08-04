@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"globals.html":[4,1,0],
+"globals_defs.html":[4,1,2],
 "globals_func.html":[4,1,1],
 "gradient_8h.html":[4,0,0,7,14],
 "gradient__util_8h.html":[4,0,0,7,15],
@@ -83,8 +85,8 @@ var NAVTREEINDEX41 =
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
 "group__discrete__systems.html":[1,3,9],
 "group__discretization.html":[1,4,0,5],
 "group__drake__contacts.html":[1,4,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "implicit__integrator__test_8h.html#a514e263bd993573a6fc3779c8ef898f5":[4,0,0,11,0,0,5,9],
 "implicit__integrator__test_8h.html#a634404f9026fedb81c96589d5e6b411a":[4,0,0,11,0,0,5,25],
 "implicit__integrator__test_8h.html#a6ae35e1b9b7e6f3a355555a54b3aba01":[4,0,0,11,0,0,5,4],
-"implicit__integrator__test_8h.html#a7d81cabe8a6d598f990dc47f228cb0cc":[4,0,0,11,0,0,5,14],
-"implicit__integrator__test_8h.html#a7f6b93be07d871c8ff90c6018a226c5f":[4,0,0,11,0,0,5,1],
-"implicit__integrator__test_8h.html#a7f6b93be07d871c8ff90c6018a226c5fa2cbc28373980e683596d05debaa16d02":[4,0,0,11,0,0,5,1,0]
+"implicit__integrator__test_8h.html#a7d81cabe8a6d598f990dc47f228cb0cc":[4,0,0,11,0,0,5,14]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"namespaces.html":[2,0],
+"never__destroyed_8h.html":[4,0,0,1,39],
 "nice__type__name_8h.html":[4,0,0,1,40],
 "nice__type__name__override_8h.html":[4,0,0,1,41],
 "nlopt__solver_8h.html":[4,0,0,10,38],
@@ -208,7 +210,7 @@ var NAVTREEINDEX44 =
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
-"quadrature_8h.html":[4,0,0,8,3,2],
+"quadrature_8h.html":[4,0,0,8,3,3],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "random__rotation_8h.html":[4,0,0,7,25],
 "random__rotation_8h.html#a6c92561b046b32c1ebe172bd32dc8276":[4,0,0,7,25,1],
 "random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4":[4,0,0,7,25,3],
-"random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f":[4,0,0,7,25,0],
-"random__rotation_8h.html#af27920d083eb816f24f832091a662f28":[4,0,0,7,25,2],
-"random__source_8h.html":[4,0,0,11,6,17]
+"random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f":[4,0,0,7,25,0]
 };

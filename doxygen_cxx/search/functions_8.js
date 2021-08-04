@@ -180,7 +180,7 @@ var searchData=
   ['isallfingersstuck',['IsAllFingersStuck',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#ac3eabc49f382cf9c9a18aa81703c64df',1,'drake::examples::allegro_hand::AllegroHandMotionState']]],
   ['isanchored',['IsAnchored',['../classdrake_1_1multibody_1_1_multibody_plant.html#a4f05c3d8f8284a9d9056a4ae47cc0e18',1,'drake::multibody::MultibodyPlant']]],
   ['isanyhighfingersstuck',['IsAnyHighFingersStuck',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#aab4c9bfe283eaf9156497b3716dacb04',1,'drake::examples::allegro_hand::AllegroHandMotionState']]],
-  ['isapprox',['isApprox',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7',1,'drake::trajectories::PiecewisePolynomial::isApprox()'],['../classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25',1,'drake::multibody::SpatialVector::IsApprox()']]],
+  ['isapprox',['IsApprox',['../classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25',1,'drake::multibody::SpatialVector::IsApprox()'],['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7',1,'drake::trajectories::PiecewisePolynomial::isApprox()']]],
   ['isapproxequalabstolwithpermutedcolumns',['IsApproxEqualAbsTolWithPermutedColumns',['../namespacedrake.html#ab8c3f5f0514513155be9f674f2c2cd63',1,'drake']]],
   ['isbadjacobian',['IsBadJacobian',['../classdrake_1_1systems_1_1_implicit_integrator.html#ad5fffcba1f63c3d8ceae80a550558f92',1,'drake::systems::ImplicitIntegrator']]],
   ['isbothquaternionandquaterniondtok',['IsBothQuaternionAndQuaternionDtOK',['../namespacedrake_1_1math.html#a3b38bdfc1e3df8662c8726bc89a08ed0',1,'drake::math']]],

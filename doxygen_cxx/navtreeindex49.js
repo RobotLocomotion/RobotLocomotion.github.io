@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172":[3,0,0,52,2],
+"structdrake_1_1type__tag.html":[3,0,0,53],
+"structdrake_1_1type__tag.html#a834c467da58ea1d81821952d3c473b64":[3,0,0,53,0],
+"structdrake_1_1type__visit__with__default.html":[3,0,0,54],
 "structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,54,0],
 "structdrake_1_1type__visit__with__tag.html":[3,0,0,55],
 "structdrake_1_1type__visit__with__tag.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54":[3,0,0,55,0],
@@ -46,6 +50,9 @@ var NAVTREEINDEX49 =
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html":[3,0,1,26],
 "structstd_1_1less_3_01drake_1_1symbolic_1_1_variable_01_4.html#a69e9ace88f698342e05dcf0cc1899818":[3,0,1,26,0],
 "structstd_1_1numeric__limits_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,28],
+"structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,1,29],
+"structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html#a834c467da58ea1d81821952d3c473b64":[3,0,1,29,0],
+"structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,1,30],
 "subvector_8h.html":[4,0,0,11,3,37],
 "supervector_8h.html":[4,0,0,11,3,38],
 "surface__mesh_8h.html":[4,0,0,4,2,41],
@@ -242,12 +249,5 @@ var NAVTREEINDEX49 =
 "symbolic__expression__cell_8h.html#ab82da118fd73ba6ccc41e3eb2f00125b":[4,0,0,1,57,38],
 "symbolic__expression__cell_8h.html#ac06c87629b60cbdc34b8e2a9f715cd41":[4,0,0,1,57,59],
 "symbolic__expression__cell_8h.html#ac1eddc430d6a33fc13db8d53a51bdfd3":[4,0,0,1,57,43],
-"symbolic__expression__cell_8h.html#ac919050a36dacd7f943da0813c91f400":[4,0,0,1,57,60],
-"symbolic__expression__cell_8h.html#acb998316cfc15506d72b2f2843b4fa62":[4,0,0,1,57,37],
-"symbolic__expression__cell_8h.html#ad0aaf128d1ed75cbab9c4ca238e0ae6c":[4,0,0,1,57,47],
-"symbolic__expression__cell_8h.html#ae4927daffb66b9bd137c174d41d94444":[4,0,0,1,57,36],
-"symbolic__expression__cell_8h.html#ae9dfc929a3e771ece5e5d20312e96abd":[4,0,0,1,57,34],
-"symbolic__expression__cell_8h.html#aee17d0564b198d4c784811945707ddbf":[4,0,0,1,57,48],
-"symbolic__expression__cell_8h.html#af9473fec0f5aba36ac7c89281bf4d524":[4,0,0,1,57,46],
-"symbolic__expression__visitor_8h.html":[4,0,0,1,58]
+"symbolic__expression__cell_8h.html#ac919050a36dacd7f943da0813c91f400":[4,0,0,1,57,60]
 };

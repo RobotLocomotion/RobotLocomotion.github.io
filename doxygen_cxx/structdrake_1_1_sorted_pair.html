@@ -152,6 +152,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a56b636fcd9a8316a4477328c7f37d7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1df0b349750d2bf6d9c88a73808eba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#aa1df0b349750d2bf6d9c88a73808eba8">operator=</a> (<a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:aa1df0b349750d2bf6d9c88a73808eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Support for using SortedPair in structured bindings.</div></td></tr>
+<tr class="memitem:a081f9d487f4f53fbcad839740d361f30"><td class="memTemplParams" colspan="2">template&lt;std::size_t Index&gt; </td></tr>
+<tr class="memitem:a081f9d487f4f53fbcad839740d361f30"><td class="memTemplItemLeft" align="right" valign="top">std::tuple_element_t&lt; Index, <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a081f9d487f4f53fbcad839740d361f30">get</a> ()</td></tr>
+<tr class="separator:a081f9d487f4f53fbcad839740d361f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5512d85d8c2189c36c306753d89b5d00"><td class="memTemplParams" colspan="2">template&lt;std::size_t Index&gt; </td></tr>
+<tr class="memitem:a5512d85d8c2189c36c306753d89b5d00"><td class="memTemplItemLeft" align="right" valign="top">const std::tuple_element_t&lt; Index, <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a5512d85d8c2189c36c306753d89b5d00">get</a> () const</td></tr>
+<tr class="separator:a5512d85d8c2189c36c306753d89b5d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -337,6 +344,40 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the first (according to <code>operator&lt;</code>) of the objects. </p>
+
+</div>
+</div>
+<a id="a081f9d487f4f53fbcad839740d361f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a081f9d487f4f53fbcad839740d361f30">&#9670;&nbsp;</a></span>get() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple_element_t&lt;Index, <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt;T&gt; &gt;&amp; get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5512d85d8c2189c36c306753d89b5d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5512d85d8c2189c36c306753d89b5d00">&#9670;&nbsp;</a></span>get() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::tuple_element_t&lt;Index, <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt;T&gt; &gt;&amp; get </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

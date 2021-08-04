@@ -2,6 +2,8 @@ var sorted__pair_8h =
 [
     [ "SortedPair", "structdrake_1_1_sorted_pair.html", "structdrake_1_1_sorted_pair" ],
     [ "hash< drake::SortedPair< T > >", "structstd_1_1hash_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
+    [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
+    [ "tuple_element< Index, drake::SortedPair< T > >", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4" ],
     [ "MakeSortedPair", "sorted__pair_8h.html#a87d5210878ec865ee82bb87786eb996d", null ],
     [ "operator!=", "sorted__pair_8h.html#a642a411b9ac97aefd67450fd5717a890", null ],
     [ "operator<", "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3", null ],

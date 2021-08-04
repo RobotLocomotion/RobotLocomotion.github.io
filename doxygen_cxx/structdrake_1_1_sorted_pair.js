@@ -7,6 +7,8 @@ var structdrake_1_1_sorted_pair =
     [ "SortedPair", "structdrake_1_1_sorted_pair.html#a32b737917cbeeb58e2b54f4d4225bb6b", null ],
     [ "SortedPair", "structdrake_1_1_sorted_pair.html#ace5b7f162bab05d193bcdd27ddee7b3b", null ],
     [ "first", "structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632", null ],
+    [ "get", "structdrake_1_1_sorted_pair.html#a081f9d487f4f53fbcad839740d361f30", null ],
+    [ "get", "structdrake_1_1_sorted_pair.html#a5512d85d8c2189c36c306753d89b5d00", null ],
     [ "operator=", "structdrake_1_1_sorted_pair.html#a59742060de03744ff3bb16e42989d2af", null ],
     [ "operator=", "structdrake_1_1_sorted_pair.html#aa1df0b349750d2bf6d9c88a73808eba8", null ],
     [ "second", "structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1", null ],

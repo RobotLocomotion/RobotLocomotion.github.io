@@ -31,6 +31,8 @@ var searchData=
   ['trianglequadrature',['TriangleQuadrature',['../classdrake_1_1multibody_1_1_triangle_quadrature.html',1,'drake::multibody']]],
   ['trianglequadraturerule',['TriangleQuadratureRule',['../classdrake_1_1multibody_1_1_triangle_quadrature_rule.html',1,'drake::multibody']]],
   ['trigpoly',['TrigPoly',['../classdrake_1_1_trig_poly.html',1,'drake']]],
+  ['tuple_5felement_3c_20index_2c_20drake_3a_3asortedpair_3c_20t_20_3e_20_3e',['tuple_element&lt; Index, drake::SortedPair&lt; T &gt; &gt;',['../structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html',1,'std']]],
+  ['tuple_5fsize_3c_20drake_3a_3asortedpair_3c_20t_20_3e_20_3e',['tuple_size&lt; drake::SortedPair&lt; T &gt; &gt;',['../structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html',1,'std']]],
   ['type_5fat',['type_at',['../structdrake_1_1type__at.html',1,'drake']]],
   ['type_5fcheck_5fdifferent_5ffrom',['type_check_different_from',['../structdrake_1_1type__check__different__from.html',1,'drake']]],
   ['type_5fpack',['type_pack',['../structdrake_1_1type__pack.html',1,'drake']]],
