@@ -7501,8 +7501,12 @@ abstract state of this system.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareVectorInputPort">
-<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], name: str, model_vector: pydrake.systems.framework.BasicVector_[float], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
+<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, model_vector: pydrake.systems.framework.BasicVector_[float], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
 This is the best way to declare LeafSystem input ports that require
 subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
@@ -7511,6 +7515,17 @@ it as such. If the <code class="docutils literal"><span class="pre">model_vector
 VectorBase::GetElementBounds() constraints, they will be re-declared
 as inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System::DeclareInputPort() for more information.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued input port with type BasicVector and size
+<code class="docutils literal"><span class="pre">size</span></code>. If the port is intended to model a random noise or
+disturbance input, <code class="docutils literal"><span class="pre">random_type</span></code> can (optionally) be used to label
+it as such.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System::DeclareInputPort() for more information.</p>
@@ -7535,6 +7550,19 @@ member function available use one of the other signatures.</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
+<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, size: int, calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
+</ol>
+<p>(Advanced) Declares a vector-valued output port with type
+BasicVector&lt;T&gt; and size <code class="docutils literal"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+which is NaN when T = double. <code class="docutils literal"><span class="pre">vector_calc_function</span></code> is a function
+for calculating the port’s value at runtime. Note that this takes the
+calculator function in its most generic form; if you have a member
+function available use one of the other signatures.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafOutputPort::CalcVectorCallback</p>
+</div>
+<ol class="arabic simple" start="3">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.BasicVector_[float], arg1: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
 </ol>
 <p>(Deprecated.)</p>
@@ -8016,8 +8044,12 @@ abstract state of this system.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareVectorInputPort">
-<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
+<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</li>
+</ol>
+<p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
 This is the best way to declare LeafSystem input ports that require
 subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
@@ -8026,6 +8058,17 @@ it as such. If the <code class="docutils literal"><span class="pre">model_vector
 VectorBase::GetElementBounds() constraints, they will be re-declared
 as inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System::DeclareInputPort() for more information.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</li>
+</ol>
+<p>Declares a vector-valued input port with type BasicVector and size
+<code class="docutils literal"><span class="pre">size</span></code>. If the port is intended to model a random noise or
+disturbance input, <code class="docutils literal"><span class="pre">random_type</span></code> can (optionally) be used to label
+it as such.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System::DeclareInputPort() for more information.</p>
@@ -8050,6 +8093,19 @@ member function available use one of the other signatures.</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
+<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, size: int, calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.BasicVector_[AutoDiffXd]], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</li>
+</ol>
+<p>(Advanced) Declares a vector-valued output port with type
+BasicVector&lt;T&gt; and size <code class="docutils literal"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+which is NaN when T = double. <code class="docutils literal"><span class="pre">vector_calc_function</span></code> is a function
+for calculating the port’s value at runtime. Note that this takes the
+calculator function in its most generic form; if you have a member
+function available use one of the other signatures.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafOutputPort::CalcVectorCallback</p>
+</div>
+<ol class="arabic simple" start="3">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], arg0: pydrake.systems.framework.BasicVector_[AutoDiffXd], arg1: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.BasicVector_[AutoDiffXd]], None]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</li>
 </ol>
 <p>(Deprecated.)</p>
@@ -8529,8 +8585,12 @@ abstract state of this system.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareVectorInputPort">
-<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], name: str, model_vector: pydrake.systems.framework.BasicVector_[Expression], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
+<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: str, model_vector: pydrake.systems.framework.BasicVector_[Expression], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[Expression]</li>
+</ol>
+<p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
 This is the best way to declare LeafSystem input ports that require
 subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
@@ -8539,6 +8599,17 @@ it as such. If the <code class="docutils literal"><span class="pre">model_vector
 VectorBase::GetElementBounds() constraints, they will be re-declared
 as inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System::DeclareInputPort() for more information.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: str, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[Expression]</li>
+</ol>
+<p>Declares a vector-valued input port with type BasicVector and size
+<code class="docutils literal"><span class="pre">size</span></code>. If the port is intended to model a random noise or
+disturbance input, <code class="docutils literal"><span class="pre">random_type</span></code> can (optionally) be used to label
+it as such.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System::DeclareInputPort() for more information.</p>
@@ -8563,6 +8634,19 @@ member function available use one of the other signatures.</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
+<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: str, size: int, calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.BasicVector_[Expression]], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[Expression]</li>
+</ol>
+<p>(Advanced) Declares a vector-valued output port with type
+BasicVector&lt;T&gt; and size <code class="docutils literal"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+which is NaN when T = double. <code class="docutils literal"><span class="pre">vector_calc_function</span></code> is a function
+for calculating the port’s value at runtime. Note that this takes the
+calculator function in its most generic form; if you have a member
+function available use one of the other signatures.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafOutputPort::CalcVectorCallback</p>
+</div>
+<ol class="arabic simple" start="3">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], arg0: pydrake.systems.framework.BasicVector_[Expression], arg1: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.BasicVector_[Expression]], None]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</li>
 </ol>
 <p>(Deprecated.)</p>
@@ -9042,8 +9126,12 @@ abstract state of this system.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareVectorInputPort">
-<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], name: str, model_vector: pydrake.systems.framework.BasicVector_[float], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
+<code class="descname">DeclareVectorInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareVectorInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, model_vector: pydrake.systems.framework.BasicVector_[float], random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued input port using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
 This is the best way to declare LeafSystem input ports that require
 subclasses of BasicVector. The port’s size and type will be the same
 as model_vector. If the port is intended to model a random noise or
@@ -9052,6 +9140,17 @@ it as such. If the <code class="docutils literal"><span class="pre">model_vector
 VectorBase::GetElementBounds() constraints, they will be re-declared
 as inequality constraints on this system (see
 DeclareInequalityConstraint()).</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System::DeclareInputPort() for more information.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>DeclareVectorInputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
+</ol>
+<p>Declares a vector-valued input port with type BasicVector and size
+<code class="docutils literal"><span class="pre">size</span></code>. If the port is intended to model a random noise or
+disturbance input, <code class="docutils literal"><span class="pre">random_type</span></code> can (optionally) be used to label
+it as such.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">System::DeclareInputPort() for more information.</p>
@@ -9076,6 +9175,19 @@ member function available use one of the other signatures.</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
 <ol class="arabic simple" start="2">
+<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, size: int, calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
+</ol>
+<p>(Advanced) Declares a vector-valued output port with type
+BasicVector&lt;T&gt; and size <code class="docutils literal"><span class="pre">size</span></code>, using the drake::dummy_value&lt;T&gt;,
+which is NaN when T = double. <code class="docutils literal"><span class="pre">vector_calc_function</span></code> is a function
+for calculating the port’s value at runtime. Note that this takes the
+calculator function in its most generic form; if you have a member
+function available use one of the other signatures.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafOutputPort::CalcVectorCallback</p>
+</div>
+<ol class="arabic simple" start="3">
 <li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.BasicVector_[float], arg1: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
 </ol>
 <p>(Deprecated.)</p>

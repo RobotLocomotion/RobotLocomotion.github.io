@@ -822,6 +822,7 @@ var hierarchy =
               ] ],
               [ "TrajectoryAffineSystem< T >", "classdrake_1_1systems_1_1_trajectory_affine_system.html", null ]
             ] ],
+            [ "VectorLogSink< T >", "classdrake_1_1systems_1_1_vector_log_sink.html", null ],
             [ "VectorSystem< T >", "classdrake_1_1systems_1_1_vector_system.html", [
               [ "MultibodyForceToWsgForceSystem< T >", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html", null ],
               [ "BarycentricMeshSystem< T >", "classdrake_1_1systems_1_1_barycentric_mesh_system.html", null ],

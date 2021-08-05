@@ -64,10 +64,13 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "DeclareStateOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#a60b72f3a421d0dacc918c304649b6573", null ],
     [ "DeclareStateOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#ae5a6b16b54a2ae435e3e89980e4229e9", null ],
     [ "DeclareVectorInputPort", "classdrake_1_1systems_1_1_leaf_system.html#ab1160102eed5c5ea6e9f89c7e8a2d15b", null ],
+    [ "DeclareVectorInputPort", "classdrake_1_1systems_1_1_leaf_system.html#a6d3e2a9b0eaa77ef62f14507ccf55884", null ],
     [ "DeclareVectorInputPort", "classdrake_1_1systems_1_1_leaf_system.html#aef8b04e5c60eafb98669564a96f9e918", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#a11479a5cb19f65f35f1a7f5530fb42a0", null ],
+    [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#ac0e6bf117c89b76c8893cf45f1ba652a", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#a580e15b4d10db0b8c07762b3ac36e632", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#aa76b1793d533fe138f7bd29fd84cd230", null ],
+    [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#af3da3722efc85a5f8ab121b8c21664c5", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#ab80f86f8f54344373ce6597afd8fd55f", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#afae593893666b820d3c725e1570967bd", null ],
     [ "DeclareVectorOutputPort", "classdrake_1_1systems_1_1_leaf_system.html#a2a848b1098292e9cf46c11d45f73efe7", null ],
@@ -92,8 +95,8 @@ var classdrake_1_1systems_1_1_leaf_system =
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#a521a1bd4eee88561b0e1a3b06b7fe1b7", null ],
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#a650d4bdc065de71ea29a608f9e5a1261", null ],
     [ "MakeWitnessFunction", "classdrake_1_1systems_1_1_leaf_system.html#af91c7a0aa53961ed14570771874bae47", null ],
-    [ "operator=", "classdrake_1_1systems_1_1_leaf_system.html#a2a5ff32e4a40707c73a10a0ea24029c0", null ],
     [ "operator=", "classdrake_1_1systems_1_1_leaf_system.html#a28e17a9a1a303fb56956cfe9e989ca2f", null ],
+    [ "operator=", "classdrake_1_1systems_1_1_leaf_system.html#a2a5ff32e4a40707c73a10a0ea24029c0", null ],
     [ "SetDefaultParameters", "classdrake_1_1systems_1_1_leaf_system.html#a48a5a76172d2c18e3ac495b44c866c1b", null ],
     [ "SetDefaultState", "classdrake_1_1systems_1_1_leaf_system.html#ac920e22e905b83dbc0abaaa57d2c0251", null ]
 ];

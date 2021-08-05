@@ -484,6 +484,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_vector_log.html">VectorLog</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This utility class serves as an in-memory cache of time-dependent vector values.  <a href="classdrake_1_1systems_1_1_vector_log.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html">VectorLogSink</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A discrete sink block which logs its vector-valued input to per-context memory.  <a href="classdrake_1_1systems_1_1_vector_log_sink.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_vector_system.html">VectorSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base class that specializes <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> for use with only zero or one vector input ports, and only zero or one vector output ports.  <a href="classdrake_1_1systems_1_1_vector_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -569,6 +572,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a1c2bfc060c7ef377cd46e15cd3d88dbe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a1c2bfc060c7ef377cd46e15cd3d88dbe">RandomSourced</a> = internal::RandomSourceT&lt; double &gt;</td></tr>
 <tr class="memdesc:a1c2bfc060c7ef377cd46e15cd3d88dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for a <a class="el" href="classdrake_1_1systems_1_1_random_source.html" title="A source block which generates random numbers at a fixed sampling interval, with a zero-order hold be...">RandomSource</a> that uses the <code>double</code> scalar type.  <a href="#a1c2bfc060c7ef377cd46e15cd3d88dbe">More...</a><br /></td></tr>
 <tr class="separator:a1c2bfc060c7ef377cd46e15cd3d88dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84c84e9fbb652ce19106e2f2e1f3d15"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15">TriggerTypeSet</a> = std::unordered_set&lt; <a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">TriggerType</a>, <a class="el" href="namespacedrake.html#a323dc8b0cc629c61d4da8feeaa8cd4f5">DefaultHash</a> &gt;</td></tr>
+<tr class="separator:ac84c84e9fbb652ce19106e2f2e1f3d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -701,6 +706,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a0545ab65838b464875abb7385495531a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a0545ab65838b464875abb7385495531a">AddRandomInputs</a> (double sampling_interval_sec, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *builder)</td></tr>
 <tr class="memdesc:a0545ab65838b464875abb7385495531a"><td class="mdescLeft">&#160;</td><td class="mdescRight">For each subsystem input port in <code>builder</code> that is (a) not yet connected and (b) labeled as random in the <a class="el" href="classdrake_1_1systems_1_1_input_port.html" title="An InputPort is a System resource that describes the kind of input a System accepts,...">InputPort</a>, this method will add a new <a class="el" href="classdrake_1_1systems_1_1_random_source.html" title="A source block which generates random numbers at a fixed sampling interval, with a zero-order hold be...">RandomSource</a> system of the appropriate type and connect it to the subsystem input port.  <a href="#a0545ab65838b464875abb7385495531a">More...</a><br /></td></tr>
 <tr class="separator:a0545ab65838b464875abb7385495531a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f7dd25823e78194ea36eabbd525cea"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:af2f7dd25823e78194ea36eabbd525cea"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html">VectorLogSink</a>&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#af2f7dd25823e78194ea36eabbd525cea">LogVectorOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;src, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *builder, double publish_period=0.0)</td></tr>
+<tr class="memdesc:af2f7dd25823e78194ea36eabbd525cea"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogVectorOutput provides a convenience function for adding a <a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html" title="A discrete sink block which logs its vector-valued input to per-context memory.">VectorLogSink</a>, initialized to the correct size, and connected to an output in a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>.  <a href="#af2f7dd25823e78194ea36eabbd525cea">More...</a><br /></td></tr>
+<tr class="separator:af2f7dd25823e78194ea36eabbd525cea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a3fea6ce8db9489e5329587daa11b3"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a91a3fea6ce8db9489e5329587daa11b3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html">VectorLogSink</a>&lt; T &gt; *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a91a3fea6ce8db9489e5329587daa11b3">LogVectorOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;src, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15">TriggerTypeSet</a> &amp;publish_triggers, double publish_period=0.0)</td></tr>
+<tr class="memdesc:a91a3fea6ce8db9489e5329587daa11b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">LogVectorOutput provides a convenience function for adding a <a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html" title="A discrete sink block which logs its vector-valued input to per-context memory.">VectorLogSink</a>, initialized to the correct size, and connected to an output in a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>.  <a href="#a91a3fea6ce8db9489e5329587daa11b3">More...</a><br /></td></tr>
+<tr class="separator:a91a3fea6ce8db9489e5329587daa11b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1041,6 +1054,20 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Serves as the local index for constraints declared on a given <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </p>
+
+</div>
+</div>
+<a id="ac84c84e9fbb652ce19106e2f2e1f3d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84c84e9fbb652ce19106e2f2e1f3d15">&#9670;&nbsp;</a></span>TriggerTypeSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15">TriggerTypeSet</a> =  std::unordered_set&lt;<a class="el" href="namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9">TriggerType</a>, <a class="el" href="namespacedrake.html#a323dc8b0cc629c61d4da8feeaa8cd4f5">DefaultHash</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1392,6 +1419,107 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Tests whether the given device under test of type S&lt;double&gt; can be converted to use Expression as its scalar type. </p>
+
+</div>
+</div>
+<a id="af2f7dd25823e78194ea36eabbd525cea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2f7dd25823e78194ea36eabbd525cea">&#9670;&nbsp;</a></span>LogVectorOutput() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html">VectorLogSink</a>&lt;T&gt;* drake::systems::LogVectorOutput </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>publish_period</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LogVectorOutput provides a convenience function for adding a <a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html" title="A discrete sink block which logs its vector-valued input to per-context memory.">VectorLogSink</a>, initialized to the correct size, and connected to an output in a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>. </p>
+<p>This overload supports the default set of publish triggers. See <a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html#vector_log_sink_default_triggers">default triggers description</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the output port to attach logging to. </td></tr>
+    <tr><td class="paramname">builder</td><td>the diagram builder. </td></tr>
+    <tr><td class="paramname">publish_period</td><td>Period that messages will be published (optional). If the publish period is zero, <a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html" title="A discrete sink block which logs its vector-valued input to per-context memory.">VectorLogSink</a> will use per-step publishing instead; see <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a49a07c6bbccc4464d5d6192889c3d2e6" title="Declares that a Publish event should occur at initialization and at the end of every trajectory-advan...">LeafSystem::DeclarePerStepPublishEvent()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>publish_period is non-negative. </dd></dl>
+
+</div>
+</div>
+<a id="a91a3fea6ce8db9489e5329587daa11b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a3fea6ce8db9489e5329587daa11b3">&#9670;&nbsp;</a></span>LogVectorOutput() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html">VectorLogSink</a>&lt;T&gt;* drake::systems::LogVectorOutput </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>builder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15">TriggerTypeSet</a> &amp;&#160;</td>
+          <td class="paramname"><em>publish_triggers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>publish_period</em> = <code>0.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>LogVectorOutput provides a convenience function for adding a <a class="el" href="classdrake_1_1systems_1_1_vector_log_sink.html" title="A discrete sink block which logs its vector-valued input to per-context memory.">VectorLogSink</a>, initialized to the correct size, and connected to an output in a <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>. </p>
+<p>This overload supports the full variety of publish trigger behavior.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">src</td><td>the output port to attach logging to. </td></tr>
+    <tr><td class="paramname">builder</td><td>the diagram builder. </td></tr>
+    <tr><td class="paramname">publish_triggers</td><td>Set of triggers that determine when messages will be published. Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will throw an error if empty or if unsupported types are provided. </td></tr>
+    <tr><td class="paramname">publish_period</td><td>Period that messages will be published (optional). publish_period should only be non-zero if one of the publish_triggers is kPeriodic. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>publish_period is non-negative. </dd>
+<dd>
+publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd></dl>
 
 </div>
 </div>

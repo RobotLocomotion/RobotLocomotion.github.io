@@ -41,6 +41,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "vector_log.h", "vector__log_8h.html", [
       [ "VectorLog", "classdrake_1_1systems_1_1_vector_log.html", "classdrake_1_1systems_1_1_vector_log" ]
     ] ],
+    [ "vector_log_sink.h", "vector__log__sink_8h.html", "vector__log__sink_8h" ],
     [ "wrap_to_system.h", "wrap__to__system_8h.html", null ],
     [ "zero_order_hold.h", "zero__order__hold_8h.html", null ]
 ];
