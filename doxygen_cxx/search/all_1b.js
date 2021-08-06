@@ -102,6 +102,7 @@ var searchData=
   ['_7emidpointintegrationconstraint',['~MidPointIntegrationConstraint',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1',1,'drake::systems::trajectory_optimization::MidPointIntegrationConstraint']]],
   ['_7eminimumdistanceconstraint',['~MinimumDistanceConstraint',['../classdrake_1_1multibody_1_1_minimum_distance_constraint.html#a9623b17216753d2cc42cf54fc6e2dd79',1,'drake::multibody::MinimumDistanceConstraint']]],
   ['_7eminimumvalueconstraint',['~MinimumValueConstraint',['../classdrake_1_1solvers_1_1_minimum_value_constraint.html#a382ce7201d11202f72729b4960871a43',1,'drake::solvers::MinimumValueConstraint']]],
+  ['_7eminkowskisum',['~MinkowskiSum',['../classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ab329d54101a6da1d831312618012bf8f',1,'drake::geometry::optimization::MinkowskiSum']]],
   ['_7emobylcpsolver',['~MobyLCPSolver',['../classdrake_1_1solvers_1_1_moby_l_c_p_solver.html#a3d0d535de5f35d05770d687b8ac869d3',1,'drake::solvers::MobyLCPSolver']]],
   ['_7emoseksolver',['~MosekSolver',['../classdrake_1_1solvers_1_1_mosek_solver.html#a0259e731ab5d911ef7952d085788bbf4',1,'drake::solvers::MosekSolver']]],
   ['_7emoveikdemobase',['~MoveIkDemoBase',['../classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#a0bc37e80cd39e4c23a263a345d5fc244',1,'drake::manipulation::util::MoveIkDemoBase']]],

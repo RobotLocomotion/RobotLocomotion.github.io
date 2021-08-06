@@ -647,6 +647,7 @@ var hierarchy =
       [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
         [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
         [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
+        [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
         [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
         [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]
       ] ],
@@ -1022,6 +1023,7 @@ var hierarchy =
     [ "Rotation::Uniform", "structdrake_1_1schema_1_1_rotation_1_1_uniform.html", null ],
     [ "uniform_real_distribution< drake::symbolic::Expression >", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", null ],
     [ "unique_ptr< T >", null, [
+      [ "copyable_unique_ptr< ConvexSet >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::AbstractValue >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::render::RenderEngine >", "classdrake_1_1copyable__unique__ptr.html", null ],
       [ "copyable_unique_ptr< drake::geometry::Shape >", "classdrake_1_1copyable__unique__ptr.html", null ],

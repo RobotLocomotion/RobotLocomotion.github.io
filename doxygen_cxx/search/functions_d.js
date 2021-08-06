@@ -108,6 +108,7 @@ var searchData=
   ['num_5fsubscribers',['num_subscribers',['../classdrake_1_1systems_1_1_dependency_tracker.html#a69b8a99844122758ea5859a1a420a355',1,'drake::systems::DependencyTracker']]],
   ['num_5fsubstates',['num_substates',['../classdrake_1_1systems_1_1_diagram_continuous_state.html#a76984b1fca2a8126623cfd8e94e05608',1,'drake::systems::DiagramContinuousState']]],
   ['num_5fsubsystems',['num_subsystems',['../classdrake_1_1systems_1_1_diagram_event_collection.html#a09a19eb1363331358c0b847bca6d499c',1,'drake::systems::DiagramEventCollection::num_subsystems()'],['../classdrake_1_1systems_1_1_diagram_composite_event_collection.html#a09a19eb1363331358c0b847bca6d499c',1,'drake::systems::DiagramCompositeEventCollection::num_subsystems()']]],
+  ['num_5fterms',['num_terms',['../classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#a7ffbc0928c59ef6d1ed744bcfea6be0b',1,'drake::geometry::optimization::MinkowskiSum']]],
   ['num_5ftotal_5finputs',['num_total_inputs',['../classdrake_1_1systems_1_1_system_base.html#a61fbc5b339d9006ff53e39b8df10c611',1,'drake::systems::SystemBase']]],
   ['num_5ftotal_5foutputs',['num_total_outputs',['../classdrake_1_1systems_1_1_system_base.html#ae1394e3cf29023475b4983cb4ad16e86',1,'drake::systems::SystemBase']]],
   ['num_5ftotal_5fstates',['num_total_states',['../classdrake_1_1systems_1_1_context.html#ac544f3f782615e62cb59a3423fbbe812',1,'drake::systems::Context']]],
