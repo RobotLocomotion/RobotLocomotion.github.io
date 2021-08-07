@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a52ec91bfc0bdaeacdb3be7800ab7d43e":[3,0,0,16,4,17],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a611b9bd79f548904a032ba3992d705e7":[3,0,0,16,4,15],
+"classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a6fd5552029547f8e16ebbed98e108bbb":[3,0,0,16,4,3],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a76ec9d05feedef776f4510cfdc3caecd":[3,0,0,16,4,2],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a847303eb7ec2b752d7eee59d3f07ea0e":[3,0,0,16,4,7],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,4,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "default__scalars__pybind_8h.html#a8a3b7387557e1dd66533247e34770031":[4,0,0,0,0,0,2,2],
 "default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
-"deformable__volume__mesh_8h.html":[4,0,0,4,2,8],
-"deformation__gradient__data_8h.html":[4,0,0,8,3,0],
-"demultiplexer_8h.html":[4,0,0,11,6,5],
-"dense__data_8h.html":[4,0,0,10,0,0,0]
+"deformable__volume__mesh_8h.html":[4,0,0,4,2,8]
 };

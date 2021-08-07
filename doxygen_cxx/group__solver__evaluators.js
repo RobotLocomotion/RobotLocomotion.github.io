@@ -181,8 +181,9 @@ var group__solver__evaluators =
       [ "A", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a2bc29ebb595afdf08aab81950b31640b", null ],
       [ "A_dense", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a16722a3fa6c094a05d2d1dd8ebcc7454", null ],
       [ "b", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#aae45694d3595659922653fd027d15cb6", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7f34e62d2679ef1dbea01e82d39a2698", null ],
-      [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a47dc7cc63c329390bf34f2033f0b23ac", null ]
+      [ "eval_type", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#ac21e1e783a8fb1816cba0db29cf0efd2", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a47dc7cc63c329390bf34f2033f0b23ac", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7f34e62d2679ef1dbea01e82d39a2698", null ]
     ] ],
     [ "RotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html", [
       [ "RotatedLorentzConeConstraint", "classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a9cbe28e9a396f2bb9f9d1896c7f80574", null ],

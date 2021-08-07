@@ -1314,7 +1314,7 @@ This will be removed from Drake on or after 2021-09-01.</dd>
 <p>A meta-sensor that houses RGB, depth, and label cameras, producing
 their corresponding images based on the contents of the
 geometry::SceneGraph.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; X_WB</td></tr></table></td></tr></table><p>The following text uses terminology and conventions from CameraInfo.
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensor</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; X_WB (2021-12-01 deprecated)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><p>The following text uses terminology and conventions from CameraInfo.
 Please review its documentation.</p>
 <p>This class uses the following frames:</p>
 <ul class="simple">
@@ -1392,6 +1392,13 @@ window based on the value of <code class="docutils literal"><span class="pre">sh
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.sensors.RgbdSensor.body_pose_in_world_output_port">
+<code class="descname">body_pose_in_world_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensor</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.body_pose_in_world_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the abstract-valued output port (containing a RigidTransform)
+which reports the pose of the body in the world frame (X_WB).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.sensors.RgbdSensor.color_camera_info">
 <code class="descname">color_camera_info</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensor</em><span class="sig-paren">)</span> &#x2192; drake::systems::sensors::CameraInfo<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.color_camera_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the intrinsics properties of the color camera model.</p>
@@ -1457,8 +1464,14 @@ ImageLabel16I.</p>
 <dl class="method">
 <dt id="pydrake.systems.sensors.RgbdSensor.X_WB_output_port">
 <code class="descname">X_WB_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensor</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.X_WB_output_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the abstract-valued output port that contains a RigidTransform
-for <code class="docutils literal"><span class="pre">X_WB</span></code>.</p>
+<dd><p>Returns the abstract-valued output port that contains a
+rendering::PoseVector for <code class="docutils literal"><span class="pre">X_WB</span></code>. <a href="#id1"><span class="problematic" id="id2">*</span></a>/ (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please use the body_pose_in_world_output_port() for a
+RigidTransform-valued pose. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -1469,7 +1482,7 @@ for <code class="docutils literal"><span class="pre">X_WB</span></code>.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>Wraps a continuous RgbdSensor with a zero-order hold to create a
 discrete sensor.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; X_WB</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; X_WB (2021-12-01 deprecated)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.sensors.RgbdSensorDiscrete.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensorDiscrete</em>, <em>sensor: pydrake.systems.sensors.RgbdSensor</em>, <em>period: float = 0.03333333333333333</em>, <em>render_label_image: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a diagram containing a (non-registered) RgbdSensor that
@@ -1484,6 +1497,15 @@ will update at a given rate.</p>
 If false, <code class="docutils literal"><span class="pre">label_image_output_port</span></code> will raise an error if
 called.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.sensors.RgbdSensorDiscrete.body_pose_in_world_output_port">
+<code class="descname">body_pose_in_world_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensorDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.body_pose_in_world_output_port" title="Permalink to this definition">¶</a></dt>
+<dd><div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">RgbdSensor::body_pose_in_world_output_port().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -1553,8 +1575,14 @@ called.</dd>
 <code class="descname">X_WB_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensorDiscrete</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete.X_WB_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">RgbdSensor::base_pose_output_port().</p>
+<p class="last">RgbdSensor::base_pose_output_port(). <a href="#id3"><span class="problematic" id="id4">*</span></a>/ (Deprecated.)</p>
 </div>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Please use the body_pose_in_world_output_port() for a
+RigidTransform-valued pose. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

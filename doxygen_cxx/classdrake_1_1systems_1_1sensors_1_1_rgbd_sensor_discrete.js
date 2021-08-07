@@ -3,6 +3,7 @@ var classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete =
     [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ad21badaf40ab842db851a4a380c0e22f", null ],
     [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ab9ed4e2a0b5730711b8a3d28804e9a07", null ],
     [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a8c8d309d9c89915e9954359bd2780a90", null ],
+    [ "body_pose_in_world_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031", null ],
     [ "color_image_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a008e7b4be9970662f22b3e31fbcc5a2b", null ],
     [ "depth_image_16U_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a895ff707132dabf15a997d7aec0b23a1", null ],
     [ "depth_image_32F_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#ae506e99f31653fd9861c90d1623163fd", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1systems_1_1_vector_base.html#a263f433b6b65dbda74b1e1f43870d0f5":[3,0,0,14,125,16],
 "classdrake_1_1systems_1_1_vector_base.html#a2d4b36a43041d6505f82836a6aeccd52":[3,0,0,14,125,18],
 "classdrake_1_1systems_1_1_vector_base.html#a2fe79641d14373b863f2bb2a6bf40d14":[3,0,0,14,125,10],
 "classdrake_1_1systems_1_1_vector_base.html#a32def866adfc4d6ce3dfe3255881651c":[3,0,0,14,125,21],
@@ -248,6 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#a5b6e82fc90a8e89c85d67628bfe637b6":[3,0,0,14,2,0,2],
 "classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#a79577c7dd3777008f117e7f54445de0f":[3,0,0,14,2,0,7],
 "classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#a7d5e2a9587a28ade6d11204f5137a56c":[3,0,0,14,2,0,14],
-"classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#a8ca0e76fa665125f1e50bd1ed8dbd213":[3,0,0,14,2,0,8],
-"classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#a8fe45de4948370dc046a9266603eb71f":[3,0,0,14,2,0,10]
+"classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html#a8ca0e76fa665125f1e50bd1ed8dbd213":[3,0,0,14,2,0,8]
 };

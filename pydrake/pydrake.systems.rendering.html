@@ -200,6 +200,14 @@ frame A in the world frame, Xdot_WA, in the form <code class="docutils literal">
 where <code class="docutils literal"><span class="pre">p</span></code> is the derivatives of x-y-z translation, and <code class="docutils literal"><span class="pre">R</span></code> is the
 derivatives of x-y-z rotation.</p>
 <p>The exact order of elements is <code class="docutils literal"><span class="pre">{ωx,</span> <span class="pre">ωy,</span> <span class="pre">ωz,</span> <span class="pre">vx,</span> <span class="pre">vy,</span> <span class="pre">vz}</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">(Deprecated</span></code>:</dt>
+<dd>.)</dd>
+<dt>Deprecated:</dt>
+<dd>FrameVelocity is no longer in use. Visualizers typically connect
+to SceneGraph’s QueryObject port. This will be removed from Drake
+on or after 2021-12-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.systems.rendering.FrameVelocity.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.rendering.FrameVelocity.__init__" title="Permalink to this definition">¶</a></dt>
@@ -207,14 +215,14 @@ derivatives of x-y-z rotation.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.systems.rendering.FrameVelocity) -&gt; None</li>
 </ol>
-<p>Default constructor.</p>
+<p>Default constructor. This class has been deprecated and will be removed on or after 2021-12-01.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.rendering.FrameVelocity, velocity: pydrake.multibody.math.SpatialVelocity_[float]) -&gt; None</li>
 </ol>
 <p>Fully-parameterized constructor.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">velocity</span></code>:</dt>
-<dd>the entire spatial velocity V_WA.</dd>
+<dd>the entire spatial velocity V_WA. This class has been deprecated and will be removed on or after 2021-12-01.</dd>
 </dl>
 </dd></dl>
 
@@ -318,10 +326,18 @@ directly from the PoseBundle.</li>
 every pose in the Diagram should appear as an input to it. Then,
 Systems that need to ingest every pose in the universe, such as
 renderers or sensor models, can simply depend on the output.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">(Deprecated</span></code>:</dt>
+<dd>.)</dd>
+<dt>Deprecated:</dt>
+<dd>PoseAggregator is no longer in use. Visualizers typically connect
+to SceneGraph’s QueryObject port. This will be removed from Drake
+on or after 2021-12-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.systems.rendering.PoseAggregator.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseAggregator</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a default aggregator (with no inputs).</p>
+<dd><p>Constructs a default aggregator (with no inputs). This class has been deprecated and will be removed on or after 2021-12-01.</p>
 </dd></dl>
 
 <dl class="method">
@@ -340,18 +356,7 @@ with the same <code class="docutils literal"><span class="pre">model_instance_id
 <dl class="method">
 <dt id="pydrake.systems.rendering.PoseAggregator.AddSinglePoseAndVelocityInput">
 <code class="descname">AddSinglePoseAndVelocityInput</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseAggregator</em>, <em>arg0: str</em>, <em>arg1: int</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.rendering.PoseVelocityInputPorts<a class="headerlink" href="#pydrake.systems.rendering.PoseAggregator.AddSinglePoseAndVelocityInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds an input for a PoseVector, and a corresponding input for a
-FrameVelocity. <code class="docutils literal"><span class="pre">name</span></code> must be unique for all inputs with the same
-<code class="docutils literal"><span class="pre">model_instance_id</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Input ports for pose and velocity.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -364,10 +369,19 @@ FrameVelocity. The poses and velocities are expressed in the world
 frame: X_WFi, V_WFi. Each pose has a name and a model instance ID. If
 two poses in the bundle have the same model instance ID, they must not
 have the same name.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">(Deprecated</span></code>:</dt>
+<dd>.)</dd>
+<dt>Deprecated:</dt>
+<dd>PoseBundle is no longer in use. Visualizers typically connect to
+SceneGraph’s QueryObject port. This will be removed from Drake on
+or after 2021-12-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.systems.rendering.PoseBundle.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.rendering.PoseBundle</em>, <em>num_poses: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.rendering.PoseBundle.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>This class has been deprecated and will be removed on or after 2021-12-01.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.rendering.PoseBundle.get_model_instance_id">
@@ -424,6 +438,14 @@ have the same name.</p>
 X_WA, in the form <code class="docutils literal"><span class="pre">{p_WA,</span> <span class="pre">R_WA}</span></code>, where <code class="docutils literal"><span class="pre">p</span></code> is represented as an
 x-y-z translation, and <code class="docutils literal"><span class="pre">R</span></code> is represented as a quaternion. The exact
 order of elements is <code class="docutils literal"><span class="pre">{x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">qw,</span> <span class="pre">qx,</span> <span class="pre">qy,</span> <span class="pre">qz}</span></code>.</p>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">(Deprecated</span></code>:</dt>
+<dd>.)</dd>
+<dt>Deprecated:</dt>
+<dd>PoseVector is no longer in use. Visualizers typically connect to
+SceneGraph’s QueryObject port. This will be removed from Drake on
+or after 2021-12-01.</dd>
+</dl>
 <dl class="method">
 <dt id="pydrake.systems.rendering.PoseVector.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.rendering.PoseVector.__init__" title="Permalink to this definition">¶</a></dt>
@@ -431,7 +453,7 @@ order of elements is <code class="docutils literal"><span class="pre">{x,</span>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.systems.rendering.PoseVector) -&gt; None</li>
 </ol>
-<p>Default constructor.</p>
+<p>Default constructor. This class has been deprecated and will be removed on or after 2021-12-01.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.rendering.PoseVector, rotation: pydrake.common.eigen_geometry.Quaternion_[float], translation: numpy.ndarray[numpy.float64[3, 1]]) -&gt; None</li>
 </ol>
@@ -441,7 +463,7 @@ order of elements is <code class="docutils literal"><span class="pre">{x,</span>
 <dd>the orientation R_WA of frame A in the world frame W.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">translation</span></code>:</dt>
 <dd>the position vector p_WA giving A’s origin measured from W’s
-origin, expressed in W.</dd>
+origin, expressed in W. This class has been deprecated and will be removed on or after 2021-12-01.</dd>
 </dl>
 </dd></dl>
 
@@ -492,7 +514,13 @@ origin, expressed in W.</dd>
 <dt id="pydrake.systems.rendering.PoseVelocityInputPorts">
 <em class="property">class </em><code class="descclassname">pydrake.systems.rendering.</code><code class="descname">PoseVelocityInputPorts</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVelocityInputPorts" title="Permalink to this definition">¶</a></dt>
 <dd><p>A container with references to the input port for the pose input, and
-a reference to the input port for the velocity input.</p>
+a reference to the input port for the velocity input. (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>PoseVelocityInputPorts is no longer in use. Visualizers typically
+connect to SceneGraph’s QueryObject port. This will be removed
+from Drake on or after 2021-12-01.</dd>
+</dl>
 <dl class="attribute">
 <dt id="pydrake.systems.rendering.PoseVelocityInputPorts.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.rendering.PoseVelocityInputPorts.__init__" title="Permalink to this definition">¶</a></dt>

@@ -1,5 +1,8 @@
 var NAVTREEINDEX45 =
 {
+"quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,23,1],
+"quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
+"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
 "quadrature_8h.html":[4,0,0,8,3,3],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX45 =
 "solver__options_8h.html#a16445fc3b260d8c58ea9082a3594f85f":[4,0,0,10,51,2],
 "solver__options_8h.html#ad58cede9876421e050ac44deee7804ff":[4,0,0,10,51,1],
 "solver__type_8h.html":[4,0,0,10,52],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,10,52,0],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6":[4,0,0,10,52,0,13],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca18bc9cbd9bb764958e636263b1b53a9d":[4,0,0,10,52,0,8],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,10,52,0,9]
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,10,52,0]
 };

@@ -1162,6 +1162,12 @@ is non-convex. For more information and visualization, please refer to
 <dd><p>Getter for b.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.eval_type">
+<code class="descname">eval_type</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.eval_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for eval type.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType">
 <em class="property">class </em><code class="descname">EvalType</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType" title="Permalink to this definition">¶</a></dt>
@@ -1783,7 +1789,7 @@ bound variables.</td>
 <code class="descname">AddLorentzConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
+<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]], eval_type: pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
 decision variables.</p>
@@ -1809,8 +1815,14 @@ call</p>
 <span class="n">prog</span><span class="o">.</span><span class="n">AddLorentzConeConstraint</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 </pre></div>
 </div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">eval_type</span></code>:</dt>
+<dd>The evaluation type when evaluating the lorentz cone constraint in
+generic optimization. Refer to LorentzConeConstraint::EvalType for
+more details.</dd>
+</dl>
 <ol class="arabic simple" start="2">
-<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, linear_expression: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0.0) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
+<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, linear_expression: pydrake.symbolic.Expression, quadratic_expression: pydrake.symbolic.Expression, tol: float = 0.0, eval_type: pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
 </ol>
 <p>Adds Lorentz cone constraint on the linear expression v1 and quadratic
 expression v2, such that v1 &gt;= sqrt(v2)</p>
@@ -1829,6 +1841,10 @@ semidefinite or not.</dd>
 is 0.</p>
 </div>
 <dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">eval_type</span></code>:</dt>
+<dd>The evaluation type when evaluating the lorentz cone constraint in
+generic optimization. Refer to LorentzConeConstraint::EvalType for
+more details.</dd>
 <dt>Returns <code class="docutils literal"><span class="pre">binding</span></code>:</dt>
 <dd>The newly added Lorentz cone constraint, together with the bound
 variables.</dd>
@@ -1864,7 +1880,7 @@ the Lorentz cone constraint</p>
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
-<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]] = 0.0) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
+<li>AddLorentzConeConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], eval_type: pydrake.solvers.mathematicalprogram.LorentzConeConstraint.EvalType = &lt;EvalType.kConvexSmooth: 1&gt;) -&gt; pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]</li>
 </ol>
 <p>Adds Lorentz cone constraint referencing potentially a subset of the
 decision variables (defined in the vars parameter). The linear
@@ -1881,6 +1897,10 @@ equals to the size of the decision variables.</dd>
 size of the decision variables.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">vars</span></code>:</dt>
 <dd>The Eigen vector of <span class="math">\(m\)</span> decision variables.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">eval_type</span></code>:</dt>
+<dd>The evaluation type when evaluating the lorentz cone constraint in
+generic optimization. Refer to LorentzConeConstraint::EvalType for
+more details.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -2021,8 +2041,6 @@ symbolic expressions <code class="docutils literal"><span class="pre">e</span></
 variables M being positive semidefinite, with the linear equality
 constraint e == M.</p>
 <dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">Derived</span></code>:</dt>
-<dd>An Eigen Matrix of symbolic expressions.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">e</span></code>:</dt>
 <dd>Imposes constraint “e is positive semidefinite”.</dd>
 <dt>Precondition:</dt>

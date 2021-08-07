@@ -51,6 +51,7 @@ var group__sensor__systems =
       [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab40d8904907330979955091b2b778a5e", null ],
       [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a3be54cd4c90c63d4351d27943d87b319", null ],
       [ "~RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a3fb071bc0c53a418967bb936b59a9f9e", null ],
+      [ "body_pose_in_world_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#aff74e4980084b28c29f132bd18606031", null ],
       [ "color_camera_info", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a705ec3567a892f2c558988b4ac3c351f", null ],
       [ "color_image_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a33d5986623f99c4adcfabe1291da311c", null ],
       [ "color_render_camera", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#acaff289a0608d413a89eac135a4c8790", null ],
