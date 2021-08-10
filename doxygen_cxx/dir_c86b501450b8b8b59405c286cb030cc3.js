@@ -42,6 +42,10 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", "classdrake_1_1solvers_1_1_gurobi_solver" ],
       [ "SolveStatusInfo", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html", "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info" ]
     ] ],
+    [ "ibex_converter.h", "ibex__converter_8h.html", null ],
+    [ "ibex_solver.h", "ibex__solver_8h.html", [
+      [ "IbexSolver", "classdrake_1_1solvers_1_1_ibex_solver.html", "classdrake_1_1solvers_1_1_ibex_solver" ]
+    ] ],
     [ "indeterminate.h", "indeterminate_8h.html", "indeterminate_8h" ],
     [ "integer_inequality_solver.h", "integer__inequality__solver_8h.html", "integer__inequality__solver_8h" ],
     [ "integer_optimization_util.h", "integer__optimization__util_8h.html", "integer__optimization__util_8h" ],

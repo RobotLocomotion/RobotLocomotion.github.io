@@ -67,6 +67,7 @@ var searchData=
   ['_7egurobisolver',['~GurobiSolver',['../classdrake_1_1solvers_1_1_gurobi_solver.html#a3a2b698ced6a7749986e056955a4b0a0',1,'drake::solvers::GurobiSolver']]],
   ['_7ehpolyhedron',['~HPolyhedron',['../classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a15f9b02bca9548dd4497de6693fa3a51',1,'drake::geometry::optimization::HPolyhedron']]],
   ['_7ehyperellipsoid',['~Hyperellipsoid',['../classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a80aa27d77264976c6203489880a9aafd',1,'drake::geometry::optimization::Hyperellipsoid']]],
+  ['_7eibexsolver',['~IbexSolver',['../classdrake_1_1solvers_1_1_ibex_solver.html#a8f418b764e839893a50268e34793ca25',1,'drake::solvers::IbexSolver']]],
   ['_7eiiwacommandreceiver',['~IiwaCommandReceiver',['../classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html#a6f5dc640af7e96f840ad9c806d065699',1,'drake::manipulation::kuka_iiwa::IiwaCommandReceiver']]],
   ['_7eiiwacommandsender',['~IiwaCommandSender',['../classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html#af498576ec68155680b9aa6d7586b0d22',1,'drake::manipulation::kuka_iiwa::IiwaCommandSender']]],
   ['_7eiiwastatusreceiver',['~IiwaStatusReceiver',['../classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html#ab8af643bb7290ec9d36d196c673b2eb5',1,'drake::manipulation::kuka_iiwa::IiwaStatusReceiver']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['ibexsolver',['IbexSolver',['../classdrake_1_1solvers_1_1_ibex_solver.html',1,'drake::solvers']]],
   ['identifier',['Identifier',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20frametag_20_3e',['Identifier&lt; class FrameTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],
   ['identifier_3c_20class_20geometrytag_20_3e',['Identifier&lt; class GeometryTag &gt;',['../classdrake_1_1_identifier.html',1,'drake']]],

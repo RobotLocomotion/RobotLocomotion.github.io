@@ -21,6 +21,7 @@ var namespacedrake_1_1solvers =
     [ "FunctionEvaluator", "classdrake_1_1solvers_1_1_function_evaluator.html", "classdrake_1_1solvers_1_1_function_evaluator" ],
     [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", "classdrake_1_1solvers_1_1_gurobi_solver" ],
     [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", "structdrake_1_1solvers_1_1_gurobi_solver_details" ],
+    [ "IbexSolver", "classdrake_1_1solvers_1_1_ibex_solver.html", "classdrake_1_1solvers_1_1_ibex_solver" ],
     [ "IpoptSolver", "classdrake_1_1solvers_1_1_ipopt_solver.html", "classdrake_1_1solvers_1_1_ipopt_solver" ],
     [ "IpoptSolverDetails", "structdrake_1_1solvers_1_1_ipopt_solver_details.html", "structdrake_1_1solvers_1_1_ipopt_solver_details" ],
     [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html", "classdrake_1_1solvers_1_1_l2_norm_cost" ],
