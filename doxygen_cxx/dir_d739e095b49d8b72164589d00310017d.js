@@ -14,6 +14,9 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "CollisionFilterManager", "classdrake_1_1geometry_1_1_collision_filter_manager.html", "classdrake_1_1geometry_1_1_collision_filter_manager" ]
     ] ],
     [ "drake_visualizer.h", "drake__visualizer_8h.html", "drake__visualizer_8h" ],
+    [ "drake_visualizer_params.h", "drake__visualizer__params_8h.html", [
+      [ "DrakeVisualizerParams", "structdrake_1_1geometry_1_1_drake_visualizer_params.html", "structdrake_1_1geometry_1_1_drake_visualizer_params" ]
+    ] ],
     [ "frame_kinematics_vector.h", "frame__kinematics__vector_8h.html", "frame__kinematics__vector_8h" ],
     [ "geometry_doxygen.h", "geometry__doxygen_8h.html", null ],
     [ "geometry_frame.h", "geometry__frame_8h.html", [

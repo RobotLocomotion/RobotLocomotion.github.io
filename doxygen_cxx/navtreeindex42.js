@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"hash_8h.html#ace5b5f07e7cce19025b862a56d85e6aa":[4,0,0,1,33,4],
 "hash_8h.html#ae04ca99007a983e597a71955c96c5925":[4,0,0,1,33,6],
 "hash_8h.html#aeacd6804761e9fb9f0fa26a6766f1444":[4,0,0,1,33,5],
 "hermitian__dense__output_8h.html":[4,0,0,11,0,5],
@@ -101,8 +102,8 @@ var NAVTREEINDEX42 =
 "integration__constraint_8h.html":[4,0,0,11,9,2],
 "integrator_8h.html":[4,0,0,11,6,10],
 "integrator__base_8h.html":[4,0,0,11,0,9],
-"internal__frame_8h.html":[4,0,0,4,21],
-"internal__geometry_8h.html":[4,0,0,4,22],
+"internal__frame_8h.html":[4,0,0,4,22],
+"internal__geometry_8h.html":[4,0,0,4,23],
 "inverse__dynamics_8h.html":[4,0,0,11,1,3],
 "inverse__dynamics__controller_8h.html":[4,0,0,11,1,4],
 "inverse__kinematics_8h.html":[4,0,0,8,5,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "mathematical__program__doxygen_8h.html":[4,0,0,10,32],
 "mathematical__program__result_8h.html":[4,0,0,10,33],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,10,33,1],
-"mathematical__program__result_8h.html#a287ba31e94ce0e4152f9214c68d7a78f":[4,0,0,10,33,2],
-"matrix__gain_8h.html":[4,0,0,11,6,13]
+"mathematical__program__result_8h.html#a287ba31e94ce0e4152f9214c68d7a78f":[4,0,0,10,33,2]
 };

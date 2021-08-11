@@ -1,5 +1,6 @@
 var NAVTREEINDEX44 =
 {
+"namespacedrake_1_1systems_1_1sensors.html":[3,0,0,14,8],
 "namespacedrake_1_1systems_1_1test.html":[2,0,0,14,10],
 "namespacedrake_1_1systems_1_1trajectory__optimization.html":[3,0,0,14,9],
 "namespacedrake_1_1systems_1_1trajectory__optimization.html":[2,0,0,14,11],
@@ -9,8 +10,8 @@ var NAVTREEINDEX44 =
 "namespacedrake_1_1trajectories.html":[3,0,0,16],
 "namespacedrake_1_1yaml.html":[3,0,0,17],
 "namespacedrake_1_1yaml.html":[2,0,0,17],
-"namespacemembers.html":[2,1,0,0],
 "namespacemembers.html":[2,1,0],
+"namespacemembers.html":[2,1,0,0],
 "namespacemembers_b.html":[2,1,0,1],
 "namespacemembers_c.html":[2,1,0,2],
 "namespacemembers_d.html":[2,1,0,3],
@@ -18,8 +19,8 @@ var NAVTREEINDEX44 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
-"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func.html":[2,1,1,0],
+"namespacemembers_func.html":[2,1,1],
 "namespacemembers_func_b.html":[2,1,1,1],
 "namespacemembers_func_c.html":[2,1,1,2],
 "namespacemembers_func_d.html":[2,1,1,3],
@@ -247,7 +248,6 @@ var NAVTREEINDEX44 =
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,10,43,7],
 "propeller_8h.html":[4,0,0,8,9,18],
 "proximity__doxygen_8h.html":[4,0,0,4,2,38],
-"proximity__engine_8h.html":[4,0,0,4,23],
-"proximity__properties_8h.html":[4,0,0,4,24],
-"proximity__properties_8h.html#a43d4f8a99b181dd9968667b7d4daefdf":[4,0,0,4,24,5]
+"proximity__engine_8h.html":[4,0,0,4,24],
+"proximity__properties_8h.html":[4,0,0,4,25]
 };
