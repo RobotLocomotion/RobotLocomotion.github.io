@@ -187,9 +187,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7622a0fb573704de7505804d57e66a79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7622a0fb573704de7505804d57e66a79">ValidateContext</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;context) const final</td></tr>
 <tr class="memdesc:a7622a0fb573704de7505804d57e66a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given context was created for this system.  <a href="#a7622a0fb573704de7505804d57e66a79">More...</a><br /></td></tr>
 <tr class="separator:a7622a0fb573704de7505804d57e66a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1be5103dedff31f358bc88ead9a43628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a1be5103dedff31f358bc88ead9a43628">ValidateContext</a> (<a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> *context) const</td></tr>
-<tr class="memdesc:a1be5103dedff31f358bc88ead9a43628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given context was created for this system.  <a href="#a1be5103dedff31f358bc88ead9a43628">More...</a><br /></td></tr>
-<tr class="separator:a1be5103dedff31f358bc88ead9a43628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eded72dc7f57febf1d8c171426d81de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a4eded72dc7f57febf1d8c171426d81de">ValidateContext</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> *context) const</td></tr>
+<tr class="memdesc:a4eded72dc7f57febf1d8c171426d81de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given context was created for this system.  <a href="#a4eded72dc7f57febf1d8c171426d81de">More...</a><br /></td></tr>
+<tr class="separator:a4eded72dc7f57febf1d8c171426d81de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fd1fc18c838f00d24942d8afcd26e4"><td class="memTemplParams" colspan="2">template&lt;class Clazz &gt; </td></tr>
+<tr class="memitem:aa4fd1fc18c838f00d24942d8afcd26e4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aa4fd1fc18c838f00d24942d8afcd26e4">ValidateCreatedForThisSystem</a> (const Clazz &amp;object) const</td></tr>
+<tr class="memdesc:aa4fd1fc18c838f00d24942d8afcd26e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the given object was created for this system.  <a href="#aa4fd1fc18c838f00d24942d8afcd26e4">More...</a><br /></td></tr>
+<tr class="separator:aa4fd1fc18c838f00d24942d8afcd26e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a0b7f7189714d79a830e909e281324533"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a0b7f7189714d79a830e909e281324533">SystemBase</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;)=delete</td></tr>
 <tr class="separator:a0b7f7189714d79a830e909e281324533"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3280,11 +3284,17 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 <p>Checks whether the given context was created for this system. </p>
 <dl class="section note"><dt>Note</dt><dd>This method is sufficiently fast for performance sensitive code. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> Ids don't match. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a1be5103dedff31f358bc88ead9a43628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1be5103dedff31f358bc88ead9a43628">&#9670;&nbsp;</a></span>ValidateContext() <span class="overload">[2/2]</span></h2>
+<a id="a4eded72dc7f57febf1d8c171426d81de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eded72dc7f57febf1d8c171426d81de">&#9670;&nbsp;</a></span>ValidateContext() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3292,7 +3302,7 @@ the port's value must be retrievable from the stored abstract value using <code>
         <tr>
           <td class="memname">void ValidateContext </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> *&#160;</td>
           <td class="paramname"><em>context</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -3301,6 +3311,41 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 <p>Checks whether the given context was created for this system. </p>
 <dl class="section note"><dt>Note</dt><dd>This method is sufficiently fast for performance sensitive code. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> Ids don't match. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>context</code> is null. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4fd1fc18c838f00d24942d8afcd26e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fd1fc18c838f00d24942d8afcd26e4">&#9670;&nbsp;</a></span>ValidateCreatedForThisSystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ValidateCreatedForThisSystem </td>
+          <td>(</td>
+          <td class="paramtype">const Clazz &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks whether the given object was created for this system. </p>
+<dl class="section note"><dt>Note</dt><dd>This method is sufficiently fast for performance sensitive code. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> Ids don't match or if <code>object</code> doesn't have an associated <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> Id. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the argument type is a pointer and it is null. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

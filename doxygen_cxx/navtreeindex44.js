@@ -1,13 +1,16 @@
 var NAVTREEINDEX44 =
 {
+"namespacedrake_1_1systems_1_1test.html":[2,0,0,14,10],
+"namespacedrake_1_1systems_1_1trajectory__optimization.html":[3,0,0,14,9],
+"namespacedrake_1_1systems_1_1trajectory__optimization.html":[2,0,0,14,11],
 "namespacedrake_1_1test.html":[3,0,0,15],
 "namespacedrake_1_1test.html":[2,0,0,15],
 "namespacedrake_1_1trajectories.html":[2,0,0,16],
 "namespacedrake_1_1trajectories.html":[3,0,0,16],
 "namespacedrake_1_1yaml.html":[3,0,0,17],
 "namespacedrake_1_1yaml.html":[2,0,0,17],
-"namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
+"namespacemembers.html":[2,1,0],
 "namespacemembers_b.html":[2,1,0,1],
 "namespacemembers_c.html":[2,1,0,2],
 "namespacemembers_d.html":[2,1,0,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX44 =
 "proximity__doxygen_8h.html":[4,0,0,4,2,38],
 "proximity__engine_8h.html":[4,0,0,4,23],
 "proximity__properties_8h.html":[4,0,0,4,24],
-"proximity__properties_8h.html#a43d4f8a99b181dd9968667b7d4daefdf":[4,0,0,4,24,5],
-"proximity__properties_8h.html#a75b8bc3ef835424639b5aa5e0874121b":[4,0,0,4,24,0],
-"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,24,3],
-"proximity__properties_8h.html#a994429610a1aadf4521959e996c5cfac":[4,0,0,4,24,1]
+"proximity__properties_8h.html#a43d4f8a99b181dd9968667b7d4daefdf":[4,0,0,4,24,5]
 };

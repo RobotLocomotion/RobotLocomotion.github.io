@@ -6,9 +6,9 @@ var classdrake_1_1systems_1_1_vector_log_sink =
     [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#a9de981eb2a9808a55fda656f1504eee2", null ],
     [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#ac79c48120767475fddd63c8eb4f96caf", null ],
     [ "FindLog", "classdrake_1_1systems_1_1_vector_log_sink.html#a021106c5eb21e08b8fce9400e5ed8721", null ],
-    [ "FindMutableLog", "classdrake_1_1systems_1_1_vector_log_sink.html#a477af0c81f5258eaead0b9062e86639e", null ],
+    [ "FindMutableLog", "classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c", null ],
     [ "GetLog", "classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb", null ],
-    [ "GetMutableLog", "classdrake_1_1systems_1_1_vector_log_sink.html#a5ac5c495c42ceff4fcb9d00053d1207f", null ],
+    [ "GetMutableLog", "classdrake_1_1systems_1_1_vector_log_sink.html#abbb32001c248cadaf541a05f661fa7fb", null ],
     [ "operator=", "classdrake_1_1systems_1_1_vector_log_sink.html#ab1109c98ab95c577808ffb5ca9b958aa", null ],
     [ "operator=", "classdrake_1_1systems_1_1_vector_log_sink.html#a01791f7cae0729bd71cdbe701b132427", null ],
     [ "VectorLogSink", "classdrake_1_1systems_1_1_vector_log_sink.html#a75fdac8e950bc94f385eb038c7766308", null ]

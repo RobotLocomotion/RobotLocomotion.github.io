@@ -14,6 +14,7 @@ var event_8h =
     [ "PublishEvent", "classdrake_1_1systems_1_1_publish_event.html", "classdrake_1_1systems_1_1_publish_event" ],
     [ "DiscreteUpdateEvent", "classdrake_1_1systems_1_1_discrete_update_event.html", "classdrake_1_1systems_1_1_discrete_update_event" ],
     [ "UnrestrictedUpdateEvent", "classdrake_1_1systems_1_1_unrestricted_update_event.html", "classdrake_1_1systems_1_1_unrestricted_update_event" ],
+    [ "TriggerTypeSet", "event_8h.html#ac84c84e9fbb652ce19106e2f2e1f3d15", null ],
     [ "TriggerType", "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9", [
       [ "kUnknown", "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390", null ],
       [ "kInitialization", "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a1800fd44ac807b793ceba2dd9cef1e25", null ],

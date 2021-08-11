@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html#a1fe140cf6e84ec992ee4bd7a3d4ad47f":[3,0,0,6,1,1,2],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html#a51a1467896c52868f448cd4ae79b3dff":[3,0,0,6,1,1,7],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html#a6e87e1b2f9b39e8b28a320607b46a44f":[3,0,0,6,1,1,6],
 "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html#a7f1ed8ee39243bb0838733c08376ad2b":[3,0,0,6,1,1,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1math_1_1_bspline_basis.html#abcc41a4e499b9ebcdc71c5e213c7c22f":[3,0,0,7,3,20],
 "classdrake_1_1math_1_1_bspline_basis.html#ac7ac2c4a102187c10daf091ab5d5b923":[3,0,0,7,3,19],
 "classdrake_1_1math_1_1_bspline_basis.html#aca4d3daca2fb14a7f974458de833ce8e":[3,0,0,7,3,14],
-"classdrake_1_1math_1_1_bspline_basis.html#acdb5921081f904477377b76b90953b12":[3,0,0,7,3,4],
-"classdrake_1_1math_1_1_bspline_basis.html#af4e5bebbe5c3fca068049c1ffe48c0fe":[3,0,0,7,3,3]
+"classdrake_1_1math_1_1_bspline_basis.html#acdb5921081f904477377b76b90953b12":[3,0,0,7,3,4]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"hash_8h.html#ae04ca99007a983e597a71955c96c5925":[4,0,0,1,33,6],
+"hash_8h.html#aeacd6804761e9fb9f0fa26a6766f1444":[4,0,0,1,33,5],
+"hermitian__dense__output_8h.html":[4,0,0,11,0,5],
 "hierarchy.html":[3,2],
 "hopf__coordinate_8h.html":[4,0,0,7,17],
 "hopf__coordinate_8h.html#a82d0a7052d08481add2e9086b98144dd":[4,0,0,7,17,0],
@@ -156,7 +159,7 @@ var NAVTREEINDEX42 =
 "lcm__messages_8h.html#adcda0f8a699ead06121a53903686013d":[4,0,0,5,4,2],
 "lcm__plan__interpolator_8h.html":[4,0,0,3,6,3],
 "lcm__publisher__system_8h.html":[4,0,0,11,4,3],
-"lcm__publisher__system_8h.html#ac84c84e9fbb652ce19106e2f2e1f3d15":[4,0,0,11,4,3,0],
+"lcm__publisher__system_8h.html#a2b4423532b6895ef22b02d25a3798daa":[4,0,0,11,4,3,0],
 "lcm__py__bind__cpp__serializers_8h.html":[4,0,0,0,0,2,3],
 "lcm__py__bind__cpp__serializers_8h.html#abd25f3ebd433d0bd7632152eb8bcd108":[4,0,0,0,0,2,3,0],
 "lcm__pybind_8h.html":[4,0,0,0,0,2,4],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "mathematical__program__result_8h.html":[4,0,0,10,33],
 "mathematical__program__result_8h.html#a014d2838aa5fae12520da4ebf46005ca":[4,0,0,10,33,1],
 "mathematical__program__result_8h.html#a287ba31e94ce0e4152f9214c68d7a78f":[4,0,0,10,33,2],
-"matrix__gain_8h.html":[4,0,0,11,6,13],
-"matrix__util_8h.html":[4,0,0,7,20],
-"matrix__util_8h.html#a141ec70804c105e09ab3b0a855152b8b":[4,0,0,7,20,2],
-"matrix__util_8h.html#a5390bb2dadbe96cd6dfbe26c6891f100":[4,0,0,7,20,3]
+"matrix__gain_8h.html":[4,0,0,11,6,13]
 };

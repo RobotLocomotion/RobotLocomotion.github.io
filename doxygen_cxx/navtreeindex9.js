@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1math_1_1_bspline_basis.html#af4e5bebbe5c3fca068049c1ffe48c0fe":[3,0,0,7,3,3],
 "classdrake_1_1math_1_1_numerical_gradient_option.html":[3,0,0,7,11],
 "classdrake_1_1math_1_1_numerical_gradient_option.html#a32db5240f6420a7ee661448822963978":[3,0,0,7,11,0],
 "classdrake_1_1math_1_1_numerical_gradient_option.html#a42db421362be5c1e41414f3a3aedae04":[3,0,0,7,11,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af072288a5a5bfc6a933a9b10b108b4be":[1,2,0,9,6],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af57e3c05d25389a8fb0096a06cbbe288":[1,2,0,9,4],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html":[3,0,0,8,12],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a1537fee11210c74bf9fb74b0641bba58":[3,0,0,8,12,1],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a38b84c42a00adfb7c8780eb6b0e4a898":[3,0,0,8,12,3]
+"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a1537fee11210c74bf9fb74b0641bba58":[3,0,0,8,12,1]
 };

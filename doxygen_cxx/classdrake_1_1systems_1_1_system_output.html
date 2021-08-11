@@ -135,6 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8cc8006b406f31ec693aeac7fd660dfd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_output.html#a8cc8006b406f31ec693aeac7fd660dfd">GetMutableVectorData</a> (<a class="el" href="classint.html">int</a> index)</td></tr>
 <tr class="memdesc:a8cc8006b406f31ec693aeac7fd660dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns mutable access to a <code><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a>&lt;T&gt;</code> object that is suitable for holding the value of output port <code>index</code> of the allocating <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>.  <a href="#a8cc8006b406f31ec693aeac7fd660dfd">More...</a><br /></td></tr>
 <tr class="separator:a8cc8006b406f31ec693aeac7fd660dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_output.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
+<tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that created this output.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
+<tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a49ab21a298d9dd5cc79e23b684d000a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_output.html#a49ab21a298d9dd5cc79e23b684d000a5">SystemOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_output.html">SystemOutput</a> &amp;)=default</td></tr>
 <tr class="separator:a49ab21a298d9dd5cc79e23b684d000a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -249,6 +252,26 @@ Friends</h2></td></tr>
 
 <p>Returns the last-saved value of output port <code>index</code> as an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a>. </p>
 <p>This works for any output port regardless of it actual type. </p>
+
+</div>
+</div>
+<a id="a1b3f9382208d13e11984a54afa711577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3f9382208d13e11984a54afa711577">&#9670;&nbsp;</a></span>get_system_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">internal::SystemId get_system_id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal) Gets the id of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> that created this output. </p>
+<p>See <a class="el" href="group__system__compatibility.html">System Compatibility</a>. </p>
 
 </div>
 </div>

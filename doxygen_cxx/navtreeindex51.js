@@ -1,5 +1,8 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__monomial__util_8h.html#af297794f22c0458592aeea637cce060a":[4,0,0,1,66,3],
+"symbolic__monomial__util_8h.html#aff00cd9261b602f7ce7708286d2dae05":[4,0,0,1,66,1],
+"symbolic__polynomial_8h.html":[4,0,0,1,67],
 "symbolic__polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,67,33],
 "symbolic__polynomial_8h.html#a07af9a80db0ccabb8ec35d2dcf3cff3b":[4,0,0,1,67,2],
 "symbolic__polynomial_8h.html#a0e4fa4bbef7ce58efc247dd1717a2ded":[4,0,0,1,67,29],
@@ -226,9 +229,8 @@ var NAVTREEINDEX51 =
 "vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
 "vector__log_8h.html":[4,0,0,11,6,26],
 "vector__log__sink_8h.html":[4,0,0,11,6,27],
-"vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3":[4,0,0,11,6,27,2],
-"vector__log__sink_8h.html#ac84c84e9fbb652ce19106e2f2e1f3d15":[4,0,0,11,6,27,0],
-"vector__log__sink_8h.html#af2f7dd25823e78194ea36eabbd525cea":[4,0,0,11,6,27,1],
+"vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3":[4,0,0,11,6,27,1],
+"vector__log__sink_8h.html#af2f7dd25823e78194ea36eabbd525cea":[4,0,0,11,6,27,0],
 "vector__system_8h.html":[4,0,0,11,3,54],
 "velocity__implicit__euler__integrator_8h.html":[4,0,0,11,0,28],
 "velocity__kinematics__cache_8h.html":[4,0,0,8,12,50],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "vtk__util_8h.html#abdb94acdad86ca639785432a868abbd0":[4,0,0,4,4,10,1],
 "vtk__util_8h.html#abfb696bdfb8aca5a7cec2ab0e167c889":[4,0,0,4,4,10,3],
 "weld__joint_8h.html":[4,0,0,8,12,51],
-"weld__mobilizer_8h.html":[4,0,0,8,12,52],
-"witness__function_8h.html":[4,0,0,11,3,55],
-"witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3":[4,0,0,11,3,55,2]
+"weld__mobilizer_8h.html":[4,0,0,8,12,52]
 };

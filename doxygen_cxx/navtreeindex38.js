@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc":[3,0,0,16,3,7],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,3,5],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d":[3,0,0,16,3,12],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#aec3c151ab7b4b34d667c50ec9d229003":[3,0,0,16,3,1],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#af33e9a993aeb52079b4310e7fd43638e":[3,0,0,16,3,14],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "csdp__solver_8h.html":[4,0,0,10,13],
 "csdp__solver__internal_8h.html":[4,0,0,10,14],
 "cubic__scalar__system_8h.html":[4,0,0,11,0,0,1],
-"decision__variable_8h.html":[4,0,0,10,15],
-"decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,10,15,3],
-"decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,10,15,6]
+"decision__variable_8h.html":[4,0,0,10,15]
 };

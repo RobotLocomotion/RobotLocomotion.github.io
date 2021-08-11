@@ -3147,6 +3147,150 @@ to the correct size, and connected to an output in a DiagramBuilder.</p>
 </div>
 </dd></dl>
 
+<dl class="function">
+<dt id="pydrake.systems.primitives.LogVectorOutput">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LogVectorOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.LogVectorOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>LogVectorOutput(src: pydrake.systems.framework.OutputPort_[float], builder: pydrake.systems.framework.DiagramBuilder_[float], publish_period: float = 0.0) -&gt; pydrake.systems.primitives.VectorLogSink_[float]</li>
+</ol>
+<p>LogVectorOutput provides a convenience function for adding a
+VectorLogSink, initialized to the correct size, and connected to an
+output in a DiagramBuilder. This overload supports the default set of
+publish triggers. See vector_log_sink_default_triggers “default
+triggers description”.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">src</span></code>:</dt>
+<dd>the output port to attach logging to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>the diagram builder.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero, VectorLogSink will use per-step publishing
+instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>LogVectorOutput(src: pydrake.systems.framework.OutputPort_[float], builder: pydrake.systems.framework.DiagramBuilder_[float], publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; pydrake.systems.primitives.VectorLogSink_[float]</li>
+</ol>
+<p>LogVectorOutput provides a convenience function for adding a
+VectorLogSink, initialized to the correct size, and connected to an
+output in a DiagramBuilder. This overload supports the full variety of
+publish trigger behavior.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">src</span></code>:</dt>
+<dd>the output port to attach logging to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>the diagram builder.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li>LogVectorOutput(src: pydrake.systems.framework.OutputPort_[AutoDiffXd], builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], publish_period: float = 0.0) -&gt; pydrake.systems.primitives.VectorLogSink_[AutoDiffXd]</li>
+</ol>
+<p>LogVectorOutput provides a convenience function for adding a
+VectorLogSink, initialized to the correct size, and connected to an
+output in a DiagramBuilder. This overload supports the default set of
+publish triggers. See vector_log_sink_default_triggers “default
+triggers description”.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">src</span></code>:</dt>
+<dd>the output port to attach logging to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>the diagram builder.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero, VectorLogSink will use per-step publishing
+instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<ol class="arabic simple" start="4">
+<li>LogVectorOutput(src: pydrake.systems.framework.OutputPort_[AutoDiffXd], builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; pydrake.systems.primitives.VectorLogSink_[AutoDiffXd]</li>
+</ol>
+<p>LogVectorOutput provides a convenience function for adding a
+VectorLogSink, initialized to the correct size, and connected to an
+output in a DiagramBuilder. This overload supports the full variety of
+publish trigger behavior.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">src</span></code>:</dt>
+<dd>the output port to attach logging to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>the diagram builder.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+<ol class="arabic simple" start="5">
+<li>LogVectorOutput(src: pydrake.systems.framework.OutputPort_[Expression], builder: pydrake.systems.framework.DiagramBuilder_[Expression], publish_period: float = 0.0) -&gt; pydrake.systems.primitives.VectorLogSink_[Expression]</li>
+</ol>
+<p>LogVectorOutput provides a convenience function for adding a
+VectorLogSink, initialized to the correct size, and connected to an
+output in a DiagramBuilder. This overload supports the default set of
+publish triggers. See vector_log_sink_default_triggers “default
+triggers description”.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">src</span></code>:</dt>
+<dd>the output port to attach logging to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>the diagram builder.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero, VectorLogSink will use per-step publishing
+instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<ol class="arabic simple" start="6">
+<li>LogVectorOutput(src: pydrake.systems.framework.OutputPort_[Expression], builder: pydrake.systems.framework.DiagramBuilder_[Expression], publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; pydrake.systems.primitives.VectorLogSink_[Expression]</li>
+</ol>
+<p>LogVectorOutput provides a convenience function for adding a
+VectorLogSink, initialized to the correct size, and connected to an
+output in a DiagramBuilder. This overload supports the full variety of
+publish trigger behavior.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">src</span></code>:</dt>
+<dd>the output port to attach logging to.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">builder</span></code>:</dt>
+<dd>the diagram builder.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.systems.primitives.MatrixGain">
 <code class="descclassname">pydrake.systems.primitives.</code><code class="descname">MatrixGain</code><a class="headerlink" href="#pydrake.systems.primitives.MatrixGain" title="Permalink to this definition">¶</a></dt>
@@ -5916,6 +6060,1010 @@ or equal to zero.</dd>
 <dd>All derivatives will be zero before the start time or after the
 end time of <code class="docutils literal"><span class="pre">trajectory</span></code>.</dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.VectorLog">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLog</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.VectorLog_[float]" title="pydrake.systems.primitives.VectorLog_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.VectorLog_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.primitives.VectorLog_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLog_</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.primitives.VectorLog_[float]" title="pydrake.systems.primitives.VectorLog_[float]"><code class="xref py py-class docutils literal"><span class="pre">VectorLog_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd]" title="pydrake.systems.primitives.VectorLog_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">VectorLog_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.VectorLog_[Expression]" title="pydrake.systems.primitives.VectorLog_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">VectorLog_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float]">
+<em class="property">class </em><code class="descname">VectorLog_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>This utility class serves as an in-memory cache of time-dependent
+vector values. Note that this is a standalone class, not a Drake
+System. It is primarily intended to support the Drake System primitive
+VectorLogSink, but can be used independently.</p>
+<p>When the log becomes full, adding more data will cause the allocated
+space to double in size. If avoiding memory allocation during some
+performance-critical phase is desired, clients can call Reserve() to
+pre-allocate log storage.</p>
+<p>This object imposes no constraints on the stored data. For example,
+times passed to AddData() need not be increasing in order of
+insertion, values are allowed to be infinite, NaN, etc.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float], input_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the vector log.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the per-time step data set.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].AddData">
+<code class="descname">AddData</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float], time: float, sample: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].AddData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <code class="docutils literal"><span class="pre">sample</span></code> to the data set with the associated <code class="docutils literal"><span class="pre">time</span></code> value.
+The new sample and time are added to the end of the log. No
+constraints are imposed on the values of`time` or <code class="docutils literal"><span class="pre">sample</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time</span></code>:</dt>
+<dd>The time value for this sample.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">sample</span></code>:</dt>
+<dd>A vector of data of the declared size for this log.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].Clear">
+<code class="descname">Clear</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].Clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the logged data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].data">
+<code class="descname">data</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged data.</p>
+<p>The InnerPanel parameter of the return type indicates that the
+compiler can assume aligned access to the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].get_input_size">
+<code class="descname">get_input_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].get_input_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the size of the log’s input vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].kDefaultCapacity">
+<code class="descname">kDefaultCapacity</code><em class="property"> = 1000</em><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].kDefaultCapacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].num_samples">
+<code class="descname">num_samples</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].num_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of samples taken since construction or last
+Clear().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].Reserve">
+<code class="descname">Reserve</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].Reserve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserve storage for at least <code class="docutils literal"><span class="pre">capacity</span></code> samples. At construction,
+there will be at least <code class="docutils literal"><span class="pre">kDefaultCapacity</span></code>; use this method to
+reserve more.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_.VectorLog_[float].sample_times">
+<code class="descname">sample_times</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_.VectorLog_[float].sample_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged time stamps.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLog_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>This utility class serves as an in-memory cache of time-dependent
+vector values. Note that this is a standalone class, not a Drake
+System. It is primarily intended to support the Drake System primitive
+VectorLogSink, but can be used independently.</p>
+<p>When the log becomes full, adding more data will cause the allocated
+space to double in size. If avoiding memory allocation during some
+performance-critical phase is desired, clients can call Reserve() to
+pre-allocate log storage.</p>
+<p>This object imposes no constraints on the stored data. For example,
+times passed to AddData() need not be increasing in order of
+insertion, values are allowed to be infinite, NaN, etc.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd], input_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the vector log.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the per-time step data set.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].AddData">
+<code class="descname">AddData</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd], time: pydrake.autodiffutils.AutoDiffXd, sample: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].AddData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <code class="docutils literal"><span class="pre">sample</span></code> to the data set with the associated <code class="docutils literal"><span class="pre">time</span></code> value.
+The new sample and time are added to the end of the log. No
+constraints are imposed on the values of`time` or <code class="docutils literal"><span class="pre">sample</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time</span></code>:</dt>
+<dd>The time value for this sample.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">sample</span></code>:</dt>
+<dd>A vector of data of the declared size for this log.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].Clear">
+<code class="descname">Clear</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].Clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the logged data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].data">
+<code class="descname">data</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged data.</p>
+<p>The InnerPanel parameter of the return type indicates that the
+compiler can assume aligned access to the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].get_input_size">
+<code class="descname">get_input_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].get_input_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the size of the log’s input vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].kDefaultCapacity">
+<code class="descname">kDefaultCapacity</code><em class="property"> = 1000</em><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].kDefaultCapacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].num_samples">
+<code class="descname">num_samples</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].num_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of samples taken since construction or last
+Clear().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].Reserve">
+<code class="descname">Reserve</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].Reserve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserve storage for at least <code class="docutils literal"><span class="pre">capacity</span></code> samples. At construction,
+there will be at least <code class="docutils literal"><span class="pre">kDefaultCapacity</span></code>; use this method to
+reserve more.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[AutoDiffXd].sample_times">
+<code class="descname">sample_times</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[AutoDiffXd].sample_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged time stamps.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLog_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>This utility class serves as an in-memory cache of time-dependent
+vector values. Note that this is a standalone class, not a Drake
+System. It is primarily intended to support the Drake System primitive
+VectorLogSink, but can be used independently.</p>
+<p>When the log becomes full, adding more data will cause the allocated
+space to double in size. If avoiding memory allocation during some
+performance-critical phase is desired, clients can call Reserve() to
+pre-allocate log storage.</p>
+<p>This object imposes no constraints on the stored data. For example,
+times passed to AddData() need not be increasing in order of
+insertion, values are allowed to be infinite, NaN, etc.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression], input_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the vector log.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the per-time step data set.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].AddData">
+<code class="descname">AddData</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression], time: pydrake.symbolic.Expression, sample: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].AddData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <code class="docutils literal"><span class="pre">sample</span></code> to the data set with the associated <code class="docutils literal"><span class="pre">time</span></code> value.
+The new sample and time are added to the end of the log. No
+constraints are imposed on the values of`time` or <code class="docutils literal"><span class="pre">sample</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time</span></code>:</dt>
+<dd>The time value for this sample.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">sample</span></code>:</dt>
+<dd>A vector of data of the declared size for this log.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].Clear">
+<code class="descname">Clear</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].Clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the logged data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].data">
+<code class="descname">data</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged data.</p>
+<p>The InnerPanel parameter of the return type indicates that the
+compiler can assume aligned access to the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].get_input_size">
+<code class="descname">get_input_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].get_input_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the size of the log’s input vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].kDefaultCapacity">
+<code class="descname">kDefaultCapacity</code><em class="property"> = 1000</em><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].kDefaultCapacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].num_samples">
+<code class="descname">num_samples</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].num_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of samples taken since construction or last
+Clear().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].Reserve">
+<code class="descname">Reserve</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].Reserve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserve storage for at least <code class="docutils literal"><span class="pre">capacity</span></code> samples. At construction,
+there will be at least <code class="docutils literal"><span class="pre">kDefaultCapacity</span></code>; use this method to
+reserve more.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[Expression].sample_times">
+<code class="descname">sample_times</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[Expression].sample_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged time stamps.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLog_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLog_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>This utility class serves as an in-memory cache of time-dependent
+vector values. Note that this is a standalone class, not a Drake
+System. It is primarily intended to support the Drake System primitive
+VectorLogSink, but can be used independently.</p>
+<p>When the log becomes full, adding more data will cause the allocated
+space to double in size. If avoiding memory allocation during some
+performance-critical phase is desired, clients can call Reserve() to
+pre-allocate log storage.</p>
+<p>This object imposes no constraints on the stored data. For example,
+times passed to AddData() need not be increasing in order of
+insertion, values are allowed to be infinite, NaN, etc.</p>
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float], input_size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the vector log.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the per-time step data set.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].AddData">
+<code class="descname">AddData</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float], time: float, sample: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].AddData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <code class="docutils literal"><span class="pre">sample</span></code> to the data set with the associated <code class="docutils literal"><span class="pre">time</span></code> value.
+The new sample and time are added to the end of the log. No
+constraints are imposed on the values of`time` or <code class="docutils literal"><span class="pre">sample</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">time</span></code>:</dt>
+<dd>The time value for this sample.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">sample</span></code>:</dt>
+<dd>A vector of data of the declared size for this log.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].Clear">
+<code class="descname">Clear</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].Clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the logged data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].data">
+<code class="descname">data</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged data.</p>
+<p>The InnerPanel parameter of the return type indicates that the
+compiler can assume aligned access to the data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].get_input_size">
+<code class="descname">get_input_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].get_input_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the size of the log’s input vector.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.VectorLog_[float].kDefaultCapacity">
+<code class="descname">kDefaultCapacity</code><em class="property"> = 1000</em><a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].kDefaultCapacity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].num_samples">
+<code class="descname">num_samples</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].num_samples" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of samples taken since construction or last
+Clear().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].Reserve">
+<code class="descname">Reserve</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].Reserve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reserve storage for at least <code class="docutils literal"><span class="pre">capacity</span></code> samples. At construction,
+there will be at least <code class="docutils literal"><span class="pre">kDefaultCapacity</span></code>; use this method to
+reserve more.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLog_[float].sample_times">
+<code class="descname">sample_times</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLog_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.primitives.VectorLog_[float].sample_times" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accesses the logged time stamps.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.primitives.VectorLogSink">
+<code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLogSink</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.primitives.VectorLogSink_[float]" title="pydrake.systems.primitives.VectorLogSink_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.VectorLogSink_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.systems.primitives.VectorLogSink_">
+<em class="property">template </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLogSink_</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.primitives.VectorLogSink_[float]" title="pydrake.systems.primitives.VectorLogSink_[float]"><code class="xref py py-class docutils literal"><span class="pre">VectorLogSink_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd]" title="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">VectorLogSink_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.primitives.VectorLogSink_[Expression]" title="pydrake.systems.primitives.VectorLogSink_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">VectorLogSink_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float]">
+<em class="property">class </em><code class="descname">VectorLogSink_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A discrete sink block which logs its vector-valued input to
+per-context memory. This data is then retrievable outside of System
+operation, e.g. after a simulation. See the warning below.</p>
+<p>The stored log (a VectorLog) holds a large, Eigen matrix for data
+storage, where each column corresponds to a data point. The
+VectorLogSink saves a data point and the context time whenever it
+samples its input.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The logged data MUST NOT be used to modify the behavior of a
+simulation. In technical terms, the log is not stored as System
+State, so should not be considered part of that state. This
+distinction allows the implementation to use <code class="docutils literal"><span class="pre">Publish()</span></code> as the
+event handler, rather than one of the state-modifying handlers.</p>
+</div>
+<p>By default, sampling is performed every time the Simulator completes a
+trajectory-advancing substep (that is, via a per-step Publish event),
+with the first sample occurring during Simulator::Initialize(). That
+means the samples will generally be unevenly spaced in time. If you
+prefer regular sampling, you may optionally specify a “publish period”
+in which case sampling occurs periodically, with the first sample
+occurring at time 0. Alternatively (not common), you can specify that
+logging should only occur at “forced publish” events, meaning at
+explicit calls to System::Publish(). The Simulator’s “publish every
+time step” option also results in forced publish events, so should be
+disabled (the default setting) if you want to control logging
+yourself.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() for a convenient way to add logging to a
+Diagram.</p>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorLogSink</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[float], input_size: int, publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink.</p>
+<p>Sets the default set of publish triggers: if publish_period = 0,
+publishes on forced events and per step, if publish_period &gt; 0,
+publishes on forced events and periodically.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero or not supplied, VectorLogSink will use per-step
+publishing instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[float], input_size: int, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink with a specified set of publish
+triggers.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].FindLog">
+<code class="descname">FindLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].FindLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].FindMutableLog">
+<code class="descname">FindMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].FindMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].GetLog">
+<code class="descname">GetLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].GetLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].GetMutableLog">
+<code class="descname">GetMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_.VectorLogSink_[float].GetMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLogSink_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>A discrete sink block which logs its vector-valued input to
+per-context memory. This data is then retrievable outside of System
+operation, e.g. after a simulation. See the warning below.</p>
+<p>The stored log (a VectorLog) holds a large, Eigen matrix for data
+storage, where each column corresponds to a data point. The
+VectorLogSink saves a data point and the context time whenever it
+samples its input.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The logged data MUST NOT be used to modify the behavior of a
+simulation. In technical terms, the log is not stored as System
+State, so should not be considered part of that state. This
+distinction allows the implementation to use <code class="docutils literal"><span class="pre">Publish()</span></code> as the
+event handler, rather than one of the state-modifying handlers.</p>
+</div>
+<p>By default, sampling is performed every time the Simulator completes a
+trajectory-advancing substep (that is, via a per-step Publish event),
+with the first sample occurring during Simulator::Initialize(). That
+means the samples will generally be unevenly spaced in time. If you
+prefer regular sampling, you may optionally specify a “publish period”
+in which case sampling occurs periodically, with the first sample
+occurring at time 0. Alternatively (not common), you can specify that
+logging should only occur at “forced publish” events, meaning at
+explicit calls to System::Publish(). The Simulator’s “publish every
+time step” option also results in forced publish events, so should be
+disabled (the default setting) if you want to control logging
+yourself.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() for a convenient way to add logging to a
+Diagram.</p>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorLogSink</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[AutoDiffXd], input_size: int, publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink.</p>
+<p>Sets the default set of publish triggers: if publish_period = 0,
+publishes on forced events and per step, if publish_period &gt; 0,
+publishes on forced events and periodically.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero or not supplied, VectorLogSink will use per-step
+publishing instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[AutoDiffXd], input_size: int, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink with a specified set of publish
+triggers.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].FindLog">
+<code class="descname">FindLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].FindLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].FindMutableLog">
+<code class="descname">FindMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].FindMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].GetLog">
+<code class="descname">GetLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].GetLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].GetMutableLog">
+<code class="descname">GetMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[AutoDiffXd].GetMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLogSink_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLogSink_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
+<p>A discrete sink block which logs its vector-valued input to
+per-context memory. This data is then retrievable outside of System
+operation, e.g. after a simulation. See the warning below.</p>
+<p>The stored log (a VectorLog) holds a large, Eigen matrix for data
+storage, where each column corresponds to a data point. The
+VectorLogSink saves a data point and the context time whenever it
+samples its input.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The logged data MUST NOT be used to modify the behavior of a
+simulation. In technical terms, the log is not stored as System
+State, so should not be considered part of that state. This
+distinction allows the implementation to use <code class="docutils literal"><span class="pre">Publish()</span></code> as the
+event handler, rather than one of the state-modifying handlers.</p>
+</div>
+<p>By default, sampling is performed every time the Simulator completes a
+trajectory-advancing substep (that is, via a per-step Publish event),
+with the first sample occurring during Simulator::Initialize(). That
+means the samples will generally be unevenly spaced in time. If you
+prefer regular sampling, you may optionally specify a “publish period”
+in which case sampling occurs periodically, with the first sample
+occurring at time 0. Alternatively (not common), you can specify that
+logging should only occur at “forced publish” events, meaning at
+explicit calls to System::Publish(). The Simulator’s “publish every
+time step” option also results in forced publish events, so should be
+disabled (the default setting) if you want to control logging
+yourself.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() for a convenient way to add logging to a
+Diagram.</p>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorLogSink</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[Expression], input_size: int, publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink.</p>
+<p>Sets the default set of publish triggers: if publish_period = 0,
+publishes on forced events and per step, if publish_period &gt; 0,
+publishes on forced events and periodically.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero or not supplied, VectorLogSink will use per-step
+publishing instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[Expression], input_size: int, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink with a specified set of publish
+triggers.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[Expression].FindLog">
+<code class="descname">FindLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[Expression].FindLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[Expression].FindMutableLog">
+<code class="descname">FindMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[Expression].FindMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[Expression].GetLog">
+<code class="descname">GetLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[Expression].GetLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[Expression].GetMutableLog">
+<code class="descname">GetMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[Expression].GetMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.primitives.VectorLogSink_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">VectorLogSink_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A discrete sink block which logs its vector-valued input to
+per-context memory. This data is then retrievable outside of System
+operation, e.g. after a simulation. See the warning below.</p>
+<p>The stored log (a VectorLog) holds a large, Eigen matrix for data
+storage, where each column corresponds to a data point. The
+VectorLogSink saves a data point and the context time whenever it
+samples its input.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The logged data MUST NOT be used to modify the behavior of a
+simulation. In technical terms, the log is not stored as System
+State, so should not be considered part of that state. This
+distinction allows the implementation to use <code class="docutils literal"><span class="pre">Publish()</span></code> as the
+event handler, rather than one of the state-modifying handlers.</p>
+</div>
+<p>By default, sampling is performed every time the Simulator completes a
+trajectory-advancing substep (that is, via a per-step Publish event),
+with the first sample occurring during Simulator::Initialize(). That
+means the samples will generally be unevenly spaced in time. If you
+prefer regular sampling, you may optionally specify a “publish period”
+in which case sampling occurs periodically, with the first sample
+occurring at time 0. Alternatively (not common), you can specify that
+logging should only occur at “forced publish” events, meaning at
+explicit calls to System::Publish(). The Simulator’s “publish every
+time step” option also results in forced publish events, so should be
+disabled (the default setting) if you want to control logging
+yourself.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() for a convenient way to add logging to a
+Diagram.</p>
+</div>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>VectorLogSink</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[float], input_size: int, publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink.</p>
+<p>Sets the default set of publish triggers: if publish_period = 0,
+publishes on forced events and per step, if publish_period &gt; 0,
+publishes on forced events and periodically.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero or not supplied, VectorLogSink will use per-step
+publishing instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.primitives.VectorLogSink_[float], input_size: int, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>Constructs the vector log sink with a specified set of publish
+triggers.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">input_size</span></code>:</dt>
+<dd>Dimension of the (single) input port. This corresponds to the
+number of rows of the data matrix.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_triggers</span></code>:</dt>
+<dd>Set of triggers that determine when messages will be published.
+Supported TriggerTypes are {kForced, kPeriodic, kPerStep}. Will
+throw an error if empty or if unsupported types are provided.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). publish_period
+should only be non-zero if one of the publish_triggers is
+kPeriodic.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+<dt>Precondition:</dt>
+<dd>publish_period &gt; 0 if and only if publish_triggers contains
+kPeriodic.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LogVectorOutput() helper function for a convenient way to add
+logging.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[float].FindLog">
+<code class="descname">FindLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[float].FindLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[float].FindMutableLog">
+<code class="descname">FindMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[float].FindMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within a containing root context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if supplied context is not a root context, or was not</li>
+<li>created for the containing diagram.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[float].GetLog">
+<code class="descname">GetLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[float].GetLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.VectorLogSink_[float].GetMutableLog">
+<code class="descname">GetMutableLog</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.VectorLogSink_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.VectorLog_[float]<a class="headerlink" href="#pydrake.systems.primitives.VectorLogSink_[float].GetMutableLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access the log as a mutable object within this component’s context.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if context was not created for this system.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

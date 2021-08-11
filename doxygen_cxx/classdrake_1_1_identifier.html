@@ -167,6 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1947275fb04e36d9eae9372158af126"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_identifier.html#ae1947275fb04e36d9eae9372158af126">operator&lt;</a> (<a class="el" href="classdrake_1_1_identifier.html">Identifier</a> other) const</td></tr>
 <tr class="memdesc:ae1947275fb04e36d9eae9372158af126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two identifiers in order to define a total ordering among identifiers.  <a href="#ae1947275fb04e36d9eae9372158af126">More...</a><br /></td></tr>
 <tr class="separator:ae1947275fb04e36d9eae9372158af126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a7209945e46c82c1e361392a8f87e68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_identifier.html#a9a7209945e46c82c1e361392a8f87e68">is_same_as_valid_id</a> (<a class="el" href="classdrake_1_1_identifier.html">Identifier</a> valid_id) const</td></tr>
+<tr class="memdesc:a9a7209945e46c82c1e361392a8f87e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Compares this possibly-invalid <a class="el" href="classdrake_1_1_identifier.html" title="A simple identifier class.">Identifier</a> with one that is known to be valid and returns <code>false</code> if they don't match.  <a href="#a9a7209945e46c82c1e361392a8f87e68">More...</a><br /></td></tr>
+<tr class="separator:a9a7209945e46c82c1e361392a8f87e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a2868815a784be55d42a1074934c866e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_identifier.html#a2868815a784be55d42a1074934c866e4">Identifier</a> (const <a class="el" href="classdrake_1_1_identifier.html">Identifier</a> &amp;)=default</td></tr>
 <tr class="separator:a2868815a784be55d42a1074934c866e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,6 +352,27 @@ Related Functions</h2></td></tr>
 
 <p>Extracts the underlying representation from the identifier. </p>
 <p>This is considered invalid for invalid ids and is strictly enforced in Debug builds. </p>
+
+</div>
+</div>
+<a id="a9a7209945e46c82c1e361392a8f87e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a7209945e46c82c1e361392a8f87e68">&#9670;&nbsp;</a></span>is_same_as_valid_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_same_as_valid_id </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_identifier.html">Identifier</a>&lt; Tag &gt;&#160;</td>
+          <td class="paramname"><em>valid_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Compares this possibly-invalid <a class="el" href="classdrake_1_1_identifier.html" title="A simple identifier class.">Identifier</a> with one that is known to be valid and returns <code>false</code> if they don't match. </p>
+<p>It is an error if <code>valid_id</code> is not actually valid, and that is strictly enforced in Debug builds. However, it is not an error if <code>this</code> id is invalid; that results in a <code>false</code> return. This method can be faster than testing separately for validity and equality. </p>
 
 </div>
 </div>

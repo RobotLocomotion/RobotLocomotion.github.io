@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_spatial_velocity.html":[3,0,0,8,67],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a05ce28d659cae24ea01cc942e18386f0":[3,0,0,8,67,9],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[3,0,0,8,67,4],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a32edb1bdd326029aeb86e0d42b33260f":[3,0,0,8,67,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a765c17a1b88356c2d9d9b20659d4292d":[3,0,0,8,0,2,0,1],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a8fcedd77201a6ff4ee603c107277a650":[3,0,0,8,0,2,0,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a9ff0e526c91586fb7a450151370377eb":[3,0,0,8,0,2,0,5],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab01f43989767b1d4836d5ed824e121cd":[3,0,0,8,0,2,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab8cc6237eaa898941ec89897b9fd0414":[3,0,0,8,0,2,0,8]
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab01f43989767b1d4836d5ed824e121cd":[3,0,0,8,0,2,0,0]
 };

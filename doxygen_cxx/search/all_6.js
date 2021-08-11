@@ -60,7 +60,7 @@ var searchData=
   ['finddecisionvariableindices',['FindDecisionVariableIndices',['../classdrake_1_1solvers_1_1_mathematical_program.html#a53e872544e169f9b66f499bc06eb4641',1,'drake::solvers::MathematicalProgram']]],
   ['findindeterminateindex',['FindIndeterminateIndex',['../classdrake_1_1solvers_1_1_mathematical_program.html#a1470ed93553619a1f630bc8035947556',1,'drake::solvers::MathematicalProgram']]],
   ['findlog',['FindLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#a021106c5eb21e08b8fce9400e5ed8721',1,'drake::systems::VectorLogSink']]],
-  ['findmutablelog',['FindMutableLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#a477af0c81f5258eaead0b9062e86639e',1,'drake::systems::VectorLogSink']]],
+  ['findmutablelog',['FindMutableLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c',1,'drake::systems::VectorLogSink']]],
   ['findnonconvexquadraticcost',['FindNonconvexQuadraticCost',['../namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb',1,'drake::solvers']]],
   ['findoptitrackbody',['FindOptitrackBody',['../namespacedrake_1_1manipulation_1_1perception.html#a0ff9cbf42a94d5a5333ba974a0e6b9f0',1,'drake::manipulation::perception']]],
   ['findoptitrackobjectid',['FindOptitrackObjectId',['../namespacedrake_1_1manipulation_1_1perception.html#a9dcf4f420824dfdb3cf8f35a263b1a8c',1,'drake::manipulation::perception']]],
