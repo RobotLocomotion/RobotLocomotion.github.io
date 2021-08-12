@@ -1,5 +1,13 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#afeaa0dd6491a96790fe00243942b7daf":[3,0,0,12,36,1],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html":[3,0,0,12,37],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a06d78a67db66b4652c452d06fe233033":[3,0,0,12,37,12],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a0c554fd10dcd279ac5b210d718acd06a":[3,0,0,12,37,19],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a248b80987448f9009737ced45086f71d":[3,0,0,12,37,13],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a2c34405f0f4cce4a88f30f5efd570dd0":[3,0,0,12,37,20],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a419cd0b396fa1fbf23bc9163ce856fa3":[3,0,0,12,37,21],
+"classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a47ee24f19cf07be4c5e81c97620941fd":[3,0,0,12,37,9],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a521a0641af7b68a3dcbc23deb6329bf1":[3,0,0,12,37,18],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a53dfe218d6cb3e5a2fa5df6cd072809d":[3,0,0,12,37,16],
 "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html#a6a89a130125ae9525102a3327ea8bbcf":[3,0,0,12,37,17],
@@ -241,13 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1solvers_1_1_solver_interface.html#a18aa508724ac803ce5f8ee66e358af99":[3,0,0,12,64,8],
 "classdrake_1_1solvers_1_1_solver_interface.html#a1e8fcd942e045810b3847510fd0528fa":[3,0,0,12,64,5],
 "classdrake_1_1solvers_1_1_solver_interface.html#a417d58de5faf840e5c617c3293695c15":[3,0,0,12,64,1],
-"classdrake_1_1solvers_1_1_solver_interface.html#a59a2b968eced6bf266e780015416db83":[3,0,0,12,64,3],
-"classdrake_1_1solvers_1_1_solver_interface.html#a7a9200fb686048e552f8b009386963b0":[3,0,0,12,64,4],
-"classdrake_1_1solvers_1_1_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023":[3,0,0,12,64,11],
-"classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906":[3,0,0,12,64,2],
-"classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25":[3,0,0,12,64,6],
-"classdrake_1_1solvers_1_1_solver_interface.html#ad1e8a72fc26766f97bb9a3ab312b0921":[3,0,0,12,64,9],
-"classdrake_1_1solvers_1_1_solver_interface.html#ae9b1880991b1fc732485c99036790983":[3,0,0,12,64,0],
-"classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec":[3,0,0,12,64,10],
-"classdrake_1_1solvers_1_1_solver_options.html":[3,0,0,12,65]
+"classdrake_1_1solvers_1_1_solver_interface.html#a59a2b968eced6bf266e780015416db83":[3,0,0,12,64,3]
 };

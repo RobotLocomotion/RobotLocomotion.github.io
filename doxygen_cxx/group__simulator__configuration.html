@@ -110,16 +110,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5d1fc9d510c450590826170fca172e5a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a">GetIntegrationSchemes</a> ()</td></tr>
 <tr class="memdesc:ga5d1fc9d510c450590826170fca172e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the allowed string values for the <code>scheme</code> parameter in <a class="el" href="group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b" title="Resets the integrator used to advanced the continuous time dynamics of the system associated with sim...">ResetIntegratorFromFlags()</a> and <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f">SimulatorConfig::integration_scheme</a>.  <a href="group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a">More...</a><br /></td></tr>
 <tr class="separator:ga5d1fc9d510c450590826170fca172e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fb5bb9390aba71982dd3b282548d68b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga3fb5bb9390aba71982dd3b282548d68b">ApplySimulatorConfig</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; double &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config)</td></tr>
-<tr class="memdesc:ga3fb5bb9390aba71982dd3b282548d68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>simulator</code> to use the given config.  <a href="group__simulator__configuration.html#ga3fb5bb9390aba71982dd3b282548d68b">More...</a><br /></td></tr>
-<tr class="separator:ga3fb5bb9390aba71982dd3b282548d68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf577b25da039038f6b9691d4bea6f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#gacf577b25da039038f6b9691d4bea6f19">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; double &gt; &amp;simulator)</td></tr>
-<tr class="memdesc:gacf577b25da039038f6b9691d4bea6f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <a href="group__simulator__configuration.html#gacf577b25da039038f6b9691d4bea6f19">More...</a><br /></td></tr>
-<tr class="separator:gacf577b25da039038f6b9691d4bea6f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">ApplySimulatorConfig</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:ga9aad0aa8b134eb63118bc3b38821977f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>simulator</code> to use the given config.  <a href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">More...</a><br /></td></tr>
+<tr class="separator:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;simulator)</td></tr>
+<tr class="memdesc:ga00b67f54aba155c982e8a1038278eed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <a href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">More...</a><br /></td></tr>
+<tr class="separator:ga00b67f54aba155c982e8a1038278eed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga3fb5bb9390aba71982dd3b282548d68b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3fb5bb9390aba71982dd3b282548d68b">&#9670;&nbsp;</a></span>ApplySimulatorConfig()</h2>
+<a id="ga9aad0aa8b134eb63118bc3b38821977f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aad0aa8b134eb63118bc3b38821977f">&#9670;&nbsp;</a></span>ApplySimulatorConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +129,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void drake::systems::ApplySimulatorConfig </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; double &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>simulator</em>, </td>
         </tr>
         <tr>
@@ -153,11 +155,17 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="gacf577b25da039038f6b9691d4bea6f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacf577b25da039038f6b9691d4bea6f19">&#9670;&nbsp;</a></span>ExtractSimulatorConfig()</h2>
+<a id="ga00b67f54aba155c982e8a1038278eed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00b67f54aba155c982e8a1038278eed6">&#9670;&nbsp;</a></span>ExtractSimulatorConfig()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +173,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> drake::systems::ExtractSimulatorConfig </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>simulator</em></td><td>)</td>
           <td></td>
         </tr>
@@ -179,6 +187,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>For non-double T (T=AutoDiffXd), doing ExtractSimulatorConfig will discard the integrator's scalar type's extra information such as gradients. </dd></dl>
 
 </div>
 </div>

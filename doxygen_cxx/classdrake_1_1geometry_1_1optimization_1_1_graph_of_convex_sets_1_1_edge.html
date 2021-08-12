@@ -110,6 +110,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6620f5394586ae49fffc5aec0d872b67"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a6620f5394586ae49fffc5aec0d872b67">~Edge</a> ()</td></tr>
 <tr class="separator:a6620f5394586ae49fffc5aec0d872b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade65736801b111b655c1cc32af8f2a92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ade65736801b111b655c1cc32af8f2a92">id</a> () const</td></tr>
+<tr class="memdesc:ade65736801b111b655c1cc32af8f2a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unique identifier associated with this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html" title="An edge in the graph connects between vertex u and vertex v.">Edge</a>.  <a href="#ade65736801b111b655c1cc32af8f2a92">More...</a><br /></td></tr>
+<tr class="separator:ade65736801b111b655c1cc32af8f2a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a> () const</td></tr>
 <tr class="memdesc:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string name associated with this edge.  <a href="#ad8227ba86a01f26e4f173cd5e219d5d1">More...</a><br /></td></tr>
 <tr class="separator:ad8227ba86a01f26e4f173cd5e219d5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +143,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4093c49c37ea58350e1874a8c0ea134"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae4093c49c37ea58350e1874a8c0ea134">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">solvers::Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">solvers::Constraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:ae4093c49c37ea58350e1874a8c0ea134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint to this edge.  <a href="#ae4093c49c37ea58350e1874a8c0ea134">More...</a><br /></td></tr>
 <tr class="separator:ae4093c49c37ea58350e1874a8c0ea134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c70942e2ec05eaa8e728b58dc5b4149"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4c70942e2ec05eaa8e728b58dc5b4149">AddPhiConstraint</a> (bool phi_value)</td></tr>
+<tr class="memdesc:a4c70942e2ec05eaa8e728b58dc5b4149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a constraint on the binary variable associated with this edge.  <a href="#a4c70942e2ec05eaa8e728b58dc5b4149">More...</a><br /></td></tr>
+<tr class="separator:a4c70942e2ec05eaa8e728b58dc5b4149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ae9472d3bcadcdc5e3845fdea8de7438d">ClearPhiConstraints</a> ()</td></tr>
+<tr class="memdesc:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes any constraints added with AddPhiConstraint.  <a href="#ae9472d3bcadcdc5e3845fdea8de7438d">More...</a><br /></td></tr>
+<tr class="separator:ae9472d3bcadcdc5e3845fdea8de7438d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc8440cef215ba725a47df2067e5f054"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#abc8440cef215ba725a47df2067e5f054">GetSolutionCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &amp;result) const</td></tr>
 <tr class="memdesc:abc8440cef215ba725a47df2067e5f054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sum of the costs associated with this edge in a MathematicalProgramResult.  <a href="#abc8440cef215ba725a47df2067e5f054">More...</a><br /></td></tr>
 <tr class="separator:abc8440cef215ba725a47df2067e5f054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -337,6 +346,46 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a4c70942e2ec05eaa8e728b58dc5b4149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c70942e2ec05eaa8e728b58dc5b4149">&#9670;&nbsp;</a></span>AddPhiConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPhiConstraint </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>phi_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a constraint on the binary variable associated with this edge. </p>
+<dl class="section note"><dt>Note</dt><dd>We intentionally do not return a binding to the constraint created by this call, as that would allow the caller to make nonsensical modifications to its bounds (i.e. requiring phi == 0.5). </dd></dl>
+
+</div>
+</div>
+<a id="ae9472d3bcadcdc5e3845fdea8de7438d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9472d3bcadcdc5e3845fdea8de7438d">&#9670;&nbsp;</a></span>ClearPhiConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearPhiConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes any constraints added with AddPhiConstraint. </p>
+
+</div>
+</div>
 <a id="abc8440cef215ba725a47df2067e5f054"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc8440cef215ba725a47df2067e5f054">&#9670;&nbsp;</a></span>GetSolutionCost()</h2>
 
@@ -354,6 +403,25 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the sum of the costs associated with this edge in a MathematicalProgramResult. </p>
+
+</div>
+</div>
+<a id="ade65736801b111b655c1cc32af8f2a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade65736801b111b655c1cc32af8f2a92">&#9670;&nbsp;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a4df1a3580f1ae7e96903c7b3f7b00974">EdgeId</a> id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the unique identifier associated with this <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html" title="An edge in the graph connects between vertex u and vertex v.">Edge</a>. </p>
 
 </div>
 </div>

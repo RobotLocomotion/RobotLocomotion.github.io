@@ -1,5 +1,13 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__monomial_8h.html#a8b3d409cea5e6c6495394208c8c8c6ee":[4,0,0,1,64,4],
+"symbolic__monomial__basis__element_8h.html":[4,0,0,1,65],
+"symbolic__monomial__basis__element_8h.html#a5885669a7b9958dc209c13778d48e6ef":[4,0,0,1,65,2],
+"symbolic__monomial__basis__element_8h.html#aec1d54669ca8ae5ea474b5904c50e85e":[4,0,0,1,65,4],
+"symbolic__monomial__basis__element_8h.html#af71ffcec2b8e06d52b7c6e8f53106160":[4,0,0,1,65,3],
+"symbolic__monomial__util_8h.html":[4,0,0,1,66],
+"symbolic__monomial__util_8h.html#a04c0029b04f957181b0cb2bdae701514":[4,0,0,1,66,2],
+"symbolic__monomial__util_8h.html#aa40528027cce753aacb377913342f536":[4,0,0,1,66,4],
 "symbolic__monomial__util_8h.html#ade6ac4e26dcd9023a9f8146aa75454c7":[4,0,0,1,66,5],
 "symbolic__monomial__util_8h.html#af297794f22c0458592aeea637cce060a":[4,0,0,1,66,3],
 "symbolic__monomial__util_8h.html#aff00cd9261b602f7ce7708286d2dae05":[4,0,0,1,66,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX51 =
 "volume__mesh_8h.html#a2aba540a75351aad1e183ae9accf234c":[4,0,0,4,2,44,5],
 "volume__mesh_8h.html#a521e6b89e03b3021766886e2270056b6":[4,0,0,4,2,44,4],
 "volume__mesh__field_8h.html":[4,0,0,4,2,45],
-"volume__mesh__field_8h.html#a6f0a99208aa3dea5d4a3094f4fdf9274":[4,0,0,4,2,45,0],
-"volume__to__surface__mesh_8h.html":[4,0,0,4,2,46],
-"vpolytope_8h.html":[4,0,0,4,1,8],
-"vtk__util_8h.html":[4,0,0,4,4,10],
-"vtk__util_8h.html#a511bb7c86c3d48ddec05b470ba3adb2c":[4,0,0,4,4,10,0],
-"vtk__util_8h.html#a69d2c70a67e99a23688272654071e2b6":[4,0,0,4,4,10,2],
-"vtk__util_8h.html#abdb94acdad86ca639785432a868abbd0":[4,0,0,4,4,10,1],
-"vtk__util_8h.html#abfb696bdfb8aca5a7cec2ab0e167c889":[4,0,0,4,4,10,3],
-"weld__joint_8h.html":[4,0,0,8,12,51]
+"volume__mesh__field_8h.html#a6f0a99208aa3dea5d4a3094f4fdf9274":[4,0,0,4,2,45,0]
 };

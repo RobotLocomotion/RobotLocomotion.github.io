@@ -1427,8 +1427,21 @@ uses of the same RandomGenerator object.</dd>
 
 <dl class="function">
 <dt id="pydrake.systems.analysis.PrintSimulatorStatistics">
-<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">PrintSimulatorStatistics</code><span class="sig-paren">(</span><em>arg0: pydrake.systems.analysis.Simulator_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.PrintSimulatorStatistics" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method outputs to stdout relevant simulation statistics for a
+<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">PrintSimulatorStatistics</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.PrintSimulatorStatistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>PrintSimulatorStatistics(arg0: pydrake.systems.analysis.Simulator_[float]) -&gt; None</li>
+</ol>
+<p>This method outputs to stdout relevant simulation statistics for a
+simulator that advanced the state of a system forward in time.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dd>The simulator to output statistics for.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>PrintSimulatorStatistics(arg0: pydrake.systems.analysis.Simulator_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>This method outputs to stdout relevant simulation statistics for a
 simulator that advanced the state of a system forward in time.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
@@ -1603,8 +1616,37 @@ in the system.</p>
 
 <dl class="function">
 <dt id="pydrake.systems.analysis.ResetIntegratorFromFlags">
-<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">ResetIntegratorFromFlags</code><span class="sig-paren">(</span><em>simulator: pydrake.systems.analysis.Simulator_[float], scheme: str, max_step_size: float</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.analysis.IntegratorBase_[float]<a class="headerlink" href="#pydrake.systems.analysis.ResetIntegratorFromFlags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resets the integrator used to advanced the continuous time dynamics of
+<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">ResetIntegratorFromFlags</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.ResetIntegratorFromFlags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ResetIntegratorFromFlags(simulator: pydrake.systems.analysis.Simulator_[float], scheme: str, max_step_size: float) -&gt; pydrake.systems.analysis.IntegratorBase_[float]</li>
+</ol>
+<p>Resets the integrator used to advanced the continuous time dynamics of
+the system associated with <code class="docutils literal"><span class="pre">simulator</span></code> according to the given
+arguments.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dd>On input, a valid pointer to a Simulator. On output the integrator
+for <code class="docutils literal"><span class="pre">simulator</span></code> is reset according to the given arguments.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scheme</span></code>:</dt>
+<dd>Integration scheme to be used, e.g., “runge_kutta2”. See
+GetIntegrationSchemes() for a the list of valid options.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dd>The IntegratorBase::set_maximum_step_size() value.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the newly created integrator owned by
+<code class="docutils literal"><span class="pre">simulator</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>ResetIntegratorFromFlags(simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd], scheme: str, max_step_size: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</li>
+</ol>
+<p>Resets the integrator used to advanced the continuous time dynamics of
 the system associated with <code class="docutils literal"><span class="pre">simulator</span></code> according to the given
 arguments.</p>
 <dl class="docutils">

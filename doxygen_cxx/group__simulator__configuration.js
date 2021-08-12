@@ -1,7 +1,7 @@
 var group__simulator__configuration =
 [
-    [ "ApplySimulatorConfig", "group__simulator__configuration.html#ga3fb5bb9390aba71982dd3b282548d68b", null ],
-    [ "ExtractSimulatorConfig", "group__simulator__configuration.html#gacf577b25da039038f6b9691d4bea6f19", null ],
+    [ "ApplySimulatorConfig", "group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f", null ],
+    [ "ExtractSimulatorConfig", "group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6", null ],
     [ "GetIntegrationSchemes", "group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a", null ],
     [ "ResetIntegratorFromFlags", "group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b", null ]
 ];

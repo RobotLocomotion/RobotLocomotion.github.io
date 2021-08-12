@@ -3100,13 +3100,12 @@ rows.</dd>
 <dl class="method">
 <dt id="pydrake.systems.primitives.LogOutput.LogOutput[float]">
 <code class="descname">LogOutput[float]</code><span class="sig-paren">(</span><em>src: pydrake.systems.framework.OutputPort_[float], builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.SignalLogger_[float]<a class="headerlink" href="#pydrake.systems.primitives.LogOutput.LogOutput[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a convenience function for adding a SignalLogger, initialized
-to the correct size, and connected to an output in a DiagramBuilder.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
-  <span class="n">auto</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">LogOutput</span><span class="p">(</span><span class="n">foo</span><span class="o">-&gt;</span><span class="n">get_output_port</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
-</pre></div>
-</div>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use LogVectorOutput instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -3114,37 +3113,34 @@ to the correct size, and connected to an output in a DiagramBuilder.</p>
 <dl class="function">
 <dt id="pydrake.systems.primitives.LogOutput[AutoDiffXd]">
 <code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LogOutput[AutoDiffXd]</code><span class="sig-paren">(</span><em>src: pydrake.systems.framework.OutputPort_[AutoDiffXd], builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.SignalLogger_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.primitives.LogOutput[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a convenience function for adding a SignalLogger, initialized
-to the correct size, and connected to an output in a DiagramBuilder.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
-  <span class="n">auto</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">LogOutput</span><span class="p">(</span><span class="n">foo</span><span class="o">-&gt;</span><span class="n">get_output_port</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
-</pre></div>
-</div>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use LogVectorOutput instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydrake.systems.primitives.LogOutput[Expression]">
 <code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LogOutput[Expression]</code><span class="sig-paren">(</span><em>src: pydrake.systems.framework.OutputPort_[Expression], builder: pydrake.systems.framework.DiagramBuilder_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.SignalLogger_[Expression]<a class="headerlink" href="#pydrake.systems.primitives.LogOutput[Expression]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a convenience function for adding a SignalLogger, initialized
-to the correct size, and connected to an output in a DiagramBuilder.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
-  <span class="n">auto</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">LogOutput</span><span class="p">(</span><span class="n">foo</span><span class="o">-&gt;</span><span class="n">get_output_port</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
-</pre></div>
-</div>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use LogVectorOutput instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydrake.systems.primitives.LogOutput[float]">
 <code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LogOutput[float]</code><span class="sig-paren">(</span><em>src: pydrake.systems.framework.OutputPort_[float], builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.SignalLogger_[float]<a class="headerlink" href="#pydrake.systems.primitives.LogOutput[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a convenience function for adding a SignalLogger, initialized
-to the correct size, and connected to an output in a DiagramBuilder.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">DiagramBuilder</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">builder</span><span class="p">;</span>
-  <span class="n">auto</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">);</span>
-  <span class="n">auto</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">LogOutput</span><span class="p">(</span><span class="n">foo</span><span class="o">-&gt;</span><span class="n">get_output_port</span><span class="p">(),</span> <span class="o">&amp;</span><span class="n">builder</span><span class="p">);</span>
-</pre></div>
-</div>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use LogVectorOutput instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -4090,7 +4086,12 @@ each thread to avoid trouble.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">Simulator::set_publish_at_initialization()</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use VectorLogSink instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
+<dl class="method">
 <dt id="pydrake.systems.primitives.SignalLogger_.SignalLogger_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SignalLogger_[float], input_size: int, batch_allocation_size: int = 1000</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SignalLogger_.SignalLogger_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the signal logger system.</p>
@@ -4220,7 +4221,12 @@ each thread to avoid trouble.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">Simulator::set_publish_at_initialization()</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use VectorLogSink instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
+<dl class="method">
 <dt id="pydrake.systems.primitives.SignalLogger_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SignalLogger_[AutoDiffXd], input_size: int, batch_allocation_size: int = 1000</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SignalLogger_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the signal logger system.</p>
@@ -4348,7 +4354,12 @@ each thread to avoid trouble.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">Simulator::set_publish_at_initialization()</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use VectorLogSink instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
+<dl class="method">
 <dt id="pydrake.systems.primitives.SignalLogger_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SignalLogger_[Expression], input_size: int, batch_allocation_size: int = 1000</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SignalLogger_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the signal logger system.</p>
@@ -4476,7 +4487,12 @@ each thread to avoid trouble.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">Simulator::set_publish_at_initialization()</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">data&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SignalLogger</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use VectorLogSink instead. This will be removed from Drake on or
+after 2021-12-01.</dd>
+</dl>
+<dl class="method">
 <dt id="pydrake.systems.primitives.SignalLogger_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.SignalLogger_[float], input_size: int, batch_allocation_size: int = 1000</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.SignalLogger_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the signal logger system.</p>

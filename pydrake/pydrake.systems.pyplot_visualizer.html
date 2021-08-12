@@ -217,9 +217,10 @@ appropriate state.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>log</strong> – A reference to a pydrake.systems.primitives.SignalLogger
-or a pydrake.trajectories.Trajectory that contains the plant
-state after running a simulation.</li>
+<li><strong>log</strong> – A reference to a pydrake.systems.primitives.VectorLog, or a
+pydrake.systems.primitives.SignalLogger (deprecated for
+2021-12-01), or a pydrake.trajectories.Trajectory that contains
+the plant state after running a simulation.</li>
 <li><strong>resample</strong> – Whether we should do a resampling operation to make the
 samples more consistent in time. This can be disabled if you
 know the draw_period passed into the constructor exactly

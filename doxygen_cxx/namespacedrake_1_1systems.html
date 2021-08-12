@@ -627,21 +627,26 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5d1fc9d510c450590826170fca172e5a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a">GetIntegrationSchemes</a> ()</td></tr>
 <tr class="memdesc:ga5d1fc9d510c450590826170fca172e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the allowed string values for the <code>scheme</code> parameter in <a class="el" href="group__simulator__configuration.html#gad32461bc90073aac39049d636974a04b" title="Resets the integrator used to advanced the continuous time dynamics of the system associated with sim...">ResetIntegratorFromFlags()</a> and <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f">SimulatorConfig::integration_scheme</a>.  <a href="group__simulator__configuration.html#ga5d1fc9d510c450590826170fca172e5a">More...</a><br /></td></tr>
 <tr class="separator:ga5d1fc9d510c450590826170fca172e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3fb5bb9390aba71982dd3b282548d68b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga3fb5bb9390aba71982dd3b282548d68b">ApplySimulatorConfig</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; double &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config)</td></tr>
-<tr class="memdesc:ga3fb5bb9390aba71982dd3b282548d68b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>simulator</code> to use the given config.  <a href="group__simulator__configuration.html#ga3fb5bb9390aba71982dd3b282548d68b">More...</a><br /></td></tr>
-<tr class="separator:ga3fb5bb9390aba71982dd3b282548d68b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacf577b25da039038f6b9691d4bea6f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#gacf577b25da039038f6b9691d4bea6f19">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; double &gt; &amp;simulator)</td></tr>
-<tr class="memdesc:gacf577b25da039038f6b9691d4bea6f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <a href="group__simulator__configuration.html#gacf577b25da039038f6b9691d4bea6f19">More...</a><br /></td></tr>
-<tr class="separator:gacf577b25da039038f6b9691d4bea6f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d75057ea20bd20cb537d756182baacd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a3d75057ea20bd20cb537d756182baacd">ResetIntegratorFromGflags</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; *simulator)</td></tr>
-<tr class="memdesc:a3d75057ea20bd20cb537d756182baacd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the integrator used to advanced the continuous time dynamics of the system associated with <code>simulator</code> according to the gflags declared in this file.  <a href="#a3d75057ea20bd20cb537d756182baacd">More...</a><br /></td></tr>
-<tr class="separator:a3d75057ea20bd20cb537d756182baacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44b2301806f1e1407fe8deee5d9e3304"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a44b2301806f1e1407fe8deee5d9e3304">MakeSimulatorFromGflags</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;system, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt;&gt; context=nullptr)</td></tr>
-<tr class="memdesc:a44b2301806f1e1407fe8deee5d9e3304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a new simulator according to the gflags declared in this file.  <a href="#a44b2301806f1e1407fe8deee5d9e3304">More...</a><br /></td></tr>
-<tr class="separator:a44b2301806f1e1407fe8deee5d9e3304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b136438cfc1637c0cd5724187f8153a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a3b136438cfc1637c0cd5724187f8153a">PrintSimulatorStatistics</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; &amp;simulator)</td></tr>
-<tr class="memdesc:a3b136438cfc1637c0cd5724187f8153a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method outputs to stdout relevant simulation statistics for a simulator that advanced the state of a system forward in time.  <a href="#a3b136438cfc1637c0cd5724187f8153a">More...</a><br /></td></tr>
-<tr class="separator:a3b136438cfc1637c0cd5724187f8153a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">ApplySimulatorConfig</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; *simulator, const <a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a> &amp;config)</td></tr>
+<tr class="memdesc:ga9aad0aa8b134eb63118bc3b38821977f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies the <code>simulator</code> to use the given config.  <a href="group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f">More...</a><br /></td></tr>
+<tr class="separator:ga9aad0aa8b134eb63118bc3b38821977f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ga00b67f54aba155c982e8a1038278eed6"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1_simulator_config.html">SimulatorConfig</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">ExtractSimulatorConfig</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">drake::systems::Simulator</a>&lt; T &gt; &amp;simulator)</td></tr>
+<tr class="memdesc:ga00b67f54aba155c982e8a1038278eed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the simulator's current configuration, including the configuration of the integrator.  <a href="group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6">More...</a><br /></td></tr>
+<tr class="separator:ga00b67f54aba155c982e8a1038278eed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0985d020df74af5d4cdb0296951b5c68"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0985d020df74af5d4cdb0296951b5c68"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a0985d020df74af5d4cdb0296951b5c68">ResetIntegratorFromGflags</a> (<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; *simulator)</td></tr>
+<tr class="memdesc:a0985d020df74af5d4cdb0296951b5c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the integrator used to advanced the continuous time dynamics of the system associated with <code>simulator</code> according to the gflags declared in this file.  <a href="#a0985d020df74af5d4cdb0296951b5c68">More...</a><br /></td></tr>
+<tr class="separator:a0985d020df74af5d4cdb0296951b5c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a0a6e4906135fe23f2a8f8f9cd68f3385">MakeSimulatorFromGflags</a> (const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;system, std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt;&gt; context=nullptr)</td></tr>
+<tr class="memdesc:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a new simulator according to the gflags declared in this file.  <a href="#a0a6e4906135fe23f2a8f8f9cd68f3385">More...</a><br /></td></tr>
+<tr class="separator:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e4e6cd73fdedd3dde63af60b3572e4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a14e4e6cd73fdedd3dde63af60b3572e4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a14e4e6cd73fdedd3dde63af60b3572e4">PrintSimulatorStatistics</a> (const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; &amp;simulator)</td></tr>
+<tr class="memdesc:a14e4e6cd73fdedd3dde63af60b3572e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method outputs to stdout relevant simulation statistics for a simulator that advanced the state of a system forward in time.  <a href="#a14e4e6cd73fdedd3dde63af60b3572e4">More...</a><br /></td></tr>
+<tr class="separator:a14e4e6cd73fdedd3dde63af60b3572e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28d54aeb4ed10ced064d5b36f5aa8b67"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a28d54aeb4ed10ced064d5b36f5aa8b67"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a28d54aeb4ed10ced064d5b36f5aa8b67">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context)</td></tr>
 <tr class="separator:a28d54aeb4ed10ced064d5b36f5aa8b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1526,22 +1531,22 @@ publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd><
 
 </div>
 </div>
-<a id="a44b2301806f1e1407fe8deee5d9e3304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44b2301806f1e1407fe8deee5d9e3304">&#9670;&nbsp;</a></span>MakeSimulatorFromGflags()</h2>
+<a id="a0a6e4906135fe23f2a8f8f9cd68f3385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6e4906135fe23f2a8f8f9cd68f3385">&#9670;&nbsp;</a></span>MakeSimulatorFromGflags()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt;double&gt; &gt; drake::systems::MakeSimulatorFromGflags </td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt;T&gt; &gt; drake::systems::MakeSimulatorFromGflags </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>system</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; double &gt;&gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt;&gt;&#160;</td>
           <td class="paramname"><em>context</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -1557,6 +1562,12 @@ publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd><
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">system</td><td>The <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> to be associated with the newly crated <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. You must ensure that <code>system</code> has a longer lifetime than the new <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>The <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> that will be used as the initial condition for the simulation; otherwise the <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a> will obtain a default <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> from <code>system</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1673,8 +1684,8 @@ publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd><
 
 </div>
 </div>
-<a id="a3b136438cfc1637c0cd5724187f8153a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b136438cfc1637c0cd5724187f8153a">&#9670;&nbsp;</a></span>PrintSimulatorStatistics()</h2>
+<a id="a14e4e6cd73fdedd3dde63af60b3572e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e4e6cd73fdedd3dde63af60b3572e4">&#9670;&nbsp;</a></span>PrintSimulatorStatistics()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1682,7 +1693,7 @@ publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd><
         <tr>
           <td class="memname">void drake::systems::PrintSimulatorStatistics </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>simulator</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1699,16 +1710,16 @@ publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd><
 
 </div>
 </div>
-<a id="a3d75057ea20bd20cb537d756182baacd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d75057ea20bd20cb537d756182baacd">&#9670;&nbsp;</a></span>ResetIntegratorFromGflags()</h2>
+<a id="a0985d020df74af5d4cdb0296951b5c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0985d020df74af5d4cdb0296951b5c68">&#9670;&nbsp;</a></span>ResetIntegratorFromGflags()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt;double&gt;&amp; drake::systems::ResetIntegratorFromGflags </td>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_integrator_base.html">IntegratorBase</a>&lt;T&gt;&amp; drake::systems::ResetIntegratorFromGflags </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; double &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_simulator.html">Simulator</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>simulator</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1719,6 +1730,12 @@ publish_period &gt; 0 if and only if publish_triggers contains kPeriodic. </dd><
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">simulator</td><td>On input, a valid pointer to a <a class="el" href="classdrake_1_1systems_1_1_simulator.html" title="A class for advancing the state of hybrid dynamic systems, represented by System&lt;T&gt; objects,...">Simulator</a>. On output the integrator for <code>simulator</code> is reset according to the gflags declared in this file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>

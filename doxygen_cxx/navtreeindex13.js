@@ -1,5 +1,13 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_revolute_joint.html#a47733949e40b86ffe8776dea4a154459":[3,0,0,8,56,27],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a4aa0283d494b40fc4b0956b3e40ab99b":[3,0,0,8,56,22],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a4c23b3d7f4f0a32f27069602e0d8397f":[3,0,0,8,56,26],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a503af5e7b7477b89d8920f5ec29582e1":[3,0,0,8,56,28],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a5608e4f04daa177004efade938e77fbf":[3,0,0,8,56,21],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a5a700b3f8484f49b554484c00411b8c2":[3,0,0,8,56,14],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a681fbb83431b9b1d7a9651dc9e93b29b":[3,0,0,8,56,24],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a79b24d1bde5380500b8bdf2bd9a28228":[3,0,0,8,56,7],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a7bfac2e954b2a595a7eb903eee290b22":[3,0,0,8,56,4],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a7f081af6a0a8a4122394e0c63b5ff7e9":[3,0,0,8,56,25],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a87889df2dbbcb278013f813d9a0cf452":[3,0,0,8,56,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43":[3,0,0,8,66,25],
 "classdrake_1_1multibody_1_1_spatial_vector.html#abb042fa391ff71b369dd7e50f0c9fbc2":[3,0,0,8,66,18],
 "classdrake_1_1multibody_1_1_spatial_vector.html#abfcc7772c9a75439b094cd2477f45e2f":[3,0,0,8,66,35],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ad0d7127cbe1d6be05f4bd47af2508c89":[3,0,0,8,66,33],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ad42341fefab8db02a40676af9b34210a":[3,0,0,8,66,20],
-"classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25":[3,0,0,8,66,14],
-"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a132f1d424bdc477e9a068a3804743afc":[3,0,0,8,66,4],
-"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a1e16824cb2e47cdb67d49d3d8fb18adc":[3,0,0,8,66,3],
-"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a":[3,0,0,8,66,2],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aefdcb096285e383be3e6a8c2380b616c":[3,0,0,8,66,22],
-"classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,8,66,29],
-"classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[3,0,0,8,66,19]
+"classdrake_1_1multibody_1_1_spatial_vector.html#ad0d7127cbe1d6be05f4bd47af2508c89":[3,0,0,8,66,33]
 };

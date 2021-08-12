@@ -1,5 +1,13 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04":[3,0,0,16,3,13],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a74d1cebdafb3c05487e3c59e2502d3fd":[3,0,0,16,3,0],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,3,4],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a99869cc7f6c64a2876ec37c85851af35":[3,0,0,16,3,6],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,3,15],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ab46599d8e0586d703e3a1927c1dcc934":[3,0,0,16,3,8],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ab5cd57146e674b2430a2553499e4c7c3":[3,0,0,16,3,10],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ac094bc1c3461db105affc922332d13c6":[3,0,0,16,3,3],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc":[3,0,0,16,3,7],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,3,5],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d":[3,0,0,16,3,12],
@@ -241,13 +249,5 @@ var NAVTREEINDEX38 =
 "cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,0,1,4],
 "cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,0,1,1],
 "cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2],
-"cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3],
-"create__constraint_8h.html":[4,0,0,10,11],
-"create__cost_8h.html":[4,0,0,10,12],
-"cross__product_8h.html":[4,0,0,7,8],
-"cross__product_8h.html#a2d78f6f294270fdc03dcb68de424536a":[4,0,0,7,8,0],
-"csdp__solver_8h.html":[4,0,0,10,13],
-"csdp__solver__internal_8h.html":[4,0,0,10,14],
-"cubic__scalar__system_8h.html":[4,0,0,11,0,0,1],
-"decision__variable_8h.html":[4,0,0,10,15]
+"cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3]
 };
