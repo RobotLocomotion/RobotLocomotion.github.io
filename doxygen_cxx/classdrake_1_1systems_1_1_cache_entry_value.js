@@ -31,6 +31,5 @@ var classdrake_1_1systems_1_1_cache_entry_value =
     [ "ThrowIfBadCacheEntryValue", "classdrake_1_1systems_1_1_cache_entry_value.html#ab5508eba32d5d670dc79329a86999e23", null ],
     [ "ticket", "classdrake_1_1systems_1_1_cache_entry_value.html#a65af7fcc4d673554e5fa127b1cf1382b", null ],
     [ "Cache", "classdrake_1_1systems_1_1_cache_entry_value.html#ac9d22b110b724211d946d911ecacdf64", null ],
-    [ "copyable_unique_ptr< CacheEntryValue >", "classdrake_1_1systems_1_1_cache_entry_value.html#a598ca03fb10c04b0cbe60b81fd9e0085", null ],
-    [ "never_destroyed< CacheEntryValue >", "classdrake_1_1systems_1_1_cache_entry_value.html#a37ceaac9af8c1d7ca87f9f326de1220e", null ]
+    [ "copyable_unique_ptr< CacheEntryValue >", "classdrake_1_1systems_1_1_cache_entry_value.html#a598ca03fb10c04b0cbe60b81fd9e0085", null ]
 ];

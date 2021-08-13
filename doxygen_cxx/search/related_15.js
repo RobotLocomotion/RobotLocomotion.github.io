@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['weldjoint',['WeldJoint',['../classdrake_1_1multibody_1_1_weld_joint.html#a4d111c4fc2a82d94fe15a244da576424',1,'drake::multibody::WeldJoint']]]
+  ['zeroorderhold',['ZeroOrderHold',['../classdrake_1_1systems_1_1_zero_order_hold.html#a0d112baac097caa5fed5378a07d423ce',1,'drake::systems::ZeroOrderHold']]]
 ];

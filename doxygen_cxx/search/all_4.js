@@ -452,6 +452,7 @@ var searchData=
   ['dual_5finfeasible',['DUAL_INFEASIBLE',['../namespacedrake_1_1solvers_1_1fbstab.html#ab7018f84050f7f1b1864f462d658433ba1583be76ac58a4ac4c024f73b3d85811',1,'drake::solvers::fbstab']]],
   ['dual_5fobjective',['dual_objective',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::CsdpSolverDetails::dual_objective()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::ScsSolverDetails::dual_objective()']]],
   ['dual_5fres',['dual_res',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4',1,'drake::solvers::OsqpSolverDetails']]],
+  ['dummy_5fcache_5fentry_5fvalue',['dummy_cache_entry_value',['../classdrake_1_1systems_1_1_cache.html#a587f7f69b1e38eea5f3638c5926e6edc',1,'drake::systems::Cache']]],
   ['dummy_5frender_5fengine_2eh',['dummy_render_engine.h',['../dummy__render__engine_8h.html',1,'']]],
   ['dummy_5fvalue',['dummy_value',['../structdrake_1_1dummy__value.html',1,'drake']]],
   ['dummy_5fvalue_2eh',['dummy_value.h',['../dummy__value_8h.html',1,'']]],

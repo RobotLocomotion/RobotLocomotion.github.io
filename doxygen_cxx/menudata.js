@@ -245,7 +245,6 @@ var menudata={children:[
 {text:"j",url:"functions_rela_j.html#index_j"},
 {text:"l",url:"functions_rela_l.html#index_l"},
 {text:"m",url:"functions_rela_m.html#index_m"},
-{text:"n",url:"functions_rela_n.html#index_n"},
 {text:"o",url:"functions_rela_o.html#index_o"},
 {text:"p",url:"functions_rela_p.html#index_p"},
 {text:"q",url:"functions_rela_q.html#index_q"},

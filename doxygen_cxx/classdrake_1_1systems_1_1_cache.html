@@ -149,6 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a827fdab7b28e2fb6792f687466dda121"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache.html#a827fdab7b28e2fb6792f687466dda121">is_cache_frozen</a> () const</td></tr>
 <tr class="memdesc:a827fdab7b28e2fb6792f687466dda121"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Reports the current value of the "is frozen" flag.  <a href="#a827fdab7b28e2fb6792f687466dda121">More...</a><br /></td></tr>
 <tr class="separator:a827fdab7b28e2fb6792f687466dda121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a587f7f69b1e38eea5f3638c5926e6edc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html">CacheEntryValue</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache.html#a587f7f69b1e38eea5f3638c5926e6edc">dummy_cache_entry_value</a> ()</td></tr>
+<tr class="memdesc:a587f7f69b1e38eea5f3638c5926e6edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a mutable reference to a dummy <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html" title="(Advanced) This is the representation in the Context for the value of one of a System&#39;s CacheEntry ob...">CacheEntryValue</a> that can serve as a /dev/null-like destination for throw-away writes.  <a href="#a587f7f69b1e38eea5f3638c5926e6edc">More...</a><br /></td></tr>
+<tr class="separator:a587f7f69b1e38eea5f3638c5926e6edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow move or assignment; copy constructor is private.</div></td></tr>
 <tr class="memitem:aa08621fdf00f850c752078900e9aa831"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_cache.html#aa08621fdf00f850c752078900e9aa831">Cache</a> (<a class="el" href="classdrake_1_1systems_1_1_cache.html">Cache</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:aa08621fdf00f850c752078900e9aa831"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -332,6 +335,25 @@ Friends</h2></td></tr>
 
 <p>(Advanced) Disables caching for all the entries in this Cache. </p>
 <p>Note that this is done by setting individual <code>is_disabled</code> flags in the entries, so it can be changed on a per-entry basis later. This has no effect on the <code>out_of_date</code> flags. </p>
+
+</div>
+</div>
+<a id="a587f7f69b1e38eea5f3638c5926e6edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a587f7f69b1e38eea5f3638c5926e6edc">&#9670;&nbsp;</a></span>dummy_cache_entry_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html">CacheEntryValue</a>&amp; dummy_cache_entry_value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns a mutable reference to a dummy <a class="el" href="classdrake_1_1systems_1_1_cache_entry_value.html" title="(Advanced) This is the representation in the Context for the value of one of a System&#39;s CacheEntry ob...">CacheEntryValue</a> that can serve as a /dev/null-like destination for throw-away writes. </p>
 
 </div>
 </div>

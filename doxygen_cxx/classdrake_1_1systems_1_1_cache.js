@@ -6,6 +6,7 @@ var classdrake_1_1systems_1_1_cache =
     [ "cache_size", "classdrake_1_1systems_1_1_cache.html#a1670c61c0b4e42e75c0ce36ffcdc1f2e", null ],
     [ "CreateNewCacheEntryValue", "classdrake_1_1systems_1_1_cache.html#a402eb8654796aa926904bf6279b16570", null ],
     [ "DisableCaching", "classdrake_1_1systems_1_1_cache.html#a731470d81a5c45420848933105a48775", null ],
+    [ "dummy_cache_entry_value", "classdrake_1_1systems_1_1_cache.html#a587f7f69b1e38eea5f3638c5926e6edc", null ],
     [ "EnableCaching", "classdrake_1_1systems_1_1_cache.html#a39bc516683cda18867e677094b095f57", null ],
     [ "freeze_cache", "classdrake_1_1systems_1_1_cache.html#aedc23f6283ac85b86b8ba8b7dea11193", null ],
     [ "get_cache_entry_value", "classdrake_1_1systems_1_1_cache.html#a6bc75c4a61d6c3ee456f433cfccc7dad", null ],

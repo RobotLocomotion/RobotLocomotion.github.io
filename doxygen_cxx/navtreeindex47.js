@@ -1,6 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"structdrake_1_1math_1_1_mat_grad_mult_mat.html":[3,0,0,7,10],
 "structdrake_1_1math_1_1_mat_grad_mult_mat.html#a21269c8d264a02b47f4bb4da4e41ec3d":[3,0,0,7,10,0],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[3,0,0,8,5],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a01c3e8a16f2e4c2d3ca103b183aa4f0d":[3,0,0,8,5,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX47 =
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html":[3,0,0,12,20],
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,12,20,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a7d16b1c68c87cec009d972e79abfba78":[3,0,0,12,20,0],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a803b799247155d71e47493ac3857b909":[3,0,0,12,20,2]
+"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a803b799247155d71e47493ac3857b909":[3,0,0,12,20,2],
+"structdrake_1_1solvers_1_1_gurobi_solver_details.html#ad1a44ab70cbada790a810ca324c07797":[3,0,0,12,20,1]
 };

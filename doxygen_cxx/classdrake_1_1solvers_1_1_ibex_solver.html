@@ -101,11 +101,17 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_ibex_solver.
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the IBEX solver (<a href="http://www.ibex-lib.org/">http://www.ibex-lib.org/</a>) </p>
-<p>For now, this solver only supports the following constraints / costs:</p><ul>
-<li>kGenericConstraint</li>
-<li>kLinearConstraint</li>
-<li>kGenericCost</li>
-<li>kQuadraticCost</li>
+<p>This solver supports the following constraints / costs:</p><ul>
+<li><a class="el" href="classdrake_1_1solvers_1_1_exponential_cone_constraint.html" title="An exponential cone constraint is a special type of convex cone constraint.">ExponentialConeConstraint</a></li>
+<li>GenericConstraint</li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html" title="Implements a constraint of the form:">LinearComplementarityConstraint</a></li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html" title="Implements a constraint of the form .">LinearConstraint</a></li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html" title="Implements a constraint of the form .">LinearEqualityConstraint</a></li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html" title="Constraining the linear expression  lies within the Lorentz cone.">LorentzConeConstraint</a></li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html" title="Constraining that the linear expression  lies within rotated Lorentz cone.">RotatedLorentzConeConstraint</a></li>
+<li>GenericCost</li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html" title="Implements a cost of the form .">LinearCost</a></li>
+<li><a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html" title="Implements a cost of the form .">QuadraticCost</a></li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>Only costs and constraints that support symbolic evaluation are compatible with this solver.</dd></dl>
 <p>TODO(soonho): Add and enumerate supported options here. </p>
