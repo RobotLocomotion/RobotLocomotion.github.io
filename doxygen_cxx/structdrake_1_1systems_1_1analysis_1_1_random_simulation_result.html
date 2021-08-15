@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1systems_1_1analysis_1_1
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A snapshot of the generator used to produce the random simulation. </p>
-<p>Use, e.g., </p><div class="fragment"><div class="line">RandomGenerator generator(result.generator_snapshot)</div><div class="line"><a class="code" href="group__analysis.html#ga9f3c726f3a915c5188fbcd8bff683cb5">RandomSimulation</a>(make_simulator, <a class="code" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317">output</a>, final_time, &amp;generator)</div></div><!-- fragment --><p> for a deterministic playback of the sampled simulation. Use the <a class="el" href="namespacedrake_1_1systems.html#a28d54aeb4ed10ced064d5b36f5aa8b67">operator&lt;&lt;()</a> operator&gt;&gt;() methods provided for the generator, which implements the Standard Template Library <a href="https://en.cppreference.com/w/cpp/named_req/RandomNumberEngine">RandomNumberEngine concept</a>, if you wish to serialize the results. Note that the generator "snapshots" are returned as const, because any non-const operations on that object may advance the state of the generator (making it no-longer valuable in reproducing the simulation). </p>
+<p>Use, e.g., </p><div class="fragment"><div class="line">RandomGenerator generator(result.generator_snapshot)</div><div class="line"><a class="code" href="group__analysis.html#ga9f3c726f3a915c5188fbcd8bff683cb5">RandomSimulation</a>(make_simulator, <a class="code" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317">output</a>, final_time, &amp;generator)</div></div><!-- fragment --><p> for a deterministic playback of the sampled simulation. Use the <a class="el" href="namespacedrake_1_1systems.html#a28d54aeb4ed10ced064d5b36f5aa8b67">operator&lt;&lt;()</a> operator&gt;&gt;() methods provided for the generator, which implements the Standard Template Library <a href="https://en.cppreference.com/w/cpp/named_req/RandomNumberEngine">RandomNumberEngine concept</a>, if you wish to serialize the results. Note that performing any non-const operations on generator_snapshot may advance the state of the generator and make it no longer capable of reproducing the simulation. </p>
 </div>
 <p><code>#include &lt;drake/systems/analysis/monte_carlo.h&gt;</code></p>
 <table class="memberdecls">
@@ -110,17 +110,78 @@ $(document).ready(function(){initNavTree('structdrake_1_1systems_1_1analysis_1_1
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af1172cb338cfb5f609bf5d636b3cd68d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#af1172cb338cfb5f609bf5d636b3cd68d">RandomSimulationResult</a> (const <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> &amp;generator, double value=0.0)</td></tr>
 <tr class="separator:af1172cb338cfb5f609bf5d636b3cd68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
+<tr class="memitem:a338f8f52a23e583f8ec10aa553b1fdfc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a338f8f52a23e583f8ec10aa553b1fdfc">RandomSimulationResult</a> (const <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;)=default</td></tr>
+<tr class="separator:a338f8f52a23e583f8ec10aa553b1fdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27bfaf29de254557149cb0bafeca4e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ab27bfaf29de254557149cb0bafeca4e3">operator=</a> (const <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;)=default</td></tr>
+<tr class="separator:ab27bfaf29de254557149cb0bafeca4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6ccda8d28bae6d00dcdff55bfc7e6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#afc6ccda8d28bae6d00dcdff55bfc7e6b">RandomSimulationResult</a> (<a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:afc6ccda8d28bae6d00dcdff55bfc7e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01d62b0af939b47796b39f4229572b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#ac01d62b0af939b47796b39f4229572b2">operator=</a> (<a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&amp;)=default</td></tr>
+<tr class="separator:ac01d62b0af939b47796b39f4229572b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:afbdcd9f95b1b2e3c6f22f07019e1cb62"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#afbdcd9f95b1b2e3c6f22f07019e1cb62">generator_snapshot</a></td></tr>
-<tr class="separator:afbdcd9f95b1b2e3c6f22f07019e1cb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851bc403edb0b8b04e35246843c4524c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a851bc403edb0b8b04e35246843c4524c">generator_snapshot</a></td></tr>
+<tr class="separator:a851bc403edb0b8b04e35246843c4524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47943f73244ca117fa9bf9234cbed317"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html#a47943f73244ca117fa9bf9234cbed317">output</a> {}</td></tr>
 <tr class="separator:a47943f73244ca117fa9bf9234cbed317"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a338f8f52a23e583f8ec10aa553b1fdfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a338f8f52a23e583f8ec10aa553b1fdfc">&#9670;&nbsp;</a></span>RandomSimulationResult() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc6ccda8d28bae6d00dcdff55bfc7e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6ccda8d28bae6d00dcdff55bfc7e6b">&#9670;&nbsp;</a></span>RandomSimulationResult() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af1172cb338cfb5f609bf5d636b3cd68d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1172cb338cfb5f609bf5d636b3cd68d">&#9670;&nbsp;</a></span>RandomSimulationResult()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1172cb338cfb5f609bf5d636b3cd68d">&#9670;&nbsp;</a></span>RandomSimulationResult() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,15 +216,68 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab27bfaf29de254557149cb0bafeca4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27bfaf29de254557149cb0bafeca4e3">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac01d62b0af939b47796b39f4229572b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01d62b0af939b47796b39f4229572b2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html">RandomSimulationResult</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="afbdcd9f95b1b2e3c6f22f07019e1cb62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbdcd9f95b1b2e3c6f22f07019e1cb62">&#9670;&nbsp;</a></span>generator_snapshot</h2>
+<a id="a851bc403edb0b8b04e35246843c4524c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851bc403edb0b8b04e35246843c4524c">&#9670;&nbsp;</a></span>generator_snapshot</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> generator_snapshot</td>
+          <td class="memname"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> generator_snapshot</td>
         </tr>
       </table>
 </div><div class="memdoc">

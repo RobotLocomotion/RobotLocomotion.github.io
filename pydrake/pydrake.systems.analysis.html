@@ -1414,6 +1414,14 @@ internally (and repeated calls to this method will return
 identical results). To produce statistically “independent” samples
 on a future call to MonteCarloSimulation, you should make repeated
 uses of the same RandomGenerator object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_parallel_executions</span></code>:</dt>
+<dd>Specify number of parallel executions to use while performing
+<code class="docutils literal"><span class="pre">num_samples</span></code> simulations. The default value, kNoConcurrency,
+specifies that simulations should be executed in serial. To use
+the default concurrency available on your hardware (equivalent to
+num_parallel_executions=std::thread::hardware_concurrency()), use
+value kUseHardwareConcurrency. Otherwise, num_parallel_executions
+must be &gt;= 1.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1423,6 +1431,18 @@ uses of the same RandomGenerator object.</dd>
 </tr>
 </tbody>
 </table>
+<p>Thread safety when parallel execution is specified: -
+<code class="docutils literal"><span class="pre">make_simulator</span></code> and <code class="docutils literal"><span class="pre">generator</span></code> are only accessed from the main
+thread.</p>
+<ul class="simple">
+<li>Each simulator created by <code class="docutils literal"><span class="pre">make_simulator</span></code> and its context are only
+accessed from within a single worker thread; however, any resource shared
+between these simulators must be safe for concurrent use.</li>
+<li><code class="docutils literal"><span class="pre">output</span></code> is called from within worker threads performing simulation with
+the simulator and context belonging to each worker thread. It must be safe
+to make concurrent calls to <code class="docutils literal"><span class="pre">output</span></code> (i.e. any mutable state inside the
+function must be safe for concurrent use).</li>
+</ul>
 </dd></dl>
 
 <dl class="function">
@@ -1511,10 +1531,9 @@ operator&lt;&lt;() operator&gt;&gt;() methods provided for the generator, which
 implements the Standard Template Library &lt;a href=
 “<a class="reference external" href="https://en.cppreference.com/w/cpp/named_req/RandomNumberEngine">https://en.cppreference.com/w/cpp/named_req/RandomNumberEngine</a>”&gt;
 RandomNumberEngine concept&lt;/a&gt;, if you wish to serialize the results.
-Note that the generator “snapshots” are returned as const, because any
-non-const operations on that object may advance the state of the
-generator (making it no-longer valuable in reproducing the
-simulation).</p>
+Note that performing any non-const operations on generator_snapshot
+may advance the state of the generator and make it no longer capable
+of reproducing the simulation.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.RandomSimulationResult.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult.__init__" title="Permalink to this definition">¶</a></dt>
