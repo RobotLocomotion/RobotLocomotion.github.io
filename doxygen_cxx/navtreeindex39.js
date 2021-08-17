@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3],
 "create__constraint_8h.html":[4,0,0,10,11],
 "create__cost_8h.html":[4,0,0,10,12],
 "cross__product_8h.html":[4,0,0,7,8],
@@ -23,7 +24,7 @@ var NAVTREEINDEX39 =
 "default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
 "deformable__volume__mesh_8h.html":[4,0,0,4,2,8],
-"deformation__gradient__data_8h.html":[4,0,0,8,3,0],
+"deformation__gradient__data_8h.html":[4,0,0,8,3,1],
 "demultiplexer_8h.html":[4,0,0,11,6,5],
 "dense__data_8h.html":[4,0,0,10,0,0,0],
 "dense__feasibility_8h.html":[4,0,0,10,0,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,0,5,2],
 "eigen__pybind_8h.html#ae8c72466dd0066fa6ff539d65eaf1a01":[4,0,0,0,0,0,5,0],
 "eigen__pybind_8h.html#af50a9a915770def7cbf4f78aa68235dc":[4,0,0,0,0,0,5,1],
-"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,0,5,3],
-"eigen__sparse__triplet_8h.html":[4,0,0,7,11]
+"eigen__pybind_8h.html#af5f81d7315477aaa1694d9aa02a1346b":[4,0,0,0,0,0,5,3]
 };

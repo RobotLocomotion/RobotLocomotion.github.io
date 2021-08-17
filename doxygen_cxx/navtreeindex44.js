@@ -1,13 +1,14 @@
 var NAVTREEINDEX44 =
 {
+"namespacedrake_1_1systems_1_1estimators.html":[2,0,0,14,4],
 "namespacedrake_1_1systems_1_1implicit__integrator__test.html":[3,0,0,14,4],
 "namespacedrake_1_1systems_1_1implicit__integrator__test.html":[2,0,0,14,5],
 "namespacedrake_1_1systems_1_1lcm.html":[3,0,0,14,5],
 "namespacedrake_1_1systems_1_1lcm.html":[2,0,0,14,6],
 "namespacedrake_1_1systems_1_1rendering.html":[3,0,0,14,6],
 "namespacedrake_1_1systems_1_1rendering.html":[2,0,0,14,7],
-"namespacedrake_1_1systems_1_1scalar__conversion.html":[3,0,0,14,7],
 "namespacedrake_1_1systems_1_1scalar__conversion.html":[2,0,0,14,8],
+"namespacedrake_1_1systems_1_1scalar__conversion.html":[3,0,0,14,7],
 "namespacedrake_1_1systems_1_1sensors.html":[2,0,0,14,9],
 "namespacedrake_1_1systems_1_1sensors.html":[3,0,0,14,8],
 "namespacedrake_1_1systems_1_1test.html":[2,0,0,14,10],
@@ -19,8 +20,8 @@ var NAVTREEINDEX44 =
 "namespacedrake_1_1trajectories.html":[2,0,0,16],
 "namespacedrake_1_1yaml.html":[3,0,0,17],
 "namespacedrake_1_1yaml.html":[2,0,0,17],
-"namespacemembers.html":[2,1,0],
 "namespacemembers.html":[2,1,0,0],
+"namespacemembers.html":[2,1,0],
 "namespacemembers_b.html":[2,1,0,1],
 "namespacemembers_c.html":[2,1,0,2],
 "namespacemembers_d.html":[2,1,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX44 =
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a914035c5bf9d877dbd17b8c476ab48a6":[4,0,0,10,43,2,10],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15a9ac21b2be50204074e59ceb63526fae6":[4,0,0,10,43,2,1],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aa1029d46d3092d1662ee6baccbd926f8":[4,0,0,10,43,2,7],
-"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aad18a51c134b9ac1c2af4f45766761cf":[4,0,0,10,43,2,12],
-"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aced0324bc370cd8712746abd28ac3844":[4,0,0,10,43,2,11]
+"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aad18a51c134b9ac1c2af4f45766761cf":[4,0,0,10,43,2,12]
 };

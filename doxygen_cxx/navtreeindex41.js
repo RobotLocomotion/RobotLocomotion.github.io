@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"functions_vars_b.html":[3,3,2,1],
 "functions_vars_c.html":[3,3,2,2],
 "functions_vars_d.html":[3,3,2,3],
 "functions_vars_e.html":[3,3,2,4],
@@ -144,12 +145,12 @@ var NAVTREEINDEX41 =
 "group__default__scalars.html":[1,0,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,13,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,0,1,1],
-"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,13,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,0,1,5],
-"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,0,1,0],
+"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,13,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,13,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,0,1,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
@@ -171,8 +172,8 @@ var NAVTREEINDEX41 =
 "group__geometry__infrastructure.html":[1,6,0],
 "group__geometry__optimization.html":[1,6,4],
 "group__geometry__optimization.html":[1,2,1],
-"group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,2,1,9],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,6,4,9],
+"group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,2,1,9],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,2,1,10],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,6,4,10],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,2,1,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "gurobi__qp_8h.html#a814877dec98d6d4cf4dfe93f686a0e8c":[4,0,0,10,22,0],
 "gurobi__solver_8h.html":[4,0,0,10,23],
 "gyroscope_8h.html":[4,0,0,11,8,4],
-"hash_8h.html":[4,0,0,1,33],
-"hash_8h.html#a0abcb9a7b5df5dcf6f77d4dd1fa1f05b":[4,0,0,1,33,7]
+"hash_8h.html":[4,0,0,1,33]
 };

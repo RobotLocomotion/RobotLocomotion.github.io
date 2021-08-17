@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aced0324bc370cd8712746abd28ac3844":[4,0,0,10,43,2,11],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aea23768965b758e81bdb3e2fb62476c8":[4,0,0,10,43,2,9],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15aeb3825da90413e715ee32c3463428d84":[4,0,0,10,43,2,3],
 "program__attribute_8h.html#ab09ca5e1afe9e5a4e8744ecb27839b15af91d74856b95694eb9624142e4317bb4":[4,0,0,10,43,2,8],
@@ -33,7 +34,7 @@ var NAVTREEINDEX45 =
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
-"quadrature_8h.html":[4,0,0,8,3,4],
+"quadrature_8h.html":[4,0,0,8,3,5],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
@@ -225,7 +226,7 @@ var NAVTREEINDEX45 =
 "signal__logger_8h.html":[4,0,0,11,6,20],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,5],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,6],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "sine_8h.html":[4,0,0,11,6,21],
 "single__output__vector__source_8h.html":[4,0,0,11,3,35],
 "sliding__friction__complementarity__constraint_8h.html":[4,0,0,8,7,5],
-"sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,7,5,0],
-"sliding__friction__complementarity__constraint_8h.html#gad168321c6009ddda8ee2ca9abbef90b1":[4,0,0,8,7,5,1]
+"sliding__friction__complementarity__constraint_8h.html#gaa1fd44e85ab30519ef7a904a4ebeb82d":[4,0,0,8,7,5,0]
 };
