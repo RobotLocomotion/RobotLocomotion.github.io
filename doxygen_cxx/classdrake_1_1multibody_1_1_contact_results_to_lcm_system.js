@@ -8,5 +8,6 @@ var classdrake_1_1multibody_1_1_contact_results_to_lcm_system =
     [ "get_lcm_message_output_port", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a3cf1dedf84121ef792a85bdb86a18374", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#aaccb65a551c978a2987efc277a771d8f", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a947baa478d3321125038ddaf12fd5297", null ],
-    [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a52e146614b835c3cd67c775437624198", null ]
+    [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a52e146614b835c3cd67c775437624198", null ],
+    [ "ContactResultsToLcmTester", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a262ee4015b7d6ad9197779c7f7443683", null ]
 ];

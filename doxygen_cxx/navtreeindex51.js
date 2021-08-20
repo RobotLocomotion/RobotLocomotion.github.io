@@ -1,5 +1,14 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__generic__polynomial_8h.html#a94b919a53ae2bebde988b237088cb822":[4,0,0,1,62,17],
+"symbolic__generic__polynomial_8h.html#a9acca4c621fa798c49dfce0461c6483d":[4,0,0,1,62,2],
+"symbolic__generic__polynomial_8h.html#aac0c3464fe7d151d7846e659e8e1d281":[4,0,0,1,62,24],
+"symbolic__generic__polynomial_8h.html#abaab72f1cd4050603b25467fa909ec24":[4,0,0,1,62,27],
+"symbolic__generic__polynomial_8h.html#abb122f4c4c5c71d0734c3b517a146df9":[4,0,0,1,62,26],
+"symbolic__generic__polynomial_8h.html#aca14414fd5dcd3628a3a5aff79eabebc":[4,0,0,1,62,7],
+"symbolic__generic__polynomial_8h.html#acf8ec1d6463a6936e7865e8cef04082f":[4,0,0,1,62,3],
+"symbolic__generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,62,28],
+"symbolic__generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,62,32],
 "symbolic__generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,62,23],
 "symbolic__generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,62,30],
 "symbolic__ldlt_8h.html":[4,0,0,1,63],
@@ -240,14 +249,5 @@ var NAVTREEINDEX51 =
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,10,0],
 "value__to__abstract__value_8h.html":[4,0,0,11,3,52],
 "van__der__pol_8h.html":[4,0,0,3,17,0],
-"vector__base_8h.html":[4,0,0,11,3,53],
-"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
-"vector__log_8h.html":[4,0,0,11,6,26],
-"vector__log__sink_8h.html":[4,0,0,11,6,27],
-"vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3":[4,0,0,11,6,27,1],
-"vector__log__sink_8h.html#af2f7dd25823e78194ea36eabbd525cea":[4,0,0,11,6,27,0],
-"vector__system_8h.html":[4,0,0,11,3,54],
-"velocity__implicit__euler__integrator_8h.html":[4,0,0,11,0,28],
-"velocity__kinematics__cache_8h.html":[4,0,0,8,12,50],
-"volume__mesh_8h.html":[4,0,0,4,2,44]
+"vector__base_8h.html":[4,0,0,11,3,53]
 };

@@ -1,5 +1,14 @@
 var NAVTREEINDEX47 =
 {
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,7,4,0],
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[3,0,0,7,5],
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html#a2a3fbd89c3970167a18d02ef2263914d":[3,0,0,7,5,0],
+"structdrake_1_1math_1_1_gradient.html":[3,0,0,7,6],
+"structdrake_1_1math_1_1_gradient.html#a7e931855896541356d337c7ad3d66f53":[3,0,0,7,6,0],
+"structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4.html":[3,0,0,7,7],
+"structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4.html#ac7cad89eecaf8f9c49522b5fbb9b4491":[3,0,0,7,7,0],
+"structdrake_1_1math_1_1_gray_codes_matrix.html":[3,0,0,7,8],
+"structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1":[3,0,0,7,8,0],
 "structdrake_1_1math_1_1_mat_grad_mult.html":[3,0,0,7,9],
 "structdrake_1_1math_1_1_mat_grad_mult.html#aace3454f69205e3b95dfe4e1176647ac":[3,0,0,7,9,0],
 "structdrake_1_1math_1_1_mat_grad_mult_mat.html":[3,0,0,7,10],
@@ -240,14 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,12,10,1],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,12,10,2],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#ab48163f67547336c2aadfc248321044a":[3,0,0,12,10,4],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,12,10,3],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,12,19,0],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c":[3,0,0,12,19,0,3],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0":[3,0,0,12,19,0,2],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a8f0c05ff392b24376b9094bb67a2228b":[3,0,0,12,19,0,4],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#aa7e5f2cbcbe7a77b0b0f1cd1a88dec2c":[3,0,0,12,19,0,0],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#acee912d9ade4dfc099e98629d832127e":[3,0,0,12,19,0,1],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#ae91d6264528898aea42defb33f87f6b8":[3,0,0,12,19,0,5],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html":[3,0,0,12,20],
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,12,20,3]
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,12,10,3]
 };

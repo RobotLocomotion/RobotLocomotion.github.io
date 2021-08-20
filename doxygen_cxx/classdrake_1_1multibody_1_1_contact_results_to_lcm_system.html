@@ -106,6 +106,7 @@ class drake::multibody::ContactResultsToLcmSystem&lt; T &gt;</h3>
 
 <p>A System that encodes <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> into a lcmt_contact_results_for_viz message. </p>
 <p>It has a single input port with type ContactResults&lt;T&gt; and a single output port with lcmt_contact_results_for_viz.</p>
+<p>Although this class can be instantiated on all default scalars, its functionality will be limited for <code>T</code> = <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. If there are any <code><a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a></code>s in the expression, attempting to evaluate the output port will throw an exception. The support is sufficient that a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">systems::Diagram</a> with a ContactResultsToLcmSystem can be scalar converted to <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> without error, but not necessarily evaluated.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -617,6 +618,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
+<tr class="memitem:a262ee4015b7d6ad9197779c7f7443683"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a262ee4015b7d6ad9197779c7f7443683">ContactResultsToLcmTester</a></td></tr>
+<tr class="separator:a262ee4015b7d6ad9197779c7f7443683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e146614b835c3cd67c775437624198"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a52e146614b835c3cd67c775437624198"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a52e146614b835c3cd67c775437624198">ContactResultsToLcmSystem</a></td></tr>
 <tr class="separator:a52e146614b835c3cd67c775437624198"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1461,6 +1464,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">friend class <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html">ContactResultsToLcmSystem</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a262ee4015b7d6ad9197779c7f7443683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262ee4015b7d6ad9197779c7f7443683">&#9670;&nbsp;</a></span>ContactResultsToLcmTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class ContactResultsToLcmTester</td>
         </tr>
       </table>
   </td>

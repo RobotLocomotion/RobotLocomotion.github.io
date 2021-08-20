@@ -1,5 +1,12 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#aacbf22548b76c4efd3c34308dfab9434":[1,2,0,12,1],
+"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#adce48ce3c022e95b6e2bb0f6b3575a47":[1,2,0,12,7],
+"classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#add626512e1b963e65d91e1a177541089":[1,2,0,12,5],
+"classdrake_1_1multibody_1_1_revolute_joint.html":[3,0,0,8,56],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a1cf746f6557c48732c1c2898f9ed51c2":[3,0,0,8,56,3],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a27e174cbce9d8926ec3eefc7d04e6e7c":[3,0,0,8,56,11],
+"classdrake_1_1multibody_1_1_revolute_joint.html#a29c13dcf8af265098940e45cdc19ba97":[3,0,0,8,56,16],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a47733949e40b86ffe8776dea4a154459":[3,0,0,8,56,27],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a4aa0283d494b40fc4b0956b3e40ab99b":[3,0,0,8,56,22],
 "classdrake_1_1multibody_1_1_revolute_joint.html#a4c23b3d7f4f0a32f27069602e0d8397f":[3,0,0,8,56,26],
@@ -242,12 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_spatial_vector.html#a9d56e1315fbb0f8a59a83c948fcded20":[3,0,0,8,66,30],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c":[3,0,0,8,66,1],
 "classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc":[3,0,0,8,66,28],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b":[3,0,0,8,66,9],
-"classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233":[3,0,0,8,66,8],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a":[3,0,0,8,66,11],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ab13f5ae55803f77298c3bb1ca0cc6f36":[3,0,0,8,66,36],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43":[3,0,0,8,66,25],
-"classdrake_1_1multibody_1_1_spatial_vector.html#abb042fa391ff71b369dd7e50f0c9fbc2":[3,0,0,8,66,18],
-"classdrake_1_1multibody_1_1_spatial_vector.html#abfcc7772c9a75439b094cd2477f45e2f":[3,0,0,8,66,35],
-"classdrake_1_1multibody_1_1_spatial_vector.html#ad0d7127cbe1d6be05f4bd47af2508c89":[3,0,0,8,66,33]
+"classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b":[3,0,0,8,66,9]
 };

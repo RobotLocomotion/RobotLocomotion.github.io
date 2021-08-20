@@ -1,5 +1,12 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1symbolic_1_1_expression.html#ac36445a7e9004a2456af89befe713ed5":[3,0,0,13,6,106],
+"classdrake_1_1symbolic_1_1_expression.html#ac5f13b18dbb6912414c3ac1704d1a341":[3,0,0,13,6,137],
+"classdrake_1_1symbolic_1_1_expression.html#ac65f0b722c3a893aaab8abfd880f8918":[3,0,0,13,6,143],
+"classdrake_1_1symbolic_1_1_expression.html#ac7396940e4ad4279f7e7a984305a051a":[3,0,0,13,6,80],
+"classdrake_1_1symbolic_1_1_expression.html#ac7e801f244f2fad2cba7a2cd27487847":[3,0,0,13,6,134],
+"classdrake_1_1symbolic_1_1_expression.html#aca292ec8785171cf537afdb339a26113":[3,0,0,13,6,14],
+"classdrake_1_1symbolic_1_1_expression.html#acb49f5c608a143af07535320a3634a0c":[3,0,0,13,6,26],
 "classdrake_1_1symbolic_1_1_expression.html#acb931e73212b416bd9b88b92b2ae5c2f":[3,0,0,13,6,2],
 "classdrake_1_1symbolic_1_1_expression.html#acbbb246a6ae1e1cf46de70f69f4d403d":[3,0,0,13,6,75],
 "classdrake_1_1symbolic_1_1_expression.html#acc2280f462d56ffc281e014f96c7f576":[3,0,0,13,6,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1symbolic_1_1_expression_sin.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,30,4],
 "classdrake_1_1symbolic_1_1_expression_sin.html#a642cbb3c770fca6bee0ee193beb2d539":[3,0,0,13,30,0],
 "classdrake_1_1symbolic_1_1_expression_sin.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,13,30,1],
-"classdrake_1_1symbolic_1_1_expression_sin.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,30,2],
-"classdrake_1_1symbolic_1_1_expression_sin.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,13,30,3],
-"classdrake_1_1symbolic_1_1_expression_sinh.html":[3,0,0,13,31],
-"classdrake_1_1symbolic_1_1_expression_sinh.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,31,4],
-"classdrake_1_1symbolic_1_1_expression_sinh.html#a5d65e3e3daf5f8ed19a81c96ab4f4b1b":[3,0,0,13,31,0],
-"classdrake_1_1symbolic_1_1_expression_sinh.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,13,31,1],
-"classdrake_1_1symbolic_1_1_expression_sinh.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,31,2],
-"classdrake_1_1symbolic_1_1_expression_sinh.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,13,31,3]
+"classdrake_1_1symbolic_1_1_expression_sin.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,30,2]
 };

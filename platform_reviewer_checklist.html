@@ -126,13 +126,39 @@ and assign a team.  When in doubt, seek advice on slack.</p>
 and assign an owner.  When in doubt, assign <a href="/issues.html#team">the lead</a>
 associated with the issue’s <code class="highlighter-rouge">team</code> label.</p>
 
-<p>Search for <a href="https://github.com/RobotLocomotion/drake/pulls?q=is%3Aopen+is%3Apr+no%3Aassignee+-label%3A%22status%3A+do+not+review%22">pull requests that need review</a>
-and (probably) assign a feature reviewer.  This is intended to make sure that
+<p>Search for <a href="https://github.com/RobotLocomotion/drake/pulls?q=is%3Aopen+is%3Apr+no%3Aassignee+-label%3A%22status%3A+do+not+review%22">pull requests with no assignee</a>
+and assign a Drake Developer.  This is intended to make sure that
 requests from outside developers receive timely attention.  For a pull request
 by a core Drake Developer, leaving it unassigned may be acceptable when it is
 clearly an early work-in-progress – but if it is unassigned for several days,
 you should probably encourage the developer to label it “do not review” for
 clarity.</p>
+
+<p>Here’s some sample text to post when a pull request does not have anyone
+assigned yet:</p>
+
+<ul>
+  <li>
+    <p>For PRs opened by a core Drake Developer:</p>
+
+    <blockquote>
+      <p>Good day, <code class="highlighter-rouge">@AUTHOR</code>.  This PR does not yet have a reviewer assigned.
+Is it ready for review yet?
+If yes, then please assign a feature reviewer.
+If not, then please label it “status: do not review”.</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>For PRs opened by a new or infrequent contributor:</p>
+
+    <blockquote>
+      <p>Good day, <code class="highlighter-rouge">@AUTHOR</code>.  I’m assigning <code class="highlighter-rouge">+@ASSIGNEE</code> as the most relevant
+team member to assist with this pull request.  If you already had a
+different team member in mind, please let us know.  To <code class="highlighter-rouge">@ASSIGNEE</code>,
+feel free to delegate in case there is someone else more suitable.</p>
+    </blockquote>
+  </li>
+</ul>
 
 <p>For PRs assigned to you that have passed all commit checks (other than needing
 a squash), merge the PR to master on behalf of the author – unless it is

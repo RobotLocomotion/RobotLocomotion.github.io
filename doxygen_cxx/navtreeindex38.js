@@ -1,5 +1,14 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aed61fed2b1bff79c2fb7b083d159a61b":[3,0,0,16,2,20],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af9607087f0b9ae63e285094756e4ac1c":[3,0,0,16,2,39],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af99a17f5dcb1100c81ee61a088a69db0":[3,0,0,16,2,30],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99":[3,0,0,16,2,50],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afe3341f2b051ca0d1d376d1da25574b9":[3,0,0,16,2,19],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html":[3,0,0,16,3],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a19b632df0f98f9aaf224e534fac69ec8":[3,0,0,16,3,16],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057":[3,0,0,16,3,2],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#a40fe359517e2533a5b7b6b58d83868a8":[3,0,0,16,3,11],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a4f39af106df0162d8c0029cfa72e5c04":[3,0,0,16,3,13],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a74d1cebdafb3c05487e3c59e2502d3fd":[3,0,0,16,3,0],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,3,4],
@@ -240,14 +249,5 @@ var NAVTREEINDEX38 =
 "cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,10,10,3],
 "cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,10,10,0],
 "cost_8h.html#ga9d268ea8150fb094f1499a958c50defb":[4,0,0,10,10,1],
-"coulomb__friction_8h.html":[4,0,0,8,9,6],
-"coulomb__friction_8h.html#aada1fb90629198ff0ee920969d517335":[4,0,0,8,9,6,1],
-"coulomb__friction_8h.html#ad1adacac02531fd546981067a851d1be":[4,0,0,8,9,6,2],
-"cpp__param__pybind_8h.html":[4,0,0,0,0,0,0],
-"cpp__param__pybind_8h.html#a2274d953c5404b3021085ef6c9891603":[4,0,0,0,0,0,0,1],
-"cpp__template__pybind_8h.html":[4,0,0,0,0,0,1],
-"cpp__template__pybind_8h.html#a0ed2ec474b72c29e46e599da52c385dc":[4,0,0,0,0,0,1,0],
-"cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,0,1,4],
-"cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,0,1,1],
-"cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2]
+"coulomb__friction_8h.html":[4,0,0,8,9,6]
 };

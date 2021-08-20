@@ -121,15 +121,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a053aa138ef7646bdd2ad76db0657b13b"><td class="memItemLeft" align="right" valign="top">::lcm::LCM *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a053aa138ef7646bdd2ad76db0657b13b">get_lcm_instance</a> ()</td></tr>
 <tr class="memdesc:a053aa138ef7646bdd2ad76db0657b13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) An accessor to the underlying LCM instance.  <a href="#a053aa138ef7646bdd2ad76db0657b13b">More...</a><br /></td></tr>
 <tr class="separator:a053aa138ef7646bdd2ad76db0657b13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6470285e0f1d648110901cef3958c7ac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a6470285e0f1d648110901cef3958c7ac">get_lcm_url</a> () const</td></tr>
-<tr class="memdesc:a6470285e0f1d648110901cef3958c7ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the LCM URL.  <a href="#a6470285e0f1d648110901cef3958c7ac">More...</a><br /></td></tr>
-<tr class="separator:a6470285e0f1d648110901cef3958c7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad12ebfa1b7ab6ec343cbde2667052991"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#ad12ebfa1b7ab6ec343cbde2667052991">Publish</a> (const std::string &amp;, const void *, <a class="el" href="classint.html">int</a>, std::optional&lt; double &gt;) override</td></tr>
 <tr class="memdesc:ad12ebfa1b7ab6ec343cbde2667052991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most users should use the <a class="el" href="namespacedrake_1_1lcm.html#a7f10e39fd5048940095d76f21bdf760d" title="Publishes an LCM message on channel channel.">drake::lcm::Publish()</a> free function, instead of this interface method.  <a href="#ad12ebfa1b7ab6ec343cbde2667052991">More...</a><br /></td></tr>
 <tr class="separator:ad12ebfa1b7ab6ec343cbde2667052991"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58ffc29be696f46957f858506550bc75"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a58ffc29be696f46957f858506550bc75">get_lcm_url</a> () const override</td></tr>
+<tr class="memdesc:a58ffc29be696f46957f858506550bc75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a URL describing the transport of this LCM interface.  <a href="#a58ffc29be696f46957f858506550bc75">More...</a><br /></td></tr>
+<tr class="separator:a58ffc29be696f46957f858506550bc75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d46824a3a1490cb7f43e75d01575003"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a1d46824a3a1490cb7f43e75d01575003">Subscribe</a> (const std::string &amp;, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867">HandlerFunction</a>) override</td></tr>
 <tr class="memdesc:a1d46824a3a1490cb7f43e75d01575003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Most users should use the <a class="el" href="namespacedrake_1_1lcm.html#ac0dd1948e81c44942a67677e6cc43d07" title="Subscribes to an LCM channel named channel and decodes messages of type Message.">drake::lcm::Subscribe()</a> free function or the <a class="el" href="classdrake_1_1lcm_1_1_subscriber.html" title="Subscribes to and stores a copy of the most recent message on a given channel, for some Message type.">drake::lcm::Subscriber</a> wrapper class, instead of this interface method.  <a href="#a1d46824a3a1490cb7f43e75d01575003">More...</a><br /></td></tr>
 <tr class="separator:a1d46824a3a1490cb7f43e75d01575003"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85767dac8b9304854190439c7dcdf7b3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a85767dac8b9304854190439c7dcdf7b3">SubscribeAllChannels</a> (<a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">MultichannelHandlerFunction</a>) override</td></tr>
+<tr class="memdesc:a85767dac8b9304854190439c7dcdf7b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subscribe to all channels; this is useful for logging and redirecting LCM traffic without regard to its content.  <a href="#a85767dac8b9304854190439c7dcdf7b3">More...</a><br /></td></tr>
+<tr class="separator:a85767dac8b9304854190439c7dcdf7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15fc920a34211ee4dfe6a9ccd51b8a02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html#a15fc920a34211ee4dfe6a9ccd51b8a02">HandleSubscriptions</a> (<a class="el" href="classint.html">int</a>) override</td></tr>
 <tr class="memdesc:a15fc920a34211ee4dfe6a9ccd51b8a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes the HandlerFunction callbacks for all subscriptions' pending messages.  <a href="#a15fc920a34211ee4dfe6a9ccd51b8a02">More...</a><br /></td></tr>
 <tr class="separator:a15fc920a34211ee4dfe6a9ccd51b8a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +163,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a2f0e6e399dbb7a03a15947bc73f1c867 inherit pub_types_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867">HandlerFunction</a> = std::function&lt; void(const void *, <a class="el" href="classint.html">int</a>)&gt;</td></tr>
 <tr class="memdesc:a2f0e6e399dbb7a03a15947bc73f1c867 inherit pub_types_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback used by <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a204b8732f3fb2f89d2139ba0f2d0e6c2" title="Most users should use the drake::lcm::Subscribe() free function or the drake::lcm::Subscriber wrapper...">DrakeLcmInterface::Subscribe()</a>, with arguments:  <a href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867">More...</a><br /></td></tr>
 <tr class="separator:a2f0e6e399dbb7a03a15947bc73f1c867 inherit pub_types_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8a7f89d6b0c87b75b710c81eb641bf inherit pub_types_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">MultichannelHandlerFunction</a> = std::function&lt; void(std::string_view, const void *, <a class="el" href="classint.html">int</a>)&gt;</td></tr>
+<tr class="memdesc:a2b8a7f89d6b0c87b75b710c81eb641bf inherit pub_types_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">A callback used by DrakeLcmInterface::SubscribeMultipleChannels (which therefore needs the receiving channel passed in).  <a href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">More...</a><br /></td></tr>
+<tr class="separator:a2b8a7f89d6b0c87b75b710c81eb641bf inherit pub_types_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1lcm_1_1_drake_lcm_interface')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">DrakeLcmInterface</a></td></tr>
 <tr class="memitem:af378b6404815e2045e3c1a3909e34eb1 inherit pro_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#af378b6404815e2045e3c1a3909e34eb1">DrakeLcmInterface</a> ()</td></tr>
 <tr class="separator:af378b6404815e2045e3c1a3909e34eb1 inherit pro_methods_classdrake_1_1lcm_1_1_drake_lcm_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,11 +355,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a6470285e0f1d648110901cef3958c7ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6470285e0f1d648110901cef3958c7ac">&#9670;&nbsp;</a></span>get_lcm_url()</h2>
+<a id="a58ffc29be696f46957f858506550bc75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58ffc29be696f46957f858506550bc75">&#9670;&nbsp;</a></span>get_lcm_url()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::string get_lcm_url </td>
@@ -362,9 +371,18 @@ Additional Inherited Members</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns the LCM URL. </p>
+<p>Returns a URL describing the transport of this LCM interface. </p>
+<p>When the URL refers to a transport offered by LCM itself (e.g., memq or udpm), then this function must return the conventional URL spelling. If the implementation of <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">DrakeLcmInterface</a> is using a non-standard back end, the result implementation-defined.</p>
+<p>In either case, it is always formatted using URI syntax rules per the RFC(s). </p>
+
+<p>Implements <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#ae48736fe174b3ad0acbed4b1b8b8926a">DrakeLcmInterface</a>.</p>
 
 </div>
 </div>
@@ -405,8 +423,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2870ca3b120a6daac46ef83e59fa2f36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2870ca3b120a6daac46ef83e59fa2f36">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aae473c12952c3046a0bddd530642166e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae473c12952c3046a0bddd530642166e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -417,7 +435,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -431,8 +449,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aae473c12952c3046a0bddd530642166e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae473c12952c3046a0bddd530642166e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a2870ca3b120a6daac46ef83e59fa2f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2870ca3b120a6daac46ef83e59fa2f36">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,7 +461,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm.html">DrakeLcm</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -566,6 +584,36 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the object used to manage the subscription if that is supported, or else nullptr if not supported. The unsubscribe-on-delete default is <code>false</code>. Refer to the <a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html" title="A helper class returned by DrakeLcmInterface::Subscribe() that allows for (possibly automatic) unsubs...">DrakeSubscriptionInterface</a> class overview for details. </dd></dl>
 
 <p>Implements <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a204b8732f3fb2f89d2139ba0f2d0e6c2">DrakeLcmInterface</a>.</p>
+
+</div>
+</div>
+<a id="a85767dac8b9304854190439c7dcdf7b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85767dac8b9304854190439c7dcdf7b3">&#9670;&nbsp;</a></span>SubscribeAllChannels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1lcm_1_1_drake_subscription_interface.html">DrakeSubscriptionInterface</a>&gt; SubscribeAllChannels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2b8a7f89d6b0c87b75b710c81eb641bf">MultichannelHandlerFunction</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Subscribe to all channels; this is useful for logging and redirecting LCM traffic without regard to its content. </p>
+
+<p>Implements <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html#a46278d4906208da92bc2d8dc88c6f629">DrakeLcmInterface</a>.</p>
 
 </div>
 </div>
