@@ -25,6 +25,7 @@ var namespacedrake_1_1geometry =
     [ "HalfSpace", "classdrake_1_1geometry_1_1_half_space.html", "classdrake_1_1geometry_1_1_half_space" ],
     [ "IllustrationProperties", "classdrake_1_1geometry_1_1_illustration_properties.html", "classdrake_1_1geometry_1_1_illustration_properties" ],
     [ "Mesh", "classdrake_1_1geometry_1_1_mesh.html", "classdrake_1_1geometry_1_1_mesh" ],
+    [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", "classdrake_1_1geometry_1_1_meshcat" ],
     [ "MeshFieldLinear", "classdrake_1_1geometry_1_1_mesh_field_linear.html", "classdrake_1_1geometry_1_1_mesh_field_linear" ],
     [ "PenetrationAsPointPair", "structdrake_1_1geometry_1_1_penetration_as_point_pair.html", "structdrake_1_1geometry_1_1_penetration_as_point_pair" ],
     [ "PerceptionProperties", "classdrake_1_1geometry_1_1_perception_properties.html", "classdrake_1_1geometry_1_1_perception_properties" ],

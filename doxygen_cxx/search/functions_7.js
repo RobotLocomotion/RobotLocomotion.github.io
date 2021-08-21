@@ -24,6 +24,7 @@ var searchData=
   ['has_5fquaternion_5fdofs',['has_quaternion_dofs',['../classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31',1,'drake::multibody::Body']]],
   ['has_5frgbs',['has_rgbs',['../classdrake_1_1perception_1_1_point_cloud.html#a8a9f195c7c9b604373d2d00ba6fd4552',1,'drake::perception::PointCloud']]],
   ['has_5ftracker',['has_tracker',['../classdrake_1_1systems_1_1_dependency_graph.html#a8fc2d63be9298fcd78f09e9438af0b00',1,'drake::systems::DependencyGraph']]],
+  ['has_5ftransient_5fhistory',['has_transient_history',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a3deaa546ce8e4e02c84a5155fa903b29',1,'drake::geometry::CollisionFilterManager']]],
   ['has_5fvalue',['has_value',['../classdrake_1_1systems_1_1_cache_entry_value.html#a78ae320e307335bd655f8767da418e36',1,'drake::systems::CacheEntryValue']]],
   ['has_5fxyzs',['has_xyzs',['../classdrake_1_1perception_1_1_point_cloud.html#abbefd7d1920434ef863911302c2da821',1,'drake::perception::PointCloud']]],
   ['hasaffinedynamics',['HasAffineDynamics',['../classdrake_1_1systems_1_1_system_symbolic_inspector.html#a092f94c1a644a73a56db842dde9698a3',1,'drake::systems::SystemSymbolicInspector']]],

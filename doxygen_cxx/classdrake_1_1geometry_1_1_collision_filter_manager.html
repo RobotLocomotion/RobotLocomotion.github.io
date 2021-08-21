@@ -122,9 +122,54 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_collision_f
 <dl class="section warning"><dt>Warning</dt><dd>The effect of applying a declaration is based on the state of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s geometry data at the time of application. More concretely:<ul>
 <li>For a particular FrameId in a <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> instance, only those geometries attached to the identified frame with the proximity role assigned at the time of the call will be included in the filter. If geometries are subsequently added or assigned the proximity role, they will not be retroactively added to the user-declared filter.</li>
 <li>If the geometry set in a declaration statement includes geometries which have <em>not</em> been assigned a proximity role, those geometries will be ignored. If a proximity role is subsequently assigned, those geometries will <em>still</em> not be part of any user-declared collision filters.</li>
-<li>In general, adding collisions and assigning proximity roles should happen prior to collision filter configuration. </li>
+<li>In general, adding collisions and assigning proximity roles should happen prior to collision filter configuration.</li>
 </ul>
 </dd></dl>
+<h3>Transient vs Persistent changes</h3>
+<p>Collision filtering is all about defining which geometry pairs are in the set C. The simplest way to modify the set C is through <em>persistent</em> modifications to a "base configuration" (via calls to <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a>). However, declarations can also be applied in a <em>transient</em> manner. Transient declarations form a history. The current definition of the set C is the result of applying the history of collision filter declarations to the persistent base configuration in order. That history can be modified:</p>
+<ul>
+<li>New transient declarations can be appended.</li>
+<li>Arbitrary transient declarations can be removed from the sequence.</li>
+<li>The current configuration (based on a history with an arbitrary number of transient declarations) can be "flattened" into the persistent base (with no history).</li>
+</ul>
+<p>The table below illustrates a sequence of operations and their effect on C. We define C's initial configuration as <code>C = {P₁, P₂, ..., Pₙ}</code> (for <code>n</code> geometry pairs). Each action is described as either persistent or transient.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Line  </th><th class="markdownTableHeadLeft">C  </th><th class="markdownTableHeadLeft">Action   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">1  </td><td class="markdownTableBodyLeft"><code>{P₁, P₂, ..., Pₙ}</code>  </td><td class="markdownTableBodyLeft">Initial condition of the persistent base   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">2  </td><td class="markdownTableBodyLeft"><code>{P₂, ..., Pₙ}</code>  </td><td class="markdownTableBodyLeft">Remove P₁ from the persistent base   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">3  </td><td class="markdownTableBodyLeft"><code>{P₂, ..., Pₙ₋₁}</code>  </td><td class="markdownTableBodyLeft">Remove Pₙ from the persistent base   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">4  </td><td class="markdownTableBodyLeft"><code>{P₂}</code>  </td><td class="markdownTableBodyLeft">Remove all pairs except P₂ from the persistent base   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">5  </td><td class="markdownTableBodyLeft"><code>{P₂, P₄, P₅}</code>  </td><td class="markdownTableBodyLeft">Transient declaration #1 puts P₄ and P₅ into C   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">6  </td><td class="markdownTableBodyLeft"><code>{P₂, P₃, P₄, P₅}</code>  </td><td class="markdownTableBodyLeft">Transient declaration #2 puts P₃ and P₄ into C   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">7  </td><td class="markdownTableBodyLeft"><code>{P₂, P₃, P₄}</code>  </td><td class="markdownTableBodyLeft">Remove declaration #1.   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">8  </td><td class="markdownTableBodyLeft"><code>{P₂, P₃, P₄}</code>  </td><td class="markdownTableBodyLeft">Configuration flattened; #2 no longer exists   </td></tr>
+</table>
+<p><b>Table 1</b>: An example sequence of operations on collision filters.</p>
+<p>Notes:</p><ul>
+<li>lines 2 - 4 represent a series of <em>persistent</em> operations, filtering pairs of geometry (aka removing them from C by calling <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a>).</li>
+<li>line 5: the first transient filter declaration which is assigned the id value #1 (via a call to <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a0685b9bd25f37bd2cf50694b5c909e69" title="Applies the declaration as the newest transient modification to the collision filter configuration.">ApplyTransient()</a>).</li>
+<li>line 6: Adds a new transient filter declaration to the sequence (assigned id #2). Note, that it redundantly declares that P₄ is a member of C just as declaration #1 did. This redundancy is fine. In fact, it may be very important (see below).</li>
+<li>line 7: We remove declaration #1. Although #1 added both P₄ and P₅ to C, the result of removing this declaration from the sequence is that P₅ is no longer a member of C but P₄ <em>is</em>. This is because #2's declaration that P₄ is* in C preserves its membership.</li>
+<li>line 8: the current configuration is "flattened" into the persistent base. All history is thrown out and any filter identifiers are rendered invalid.</li>
+</ul>
+<p>This example workflow above illustrates some key ideas in using transient declarations.</p>
+<ul>
+<li><b>The persistent configuration can only be modified when there is no transient history.</b> Applying a filter declaration should have the effect of realizing that declaration. If a pair is <em>declared</em> to be in C, the result of the declaration is that the pair is in C (assuming that the pair can* be in C). If we allowed modifying the persistent configuration with an active transient history, there might be no discernable change in the resultant configuration state because a subsequent transient declaration may supplant it. This would lead to inscrutable bugs. Therefore, it's simply not allowed.</li>
+<li><b>When defining a transient declaration, the declaration should include all critical pairs <em>explicitly</em>.</b> This includes those pairs that should and should not be in C. Any pair <em>not</em> explicitly accounted for should be one whose filter status is immaterial. It <em>might</em> seems desirable (from an optimization perspective) to examine the <em>current</em> configuration of C and apply the minimum change to put it into a desired state (i.e., if a pair I need filtered is already filtered, I would omit it from the declaration). This approach is fraught with peril. If the current configuration is the result of previous transient declarations, the removal of any of those declarations could invalidate the attempted difference calculation and my declaration would no longer be sufficient to guarantee the set C required.</li>
+<li><b>Anyone at any time can add to the history.</b> Some code can modify C to suit its needs. However, it can also make subsequent calls into code that also modifies C with no guarantees that the called code will undo those changes. Code that modifies collision filters configuration should document that it does so. It should also have a clear protocol for cleaning up its own changes. Finally, code that applies declarations should not take for granted that its transient declarations are necessarily the last declarations in the history.</li>
+</ul>
+<h4>Making transient filter declarations</h4>
+<p>There is a custom API for applying a filter declaration as a <em>transient</em> declaration. It returns the id for the transient API (used to remove the declaration from the history sequence).</p>
+<p>Attempting to change the persistent configuration when there are active transient declarations in the history will throw an exception. </p>
 </div>
 <p><code>#include &lt;drake/geometry/collision_filter_manager.h&gt;</code></p>
 <table class="memberdecls">
@@ -133,6 +178,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a67386b6917b1243e34c6f092d4956386"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386">Apply</a> (const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;declaration)</td></tr>
 <tr class="memdesc:a67386b6917b1243e34c6f092d4956386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the given <code>declaration</code> to the geometry state managed by <code>this</code> instance.  <a href="#a67386b6917b1243e34c6f092d4956386">More...</a><br /></td></tr>
 <tr class="separator:a67386b6917b1243e34c6f092d4956386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0685b9bd25f37bd2cf50694b5c909e69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a0685b9bd25f37bd2cf50694b5c909e69">ApplyTransient</a> (const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;declaration)</td></tr>
+<tr class="memdesc:a0685b9bd25f37bd2cf50694b5c909e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the declaration as the newest <em>transient</em> modification to the collision filter configuration.  <a href="#a0685b9bd25f37bd2cf50694b5c909e69">More...</a><br /></td></tr>
+<tr class="separator:a0685b9bd25f37bd2cf50694b5c909e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a626c14903db8fa561573fc58992a2909"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a626c14903db8fa561573fc58992a2909">RemoveDeclaration</a> (<a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> filter_id)</td></tr>
+<tr class="memdesc:a626c14903db8fa561573fc58992a2909"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to remove the transient declaration from the history for the declaration associated with the given <code>filter_id</code>.  <a href="#a626c14903db8fa561573fc58992a2909">More...</a><br /></td></tr>
+<tr class="separator:a626c14903db8fa561573fc58992a2909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3deaa546ce8e4e02c84a5155fa903b29"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a3deaa546ce8e4e02c84a5155fa903b29">has_transient_history</a> () const</td></tr>
+<tr class="memdesc:a3deaa546ce8e4e02c84a5155fa903b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if there are any active transient filter declarations.  <a href="#a3deaa546ce8e4e02c84a5155fa903b29">More...</a><br /></td></tr>
+<tr class="separator:a3deaa546ce8e4e02c84a5155fa903b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a602c7fa3bc1a4abfa6afbfd8e5dcd2f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a602c7fa3bc1a4abfa6afbfd8e5dcd2f5">IsActive</a> (<a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> filter_id) const</td></tr>
+<tr class="memdesc:a602c7fa3bc1a4abfa6afbfd8e5dcd2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports if the transient collision filter declaration indicated by the given <code>filter_id</code> is part of the history.  <a href="#a602c7fa3bc1a4abfa6afbfd8e5dcd2f5">More...</a><br /></td></tr>
+<tr class="separator:a602c7fa3bc1a4abfa6afbfd8e5dcd2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ae0d5fa02bfe95e2f82a8d06220cc3dcc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#ae0d5fa02bfe95e2f82a8d06220cc3dcc">CollisionFilterManager</a> (const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a> &amp;)=default</td></tr>
 <tr class="separator:ae0d5fa02bfe95e2f82a8d06220cc3dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -228,15 +285,101 @@ Friends</h2></td></tr>
 </ul>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the <code>declaration</code> references invalid ids. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the <code>declaration</code> references invalid ids or there is an active history. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
+<a id="a0685b9bd25f37bd2cf50694b5c909e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0685b9bd25f37bd2cf50694b5c909e69">&#9670;&nbsp;</a></span>ApplyTransient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> ApplyTransient </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_declaration.html">CollisionFilterDeclaration</a> &amp;&#160;</td>
+          <td class="paramname"><em>declaration</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies the declaration as the newest <em>transient</em> modification to the collision filter configuration. </p>
+<p>The declaration must be considered "valid", as defined for <a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html#a67386b6917b1243e34c6f092d4956386" title="Applies the given declaration to the geometry state managed by this instance.">Apply()</a>. </p>
+
+</div>
+</div>
+<a id="a3deaa546ce8e4e02c84a5155fa903b29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3deaa546ce8e4e02c84a5155fa903b29">&#9670;&nbsp;</a></span>has_transient_history()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool has_transient_history </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports if there are any active transient filter declarations. </p>
+
+</div>
+</div>
+<a id="a602c7fa3bc1a4abfa6afbfd8e5dcd2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a602c7fa3bc1a4abfa6afbfd8e5dcd2f5">&#9670;&nbsp;</a></span>IsActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a>&#160;</td>
+          <td class="paramname"><em>filter_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports if the transient collision filter declaration indicated by the given <code>filter_id</code> is part of the history. </p>
+
+</div>
+</div>
+<a id="a4c3ee4bac270a51017b78ad3f478d02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3ee4bac270a51017b78ad3f478d02a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4e2694aa4d86afb82317889dacef21d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e2694aa4d86afb82317889dacef21d8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2694aa4d86afb82317889dacef21d8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,29 +404,30 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4c3ee4bac270a51017b78ad3f478d02a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c3ee4bac270a51017b78ad3f478d02a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a626c14903db8fa561573fc58992a2909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a626c14903db8fa561573fc58992a2909">&#9670;&nbsp;</a></span>RemoveDeclaration()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&amp; operator= </td>
+          <td class="memname">bool RemoveDeclaration </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a>&#160;</td>
+          <td class="paramname"><em>filter_id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Attempts to remove the transient declaration from the history for the declaration associated with the given <code>filter_id</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter_id</td><td>The id of the filter declaration to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> iff <code>is_active(filter_id)</code> returns <code>true</code> before calling this method (i.e., <code>filter_id</code> refers to an existent filter that has successfully been removed). </dd></dl>
 
 </div>
 </div>

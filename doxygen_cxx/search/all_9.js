@@ -287,6 +287,7 @@ var searchData=
   ['is_5fwrite',['is_write',['../classdrake_1_1lcm_1_1_drake_lcm_log.html#aa0eced80d7591ebe55498b3b52657f95',1,'drake::lcm::DrakeLcmLog']]],
   ['is_5fzero',['is_zero',['../namespacedrake_1_1symbolic.html#a717f1ae4a1d038bc7870416276167f19',1,'drake::symbolic']]],
   ['isabstract',['IsAbstract',['../classdrake_1_1systems_1_1_system_symbolic_inspector.html#abd4941ebb467b1aafbdba4346e24f738',1,'drake::systems::SystemSymbolicInspector']]],
+  ['isactive',['IsActive',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a602c7fa3bc1a4abfa6afbfd8e5dcd2f5',1,'drake::geometry::CollisionFilterManager']]],
   ['isaffine',['IsAffine',['../classdrake_1_1_polynomial.html#a0a83f7960aa020c56d20f435dba4d3cd',1,'drake::Polynomial::IsAffine()'],['../namespacedrake_1_1symbolic.html#a13c0db41d89c9257d2fbfc4928fa5bd7',1,'drake::symbolic::IsAffine(const Eigen::Ref&lt; const MatrixX&lt; Expression &gt;&gt; &amp;m, const Variables &amp;vars)'],['../namespacedrake_1_1symbolic.html#a9d8e94c7598bd59e6a5314ffbc3c7f59',1,'drake::symbolic::IsAffine(const Eigen::Ref&lt; const MatrixX&lt; Expression &gt;&gt; &amp;m)']]],
   ['isallfingersstuck',['IsAllFingersStuck',['../classdrake_1_1examples_1_1allegro__hand_1_1_allegro_hand_motion_state.html#ac3eabc49f382cf9c9a18aa81703c64df',1,'drake::examples::allegro_hand::AllegroHandMotionState']]],
   ['isanchored',['IsAnchored',['../classdrake_1_1multibody_1_1_multibody_plant.html#a4f05c3d8f8284a9d9056a4ae47cc0e18',1,'drake::multibody::MultibodyPlant']]],

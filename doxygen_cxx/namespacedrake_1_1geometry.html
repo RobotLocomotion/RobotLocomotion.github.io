@@ -181,6 +181,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh.html">Mesh</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a general (possibly non-convex) triangular surface mesh.  <a href="classdrake_1_1geometry_1_1_mesh.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an interface to <a href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a>.  <a href="classdrake_1_1geometry_1_1_meshcat.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MeshFieldLinear represents a continuous piecewise-linear scalar field <code>f</code> defined on a (triangular or tetrahedral) mesh; the field value changes linearly within each element E (triangle or tetrahedron), and the gradient ∇f is constant within each element.  <a href="classdrake_1_1geometry_1_1_mesh_field_linear.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +264,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a4ace159b1ce98627d4af8aeb8c681087"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a4ace159b1ce98627d4af8aeb8c681087">FramePoseVector</a> = <a class="el" href="classdrake_1_1geometry_1_1_frame_kinematics_vector.html">FrameKinematicsVector</a>&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &gt;</td></tr>
 <tr class="memdesc:a4ace159b1ce98627d4af8aeb8c681087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class for communicating <em>pose</em> information to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> for registered frames.  <a href="#a4ace159b1ce98627d4af8aeb8c681087">More...</a><br /></td></tr>
 <tr class="separator:a4ace159b1ce98627d4af8aeb8c681087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92efe958866f76d7391035159c554a56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> = <a class="el" href="classdrake_1_1_identifier.html">drake::Identifier</a>&lt; class FilterTag &gt;</td></tr>
+<tr class="memdesc:a92efe958866f76d7391035159c554a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify transient collision filter declarations in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>.  <a href="#a92efe958866f76d7391035159c554a56">More...</a><br /></td></tr>
+<tr class="separator:a92efe958866f76d7391035159c554a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac53cb597123131fb23a7af26e8d350bf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> = <a class="el" href="classdrake_1_1_identifier.html">drake::Identifier</a>&lt; class SourceTag &gt;</td></tr>
 <tr class="memdesc:ac53cb597123131fb23a7af26e8d350bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify geometry sources in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>.  <a href="#ac53cb597123131fb23a7af26e8d350bf">More...</a><br /></td></tr>
 <tr class="separator:ac53cb597123131fb23a7af26e8d350bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -382,6 +388,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A convenient alias for the <a class="el" href="classdrake_1_1geometry_1_1_drake_visualizer.html" title="A system that publishes LCM messages compatible with the drake_visualizer application representing th...">DrakeVisualizer</a> class when using the <code>double</code> scalar type. </p>
+
+</div>
+</div>
+<a id="a92efe958866f76d7391035159c554a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92efe958866f76d7391035159c554a56">&#9670;&nbsp;</a></span>FilterId</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#a92efe958866f76d7391035159c554a56">FilterId</a> =  <a class="el" href="classdrake_1_1_identifier.html">drake::Identifier</a>&lt;class FilterTag&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type used to identify transient collision filter declarations in <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>. </p>
 
 </div>
 </div>

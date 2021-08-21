@@ -236,6 +236,7 @@ var searchData=
   ['applydiscretevariableupdate',['ApplyDiscreteVariableUpdate',['../classdrake_1_1systems_1_1_system.html#a3873890578a88001255c795f20f01e3f',1,'drake::systems::System']]],
   ['applyjointvelocitylimits',['ApplyJointVelocityLimits',['../namespacedrake_1_1manipulation_1_1util.html#a03defeaacd8e6e4a43260eb910c1913c',1,'drake::manipulation::util']]],
   ['applysimulatorconfig',['ApplySimulatorConfig',['../group__simulator__configuration.html#ga9aad0aa8b134eb63118bc3b38821977f',1,'drake::systems']]],
+  ['applytransient',['ApplyTransient',['../classdrake_1_1geometry_1_1_collision_filter_manager.html#a0685b9bd25f37bd2cf50694b5c909e69',1,'drake::geometry::CollisionFilterManager']]],
   ['applyunrestrictedupdate',['ApplyUnrestrictedUpdate',['../classdrake_1_1systems_1_1_system.html#a1bc3701622107a616b3e45f9f0735233',1,'drake::systems::System']]],
   ['approach',['approach',['../classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#ad48cd766fd69e534747352670b320229',1,'drake::solvers::MixedIntegerRotationConstraintGenerator']]],
   ['area',['area',['../classdrake_1_1geometry_1_1_surface_mesh.html#a3140454e38db89c3828b2a7403b7d31b',1,'drake::geometry::SurfaceMesh']]],

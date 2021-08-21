@@ -421,6 +421,92 @@ be part of any user-declared collision filters. - In general,
 adding collisions and assigning proximity roles should happen
 prior to collision filter configuration.</p>
 </div>
+<p><strong>Transient vs Persistent changes</strong></p>
+<p>Collision filtering is all about defining which geometry pairs are in
+the set C. The simplest way to modify the set C is through
+<em>persistent</em> modifications to a “base configuration” (via calls to
+Apply()). However, declarations can also be applied in a <em>transient</em>
+manner. Transient declarations form a history. The current definition
+of the set C is the result of applying the history of collision filter
+declarations to the persistent base configuration in order. That
+history can be modified:</p>
+<ul class="simple">
+<li>New transient declarations can be appended.</li>
+<li>Arbitrary transient declarations can be removed from the sequence.</li>
+<li>The current configuration (based on a history with an arbitrary number</li>
+</ul>
+<p>of transient declarations) can be “flattened” into the persistent base
+(with no history).</p>
+<p>The table below illustrates a sequence of operations and their effect
+on C. We define C’s initial configuration as <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">{P₁,</span> <span class="pre">P₂,</span> <span class="pre">...,</span> <span class="pre">Pₙ}</span></code>
+(for <code class="docutils literal"><span class="pre">n</span></code> geometry pairs). Each action is described as either
+persistent or transient.</p>
+<div class="line-block">
+<div class="line">Line | C | Action | | :–: | :—————— |</div>
+</div>
+<p>:————————————————– | | 1 | <code class="docutils literal"><span class="pre">{P₁,</span> <span class="pre">P₂,</span>
+<span class="pre">...,</span> <span class="pre">Pₙ}</span></code> | Initial condition of the persistent base | | 2 | <code class="docutils literal"><span class="pre">{P₂,</span>
+<span class="pre">...,</span> <span class="pre">Pₙ}</span></code> | Remove P₁ from the persistent base | | 3 | <code class="docutils literal"><span class="pre">{P₂,</span> <span class="pre">...,</span>
+<span class="pre">Pₙ₋₁}</span></code> | Remove Pₙ from the persistent base | | 4 | <code class="docutils literal"><span class="pre">{P₂}</span></code> | Remove
+all pairs except P₂ from the persistent base | | 5 | <code class="docutils literal"><span class="pre">{P₂,</span> <span class="pre">P₄,</span> <span class="pre">P₅}</span></code>
+| Transient declaration #1 puts P₄ and P₅ into C | | 6 | <code class="docutils literal"><span class="pre">{P₂,</span> <span class="pre">P₃,</span>
+<span class="pre">P₄,</span> <span class="pre">P₅}</span></code> | Transient declaration #2 puts P₃ and P₄ into C | | 7 |
+<code class="docutils literal"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄}</span></code> | Remove declaration #1. | | 8 | <code class="docutils literal"><span class="pre">{P₂,</span> <span class="pre">P₃,</span> <span class="pre">P₄}</span></code> |
+Configuration flattened; #2 no longer exists | <strong>Table 1</strong>: An example
+sequence of operations on collision filters.</p>
+<p>Notes: - lines 2 - 4 represent a series of <em>persistent</em> operations,
+filtering pairs of geometry (aka removing them from C by calling
+Apply()). - line 5: the first transient filter declaration which is
+assigned the id value #1 (via a call to ApplyTransient()). - line 6:
+Adds a new transient filter declaration to the sequence (assigned id
+#2). Note, that it redundantly declares that P₄ is a member of C just
+as declaration #1 did. This redundancy is fine. In fact, it may be
+very important (see below). - line 7: We remove declaration #1.
+Although #1 added both P₄ and P₅ to C, the result of removing this
+declaration from the sequence is that P₅ is no longer a member of C
+but P₄ <em>is</em>. This is because #2’s declaration that P₄ is* in C
+preserves its membership. - line 8: the current configuration is
+“flattened” into the persistent base. All history is thrown out and
+any filter identifiers are rendered invalid.</p>
+<p>This example workflow above illustrates some key ideas in using
+transient declarations.</p>
+<ul class="simple">
+<li><a href="#id1"><span class="problematic" id="id2">**</span></a>The persistent configuration can only be modified when there is no</li>
+</ul>
+<p>transient history.** Applying a filter declaration should have the effect
+of realizing that declaration. If a pair is <em>declared</em> to be in C, the
+result of the declaration is that the pair is in C (assuming that the pair
+can* be in C). If we allowed modifying the persistent configuration with
+an active transient history, there might be no discernable change in the
+resultant configuration state because a subsequent transient declaration
+may supplant it. This would lead to inscrutable bugs. Therefore, it’s
+simply not allowed.
+- <strong>When defining a transient declaration, the declaration should include all
+critical pairs *explicitly*.</strong> This includes those pairs that should and
+should not be in C. Any pair <em>not</em> explicitly accounted for should be one
+whose filter status is immaterial.
+It <em>might</em> seems desirable (from an optimization perspective) to examine
+the <em>current</em> configuration of C and apply the minimum change to put it
+into a desired state (i.e., if a pair I need filtered is already filtered,
+I would omit it from the declaration). This approach is fraught with peril.
+If the current configuration is the result of previous transient
+declarations, the removal of any of those declarations could invalidate the
+attempted difference calculation and my declaration would no longer be
+sufficient to guarantee the set C required.
+- <strong>Anyone at any time can add to the history.</strong> Some code can modify C to
+suit its needs. However, it can also make subsequent calls into code that
+also modifies C with no guarantees that the called code will undo those
+changes. Code that modifies collision filters configuration should document
+that it does so. It should also have a clear protocol for cleaning up its
+own changes. Finally, code that applies declarations should not take for
+granted that its transient declarations are necessarily the last
+declarations in the history.</p>
+<p><em>Making transient filter declarations</em></p>
+<p>There is a custom API for applying a filter declaration as a
+<em>transient</em> declaration. It returns the id for the transient API (used
+to remove the declaration from the history sequence).</p>
+<p>Attempting to change the persistent configuration when there are
+active transient declarations in the history will throw an exception.</p>
 <dl class="attribute">
 <dt id="pydrake.geometry.CollisionFilterManager.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.__init__" title="Permalink to this definition">¶</a></dt>
@@ -445,7 +531,53 @@ The following polices are implemented during application:</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the <code class="docutils literal"><span class="pre">declaration</span></code> references invalid ids.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the <code class="docutils literal"><span class="pre">declaration</span></code> references invalid ids or</li>
+<li>there is an active history.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterManager.ApplyTransient">
+<code class="descname">ApplyTransient</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>declaration: pydrake.geometry.CollisionFilterDeclaration</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.FilterId<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.ApplyTransient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the declaration as the newest <em>transient</em> modification to the
+collision filter configuration. The declaration must be considered
+“valid”, as defined for Apply().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterManager.has_transient_history">
+<code class="descname">has_transient_history</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.has_transient_history" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if there are any active transient filter declarations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterManager.IsActive">
+<code class="descname">IsActive</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>filter_id: pydrake.geometry.FilterId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.IsActive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the transient collision filter declaration indicated by the
+given <code class="docutils literal"><span class="pre">filter_id</span></code> is part of the history.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.CollisionFilterManager.RemoveDeclaration">
+<code class="descname">RemoveDeclaration</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>filter_id: pydrake.geometry.FilterId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.RemoveDeclaration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to remove the transient declaration from the history for the
+declaration associated with the given <code class="docutils literal"><span class="pre">filter_id</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">filter_id</span></code>:</dt>
+<dd>The id of the filter declaration to remove.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> iff <code class="docutils literal"><span class="pre">is_active(filter_id)</span></code> returns <code class="docutils literal"><span class="pre">True</span></code> before
+calling this method (i.e., <code class="docutils literal"><span class="pre">filter_id</span></code> refers to an existent
+filter that has successfully been removed).</td>
 </tr>
 </tbody>
 </table>
@@ -796,7 +928,7 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id40"><span class="problematic" id="id41">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id42"><span class="problematic" id="id43">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -1364,6 +1496,42 @@ semi-axes.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.geometry.FilterId">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">FilterId</code><a class="headerlink" href="#pydrake.geometry.FilterId" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type used to identify transient collision filter declarations in
+SceneGraph.</p>
+<dl class="attribute">
+<dt id="pydrake.geometry.FilterId.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.FilterId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.FilterId.get_new_id">
+<em class="property">static </em><code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.geometry.FilterId<a class="headerlink" href="#pydrake.geometry.FilterId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FilterId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FilterId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.FilterId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.FilterId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.FilterId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.FilterId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.geometry.FrameId">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">FrameId</code><a class="headerlink" href="#pydrake.geometry.FrameId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type used to identify geometry frames in SceneGraph.</p>
@@ -1472,7 +1640,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id42"><span class="problematic" id="id43">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id44"><span class="problematic" id="id45">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -1604,7 +1772,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id44"><span class="problematic" id="id45">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id46"><span class="problematic" id="id47">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -1734,7 +1902,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id46"><span class="problematic" id="id47">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id48"><span class="problematic" id="id49">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2704,7 +2872,7 @@ scale factor.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id48"><span class="problematic" id="id49">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id50"><span class="problematic" id="id51">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -3200,7 +3368,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id50"><span class="problematic" id="id51">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id52"><span class="problematic" id="id53">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -3210,7 +3378,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id52"><span class="problematic" id="id53">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id54"><span class="problematic" id="id55">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -3316,8 +3484,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id54"><span class="problematic" id="id55">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id56"><span class="problematic" id="id57">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id56"><span class="problematic" id="id57">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -3779,7 +3947,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id58"><span class="problematic" id="id59">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id60"><span class="problematic" id="id61">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -3789,7 +3957,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id60"><span class="problematic" id="id61">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id62"><span class="problematic" id="id63">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -3895,8 +4063,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id62"><span class="problematic" id="id63">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id66"><span class="problematic" id="id67">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -4356,7 +4524,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id66"><span class="problematic" id="id67">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id68"><span class="problematic" id="id69">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -4366,7 +4534,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id68"><span class="problematic" id="id69">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id70"><span class="problematic" id="id71">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -4472,8 +4640,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id70"><span class="problematic" id="id71">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id72"><span class="problematic" id="id73">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id72"><span class="problematic" id="id73">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id74"><span class="problematic" id="id75">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -4718,7 +4886,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id80"><span class="problematic" id="id81">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id82"><span class="problematic" id="id83">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -5252,7 +5420,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id2"><span class="problematic" id="id3">*</span></a>/ (Deprecated.)</li>
+<li>scene graph. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -5268,7 +5436,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id6"><span class="problematic" id="id7">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -5300,7 +5468,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id6"><span class="problematic" id="id7">*</span></a>/ (Deprecated.)</li>
+<li>graph. <a href="#id8"><span class="problematic" id="id9">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -5316,7 +5484,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id8"><span class="problematic" id="id9">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -5328,7 +5496,7 @@ will be removed from Drake on or after 2021-11-01.</dd>
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -5997,7 +6165,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id13"><span class="problematic" id="id14">*</span></a>/ (Deprecated.)</li>
+<li>scene graph. <a href="#id15"><span class="problematic" id="id16">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -6013,7 +6181,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id15"><span class="problematic" id="id16">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id17"><span class="problematic" id="id18">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -6045,7 +6213,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id17"><span class="problematic" id="id18">*</span></a>/ (Deprecated.)</li>
+<li>graph. <a href="#id19"><span class="problematic" id="id20">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -6061,7 +6229,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id19"><span class="problematic" id="id20">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id21"><span class="problematic" id="id22">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -6073,7 +6241,7 @@ will be removed from Drake on or after 2021-11-01.</dd>
 <dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id21"><span class="problematic" id="id22">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id23"><span class="problematic" id="id24">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -6740,7 +6908,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id24"><span class="problematic" id="id25">*</span></a>/ (Deprecated.)</li>
+<li>scene graph. <a href="#id26"><span class="problematic" id="id27">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -6756,7 +6924,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id26"><span class="problematic" id="id27">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id28"><span class="problematic" id="id29">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -6788,7 +6956,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id28"><span class="problematic" id="id29">*</span></a>/ (Deprecated.)</li>
+<li>graph. <a href="#id30"><span class="problematic" id="id31">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -6804,7 +6972,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id30"><span class="problematic" id="id31">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id32"><span class="problematic" id="id33">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -6816,7 +6984,7 @@ will be removed from Drake on or after 2021-11-01.</dd>
 <dt id="pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id32"><span class="problematic" id="id33">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id34"><span class="problematic" id="id35">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -7192,7 +7360,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id34"><span class="problematic" id="id35">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id36"><span class="problematic" id="id37">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -7902,7 +8070,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id36"><span class="problematic" id="id37">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id38"><span class="problematic" id="id39">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -8610,7 +8778,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id38"><span class="problematic" id="id39">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id40"><span class="problematic" id="id41">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -9621,7 +9789,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id74"><span class="problematic" id="id75">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id76"><span class="problematic" id="id77">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9708,7 +9876,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id76"><span class="problematic" id="id77">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id78"><span class="problematic" id="id79">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -9793,7 +9961,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id78"><span class="problematic" id="id79">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id80"><span class="problematic" id="id81">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result

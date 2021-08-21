@@ -227,6 +227,8 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.ContactSurface_[float].__init__">(pydrake.geometry.ContactSurface_[float] attribute)</a>
 </li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.FilterId.__init__">(pydrake.geometry.FilterId attribute)</a>
+</li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FrameId.__init__">(pydrake.geometry.FrameId attribute)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryId.__init__">(pydrake.geometry.GeometryId attribute)</a>
@@ -2447,6 +2449,8 @@
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.AppendFirstOrderSegment">AppendFirstOrderSegment() (pydrake.trajectories.PiecewisePolynomial method)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.Apply">Apply() (pydrake.geometry.CollisionFilterManager method)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.ApplyTransient">ApplyTransient() (pydrake.geometry.CollisionFilterManager method)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.arccos">arccos() (in module pydrake.math)</a>
 
@@ -5516,6 +5520,8 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.Mesh.filename">(pydrake.geometry.Mesh method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.FilterId">FilterId (class in pydrake.geometry)</a>
+</li>
       <li><a href="pydrake.math.html#pydrake.math.BsplineBasis_.BsplineBasis_[float].final_parameter_value">final_parameter_value() (pydrake.math.BsplineBasis_.BsplineBasis_[float] method)</a>
 
       <ul>
@@ -5640,6 +5646,8 @@
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[float]">FixedOffsetFrame_[float] (class in pydrake.multibody.tree)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].FixInputPortsFrom">FixInputPortsFrom() (pydrake.systems.framework.System_.System_[float] method)</a>
 
       <ul>
@@ -5650,8 +5658,6 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].FixInputPortsFrom">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_.InputPort_[float].FixValue">FixValue() (pydrake.systems.framework.InputPort_.InputPort_[float] method)</a>
 
       <ul>
@@ -7208,9 +7214,11 @@
         <li><a href="pydrake.systems.rendering.html#pydrake.systems.rendering.PoseBundle.get_name">(pydrake.systems.rendering.PoseBundle method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.FrameId.get_new_id">get_new_id() (pydrake.geometry.FrameId static method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.FilterId.get_new_id">get_new_id() (pydrake.geometry.FilterId static method)</a>
 
       <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.FrameId.get_new_id">(pydrake.geometry.FrameId static method)</a>
+</li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryId.get_new_id">(pydrake.geometry.GeometryId static method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SourceId.get_new_id">(pydrake.geometry.SourceId static method)</a>
@@ -7866,6 +7874,8 @@
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value[object].get_value">(pydrake.common.value.Value[object] method)</a>
 </li>
         <li><a href="pydrake.common.value.html#pydrake.common.value.Value[str].get_value">(pydrake.common.value.Value[str] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.FilterId.get_value">(pydrake.geometry.FilterId method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.FrameId.get_value">(pydrake.geometry.FrameId method)</a>
 </li>
@@ -9008,6 +9018,8 @@
       </ul></li>
       <li><a href="pydrake.perception.html#pydrake.perception.PointCloud.has_rgbs">has_rgbs() (pydrake.perception.PointCloud method)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.has_transient_history">has_transient_history() (pydrake.geometry.CollisionFilterManager method)</a>
+</li>
       <li><a href="pydrake.perception.html#pydrake.perception.PointCloud.has_xyzs">has_xyzs() (pydrake.perception.PointCloud method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].HasAnyDirectFeedthrough">HasAnyDirectFeedthrough() (pydrake.systems.framework.System_.System_[float] method)</a>
@@ -9636,9 +9648,11 @@
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseTrajectory.is_time_in_range">is_time_in_range() (pydrake.trajectories.PiecewiseTrajectory method)</a>
 </li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.FrameId.is_valid">is_valid() (pydrake.geometry.FrameId method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.FilterId.is_valid">is_valid() (pydrake.geometry.FilterId method)</a>
 
       <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.FrameId.is_valid">(pydrake.geometry.FrameId method)</a>
+</li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.GeometryId.is_valid">(pydrake.geometry.GeometryId method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.SourceId.is_valid">(pydrake.geometry.SourceId method)</a>
@@ -9690,6 +9704,8 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame_[float].is_world_frame">(pydrake.multibody.tree.Frame_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.IsActive">IsActive() (pydrake.geometry.CollisionFilterManager method)</a>
+</li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.IsAffine">IsAffine() (in module pydrake.symbolic)</a>
 
       <ul>
@@ -12585,6 +12601,8 @@
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveConstraint">RemoveConstraint() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.RemoveCost">RemoveCost() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.CollisionFilterManager.RemoveDeclaration">RemoveDeclaration() (pydrake.geometry.CollisionFilterManager method)</a>
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.RemoveFinalSegment">RemoveFinalSegment() (pydrake.trajectories.PiecewisePolynomial method)</a>
 </li>
