@@ -76,7 +76,7 @@ var NAVTREEINDEX =
 "classdrake_1_1math_1_1_barycentric_mesh.html#ab6e7f372f59d1657cee065dfaaa80ae8",
 "classdrake_1_1multibody_1_1_body_frame.html",
 "classdrake_1_1multibody_1_1_joint.html#a0ba1e0f8f4e9c00d58e4bc53e6ff346f",
-"classdrake_1_1multibody_1_1_multibody_plant.html#a6b7f0267d163693025fa04f78bb18333",
+"classdrake_1_1multibody_1_1_multibody_plant.html#a6b4ee8afbadd70f10f124ceb75ab06bd",
 "classdrake_1_1multibody_1_1_propeller.html#a4f89cbd2b0c2cdd6cbd69555aaf94501",
 "classdrake_1_1multibody_1_1_spatial_vector.html#a55ef3f82fae301899d9bb544a7ea2de0",
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a1466802a33c4cb8a41f2ca598fe5b25d",
