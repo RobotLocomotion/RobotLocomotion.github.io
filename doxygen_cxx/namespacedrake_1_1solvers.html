@@ -172,7 +172,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Gurobi solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_gurobi_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ibex_solver.html">IbexSolver</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the IBEX solver (<a href="http://www.ibex-lib.org/">http://www.ibex-lib.org/</a>)  <a href="classdrake_1_1solvers_1_1_ibex_solver.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An implementation of <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html" title="Interface used by implementations of individual solvers.">SolverInterface</a> for the IBEX solver (<a href="http://www.ibex-lib.org">http://www.ibex-lib.org</a>).  <a href="classdrake_1_1solvers_1_1_ibex_solver.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_ipopt_solver.html">IpoptSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2759,7 +2759,7 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 </div><div class="memdoc">
 
 <p>Creates a cost term of the form | Ax - b |^2. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>"Use Make2NormSquaredCost instead" <br />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>"Use Make2NormSquaredCost instead" <br />
  This will be removed from Drake on or after "2021-09-01" .</dd></dl>
 
 </div>
@@ -3074,36 +3074,8 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 </div>
 </div>
-<a id="ad58cede9876421e050ac44deee7804ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/12]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6c59daf7e576403f76128d2063303e9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/12]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c59daf7e576403f76128d2063303e9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/12]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3119,6 +3091,34 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake_1_1solvers.html#a6297509967536d29159910e5c51fd285">IntervalBinning</a> &amp;&#160;</td>
           <td class="paramname"><em>binning</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad58cede9876421e050ac44deee7804ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58cede9876421e050ac44deee7804ff">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/12]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::solvers::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>

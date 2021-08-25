@@ -1,5 +1,14 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a87952ec710e902557114a6d53d39734e":[3,0,0,16,2,38],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[3,0,0,16,2,48],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c09a6d35797ae0eed1de62a97433b9e":[3,0,0,16,2,21],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[3,0,0,16,2,3],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[3,0,0,16,2,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[3,0,0,16,2,53],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a97030415f23deb1b1244d33b95c1b0fb":[3,0,0,16,2,46],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add":[3,0,0,16,2,54],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,2,51],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9bd57b84091cef3694aee370fa189735":[3,0,0,16,2,43],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797":[3,0,0,16,2,0],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9fc93abbb14c2b7d6702fadcc72baff6":[3,0,0,16,2,45],
@@ -240,14 +249,5 @@ var NAVTREEINDEX38 =
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface__doxygen_8h.html":[4,0,0,4,2,6],
 "contact__surface__utility_8h.html":[4,0,0,4,2,7],
-"contact__wrench_8h.html":[4,0,0,8,7,1],
-"contact__wrench__evaluator_8h.html":[4,0,0,8,7,2],
-"context_8h.html":[4,0,0,11,3,7],
-"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,11,3,7,1],
-"context__base_8h.html":[4,0,0,11,3,8],
-"continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,5],
-"continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,5,1],
-"continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0],
-"continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
-"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0]
+"contact__wrench_8h.html":[4,0,0,8,7,1]
 };

@@ -1,5 +1,17 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a48fd1a491d4b55da113c50ad56ac0e0b":[3,0,0,11,6,2,3],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,11,6,2,0],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a81fc1edc9be7f6ca52a5c9f2d1f284a6":[3,0,0,11,6,2,4],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,6,2,5],
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,11,6,2,6],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,11,6,3],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[3,0,0,11,6,3,0],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,11,6,3,4],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[3,0,0,11,6,3,2],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,11,6,3,5],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,11,6,3,3],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,11,6,3,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html":[3,0,0,12,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,12,1,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,12,1,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html":[3,0,0,14,6,6],
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#abc9564688bbee2a18b20e2e0c10ee252":[3,0,0,14,6,6,1],
 "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#af1a58b1ce15865c2470ca4b646f3ab83":[3,0,0,14,6,6,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,14,7,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,14,7,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,14,7,1,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,14,7,2],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,7,2,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,14,7,8],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,14,7,10],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,14,7,11],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,14,7,3],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,14,7,4],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,14,7,5],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html":[3,0,0,14,7,6]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0]
 };

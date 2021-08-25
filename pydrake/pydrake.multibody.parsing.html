@@ -294,7 +294,8 @@ ROS packages for resources like mesh files.</p>
 <dl class="method">
 <dt id="pydrake.multibody.parsing.PackageMap.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.PackageMap</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>A constructor that initializes an empty map.</p>
+<dd><p>A constructor that initializes a default map containing only the top-
+level <code class="docutils literal"><span class="pre">drake</span></code> manifest.</p>
 </dd></dl>
 
 <dl class="method">
@@ -339,6 +340,12 @@ names returned is unspecified.</p>
 <code class="descname">GetPath</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.PackageMap</em>, <em>package_name: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.GetPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Obtains the path associated with package <code class="docutils literal"><span class="pre">package_name</span></code>. Aborts if
 no package named <code class="docutils literal"><span class="pre">package_name</span></code> exists in this PackageMap.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.parsing.PackageMap.MakeEmpty">
+<em class="property">static </em><code class="descname">MakeEmpty</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.multibody.parsing.PackageMap<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.MakeEmpty" title="Permalink to this definition">¶</a></dt>
+<dd><p>A factory method that initializes an empty map.</p>
 </dd></dl>
 
 <dl class="method">

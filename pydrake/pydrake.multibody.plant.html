@@ -482,26 +482,35 @@ default publishing rate).</td>
 <dd><p>Enumeration for contact model options.</p>
 <p>Members:</p>
 <blockquote>
-<div>kHydroelasticsOnly : Contact forces are computed using the Hydroelastic model. Conctact</div></blockquote>
+<div>kHydroelastic : Contact forces are computed using the Hydroelastic model. Conctact</div></blockquote>
 <p>between unsupported geometries will cause a runtime exception.</p>
 <blockquote>
-<div>kPointContactOnly : Contact forces are computed using a point contact model, see</div></blockquote>
+<div>kPoint : Contact forces are computed using a point contact model, see</div></blockquote>
 <p>point_contact_approximation “Numerical Approximation of Point
 Contact”.</p>
 <blockquote>
 <div>kHydroelasticWithFallback : Contact forces are computed using the hydroelastic model, where</div></blockquote>
 <p>possible. For most other unsupported colliding pairs, the point model
-from kPointContactOnly is used. See
-geometry::QueryObject:ComputeContactSurfacesWithFallback for more
+from kPoint is used. See
+geometry::QueryObject::ComputeContactSurfacesWithFallback for more
 details.</p>
+<blockquote>
+<div><p>kHydroelasticsOnly : Legacy alias. TODO(jwnimmer-tri) Deprecate this constant.</p>
+<p>kPointContactOnly : Legacy alias. TODO(jwnimmer-tri) Deprecate this constant.</p>
+</div></blockquote>
 <dl class="method">
 <dt id="pydrake.multibody.plant.ContactModel.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactModel</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.ContactModel.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.multibody.plant.ContactModel.kHydroelastic">
+<code class="descname">kHydroelastic</code><em class="property"> = &lt;ContactModel.kHydroelastic: 0&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.ContactModel.kHydroelastic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.multibody.plant.ContactModel.kHydroelasticsOnly">
-<code class="descname">kHydroelasticsOnly</code><em class="property"> = &lt;ContactModel.kHydroelasticsOnly: 0&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.ContactModel.kHydroelasticsOnly" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kHydroelasticsOnly</code><em class="property"> = &lt;ContactModel.kHydroelastic: 0&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.ContactModel.kHydroelasticsOnly" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -510,8 +519,13 @@ details.</p>
 <dd></dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.multibody.plant.ContactModel.kPoint">
+<code class="descname">kPoint</code><em class="property"> = &lt;ContactModel.kPoint: 1&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.ContactModel.kPoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.multibody.plant.ContactModel.kPointContactOnly">
-<code class="descname">kPointContactOnly</code><em class="property"> = &lt;ContactModel.kPointContactOnly: 1&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.ContactModel.kPointContactOnly" title="Permalink to this definition">¶</a></dt>
+<code class="descname">kPointContactOnly</code><em class="property"> = &lt;ContactModel.kPoint: 1&gt;</em><a class="headerlink" href="#pydrake.multibody.plant.ContactModel.kPointContactOnly" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -4957,7 +4971,7 @@ geometry::IllustrationProperties.</p>
 <code class="descname">set_contact_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model: drake::multibody::ContactModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].set_contact_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the contact model to be used by <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant, see
 ContactModel for available options. The default contact model is
-ContactModel::kPointContactOnly.</p>
+ContactModel::kPoint.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -8861,7 +8875,7 @@ geometry::IllustrationProperties.</p>
 <code class="descname">set_contact_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model: drake::multibody::ContactModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_contact_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the contact model to be used by <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant, see
 ContactModel for available options. The default contact model is
-ContactModel::kPointContactOnly.</p>
+ContactModel::kPoint.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -12763,7 +12777,7 @@ geometry::IllustrationProperties.</p>
 <code class="descname">set_contact_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model: drake::multibody::ContactModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].set_contact_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the contact model to be used by <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant, see
 ContactModel for available options. The default contact model is
-ContactModel::kPointContactOnly.</p>
+ContactModel::kPoint.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -16665,7 +16679,7 @@ geometry::IllustrationProperties.</p>
 <code class="descname">set_contact_model</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model: drake::multibody::ContactModel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].set_contact_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the contact model to be used by <code class="docutils literal"><span class="pre">this</span></code> MultibodyPlant, see
 ContactModel for available options. The default contact model is
-ContactModel::kPointContactOnly.</p>
+ContactModel::kPoint.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

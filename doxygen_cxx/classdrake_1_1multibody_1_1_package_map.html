@@ -94,6 +94,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_package_ma
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1multibody_1_1_package_map-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -109,7 +110,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_package_ma
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a26f6421b2b1971f71b16c808851bf044"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a26f6421b2b1971f71b16c808851bf044">PackageMap</a> ()</td></tr>
-<tr class="memdesc:a26f6421b2b1971f71b16c808851bf044"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor that initializes an empty map.  <a href="#a26f6421b2b1971f71b16c808851bf044">More...</a><br /></td></tr>
+<tr class="memdesc:a26f6421b2b1971f71b16c808851bf044"><td class="mdescLeft">&#160;</td><td class="mdescRight">A constructor that initializes a default map containing only the top- level <code>drake</code> manifest.  <a href="#a26f6421b2b1971f71b16c808851bf044">More...</a><br /></td></tr>
 <tr class="separator:a26f6421b2b1971f71b16c808851bf044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac51ed3119aaced1a4d66bc104c7a8241"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ac51ed3119aaced1a4d66bc104c7a8241">Add</a> (const std::string &amp;package_name, const std::string &amp;package_path)</td></tr>
 <tr class="memdesc:ac51ed3119aaced1a4d66bc104c7a8241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds package <code>package_name</code> and its path, <code>package_path</code>.  <a href="#ac51ed3119aaced1a4d66bc104c7a8241">More...</a><br /></td></tr>
@@ -153,6 +154,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad871b3018bc94d4b5c6f590f07f702f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c725213ca97011cb90e9f72f4792b68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a6c725213ca97011cb90e9f72f4792b68">operator=</a> (<a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:a6c725213ca97011cb90e9f72f4792b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a9b54d0bb91bc2d4f6a629ccd3868d4c1"><td class="memItemLeft" align="right" valign="top">static class <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a9b54d0bb91bc2d4f6a629ccd3868d4c1">MakeEmpty</a> ()</td></tr>
+<tr class="memdesc:a9b54d0bb91bc2d4f6a629ccd3868d4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">A factory method that initializes an empty map.  <a href="#a9b54d0bb91bc2d4f6a629ccd3868d4c1">More...</a><br /></td></tr>
+<tr class="separator:a9b54d0bb91bc2d4f6a629ccd3868d4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -227,7 +234,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A constructor that initializes an empty map. </p>
+<p>A constructor that initializes a default map containing only the top- level <code>drake</code> manifest. </p>
 
 </div>
 </div>
@@ -363,6 +370,33 @@ Friends</h2></td></tr>
 
 <p>Obtains the path associated with package <code>package_name</code>. </p>
 <p>Aborts if no package named <code>package_name</code> exists in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>. </p>
+
+</div>
+</div>
+<a id="a9b54d0bb91bc2d4f6a629ccd3868d4c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b54d0bb91bc2d4f6a629ccd3868d4c1">&#9670;&nbsp;</a></span>MakeEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static class <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> MakeEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A factory method that initializes an empty map. </p>
 
 </div>
 </div>

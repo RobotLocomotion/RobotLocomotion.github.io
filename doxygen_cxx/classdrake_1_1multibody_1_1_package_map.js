@@ -9,6 +9,7 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "Contains", "classdrake_1_1multibody_1_1_package_map.html#aeba4aacea21458551c23a35911ae42bb", null ],
     [ "GetPackageNames", "classdrake_1_1multibody_1_1_package_map.html#afaa68d5d43369307f840901e3d9fed97", null ],
     [ "GetPath", "classdrake_1_1multibody_1_1_package_map.html#aa466c277b13b0a0e2ab7c64fa47917da", null ],
+    [ "MakeEmpty", "classdrake_1_1multibody_1_1_package_map.html#a9b54d0bb91bc2d4f6a629ccd3868d4c1", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_package_map.html#a6c725213ca97011cb90e9f72f4792b68", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_package_map.html#afcdc55946fb2ea46cbe9728bffa8f5f6", null ],
     [ "PopulateFromEnvironment", "classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068", null ],

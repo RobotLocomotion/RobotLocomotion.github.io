@@ -100,16 +100,39 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_meshcat.htm
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides an interface to <a href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a>. </p>
-<p>Each instance of this class spawns a thread which runs an http/websocket server. Users can navigate their browser to the hosted URL to visualize the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to https://github.com/rdeits/meshcat.">Meshcat</a> scene. Note that, unlike many visualizers, one cannot open the visualizer until this server is running.</p>
-<p>Note: This code is currently a skeleton implementation; it only allows you to set (boolean) properties as a minimal demonstration of sending data from C++ to the viewer. It is the result of the second PR in a train of PRs that will establish the full <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to https://github.com/rdeits/meshcat.">Meshcat</a> functionality. See #13038. </p>
+<div class="textblock"><p>Provides an interface to Meshcat (<a href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a>). </p>
+<p>Each instance of this class spawns a thread which runs an http/websocket server. Users can navigate their browser to the hosted URL to visualize the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> scene. Note that, unlike many visualizers, one cannot open the visualizer until this server is running.</p>
+<p>In the current implementation, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> methods must be called from the same thread where the class instance was constructed. For example, running multiple simulations in parallel using the same <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance is not yet supported. We may generalize this in the future.</p>
+<h1><a class="anchor" id="meshcat_path"></a>
+Meshcat paths and the scene tree</h1>
+<p><a href="https://github.com/rdeits/meshcat#api">https://github.com/rdeits/meshcat#api</a> provides a nice introduction to the websocket API that we wrap with this class. One of the core concepts is the "scene tree" &ndash; a directory-like structure of objects, transforms, and properties. The scene tree is viewable in the browser by clicking on "Open
+Controls" in the top right corner.</p>
+<p>Elements of the tree are referenced programmatically by a "/"-delimited string indicating the object's <b>path</b> in the scene tree. An object at path "/foo/bar" is a child of an object at path "/foo", so setting the transform of (or deleting) "/foo" will also affect its children.</p>
+<p>The string path arguments to the methods in this class use the following semantics:</p><ul>
+<li>A path that begins with "/" is treated as an absolute path, and is used without modification.</li>
+<li>A path that <em>does not</em> begin with "/" is treated as a relative path to the default working directory.</li>
+<li>The "working directory" is fixed to be "/drake" in the current implementation. So any relative path "foo" will be treated as "/drake/foo".</li>
+<li>Delete("/foo") will remove all objects, transforms, and properties in "/foo" and its children from the scene tree.</li>
+<li><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">Delete()</a> is equivalent to Delete("") or Delete("/drake/").</li>
+<li>SetObject("/foo", ...) places the object at "/foo/&lt;object&gt;", where "&lt;object&gt;" is a hard-coded suffix used for all objects. You can use the Delete("/foo/&lt;object&gt;") to delete the object only (and not the children of "/foo") and must use SetProperty("/foo/&lt;object&gt;", ...) to change object-specific properties.</li>
+</ul>
+<p>The root directory contains a number of elements that are set up automatically in the browser. These include "/Background", "/Lights", "/Grid", and "/Cameras". To find more details please see the <a class="el" href="">meshcat documentation </a> and the <a class="el" href="">three.js documentation </a>.</p><ul>
+<li>You can modify these elements, create new lights/cameras, and even delete these elements (one at a time).</li>
+<li>Delete("/") is not allowed. It will be silently ignored.</li>
+</ul>
+<h1><a class="anchor" id="meshcat_recommended_workflow"></a>
+Recommended workflow</h1>
+<p>For convenience, <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> fosters a work flow in which all user-created objects created in Drake are contained in the "/drake" folder. Objects added with a relative path are placed in the "/drake" folder for you. The benefits are:</p><ul>
+<li>It's simple to distinguish between user objects and "infrastructure" objects in the visualizer.</li>
+<li>All user objects can easily be cleared by a single, parameter-free call to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">Delete()</a>. You are welcome to use absolute paths to organize your data, but the burden on tracking and cleaning them up lie on you. </li>
+</ul>
 </div>
 <p><code>#include &lt;drake/geometry/meshcat.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a72979a909cade59dffa5432128b603c3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a72979a909cade59dffa5432128b603c3">Meshcat</a> ()</td></tr>
-<tr class="memdesc:a72979a909cade59dffa5432128b603c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to https://github.com/rdeits/meshcat.">Meshcat</a> instance.  <a href="#a72979a909cade59dffa5432128b603c3">More...</a><br /></td></tr>
+<tr class="memdesc:a72979a909cade59dffa5432128b603c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance.  <a href="#a72979a909cade59dffa5432128b603c3">More...</a><br /></td></tr>
 <tr class="separator:a72979a909cade59dffa5432128b603c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ded5dcf3b477a151c05ff4f9ea3351b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7ded5dcf3b477a151c05ff4f9ea3351b">~Meshcat</a> ()</td></tr>
 <tr class="separator:a7ded5dcf3b477a151c05ff4f9ea3351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,9 +142,29 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7770452d0167ddf273f47c90e85dc941"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7770452d0167ddf273f47c90e85dc941">ws_url</a> () const</td></tr>
 <tr class="memdesc:a7770452d0167ddf273f47c90e85dc941"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the ws:// URL for direct connection to the websocket interface.  <a href="#a7770452d0167ddf273f47c90e85dc941">More...</a><br /></td></tr>
 <tr class="separator:a7770452d0167ddf273f47c90e85dc941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b147b6b447fed608fc6c15aab5fe7b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a0b147b6b447fed608fc6c15aab5fe7b7">SetProperty</a> (std::string_view path, std::string_view property, bool value)</td></tr>
-<tr class="memdesc:a0b147b6b447fed608fc6c15aab5fe7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forwards a set_property(...) message to the meshcat viewers.  <a href="#a0b147b6b447fed608fc6c15aab5fe7b7">More...</a><br /></td></tr>
-<tr class="separator:a0b147b6b447fed608fc6c15aab5fe7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973d81c7adb1da00361eaeab4118604f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a973d81c7adb1da00361eaeab4118604f">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
+<tr class="memdesc:a973d81c7adb1da00361eaeab4118604f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the 3D object at a given <code>path</code> in the scene tree.  <a href="#a973d81c7adb1da00361eaeab4118604f">More...</a><br /></td></tr>
+<tr class="separator:a973d81c7adb1da00361eaeab4118604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1b021d8e7be408a7d17d39ce459b39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a1e1b021d8e7be408a7d17d39ce459b39">SetTransform</a> (std::string_view path, const math::RigidTransformd &amp;X_ParentPath)</td></tr>
+<tr class="memdesc:a1e1b021d8e7be408a7d17d39ce459b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RigidTransform for a given path in the scene tree.  <a href="#a1e1b021d8e7be408a7d17d39ce459b39">More...</a><br /></td></tr>
+<tr class="separator:a1e1b021d8e7be408a7d17d39ce459b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8">Delete</a> (std::string_view path=&quot;&quot;)</td></tr>
+<tr class="memdesc:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the object at the given <code>path</code> as well as all of its children.  <a href="#af4681ade5efb8da0d67f86ecae9b9ac8">More...</a><br /></td></tr>
+<tr class="separator:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af890c2ad444b8dcdaeee6453e436b8d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3">SetProperty</a> (std::string_view path, std::string property, bool value)</td></tr>
+<tr class="memdesc:af890c2ad444b8dcdaeee6453e436b8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af890c2ad444b8dcdaeee6453e436b8d3">More...</a><br /></td></tr>
+<tr class="separator:af890c2ad444b8dcdaeee6453e436b8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9eb77512050207a9b91e2da278568a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af9eb77512050207a9b91e2da278568a4">SetProperty</a> (std::string_view path, std::string property, double value)</td></tr>
+<tr class="memdesc:af9eb77512050207a9b91e2da278568a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af9eb77512050207a9b91e2da278568a4">More...</a><br /></td></tr>
+<tr class="separator:af9eb77512050207a9b91e2da278568a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40769135bba976dde79af9499e8d000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000">HasPath</a> (std::string_view path) const</td></tr>
+<tr class="separator:ae40769135bba976dde79af9499e8d000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abac0b91a968117e6d9b8792bc753d9d6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#abac0b91a968117e6d9b8792bc753d9d6">GetPackedObject</a> (std::string_view path) const</td></tr>
+<tr class="separator:abac0b91a968117e6d9b8792bc753d9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cbfa93be716f89b71af1a3b0f414bb9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a5cbfa93be716f89b71af1a3b0f414bb9">GetPackedTransform</a> (std::string_view path) const</td></tr>
+<tr class="separator:a5cbfa93be716f89b71af1a3b0f414bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb7302d2b6d4d7da3a963790d56db20d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#afb7302d2b6d4d7da3a963790d56db20d">GetPackedProperty</a> (std::string_view path, std::string property) const</td></tr>
+<tr class="separator:afb7302d2b6d4d7da3a963790d56db20d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a7e8936185fd67ee1825d107010b66507"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7e8936185fd67ee1825d107010b66507">Meshcat</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;)=delete</td></tr>
 <tr class="separator:a7e8936185fd67ee1825d107010b66507"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,7 +243,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to https://github.com/rdeits/meshcat.">Meshcat</a> instance. </p>
+<p>Constructs the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance. </p>
 <p>It will listen on the first available port starting at 7001 (up to 7099). </p>
 
 </div>
@@ -223,6 +266,109 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af4681ade5efb8da0d67f86ecae9b9ac8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4681ade5efb8da0d67f86ecae9b9ac8">&#9670;&nbsp;</a></span>Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Delete </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em> = <code>&quot;&quot;</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes the object at the given <code>path</code> as well as all of its children. </p>
+<p>See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the detailed semantics of deletion. </p>
+
+</div>
+</div>
+<a id="abac0b91a968117e6d9b8792bc753d9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abac0b91a968117e6d9b8792bc753d9d6">&#9670;&nbsp;</a></span>GetPackedObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetPackedObject </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb7302d2b6d4d7da3a963790d56db20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb7302d2b6d4d7da3a963790d56db20d">&#9670;&nbsp;</a></span>GetPackedProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetPackedProperty </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>property</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cbfa93be716f89b71af1a3b0f414bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cbfa93be716f89b71af1a3b0f414bb9">&#9670;&nbsp;</a></span>GetPackedTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string GetPackedTransform </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae40769135bba976dde79af9499e8d000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40769135bba976dde79af9499e8d000">&#9670;&nbsp;</a></span>HasPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HasPath </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac40bc1b2063091ffce4741216b559b53"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac40bc1b2063091ffce4741216b559b53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -275,8 +421,52 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0b147b6b447fed608fc6c15aab5fe7b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b147b6b447fed608fc6c15aab5fe7b7">&#9670;&nbsp;</a></span>SetProperty()</h2>
+<a id="a973d81c7adb1da00361eaeab4118604f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a973d81c7adb1da00361eaeab4118604f">&#9670;&nbsp;</a></span>SetObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetObject </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgba</em> = <code><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9,&#160;1.)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the 3D object at a given <code>path</code> in the scene tree. </p>
+<p>Note that <code>path</code>="/foo" will always set an object in the tree at "/foo/&lt;object&gt;". See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a>. Any objects previously set at this <code>path</code> will be replaced. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">shape</td><td>a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> that specifies the geometry of the object. </td></tr>
+    <tr><td class="paramname">rgba</td><td>an <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> that specifies the (solid) color of the object. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af890c2ad444b8dcdaeee6453e436b8d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af890c2ad444b8dcdaeee6453e436b8d3">&#9670;&nbsp;</a></span>SetProperty() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +480,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>property</em>, </td>
         </tr>
         <tr>
@@ -307,9 +497,101 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Forwards a set_property(...) message to the meshcat viewers. </p>
+<p>Sets a single named property of the object at the given path. </p>
 <p>For example, </p><pre class="fragment">meshcat.SetProperty("/Background", "visible", false);
-</pre><p> will turn off the background. </p>
+</pre><p> will turn off the background. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for more details about these properties and how to address them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
+    <tr><td class="paramname">value</td><td>the new value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af9eb77512050207a9b91e2da278568a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9eb77512050207a9b91e2da278568a4">&#9670;&nbsp;</a></span>SetProperty() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetProperty </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>property</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a single named property of the object at the given path. </p>
+<p>For example, </p><pre class="fragment">meshcat.SetProperty("/Cameras/default/rotated/&lt;object&gt;", "zoom", 2.0);
+meshcat.SetProperty("/Lights/DirectionalLight/&lt;object&gt;", "intensity", 1.0);
+</pre><p> See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for more details about these properties and how to address them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
+    <tr><td class="paramname">value</td><td>the new value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1e1b021d8e7be408a7d17d39ce459b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1b021d8e7be408a7d17d39ce459b39">&#9670;&nbsp;</a></span>SetTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTransform </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const math::RigidTransformd &amp;&#160;</td>
+          <td class="paramname"><em>X_ParentPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the RigidTransform for a given path in the scene tree. </p>
+<p>An object's pose is the concatenation of all of the transforms along its path, so setting the transform of "/foo" will move the objects at "/foo/box1" and "/foo/robots/HAL9000". </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">X_ParentPath</td><td>the relative transform from the path to its immediate parent. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

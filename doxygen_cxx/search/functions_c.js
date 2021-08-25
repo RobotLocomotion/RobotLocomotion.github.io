@@ -25,6 +25,7 @@ var searchData=
   ['makecylinderplant',['MakeCylinderPlant',['../namespacedrake_1_1examples_1_1multibody_1_1cylinder__with__multicontact.html#a71833e144a8146fca220d2e32453098a',1,'drake::examples::multibody::cylinder_with_multicontact']]],
   ['makedenseevalfunction',['MakeDenseEvalFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html#a540031be4e8e7c18bd30b3a2f72a77e1',1,'drake::systems::AntiderivativeFunction']]],
   ['makederivative',['MakeDerivative',['../classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2',1,'drake::trajectories::Trajectory']]],
+  ['makeempty',['MakeEmpty',['../classdrake_1_1multibody_1_1_package_map.html#a9b54d0bb91bc2d4f6a629ccd3868d4c1',1,'drake::multibody::PackageMap']]],
   ['makefinitehorizonlinearquadraticregulator',['MakeFiniteHorizonLinearQuadraticRegulator',['../group__control__systems.html#ga2ebe52e849a0597ad54f37ab6e35df8a',1,'drake::systems::controllers']]],
   ['makefirstavailablesolver',['MakeFirstAvailableSolver',['../namespacedrake_1_1solvers.html#a99ce5167dfbdc1a1f84e2e7cc52cba4e',1,'drake::solvers']]],
   ['makefixinputporttypechecker',['MakeFixInputPortTypeChecker',['../classdrake_1_1systems_1_1_system_base.html#a68edc113d25e053c138ab15996332664',1,'drake::systems::SystemBase']]],

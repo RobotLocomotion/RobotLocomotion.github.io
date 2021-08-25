@@ -210,6 +210,7 @@ Functions</h2></td></tr>
 <tr class="separator:a3e1337cae81c66571d592dd9be50df7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplParams" colspan="2">template&lt;typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
 <tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">gradientMatrixToAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</td></tr>
+<tr class="memdesc:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a9a5aa65ce6d612ea5275c1f724a7f319">More...</a><br /></td></tr>
 <tr class="separator:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, const typename Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::dummy_precision())</td></tr>
@@ -914,7 +915,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -1875,6 +1876,10 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>"Apparently unused. File a Drake issue on GitHub if you need this method." <br />
+ This will be removed from Drake on or after "2021-12-01" .</dd></dl>
 
 </div>
 </div>
@@ -3073,10 +3078,12 @@ else
 <p>If the mat and scalar inputs are AutoDiffScalars, resize the derivatives vector of each element of the matrix mat to match the number of derivatives of the scalar. This is useful in functions that return matrices that do not depend on an AutoDiffScalar argument (e.g. a function with a constant output), while it is desired that information about the number of derivatives is preserved. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mat</td><td>matrix, for which the derivative vectors of the elements will be resized </td></tr>
-    <tr><td class="paramname">scalar</td><td>scalar to match the derivative size vector against. </td></tr>
+    <tr><td class="paramname">scalar</td><td>scalar to match the derivative size vector against.(Deprecated.) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>"Apparently unused. File a Drake issue on GitHub if you need this method." <br />
+ This will be removed from Drake on or after "2021-12-01" .</dd></dl>
 
 </div>
 </div>

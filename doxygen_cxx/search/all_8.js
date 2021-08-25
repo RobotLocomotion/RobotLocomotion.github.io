@@ -69,6 +69,7 @@ var searchData=
   ['hasjointnamed',['HasJointNamed',['../classdrake_1_1multibody_1_1_multibody_plant.html#af5cc2bf03e1b34a63539f8e104425729',1,'drake::multibody::MultibodyPlant::HasJointNamed(std::string_view name) const'],['../classdrake_1_1multibody_1_1_multibody_plant.html#add62ae8b7ca0c50c87fc93abbf8fd843',1,'drake::multibody::MultibodyPlant::HasJointNamed(std::string_view name, ModelInstanceIndex model_instance) const']]],
   ['hasmodelinstancenamed',['HasModelInstanceNamed',['../classdrake_1_1multibody_1_1_multibody_plant.html#ae12f32b40b7a41c3aa933ed74b2417fb',1,'drake::multibody::MultibodyPlant']]],
   ['hasoutputport',['HasOutputPort',['../classdrake_1_1systems_1_1_system.html#a70946c955bb9100cc8e9dc1f5df5c8bc',1,'drake::systems::System']]],
+  ['haspath',['HasPath',['../classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000',1,'drake::geometry::Meshcat']]],
   ['hasprerequisite',['HasPrerequisite',['../classdrake_1_1systems_1_1_dependency_tracker.html#ace3ae81bdf9329aea03fa138ba0baaf8',1,'drake::systems::DependencyTracker']]],
   ['hasproperty',['HasProperty',['../classdrake_1_1geometry_1_1_geometry_properties.html#ace6a963ab7442bf3f29d9ebacdc849ca',1,'drake::geometry::GeometryProperties']]],
   ['haspublishevents',['HasPublishEvents',['../classdrake_1_1systems_1_1_composite_event_collection.html#a7bd20cc8bbfbfd885b40ed23500dec0c',1,'drake::systems::CompositeEventCollection']]],

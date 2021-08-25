@@ -1,5 +1,13 @@
 var NAVTREEINDEX6 =
 {
+"classdrake_1_1geometry_1_1_volume_vertex.html#a391f8ede81295f819b1e6087c54a93c4":[3,0,0,3,49,1],
+"classdrake_1_1geometry_1_1_volume_vertex.html#aa7d320c20ffbb296cb38f5f251aa678b":[3,0,0,3,49,0],
+"classdrake_1_1geometry_1_1_volume_vertex.html#abcf7aa59a153c02fd787921813fcae2a":[3,0,0,3,49,6],
+"classdrake_1_1geometry_1_1_volume_vertex.html#ac8ffb2386eaebd1f79b53da889073c99":[3,0,0,3,49,2],
+"classdrake_1_1geometry_1_1_volume_vertex.html#acdf75f892d5d7403247d64c07bb823c8":[3,0,0,3,49,3],
+"classdrake_1_1geometry_1_1_volume_vertex.html#af4fd52059d42dca39cd646d6217acaae":[3,0,0,3,49,5],
+"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html":[1,6,4,0],
+"classdrake_1_1geometry_1_1optimization_1_1_convex_set.html":[1,2,1,0],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0382c0146a79fe4657004654da0489cc":[1,6,4,0,20],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a0382c0146a79fe4657004654da0489cc":[1,2,1,0,20],
 "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1cb1e034a963f31045c5667256013afb":[1,6,4,0,9],
@@ -241,13 +249,5 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3":[1,2,1,6,2],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3":[1,6,4,6,2],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,2,1,6,3],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,6,4,6,3],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa6eed9c1eff2ff8f5635d62e6db1e119":[1,2,1,6,6],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa6eed9c1eff2ff8f5635d62e6db1e119":[1,6,4,6,6],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa7a4d7c125954dfde3c15238c852eeed":[1,2,1,6,7],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa7a4d7c125954dfde3c15238c852eeed":[1,6,4,6,7],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#ab6d8843112be555009c92fa609554255":[1,2,1,6,1],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#ab6d8843112be555009c92fa609554255":[1,6,4,6,1],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#abeff1f260f066803152817686aaf33a0":[1,2,1,6,8],
-"classdrake_1_1geometry_1_1optimization_1_1_point.html#abeff1f260f066803152817686aaf33a0":[1,6,4,6,8]
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,6,4,6,3]
 };

@@ -33,6 +33,7 @@ var searchData=
   ['mesh_5fto_5fvtk_2eh',['mesh_to_vtk.h',['../mesh__to__vtk_8h.html',1,'']]],
   ['mesh_5ftraits_2eh',['mesh_traits.h',['../mesh__traits_8h.html',1,'']]],
   ['meshcat_2eh',['meshcat.h',['../meshcat_8h.html',1,'']]],
+  ['meshcat_5ftypes_2eh',['meshcat_types.h',['../meshcat__types_8h.html',1,'']]],
   ['meshing_5futilities_2eh',['meshing_utilities.h',['../meshing__utilities_8h.html',1,'']]],
   ['minimum_5fdistance_5fconstraint_2eh',['minimum_distance_constraint.h',['../minimum__distance__constraint_8h.html',1,'']]],
   ['minimum_5fvalue_5fconstraint_2eh',['minimum_value_constraint.h',['../minimum__value__constraint_8h.html',1,'']]],
