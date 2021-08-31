@@ -437,6 +437,7 @@ var hierarchy =
     ] ],
     [ "MathematicalProgramResult", "classdrake_1_1solvers_1_1_mathematical_program_result.html", null ],
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", null ],
+    [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", null ],
     [ "MeshFieldLinear< T, MeshType >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
     [ "MeshFieldLinear< T, T >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", null ],
@@ -523,6 +524,7 @@ var hierarchy =
       [ "Traits< examples::quadrotor::QuadrotorPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html", null ],
       [ "Traits< examples::rimless_wheel::RimlessWheel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html", null ],
       [ "Traits< geometry::DrakeVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html", null ],
+      [ "Traits< geometry::MeshcatVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html", null ],
       [ "Traits< internal::RandomSourceT >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01internal_1_1_random_source_t_01_4.html", null ],
       [ "Traits< LinearTransformDensity >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html", null ],
       [ "Traits< sensors::BeamModel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html", null ],
@@ -766,6 +768,7 @@ var hierarchy =
             [ "SolarSystem< T >", "classdrake_1_1examples_1_1solar__system_1_1_solar_system.html", null ],
             [ "VanDerPolOscillator< T >", "classdrake_1_1examples_1_1van__der__pol_1_1_van_der_pol_oscillator.html", null ],
             [ "DrakeVisualizer< T >", "classdrake_1_1geometry_1_1_drake_visualizer.html", null ],
+            [ "MeshcatVisualizer< T >", "classdrake_1_1geometry_1_1_meshcat_visualizer.html", null ],
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
             [ "MultibodyTreeSystem< T >", null, [

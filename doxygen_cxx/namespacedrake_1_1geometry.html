@@ -184,6 +184,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides an interface to Meshcat (<a href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a>).  <a href="classdrake_1_1geometry_1_1_meshcat.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A system wrapper for <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> that publishes the current state of a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> instance (whose QueryObject-valued output port is connected to this system's input port).  <a href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of parameters for configuring <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>.  <a href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">MeshFieldLinear represents a continuous piecewise-linear scalar field <code>f</code> defined on a (triangular or tetrahedral) mesh; the field value changes linearly within each element E (triangle or tetrahedron), and the gradient ∇f is constant within each element.  <a href="classdrake_1_1geometry_1_1_mesh_field_linear.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,6 +282,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aa5d902a71edc021497a25d2001b2af76"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#aa5d902a71edc021497a25d2001b2af76">FrameIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class GeometryTag &gt;</td></tr>
 <tr class="memdesc:aa5d902a71edc021497a25d2001b2af76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index into the ordered vector of all registered frames &ndash; by convention, the world frame's index is always zero.  <a href="#aa5d902a71edc021497a25d2001b2af76">More...</a><br /></td></tr>
 <tr class="separator:aa5d902a71edc021497a25d2001b2af76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc5928f9ddabb01ca8a0f2cdabbffa3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#acfc5928f9ddabb01ca8a0f2cdabbffa3">MeshcatVisualizerd</a> = <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt; double &gt;</td></tr>
+<tr class="memdesc:acfc5928f9ddabb01ca8a0f2cdabbffa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> class when using the <code>double</code> scalar type.  <a href="#acfc5928f9ddabb01ca8a0f2cdabbffa3">More...</a><br /></td></tr>
+<tr class="separator:acfc5928f9ddabb01ca8a0f2cdabbffa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74b8d905842571b365085fdd17378772"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a74b8d905842571b365085fdd17378772"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a> = typename <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical</a>&lt; T, U &gt;::type</td></tr>
 <tr class="separator:a74b8d905842571b365085fdd17378772"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -474,6 +483,22 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="acfc5928f9ddabb01ca8a0f2cdabbffa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc5928f9ddabb01ca8a0f2cdabbffa3">&#9670;&nbsp;</a></span>MeshcatVisualizerd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#acfc5928f9ddabb01ca8a0f2cdabbffa3">MeshcatVisualizerd</a> =  <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt;double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A convenient alias for the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> class when using the <code>double</code> scalar type. </p>
 
 </div>
 </div>

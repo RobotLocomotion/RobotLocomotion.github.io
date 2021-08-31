@@ -2896,6 +2896,484 @@ scale factor.</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.geometry.Meshcat">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">Meshcat</code><a class="headerlink" href="#pydrake.geometry.Meshcat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides an interface to Meshcat (<a class="reference external" href="https://github.com/rdeits/meshcat">https://github.com/rdeits/meshcat</a>).</p>
+<p>Each instance of this class spawns a thread which runs an
+http/websocket server. Users can navigate their browser to the hosted
+URL to visualize the Meshcat scene. Note that, unlike many
+visualizers, one cannot open the visualizer until this server is
+running.</p>
+<p>In the current implementation, Meshcat methods must be called from the
+same thread where the class instance was constructed. For example,
+running multiple simulations in parallel using the same Meshcat
+instance is not yet supported. We may generalize this in the future.</p>
+<p><a class="reference external" href="https://github.com/rdeits/meshcat#api">https://github.com/rdeits/meshcat#api</a> provides a nice introduction to
+the websocket API that we wrap with this class. One of the core
+concepts is the “scene tree” – a directory-like structure of objects,
+transforms, and properties. The scene tree is viewable in the browser
+by clicking on “Open Controls” in the top right corner.</p>
+<p>Elements of the tree are referenced programmatically by a
+“/”-delimited string indicating the object’s <strong>path</strong> in the scene
+tree. An object at path “/foo/bar” is a child of an object at path
+“/foo”, so setting the transform of (or deleting) “/foo” will also
+affect its children.</p>
+<p>The string path arguments to the methods in this class use the
+following semantics: - A path that begins with “/” is treated as an
+absolute path, and is used without modification. - A path that <em>does
+not</em> begin with “/” is treated as a relative path to the default
+working directory. - The “working directory” is fixed to be “/drake”
+in the current implementation. So any relative path “foo” will be
+treated as “/drake/foo”. - Delete(“/foo”) will remove all objects,
+transforms, and properties in “/foo” and its children from the scene
+tree. - Delete() is equivalent to Delete(“”) or Delete(“/drake/”). -
+SetObject(“/foo”, …) places the object at “/foo/&lt;object&gt;”, where
+“&lt;object&gt;” is a hard-coded suffix used for all objects. You can use
+the Delete(“/foo/&lt;object&gt;”) to delete the object only (and not the
+children of “/foo”) and must use SetProperty(“/foo/&lt;object&gt;”, …) to
+change object-specific properties.</p>
+<p>The root directory contains a number of elements that are set up
+automatically in the browser. These include “/Background”, “/Lights”,
+“/Grid”, and “/Cameras”. To find more details please see the &#64;link
+<a class="reference external" href="https://github.com/rdeits/meshcat#api">https://github.com/rdeits/meshcat#api</a> meshcat documentation &#64;endlink
+and the &#64;link <a class="reference external" href="https://threejs.org/docs/index.html">https://threejs.org/docs/index.html</a> three.js
+documentation &#64;endlink. - You can modify these elements, create new
+lights/cameras, and even delete these elements (one at a time). -
+Delete(“/”) is not allowed. It will be silently ignored.</p>
+<p>For convenience, Meshcat fosters a work flow in which all user-created
+objects created in Drake are contained in the “/drake” folder. Objects
+added with a relative path are placed in the “/drake” folder for you.
+The benefits are: - It’s simple to distinguish between user objects
+and “infrastructure” objects in the visualizer. - All user objects can
+easily be cleared by a single, parameter-free call to Delete(). You
+are welcome to use absolute paths to organize your data, but the
+burden on tracking and cleaning them up lie on you.</p>
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the Meshcat instance. It will listen on the first available
+port starting at 7001 (up to 7099).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>path: str = ''</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the object at the given <code class="docutils literal"><span class="pre">path</span></code> as well as all of its
+children. See meshcat_path for the detailed semantics of deletion.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetObject">
+<code class="descname">SetObject</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>path: str</em>, <em>shape: pydrake.geometry.Shape</em>, <em>rgba: pydrake.geometry.Rgba = Rgba(r=0.9</em>, <em>g=0.9</em>, <em>b=0.9</em>, <em>a=1.0)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the 3D object at a given <code class="docutils literal"><span class="pre">path</span></code> in the scene tree. Note that
+<code class="docutils literal"><span class="pre">path`=&quot;/foo&quot;</span> <span class="pre">will</span> <span class="pre">always</span> <span class="pre">set</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">tree</span> <span class="pre">at</span>
+<span class="pre">&quot;/foo/&lt;object&gt;&quot;.</span> <span class="pre">See</span> <span class="pre">meshcat_path.</span> <span class="pre">Any</span> <span class="pre">objects</span> <span class="pre">previously</span> <span class="pre">set</span> <span class="pre">at</span> <span class="pre">this</span>
+<span class="pre">`path</span></code> will be replaced.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">shape</span></code>:</dt>
+<dd>a Shape that specifies the geometry of the object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rgba</span></code>:</dt>
+<dd>an Rgba that specifies the (solid) color of the object.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetProperty">
+<code class="descname">SetProperty</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: bool) -&gt; None</li>
+</ol>
+<p>Sets a single named property of the object at the given path. For
+example,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Background&quot;</span><span class="p">,</span> <span class="s2">&quot;visible&quot;</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>will turn off the background. See meshcat_path “Meshcat paths” for
+more details about these properties and how to address them.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
+<dd>the string name of the property to set</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>the new value.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: float) -&gt; None</li>
+</ol>
+<p>Sets a single named property of the object at the given path. For
+example,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Cameras/default/rotated/&lt;object&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;zoom&quot;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">);</span>
+<span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Lights/DirectionalLight/&lt;object&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>See meshcat_path “Meshcat paths” for more details about these
+properties and how to address them.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
+<dd>the string name of the property to set</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>the new value.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetTransform">
+<code class="descname">SetTransform</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, X_ParentPath: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the RigidTransform for a given path in the scene tree. An object’s
+pose is the concatenation of all of the transforms along its path, so
+setting the transform of “/foo” will move the objects at “/foo/box1”
+and “/foo/robots/HAL9000”.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">X_ParentPath</span></code>:</dt>
+<dd>the relative transform from the path to its immediate parent.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.web_url">
+<code class="descname">web_url</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.Meshcat.web_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the hosted http URL.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.ws_url">
+<code class="descname">ws_url</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.Meshcat.ws_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns the ws:// URL for direct connection to the
+websocket interface. Most users should connect via a browser opened to
+web_url().</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.MeshcatVisualizerCpp_[float]" title="pydrake.geometry.MeshcatVisualizerCpp_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.MeshcatVisualizerCpp_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_">
+<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp_</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.MeshcatVisualizerCpp_[float]" title="pydrake.geometry.MeshcatVisualizerCpp_[float]"><code class="xref py py-class docutils literal"><span class="pre">MeshcatVisualizerCpp_[float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]" title="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">MeshcatVisualizerCpp_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float]">
+<em class="property">class </em><code class="descname">MeshcatVisualizerCpp_[float]</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A system wrapper for Meshcat that publishes the current state of a
+SceneGraph instance (whose QueryObject-valued output port is connected
+to this system’s input port). While this system will add geometry to
+Meshcat, the Meshcat instance is also available for users to add their
+own visualization alongside the MeshcatVisualizer visualizations. This
+can be enormously valuable for impromptu visualizations.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
+detect changes to the geometry so that a change in SceneGraph’s data
+will propagate to Meshcat.</p>
+<p>By default, MeshcatVisualizer visualizes geometries with the
+illustration role (see geometry_roles for more details). It can be
+configured to visualize geometries with other roles. Only one role can
+be specified. See DrakeVisualizer which uses the same mechanisms for
+more details.</p>
+<p>Instances of MeshcatVisualizer created by scalar-conversion will
+publish to the same Meshcat instance.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117648&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatVisualizer.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>A Meshcat instance. This class will assume shared ownership for
+the lifetime of the object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">params</span></code>:</dt>
+<dd>The set of parameters to control this system’s behavior.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">params.publish_period</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">params.role</span> <span class="pre">==</span> <span class="pre">Role::kUnassigned</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e1176a8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+</ol>
+<p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
+QueryObject-valued output port. See
+MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
+MeshcatVisualizerParams) for details.</p>
+<ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+</ol>
+<p>Adds a MescatVisualizer and connects it to the given
+QueryObject-valued output port. See
+MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
+MeshcatVisualizerParams) for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Meschat::Delete(std::string path), with the path set to
+MeshcatVisualizerParams::prefix. Since this visualizer will only ever
+add geometry under this prefix, this will remove all
+geometry/transforms added by the visualizer, or by a previous instance
+of this visualizer using the same prefix. Use
+MeshcatVisualizer::delete_on_intialization_event to determine whether
+this should be called on initialization.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].query_object_input_port">
+<code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].query_object_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the QueryObject-valued input port. It should be connected to
+SceneGraph’s QueryObject-valued output port. Failure to do so will
+cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>A system wrapper for Meshcat that publishes the current state of a
+SceneGraph instance (whose QueryObject-valued output port is connected
+to this system’s input port). While this system will add geometry to
+Meshcat, the Meshcat instance is also available for users to add their
+own visualization alongside the MeshcatVisualizer visualizations. This
+can be enormously valuable for impromptu visualizations.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
+detect changes to the geometry so that a change in SceneGraph’s data
+will propagate to Meshcat.</p>
+<p>By default, MeshcatVisualizer visualizes geometries with the
+illustration role (see geometry_roles for more details). It can be
+configured to visualize geometries with other roles. Only one role can
+be specified. See DrakeVisualizer which uses the same mechanisms for
+more details.</p>
+<p>Instances of MeshcatVisualizer created by scalar-conversion will
+publish to the same Meshcat instance.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117c48&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatVisualizer.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>A Meshcat instance. This class will assume shared ownership for
+the lifetime of the object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">params</span></code>:</dt>
+<dd>The set of parameters to control this system’s behavior.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">params.publish_period</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">params.role</span> <span class="pre">==</span> <span class="pre">Role::kUnassigned</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117ca8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+</ol>
+<p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
+QueryObject-valued output port. See
+MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
+MeshcatVisualizerParams) for details.</p>
+<ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117d08&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+</ol>
+<p>Adds a MescatVisualizer and connects it to the given
+QueryObject-valued output port. See
+MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
+MeshcatVisualizerParams) for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Meschat::Delete(std::string path), with the path set to
+MeshcatVisualizerParams::prefix. Since this visualizer will only ever
+add geometry under this prefix, this will remove all
+geometry/transforms added by the visualizer, or by a previous instance
+of this visualizer using the same prefix. Use
+MeshcatVisualizer::delete_on_intialization_event to determine whether
+this should be called on initialization.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].query_object_input_port">
+<code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].query_object_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the QueryObject-valued input port. It should be connected to
+SceneGraph’s QueryObject-valued output port. Failure to do so will
+cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp_[float]</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>A system wrapper for Meshcat that publishes the current state of a
+SceneGraph instance (whose QueryObject-valued output port is connected
+to this system’s input port). While this system will add geometry to
+Meshcat, the Meshcat instance is also available for users to add their
+own visualization alongside the MeshcatVisualizer visualizations. This
+can be enormously valuable for impromptu visualizations.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">query_object&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The system uses the versioning mechanism provided by SceneGraph to
+detect changes to the geometry so that a change in SceneGraph’s data
+will propagate to Meshcat.</p>
+<p>By default, MeshcatVisualizer visualizes geometries with the
+illustration role (see geometry_roles for more details). It can be
+configured to visualize geometries with other roles. Only one role can
+be specified. See DrakeVisualizer which uses the same mechanisms for
+more details.</p>
+<p>Instances of MeshcatVisualizer created by scalar-conversion will
+publish to the same Meshcat instance.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117648&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatVisualizer.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>A Meshcat instance. This class will assume shared ownership for
+the lifetime of the object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">params</span></code>:</dt>
+<dd>The set of parameters to control this system’s behavior.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">params.publish_period</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code>.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">params.role</span> <span class="pre">==</span> <span class="pre">Role::kUnassigned</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].AddToBuilder">
+<em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e1176a8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+</ol>
+<p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
+QueryObject-valued output port. See
+MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
+MeshcatVisualizerParams) for details.</p>
+<ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fa96e117708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+</ol>
+<p>Adds a MescatVisualizer and connects it to the given
+QueryObject-valued output port. See
+MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
+MeshcatVisualizerParams) for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Meschat::Delete(std::string path), with the path set to
+MeshcatVisualizerParams::prefix. Since this visualizer will only ever
+add geometry under this prefix, this will remove all
+geometry/transforms added by the visualizer, or by a previous instance
+of this visualizer using the same prefix. Use
+MeshcatVisualizer::delete_on_intialization_event to determine whether
+this should be called on initialization.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].query_object_input_port">
+<code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].query_object_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the QueryObject-valued input port. It should be connected to
+SceneGraph’s QueryObject-valued output port. Failure to do so will
+cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatVisualizerParams">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerParams</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of parameters for configuring MeshcatVisualizer.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerParams.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerParams</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatVisualizerParams.default_color">
+<code class="descname">default_color</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.default_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color to apply to any geometry that hasn’t defined one.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatVisualizerParams.delete_on_intialization_event">
+<code class="descname">delete_on_intialization_event</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.delete_on_intialization_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether to send a Meschat::Delete(“/prefix”) message on an
+initialization event to remove any visualizations e.g. from a previous
+simulation. See declare_initialization_events “Declare initialization
+events” for more information.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatVisualizerParams.prefix">
+<code class="descname">prefix</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>A prefix to add to the path for all objects and transforms curated by
+the MeshcatVisualizer. It can be an absolute path or relative path. If
+relative, this <code class="docutils literal"><span class="pre">prefix</span></code> will be appended to the Meshcat <code class="docutils literal"><span class="pre">prefix</span></code>
+based on the standard path semantics in Meshcat. See meshcat_path
+“Meshcat paths” for details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatVisualizerParams.publish_period">
+<code class="descname">publish_period</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.publish_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The duration (in simulation seconds) between attempts to update poses
+in the visualizer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatVisualizerParams.role">
+<code class="descname">role</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The role of the geometries to be sent to the visualizer.</p>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.geometry.PenetrationAsPointPair">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">PenetrationAsPointPair</code><a class="headerlink" href="#pydrake.geometry.PenetrationAsPointPair" title="Permalink to this definition">¶</a></dt>

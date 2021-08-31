@@ -1,5 +1,17 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_point.html":[1,2,1,6],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html":[1,6,4,6],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a04d7ca865997dfcd84716a26e7272c10":[1,2,1,6,5],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a04d7ca865997dfcd84716a26e7272c10":[1,6,4,6,5],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a2c488b3f2c926826a61b925810cee8ae":[1,2,1,6,4],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a2c488b3f2c926826a61b925810cee8ae":[1,6,4,6,4],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766":[1,2,1,6,9],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a2fc93d35ec165e7a8ebd31b025a5f766":[1,6,4,6,9],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3":[1,2,1,6,2],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#a99517cf9329eaf4327b3c7b090a058d3":[1,6,4,6,2],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,2,1,6,3],
+"classdrake_1_1geometry_1_1optimization_1_1_point.html#aa32345884ecc59f85087059f9bcee5e7":[1,6,4,6,3],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa6eed9c1eff2ff8f5635d62e6db1e119":[1,2,1,6,6],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa6eed9c1eff2ff8f5635d62e6db1e119":[1,6,4,6,6],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#aa7a4d7c125954dfde3c15238c852eeed":[1,2,1,6,7],
@@ -237,17 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1lcm_1_1_subscriber.html#a98d9c60d19f950a9eab8dcdafd1b5c8b":[3,0,0,4,5,6],
 "classdrake_1_1lcm_1_1_subscriber.html#aa60a28d678cc655573ba1fb411467e86":[3,0,0,4,5,2],
 "classdrake_1_1lcm_1_1_subscriber.html#aaaccfbbb39adad66c631de0c0c6293e3":[3,0,0,4,5,1],
-"classdrake_1_1lcm_1_1_subscriber.html#ab375e6d238626437a2c5398b2dd0aeca":[3,0,0,4,5,4],
-"classdrake_1_1lcm_1_1_subscriber.html#ac8bb3912a3ce86b15842e79d0b421204":[3,0,0,4,5,3],
-"classdrake_1_1lcm_1_1_subscriber.html#aff871e6fe97086a46415d06515414580":[3,0,0,4,5,9],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html":[3,0,0,6,0,0],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#a4fc7560f1dff45aab3cc2be3169fb419":[3,0,0,6,0,0,2],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#aae91fe3f39616ba239b34cffb9ec95bd":[3,0,0,6,0,0,3],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#aaeeb42b7a0247ed3d9877dabb124d179":[3,0,0,6,0,0,1],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#abd60fa170582d8abc5ed8b6cb65637ad":[3,0,0,6,0,0,0],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#ad81f79876b803c06df785754772c43a7":[3,0,0,6,0,0,4],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#af6ea3c0e52ff8ceb7639fca4eb23bf84":[3,0,0,6,0,0,5],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html":[3,0,0,6,0,1],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a5992db5683c5e4372a7cc1ae6d5a8bea":[3,0,0,6,0,1,1],
-"classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a84cea16331dc249400960dd7a8159318":[3,0,0,6,0,1,3]
+"classdrake_1_1lcm_1_1_subscriber.html#ab375e6d238626437a2c5398b2dd0aeca":[3,0,0,4,5,4]
 };

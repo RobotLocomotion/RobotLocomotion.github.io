@@ -262,6 +262,50 @@ lambda.rows() - 1.</dd>
 </dl>
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.IntervalBinning">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.mixed_integer_optimization_util.</code><code class="descname">IntervalBinning</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.IntervalBinning" title="Permalink to this definition">¶</a></dt>
+<dd><p>For a continuous variable whose range is cut into small intervals, we
+will use binary variables to represent which interval the continuous
+variable is in. We support two representations, either using
+logarithmic number of binary variables, or linear number of binary
+variables. For more details,</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">AddLogarithmicSos2Constraint and AddSos2Constraint</p>
+</div>
+<p>Members:</p>
+<blockquote>
+<div><p>kLogarithmic</p>
+<p>kLinear</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mixed_integer_optimization_util.IntervalBinning</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.kLinear">
+<code class="descname">kLinear</code><em class="property"> = &lt;IntervalBinning.kLinear: 1&gt;</em><a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.kLinear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.kLogarithmic">
+<code class="descname">kLogarithmic</code><em class="property"> = &lt;IntervalBinning.kLogarithmic: 0&gt;</em><a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.kLogarithmic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.IntervalBinning.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

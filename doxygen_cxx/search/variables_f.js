@@ -20,10 +20,11 @@ var searchData=
   ['pose',['pose',['../structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#ae01adb7e45a3f63fccccf9f06a9eea2f',1,'drake::manipulation::planner::ConstraintRelaxingIk::IkCartesianWaypoint']]],
   ['pose_5finput_5fport',['pose_input_port',['../structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html#af1a58b1ce15865c2470ca4b646f3ab83',1,'drake::systems::rendering::PoseVelocityInputPorts']]],
   ['power',['power',['../classdrake_1_1_polynomial_1_1_term.html#ac1824026fd6513f52dbf078e21746c5d',1,'drake::Polynomial::Term']]],
+  ['prefix',['prefix',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b',1,'drake::geometry::MeshcatVisualizerParams']]],
   ['primal_5fobjective',['primal_objective',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0',1,'drake::solvers::CsdpSolverDetails::primal_objective()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#a90de5192c60705e7cc5fa526388280e0',1,'drake::solvers::ScsSolverDetails::primal_objective()']]],
   ['primal_5fres',['primal_res',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5',1,'drake::solvers::OsqpSolverDetails']]],
   ['primal_5fresidue',['primal_residue',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a7c384b6bd4cb9e20b46ebd99cf7bbce3',1,'drake::solvers::ScsSolverDetails']]],
   ['prox_5fiters',['prox_iters',['../structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html#a23a877c2541d4bc63ff845fb8a788055',1,'drake::solvers::fbstab::SolverOut']]],
   ['publish_5fevery_5ftime_5fstep',['publish_every_time_step',['../structdrake_1_1systems_1_1_simulator_config.html#af1d9089360c8cd472de8f923ba7df99a',1,'drake::systems::SimulatorConfig']]],
-  ['publish_5fperiod',['publish_period',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626',1,'drake::geometry::DrakeVisualizerParams']]]
+  ['publish_5fperiod',['publish_period',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626',1,'drake::geometry::DrakeVisualizerParams::publish_period()'],['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626',1,'drake::geometry::MeshcatVisualizerParams::publish_period()']]]
 ];

@@ -427,6 +427,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a25c2dc47991b3df171ed5192bcf70390">kUnknown</a>
 <br />
  }</td></tr>
+<tr class="memdesc:ab09ca5e1afe9e5a4e8744ecb27839b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">A coarse categorization of the optimization problem based on the type of constraints/costs/variables.  <a href="namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15">More...</a><br /></td></tr>
 <tr class="separator:ab09ca5e1afe9e5a4e8744ecb27839b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1949f5edc628077e2d780c150de88d74"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74">RollPitchYawLimitOptions</a> { <br />
 &#160;&#160;<a class="el" href="namespacedrake_1_1solvers.html#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea">kNoLimits</a> = 0, 
@@ -1043,6 +1044,9 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>A coarse categorization of the optimization problem based on the type of constraints/costs/variables. </p>
+<p>Notice that Drake chooses the solver based on a finer category; for example we have a specific solver for equality-constrained convex QP. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab09ca5e1afe9e5a4e8744ecb27839b15a3e3af9259f19c76c1a21cacdbd5afd4a"></a>kLP&#160;</td><td class="fielddoc"><p>Linear Programming, with a linear cost and linear constraints. </p>
 </td></tr>

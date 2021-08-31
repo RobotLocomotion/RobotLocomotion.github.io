@@ -456,7 +456,7 @@ Public Member Functions</h2></td></tr>
 <p>Sets the 3D object at a given <code>path</code> in the scene tree. </p>
 <p>Note that <code>path</code>="/foo" will always set an object in the tree at "/foo/&lt;object&gt;". See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a>. Any objects previously set at this <code>path</code> will be replaced. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
     <tr><td class="paramname">shape</td><td>a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> that specifies the geometry of the object. </td></tr>
     <tr><td class="paramname">rgba</td><td>an <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> that specifies the (solid) color of the object. </td></tr>
   </table>
@@ -499,7 +499,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Sets a single named property of the object at the given path. </p>
 <p>For example, </p><pre class="fragment">meshcat.SetProperty("/Background", "visible", false);
-</pre><p> will turn off the background. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for more details about these properties and how to address them.</p>
+</pre><p> will turn off the background. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for more details about these properties and how to address them.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
@@ -546,7 +546,7 @@ Public Member Functions</h2></td></tr>
 <p>Sets a single named property of the object at the given path. </p>
 <p>For example, </p><pre class="fragment">meshcat.SetProperty("/Cameras/default/rotated/&lt;object&gt;", "zoom", 2.0);
 meshcat.SetProperty("/Lights/DirectionalLight/&lt;object&gt;", "intensity", 1.0);
-</pre><p> See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for more details about these properties and how to address them.</p>
+</pre><p> See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for more details about these properties and how to address them.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
@@ -587,7 +587,7 @@ meshcat.SetProperty("/Lights/DirectionalLight/&lt;object&gt;", "intensity", 1.0)
 <p>Set the RigidTransform for a given path in the scene tree. </p>
 <p>An object's pose is the concatenation of all of the transforms along its path, so setting the transform of "/foo" will move the objects at "/foo/box1" and "/foo/robots/HAL9000". </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
     <tr><td class="paramname">X_ParentPath</td><td>the relative transform from the path to its immediate parent. </td></tr>
   </table>
   </dd>

@@ -1,5 +1,17 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,16,2,32],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27":[3,0,0,16,2,7],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23":[3,0,0,16,2,9],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a60ecdbaf41d941ec12c0b6add7cc32d9":[3,0,0,16,2,18],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc":[3,0,0,16,2,24],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6a44781cbe3dd6c55234638a1b63d4ef":[3,0,0,16,2,1],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6d7f5289922d84e6f35f96bb29ddd09c":[3,0,0,16,2,23],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6ec39e8128c0da804f03d8fbd17fd843":[3,0,0,16,2,25],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a728995759fa06a8d1a2b967d313b6d6b":[3,0,0,16,2,55],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a75d7ffe2f4e1a808aaeb76a871f772e2":[3,0,0,16,2,13],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a838cb1725eb9ba7896158fa9032ecdcc":[3,0,0,16,2,4],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,2,11],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a87952ec710e902557114a6d53d39734e":[3,0,0,16,2,38],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[3,0,0,16,2,48],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c09a6d35797ae0eed1de62a97433b9e":[3,0,0,16,2,21],
@@ -237,17 +249,5 @@ var NAVTREEINDEX38 =
 "constraint__relaxing__ik_8h.html":[4,0,0,6,3,0],
 "constraint__solver_8h.html":[4,0,0,8,1,2],
 "contact__jacobians_8h.html":[4,0,0,8,9,1],
-"contact__model__doxygen_8h.html":[4,0,0,8,9,2],
-"contact__permutation_8h.html":[4,0,0,8,9,3],
-"contact__results_8h.html":[4,0,0,8,9,4],
-"contact__results__to__lcm_8h.html":[4,0,0,8,9,5],
-"contact__results__to__lcm_8h.html#ga198e1dbf7f5bae86fc8052374ba08e5f":[4,0,0,8,9,5,2],
-"contact__results__to__lcm_8h.html#gac7c07596e19e7537c3f08fd94ba8e153":[4,0,0,8,9,5,1],
-"contact__solver_8h.html":[4,0,0,8,2,2],
-"contact__solver__results_8h.html":[4,0,0,8,2,3],
-"contact__solver__utils_8h.html":[4,0,0,8,2,4],
-"contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,6],
-"contact__surface__utility_8h.html":[4,0,0,4,2,7],
-"contact__wrench_8h.html":[4,0,0,8,7,1]
+"contact__model__doxygen_8h.html":[4,0,0,8,9,2]
 };

@@ -3993,7 +3993,11 @@ indicate the positive semidefiniteness of some decision variables.</p>
 <dl class="class">
 <dt id="pydrake.solvers.mathematicalprogram.ProgramType">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">ProgramType</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ProgramType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Members:</p>
+<dd><p>A coarse categorization of the optimization problem based on the type
+of constraints/costs/variables. Notice that Drake chooses the solver
+based on a finer category; for example we have a specific solver for
+equality-constrained convex QP.</p>
+<p>Members:</p>
 <blockquote>
 <div><p>kLP : Linear Programming, with a linear cost and linear constraints.</p>
 <p>kQP : Quadratic Programming, with a convex quadratic cost and linear</p>
