@@ -1,5 +1,12 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1pydrake_1_1overload__cast__impl.html#a74f8574b2d358293cf04c7f27df47bb2":[3,0,0,10,2,1],
+"structdrake_1_1pydrake_1_1overload__cast__impl.html#ad8669f38296275ae761b8ea5ca557cd6":[3,0,0,10,2,2],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html":[3,0,0,10,3],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#a48a259ef8336ef23e66f632b0ddad145":[3,0,0,10,3,2],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#ac0d8dfca95588efef734b244410fa031":[3,0,0,10,3,1],
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#af86f89529a81600b291217b3f9b1a067":[3,0,0,10,3,0],
+"structdrake_1_1scalar__predicate.html":[3,0,0,45],
 "structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,45,0],
 "structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,45,1],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html":[3,0,0,11,6,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,14,2,1,0],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,14,2,1,0,1],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,14,2,1,0,0],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,14,2,1,0,2],
-"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,14,2,1,0,3],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,14,2,2],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,14,2,2,1],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,14,2,2,3],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,14,2,2,5],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,14,2,2,6],
-"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a29017aee3204b230b5884faaf2fac289":[3,0,0,14,2,2,0]
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,14,2,1,0,2]
 };

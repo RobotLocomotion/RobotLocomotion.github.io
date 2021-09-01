@@ -1,5 +1,12 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__formula__cell_8h.html#a0b0758b788047cb3d6b4737c6d54cee2":[4,0,0,1,60,35],
+"symbolic__formula__cell_8h.html#a10a6204418091c1fbf26c9d2ad03389f":[4,0,0,1,60,36],
+"symbolic__formula__cell_8h.html#a180aa6c7637801b158099a87a59a4185":[4,0,0,1,60,34],
+"symbolic__formula__cell_8h.html#a18a463fed830ca5aa9b3ff7bdef8f67a":[4,0,0,1,60,28],
+"symbolic__formula__cell_8h.html#a1aeb30cdaf6f0d8f4d324afee241ae89":[4,0,0,1,60,22],
+"symbolic__formula__cell_8h.html#a1ba2673fe37620dcc2a3b06ab7b72bec":[4,0,0,1,60,37],
+"symbolic__formula__cell_8h.html#a259612bbd9405f24d4ac3b60d54575e6":[4,0,0,1,60,48],
 "symbolic__formula__cell_8h.html#a352fe19778d77b7095580950d8e298b4":[4,0,0,1,60,39],
 "symbolic__formula__cell_8h.html#a3654df643f4d7840fd8548eb81f4a9ae":[4,0,0,1,60,32],
 "symbolic__formula__cell_8h.html#a3b78dde9ca32fe1ee12cc232a9a4e85c":[4,0,0,1,60,50],
@@ -242,12 +249,5 @@ var NAVTREEINDEX51 =
 "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,9,20,3,0],
 "temp__directory_8h.html":[4,0,0,1,74],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,74,0],
-"tessellation__strategy_8h.html":[4,0,0,4,2,43],
-"test__utilities_8h.html":[4,0,0,4,1,7],
-"text__logging_8h.html":[4,0,0,1,75],
-"text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,75,6],
-"text__logging_8h.html#a60321c9dbf7c1ebe763371ab00262d68":[4,0,0,1,75,9],
-"text__logging_8h.html#a83987c1d52b74115b933adef64972af7":[4,0,0,1,75,5],
-"text__logging_8h.html#a9cae370466ffb304c10aebea42eca26b":[4,0,0,1,75,1],
-"text__logging_8h.html#abc074aead70b88bf38e18993bf9c28c3":[4,0,0,1,75,7]
+"tessellation__strategy_8h.html":[4,0,0,4,2,43]
 };

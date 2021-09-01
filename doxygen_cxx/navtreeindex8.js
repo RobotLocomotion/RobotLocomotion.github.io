@@ -1,5 +1,7 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1lcm_1_1_subscriber.html#aaaccfbbb39adad66c631de0c0c6293e3":[3,0,0,4,5,1],
+"classdrake_1_1lcm_1_1_subscriber.html#ab375e6d238626437a2c5398b2dd0aeca":[3,0,0,4,5,4],
 "classdrake_1_1lcm_1_1_subscriber.html#ac8bb3912a3ce86b15842e79d0b421204":[3,0,0,4,5,3],
 "classdrake_1_1lcm_1_1_subscriber.html#aff871e6fe97086a46415d06515414580":[3,0,0,4,5,9],
 "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html":[3,0,0,6,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#ac37b985c1ea77de8d4b7403e2ce70b9a":[3,0,0,6,5,0,1],
 "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html#aebe42489a5df58b6dbaf688e460d8e7b":[3,0,0,6,5,0,9],
 "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html":[3,0,0,6,5,1],
-"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#a39f8c727bd1c62caa747b1314b7d4d84":[3,0,0,6,5,1,0],
-"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#a42ac7512e69a5f94d8ad8022572cf958":[3,0,0,6,5,1,3],
-"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#a8a79276d1c50fef43d09d52bf3c3238c":[3,0,0,6,5,1,2]
+"classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html#a39f8c727bd1c62caa747b1314b7d4d84":[3,0,0,6,5,1,0]
 };

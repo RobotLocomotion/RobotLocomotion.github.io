@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5412c17187dde2f8984dcfb3eb67ca1d":[3,0,0,16,2,15],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a547e26c83862bad737713ca1be3d3d84":[3,0,0,16,2,35],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a54d2cefdc8e6443b9710b195b914b680":[3,0,0,16,2,44],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,16,2,32],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27":[3,0,0,16,2,7],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23":[3,0,0,16,2,9],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "constraint_8h.html":[4,0,0,10,9],
 "constraint__doxygen_8h.html":[4,0,0,8,1,0],
 "constraint__problem__data_8h.html":[4,0,0,8,1,1],
-"constraint__relaxing__ik_8h.html":[4,0,0,6,3,0],
-"constraint__solver_8h.html":[4,0,0,8,1,2],
-"contact__jacobians_8h.html":[4,0,0,8,9,1],
-"contact__model__doxygen_8h.html":[4,0,0,8,9,2]
+"constraint__relaxing__ik_8h.html":[4,0,0,6,3,0]
 };

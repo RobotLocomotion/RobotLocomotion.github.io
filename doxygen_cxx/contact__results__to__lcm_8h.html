@@ -94,8 +94,7 @@ $(document).ready(function(){initNavTree('contact__results__to__lcm_8h.html','')
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
 <div class="title">contact_results_to_lcm.h File Reference</div>  </div>
 </div><!--header-->
@@ -103,11 +102,13 @@ $(document).ready(function(){initNavTree('contact__results__to__lcm_8h.html','')
 <div class="textblock"><code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="default__scalars_8h.html">drake/common/default_scalars.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="geometry__ids_8h.html">drake/geometry/geometry_ids.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scene__graph_8h.html">drake/geometry/scene_graph.h</a>&quot;</code><br />
 <code>#include &quot;drake/lcmt_contact_results_for_viz.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="contact__results_8h.html">drake/multibody/plant/contact_results.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
@@ -136,12 +137,49 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac7c07596e19e7537c3f08fd94ba8e153"><td class="memItemLeft" align="right" valign="top">systems::lcm::LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#gac7c07596e19e7537c3f08fd94ba8e153">ConnectContactResultsToDrakeVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder, const MultibodyPlant&lt; double &gt; &amp;multibody_plant, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
-<tr class="memdesc:gac7c07596e19e7537c3f08fd94ba8e153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extends a Diagram with the required components to publish contact results to drake_visualizer.  <a href="group__visualization.html#gac7c07596e19e7537c3f08fd94ba8e153">More...</a><br /></td></tr>
-<tr class="separator:gac7c07596e19e7537c3f08fd94ba8e153"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga198e1dbf7f5bae86fc8052374ba08e5f"><td class="memItemLeft" align="right" valign="top">systems::lcm::LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f">ConnectContactResultsToDrakeVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder, const MultibodyPlant&lt; double &gt; &amp;multibody_plant, const systems::OutputPort&lt; double &gt; &amp;contact_results_port, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
-<tr class="memdesc:ga198e1dbf7f5bae86fc8052374ba08e5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements ConnectContactResultsToDrakeVisualizer, but using explicitly specified <code>contact_results_port</code> and <code>geometry_input_port</code> arguments.  <a href="group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f">More...</a><br /></td></tr>
-<tr class="separator:ga198e1dbf7f5bae86fc8052374ba08e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Visualizing contact results</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="contact_result_vis_creation"></a> These methods extend a Diagram with the required components to publish contact results (as reported by MultibodyPlant) to drake_visualizer. We recommend using these methods instead of assembling the requisite components by hand.</p>
+<p>These must be called <em>during</em> Diagram building. Each method makes modifications to the diagram being constructed by <code>builder</code> including the following changes:</p>
+<ul>
+<li>adds systems multibody::ContactResultsToLcmSystem and LcmPublisherSystem to the Diagram and connects the draw message output to the publisher input,</li>
+<li>connects a ContactResults&lt;double&gt;-valued output port to the ContactResultsToLcmSystem system, and</li>
+<li>sets the publishing rate to 1/60 of a second (simulated time).</li>
+</ul>
+<p>The four variants differ in the following ways:</p>
+<ul>
+<li>Two overloads take a SceneGraph and two don't. Those that do will ensure that the geometry names communicated in the lcm messages match the names used in SceneGraph. Those that don't default to the naming convention documented in ContactResultsToLcmSystem.</li>
+<li>Two overloads take an OutputPort and two don't. This determines what is connected to the ContactResultsToLcmSystem input port. The overloads that specify an OutputPort will attempt to connect that port. Those that don't will connect the given plant's contact results output port.</li>
+</ul>
+<p>The parameters have the following semantics:</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">builder</td><td>The diagram builder being used to construct the Diagram. Systems will be added to this builder. </td></tr>
+    <tr><td class="paramname">plant</td><td>The System in <code>builder</code> containing the plant whose contact results are to be visualized. </td></tr>
+    <tr><td class="paramname">scene_graph</td><td>The SceneGraph that will determine how the geometry names will appear in the lcm message. </td></tr>
+    <tr><td class="paramname">lcm</td><td>An optional lcm interface through which lcm messages will be dispatched. Will be allocated internally if none is supplied. If one is given, it must remain alive at least as long as the diagram built from <code>builder</code>. </td></tr>
+    <tr><td class="paramname">contact_results_port</td><td>The optional port that will be connected to the ContactResultsToLcmSystem (as documented above).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>(for all overloads) the LcmPublisherSystem (in case callers, e.g., need to change the default publishing rate).</dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>plant</code> is contained within the supplied <code>builder</code>. </dd>
+<dd>
+<code>scene_graph</code> (if given) is contained with the supplied <code>builder</code>. </dd>
+<dd>
+<code>contact_results_port</code> (if given) belongs to a system that is an immediate child of <code>builder</code>. </dd></dl>
+</div></td></tr>
+<tr class="memitem:ga8c78a18a7167620f81d5d9780b65d562"><td class="memItemLeft" align="right" valign="top">systems::lcm::LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#ga8c78a18a7167620f81d5d9780b65d562">ConnectContactResultsToDrakeVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder, const MultibodyPlant&lt; double &gt; &amp;plant, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
+<tr class="memdesc:ga8c78a18a7167620f81d5d9780b65d562"><td class="mdescLeft">&#160;</td><td class="mdescRight">MultibodyPlant-connecting, default-named geometry overload.  <a href="group__visualization.html#ga8c78a18a7167620f81d5d9780b65d562">More...</a><br /></td></tr>
+<tr class="separator:ga8c78a18a7167620f81d5d9780b65d562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70e362ebad8d7556c8e3cb883af12d13"><td class="memItemLeft" align="right" valign="top">systems::lcm::LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#ga70e362ebad8d7556c8e3cb883af12d13">ConnectContactResultsToDrakeVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder, const MultibodyPlant&lt; double &gt; &amp;plant, const geometry::SceneGraph&lt; double &gt; &amp;scene_graph, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
+<tr class="memdesc:ga70e362ebad8d7556c8e3cb883af12d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">MultibodyPlant-connecting, SceneGraph-named geometry overload.  <a href="group__visualization.html#ga70e362ebad8d7556c8e3cb883af12d13">More...</a><br /></td></tr>
+<tr class="separator:ga70e362ebad8d7556c8e3cb883af12d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4761192640acd751f57edc644e34ca66"><td class="memItemLeft" align="right" valign="top">systems::lcm::LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#ga4761192640acd751f57edc644e34ca66">ConnectContactResultsToDrakeVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder, const MultibodyPlant&lt; double &gt; &amp;plant, const systems::OutputPort&lt; double &gt; &amp;contact_results_port, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
+<tr class="memdesc:ga4761192640acd751f57edc644e34ca66"><td class="mdescLeft">&#160;</td><td class="mdescRight">OutputPort-connecting, default-named geometry overload.  <a href="group__visualization.html#ga4761192640acd751f57edc644e34ca66">More...</a><br /></td></tr>
+<tr class="separator:ga4761192640acd751f57edc644e34ca66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf04cff08eadce0b0c46cb7c6a30d9dd9"><td class="memItemLeft" align="right" valign="top">systems::lcm::LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__visualization.html#gaf04cff08eadce0b0c46cb7c6a30d9dd9">ConnectContactResultsToDrakeVisualizer</a> (systems::DiagramBuilder&lt; double &gt; *builder, const MultibodyPlant&lt; double &gt; &amp;plant, const geometry::SceneGraph&lt; double &gt; &amp;scene_graph, const systems::OutputPort&lt; double &gt; &amp;contact_results_port, lcm::DrakeLcmInterface *lcm=nullptr)</td></tr>
+<tr class="memdesc:gaf04cff08eadce0b0c46cb7c6a30d9dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OutputPort-connecting, SceneGraph-named geometry overload.  <a href="group__visualization.html#gaf04cff08eadce0b0c46cb7c6a30d9dd9">More...</a><br /></td></tr>
+<tr class="separator:gaf04cff08eadce0b0c46cb7c6a30d9dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

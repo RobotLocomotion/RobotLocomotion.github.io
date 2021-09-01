@@ -1,6 +1,7 @@
 var contact__results__to__lcm_8h =
 [
-    [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system" ],
-    [ "ConnectContactResultsToDrakeVisualizer", "contact__results__to__lcm_8h.html#gac7c07596e19e7537c3f08fd94ba8e153", null ],
-    [ "ConnectContactResultsToDrakeVisualizer", "contact__results__to__lcm_8h.html#ga198e1dbf7f5bae86fc8052374ba08e5f", null ]
+    [ "ConnectContactResultsToDrakeVisualizer", "contact__results__to__lcm_8h.html#ga8c78a18a7167620f81d5d9780b65d562", null ],
+    [ "ConnectContactResultsToDrakeVisualizer", "contact__results__to__lcm_8h.html#ga70e362ebad8d7556c8e3cb883af12d13", null ],
+    [ "ConnectContactResultsToDrakeVisualizer", "contact__results__to__lcm_8h.html#ga4761192640acd751f57edc644e34ca66", null ],
+    [ "ConnectContactResultsToDrakeVisualizer", "contact__results__to__lcm_8h.html#gaf04cff08eadce0b0c46cb7c6a30d9dd9", null ]
 ];

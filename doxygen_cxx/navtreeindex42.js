@@ -1,5 +1,10 @@
 var NAVTREEINDEX42 =
 {
+"group__planning.html":[1,5,2],
+"group__planning.html#ga1419d6264a35506905a455d205a3af13":[1,5,2,10],
+"group__planning.html#ga6106c9d0180a87d59f7a36709f7d6785":[1,5,2,9],
+"group__planning.html#gab53fd2e1578db60ceb43b754671ae539":[1,5,2,8],
+"group__primitive__systems.html":[1,3,1],
 "group__primitive__systems.html#ga14e2725af4ae2110baaf69555a49b591":[1,3,1,28],
 "group__primitive__systems.html#ga80a6af98e4258a474416aae6ab3abdd8":[1,3,1,29],
 "group__proximity__queries.html":[1,6,2],
@@ -36,8 +41,10 @@ var NAVTREEINDEX42 =
 "group__templates.html":[1,0,5],
 "group__terminology__and__notation.html":[1,1],
 "group__visualization.html":[1,3,11],
-"group__visualization.html#ga198e1dbf7f5bae86fc8052374ba08e5f":[1,3,11,2],
-"group__visualization.html#gac7c07596e19e7537c3f08fd94ba8e153":[1,3,11,1],
+"group__visualization.html#ga4761192640acd751f57edc644e34ca66":[1,3,11,4],
+"group__visualization.html#ga70e362ebad8d7556c8e3cb883af12d13":[1,3,11,3],
+"group__visualization.html#ga8c78a18a7167620f81d5d9780b65d562":[1,3,11,2],
+"group__visualization.html#gaf04cff08eadce0b0c46cb7c6a30d9dd9":[1,3,11,5],
 "gurobi__qp_8h.html":[4,0,0,10,22],
 "gurobi__qp_8h.html#a0a12ac8a773158c91a75d797b9191c70":[4,0,0,10,22,1],
 "gurobi__qp_8h.html#a447699fbd5eef5296f9fc14b34195ce8":[4,0,0,10,22,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX42 =
 "linear__system_8h.html#ga14e2725af4ae2110baaf69555a49b591":[4,0,0,11,6,11,1],
 "linear__system_8h.html#ga80a6af98e4258a474416aae6ab3abdd8":[4,0,0,11,6,11,4],
 "linear__system_8h.html#ga8bc6169b50b1b127ed5f1b70afcb64ca":[4,0,0,11,6,11,2],
-"linear__system_8h.html#ga9bb685faf49982e65d0e4bbf2c1d460b":[4,0,0,11,6,11,3],
-"linear__system_8h.html#gaa15831763ec42b356a75c6bb616a6531":[4,0,0,11,6,11,5],
-"linear__system_8h.html#gaedff9f0a8ddce5d29888ed611ce8bee2":[4,0,0,11,6,11,0],
-"linear__system__solver_8h.html":[4,0,0,10,30],
-"linear__transform__density_8h.html":[4,0,0,11,6,12],
-"logistic__system_8h.html":[4,0,0,11,0,0,7],
-"luenberger__observer_8h.html":[4,0,0,11,2,1],
-"lyapunov_8h.html":[4,0,0,11,0,10]
+"linear__system_8h.html#ga9bb685faf49982e65d0e4bbf2c1d460b":[4,0,0,11,6,11,3]
 };

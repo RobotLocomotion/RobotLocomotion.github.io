@@ -1,5 +1,7 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aefdee5e8d315d573207fd1cd6711353e":[1,2,1,5,3],
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aefdee5e8d315d573207fd1cd6711353e":[1,6,4,5,3],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html":[1,2,1,6],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html":[1,6,4,6],
 "classdrake_1_1geometry_1_1optimization_1_1_point.html#a04d7ca865997dfcd84716a26e7272c10":[1,2,1,6,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1lcm_1_1_subscriber.html#a361b1c7f6ecf8c70a8d867b96583b1c3":[3,0,0,4,5,5],
 "classdrake_1_1lcm_1_1_subscriber.html#a3ea2ced420106e08700676e94eec98be":[3,0,0,4,5,8],
 "classdrake_1_1lcm_1_1_subscriber.html#a98d9c60d19f950a9eab8dcdafd1b5c8b":[3,0,0,4,5,6],
-"classdrake_1_1lcm_1_1_subscriber.html#aa60a28d678cc655573ba1fb411467e86":[3,0,0,4,5,2],
-"classdrake_1_1lcm_1_1_subscriber.html#aaaccfbbb39adad66c631de0c0c6293e3":[3,0,0,4,5,1],
-"classdrake_1_1lcm_1_1_subscriber.html#ab375e6d238626437a2c5398b2dd0aeca":[3,0,0,4,5,4]
+"classdrake_1_1lcm_1_1_subscriber.html#aa60a28d678cc655573ba1fb411467e86":[3,0,0,4,5,2]
 };
