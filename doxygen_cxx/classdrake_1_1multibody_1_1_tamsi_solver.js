@@ -14,6 +14,7 @@ var classdrake_1_1multibody_1_1_tamsi_solver =
     [ "get_tangential_velocities", "classdrake_1_1multibody_1_1_tamsi_solver.html#ac196523cef3bf653c3c198614dd05f50", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_tamsi_solver.html#a341180b650aeddec340037d98a48e2cf", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_tamsi_solver.html#a2ac71c044c74b654a651fdae15c82c20", null ],
+    [ "ResizeIfNeeded", "classdrake_1_1multibody_1_1_tamsi_solver.html#aea21f84078db50dc348bc02f75a3005c", null ],
     [ "set_solver_parameters", "classdrake_1_1multibody_1_1_tamsi_solver.html#a72660d4b210220b673a299c606992f00", null ],
     [ "SetOneWayCoupledProblemData", "classdrake_1_1multibody_1_1_tamsi_solver.html#ac9c880a38bb3a6c5cddfe5f258db8ca7", null ],
     [ "SetTwoWayCoupledProblemData", "classdrake_1_1multibody_1_1_tamsi_solver.html#a2f0dd5fb64de38e8f5fde32e1b19f862", null ],

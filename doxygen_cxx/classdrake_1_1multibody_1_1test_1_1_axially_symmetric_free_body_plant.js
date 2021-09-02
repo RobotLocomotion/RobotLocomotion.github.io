@@ -2,7 +2,7 @@ var classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant =
 [
     [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#ae7f7530d71335f60404ee04304ccdb25", null ],
     [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a8fdf0db233b9d58bea3d95d3518d4d72", null ],
-    [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a35565d387ca6205f46cdc9b9e97edf0c", null ],
+    [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b145ded140538ae94fbe83a8c96a5a9", null ],
     [ "AxiallySymmetricFreeBodyPlant", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a241b69e04f308b378ebbadc57b745781", null ],
     [ "body", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a54ef649a3a7676a4a374f537f2f9bbbe", null ],
     [ "CalcPoseInWorldFrame", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a1663364886dc031b13718c5a823d34ef", null ],

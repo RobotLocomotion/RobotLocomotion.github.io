@@ -179,6 +179,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c6125a41db505a5d9caf8b5d93c591e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#a8c6125a41db505a5d9caf8b5d93c591e">TamsiSolver</a> (<a class="el" href="classint.html">int</a> nv)</td></tr>
 <tr class="memdesc:a8c6125a41db505a5d9caf8b5d93c591e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates a solver for a problem with <code>nv</code> generalized velocities.  <a href="#a8c6125a41db505a5d9caf8b5d93c591e">More...</a><br /></td></tr>
 <tr class="separator:a8c6125a41db505a5d9caf8b5d93c591e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea21f84078db50dc348bc02f75a3005c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#aea21f84078db50dc348bc02f75a3005c">ResizeIfNeeded</a> (<a class="el" href="classint.html">int</a> nv) const</td></tr>
+<tr class="memdesc:aea21f84078db50dc348bc02f75a3005c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the working size of the solver to use <code>nv</code> generalized velocities.  <a href="#aea21f84078db50dc348bc02f75a3005c">More...</a><br /></td></tr>
+<tr class="separator:aea21f84078db50dc348bc02f75a3005c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c880a38bb3a6c5cddfe5f258db8ca7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html#ac9c880a38bb3a6c5cddfe5f258db8ca7">SetOneWayCoupledProblemData</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; M, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Jn, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Jt, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; p_star, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; fn, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; mu)</td></tr>
 <tr class="memdesc:ac9c880a38bb3a6c5cddfe5f258db8ca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets data for the problem to be solved as outlined by Eq.  <a href="#ac9c880a38bb3a6c5cddfe5f258db8ca7">More...</a><br /></td></tr>
 <tr class="separator:ac9c880a38bb3a6c5cddfe5f258db8ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -550,6 +553,32 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea21f84078db50dc348bc02f75a3005c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea21f84078db50dc348bc02f75a3005c">&#9670;&nbsp;</a></span>ResizeIfNeeded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResizeIfNeeded </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>nv</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the working size of the solver to use <code>nv</code> generalized velocities. </p>
+<p>This can be used to either shrink or grow the workspaces. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if nv is non-positive. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

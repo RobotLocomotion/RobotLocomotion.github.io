@@ -117,9 +117,9 @@ class drake::multibody::test::AxiallySymmetricFreeBodyPlant&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a35565d387ca6205f46cdc9b9e97edf0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a35565d387ca6205f46cdc9b9e97edf0c">AxiallySymmetricFreeBodyPlant</a> (double mass, double I, double J, double g)</td></tr>
-<tr class="memdesc:a35565d387ca6205f46cdc9b9e97edf0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from known rotational inertia values.  <a href="#a35565d387ca6205f46cdc9b9e97edf0c">More...</a><br /></td></tr>
-<tr class="separator:a35565d387ca6205f46cdc9b9e97edf0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b145ded140538ae94fbe83a8c96a5a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b145ded140538ae94fbe83a8c96a5a9">AxiallySymmetricFreeBodyPlant</a> (double mass, double I, double J, double g, double <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>=0.0)</td></tr>
+<tr class="memdesc:a4b145ded140538ae94fbe83a8c96a5a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor from known rotational inertia values.  <a href="#a4b145ded140538ae94fbe83a8c96a5a9">More...</a><br /></td></tr>
+<tr class="separator:a4b145ded140538ae94fbe83a8c96a5a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a241b69e04f308b378ebbadc57b745781"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a241b69e04f308b378ebbadc57b745781"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a241b69e04f308b378ebbadc57b745781">AxiallySymmetricFreeBodyPlant</a> (const <a class="el" href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html">AxiallySymmetricFreeBodyPlant</a>&lt; U &gt; &amp;)</td></tr>
 <tr class="memdesc:a241b69e04f308b378ebbadc57b745781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor.  <a href="#a241b69e04f308b378ebbadc57b745781">More...</a><br /></td></tr>
@@ -800,8 +800,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a35565d387ca6205f46cdc9b9e97edf0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35565d387ca6205f46cdc9b9e97edf0c">&#9670;&nbsp;</a></span>AxiallySymmetricFreeBodyPlant() <span class="overload">[3/4]</span></h2>
+<a id="a4b145ded140538ae94fbe83a8c96a5a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b145ded140538ae94fbe83a8c96a5a9">&#9670;&nbsp;</a></span>AxiallySymmetricFreeBodyPlant() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -828,7 +828,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>g</em>&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_step</em> = <code>0.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -845,6 +851,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">I</td><td>rotational inertia about any axis perpendicular to the axis of revolution of the body. </td></tr>
     <tr><td class="paramname">J</td><td>rotational inertia about the axis of revolution of the body. </td></tr>
     <tr><td class="paramname">g</td><td>Acceleration of gravity. In this model if <code>g &gt; 0</code> the gravity vector points downward in the z-axis direction. </td></tr>
+    <tr><td class="paramname">time_step</td><td>[optional] See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58">MultibodyPlant::MultibodyPlant</a>. </td></tr>
   </table>
   </dd>
 </dl>

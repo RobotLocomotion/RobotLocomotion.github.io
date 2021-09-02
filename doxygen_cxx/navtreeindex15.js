@@ -1,5 +1,15 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ac838a518ac00451aa6326291afbaccae":[3,0,0,8,0,5,9],
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ada0551b1763f4c7c250d02616417e569":[3,0,0,8,0,5,3],
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#ae1ed7863c45788f035096ed919d55238":[3,0,0,8,0,5,7],
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#aedd9e5f19cb6e54ee59a0f82059967a6":[3,0,0,8,0,5,0],
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#af79bb349e7f805159cc268dba69b847c":[3,0,0,8,0,5,4],
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#afa066ebd39d93abd3cb0487769ab2e1d":[3,0,0,8,0,5,1],
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html":[3,0,0,8,0,0,0],
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a03099360262748cd998175ca60abf26f":[3,0,0,8,0,0,0,2],
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1a3992e1b22120aa3e84dbdf5187557b":[3,0,0,8,0,0,0,19],
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1c96c484fc90e224def3000dedfbe08d":[3,0,0,8,0,0,0,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a20e45c25697497d9741c632a673bebfa":[3,0,0,8,0,0,0,21],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a22899889fb8a91c6c17ecce04bdf69f8":[3,0,0,8,0,0,0,20],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a264f439a113b5cd82be61ba4de3f8c2a":[3,0,0,8,0,0,0,23],
@@ -96,7 +106,7 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a082b117bd7b1821b3f0f7d84faffc1d6":[3,0,0,8,3,0,9],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a1663364886dc031b13718c5a823d34ef":[3,0,0,8,3,0,5],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a241b69e04f308b378ebbadc57b745781":[3,0,0,8,3,0,3],
-"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a35565d387ca6205f46cdc9b9e97edf0c":[3,0,0,8,3,0,2],
+"classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a4b145ded140538ae94fbe83a8c96a5a9":[3,0,0,8,3,0,2],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a54ef649a3a7676a4a374f537f2f9bbbe":[3,0,0,8,3,0,4],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a825f8af102f87f42e1d44c05c220d8a2":[3,0,0,8,3,0,10],
 "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html#a8fdf0db233b9d58bea3d95d3518d4d72":[3,0,0,8,3,0,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1pydrake_1_1_object.html#ae2a5c95370a1d983c18c22e525f2a987":[3,0,0,10,1,1],
 "classdrake_1_1pydrake_1_1_object.html#ae70939546b3b8732417876a4a1c6a534":[3,0,0,10,1,9],
 "classdrake_1_1reset__after__move.html":[3,0,0,42],
-"classdrake_1_1reset__after__move.html#a619905eb6bcfb8d0424234c5e2e65954":[3,0,0,42,5],
-"classdrake_1_1reset__after__move.html#a687e3e2c4ad9b6e872e73985e2579a09":[3,0,0,42,9],
-"classdrake_1_1reset__after__move.html#a9d725fbbe2720d1492d1f0d37ce0d4f8":[3,0,0,42,2],
-"classdrake_1_1reset__after__move.html#aa2e964756d74a635a00d3ece8abede3d":[3,0,0,42,4],
-"classdrake_1_1reset__after__move.html#aaa8482b08e4e200aee227b60381a755d":[3,0,0,42,8],
-"classdrake_1_1reset__after__move.html#ab8c2e7dc3876319b32f62abdef1e25a2":[3,0,0,42,3],
-"classdrake_1_1reset__after__move.html#ac8e42fc98481791a8d8ca911b820f728":[3,0,0,42,1],
-"classdrake_1_1reset__after__move.html#ad010d15727d63310a7eca091e42e52f5":[3,0,0,42,6],
-"classdrake_1_1reset__after__move.html#ad205cd89a7f7bad4df4599fbfa82ed3b":[3,0,0,42,0],
-"classdrake_1_1reset__after__move.html#af4ab1c910fbe75474c2d4f1488c71497":[3,0,0,42,7],
-"classdrake_1_1reset__on__copy.html":[3,0,0,43]
+"classdrake_1_1reset__after__move.html#a619905eb6bcfb8d0424234c5e2e65954":[3,0,0,42,5]
 };

@@ -2044,6 +2044,8 @@
 </li>
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints">AddConstraintToAllKnotPoints() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.AddContactMaterial">AddContactMaterial() (in module pydrake.geometry)</a>
+</li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddCost">AddCost() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.VectorLog_.VectorLog_[float].AddData">AddData() (pydrake.systems.primitives.VectorLog_.VectorLog_[float] method)</a>
@@ -2222,10 +2224,10 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].AddModelInstance">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.AddMultibodyPlantSceneGraph">AddMultibodyPlantSceneGraph() (in module pydrake.multibody.plant)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].AddNamedSystem">AddNamedSystem() (pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float] method)</a>
 
       <ul>
@@ -2280,6 +2282,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].AddRigidBody">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.AddRigidHydroelasticProperties">AddRigidHydroelasticProperties() (in module pydrake.geometry)</a>
+</li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddRotatedLorentzConeConstraint">AddRotatedLorentzConeConstraint() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.systems.trajectory_optimization.html#pydrake.systems.trajectory_optimization.MultipleShooting.AddRunningCost">AddRunningCost() (pydrake.systems.trajectory_optimization.MultipleShooting method)</a>
@@ -2289,6 +2293,10 @@
       <li><a href="pydrake.systems.rendering.html#pydrake.systems.rendering.PoseAggregator.AddSingleInput">AddSingleInput() (pydrake.systems.rendering.PoseAggregator method)</a>
 </li>
       <li><a href="pydrake.systems.rendering.html#pydrake.systems.rendering.PoseAggregator.AddSinglePoseAndVelocityInput">AddSinglePoseAndVelocityInput() (pydrake.systems.rendering.PoseAggregator method)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.AddSoftHydroelasticProperties">AddSoftHydroelasticProperties() (in module pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace">AddSoftHydroelasticPropertiesForHalfSpace() (in module pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.solvers.mixed_integer_optimization_util.html#pydrake.solvers.mixed_integer_optimization_util.AddSos2Constraint">AddSos2Constraint() (in module pydrake.solvers.mixed_integer_optimization_util)</a>
 </li>
@@ -9676,6 +9684,24 @@
       </ul></li>
       <li><a href="pydrake.common.cpp_template.html#pydrake.common.cpp_template.TemplateBase.is_instantiation">is_instantiation() (pydrake.common.cpp_template.TemplateBase method)</a>
 </li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_.Body_[float].is_locked">is_locked() (pydrake.multibody.tree.Body_.Body_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[AutoDiffXd].is_locked">(pydrake.multibody.tree.Body_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[Expression].is_locked">(pydrake.multibody.tree.Body_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[float].is_locked">(pydrake.multibody.tree.Body_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_.Joint_[float].is_locked">(pydrake.multibody.tree.Joint_.Joint_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[AutoDiffXd].is_locked">(pydrake.multibody.tree.Joint_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[Expression].is_locked">(pydrake.multibody.tree.Joint_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[float].is_locked">(pydrake.multibody.tree.Joint_[float] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Expression.is_polynomial">is_polynomial() (pydrake.symbolic.Expression method)</a>
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.InverseDynamics.is_pure_gravity_compensation">is_pure_gravity_compensation() (pydrake.systems.controllers.InverseDynamics method)</a>
@@ -10456,8 +10482,6 @@
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.LinearCost">LinearCost (class in pydrake.solvers.mathematicalprogram)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.LinearEqualityConstraint">LinearEqualityConstraint (class in pydrake.solvers.mathematicalprogram)</a>
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.Linearize">Linearize() (in module pydrake.systems.primitives)</a>
@@ -10466,6 +10490,8 @@
 </li>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.LinearProgrammingApproximateDynamicProgramming">LinearProgrammingApproximateDynamicProgramming() (in module pydrake.systems.controllers)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.LinearQuadraticRegulator">LinearQuadraticRegulator() (in module pydrake.systems.controllers)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.LinearSpringDamper">LinearSpringDamper (in module pydrake.multibody.tree)</a>
@@ -10520,6 +10546,24 @@
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.LoadModelDirectives">LoadModelDirectives() (in module pydrake.multibody.parsing)</a>
 </li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_.Body_[float].Lock">Lock() (pydrake.multibody.tree.Body_.Body_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[AutoDiffXd].Lock">(pydrake.multibody.tree.Body_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[Expression].Lock">(pydrake.multibody.tree.Body_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[float].Lock">(pydrake.multibody.tree.Body_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_.Joint_[float].Lock">(pydrake.multibody.tree.Joint_.Joint_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[AutoDiffXd].Lock">(pydrake.multibody.tree.Joint_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[Expression].Lock">(pydrake.multibody.tree.Joint_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[float].Lock">(pydrake.multibody.tree.Joint_[float] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.math.html#pydrake.math.log">log() (in module pydrake.math)</a>
 
       <ul>
@@ -15970,8 +16014,6 @@
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UnitInertia_[float]">UnitInertia_[float] (class in pydrake.multibody.tree)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.inverse_kinematics.html#pydrake.multibody.inverse_kinematics.UnitQuaternionConstraint">UnitQuaternionConstraint (class in pydrake.multibody.inverse_kinematics)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniversalJoint">UniversalJoint (in module pydrake.multibody.tree)</a>
@@ -15980,10 +16022,30 @@
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniversalJoint_[AutoDiffXd]">UniversalJoint_[AutoDiffXd] (class in pydrake.multibody.tree)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniversalJoint_[Expression]">UniversalJoint_[Expression] (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.UniversalJoint_[float]">UniversalJoint_[float] (class in pydrake.multibody.tree)</a>
 </li>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_.Body_[float].Unlock">Unlock() (pydrake.multibody.tree.Body_.Body_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[AutoDiffXd].Unlock">(pydrake.multibody.tree.Body_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[Expression].Unlock">(pydrake.multibody.tree.Body_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Body_[float].Unlock">(pydrake.multibody.tree.Body_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_.Joint_[float].Unlock">(pydrake.multibody.tree.Joint_.Joint_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[AutoDiffXd].Unlock">(pydrake.multibody.tree.Joint_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[Expression].Unlock">(pydrake.multibody.tree.Joint_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[float].Unlock">(pydrake.multibody.tree.Joint_[float] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.UnrestrictedUpdateEvent">UnrestrictedUpdateEvent (in module pydrake.systems.framework)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.UnrestrictedUpdateEvent_.UnrestrictedUpdateEvent_[float]">UnrestrictedUpdateEvent_.UnrestrictedUpdateEvent_[float] (class in pydrake.systems.framework)</a>

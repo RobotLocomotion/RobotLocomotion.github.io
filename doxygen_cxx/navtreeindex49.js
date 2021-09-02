@@ -1,5 +1,15 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,14,2,1,5],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,14,2,1,2],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,14,2,1,1],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab05ba1c548fa1a71138dcdac91ddeaf6":[3,0,0,14,2,1,3],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ab63f7cdb7cd14bc9cc48c4b9d4a629a5":[3,0,0,14,2,1,6],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#ad7e0abe77b84e16a4224c12492730d30":[3,0,0,14,2,1,4],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html":[3,0,0,14,2,1,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a1fbdf8974a433578feee716bd2074060":[3,0,0,14,2,1,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a2fdb1c59d7e0362407f9784fff99c6ef":[3,0,0,14,2,1,0,0],
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#a868930cd95abeb4a0a903df323444fd9":[3,0,0,14,2,1,0,2],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options_1_1_periodic_boundary_condition.html#ae2bfa68803b302dc2c985a150d7f9205":[3,0,0,14,2,1,0,3],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html":[3,0,0,14,2,2],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,14,2,2,1],
@@ -239,15 +249,5 @@ var NAVTREEINDEX49 =
 "symbolic__expression_8h.html#a184038d04f0ab628e12fb53a6f7cb5d9":[4,0,0,1,56,76],
 "symbolic__expression_8h.html#a1b317498b02b74b0937f7cdb31b0ef52":[4,0,0,1,56,34],
 "symbolic__expression_8h.html#a1c5d6073354479ca8e507536cd36f844":[4,0,0,1,56,107],
-"symbolic__expression_8h.html#a1dbec6a09664cb563d86071a7be38913":[4,0,0,1,56,85],
-"symbolic__expression_8h.html#a1dfe436e1c70779badecad19c8a039fe":[4,0,0,1,56,45],
-"symbolic__expression_8h.html#a208a1c5a02e5bff9ba66d7b7db588ba0":[4,0,0,1,56,55],
-"symbolic__expression_8h.html#a20be18c2d4942e2e64987a30c7e37c1d":[4,0,0,1,56,36],
-"symbolic__expression_8h.html#a23b9105cdfbe657bfe90eaf47d9e8f11":[4,0,0,1,56,69],
-"symbolic__expression_8h.html#a24ba050d5b6f088d5fe578396b3ad646":[4,0,0,1,56,13],
-"symbolic__expression_8h.html#a251f0e1c8ae1894d0a09ccaeb5e79a41":[4,0,0,1,56,31],
-"symbolic__expression_8h.html#a30a0c468c43eb087bc5e98af3c3ad278":[4,0,0,1,56,109],
-"symbolic__expression_8h.html#a3382c5787d8654035c3f94ed1f0c332e":[4,0,0,1,56,96],
-"symbolic__expression_8h.html#a363fca62ae61755e169b00b41fc45332":[4,0,0,1,56,90],
-"symbolic__expression_8h.html#a368c7616ccd2ce8d1587aa7343575d52":[4,0,0,1,56,84]
+"symbolic__expression_8h.html#a1dbec6a09664cb563d86071a7be38913":[4,0,0,1,56,85]
 };

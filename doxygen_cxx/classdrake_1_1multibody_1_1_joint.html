@@ -181,6 +181,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a17028bb61e70288045e0e78002c32ba8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a17028bb61e70288045e0e78002c32ba8">AddInDamping</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *forces) const</td></tr>
 <tr class="memdesc:a17028bb61e70288045e0e78002c32ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into <code>forces</code> the force due to damping within <code>this</code> joint.  <a href="#a17028bb61e70288045e0e78002c32ba8">More...</a><br /></td></tr>
 <tr class="separator:a17028bb61e70288045e0e78002c32ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c7f850050d4a94641ed72dd2d1968f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f">Lock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:a50c7f850050d4a94641ed72dd2d1968f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lock the joint.  <a href="#a50c7f850050d4a94641ed72dd2d1968f">More...</a><br /></td></tr>
+<tr class="separator:a50c7f850050d4a94641ed72dd2d1968f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154263b43696322ad958ee8565d960ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a154263b43696322ad958ee8565d960ff">Unlock</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:a154263b43696322ad958ee8565d960ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlock the joint.  <a href="#a154263b43696322ad958ee8565d960ff">More...</a><br /></td></tr>
+<tr class="separator:a154263b43696322ad958ee8565d960ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a0c0fd3c2e27243de55385f4f9695fc0e">is_locked</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="separator:a0c0fd3c2e27243de55385f4f9695fc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a1a9b8301235756e59d61585853764f89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a1a9b8301235756e59d61585853764f89">Joint</a> (const <a class="el" href="classdrake_1_1multibody_1_1_joint.html">Joint</a> &amp;)=delete</td></tr>
 <tr class="separator:a1a9b8301235756e59d61585853764f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,9 +288,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af63e6defdaac784a56512d2d892cb9b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#af63e6defdaac784a56512d2d892cb9b4">DoAddInDamping</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;, <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html">MultibodyForces</a>&lt; T &gt; *) const</td></tr>
 <tr class="memdesc:af63e6defdaac784a56512d2d892cb9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds into <a class="el" href="classdrake_1_1multibody_1_1_multibody_forces.html" title="A class to hold a set of forces applied to a MultibodyTree system.">MultibodyForces</a> the forces due to damping within <code>this</code> joint.  <a href="#af63e6defdaac784a56512d2d892cb9b4">More...</a><br /></td></tr>
 <tr class="separator:af63e6defdaac784a56512d2d892cb9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca82b40e66c6275f60dad8ef56220b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#abca82b40e66c6275f60dad8ef56220b0">DoSetTopology</a> (const internal::MultibodyTreeTopology &amp;)</td></tr>
-<tr class="memdesc:abca82b40e66c6275f60dad8ef56220b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>.  <a href="#abca82b40e66c6275f60dad8ef56220b0">More...</a><br /></td></tr>
-<tr class="separator:abca82b40e66c6275f60dad8ef56220b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f268758c7ca361722fd8526b7c32551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551">DoSetTopology</a> (const internal::MultibodyTreeTopology &amp;) override</td></tr>
+<tr class="memdesc:a5f268758c7ca361722fd8526b7c32551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>.  <a href="#a5f268758c7ca361722fd8526b7c32551">More...</a><br /></td></tr>
+<tr class="separator:a5f268758c7ca361722fd8526b7c32551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb7bb56e3111b8b13991cc780df2a12e"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html">BluePrint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#adb7bb56e3111b8b13991cc780df2a12e">MakeImplementationBlueprint</a> () const =0</td></tr>
 <tr class="memdesc:adb7bb56e3111b8b13991cc780df2a12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be implemented by derived classes in order to provide JointImplementationBuilder a <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_blue_print.html" title="(Advanced) Structure containing all the information needed to build the MultibodyTree implementation ...">BluePrint</a> of their internal implementation <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html" title="(Advanced) A Joint is implemented in terms of MultibodyTree elements such as bodies,...">JointImplementation</a>.  <a href="#adb7bb56e3111b8b13991cc780df2a12e">More...</a><br /></td></tr>
 <tr class="separator:adb7bb56e3111b8b13991cc780df2a12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,6 +300,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a29cbe17adde3122d72d7d573152b04c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8">has_implementation</a> () const</td></tr>
 <tr class="memdesc:a29cbe17adde3122d72d7d573152b04c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether <code>this</code> joint owns a particular implementation.  <a href="#a29cbe17adde3122d72d7d573152b04c8">More...</a><br /></td></tr>
 <tr class="separator:a29cbe17adde3122d72d7d573152b04c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system) override</td></tr>
+<tr class="memdesc:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">More...</a><br /></td></tr>
+<tr class="separator:a522410fdf7fa3aaaeebf2bf5e66b5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods to make a clone templated on different scalar types.</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Clones this Joint (templated on T) to a joint templated on <code>double</code>.</p>
 </div></td></tr>
@@ -318,12 +329,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">SetTopology</a> (const internal::MultibodyTreeTopology &amp;tree)</td></tr>
 <tr class="memdesc:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree::Finalize() is invoked.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb">More...</a><br /></td></tr>
 <tr class="separator:a68e3e034aa4ff8fbfc3ae70b96923ccb inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">DoDeclareParameters</a> (internal::MultibodyTreeSystem&lt; T &gt; *)</td></tr>
-<tr class="memdesc:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">More...</a><br /></td></tr>
-<tr class="separator:a81c425ccd8cf5adb6b0d496ad7f4b314 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
 <tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">More...</a><br /></td></tr>
 <tr class="separator:a7a976e6fccd8686189b1fdbf1d2cc722 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57aa9aaaab0516dbcbaf970347c76611 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611">DeclareAbstractParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="memdesc:a57aa9aaaab0516dbcbaf970347c76611 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611">More...</a><br /></td></tr>
+<tr class="separator:a57aa9aaaab0516dbcbaf970347c76611 inherit pro_methods_classdrake_1_1multibody_1_1_multibody_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -979,6 +990,37 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a522410fdf7fa3aaaeebf2bf5e66b5d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522410fdf7fa3aaaeebf2bf5e66b5d5e">&#9670;&nbsp;</a></span>DoDeclareParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoDeclareParameters </td>
+          <td>(</td>
+          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>. </p>
+<p>MultibodyElement-derived objects must override to declare their specific parameters. If an object is not a direct descendent of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html" title="A class representing an element (subcomponent) of a MultibodyPlant or (internally) a MultibodyTree.">MultibodyElement</a>, it must invoke its parent classes' <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a> before declaring its own parameters. </p>
+
+<p>Reimplemented from <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314">MultibodyElement&lt; Joint, T, JointIndex &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a55fbeff7bf8dcabddc072a224f42a8ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55fbeff7bf8dcabddc072a224f42a8ac">&#9670;&nbsp;</a></span>DoGetOnePosition()</h2>
 
@@ -1037,8 +1079,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="abca82b40e66c6275f60dad8ef56220b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abca82b40e66c6275f60dad8ef56220b0">&#9670;&nbsp;</a></span>DoSetTopology()</h2>
+<a id="a5f268758c7ca361722fd8526b7c32551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f268758c7ca361722fd8526b7c32551">&#9670;&nbsp;</a></span>DoSetTopology()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1056,7 +1098,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1211,6 +1253,51 @@ Friends</h2></td></tr>
 
 <p>Returns whether <code>this</code> joint owns a particular implementation. </p>
 <p>If the MultibodyTree has been finalized, this will return true. </p>
+
+</div>
+</div>
+<a id="a0c0fd3c2e27243de55385f4f9695fc0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c0fd3c2e27243de55385f4f9695fc0e">&#9670;&nbsp;</a></span>is_locked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_locked </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if the joint is locked, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a50c7f850050d4a94641ed72dd2d1968f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c7f850050d4a94641ed72dd2d1968f">&#9670;&nbsp;</a></span>Lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Lock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lock the joint. </p>
+<p>Its generalized velocities will be 0 until it is unlocked. Locking is not yet supported for continuous-mode systems. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the parent model uses continuous state. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1589,6 +1676,32 @@ Friends</h2></td></tr>
 <p>Returns a string identifying the type of <code>this</code> joint, such as "revolute" or "prismatic". </p>
 
 <p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">RevoluteJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_prismatic_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">PrismaticJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_universal_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">UniversalJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_screw_joint.html#ae4fa9c904accccf5900c63c3e65ca277">ScrewJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_planar_joint.html#ae4fa9c904accccf5900c63c3e65ca277">PlanarJoint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_ball_rpy_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">BallRpyJoint&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524">WeldJoint&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a154263b43696322ad958ee8565d960ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154263b43696322ad958ee8565d960ff">&#9670;&nbsp;</a></span>Unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Unlock </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unlock the joint. </p>
+<p>Unlocking is not yet supported for continuous-mode systems. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the parent model uses continuous state. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -994,6 +994,7 @@ var hierarchy =
     [ "type_visit_with_default", "structdrake_1_1type__visit__with__default.html", null ],
     [ "type_visit_with_tag< Tag >", "structdrake_1_1type__visit__with__tag.html", null ],
     [ "TypeSafeIndex< Tag >", "classdrake_1_1_type_safe_index.html", null ],
+    [ "TypeSafeIndex< class AbstractParameterTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class AbstractStateTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class BodyTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class CacheTag >", "classdrake_1_1_type_safe_index.html", null ],

@@ -170,6 +170,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#af11369a06c5bfd3fa18acb79f85777df">systems::NumericParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a7a976e6fccd8686189b1fdbf1d2cc722">DeclareNumericParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">systems::BasicVector</a>&lt; T &gt; &amp;model_vector)</td></tr>
 <tr class="memdesc:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="#a7a976e6fccd8686189b1fdbf1d2cc722">More...</a><br /></td></tr>
 <tr class="separator:a7a976e6fccd8686189b1fdbf1d2cc722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57aa9aaaab0516dbcbaf970347c76611"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a57aa9aaaab0516dbcbaf970347c76611">DeclareAbstractParameter</a> (internal::MultibodyTreeSystem&lt; T &gt; *tree_system, const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;model_value)</td></tr>
+<tr class="memdesc:a57aa9aaaab0516dbcbaf970347c76611"><td class="mdescLeft">&#160;</td><td class="mdescRight">To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>.  <a href="#a57aa9aaaab0516dbcbaf970347c76611">More...</a><br /></td></tr>
+<tr class="separator:a57aa9aaaab0516dbcbaf970347c76611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -312,6 +315,45 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a57aa9aaaab0516dbcbaf970347c76611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57aa9aaaab0516dbcbaf970347c76611">&#9670;&nbsp;</a></span>DeclareAbstractParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1systems.html#a86b350169906f6d5e07e9db46e36d57a">systems::AbstractParameterIndex</a> DeclareAbstractParameter </td>
+          <td>(</td>
+          <td class="paramtype">internal::MultibodyTreeSystem&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>tree_system</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &amp;&#160;</td>
+          <td class="paramname"><em>model_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>To be used by MultibodyElement-derived objects when declaring parameters in their implementation of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a>. </p>
+<p>For an example, see <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e" title="Implementation of the NVI DeclareParameters().">Joint::DoDeclareParameters()</a>. </p>
+
+</div>
+</div>
 <a id="a7a976e6fccd8686189b1fdbf1d2cc722"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a976e6fccd8686189b1fdbf1d2cc722">&#9670;&nbsp;</a></span>DeclareNumericParameter()</h2>
 
@@ -405,7 +447,7 @@ Friends</h2></td></tr>
 <p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a78bee989062e1b311dbd90831ac9959f" title="Declares MultibodyTreeSystem Parameters at MultibodyTreeSystem::Finalize() time.">DeclareParameters()</a>. </p>
 <p>MultibodyElement-derived objects must override to declare their specific parameters. If an object is not a direct descendent of <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html" title="A class representing an element (subcomponent) of a MultibodyPlant or (internally) a MultibodyTree.">MultibodyElement</a>, it must invoke its parent classes' <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a81c425ccd8cf5adb6b0d496ad7f4b314" title="Implementation of the NVI DeclareParameters().">DoDeclareParameters()</a> before declaring its own parameters. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">LinearBushingRollPitchYaw&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">RigidBody&lt; T &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">Joint&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">LinearBushingRollPitchYaw&lt; T &gt;</a>, <a class="el" href="classdrake_1_1multibody_1_1_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">Body&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1multibody_1_1_rigid_body.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e">RigidBody&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -436,7 +478,7 @@ Friends</h2></td></tr>
 <p>Implementation of the NVI <a class="el" href="classdrake_1_1multibody_1_1_multibody_element.html#a68e3e034aa4ff8fbfc3ae70b96923ccb" title="Gives MultibodyElement-derived objects the opportunity to retrieve their topology after MultibodyTree...">SetTopology()</a>. </p>
 <p>For advanced use only for developers implementing new MultibodyTree components. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_joint.html#abca82b40e66c6275f60dad8ef56220b0">Joint&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1multibody_1_1_joint.html#a5f268758c7ca361722fd8526b7c32551">Joint&lt; T &gt;</a>.</p>
 
 </div>
 </div>
