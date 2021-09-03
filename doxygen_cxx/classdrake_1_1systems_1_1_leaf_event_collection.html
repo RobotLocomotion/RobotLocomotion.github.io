@@ -122,9 +122,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a49928cac496b9e91d90a804554d849df"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; const EventType * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html#a49928cac496b9e91d90a804554d849df">get_events</a> () const</td></tr>
 <tr class="memdesc:a49928cac496b9e91d90a804554d849df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the vector of const pointers to all of the events.  <a href="#a49928cac496b9e91d90a804554d849df">More...</a><br /></td></tr>
 <tr class="separator:a49928cac496b9e91d90a804554d849df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adfd213bb1e5c26cb44858e8e53adf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html#a4adfd213bb1e5c26cb44858e8e53adf3">add_event</a> (std::unique_ptr&lt; EventType &gt; event) final</td></tr>
-<tr class="memdesc:a4adfd213bb1e5c26cb44858e8e53adf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <code>event</code> to the existing collection.  <a href="#a4adfd213bb1e5c26cb44858e8e53adf3">More...</a><br /></td></tr>
-<tr class="separator:a4adfd213bb1e5c26cb44858e8e53adf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcad2c2f0bc6ff2cfb116779fe4ffb8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html#abcad2c2f0bc6ff2cfb116779fe4ffb8d">AddEvent</a> (EventType event) final</td></tr>
 <tr class="memdesc:abcad2c2f0bc6ff2cfb116779fe4ffb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add <code>event</code> to the existing collection.  <a href="#abcad2c2f0bc6ff2cfb116779fe4ffb8d">More...</a><br /></td></tr>
 <tr class="separator:abcad2c2f0bc6ff2cfb116779fe4ffb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -256,37 +253,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4adfd213bb1e5c26cb44858e8e53adf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4adfd213bb1e5c26cb44858e8e53adf3">&#9670;&nbsp;</a></span>add_event()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void add_event </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; EventType &gt;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Add <code>event</code> to the existing collection. </p>
-<p>Ownership of <code>event</code> is transferred. Aborts if event is null. </p>
-
-<p>Implements <a class="el" href="classdrake_1_1systems_1_1_event_collection.html#a441779b587accb79f832dd172ddb3285">EventCollection&lt; EventType &gt;</a>.</p>
-
-</div>
-</div>
 <a id="abcad2c2f0bc6ff2cfb116779fe4ffb8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abcad2c2f0bc6ff2cfb116779fe4ffb8d">&#9670;&nbsp;</a></span>AddEvent()</h2>
 
@@ -463,8 +429,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a820850d2bd7f3debf944dd3325c91802"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a820850d2bd7f3debf944dd3325c91802">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a3d4ec6eea85ae1991425cbfedc4fa54e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4ec6eea85ae1991425cbfedc4fa54e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,7 +441,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html">LeafEventCollection</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html">LeafEventCollection</a>&lt; EventType &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html">LeafEventCollection</a>&lt; EventType &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -489,8 +455,8 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d4ec6eea85ae1991425cbfedc4fa54e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d4ec6eea85ae1991425cbfedc4fa54e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a820850d2bd7f3debf944dd3325c91802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a820850d2bd7f3debf944dd3325c91802">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,7 +467,7 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html">LeafEventCollection</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html">LeafEventCollection</a>&lt; EventType &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html">LeafEventCollection</a>&lt; EventType &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

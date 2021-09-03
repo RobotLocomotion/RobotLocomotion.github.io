@@ -53,8 +53,6 @@ var group__solvers =
       [ "AddExponentialConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7b08a882bd0f9c823350bf877fe7867f", null ],
       [ "AddExponentialConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a700caef005988a7711e183b439e20a25", null ],
       [ "AddIndeterminates", "classdrake_1_1solvers_1_1_mathematical_program.html#a46c7fda7a953076c526e686a24fc1c3b", null ],
-      [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a2a915ebc93c14da19b845df70e95bf6c", null ],
-      [ "AddL2NormCost", "classdrake_1_1solvers_1_1_mathematical_program.html#ae12e1f27eb841aef6de75e3e7e5a96fe", null ],
       [ "AddLinearComplementarityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#aefb8281bc9e90a665dab64afa9749542", null ],
       [ "AddLinearComplementarityConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a8cae2adfde468f154fc70a367e0f0ff6", null ],
       [ "AddLinearConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7d60c0944a1bf43c50dd26b6dbbc3c1b", null ],

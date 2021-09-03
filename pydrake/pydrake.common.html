@@ -362,21 +362,28 @@ then this returns an empty string.</td>
 <dl class="function">
 <dt id="pydrake.common.temp_directory">
 <code class="descclassname">pydrake.common.</code><code class="descname">temp_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.common.temp_directory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a directory location suitable for temporary files.</p>
+<dd><p>Returns a directory location suitable for temporary files. The
+directory will be called ${parent}/robotlocomotion_drake_XXXXXX where
+each X is replaced by a character from the portable filename character
+set. The path ${parent} is defined as one of the following (in
+decreasing priority):</p>
+<ul class="simple">
+<li>${TEST_TMPDIR} - ${TMPDIR} - /tmp</li>
+</ul>
+<p>If successful, this will always create a new directory. While the
+caller is not obliged to delete the directory, it has full power to do
+so based on specific context and need.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The value of the environment variable TEST_TMPDIR if defined or
-otherwise ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX where each
-X is replaced by a character from the portable filename character
-set. Any trailing / will be stripped from the output.</p>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">The path representing a newly created directory There will be no
+trailing <code class="docutils literal"><span class="pre">/</span></code>.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError If the path referred to by TEST_TMPDIR or</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">${TMPDIR</span></code> – -/tmp}/robotlocomotion_drake_XXXXXX cannot be created,</li>
-<li>does not exist, or is not a directory.</li>
+<li>if the directory ${parent}/robotlocomotion_drake_XXXXXX cannot be</li>
+<li>created, or is not a directory.</li>
 </ul>
 </td>
 </tr>

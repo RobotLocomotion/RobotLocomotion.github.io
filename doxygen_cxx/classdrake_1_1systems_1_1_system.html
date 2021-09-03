@@ -779,10 +779,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a86649644cbbb5db1a63f2ef6dde59edd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">get_mutable_system_scalar_converter</a> ()</td></tr>
 <tr class="memdesc:a86649644cbbb5db1a63f2ef6dde59edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> for <code>this</code> system.  <a href="#a86649644cbbb5db1a63f2ef6dde59edd">More...</a><br /></td></tr>
 <tr class="separator:a86649644cbbb5db1a63f2ef6dde59edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88d780ac96e83eadd765f5c2fd1abbb4"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class Clazz&gt; </td></tr>
-<tr class="memitem:a88d780ac96e83eadd765f5c2fd1abbb4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a88d780ac96e83eadd765f5c2fd1abbb4">ValidateChildOfContext</a> (const Clazz&lt; T &gt; *object) const</td></tr>
-<tr class="memdesc:a88d780ac96e83eadd765f5c2fd1abbb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a88d780ac96e83eadd765f5c2fd1abbb4">More...</a><br /></td></tr>
-<tr class="separator:a88d780ac96e83eadd765f5c2fd1abbb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Event handler dispatch mechanism</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a> (or user implemented equivalent classes), these functions need to call the appropriate LeafSystem::DoX event handler.</p>
 <p>E.g. LeafSystem::DispatchPublishHandler() calls <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a119e3a83eeb61b8eb99198348178afd2" title="Derived-class event dispatcher for all simultaneous publish events in events.">LeafSystem::DoPublish()</a>. User supplied custom event callbacks embedded in each individual event need to be further dispatched in the LeafSystem::DoX handlers if desired. For a <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>, the pseudo code of the complete default publish event handler dispatching is roughly: </p><pre>
@@ -2301,7 +2297,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated:</a></b></dt><dd>"Use the ValueProducer overload instead." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>"Use the ValueProducer overload instead." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -2339,7 +2335,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated:</a></b></dt><dd>"This overload for DeclareCacheEntry is rarely the best choice; it is" " unusual for allocation to actually require a boutique callback rather" " than just a Clone of a model_value. We found that most uses of this" " overload hindered readability, because other overloads would often do" " the job more directly. If no existing overload works, you may wrap a" " ValueProducer around your existing make method and call the primary" " DeclareCacheEntry overload that takes a ValueProducer, instead." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>"This overload for DeclareCacheEntry is rarely the best choice; it is" " unusual for allocation to actually require a boutique callback rather" " than just a Clone of a model_value. We found that most uses of this" " overload hindered readability, because other overloads would often do" " the job more directly. If no existing overload works, you may wrap a" " ValueProducer around your existing make method and call the primary" " DeclareCacheEntry overload that takes a ValueProducer, instead." <br />
  This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
@@ -2382,8 +2378,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d078e4f799ae50f07ae35389352835f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[5/7]</span></h2>
+<a id="a690a31266a408ea23593fac8e2ea1804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690a31266a408ea23593fac8e2ea1804">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2414,11 +2410,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
-<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
-<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>"This overload for DeclareCacheEntry is dispreferred because it might" " not reuse heap storage from one calculation to the next, and so is" " typically less efficient than the other overloads. A better option" " is to change the ValueType returned by-value to be an output pointer" " instead, and return void. If that is not possible, you may wrap a" " ValueProducer around your existing method and call the primary" " DeclareCacheEntry overload that takes a ValueProducer, instead." <br />
+ This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>
@@ -2455,13 +2449,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated:</a></b></dt><dd>"This overload for DeclareCacheEntry is dispreferred because it might" " not reuse heap storage from one calculation to the next, and so is" " typically less efficient than the other overloads. A better option" " is to change the ValueType returned by-value to be an output pointer" " instead, and return void. If that is not possible, you may wrap a" " ValueProducer around your existing method and call the primary" " DeclareCacheEntry overload that takes a ValueProducer, instead." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>"This overload for DeclareCacheEntry is dispreferred because it might" " not reuse heap storage from one calculation to the next, and so is" " typically less efficient than the other overloads. A better option" " is to change the ValueType returned by-value to be an output pointer" " instead, and return void. If that is not possible, you may wrap a" " ValueProducer around your existing method and call the primary" " DeclareCacheEntry overload that takes a ValueProducer, instead." <br />
  This will be removed from Drake on or after "2021-11-01" .</dd></dl>
 
 </div>
 </div>
-<a id="a690a31266a408ea23593fac8e2ea1804"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a690a31266a408ea23593fac8e2ea1804">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[7/7]</span></h2>
+<a id="a7d078e4f799ae50f07ae35389352835f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2492,9 +2486,11 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated:</a></b></dt><dd>"This overload for DeclareCacheEntry is dispreferred because it might" " not reuse heap storage from one calculation to the next, and so is" " typically less efficient than the other overloads. A better option" " is to change the ValueType returned by-value to be an output pointer" " instead, and return void. If that is not possible, you may wrap a" " ValueProducer around your existing method and call the primary" " DeclareCacheEntry overload that takes a ValueProducer, instead." <br />
- This will be removed from Drake on or after "2021-11-01" .</dd></dl>
+<p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
+<p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
+<dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
@@ -2598,7 +2594,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated:</a></b></dt><dd>"Pass a port name as the first argument." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>"Pass a port name as the first argument." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -6034,36 +6030,6 @@ the port's value must be of type Vec&lt;T&gt;.</dd></dl>
 
 <p>Returns a ticket indicating dependence on velocity state variables v. </p>
 <p>This does <em>not</em> also indicate a dependence on configuration variables q &ndash; you must list that explicitly or use <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a1291b5091aa55dbd03c9b5944dbced09" title="Returns a ticket indicating dependence on all source values that may affect configuration- or velocit...">kinematics_ticket()</a> instead. There is no ticket representing just one of the state variables vᵢ. </p>
-
-</div>
-</div>
-<a id="a88d780ac96e83eadd765f5c2fd1abbb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88d780ac96e83eadd765f5c2fd1abbb4">&#9670;&nbsp;</a></span>ValidateChildOfContext()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ValidateChildOfContext </td>
-          <td>(</td>
-          <td class="paramtype">const Clazz&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>object</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>"Please use ValidateCreatedForThisSystem instead." <br />
- This will be removed from Drake on or after "2021-09-01" .</dd></dl>
 
 </div>
 </div>

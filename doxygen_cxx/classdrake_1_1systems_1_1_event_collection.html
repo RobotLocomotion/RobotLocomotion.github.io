@@ -155,9 +155,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af025a9d6b00f00183fde53dd4f31662c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html#af025a9d6b00f00183fde53dd4f31662c">HasEvents</a> () const =0</td></tr>
 <tr class="memdesc:af025a9d6b00f00183fde53dd4f31662c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>false</code> if and only if this collection contains no events.  <a href="#af025a9d6b00f00183fde53dd4f31662c">More...</a><br /></td></tr>
 <tr class="separator:af025a9d6b00f00183fde53dd4f31662c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a441779b587accb79f832dd172ddb3285"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html#a441779b587accb79f832dd172ddb3285">add_event</a> (std::unique_ptr&lt; EventType &gt; event)=0</td></tr>
-<tr class="memdesc:a441779b587accb79f832dd172ddb3285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an event to this collection, or throws if the concrete collection does not permit adding new events.  <a href="#a441779b587accb79f832dd172ddb3285">More...</a><br /></td></tr>
-<tr class="separator:a441779b587accb79f832dd172ddb3285"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a962bb5c9418bc0c72fdca0a12484446a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_event_collection.html#a962bb5c9418bc0c72fdca0a12484446a">AddEvent</a> (EventType event)=0</td></tr>
 <tr class="memdesc:a962bb5c9418bc0c72fdca0a12484446a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an event to this collection, or throws if the concrete collection does not permit adding new events.  <a href="#a962bb5c9418bc0c72fdca0a12484446a">More...</a><br /></td></tr>
 <tr class="separator:a962bb5c9418bc0c72fdca0a12484446a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,38 +282,6 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a441779b587accb79f832dd172ddb3285"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a441779b587accb79f832dd172ddb3285">&#9670;&nbsp;</a></span>add_event()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void add_event </td>
-          <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; EventType &gt;&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Adds an event to this collection, or throws if the concrete collection does not permit adding new events. </p>
-<p>Derived classes must implement this method to add the specified event to the homogeneous event collection.(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>"Use AddEvent instead." <br />
- This will be removed from Drake on or after "2021-09-01" .</dd></dl>
-
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_leaf_event_collection.html#a4adfd213bb1e5c26cb44858e8e53adf3">LeafEventCollection&lt; EventType &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_diagram_event_collection.html#adad67355ba21095e5133a3d90e2ded0d">DiagramEventCollection&lt; EventType &gt;</a>.</p>
-
-</div>
-</div>
 <a id="a962bb5c9418bc0c72fdca0a12484446a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a962bb5c9418bc0c72fdca0a12484446a">&#9670;&nbsp;</a></span>AddEvent()</h2>
 

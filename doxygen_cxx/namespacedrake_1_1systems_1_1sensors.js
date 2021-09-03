@@ -19,8 +19,6 @@ var namespacedrake_1_1systems_1_1sensors =
     [ "ImageTraits< PixelType::kRgb8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4" ],
     [ "ImageTraits< PixelType::kRgba8U >", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4" ],
     [ "ImageWriter", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html", "classdrake_1_1systems_1_1sensors_1_1_image_writer" ],
-    [ "InvalidDepth", "classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html", "classdrake_1_1systems_1_1sensors_1_1_invalid_depth" ],
-    [ "Label", "classdrake_1_1systems_1_1sensors_1_1_label.html", "classdrake_1_1systems_1_1sensors_1_1_label" ],
     [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images" ],
     [ "LcmImageTraits", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html", null ],
     [ "LcmImageTraits< PixelType::kBgr8U >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4" ],

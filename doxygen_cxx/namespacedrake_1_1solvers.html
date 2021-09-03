@@ -529,9 +529,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5f972e77c40a9afab91907620c621e11"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">MakeQuadraticErrorCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_desired)</td></tr>
 <tr class="memdesc:ga5f972e77c40a9afab91907620c621e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cost term of the form (x-x_desired)'<em>Q</em>(x-x_desired).  <a href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">More...</a><br /></td></tr>
 <tr class="separator:ga5f972e77c40a9afab91907620c621e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bad4d69748b5e84448a51d04f672f76"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4bad4d69748b5e84448a51d04f672f76">MakeL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
-<tr class="memdesc:a4bad4d69748b5e84448a51d04f672f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cost term of the form | Ax - b |^2.  <a href="#a4bad4d69748b5e84448a51d04f672f76">More...</a><br /></td></tr>
-<tr class="separator:a4bad4d69748b5e84448a51d04f672f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga62744a5e355fa26fa97169acfc946128"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga62744a5e355fa26fa97169acfc946128">Make2NormSquaredCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
 <tr class="memdesc:ga62744a5e355fa26fa97169acfc946128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a quadratic cost of the form |Ax-b|²=(Ax-b)ᵀ(Ax-b)  <a href="group__solver__evaluators.html#ga62744a5e355fa26fa97169acfc946128">More...</a><br /></td></tr>
 <tr class="separator:ga62744a5e355fa26fa97169acfc946128"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2733,38 +2730,6 @@ s.t ∑ᵢ yᵢAᵢ - C ≽ 0
 
 <p>Makes the first available and enabled solver. </p>
 <p>If no solvers are available, throws a std::exception. </p>
-
-</div>
-</div>
-<a id="a4bad4d69748b5e84448a51d04f672f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bad4d69748b5e84448a51d04f672f76">&#9670;&nbsp;</a></span>MakeL2NormCost()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a>&gt; drake::solvers::MakeL2NormCost </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a cost term of the form | Ax - b |^2. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>"Use Make2NormSquaredCost instead" <br />
- This will be removed from Drake on or after "2021-09-01" .</dd></dl>
 
 </div>
 </div>

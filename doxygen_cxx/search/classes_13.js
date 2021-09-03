@@ -1,8 +1,6 @@
 var searchData=
 [
   ['tamsisolver',['TamsiSolver',['../classdrake_1_1multibody_1_1_tamsi_solver.html',1,'drake::multibody']]],
-  ['tamsisolver_3c_20autodiffxd_20_3e',['TamsiSolver&lt; AutoDiffXd &gt;',['../classdrake_1_1multibody_1_1_tamsi_solver.html',1,'drake::multibody']]],
-  ['tamsisolver_3c_20double_20_3e',['TamsiSolver&lt; double &gt;',['../classdrake_1_1multibody_1_1_tamsi_solver.html',1,'drake::multibody']]],
   ['tamsisolveriterationstats',['TamsiSolverIterationStats',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html',1,'drake::multibody']]],
   ['tamsisolverparameters',['TamsiSolverParameters',['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html',1,'drake::multibody']]],
   ['template_5fsingle_5ftag',['template_single_tag',['../structdrake_1_1template__single__tag.html',1,'drake']]],

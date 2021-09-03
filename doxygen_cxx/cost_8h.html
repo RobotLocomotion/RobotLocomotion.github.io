@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('cost_8h.html','');});
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;Eigen/SparseCore&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="evaluator__base_8h.html">drake/solvers/evaluator_base.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for cost.h:</div>
@@ -165,9 +164,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5f972e77c40a9afab91907620c621e11"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; QuadraticCost &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">MakeQuadraticErrorCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x_desired)</td></tr>
 <tr class="memdesc:ga5f972e77c40a9afab91907620c621e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cost term of the form (x-x_desired)'<em>Q</em>(x-x_desired).  <a href="group__solver__evaluators.html#ga5f972e77c40a9afab91907620c621e11">More...</a><br /></td></tr>
 <tr class="separator:ga5f972e77c40a9afab91907620c621e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bad4d69748b5e84448a51d04f672f76"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; QuadraticCost &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4bad4d69748b5e84448a51d04f672f76">MakeL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
-<tr class="memdesc:a4bad4d69748b5e84448a51d04f672f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a cost term of the form | Ax - b |^2.  <a href="namespacedrake_1_1solvers.html#a4bad4d69748b5e84448a51d04f672f76">More...</a><br /></td></tr>
-<tr class="separator:a4bad4d69748b5e84448a51d04f672f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga62744a5e355fa26fa97169acfc946128"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; QuadraticCost &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__solver__evaluators.html#ga62744a5e355fa26fa97169acfc946128">Make2NormSquaredCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b)</td></tr>
 <tr class="memdesc:ga62744a5e355fa26fa97169acfc946128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a quadratic cost of the form |Ax-b|²=(Ax-b)ᵀ(Ax-b)  <a href="group__solver__evaluators.html#ga62744a5e355fa26fa97169acfc946128">More...</a><br /></td></tr>
 <tr class="separator:ga62744a5e355fa26fa97169acfc946128"><td class="memSeparator" colspan="2">&#160;</td></tr>

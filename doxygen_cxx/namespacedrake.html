@@ -3790,10 +3790,17 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a directory location suitable for temporary files. </p>
-<dl class="section return"><dt>Returns</dt><dd>The value of the environment variable TEST_TMPDIR if defined or otherwise ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX where each X is replaced by a character from the portable filename character set. Any trailing / will be stripped from the output. </dd></dl>
+<p>The directory will be called ${parent}/robotlocomotion_drake_XXXXXX where each X is replaced by a character from the portable filename character set. The path ${parent} is defined as one of the following (in decreasing priority):</p>
+<ul>
+<li>${TEST_TMPDIR}</li>
+<li>${TMPDIR}</li>
+<li>/tmp</li>
+</ul>
+<p>If successful, this will always create a new directory. While the caller is not obliged to delete the directory, it has full power to do so based on specific context and need.</p>
+<dl class="section return"><dt>Returns</dt><dd>The path representing a newly created directory There will be no trailing <code>/</code>. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>If the path referred to by TEST_TMPDIR or ${TMPDIR:-/tmp}/robotlocomotion_drake_XXXXXX cannot be created, does not exist, or is not a directory. </td></tr>
+    <tr><td class="paramname">if</td><td>the directory ${parent}/robotlocomotion_drake_XXXXXX cannot be created, or is not a directory. </td></tr>
   </table>
   </dd>
 </dl>

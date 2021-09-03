@@ -2,8 +2,6 @@ var image_8h =
 [
     [ "Image", "classdrake_1_1systems_1_1sensors_1_1_image.html", "classdrake_1_1systems_1_1sensors_1_1_image" ],
     [ "Image", "classdrake_1_1systems_1_1sensors_1_1_image.html", "classdrake_1_1systems_1_1sensors_1_1_image" ],
-    [ "InvalidDepth", "classdrake_1_1systems_1_1sensors_1_1_invalid_depth.html", "classdrake_1_1systems_1_1sensors_1_1_invalid_depth" ],
-    [ "Label", "classdrake_1_1systems_1_1sensors_1_1_label.html", "classdrake_1_1systems_1_1sensors_1_1_label" ],
     [ "ImageBgr8U", "image_8h.html#ad6764dabff337ef74ed1871b8a2c2ffd", null ],
     [ "ImageBgra8U", "image_8h.html#a746567d80e8e7ae22cae20c9dbe78f3b", null ],
     [ "ImageDepth16U", "image_8h.html#a12ae113c6f13e4c9c37430a988afeef8", null ],
