@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"screw__joint_8h.html":[4,0,0,8,12,40],
+"screw__mobilizer_8h.html":[4,0,0,8,12,41],
 "scs__solver_8h.html":[4,0,0,10,45],
 "sdpa__free__format_8h.html":[4,0,0,10,46],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,10,46,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a86e47adc0afa8788574df20ffa841821":[3,0,0,3,42,2],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a8f373bb18900dac39b06f4bde227e8dc":[3,0,0,3,42,8],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,3,42,0],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,3,42,1],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,3,42,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,6,4,4]
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,3,42,1]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__formula__cell_8h.html#a500b46690e6bd8926394ccf7c8482a70":[4,0,0,1,60,31],
+"symbolic__formula__cell_8h.html#a6854fa16fb68d99c3cbe16d2c9afc584":[4,0,0,1,60,47],
 "symbolic__formula__cell_8h.html#a70e880ce60c41c7e65085dbf911edded":[4,0,0,1,60,46],
 "symbolic__formula__cell_8h.html#a726023da52d6033c2565368b6def1e16":[4,0,0,1,60,25],
 "symbolic__formula__cell_8h.html#a7488de67ca4d6bc69cec3bb0f67ae4c3":[4,0,0,1,60,42],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "text__logging_8h.html#ae0fe856459e2ca7ef105677ef381da55":[4,0,0,1,75,4],
 "text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,75,3],
 "text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,75,8],
-"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,75,2],
-"text__logging__pybind_8h.html":[4,0,0,0,0,0,7],
-"texture__library_8h.html":[4,0,0,4,4,0,11]
+"text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,75,2]
 };

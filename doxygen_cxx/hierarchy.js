@@ -523,8 +523,8 @@ var hierarchy =
       [ "Traits< examples::rimless_wheel::RimlessWheel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html", null ],
       [ "Traits< geometry::DrakeVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html", null ],
       [ "Traits< geometry::MeshcatVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html", null ],
-      [ "Traits< internal::RandomSourceT >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01internal_1_1_random_source_t_01_4.html", null ],
       [ "Traits< LinearTransformDensity >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html", null ],
+      [ "Traits< RandomSource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html", null ],
       [ "Traits< sensors::BeamModel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html", null ],
       [ "Traits< TrajectoryAffineSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html", null ],
       [ "Traits< TrajectoryLinearSystem >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html", null ]
@@ -795,6 +795,7 @@ var hierarchy =
             [ "Multiplexer< T >", "classdrake_1_1systems_1_1_multiplexer.html", null ],
             [ "PassThrough< T >", "classdrake_1_1systems_1_1_pass_through.html", null ],
             [ "PortSwitch< T >", "classdrake_1_1systems_1_1_port_switch.html", null ],
+            [ "RandomSource< T >", "classdrake_1_1systems_1_1_random_source.html", null ],
             [ "MultibodyPositionToGeometryPose< T >", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html", null ],
             [ "PoseAggregator< T >", "classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html", null ],
             [ "RenderPoseToGeometryPose< T >", "classdrake_1_1systems_1_1rendering_1_1_render_pose_to_geometry_pose.html", null ],
@@ -911,9 +912,6 @@ var hierarchy =
             [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", null ],
             [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", null ],
             [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", null ],
-            [ "RandomSourceT< double >", null, [
-              [ "RandomSource", "classdrake_1_1systems_1_1_random_source.html", null ]
-            ] ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "SpringMassSystem< double >", "classdrake_1_1systems_1_1_spring_mass_system.html", [
               [ "MySpringMassSystem< double >", "classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html", null ],

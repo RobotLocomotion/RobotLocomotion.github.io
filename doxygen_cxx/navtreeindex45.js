@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"pose__bundle_8h.html":[4,0,0,11,7,3],
+"pose__bundle__to__draw__message_8h.html":[4,0,0,11,7,4],
 "pose__smoother_8h.html":[4,0,0,6,2,1],
 "pose__vector_8h.html":[4,0,0,11,7,5],
 "posed__half__space_8h.html":[4,0,0,4,2,37],
@@ -123,7 +125,7 @@ var NAVTREEINDEX45 =
 "random__rotation_8h.html#af27920d083eb816f24f832091a662f28":[4,0,0,7,25,2],
 "random__source_8h.html":[4,0,0,11,6,17],
 "random__source_8h.html#a0545ab65838b464875abb7385495531a":[4,0,0,11,6,17,2],
-"random__source_8h.html#a1c2bfc060c7ef377cd46e15cd3d88dbe":[4,0,0,11,6,17,1],
+"random__source_8h.html#a17d9785a5cf7db65cd70670c892101f9":[4,0,0,11,6,17,1],
 "region__of__attraction_8h.html":[4,0,0,11,0,13],
 "region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,11,0,13,1],
 "render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX45 =
 "scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,8,12,4],
 "scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,8,12,1],
 "scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,8,12,2],
-"scoped__singleton_8h.html":[4,0,0,1,48],
-"screw__joint_8h.html":[4,0,0,8,12,40],
-"screw__mobilizer_8h.html":[4,0,0,8,12,41]
+"scoped__singleton_8h.html":[4,0,0,1,48]
 };

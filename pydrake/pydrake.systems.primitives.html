@@ -3825,8 +3825,59 @@ the default when no input is connected.</dd>
 <dt id="pydrake.systems.primitives.RandomSource">
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">RandomSource</code><a class="headerlink" href="#pydrake.systems.primitives.RandomSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
-<p>A convenient alias for a RandomSource that uses the <code class="docutils literal"><span class="pre">double</span></code> scalar
-type.</p>
+<p>A source block which generates random numbers at a fixed sampling
+interval, with a zero-order hold between samples. For continuous-time
+systems, this can be interpreted as a band-limited approximation of
+continuous white noise (with a power-spectral density of the form Ts *
+sinc^2( omega * Ts ), where Ts is the sampling interval.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RandomSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; output</td></tr></table></td></tr></table><p>This system exposes a parameter named <code class="docutils literal"><span class="pre">seed</span></code> for the pseudo-random
+number generator that determines the noise output. The <code class="docutils literal"><span class="pre">seed</span></code>
+parameter behaves as follows:</p>
+<p>1. Each newly-created RandomSource chooses a new <code class="docutils literal"><span class="pre">per_instance_seed</span></code> member
+field value for itself.  The value will be unique within the current
+executable process.</p>
+<p>2. By default, <code class="docutils literal"><span class="pre">source.CreateDefaultContext()</span></code> will set the returned
+context’s <code class="docutils literal"><span class="pre">seed</span></code> parameter to <code class="docutils literal"><span class="pre">per_instance_seed</span></code>.  Therefore, for a given
+instance of this system, the parameters, state, and outputs will be
+identical for all simulations that start from a default context.</p>
+<p>3. By default, <code class="docutils literal"><span class="pre">source.SetRandomContext()</span></code> will choose a new, arbitrary
+value for the context’s <code class="docutils literal"><span class="pre">seed</span></code> parameter, which means that the system’s
+parameters, state, and outputs will (almost certainly) differ from their
+defaults.</p>
+<p>4. The user may call <code class="docutils literal"><span class="pre">source.set_fixed_seed(new_seed)</span></code> on this system.
+When a <code class="docutils literal"><span class="pre">new_seed</span></code> value is provided, it is used by both
+<code class="docutils literal"><span class="pre">CreateDefaultContext</span></code> and <code class="docutils literal"><span class="pre">SetRandomContext</span></code>.  Therefore, the system’s
+parameters, state, and outputs will be identical to any other instances
+that share the same <code class="docutils literal"><span class="pre">new_seed</span></code> value for their <code class="docutils literal"><span class="pre">seed</span></code> context parameter.
+Note that <code class="docutils literal"><span class="pre">set_fixed_seed</span></code> affects subsequently-created contexts; any
+pre-existing contexts are unaffected.  The user may call
+<code class="docutils literal"><span class="pre">source.set_fixed_seed(nullopt)</span></code> to revert to the default the behaviors
+described in #2 and #3 again.</p>
+<p>5. The context returned by <code class="docutils literal"><span class="pre">source.AllocateContext()</span></code> does not contain a
+valid <code class="docutils literal"><span class="pre">seed</span></code> parameter; that context should not be used until its values
+are populated via another Context.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This system is only defined for the double scalar type.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The exact distribution results may vary across multiple platforms
+or revisions of Drake, but will be consistent for all compilations
+on a given platform and Drake revision.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The hard-coding of (default) distribution parameters is imposed
+intentionally to simplify analysis (by forcing systems taking
+noise inputs to implement the shifting/scaling, the system itself
+contains all of the necessary information for stochastic
+analysis).</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">stochastic_systems</p>
+</div>
 <dl class="method">
 <dt id="pydrake.systems.primitives.RandomSource.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.RandomSource</em>, <em>distribution: pydrake.common._module_py.RandomDistribution</em>, <em>num_outputs: int</em>, <em>sampling_interval_sec: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.RandomSource.__init__" title="Permalink to this definition">¶</a></dt>

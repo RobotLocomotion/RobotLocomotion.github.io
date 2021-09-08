@@ -104,7 +104,6 @@ $(document).ready(function(){initNavTree('random__source_8h.html','');});
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__copyable_8h.html">drake/common/drake_copyable.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="random_8h.html">drake/common/random.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="leaf__system_8h.html">drake/systems/framework/leaf_system.h</a>&quot;</code><br />
@@ -117,10 +116,10 @@ Include dependency graph for random_source.h:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_random_source.html">RandomSource</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_random_source.html">RandomSource&lt; T &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A source block which generates random numbers at a fixed sampling interval, with a zero-order hold between samples.  <a href="classdrake_1_1systems_1_1_random_source.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01internal_1_1_random_source_t_01_4.html">Traits&lt; internal::RandomSourceT &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html">Traits&lt; RandomSource &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -134,9 +133,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a1c2bfc060c7ef377cd46e15cd3d88dbe"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a1c2bfc060c7ef377cd46e15cd3d88dbe">RandomSourced</a> = internal::RandomSourceT&lt; double &gt;</td></tr>
-<tr class="memdesc:a1c2bfc060c7ef377cd46e15cd3d88dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for a <a class="el" href="classdrake_1_1systems_1_1_random_source.html" title="A source block which generates random numbers at a fixed sampling interval, with a zero-order hold be...">RandomSource</a> that uses the <code>double</code> scalar type.  <a href="namespacedrake_1_1systems.html#a1c2bfc060c7ef377cd46e15cd3d88dbe">More...</a><br /></td></tr>
-<tr class="separator:a1c2bfc060c7ef377cd46e15cd3d88dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d9785a5cf7db65cd70670c892101f9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a17d9785a5cf7db65cd70670c892101f9">RandomSourced</a> = RandomSource&lt; double &gt;</td></tr>
+<tr class="memdesc:a17d9785a5cf7db65cd70670c892101f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for a <a class="el" href="classdrake_1_1systems_1_1_random_source.html" title="A source block which generates random numbers at a fixed sampling interval, with a zero-order hold be...">RandomSource</a> that uses the <code>double</code> scalar type.  <a href="namespacedrake_1_1systems.html#a17d9785a5cf7db65cd70670c892101f9">More...</a><br /></td></tr>
+<tr class="separator:a17d9785a5cf7db65cd70670c892101f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"text__logging__pybind_8h.html":[4,0,0,0,0,0,7],
+"texture__library_8h.html":[4,0,0,4,4,0,11],
 "trajectory_8h.html":[4,0,0,1,3,7],
 "trajectory__affine__system_8h.html":[4,0,0,11,6,23],
 "trajectory__linear__system_8h.html":[4,0,0,11,6,24],
