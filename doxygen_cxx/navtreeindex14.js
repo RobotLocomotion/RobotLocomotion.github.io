@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a751136a22e2d0980679dd41429d54c62":[3,0,0,8,64,6],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a87068d58ff4a71b1d3d9795e9fed4aa6":[3,0,0,8,64,20],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a8f02d78a11a4fd918699c75b48573520":[3,0,0,8,64,0],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee":[3,0,0,8,64,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#aee7457510064eba5e950bce13800e4ad":[3,0,0,8,0,4,11],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html":[3,0,0,8,0,5],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a4cd9da1af9594b5148f1275b259c0580":[3,0,0,8,0,5,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a5360f3f5943cf0e9167389b24e89cfaf":[3,0,0,8,0,5,8],
-"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a74e2e6506982cee0c16c6048d0baa5b9":[3,0,0,8,0,5,6]
+"classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#a5360f3f5943cf0e9167389b24e89cfaf":[3,0,0,8,0,5,8]
 };

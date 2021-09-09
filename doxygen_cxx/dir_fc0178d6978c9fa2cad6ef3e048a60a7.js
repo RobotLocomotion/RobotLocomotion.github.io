@@ -30,6 +30,7 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "hopf_coordinate.h", "hopf__coordinate_8h.html", "hopf__coordinate_8h" ],
     [ "jacobian.h", "jacobian_8h.html", "jacobian_8h" ],
     [ "knot_vector_type.h", "knot__vector__type_8h.html", "knot__vector__type_8h" ],
+    [ "linear_solve.h", "linear__solve_8h.html", "linear__solve_8h" ],
     [ "matrix_util.h", "matrix__util_8h.html", "matrix__util_8h" ],
     [ "normalize_vector.h", "normalize__vector_8h.html", "normalize__vector_8h" ],
     [ "orthonormal_basis.h", "orthonormal__basis_8h.html", "orthonormal__basis_8h" ],

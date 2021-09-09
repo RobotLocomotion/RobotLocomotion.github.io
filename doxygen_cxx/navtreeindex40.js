@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"drake__lcm__interface_8h.html":[4,0,0,5,1],
 "drake__lcm__interface_8h.html#a6db1a743c5ddeef2341da48dbf5ab027":[4,0,0,5,1,3],
 "drake__lcm__interface_8h.html#a7f10e39fd5048940095d76f21bdf760d":[4,0,0,5,1,4],
 "drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,1,5],
@@ -209,8 +210,8 @@ var NAVTREEINDEX40 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,2,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,10,20],
-"functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
+"functions.html":[3,3,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -218,8 +219,8 @@ var NAVTREEINDEX40 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1,0],
 "functions_func.html":[3,3,1],
+"functions_func.html":[3,3,1,0],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "functions_func_~.html":[3,3,1,26],
 "functions_g.html":[3,3,0,6],
 "functions_h.html":[3,3,0,7],
-"functions_i.html":[3,3,0,8],
-"functions_j.html":[3,3,0,9]
+"functions_i.html":[3,3,0,8]
 };

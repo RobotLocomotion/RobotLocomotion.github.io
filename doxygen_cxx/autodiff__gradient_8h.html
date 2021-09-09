@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('autodiff__gradient_8h.html','');});
 <div class="textblock"><p>Utilities that relate simultaneously to both autodiff matrices and gradient matrices. </p>
 </div><div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
+<code>#include &lt;fmt/format.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="drake__assert_8h.html">drake/common/drake_assert.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="unused_8h.html">drake/common/unused.h</a>&quot;</code><br />
@@ -118,7 +119,7 @@ Include dependency graph for autodiff_gradient.h:</div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="autodiff__gradient_8h__dep__incl.svg" width="475" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="autodiff__gradient_8h__dep__incl.svg" width="100%" height="417"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -166,6 +167,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a51e012b12b2183ef633c86c51d8e0677"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; _Scalar, double &gt;, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</td></tr>
 <tr class="memdesc:a51e012b12b2183ef633c86c51d8e0677"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">More...</a><br /></td></tr>
 <tr class="separator:a51e012b12b2183ef633c86c51d8e0677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_same_v&lt; typename Derived::Scalar, double &gt;, <a class="el" href="classint.html">int</a> &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4360e58bcb10c6b20aa3e28fed7297fb">GetDerivativeSize</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;A)</td></tr>
+<tr class="memdesc:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of AutoDiffScalars, returns the size of the derivatives.  <a href="namespacedrake_1_1math.html#a4360e58bcb10c6b20aa3e28fed7297fb">More...</a><br /></td></tr>
+<tr class="separator:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

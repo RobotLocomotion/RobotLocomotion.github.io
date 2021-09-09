@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"contact__results__to__lcm_8h.html#gaf04cff08eadce0b0c46cb7c6a30d9dd9":[4,0,0,8,9,5,3],
 "contact__solver_8h.html":[4,0,0,8,2,2],
 "contact__solver__results_8h.html":[4,0,0,8,2,3],
 "contact__solver__utils_8h.html":[4,0,0,8,2,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "drake__deprecated_8h.html":[4,0,0,1,20],
 "drake__deprecated_8h.html#a847d827d084f28e4ae1788a0ae75be96":[4,0,0,1,20,0],
 "drake__kuka__iiwa__robot_8h.html":[4,0,0,8,0,3,0],
-"drake__lcm_8h.html":[4,0,0,5,0],
-"drake__lcm__interface_8h.html":[4,0,0,5,1]
+"drake__lcm_8h.html":[4,0,0,5,0]
 };

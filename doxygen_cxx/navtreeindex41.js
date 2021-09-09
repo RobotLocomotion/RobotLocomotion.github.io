@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"functions_j.html":[3,3,0,9],
 "functions_k.html":[3,3,0,10],
 "functions_l.html":[3,3,0,11],
 "functions_m.html":[3,3,0,12],
@@ -192,8 +193,8 @@ var NAVTREEINDEX41 =
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
 "group__discrete__systems.html":[1,3,9],
 "group__discretization.html":[1,4,0,5],
 "group__drake__contacts.html":[1,4,1],
@@ -213,8 +214,8 @@ var NAVTREEINDEX41 =
 "group__geometry__optimization.html":[1,2,1],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,6,4,9],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,2,1,9],
-"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,6,4,10],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,2,1,10],
+"group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,6,4,10],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,2,1,8],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,6,4,8],
 "group__geometry__roles.html":[1,6,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "group__primitive__systems.html#ga80a6af98e4258a474416aae6ab3abdd8":[1,3,1,29],
 "group__proximity__queries.html":[1,6,2],
 "group__python__bindings.html":[1,0,0],
-"group__render__benchmarks.html":[1,6,3,0],
-"group__render__engine__benchmarks.html":[1,6,3,0,0]
+"group__render__benchmarks.html":[1,6,3,0]
 };

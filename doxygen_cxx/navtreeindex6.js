@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"classdrake_1_1geometry_1_1_volume_mesh.html#a7c63c0eb1065ee899847e5ec6af74ccf":[3,0,0,3,49,8],
 "classdrake_1_1geometry_1_1_volume_mesh.html#a895d67540aff2cb88a555048a1fa7e90":[3,0,0,3,49,18],
 "classdrake_1_1geometry_1_1_volume_mesh.html#a98f8a4ac27c2c8008728ae504e8e68bc":[3,0,0,3,49,14],
 "classdrake_1_1geometry_1_1_volume_mesh.html#ad1233e4b20b349fa520335f175a1e2f5":[3,0,0,3,49,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#acf3359a9ffe54d19027766e2e2520218":[1,6,4,5,4],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ada1d96f68ad61431e19ea0cb65117cd6":[1,2,1,5,1],
 "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#ada1d96f68ad61431e19ea0cb65117cd6":[1,6,4,5,1],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18":[1,2,1,5,7],
-"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18":[1,6,4,5,7]
+"classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html#aeb9d125fc472d3d8b44a2f410f3ffb18":[1,2,1,5,7]
 };

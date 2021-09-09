@@ -23,6 +23,7 @@ var searchData=
   ['linear_5fquadratic_5fregulator_2eh',['linear_quadratic_regulator.h',['../linear__quadratic__regulator_8h.html',1,'']]],
   ['linear_5fscalar_5fsystem_2eh',['linear_scalar_system.h',['../linear__scalar__system_8h.html',1,'']]],
   ['linear_5fsimplex_5felement_2eh',['linear_simplex_element.h',['../linear__simplex__element_8h.html',1,'']]],
+  ['linear_5fsolve_2eh',['linear_solve.h',['../linear__solve_8h.html',1,'']]],
   ['linear_5fspring_5fdamper_2eh',['linear_spring_damper.h',['../linear__spring__damper_8h.html',1,'']]],
   ['linear_5fsystem_2eh',['linear_system.h',['../linear__system_8h.html',1,'']]],
   ['linear_5fsystem_5fsolver_2eh',['linear_system_solver.h',['../linear__system__solver_8h.html',1,'']]],

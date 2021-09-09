@@ -1,5 +1,13 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a10106668012c2b809949d73d6e72f88f":[3,0,0,14,2,2,3],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a1ba9dae3af1b60cc4f276e689b8f3134":[3,0,0,14,2,2,5],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a267538df8d3c6c1cf0dcd83eafa308ca":[3,0,0,14,2,2,6],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a29017aee3204b230b5884faaf2fac289":[3,0,0,14,2,2,0],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a4c74c519e42f88117207f1fffef290c7":[3,0,0,14,2,2,2],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a6734a991d96eb572b943a06ce7f5188c":[3,0,0,14,2,2,7],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a7e7b9b98008f565a28fa06c3e4d04b6e":[3,0,0,14,2,2,4],
+"structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html":[3,0,0,14,2,3],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a118c80afa021941c77e3295fbb2677ea":[3,0,0,14,2,3,0],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a30edcf82b08e03225696e43415e04c41":[3,0,0,14,2,3,3],
 "structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_result.html#a96666d29f27b318e44d0f2fc3e5382cd":[3,0,0,14,2,3,4],
@@ -241,13 +249,5 @@ var NAVTREEINDEX49 =
 "symbolic__expression_8h.html#a368c7616ccd2ce8d1587aa7343575d52":[4,0,0,1,56,84],
 "symbolic__expression_8h.html#a374ac54710c8173da5ca4b2d7eeec520":[4,0,0,1,56,40],
 "symbolic__expression_8h.html#a380b68d6baf2cb5ab4212e435d1104ee":[4,0,0,1,56,105],
-"symbolic__expression_8h.html#a38f904009d1e4f9ad6f5ed22a4e4c41b":[4,0,0,1,56,37],
-"symbolic__expression_8h.html#a3abe49c1083796a8b370bab55535aa72":[4,0,0,1,56,113],
-"symbolic__expression_8h.html#a3f0ddd00582ffc739418f9198e0f6a9c":[4,0,0,1,56,89],
-"symbolic__expression_8h.html#a3f6413d336e52ed76599cc96a8c87eee":[4,0,0,1,56,83],
-"symbolic__expression_8h.html#a43e7c74e8b9ea1c9c5843c590e388009":[4,0,0,1,56,106],
-"symbolic__expression_8h.html#a45f342ca12fff0fb252625b2f62afe97":[4,0,0,1,56,67],
-"symbolic__expression_8h.html#a4ac54d0c8fa80bf084505f90528c9f5e":[4,0,0,1,56,51],
-"symbolic__expression_8h.html#a4f327d917e1fe72bfd5bd65be4a91b2a":[4,0,0,1,56,88],
-"symbolic__expression_8h.html#a554e434566b78163855f96829c244e37":[4,0,0,1,56,103]
+"symbolic__expression_8h.html#a38f904009d1e4f9ad6f5ed22a4e4c41b":[4,0,0,1,56,37]
 };
