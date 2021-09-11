@@ -181,8 +181,53 @@
 <dl class="class">
 <dt id="pydrake.geometry.render.ClippingRange">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.render.</code><code class="descname">ClippingRange</code><a class="headerlink" href="#pydrake.geometry.render.ClippingRange" title="Permalink to this definition">¶</a></dt>
-<dd><p>Defines the near and far clipping planes for frustum-based (e.g.
-OpenGL) RenderEngine cameras.</p>
+<dd><p>Defines the near and far clipping planes for frustum-based (OpenGL)
+RenderEngine cameras.</p>
+<p><strong>Guidance on selecting clipping plane values</strong></p>
+<p>This documentation is targeted toward those who are unfamiliar with
+the OpenGL rasterization pipeline. For in-depth explanations about how
+the clipping range defines the viewing volume, see ` the discussion on
+projective transforms
+&lt;<a class="reference external" href="https://www.glprogramming.com/red/chapter03.html#name3">https://www.glprogramming.com/red/chapter03.html#name3</a>&gt;`_. For more
+detail on its effect on determining occlusion (which geometries are in
+front), try ` “A Hidden-Surface Removal Survival Kit”
+&lt;<a class="reference external" href="https://www.glprogramming.com/red/chapter05.html#name1">https://www.glprogramming.com/red/chapter05.html#name1</a>&gt;`_.</p>
+<p><em>The short summary</em></p>
+<ul class="simple">
+<li>The clipping range defines the distance of the <em>closest</em> and <em>farthest</em></li>
+</ul>
+<p>things that <em>can</em> appear in the rendering.
+- Objects that cross the planes placed at those distances get clipped.
+- Make the range as small as reasonably possible to get the best occlusion
+(a.k.a. z-buffer) results.
+- For depth cameras, make sure your clipping range always includes your valid
+depth range.</p>
+<p><em>The longer discussion</em></p>
+<p>Given that the clipping range defines what you can/can’t see in the
+camera, it <em>might</em> be tempting to just put an arbitrarily large range
+in (e.g., starting 1 micrometer away and going up to 1 million
+kilometers away). By doing so, you know everything you put into your
+scene will appear. If making sure things are visible were the only
+factor, this would be fine.</p>
+<p>Rasterization pipelines render objects in arbitrary order but have to
+be able to determine which objects are in front of other objects as
+they go. They achieve this by creating a “z-buffer”. It is a measure
+of the depth of the triangle that rendered to a particular “pixel”.
+When two triangles both want to color the same pixel, the triangle
+with the smallest z-value is typically selected.</p>
+<p>The z-buffer has fixed precision. That fixed precision is spread over
+the entire available depth range (as defined by the clipping range).
+The greater the range, the less precision the z-buffer has per meter
+of depth. A small range may have the ability to distinguish objects
+separated by 1 mm. But a large range may only be able to distinuish
+objects separated by 1 m. Two objects with measurably different depths
+relative to the camera, can become indistinguishable in the z-buffer
+due to these precision issues; the object that ends up in front is due
+to random chance. This will lead to artifacts where two objects near
+the same depth will flicker back and forth in front of each other
+(sometimes called “z fighting”).</p>
+<p>So, it is best to define the smallest clipping range that will include
+the objects of the scene that you care about most.</p>
 <dl class="method">
 <dt id="pydrake.geometry.render.ClippingRange.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.render.ClippingRange.__init__" title="Permalink to this definition">¶</a></dt>
