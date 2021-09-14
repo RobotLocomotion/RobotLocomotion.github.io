@@ -491,10 +491,43 @@ Functions</h2></td></tr>
 <tr class="separator:a22ef8ddc01621bfea0d26d27d3822be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65261ee2a29dd949589e1a5d29dd9779"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
 <tr class="memitem:a65261ee2a29dd949589e1a5d29dd9779"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a65261ee2a29dd949589e1a5d29dd9779">LinearSolve</a> (const LinearSolver &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a65261ee2a29dd949589e1a5d29dd9779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when both A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double.See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details.  <a href="#a65261ee2a29dd949589e1a5d29dd9779">More...</a><br /></td></tr>
+<tr class="memdesc:a65261ee2a29dd949589e1a5d29dd9779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double.  <a href="#a65261ee2a29dd949589e1a5d29dd9779">More...</a><br /></td></tr>
 <tr class="separator:a65261ee2a29dd949589e1a5d29dd9779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Get linear solver</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="get_linear_solver"></a></p>
+<p>Create the linear solver for a given matrix A, which will be used to solve the linear system of equations A * x = b.</p>
+<p>The following table indicate the scalar type of the matrix in the returned linear solver, depending on the scalar type in matrix A</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">A  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">solver  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">Expr   </td></tr>
+</table>
+<p>where ADS stands for Eigen::AutoDiffScalar, and Expr stands for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. Here is the example code </p><div class="fragment"><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 2, 5;</div><div class="line"><a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(3, 4);</div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> x_val =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_val), A_val, b_val);</div><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 2&gt; A_ad;</div><div class="line">A_ad(0, 0).value() = A_val(0, 0);</div><div class="line">A_ad(0, 0).derivatives() = Eigen::Vector3d(1, 2, 3);</div><div class="line">A_ad(0, 1).value() = A_val(0, 1);</div><div class="line">A_ad(0, 1).derivatives() = Eigen::Vector3d(2, 3, 4);</div><div class="line">A_ad(1, 0).value() = A_val(1, 0);</div><div class="line">A_ad(1, 0).derivatives() = Eigen::Vector3d(3, 4, 5);</div><div class="line">A_ad(1, 1).value() = A_val(1, 1);</div><div class="line">A_ad(1, 1).derivatives() = Eigen::Vector3d(4, 5, 6);</div><div class="line"><span class="comment">// Solve A * x = b with A containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad1 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_ad), A_ad, b_val);</div><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; b_ad;</div><div class="line">b_ad(0).value() = b_val(0);</div><div class="line">b_ad(0).derivatives() = Eigen::Vector3d(5, 6, 7);</div><div class="line">b_ad(1).value() = b_val(1);</div><div class="line">b_ad(1).derivatives() = Eigen::Vector3d(6, 7, 8);</div><div class="line"><span class="comment">// Solve A * x = b with b containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad2 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_val), A_val, b_ad);</div><div class="line"><span class="comment">// Solve A * x = b with both A and b containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad3 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_ad), A_ad, b_ad);</div></div><!-- fragment --><p>{cc} </p>
+</div></td></tr>
+<tr class="memitem:a4b6432ad0f036babf00c234c9a11df9e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA &gt; </td></tr>
+<tr class="memitem:a4b6432ad0f036babf00c234c9a11df9e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, LinearSolverType&lt; Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime &gt; &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4b6432ad0f036babf00c234c9a11df9e">GetLinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
+<tr class="memdesc:a4b6432ad0f036babf00c234c9a11df9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear solver for a matrix A containing double or symbolic::Expressions.  <a href="#a4b6432ad0f036babf00c234c9a11df9e">More...</a><br /></td></tr>
+<tr class="separator:a4b6432ad0f036babf00c234c9a11df9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ac9b72789bb55f8e0dd41d36303d195"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA &gt; </td></tr>
+<tr class="memitem:a7ac9b72789bb55f8e0dd41d36303d195"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, LinearSolverType&lt; Eigen::Matrix&lt; double, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime &gt; &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a7ac9b72789bb55f8e0dd41d36303d195">GetLinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
+<tr class="memdesc:a7ac9b72789bb55f8e0dd41d36303d195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear solver for a matrix A containing AutoDiffScalar.  <a href="#a7ac9b72789bb55f8e0dd41d36303d195">More...</a><br /></td></tr>
+<tr class="separator:a7ac9b72789bb55f8e0dd41d36303d195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">solve linear system of equations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="linear_solve"></a> Solve linear system of equations A * x = b. Where A is an Eigen matrix of double/AutoDiffScalar/symbolic::Expression, and b is an Eigen matrix of double/AutoDiffScalar/symbolic::Expression. Note that when either A or b contains <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, the other has to contain <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> as well. When either A or b contains AutoDiffScalar, we use implicit function theorem to find the gradient in x as ∂x/∂zᵢ = A⁻¹(∂b/∂zᵢ - ∂A/∂zᵢ * x) where z is the variable we take gradient with.</p>
+<p>The following table indicate the scalar type of x with A/b containing the specified scalar type. The entries with NA are not supported.</p>
+<p>| ＼A | | | | </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">b ＼  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">NA   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">NA   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Expr  </td><td class="markdownTableBodyNone">NA  </td><td class="markdownTableBodyNone">NA  </td><td class="markdownTableBodyNone">Expr   </td></tr>
+</table>
+<p>where ADS stands for Eigen::AutoDiffScalar, and Expr stands for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>.</p>
+<p>TODO(hongkai.dai): support one of A/b being a double matrix and the other being a <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrix.</p>
 <dl class="section note"><dt>Note</dt><dd>When both A and b are Eigen matrix of double, this function is almost as fast as calling linear_solver.solve(b) directly; when either A or b contains AutoDiffScalar, this function is a lot faster than first instantiating the linear solver of AutoDiffScalar, and then solving the equation with this autodiffable linear solver. </dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
@@ -1804,6 +1837,48 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 
 </div>
 </div>
+<a id="a4b6432ad0f036babf00c234c9a11df9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6432ad0f036babf00c234c9a11df9e">&#9670;&nbsp;</a></span>GetLinearSolver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value, LinearSolverType&lt;Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime&gt; &gt; &gt;::type drake::math::GetLinearSolver </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the linear solver for a matrix A containing double or symbolic::Expressions. </p>
+<p>The returned linear solver will have matrix type containing the same scalar type as A. See <a class="el" href="namespacedrake_1_1math.html#get_linear_solver">get_linear_solver</a> for more details. </p>
+
+</div>
+</div>
+<a id="a7ac9b72789bb55f8e0dd41d36303d195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac9b72789bb55f8e0dd41d36303d195">&#9670;&nbsp;</a></span>GetLinearSolver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value, LinearSolverType&lt;Eigen::Matrix&lt;double, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime&gt; &gt; &gt;::type drake::math::GetLinearSolver </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the linear solver for a matrix A containing AutoDiffScalar. </p>
+<p>The returned linear solver will be LinearSolverType&lt;Matrix&lt;double, Rows, Cols&gt;&gt; </p>
+
+</div>
+</div>
 <a id="a5c5269630d172b12a31b34d6c98b4e64"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c5269630d172b12a31b34d6c98b4e64">&#9670;&nbsp;</a></span>getSubMatrixGradient() <span class="overload">[1/3]</span></h2>
 
@@ -2755,7 +2830,8 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Specialized when both A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double.See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. </p>
+<p>Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double. </p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. </p>
 
 </div>
 </div>

@@ -1,5 +1,14 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5412c17187dde2f8984dcfb3eb67ca1d":[3,0,0,16,2,15],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a547e26c83862bad737713ca1be3d3d84":[3,0,0,16,2,35],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a54d2cefdc8e6443b9710b195b914b680":[3,0,0,16,2,44],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5d7edaa991443e887ca36e0fd20b96c7":[3,0,0,16,2,32],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a5dc4d107b331f4e33f2893826c44be27":[3,0,0,16,2,7],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a603a4e747fb099305c01f8762e8cff23":[3,0,0,16,2,9],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a60ecdbaf41d941ec12c0b6add7cc32d9":[3,0,0,16,2,18],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a644718bb2fb240de962dc3c9a1fdf0dc":[3,0,0,16,2,24],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6a44781cbe3dd6c55234638a1b63d4ef":[3,0,0,16,2,1],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6d7f5289922d84e6f35f96bb29ddd09c":[3,0,0,16,2,23],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a6ec39e8128c0da804f03d8fbd17fd843":[3,0,0,16,2,25],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a728995759fa06a8d1a2b967d313b6d6b":[3,0,0,16,2,55],
@@ -240,14 +249,5 @@ var NAVTREEINDEX38 =
 "constraint_8h.html":[4,0,0,10,9],
 "constraint__doxygen_8h.html":[4,0,0,8,1,0],
 "constraint__problem__data_8h.html":[4,0,0,8,1,1],
-"constraint__relaxing__ik_8h.html":[4,0,0,6,3,0],
-"constraint__solver_8h.html":[4,0,0,8,1,2],
-"contact__jacobians_8h.html":[4,0,0,8,9,1],
-"contact__model__doxygen_8h.html":[4,0,0,8,9,2],
-"contact__permutation_8h.html":[4,0,0,8,9,3],
-"contact__results_8h.html":[4,0,0,8,9,4],
-"contact__results__to__lcm_8h.html":[4,0,0,8,9,5],
-"contact__results__to__lcm_8h.html#ga4761192640acd751f57edc644e34ca66":[4,0,0,8,9,5,2],
-"contact__results__to__lcm_8h.html#ga70e362ebad8d7556c8e3cb883af12d13":[4,0,0,8,9,5,1],
-"contact__results__to__lcm_8h.html#ga8c78a18a7167620f81d5d9780b65d562":[4,0,0,8,9,5,0]
+"constraint__relaxing__ik_8h.html":[4,0,0,6,3,0]
 };

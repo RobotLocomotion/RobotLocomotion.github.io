@@ -340,6 +340,10 @@ Functions</h2></td></tr>
 <tr class="separator:a2134db5f8753db883df9439aa2c38814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15599d92370af7b991c4a593f6103376"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a15599d92370af7b991c4a593f6103376">operator!=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e1, const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e2)</td></tr>
 <tr class="separator:a15599d92370af7b991c4a593f6103376"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a83ec9d5a48501f63fb6a687ab83fdef1">ConvertVolumeToSurfaceMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;volume)</td></tr>
+<tr class="memdesc:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a tetrahedral volume mesh to a triangulated surface mesh of the boundary surface of the volume.  <a href="#a83ec9d5a48501f63fb6a687ab83fdef1">More...</a><br /></td></tr>
+<tr class="separator:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af76ed94bef3f81765a1b3ce069562e00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#af76ed94bef3f81765a1b3ce069562e00">AddRigidHydroelasticProperties</a> (double resolution_hint, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:af76ed94bef3f81765a1b3ce069562e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds properties to the given set of proximity properties sufficient to cause the associated geometry to generate a rigid hydroelastic representation.  <a href="#af76ed94bef3f81765a1b3ce069562e00">More...</a><br /></td></tr>
 <tr class="separator:af76ed94bef3f81765a1b3ce069562e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -970,6 +974,40 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>0 &lt; <code>slab_thickness</code> &lt; ∞ . </dd></dl>
+
+</div>
+</div>
+<a id="a83ec9d5a48501f63fb6a687ab83fdef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ec9d5a48501f63fb6a687ab83fdef1">&#9670;&nbsp;</a></span>ConvertVolumeToSurfaceMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt;T&gt; drake::geometry::ConvertVolumeToSurfaceMesh </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts a tetrahedral volume mesh to a triangulated surface mesh of the boundary surface of the volume. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">volume</td><td>The tetrahedral volume mesh, whose vertex positions are measured and expressed in some frame E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The triangulated surface mesh, whose vertex positions are measured and expressed in the same frame E of the volume mesh. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The vertices of the volume mesh are unique. Adjacent tetrahedra share the same vertices, instead of repeating the vertices with the same coordinates. Otherwise, the returned surface mesh will have extra triangles in addition to the boundary triangles of the volume. </dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

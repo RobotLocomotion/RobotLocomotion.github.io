@@ -238,6 +238,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33a4eab8cdd87647bbae03cca106fe55"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a33a4eab8cdd87647bbae03cca106fe55">GetPoseInParent</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
 <tr class="memdesc:a33a4eab8cdd87647bbae03cca106fe55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of SceneGraphInspector::X_PG().  <a href="#a33a4eab8cdd87647bbae03cca106fe55">More...</a><br /></td></tr>
 <tr class="separator:a33a4eab8cdd87647bbae03cca106fe55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab840f09f0ed42eafe68c17c65912e646"><td class="memItemLeft" align="right" valign="top">std::variant&lt; std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt; double &gt; *, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; double &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ab840f09f0ed42eafe68c17c65912e646">maybe_get_hydroelastic_mesh</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id) const</td></tr>
+<tr class="memdesc:ab840f09f0ed42eafe68c17c65912e646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab840f09f0ed42eafe68c17c65912e646" title="Returns the mesh used to represent this geometry in hydroelastic contact calculations,...">SceneGraphInspector::maybe_get_hydroelastic_mesh()</a>.  <a href="#ab840f09f0ed42eafe68c17c65912e646">More...</a><br /></td></tr>
+<tr class="separator:ab840f09f0ed42eafe68c17c65912e646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6af6c5ad58318c3069f4becb57e06823"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a6af6c5ad58318c3069f4becb57e06823">GetProximityProperties</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> id) const</td></tr>
 <tr class="memdesc:a6af6c5ad58318c3069f4becb57e06823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a54ca60ee613f990628306a00cf2edf0a" title="Returns a pointer to the const proximity properties of the geometry with the given geometry_id.">SceneGraphInspector::GetProximityProperties()</a>.  <a href="#a6af6c5ad58318c3069f4becb57e06823">More...</a><br /></td></tr>
 <tr class="separator:a6af6c5ad58318c3069f4becb57e06823"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1641,6 +1644,26 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab840f09f0ed42eafe68c17c65912e646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab840f09f0ed42eafe68c17c65912e646">&#9670;&nbsp;</a></span>maybe_get_hydroelastic_mesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::variant&lt;std::monostate, const <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt;double&gt;*, const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt;double&gt;*&gt; maybe_get_hydroelastic_mesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab840f09f0ed42eafe68c17c65912e646" title="Returns the mesh used to represent this geometry in hydroelastic contact calculations,...">SceneGraphInspector::maybe_get_hydroelastic_mesh()</a>. </p>
 
 </div>
 </div>

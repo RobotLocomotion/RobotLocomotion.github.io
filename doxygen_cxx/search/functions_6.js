@@ -630,6 +630,7 @@ var searchData=
   ['getknownsolvers',['GetKnownSolvers',['../namespacedrake_1_1solvers.html#a55b69ef16f17a627abcbe62dde1d4807',1,'drake::solvers']]],
   ['getknownuptodate',['GetKnownUpToDate',['../classdrake_1_1systems_1_1_cache_entry.html#afa9b55a7a43bdb10ea04f9621dbd8979',1,'drake::systems::CacheEntry']]],
   ['getknownuptodateabstract',['GetKnownUpToDateAbstract',['../classdrake_1_1systems_1_1_cache_entry.html#abf790ebeb7d49d7f9181d9a9dc8618a7',1,'drake::systems::CacheEntry']]],
+  ['getlinearsolver',['GetLinearSolver',['../namespacedrake_1_1math.html#a4b6432ad0f036babf00c234c9a11df9e',1,'drake::math::GetLinearSolver(const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)'],['../namespacedrake_1_1math.html#a7ac9b72789bb55f8e0dd41d36303d195',1,'drake::math::GetLinearSolver(const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)']]],
   ['getlog',['GetLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb',1,'drake::systems::VectorLogSink']]],
   ['getlumpedparametersfrompolynomial',['GetLumpedParametersFromPolynomial',['../classdrake_1_1solvers_1_1_system_identification.html#ac773380ef71146a579c09a2b75d9bc87',1,'drake::solvers::SystemIdentification']]],
   ['getlumpedparametersfrompolynomials',['GetLumpedParametersFromPolynomials',['../classdrake_1_1solvers_1_1_system_identification.html#ac94f79e52948e0d2fdc8669ef58118cd',1,'drake::solvers::SystemIdentification']]],
