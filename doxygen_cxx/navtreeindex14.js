@@ -1,5 +1,13 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_spatial_inertia.html":[3,0,0,8,64],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a025a1eb3a6fcfd673edc15b7ba85de9e":[3,0,0,8,64,5],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a09b2415a4b0787515507518d9c0dd4e5":[3,0,0,8,64,22],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a1664b38f6c4fad624a7ab777c9642a7e":[3,0,0,8,64,9],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220":[3,0,0,8,64,11],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a1d857a6e2165c421949804eb2afbe7c7":[3,0,0,8,64,8],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a2d612851b1578071428ec79f7da1047a":[3,0,0,8,64,18],
+"classdrake_1_1multibody_1_1_spatial_inertia.html#a3a1c2e2b7b334839c460e022d4686f54":[3,0,0,8,64,4],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a3c36e3056b0d3fcc88d8c972df267a0e":[3,0,0,8,64,13],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a413ff91e8caf0498a96e5b1e06da9cd1":[3,0,0,8,64,7],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#a423681189f9dd1726b750876f67dafe9":[3,0,0,8,64,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_weld_joint.html#a952a908b4c1b68ac11b2e31ef31e9524":[3,0,0,8,80,7],
 "classdrake_1_1multibody_1_1_weld_joint.html#a9b78e1282dbe407d7e389ea125515f69":[3,0,0,8,80,0],
 "classdrake_1_1multibody_1_1_weld_joint.html#aaad155ce9d89bbe3c6240c3e9e5da8f8":[3,0,0,8,80,3],
-"classdrake_1_1multibody_1_1_weld_joint.html#ab0954f79e22c39d0bd221aea65b0d625":[3,0,0,8,80,1],
-"classdrake_1_1multibody_1_1_weld_joint.html#aec0ff8efa446e5e97baa611baca985e7":[3,0,0,8,80,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html":[3,0,0,8,0,4],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a261de30a5ed8af25767d884401a83137":[3,0,0,8,0,4,4],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a2996fc868fb6b219f4fa4a9729b9b317":[3,0,0,8,0,4,7],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a2d48ccdd3dde78b6d1431ef788ddcafd":[3,0,0,8,0,4,10],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a3435faa90af0e61ae68fd70484032762":[3,0,0,8,0,4,5],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a4c64f73a489f67a84bc369760635f2cc":[3,0,0,8,0,4,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a718e55f6a9874887f021f464179a2798":[3,0,0,8,0,4,1]
+"classdrake_1_1multibody_1_1_weld_joint.html#ab0954f79e22c39d0bd221aea65b0d625":[3,0,0,8,80,1]
 };

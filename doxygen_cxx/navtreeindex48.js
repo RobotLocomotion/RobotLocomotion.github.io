@@ -1,5 +1,13 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,2,3,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231":[3,0,0,8,2,3,2],
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,2,3,0],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html":[3,0,0,8,2,4],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a36dbe2aa2c05a792070d7b44d5c06e87":[3,0,0,8,2,4,3],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a79e9374608093db77a9d533b2af3f11a":[3,0,0,8,2,4,2],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,8,2,4,1],
+"structdrake_1_1multibody_1_1parsing_1_1_add_weld.html#ac532c4b500b1a85ea22217f2c65a70ed":[3,0,0,8,2,4,0],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html":[3,0,0,8,2,5],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a2a5d37b46d7a2fe94a06ae57bc3109a2":[3,0,0,8,2,5,5],
 "structdrake_1_1multibody_1_1parsing_1_1_model_directive.html#a4c4f8911ceb35347add952a07c1add40":[3,0,0,8,2,5,6],
@@ -241,13 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html":[3,0,0,14,0,2],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aad8f71d6c3e803538d9917ba719e66d4":[3,0,0,14,0,2,1],
 "structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aaeb33e652a26580e0b4af48b12fff998":[3,0,0,14,0,2,2],
-"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[3,0,0,14,0,2,0],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html":[3,0,0,14,1,1],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a03438bfa4d94bde06f020fd03bf119f7":[3,0,0,14,1,1,4],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a06b4bf90f560eba55ebfe4c6c87092a4":[3,0,0,14,1,1,2],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a2dddadb7fdc7410ae7d2d76e4934ff38":[3,0,0,14,1,1,1],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a6aa3dc95330ca350010af07f6fc6a3d9":[3,0,0,14,1,1,6],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a758aa200c389c79a6726265a8a3ec559":[3,0,0,14,1,1,7],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae1eeea98f1866116ac3f5765a855daef":[3,0,0,14,1,1,5],
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#ae5b6c59565e02e83dbb2fc7bcfce9234":[3,0,0,14,1,1,3]
+"structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#adf3c6b6e481d6acc45e87b93d10d8f96":[3,0,0,14,0,2,0]
 };

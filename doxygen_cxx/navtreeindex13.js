@@ -1,5 +1,13 @@
 var NAVTREEINDEX13 =
 {
+"classdrake_1_1multibody_1_1_point_pair_contact_info.html#ab9a94e5485a94db25be84679cdb91085":[3,0,0,8,49,6],
+"classdrake_1_1multibody_1_1_point_pair_contact_info.html#adf061bdb3efd7aafdc886a705994dfb3":[3,0,0,8,49,5],
+"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html":[1,2,0,6],
+"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a19b58a472f72da80913ea92350878a82":[1,2,0,6,0],
+"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a1ad15b12e5a3d557247b84851011334d":[1,2,0,6,2],
+"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a55fd03edcd5b6162e5df17463d4a94b9":[1,2,0,6,4],
+"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a5cc87f4dbc7b4b9714bfc446e9a6df71":[1,2,0,6,6],
+"classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#a7ebf10ed8bc4dc8c999bf13ed006a5d5":[1,2,0,6,1],
 "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#aaa0122ae096ef10f65c2fc5593dc9c0b":[1,2,0,6,3],
 "classdrake_1_1multibody_1_1_point_to_point_distance_constraint.html#afe04325c25ab5531a0f0ba6978820569":[1,2,0,6,5],
 "classdrake_1_1multibody_1_1_position_constraint.html":[1,2,0,7],
@@ -241,13 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_spatial_force.html#a8d0528e3cf5b7dcd25aedffe760321a1":[3,0,0,8,63,13],
 "classdrake_1_1multibody_1_1_spatial_force.html#aac6191ea5169aaac3b7097dbed1b88cb":[3,0,0,8,63,8],
 "classdrake_1_1multibody_1_1_spatial_force.html#ab6e80e6ece55b0a2d795d7ee141a23a7":[3,0,0,8,63,0],
-"classdrake_1_1multibody_1_1_spatial_force.html#adf17e038937f65df323555605b2e93ff":[3,0,0,8,63,1],
-"classdrake_1_1multibody_1_1_spatial_inertia.html":[3,0,0,8,64],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a025a1eb3a6fcfd673edc15b7ba85de9e":[3,0,0,8,64,5],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a09b2415a4b0787515507518d9c0dd4e5":[3,0,0,8,64,22],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a1664b38f6c4fad624a7ab777c9642a7e":[3,0,0,8,64,9],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220":[3,0,0,8,64,11],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a1d857a6e2165c421949804eb2afbe7c7":[3,0,0,8,64,8],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a2d612851b1578071428ec79f7da1047a":[3,0,0,8,64,18],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#a3a1c2e2b7b334839c460e022d4686f54":[3,0,0,8,64,4]
+"classdrake_1_1multibody_1_1_spatial_force.html#adf17e038937f65df323555605b2e93ff":[3,0,0,8,63,1]
 };

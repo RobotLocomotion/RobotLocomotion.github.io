@@ -201,6 +201,39 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b80af00a00e2a047d59cdc4dc1e7754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b1b4538dd47e4dc5fd9c671454b4d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a37b1b4538dd47e4dc5fd9c671454b4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Meshcat Controls</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> "Controls" are user interface elements in the browser.</p>
+<p>These currently include buttons and sliders.</p><ul>
+<li>Controls appear in the browser under the "Open Controls" dropdown menu, and are appended to the root node of the tree (they do not have a path in the "scene tree"), in the order in which they are added.</li>
+<li>Controls must have unique names. Adding a control with a name that was already in use will overwrite the existing control. If you add a slider with a name that was previous used for a button, then the button will be replaced by the slider, etc.</li>
+<li>Users of this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance are responsible for polling the GUI to retrieve the user interface events.</li>
+<li>Controls can be added/deleted/accessed anytime during the lifetime of this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance. </li>
+</ul>
+</div></td></tr>
+<tr class="memitem:ad3b7ca87f8c10999608db8ffa6863bc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad3b7ca87f8c10999608db8ffa6863bc8">AddButton</a> (std::string name)</td></tr>
+<tr class="memdesc:ad3b7ca87f8c10999608db8ffa6863bc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a button with the label <code>name</code> to the meshcat browser controls GUI.  <a href="#ad3b7ca87f8c10999608db8ffa6863bc8">More...</a><br /></td></tr>
+<tr class="separator:ad3b7ca87f8c10999608db8ffa6863bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092d27d205ba0c1c7b089269f33585dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a092d27d205ba0c1c7b089269f33585dd">GetButtonClicks</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a092d27d205ba0c1c7b089269f33585dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of times the button <code>name</code> has been clicked in the GUI, from the time that it was added to <code>this</code>.  <a href="#a092d27d205ba0c1c7b089269f33585dd">More...</a><br /></td></tr>
+<tr class="separator:a092d27d205ba0c1c7b089269f33585dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aece8086277995b5f6b9fabc80aee7e20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aece8086277995b5f6b9fabc80aee7e20">DeleteButton</a> (std::string name)</td></tr>
+<tr class="memdesc:aece8086277995b5f6b9fabc80aee7e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the button <code>name</code> from the GUI.  <a href="#aece8086277995b5f6b9fabc80aee7e20">More...</a><br /></td></tr>
+<tr class="separator:aece8086277995b5f6b9fabc80aee7e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade314a0eb49972618be311414792b357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ade314a0eb49972618be311414792b357">AddSlider</a> (std::string name, double min, double max, double step, double value)</td></tr>
+<tr class="memdesc:ade314a0eb49972618be311414792b357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a slider with the label <code>name</code> to the meshcat browser controls GUI.  <a href="#ade314a0eb49972618be311414792b357">More...</a><br /></td></tr>
+<tr class="separator:ade314a0eb49972618be311414792b357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad933314f09b40dd5758387e29c952c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b">SetSliderValue</a> (std::string name, double value)</td></tr>
+<tr class="memdesc:ad933314f09b40dd5758387e29c952c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad933314f09b40dd5758387e29c952c8b">More...</a><br /></td></tr>
+<tr class="separator:ad933314f09b40dd5758387e29c952c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad687bbb7459a2c4c012392a2adf7f177"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ad687bbb7459a2c4c012392a2adf7f177">GetSliderValue</a> (std::string_view name)</td></tr>
+<tr class="memdesc:ad687bbb7459a2c4c012392a2adf7f177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current <code>value</code> of the slider <code>name</code>.  <a href="#ad687bbb7459a2c4c012392a2adf7f177">More...</a><br /></td></tr>
+<tr class="separator:ad687bbb7459a2c4c012392a2adf7f177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50fc49ac1d55ac00b10946b748db02dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc">DeleteSlider</a> (std::string name)</td></tr>
+<tr class="memdesc:a50fc49ac1d55ac00b10946b748db02dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the slider <code>name</code> from the GUI.  <a href="#a50fc49ac1d55ac00b10946b748db02dc">More...</a><br /></td></tr>
+<tr class="separator:a50fc49ac1d55ac00b10946b748db02dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af1bb2f8edfd7ee327ff24ad088e1c607">DeleteAddedControls</a> ()</td></tr>
+<tr class="memdesc:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance.  <a href="#af1bb2f8edfd7ee327ff24ad088e1c607">More...</a><br /></td></tr>
+<tr class="separator:af1bb2f8edfd7ee327ff24ad088e1c607"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e8936185fd67ee1825d107010b66507"></a>
@@ -308,6 +341,75 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad3b7ca87f8c10999608db8ffa6863bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3b7ca87f8c10999608db8ffa6863bc8">&#9670;&nbsp;</a></span>AddButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddButton </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a button with the label <code>name</code> to the meshcat browser controls GUI. </p>
+
+</div>
+</div>
+<a id="ade314a0eb49972618be311414792b357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade314a0eb49972618be311414792b357">&#9670;&nbsp;</a></span>AddSlider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddSlider </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a slider with the label <code>name</code> to the meshcat browser controls GUI. </p>
+<p>The slider range is given by [<code>min</code>, <code>max</code>]. <code>step</code> is the smallest increment by which the slider can change values (and therefore send updates back to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance). <code>value</code> specifies the initial value; it will be truncated to the slider range and rounded to the nearest increment. </p>
+
+</div>
+</div>
 <a id="af4681ade5efb8da0d67f86ecae9b9ac8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af4681ade5efb8da0d67f86ecae9b9ac8">&#9670;&nbsp;</a></span>Delete()</h2>
 
@@ -326,6 +428,104 @@ Public Member Functions</h2></td></tr>
 
 <p>Deletes the object at the given <code>path</code> as well as all of its children. </p>
 <p>See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the detailed semantics of deletion. </p>
+
+</div>
+</div>
+<a id="af1bb2f8edfd7ee327ff24ad088e1c607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bb2f8edfd7ee327ff24ad088e1c607">&#9670;&nbsp;</a></span>DeleteAddedControls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteAddedControls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all buttons and sliders from the GUI that have been registered by this <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> instance. </p>
+<p>It does <em>not</em> clear the default GUI elements set in the meshcat browser (e.g. for cameras and lights). </p>
+
+</div>
+</div>
+<a id="aece8086277995b5f6b9fabc80aee7e20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aece8086277995b5f6b9fabc80aee7e20">&#9670;&nbsp;</a></span>DeleteButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteButton </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the button <code>name</code> from the GUI. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered button. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a50fc49ac1d55ac00b10946b748db02dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50fc49ac1d55ac00b10946b748db02dc">&#9670;&nbsp;</a></span>DeleteSlider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteSlider </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes the slider <code>name</code> from the GUI. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered slider. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a092d27d205ba0c1c7b089269f33585dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092d27d205ba0c1c7b089269f33585dd">&#9670;&nbsp;</a></span>GetButtonClicks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> GetButtonClicks </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of times the button <code>name</code> has been clicked in the GUI, from the time that it was added to <code>this</code>. </p>
+<p>If multiple browsers are open, then this number is the cumulative number of clicks in all browsers. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered button. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -390,6 +590,32 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad687bbb7459a2c4c012392a2adf7f177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad687bbb7459a2c4c012392a2adf7f177">&#9670;&nbsp;</a></span>GetSliderValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double GetSliderValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current <code>value</code> of the slider <code>name</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered slider. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -780,6 +1006,42 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad933314f09b40dd5758387e29c952c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad933314f09b40dd5758387e29c952c8b">&#9670;&nbsp;</a></span>SetSliderValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetSliderValue </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the current <code>value</code> of the slider <code>name</code>. </p>
+<p><code>value</code> will be truncated to the slider range and rounded to the nearest increment specified by the slider <code>step</code>. This will update the slider element in all connected meshcat browsers. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>name</code> is not a registered slider. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -1,5 +1,13 @@
 var NAVTREEINDEX42 =
 {
+"group__multibody__quantities.html":[1,1,1,2],
+"group__multibody__spatial__algebra.html":[1,1,1,4],
+"group__multibody__spatial__inertia.html":[1,1,1,4,2],
+"group__multibody__spatial__pose.html":[1,1,1,4,0],
+"group__multibody__spatial__vectors.html":[1,1,1,4,1],
+"group__multibody__systems.html":[1,3,7],
+"group__perception__systems.html":[1,3,8],
+"group__planning.html":[1,5,2],
 "group__planning.html#ga1419d6264a35506905a455d205a3af13":[1,5,2,10],
 "group__planning.html#ga6106c9d0180a87d59f7a36709f7d6785":[1,5,2,9],
 "group__planning.html#gab53fd2e1578db60ceb43b754671ae539":[1,5,2,8],
@@ -241,13 +249,5 @@ var NAVTREEINDEX42 =
 "linear__quadratic__regulator_8h.html#ga0fdf8e6372fa9c822431fb5b0a5e5bd9":[4,0,0,11,1,6,2],
 "linear__quadratic__regulator_8h.html#gae7d3c5debca2daa6de88dbc014263f5c":[4,0,0,11,1,6,1],
 "linear__quadratic__regulator_8h.html#gaeaf380f9c445eee90a846b57f8b70ba7":[4,0,0,11,1,6,3],
-"linear__scalar__system_8h.html":[4,0,0,11,0,0,6],
-"linear__simplex__element_8h.html":[4,0,0,8,3,4],
-"linear__solve_8h.html":[4,0,0,7,20],
-"linear__solve_8h.html#a22ef8ddc01621bfea0d26d27d3822be1":[4,0,0,7,20,3],
-"linear__solve_8h.html#a49a377f4caf31b45f1bed480369fe2f9":[4,0,0,7,20,7],
-"linear__solve_8h.html#a4b6432ad0f036babf00c234c9a11df9e":[4,0,0,7,20,0],
-"linear__solve_8h.html#a65261ee2a29dd949589e1a5d29dd9779":[4,0,0,7,20,4],
-"linear__solve_8h.html#a7ac9b72789bb55f8e0dd41d36303d195":[4,0,0,7,20,1],
-"linear__solve_8h.html#abcf6fc41a39525524ddda3f9a0e41a10":[4,0,0,7,20,6]
+"linear__scalar__system_8h.html":[4,0,0,11,0,0,6]
 };
