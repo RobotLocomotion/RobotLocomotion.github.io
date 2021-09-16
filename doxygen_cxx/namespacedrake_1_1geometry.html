@@ -830,7 +830,7 @@ Functions</h2></td></tr>
 <p>Adds properties to the given set of proximity properties sufficient to cause the associated geometry to generate a rigid hydroelastic representation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. See MODULE_NOT_WRITTEN_YET. This will be ignored for geometry types that don't require tessellation. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh. See MODULE_NOT_WRITTEN_YET. This will be ignored for geometry types that don't require tessellation. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">properties</td><td>The properties will be added to this property set. </td></tr>
   </table>
   </dd>
@@ -896,7 +896,7 @@ Functions</h2></td></tr>
 <p>The geometry's pressure field will be the function p(e) = Ee, where E is the elastic modulus stored in the given <code>properties</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. This will be ignored for geometry types that don't require tessellation. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">resolution_hint</td><td>If the geometry is to be tessellated, it is the parameter that guides the level of mesh refinement. It has length units (in meters) and roughly corresponds to a typical edge length in the resulting mesh. This will be ignored for geometry types that don't require tessellation. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">properties</td><td>The properties will be added to this property set. </td></tr>
   </table>
   </dd>
