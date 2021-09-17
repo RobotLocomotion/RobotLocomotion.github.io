@@ -184,6 +184,8 @@ the main body of the document:</p>
 
 <ul>
   <li>Many commit messages can be cut down to their summary strings and used as-is.</li>
+  <li>File geometry/optimization changes under the “Mathematical Program” heading,
+not the “Multibody” heading.</li>
   <li>Expand all acronyms (eg, MBP -&gt; MultibodyPlant, SG -&gt; SceneGraph).</li>
   <li>Commits can be omitted if they only affect tests or non-installed examples.</li>
   <li>In general you should mention new bindings and deprecated/removed classes and
@@ -210,20 +212,23 @@ discouraged</li>
       <li>Every dependency upgrade line should be “Upgrade libfoobar to latest
 release 1.2.3” or “Upgrade funrepo to latest commit”.</li>
       <li>Dependencies should be referred to by their workspace name.</li>
+      <li>Only one dependency change per line. Even if both meshcat and meshcat-python
+were upgraded in the same pull request, they each should get their own
+line in the release notes.</li>
     </ul>
   </li>
-  <li>
-    <p>Some features under development (eg, hydroelastic as of this writing) may
+  <li>Some features under development (eg, hydroelastic as of this writing) may
 have no-release-notes policies, as their APIs although public are not yet
 fully supported.  Be sure to take note of which these are, or ask on
-<code class="highlighter-rouge">#platform_review</code> slack.</p>
-  </li>
+<code class="highlighter-rouge">#platform_review</code> slack.</li>
   <li>Keep all bullet points to one line.
     <ul>
       <li>Using hard linebreaks to stay under 80 columns makes the bullet lists hard
 to maintain over time.</li>
     </ul>
   </li>
+  <li>Say “macOS” not “Mac” or “Apple” or etc.</li>
+  <li>Say “SDFormat” not “SDF” nor “sdf”.</li>
 </ul>
 
 <h2 id="cutting-the-release">Cutting the release</h2>
@@ -313,7 +318,27 @@ certain Drake-owned externals have sufficient tags:
     <ol>
       <li>Open <code class="highlighter-rouge">models/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
         <ol>
-          <li>Open <a href="https://github.com/RobotLocomotion/models">RobotLocomotion/models</a>
+          <li>Open
+<a href="https://github.com/RobotLocomotion/models/releases">RobotLocomotion/models</a>
+and check whether that commit already has an associated release tag.</li>
+          <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
+the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,
+four digit year, two digit month, two digit day).</li>
+        </ol>
+      </li>
+      <li>Open <code class="highlighter-rouge">optitrack_driver/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
+        <ol>
+          <li>Open
+<a href="https://github.com/RobotLocomotion/optitrack-driver/releases">RobotLocomotion/optitrack-driver</a>
+and check whether that commit already has an associated release tag.</li>
+          <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
+the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,
+four digit year, two digit month, two digit day).</li>
+        </ol>
+      </li>
+      <li>Open <code class="highlighter-rouge">styleguide/repository.bzl</code> and find the <code class="highlighter-rouge">commit =</code> used.
+        <ol>
+          <li>Open <a href="https://github.com/RobotLocomotion/styleguide/releases">RobotLocomotion/styleguide</a>
 and check whether that commit already has an associated release tag.</li>
           <li>If not, then create a new release named <code class="highlighter-rouge">v0.0.foo</code> where <code class="highlighter-rouge">foo</code> is
 the 8-digit datestamp associated with the <code class="highlighter-rouge">commit</code> in question (i.e.,

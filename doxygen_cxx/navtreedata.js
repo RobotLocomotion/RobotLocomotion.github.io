@@ -110,13 +110,13 @@ var NAVTREEINDEX =
 "linear__simplex__element_8h.html",
 "namespacedrake_1_1lcm.html",
 "point__cloud__flags_8h.html#a56d63c5b36bdd2d17582653cbc3a626c",
-"scene__graph_8h.html",
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb",
-"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a8e8824802dedfbc36776227f7482b6bc",
-"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html",
-"symbolic__decompose_8h.html#a168045cc4df5fee36f317095c2a9f891",
-"symbolic__formula_8h.html#a9a8a8cf51365e956ea445cf6b77d2577",
-"symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f"
+"scene__graph__inspector_8h.html",
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626",
+"structdrake_1_1multibody_1_1parsing_1_1_add_model_instance.html#a9b45b3e13bd9167aab02e17e08916231",
+"structdrake_1_1systems_1_1analysis__test_1_1_explicit_error_controlled_integrator_test.html#a03438bfa4d94bde06f020fd03bf119f7",
+"symbolic__decompose_8h.html#a3b1b3967fa1010c4e10b2bd804453f10",
+"symbolic__formula_8h.html#aa4f5aab12f951d127ecfaf06b4f175c5",
+"system_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
