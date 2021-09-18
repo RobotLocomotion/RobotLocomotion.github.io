@@ -912,6 +912,95 @@ point’s value is ignored, and only its break time is used.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.trajectories.PiecewisePose">
+<em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">PiecewisePose</code><a class="headerlink" href="#pydrake.trajectories.PiecewisePose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory" title="pydrake.trajectories.PiecewiseTrajectory"><code class="xref py py-class docutils literal"><span class="pre">pydrake.trajectories.PiecewiseTrajectory</span></code></a></p>
+<p>A wrapper class that represents a pose trajectory, whose rotation part
+is a PiecewiseQuaternionSlerp and the translation part is a
+PiecewisePolynomial.</p>
+<p>&#64;tparam_default_scalars</p>
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.trajectories.PiecewisePose.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.trajectories.PiecewisePose) -&gt; None</li>
+</ol>
+<p>Constructs an empty piecewise pose trajectory.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.trajectories.PiecewisePose, position_trajectory: pydrake.trajectories.PiecewisePolynomial, orientation_trajectory: pydrake.trajectories.PiecewiseQuaternionSlerp) -&gt; None</li>
+</ol>
+<p>Constructor.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">pos_traj</span></code>:</dt>
+<dd>Position trajectory.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rot_traj</span></code>:</dt>
+<dd>Orientation trajectory.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.get_orientation_trajectory">
+<code class="descname">get_orientation_trajectory</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePose</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewiseQuaternionSlerp<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.get_orientation_trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the orientation trajectory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.get_position_trajectory">
+<code class="descname">get_position_trajectory</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePose</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.get_position_trajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the position trajectory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.GetAcceleration">
+<code class="descname">GetAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePose</em>, <em>time: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[6, 1]]<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.GetAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the interpolated acceleration at <code class="docutils literal"><span class="pre">time</span></code> or zero if <code class="docutils literal"><span class="pre">time</span></code>
+is before this trajectory’s start time or after its end time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.GetPose">
+<code class="descname">GetPose</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePose</em>, <em>time: float</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.GetPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the interpolated pose at <code class="docutils literal"><span class="pre">time</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.GetVelocity">
+<code class="descname">GetVelocity</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePose</em>, <em>time: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[6, 1]]<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.GetVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the interpolated velocity at <code class="docutils literal"><span class="pre">time</span></code> or zero if <code class="docutils literal"><span class="pre">time</span></code> is
+before this trajectory’s start time or after its end time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.PiecewisePose.IsApprox">
+<code class="descname">IsApprox</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.PiecewisePose</em>, <em>other: pydrake.trajectories.PiecewisePose</em>, <em>tol: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.IsApprox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the position and orientation trajectories are both
+within <code class="docutils literal"><span class="pre">tol</span></code> from the other’s.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity">
+<em class="property">static </em><code class="descname">MakeCubicLinearWithEndLinearVelocity</code><span class="sig-paren">(</span><em>times: List[float], poses: List[pydrake.math.RigidTransform_[float]], start_vel: numpy.ndarray[numpy.float64[3, 1]] = array([ 0.,  0.,  0.]), end_vel: numpy.ndarray[numpy.float64[3, 1]] = array([ 0.,  0.,  0.])</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePose<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a PiecewisePose from given <code class="docutils literal"><span class="pre">time</span></code> and <code class="docutils literal"><span class="pre">poses</span></code>. A cubic
+polynomial with given end velocities is used to construct the position
+part. The rotational part is represented by a piecewise quaterion
+trajectory. There must be at least two elements in <code class="docutils literal"><span class="pre">times</span></code> and
+<code class="docutils literal"><span class="pre">poses</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">times</span></code>:</dt>
+<dd>Breaks used to build the splines.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">poses</span></code>:</dt>
+<dd>Knots used to build the splines.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">start_vel</span></code>:</dt>
+<dd>Start linear velocity.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">end_vel</span></code>:</dt>
+<dd>End linear velocity.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.trajectories.PiecewiseQuaternionSlerp">
 <em class="property">class </em><code class="descclassname">pydrake.trajectories.</code><code class="descname">PiecewiseQuaternionSlerp</code><a class="headerlink" href="#pydrake.trajectories.PiecewiseQuaternionSlerp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.trajectories.PiecewiseTrajectory" title="pydrake.trajectories.PiecewiseTrajectory"><code class="xref py py-class docutils literal"><span class="pre">pydrake.trajectories.PiecewiseTrajectory</span></code></a></p>

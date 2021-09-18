@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__variables_8h.html#aae117a884f72a1a73cc2863ec026c011":[4,0,0,1,73,5],
+"symbolic__variables_8h.html#aba2399f6ee5b4c18bc26dc3fd5b6c07a":[4,0,0,1,73,3],
+"symbolic__vector__system_8h.html":[4,0,0,11,6,22],
+"symbolic__vector__system_8h.html#aab7d5774e6ddd8a01ac4ee761a5b1e0f":[4,0,0,11,6,22,1],
 "system_8h.html":[4,0,0,11,3,39],
 "system__base_8h.html":[4,0,0,11,3,40],
 "system__compatibility__doxygen_8h.html":[4,0,0,11,3,41],

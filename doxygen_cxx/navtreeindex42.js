@@ -1,5 +1,9 @@
 var NAVTREEINDEX42 =
 {
+"group__multibody.html":[1,4],
+"group__multibody__frames__and__bodies.html":[1,1,1,1],
+"group__multibody__notation.html":[1,1,1],
+"group__multibody__notation__basics.html":[1,1,1,0],
 "group__multibody__quantities.html":[1,1,1,2],
 "group__multibody__spatial__algebra.html":[1,1,1,4],
 "group__multibody__spatial__inertia.html":[1,1,1,4,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX42 =
 "linear__model__predictive__controller_8h.html":[4,0,0,11,1,5],
 "linear__operator_8h.html":[4,0,0,8,2,5],
 "linear__quadratic__regulator_8h.html":[4,0,0,11,1,6],
-"linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,11,1,6,4],
-"linear__quadratic__regulator_8h.html#ga0fdf8e6372fa9c822431fb5b0a5e5bd9":[4,0,0,11,1,6,2],
-"linear__quadratic__regulator_8h.html#gae7d3c5debca2daa6de88dbc014263f5c":[4,0,0,11,1,6,1],
-"linear__quadratic__regulator_8h.html#gaeaf380f9c445eee90a846b57f8b70ba7":[4,0,0,11,1,6,3],
-"linear__scalar__system_8h.html":[4,0,0,11,0,0,6]
+"linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,11,1,6,4]
 };

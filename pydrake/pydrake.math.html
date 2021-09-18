@@ -2056,6 +2056,74 @@ sqrt condition number.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyIdentity">
+<code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsIdentityToEpsilon().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsIdentityToEpsilon">
+<code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsNearlyEqualTo">
+<code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float], tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares each element of <code class="docutils literal"><span class="pre">this</span></code> to the corresponding element of
+<code class="docutils literal"><span class="pre">other</span></code> to check if they are the same to within a specified
+<code class="docutils literal"><span class="pre">tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tolerance</span></code>:</dt>
+<dd>maximum allowable absolute difference between the elements in
+<code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">‖this.matrix()</span> <span class="pre">-</span> <span class="pre">other.matrix()‖∞</span> <span class="pre">&lt;=</span> <span class="pre">tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Consider scaling tolerance with the largest of magA and magB,
+where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
+vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RigidTransform_.RigidTransform_[float].multiply">
 <code class="descname">multiply</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].multiply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2653,6 +2721,74 @@ sqrt condition number.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyIdentity">
+<code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsIdentityToEpsilon().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsIdentityToEpsilon">
+<code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsNearlyEqualTo">
+<code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], other: pydrake.math.RigidTransform_[AutoDiffXd], tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares each element of <code class="docutils literal"><span class="pre">this</span></code> to the corresponding element of
+<code class="docutils literal"><span class="pre">other</span></code> to check if they are the same to within a specified
+<code class="docutils literal"><span class="pre">tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tolerance</span></code>:</dt>
+<dd>maximum allowable absolute difference between the elements in
+<code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">‖this.matrix()</span> <span class="pre">-</span> <span class="pre">other.matrix()‖∞</span> <span class="pre">&lt;=</span> <span class="pre">tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Consider scaling tolerance with the largest of magA and magB,
+where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
+vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RigidTransform_[AutoDiffXd].multiply">
 <code class="descname">multiply</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].multiply" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3244,6 +3380,74 @@ expressed in frame B).</p>
 roughly the magnitude of the position vector. The accuracy of the
 calculation for the inverse of a RigidTransform drops off with the
 sqrt condition number.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].IsExactlyIdentity">
+<code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsIdentityToEpsilon().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].IsIdentityToEpsilon">
+<code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].IsNearlyEqualTo">
+<code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], other: pydrake.math.RigidTransform_[Expression], tolerance: float</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares each element of <code class="docutils literal"><span class="pre">this</span></code> to the corresponding element of
+<code class="docutils literal"><span class="pre">other</span></code> to check if they are the same to within a specified
+<code class="docutils literal"><span class="pre">tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tolerance</span></code>:</dt>
+<dd>maximum allowable absolute difference between the elements in
+<code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">‖this.matrix()</span> <span class="pre">-</span> <span class="pre">other.matrix()‖∞</span> <span class="pre">&lt;=</span> <span class="pre">tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Consider scaling tolerance with the largest of magA and magB,
+where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
+vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
 </div>
 </dd></dl>
 
@@ -3887,6 +4091,74 @@ expressed in frame B).</p>
 roughly the magnitude of the position vector. The accuracy of the
 calculation for the inverse of a RigidTransform drops off with the
 sqrt condition number.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].IsExactlyIdentity">
+<code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[float].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsIdentityToEpsilon().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].IsIdentityToEpsilon">
+<code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[float].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].IsNearlyEqualTo">
+<code class="descname">IsNearlyEqualTo</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float], tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[float].IsNearlyEqualTo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compares each element of <code class="docutils literal"><span class="pre">this</span></code> to the corresponding element of
+<code class="docutils literal"><span class="pre">other</span></code> to check if they are the same to within a specified
+<code class="docutils literal"><span class="pre">tolerance</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform to compare to <code class="docutils literal"><span class="pre">this</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">tolerance</span></code>:</dt>
+<dd>maximum allowable absolute difference between the elements in
+<code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">‖this.matrix()</span> <span class="pre">-</span> <span class="pre">other.matrix()‖∞</span> <span class="pre">&lt;=</span> <span class="pre">tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Consider scaling tolerance with the largest of magA and magB,
+where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
+vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
 </div>
 </dd></dl>
 

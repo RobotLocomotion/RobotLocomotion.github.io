@@ -1851,6 +1851,8 @@
 </li>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.__init__">(pydrake.trajectories.PiecewisePolynomial method)</a>
 </li>
+        <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.__init__">(pydrake.trajectories.PiecewisePose method)</a>
+</li>
         <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseQuaternionSlerp.__init__">(pydrake.trajectories.PiecewiseQuaternionSlerp method)</a>
 </li>
       </ul></li>
@@ -7390,6 +7392,8 @@
 </li>
       <li><a href="pydrake.common.cpp_template.html#pydrake.common.cpp_template.get_or_init">get_or_init() (in module pydrake.common.cpp_template)</a>
 </li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.get_orientation_trajectory">get_orientation_trajectory() (pydrake.trajectories.PiecewisePose method)</a>
+</li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].get_output_port">get_output_port() (pydrake.systems.framework.System_.System_[float] method)</a>
 
       <ul>
@@ -7490,6 +7494,8 @@
         <li><a href="pydrake.manipulation.schunk_wsg.html#pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver.get_position_output_port">(pydrake.manipulation.schunk_wsg.SchunkWsgCommandReceiver method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.get_position_trajectory">get_position_trajectory() (pydrake.trajectories.PiecewisePose method)</a>
+</li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Monomial.get_powers">get_powers() (pydrake.symbolic.Monomial method)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverOptions.get_print_file_name">get_print_file_name() (pydrake.solvers.mathematicalprogram.SolverOptions method)</a>
@@ -8043,6 +8049,8 @@
       <li><a href="pydrake.manipulation.kuka_iiwa.html#pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver.get_velocity_estimated_output_port">get_velocity_estimated_output_port() (pydrake.manipulation.kuka_iiwa.IiwaStatusReceiver method)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgramResult.get_x_val">get_x_val() (pydrake.solvers.mathematicalprogram.MathematicalProgramResult method)</a>
+</li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.GetAcceleration">GetAcceleration() (pydrake.trajectories.PiecewisePose method)</a>
 </li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetAccelerationLowerLimits">GetAccelerationLowerLimits() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
 
@@ -8710,6 +8718,8 @@
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.getPolynomialMatrix">getPolynomialMatrix() (pydrake.trajectories.PiecewisePolynomial method)</a>
 </li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.GetPose">GetPose() (pydrake.trajectories.PiecewisePose method)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].GetPoseInFrame">GetPoseInFrame() (pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float] method)</a>
 
       <ul>
@@ -8978,6 +8988,8 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].GetVelocitiesFromArray">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.GetVelocity">GetVelocity() (pydrake.trajectories.PiecewisePose method)</a>
+</li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetVelocityLowerLimits">GetVelocityLowerLimits() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
 
       <ul>
@@ -9846,6 +9858,8 @@
       </ul></li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial.isApprox">isApprox() (pydrake.trajectories.PiecewisePolynomial method)</a>
 </li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.IsApprox">IsApprox() (pydrake.trajectories.PiecewisePose method)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet.IsBounded">IsBounded() (pydrake.geometry.optimization.ConvexSet method)</a>
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.IsControllable">IsControllable() (in module pydrake.systems.primitives)</a>
@@ -9886,9 +9900,17 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].IsDifferenceEquationSystem">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_.RotationMatrix_[float].IsExactlyIdentity">IsExactlyIdentity() (pydrake.math.RotationMatrix_.RotationMatrix_[float] method)</a>
+      <li><a href="pydrake.math.html#pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyIdentity">IsExactlyIdentity() (pydrake.math.RigidTransform_.RigidTransform_[float] method)</a>
 
       <ul>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyIdentity">(pydrake.math.RigidTransform_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[Expression].IsExactlyIdentity">(pydrake.math.RigidTransform_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[float].IsExactlyIdentity">(pydrake.math.RigidTransform_[float] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_.RotationMatrix_[float].IsExactlyIdentity">(pydrake.math.RotationMatrix_.RotationMatrix_[float] method)</a>
+</li>
         <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_[AutoDiffXd].IsExactlyIdentity">(pydrake.math.RotationMatrix_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_[Expression].IsExactlyIdentity">(pydrake.math.RotationMatrix_[Expression] method)</a>
@@ -9898,6 +9920,16 @@
       </ul></li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.SimulatorStatus.IsIdenticalStatus">IsIdenticalStatus() (pydrake.systems.analysis.SimulatorStatus method)</a>
 </li>
+      <li><a href="pydrake.math.html#pydrake.math.RigidTransform_.RigidTransform_[float].IsIdentityToEpsilon">IsIdentityToEpsilon() (pydrake.math.RigidTransform_.RigidTransform_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[AutoDiffXd].IsIdentityToEpsilon">(pydrake.math.RigidTransform_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[Expression].IsIdentityToEpsilon">(pydrake.math.RigidTransform_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[float].IsIdentityToEpsilon">(pydrake.math.RigidTransform_[float] method)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_.RotationMatrix_[float].IsIdentityToInternalTolerance">IsIdentityToInternalTolerance() (pydrake.math.RotationMatrix_.RotationMatrix_[float] method)</a>
 
       <ul>
@@ -9928,9 +9960,17 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.SpatialInertia_[float].IsNaN">(pydrake.multibody.tree.SpatialInertia_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float].IsNearlyEqualTo">IsNearlyEqualTo() (pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float] method)</a>
+      <li><a href="pydrake.math.html#pydrake.math.RigidTransform_.RigidTransform_[float].IsNearlyEqualTo">IsNearlyEqualTo() (pydrake.math.RigidTransform_.RigidTransform_[float] method)</a>
 
       <ul>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[AutoDiffXd].IsNearlyEqualTo">(pydrake.math.RigidTransform_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[Expression].IsNearlyEqualTo">(pydrake.math.RigidTransform_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.math.html#pydrake.math.RigidTransform_[float].IsNearlyEqualTo">(pydrake.math.RigidTransform_[float] method)</a>
+</li>
+        <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float].IsNearlyEqualTo">(pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float] method)</a>
+</li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RotationalInertia_[AutoDiffXd].IsNearlyEqualTo">(pydrake.multibody.tree.RotationalInertia_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RotationalInertia_[Expression].IsNearlyEqualTo">(pydrake.multibody.tree.RotationalInertia_[Expression] method)</a>
@@ -10694,6 +10734,8 @@
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.VPolytope.MakeBox">(pydrake.geometry.optimization.VPolytope static method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity">MakeCubicLinearWithEndLinearVelocity() (pydrake.trajectories.PiecewisePose static method)</a>
+</li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.Trajectory.MakeDerivative">MakeDerivative() (pydrake.trajectories.Trajectory method)</a>
 </li>
       <li><a href="pydrake.multibody.parsing.html#pydrake.multibody.parsing.PackageMap.MakeEmpty">MakeEmpty() (pydrake.multibody.parsing.PackageMap static method)</a>
@@ -12055,6 +12097,8 @@
       <li><a href="pydrake.systems.controllers.html#pydrake.systems.controllers.PidController">PidController (class in pydrake.systems.controllers)</a>
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePolynomial">PiecewisePolynomial (class in pydrake.trajectories)</a>
+</li>
+      <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewisePose">PiecewisePose (class in pydrake.trajectories)</a>
 </li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.PiecewiseQuaternionSlerp">PiecewiseQuaternionSlerp (class in pydrake.trajectories)</a>
 </li>

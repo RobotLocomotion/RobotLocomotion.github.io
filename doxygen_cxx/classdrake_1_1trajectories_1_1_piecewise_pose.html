@@ -114,9 +114,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e8a6ff52ba38aeedc2104d69acb7057"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a3e8a6ff52ba38aeedc2104d69acb7057">PiecewisePose</a> ()</td></tr>
 <tr class="memdesc:a3e8a6ff52ba38aeedc2104d69acb7057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty piecewise pose trajectory.  <a href="#a3e8a6ff52ba38aeedc2104d69acb7057">More...</a><br /></td></tr>
 <tr class="separator:a3e8a6ff52ba38aeedc2104d69acb7057"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac094bc1c3461db105affc922332d13c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#ac094bc1c3461db105affc922332d13c6">PiecewisePose</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;pos_traj, const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html">PiecewiseQuaternionSlerp</a>&lt; T &gt; &amp;rot_traj)</td></tr>
-<tr class="memdesc:ac094bc1c3461db105affc922332d13c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ac094bc1c3461db105affc922332d13c6">More...</a><br /></td></tr>
-<tr class="separator:ac094bc1c3461db105affc922332d13c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe9bbc905bd05580ba6943a89d530b4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#abe9bbc905bd05580ba6943a89d530b4b">PiecewisePose</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;position_trajectory, const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html">PiecewiseQuaternionSlerp</a>&lt; T &gt; &amp;orientation_trajectory)</td></tr>
+<tr class="memdesc:abe9bbc905bd05580ba6943a89d530b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#abe9bbc905bd05580ba6943a89d530b4b">More...</a><br /></td></tr>
+<tr class="separator:abe9bbc905bd05580ba6943a89d530b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8743b4bccdaf5d24987b1f76403bbe41"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html">Trajectory</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a8743b4bccdaf5d24987b1f76403bbe41">Clone</a> () const override</td></tr>
 <tr class="separator:a8743b4bccdaf5d24987b1f76403bbe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa1f1cfff6dcb352d5fbb15a80ee1a9"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">rows</a> () const override</td></tr>
@@ -124,20 +124,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adca8eca2ee324f57170dedfb4b06160b"><td class="memItemLeft" align="right" valign="top">Eigen::Index&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b">cols</a> () const override</td></tr>
 <tr class="separator:adca8eca2ee324f57170dedfb4b06160b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab46599d8e0586d703e3a1927c1dcc934"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#ab46599d8e0586d703e3a1927c1dcc934">get_pose</a> (const T &amp;time) const</td></tr>
-<tr class="memdesc:ab46599d8e0586d703e3a1927c1dcc934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated pose at <code>time</code>.  <a href="#ab46599d8e0586d703e3a1927c1dcc934">More...</a><br /></td></tr>
+<tr class="memdesc:ab46599d8e0586d703e3a1927c1dcc934"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab46599d8e0586d703e3a1927c1dcc934">More...</a><br /></td></tr>
 <tr class="separator:ab46599d8e0586d703e3a1927c1dcc934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0738d795ce884dad03ad5ff5184d886b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a0738d795ce884dad03ad5ff5184d886b">GetPose</a> (const T &amp;time) const</td></tr>
+<tr class="memdesc:a0738d795ce884dad03ad5ff5184d886b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated pose at <code>time</code>.  <a href="#a0738d795ce884dad03ad5ff5184d886b">More...</a><br /></td></tr>
+<tr class="separator:a0738d795ce884dad03ad5ff5184d886b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b632df0f98f9aaf224e534fac69ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a19b632df0f98f9aaf224e534fac69ec8">value</a> (const T &amp;t) const override</td></tr>
 <tr class="memdesc:a19b632df0f98f9aaf224e534fac69ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the trajectory at the given time <code>t</code>.  <a href="#a19b632df0f98f9aaf224e534fac69ec8">More...</a><br /></td></tr>
 <tr class="separator:a19b632df0f98f9aaf224e534fac69ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5cd57146e674b2430a2553499e4c7c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#ab5cd57146e674b2430a2553499e4c7c3">get_velocity</a> (const T &amp;time) const</td></tr>
-<tr class="memdesc:ab5cd57146e674b2430a2553499e4c7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated velocity at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time.  <a href="#ab5cd57146e674b2430a2553499e4c7c3">More...</a><br /></td></tr>
+<tr class="memdesc:ab5cd57146e674b2430a2553499e4c7c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab5cd57146e674b2430a2553499e4c7c3">More...</a><br /></td></tr>
 <tr class="separator:ab5cd57146e674b2430a2553499e4c7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e7be149ba17c2caee73b6823184fd2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a5e7be149ba17c2caee73b6823184fd2e">GetVelocity</a> (const T &amp;time) const</td></tr>
+<tr class="memdesc:a5e7be149ba17c2caee73b6823184fd2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated velocity at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time.  <a href="#a5e7be149ba17c2caee73b6823184fd2e">More...</a><br /></td></tr>
+<tr class="separator:a5e7be149ba17c2caee73b6823184fd2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99869cc7f6c64a2876ec37c85851af35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a99869cc7f6c64a2876ec37c85851af35">get_acceleration</a> (const T &amp;time) const</td></tr>
-<tr class="memdesc:a99869cc7f6c64a2876ec37c85851af35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated acceleration at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time.  <a href="#a99869cc7f6c64a2876ec37c85851af35">More...</a><br /></td></tr>
+<tr class="memdesc:a99869cc7f6c64a2876ec37c85851af35"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a99869cc7f6c64a2876ec37c85851af35">More...</a><br /></td></tr>
 <tr class="separator:a99869cc7f6c64a2876ec37c85851af35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6002daeeb77b73b37291f8b8ef9d36c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a6002daeeb77b73b37291f8b8ef9d36c5">GetAcceleration</a> (const T &amp;time) const</td></tr>
+<tr class="memdesc:a6002daeeb77b73b37291f8b8ef9d36c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the interpolated acceleration at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time.  <a href="#a6002daeeb77b73b37291f8b8ef9d36c5">More...</a><br /></td></tr>
+<tr class="separator:a6002daeeb77b73b37291f8b8ef9d36c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40fe359517e2533a5b7b6b58d83868a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a40fe359517e2533a5b7b6b58d83868a8">is_approx</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt; T &gt; &amp;other, double tol) const</td></tr>
-<tr class="memdesc:a40fe359517e2533a5b7b6b58d83868a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the position and orientation trajectories are both within <code>tol</code> from the other's.  <a href="#a40fe359517e2533a5b7b6b58d83868a8">More...</a><br /></td></tr>
+<tr class="memdesc:a40fe359517e2533a5b7b6b58d83868a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a40fe359517e2533a5b7b6b58d83868a8">More...</a><br /></td></tr>
 <tr class="separator:a40fe359517e2533a5b7b6b58d83868a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a220c40e5653537ed8456542adcb14b89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a220c40e5653537ed8456542adcb14b89">IsApprox</a> (const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt; T &gt; &amp;other, double tol) const</td></tr>
+<tr class="memdesc:a220c40e5653537ed8456542adcb14b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the position and orientation trajectories are both within <code>tol</code> from the other's.  <a href="#a220c40e5653537ed8456542adcb14b89">More...</a><br /></td></tr>
+<tr class="separator:a220c40e5653537ed8456542adcb14b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ed665c279c199edc05b05413deb70b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b">get_position_trajectory</a> () const</td></tr>
 <tr class="memdesc:af3ed665c279c199edc05b05413deb70b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position trajectory.  <a href="#af3ed665c279c199edc05b05413deb70b">More...</a><br /></td></tr>
 <tr class="separator:af3ed665c279c199edc05b05413deb70b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -312,8 +324,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ac094bc1c3461db105affc922332d13c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac094bc1c3461db105affc922332d13c6">&#9670;&nbsp;</a></span>PiecewisePose() <span class="overload">[4/4]</span></h2>
+<a id="abe9bbc905bd05580ba6943a89d530b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe9bbc905bd05580ba6943a89d530b4b">&#9670;&nbsp;</a></span>PiecewisePose() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,13 +334,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>pos_traj</em>, </td>
+          <td class="paramname"><em>position_trajectory</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html">PiecewiseQuaternionSlerp</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>rot_traj</em>&#160;</td>
+          <td class="paramname"><em>orientation_trajectory</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -422,7 +434,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the interpolated acceleration at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>"get_acceleration() has been renamed to GetAcceleration()." <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
@@ -461,7 +475,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the interpolated pose at <code>time</code>. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>"get_pose() has been renamed to GetPose()." <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
@@ -500,6 +516,68 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>"get_velocity() has been renamed to GetVelocity()." <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
+
+</div>
+</div>
+<a id="a6002daeeb77b73b37291f8b8ef9d36c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6002daeeb77b73b37291f8b8ef9d36c5">&#9670;&nbsp;</a></span>GetAcceleration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt;T&gt; GetAcceleration </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the interpolated acceleration at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time. </p>
+
+</div>
+</div>
+<a id="a0738d795ce884dad03ad5ff5184d886b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0738d795ce884dad03ad5ff5184d886b">&#9670;&nbsp;</a></span>GetPose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt;T&gt; GetPose </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the interpolated pose at <code>time</code>. </p>
+
+</div>
+</div>
+<a id="a5e7be149ba17c2caee73b6823184fd2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e7be149ba17c2caee73b6823184fd2e">&#9670;&nbsp;</a></span>GetVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt;T&gt; GetVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 <p>Returns the interpolated velocity at <code>time</code> or zero if <code>time</code> is before this trajectory's start time or after its end time. </p>
 
 </div>
@@ -512,6 +590,38 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">bool is_approx </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tol</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>"is_approx() has been renamed to IsApprox()." <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
+
+</div>
+</div>
+<a id="a220c40e5653537ed8456542adcb14b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a220c40e5653537ed8456542adcb14b89">&#9670;&nbsp;</a></span>IsApprox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsApprox </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>other</em>, </td>
