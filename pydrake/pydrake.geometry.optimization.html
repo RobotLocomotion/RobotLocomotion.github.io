@@ -179,6 +179,77 @@
 <span id="pydrake-geometry-optimization"></span><h1>pydrake.geometry.optimization<a class="headerlink" href="#module-pydrake.geometry.optimization" title="Permalink to this headline">¶</a></h1>
 <p>Local bindings for <cite>drake::geometry::optimization</cite></p>
 <dl class="class">
+<dt id="pydrake.geometry.optimization.CartesianProduct">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">CartesianProduct</code><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯
+× Xₙ = {(x₁, x₂, …, xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈ Xₙ} We
+currently require the sets X to be bounded.</p>
+<p>This class also supports a generalization of this concept in which the
+coordinates are transformed by the linear map, {x | y = Ax + b, y ∈ Y₁
+× Y₂ × ⋯ × Yₙ}, with the default values set to the identity map. This
+concept is required for reasoning about cylinders in arbitrary poses
+as cartesian products, and more generally for describing any affine
+transform of a CartesianProduct.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.CartesianProduct.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet]) -&gt; None</li>
+</ol>
+<p>Constructs the product from a vector of convex sets. All of the sets
+must be bounded.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.CartesianProduct, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</li>
+</ol>
+<p>Constructs the product from a pair of convex sets. <code class="docutils literal"><span class="pre">setA</span></code> and
+<code class="docutils literal"><span class="pre">setB</span></code> must be bounded.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Constructs the product of convex sets in the transformed coordinates:
+{x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. <code class="docutils literal"><span class="pre">A</span></code> must be full column
+rank, and all of the sets must be bounded.</p>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.geometry.optimization.CartesianProduct, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
+</ol>
+<p>Constructs a CartesianProduct from a SceneGraph geometry and pose in
+the <code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+in the world frame.</p>
+<p>Although any geometry that can be used as a ConvexSet could also be a
+(trivial) CartesianProduct, we restrict this constructor to handling
+Cylinder geometry, which constructs the (non-trivial) Cartesian
+product of a HyperEllipsoid and an HPolyhedron. Most other SceneGraph
+geometry types are supported by at least one of the ConvexSet class
+constructors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if geometry_id does not correspond to a Cylinder.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.CartesianProduct.factor">
+<code class="descname">factor</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.CartesianProduct</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal"><span class="pre">index</span></code> factor in
+the product.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.CartesianProduct.num_factors">
+<code class="descname">num_factors</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.CartesianProduct</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.num_factors" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of factors (or sets) used in the product.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.geometry.optimization.ConvexSet">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">ConvexSet</code><a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abstract base class for defining a convex set.</p>
@@ -512,7 +583,7 @@ center (up to precision).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7efce1bc47b0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7f18dcae27b0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
@@ -602,7 +673,7 @@ IRIS algorithm.</p>
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">MinkowskiSum</code><a class="headerlink" href="#pydrake.geometry.optimization.MinkowskiSum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>A convex set that represents the Minkowski sum of multiple sets: S =
-X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X, …, xₙ ∈
+X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈
 Xₙ}</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.MinkowskiSum.__init__">

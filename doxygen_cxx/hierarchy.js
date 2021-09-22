@@ -648,6 +648,7 @@ var hierarchy =
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [
       [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", [
+        [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
         [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
         [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
         [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],

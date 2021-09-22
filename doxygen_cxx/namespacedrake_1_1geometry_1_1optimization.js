@@ -1,5 +1,6 @@
 var namespacedrake_1_1geometry_1_1optimization =
 [
+    [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product" ],
     [ "ConvexSet", "classdrake_1_1geometry_1_1optimization_1_1_convex_set.html", "classdrake_1_1geometry_1_1optimization_1_1_convex_set" ],
     [ "GraphOfConvexSets", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets" ],
     [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron" ],
