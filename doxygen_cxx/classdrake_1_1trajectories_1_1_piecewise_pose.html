@@ -207,8 +207,11 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a5200b41e6c52f4bc8cbc0c0e75cb4d79"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a5200b41e6c52f4bc8cbc0c0e75cb4d79">MakeLinear</a> (const std::vector&lt; T &gt; &amp;times, const std::vector&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&gt; &amp;poses)</td></tr>
+<tr class="memdesc:a5200b41e6c52f4bc8cbc0c0e75cb4d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html" title="A wrapper class that represents a pose trajectory, whose rotation part is a PiecewiseQuaternionSlerp ...">PiecewisePose</a> from given <code>times</code> and <code>poses</code>.  <a href="#a5200b41e6c52f4bc8cbc0c0e75cb4d79">More...</a><br /></td></tr>
+<tr class="separator:a5200b41e6c52f4bc8cbc0c0e75cb4d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2f8a49b642aecb5c19ef3625be5e61d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d">MakeCubicLinearWithEndLinearVelocity</a> (const std::vector&lt; T &gt; &amp;times, const std::vector&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&gt; &amp;poses, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;start_vel=<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;::Zero(), const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;end_vel=<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;::Zero())</td></tr>
-<tr class="memdesc:ae2f8a49b642aecb5c19ef3625be5e61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html" title="A wrapper class that represents a pose trajectory, whose rotation part is a PiecewiseQuaternionSlerp ...">PiecewisePose</a> from given <code>time</code> and <code>poses</code>.  <a href="#ae2f8a49b642aecb5c19ef3625be5e61d">More...</a><br /></td></tr>
+<tr class="memdesc:ae2f8a49b642aecb5c19ef3625be5e61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html" title="A wrapper class that represents a pose trajectory, whose rotation part is a PiecewiseQuaternionSlerp ...">PiecewisePose</a> from given <code>times</code> and <code>poses</code>.  <a href="#ae2f8a49b642aecb5c19ef3625be5e61d">More...</a><br /></td></tr>
 <tr class="separator:ae2f8a49b642aecb5c19ef3625be5e61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html">PiecewiseTrajectory&lt; T &gt;</a></td></tr>
 <tr class="memitem:adff893a14b498f0e779c90305602e44d inherit pub_static_methods_classdrake_1_1trajectories_1_1_piecewise_trajectory"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d">RandomSegmentTimes</a> (<a class="el" href="classint.html">int</a> num_segments, std::default_random_engine &amp;generator)</td></tr>
@@ -690,13 +693,58 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html" title="A wrapper class that represents a pose trajectory, whose rotation part is a PiecewiseQuaternionSlerp ...">PiecewisePose</a> from given <code>time</code> and <code>poses</code>. </p>
+<p>Constructs a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html" title="A wrapper class that represents a pose trajectory, whose rotation part is a PiecewiseQuaternionSlerp ...">PiecewisePose</a> from given <code>times</code> and <code>poses</code>. </p>
 <p>A cubic polynomial with given end velocities is used to construct the position part. The rotational part is represented by a piecewise quaterion trajectory. There must be at least two elements in <code>times</code> and <code>poses</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">times</td><td>Breaks used to build the splines. </td></tr>
     <tr><td class="paramname">poses</td><td>Knots used to build the splines. </td></tr>
     <tr><td class="paramname">start_vel</td><td>Start linear velocity. </td></tr>
     <tr><td class="paramname">end_vel</td><td>End linear velocity. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5200b41e6c52f4bc8cbc0c0e75cb4d79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5200b41e6c52f4bc8cbc0c0e75cb4d79">&#9670;&nbsp;</a></span>MakeLinear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html">PiecewisePose</a>&lt;T&gt; MakeLinear </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>times</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>poses</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html" title="A wrapper class that represents a pose trajectory, whose rotation part is a PiecewiseQuaternionSlerp ...">PiecewisePose</a> from given <code>times</code> and <code>poses</code>. </p>
+<p>The positions trajectory is constructed as a first-order hold. The orientation is constructed using the quaternion slerp. There must be at least two elements in <code>times</code> and <code>poses</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">times</td><td>Breaks used to build the splines. </td></tr>
+    <tr><td class="paramname">poses</td><td>Knots used to build the splines. </td></tr>
   </table>
   </dd>
 </dl>

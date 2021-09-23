@@ -262,6 +262,63 @@ constructed visualizer.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface">
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">HydroTriSurface</code><span class="sig-paren">(</span><em>vertices</em>, <em>normals</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">meshcat.geometry.Geometry</span></code></p>
+<p>Unique representation of the triangle surface mesh associated with
+hydroelastic mesh representations. In this case, it’s important that we
+support per-face normals (we want as honest a representation of the
+object as possible).</p>
+<p>A mesh consisting of an arbitrary collection of triangular faces. To
+construct one, you need to pass in a collection of vertices as an 3Nx3
+array and a collection of normals as a 3Nx3 array as well. The triangles
+are implied by every triple of vertex/normals. This does <em>not</em> allow
+re-use of vertices because it encodes a classic OpenGl vertex buffer
+format.</p>
+<p>For example, to create a square made out of two adjacent triangles, we
+could do:
+vertices = np.array([</p>
+<blockquote>
+<div>[0, 0, 0],  # the first vertex is at [0, 0, 0]
+[1, 0, 0],
+[1, 0, 1],
+[0, 0, 1],
+[0, 0, 0],
+[1, 0, 1]</div></blockquote>
+<p>])
+normals = np.array([</p>
+<blockquote>
+<div>[0, 1, 0],  # The square is planar, all normals point in the same dir.
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0],
+[0, 1, 0],</div></blockquote>
+<p>])
+mesh = HydroTriSurface(vertices, normals)</p>
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>vertices</em>, <em>normals</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface.lower">
+<code class="descname">lower</code><span class="sig-paren">(</span><em>object_data</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface.lower" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface.normals">
+<code class="descname">normals</code><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface.normals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface.vertices">
+<code class="descname">vertices</code><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface.vertices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer">
 <em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatContactVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz</em>, <em>force_threshold=0.01</em>, <em>contact_force_scale=10</em>, <em>plant=None</em>, <em>contact_force_radius=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
@@ -353,7 +410,7 @@ not provide RGB values.</li>
 
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer">
-<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>MeshcatVisualizer is a System block that connects to the query output port
 of a SceneGraph and visualizes the scene in Meshcat.</p>
@@ -366,7 +423,7 @@ then to run drake apps (potentially many times) that publish to that
 default url.</p>
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -409,6 +466,14 @@ may call <code class="docutils literal"><span class="pre">delete_prefix()</span>
 <li><strong>role</strong> – Renders geometry of the specified pydrake.geometry.Role
 type – defaults to Role.kIllustration to draw visual geometry,
 and also supports Role.kProximity to draw collision geometry.</li>
+<li><strong>prefer_hydro</strong> – If True (and role == Role.kProximity) any geometry
+that has a mesh hydroelastic representation will be visualized
+by that discrete mesh and not the declared primitive. In the
+case of <em>compliant</em> hydroelastic geometries, only the surface
+of the volume mesh will be drawn. This is <em>not</em> the <em>contact</em>
+surface used to characterize contact between two geometries
+with hydroelastic representations – it is the mesh
+representations of those geometries.</li>
 </ul>
 </td>
 </tr>
@@ -538,6 +603,19 @@ pan and zoom interactively in the browser.</p>
 <code class="descname">stop_recording</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.stop_recording" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disables the recording of future publish events.</p>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.meshcat_visualizer.StringToRoleAction">
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">StringToRoleAction</code><span class="sig-paren">(</span><em>option_strings</em>, <em>dest</em>, <em>nargs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.StringToRoleAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">argparse.Action</span></code></p>
+<p>Action that converts the string ‘proximity’ or ‘illustration’ to the
+corresponding Role enumeration value.</p>
+<dl class="method">
+<dt id="pydrake.systems.meshcat_visualizer.StringToRoleAction.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>option_strings</em>, <em>dest</em>, <em>nargs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.StringToRoleAction.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

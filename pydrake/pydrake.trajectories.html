@@ -981,7 +981,7 @@ within <code class="docutils literal"><span class="pre">tol</span></code> from t
 <dl class="staticmethod">
 <dt id="pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity">
 <em class="property">static </em><code class="descname">MakeCubicLinearWithEndLinearVelocity</code><span class="sig-paren">(</span><em>times: List[float], poses: List[pydrake.math.RigidTransform_[float]], start_vel: numpy.ndarray[numpy.float64[3, 1]] = array([ 0.,  0.,  0.]), end_vel: numpy.ndarray[numpy.float64[3, 1]] = array([ 0.,  0.,  0.])</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePose<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeCubicLinearWithEndLinearVelocity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a PiecewisePose from given <code class="docutils literal"><span class="pre">time</span></code> and <code class="docutils literal"><span class="pre">poses</span></code>. A cubic
+<dd><p>Constructs a PiecewisePose from given <code class="docutils literal"><span class="pre">times</span></code> and <code class="docutils literal"><span class="pre">poses</span></code>. A cubic
 polynomial with given end velocities is used to construct the position
 part. The rotational part is represented by a piecewise quaterion
 trajectory. There must be at least two elements in <code class="docutils literal"><span class="pre">times</span></code> and
@@ -995,6 +995,21 @@ trajectory. There must be at least two elements in <code class="docutils literal
 <dd>Start linear velocity.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">end_vel</span></code>:</dt>
 <dd>End linear velocity.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.trajectories.PiecewisePose.MakeLinear">
+<em class="property">static </em><code class="descname">MakeLinear</code><span class="sig-paren">(</span><em>times: List[float], poses: List[pydrake.math.RigidTransform_[float]]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePose<a class="headerlink" href="#pydrake.trajectories.PiecewisePose.MakeLinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a PiecewisePose from given <code class="docutils literal"><span class="pre">times</span></code> and <code class="docutils literal"><span class="pre">poses</span></code>. The
+positions trajectory is constructed as a first-order hold. The
+orientation is constructed using the quaternion slerp. There must be
+at least two elements in <code class="docutils literal"><span class="pre">times</span></code> and <code class="docutils literal"><span class="pre">poses</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">times</span></code>:</dt>
+<dd>Breaks used to build the splines.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">poses</span></code>:</dt>
+<dd>Knots used to build the splines.</dd>
 </dl>
 </dd></dl>
 

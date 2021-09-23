@@ -51,6 +51,7 @@ var hierarchy =
     [ "Cache", "classdrake_1_1systems_1_1_cache.html", null ],
     [ "CacheEntry", "classdrake_1_1systems_1_1_cache_entry.html", null ],
     [ "CacheEntryValue", "classdrake_1_1systems_1_1_cache_entry_value.html", null ],
+    [ "CalcGridPointsOptions", "structdrake_1_1multibody_1_1_calc_grid_points_options.html", null ],
     [ "CameraInfo", "classdrake_1_1systems_1_1sensors_1_1_camera_info.html", null ],
     [ "CartesianSetpoint< Scalar >", "classdrake_1_1systems_1_1controllers_1_1_cartesian_setpoint.html", null ],
     [ "ChebyshevPolynomial", "classdrake_1_1symbolic_1_1_chebyshev_polynomial.html", null ],
@@ -581,10 +582,10 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
-    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
+    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
+    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
@@ -955,6 +956,7 @@ var hierarchy =
       [ "PleidesTest< T >", "structdrake_1_1systems_1_1analysis__test_1_1_pleides_test.html", null ]
     ] ],
     [ "TimeStep", "structdrake_1_1systems_1_1trajectory__optimization_1_1_time_step.html", null ],
+    [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", null ],
     [ "Traits< S >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html", null ],
     [ "Traits< geometry::SceneGraph >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html", null ],
     [ "Trajectory< T >", "classdrake_1_1trajectories_1_1_trajectory.html", [

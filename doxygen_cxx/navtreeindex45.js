@@ -1,5 +1,17 @@
 var NAVTREEINDEX45 =
 {
+"piecewise__quaternion_8h.html":[4,0,0,1,3,5],
+"piecewise__trajectory_8h.html":[4,0,0,1,3,6],
+"pixel__types_8h.html":[4,0,0,11,8,11],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3d":[4,0,0,11,8,11,12],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da0326c4bed4ffb3b2f430e119a147b530":[4,0,0,11,8,11,12,1],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da238a889ea664dc69a583c89712b4f96c":[4,0,0,11,8,11,12,6],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec":[4,0,0,11,8,11,12,7],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3da3798842b1f11a731f5e11d9744c29774":[4,0,0,11,8,11,12,4],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3dab2ba7d59e9ac2edec71ea18cc201b478":[4,0,0,11,8,11,12,2],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3dad87b61f50587e7841b2d192c6e8afe05":[4,0,0,11,8,11,12,8],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3dad9ccb61d94c4349b5471a40a5b5c7ea8":[4,0,0,11,8,11,12,3],
+"pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3daeee66110e8b7e5d4ffd4f739ba15f5f6":[4,0,0,11,8,11,12,0],
 "pixel__types_8h.html#a37140413518dff2aa63096a2e31b9b3daf85535e7c32140b6d5a5544342787ced":[4,0,0,11,8,11,12,5],
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072a":[4,0,0,11,8,11,11],
 "pixel__types_8h.html#a60883d4958a60b91661e97027a85072aa40cd0e65ffc5f6da4b0de71c32a1849c":[4,0,0,11,8,11,11,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX45 =
 "rotary__encoders_8h.html":[4,0,0,11,8,13],
 "rotation_8h.html":[4,0,0,1,1,0],
 "rotation__constraint_8h.html":[4,0,0,10,44],
-"rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,10,44,2],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74":[4,0,0,10,44,1],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a27402335e74462e03adf2c79e903705e":[4,0,0,10,44,1,8],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a34bbac4b028a742de1b931cc2694dcea":[4,0,0,10,44,1,0],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a56192ce118646021d72474e9520a804a":[4,0,0,10,44,1,5],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74a6973c9c90ce92aa52ce62a6e0fc4664d":[4,0,0,10,44,1,3],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aa059fc525d6d174e5e070c7261ff8e43":[4,0,0,10,44,1,6],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aae2b1591bba5a77450b0df77a207be8f":[4,0,0,10,44,1,10],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74aca450e45c136c14aabb606a09e0775a8":[4,0,0,10,44,1,7],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74adb2b51a6cdf2edf29dc2bfdcefef6ce0":[4,0,0,10,44,1,4],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74af029ec457c6dc0bdc5bee0edc2baf12d":[4,0,0,10,44,1,1],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74af031fdd95c7b0bd771a160bf2905eaae":[4,0,0,10,44,1,9],
-"rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74af69f0d7bda8d330fcf89df333412794d":[4,0,0,10,44,1,2]
+"rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,10,44,2]
 };

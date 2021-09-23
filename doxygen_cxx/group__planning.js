@@ -81,6 +81,18 @@ var group__planning =
       [ "u_vars", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a3e9e39c3838a0bd70efe3fa22b41af59", null ],
       [ "UpdateComplementarityTolerance", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#ae4ab2d64e1aa8207be5be089fc9d6a61", null ]
     ] ],
+    [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html", [
+      [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html#ac6962da0cfeb19c216cf5920469e7926", null ],
+      [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html#a3a7ffb0f0acced8a28daa7bb2758f2f2", null ],
+      [ "~Toppra", "classdrake_1_1multibody_1_1_toppra.html#a9024708d5314cf3655e2b72c5c138a39", null ],
+      [ "Toppra", "classdrake_1_1multibody_1_1_toppra.html#ac9fc9da3b84296fbc0292963ecffb699", null ],
+      [ "AddJointAccelerationLimit", "classdrake_1_1multibody_1_1_toppra.html#a68128c4e24b7fb5ced993cc55f2453a6", null ],
+      [ "AddJointVelocityLimit", "classdrake_1_1multibody_1_1_toppra.html#aa6404ed212fab2af0bad98457df07d16", null ],
+      [ "CalcGridpts", "classdrake_1_1multibody_1_1_toppra.html#ae5efec97ee015e550baedd2c7428042f", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_toppra.html#a57c0c591fef12ba0135b9576f4344974", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1_toppra.html#ab013d8e5872653e5d10eaae0f3daa3dc", null ],
+      [ "SolvePathParameterization", "classdrake_1_1multibody_1_1_toppra.html#a243a423bdac8eca7742c66d6a85960b1", null ]
+    ] ],
     [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", [
       [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#a26b85162b5bb123a554b1ba7ec1d22ac", null ],
       [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#af6a6dfd04b282d5703c7b6d357621085", null ],

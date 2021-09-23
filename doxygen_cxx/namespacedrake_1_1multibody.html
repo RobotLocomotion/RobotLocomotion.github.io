@@ -142,6 +142,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body_frame.html">BodyFrame</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A BodyFrame is a material <a class="el" href="classdrake_1_1multibody_1_1_frame.html" title="Frame is an abstract class representing a material frame (also called a physical frame),...">Frame</a> that serves as the unique reference frame for a <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a>.  <a href="classdrake_1_1multibody_1_1_body_frame.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_calc_grid_points_options.html">CalcGridPointsOptions</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html">CentroidalMomentumConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) - k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial momentum (linear and angular momentum about the center of mass C) expressed in the world frame (W).  <a href="classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,6 +327,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html">TamsiSolverParameters</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the parameters controlling the iteration process of the <a class="el" href="classdrake_1_1multibody_1_1_tamsi_solver.html">TamsiSolver</a> solver.  <a href="structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_toppra.html">Toppra</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves a Time Optimal Path Parameterization based on Reachability Analysis (TOPPRA) to find the fastest traversal of a given path, satisfying the given constraints.  <a href="classdrake_1_1multibody_1_1_toppra.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_triangle_quadrature.html">TriangleQuadrature</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class for integrating a function using numerical quadrature over triangular domains.  <a href="classdrake_1_1multibody_1_1_triangle_quadrature.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,6 +378,11 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ad8fa828762d54ed2db5efec5df1b5082"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> { <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a">kCollocation</a>, 
+<a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">kInterpolation</a>
+ }</td></tr>
+<tr class="memdesc:ad8fa828762d54ed2db5efec5df1b5082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects how linear constraints are enforced for Toppra's optimization.  <a href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">More...</a><br /></td></tr>
+<tr class="separator:ad8fa828762d54ed2db5efec5df1b5082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f6e054758d34b83e86bea87d65dfe4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a> { <br />
 &#160;&#160;<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d">kHydroelastic</a>, 
 <a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea20e722b15a1b587c30633f0a136b7009">kPoint</a>, 
@@ -693,6 +703,35 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727"></a>kLinearSolverFailed&#160;</td><td class="fielddoc"><p>The linear solver used within the Newton-Raphson loop failed. </p>
 <p>This might be caused by a divergent iteration that led to an invalid Jacobian matrix. </p>
 </td></tr>
+</table>
+
+</div>
+</div>
+<a id="ad8fa828762d54ed2db5efec5df1b5082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8fa828762d54ed2db5efec5df1b5082">&#9670;&nbsp;</a></span>ToppraDiscretization</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selects how linear constraints are enforced for <a class="el" href="classdrake_1_1multibody_1_1_toppra.html" title="Solves a Time Optimal Path Parameterization based on Reachability Analysis (TOPPRA) to find the faste...">Toppra</a>'s optimization. </p>
+<p>kCollocation - enforces constraints only at each gridpoint. kInterpolation - enforces constrants at each gridpoint and at the following gridpoint using forward integration. Yields higher accuracy at minor computational cost. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a"></a>kCollocation&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d"></a>kInterpolation&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
