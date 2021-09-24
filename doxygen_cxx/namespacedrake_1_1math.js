@@ -7,7 +7,7 @@ var namespacedrake_1_1math =
     [ "GetSubMatrixGradientArray", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array" ],
     [ "GetSubMatrixGradientSingleElement", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element" ],
     [ "Gradient", "structdrake_1_1math_1_1_gradient.html", "structdrake_1_1math_1_1_gradient" ],
-    [ "Gradient< Derived, Nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4" ],
+    [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4" ],
     [ "GrayCodesMatrix", "structdrake_1_1math_1_1_gray_codes_matrix.html", "structdrake_1_1math_1_1_gray_codes_matrix" ],
     [ "MatGradMult", "structdrake_1_1math_1_1_mat_grad_mult.html", "structdrake_1_1math_1_1_mat_grad_mult" ],
     [ "MatGradMultMat", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", "structdrake_1_1math_1_1_mat_grad_mult_mat" ],

@@ -104,6 +104,7 @@ var searchData=
   ['khydroelastic',['kHydroelastic',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d',1,'drake::multibody']]],
   ['khydroelasticsonly',['kHydroelasticsOnly',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea0f9136530df40294d8404d10cc150423',1,'drake::multibody']]],
   ['khydroelasticwithfallback',['kHydroelasticWithFallback',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a',1,'drake::multibody']]],
+  ['kibex',['kIbex',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57',1,'drake::solvers']]],
   ['kiiwaarmnumjoints',['kIiwaArmNumJoints',['../namespacedrake_1_1manipulation_1_1kuka__iiwa.html#ab5064aebe6beff8d3ab30a4455e0dc11',1,'drake::manipulation::kuka_iiwa']]],
   ['kiiwalcmstatusperiod',['kIiwaLcmStatusPeriod',['../namespacedrake_1_1manipulation_1_1kuka__iiwa.html#a7f8b017f8ed94f3d82a82489a2066540',1,'drake::manipulation::kuka_iiwa']]],
   ['killustration',['kIllustration',['../namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951aac28e5ab68fbe5dc23f550aa18255c07',1,'drake::geometry']]],

@@ -119,8 +119,10 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html">GetSubMatrixGradientSingleElement</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_gradient.html">Gradient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively defined template specifying a matrix type of the correct size for a gradient of a matrix function with respect to <code>nq</code> variables, of any order.  <a href="structdrake_1_1math_1_1_gradient.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4.html">Gradient&lt; Derived, Nq, 1 &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html">Gradient&lt; Derived, nq, 1 &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base case for recursively defined gradient template.  <a href="structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_gray_codes_matrix.html">GrayCodesMatrix</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structdrake_1_1math_1_1_gray_codes_matrix.html#a83c3b24ce255b931f182e59775510cb1">GrayCodesMatrix::type</a> returns an Eigen matrix of integers.  <a href="structdrake_1_1math_1_1_gray_codes_matrix.html#details">More...</a><br /></td></tr>
@@ -145,10 +147,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a65ee44eb97ff7373bd2b6b088b8390b6"><td class="memTemplParams" colspan="2">template&lt;typename Derived , int Nq&gt; </td></tr>
-<tr class="memitem:a65ee44eb97ff7373bd2b6b088b8390b6"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a> = Eigen::Matrix&lt; Eigen::AutoDiffScalar&lt; Eigen::Matrix&lt; typename Derived::Scalar, Nq, 1 &gt; &gt;, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt;</td></tr>
-<tr class="memdesc:a65ee44eb97ff7373bd2b6b088b8390b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The appropriate AutoDiffScalar gradient type given the value type and the number of derivatives at compile time.  <a href="#a65ee44eb97ff7373bd2b6b088b8390b6">More...</a><br /></td></tr>
-<tr class="separator:a65ee44eb97ff7373bd2b6b088b8390b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0249a3cc715341eaf27380878eb1df9"><td class="memTemplParams" colspan="2">template&lt;typename Derived , int nq&gt; </td></tr>
+<tr class="memitem:af0249a3cc715341eaf27380878eb1df9"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a> = Eigen::Matrix&lt; Eigen::AutoDiffScalar&lt; Eigen::Matrix&lt; typename Derived::Scalar, nq, 1 &gt; &gt;, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt;</td></tr>
+<tr class="memdesc:af0249a3cc715341eaf27380878eb1df9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The appropriate AutoDiffScalar matrix type given the value type and the number of derivatives at compile time.  <a href="#af0249a3cc715341eaf27380878eb1df9">More...</a><br /></td></tr>
+<tr class="separator:af0249a3cc715341eaf27380878eb1df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -165,9 +167,13 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2131d12e81399c3201b29118d59adc87"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a2131d12e81399c3201b29118d59adc87"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_value_matrix.html">AutoDiffToValueMatrix</a>&lt; Derived &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2131d12e81399c3201b29118d59adc87">autoDiffToValueMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
-<tr class="separator:a2131d12e81399c3201b29118d59adc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb0cd738c70309748ff3cbc5c6b2d50e"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:abb0cd738c70309748ff3cbc5c6b2d50e"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#abb0cd738c70309748ff3cbc5c6b2d50e">ExtractValue</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
+<tr class="memdesc:abb0cd738c70309748ff3cbc5c6b2d50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the <code>value()</code> portion from a matrix of AutoDiffScalar entries.  <a href="#abb0cd738c70309748ff3cbc5c6b2d50e">More...</a><br /></td></tr>
+<tr class="separator:abb0cd738c70309748ff3cbc5c6b2d50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72982a8973f482f5cbf66d6656eaf08"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ab72982a8973f482f5cbf66d6656eaf08"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_value_matrix.html">AutoDiffToValueMatrix</a>&lt; Derived &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab72982a8973f482f5cbf66d6656eaf08">autoDiffToValueMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix)</td></tr>
+<tr class="separator:ab72982a8973f482f5cbf66d6656eaf08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc21793a127ffbebcb28a2442123390"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:abdc21793a127ffbebcb28a2442123390"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix)</td></tr>
 <tr class="memdesc:abdc21793a127ffbebcb28a2442123390"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardGradient(A)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, explicitly throwing away any gradient information.  <a href="#abdc21793a127ffbebcb28a2442123390">More...</a><br /></td></tr>
@@ -183,33 +189,55 @@ Functions</h2></td></tr>
 <tr class="memitem:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; _Scalar, double &gt;, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</td></tr>
 <tr class="memdesc:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aaf276d6a032d9a1ec3ea0f0f29fc1111">More...</a><br /></td></tr>
 <tr class="separator:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32d860f5fd00b3004e866af6f73a1362"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedAutoDiff &gt; </td></tr>
-<tr class="memitem:a32d860f5fd00b3004e866af6f73a1362"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a32d860f5fd00b3004e866af6f73a1362">initializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;val, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</td></tr>
-<tr class="memdesc:a32d860f5fd00b3004e866af6f73a1362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a single autodiff matrix given the corresponding value matrix.  <a href="#a32d860f5fd00b3004e866af6f73a1362">More...</a><br /></td></tr>
-<tr class="separator:a32d860f5fd00b3004e866af6f73a1362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab773f7c582bc83dd2f26c0965de1e427"><td class="memTemplParams" colspan="2">template&lt;int Nq = Eigen::Dynamic, typename Derived &gt; </td></tr>
-<tr class="memitem:ab773f7c582bc83dd2f26c0965de1e427"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt; Derived, Nq &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab773f7c582bc83dd2f26c0965de1e427">initializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</td></tr>
-<tr class="memdesc:ab773f7c582bc83dd2f26c0965de1e427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a single autodiff matrix given the corresponding value matrix.  <a href="#ab773f7c582bc83dd2f26c0965de1e427">More...</a><br /></td></tr>
-<tr class="separator:ab773f7c582bc83dd2f26c0965de1e427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a7fc1b9bbef766b25c3e3684df19eee0c">resizeDerivativesToMatchScalar</a> (Eigen::MatrixBase&lt; Derived &gt; &amp;mat, const typename Derived::Scalar &amp;scalar)</td></tr>
-<tr class="memdesc:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize derivatives vector of each element of a matrix to match the size of the derivatives vector of a given scalar.  <a href="#a7fc1b9bbef766b25c3e3684df19eee0c">More...</a><br /></td></tr>
-<tr class="separator:a7fc1b9bbef766b25c3e3684df19eee0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e5c76a80b6a785f91dd3e06200e3f83"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
-<tr class="memitem:a6e5c76a80b6a785f91dd3e06200e3f83"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt; Deriveds, internal::totalSizeAtCompileTime&lt; Deriveds... &gt;)&gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6e5c76a80b6a785f91dd3e06200e3f83">initializeAutoDiffTuple</a> (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</td></tr>
-<tr class="memdesc:a6e5c76a80b6a785f91dd3e06200e3f83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a series of Eigen matrices, create a tuple of corresponding AutoDiff matrices with values equal to the input matrices and properly initialized derivative vectors.  <a href="#a6e5c76a80b6a785f91dd3e06200e3f83">More...</a><br /></td></tr>
-<tr class="separator:a6e5c76a80b6a785f91dd3e06200e3f83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af00cd34bea44b187b01da164d5207ae3"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:af00cd34bea44b187b01da164d5207ae3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html">AutoDiffToGradientMatrix</a>&lt; Derived &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af00cd34bea44b187b01da164d5207ae3">autoDiffToGradientMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, <a class="el" href="classint.html">int</a> num_variables=Eigen::Dynamic)</td></tr>
-<tr class="separator:af00cd34bea44b187b01da164d5207ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a627c51b97633b728056e96ee26daf583"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
-<tr class="memitem:a627c51b97633b728056e96ee26daf583"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</td></tr>
-<tr class="memdesc:a627c51b97633b728056e96ee26daf583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an autodiff matrix given a matrix of values and gradient matrix.  <a href="#a627c51b97633b728056e96ee26daf583">More...</a><br /></td></tr>
-<tr class="separator:a627c51b97633b728056e96ee26daf583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e1337cae81c66571d592dd9be50df7c"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedGradient &gt; </td></tr>
-<tr class="memitem:a3e1337cae81c66571d592dd9be50df7c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt; Derived, DerivedGradient::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3e1337cae81c66571d592dd9be50df7c">initializeAutoDiffGivenGradientMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</td></tr>
-<tr class="memdesc:a3e1337cae81c66571d592dd9be50df7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and initializes an autodiff matrix given a matrix of values and gradient matrix.  <a href="#a3e1337cae81c66571d592dd9be50df7c">More...</a><br /></td></tr>
-<tr class="separator:a3e1337cae81c66571d592dd9be50df7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32942f788a67278f27426f128e50e0b2"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedAutoDiff &gt; </td></tr>
+<tr class="memitem:a32942f788a67278f27426f128e50e0b2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a32942f788a67278f27426f128e50e0b2">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_derivatives, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; deriv_num_start, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *auto_diff_matrix)</td></tr>
+<tr class="memdesc:a32942f788a67278f27426f128e50e0b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a single AutoDiff matrix given the corresponding value matrix.  <a href="#a32942f788a67278f27426f128e50e0b2">More...</a><br /></td></tr>
+<tr class="separator:a32942f788a67278f27426f128e50e0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563f68724c579b35cdaf62b72c056e5e"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedAutoDiff &gt; </td></tr>
+<tr class="memitem:a563f68724c579b35cdaf62b72c056e5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a563f68724c579b35cdaf62b72c056e5e">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *auto_diff_matrix)</td></tr>
+<tr class="memdesc:a563f68724c579b35cdaf62b72c056e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternate signature provides default values for the number of derivatives (dynamic, determined at run time) and the starting index (0).  <a href="#a563f68724c579b35cdaf62b72c056e5e">More...</a><br /></td></tr>
+<tr class="separator:a563f68724c579b35cdaf62b72c056e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6394a85153c159ec7ddf8d3b27f63917"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedAutoDiff &gt; </td></tr>
+<tr class="memitem:a6394a85153c159ec7ddf8d3b27f63917"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">initializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</td></tr>
+<tr class="separator:a6394a85153c159ec7ddf8d3b27f63917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e75abd55fa93ee21998756cf8c6e244"><td class="memTemplParams" colspan="2">template&lt;int nq = Eigen::Dynamic, typename Derived &gt; </td></tr>
+<tr class="memitem:a3e75abd55fa93ee21998756cf8c6e244"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Derived, nq &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3e75abd55fa93ee21998756cf8c6e244">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_derivatives={}, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; deriv_num_start={})</td></tr>
+<tr class="memdesc:a3e75abd55fa93ee21998756cf8c6e244"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a single AutoDiff matrix given the corresponding value matrix.  <a href="#a3e75abd55fa93ee21998756cf8c6e244">More...</a><br /></td></tr>
+<tr class="separator:a3e75abd55fa93ee21998756cf8c6e244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b7dc3351569c13b9d98ab32fd901af3"><td class="memTemplParams" colspan="2">template&lt;int nq = Eigen::Dynamic, typename Derived &gt; </td></tr>
+<tr class="memitem:a3b7dc3351569c13b9d98ab32fd901af3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Derived, nq &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3b7dc3351569c13b9d98ab32fd901af3">initializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</td></tr>
+<tr class="separator:a3b7dc3351569c13b9d98ab32fd901af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67903de1408fe87ae27f9b5a955c81ff"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a67903de1408fe87ae27f9b5a955c81ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a67903de1408fe87ae27f9b5a955c81ff">resizeDerivativesToMatchScalar</a> (Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, const typename Derived::Scalar &amp;scalar)</td></tr>
+<tr class="memdesc:a67903de1408fe87ae27f9b5a955c81ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize derivatives vector of each element of a matrix to match the size of the derivatives vector of a given scalar.  <a href="#a67903de1408fe87ae27f9b5a955c81ff">More...</a><br /></td></tr>
+<tr class="separator:a67903de1408fe87ae27f9b5a955c81ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad148a2735129010d96646652ec1f4986"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
+<tr class="memitem:ad148a2735129010d96646652ec1f4986"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Deriveds, internal::total_size_at_compile_time&lt; Deriveds... &gt;)&gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ad148a2735129010d96646652ec1f4986">InitializeAutoDiffTuple</a> (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</td></tr>
+<tr class="separator:ad148a2735129010d96646652ec1f4986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d2993436a049675d4aefab5e8661862"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
+<tr class="memitem:a8d2993436a049675d4aefab5e8661862"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Deriveds, internal::total_size_at_compile_time&lt; Deriveds... &gt;)&gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8d2993436a049675d4aefab5e8661862">initializeAutoDiffTuple</a> (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</td></tr>
+<tr class="separator:a8d2993436a049675d4aefab5e8661862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099a62886c181d6f9b917f0215a1a947"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a099a62886c181d6f9b917f0215a1a947"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::SizeAtCompileTime, Eigen::Dynamic &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a099a62886c181d6f9b917f0215a1a947">ExtractGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_derivatives={})</td></tr>
+<tr class="memdesc:a099a62886c181d6f9b917f0215a1a947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the <code>derivatives()</code> portion from a matrix of AutoDiffScalar entries.  <a href="#a099a62886c181d6f9b917f0215a1a947">More...</a><br /></td></tr>
+<tr class="separator:a099a62886c181d6f9b917f0215a1a947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83fe4512cb9f4a0997cbc08243404e63"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a83fe4512cb9f4a0997cbc08243404e63"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html">AutoDiffToGradientMatrix</a>&lt; Derived &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a83fe4512cb9f4a0997cbc08243404e63">autoDiffToGradientMatrix</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix, <a class="el" href="classint.html">int</a> num_derivatives=Eigen::Dynamic)</td></tr>
+<tr class="separator:a83fe4512cb9f4a0997cbc08243404e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01d5aa7f58a485b614ddc46e7be7dd4"><td class="memTemplParams" colspan="2">template&lt;typename DerivedValue , typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
+<tr class="memitem:ac01d5aa7f58a485b614ddc46e7be7dd4"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ac01d5aa7f58a485b614ddc46e7be7dd4">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *auto_diff_matrix)</td></tr>
+<tr class="memdesc:ac01d5aa7f58a485b614ddc46e7be7dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes an AutoDiff matrix given a matrix of values and a gradient matrix.  <a href="#ac01d5aa7f58a485b614ddc46e7be7dd4">More...</a><br /></td></tr>
+<tr class="separator:ac01d5aa7f58a485b614ddc46e7be7dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e2a9bc07853150c96614244960dc23"><td class="memTemplParams" colspan="2">template&lt;typename DerivedValue , typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
+<tr class="memitem:a36e2a9bc07853150c96614244960dc23"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</td></tr>
+<tr class="separator:a36e2a9bc07853150c96614244960dc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23c3981782540c98f8a1cb2abc59627"><td class="memTemplParams" colspan="2">template&lt;typename DerivedValue , typename DerivedGradient &gt; </td></tr>
+<tr class="memitem:af23c3981782540c98f8a1cb2abc59627"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; DerivedValue, DerivedGradient::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af23c3981782540c98f8a1cb2abc59627">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</td></tr>
+<tr class="memdesc:af23c3981782540c98f8a1cb2abc59627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an AutoDiff matrix given a matrix of values and a gradient matrix.  <a href="#af23c3981782540c98f8a1cb2abc59627">More...</a><br /></td></tr>
+<tr class="separator:af23c3981782540c98f8a1cb2abc59627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60989b35690cd787112c9d14e8161ec2"><td class="memTemplParams" colspan="2">template&lt;typename DerivedValue , typename DerivedGradient &gt; </td></tr>
+<tr class="memitem:a60989b35690cd787112c9d14e8161ec2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; DerivedValue, DerivedGradient::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a60989b35690cd787112c9d14e8161ec2">initializeAutoDiffGivenGradientMatrix</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</td></tr>
+<tr class="separator:a60989b35690cd787112c9d14e8161ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplParams" colspan="2">template&lt;typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
 <tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">gradientMatrixToAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</td></tr>
 <tr class="memdesc:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a9a5aa65ce6d612ea5275c1f724a7f319">More...</a><br /></td></tr>
@@ -480,39 +508,31 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Here is an example code. </p><div class="fragment"><div class="line">Eigen::Matrix&lt;AutoDiffd&lt;3&gt;, 2, 2&gt; A_ad;</div><div class="line"><span class="comment">// Set the value and gradient in A_ad with arbitrary values;</span></div><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 3, 4;</div><div class="line"><span class="comment">// Gradient of A.col(0).</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A0_gradient;</div><div class="line">A0_gradient &lt;&lt; 1, 2, 3, 4, 5, 6;</div><div class="line">A_ad.col(0) = <a class="code" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(0), A0_gradient);</div><div class="line"><span class="comment">// Gradient of A.col(1)</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A1_gradient;</div><div class="line">A1_gradient &lt;&lt; 7, 8, 9, 10, 11, 12;</div><div class="line">A_ad.col(1) = <a class="code" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(1), A1_gradient);</div><div class="line"><span class="comment">// Set the value and gradient of b to arbitrary value.</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(2, 3);</div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; b_gradient;</div><div class="line">b_gradient &lt;&lt; 1, 3, 5, 7, 9, 11;</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b_ad = <a class="code" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a>(b_val, b_gradient);</div><div class="line"><span class="comment">// Solve the linear system A_val * x_val = b_val.</span></div><div class="line">Eigen::PartialPivLU&lt;Eigen::Matrix2d&gt; linear_solver(A_val);</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_val = <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(linear_solver, A_val, b_val);</div><div class="line"><span class="comment">// Solve the linear system A*x=b, together with the gradient.</span></div><div class="line"><span class="comment">// x_ad contains both the value of the solution A*x=b, together with its</span></div><div class="line"><span class="comment">// gradient.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_ad = <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(linear_solver, A_ad, b_ad);</div></div><!-- fragment --> </div></td></tr>
-<tr class="memitem:ae19b872a74eab60ba4e7edec626b8035"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:ae19b872a74eab60ba4e7edec626b8035"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value &amp;&amp;internal::is_double_or_symbolic&lt; typename DerivedB::Scalar &gt;::value &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a> (const LinearSolver &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:ae19b872a74eab60ba4e7edec626b8035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A and b are both double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrices.  <a href="#ae19b872a74eab60ba4e7edec626b8035">More...</a><br /></td></tr>
-<tr class="separator:ae19b872a74eab60ba4e7edec626b8035"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22ef8ddc01621bfea0d26d27d3822be1"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a22ef8ddc01621bfea0d26d27d3822be1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;!internal::is_double_or_symbolic&lt; typename DerivedB::Scalar &gt;::value, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a22ef8ddc01621bfea0d26d27d3822be1">LinearSolve</a> (const LinearSolver &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a22ef8ddc01621bfea0d26d27d3822be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is a double-valued matrix and b is an AutoDiffScalar-valued matrix .See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details.  <a href="#a22ef8ddc01621bfea0d26d27d3822be1">More...</a><br /></td></tr>
-<tr class="separator:a22ef8ddc01621bfea0d26d27d3822be1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65261ee2a29dd949589e1a5d29dd9779"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a65261ee2a29dd949589e1a5d29dd9779"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a65261ee2a29dd949589e1a5d29dd9779">LinearSolve</a> (const LinearSolver &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a65261ee2a29dd949589e1a5d29dd9779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double.  <a href="#a65261ee2a29dd949589e1a5d29dd9779">More...</a><br /></td></tr>
-<tr class="separator:a65261ee2a29dd949589e1a5d29dd9779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Get linear solver</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="get_linear_solver"></a></p>
-<p>Create the linear solver for a given matrix A, which will be used to solve the linear system of equations A * x = b.</p>
-<p>The following table indicate the scalar type of the matrix in the returned linear solver, depending on the scalar type in matrix A</p>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">A  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr   </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">solver  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">Expr   </td></tr>
-</table>
-<p>where ADS stands for Eigen::AutoDiffScalar, and Expr stands for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. Here is the example code </p><div class="fragment"><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 2, 5;</div><div class="line"><a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(3, 4);</div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> x_val =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_val), A_val, b_val);</div><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 2&gt; A_ad;</div><div class="line">A_ad(0, 0).value() = A_val(0, 0);</div><div class="line">A_ad(0, 0).derivatives() = Eigen::Vector3d(1, 2, 3);</div><div class="line">A_ad(0, 1).value() = A_val(0, 1);</div><div class="line">A_ad(0, 1).derivatives() = Eigen::Vector3d(2, 3, 4);</div><div class="line">A_ad(1, 0).value() = A_val(1, 0);</div><div class="line">A_ad(1, 0).derivatives() = Eigen::Vector3d(3, 4, 5);</div><div class="line">A_ad(1, 1).value() = A_val(1, 1);</div><div class="line">A_ad(1, 1).derivatives() = Eigen::Vector3d(4, 5, 6);</div><div class="line"><span class="comment">// Solve A * x = b with A containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad1 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_ad), A_ad, b_val);</div><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; b_ad;</div><div class="line">b_ad(0).value() = b_val(0);</div><div class="line">b_ad(0).derivatives() = Eigen::Vector3d(5, 6, 7);</div><div class="line">b_ad(1).value() = b_val(1);</div><div class="line">b_ad(1).derivatives() = Eigen::Vector3d(6, 7, 8);</div><div class="line"><span class="comment">// Solve A * x = b with b containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad2 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_val), A_val, b_ad);</div><div class="line"><span class="comment">// Solve A * x = b with both A and b containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad3 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#ae19b872a74eab60ba4e7edec626b8035">LinearSolve</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_ad), A_ad, b_ad);</div></div><!-- fragment --><p>{cc} </p>
-</div></td></tr>
-<tr class="memitem:a4b6432ad0f036babf00c234c9a11df9e"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA &gt; </td></tr>
-<tr class="memitem:a4b6432ad0f036babf00c234c9a11df9e"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, LinearSolverType&lt; Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime &gt; &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4b6432ad0f036babf00c234c9a11df9e">GetLinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
-<tr class="memdesc:a4b6432ad0f036babf00c234c9a11df9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear solver for a matrix A containing double or symbolic::Expressions.  <a href="#a4b6432ad0f036babf00c234c9a11df9e">More...</a><br /></td></tr>
-<tr class="separator:a4b6432ad0f036babf00c234c9a11df9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac9b72789bb55f8e0dd41d36303d195"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA &gt; </td></tr>
-<tr class="memitem:a7ac9b72789bb55f8e0dd41d36303d195"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, LinearSolverType&lt; Eigen::Matrix&lt; double, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime &gt; &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a7ac9b72789bb55f8e0dd41d36303d195">GetLinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
-<tr class="memdesc:a7ac9b72789bb55f8e0dd41d36303d195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear solver for a matrix A containing AutoDiffScalar.  <a href="#a7ac9b72789bb55f8e0dd41d36303d195">More...</a><br /></td></tr>
-<tr class="separator:a7ac9b72789bb55f8e0dd41d36303d195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<p>Here is an example code. </p><div class="fragment"><div class="line">Eigen::Matrix&lt;AutoDiffd&lt;3&gt;, 2, 2&gt; A_ad;</div><div class="line"><span class="comment">// Set the value and gradient in A_ad with arbitrary values;</span></div><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 3, 4;</div><div class="line"><span class="comment">// Gradient of A.col(0).</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A0_gradient;</div><div class="line">A0_gradient &lt;&lt; 1, 2, 3, 4, 5, 6;</div><div class="line">A_ad.col(0) = <a class="code" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(0), A0_gradient);</div><div class="line"><span class="comment">// Gradient of A.col(1)</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A1_gradient;</div><div class="line">A1_gradient &lt;&lt; 7, 8, 9, 10, 11, 12;</div><div class="line">A_ad.col(1) = <a class="code" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(1), A1_gradient);</div><div class="line"><span class="comment">// Set the value and gradient of b to arbitrary value.</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(2, 3);</div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; b_gradient;</div><div class="line">b_gradient &lt;&lt; 1, 3, 5, 7, 9, 11;</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b_ad = <a class="code" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a>(b_val, b_gradient);</div><div class="line"><span class="comment">// Solve the linear system A_val * x_val = b_val.</span></div><div class="line">Eigen::PartialPivLU&lt;Eigen::Matrix2d&gt; linear_solver(A_val);</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_val = <a class="code" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a>(linear_solver, A_val, b_val);</div><div class="line"><span class="comment">// Solve the linear system A*x=b, together with the gradient.</span></div><div class="line"><span class="comment">// x_ad contains both the value of the solution A*x=b, together with its</span></div><div class="line"><span class="comment">// gradient.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_ad = <a class="code" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a>(linear_solver, A_ad, b_ad);</div></div><!-- fragment --> </div></td></tr>
+<tr class="memitem:a058825f71b44c44e61dd90c3b89ec87d"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a058825f71b44c44e61dd90c3b89ec87d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a> (const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a058825f71b44c44e61dd90c3b89ec87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A and b are both double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrices.  <a href="#a058825f71b44c44e61dd90c3b89ec87d">More...</a><br /></td></tr>
+<tr class="separator:a058825f71b44c44e61dd90c3b89ec87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12cd1e9dec4704f09c44c240f5b95346"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a12cd1e9dec4704f09c44c240f5b95346"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a12cd1e9dec4704f09c44c240f5b95346">LinearSolve</a> (const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a12cd1e9dec4704f09c44c240f5b95346"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a12cd1e9dec4704f09c44c240f5b95346">More...</a><br /></td></tr>
+<tr class="separator:a12cd1e9dec4704f09c44c240f5b95346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5b45142d674480f5196638f903867f9"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:ae5b45142d674480f5196638f903867f9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;!internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ae5b45142d674480f5196638f903867f9">SolveLinearSystem</a> (const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:ae5b45142d674480f5196638f903867f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is a double-valued matrix and b is an AutoDiffScalar-valued matrix .See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details.  <a href="#ae5b45142d674480f5196638f903867f9">More...</a><br /></td></tr>
+<tr class="separator:ae5b45142d674480f5196638f903867f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a629a74f63be2d7e37543dc705db83df7"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a629a74f63be2d7e37543dc705db83df7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;!internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a629a74f63be2d7e37543dc705db83df7">LinearSolve</a> (const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a629a74f63be2d7e37543dc705db83df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a629a74f63be2d7e37543dc705db83df7">More...</a><br /></td></tr>
+<tr class="separator:a629a74f63be2d7e37543dc705db83df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a330a49d70f7a590760819c4f228425f6"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a330a49d70f7a590760819c4f228425f6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a330a49d70f7a590760819c4f228425f6">SolveLinearSystem</a> (const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a330a49d70f7a590760819c4f228425f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double.  <a href="#a330a49d70f7a590760819c4f228425f6">More...</a><br /></td></tr>
+<tr class="separator:a330a49d70f7a590760819c4f228425f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff2e71eedf1bd76dc28d9f30b04cace"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:acff2e71eedf1bd76dc28d9f30b04cace"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#acff2e71eedf1bd76dc28d9f30b04cace">LinearSolve</a> (const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:acff2e71eedf1bd76dc28d9f30b04cace"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#acff2e71eedf1bd76dc28d9f30b04cace">More...</a><br /></td></tr>
+<tr class="separator:acff2e71eedf1bd76dc28d9f30b04cace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">solve linear system of equations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="linear_solve"></a> Solve linear system of equations A * x = b. Where A is an Eigen matrix of double/AutoDiffScalar/symbolic::Expression, and b is an Eigen matrix of double/AutoDiffScalar/symbolic::Expression. Note that when either A or b contains <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, the other has to contain <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> as well. When either A or b contains AutoDiffScalar, we use implicit function theorem to find the gradient in x as ∂x/∂zᵢ = A⁻¹(∂b/∂zᵢ - ∂A/∂zᵢ * x) where z is the variable we take gradient with.</p>
 <p>The following table indicate the scalar type of x with A/b containing the specified scalar type. The entries with NA are not supported.</p>
@@ -544,34 +564,85 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Here is an example code. </p><div class="fragment"><div class="line">Eigen::Matrix&lt;AutoDiffd&lt;3&gt;, 2, 2&gt; A_ad;</div><div class="line"><span class="comment">// Set the value and gradient in A_ad with arbitrary values;</span></div><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 3, 4;</div><div class="line"><span class="comment">// Gradient of A.col(0).</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A0_gradient;</div><div class="line">A0_gradient &lt;&lt; 1, 2, 3, 4, 5, 6;</div><div class="line">A_ad.col(0) = <a class="code" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(0), A0_gradient);</div><div class="line"><span class="comment">// Gradient of A.col(1)</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A1_gradient;</div><div class="line">A1_gradient &lt;&lt; 7, 8, 9, 10, 11, 12;</div><div class="line">A_ad.col(1) = <a class="code" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(1), A1_gradient);</div><div class="line"><span class="comment">// Set the value and gradient of b to arbitrary value.</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(2, 3);</div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; b_gradient;</div><div class="line">b_gradient &lt;&lt; 1, 3, 5, 7, 9, 11;</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b_ad = <a class="code" href="namespacedrake_1_1math.html#a627c51b97633b728056e96ee26daf583">initializeAutoDiffGivenGradientMatrix</a>(b_val, b_gradient);</div><div class="line"><span class="comment">// Solve the linear system A*x=b without the gradient.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_val = LinearSolve&lt;Eigen::PartialPivLU&gt;(A_val, b_val);</div><div class="line"><span class="comment">// Solve the linear system A*x=b, together with the gradient.</span></div><div class="line"><span class="comment">// x_ad contains both the value of the solution A*x=b, together with its</span></div><div class="line"><span class="comment">// gradient.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_ad = LinearSolve&lt;Eigen::PartialPivLU&gt;(A_ad, b_ad);</div></div><!-- fragment --> </div></td></tr>
-<tr class="memitem:ade89928d7cc0c9127dab2f803d32408a"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:ade89928d7cc0c9127dab2f803d32408a"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value &amp;&amp;internal::is_double_or_symbolic&lt; typename DerivedB::Scalar &gt;::value &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ade89928d7cc0c9127dab2f803d32408a">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:ade89928d7cc0c9127dab2f803d32408a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization for both A and b being double-valued matrices.  <a href="#ade89928d7cc0c9127dab2f803d32408a">More...</a><br /></td></tr>
-<tr class="separator:ade89928d7cc0c9127dab2f803d32408a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcf6fc41a39525524ddda3f9a0e41a10"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:abcf6fc41a39525524ddda3f9a0e41a10"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;!internal::is_double_or_symbolic&lt; typename DerivedB::Scalar &gt;::value, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#abcf6fc41a39525524ddda3f9a0e41a10">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:abcf6fc41a39525524ddda3f9a0e41a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization for A being double-valued matrix, and b being AutoDiffScalar-valued matrix.  <a href="#abcf6fc41a39525524ddda3f9a0e41a10">More...</a><br /></td></tr>
-<tr class="separator:abcf6fc41a39525524ddda3f9a0e41a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49a377f4caf31b45f1bed480369fe2f9"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a49a377f4caf31b45f1bed480369fe2f9"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic&lt; typename DerivedA::Scalar &gt;::value, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a49a377f4caf31b45f1bed480369fe2f9">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a49a377f4caf31b45f1bed480369fe2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization when A is a matrix of AutoDiffScalar.  <a href="#a49a377f4caf31b45f1bed480369fe2f9">More...</a><br /></td></tr>
-<tr class="separator:a49a377f4caf31b45f1bed480369fe2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<p>Here is an example code. </p><div class="fragment"><div class="line">Eigen::Matrix&lt;AutoDiffd&lt;3&gt;, 2, 2&gt; A_ad;</div><div class="line"><span class="comment">// Set the value and gradient in A_ad with arbitrary values;</span></div><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 3, 4;</div><div class="line"><span class="comment">// Gradient of A.col(0).</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A0_gradient;</div><div class="line">A0_gradient &lt;&lt; 1, 2, 3, 4, 5, 6;</div><div class="line">A_ad.col(0) = <a class="code" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(0), A0_gradient);</div><div class="line"><span class="comment">// Gradient of A.col(1)</span></div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; A1_gradient;</div><div class="line">A1_gradient &lt;&lt; 7, 8, 9, 10, 11, 12;</div><div class="line">A_ad.col(1) = <a class="code" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a>(</div><div class="line">    A_val.col(1), A1_gradient);</div><div class="line"><span class="comment">// Set the value and gradient of b to arbitrary value.</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(2, 3);</div><div class="line">Eigen::Matrix&lt;double, 2, 3&gt; b_gradient;</div><div class="line">b_gradient &lt;&lt; 1, 3, 5, 7, 9, 11;</div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> b_ad = <a class="code" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">initializeAutoDiffGivenGradientMatrix</a>(b_val, b_gradient);</div><div class="line"><span class="comment">// Solve the linear system A*x=b without the gradient.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_val = SolveLinearSystem&lt;Eigen::PartialPivLU&gt;(A_val, b_val);</div><div class="line"><span class="comment">// Solve the linear system A*x=b, together with the gradient.</span></div><div class="line"><span class="comment">// x_ad contains both the value of the solution A*x=b, together with its</span></div><div class="line"><span class="comment">// gradient.</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">auto</span> x_ad = SolveLinearSystem&lt;Eigen::PartialPivLU&gt;(A_ad, b_ad);</div></div><!-- fragment --> </div></td></tr>
+<tr class="memitem:ac8229b4b5fa06b098639dbf00e82fc78"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:ac8229b4b5fa06b098639dbf00e82fc78"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ac8229b4b5fa06b098639dbf00e82fc78">SolveLinearSystem</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:ac8229b4b5fa06b098639dbf00e82fc78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization for both A and b being double-valued matrices.  <a href="#ac8229b4b5fa06b098639dbf00e82fc78">More...</a><br /></td></tr>
+<tr class="separator:ac8229b4b5fa06b098639dbf00e82fc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c6f5510dba4ed848869421642a507b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a86c6f5510dba4ed848869421642a507b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a86c6f5510dba4ed848869421642a507b">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a86c6f5510dba4ed848869421642a507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a86c6f5510dba4ed848869421642a507b">More...</a><br /></td></tr>
+<tr class="separator:a86c6f5510dba4ed848869421642a507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6afc2838c9f0557a1060507a584548ea"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a6afc2838c9f0557a1060507a584548ea"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;!internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6afc2838c9f0557a1060507a584548ea">SolveLinearSystem</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a6afc2838c9f0557a1060507a584548ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization for A being double-valued matrix, and b being AutoDiffScalar-valued matrix.  <a href="#a6afc2838c9f0557a1060507a584548ea">More...</a><br /></td></tr>
+<tr class="separator:a6afc2838c9f0557a1060507a584548ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cbe77d752e146af183c38a4e830042c"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a4cbe77d752e146af183c38a4e830042c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;!internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4cbe77d752e146af183c38a4e830042c">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a4cbe77d752e146af183c38a4e830042c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4cbe77d752e146af183c38a4e830042c">More...</a><br /></td></tr>
+<tr class="separator:a4cbe77d752e146af183c38a4e830042c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab72ac2c5ed9d77fd217afef0db0694b1"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:ab72ac2c5ed9d77fd217afef0db0694b1"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ab72ac2c5ed9d77fd217afef0db0694b1">SolveLinearSystem</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:ab72ac2c5ed9d77fd217afef0db0694b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization when A is a matrix of AutoDiffScalar.  <a href="#ab72ac2c5ed9d77fd217afef0db0694b1">More...</a><br /></td></tr>
+<tr class="separator:ab72ac2c5ed9d77fd217afef0db0694b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52bc61b704331cc7159ee4f3c2c87dfa"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:a52bc61b704331cc7159ee4f3c2c87dfa"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a52bc61b704331cc7159ee4f3c2c87dfa">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
+<tr class="memdesc:a52bc61b704331cc7159ee4f3c2c87dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a52bc61b704331cc7159ee4f3c2c87dfa">More...</a><br /></td></tr>
+<tr class="separator:a52bc61b704331cc7159ee4f3c2c87dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Get linear solver</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrpaf2e3eb63ecef8e2d47c52ea3815274d"></a><a class="anchor" id="get_linear_solver"></a></p>
+<p>Create the linear solver for a given matrix A, which will be used to solve the linear system of equations A * x = b.</p>
+<p>The following table indicate the scalar type of the matrix in the returned linear solver, depending on the scalar type in matrix A</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">A  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">solver  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">Expr   </td></tr>
+</table>
+<p>where ADS stands for Eigen::AutoDiffScalar, and Expr stands for <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>. Here is the example code </p><div class="fragment"><div class="line">Eigen::Matrix2d A_val;</div><div class="line">A_val &lt;&lt; 1, 2, 2, 5;</div><div class="line"><a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b_val(3, 4);</div><div class="line"><span class="keyword">const</span> <a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> x_val =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_val), A_val, b_val);</div><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 2&gt; A_ad;</div><div class="line">A_ad(0, 0).value() = A_val(0, 0);</div><div class="line">A_ad(0, 0).derivatives() = Eigen::Vector3d(1, 2, 3);</div><div class="line">A_ad(0, 1).value() = A_val(0, 1);</div><div class="line">A_ad(0, 1).derivatives() = Eigen::Vector3d(2, 3, 4);</div><div class="line">A_ad(1, 0).value() = A_val(1, 0);</div><div class="line">A_ad(1, 0).derivatives() = Eigen::Vector3d(3, 4, 5);</div><div class="line">A_ad(1, 1).value() = A_val(1, 1);</div><div class="line">A_ad(1, 1).derivatives() = Eigen::Vector3d(4, 5, 6);</div><div class="line"><span class="comment">// Solve A * x = b with A containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad1 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_ad), A_ad, b_val);</div><div class="line">Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; b_ad;</div><div class="line">b_ad(0).value() = b_val(0);</div><div class="line">b_ad(0).derivatives() = Eigen::Vector3d(5, 6, 7);</div><div class="line">b_ad(1).value() = b_val(1);</div><div class="line">b_ad(1).derivatives() = Eigen::Vector3d(6, 7, 8);</div><div class="line"><span class="comment">// Solve A * x = b with b containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad2 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_val), A_val, b_ad);</div><div class="line"><span class="comment">// Solve A * x = b with both A and b containing gradient.</span></div><div class="line"><span class="keyword">const</span> Eigen::Matrix&lt;AutoDiffXd, 2, 1&gt; x_ad3 =</div><div class="line">  <a class="code" href="namespacedrake_1_1math.html#a058825f71b44c44e61dd90c3b89ec87d">SolveLinearSystem</a>(GetLinearSolver&lt;Eigen::LLT&gt;(A_ad), A_ad, b_ad);</div></div><!-- fragment --><p>{cc} </p>
+</td></tr>
+<tr class="memitem:a83f5ce728ad96445072eecaf28b83eb4"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA &gt; </td></tr>
+<tr class="memitem:a83f5ce728ad96445072eecaf28b83eb4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> = LinearSolverType&lt; Eigen::Matrix&lt; std::conditional_t&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt;, typename DerivedA::Scalar, double &gt;, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime &gt; &gt;</td></tr>
+<tr class="memdesc:a83f5ce728ad96445072eecaf28b83eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The return type of GetLinearSolver function.  <a href="#a83f5ce728ad96445072eecaf28b83eb4">More...</a><br /></td></tr>
+<tr class="separator:a83f5ce728ad96445072eecaf28b83eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada1b2ebdc1844a99851185d0921bf8db"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA &gt; </td></tr>
+<tr class="memitem:ada1b2ebdc1844a99851185d0921bf8db"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a>&lt; LinearSolverType, DerivedA &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ada1b2ebdc1844a99851185d0921bf8db">GetLinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
+<tr class="memdesc:ada1b2ebdc1844a99851185d0921bf8db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear solver for a matrix A.  <a href="#ada1b2ebdc1844a99851185d0921bf8db">More...</a><br /></td></tr>
+<tr class="separator:ada1b2ebdc1844a99851185d0921bf8db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a65ee44eb97ff7373bd2b6b088b8390b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ee44eb97ff7373bd2b6b088b8390b6">&#9670;&nbsp;</a></span>AutoDiffMatrixType</h2>
+<a id="af0249a3cc715341eaf27380878eb1df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0249a3cc715341eaf27380878eb1df9">&#9670;&nbsp;</a></span>AutoDiffMatrixType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a> =  Eigen::Matrix&lt; Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;typename Derived::Scalar, Nq, 1&gt; &gt;, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a> =  Eigen::Matrix&lt; Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;typename Derived::Scalar, nq, 1&gt; &gt;, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>The appropriate AutoDiffScalar gradient type given the value type and the number of derivatives at compile time. </p>
+<p>The appropriate AutoDiffScalar matrix type given the value type and the number of derivatives at compile time. </p>
+
+</div>
+</div>
+<a id="a83f5ce728ad96445072eecaf28b83eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83f5ce728ad96445072eecaf28b83eb4">&#9670;&nbsp;</a></span>LinearSolver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> =  LinearSolverType&lt;Eigen::Matrix&lt; std::conditional_t&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt;, typename DerivedA::Scalar, double&gt;, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The return type of GetLinearSolver function. </p>
+<p>It is the type of the linear solver. For example LinearSolver&lt;Eigen::LLT, Eigen::Matrix3d&gt;::type is Eigen::LLT&lt;Eigen::Matrix3d&gt;. See <a class="el" href="namespacedrake_1_1math.html#get_linear_solver">get_linear_solver</a> for more details. When DerivedA::Scalar is double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, the solver scalar type is the same as DerivedA::Scalar; when DerivedA::Scalar is Eigen::AutoDiffScalar, the solver scalar type is double. </p>
 
 </div>
 </div>
@@ -682,8 +753,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af00cd34bea44b187b01da164d5207ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af00cd34bea44b187b01da164d5207ae3">&#9670;&nbsp;</a></span>autoDiffToGradientMatrix()</h2>
+<a id="a83fe4512cb9f4a0997cbc08243404e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83fe4512cb9f4a0997cbc08243404e63">&#9670;&nbsp;</a></span>autoDiffToGradientMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -692,13 +763,13 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html">AutoDiffToGradientMatrix</a>&lt;Derived&gt;::type drake::math::autoDiffToGradientMatrix </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>auto_diff_matrix</em>, </td>
+          <td class="paramname"><em>autodiff_matrix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>num_variables</em> = <code>Eigen::Dynamic</code>&#160;</td>
+          <td class="paramname"><em>num_derivatives</em> = <code>Eigen::Dynamic</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -710,8 +781,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2131d12e81399c3201b29118d59adc87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2131d12e81399c3201b29118d59adc87">&#9670;&nbsp;</a></span>autoDiffToValueMatrix()</h2>
+<a id="ab72982a8973f482f5cbf66d6656eaf08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72982a8973f482f5cbf66d6656eaf08">&#9670;&nbsp;</a></span>autoDiffToValueMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -720,7 +791,7 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="structdrake_1_1math_1_1_auto_diff_to_value_matrix.html">AutoDiffToValueMatrix</a>&lt;Derived&gt;::type drake::math::autoDiffToValueMatrix </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>auto_diff_matrix</em></td><td>)</td>
+          <td class="paramname"><em>autodiff_matrix</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1019,7 +1090,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>"Use RotationMatrix::MakeFromOneVector()." <br />
  This will be removed from Drake on or after "2021-10-01" .</dd></dl>
 
 </div>
@@ -1385,7 +1456,8 @@ d₁ = P*d
 <p><code>B = DiscardGradient(A)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, explicitly throwing away any gradient information. </p>
 <p>For a matrix of type, e.g. <code>MatrixX&lt;AutoDiffXd&gt; A</code>, the comparable operation <code>B = A.cast&lt;double&gt;()</code> should (and does) fail to compile. Use <code>DiscardGradient(A)</code> if you want to force the cast (and explicitly declare that information is lost).</p>
 <p>This method is overloaded to permit the user to call it for double types and AutoDiffScalar types (to avoid the calling function having to handle the two cases differently).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient</a> </dd></dl>
+<p>See <a class="el" href="namespacedrake_1_1math.html#abb0cd738c70309748ff3cbc5c6b2d50e" title="Extracts the value() portion from a matrix of AutoDiffScalar entries.">ExtractValue()</a> for a note on similar Drake functions.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abb0cd738c70309748ff3cbc5c6b2d50e" title="Extracts the value() portion from a matrix of AutoDiffScalar entries.">ExtractValue()</a>, <a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a> </dd></dl>
 
 </div>
 </div>
@@ -1481,6 +1553,7 @@ d₁ = P*d
 <p><code>B = DiscardZeroGradient(A, precision)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, but first checking that the gradient matrix is empty or zero. </p>
 <p>For a matrix of type, e.g. <code>MatrixX&lt;AutoDiffXd&gt; A</code>, the comparable operation <code>B = A.cast&lt;double&gt;()</code> should (and does) fail to compile. Use <code>DiscardZeroGradient(A)</code> if you want to force the cast (and the check).</p>
 <p>This method is overloaded to permit the user to call it for double types and AutoDiffScalar types (to avoid the calling function having to handle the two cases differently).</p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#abb0cd738c70309748ff3cbc5c6b2d50e" title="Extracts the value() portion from a matrix of AutoDiffScalar entries.">ExtractValue()</a> for a note on similar Drake functions.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">precision</td><td>is passed to Eigen's isZero(precision) to evaluate whether the gradients are zero. </td></tr>
@@ -1489,11 +1562,11 @@ d₁ = P*d
 </dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the gradients were not empty nor zero.</td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the gradients were not empty nor zero. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a> </dd></dl>
 
 </div>
 </div>
@@ -1811,6 +1884,104 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 
 </div>
 </div>
+<a id="a099a62886c181d6f9b917f0215a1a947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099a62886c181d6f9b917f0215a1a947">&#9670;&nbsp;</a></span>ExtractGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt;typename Derived::Scalar::Scalar, Derived::SizeAtCompileTime, Eigen::Dynamic&gt; drake::math::ExtractGradient </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>auto_diff_matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>num_derivatives</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracts the <code>derivatives()</code> portion from a matrix of AutoDiffScalar entries. </p>
+<p>(Each entry contains a value and derivatives.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">auto_diff_matrix</td><td>An object whose Eigen type represents a matrix of AutoDiffScalar entries. </td></tr>
+    <tr><td class="paramname">num_derivatives</td><td>(Optional) The number of derivatives to return in case the input matrix has none, which we interpret as <code>num_derivatives</code> zeroes. If <code>num_derivatives</code> is supplied and the input matrix has derivatives, the sizes must match. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">gradient_matrix</td><td>An Eigen::Matrix with number of rows equal to the total size (rows x cols) of the input matrix and number of columns equal to the number of derivatives. Each output row corresponds to one entry of the input matrix, in input row order.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Derived</td><td>An Eigen type representing a matrix with AutoDiffScalar entries. The type will be inferred from the type of the <code>auto_diff_matrix</code> parameter at the call site.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the input matrix has elements with inconsistent, non-zero numbers of derivatives. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if <code>num_derivatives</code> is specified but the input matrix has a different, non-zero number of derivatives. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abb0cd738c70309748ff3cbc5c6b2d50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb0cd738c70309748ff3cbc5c6b2d50e">&#9670;&nbsp;</a></span>ExtractValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt;typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; drake::math::ExtractValue </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>auto_diff_matrix</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extracts the <code>value()</code> portion from a matrix of AutoDiffScalar entries. </p>
+<p>(Each entry contains a value and some derivatives.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">auto_diff_matrix</td><td>An object whose Eigen type represents a matrix of AutoDiffScalar entries. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">value</td><td>An Eigen::Matrix of the same dimensions as the input matrix, but containing only the value portion of each entry, without the derivatives. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Derived</td><td>An Eigen type representing a matrix with AutoDiffScalar entries. The type will be inferred from the type of the <code>auto_diff_matrix</code> parameter at the call site.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Drake provides several similar functions: <a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a> is specialized so that it can be applied to a <code>Matrix&lt;T&gt;</code> where T could be an AutoDiffScalar or an ordinary double, in which case it returns the original matrix at no cost. <a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a> is similar but requires that the discarded gradient was zero. <a class="el" href="namespacedrake.html#aa9721f3a5897b05ef2168f7a6d886dc8" title="Returns the autodiff scalar&#39;s value() as a double.">drake::ExtractDoubleOrThrow()</a> has many specializations, including one for <code>Matrix&lt;AutoDiffScalar&gt;</code> that behaves identically to <a class="el" href="namespacedrake_1_1math.html#abb0cd738c70309748ff3cbc5c6b2d50e" title="Extracts the value() portion from a matrix of AutoDiffScalar entries.">ExtractValue()</a>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#abdc21793a127ffbebcb28a2442123390" title="B = DiscardGradient(A) enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar typ...">DiscardGradient()</a>, <a class="el" href="namespacedrake.html#aa9721f3a5897b05ef2168f7a6d886dc8" title="Returns the autodiff scalar&#39;s value() as a double.">drake::ExtractDoubleOrThrow()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a4360e58bcb10c6b20aa3e28fed7297fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4360e58bcb10c6b20aa3e28fed7297fb">&#9670;&nbsp;</a></span>GetDerivativeSize()</h2>
 
@@ -1837,14 +2008,14 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 
 </div>
 </div>
-<a id="a4b6432ad0f036babf00c234c9a11df9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b6432ad0f036babf00c234c9a11df9e">&#9670;&nbsp;</a></span>GetLinearSolver() <span class="overload">[1/2]</span></h2>
+<a id="ada1b2ebdc1844a99851185d0921bf8db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada1b2ebdc1844a99851185d0921bf8db">&#9670;&nbsp;</a></span>GetLinearSolver()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value, LinearSolverType&lt;Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime&gt; &gt; &gt;::type drake::math::GetLinearSolver </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a>&lt;LinearSolverType, DerivedA&gt; drake::math::GetLinearSolver </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
           <td class="paramname"><em>A</em></td><td>)</td>
@@ -1853,29 +2024,8 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Get the linear solver for a matrix A containing double or symbolic::Expressions. </p>
-<p>The returned linear solver will have matrix type containing the same scalar type as A. See <a class="el" href="namespacedrake_1_1math.html#get_linear_solver">get_linear_solver</a> for more details. </p>
-
-</div>
-</div>
-<a id="a7ac9b72789bb55f8e0dd41d36303d195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ac9b72789bb55f8e0dd41d36303d195">&#9670;&nbsp;</a></span>GetLinearSolver() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value, LinearSolverType&lt;Eigen::Matrix&lt;double, DerivedA::RowsAtCompileTime, DerivedA::ColsAtCompileTime, Eigen::ColMajor, DerivedA::MaxRowsAtCompileTime, DerivedA::MaxColsAtCompileTime&gt; &gt; &gt;::type drake::math::GetLinearSolver </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the linear solver for a matrix A containing AutoDiffScalar. </p>
-<p>The returned linear solver will be LinearSolverType&lt;Matrix&lt;double, Rows, Cols&gt;&gt; </p>
+<p>Get the linear solver for a matrix A. </p>
+<p>If A has scalar type of double or symbolic::Expressions, then the returned linear solver will have the same scalar type. If A has scalar type of Eigen::AutoDiffScalar, then the returned linear solver will have scalar type of double. See <a class="el" href="namespacedrake_1_1math.html#get_linear_solver">get_linear_solver</a> for more details. </p>
 
 </div>
 </div>
@@ -2182,8 +2332,136 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 
 </div>
 </div>
-<a id="a32d860f5fd00b3004e866af6f73a1362"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32d860f5fd00b3004e866af6f73a1362">&#9670;&nbsp;</a></span>initializeAutoDiff() <span class="overload">[1/2]</span></h2>
+<a id="ac01d5aa7f58a485b614ddc46e7be7dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01d5aa7f58a485b614ddc46e7be7dd4">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::math::InitializeAutoDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *&#160;</td>
+          <td class="paramname"><em>auto_diff_matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes an AutoDiff matrix given a matrix of values and a gradient matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value matrix. Will be accessed with a single index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gradient</td><td>The gradient matrix. The number of rows must match the total size (nrow x ncol) of the value matrix. Derivatives of value(j) should be stored in row j of the gradient matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">auto_diff_matrix</td><td>The matrix of AutoDiffScalars. Will be resized as needed to have the same dimensions as the value matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32942f788a67278f27426f128e50e0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32942f788a67278f27426f128e50e0b2">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::math::InitializeAutoDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>num_derivatives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>deriv_num_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *&#160;</td>
+          <td class="paramname"><em>auto_diff_matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a single AutoDiff matrix given the corresponding value matrix. </p>
+<p>Sets the values of <code>auto_diff_matrix</code> (after resizing if necessary) to be equal to <code>value</code>, and for each element i of <code>auto_diff_matrix</code>, resizes the derivatives vector to <code>num_derivatives</code> and sets derivative number <code>deriv_num_start</code> + i to one (all other elements of the derivative vector set to zero).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>a 'regular' matrix of values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_derivatives</td><td>(Optional) size of the derivatives vector <br />
+ <em>Default:</em> total size of the value matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deriv_num_start</td><td>(Optional) starting index into derivative vector (i.e. element deriv_num_start in derivative vector corresponds to value(0, 0)). <br />
+ <em>Default:</em> 0 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">auto_diff_matrix</td><td>AutoDiff matrix set as described above </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a563f68724c579b35cdaf62b72c056e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563f68724c579b35cdaf62b72c056e5e">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::math::InitializeAutoDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *&#160;</td>
+          <td class="paramname"><em>auto_diff_matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alternate signature provides default values for the number of derivatives (dynamic, determined at run time) and the starting index (0). </p>
+
+</div>
+</div>
+<a id="a6394a85153c159ec7ddf8d3b27f63917"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6394a85153c159ec7ddf8d3b27f63917">&#9670;&nbsp;</a></span>initializeAutoDiff() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2192,7 +2470,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
           <td class="memname">void drake::math::initializeAutoDiff </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
+          <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2220,30 +2498,112 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Initialize a single autodiff matrix given the corresponding value matrix. </p>
-<p>Set the values of <code>auto_diff_matrix</code> to be equal to <code>val</code>, and for each element i of <code>auto_diff_matrix</code>, resize the derivatives vector to <code>num_derivatives</code>, and set derivative number <code>deriv_num_start</code> + i to one (all other elements of the derivative vector set to zero).</p>
+</div>
+</div>
+<a id="af23c3981782540c98f8a1cb2abc59627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23c3981782540c98f8a1cb2abc59627">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt;DerivedValue, DerivedGradient::ColsAtCompileTime&gt; drake::math::InitializeAutoDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an AutoDiff matrix given a matrix of values and a gradient matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mat</td><td>'regular' matrix of values </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">ret</td><td>AutoDiff matrix </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">num_derivatives</td><td>the size of the derivatives vector <br />
- <em>Default:</em> the size of mat </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deriv_num_start</td><td>starting index into derivative vector (i.e. element deriv_num_start in derivative vector corresponds to mat(0, 0)). <br />
- <em>Default:</em> 0 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value matrix. Will be accessed with a single index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gradient</td><td>The gradient matrix. The number of rows must match the total size (nrow x ncol) of the value matrix. Derivatives of value(j) should be stored in row j of the gradient matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">auto_diff_matrix</td><td>The matrix of AutoDiffScalars. Will have the same dimensions as the value matrix. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ab773f7c582bc83dd2f26c0965de1e427"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab773f7c582bc83dd2f26c0965de1e427">&#9670;&nbsp;</a></span>initializeAutoDiff() <span class="overload">[2/2]</span></h2>
+<a id="a3e75abd55fa93ee21998756cf8c6e244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e75abd55fa93ee21998756cf8c6e244">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt;Derived, Nq&gt; drake::math::initializeAutoDiff </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt;Derived, nq&gt; drake::math::InitializeAutoDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>num_derivatives</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td>
+          <td class="paramname"><em>deriv_num_start</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes a single AutoDiff matrix given the corresponding value matrix. </p>
+<p>Creates an AutoDiff matrix that matches <code>value</code> in size with derivative of compile time size <code>nq</code> and runtime size <code>num_derivatives</code>. Sets its values to be equal to <code>value</code>, and for each element i of <code>auto_diff_matrix</code>, sets derivative number <code>deriv_num_start</code> + i to one (all other derivatives set to zero).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>'regular' matrix of values </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">num_derivatives</td><td>(Optional) size of the derivatives vector <br />
+ <em>Default:</em> total size of the value matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">deriv_num_start</td><td>(Optional) starting index into derivative vector (i.e. element deriv_num_start in derivative vector corresponds to matrix(0, 0)). <br />
+ <em>Default:</em> 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">auto_diff_matrix</td><td>The result as described above. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b7dc3351569c13b9d98ab32fd901af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7dc3351569c13b9d98ab32fd901af3">&#9670;&nbsp;</a></span>initializeAutoDiff() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt;Derived, nq&gt; drake::math::initializeAutoDiff </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>mat</em>, </td>
@@ -2268,24 +2628,10 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Initialize a single autodiff matrix given the corresponding value matrix. </p>
-<p>Create autodiff matrix that matches <code>mat</code> in size with derivatives of compile time size <code>Nq</code> and runtime size <code>num_derivatives</code>. Set its values to be equal to <code>val</code>, and for each element i of <code>auto_diff_matrix</code>, set derivative number <code>deriv_num_start</code> + i to one (all other derivatives set to zero).</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mat</td><td>'regular' matrix of values </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">num_derivatives</td><td>the size of the derivatives vector <br />
- <em>Default:</em> the size of mat </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">deriv_num_start</td><td>starting index into derivative vector (i.e. element deriv_num_start in derivative vector corresponds to mat(0, 0)). <br />
- <em>Default:</em> 0 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>AutoDiff matrix </dd></dl>
-
 </div>
 </div>
-<a id="a627c51b97633b728056e96ee26daf583"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a627c51b97633b728056e96ee26daf583">&#9670;&nbsp;</a></span>initializeAutoDiffGivenGradientMatrix() <span class="overload">[1/2]</span></h2>
+<a id="a36e2a9bc07853150c96614244960dc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e2a9bc07853150c96614244960dc23">&#9670;&nbsp;</a></span>initializeAutoDiffGivenGradientMatrix() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2293,8 +2639,8 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
         <tr>
           <td class="memname">void drake::math::initializeAutoDiffGivenGradientMatrix </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>val</em>, </td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2316,28 +2662,18 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Initializes an autodiff matrix given a matrix of values and gradient matrix. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>value matrix </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gradient</td><td>gradient matrix; the derivatives of val(j) are stored in row j of the gradient matrix. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">autodiff_matrix</td><td>matrix of AutoDiffScalars with the same size as <code>val</code> </td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
-<a id="a3e1337cae81c66571d592dd9be50df7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e1337cae81c66571d592dd9be50df7c">&#9670;&nbsp;</a></span>initializeAutoDiffGivenGradientMatrix() <span class="overload">[2/2]</span></h2>
+<a id="a60989b35690cd787112c9d14e8161ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60989b35690cd787112c9d14e8161ec2">&#9670;&nbsp;</a></span>initializeAutoDiffGivenGradientMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt;Derived, DerivedGradient::ColsAtCompileTime&gt; drake::math::initializeAutoDiffGivenGradientMatrix </td>
+          <td class="memname"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt;DerivedValue, DerivedGradient::ColsAtCompileTime&gt; drake::math::initializeAutoDiffGivenGradientMatrix </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
           <td class="paramname"><em>val</em>, </td>
         </tr>
         <tr>
@@ -2354,26 +2690,16 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Creates and initializes an autodiff matrix given a matrix of values and gradient matrix. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>value matrix </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gradient</td><td>gradient matrix; the derivatives of val(j) are stored in row j of the gradient matrix. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>autodiff_matrix matrix of AutoDiffScalars with the same size as <code>val</code> </dd></dl>
-
 </div>
 </div>
-<a id="a6e5c76a80b6a785f91dd3e06200e3f83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e5c76a80b6a785f91dd3e06200e3f83">&#9670;&nbsp;</a></span>initializeAutoDiffTuple()</h2>
+<a id="ad148a2735129010d96646652ec1f4986"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad148a2735129010d96646652ec1f4986">&#9670;&nbsp;</a></span>InitializeAutoDiffTuple()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::tuple&lt;<a class="el" href="namespacedrake_1_1math.html#a65ee44eb97ff7373bd2b6b088b8390b6">AutoDiffMatrixType</a>&lt; Deriveds, internal::totalSizeAtCompileTime&lt;Deriveds...&gt;)&gt;...&gt; drake::math::initializeAutoDiffTuple </td>
+          <td class="memname">std::tuple&lt;<a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Deriveds, internal::total_size_at_compile_time&lt;Deriveds...&gt;)&gt;...&gt; drake::math::InitializeAutoDiffTuple </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; Deriveds &gt; &amp;...&#160;</td>
           <td class="paramname"><em>args</em></td><td>)</td>
@@ -2382,15 +2708,23 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Given a series of Eigen matrices, create a tuple of corresponding AutoDiff matrices with values equal to the input matrices and properly initialized derivative vectors. </p>
-<p>The size of the derivative vector of each element of the matrices in the output tuple will be the same, and will equal the sum of the number of elements of the matrices in <code>args</code>. If all of the matrices in <code>args</code> have fixed size, then the derivative vectors will also have fixed size (being the sum of the sizes at compile time of all of the input arguments), otherwise the derivative vectors will have dynamic size. The 0th element of the derivative vectors will correspond to the derivative with respect to the 0th element of the first argument. Subsequent derivative vector elements correspond first to subsequent elements of the first input argument (traversed first by row, then by column), and so on for subsequent arguments.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">args</td><td>a series of Eigen matrices </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>a tuple of properly initialized AutoDiff matrices corresponding to <code>args</code> </dd></dl>
+</div>
+</div>
+<a id="a8d2993436a049675d4aefab5e8661862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d2993436a049675d4aefab5e8661862">&#9670;&nbsp;</a></span>initializeAutoDiffTuple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;<a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Deriveds, internal::total_size_at_compile_time&lt;Deriveds...&gt;)&gt;...&gt; drake::math::initializeAutoDiffTuple </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Deriveds &gt; &amp;...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2724,16 +3058,16 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 
 </div>
 </div>
-<a id="ae19b872a74eab60ba4e7edec626b8035"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae19b872a74eab60ba4e7edec626b8035">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[1/6]</span></h2>
+<a id="a12cd1e9dec4704f09c44c240f5b95346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12cd1e9dec4704f09c44c240f5b95346">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value &amp;&amp; internal::is_double_or_symbolic&lt;typename DerivedB::Scalar&gt;::value &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
+          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
           <td>(</td>
-          <td class="paramtype">const LinearSolver &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>linear_solver</em>, </td>
         </tr>
         <tr>
@@ -2756,21 +3090,22 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Specialized when A and b are both double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrices. </p>
-<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. Note that <code>A</code> is unused, as we already compute its factorization in <code>linear_solver</code>. But we keep it here for consistency with the overloaded function, where A is a matrix of AutoDiffScalar. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>"Please use SolveLinearSystem() instead of LinearSolve()" <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
-<a id="a22ef8ddc01621bfea0d26d27d3822be1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22ef8ddc01621bfea0d26d27d3822be1">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[2/6]</span></h2>
+<a id="a629a74f63be2d7e37543dc705db83df7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a629a74f63be2d7e37543dc705db83df7">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; !internal::is_double_or_symbolic&lt;typename DerivedB::Scalar&gt;::value, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
+          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; !internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
           <td>(</td>
-          <td class="paramtype">const LinearSolver &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>linear_solver</em>, </td>
         </tr>
         <tr>
@@ -2793,21 +3128,22 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Specialized when A is a double-valued matrix and b is an AutoDiffScalar-valued matrix .See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. </p>
-<p>Note that <code>A</code> is unused, as we already compute its factorization in <code>linear_solver</code>. But we keep it here for consistency with the overloaded function, where A is a matrix of AutoDiffScalar. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>"Please use SolveLinearSystem() instead of LinearSolve()" <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
-<a id="a65261ee2a29dd949589e1a5d29dd9779"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65261ee2a29dd949589e1a5d29dd9779">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[3/6]</span></h2>
+<a id="acff2e71eedf1bd76dc28d9f30b04cace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff2e71eedf1bd76dc28d9f30b04cace">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
+          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
           <td>(</td>
-          <td class="paramtype">const LinearSolver &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;&#160;</td>
           <td class="paramname"><em>linear_solver</em>, </td>
         </tr>
         <tr>
@@ -2830,19 +3166,20 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double. </p>
-<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>"Please use SolveLinearSystem() instead of LinearSolve()" <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
-<a id="ade89928d7cc0c9127dab2f803d32408a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade89928d7cc0c9127dab2f803d32408a">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[4/6]</span></h2>
+<a id="a86c6f5510dba4ed848869421642a507b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c6f5510dba4ed848869421642a507b">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value &amp;&amp; internal::is_double_or_symbolic&lt;typename DerivedB::Scalar&gt;::value &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
+          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -2861,19 +3198,20 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Template specialization for both A and b being double-valued matrices. </p>
-<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve">linear_solve</a> for more details. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>"Please use SolveLinearSystem() instead of LinearSolve()" <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
-<a id="abcf6fc41a39525524ddda3f9a0e41a10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcf6fc41a39525524ddda3f9a0e41a10">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[5/6]</span></h2>
+<a id="a4cbe77d752e146af183c38a4e830042c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cbe77d752e146af183c38a4e830042c">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; !internal::is_double_or_symbolic&lt;typename DerivedB::Scalar&gt;::value, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
+          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; !internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -2892,19 +3230,20 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Template specialization for A being double-valued matrix, and b being AutoDiffScalar-valued matrix. </p>
-<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve">linear_solve</a> for more details. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>"Please use SolveLinearSystem() instead of LinearSolve()" <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
-<a id="a49a377f4caf31b45f1bed480369fe2f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49a377f4caf31b45f1bed480369fe2f9">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[6/6]</span></h2>
+<a id="a52bc61b704331cc7159ee4f3c2c87dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52bc61b704331cc7159ee4f3c2c87dfa">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic&lt;typename DerivedA::Scalar&gt;::value, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
+          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
           <td class="paramname"><em>A</em>, </td>
@@ -2923,8 +3262,9 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
       </table>
 </div><div class="memdoc">
 
-<p>Template specialization when A is a matrix of AutoDiffScalar. </p>
-<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve">linear_solve</a> for more details. </p>
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>"Please use SolveLinearSystem() instead of LinearSolve()" <br />
+ This will be removed from Drake on or after "2022-01-01" .</dd></dl>
 
 </div>
 </div>
@@ -3436,8 +3776,8 @@ else
 
 </div>
 </div>
-<a id="a7fc1b9bbef766b25c3e3684df19eee0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fc1b9bbef766b25c3e3684df19eee0c">&#9670;&nbsp;</a></span>resizeDerivativesToMatchScalar()</h2>
+<a id="a67903de1408fe87ae27f9b5a955c81ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67903de1408fe87ae27f9b5a955c81ff">&#9670;&nbsp;</a></span>resizeDerivativesToMatchScalar()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3446,7 +3786,7 @@ else
           <td class="memname">void drake::math::resizeDerivativesToMatchScalar </td>
           <td>(</td>
           <td class="paramtype">Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>mat</em>, </td>
+          <td class="paramname"><em>matrix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3683,6 +4023,210 @@ else
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a058825f71b44c44e61dd90c3b89ec87d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058825f71b44c44e61dd90c3b89ec87d">&#9670;&nbsp;</a></span>SolveLinearSystem() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;&#160;</td>
+          <td class="paramname"><em>linear_solver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specialized when A and b are both double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrices. </p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. Note that <code>A</code> is unused, as we already compute its factorization in <code>linear_solver</code>. But we keep it here for consistency with the overloaded function, where A is a matrix of AutoDiffScalar. </p>
+
+</div>
+</div>
+<a id="ae5b45142d674480f5196638f903867f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b45142d674480f5196638f903867f9">&#9670;&nbsp;</a></span>SolveLinearSystem() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; !internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;&#160;</td>
+          <td class="paramname"><em>linear_solver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specialized when A is a double-valued matrix and b is an AutoDiffScalar-valued matrix .See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. </p>
+<p>Note that <code>A</code> is unused, as we already compute its factorization in <code>linear_solver</code>. But we keep it here for consistency with the overloaded function, where A is a matrix of AutoDiffScalar. </p>
+
+</div>
+</div>
+<a id="a330a49d70f7a590760819c4f228425f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a330a49d70f7a590760819c4f228425f6">&#9670;&nbsp;</a></span>SolveLinearSystem() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1math.html#a83f5ce728ad96445072eecaf28b83eb4">LinearSolver</a> &amp;&#160;</td>
+          <td class="paramname"><em>linear_solver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double. </p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve_given_solver">linear_solve_given_solver</a> for more details. </p>
+
+</div>
+</div>
+<a id="ac8229b4b5fa06b098639dbf00e82fc78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8229b4b5fa06b098639dbf00e82fc78">&#9670;&nbsp;</a></span>SolveLinearSystem() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Template specialization for both A and b being double-valued matrices. </p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve">linear_solve</a> for more details. </p>
+
+</div>
+</div>
+<a id="a6afc2838c9f0557a1060507a584548ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afc2838c9f0557a1060507a584548ea">&#9670;&nbsp;</a></span>SolveLinearSystem() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; !internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Template specialization for A being double-valued matrix, and b being AutoDiffScalar-valued matrix. </p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve">linear_solve</a> for more details. </p>
+
+</div>
+</div>
+<a id="ab72ac2c5ed9d77fd217afef0db0694b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab72ac2c5ed9d77fd217afef0db0694b1">&#9670;&nbsp;</a></span>SolveLinearSystem() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt; !internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::SolveLinearSystem </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Template specialization when A is a matrix of AutoDiffScalar. </p>
+<p>See <a class="el" href="namespacedrake_1_1math.html#linear_solve">linear_solve</a> for more details. </p>
 
 </div>
 </div>

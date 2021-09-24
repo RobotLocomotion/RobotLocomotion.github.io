@@ -67,6 +67,7 @@ var searchData=
   ['khydroelastic',['kHydroelastic',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d',1,'drake::multibody']]],
   ['khydroelasticsonly',['kHydroelasticsOnly',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea0f9136530df40294d8404d10cc150423',1,'drake::multibody']]],
   ['khydroelasticwithfallback',['kHydroelasticWithFallback',['../namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a',1,'drake::multibody']]],
+  ['kibex',['kIbex',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57',1,'drake::solvers']]],
   ['killustration',['kIllustration',['../namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951aac28e5ab68fbe5dc23f550aa18255c07',1,'drake::geometry']]],
   ['kinequality',['kInequality',['../namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0faad3bf38271b2a03f735e67b88923c432',1,'drake::systems']]],
   ['kinfeasible_5for_5funbounded',['kInfeasible_Or_Unbounded',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3',1,'drake::solvers']]],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: Gradient&lt; Derived, Nq, DerivativeOrder &gt; Struct Template Reference</title>
+<title>Drake: Gradient&lt; Derived, nq, derivative_order &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,26 +96,31 @@ $(document).ready(function(){initNavTree('structdrake_1_1math_1_1_gradient.html'
 <a href="#pub-types">Public Types</a> &#124;
 <a href="structdrake_1_1math_1_1_gradient-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Gradient&lt; Derived, Nq, DerivativeOrder &gt; Struct Template Reference</div>  </div>
+<div class="title">Gradient&lt; Derived, nq, derivative_order &gt; Struct Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename Derived, int nq, int derivative_order = 1&gt;<br />
+struct drake::math::Gradient&lt; Derived, nq, derivative_order &gt;</h3>
 
+<p>Recursively defined template specifying a matrix type of the correct size for a gradient of a matrix function with respect to <code>nq</code> variables, of any order. </p>
+</div>
 <p><code>#include &lt;drake/math/gradient.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7e931855896541356d337c7ad3d66f53"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Matrix&lt; typename Derived::Scalar,((Derived::SizeAtCompileTime==Eigen::Dynamic||Nq==Eigen::Dynamic) ? Eigen::Dynamic :<a class="el" href="structdrake_1_1math_1_1_gradient.html">Gradient</a>&lt; Derived, Nq, DerivativeOrder - 1 &gt;::type::SizeAtCompileTime), Nq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_gradient.html#a7e931855896541356d337c7ad3d66f53">type</a></td></tr>
-<tr class="separator:a7e931855896541356d337c7ad3d66f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9313c120423caca056641271c39df68d"><td class="memItemLeft" align="right" valign="top">typedef Eigen::Matrix&lt; typename Derived::Scalar,((Derived::SizeAtCompileTime==Eigen::Dynamic||nq==Eigen::Dynamic) ? Eigen::Dynamic :<a class="el" href="structdrake_1_1math_1_1_gradient.html">Gradient</a>&lt; Derived, nq, derivative_order - 1 &gt;::type::SizeAtCompileTime), nq &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1math_1_1_gradient.html#a9313c120423caca056641271c39df68d">type</a></td></tr>
+<tr class="separator:a9313c120423caca056641271c39df68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a7e931855896541356d337c7ad3d66f53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e931855896541356d337c7ad3d66f53">&#9670;&nbsp;</a></span>type</h2>
+<a id="a9313c120423caca056641271c39df68d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9313c120423caca056641271c39df68d">&#9670;&nbsp;</a></span>type</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef Eigen::Matrix&lt; typename Derived::Scalar, ((Derived::SizeAtCompileTime == Eigen::Dynamic || Nq == Eigen::Dynamic) ? Eigen::Dynamic : <a class="el" href="structdrake_1_1math_1_1_gradient.html">Gradient</a>&lt;Derived, Nq, DerivativeOrder - 1&gt;::type::SizeAtCompileTime), Nq&gt; <a class="el" href="structdrake_1_1math_1_1_gradient.html#a7e931855896541356d337c7ad3d66f53">type</a></td>
+          <td class="memname">typedef Eigen::Matrix&lt; typename Derived::Scalar, ((Derived::SizeAtCompileTime == Eigen::Dynamic || nq == Eigen::Dynamic) ? Eigen::Dynamic : <a class="el" href="structdrake_1_1math_1_1_gradient.html">Gradient</a>&lt;Derived, nq, derivative_order - 1&gt;::type::SizeAtCompileTime), nq&gt; <a class="el" href="structdrake_1_1math_1_1_gradient.html#a9313c120423caca056641271c39df68d">type</a></td>
         </tr>
       </table>
 </div><div class="memdoc">

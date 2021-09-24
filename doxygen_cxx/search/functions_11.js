@@ -97,7 +97,7 @@ var searchData=
   ['resetstatistics',['ResetStatistics',['../classdrake_1_1systems_1_1_integrator_base.html#a64a01ac56f8a0086cc6ed335ee9e5caa',1,'drake::systems::IntegratorBase::ResetStatistics()'],['../classdrake_1_1systems_1_1_simulator.html#a64a01ac56f8a0086cc6ed335ee9e5caa',1,'drake::systems::Simulator::ResetStatistics()']]],
   ['reshape',['Reshape',['../classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a39001029f6f2e13a8890f233254c4709',1,'drake::trajectories::PiecewisePolynomial']]],
   ['resize',['resize',['../classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301',1,'drake::perception::PointCloud::resize()'],['../classdrake_1_1systems_1_1sensors_1_1_image.html#a56bfa8fae91947eb5802d2e208405904',1,'drake::systems::sensors::Image::resize()']]],
-  ['resizederivativestomatchscalar',['resizeDerivativesToMatchScalar',['../namespacedrake_1_1math.html#a7fc1b9bbef766b25c3e3684df19eee0c',1,'drake::math']]],
+  ['resizederivativestomatchscalar',['resizeDerivativesToMatchScalar',['../namespacedrake_1_1math.html#a67903de1408fe87ae27f9b5a955c81ff',1,'drake::math']]],
   ['resizeifneeded',['ResizeIfNeeded',['../classdrake_1_1multibody_1_1_tamsi_solver.html#aea21f84078db50dc348bc02f75a3005c',1,'drake::multibody::TamsiSolver']]],
   ['resolvemodeldirectiveuri',['ResolveModelDirectiveUri',['../namespacedrake_1_1multibody_1_1parsing.html#a5b399245a1104a5929442541197201cd',1,'drake::multibody::parsing']]],
   ['return_5ftime',['return_time',['../classdrake_1_1systems_1_1_simulator_status.html#ae3cf1c0f8b22d78e08b54a59df3dcfdb',1,'drake::systems::SimulatorStatus']]],

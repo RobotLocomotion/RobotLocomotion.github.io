@@ -23,7 +23,7 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     ] ],
     [ "gradient.h", "gradient_8h.html", [
       [ "Gradient", "structdrake_1_1math_1_1_gradient.html", "structdrake_1_1math_1_1_gradient" ],
-      [ "Gradient< Derived, Nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01_nq_00_011_01_4" ]
+      [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4" ]
     ] ],
     [ "gradient_util.h", "gradient__util_8h.html", "gradient__util_8h" ],
     [ "gray_code.h", "gray__code_8h.html", "gray__code_8h" ],

@@ -1,10 +1,13 @@
 var NAVTREEINDEX42 =
 {
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,13,0],
+"group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,0,1,0],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
 "group__discrete__systems.html":[1,3,9],
 "group__discretization.html":[1,4,0,5],
 "group__drake__contacts.html":[1,4,1],
@@ -20,14 +23,14 @@ var NAVTREEINDEX42 =
 "group__example__systems.html":[1,3,12],
 "group__geometry.html":[1,6],
 "group__geometry__infrastructure.html":[1,6,0],
-"group__geometry__optimization.html":[1,2,1],
 "group__geometry__optimization.html":[1,6,4],
+"group__geometry__optimization.html":[1,2,1],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,2,1,10],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,6,4,10],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,6,4,11],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,2,1,11],
-"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,6,4,9],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,2,1,9],
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,6,4,9],
 "group__geometry__roles.html":[1,6,1],
 "group__hash__append.html":[1,0,2,0],
 "group__identification.html":[1,5,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "jaco__status__receiver_8h.html":[4,0,0,6,0,3],
 "jaco__status__sender_8h.html":[4,0,0,6,0,4],
 "jacobian_8h.html":[4,0,0,7,18],
-"jacobian_8h.html#a57457683becdddf605a55be881c065b4":[4,0,0,7,18,1],
-"jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[4,0,0,7,18,0],
-"joint_8h.html":[4,0,0,8,12,14],
-"joint__actuator_8h.html":[4,0,0,8,12,15]
+"jacobian_8h.html#a57457683becdddf605a55be881c065b4":[4,0,0,7,18,1]
 };

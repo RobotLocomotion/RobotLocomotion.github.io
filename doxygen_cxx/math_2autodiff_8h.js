@@ -1,14 +1,19 @@
 var math_2autodiff_8h =
 [
     [ "AutoDiffToValueMatrix", "structdrake_1_1math_1_1_auto_diff_to_value_matrix.html", "structdrake_1_1math_1_1_auto_diff_to_value_matrix" ],
-    [ "AutoDiffMatrixType", "math_2autodiff_8h.html#a65ee44eb97ff7373bd2b6b088b8390b6", null ],
-    [ "autoDiffToValueMatrix", "math_2autodiff_8h.html#a2131d12e81399c3201b29118d59adc87", null ],
+    [ "AutoDiffMatrixType", "math_2autodiff_8h.html#af0249a3cc715341eaf27380878eb1df9", null ],
+    [ "autoDiffToValueMatrix", "math_2autodiff_8h.html#ab72982a8973f482f5cbf66d6656eaf08", null ],
     [ "DiscardGradient", "math_2autodiff_8h.html#abdc21793a127ffbebcb28a2442123390", null ],
     [ "DiscardGradient", "math_2autodiff_8h.html#a04e58f14dcca01f3684a820cff4c61b0", null ],
     [ "DiscardGradient", "math_2autodiff_8h.html#a6368b8ff52fa8c7df0b3548b77615363", null ],
     [ "DiscardGradient", "math_2autodiff_8h.html#aaf276d6a032d9a1ec3ea0f0f29fc1111", null ],
-    [ "initializeAutoDiff", "math_2autodiff_8h.html#a32d860f5fd00b3004e866af6f73a1362", null ],
-    [ "initializeAutoDiff", "math_2autodiff_8h.html#ab773f7c582bc83dd2f26c0965de1e427", null ],
-    [ "initializeAutoDiffTuple", "math_2autodiff_8h.html#a6e5c76a80b6a785f91dd3e06200e3f83", null ],
-    [ "resizeDerivativesToMatchScalar", "math_2autodiff_8h.html#a7fc1b9bbef766b25c3e3684df19eee0c", null ]
+    [ "ExtractValue", "math_2autodiff_8h.html#abb0cd738c70309748ff3cbc5c6b2d50e", null ],
+    [ "InitializeAutoDiff", "math_2autodiff_8h.html#a32942f788a67278f27426f128e50e0b2", null ],
+    [ "InitializeAutoDiff", "math_2autodiff_8h.html#a563f68724c579b35cdaf62b72c056e5e", null ],
+    [ "initializeAutoDiff", "math_2autodiff_8h.html#a6394a85153c159ec7ddf8d3b27f63917", null ],
+    [ "InitializeAutoDiff", "math_2autodiff_8h.html#a3e75abd55fa93ee21998756cf8c6e244", null ],
+    [ "initializeAutoDiff", "math_2autodiff_8h.html#a3b7dc3351569c13b9d98ab32fd901af3", null ],
+    [ "InitializeAutoDiffTuple", "math_2autodiff_8h.html#ad148a2735129010d96646652ec1f4986", null ],
+    [ "initializeAutoDiffTuple", "math_2autodiff_8h.html#a8d2993436a049675d4aefab5e8661862", null ],
+    [ "resizeDerivativesToMatchScalar", "math_2autodiff_8h.html#a67903de1408fe87ae27f9b5a955c81ff", null ]
 ];

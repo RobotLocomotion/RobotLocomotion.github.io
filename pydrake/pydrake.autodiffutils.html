@@ -319,50 +319,157 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="pydrake.autodiffutils.initializeAutoDiff">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiff</code><span class="sig-paren">(</span><em>mat: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = -1, deriv_num_start: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize a single autodiff matrix given the corresponding value
-matrix.</p>
-<p>Create autodiff matrix that matches <code class="docutils literal"><span class="pre">mat</span></code> in size with derivatives
-of compile time size <code class="docutils literal"><span class="pre">Nq</span></code> and runtime size <code class="docutils literal"><span class="pre">num_derivatives</span></code>. Set
-its values to be equal to <code class="docutils literal"><span class="pre">val</span></code>, and for each element i of
-<code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>, set derivative number <code class="docutils literal"><span class="pre">deriv_num_start</span></code> + i to
-one (all other derivatives set to zero).</p>
+<dt id="pydrake.autodiffutils.ExtractGradient">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">ExtractGradient</code><span class="sig-paren">(</span><em>auto_diff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.ExtractGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the <code class="docutils literal"><span class="pre">derivatives()</span></code> portion from a matrix of AutoDiffScalar
+entries. (Each entry contains a value and derivatives.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">mat</span></code>:</dt>
-<dd>‘regular’ matrix of values</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
+<dd>An object whose Eigen type represents a matrix of AutoDiffScalar
+entries.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">num_derivatives</span></code>:</dt>
-<dd>the size of the derivatives vector $*Default:* the size of mat</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">deriv_num_start</span></code>:</dt>
-<dd>starting index into derivative vector (i.e. element
-deriv_num_start in derivative vector corresponds to mat(0, 0)).</dd>
-<dt><em>Default:</em> 0</dt>
-<dd>$Returns:</dd>
-</dl>
-<p>AutoDiff matrix</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffGivenGradientMatrix</code><span class="sig-paren">(</span><em>val: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates and initializes an autodiff matrix given a matrix of values
-and gradient matrix</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">val</span></code>:</dt>
-<dd>value matrix</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">gradient</span></code>:</dt>
-<dd>gradient matrix; the derivatives of val(j) are stored in row j of
-the gradient matrix.</dd>
+<dd>(Optional) The number of derivatives to return in case the input
+matrix has none, which we interpret as <code class="docutils literal"><span class="pre">num_derivatives</span></code> zeroes.
+If <code class="docutils literal"><span class="pre">num_derivatives</span></code> is supplied and the input matrix has
+derivatives, the sizes must match.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">gradient_matrix</span></code>:</dt>
+<dd>An Eigen::Matrix with number of rows equal to the total size (rows
+x cols) of the input matrix and number of columns equal to the
+number of derivatives. Each output row corresponds to one entry of
+the input matrix, in input row order.</dd>
+<dt>Template parameter <code class="docutils literal"><span class="pre">Derived</span></code>:</dt>
+<dd>An Eigen type representing a matrix with AutoDiffScalar entries.
+The type will be inferred from the type of the
+<code class="docutils literal"><span class="pre">auto_diff_matrix</span></code> parameter at the call site.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">autodiff_matrix matrix of AutoDiffScalars with the same size as
-<code class="docutils literal"><span class="pre">val</span></code></td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if the input matrix has elements with inconsistent,</li>
+<li>non-zero numbers of derivatives.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">num_derivatives</span></code> is specified but the input</li>
+<li>matrix has a different, non-zero number of derivatives.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.ExtractValue">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">ExtractValue</code><span class="sig-paren">(</span><em>auto_diff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.ExtractValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the <code class="docutils literal"><span class="pre">value()</span></code> portion from a matrix of AutoDiffScalar
+entries. (Each entry contains a value and some derivatives.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
+<dd>An object whose Eigen type represents a matrix of AutoDiffScalar
+entries.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>An Eigen::Matrix of the same dimensions as the input matrix, but
+containing only the value portion of each entry, without the
+derivatives.</dd>
+<dt>Template parameter <code class="docutils literal"><span class="pre">Derived</span></code>:</dt>
+<dd>An Eigen type representing a matrix with AutoDiffScalar entries.
+The type will be inferred from the type of the
+<code class="docutils literal"><span class="pre">auto_diff_matrix</span></code> parameter at the call site.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Drake provides several similar functions: DiscardGradient() is
+specialized so that it can be applied to a <code class="docutils literal"><span class="pre">Matrix&lt;T&gt;</span></code> where T
+could be an AutoDiffScalar or an ordinary double, in which case it
+returns the original matrix at no cost. DiscardZeroGradient() is
+similar but requires that the discarded gradient was zero.
+drake::ExtractDoubleOrThrow() has many specializations, including
+one for <code class="docutils literal"><span class="pre">Matrix&lt;AutoDiffScalar&gt;</span></code> that behaves identically to
+ExtractValue().</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DiscardGradient(), drake::ExtractDoubleOrThrow()</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.InitializeAutoDiff">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">InitializeAutoDiff</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.InitializeAutoDiff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>InitializeAutoDiff(value: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = None, deriv_num_start: int = None) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+<p>Initializes a single AutoDiff matrix given the corresponding value
+matrix.</p>
+<p>Creates an AutoDiff matrix that matches <code class="docutils literal"><span class="pre">value</span></code> in size with
+derivative of compile time size <code class="docutils literal"><span class="pre">nq</span></code> and runtime size
+<code class="docutils literal"><span class="pre">num_derivatives</span></code>. Sets its values to be equal to <code class="docutils literal"><span class="pre">value</span></code>, and for
+each element i of <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>, sets derivative number
+<code class="docutils literal"><span class="pre">deriv_num_start</span></code> + i to one (all other derivatives set to zero).</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>‘regular’ matrix of values</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">num_derivatives</span></code>:</dt>
+<dd>(Optional) size of the derivatives vector</dd>
+<dt><em>Default:</em> total size of the value matrix</dt>
+<dd>$Parameter <code class="docutils literal"><span class="pre">deriv_num_start</span></code>:</dd>
+</dl>
+<p>(Optional) starting index into derivative vector (i.e. element
+deriv_num_start in derivative vector corresponds to matrix(0, 0)).</p>
+<dl class="docutils">
+<dt><em>Default:</em> 0</dt>
+<dd>$Returns <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dd>
+</dl>
+<p>The result as described above.</p>
+<ol class="arabic simple" start="2">
+<li>InitializeAutoDiff(value: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Returns an AutoDiff matrix given a matrix of values and a gradient
+matrix.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>The value matrix. Will be accessed with a single index.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">gradient</span></code>:</dt>
+<dd>The gradient matrix. The number of rows must match the total size
+(nrow x ncol) of the value matrix. Derivatives of value(j) should
+be stored in row j of the gradient matrix.</dd>
+<dt>Returns <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
+<dd>The matrix of AutoDiffScalars. Will have the same dimensions as
+the value matrix.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.initializeAutoDiff">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiff</code><span class="sig-paren">(</span><em>mat: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = -1, deriv_num_start: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffGivenGradientMatrix</code><span class="sig-paren">(</span><em>val: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pydrake.autodiffutils.InitializeAutoDiffTuple">
+<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">InitializeAutoDiffTuple</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.InitializeAutoDiffTuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a series of array_like input arguments, create a tuple of
+corresponding AutoDiff matrices with values equal to the input matrices
+and properly initialized derivative vectors.</p>
+<p>The size of the derivative vector of each element of the matrices in the
+output tuple will be the same, and will equal the sum of the number of
+elements of the matrices in args.</p>
+<p>The 0th element of the derivative vectors will correspond to the
+derivative with respect to the 0th element of the first argument.
+Subsequent derivative vector elements correspond first to subsequent
+elements of the first input argument (traversed first by row, then by
+column), and so on for subsequent arguments.</p>
+<p>This is a pythonic implementation of drake::math::InitializeAutoDiffTuple
+in C++.</p>
 </dd></dl>
 
 <dl class="function">
@@ -379,7 +486,7 @@ derivative with respect to the 0th element of the first argument.
 Subsequent derivative vector elements correspond first to subsequent
 elements of the first input argument (traversed first by row, then by
 column), and so on for subsequent arguments.</p>
-<p>This is a pythonic implementation of drake::math::initializeAutoDiffTuple
+<p>This is a pythonic implementation of drake::math::InitializeAutoDiffTuple
 in C++.</p>
 </dd></dl>
 

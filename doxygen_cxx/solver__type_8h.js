@@ -6,6 +6,7 @@ var solver__type_8h =
       [ "kDReal", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d", null ],
       [ "kEqualityConstrainedQP", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173", null ],
       [ "kGurobi", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabc8ddfb8a00bb405e68545ce187ac238", null ],
+      [ "kIbex", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57", null ],
       [ "kIpopt", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795", null ],
       [ "kLinearSystem", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d", null ],
       [ "kMobyLCP", "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56", null ],

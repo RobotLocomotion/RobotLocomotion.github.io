@@ -1,5 +1,8 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a46278d4906208da92bc2d8dc88c6f629":[3,0,0,4,1,12],
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a7b73a55d48495f81082838dad64bd57e":[3,0,0,4,1,3],
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a8e84d1e5a57fe713e7505381c3069950":[3,0,0,4,1,9],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#aa654c10b33c6799f374608cce0352712":[3,0,0,4,1,10],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#aada32d80b0f84c33c4f4b78967bcfeb9":[3,0,0,4,1,2],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#ada4cdd96fd686bb8c6158d8012ed4245":[3,0,0,4,1,13],
@@ -246,8 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a66b0ddb7bd3dc10b2f2ff6cfa51b409a":[1,3,5,10,3],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a7fdeb240d2a441929f00c9b8ae24b323":[1,3,5,10,6],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#aafbbd8adc46009f9305d5a2522b4093b":[1,3,5,10,9],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#acb574affd4e091f2c83878e57e81bf85":[1,3,5,10,1],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#ad3b079500a82a818ba8128778ed07a3f":[1,3,5,10,2],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#af71a66f365f5efc8fcaa78a2c2fde404":[1,3,5,10,8],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html":[1,3,5,12]
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#acb574affd4e091f2c83878e57e81bf85":[1,3,5,10,1]
 };
