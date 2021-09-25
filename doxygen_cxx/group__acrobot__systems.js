@@ -27,7 +27,7 @@ var group__acrobot__systems =
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#aa38177c6a6e64ff8daf64a2cc47137ea", null ],
       [ "AcrobotPlant", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a06262905a47222173e1551ef437b29fc", null ],
       [ "DynamicsBiasTerm", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a8b1d92334bf606793a4fe3d1cb687bf1", null ],
-      [ "get_mutable_parameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a03cf03ec967c9af9482279f7c934f33c", null ],
+      [ "get_mutable_parameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a7ec6607ea1dba1c490f2d2ae2df321b4", null ],
       [ "get_mutable_state", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a598e8698c42e1af32f9b67f06862305f", null ],
       [ "get_mutable_state", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a2ddd0c881dbc38b6e3fe86dcea1db62e", null ],
       [ "get_parameters", "classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html#a6bff3612980d7d9bde1dc7cdd6929c92", null ],
