@@ -33,10 +33,8 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "EqualityConstrainedQPSolver", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html", "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver" ]
     ] ],
     [ "evaluator_base.h", "evaluator__base_8h.html", "evaluator__base_8h" ],
-    [ "fast_qp.h", "fast__qp_8h.html", "fast__qp_8h" ],
     [ "function.h", "function_8h.html", null ],
     [ "get_program_type.h", "get__program__type_8h.html", "get__program__type_8h" ],
-    [ "gurobi_qp.h", "gurobi__qp_8h.html", "gurobi__qp_8h" ],
     [ "gurobi_solver.h", "gurobi__solver_8h.html", [
       [ "GurobiSolverDetails", "structdrake_1_1solvers_1_1_gurobi_solver_details.html", "structdrake_1_1solvers_1_1_gurobi_solver_details" ],
       [ "GurobiSolver", "classdrake_1_1solvers_1_1_gurobi_solver.html", "classdrake_1_1solvers_1_1_gurobi_solver" ],

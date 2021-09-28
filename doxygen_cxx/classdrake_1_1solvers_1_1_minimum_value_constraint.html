@@ -287,7 +287,7 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>value_function_double(math::autoDiffToValueMatrix(x), v_influence) == math::autoDiffToValueMatrix(value_function(x, v_influence))</code> for all x. </dd>
+<dl class="section pre"><dt>Precondition</dt><dd><code>value_function_double(ExtractValue(x), v_influence) == ExtractValue(value_function(x, v_influence))</code> for all x. </dd>
 <dd>
 <code>value_function(x).size() &lt;= max_num_values</code> for all x. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
