@@ -7,6 +7,7 @@ var searchData=
   ['scs_5fsolve_5ftime',['scs_solve_time',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a4f04309606118f6deab8739e9496d6c6',1,'drake::solvers::ScsSolverDetails']]],
   ['scs_5fstatus',['scs_status',['../structdrake_1_1solvers_1_1_scs_solver_details.html#ab14ffec13ba48949eb5344938b168ec0',1,'drake::solvers::ScsSolverDetails']]],
   ['setup_5ftime',['setup_time',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb',1,'drake::solvers::OsqpSolverDetails']]],
+  ['show_5fhydroelastic',['show_hydroelastic',['../structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14',1,'drake::geometry::DrakeVisualizerParams']]],
   ['size',['size',['../structdrake_1_1type__pack.html#a5bedf34ecf2bf4cc8e7a9d7df1f91172',1,'drake::type_pack']]],
   ['sliding_5fcontacts',['sliding_contacts',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#ad7420fd6adfed409f3fc8551d0decb96',1,'drake::multibody::constraint::ConstraintAccelProblemData']]],
   ['solution_5fstatus',['solution_status',['../structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0',1,'drake::solvers::MosekSolverDetails']]],

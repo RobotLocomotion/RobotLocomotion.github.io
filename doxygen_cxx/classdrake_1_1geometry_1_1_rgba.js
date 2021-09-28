@@ -4,6 +4,7 @@ var classdrake_1_1geometry_1_1_rgba =
     [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html#a6d8f94f9065747bee9fc8b3da8514610", null ],
     [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html#a28a51d28a1bd0181e54c30643247cb68", null ],
     [ "a", "classdrake_1_1geometry_1_1_rgba.html#a7f0799082988106ce030952a5d2fbb2e", null ],
+    [ "AlmostEqual", "classdrake_1_1geometry_1_1_rgba.html#a3a4f465549d621827b30f0a7e8e5ffc4", null ],
     [ "b", "classdrake_1_1geometry_1_1_rgba.html#a2bbc76aeadab8a326a08ddab7aae3412", null ],
     [ "g", "classdrake_1_1geometry_1_1_rgba.html#a5d49035285a5d232617b92f664da8dd0", null ],
     [ "operator!=", "classdrake_1_1geometry_1_1_rgba.html#a3b56194686433cadff14e87b2a01d9dd", null ],

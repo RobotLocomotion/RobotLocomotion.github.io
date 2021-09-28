@@ -256,6 +256,7 @@ var searchData=
   ['allow_5fyaml_5fwith_5fno_5fcpp',['allow_yaml_with_no_cpp',['../structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#aea27c3ce8aaf9792e86b006e57659938',1,'drake::yaml::YamlReadArchive::Options']]],
   ['allowbetween',['AllowBetween',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html#a6f7344ad99e7f5793bca5f5ed358fea7',1,'drake::geometry::CollisionFilterDeclaration']]],
   ['allowwithin',['AllowWithin',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html#a373062b67e7a65dca66e0d64541a48ef',1,'drake::geometry::CollisionFilterDeclaration']]],
+  ['almostequal',['AlmostEqual',['../classdrake_1_1geometry_1_1_rgba.html#a3a4f465549d621827b30f0a7e8e5ffc4',1,'drake::geometry::Rgba']]],
   ['ambient_5fdimension',['ambient_dimension',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e',1,'drake::geometry::optimization::ConvexSet::ambient_dimension()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::ambient_dimension()']]],
   ['ambient_5fdimension_5f',['ambient_dimension_',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a4a14fb3bdc8b47e2276d458b61b0633a',1,'drake::geometry::optimization::ConvexSet']]],
   ['amplitude',['amplitude',['../classdrake_1_1systems_1_1_sine.html#a70cd1043e7ba541bf72935d64785fdc3',1,'drake::systems::Sine']]],

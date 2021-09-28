@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html#a25f396d1eaf4be52eb3db66072895105":[3,0,0,12,53,6],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a384004055e2aad02cb0d300cc16722c3":[3,0,0,12,53,3],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4b9014ce5ea008d66f100e73f204fecb":[3,0,0,12,53,0],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4cfabc8f2d2a53ee991b848f84516bb6":[3,0,0,12,53,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a051a0096a00db2a286963dde8b8b7bab":[3,0,0,12,0,3,6],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a0cd8d736321ae73d617ee0f756492bc6":[3,0,0,12,0,3,18],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a38931497090eca987dab77e0cc9d2c75":[3,0,0,12,0,3,20],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a402cf53a71e91864891f414f7f6bec71":[3,0,0,12,0,3,16],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a4d43aa115ba9a2099ccd46122d3d781c":[3,0,0,12,0,3,2]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a402cf53a71e91864891f414f7f6bec71":[3,0,0,12,0,3,16]
 };

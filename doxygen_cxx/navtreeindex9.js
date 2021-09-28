@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#acb574affd4e091f2c83878e57e81bf85":[1,3,5,10,1],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#ad3b079500a82a818ba8128778ed07a3f":[1,3,5,10,2],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#af71a66f365f5efc8fcaa78a2c2fde404":[1,3,5,10,8],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_position_controller.html":[1,3,5,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a9a29c3df53244b679800b206a5949f2b":[1,2,0,0,3],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#aaa11fd69bb834bc3695b005832bee7f8":[1,2,0,0,0],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#ae0935336292ab087cb230d04dbf329e5":[1,2,0,0,6],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,8,7],
-"classdrake_1_1multibody_1_1_articulated_body_inertia.html#a05bea6e19974f4c24d747976ada0efef":[3,0,0,8,7,1]
+"classdrake_1_1multibody_1_1_articulated_body_inertia.html":[3,0,0,8,7]
 };

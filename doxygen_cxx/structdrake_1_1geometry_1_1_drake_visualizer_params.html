@@ -115,6 +115,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3fa2976e721c8d9ed2ed3c79c6fdab2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e">default_color</a> {0.9, 0.9, 0.9, 1.0}</td></tr>
 <tr class="memdesc:a3fa2976e721c8d9ed2ed3c79c6fdab2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color to apply to any geometry that hasn't defined one.  <a href="#a3fa2976e721c8d9ed2ed3c79c6fdab2e">More...</a><br /></td></tr>
 <tr class="separator:a3fa2976e721c8d9ed2ed3c79c6fdab2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f364184aa2780e090858d0b3cfda14"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14">show_hydroelastic</a> {false}</td></tr>
+<tr class="memdesc:ae7f364184aa2780e090858d0b3cfda14"><td class="mdescLeft">&#160;</td><td class="mdescRight">When using the hydroelastic contact model, collision geometries that are <em>declared</em> as geometric primitives are frequently represented by some discretely tessellated mesh when computing contact.  <a href="#ae7f364184aa2780e090858d0b3cfda14">More...</a><br /></td></tr>
+<tr class="separator:ae7f364184aa2780e090858d0b3cfda14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a3fa2976e721c8d9ed2ed3c79c6fdab2e"></a>
@@ -162,6 +165,25 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The role of the geometries to be sent to the visualizer. </p>
+
+</div>
+</div>
+<a id="ae7f364184aa2780e090858d0b3cfda14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f364184aa2780e090858d0b3cfda14">&#9670;&nbsp;</a></span>show_hydroelastic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool show_hydroelastic {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When using the hydroelastic contact model, collision geometries that are <em>declared</em> as geometric primitives are frequently represented by some discretely tessellated mesh when computing contact. </p>
+<p>It can be quite helpful in assessing contact behavior to visualize these discrete meshes (in place of the idealized primitives).</p>
+<p>To visualize these representations it is necessary to request visualization of geometries with the <a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951ad909c44a5dea6ebbdb3a95e4cb701521">Role::kProximity</a> role (see the role field). It is further necessary to explicitly request the hydroelastic meshes where available (setting show_hydroelastic to <code>true</code>).</p>
+<p>Setting this <code>show_hydroelastic</code> to <code>true</code> will have no apparent effect if none of the collision meshes have a hydroelastic mesh associated with them. </p>
 
 </div>
 </div>

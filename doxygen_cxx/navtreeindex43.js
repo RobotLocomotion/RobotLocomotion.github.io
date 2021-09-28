@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"kalman__filter_8h.html#gaffc5a5eabe473ebd57f96b0310d70ed8":[4,0,0,11,2,0,2],
 "kinematic__constraint__utilities_8h.html":[4,0,0,8,5,8],
 "knot__vector__type_8h.html":[4,0,0,7,19],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,19,0],
@@ -241,13 +242,12 @@ var NAVTREEINDEX43 =
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,38,2],
 "namespacedrake.html":[3,0,0],
 "namespacedrake.html":[2,0,0],
-"namespacedrake_1_1assert.html":[3,0,0,0],
 "namespacedrake_1_1assert.html":[2,0,0,0],
+"namespacedrake_1_1assert.html":[3,0,0,0],
 "namespacedrake_1_1common.html":[2,0,0,1],
 "namespacedrake_1_1common.html":[3,0,0,1],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,1,0],
 "namespacedrake_1_1examples.html":[3,0,0,2],
 "namespacedrake_1_1examples.html":[2,0,0,2],
-"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,2,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,2,0]
 };

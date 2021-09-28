@@ -216,6 +216,7 @@ var searchData=
   ['allow_5fquaternion_5fnegation',['allow_quaternion_negation',['../classdrake_1_1multibody_1_1_quaternion_euler_integration_constraint.html#a9d73dd4211e6d2b4105118f669b388b0',1,'drake::multibody::QuaternionEulerIntegrationConstraint']]],
   ['allowbetween',['AllowBetween',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html#a6f7344ad99e7f5793bca5f5ed358fea7',1,'drake::geometry::CollisionFilterDeclaration']]],
   ['allowwithin',['AllowWithin',['../classdrake_1_1geometry_1_1_collision_filter_declaration.html#a373062b67e7a65dca66e0d64541a48ef',1,'drake::geometry::CollisionFilterDeclaration']]],
+  ['almostequal',['AlmostEqual',['../classdrake_1_1geometry_1_1_rgba.html#a3a4f465549d621827b30f0a7e8e5ffc4',1,'drake::geometry::Rgba']]],
   ['ambient_5fdimension',['ambient_dimension',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a79ab6fe34900a8391301b23abd29e10e',1,'drake::geometry::optimization::ConvexSet::ambient_dimension()'],['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a79ab6fe34900a8391301b23abd29e10e',1,'drake::geometry::optimization::GraphOfConvexSets::Vertex::ambient_dimension()']]],
   ['amplitude',['amplitude',['../classdrake_1_1systems_1_1_sine.html#a70cd1043e7ba541bf72935d64785fdc3',1,'drake::systems::Sine']]],
   ['amplitude_5fvector',['amplitude_vector',['../classdrake_1_1systems_1_1_sine.html#a4e32d1fde8e877a598314ed7ba1aef71',1,'drake::systems::Sine']]],

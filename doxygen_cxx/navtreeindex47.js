@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,44,1],
 "structdrake_1_1_sorted_pair.html":[3,0,0,47],
 "structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,47,6],
 "structdrake_1_1_sorted_pair.html#a081f9d487f4f53fbcad839740d361f30":[3,0,0,47,7],
@@ -35,6 +36,7 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,3,10,2],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,3,10,1],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,3,10,0],
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,3,10,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,3,25,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,3,25,0,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,3,25,0,3],
@@ -94,18 +96,18 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#a946e9c1917a91f579287e1680688db19":[3,0,0,3,42,0],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb03b97da4041960f115525445ecd307":[3,0,0,3,42,1],
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,3,42,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,6,4,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,2,1,5],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,6,4,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,2,1,5,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,6,4,5,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,6,4,5,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,2,1,5,4],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,6,4,5,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,2,1,5,3],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,2,1,5,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,6,4,5,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,6,4,5,2],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,6,4,5,0],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,2,1,5,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,2,1,5,0],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,6,4,5,0],
 "structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,3,31],
 "structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,3,31,0],
 "structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html":[3,0,0,3,1,7],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a16c5614af40edee599284c373fba9c09":[3,0,0,8,1,0,18],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1b267a517e862262fc1f50dd62c48f41":[3,0,0,8,1,0,1],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a1ea36727a50f62443fbf5770544a69d4":[3,0,0,8,1,0,13],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,8,1,0,14],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a35881bb6864939d024dcffcef32de848":[3,0,0,8,1,0,19],
-"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a3cde9da79a1a8aba25ee8aacdb2ffd39":[3,0,0,8,1,0,6]
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a29af929fcff5a59a15ac072ebe89d26e":[3,0,0,8,1,0,14]
 };

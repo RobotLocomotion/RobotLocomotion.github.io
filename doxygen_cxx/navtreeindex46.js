@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"robot__plan__utils_8h.html#a8cac2550a9a52551ff82e51b3d5b29e3":[4,0,0,6,5,2,2],
 "rod2d_8h.html":[4,0,0,3,15,0],
 "rod2d__geometry_8h.html":[4,0,0,3,15,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,28],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "structdrake_1_1_polynomial_1_1_product.html":[3,0,0,40,1],
 "structdrake_1_1_polynomial_1_1_product.html#a7a4135c74ceab3342f130fb491ccbe29":[3,0,0,40,1,0],
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,44],
-"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,44,0],
-"structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,44,1]
+"structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,44,0]
 };
