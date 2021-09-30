@@ -1,5 +1,11 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a16a1ff64460e6742849e539887626cea":[3,0,0,16,0,9],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,16,0,24],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a2a8a7c06f6f68cd4e58721aab4eb5885":[3,0,0,16,0,18],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19":[3,0,0,16,0,10],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8":[3,0,0,16,0,4],
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48":[3,0,0,16,0,6],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,16,0,13],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a76b00967f0f33d809b58469e8301e4cb":[3,0,0,16,0,15],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[3,0,0,16,0,17],
@@ -243,11 +249,5 @@ var NAVTREEINDEX38 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2e58e3553fbff5f9ba05acba0daa7753":[3,0,1,31,15],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,1,31,9],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3600d2fb47a7b4a9f2fc09c831b53c36":[3,0,1,31,7],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3c7f8bf042ab4ed8bb90e99f17209f74":[3,0,1,31,4],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a653b323ac62c21fd25d05d367ccc6259":[3,0,1,31,6],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a7315c497b305140748d3266adb76cf32":[3,0,1,31,5],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aa7270c55d80df6ea173269cb29c8c917":[3,0,1,31,3],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,1,31,10],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab128d4795c1161bafae531dd5c37e4f1":[3,0,1,31,12],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,1,31,1]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3c7f8bf042ab4ed8bb90e99f17209f74":[3,0,1,31,4]
 };

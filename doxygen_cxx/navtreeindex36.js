@@ -1,5 +1,11 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#ad8be280cef36775967d1743de89f35be":[3,0,0,14,2,11,16],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#adea5f45150e3c8892a6375bbbb553b1b":[3,0,0,14,2,11,18],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#ae6870054f1365c9d10d90e48fd37d8b8":[3,0,0,14,2,11,8],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#af2a5f78e0179ac6f4753b7e0742ef1e1":[3,0,0,14,2,11,11],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,14,2,11,20],
+"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html":[1,5,2,5],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#a0579793f4ce5ad302173ab0f1ab8d4fe":[1,5,2,5,3],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#a26b85162b5bb123a554b1ba7ec1d22ac":[1,5,2,5,0],
 "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#a2d9a2ad767cf5d9b75b66c05148efc07":[1,5,2,5,7],
@@ -243,11 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a6ff95253bd4a47e6ed4d349ff3290b16":[1,3,4,1,2],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#ad5dd463d80e310948143e675e71197de":[1,3,4,1,10],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#afab4d0f4a234cdb8f46a1ba19cc3fec3":[1,3,4,1,12],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html":[3,0,0,14,8,2],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a123b2aa06c4f7c906822c2bb81c5803a":[3,0,0,14,8,2,4],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a2a47edcba32f94edbb71f18864c70d92":[3,0,0,14,8,2,2],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a3145619e4a819f4ae2ec061893bef1d5":[3,0,0,14,8,2,5],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a5260647c6d73b9af547424968d24da09":[3,0,0,14,8,2,7],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a5739989024f77d7903794db9b37ea9de":[3,0,0,14,8,2,3],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a840e2471b3f05b98dbb7d9ec51f6efd7":[3,0,0,14,8,2,0]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html":[3,0,0,14,8,2]
 };

@@ -9,6 +9,7 @@ var namespacedrake_1_1math =
     [ "Gradient", "structdrake_1_1math_1_1_gradient.html", "structdrake_1_1math_1_1_gradient" ],
     [ "Gradient< Derived, nq, 1 >", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html", "structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4" ],
     [ "GrayCodesMatrix", "structdrake_1_1math_1_1_gray_codes_matrix.html", "structdrake_1_1math_1_1_gray_codes_matrix" ],
+    [ "LinearSolver", "classdrake_1_1math_1_1_linear_solver.html", "classdrake_1_1math_1_1_linear_solver" ],
     [ "MatGradMult", "structdrake_1_1math_1_1_mat_grad_mult.html", "structdrake_1_1math_1_1_mat_grad_mult" ],
     [ "MatGradMultMat", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", "structdrake_1_1math_1_1_mat_grad_mult_mat" ],
     [ "NumericalGradientOption", "classdrake_1_1math_1_1_numerical_gradient_option.html", "classdrake_1_1math_1_1_numerical_gradient_option" ],

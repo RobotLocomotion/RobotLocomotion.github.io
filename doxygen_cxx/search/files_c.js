@@ -62,6 +62,8 @@ var searchData=
   ['multibody_5fforces_2eh',['multibody_forces.h',['../multibody__forces_8h.html',1,'']]],
   ['multibody_5fgraph_2eh',['multibody_graph.h',['../multibody__graph_8h.html',1,'']]],
   ['multibody_5fplant_2eh',['multibody_plant.h',['../multibody__plant_8h.html',1,'']]],
+  ['multibody_5fplant_5fconfig_2eh',['multibody_plant_config.h',['../multibody__plant__config_8h.html',1,'']]],
+  ['multibody_5fplant_5fconfig_5ffunctions_2eh',['multibody_plant_config_functions.h',['../multibody__plant__config__functions_8h.html',1,'']]],
   ['multibody_5fplant_5fdiscrete_5fupdate_5fmanager_5fattorney_2eh',['multibody_plant_discrete_update_manager_attorney.h',['../multibody__plant__discrete__update__manager__attorney_8h.html',1,'']]],
   ['multibody_5fplant_5fmodel_5fattorney_2eh',['multibody_plant_model_attorney.h',['../multibody__plant__model__attorney_8h.html',1,'']]],
   ['multibody_5fposition_5fto_5fgeometry_5fpose_2eh',['multibody_position_to_geometry_pose.h',['../multibody__position__to__geometry__pose_8h.html',1,'']]],

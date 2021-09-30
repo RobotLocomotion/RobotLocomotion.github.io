@@ -1,5 +1,11 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1symbolic_1_1_formula_false.html#a3660c96e65bec4f7831e74691a14c129":[3,0,0,13,41,2],
+"classdrake_1_1symbolic_1_1_formula_false.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,13,41,5],
+"classdrake_1_1symbolic_1_1_formula_false.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,13,41,3],
+"classdrake_1_1symbolic_1_1_formula_false.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,41,1],
+"classdrake_1_1symbolic_1_1_formula_false.html#ad66ef14f5c0b153b91989fccf3a38920":[3,0,0,13,41,7],
+"classdrake_1_1symbolic_1_1_formula_false.html#aeabbbb6c69ba676155d0965880d6c8dd":[3,0,0,13,41,6],
 "classdrake_1_1symbolic_1_1_formula_false.html#af3366a56a2a8c2942ee6fdd6a2d064b1":[3,0,0,13,41,4],
 "classdrake_1_1symbolic_1_1_formula_forall.html":[3,0,0,13,42],
 "classdrake_1_1symbolic_1_1_formula_forall.html#a3060c3caa44e9a75a9d25564ca114aca":[3,0,0,13,42,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1symbolic_1_1_polynomial.html#ad7a3fb26530d992d7b2278a5f6281c09":[3,0,0,13,59,30],
 "classdrake_1_1symbolic_1_1_polynomial.html#adb6379c53bbbfcac28d757e0ef4d9bc3":[3,0,0,13,59,18],
 "classdrake_1_1symbolic_1_1_polynomial.html#adeaa4f722744d397b42ff26f50f443bf":[3,0,0,13,59,38],
-"classdrake_1_1symbolic_1_1_polynomial.html#ae973070e668be3703cc3e26eba36d1ba":[3,0,0,13,59,35],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html":[3,0,0,13,60],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a071a669b72be2962a38ce2d5142495ed":[3,0,0,13,60,2],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a07e43dd6afaaafb0291e1067a4479212":[3,0,0,13,60,20],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a1277a9e975fc16f398cde0ee7c8e9ca7":[3,0,0,13,60,18],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a1b61a42aa11eaccd09223a12e26ec51b":[3,0,0,13,60,0],
-"classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a1d0553f396185535b2ba95351ac4902c":[3,0,0,13,60,13]
+"classdrake_1_1symbolic_1_1_polynomial.html#ae973070e668be3703cc3e26eba36d1ba":[3,0,0,13,59,35]
 };

@@ -47,6 +47,7 @@ var searchData=
   ['linearmodelpredictivecontroller',['LinearModelPredictiveController',['../classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html',1,'drake::systems::controllers']]],
   ['linearquadraticregulatorresult',['LinearQuadraticRegulatorResult',['../structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html',1,'drake::systems::controllers']]],
   ['linearscalarsystem',['LinearScalarSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html',1,'drake::systems::analysis_test']]],
+  ['linearsolver',['LinearSolver',['../classdrake_1_1math_1_1_linear_solver.html',1,'drake::math']]],
   ['linearspringdamper',['LinearSpringDamper',['../classdrake_1_1multibody_1_1_linear_spring_damper.html',1,'drake::multibody']]],
   ['linearsystem',['LinearSystem',['../classdrake_1_1systems_1_1_linear_system.html',1,'drake::systems']]],
   ['linearsystem_3c_20double_20_3e',['LinearSystem&lt; double &gt;',['../classdrake_1_1systems_1_1_linear_system.html',1,'drake::systems']]],

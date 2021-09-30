@@ -52,6 +52,7 @@ var searchData=
   ['multibodyplant',['MultibodyPlant',['../classdrake_1_1multibody_1_1_multibody_plant.html',1,'drake::multibody']]],
   ['multibodyplant_3c_20autodiffxd_20_3e',['MultibodyPlant&lt; AutoDiffXd &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html',1,'drake::multibody']]],
   ['multibodyplant_3c_20double_20_3e',['MultibodyPlant&lt; double &gt;',['../classdrake_1_1multibody_1_1_multibody_plant.html',1,'drake::multibody']]],
+  ['multibodyplantconfig',['MultibodyPlantConfig',['../structdrake_1_1multibody_1_1_multibody_plant_config.html',1,'drake::multibody']]],
   ['multibodyplanttester',['MultibodyPlantTester',['../classdrake_1_1multibody_1_1_multibody_plant_tester.html',1,'drake::multibody']]],
   ['multibodypositiontogeometrypose',['MultibodyPositionToGeometryPose',['../classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html',1,'drake::systems::rendering']]],
   ['multipleshooting',['MultipleShooting',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html',1,'drake::systems::trajectory_optimization']]],

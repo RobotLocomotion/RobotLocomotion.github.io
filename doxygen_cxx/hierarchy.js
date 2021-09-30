@@ -424,6 +424,7 @@ var hierarchy =
     [ "LimitMalloc", "classdrake_1_1test_1_1_limit_malloc.html", null ],
     [ "LimitMallocParams", "structdrake_1_1test_1_1_limit_malloc_params.html", null ],
     [ "LinearQuadraticRegulatorResult", "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html", null ],
+    [ "LinearSolver< LinearSolverType, DerivedA >", "classdrake_1_1math_1_1_linear_solver.html", null ],
     [ "LogarithmicSos2NewBinaryVariables< NumLambda >", "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html", null ],
     [ "MassDamperSpringAnalyticalSolution< T >", "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html", null ],
     [ "MatGradMult< DerivedDA, DerivedB >", "structdrake_1_1math_1_1_mat_grad_mult.html", null ],
@@ -505,6 +506,7 @@ var hierarchy =
     [ "MultibodyElement< Mobilizer, T, MobilizerIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", null ],
     [ "MultibodyElement< ModelInstance, T, ModelInstanceIndex >", "classdrake_1_1multibody_1_1_multibody_element.html", null ],
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
+    [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", null ],
     [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],
     [ "MultiplyEigenSizes< a, b >", "structdrake_1_1_multiply_eigen_sizes.html", null ],
     [ "NameValue< T >", "classdrake_1_1_name_value.html", null ],
@@ -555,8 +557,8 @@ var hierarchy =
     [ "Meshcat::PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]

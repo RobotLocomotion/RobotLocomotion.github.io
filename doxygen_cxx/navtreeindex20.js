@@ -1,5 +1,11 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a7ac486efb96e05a296c7d114d64f2ead":[1,2,0,34,1],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a8f99a12c084358b7a5c4cc6ec1722450":[1,2,0,34,3],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[1,2,0,34,0],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#ab934f3e9477d69de1b7e4d21adaa59c1":[1,2,0,34,4],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#ad972d33be3a5df23c8c6f0906ee43d00":[1,2,0,34,2],
+"classdrake_1_1solvers_1_1_polynomial_evaluator.html":[3,0,0,12,53],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a25f396d1eaf4be52eb3db66072895105":[3,0,0,12,53,6],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a384004055e2aad02cb0d300cc16722c3":[3,0,0,12,53,3],
 "classdrake_1_1solvers_1_1_polynomial_evaluator.html#a4b9014ce5ea008d66f100e73f204fecb":[3,0,0,12,53,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a9117e4a6fb3ded3267eba43ffc87a388":[3,0,0,12,0,2,0],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a9fab6ed634b4aeec7249e5df50fd05e2":[3,0,0,12,0,2,1],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ac80cf29e054d6de6794351ea79da99b0":[3,0,0,12,0,2,8],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,2,6],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html":[3,0,0,12,0,3],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a00e05e1bb6f3185b1a40728679be5274":[3,0,0,12,0,3,8],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a051a0096a00db2a286963dde8b8b7bab":[3,0,0,12,0,3,6],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a0cd8d736321ae73d617ee0f756492bc6":[3,0,0,12,0,3,18],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a38931497090eca987dab77e0cc9d2c75":[3,0,0,12,0,3,20],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_residual.html#a402cf53a71e91864891f414f7f6bec71":[3,0,0,12,0,3,16]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,2,6]
 };

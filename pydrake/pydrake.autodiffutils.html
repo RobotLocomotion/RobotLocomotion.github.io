@@ -402,7 +402,7 @@ ExtractValue().</p>
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">InitializeAutoDiff</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.InitializeAutoDiff" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>InitializeAutoDiff(value: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = None, deriv_num_start: int = None) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>InitializeAutoDiff(value: numpy.ndarray[numpy.float64[m, n]], num_derivatives: Optional[int] = None, deriv_num_start: Optional[int] = None) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Initializes a single AutoDiff matrix given the corresponding value
 matrix.</p>
@@ -427,7 +427,7 @@ deriv_num_start in derivative vector corresponds to matrix(0, 0)).</p>
 </dl>
 <p>The result as described above.</p>
 <ol class="arabic simple" start="2">
-<li>InitializeAutoDiff(value: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, 1]]</li>
+<li>InitializeAutoDiff(value: numpy.ndarray[numpy.float64[m, n]], gradient: numpy.ndarray[numpy.float64[m, n]]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Returns an AutoDiff matrix given a matrix of values and a gradient
 matrix.</p>
