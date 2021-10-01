@@ -1,6 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62":[1,2,0,0,4],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a98fb2abd442bf1476402c2bc628828af":[1,2,0,0,5],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a9a29c3df53244b679800b206a5949f2b":[1,2,0,0,3],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#aaa11fd69bb834bc3695b005832bee7f8":[1,2,0,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX10 =
 "classdrake_1_1multibody_1_1_frame.html#a4a070ee83deb89bd6cca65946a5f8f37":[3,0,0,8,27,20],
 "classdrake_1_1multibody_1_1_frame.html#a5d48b5a6c31b367eb3fff952fcefe648":[3,0,0,8,27,5],
 "classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22":[3,0,0,8,27,25],
-"classdrake_1_1multibody_1_1_frame.html#a652a1d7c4d9d502fffcec5b9d27dd3ec":[3,0,0,8,27,18]
+"classdrake_1_1multibody_1_1_frame.html#a652a1d7c4d9d502fffcec5b9d27dd3ec":[3,0,0,8,27,18],
+"classdrake_1_1multibody_1_1_frame.html#a6681a8def9431af1311063721c46fe14":[3,0,0,8,27,24]
 };

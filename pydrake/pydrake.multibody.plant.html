@@ -442,7 +442,10 @@ of Coulomb’s law coefficients of friction.</dd>
 <ol class="arabic simple">
 <li>ConnectContactResultsToDrakeVisualizer(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, publish_period: Optional[float] = None) -&gt; pydrake.systems.lcm.LcmPublisherSystem</li>
 </ol>
-<p>MultibodyPlant-connecting, default-named geometry overload.</p>
+<p>MultibodyPlant-connecting, default-named geometry overload.
+$Deprecated:</p>
+<p>Provide a SceneGraph as the third argument. This will be removed from
+Drake on or after 2022-01-01.</p>
 <ol class="arabic simple" start="2">
 <li>ConnectContactResultsToDrakeVisualizer(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, publish_period: Optional[float] = None) -&gt; pydrake.systems.lcm.LcmPublisherSystem</li>
 </ol>

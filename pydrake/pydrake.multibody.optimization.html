@@ -184,6 +184,36 @@
 <span id="pydrake-multibody-optimization"></span><h1>pydrake.multibody.optimization<a class="headerlink" href="#module-pydrake.multibody.optimization" title="Permalink to this headline">¶</a></h1>
 <p>Optimization module for MultibodyPlant motion planning</p>
 <dl class="class">
+<dt id="pydrake.multibody.optimization.CalcGridPointsOptions">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">CalcGridPointsOptions</code><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="pydrake.multibody.optimization.CalcGridPointsOptions.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.CalcGridPointsOptions</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.CalcGridPointsOptions.max_err">
+<code class="descname">max_err</code><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.max_err" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.CalcGridPointsOptions.max_iter">
+<code class="descname">max_iter</code><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.max_iter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.CalcGridPointsOptions.max_seg_length">
+<code class="descname">max_seg_length</code><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.max_seg_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.CalcGridPointsOptions.min_points">
+<code class="descname">min_points</code><a class="headerlink" href="#pydrake.multibody.optimization.CalcGridPointsOptions.min_points" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.multibody.optimization.CentroidalMomentumConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">CentroidalMomentumConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
@@ -395,6 +425,257 @@ wrench will be applied between these pairs.</dd>
 0. The complementarity constraint is relaxed as 0 ≤ α * β ≤ tol. See
 AddStaticFrictionConeComplementarityConstraint() for more details.</p>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.optimization.Toppra">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">Toppra</code><a class="headerlink" href="#pydrake.multibody.optimization.Toppra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves a Time Optimal Path Parameterization based on Reachability
+Analysis (TOPPRA) to find the fastest traversal of a given path,
+satisfying the given constraints. The approach is described in “A new
+approach to Time-Optimal Path Parameterization based on Reachability
+Analysis” by Hung Pham and Quang Cuong Pham, IEEE Transactions on
+Robotics, 2018.</p>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, path: pydrake.trajectories.Trajectory, plant: pydrake.multibody.plant.MultibodyPlant_[float], gridpoints: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an inverse kinematics problem for a MultibodyPlant. This
+constructor will create and own a context for</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>The trajectory on which the TOPPRA problem will be solved.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The robot that will follow the solved trajectory. Used for
+enforcing torque and frame specific constraints.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">gridpoints</span></code>:</dt>
+<dd>The points along the path to discretize the problem and enforce
+constraints at. The first and last gridpoint must equal the path
+start and end time respectively. Gridpoints must also be
+monotonically increasing.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Toppra does not currently support plants that contain bodies with
+quaternion degrees of freedom. In addition, any plant where q̇ ≠ v
+will have undefined behavior.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit">
+<code class="descname">AddFrameAccelerationLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint], pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameAccelerationLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a limit on the elements of the spatial acceleration of the given
+frame, measured and and expressed in the world frame. The limits
+should be given as [α_WF, a_WF], where α_WF is the frame’s angular
+acceleration and v_WF is the frame’s translational acceleration.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">constraint_frame</span></code>:</dt>
+<dd>The frame to limit the acceleration of.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>The lower acceleration limit for constraint_frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>The upper acceleration limit for constraint_frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">discretization</span></code>:</dt>
+<dd>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A pair containing the linear constraints that will enforce the
+frame acceleration limit on the backward pass and forward pass
+respectively.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit">
+<code class="descname">AddFrameTranslationalSpeedLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], upper_limit: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameTranslationalSpeedLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a limit on the magnitude of the translational velocity of the
+given frame, measured and expressed in the world frame.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">constraint_frame</span></code>:</dt>
+<dd>The frame to limit the translational speed of.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>The upper translational speed limit for constraint_frame.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bounding box constraint that will enforce the frame
+translational speed limit during the backward pass.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit">
+<code class="descname">AddFrameVelocityLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, constraint_frame: pydrake.multibody.tree.Frame_[float], lower_limit: numpy.ndarray[numpy.float64[6, 1]], upper_limit: numpy.ndarray[numpy.float64[6, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddFrameVelocityLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a limit on the elements of the spatial velocity of the given
+frame, measured and and expressed in the world frame. The limits
+should be given as [ω_WF, v_WF], where ω_WF is the frame’s angular
+velocity and v_WF is the frame’s translational velocity.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">constraint_frame</span></code>:</dt>
+<dd>The frame to limit the velocity of.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>The lower velocity limit for constraint_frame.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>The upper velocity limit for constraint_frame.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The bounding box constraint that will enforce the frame velocity
+limit during the backward pass.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit">
+<code class="descname">AddJointAccelerationLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint], pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointAccelerationLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an acceleration limit to all the degrees of freedom in the plant.
+The limits must be arranged in the same order as the entries in the
+path.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>The lower acceleration limit for each degree of freedom.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>The upper acceleration limit for each degree of freedom.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">discretization</span></code>:</dt>
+<dd>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A pair containing the linear constraints that will enforce the
+acceleration limit on the backward pass and forward pass
+respectively.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.AddJointTorqueLimit">
+<code class="descname">AddJointTorqueLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]], discretization: pydrake.multibody.optimization.ToppraDiscretization = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint], pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointTorqueLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a torque limit to all the degrees of freedom in the plant. The
+limits must be arranged in the same order as the entries in the path.
+This constrains the generalized torques applied to the plant and does
+not reason about contact forces.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>The lower torque limit for each degree of freedom.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>The upper torque limit for each degree of freedom.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">discretization</span></code>:</dt>
+<dd>The discretization scheme to use for this linear constraint. See
+ToppraDiscretization for details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A pair containing the linear constraints that will enforce the
+torque limit on the backward pass and forward pass respectively.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.AddJointVelocityLimit">
+<code class="descname">AddJointVelocityLimit</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, lower_limit: numpy.ndarray[numpy.float64[m, 1]], upper_limit: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.AddJointVelocityLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a velocity limit to all the degrees of freedom in the plant. The
+limits must be arranged in the same order as the entries in the path.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>The lower velocity limit for each degree of freedom.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>The upper velocity limit for each degree of freedom.</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.optimization.Toppra.CalcGridPoints">
+<em class="property">static </em><code class="descname">CalcGridPoints</code><span class="sig-paren">(</span><em>path: pydrake.trajectories.Trajectory</em>, <em>options: pydrake.multibody.optimization.CalcGridPointsOptions</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.CalcGridPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a path and generates a sequence of gridpoints selected to
+control the interpolation error of the optimization. The gridpoints
+are selected such that the distance between them is below
+<code class="docutils literal"><span class="pre">max_seg_length</span></code>, there are at least <code class="docutils literal"><span class="pre">min_points</span></code> number of
+gridpoints and the interpolation error, estimated with the equation</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>errₑₛₜ = max(|q̈ Δₛ²|) / 2
+</pre></div>
+</div>
+<p>where Δₛ is the distance between sequential gridpoints, is less than
+<code class="docutils literal"><span class="pre">max_err</span></code>. Gridpoints are selected by adding the midpoint between
+two gridpoints whenever the distance between them is too large or the
+estimated error is too high. This results in more points in parts of
+the path with higher curvature. All grid points will lie between
+path.start_time() and path.end_time().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.optimization.Toppra.SolvePathParameterization">
+<code class="descname">SolvePathParameterization</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.trajectories.PiecewisePolynomial]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves the TOPPRA optimization and returns the time optimized path
+parameterization s(t). This can be used with the original path q(s) to
+generate a time parameterized trajectory. The path parameterization
+has the same start time as the original path’s starting break.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.optimization.ToppraDiscretization">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">ToppraDiscretization</code><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selects how linear constraints are enforced for TOPPRA’s optimization.
+kCollocation - enforces constraints only at each gridpoint.
+kInterpolation - enforces constrants at each gridpoint and at the
+following gridpoint using forward integration. Yields higher accuracy
+at minor computational cost.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kCollocation :</p>
+<p>kInterpolation :</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.multibody.optimization.ToppraDiscretization.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.ToppraDiscretization</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ToppraDiscretization.kCollocation">
+<code class="descname">kCollocation</code><em class="property"> = &lt;ToppraDiscretization.kCollocation: 0&gt;</em><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.kCollocation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ToppraDiscretization.kInterpolation">
+<code class="descname">kInterpolation</code><em class="property"> = &lt;ToppraDiscretization.kInterpolation: 1&gt;</em><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.kInterpolation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ToppraDiscretization.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.optimization.ToppraDiscretization.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.multibody.optimization.ToppraDiscretization.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

@@ -105,9 +105,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1math_1_1_linear_solver.h
 class drake::math::LinearSolver&lt; LinearSolverType, DerivedA &gt;</h3>
 
 <p>Solves a linear system of equations A*x=b. </p>
-<p>Depending on the scalar types of A and b, the scalar type of x is summarized in this table. | ＼A | | | | </p><table class="markdownTable">
+<p>Depending on the scalar types of A and b, the scalar type of x is summarized in this table. </p><table class="markdownTable">
 <tr class="markdownTableHead">
-<th class="markdownTableHeadNone">b ＼  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr   </th></tr>
+<th class="markdownTableHeadNone">b ＼ A  </th><th class="markdownTableHeadNone">double  </th><th class="markdownTableHeadNone">ADS  </th><th class="markdownTableHeadNone">Expr   </th></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">double  </td><td class="markdownTableBodyNone">ADS  </td><td class="markdownTableBodyNone">NA   </td></tr>
 <tr class="markdownTableRowEven">
@@ -122,35 +122,28 @@ class drake::math::LinearSolver&lt; LinearSolverType, DerivedA &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a9a813708b474b1a7b658a1373cd0c3a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a9a813708b474b1a7b658a1373cd0c3a2">SolverType</a> = internal::EigenLinearSolver&lt; LinearSolverType, DerivedA &gt;</td></tr>
-<tr class="separator:a9a813708b474b1a7b658a1373cd0c3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765cac1de6b90115a30361aa561f14b2"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB &gt; </td></tr>
+<tr class="memitem:a765cac1de6b90115a30361aa561f14b2"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a765cac1de6b90115a30361aa561f14b2">SolutionType</a> = internal::Solution&lt; DerivedA, DerivedB &gt;</td></tr>
+<tr class="separator:a765cac1de6b90115a30361aa561f14b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acc37b898316108f2fcc15630a2ab2ccd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#acc37b898316108f2fcc15630a2ab2ccd">LinearSolver</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A)</td></tr>
 <tr class="separator:acc37b898316108f2fcc15630a2ab2ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a103382b48500c559f64f9560d995db4d"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB &gt; </td></tr>
-<tr class="memitem:a103382b48500c559f64f9560d995db4d"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a103382b48500c559f64f9560d995db4d">Solve</a> (const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a103382b48500c559f64f9560d995db4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization for both A and b being double- or symbolic-valued matrices.  <a href="#a103382b48500c559f64f9560d995db4d">More...</a><br /></td></tr>
-<tr class="separator:a103382b48500c559f64f9560d995db4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a500955b8392e9fd00f0a0502cc9ae668"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB &gt; </td></tr>
-<tr class="memitem:a500955b8392e9fd00f0a0502cc9ae668"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a500955b8392e9fd00f0a0502cc9ae668">Solve</a> (const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a500955b8392e9fd00f0a0502cc9ae668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization for A being double-valued matrix, and b being AutoDiffScalar-valued matrix.  <a href="#a500955b8392e9fd00f0a0502cc9ae668">More...</a><br /></td></tr>
-<tr class="separator:a500955b8392e9fd00f0a0502cc9ae668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a821388cb13721fe8ba3e3daa0b78c803"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB &gt; </td></tr>
-<tr class="memitem:a821388cb13721fe8ba3e3daa0b78c803"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_autodiff_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a821388cb13721fe8ba3e3daa0b78c803">Solve</a> (const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b) const</td></tr>
-<tr class="memdesc:a821388cb13721fe8ba3e3daa0b78c803"><td class="mdescLeft">&#160;</td><td class="mdescRight">Template specialization when A is a matrix of AutoDiffScalar.  <a href="#a821388cb13721fe8ba3e3daa0b78c803">More...</a><br /></td></tr>
-<tr class="separator:a821388cb13721fe8ba3e3daa0b78c803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a029d532ff52b767fd930b12a8d8021ca"><td class="memTemplParams" colspan="2">template&lt;typename DerivedB &gt; </td></tr>
+<tr class="memitem:a029d532ff52b767fd930b12a8d8021ca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a765cac1de6b90115a30361aa561f14b2">SolutionType</a>&lt; DerivedB &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a029d532ff52b767fd930b12a8d8021ca">Solve</a> (const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b) const</td></tr>
+<tr class="memdesc:a029d532ff52b767fd930b12a8d8021ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves system A*x = b.  <a href="#a029d532ff52b767fd930b12a8d8021ca">More...</a><br /></td></tr>
+<tr class="separator:a029d532ff52b767fd930b12a8d8021ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a9a813708b474b1a7b658a1373cd0c3a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a813708b474b1a7b658a1373cd0c3a2">&#9670;&nbsp;</a></span>SolverType</h2>
+<a id="a765cac1de6b90115a30361aa561f14b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765cac1de6b90115a30361aa561f14b2">&#9670;&nbsp;</a></span>SolutionType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a9a813708b474b1a7b658a1373cd0c3a2">SolverType</a> =  internal::EigenLinearSolver&lt;LinearSolverType, DerivedA&gt;</td>
+          <td class="memname">using <a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a765cac1de6b90115a30361aa561f14b2">SolutionType</a> =  internal::Solution&lt;DerivedA, DerivedB&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -185,14 +178,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a103382b48500c559f64f9560d995db4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a103382b48500c559f64f9560d995db4d">&#9670;&nbsp;</a></span>Solve() <span class="overload">[1/3]</span></h2>
+<a id="a029d532ff52b767fd930b12a8d8021ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a029d532ff52b767fd930b12a8d8021ca">&#9670;&nbsp;</a></span>Solve()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type Solve </td>
+          <td class="memname"><a class="el" href="classdrake_1_1math_1_1_linear_solver.html#a765cac1de6b90115a30361aa561f14b2">SolutionType</a>&lt;DerivedB&gt; Solve </td>
           <td>(</td>
           <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
           <td class="paramname"><em>b</em></td><td>)</td>
@@ -201,47 +194,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Template specialization for both A and b being double- or symbolic-valued matrices. </p>
-
-</div>
-</div>
-<a id="a500955b8392e9fd00f0a0502cc9ae668"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a500955b8392e9fd00f0a0502cc9ae668">&#9670;&nbsp;</a></span>Solve() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type Solve </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Template specialization for A being double-valued matrix, and b being AutoDiffScalar-valued matrix. </p>
-
-</div>
-</div>
-<a id="a821388cb13721fe8ba3e3daa0b78c803"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a821388cb13721fe8ba3e3daa0b78c803">&#9670;&nbsp;</a></span>Solve() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; internal::is_autodiff_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type Solve </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Template specialization when A is a matrix of AutoDiffScalar. </p>
+<p>Solves system A*x = b. </p>
+<p>Return type is as described in the table above. </p>
 
 </div>
 </div>

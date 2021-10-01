@@ -244,7 +244,7 @@ you can specify gtest-specific flags. As an example:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run bindings/pydrake:py/symbolic_test -- --trace=user --deprecation_action=error
 </code></pre></div></div>
 
-<h2 id="debugging-on-macos">Debugging on macOS</h2>
+<h2 id="debugging-and-profiling-on-macos">Debugging and profiling on macOS</h2>
 
 <p>On macOS, DWARF debug symbols are emitted to a <code class="highlighter-rouge">.dSYM</code> file.  The Bazel
 <code class="highlighter-rouge">cc_binary</code> and <code class="highlighter-rouge">cc_test</code> rules do not natively generate or expose this
@@ -254,6 +254,13 @@ This config turns off sandboxing, which allows a <code class="highlighter-rouge"
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel build --config=apple_debug path/to/my:binary_or_test_dsym
 lldb ./bazel-bin/path/to/my/binary_or_test
+</code></pre></div></div>
+
+<p>Profiling on macOS can be done by building with the debug symbols and then running</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcrun xctrace record -t "Time Profiler" --launch ./bazel-bin/path/to/my/binary_or_test
+</code></pre></div></div>
+<p>This will generate a <code class="highlighter-rouge">.trace</code> file that can be opened in the Instruments app:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>open -a Instruments myfile.trace
 </code></pre></div></div>
 
 <p>For more information, see <a href="https://github.com/bazelbuild/bazel/issues/2537">https://github.com/bazelbuild/bazel/issues/2537</a>.</p>

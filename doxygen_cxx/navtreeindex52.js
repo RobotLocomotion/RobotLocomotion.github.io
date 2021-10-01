@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__rational__function_8h.html#ad71ee73fb966e97f0de864fa7cdb3692":[4,0,0,1,70,2],
 "symbolic__rational__function_8h.html#af9ea1fd857bdf8fa5c18f570118640ff":[4,0,0,1,70,12],
 "symbolic__simplification_8h.html":[4,0,0,1,71],
 "symbolic__simplification_8h.html#a134e54042165751a5e5369b4631c90eb":[4,0,0,1,71,2],

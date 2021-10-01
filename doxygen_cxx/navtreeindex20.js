@@ -1,5 +1,8 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1solvers_1_1_polynomial_cost.html":[1,2,0,34],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a25f396d1eaf4be52eb3db66072895105":[1,2,0,34,6],
+"classdrake_1_1solvers_1_1_polynomial_cost.html#a4cfabc8f2d2a53ee991b848f84516bb6":[1,2,0,34,5],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a7ac486efb96e05a296c7d114d64f2ead":[1,2,0,34,1],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a8f99a12c084358b7a5c4cc6ec1722450":[1,2,0,34,3],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#aa2d7ab409cc841882a99f3e9b5d034c3":[1,2,0,34,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a54fec3504340cb5b3b15860d7b8929f2":[3,0,0,12,0,2,2],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a846830de124e22627562f0c8cbdda6a7":[3,0,0,12,0,2,4],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a85ab6b4bd08f5d110cbc4b87a6412409":[3,0,0,12,0,2,5],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a9117e4a6fb3ded3267eba43ffc87a388":[3,0,0,12,0,2,0],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a9fab6ed634b4aeec7249e5df50fd05e2":[3,0,0,12,0,2,1],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ac80cf29e054d6de6794351ea79da99b0":[3,0,0,12,0,2,8],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#ae2d6c0ae02101d50469e1e3a7c312b99":[3,0,0,12,0,2,6]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a9117e4a6fb3ded3267eba43ffc87a388":[3,0,0,12,0,2,0]
 };

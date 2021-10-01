@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#aafbbd8adc46009f9305d5a2522b4093b":[1,3,5,10,9],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#acb574affd4e091f2c83878e57e81bf85":[1,3,5,10,1],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#ad3b079500a82a818ba8128778ed07a3f":[1,3,5,10,2],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#af71a66f365f5efc8fcaa78a2c2fde404":[1,3,5,10,8],
@@ -100,10 +101,8 @@ var NAVTREEINDEX9 =
 "classdrake_1_1math_1_1_bspline_basis.html#acdb5921081f904477377b76b90953b12":[3,0,0,7,3,4],
 "classdrake_1_1math_1_1_bspline_basis.html#af4e5bebbe5c3fca068049c1ffe48c0fe":[3,0,0,7,3,3],
 "classdrake_1_1math_1_1_linear_solver.html":[3,0,0,7,9],
-"classdrake_1_1math_1_1_linear_solver.html#a103382b48500c559f64f9560d995db4d":[3,0,0,7,9,2],
-"classdrake_1_1math_1_1_linear_solver.html#a500955b8392e9fd00f0a0502cc9ae668":[3,0,0,7,9,3],
-"classdrake_1_1math_1_1_linear_solver.html#a821388cb13721fe8ba3e3daa0b78c803":[3,0,0,7,9,4],
-"classdrake_1_1math_1_1_linear_solver.html#a9a813708b474b1a7b658a1373cd0c3a2":[3,0,0,7,9,0],
+"classdrake_1_1math_1_1_linear_solver.html#a029d532ff52b767fd930b12a8d8021ca":[3,0,0,7,9,2],
+"classdrake_1_1math_1_1_linear_solver.html#a765cac1de6b90115a30361aa561f14b2":[3,0,0,7,9,0],
 "classdrake_1_1math_1_1_linear_solver.html#acc37b898316108f2fcc15630a2ab2ccd":[3,0,0,7,9,1],
 "classdrake_1_1math_1_1_numerical_gradient_option.html":[3,0,0,7,12],
 "classdrake_1_1math_1_1_numerical_gradient_option.html#a32db5240f6420a7ee661448822963978":[3,0,0,7,12,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX9 =
 "classdrake_1_1math_1_1_rotation_matrix.html#afa3f1ea791e60612a37e57dcf8b4187c":[3,0,0,7,15,31],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html":[1,2,0,0],
 "classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a0b7d46ac767f2268ee98b417dfebe34a":[1,2,0,0,2],
-"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a1efb2de54a80607fd7cac4b6760071bc":[1,2,0,0,1]
+"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a1efb2de54a80607fd7cac4b6760071bc":[1,2,0,0,1],
+"classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html#a2cf9c73e6f4c40795e1a8bd64ea29e62":[1,2,0,0,4]
 };

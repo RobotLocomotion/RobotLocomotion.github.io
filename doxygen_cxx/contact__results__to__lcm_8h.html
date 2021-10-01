@@ -148,7 +148,7 @@ Functions</h2></td></tr>
 </ul>
 <p>The four variants differ in the following ways:</p>
 <ul>
-<li>Two overloads take a SceneGraph and two don't. Those that do will ensure that the geometry names communicated in the lcm messages match the names used in SceneGraph. Those that don't default to the naming convention documented in ContactResultsToLcmSystem.</li>
+<li>Two overloads take a SceneGraph and two don't. Those that do will ensure that the geometry names communicated in the lcm messages match the names used in SceneGraph. Those that don't are deprecated.</li>
 <li>Two overloads take an OutputPort and two don't. This determines what is connected to the ContactResultsToLcmSystem input port. The overloads that specify an OutputPort will attempt to connect that port. Those that don't will connect the given plant's contact results output port.</li>
 </ul>
 <p>The parameters have the following semantics:</p>

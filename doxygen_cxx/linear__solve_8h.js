@@ -13,7 +13,5 @@ var linear__solve_8h =
     [ "SolveLinearSystem", "linear__solve_8h.html#ac1ecf90a76392d69deecb8feb29e19a7", null ],
     [ "SolveLinearSystem", "linear__solve_8h.html#a2fe42b78445dde235cc217342ba8ab87", null ],
     [ "SolveLinearSystem", "linear__solve_8h.html#a9bfcba20c731dc23e4f48c367e36c9de", null ],
-    [ "SolveLinearSystem", "linear__solve_8h.html#ac8229b4b5fa06b098639dbf00e82fc78", null ],
-    [ "SolveLinearSystem", "linear__solve_8h.html#ab89b1c65992f98a31bc51792148b6650", null ],
-    [ "SolveLinearSystem", "linear__solve_8h.html#ac34dce8c550e60cd5f163c210c1f322c", null ]
+    [ "SolveLinearSystem", "linear__solve_8h.html#a579e00c8ae91d6bcdb32eb4d723eba73", null ]
 ];

@@ -384,7 +384,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ad8fa828762d54ed2db5efec5df1b5082"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">ToppraDiscretization</a> { <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a">kCollocation</a>, 
 <a class="el" href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082a9ef15c126044c94d6440bfbf02f6c55d">kInterpolation</a>
  }</td></tr>
-<tr class="memdesc:ad8fa828762d54ed2db5efec5df1b5082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects how linear constraints are enforced for Toppra's optimization.  <a href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">More...</a><br /></td></tr>
+<tr class="memdesc:ad8fa828762d54ed2db5efec5df1b5082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects how linear constraints are enforced for TOPPRA's optimization.  <a href="namespacedrake_1_1multibody.html#ad8fa828762d54ed2db5efec5df1b5082">More...</a><br /></td></tr>
 <tr class="separator:ad8fa828762d54ed2db5efec5df1b5082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f6e054758d34b83e86bea87d65dfe4e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a> { <br />
 &#160;&#160;<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d">kHydroelastic</a>, 
@@ -457,7 +457,7 @@ Functions</h2></td></tr>
 </ul>
 <p>The four variants differ in the following ways:</p>
 <ul>
-<li>Two overloads take a SceneGraph and two don't. Those that do will ensure that the geometry names communicated in the lcm messages match the names used in SceneGraph. Those that don't default to the naming convention documented in <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message.">ContactResultsToLcmSystem</a>.</li>
+<li>Two overloads take a SceneGraph and two don't. Those that do will ensure that the geometry names communicated in the lcm messages match the names used in SceneGraph. Those that don't are deprecated.</li>
 <li>Two overloads take an OutputPort and two don't. This determines what is connected to the <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message.">ContactResultsToLcmSystem</a> input port. The overloads that specify an OutputPort will attempt to connect that port. Those that don't will connect the given plant's contact results output port.</li>
 </ul>
 <p>The parameters have the following semantics:</p>
@@ -734,7 +734,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Selects how linear constraints are enforced for <a class="el" href="classdrake_1_1multibody_1_1_toppra.html" title="Solves a Time Optimal Path Parameterization based on Reachability Analysis (TOPPRA) to find the faste...">Toppra</a>'s optimization. </p>
+<p>Selects how linear constraints are enforced for TOPPRA's optimization. </p>
 <p>kCollocation - enforces constraints only at each gridpoint. kInterpolation - enforces constrants at each gridpoint and at the following gridpoint using forward integration. Yields higher accuracy at minor computational cost. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad8fa828762d54ed2db5efec5df1b5082a8adcba0ce62338780719c9d3d29a0c6a"></a>kCollocation&#160;</td><td class="fielddoc"></td></tr>

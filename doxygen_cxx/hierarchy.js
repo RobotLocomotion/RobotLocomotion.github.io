@@ -557,8 +557,8 @@ var hierarchy =
     [ "Meshcat::PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
