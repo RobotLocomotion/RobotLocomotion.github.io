@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_scala
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_system_scalar_converter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SystemScalarConverter Class Reference</div>  </div>
@@ -125,9 +126,6 @@ Public Types</h2></td></tr>
 <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63a7b04d8795f5fd03c761ce70dab985fee">kDisabled</a>
  }</td></tr>
 <tr class="separator:aa5deb46f2141a0937f577705ba822e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a> = std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; &gt;(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;)&gt;</td></tr>
-<tr class="separator:a2370ce4ad203ecc3b866db8c79ad6d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -145,14 +143,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff no conversions are supported.  <a href="#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab688111bb39aa17b3c4937fb3dc1327c"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
-<tr class="memitem:ab688111bb39aa17b3c4937fb3dc1327c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#ab688111bb39aa17b3c4937fb3dc1327c">Add</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a>&lt; T, U &gt; &amp;)</td></tr>
-<tr class="memdesc:ab688111bb39aa17b3c4937fb3dc1327c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab688111bb39aa17b3c4937fb3dc1327c">More...</a><br /></td></tr>
-<tr class="separator:ab688111bb39aa17b3c4937fb3dc1327c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a741ce0f7af95f7085627930436dab249"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S, typename T , typename U &gt; </td></tr>
-<tr class="memitem:a741ce0f7af95f7085627930436dab249"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a741ce0f7af95f7085627930436dab249">AddIfSupported</a> ()</td></tr>
-<tr class="memdesc:a741ce0f7af95f7085627930436dab249"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a741ce0f7af95f7085627930436dab249">More...</a><br /></td></tr>
-<tr class="separator:a741ce0f7af95f7085627930436dab249"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9016c7efc7525c57ed373c3e00b47151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a9016c7efc7525c57ed373c3e00b47151">RemoveUnlessAlsoSupportedBy</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;other)</td></tr>
 <tr class="memdesc:a9016c7efc7525c57ed373c3e00b47151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes from this converter all pairs where <code>other.IsConvertible&lt;T, U&gt;</code> is false.  <a href="#a9016c7efc7525c57ed373c3e00b47151">More...</a><br /></td></tr>
 <tr class="separator:a9016c7efc7525c57ed373c3e00b47151"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,22 +174,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a6275b6e3f7ef323d21f726c6f093d1dd">MakeWithoutSubtypeChecking</a> ()</td></tr>
 <tr class="memdesc:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Creates a converter similar to the single-argument constructor, with the built-in checks for guaranteed subtype preservation of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> turned off.  <a href="#a6275b6e3f7ef323d21f726c6f093d1dd">More...</a><br /></td></tr>
 <tr class="separator:a6275b6e3f7ef323d21f726c6f093d1dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a66777eb6910798b0be2e4fcbf31c7b84"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a66777eb6910798b0be2e4fcbf31c7b84"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a66777eb6910798b0be2e4fcbf31c7b84">system_scalar_converter_internal::AddPydrakeConverterFunction</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> *, const std::function&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;)&gt; &amp;)</td></tr>
+<tr class="separator:a66777eb6910798b0be2e4fcbf31c7b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a2370ce4ad203ecc3b866db8c79ad6d34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2370ce4ad203ecc3b866db8c79ad6d34">&#9670;&nbsp;</a></span>ConverterFunction</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a> =  std::function&lt;std::unique_ptr&lt;<a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;T&gt; &gt;(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt;U&gt;&amp;)&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="aa5deb46f2141a0937f577705ba822e63"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5deb46f2141a0937f577705ba822e63">&#9670;&nbsp;</a></span>GuaranteedSubtypePreservation</h2>
@@ -354,55 +335,12 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000046">Deprecated:</a></b></dt><dd>Use MakeWithoutSubtypeChecking instead of kDisabled. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Use MakeWithoutSubtypeChecking instead of kDisabled. <br />
  This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab688111bb39aa17b3c4937fb3dc1327c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab688111bb39aa17b3c4937fb3dc1327c">&#9670;&nbsp;</a></span>Add()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Add </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a2370ce4ad203ecc3b866db8c79ad6d34">ConverterFunction</a>&lt; T, U &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000047">Deprecated:</a></b></dt><dd>Only scalar-converting copy constructors are supported. <br />
- This will be removed from Drake on or after 2021-10-01.</dd></dl>
-
-</div>
-</div>
-<a id="a741ce0f7af95f7085627930436dab249"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a741ce0f7af95f7085627930436dab249">&#9670;&nbsp;</a></span>AddIfSupported()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AddIfSupported </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000048">Deprecated:</a></b></dt><dd>User-defined scalar types cannot be added. <br />
- This will be removed from Drake on or after 2021-10-01.</dd></dl>
-
-</div>
-</div>
 <a id="a16f9a4430d4f9d2c9dc4228524f17b5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16f9a4430d4f9d2c9dc4228524f17b5b">&#9670;&nbsp;</a></span>Convert()</h2>
 
@@ -580,6 +518,43 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Removes from this converter all pairs where <code>other.IsConvertible&lt;T, U&gt;</code> is false. </p>
 <p>The subtype <code>S</code> need not be the same between this and <code>other</code>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a66777eb6910798b0be2e4fcbf31c7b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66777eb6910798b0be2e4fcbf31c7b84">&#9670;&nbsp;</a></span>system_scalar_converter_internal::AddPydrakeConverterFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void system_scalar_converter_internal::AddPydrakeConverterFunction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::function&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;)&gt; &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('structdrake_1_1geometry_1_1_meshcat_vi
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3a415b5e7e1f412ec0002e0251ced626"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626">publish_period</a> {1 / 60.0}</td></tr>
+<tr class="memitem:a3a415b5e7e1f412ec0002e0251ced626"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626">publish_period</a> {1 / 64.0}</td></tr>
 <tr class="memdesc:a3a415b5e7e1f412ec0002e0251ced626"><td class="mdescLeft">&#160;</td><td class="mdescRight">The duration (in simulation seconds) between attempts to update poses in the visualizer.  <a href="#a3a415b5e7e1f412ec0002e0251ced626">More...</a><br /></td></tr>
 <tr class="separator:a3a415b5e7e1f412ec0002e0251ced626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d836029fd25573125bd231e1ad19ecb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951">Role</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb">role</a> {<a class="el" href="namespacedrake_1_1geometry.html#acdd79a1a4f81dd6ee5cddcb21149b951aac28e5ab68fbe5dc23f550aa18255c07">Role::kIllustration</a>}</td></tr>
@@ -180,12 +180,13 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double publish_period {1 / 60.0}</td>
+          <td class="memname">double publish_period {1 / 64.0}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The duration (in simulation seconds) between attempts to update poses in the visualizer. </p>
+<p>(To help avoid small simulation timesteps, we use a default period that has an exact representation in binary floating point; see drake#15021 for details.) </p>
 
 </div>
 </div>

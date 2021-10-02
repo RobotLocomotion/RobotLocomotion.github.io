@@ -385,10 +385,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a48484009086db12d881bea6bcaab2514"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a48484009086db12d881bea6bcaab2514">NormalizeVector</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;x, typename Derived::PlainObject &amp;x_norm, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 1 &gt;::type *dx_norm=nullptr, typename <a class="el" href="structdrake_1_1math_1_1_gradient.html">drake::math::Gradient</a>&lt; Derived, Derived::RowsAtCompileTime, 2 &gt;::type *ddx_norm=nullptr)</td></tr>
 <tr class="memdesc:a48484009086db12d881bea6bcaab2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the normalized vector, optionally with its gradient and second derivative.  <a href="#a48484009086db12d881bea6bcaab2514">More...</a><br /></td></tr>
 <tr class="separator:a48484009086db12d881bea6bcaab2514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a25d66185d603162f5702d31136b31c"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a5a25d66185d603162f5702d31136b31c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a5a25d66185d603162f5702d31136b31c">ComputeBasisFromAxis</a> (<a class="el" href="classint.html">int</a> axis_index, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;axis_W)</td></tr>
-<tr class="memdesc:a5a25d66185d603162f5702d31136b31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a right-handed local basis from a given axis.  <a href="#a5a25d66185d603162f5702d31136b31c">More...</a><br /></td></tr>
-<tr class="separator:a5a25d66185d603162f5702d31136b31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fccff311f09a5a35afac17388541c7f"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fccff311f09a5a35afac17388541c7f">DecomposePSDmatrixIntoXtransposeTimesX</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Y, double zero_tol)</td></tr>
 <tr class="memdesc:a2fccff311f09a5a35afac17388541c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a symmetric positive semidefinite matrix Y, decompose it into XᵀX, where the number of rows in X equals to the rank of Y.  <a href="#a2fccff311f09a5a35afac17388541c7f">More...</a><br /></td></tr>
 <tr class="separator:a2fccff311f09a5a35afac17388541c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1020,58 +1016,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a unit quaternion that represents the same orientation as <code>q1</code>, and has the "shortest" geodesic distance on the unit sphere to <code>q0</code>. </p>
-
-</div>
-</div>
-<a id="a5a25d66185d603162f5702d31136b31c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a25d66185d603162f5702d31136b31c">&#9670;&nbsp;</a></span>ComputeBasisFromAxis()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">Matrix3</a>&lt;T&gt; drake::math::ComputeBasisFromAxis </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>axis_index</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>axis_W</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Creates a right-handed local basis from a given axis. </p>
-<p>Defines two other arbitrary axes such that the basis is orthonormal. The basis is R_WL, where W is the frame in which the input axis is expressed and L is a local basis such that v_W = R_WL * v_L.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">axis_index</td><td>The index of the axis (in the range [0,2]), with 0 corresponding to the x-axis, 1 corresponding to the y-axis, and z-corresponding to the z-axis. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">axis_W</td><td>The vector defining the basis's given axis expressed in frame W. The vector need not be a unit vector: this routine will normalize it. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">R_WL</td><td>The computed basis. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the norm of <code>axis_W</code> is within 1e-10 to zero or <code>axis_index</code> does not lie in the range [0,2]. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Use RotationMatrix::MakeFromOneVector(). <br />
- This will be removed from Drake on or after 2021-10-01.</dd></dl>
 
 </div>
 </div>

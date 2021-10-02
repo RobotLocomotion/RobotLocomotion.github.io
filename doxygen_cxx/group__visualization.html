@@ -123,7 +123,7 @@ Visualizing contact results</h2></td></tr>
 <ul>
 <li>adds systems multibody::ContactResultsToLcmSystem and LcmPublisherSystem to the Diagram and connects the draw message output to the publisher input,</li>
 <li>connects a ContactResults&lt;double&gt;-valued output port to the ContactResultsToLcmSystem system, and</li>
-<li>sets the publishing rate to 1/60 of a second (simulated time).</li>
+<li>sets the publishing rate based on publish_period.</li>
 </ul>
 <p>The four variants differ in the following ways:</p>
 <ul>
@@ -202,7 +202,7 @@ Visualizing contact results</h2></td></tr>
 </div><div class="memdoc">
 
 <p>MultibodyPlant-connecting, default-named geometry overload. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Provide a SceneGraph as the third argument. <br />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Provide a SceneGraph as the third argument. <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -300,7 +300,7 @@ Visualizing contact results</h2></td></tr>
 </div><div class="memdoc">
 
 <p>OutputPort-connecting, default-named geometry overload. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Provide a SceneGraph as the third argument. <br />
+<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Provide a SceneGraph as the third argument. <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>

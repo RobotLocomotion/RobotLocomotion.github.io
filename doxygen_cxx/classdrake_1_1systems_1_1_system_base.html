@@ -306,26 +306,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1b3f9382208d13e11984a54afa711577"><td class="memItemLeft" align="right" valign="top">internal::SystemId&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a1b3f9382208d13e11984a54afa711577">get_system_id</a> () const</td></tr>
 <tr class="memdesc:a1b3f9382208d13e11984a54afa711577"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal) Gets the id used to tag context data as being created by this system.  <a href="#a1b3f9382208d13e11984a54afa711577">More...</a><br /></td></tr>
 <tr class="separator:a1b3f9382208d13e11984a54afa711577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:abbed6ab1f586a7b4d4a6131c6fa415ab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">set_parent_service</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> *child, const internal::SystemParentServiceInterface *parent_service)</td></tr>
-<tr class="memdesc:abbed6ab1f586a7b4d4a6131c6fa415ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Declares that <code>parent_service</code> is the service interface of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that owns this subsystem.  <a href="#abbed6ab1f586a7b4d4a6131c6fa415ab">More...</a><br /></td></tr>
-<tr class="separator:abbed6ab1f586a7b4d4a6131c6fa415ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a647a29d1660bcca523c4943cdc0ca1c8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">ThrowInputPortHasWrongType</a> (const char *func, const std::string &amp;system_pathname, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a>, const std::string &amp;port_name, const std::string &amp;expected_type, const std::string &amp;actual_type)</td></tr>
-<tr class="memdesc:a647a29d1660bcca523c4943cdc0ca1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code> claiming the input port had some value type that was wrong.  <a href="#a647a29d1660bcca523c4943cdc0ca1c8">More...</a><br /></td></tr>
-<tr class="separator:a647a29d1660bcca523c4943cdc0ca1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ada692f3d9776c32b9f7a74c6637ac5eb">ThrowUnsupportedScalarConversion</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;from, const std::string &amp;destination_type_name)</td></tr>
-<tr class="memdesc:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws a std::exception for unsupported scalar type conversions.  <a href="#ada692f3d9776c32b9f7a74c6637ac5eb">More...</a><br /></td></tr>
-<tr class="separator:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae5fb494dd1e5a799534b5fc0826062"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html">ContextSizes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">get_context_sizes</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;system)</td></tr>
-<tr class="memdesc:acae5fb494dd1e5a799534b5fc0826062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to access protected <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a> recursively on its subsystems.  <a href="#acae5fb494dd1e5a799534b5fc0826062">More...</a><br /></td></tr>
-<tr class="separator:acae5fb494dd1e5a799534b5fc0826062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
-Declare cache entries</h2></td></tr>
-<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp5b14d85121e48d41744c9403d0bf749b"></a><a class="anchor" id="DeclareCacheEntry_documentation"></a> Methods in this section are used by derived classes to declare cache entries for their own internal computations. (Other cache entries are provided automatically for well-known computations such as output ports and time derivatives.) <a class="el" href="classdrake_1_1systems_1_1_cache.html" title="(Advanced) Stores all the CacheEntryValue objects owned by a particular Context, organized to allow f...">Cache</a> entries may contain values of any type, however the type for any particular cache entry is fixed after first allocation. Every cache entry must have an <em>allocator</em> function <code>Allocate()</code> and a <em>calculator</em> function <code>Calc()</code>. <code>Allocate()</code> returns an object suitable for holding a value of the cache entry. <code>Calc()</code> uses the contents of a given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to produce the cache entry's value, which is placed in an object of the type returned by <code>Allocate()</code>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>These methods are currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01.</dd></dl>
+<tr><td colspan="2"><div class="groupHeader">Declare cache entries</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="DeclareCacheEntry_documentation"></a> Methods in this section are used by derived classes to declare cache entries for their own internal computations. (Other cache entries are provided automatically for well-known computations such as output ports and time derivatives.) <a class="el" href="classdrake_1_1systems_1_1_cache.html" title="(Advanced) Stores all the CacheEntryValue objects owned by a particular Context, organized to allow f...">Cache</a> entries may contain values of any type, however the type for any particular cache entry is fixed after first allocation. Every cache entry must have an <em>allocator</em> function <code>Allocate()</code> and a <em>calculator</em> function <code>Calc()</code>. <code>Allocate()</code> returns an object suitable for holding a value of the cache entry. <code>Calc()</code> uses the contents of a given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> to produce the cache entry's value, which is placed in an object of the type returned by <code>Allocate()</code>.</p>
 <h4>Prerequisites</h4>
 <p>Correct runtime caching behavior depends critically on understanding the dependencies of the cache entry's <code>Calc()</code> function (we call those "prerequisites"). If none of the prerequisites has changed since the last time <code>Calc()</code> was invoked to set the cache entry's value, then we don't need to perform a potentially expensive recalculation. On the other hand, if any of the prerequisites has changed then the current value is invalid and must not be used without first recomputing.</p>
 <p>Currently it is not possible for Drake to infer prerequisites accurately and automatically from inspection of the <code>Calc()</code> implementation. Therefore, if you don't say otherwise, Drake will assume <code>Calc()</code> is dependent on all value sources in the <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>, including time, state, input ports, parameters, and accuracy. That means the cache entry's value will be considered invalid if <em>any</em> of those sources has changed since the last time the value was calculated. That is safe, but can result in more computation than necessary. If you know that your <code>Calc()</code> method has fewer prerequisites, you may say so by providing an explicit list in the <code>prerequisites_of_calc</code> parameter. Every possible prerequisite has a DependencyTicket ("ticket"), and the list should consist of tickets. For example, if your calculator depends only on time (e.g. <code>Calc(context)</code> is <code>sin(context.get_time())</code>) then you would specify <code>prerequisites_of_calc={<a class="el" href="classdrake_1_1systems_1_1_system_base.html#a68516072b2dc51a601f2de699691f1c3" title="Returns a ticket indicating dependence on time.">time_ticket()</a>}</code> here. See <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DependencyTicket_documentation">Dependency tickets</a> for a list of the possible tickets and what they mean.</p>
@@ -340,10 +322,10 @@ Declare cache entries</h2></td></tr>
 <h4>Which signature to use?</h4>
 <p>Although the allocator and calculator functions ultimately satisfy generic function signatures defined by a <a class="el" href="classdrake_1_1systems_1_1_value_producer.html" title="ValueProducer computes an AbstractValue output based on a ContextBase input.">ValueProducer</a>, we provide a variety of <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a></code> signatures here for convenient specification, with mapping to the generic form handled invisibly. In particular, allocators are most easily defined by providing a model value that can be used to construct an allocator that copies the model when a new value object is needed. Alternatively a method can be provided that constructs a value object when invoked (those methods are conventionally, but not necessarily, named <code>MakeSomething()</code> where <code>Something</code> is replaced by the cache entry value type).</p>
 <p>Because cache entry values are ultimately stored in <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> objects, the underlying types must be suitable. That means the type must be copy constructible or cloneable. For methods below that are not given an explicit model value or construction ("make") method, the underlying type must also be default constructible. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> for more about abstract values. </dd></dl>
-</td></tr>
-<tr class="memitem:aef49fcced5cc4bf3a164beb0a688cc3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#aef49fcced5cc4bf3a164beb0a688cc3c">DeclareCacheEntry</a> (std::string description, std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;()&gt; alloc_function, std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt; calc_function, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:aef49fcced5cc4bf3a164beb0a688cc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aef49fcced5cc4bf3a164beb0a688cc3c">More...</a><br /></td></tr>
-<tr class="separator:aef49fcced5cc4bf3a164beb0a688cc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</div></td></tr>
+<tr class="memitem:a7da4e8aa9a414faa5b40fc64e8ca40e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">DeclareCacheEntry</a> (std::string description, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a7da4e8aa9a414faa5b40fc64e8ca40e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a new CacheEntry in this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the most generic form of the calculation function.  <a href="#a7da4e8aa9a414faa5b40fc64e8ca40e3">More...</a><br /></td></tr>
+<tr class="separator:a7da4e8aa9a414faa5b40fc64e8ca40e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72cf4ad323350419dfcc5a6601fa0449"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
 <tr class="memitem:a72cf4ad323350419dfcc5a6601fa0449"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a72cf4ad323350419dfcc5a6601fa0449">DeclareCacheEntry</a> (std::string description, ValueType(MySystem::*make)() const, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
 <tr class="memdesc:a72cf4ad323350419dfcc5a6601fa0449"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a72cf4ad323350419dfcc5a6601fa0449">More...</a><br /></td></tr>
@@ -364,9 +346,21 @@ Declare cache entries</h2></td></tr>
 <tr class="memitem:ad291a98842b04b626d781e4e86e7fdfb"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad291a98842b04b626d781e4e86e7fdfb">DeclareCacheEntry</a> (std::string description, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
 <tr class="memdesc:ad291a98842b04b626d781e4e86e7fdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ad291a98842b04b626d781e4e86e7fdfb">More...</a><br /></td></tr>
 <tr class="separator:ad291a98842b04b626d781e4e86e7fdfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da4e8aa9a414faa5b40fc64e8ca40e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">DeclareCacheEntry</a> (std::string description, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a7da4e8aa9a414faa5b40fc64e8ca40e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a new CacheEntry in this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the most generic form of the calculation function.  <a href="#a7da4e8aa9a414faa5b40fc64e8ca40e3">More...</a><br /></td></tr>
-<tr class="separator:a7da4e8aa9a414faa5b40fc64e8ca40e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:abbed6ab1f586a7b4d4a6131c6fa415ab"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#abbed6ab1f586a7b4d4a6131c6fa415ab">set_parent_service</a> (<a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> *child, const internal::SystemParentServiceInterface *parent_service)</td></tr>
+<tr class="memdesc:abbed6ab1f586a7b4d4a6131c6fa415ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Declares that <code>parent_service</code> is the service interface of the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that owns this subsystem.  <a href="#abbed6ab1f586a7b4d4a6131c6fa415ab">More...</a><br /></td></tr>
+<tr class="separator:abbed6ab1f586a7b4d4a6131c6fa415ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a647a29d1660bcca523c4943cdc0ca1c8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">ThrowInputPortHasWrongType</a> (const char *func, const std::string &amp;system_pathname, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a>, const std::string &amp;port_name, const std::string &amp;expected_type, const std::string &amp;actual_type)</td></tr>
+<tr class="memdesc:a647a29d1660bcca523c4943cdc0ca1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code> claiming the input port had some value type that was wrong.  <a href="#a647a29d1660bcca523c4943cdc0ca1c8">More...</a><br /></td></tr>
+<tr class="separator:a647a29d1660bcca523c4943cdc0ca1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ada692f3d9776c32b9f7a74c6637ac5eb">ThrowUnsupportedScalarConversion</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;from, const std::string &amp;destination_type_name)</td></tr>
+<tr class="memdesc:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws a std::exception for unsupported scalar type conversions.  <a href="#ada692f3d9776c32b9f7a74c6637ac5eb">More...</a><br /></td></tr>
+<tr class="separator:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae5fb494dd1e5a799534b5fc0826062"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html">ContextSizes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">get_context_sizes</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;system)</td></tr>
+<tr class="memdesc:acae5fb494dd1e5a799534b5fc0826062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to access protected <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a> recursively on its subsystems.  <a href="#acae5fb494dd1e5a799534b5fc0826062">More...</a><br /></td></tr>
+<tr class="separator:acae5fb494dd1e5a799534b5fc0826062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Dependency tickets</h2></td></tr>
@@ -1062,7 +1056,7 @@ Dependency tickets</h2></td></tr>
 </div>
 </div>
 <a id="a7da4e8aa9a414faa5b40fc64e8ca40e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7da4e8aa9a414faa5b40fc64e8ca40e3">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7da4e8aa9a414faa5b40fc64e8ca40e3">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1121,55 +1115,14 @@ Dependency tickets</h2></td></tr>
 
 </div>
 </div>
-<a id="aef49fcced5cc4bf3a164beb0a688cc3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef49fcced5cc4bf3a164beb0a688cc3c">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[2/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a>&amp; DeclareCacheEntry </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>description</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; std::unique_ptr&lt; <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> &gt;()&gt;&#160;</td>
-          <td class="paramname"><em>alloc_function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::function&lt; void(const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;, <a class="el" href="classdrake_1_1_abstract_value.html">AbstractValue</a> *)&gt;&#160;</td>
-          <td class="paramname"><em>calc_function</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt;&#160;</td>
-          <td class="paramname"><em>prerequisites_of_calc</em> = <code>{&#160;<a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()}</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated:</a></b></dt><dd>Use the ValueProducer overload instead. <br />
- This will be removed from Drake on or after 2021-10-01.</dd></dl>
-
-</div>
-</div>
 <a id="a72cf4ad323350419dfcc5a6601fa0449"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72cf4ad323350419dfcc5a6601fa0449">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a72cf4ad323350419dfcc5a6601fa0449">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
@@ -1201,19 +1154,27 @@ Dependency tickets</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000043">Deprecated:</a></b></dt><dd>This overload for DeclareCacheEntry is rarely the best choice; it is  unusual for allocation to actually require a boutique callback rather  than just a Clone of a model_value. We found that most uses of this  overload hindered readability, because other overloads would often do  the job more directly. If no existing overload works, you may wrap a  ValueProducer around your existing make method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>This overload for DeclareCacheEntry is rarely the best choice; it is  unusual for allocation to actually require a boutique callback rather  than just a Clone of a model_value. We found that most uses of this  overload hindered readability, because other overloads would often do  the job more directly. If no existing overload works, you may wrap a  ValueProducer around your existing make method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
  This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>
 </div>
 <a id="a4076a7594095a9ca6936dd70c7254f84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4076a7594095a9ca6936dd70c7254f84">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
@@ -1245,19 +1206,26 @@ Dependency tickets</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature: </p>
 <p><a class="anchor" id="DeclareCacheEntry_model_and_calc"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code>, <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>, and <code>ValueType</code> is any concrete type such that <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted. (The method names are arbitrary.) Template arguments will be deduced and do not need to be specified. See the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#DeclareCacheEntry_primary">primary DeclareCacheEntry() signature</a> above for more information about the parameters and behavior. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
 <a id="a690a31266a408ea23593fac8e2ea1804"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a690a31266a408ea23593fac8e2ea1804">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a690a31266a408ea23593fac8e2ea1804">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
@@ -1289,19 +1257,27 @@ Dependency tickets</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated:</a></b></dt><dd>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
  This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>
 </div>
 <a id="a7d078e4f799ae50f07ae35389352835f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d078e4f799ae50f07ae35389352835f">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
@@ -1327,21 +1303,28 @@ Dependency tickets</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature: </p>
 <p><a class="anchor" id="DeclareCacheEntry_calc_only"></a></p><div class="fragment"><div class="line"><span class="keywordtype">void</span> MySystem::CalcCacheValue(<span class="keyword">const</span> MyContext&amp;, ValueType*) <span class="keyword">const</span>;</div></div><!-- fragment --><p> where <code>MySystem</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_system_base.html" title="Provides non-templatized functionality shared by the templatized System classes.">SystemBase</a></code> and <code>MyContext</code> is a class derived from <code><a class="el" href="classdrake_1_1systems_1_1_context_base.html" title="Provides non-templatized Context functionality shared by the templatized derived classes.">ContextBase</a></code>. <code>ValueType</code> is a concrete type such that (a) <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;</code> is permitted, and (b) <code>ValueType</code> is default constructible. That allows us to create a model value using <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;ValueType&gt;{}</code> (value initialized so numerical types will be zeroed in the model). (The method name is arbitrary.) Template arguments will be deduced and do not need to be specified. See the first <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3" title="Declares a new CacheEntry in this System using the most generic form of the calculation function.">DeclareCacheEntry()</a> signature above for more information about the parameters and behavior.</p>
 <dl class="section note"><dt>Note</dt><dd>The default constructor will be called once immediately to create a model value, and subsequent allocations will just copy the model value without invoking the constructor again. If you want the constructor invoked again at each allocation (not common), use one of the other signatures to explicitly provide a method for the allocator to call; that method can then invoke the <code>ValueType</code> default constructor each time it is called. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">drake::Value</a> </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>This method is currently specified as <code>public</code> access, but will be demoted to <code>protected</code> access on or after 2021-10-01. </dd></dl>
 
 </div>
 </div>
 <a id="ad291a98842b04b626d781e4e86e7fdfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad291a98842b04b626d781e4e86e7fdfb">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad291a98842b04b626d781e4e86e7fdfb">&#9670;&nbsp;</a></span>DeclareCacheEntry() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp; DeclareCacheEntry </td>
@@ -1367,10 +1350,15 @@ Dependency tickets</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000045">Deprecated:</a></b></dt><dd>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
  This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>

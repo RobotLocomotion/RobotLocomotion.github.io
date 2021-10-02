@@ -1068,44 +1068,6 @@ class description).</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="pydrake.math.ComputeBasisFromAxis">
-<code class="descclassname">pydrake.math.</code><code class="descname">ComputeBasisFromAxis</code><span class="sig-paren">(</span><em>axis_index: int, axis_W: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 3]]<a class="headerlink" href="#pydrake.math.ComputeBasisFromAxis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a right-handed local basis from a given axis. Defines two
-other arbitrary axes such that the basis is orthonormal. The basis is
-R_WL, where W is the frame in which the input axis is expressed and L
-is a local basis such that v_W = R_WL * v_L.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">axis_index</span></code>:</dt>
-<dd>The index of the axis (in the range [0,2]), with 0 corresponding
-to the x-axis, 1 corresponding to the y-axis, and z-corresponding
-to the z-axis.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">axis_W</span></code>:</dt>
-<dd>The vector defining the basis’s given axis expressed in frame W.
-The vector need not be a unit vector: this routine will normalize
-it.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">R_WL</span></code>:</dt>
-<dd>The computed basis.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the norm of <code class="docutils literal"><span class="pre">axis_W</span></code> is within 1e-10 to zero or</li>
-<li><code class="docutils literal"><span class="pre">axis_index</span></code> does not lie in the range [0,2]. (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use RotationMatrix::MakeFromOneVector(). This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
 <dt id="pydrake.math.ContinuousAlgebraicRiccatiEquation">
 <code class="descclassname">pydrake.math.</code><code class="descname">ContinuousAlgebraicRiccatiEquation</code><span class="sig-paren">(</span><em>A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ContinuousAlgebraicRiccatiEquation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the unique stabilizing solution S to the continuous-time

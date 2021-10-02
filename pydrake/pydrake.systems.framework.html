@@ -7176,12 +7176,8 @@ input, must provide for values whose type matches this
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareAbstractOutputPort">
-<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
-</ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
+<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Declares an abstract-valued output port using the given
 allocator and calculator functions provided in their most generic
 forms. If you have a member function available use one of the other
 signatures.</p>
@@ -7189,15 +7185,6 @@ signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7562,15 +7549,6 @@ function available use one of the other signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.BasicVector_[float], arg1: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -7719,12 +7697,8 @@ input, must provide for values whose type matches this
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareAbstractOutputPort">
-<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</li>
-</ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
+<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Declares an abstract-valued output port using the given
 allocator and calculator functions provided in their most generic
 forms. If you have a member function available use one of the other
 signatures.</p>
@@ -7732,15 +7706,6 @@ signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[AutoDiffXd]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8105,15 +8070,6 @@ function available use one of the other signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], arg0: pydrake.systems.framework.BasicVector_[AutoDiffXd], arg1: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.BasicVector_[AutoDiffXd]], None]) -&gt; pydrake.systems.framework.OutputPort_[AutoDiffXd]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8260,12 +8216,8 @@ input, must provide for values whose type matches this
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareAbstractOutputPort">
-<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[Expression]</li>
-</ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
+<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[Expression]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Declares an abstract-valued output port using the given
 allocator and calculator functions provided in their most generic
 forms. If you have a member function available use one of the other
 signatures.</p>
@@ -8273,15 +8225,6 @@ signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[Expression]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8646,15 +8589,6 @@ function available use one of the other signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[Expression], arg0: pydrake.systems.framework.BasicVector_[Expression], arg1: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.BasicVector_[Expression]], None]) -&gt; pydrake.systems.framework.OutputPort_[Expression]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -8801,12 +8735,8 @@ input, must provide for values whose type matches this
 
 <dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareAbstractOutputPort">
-<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
-</ol>
-<p>(Advanced) Declares an abstract-valued output port using the given
+<code class="descname">DeclareAbstractOutputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], name: str, alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None], prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareAbstractOutputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Declares an abstract-valued output port using the given
 allocator and calculator functions provided in their most generic
 forms. If you have a member function available use one of the other
 signatures.</p>
@@ -8814,15 +8744,6 @@ signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::AllocCallback, LeafOutputPort::CalcCallback</p>
 </div>
-<ol class="arabic simple" start="2">
-<li>DeclareAbstractOutputPort(self: pydrake.systems.framework.LeafSystem_[float], alloc: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.Context_[float], pydrake.common.value.AbstractValue], None]) -&gt; pydrake.systems.framework.LeafOutputPort_[float]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -9187,15 +9108,6 @@ function available use one of the other signatures.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">LeafOutputPort::CalcVectorCallback</p>
 </div>
-<ol class="arabic simple" start="3">
-<li>DeclareVectorOutputPort(self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.BasicVector_[float], arg1: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.BasicVector_[float]], None]) -&gt; pydrake.systems.framework.OutputPort_[float]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -11067,12 +10979,8 @@ and sets its default values using SetDefaultContext().</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.System_.System_[float].DeclareInputPort">
-<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
-</ol>
-<p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
 topology.</p>
 <p>Input port names must be unique for this system (passing in a
 duplicate <code class="docutils literal"><span class="pre">name</span></code> will throw RuntimeError). If <code class="docutils literal"><span class="pre">name</span></code> is given as
@@ -11097,15 +11005,6 @@ input ports are assumed to be statistically independent.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[float], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -11855,12 +11754,8 @@ and sets its default values using SetDefaultContext().</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.System_[AutoDiffXd].DeclareInputPort">
-<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[AutoDiffXd], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</li>
-</ol>
-<p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
 topology.</p>
 <p>Input port names must be unique for this system (passing in a
 duplicate <code class="docutils literal"><span class="pre">name</span></code> will throw RuntimeError). If <code class="docutils literal"><span class="pre">name</span></code> is given as
@@ -11885,15 +11780,6 @@ input ports are assumed to be statistically independent.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[AutoDiffXd], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -12641,12 +12527,8 @@ and sets its default values using SetDefaultContext().</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.System_[Expression].DeclareInputPort">
-<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_[Expression].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[Expression], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[Expression]</li>
-</ol>
-<p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
 topology.</p>
 <p>Input port names must be unique for this system (passing in a
 duplicate <code class="docutils literal"><span class="pre">name</span></code> will throw RuntimeError). If <code class="docutils literal"><span class="pre">name</span></code> is given as
@@ -12671,15 +12553,6 @@ input ports are assumed to be statistically independent.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[Expression], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[Expression]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -13427,12 +13300,8 @@ and sets its default values using SetDefaultContext().</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.System_[float].DeclareInputPort">
-<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_[float].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
-</ol>
-<p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
+<code class="descname">DeclareInputPort</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], name: Union[str, pydrake.systems.framework.UseDefaultName], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.framework.System_[float].DeclareInputPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a port with the specified <code class="docutils literal"><span class="pre">type</span></code> and <code class="docutils literal"><span class="pre">size</span></code> to the input
 topology.</p>
 <p>Input port names must be unique for this system (passing in a
 duplicate <code class="docutils literal"><span class="pre">name</span></code> will throw RuntimeError). If <code class="docutils literal"><span class="pre">name</span></code> is given as
@@ -13457,15 +13326,6 @@ input ports are assumed to be statistically independent.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>DeclareInputPort(self: pydrake.systems.framework.System_[float], type: pydrake.systems.framework.PortDataType, size: int, random_type: Optional[pydrake.common._module_py.RandomDistribution] = None) -&gt; pydrake.systems.framework.InputPort_[float]</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Pass a port name as the first argument. This will be removed from
-Drake on or after 2021-10-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -14694,86 +14554,59 @@ during allocation.</p>
 <dd></dd></dl>
 
 <dl class="template">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add">
-<em class="property">template </em><code class="descname">Add</code><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]" title="pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]"><code class="xref py py-class docutils literal"><span class="pre">Add[AutoDiffXd,</span> <span class="pre">float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">Add[Expression,</span> <span class="pre">float]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[float,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[Expression,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[float,</span> <span class="pre">Expression]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">Add[AutoDiffXd,</span> <span class="pre">Expression]</span></code></p>
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]">
-<code class="descname">Add[AutoDiffXd, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;double&gt;], drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add.Add[AutoDiffXd, float]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add[AutoDiffXd, Expression]">
-<code class="descname">Add[AutoDiffXd, Expression]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;], drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add[AutoDiffXd, Expression]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add[AutoDiffXd, float]">
-<code class="descname">Add[AutoDiffXd, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;double&gt;], drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add[AutoDiffXd, float]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add[Expression, AutoDiffXd]">
-<code class="descname">Add[Expression, AutoDiffXd]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], drake::systems::System&lt;drake::symbolic::Expression&gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add[Expression, AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add[Expression, float]">
-<code class="descname">Add[Expression, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;double&gt;], drake::systems::System&lt;drake::symbolic::Expression&gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add[Expression, float]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add[float, AutoDiffXd]">
-<code class="descname">Add[float, AutoDiffXd]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], drake::systems::System&lt;double&gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add[float, AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.SystemScalarConverter.Add[float, Expression]">
-<code class="descname">Add[float, Expression]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter, arg0: Callable[[drake::systems::System&lt;drake::symbolic::Expression&gt;], drake::systems::System&lt;double&gt;]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.Add[float, Expression]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="template">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible">
 <em class="property">template </em><code class="descname">IsConvertible</code><a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]" title="pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]"><code class="xref py py-class docutils literal"><span class="pre">IsConvertible[AutoDiffXd,</span> <span class="pre">float]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[Expression,</span> <span class="pre">float]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[float,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[Expression,</span> <span class="pre">AutoDiffXd]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[float,</span> <span class="pre">Expression]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">IsConvertible[AutoDiffXd,</span> <span class="pre">Expression]</span></code></p>
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]">
 <code class="descname">IsConvertible[AutoDiffXd, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible.IsConvertible[AutoDiffXd, float]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible[AutoDiffXd, Expression]">
 <code class="descname">IsConvertible[AutoDiffXd, Expression]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible[AutoDiffXd, Expression]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible[AutoDiffXd, float]">
 <code class="descname">IsConvertible[AutoDiffXd, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible[AutoDiffXd, float]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible[Expression, AutoDiffXd]">
 <code class="descname">IsConvertible[Expression, AutoDiffXd]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible[Expression, AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible[Expression, float]">
 <code class="descname">IsConvertible[Expression, float]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible[Expression, float]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible[float, AutoDiffXd]">
 <code class="descname">IsConvertible[float, AutoDiffXd]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible[float, AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.SystemScalarConverter.IsConvertible[float, Expression]">
 <code class="descname">IsConvertible[float, Expression]</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemScalarConverter</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.SystemScalarConverter.IsConvertible[float, Expression]" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Returns true iff this object can convert a System&lt;U&gt; into a System&lt;T&gt;,
+i.e., whether Convert() will return non-null.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.systems.framework.SystemScalarConverter.SupportedConversionPairs">

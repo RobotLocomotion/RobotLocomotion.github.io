@@ -33,7 +33,6 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "linear_solve.h", "linear__solve_8h.html", "linear__solve_8h" ],
     [ "matrix_util.h", "matrix__util_8h.html", "matrix__util_8h" ],
     [ "normalize_vector.h", "normalize__vector_8h.html", "normalize__vector_8h" ],
-    [ "orthonormal_basis.h", "orthonormal__basis_8h.html", "orthonormal__basis_8h" ],
     [ "quadratic_form.h", "quadratic__form_8h.html", "quadratic__form_8h" ],
     [ "quaternion.h", "quaternion_8h.html", "quaternion_8h" ],
     [ "random_rotation.h", "random__rotation_8h.html", "random__rotation_8h" ],

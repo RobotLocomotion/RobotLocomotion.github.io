@@ -453,7 +453,7 @@ Functions</h2></td></tr>
 <ul>
 <li>adds systems <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message.">multibody::ContactResultsToLcmSystem</a> and LcmPublisherSystem to the Diagram and connects the draw message output to the publisher input,</li>
 <li>connects a ContactResults&lt;double&gt;-valued output port to the <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message.">ContactResultsToLcmSystem</a> system, and</li>
-<li>sets the publishing rate to 1/60 of a second (simulated time).</li>
+<li>sets the publishing rate based on publish_period.</li>
 </ul>
 <p>The four variants differ in the following ways:</p>
 <ul>

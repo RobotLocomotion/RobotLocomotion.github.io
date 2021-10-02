@@ -1,8 +1,5 @@
 var NAVTREEINDEX28 =
 {
-"classdrake_1_1systems_1_1_diagram_discrete_values.html#a8b6c4422885f32ab2c23d90752f3d9bf":[3,0,0,14,35,6],
-"classdrake_1_1systems_1_1_diagram_discrete_values.html#ab8b2c65e7f44a1d77e7c65f27db91a5f":[3,0,0,14,35,4],
-"classdrake_1_1systems_1_1_diagram_discrete_values.html#abc16a446db987798a37288c790c87541":[3,0,0,14,35,5],
 "classdrake_1_1systems_1_1_diagram_discrete_values.html#ac003ec4a2c93b2dc6201b3a1ff4af014":[3,0,0,14,35,10],
 "classdrake_1_1systems_1_1_diagram_discrete_values.html#ad0c91af87be48d209a458f206167e35f":[3,0,0,14,35,8],
 "classdrake_1_1systems_1_1_diagram_discrete_values.html#ae1d47975230f53b9bdcbf53f59bc1486":[3,0,0,14,35,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX28 =
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#ad6c6c44f9070bc963b88512fbab24d8b":[3,0,0,14,52,0,4],
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#aed7903f9f7e9319b7a0feea50e0f33ce":[3,0,0,14,52,0,1],
 "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,14,52,0,11],
-"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#afe1e006a0e64d51de9749f7b25fc54ec":[3,0,0,14,52,0,2]
+"classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html#afe1e006a0e64d51de9749f7b25fc54ec":[3,0,0,14,52,0,2],
+"classdrake_1_1systems_1_1_implicit_euler_integrator.html":[1,5,0,0,2],
+"classdrake_1_1systems_1_1_implicit_euler_integrator.html#a153cfb621ca6c474b942a63762a82ec5":[1,5,0,0,2,0],
+"classdrake_1_1systems_1_1_implicit_euler_integrator.html#a447328b1aaa3ed12450855b792983d24":[1,5,0,0,2,4]
 };

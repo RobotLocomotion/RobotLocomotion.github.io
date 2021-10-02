@@ -358,7 +358,7 @@ to visualize the forces.</li>
 
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer">
-<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatPointCloudVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03333333333333333, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatPointCloudVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03125, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>MeshcatPointCloudVisualizer is a System block that visualizes a
 PointCloud in meshcat. The PointCloud:</p>
@@ -379,7 +379,7 @@ PointCloud in meshcat. The PointCloud:</p>
 </div>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">point_cloud_P&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03333333333333333, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03125, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -410,7 +410,7 @@ not provide RGB values.</li>
 
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer">
-<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03125</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>MeshcatVisualizer is a System block that connects to the query output port
 of a SceneGraph and visualizes the scene in Meshcat.</p>
@@ -423,7 +423,7 @@ then to run drake apps (potentially many times) that publish to that
 default url.</p>
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03333333333333333</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03125</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

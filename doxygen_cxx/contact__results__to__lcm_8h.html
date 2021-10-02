@@ -144,7 +144,7 @@ Functions</h2></td></tr>
 <ul>
 <li>adds systems multibody::ContactResultsToLcmSystem and LcmPublisherSystem to the Diagram and connects the draw message output to the publisher input,</li>
 <li>connects a ContactResults&lt;double&gt;-valued output port to the ContactResultsToLcmSystem system, and</li>
-<li>sets the publishing rate to 1/60 of a second (simulated time).</li>
+<li>sets the publishing rate based on publish_period.</li>
 </ul>
 <p>The four variants differ in the following ways:</p>
 <ul>

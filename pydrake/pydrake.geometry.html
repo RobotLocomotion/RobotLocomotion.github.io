@@ -1143,7 +1143,7 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id50"><span class="problematic" id="id51">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id42"><span class="problematic" id="id43">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -1292,7 +1292,7 @@ converted from one scalar type to another if the DrakeVisualizer
 the system otherwise will throw an exception.</p>
 <dl class="method">
 <dt id="pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.DrakeVisualizer_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.DrakeVisualizer_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of DrakeVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
@@ -1319,12 +1319,12 @@ for the lifetime of this object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given SceneGraph’s
 QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given
 QueryObject-valued output port.</p>
@@ -1332,7 +1332,7 @@ QueryObject-valued output port.</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].DispatchLoadMessage">
-<em class="property">static </em><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_.DrakeVisualizer_[float].DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Dispatches a load message built on the <em>model</em> geometry for
 the given SceneGraph instance. This should be used sparingly. When we
 have a starightforward method for binding lcmtypes in python, this
@@ -1435,7 +1435,7 @@ converted from one scalar type to another if the DrakeVisualizer
 the system otherwise will throw an exception.</p>
 <dl class="method">
 <dt id="pydrake.geometry.DrakeVisualizer_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.DrakeVisualizer_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.DrakeVisualizer_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of DrakeVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
@@ -1462,12 +1462,12 @@ for the lifetime of this object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given SceneGraph’s
 QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given
 QueryObject-valued output port.</p>
@@ -1475,7 +1475,7 @@ QueryObject-valued output port.</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.geometry.DrakeVisualizer_[AutoDiffXd].DispatchLoadMessage">
-<em class="property">static </em><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[AutoDiffXd].DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], lcm: pydrake.lcm.DrakeLcmInterface, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[AutoDiffXd].DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Dispatches a load message built on the <em>model</em> geometry for
 the given SceneGraph instance. This should be used sparingly. When we
 have a starightforward method for binding lcmtypes in python, this
@@ -1576,7 +1576,7 @@ converted from one scalar type to another if the DrakeVisualizer
 the system otherwise will throw an exception.</p>
 <dl class="method">
 <dt id="pydrake.geometry.DrakeVisualizer_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.DrakeVisualizer_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.DrakeVisualizer_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of DrakeVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">lcm</span></code>:</dt>
@@ -1603,12 +1603,12 @@ for the lifetime of this object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given SceneGraph’s
 QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)) -&gt; pydrake.geometry.DrakeVisualizer_[float]</li>
 </ol>
 <p>Connects the newly added DrakeVisualizer to the given
 QueryObject-valued output port.</p>
@@ -1616,7 +1616,7 @@ QueryObject-valued output port.</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.geometry.DrakeVisualizer_[float].DispatchLoadMessage">
-<em class="property">static </em><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.016666666666666666, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[float].DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">DispatchLoadMessage</code><span class="sig-paren">(</span><em>scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface, params: pydrake.geometry.DrakeVisualizerParams = DrakeVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), show_hydroelastic=False)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.DrakeVisualizer_[float].DispatchLoadMessage" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Dispatches a load message built on the <em>model</em> geometry for
 the given SceneGraph instance. This should be used sparingly. When we
 have a starightforward method for binding lcmtypes in python, this
@@ -1657,7 +1657,9 @@ cause a runtime error when attempting to broadcast messages.</p>
 <dt id="pydrake.geometry.DrakeVisualizerParams.publish_period">
 <code class="descname">publish_period</code><a class="headerlink" href="#pydrake.geometry.DrakeVisualizerParams.publish_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration (in seconds) between published LCM messages that update
-the poses of the scene’s geometry.</p>
+the poses of the scene’s geometry. (To help avoid small simulation
+timesteps, we use a default period that has an exact representation in
+binary floating point; see drake#15021 for details.)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1746,11 +1748,6 @@ SceneGraph.</p>
 be different from all previous identifiers created. This method does
 <em>not</em> make any guarantees about the values of ids from successive
 invocations. This method is guaranteed to be thread safe.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To avoid possible “one definition rule” violations, it’s best to
-only ever call this from from a <a href="#id3"><span class="problematic" id="id4">*</span></a>.cc file, not a header file.</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -1786,11 +1783,6 @@ builds.</p>
 be different from all previous identifiers created. This method does
 <em>not</em> make any guarantees about the values of ids from successive
 invocations. This method is guaranteed to be thread safe.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To avoid possible “one definition rule” violations, it’s best to
-only ever call this from from a <a href="#id5"><span class="problematic" id="id6">*</span></a>.cc file, not a header file.</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -1883,7 +1875,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id52"><span class="problematic" id="id53">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id44"><span class="problematic" id="id45">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2015,7 +2007,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id54"><span class="problematic" id="id55">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id46"><span class="problematic" id="id47">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2145,7 +2137,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id56"><span class="problematic" id="id57">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id48"><span class="problematic" id="id49">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2283,11 +2275,6 @@ representation as well.</p>
 be different from all previous identifiers created. This method does
 <em>not</em> make any guarantees about the values of ids from successive
 invocations. This method is guaranteed to be thread safe.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To avoid possible “one definition rule” violations, it’s best to
-only ever call this from from a <a href="#id7"><span class="problematic" id="id8">*</span></a>.cc file, not a header file.</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -3120,7 +3107,7 @@ scale factor.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id58"><span class="problematic" id="id59">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id50"><span class="problematic" id="id51">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -3490,7 +3477,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dd6a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf700086a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3516,14 +3503,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dd708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dd768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3577,7 +3564,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4ddd68&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008d68&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3603,14 +3590,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dddc8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008dc8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dde28&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008e28&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3662,7 +3649,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dd6a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf700086a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3688,14 +3675,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dd708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f460c4dd768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fdf70008768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3763,7 +3750,9 @@ based on the standard path semantics in Meshcat. See meshcat_path
 <dt id="pydrake.geometry.MeshcatVisualizerParams.publish_period">
 <code class="descname">publish_period</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.publish_period" title="Permalink to this definition">¶</a></dt>
 <dd><p>The duration (in simulation seconds) between attempts to update poses
-in the visualizer.</p>
+in the visualizer. (To help avoid small simulation timesteps, we use a
+default period that has an exact representation in binary floating
+point; see drake#15021 for details.)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4246,7 +4235,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id60"><span class="problematic" id="id61">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id52"><span class="problematic" id="id53">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -4256,7 +4245,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id62"><span class="problematic" id="id63">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id54"><span class="problematic" id="id55">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -4378,8 +4367,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id66"><span class="problematic" id="id67">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id56"><span class="problematic" id="id57">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -4841,7 +4830,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id68"><span class="problematic" id="id69">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id60"><span class="problematic" id="id61">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -4851,7 +4840,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id70"><span class="problematic" id="id71">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id62"><span class="problematic" id="id63">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -4973,8 +4962,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id72"><span class="problematic" id="id73">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id74"><span class="problematic" id="id75">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id66"><span class="problematic" id="id67">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -5434,7 +5423,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id76"><span class="problematic" id="id77">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id68"><span class="problematic" id="id69">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5444,7 +5433,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id78"><span class="problematic" id="id79">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id70"><span class="problematic" id="id71">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5566,8 +5555,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id80"><span class="problematic" id="id81">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id82"><span class="problematic" id="id83">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id72"><span class="problematic" id="id73">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id74"><span class="problematic" id="id75">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -5812,7 +5801,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id90"><span class="problematic" id="id91">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id82"><span class="problematic" id="id83">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -6346,7 +6335,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</li>
+<li>scene graph. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -6362,7 +6351,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id6"><span class="problematic" id="id7">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -6394,7 +6383,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id14"><span class="problematic" id="id15">*</span></a>/ (Deprecated.)</li>
+<li>graph. <a href="#id8"><span class="problematic" id="id9">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -6410,7 +6399,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id16"><span class="problematic" id="id17">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -6422,7 +6411,7 @@ will be removed from Drake on or after 2021-11-01.</dd>
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id18"><span class="problematic" id="id19">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -7091,7 +7080,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id21"><span class="problematic" id="id22">*</span></a>/ (Deprecated.)</li>
+<li>scene graph. <a href="#id15"><span class="problematic" id="id16">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -7107,7 +7096,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id23"><span class="problematic" id="id24">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id17"><span class="problematic" id="id18">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -7139,7 +7128,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id25"><span class="problematic" id="id26">*</span></a>/ (Deprecated.)</li>
+<li>graph. <a href="#id19"><span class="problematic" id="id20">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -7155,7 +7144,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id27"><span class="problematic" id="id28">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id21"><span class="problematic" id="id22">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -7167,7 +7156,7 @@ will be removed from Drake on or after 2021-11-01.</dd>
 <dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id29"><span class="problematic" id="id30">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id23"><span class="problematic" id="id24">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -7834,7 +7823,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id32"><span class="problematic" id="id33">*</span></a>/ (Deprecated.)</li>
+<li>scene graph. <a href="#id26"><span class="problematic" id="id27">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -7850,7 +7839,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsBetween().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id34"><span class="problematic" id="id35">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id28"><span class="problematic" id="id29">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -7882,7 +7871,7 @@ filtering works.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id36"><span class="problematic" id="id37">*</span></a>/ (Deprecated.)</li>
+<li>graph. <a href="#id30"><span class="problematic" id="id31">*</span></a>/ (Deprecated.)</li>
 </ul>
 </td>
 </tr>
@@ -7898,7 +7887,7 @@ be removed from Drake on or after 2021-11-01.</dd>
 </ol>
 <p>systems::Context-modifying variant of ExcludeCollisionsWithin().
 Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id38"><span class="problematic" id="id39">*</span></a>/ (Deprecated.)</p>
+model stored in the provided context. <a href="#id32"><span class="problematic" id="id33">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please call collision_filter_manager(context).Apply() instead This
@@ -7910,7 +7899,7 @@ will be removed from Drake on or after 2021-11-01.</dd>
 <dt id="pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id40"><span class="problematic" id="id41">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id34"><span class="problematic" id="id35">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -8286,7 +8275,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id42"><span class="problematic" id="id43">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id36"><span class="problematic" id="id37">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -9031,7 +9020,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id44"><span class="problematic" id="id45">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id38"><span class="problematic" id="id39">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -9774,7 +9763,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id46"><span class="problematic" id="id47">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id40"><span class="problematic" id="id41">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -10820,7 +10809,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id84"><span class="problematic" id="id85">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id76"><span class="problematic" id="id77">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -10907,7 +10896,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id86"><span class="problematic" id="id87">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id78"><span class="problematic" id="id79">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -10992,7 +10981,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id88"><span class="problematic" id="id89">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id80"><span class="problematic" id="id81">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11053,11 +11042,6 @@ point Q, expressed in G’s frame.</p>
 be different from all previous identifiers created. This method does
 <em>not</em> make any guarantees about the values of ids from successive
 invocations. This method is guaranteed to be thread safe.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">To avoid possible “one definition rule” violations, it’s best to
-only ever call this from from a <a href="#id48"><span class="problematic" id="id49">*</span></a>.cc file, not a header file.</p>
-</div>
 </dd></dl>
 
 <dl class="method">

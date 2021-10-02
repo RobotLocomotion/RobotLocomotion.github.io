@@ -133,7 +133,6 @@ var dir_2186f45272e5c29e3ac18ec762ab7501 =
     ] ],
     [ "system_scalar_conversion_doxygen.h", "system__scalar__conversion__doxygen_8h.html", null ],
     [ "system_scalar_converter.h", "system__scalar__converter_8h.html", [
-      [ "System", "classdrake_1_1systems_1_1_system.html", "classdrake_1_1systems_1_1_system" ],
       [ "SystemScalarConverter", "classdrake_1_1systems_1_1_system_scalar_converter.html", "classdrake_1_1systems_1_1_system_scalar_converter" ]
     ] ],
     [ "system_symbolic_inspector.h", "system__symbolic__inspector_8h.html", [

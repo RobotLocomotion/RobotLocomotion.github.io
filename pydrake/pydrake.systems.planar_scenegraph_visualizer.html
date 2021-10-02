@@ -225,7 +225,7 @@ port.</li>
 
 <dl class="class">
 <dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer">
-<em class="property">class </em><code class="descclassname">pydrake.systems.planar_scenegraph_visualizer.</code><code class="descname">PlanarSceneGraphVisualizer</code><span class="sig-paren">(</span><em>scene_graph, draw_period=0.03333333333333333, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">pydrake.systems.planar_scenegraph_visualizer.</code><code class="descname">PlanarSceneGraphVisualizer</code><span class="sig-paren">(</span><em>scene_graph, draw_period=None, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.pyplot_visualizer.html#pydrake.systems.pyplot_visualizer.PyPlotVisualizer" title="pydrake.systems.pyplot_visualizer.PyPlotVisualizer"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.pyplot_visualizer.PyPlotVisualizer</span></code></a></p>
 <p>Given a SceneGraph and a view plane, provides a view of the robot by
 projecting all geometry onto the view plane.</p>
@@ -263,7 +263,7 @@ easier to keep handling scaling with xlim, ylim, and view plane selection
 and <em>maybe</em> offsetting with the projection matrix.</p>
 <dl class="method">
 <dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph, draw_period=0.03333333333333333, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph, draw_period=None, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -271,7 +271,7 @@ and <em>maybe</em> offsetting with the projection matrix.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>scene_graph</strong> – A SceneGraph object.</li>
 <li><strong>draw_period</strong> – The rate at which this class publishes to the
-visualizer.</li>
+visualizer.  When None, a suitable default will be used.</li>
 <li><strong>T_VW</strong> – The view projection matrix from world to view coordinates.</li>
 <li><strong>xlim</strong> – View limit into the scene.</li>
 <li><strong>ylim</strong> – View limit into the scene.</li>

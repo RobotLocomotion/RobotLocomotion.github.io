@@ -24,7 +24,6 @@ var classdrake_1_1systems_1_1_system_base =
     [ "cache_entry_ticket", "classdrake_1_1systems_1_1_system_base.html#a7e92c6f01c04b3591d642d27a467b093", null ],
     [ "configuration_ticket", "classdrake_1_1systems_1_1_system_base.html#a28830dced98dcdc1f498d8d250db0ae4", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system_base.html#a7da4e8aa9a414faa5b40fc64e8ca40e3", null ],
-    [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system_base.html#aef49fcced5cc4bf3a164beb0a688cc3c", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system_base.html#a72cf4ad323350419dfcc5a6601fa0449", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system_base.html#a4076a7594095a9ca6936dd70c7254f84", null ],
     [ "DeclareCacheEntry", "classdrake_1_1systems_1_1_system_base.html#a690a31266a408ea23593fac8e2ea1804", null ],
