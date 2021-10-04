@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,19,0,1],
 "kuka__torque__controller_8h.html":[4,0,0,3,6,2],
 "lcm__image__array__to__images_8h.html":[4,0,0,11,8,8],
 "lcm__image__traits_8h.html":[4,0,0,11,8,9],
@@ -139,7 +140,9 @@ var NAVTREEINDEX43 =
 "mesh__traits_8h.html#a74b8d905842571b365085fdd17378772":[4,0,0,4,2,30,1],
 "meshcat_8h.html":[4,0,0,4,24],
 "meshcat__types_8h.html":[4,0,0,4,25],
-"meshcat__types_8h.html#a32f92e73a0a5623faaf129c02eb0ba4e":[4,0,0,4,25,0],
+"meshcat__types_8h.html#a32f92e73a0a5623faaf129c02eb0ba4e":[4,0,0,4,25,2],
+"meshcat__types_8h.html#a57b31da90b5652a5c9d22075ce09d4db":[4,0,0,4,25,1],
+"meshcat__types_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,25,0],
 "meshcat__visualizer_8h.html":[4,0,0,4,26],
 "meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,26,2],
 "meshcat__visualizer__params_8h.html":[4,0,0,4,27],
@@ -245,9 +248,6 @@ var NAVTREEINDEX43 =
 "namespacedrake_1_1common_1_1test.html":[2,0,0,1,0],
 "namespacedrake_1_1examples.html":[2,0,0,2],
 "namespacedrake_1_1examples.html":[3,0,0,2],
-"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,2,0],
 "namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,2,0],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[3,0,0,2,1],
-"namespacedrake_1_1examples_1_1allegro__hand.html":[2,0,0,2,1],
-"namespacedrake_1_1examples_1_1bead__on__a__wire.html":[3,0,0,2,2]
+"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,2,0]
 };

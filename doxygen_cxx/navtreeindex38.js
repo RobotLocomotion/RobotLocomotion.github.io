@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,0,21],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#aa60dd7fd9939516ab657b3ad5a305e63":[3,0,0,16,0,14],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#aba5bc39050417dea169199678e0273c5":[3,0,0,16,0,1],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#ac9bec40ee20228e889951338227f5db7":[3,0,0,16,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "cloth__spring__model_8h.html":[4,0,0,3,8,0],
 "cloth__spring__model__geometry_8h.html":[4,0,0,3,8,1],
 "clp__solver_8h.html":[4,0,0,10,7],
-"collision__filter_8h.html":[4,0,0,4,2,4],
-"collision__filter__declaration_8h.html":[4,0,0,4,6]
+"collision__filter_8h.html":[4,0,0,4,2,4]
 };

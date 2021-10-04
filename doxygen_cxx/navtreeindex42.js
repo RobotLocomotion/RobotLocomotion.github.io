@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
 "group__discrete__systems.html":[1,3,9],
 "group__discretization.html":[1,4,0,5],
 "group__drake__contacts.html":[1,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "kinematic__constraint__utilities_8h.html":[4,0,0,8,5,8],
 "knot__vector__type_8h.html":[4,0,0,7,19],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2":[4,0,0,7,19,0],
-"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,19,0,0],
-"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,19,0,1]
+"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,19,0,0]
 };

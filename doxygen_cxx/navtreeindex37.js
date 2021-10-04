@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f":[3,0,0,14,8,2,11],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf":[3,0,0,14,8,2,15],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,14,8,2,6],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html":[3,0,0,14,8,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7f8590290a608aae75e64e1037063a1e":[3,0,0,16,0,2],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8ba65f057b09f645ebefbccd5b490fcc":[3,0,0,16,0,20],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,0,22],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9066afc9f6c06932c20b1f9688523603":[3,0,0,16,0,5],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,0,21]
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9066afc9f6c06932c20b1f9688523603":[3,0,0,16,0,5]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1perception_1_1_point_cloud.html#a8f5e14dcd8cbd0c6ea52dab9c0fb99f5":[3,0,0,9,2,28],
 "classdrake_1_1perception_1_1_point_cloud.html#a9bba27b505a1ff06953ecdb5334ad9e5":[3,0,0,9,2,10],
 "classdrake_1_1perception_1_1_point_cloud.html#aa05a80e152921d8c7efb35387f400922":[3,0,0,9,2,18],
 "classdrake_1_1perception_1_1_point_cloud.html#aa7f097393e9b2b3bd84ddd98188ed7d7":[3,0,0,9,2,33],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1solvers_1_1_binding.html#a7ef2321debee2bd5b32026388dd3855d":[3,0,0,12,2,2],
 "classdrake_1_1solvers_1_1_binding.html#a865cec724a188ed5afb59dda367fe78c":[3,0,0,12,2,7],
 "classdrake_1_1solvers_1_1_binding.html#a94d0d01fcb647eb14ca2484fbef2595a":[3,0,0,12,2,6],
-"classdrake_1_1solvers_1_1_binding.html#aa3b88f68e741b1f50ad03d13825e1f66":[3,0,0,12,2,9],
-"classdrake_1_1solvers_1_1_binding.html#aac993ecccd3d88aafefb6b8e3caa1dee":[3,0,0,12,2,12]
+"classdrake_1_1solvers_1_1_binding.html#aa3b88f68e741b1f50ad03d13825e1f66":[3,0,0,12,2,9]
 };

@@ -262,6 +262,7 @@ var menudata={children:[
 {text:"_",url:"globals.html#index__5F"},
 {text:"d",url:"globals.html#index_d"},
 {text:"g",url:"globals.html#index_g"},
+{text:"m",url:"globals.html#index_m"},
 {text:"p",url:"globals.html#index_p"}]},
 {text:"Functions",url:"globals_func.html"},
 {text:"Macros",url:"globals_defs.html"}]}]}]}

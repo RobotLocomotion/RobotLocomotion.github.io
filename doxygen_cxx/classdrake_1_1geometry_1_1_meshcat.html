@@ -158,6 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a973d81c7adb1da00361eaeab4118604f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a973d81c7adb1da00361eaeab4118604f">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
 <tr class="memdesc:a973d81c7adb1da00361eaeab4118604f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the 3D object at a given <code>path</code> in the scene tree.  <a href="#a973d81c7adb1da00361eaeab4118604f">More...</a><br /></td></tr>
 <tr class="separator:a973d81c7adb1da00361eaeab4118604f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;point_cloud, double point_size=0.001, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
+<tr class="memdesc:a4a847b014dcf8f38f0317dfab8eca71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at a given <code>path</code> in the scene tree to be <code>point_cloud</code>.  <a href="#a4a847b014dcf8f38f0317dfab8eca71e">More...</a><br /></td></tr>
+<tr class="separator:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3dc13928478563343ff6ef72c16fc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html">PerspectiveCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
 <tr class="memdesc:af3dc13928478563343ff6ef72c16fc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera.  <a href="#af3dc13928478563343ff6ef72c16fc98">More...</a><br /></td></tr>
 <tr class="separator:af3dc13928478563343ff6ef72c16fc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -840,7 +843,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a973d81c7adb1da00361eaeab4118604f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973d81c7adb1da00361eaeab4118604f">&#9670;&nbsp;</a></span>SetObject()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a973d81c7adb1da00361eaeab4118604f">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -877,6 +880,57 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
     <tr><td class="paramname">shape</td><td>a <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a> that specifies the geometry of the object. </td></tr>
     <tr><td class="paramname">rgba</td><td>an <a class="el" href="classdrake_1_1geometry_1_1_rgba.html" title="Defines RGBA (red, green, blue, alpha) values on the range [0, 1].">Rgba</a> that specifies the (solid) color of the object. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a847b014dcf8f38f0317dfab8eca71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a847b014dcf8f38f0317dfab8eca71e">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetObject </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;&#160;</td>
+          <td class="paramname"><em>point_cloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>point_size</em> = <code>0.001</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgba</em> = <code><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9,&#160;1.)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the "object" at a given <code>path</code> in the scene tree to be <code>point_cloud</code>. </p>
+<p>Note that <code>path</code>="/foo" will always set an object in the tree at "/foo/&lt;object&gt;". See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a>. Any objects previously set at this <code>path</code> will be replaced. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
+    <tr><td class="paramname">point_cloud</td><td>a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient,...">perception::PointCloud</a>; if <code>point_cloud.has_rgbs()</code> is true, then meshcat will render the colored points. </td></tr>
+    <tr><td class="paramname">point_size</td><td>is the size of each rendered point. </td></tr>
+    <tr><td class="paramname">rgba</td><td>is the default color, which is only used if <code>point_cloud.has_rgbs() == false</code>. </td></tr>
   </table>
   </dd>
 </dl>

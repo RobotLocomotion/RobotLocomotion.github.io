@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"collision__filter__declaration_8h.html":[4,0,0,4,6],
 "collision__filter__manager_8h.html":[4,0,0,4,7],
 "collisions__exist__callback_8h.html":[4,0,0,4,2,5],
 "color__palette_8h.html":[4,0,0,11,8,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "dir_d8973131f51b66669fc427ecaef4c4db.html":[4,0,0,11,0,0],
 "dir_da11cd43e7bab310171e778f62212487.html":[4,0,0,8,5],
 "dir_dc85ca307a056e878fb7cdf32e7a9a8e.html":[4,0,0,3,11],
-"dir_dd40e4ced6d50249f5b665722b0662c5.html":[4,0,0,4,5],
-"dir_e40d16ce0a19d8334ee3d7fe9c80dfbb.html":[4,0,0,10,0,0]
+"dir_dd40e4ced6d50249f5b665722b0662c5.html":[4,0,0,4,5]
 };

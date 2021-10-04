@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1lcm_1_1_drake_lcm_interface.html#a2f0e6e399dbb7a03a15947bc73f1c867":[3,0,0,4,1,0],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a3aff1c5f0fed4b08a332e3edc46cd349":[3,0,0,4,1,4],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a437b788f32af8a9b80c59fe729f75865":[3,0,0,4,1,8],
 "classdrake_1_1lcm_1_1_drake_lcm_interface.html#a46278d4906208da92bc2d8dc88c6f629":[3,0,0,4,1,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a51df4a9975d9dc48513547675728ef26":[1,3,5,10,7],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a6274926b910ba8702481fbf629524fdd":[1,3,5,10,4],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a65258be6174626bf51b9b4bd379ae62e":[1,3,5,10,5],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a66b0ddb7bd3dc10b2f2ff6cfa51b409a":[1,3,5,10,3],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a7fdeb240d2a441929f00c9b8ae24b323":[1,3,5,10,6]
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html#a66b0ddb7bd3dc10b2f2ff6cfa51b409a":[1,3,5,10,3]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"roll__pitch__yaw_8h.html":[4,0,0,7,27],
+"rotary__encoders_8h.html":[4,0,0,11,8,13],
+"rotation_8h.html":[4,0,0,1,1,0],
 "rotation__constraint_8h.html":[4,0,0,10,42],
 "rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,10,42,2],
 "rotation__constraint_8h.html#a1949f5edc628077e2d780c150de88d74":[4,0,0,10,42,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,44,0],
 "structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,44,1],
 "structdrake_1_1_sorted_pair.html":[3,0,0,47],
-"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,47,6],
-"structdrake_1_1_sorted_pair.html#a081f9d487f4f53fbcad839740d361f30":[3,0,0,47,7],
-"structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1":[3,0,0,47,11],
-"structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9":[3,0,0,47,3]
+"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,47,6]
 };

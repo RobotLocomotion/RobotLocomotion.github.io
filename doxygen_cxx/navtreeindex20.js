@@ -1,5 +1,6 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1solvers_1_1_polynomial_constraint.html#ae141a256267715167e020e82602198a2":[1,2,0,20,5],
 "classdrake_1_1solvers_1_1_polynomial_cost.html":[1,2,0,34],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a25f396d1eaf4be52eb3db66072895105":[1,2,0,34,6],
 "classdrake_1_1solvers_1_1_polynomial_cost.html#a4cfabc8f2d2a53ee991b848f84516bb6":[1,2,0,34,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a502568c1de7065fc3de043a231ad1f1f":[3,0,0,12,0,2,7],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a54fec3504340cb5b3b15860d7b8929f2":[3,0,0,12,0,2,2],
 "classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a846830de124e22627562f0c8cbdda6a7":[3,0,0,12,0,2,4],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a85ab6b4bd08f5d110cbc4b87a6412409":[3,0,0,12,0,2,5],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a9117e4a6fb3ded3267eba43ffc87a388":[3,0,0,12,0,2,0]
+"classdrake_1_1solvers_1_1fbstab_1_1_dense_linear_solver.html#a85ab6b4bd08f5d110cbc4b87a6412409":[3,0,0,12,0,2,5]
 };
