@@ -224,6 +224,33 @@ not when the method is called. For other methods, see the examples in
 <p>Use <cite>ModuleShim</cite> for deprecating variables in a module.</p>
 </dd></dl>
 
+<dl class="function">
+<dt id="pydrake.common.deprecation.deprecated_callable">
+<code class="descclassname">pydrake.common.deprecation.</code><code class="descname">deprecated_callable</code><span class="sig-paren">(</span><em>message</em>, <em>*</em>, <em>date=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.deprecation.deprecated_callable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecates a callable (a free function or a type/class object) by
+wrapping its invocation to emit a deprecation.</p>
+<p>When possible, use ModuleShim to ensure that a deprecation warning is
+emitted at <em>import time</em>, as it can easily be used with pure Python
+modules.</p>
+<p>However, if you are dealing with a C++ module (and are writing code inside
+of <cite>_{module}_extra.py</cite>), you should use this approach.</p>
+<p>Example as decorator:</p>
+<blockquote>
+<div><p>&#64;deprecated_callable(“Please use <cite>func_y</cite> instead”, date=”2038-01-19”)
+def func_x():</p>
+<blockquote>
+<div>…</div></blockquote>
+</div></blockquote>
+<p>Example for alias:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>my_alias = deprecated_callable(</dt>
+<dd>“Please use <cite>my_original</cite> instead”, date=”2038-01-19”</dd>
+</dl>
+<p>)(my_original)</p>
+</div></blockquote>
+</dd></dl>
+
 <dl class="exception">
 <dt id="pydrake.common.deprecation.DrakeDeprecationWarning">
 <em class="property">exception </em><code class="descclassname">pydrake.common.deprecation.</code><code class="descname">DrakeDeprecationWarning</code><a class="headerlink" href="#pydrake.common.deprecation.DrakeDeprecationWarning" title="Permalink to this definition">¶</a></dt>
