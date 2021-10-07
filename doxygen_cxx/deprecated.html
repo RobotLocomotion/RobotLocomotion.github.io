@@ -100,54 +100,75 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake.html#ac4bf256d86fde2cb6f9db36919a6031f">drake::ExtractDoubleOrThrow</a>  (const T &amp;)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>Provide a specific overload of ExtractDoubleOrThrow for any  type that really is sensible at compile time and should  defer failure to runtime; this version was too generic. <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</dt>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a83fe4512cb9f4a0997cbc08243404e63">drake::math::autoDiffToGradientMatrix</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix, int num_derivatives=Eigen::Dynamic)</dt>
+<dd><a class="anchor" id="_deprecated000021"></a>Use ExtractGradient(). <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#ab72982a8973f482f5cbf66d6656eaf08">drake::math::autoDiffToValueMatrix</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix)</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>Use ExtractValue() instead <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6368b8ff52fa8c7df0b3548b77615363">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform)</dt>
 <dd><a class="anchor" id="_deprecated000015"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6368b8ff52fa8c7df0b3548b77615363">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform)</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</dt>
+<dd><a class="anchor" id="_deprecated000016"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a0e1dbe26c9179a94ca05db1b84528b47">drake::math::DiscardZeroGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform, const typename Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::dummy_precision())</dt>
-<dd><a class="anchor" id="_deprecated000018"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dd><a class="anchor" id="_deprecated000025"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">drake::math::DiscardZeroGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dd><a class="anchor" id="_deprecated000026"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">drake::math::gradientMatrixToAutoDiff</a>  (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
+<dd><a class="anchor" id="_deprecated000024"></a>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</dt>
+<dd><a class="anchor" id="_deprecated000017"></a>Use InitializeAutoDiff() instead <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a3b7dc3351569c13b9d98ab32fd901af3">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</dt>
+<dd><a class="anchor" id="_deprecated000018"></a>Use InitializeAutoDiff() instead <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a60989b35690cd787112c9d14e8161ec2">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</dt>
+<dd><a class="anchor" id="_deprecated000023"></a>Use InitializeAutoDiff() instead <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
+<dd><a class="anchor" id="_deprecated000022"></a>Use InitializeAutoDiff(). <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a8d2993436a049675d4aefab5e8661862">drake::math::initializeAutoDiffTuple</a>  (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>Use InitializeAutoDiffTuple() instead <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a12cd1e9dec4704f09c44c240f5b95346">drake::math::LinearSolve</a>  (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html" title="Solves a linear system of equations A*x=b.">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000020"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dd><p class="startdd"><a class="anchor" id="_deprecated000027"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</p>
-<p class="interdd"><a class="anchor" id="_deprecated000021"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<p class="interdd"><a class="anchor" id="_deprecated000028"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</p>
-<p class="enddd"><a class="anchor" id="_deprecated000022"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<p class="enddd"><a class="anchor" id="_deprecated000029"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01. </p>
 </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a86c6f5510dba4ed848869421642a507b">drake::math::LinearSolve</a>  (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000023"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dd><p class="startdd"><a class="anchor" id="_deprecated000030"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</p>
-<p class="interdd"><a class="anchor" id="_deprecated000024"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<p class="interdd"><a class="anchor" id="_deprecated000031"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</p>
-<p class="enddd"><a class="anchor" id="_deprecated000025"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<p class="enddd"><a class="anchor" id="_deprecated000032"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01. </p>
 </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a67903de1408fe87ae27f9b5a955c81ff">drake::math::resizeDerivativesToMatchScalar</a>  (Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, const typename Derived::Scalar &amp;scalar)</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
+<dd><a class="anchor" id="_deprecated000019"></a>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="group__visualization.html#ga8e22883065d455ac5735099a9b11eea4">drake::multibody::ConnectContactResultsToDrakeVisualizer</a>  (systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt; double &gt;</a> &amp;plant, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr, std::optional&lt; double &gt; publish_period=std::nullopt)</dt>
-<dd><a class="anchor" id="_deprecated000026"></a>Provide a SceneGraph as the third argument. <br />
+<dd><a class="anchor" id="_deprecated000033"></a>Provide a SceneGraph as the third argument. <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="group__visualization.html#gad44196ed37f99aa73a136a3dc7f20354">drake::multibody::ConnectContactResultsToDrakeVisualizer</a>  (systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt; double &gt;</a> &amp;plant, const systems::OutputPort&lt; double &gt; &amp;contact_results_port, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr, std::optional&lt; double &gt; publish_period=std::nullopt)</dt>
-<dd><a class="anchor" id="_deprecated000027"></a>Provide a SceneGraph as the third argument. <br />
+<dd><a class="anchor" id="_deprecated000034"></a>Provide a SceneGraph as the third argument. <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a4aa98e140c3e8e4afdc8535f884e82d0">drake::systems::lcm::ConnectLcmScope</a>  (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort&lt; double &gt;</a> &amp;src, const std::string &amp;channel, systems::DiagramBuilder&lt; double &gt; *builder, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">drake::lcm::DrakeLcmInterface</a> *lcm, double publish_period=0.0)</dt>
-<dd><a class="anchor" id="_deprecated000034"></a>Prefer to use LcmScopeSystem::AddToBuilder instead of this function;  the LcmScopeSystem provides more detailed timestamps. <br />
+<dd><a class="anchor" id="_deprecated000041"></a>Prefer to use LcmScopeSystem::AddToBuilder instead of this function;  the LcmScopeSystem provides more detailed timestamps. <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a95def6b775c19aa57da9beddb3204927">LeafSystem&lt; T &gt;::DeclareAbstractOutputPort</a>  (std::variant&lt; std::string, UseDefaultName &gt; name, OutputType(MySystem::*make)() const, void(MySystem::*calc)(const Context&lt; T &gt; &amp;, OutputType *) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10" title="Returns a ticket indicating dependence on every possible independent source value,...">all_sources_ticket()</a>})</dt>
-<dd><a class="anchor" id="_deprecated000029"></a>This overload for DeclareAbstractOutputPort is rarely the best choice;  it is unusual for a boutique allocation to return an abstract type by  value rather than provide a model_value. If the default constructor  or a model value cannot be used, use the overload that accepts an  AllocCallback alloc_function instead. <br />
+<dd><a class="anchor" id="_deprecated000036"></a>This overload for DeclareAbstractOutputPort is rarely the best choice;  it is unusual for a boutique allocation to return an abstract type by  value rather than provide a model_value. If the default constructor  or a model value cannot be used, use the overload that accepts an  AllocCallback alloc_function instead. <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_signal_logger.html#a3b36477ccd5d5763a6fd9093ffb75b23">LogOutput</a>  </dt>
-<dd><a class="anchor" id="_deprecated000035"></a>Use LogVectorOutput instead. <br />
+<dd><a class="anchor" id="_deprecated000042"></a>Use LogVectorOutput instead. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a95cb1c6952612163b7e60a81a209f692">MeshFieldLinear&lt; T, MeshType &gt;::MeshFieldLinear</a>  (std::string name, std::vector&lt; T &gt; &amp;&amp;values, const MeshType *mesh, bool calculate_gradient=true)</dt>
 <dd><a class="anchor" id="_deprecated000006"></a>This object will no longer store a name <br />
@@ -156,7 +177,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000007"></a>This object will no longer store a name <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html#aa607644ad523138686a48e0473c8fa77">MosekSolver::set_stream_logging</a>  (bool flag, const std::string &amp;log_file)</dt>
-<dd><a class="anchor" id="_deprecated000028"></a>Please set CommonSolverOption::kPrintFileName or  CommonSolverOption::kPrintToConsole in SolverOptions <br />
+<dd><a class="anchor" id="_deprecated000035"></a>Please set CommonSolverOption::kPrintFileName or  CommonSolverOption::kPrintToConsole in SolverOptions <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_pose.html#a99869cc7f6c64a2876ec37c85851af35">PiecewisePose&lt; T &gt;::get_acceleration</a>  (const T &amp;time) const</dt>
 <dd><a class="anchor" id="_deprecated000004"></a>get_acceleration() has been renamed to GetAcceleration(). <br />
@@ -171,22 +192,22 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000005"></a>is_approx() has been renamed to IsApprox(). <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab1d56f20fb784af0c0d9f0a737d19f68">RgbdSensor::X_WB_output_port</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000036"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
+<dd><a class="anchor" id="_deprecated000043"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a3caed2b8fffe3482458283030d2b439f">RgbdSensorDiscrete::X_WB_output_port</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000037"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
+<dd><a class="anchor" id="_deprecated000044"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7213aaf748b88198be04bef5eedce4ec">SceneGraph&lt; T &gt;::ExcludeCollisionsBetween</a>  (systems::Context&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setB) const</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Please call collision_filter_manager(context).Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1">SceneGraph&lt; T &gt;::ExcludeCollisionsBetween</a>  (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setB)</dt>
 <dd><a class="anchor" id="_deprecated000011"></a>Please call collision_filter_manager().Apply()  instead <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921">SceneGraph&lt; T &gt;::ExcludeCollisionsWithin</a>  (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;set)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Please call collision_filter_manager().Apply()  instead <br />
+<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7213aaf748b88198be04bef5eedce4ec">SceneGraph&lt; T &gt;::ExcludeCollisionsBetween</a>  (systems::Context&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setB) const</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>Please call collision_filter_manager(context).Apply()  instead <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ad4cd139d69275158befe510f61551d6d">SceneGraph&lt; T &gt;::ExcludeCollisionsWithin</a>  (systems::Context&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;set) const</dt>
 <dd><a class="anchor" id="_deprecated000010"></a>Please call collision_filter_manager(context).Apply()  instead <br />
+ This will be removed from Drake on or after 2021-11-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921">SceneGraph&lt; T &gt;::ExcludeCollisionsWithin</a>  (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;set)</dt>
+<dd><a class="anchor" id="_deprecated000009"></a>Please call collision_filter_manager().Apply()  instead <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a637679130ce796cc4dfaa97ceb0e7559">SceneGraph&lt; T &gt;::get_pose_bundle_output_port</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000008"></a>PoseBundle is no longer in use. Visualizers typically  connect to SceneGraph's QueryObject port. <br />
@@ -194,17 +215,17 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a84fa00c683202c7b48333b3c7e6193c8">SceneGraphInspector&lt; T &gt;::all_frame_ids</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000013"></a>Please use GetAllFrameIds() instead. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad291a98842b04b626d781e4e86e7fdfb">SystemBase::DeclareCacheEntry</a>  (std::string description, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10" title="Returns a ticket indicating dependence on every possible independent source value,...">all_sources_ticket()</a>})</dt>
-<dd><a class="anchor" id="_deprecated000032"></a>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a690a31266a408ea23593fac8e2ea1804">SystemBase::DeclareCacheEntry</a>  (std::string description, const ValueType &amp;model_value, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10" title="Returns a ticket indicating dependence on every possible independent source value,...">all_sources_ticket()</a>})</dt>
+<dd><a class="anchor" id="_deprecated000038"></a>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a72cf4ad323350419dfcc5a6601fa0449">SystemBase::DeclareCacheEntry</a>  (std::string description, ValueType(MySystem::*make)() const, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10" title="Returns a ticket indicating dependence on every possible independent source value,...">all_sources_ticket()</a>})</dt>
-<dd><a class="anchor" id="_deprecated000030"></a>This overload for DeclareCacheEntry is rarely the best choice; it is  unusual for allocation to actually require a boutique callback rather  than just a Clone of a model_value. We found that most uses of this  overload hindered readability, because other overloads would often do  the job more directly. If no existing overload works, you may wrap a  ValueProducer around your existing make method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
+<dd><a class="anchor" id="_deprecated000037"></a>This overload for DeclareCacheEntry is rarely the best choice; it is  unusual for allocation to actually require a boutique callback rather  than just a Clone of a model_value. We found that most uses of this  overload hindered readability, because other overloads would often do  the job more directly. If no existing overload works, you may wrap a  ValueProducer around your existing make method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a690a31266a408ea23593fac8e2ea1804">SystemBase::DeclareCacheEntry</a>  (std::string description, const ValueType &amp;model_value, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10" title="Returns a ticket indicating dependence on every possible independent source value,...">all_sources_ticket()</a>})</dt>
-<dd><a class="anchor" id="_deprecated000031"></a>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad291a98842b04b626d781e4e86e7fdfb">SystemBase::DeclareCacheEntry</a>  (std::string description, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; DependencyTicket &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10" title="Returns a ticket indicating dependence on every possible independent source value,...">all_sources_ticket()</a>})</dt>
+<dd><a class="anchor" id="_deprecated000039"></a>This overload for DeclareCacheEntry is dispreferred because it might  not reuse heap storage from one calculation to the next, and so is  typically less efficient than the other overloads. A better option  is to change the ValueType returned by-value to be an output pointer  instead, and return void. If that is not possible, you may wrap a  ValueProducer around your existing method and call the primary  DeclareCacheEntry overload that takes a ValueProducer, instead. <br />
  This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a39bc263bfa369d811ee1c1ef60850d5b">SystemScalarConverter::SystemScalarConverter</a>  (SystemTypeTag&lt; S &gt;, GuaranteedSubtypePreservation sub)</dt>
-<dd><a class="anchor" id="_deprecated000033"></a>Use MakeWithoutSubtypeChecking instead of kDisabled. <br />
+<dd><a class="anchor" id="_deprecated000040"></a>Use MakeWithoutSubtypeChecking instead of kDisabled. <br />
  This will be removed from Drake on or after 2021-11-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

@@ -173,12 +173,24 @@
 <dl class="function">
 <dt id="pydrake.autodiffutils.autoDiffToGradientMatrix">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">autoDiffToGradientMatrix</code><span class="sig-paren">(</span><em>autodiff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.autoDiffToGradientMatrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use ExtractGradient(). This will be removed from Drake on or after
+2022-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="pydrake.autodiffutils.autoDiffToValueMatrix">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">autoDiffToValueMatrix</code><span class="sig-paren">(</span><em>autodiff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.autoDiffToValueMatrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use ExtractValue() instead This will be removed from Drake on or
+after 2022-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="class">
 <dt id="pydrake.autodiffutils.AutoDiffXd">
@@ -447,34 +459,28 @@ the value matrix.</dd>
 <dl class="function">
 <dt id="pydrake.autodiffutils.initializeAutoDiff">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiff</code><span class="sig-paren">(</span><em>mat: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = -1, deriv_num_start: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiff" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use InitializeAutoDiff() instead This will be removed from Drake
+on or after 2022-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffGivenGradientMatrix</code><span class="sig-paren">(</span><em>val: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use InitializeAutoDiff() instead This will be removed from Drake
+on or after 2022-02-01.</dd>
+</dl>
+</dd></dl>
 
 <dl class="function">
 <dt id="pydrake.autodiffutils.InitializeAutoDiffTuple">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">InitializeAutoDiffTuple</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.InitializeAutoDiffTuple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a series of array_like input arguments, create a tuple of
-corresponding AutoDiff matrices with values equal to the input matrices
-and properly initialized derivative vectors.</p>
-<p>The size of the derivative vector of each element of the matrices in the
-output tuple will be the same, and will equal the sum of the number of
-elements of the matrices in args.</p>
-<p>The 0th element of the derivative vectors will correspond to the
-derivative with respect to the 0th element of the first argument.
-Subsequent derivative vector elements correspond first to subsequent
-elements of the first input argument (traversed first by row, then by
-column), and so on for subsequent arguments.</p>
-<p>This is a pythonic implementation of drake::math::InitializeAutoDiffTuple
-in C++.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.autodiffutils.initializeAutoDiffTuple">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffTuple</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffTuple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a series of array_like input arguments, create a tuple of
 corresponding AutoDiff matrices with values equal to the input matrices
 and properly initialized derivative vectors.</p>

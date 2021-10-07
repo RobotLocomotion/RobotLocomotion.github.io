@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#aea27c3ce8aaf9792e86b006e57659938":[3,0,0,17,0,0,2],
 "structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#afcf03c1d7facd07abeb941be18cc75b2":[3,0,0,17,0,0,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,0],
 "structstd_1_1equal__to_3_01drake_1_1symbolic_1_1_expression_01_4.html#a538d122bb822306915eed589daae8627":[3,0,1,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "symbolic__formula_8h.html":[4,0,0,1,59],
 "symbolic__formula_8h.html#a097b1381843c0314529765995289c063":[4,0,0,1,59,81],
 "symbolic__formula_8h.html#a0ad84d6691fb2bf9627d894d56b8ef6f":[4,0,0,1,59,49],
-"symbolic__formula_8h.html#a1028ce4a4b55e7bf85a37d6282c3bf20":[4,0,0,1,59,71],
-"symbolic__formula_8h.html#a19aa57dcc28c59559eef51f7cbba8cba":[4,0,0,1,59,8]
+"symbolic__formula_8h.html#a1028ce4a4b55e7bf85a37d6282c3bf20":[4,0,0,1,59,71]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"rod2d__geometry_8h.html":[4,0,0,3,15,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,27],
 "rotary__encoders_8h.html":[4,0,0,11,8,13],
 "rotation_8h.html":[4,0,0,1,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "structdrake_1_1_rlocation_or_error.html":[3,0,0,44],
 "structdrake_1_1_rlocation_or_error.html#a73f9ba255d9f67483bea8f29d42f9e13":[3,0,0,44,0],
 "structdrake_1_1_rlocation_or_error.html#a8c94119e5bd6fbde0680ef83f01c9685":[3,0,0,44,1],
-"structdrake_1_1_sorted_pair.html":[3,0,0,47],
-"structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632":[3,0,0,47,6]
+"structdrake_1_1_sorted_pair.html":[3,0,0,47]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,7,19,0,0],
 "knot__vector__type_8h.html#a2dc222f66e0f5092e8cfe879f24874b2af1b493f6e43ce0d1371533ee4f1199d0":[4,0,0,7,19,0,1],
 "kuka__torque__controller_8h.html":[4,0,0,3,6,2],
 "lcm__image__array__to__images_8h.html":[4,0,0,11,8,8],
@@ -239,15 +240,14 @@ var NAVTREEINDEX43 =
 "name__value_8h.html":[4,0,0,1,38],
 "name__value_8h.html#a1e095c8e1bdc141709c1bb22aca6d944":[4,0,0,1,38,1],
 "name__value_8h.html#a4f1f5c73dacf99966ffa810a1fd23cd3":[4,0,0,1,38,2],
-"namespacedrake.html":[2,0,0],
 "namespacedrake.html":[3,0,0],
-"namespacedrake_1_1assert.html":[3,0,0,0],
+"namespacedrake.html":[2,0,0],
 "namespacedrake_1_1assert.html":[2,0,0,0],
+"namespacedrake_1_1assert.html":[3,0,0,0],
 "namespacedrake_1_1common.html":[2,0,0,1],
 "namespacedrake_1_1common.html":[3,0,0,1],
 "namespacedrake_1_1common_1_1test.html":[2,0,0,1,0],
 "namespacedrake_1_1examples.html":[2,0,0,2],
 "namespacedrake_1_1examples.html":[3,0,0,2],
-"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,2,0],
-"namespacedrake_1_1examples_1_1acrobot.html":[3,0,0,2,0]
+"namespacedrake_1_1examples_1_1acrobot.html":[2,0,0,2,0]
 };

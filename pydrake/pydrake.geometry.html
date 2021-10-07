@@ -181,7 +181,8 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.render.html">pydrake.geometry.render</a></li>
 </ul>
 </div>
-<span class="target" id="module-pydrake.geometry"></span><dl class="function">
+<span class="target" id="module-pydrake.geometry"></span><p>Bindings for <cite>drake::geometry</cite></p>
+<dl class="function">
 <dt id="pydrake.geometry.AddContactMaterial">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">AddContactMaterial</code><span class="sig-paren">(</span><em>elastic_modulus: Optional[float] = None</em>, <em>dissipation: Optional[float] = None</em>, <em>point_stiffness: Optional[float] = None</em>, <em>friction: Optional[drake::multibody::CoulombFriction&lt;double&gt;] = None</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddContactMaterial" title="Permalink to this definition">¶</a></dt>
 <dd><p>&#64;name Contact Material Utility Functions AddContactMaterial() adds
@@ -698,7 +699,7 @@ The following polices are implemented during application:</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.CollisionFilterManager.ApplyTransient">
-<code class="descname">ApplyTransient</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>declaration: pydrake.geometry.CollisionFilterDeclaration</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.FilterId<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.ApplyTransient" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ApplyTransient</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>declaration: pydrake.geometry.CollisionFilterDeclaration</em><span class="sig-paren">)</span> &#x2192; drake::Identifier&lt;drake::geometry::FilterTag&gt;<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.ApplyTransient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Applies the declaration as the newest <em>transient</em> modification to the
 collision filter configuration. The declaration must be considered
 “valid”, as defined for Apply().</p>
@@ -712,14 +713,14 @@ collision filter configuration. The declaration must be considered
 
 <dl class="method">
 <dt id="pydrake.geometry.CollisionFilterManager.IsActive">
-<code class="descname">IsActive</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>filter_id: pydrake.geometry.FilterId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.IsActive" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IsActive</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>filter_id: drake::Identifier&lt;drake::geometry::FilterTag&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.IsActive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reports if the transient collision filter declaration indicated by the
 given <code class="docutils literal"><span class="pre">filter_id</span></code> is part of the history.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.CollisionFilterManager.RemoveDeclaration">
-<code class="descname">RemoveDeclaration</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>filter_id: pydrake.geometry.FilterId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.RemoveDeclaration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RemoveDeclaration</code><span class="sig-paren">(</span><em>self: pydrake.geometry.CollisionFilterManager</em>, <em>filter_id: drake::Identifier&lt;drake::geometry::FilterTag&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.CollisionFilterManager.RemoveDeclaration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempts to remove the transient declaration from the history for the
 declaration associated with the given <code class="docutils literal"><span class="pre">filter_id</span></code>.</p>
 <dl class="docutils">
@@ -2243,7 +2244,7 @@ the common, 0 group. Must be non-negative.</dd>
 
 <dl class="method">
 <dt id="pydrake.geometry.GeometryFrame.id">
-<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryFrame</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.FrameId<a class="headerlink" href="#pydrake.geometry.GeometryFrame.id" title="Permalink to this definition">¶</a></dt>
+<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryFrame</em><span class="sig-paren">)</span> &#x2192; drake::Identifier&lt;drake::geometry::FrameTag&gt;<a class="headerlink" href="#pydrake.geometry.GeometryFrame.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the globally unique id for this geometry specification. Every
 instantiation of FrameInstance will contain a unique id value. The id
 value is preserved across copies. After successfully registering this
@@ -2347,7 +2348,7 @@ Querying the instance of its name will return this <em>canonicalized</em>
 name.</p>
 <dl class="method">
 <dt id="pydrake.geometry.GeometryInstance.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance, X_PG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.GeometryInstance.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance, X_PG: pydrake.math.RigidTransform_[float], shape: drake::geometry::Shape, name: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.GeometryInstance.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a geometry instance specification.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">X_PG</span></code>:</dt>
@@ -2369,7 +2370,7 @@ name.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.GeometryInstance.id">
-<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.GeometryInstance.id" title="Permalink to this definition">¶</a></dt>
+<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; drake::geometry::GeometryId<a class="headerlink" href="#pydrake.geometry.GeometryInstance.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the globally unique id for this geometry specification. Every
 instantiation of GeometryInstance will contain a unique id value. The
 id value is preserved across copies. After successfully registering
@@ -2437,7 +2438,7 @@ they are defined). Nullptr otherwise.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.GeometryInstance.release_shape">
-<code class="descname">release_shape</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.Shape<a class="headerlink" href="#pydrake.geometry.GeometryInstance.release_shape" title="Permalink to this definition">¶</a></dt>
+<code class="descname">release_shape</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; drake::geometry::Shape<a class="headerlink" href="#pydrake.geometry.GeometryInstance.release_shape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Releases the shape from the instance.</p>
 </dd></dl>
 
@@ -2477,7 +2478,7 @@ they are defined). Nullptr otherwise.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.GeometryInstance.shape">
-<code class="descname">shape</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.Shape<a class="headerlink" href="#pydrake.geometry.GeometryInstance.shape" title="Permalink to this definition">¶</a></dt>
+<code class="descname">shape</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryInstance</em><span class="sig-paren">)</span> &#x2192; drake::geometry::Shape<a class="headerlink" href="#pydrake.geometry.GeometryInstance.shape" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2917,23 +2918,23 @@ of geometries rigidly affixed to frame f).</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.geometry.GeometrySet) -&gt; None</li>
-<li>__init__(self: pydrake.geometry.GeometrySet, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.GeometrySet, geometry_id: drake::geometry::GeometryId) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 <ol class="arabic simple" start="3">
-<li>__init__(self: pydrake.geometry.GeometrySet, frame_id: pydrake.geometry.FrameId) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.GeometrySet, frame_id: drake::Identifier&lt;drake::geometry::FrameTag&gt;) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 <ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.geometry.GeometrySet, geometry_ids: List[pydrake.geometry.GeometryId]) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.GeometrySet, geometry_ids: List[drake::geometry::GeometryId]) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 <ol class="arabic simple" start="5">
-<li>__init__(self: pydrake.geometry.GeometrySet, frame_ids: List[pydrake.geometry.FrameId]) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.GeometrySet, frame_ids: List[drake::Identifier&lt;drake::geometry::FrameTag&gt;]) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 <ol class="arabic simple" start="6">
-<li>__init__(self: pydrake.geometry.GeometrySet, geometry_ids: List[pydrake.geometry.GeometryId], frame_ids: List[pydrake.geometry.FrameId]) -&gt; None</li>
+<li>__init__(self: pydrake.geometry.GeometrySet, geometry_ids: List[drake::geometry::GeometryId], frame_ids: List[drake::Identifier&lt;drake::geometry::FrameTag&gt;]) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 </dd></dl>
@@ -2943,17 +2944,17 @@ of geometries rigidly affixed to frame f).</p>
 <code class="descname">Add</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.GeometrySet.Add" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>Add(self: pydrake.geometry.GeometrySet, geometry_id: pydrake.geometry.GeometryId) -&gt; None</li>
-<li>Add(self: pydrake.geometry.GeometrySet, frame_id: pydrake.geometry.FrameId) -&gt; None</li>
-<li>Add(self: pydrake.geometry.GeometrySet, geometry_ids: List[pydrake.geometry.GeometryId]) -&gt; None</li>
+<li>Add(self: pydrake.geometry.GeometrySet, geometry_id: drake::geometry::GeometryId) -&gt; None</li>
+<li>Add(self: pydrake.geometry.GeometrySet, frame_id: drake::Identifier&lt;drake::geometry::FrameTag&gt;) -&gt; None</li>
+<li>Add(self: pydrake.geometry.GeometrySet, geometry_ids: List[drake::geometry::GeometryId]) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 <ol class="arabic simple" start="4">
-<li>Add(self: pydrake.geometry.GeometrySet, frame_ids: List[pydrake.geometry.FrameId]) -&gt; None</li>
+<li>Add(self: pydrake.geometry.GeometrySet, frame_ids: List[drake::Identifier&lt;drake::geometry::FrameTag&gt;]) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 <ol class="arabic simple" start="5">
-<li>Add(self: pydrake.geometry.GeometrySet, geometry_ids: List[pydrake.geometry.GeometryId], frame_ids: List[pydrake.geometry.FrameId]) -&gt; None</li>
+<li>Add(self: pydrake.geometry.GeometrySet, geometry_ids: List[drake::geometry::GeometryId], frame_ids: List[drake::Identifier&lt;drake::geometry::FrameTag&gt;]) -&gt; None</li>
 </ol>
 <p>See main constructor</p>
 </dd></dl>
@@ -2999,7 +3000,7 @@ from every other instance.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.GeometryVersion.IsSameAs">
-<code class="descname">IsSameAs</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryVersion</em>, <em>other: pydrake.geometry.GeometryVersion</em>, <em>role: pydrake.geometry.Role</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.GeometryVersion.IsSameAs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IsSameAs</code><span class="sig-paren">(</span><em>self: pydrake.geometry.GeometryVersion</em>, <em>other: pydrake.geometry.GeometryVersion</em>, <em>role: drake::geometry::Role</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.GeometryVersion.IsSameAs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if <code class="docutils literal"><span class="pre">this</span></code> GeometryVersion has the same <code class="docutils literal"><span class="pre">role</span></code> version
 as the <code class="docutils literal"><span class="pre">other</span></code> GeometryVersion.</p>
 </dd></dl>
@@ -3501,7 +3502,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038d6a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644f6a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3527,14 +3528,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038d708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644f708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038d768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644f768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3588,7 +3589,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038dd68&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644fd68&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3614,14 +3615,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038ddc8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644fdc8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038de28&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644fe28&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3673,7 +3674,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038d6a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644f6a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3699,14 +3700,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038d708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644f708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7fb44038d768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f6ab644f768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
