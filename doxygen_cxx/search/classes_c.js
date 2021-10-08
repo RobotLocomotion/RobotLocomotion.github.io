@@ -11,6 +11,7 @@ var searchData=
   ['matrixgain',['MatrixGain',['../classdrake_1_1systems_1_1_matrix_gain.html',1,'drake::systems']]],
   ['mesh',['Mesh',['../classdrake_1_1geometry_1_1_mesh.html',1,'drake::geometry']]],
   ['meshcat',['Meshcat',['../classdrake_1_1geometry_1_1_meshcat.html',1,'drake::geometry']]],
+  ['meshcatanimation',['MeshcatAnimation',['../classdrake_1_1geometry_1_1_meshcat_animation.html',1,'drake::geometry']]],
   ['meshcatvisualizer',['MeshcatVisualizer',['../classdrake_1_1geometry_1_1_meshcat_visualizer.html',1,'drake::geometry']]],
   ['meshcatvisualizerparams',['MeshcatVisualizerParams',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html',1,'drake::geometry']]],
   ['meshfieldlinear',['MeshFieldLinear',['../classdrake_1_1geometry_1_1_mesh_field_linear.html',1,'drake::geometry']]],

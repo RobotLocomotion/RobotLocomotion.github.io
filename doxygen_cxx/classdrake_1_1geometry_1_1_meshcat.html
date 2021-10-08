@@ -186,7 +186,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af9eb77512050207a9b91e2da278568a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#af9eb77512050207a9b91e2da278568a4">More...</a><br /></td></tr>
 <tr class="separator:af9eb77512050207a9b91e2da278568a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ca09d605f1d8c991e98793136a3b027"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027">SetProperty</a> (std::string_view path, std::string property, const std::vector&lt; double &gt; &amp;value)</td></tr>
+<tr class="memdesc:a4ca09d605f1d8c991e98793136a3b027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a single named property of the object at the given path.  <a href="#a4ca09d605f1d8c991e98793136a3b027">More...</a><br /></td></tr>
 <tr class="separator:a4ca09d605f1d8c991e98793136a3b027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385b6142ccc841b5b51a14825b7cebdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf">SetAnimation</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;animation)</td></tr>
+<tr class="memdesc:a385b6142ccc841b5b51a14825b7cebdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, which creates a slider interface element to play/pause/rewind through a series of animation frames in the visualizer.  <a href="#a385b6142ccc841b5b51a14825b7cebdf">More...</a><br /></td></tr>
+<tr class="separator:a385b6142ccc841b5b51a14825b7cebdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40769135bba976dde79af9499e8d000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000">HasPath</a> (std::string_view path) const</td></tr>
 <tr class="separator:ae40769135bba976dde79af9499e8d000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac0b91a968117e6d9b8792bc753d9d6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#abac0b91a968117e6d9b8792bc753d9d6">GetPackedObject</a> (std::string_view path) const</td></tr>
@@ -780,6 +784,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a385b6142ccc841b5b51a14825b7cebdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a385b6142ccc841b5b51a14825b7cebdf">&#9670;&nbsp;</a></span>SetAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetAnimation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;&#160;</td>
+          <td class="paramname"><em>animation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, which creates a slider interface element to play/pause/rewind through a series of animation frames in the visualizer. </p>
+
+</div>
+</div>
 <a id="af3dc13928478563343ff6ef72c16fc98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af3dc13928478563343ff6ef72c16fc98">&#9670;&nbsp;</a></span>SetCamera() <span class="overload">[1/2]</span></h2>
 
@@ -1060,6 +1084,18 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sets a single named property of the object at the given path. </p>
+<p>For example, </p><pre class="fragment">meshcat.SetProperty("box", "position", [1.0, 0.0, 0.0]);
+</pre><p> See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for more details about these properties and how to address them.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths and the scene tree</a> for the semantics. </td></tr>
+    <tr><td class="paramname">property</td><td>the string name of the property to set </td></tr>
+    <tr><td class="paramname">value</td><td>the new value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

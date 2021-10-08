@@ -47,6 +47,9 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera" ],
       [ "OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera" ]
     ] ],
+    [ "meshcat_animation.h", "meshcat__animation_8h.html", [
+      [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", "classdrake_1_1geometry_1_1_meshcat_animation" ]
+    ] ],
     [ "meshcat_types.h", "meshcat__types_8h.html", "meshcat__types_8h" ],
     [ "meshcat_visualizer.h", "meshcat__visualizer_8h.html", "meshcat__visualizer_8h" ],
     [ "meshcat_visualizer_params.h", "meshcat__visualizer__params_8h.html", [

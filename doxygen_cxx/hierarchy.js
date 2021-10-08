@@ -437,6 +437,7 @@ var hierarchy =
     ] ],
     [ "MathematicalProgramResult", "classdrake_1_1solvers_1_1_mathematical_program_result.html", null ],
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", null ],
+    [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", null ],
     [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", null ],
     [ "MeshFieldLinear< T, MeshType >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
     [ "MeshFieldLinear< T, T >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],

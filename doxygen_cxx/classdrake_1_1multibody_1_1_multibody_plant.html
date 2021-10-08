@@ -796,6 +796,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a219464f25203b3593baafe473f98d817"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a219464f25203b3593baafe473f98d817">GetFrameByName</a> (std::string_view name, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:a219464f25203b3593baafe473f98d817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the frame that is uniquely identified by the string <code>name</code> in <code>model_instance</code>.  <a href="#a219464f25203b3593baafe473f98d817">More...</a><br /></td></tr>
 <tr class="separator:a219464f25203b3593baafe473f98d817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ed349a2f7ff96074f02339fb34ef81f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1ed349a2f7ff96074f02339fb34ef81f">GetFrameIndices</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
+<tr class="memdesc:a1ed349a2f7ff96074f02339fb34ef81f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of frame indices associated with <code>model_instance</code>.  <a href="#a1ed349a2f7ff96074f02339fb34ef81f">More...</a><br /></td></tr>
+<tr class="separator:a1ed349a2f7ff96074f02339fb34ef81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8601c026e9807127b4dd41e7585d2cfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc">num_actuators</a> () const</td></tr>
 <tr class="memdesc:a8601c026e9807127b4dd41e7585d2cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of joint actuators in the model.  <a href="#a8601c026e9807127b4dd41e7585d2cfc">More...</a><br /></td></tr>
 <tr class="separator:a8601c026e9807127b4dd41e7585d2cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4264,6 +4267,26 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a1ed349a2f7ff96074f02339fb34ef81f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ed349a2f7ff96074f02339fb34ef81f">&#9670;&nbsp;</a></span>GetFrameIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a>&gt; GetFrameIndices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a list of frame indices associated with <code>model_instance</code>. </p>
+
+</div>
+</div>
 <a id="ae38b99ebc8a1c3b0a97832f91c8b751c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae38b99ebc8a1c3b0a97832f91c8b751c">&#9670;&nbsp;</a></span>GetFreeBodyPose()</h2>
 
@@ -6068,8 +6091,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6080,7 +6103,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6094,8 +6117,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6106,7 +6129,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

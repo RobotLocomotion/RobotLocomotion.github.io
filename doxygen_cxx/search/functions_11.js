@@ -78,6 +78,7 @@ var searchData=
   ['reorderkeyframesforplant',['ReorderKeyframesForPlant',['../namespacedrake_1_1examples_1_1planar__gripper.html#afed59ae9f2391861847f21ae55d2304f',1,'drake::examples::planar_gripper']]],
   ['repairtrackerpointers',['RepairTrackerPointers',['../classdrake_1_1systems_1_1_dependency_graph.html#ac67f28d5c824455843489f2236cb2a94',1,'drake::systems::DependencyGraph']]],
   ['reparse',['Reparse',['../classdrake_1_1solvers_1_1_mathematical_program.html#aee9493ea7d08a35395634bfbfd5713dd',1,'drake::solvers::MathematicalProgram']]],
+  ['repetitions',['repetitions',['../classdrake_1_1geometry_1_1_meshcat_animation.html#a9494a186ce18e499dd8e76e8485b2b49',1,'drake::geometry::MeshcatAnimation']]],
   ['replacebilinearterms',['ReplaceBilinearTerms',['../namespacedrake_1_1solvers.html#ab9867f403bc6e247a2b55c9022f6fa3a',1,'drake::solvers']]],
   ['request_5finitial_5fstep_5fsize_5ftarget',['request_initial_step_size_target',['../classdrake_1_1systems_1_1_integrator_base.html#aaa818a52a133131208f51b1c0a3a906c',1,'drake::systems::IntegratorBase']]],
   ['required_5fcapabilities',['required_capabilities',['../classdrake_1_1solvers_1_1_mathematical_program.html#a2a7f71f7ae23678cd721de4cfcb52f54',1,'drake::solvers::MathematicalProgram']]],

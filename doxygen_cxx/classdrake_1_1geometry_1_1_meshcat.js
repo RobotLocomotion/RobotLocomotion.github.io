@@ -23,6 +23,7 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "port", "classdrake_1_1geometry_1_1_meshcat.html#a1f39e1fa88e061ddd4dc15a3be1a0450", null ],
     [ "ResetRenderMode", "classdrake_1_1geometry_1_1_meshcat.html#adeec831adfeef24453c8c5b8b9d69625", null ],
     [ "Set2dRenderMode", "classdrake_1_1geometry_1_1_meshcat.html#a1464f94b8c5d602566dee2b83f47c5df", null ],
+    [ "SetAnimation", "classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf", null ],
     [ "SetCamera", "classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98", null ],
     [ "SetCamera", "classdrake_1_1geometry_1_1_meshcat.html#a9d89514b4f0f06e38a7bf5ea480435b9", null ],
     [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#a973d81c7adb1da00361eaeab4118604f", null ],

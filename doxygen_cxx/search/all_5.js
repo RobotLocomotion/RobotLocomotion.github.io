@@ -13,6 +13,7 @@ var searchData=
   ['eigen_5fautodiff_5ftypes_2eh',['eigen_autodiff_types.h',['../eigen__autodiff__types_8h.html',1,'']]],
   ['eigen_5fgeometry_5fcompare_2eh',['eigen_geometry_compare.h',['../eigen__geometry__compare_8h.html',1,'']]],
   ['eigen_5fgeometry_5fpybind_2eh',['eigen_geometry_pybind.h',['../eigen__geometry__pybind_8h.html',1,'']]],
+  ['eigen_5flinear_5fsolver',['eigen_linear_solver',['../classdrake_1_1math_1_1_linear_solver.html#a3f298f8ed8740b28588228e7fa0f236d',1,'drake::math::LinearSolver']]],
   ['eigen_5fmatrix_5fcompare_2eh',['eigen_matrix_compare.h',['../eigen__matrix__compare_8h.html',1,'']]],
   ['eigen_5fpybind_2eh',['eigen_pybind.h',['../eigen__pybind_8h.html',1,'']]],
   ['eigen_5fsparse_5ftriplet_2eh',['eigen_sparse_triplet.h',['../eigen__sparse__triplet_8h.html',1,'']]],
