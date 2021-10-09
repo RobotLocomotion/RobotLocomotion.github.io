@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__polynomial__basis_8h.html":[4,0,0,1,68],
+"symbolic__polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,68,0],
 "symbolic__polynomial__basis__element_8h.html":[4,0,0,1,69],
 "symbolic__rational__function_8h.html":[4,0,0,1,70],
 "symbolic__rational__function_8h.html#a0dc08ea95543252bcf2b31fdfe723d26":[4,0,0,1,70,11],

@@ -238,9 +238,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a7429d58f69452750233eb29092d6e679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a7429d58f69452750233eb29092d6e679">DefineGeometryCommon</a> (py::module m)</td></tr>
 <tr class="memdesc:a7429d58f69452750233eb29092d6e679"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the common elements in the <a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a> namespace.  <a href="#a7429d58f69452750233eb29092d6e679">More...</a><br /></td></tr>
 <tr class="separator:a7429d58f69452750233eb29092d6e679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeb190e42e2f696d5ed3f8d319db6459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#aeeb190e42e2f696d5ed3f8d319db6459">DefineGeometryHydro</a> (py::module m)</td></tr>
+<tr class="memdesc:aeeb190e42e2f696d5ed3f8d319db6459"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines all of the hydroelastic-specific entities.  <a href="#aeeb190e42e2f696d5ed3f8d319db6459">More...</a><br /></td></tr>
+<tr class="separator:aeeb190e42e2f696d5ed3f8d319db6459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e2a66cb1a4fec05d8ec8f5d2dd7b6de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de">DefineGeometryOptimization</a> (py::module m)</td></tr>
 <tr class="memdesc:a1e2a66cb1a4fec05d8ec8f5d2dd7b6de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines all elements in the <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">drake::geometry::optimization</a> namespace.  <a href="#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de">More...</a><br /></td></tr>
 <tr class="separator:a1e2a66cb1a4fec05d8ec8f5d2dd7b6de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1dd02f74528f84556c55239d82ab9b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#af1dd02f74528f84556c55239d82ab9b3">DefineGeometryVisualizers</a> (py::module m)</td></tr>
+<tr class="memdesc:af1dd02f74528f84556c55239d82ab9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the visualizers in <a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a>.  <a href="#af1dd02f74528f84556c55239d82ab9b3">More...</a><br /></td></tr>
+<tr class="separator:af1dd02f74528f84556c55239d82ab9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14724461c57557eb0646af0081b97ef2"><td class="memItemLeft" align="right" valign="top">py::object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a14724461c57557eb0646af0081b97ef2">py_keep_alive</a> (py::object nurse, py::object patient)</td></tr>
 <tr class="memdesc:a14724461c57557eb0646af0081b97ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this when you must do manual casting - e.g.  <a href="#a14724461c57557eb0646af0081b97ef2">More...</a><br /></td></tr>
 <tr class="separator:a14724461c57557eb0646af0081b97ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -781,6 +787,27 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aeeb190e42e2f696d5ed3f8d319db6459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeb190e42e2f696d5ed3f8d319db6459">&#9670;&nbsp;</a></span>DefineGeometryHydro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::pydrake::DefineGeometryHydro </td>
+          <td>(</td>
+          <td class="paramtype">py::module&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines all of the hydroelastic-specific entities. </p>
+<p>See geometry_py_hydro.cc </p>
+
+</div>
+</div>
 <a id="a1e2a66cb1a4fec05d8ec8f5d2dd7b6de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de">&#9670;&nbsp;</a></span>DefineGeometryOptimization()</h2>
 
@@ -799,6 +826,27 @@ Variables</h2></td></tr>
 
 <p>Defines all elements in the <a class="el" href="namespacedrake_1_1geometry_1_1optimization.html">drake::geometry::optimization</a> namespace. </p>
 <p>See geometry_py_optimization.cc. </p>
+
+</div>
+</div>
+<a id="af1dd02f74528f84556c55239d82ab9b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dd02f74528f84556c55239d82ab9b3">&#9670;&nbsp;</a></span>DefineGeometryVisualizers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::pydrake::DefineGeometryVisualizers </td>
+          <td>(</td>
+          <td class="paramtype">py::module&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Binds the visualizers in <a class="el" href="namespacedrake_1_1geometry.html">drake::geometry</a>. </p>
+<p>See geometry_py_visualizers.cc. </p>
 
 </div>
 </div>

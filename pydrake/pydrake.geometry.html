@@ -3336,6 +3336,14 @@ properties to false.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetAnimation">
+<code class="descname">SetAnimation</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>animation: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetAnimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the MeshcatAnimation, which creates a slider interface element to
+play/pause/rewind through a series of animation frames in the
+visualizer.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.SetObject">
 <code class="descname">SetObject</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3419,25 +3427,6 @@ meshcat_path for the semantics.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
 <dd>the new value.</dd>
 </dl>
-<ol class="arabic simple" start="3">
-<li>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: List[float]) -&gt; None</li>
-</ol>
-<p>Sets a single named property of the object at the given path. For
-example,</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;box&quot;</span><span class="p">,</span> <span class="s2">&quot;position&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]);</span>
-</pre></div>
-</div>
-<p>See meshcat_path “Meshcat paths” for more details about these
-properties and how to address them.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
-<dd>a “/”-delimited string indicating the path in the scene tree. See
-meshcat_path for the semantics.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
-<dd>the string name of the property to set</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
-<dd>the new value.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3489,6 +3478,286 @@ web_url().</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatAnimation">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatAnimation</code><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>An interface for recording/playback animations in Meshcat. Use
+Meshcat::SetAnimation to publish a MeshcatAnimation to the visualizer.</p>
+<p>NOTE: There is a significant bug in meshcat/three.js that limits the
+ability to set multiple property types in a single animation. Your
+mileage with property animations may vary until we can resolve
+<a class="reference external" href="https://github.com/rdeits/meshcat/issues/105">https://github.com/rdeits/meshcat/issues/105</a>.</p>
+<p>Currently, an animation consists of (only) transforms and properties
+that are set at a particular integer frame number. Although we do not
+support calls to SetObject/Delete in an animation, you can consider
+using <code class="docutils literal"><span class="pre">SetProperty(frame,</span> <span class="pre">path,</span> <span class="pre">&quot;visible&quot;,</span> <span class="pre">true/false)</span></code> in your
+animation to make the object appear or disappear at a particular
+frame.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>frames_per_second: float = 32.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the animation object.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frames_per_second</span></code>:</dt>
+<dd>a positive integer specifying the timing at which the frames are
+played back.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.autoplay">
+<code class="descname">autoplay</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.autoplay" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.clamp_when_finished">
+<code class="descname">clamp_when_finished</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.clamp_when_finished" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.frame">
+<code class="descname">frame</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>time_from_start: float</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.frame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uses the frame rate to convert from time to the frame number, using
+std::round. <code class="docutils literal"><span class="pre">time_from_start</span></code> must be non-negative.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.frames_per_second">
+<code class="descname">frames_per_second</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.frames_per_second" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the frame rate at which the animation will be played back.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.loop_mode">
+<code class="descname">loop_mode</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; drake::geometry::MeshcatAnimation::LoopMode<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.loop_mode" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode">
+<em class="property">class </em><code class="descname">LoopMode</code><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Members:</p>
+<blockquote>
+<div><p>kLoopOnce : Plays the clip once.</p>
+<p>kLoopRepeat : Plays the clip with the chosen number of repetitions, each time</p>
+</div></blockquote>
+<p>jumping from the end of the clip directly to its beginning.</p>
+<blockquote>
+<div>kLoopPingPong : Plays the clip with the chosen number of repetitions, alternately</div></blockquote>
+<p>playing forward and backward.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation.LoopMode</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode.kLoopOnce">
+<code class="descname">kLoopOnce</code><em class="property"> = &lt;LoopMode.kLoopOnce: 2200&gt;</em><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode.kLoopOnce" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode.kLoopPingPong">
+<code class="descname">kLoopPingPong</code><em class="property"> = &lt;LoopMode.kLoopPingPong: 2202&gt;</em><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode.kLoopPingPong" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode.kLoopRepeat">
+<code class="descname">kLoopRepeat</code><em class="property"> = &lt;LoopMode.kLoopRepeat: 2201&gt;</em><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode.kLoopRepeat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatAnimation.LoopMode.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.LoopMode.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.repetitions">
+<code class="descname">repetitions</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.repetitions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.set_autoplay">
+<code class="descname">set_autoplay</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>play: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.set_autoplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the behavior when the animation is first sent to the visualizer.
+The animation will play immediately iff <code class="docutils literal"><span class="pre">play</span></code> is true. The default
+is true.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.set_clamp_when_finished">
+<code class="descname">set_clamp_when_finished</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>clamp: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.set_clamp_when_finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the behavior at the end of the animation. If true, then the
+animation will automatically be paused on its last frame. If false,
+the scene will be reset to before the animation. The default is true.</p>
+<p>Note: This setting has no impact if the action is interrupted (it has
+only an effect if its last loop has really finished).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.set_loop_mode">
+<code class="descname">set_loop_mode</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>mode: drake::geometry::MeshcatAnimation::LoopMode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.set_loop_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the loop behavior on play.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LoopMode for details. The default is kLoopRepeat.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.set_repetitions">
+<code class="descname">set_repetitions</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>repetitions: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.set_repetitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the number of repetitions of the animation each time it is
+played. This number has no effect when the loop mode is set to
+kLoopOnce. <code class="docutils literal"><span class="pre">repetitions</span></code> must be a positive integer. The default
+value is 1.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.SetProperty">
+<code class="descname">SetProperty</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.SetProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetProperty(self: pydrake.geometry.MeshcatAnimation, frame: int, path: str, property: str, value: bool) -&gt; None</li>
+</ol>
+<p>Sets a single named property of the object at the given <code class="docutils literal"><span class="pre">path</span></code> at
+the specified <code class="docutils literal"><span class="pre">frame</span></code> in the animation.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Meshcat::SetProperty.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame</span></code>:</dt>
+<dd>a non-negative integer indicating the frame at which this
+transform is applied.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
+<dd>the string name of the property to set</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>the new value.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this path/property has already been set with a</li>
+<li>different type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SetProperty(self: pydrake.geometry.MeshcatAnimation, frame: int, path: str, property: str, value: float) -&gt; None</li>
+</ol>
+<p>Sets a single named property of the object at the given <code class="docutils literal"><span class="pre">path</span></code> at
+the specified <code class="docutils literal"><span class="pre">frame</span></code> in the animation.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Meshcat::SetProperty.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame</span></code>:</dt>
+<dd>a non-negative integer indicating the frame at which this
+transform is applied.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
+<dd>the string name of the property to set</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>the new value.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this path/property has already been set with a</li>
+<li>different type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
+<li>SetProperty(self: pydrake.geometry.MeshcatAnimation, frame: int, path: str, property: str, value: List[float]) -&gt; None</li>
+</ol>
+<p>Sets a single named property of the object at the given <code class="docutils literal"><span class="pre">path</span></code> at
+the specified <code class="docutils literal"><span class="pre">frame</span></code> in the animation.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Meshcat::SetProperty.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame</span></code>:</dt>
+<dd>a non-negative integer indicating the frame at which this
+transform is applied.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
+<dd>the string name of the property to set</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>the new value.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this path/property has already been set with a</li>
+<li>different type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatAnimation.SetTransform">
+<code class="descname">SetTransform</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation, frame: int, path: str, X_ParentPath: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.SetTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the RigidTransform at <code class="docutils literal"><span class="pre">frame</span></code> in the animation for a given
+<code class="docutils literal"><span class="pre">path</span></code> in the the scene tree.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Meshcat::SetTransform.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">frame</span></code>:</dt>
+<dd>a non-negative integer indicating the frame at which this
+transform is applied.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">X_ParentPath</span></code>:</dt>
+<dd>the relative transform from the path to its immediate parent.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the position or quaternion properties of this path</li>
+<li>have already been set to an incorrect type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp" title="Permalink to this definition">¶</a></dt>
@@ -3521,7 +3790,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f84981296a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2b28&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3547,14 +3816,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2b88&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2be8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3608,7 +3877,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129d68&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2e88&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3634,14 +3903,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129dc8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2ee8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129e28&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2f48&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3693,7 +3962,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f84981296a8&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2b28&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3719,14 +3988,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129708&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2b88&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f8498129768&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f1c7afb2be8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -8866,7 +9135,7 @@ should be passed through an implementation of a ShapeReifier.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh">
-<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, drake::geometry::SurfaceMesh&lt;double&gt;, drake::geometry::VolumeMesh&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.SurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <em>mesh</em> used to represent this geometry in hydroelastic
 contact calculations, if it exists. Most primitives (sphere, cylinder,
 etc.) are actually represented by discrete approximations (i.e., the
@@ -10354,7 +10623,7 @@ should be passed through an implementation of a ShapeReifier.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh">
-<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, drake::geometry::SurfaceMesh&lt;double&gt;, drake::geometry::VolumeMesh&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.SurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <em>mesh</em> used to represent this geometry in hydroelastic
 contact calculations, if it exists. Most primitives (sphere, cylinder,
 etc.) are actually represented by discrete approximations (i.e., the

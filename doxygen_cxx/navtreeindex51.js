@@ -1,5 +1,7 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__expression__cell_8h.html#a0373300d4207624b99351d0f7c347b85":[4,0,0,1,57,56],
+"symbolic__expression__cell_8h.html#a1633315c1c26cbd8411a7ea0d860a9c2":[4,0,0,1,57,44],
 "symbolic__expression__cell_8h.html#a19a56ae8b296df9d9285c93e00b82dc7":[4,0,0,1,57,51],
 "symbolic__expression__cell_8h.html#a1ae3c8118eef15cc3a9dafe14c6d48c2":[4,0,0,1,57,54],
 "symbolic__expression__cell_8h.html#a2196a9e544a94c2e7c277b18c7b7716b":[4,0,0,1,57,62],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic__polynomial_8h.html#aece6b8e4e48de49ed447c6d62b81ce88":[4,0,0,1,67,13],
 "symbolic__polynomial_8h.html#af04dff9a90e39ac9985d520d3e66f5c3":[4,0,0,1,67,17],
 "symbolic__polynomial_8h.html#af38134e3394d8c40a7a91490154de2b3":[4,0,0,1,67,6],
-"symbolic__polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,67,14],
-"symbolic__polynomial__basis_8h.html":[4,0,0,1,68],
-"symbolic__polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,68,0]
+"symbolic__polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,67,14]
 };
