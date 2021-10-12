@@ -106,9 +106,10 @@ struct drake::SortedPair&lt; T &gt;</h3>
 
 <p>This class is similar to the std::pair class. </p>
 <p>However, this class uses a pair of homogeneous types (std::pair can use heterogeneous types) and sorts the first and second values such that the first value is less than or equal to the second one). Note that the sort is a stable one. Thus the <a class="el" href="structdrake_1_1_sorted_pair.html" title="This class is similar to the std::pair class.">SortedPair</a> class is able to be used to generate keys (e.g., for std::map, etc.) from pairs of objects.</p>
+<p>The availability of construction and assignment operations (i.e., default constructor, copy constructor, copy assignment, move constructor, move assignment) is the same as whatever T provides . All comparison operations (including equality, etc.) are always available.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>A template type that provides <code>operator&lt;</code> and supports default construction. </td></tr>
+    <tr><td class="paramname">T</td><td>A template type that provides <code>operator&lt;</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -117,9 +118,9 @@ struct drake::SortedPair&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5068823e7010a831c8b6b6dee93a1bf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a5068823e7010a831c8b6b6dee93a1bf7">SortedPair</a> ()=default</td></tr>
-<tr class="memdesc:a5068823e7010a831c8b6b6dee93a1bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor creates <code><a class="el" href="structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632" title="Gets the first (according to operator&lt;) of the objects.">first()</a></code> and <code><a class="el" href="structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1" title="Gets the second (according to operator&lt;) of the objects.">second()</a></code> using their respective default constructors.  <a href="#a5068823e7010a831c8b6b6dee93a1bf7">More...</a><br /></td></tr>
-<tr class="separator:a5068823e7010a831c8b6b6dee93a1bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affe80b1feb4483db8575f33f3b23e07d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#affe80b1feb4483db8575f33f3b23e07d">SortedPair</a> ()</td></tr>
+<tr class="memdesc:affe80b1feb4483db8575f33f3b23e07d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default constructor creates <code><a class="el" href="structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632" title="Gets the first (according to operator&lt;) of the objects.">first()</a></code> and <code><a class="el" href="structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1" title="Gets the second (according to operator&lt;) of the objects.">second()</a></code> using T's default constructor, iff T has a default constructor.  <a href="#affe80b1feb4483db8575f33f3b23e07d">More...</a><br /></td></tr>
+<tr class="separator:affe80b1feb4483db8575f33f3b23e07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fc588ec6d00ca9a86173dcc508a12a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a2fc588ec6d00ca9a86173dcc508a12a9">SortedPair</a> (T &amp;&amp;a, T &amp;&amp;b)</td></tr>
 <tr class="memdesc:a2fc588ec6d00ca9a86173dcc508a12a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rvalue reference constructor, permits constructing with std::unique_ptr types, for example.  <a href="#a2fc588ec6d00ca9a86173dcc508a12a9">More...</a><br /></td></tr>
 <tr class="separator:a2fc588ec6d00ca9a86173dcc508a12a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,15 +144,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a88eda7bfcc2bb51183a5c71ca7956731"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a88eda7bfcc2bb51183a5c71ca7956731">Swap</a> (<a class="el" href="structdrake_1_1_sorted_pair.html">drake::SortedPair</a>&lt; T &gt; &amp;t)</td></tr>
 <tr class="memdesc:a88eda7bfcc2bb51183a5c71ca7956731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swaps <code>this</code> and <code>t</code>.  <a href="#a88eda7bfcc2bb51183a5c71ca7956731">More...</a><br /></td></tr>
 <tr class="separator:a88eda7bfcc2bb51183a5c71ca7956731"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
-<tr class="memitem:a6866c8c8324b0cdf8c136d592d9406b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a6866c8c8324b0cdf8c136d592d9406b0">SortedPair</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;)=default</td></tr>
-<tr class="separator:a6866c8c8324b0cdf8c136d592d9406b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59742060de03744ff3bb16e42989d2af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a59742060de03744ff3bb16e42989d2af">operator=</a> (const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;)=default</td></tr>
-<tr class="separator:a59742060de03744ff3bb16e42989d2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b636fcd9a8316a4477328c7f37d7a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a56b636fcd9a8316a4477328c7f37d7a3">SortedPair</a> (<a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:a56b636fcd9a8316a4477328c7f37d7a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1df0b349750d2bf6d9c88a73808eba8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#aa1df0b349750d2bf6d9c88a73808eba8">operator=</a> (<a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> &amp;&amp;)=default</td></tr>
-<tr class="separator:aa1df0b349750d2bf6d9c88a73808eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Support for using SortedPair in structured bindings.</div></td></tr>
 <tr class="memitem:a081f9d487f4f53fbcad839740d361f30"><td class="memTemplParams" colspan="2">template&lt;std::size_t Index&gt; </td></tr>
 <tr class="memitem:a081f9d487f4f53fbcad839740d361f30"><td class="memTemplItemLeft" align="right" valign="top">std::tuple_element_t&lt; Index, <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structdrake_1_1_sorted_pair.html#a081f9d487f4f53fbcad839740d361f30">get</a> ()</td></tr>
@@ -168,66 +160,11 @@ Friends</h2></td></tr>
 <tr class="separator:aa92b10b40f1d60a4dce917bb942db4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a6866c8c8324b0cdf8c136d592d9406b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6866c8c8324b0cdf8c136d592d9406b0">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[1/6]</span></h2>
+<a id="affe80b1feb4483db8575f33f3b23e07d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe80b1feb4483db8575f33f3b23e07d">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a56b636fcd9a8316a4477328c7f37d7a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56b636fcd9a8316a4477328c7f37d7a3">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[2/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5068823e7010a831c8b6b6dee93a1bf7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5068823e7010a831c8b6b6dee93a1bf7">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a> </td>
@@ -236,19 +173,15 @@ Friends</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>The default constructor creates <code><a class="el" href="structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632" title="Gets the first (according to operator&lt;) of the objects.">first()</a></code> and <code><a class="el" href="structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1" title="Gets the second (according to operator&lt;) of the objects.">second()</a></code> using their respective default constructors. </p>
+<p>The default constructor creates <code><a class="el" href="structdrake_1_1_sorted_pair.html#a060d674b4b2ac71089f02707fcc90632" title="Gets the first (according to operator&lt;) of the objects.">first()</a></code> and <code><a class="el" href="structdrake_1_1_sorted_pair.html#a167fa11f5bf36b4e808282c14c09b3e1" title="Gets the second (according to operator&lt;) of the objects.">second()</a></code> using T's default constructor, iff T has a default constructor. </p>
+<p>Otherwise, this constructor is not available. </p>
 
 </div>
 </div>
 <a id="a2fc588ec6d00ca9a86173dcc508a12a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fc588ec6d00ca9a86173dcc508a12a9">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc588ec6d00ca9a86173dcc508a12a9">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,7 +211,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a32b737917cbeeb58e2b54f4d4225bb6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32b737917cbeeb58e2b54f4d4225bb6b">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b737917cbeeb58e2b54f4d4225bb6b">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +241,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="ace5b7f162bab05d193bcdd27ddee7b3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace5b7f162bab05d193bcdd27ddee7b3b">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5b7f162bab05d193bcdd27ddee7b3b">&#9670;&nbsp;</a></span>SortedPair() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,58 +310,6 @@ Friends</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a59742060de03744ff3bb16e42989d2af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59742060de03744ff3bb16e42989d2af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa1df0b349750d2bf6d9c88a73808eba8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1df0b349750d2bf6d9c88a73808eba8">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&amp; operator= </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>

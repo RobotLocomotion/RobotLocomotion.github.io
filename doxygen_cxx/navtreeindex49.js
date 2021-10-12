@@ -1,9 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html":[3,0,0,12,67,0],
-"structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html#a18e93ca094ae69c7976e4b564759cb28":[3,0,0,12,67,0,3],
-"structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html#a42d9b820ef41e4fa4653af17fce5c26b":[3,0,0,12,67,0,4],
-"structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html#a563eb23cbeea0bba6d3af87f73229774":[3,0,0,12,67,0,1],
 "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html#a8baf6734662529de192e18051c1d6f46":[3,0,0,12,67,0,2],
 "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html#af6390c53706afa59c954018c4bfe0975":[3,0,0,12,67,0,0],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html":[3,0,0,12,0,6,0],
@@ -249,5 +245,9 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html":[3,0,0,14,8,31],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_bgra_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,14,8,31,0],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html":[3,0,0,14,8,32],
-"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,14,8,32,0]
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_depth_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,14,8,32,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html":[3,0,0,14,8,33],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_grey_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,14,8,33,0],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html":[3,0,0,14,8,34],
+"structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_label_01_4.html#ab9d071a35c456d7863cadc4f413e8fcf":[3,0,0,14,8,34,0]
 };

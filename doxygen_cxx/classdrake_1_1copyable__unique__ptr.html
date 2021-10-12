@@ -115,13 +115,11 @@ class drake::copyable_unique_ptr&lt; T &gt;</h3>
 <p><b>Usage</b></p>
 <p>In the simplest use case, the instantiation type will match the type of object it references, e.g.: </p><div class="fragment"><div class="line">copyable_unique_ptr&lt;Foo&gt; ptr = make_unique&lt;Foo&gt;(...);</div></div><!-- fragment --><p> In this case, as long <code>Foo</code> is deemed compatible, the behavior will be as expected, i.e., when <code>ptr</code> copies, it will contain a reference to a new instance of <code>Foo</code>.</p>
 <p>copyable_unique_ptr can also be used with polymorphic classes &ndash; a copyable_unique_ptr, instantiated on a <em>base</em> class, references an instance of a <em>derived</em> class. When copying the object, we would want the copy to likewise contain an instance of the derived class. For example:</p>
-<div class="fragment"><div class="line">copyable_unique_ptr&lt;Base&gt; cu_ptr = make_unique&lt;Derived&gt;();</div><div class="line">copyable_unique_ptr&lt;Base&gt; other_cu_ptr = cu_ptr;           <span class="comment">// Triggers a copy.</span></div><div class="line">is_dynamic_castable&lt;Derived&gt;(cu_other_ptr.get());          <span class="comment">// Should be true.</span></div></div><!-- fragment --><p>This works for well-designed polymorphic classes.</p>
+<div class="fragment"><div class="line">copyable_unique_ptr&lt;Base&gt; cu_ptr = make_unique&lt;Derived&gt;();</div><div class="line">copyable_unique_ptr&lt;Base&gt; other_cu_ptr = cu_ptr;           <span class="comment">// Triggers a copy.</span></div><div class="line">is_dynamic_castable&lt;Derived&gt;(other_cu_ptr.get());          <span class="comment">// Should be true.</span></div></div><!-- fragment --><p>This works for well-designed polymorphic classes.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Ill-formed polymorphic classes can lead to fatal type slicing of the referenced object, such that the new copy contains an instance of <code>Base</code> instead of <code>Derived</code>. Some mistakes that would lead to this degenerate behavior:</dd></dl>
 <ul>
-<li>The <code>Base</code> class has a public copy constructor.</li>
 <li>The <code>Base</code> class's Clone() implementation does not invoke the <code>Derived</code> class's implementation of a suitable virtual method.</li>
 </ul>
-<dl class="section warning"><dt>Warning</dt><dd>One important difference between unique_ptr and copyable_unique_ptr is that a unique_ptr can be declared on a forward-declared class type. The copyable_unique_ptr <em>cannot</em>. The class must be fully defined so that the copyable_unique_ptr is able to determine if the type meets the requirements (i.e., public copy constructible or cloneable).</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The type of the contained object, which <em>must</em> be copyable as defined above. May be an abstract or concrete type. </td></tr>
@@ -137,9 +135,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a38cdcb23181ad1c554ef0209a29cd768"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#a38cdcb23181ad1c554ef0209a29cd768">copyable_unique_ptr</a> () noexcept</td></tr>
 <tr class="memdesc:a38cdcb23181ad1c554ef0209a29cd768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor stores a <code>nullptr</code>.  <a href="#a38cdcb23181ad1c554ef0209a29cd768">More...</a><br /></td></tr>
 <tr class="separator:a38cdcb23181ad1c554ef0209a29cd768"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac67cae08914b16290d64a748fb64d6dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ac67cae08914b16290d64a748fb64d6dc">copyable_unique_ptr</a> (T *ptr) noexcept</td></tr>
-<tr class="memdesc:ac67cae08914b16290d64a748fb64d6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a pointer to a writable heap-allocated object, take over ownership of that object.  <a href="#ac67cae08914b16290d64a748fb64d6dc">More...</a><br /></td></tr>
-<tr class="separator:ac67cae08914b16290d64a748fb64d6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfdff602d3fd4c83656a696b984ea7f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#acfdff602d3fd4c83656a696b984ea7f5">copyable_unique_ptr</a> (T *raw) noexcept</td></tr>
+<tr class="memdesc:acfdff602d3fd4c83656a696b984ea7f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a raw pointer to a writable heap-allocated object, take over ownership of that object.  <a href="#acfdff602d3fd4c83656a696b984ea7f5">More...</a><br /></td></tr>
+<tr class="separator:acfdff602d3fd4c83656a696b984ea7f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad454f66aaeaf4bff4953937c55634298"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ad454f66aaeaf4bff4953937c55634298">copyable_unique_ptr</a> (const T &amp;value)</td></tr>
 <tr class="memdesc:ad454f66aaeaf4bff4953937c55634298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a unique instance of T as a copy of the provided model value.  <a href="#ad454f66aaeaf4bff4953937c55634298">More...</a><br /></td></tr>
 <tr class="separator:ad454f66aaeaf4bff4953937c55634298"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -161,9 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad0b538a9c4ca822d4212226ba51dc0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move construction from a compatible standard <code>unique_ptr</code>.  <a href="#ad0b538a9c4ca822d4212226ba51dc0aa">More...</a><br /></td></tr>
 <tr class="separator:ad0b538a9c4ca822d4212226ba51dc0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Assignment</div></td></tr>
-<tr class="memitem:aabb236eef6e850a09b441591f0812747"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#aabb236eef6e850a09b441591f0812747">operator=</a> (T *ptr) noexcept</td></tr>
-<tr class="memdesc:aabb236eef6e850a09b441591f0812747"><td class="mdescLeft">&#160;</td><td class="mdescRight">This form of assignment replaces the currently-held object by the given source object and takes over ownership of the source object.  <a href="#aabb236eef6e850a09b441591f0812747">More...</a><br /></td></tr>
-<tr class="separator:aabb236eef6e850a09b441591f0812747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae817c604dc8ec423c4c58620ee6f8fe2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#ae817c604dc8ec423c4c58620ee6f8fe2">operator=</a> (T *raw) noexcept</td></tr>
+<tr class="memdesc:ae817c604dc8ec423c4c58620ee6f8fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This form of assignment replaces the currently-held object by the given source object and takes over ownership of the source object.  <a href="#ae817c604dc8ec423c4c58620ee6f8fe2">More...</a><br /></td></tr>
+<tr class="separator:ae817c604dc8ec423c4c58620ee6f8fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d4078720893b915d022bd734f6eb5e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1copyable__unique__ptr.html#a4d4078720893b915d022bd734f6eb5e9">operator=</a> (const T &amp;ref)</td></tr>
 <tr class="memdesc:a4d4078720893b915d022bd734f6eb5e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This form of assignment replaces the currently-held object by a heap-allocated copy of the source object, created using its copy constructor or <code>Clone()</code> method.  <a href="#a4d4078720893b915d022bd734f6eb5e9">More...</a><br /></td></tr>
 <tr class="separator:a4d4078720893b915d022bd734f6eb5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,8 +248,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac67cae08914b16290d64a748fb64d6dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac67cae08914b16290d64a748fb64d6dc">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[2/8]</span></h2>
+<a id="acfdff602d3fd4c83656a696b984ea7f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdff602d3fd4c83656a696b984ea7f5">&#9670;&nbsp;</a></span>copyable_unique_ptr() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -263,7 +261,7 @@ Related Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a> </td>
           <td>(</td>
           <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td class="paramname"><em>raw</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -274,7 +272,7 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Given a pointer to a writable heap-allocated object, take over ownership of that object. </p>
+<p>Given a raw pointer to a writable heap-allocated object, take over ownership of that object. </p>
 <p>No copying occurs. </p>
 
 </div>
@@ -574,8 +572,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aabb236eef6e850a09b441591f0812747"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabb236eef6e850a09b441591f0812747">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/10]</span></h2>
+<a id="ae817c604dc8ec423c4c58620ee6f8fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae817c604dc8ec423c4c58620ee6f8fe2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -587,7 +585,7 @@ Related Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1copyable__unique__ptr.html">copyable_unique_ptr</a>&amp; operator= </td>
           <td>(</td>
           <td class="paramtype">T *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td class="paramname"><em>raw</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

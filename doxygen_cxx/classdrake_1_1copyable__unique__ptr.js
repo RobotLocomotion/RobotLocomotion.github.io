@@ -1,7 +1,7 @@
 var classdrake_1_1copyable__unique__ptr =
 [
     [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html#a38cdcb23181ad1c554ef0209a29cd768", null ],
-    [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html#ac67cae08914b16290d64a748fb64d6dc", null ],
+    [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html#acfdff602d3fd4c83656a696b984ea7f5", null ],
     [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html#ad454f66aaeaf4bff4953937c55634298", null ],
     [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html#a9efa09fdc8aad69db06b649c447d9806", null ],
     [ "copyable_unique_ptr", "classdrake_1_1copyable__unique__ptr.html#a1774b97188ce9c5a5cd47c5c4ff63fc0", null ],
@@ -13,7 +13,7 @@ var classdrake_1_1copyable__unique__ptr =
     [ "get_mutable", "classdrake_1_1copyable__unique__ptr.html#ac684d04fadf2a6b636c98e38aabf7ccb", null ],
     [ "operator *", "classdrake_1_1copyable__unique__ptr.html#acdbce0832fe3d1de72e719f60db3a9aa", null ],
     [ "operator *", "classdrake_1_1copyable__unique__ptr.html#acd9f2ee3a1bcd0468bba24f98905b00f", null ],
-    [ "operator=", "classdrake_1_1copyable__unique__ptr.html#aabb236eef6e850a09b441591f0812747", null ],
+    [ "operator=", "classdrake_1_1copyable__unique__ptr.html#ae817c604dc8ec423c4c58620ee6f8fe2", null ],
     [ "operator=", "classdrake_1_1copyable__unique__ptr.html#a4d4078720893b915d022bd734f6eb5e9", null ],
     [ "operator=", "classdrake_1_1copyable__unique__ptr.html#a35881f6551d81d4ba11f23bdc695dbf5", null ],
     [ "operator=", "classdrake_1_1copyable__unique__ptr.html#a5d014005bde7838a248d7129023b999c", null ],
