@@ -17,5 +17,6 @@ var searchData=
   ['dspring_5fcontext_5f',['dspring_context_',['../classdrake_1_1systems_1_1analysis__test_1_1_implicit_integrator_test.html#abc22a9be7a584db72a293f42b7888fac',1,'drake::systems::analysis_test::ImplicitIntegratorTest']]],
   ['dual_5fobjective',['dual_objective',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::CsdpSolverDetails::dual_objective()'],['../structdrake_1_1solvers_1_1_scs_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd',1,'drake::solvers::ScsSolverDetails::dual_objective()']]],
   ['dual_5fres',['dual_res',['../structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4',1,'drake::solvers::OsqpSolverDetails']]],
+  ['duality_5fgap',['duality_gap',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a88099c06f0d2a18e23e301b3cdf08020',1,'drake::solvers::ScsSolverDetails']]],
   ['dynamic_5ffriction_5ftorque',['dynamic_friction_torque',['../structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7',1,'drake::multibody::DoorHingeConfig']]]
 ];

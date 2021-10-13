@@ -141,9 +141,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6106c9d0180a87d59f7a36709f7d6785"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning.html#ga6106c9d0180a87d59f7a36709f7d6785">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt; &amp;V_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:ga6106c9d0180a87d59f7a36709f7d6785"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(q_current, v_current, V, J, params) that tracks frame E's spatial velocity.  <a href="group__planning.html#ga6106c9d0180a87d59f7a36709f7d6785">More...</a><br /></td></tr>
 <tr class="separator:ga6106c9d0180a87d59f7a36709f7d6785"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1419d6264a35506905a455d205a3af13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning.html#ga1419d6264a35506905a455d205a3af13">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
-<tr class="memdesc:ga1419d6264a35506905a455d205a3af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired, frame_E, params) that tracks frame E's pose in the world frame.  <a href="group__planning.html#ga1419d6264a35506905a455d205a3af13">More...</a><br /></td></tr>
-<tr class="separator:ga1419d6264a35506905a455d205a3af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae10cdb111b55cc12914467fecbe82234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning.html#gae10cdb111b55cc12914467fecbe82234">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
+<tr class="memdesc:gae10cdb111b55cc12914467fecbe82234"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired, frame_E, params) that tracks frame E's pose in the world frame.  <a href="group__planning.html#gae10cdb111b55cc12914467fecbe82234">More...</a><br /></td></tr>
+<tr class="separator:gae10cdb111b55cc12914467fecbe82234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gab53fd2e1578db60ceb43b754671ae539"></a>
@@ -265,8 +265,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga1419d6264a35506905a455d205a3af13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1419d6264a35506905a455d205a3af13">&#9670;&nbsp;</a></span>DoDifferentialInverseKinematics() <span class="overload">[3/3]</span></h2>
+<a id="gae10cdb111b55cc12914467fecbe82234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae10cdb111b55cc12914467fecbe82234">&#9670;&nbsp;</a></span>DoDifferentialInverseKinematics() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +286,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;&#160;</td>
           <td class="paramname"><em>X_WE_desired</em>, </td>
         </tr>
         <tr>

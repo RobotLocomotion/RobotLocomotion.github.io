@@ -242,9 +242,6 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 <li>RelationalFormulaCell()
 : <a class="el" href="classdrake_1_1symbolic_1_1_relational_formula_cell.html#a0aa35c0f19b6552333ac532d0319bc96">RelationalFormulaCell</a>
 </li>
-<li>relative_duality_gap
-: <a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a6f09fca6f296d95b8b62f288f10f5c09">ScsSolverDetails</a>
-</li>
 <li>relative_gap_tol()
 : <a class="el" href="classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html#a06f64cf74ec0163bd28e293d2c47d966">MixedIntegerBranchAndBound</a>
 </li>
@@ -440,8 +437,11 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 <li>residue_infeasibility
 : <a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a50ed0b0f95656409f8d69b68cae7a3f6">ScsSolverDetails</a>
 </li>
-<li>residue_unbounded
-: <a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#ab715e524061e30b6c08e32b8ffdae195">ScsSolverDetails</a>
+<li>residue_unbounded_a
+: <a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a2f2f3ad142051a0c2f94d66d7430c67b">ScsSolverDetails</a>
+</li>
+<li>residue_unbounded_p
+: <a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a">ScsSolverDetails</a>
 </li>
 <li>resize()
 : <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html#abc8e346be919f7dbb4995d6365492301">PointCloud</a>
@@ -598,7 +598,7 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 : <a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik_1_1_ik_cartesian_waypoint.html#a1c465fdede6b5ea8a96275e2b9f1ecb3">ConstraintRelaxingIk::IkCartesianWaypoint</a>
 </li>
 <li>RotaryEncoders()
-: <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#ad59feb45c891897205200a1a186b86f1">RotaryEncoders&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html#a4d897b58fab20fca728b82f9101cb7d3">RotaryEncoders&lt; T &gt;</a>
 </li>
 <li>rotated_lorentz_cone_constraints()
 : <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aeb8ffa00352e1b2d8f1e8cfa720dc88c">MathematicalProgram</a>
@@ -610,7 +610,7 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 : <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#acbb70b2d5e20b8e9a4ffe2e21c7bf8fd">RigidTransform&lt; T &gt;</a>
 </li>
 <li>Rotation()
-: <a class="el" href="classdrake_1_1schema_1_1_rotation.html#aaf404eb720cbf92e268b18f01d60c1f4">Rotation</a>
+: <a class="el" href="classdrake_1_1schema_1_1_rotation.html#a780a158069f8b6c265dd1621bb4dcb65">Rotation</a>
 </li>
 <li>rotation
 : <a class="el" href="classdrake_1_1schema_1_1_transform.html#a892c274d76368b44189e47bfa5dc8ba3">Transform</a>
@@ -622,10 +622,10 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 : <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43">SpatialVector&lt; SV, T &gt;</a>
 </li>
 <li>RotationalInertia()
-: <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a73ee8d395f9f46a1086071be0faa8e37">RotationalInertia&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a319d6a0feeb306267605332cdd1906d6">RotationalInertia&lt; T &gt;</a>
 </li>
 <li>RotationMatrix()
-: <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a05183386f55111df27e380877a9f11b2">RotationMatrix&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#aeb8205e6418bc644739b23879344135b">RotationMatrix&lt; T &gt;</a>
 </li>
 <li>RotationMatrixd
 : <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a9771c03401395a6e30c398f5663799ed">RotationMatrix&lt; T &gt;</a>
@@ -651,7 +651,7 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 , <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#a857db071d9bf847d026ba7046aa9744e">Trajectory&lt; T &gt;</a>
 </li>
 <li>Rpy()
-: <a class="el" href="structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba">Rotation::Rpy</a>
+: <a class="el" href="structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69">Rotation::Rpy</a>
 </li>
 <li>run()
 : <a class="el" href="structdrake_1_1type__visit__with__default.html#a9a1b7f1cdcb3d709ba4b3a40746c5e54">type_visit_with_default</a>
@@ -664,10 +664,10 @@ $(document).ready(function(){initNavTree('functions_r.html','');});
 : <a class="el" href="classdrake_1_1systems_1_1_runge_kutta2_integrator.html#a53e96d013e25e4ae79b986834df6740f">RungeKutta2Integrator&lt; T &gt;</a>
 </li>
 <li>RungeKutta3Integrator()
-: <a class="el" href="classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a79fa9cee8048c3c70860a5e881eee447">RungeKutta3Integrator&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_runge_kutta3_integrator.html#aed4d1538f754665db35232833361256d">RungeKutta3Integrator&lt; T &gt;</a>
 </li>
 <li>RungeKutta5Integrator()
-: <a class="el" href="classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a0783821783e5404b483d8c1b758ea9ae">RungeKutta5Integrator&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a571ccaa9e4261760a7d130eac5a2994e">RungeKutta5Integrator&lt; T &gt;</a>
 </li>
 </ul>
 </div><!-- contents -->

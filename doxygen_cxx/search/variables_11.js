@@ -1,7 +1,6 @@
 var searchData=
 [
   ['r',['R',['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#ac398f23f442f485a744b957ea27d4749',1,'drake::solvers::fbstab::FBstabMpc::QPData::R()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::multibody::constraint::ConstraintAccelProblemData::r()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d',1,'drake::multibody::constraint::ConstraintVelProblemData::r()'],['../structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html#af02e44a9cbc4d0a9ea490704fbe74114',1,'drake::solvers::fbstab::FBstabMpc::QPData::r()'],['../structdrake_1_1systems_1_1sensors_1_1_color.html#a3ff0123200292ec4b7e3e6319d048fa0',1,'drake::systems::sensors::Color::r()']]],
-  ['relative_5fduality_5fgap',['relative_duality_gap',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a6f09fca6f296d95b8b62f288f10f5c09',1,'drake::solvers::ScsSolverDetails']]],
   ['relative_5ftolerance',['relative_tolerance',['../structdrake_1_1multibody_1_1_tamsi_solver_parameters.html#a8acbff0eb102fe9c676bdbe5933a13d8',1,'drake::multibody::TamsiSolverParameters']]],
   ['reported_5fruntime',['reported_runtime',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#ae91d6264528898aea42defb33f87f6b8',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['require_5fsample_5fpoint_5fis_5fcontained',['require_sample_point_is_contained',['../structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d',1,'drake::geometry::optimization::IrisOptions']]],
@@ -9,7 +8,8 @@ var searchData=
   ['residual',['residual',['../structdrake_1_1solvers_1_1fbstab_1_1_solver_out.html#a6998d64b1d5b8fec0d92a0b294062e3d',1,'drake::solvers::fbstab::SolverOut']]],
   ['residuals',['residuals',['../structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#acda4a0a5802babdb809dacb42ae34988',1,'drake::multibody::TamsiSolverIterationStats']]],
   ['residue_5finfeasibility',['residue_infeasibility',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a50ed0b0f95656409f8d69b68cae7a3f6',1,'drake::solvers::ScsSolverDetails']]],
-  ['residue_5funbounded',['residue_unbounded',['../structdrake_1_1solvers_1_1_scs_solver_details.html#ab715e524061e30b6c08e32b8ffdae195',1,'drake::solvers::ScsSolverDetails']]],
+  ['residue_5funbounded_5fa',['residue_unbounded_a',['../structdrake_1_1solvers_1_1_scs_solver_details.html#a2f2f3ad142051a0c2f94d66d7430c67b',1,'drake::solvers::ScsSolverDetails']]],
+  ['residue_5funbounded_5fp',['residue_unbounded_p',['../structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a',1,'drake::solvers::ScsSolverDetails']]],
   ['retain_5fmap_5fdefaults',['retain_map_defaults',['../structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html#a121abbb69f58eeb8186f484386d65b9d',1,'drake::yaml::YamlReadArchive::Options']]],
   ['return_5fcode',['return_code',['../structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb',1,'drake::solvers::CsdpSolverDetails']]],
   ['right',['right',['../structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#ab833bacb3fa8d1a189efcbba74f10fa1',1,'drake::geometry::Meshcat::OrthographicCamera']]],

@@ -617,7 +617,7 @@ be set to v, otherwise it will be nullopt.</td>
 </tbody>
 </table>
 <ol class="arabic simple" start="3">
-<li>DoDifferentialInverseKinematics(robot: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], X_WE_desired: pydrake.common.eigen_geometry.Isometry3_[float], frame_E: drake::multibody::Frame&lt;double&gt;, parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
+<li>DoDifferentialInverseKinematics(robot: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], X_WE_desired: pydrake.math.RigidTransform_[float], frame_E: drake::multibody::Frame&lt;double&gt;, parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
 </ol>
 <p>A wrapper over DoDifferentialInverseKinematics(robot, context,
 V_WE_desired, frame_E, params) that tracks frame E’s pose in the world
@@ -647,6 +647,15 @@ be set to v, otherwise it will be nullopt.</td>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="4">
+<li>DoDifferentialInverseKinematics(robot: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], X_WE_desired: pydrake.common.eigen_geometry.Isometry3_[float], frame_E: drake::multibody::Frame&lt;double&gt;, parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
+</ol>
+<p>(Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use RigidTransform instead of Isometry3 This will be removed from
+Drake on or after 2022-02-01.</dd>
+</dl>
 </dd></dl>
 
 </div>

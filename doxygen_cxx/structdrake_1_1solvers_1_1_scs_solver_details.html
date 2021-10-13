@@ -125,12 +125,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a50ed0b0f95656409f8d69b68cae7a3f6"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a50ed0b0f95656409f8d69b68cae7a3f6">residue_infeasibility</a> {}</td></tr>
 <tr class="memdesc:a50ed0b0f95656409f8d69b68cae7a3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">infeasibility certificate residue.  <a href="#a50ed0b0f95656409f8d69b68cae7a3f6">More...</a><br /></td></tr>
 <tr class="separator:a50ed0b0f95656409f8d69b68cae7a3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab715e524061e30b6c08e32b8ffdae195"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#ab715e524061e30b6c08e32b8ffdae195">residue_unbounded</a> {}</td></tr>
-<tr class="memdesc:ab715e524061e30b6c08e32b8ffdae195"><td class="mdescLeft">&#160;</td><td class="mdescRight">unbounded certificate residue.  <a href="#ab715e524061e30b6c08e32b8ffdae195">More...</a><br /></td></tr>
-<tr class="separator:ab715e524061e30b6c08e32b8ffdae195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f09fca6f296d95b8b62f288f10f5c09"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a6f09fca6f296d95b8b62f288f10f5c09">relative_duality_gap</a> {}</td></tr>
-<tr class="memdesc:a6f09fca6f296d95b8b62f288f10f5c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">relative duality gap.  <a href="#a6f09fca6f296d95b8b62f288f10f5c09">More...</a><br /></td></tr>
-<tr class="separator:a6f09fca6f296d95b8b62f288f10f5c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2f3ad142051a0c2f94d66d7430c67b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a2f2f3ad142051a0c2f94d66d7430c67b">residue_unbounded_a</a> {}</td></tr>
+<tr class="memdesc:a2f2f3ad142051a0c2f94d66d7430c67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">unbounded certificate residue.  <a href="#a2f2f3ad142051a0c2f94d66d7430c67b">More...</a><br /></td></tr>
+<tr class="separator:a2f2f3ad142051a0c2f94d66d7430c67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea40e482640dbccf5ac387adf5df2b5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#aea40e482640dbccf5ac387adf5df2b5a">residue_unbounded_p</a> {}</td></tr>
+<tr class="memdesc:aea40e482640dbccf5ac387adf5df2b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">unbounded certificate residue.  <a href="#aea40e482640dbccf5ac387adf5df2b5a">More...</a><br /></td></tr>
+<tr class="separator:aea40e482640dbccf5ac387adf5df2b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88099c06f0d2a18e23e301b3cdf08020"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a88099c06f0d2a18e23e301b3cdf08020">duality_gap</a> {}</td></tr>
+<tr class="memdesc:a88099c06f0d2a18e23e301b3cdf08020"><td class="mdescLeft">&#160;</td><td class="mdescRight">duality gap.  <a href="#a88099c06f0d2a18e23e301b3cdf08020">More...</a><br /></td></tr>
+<tr class="separator:a88099c06f0d2a18e23e301b3cdf08020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707f3344f98de9a0626c213de987676e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_scs_solver_details.html#a707f3344f98de9a0626c213de987676e">scs_setup_time</a> {}</td></tr>
 <tr class="memdesc:a707f3344f98de9a0626c213de987676e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time taken for SCS to setup in milliseconds.  <a href="#a707f3344f98de9a0626c213de987676e">More...</a><br /></td></tr>
 <tr class="separator:a707f3344f98de9a0626c213de987676e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +162,23 @@ Public Attributes</h2></td></tr>
 
 <p>Dual objective value at termination. </p>
 <p>Equal to SCS_INFO.dobj </p>
+
+</div>
+</div>
+<a id="a88099c06f0d2a18e23e301b3cdf08020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88099c06f0d2a18e23e301b3cdf08020">&#9670;&nbsp;</a></span>duality_gap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double duality_gap {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>duality gap. </p>
+<p>Equal to SCS_INFO.gap. </p>
 
 </div>
 </div>
@@ -213,23 +233,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a6f09fca6f296d95b8b62f288f10f5c09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f09fca6f296d95b8b62f288f10f5c09">&#9670;&nbsp;</a></span>relative_duality_gap</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">double relative_duality_gap {}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>relative duality gap. </p>
-<p>Equal to SCS_INFO.rel_gap. </p>
-
-</div>
-</div>
 <a id="a50ed0b0f95656409f8d69b68cae7a3f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50ed0b0f95656409f8d69b68cae7a3f6">&#9670;&nbsp;</a></span>residue_infeasibility</h2>
 
@@ -247,20 +250,37 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab715e524061e30b6c08e32b8ffdae195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab715e524061e30b6c08e32b8ffdae195">&#9670;&nbsp;</a></span>residue_unbounded</h2>
+<a id="a2f2f3ad142051a0c2f94d66d7430c67b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f2f3ad142051a0c2f94d66d7430c67b">&#9670;&nbsp;</a></span>residue_unbounded_a</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double residue_unbounded {}</td>
+          <td class="memname">double residue_unbounded_a {}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>unbounded certificate residue. </p>
-<p>Equal to SCS_INFO.res_unbdd </p>
+<p>Equal to SCS_INFO.res_unbdd_a </p>
+
+</div>
+</div>
+<a id="aea40e482640dbccf5ac387adf5df2b5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea40e482640dbccf5ac387adf5df2b5a">&#9670;&nbsp;</a></span>residue_unbounded_p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double residue_unbounded_p {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>unbounded certificate residue. </p>
+<p>Equal to SCS_INFO.res_unbdd_p </p>
 
 </div>
 </div>
