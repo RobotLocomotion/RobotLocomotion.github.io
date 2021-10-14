@@ -466,6 +466,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa0be270734139ba7fd908effc13dd54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa0be270734139ba7fd908effc13dd54">GetPositionsAndVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:afa0be270734139ba7fd908effc13dd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector <code>[q; v]</code> containing the generalized positions q and generalized velocities v of a specified model instance in a given Context.  <a href="#afa0be270734139ba7fd908effc13dd54">More...</a><br /></td></tr>
 <tr class="separator:afa0be270734139ba7fd908effc13dd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88f6962ac18a44af116a57249fd0b8d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a88f6962ac18a44af116a57249fd0b8d4">GetPositionsAndVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; qv_out) const</td></tr>
+<tr class="memdesc:a88f6962ac18a44af116a57249fd0b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector qv_out representing the generalized positions q and generalized velocities v of a specified model instance in a given Context.  <a href="#a88f6962ac18a44af116a57249fd0b8d4">More...</a><br /></td></tr>
+<tr class="separator:a88f6962ac18a44af116a57249fd0b8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1036e869271ac77a82f891a5f7187210"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1036e869271ac77a82f891a5f7187210">GetMutablePositionsAndVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a1036e869271ac77a82f891a5f7187210"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference <code>[q; v]</code> to the generalized positions q and generalized velocities v in a given Context.  <a href="#a1036e869271ac77a82f891a5f7187210">More...</a><br /></td></tr>
 <tr class="separator:a1036e869271ac77a82f891a5f7187210"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -481,6 +484,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abe2a085e96321a9d821551c479aed347"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#abe2a085e96321a9d821551c479aed347">GetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:abe2a085e96321a9d821551c479aed347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector containing the generalized positions q of a specified model instance in a given Context.  <a href="#abe2a085e96321a9d821551c479aed347">More...</a><br /></td></tr>
 <tr class="separator:abe2a085e96321a9d821551c479aed347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89e6e2bebbf492386bdfabafd7c883cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a89e6e2bebbf492386bdfabafd7c883cb">GetPositions</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; q_out) const</td></tr>
+<tr class="memdesc:a89e6e2bebbf492386bdfabafd7c883cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector q_out with the generalized positions q of a specified model instance in a given Context.  <a href="#a89e6e2bebbf492386bdfabafd7c883cb">More...</a><br /></td></tr>
+<tr class="separator:a89e6e2bebbf492386bdfabafd7c883cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2984079483027345739f5e1bc8a19c"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ace2984079483027345739f5e1bc8a19c">GetMutablePositions</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:ace2984079483027345739f5e1bc8a19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference to the generalized positions q in a given Context.  <a href="#ace2984079483027345739f5e1bc8a19c">More...</a><br /></td></tr>
 <tr class="separator:ace2984079483027345739f5e1bc8a19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -502,6 +508,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acbcd0c2630b23058791b7a3d6bac07a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acbcd0c2630b23058791b7a3d6bac07a8">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance) const</td></tr>
 <tr class="memdesc:acbcd0c2630b23058791b7a3d6bac07a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector containing the generalized velocities v of a specified model instance in a given Context.  <a href="#acbcd0c2630b23058791b7a3d6bac07a8">More...</a><br /></td></tr>
 <tr class="separator:acbcd0c2630b23058791b7a3d6bac07a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac982b98171e628abdf7a95b578d02aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aac982b98171e628abdf7a95b578d02aa">GetVelocities</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v_out) const</td></tr>
+<tr class="memdesc:aac982b98171e628abdf7a95b578d02aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector v_out with the generalized velocities v of a specified model instance in a given Context.  <a href="#aac982b98171e628abdf7a95b578d02aa">More...</a><br /></td></tr>
+<tr class="separator:aac982b98171e628abdf7a95b578d02aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fe7c6fe93604e71b9d277b76fab5932"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a7fe7c6fe93604e71b9d277b76fab5932">GetMutableVelocities</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a7fe7c6fe93604e71b9d277b76fab5932"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced &ndash; <b>see warning</b>) Returns a mutable vector reference to the generalized velocities v in a given Context.  <a href="#a7fe7c6fe93604e71b9d277b76fab5932">More...</a><br /></td></tr>
 <tr class="separator:a7fe7c6fe93604e71b9d277b76fab5932"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -532,12 +541,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b8a17ef762452f820bdd351f8bb41b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9b8a17ef762452f820bdd351f8bb41b4">GetPositionsFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q) const</td></tr>
 <tr class="memdesc:a9b8a17ef762452f820bdd351f8bb41b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of generalized positions for <code>model_instance</code> from a vector <code>q_array</code> of generalized positions for the entire model model.  <a href="#a9b8a17ef762452f820bdd351f8bb41b4">More...</a><br /></td></tr>
 <tr class="separator:a9b8a17ef762452f820bdd351f8bb41b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a925d12315105b8efe6a338ef6eb6677c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a925d12315105b8efe6a338ef6eb6677c">GetPositionsFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; q_out) const</td></tr>
+<tr class="memdesc:a925d12315105b8efe6a338ef6eb6677c"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector q_out and with the generalized positions for <code>model_instance</code> from a vector <code>q</code> of generalized positions for the entire model.  <a href="#a925d12315105b8efe6a338ef6eb6677c">More...</a><br /></td></tr>
+<tr class="separator:a925d12315105b8efe6a338ef6eb6677c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de72c319632f5a263fe6c9e96c70614"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3de72c319632f5a263fe6c9e96c70614">SetPositionsInArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;q_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; q) const</td></tr>
 <tr class="memdesc:a3de72c319632f5a263fe6c9e96c70614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector of generalized positions for <code>model_instance</code> in <code>q</code> using <code>q_instance</code>, leaving all other elements in the array untouched.  <a href="#a3de72c319632f5a263fe6c9e96c70614">More...</a><br /></td></tr>
 <tr class="separator:a3de72c319632f5a263fe6c9e96c70614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f32c59d0fb31b2bb9258bd9ee86f55d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a9f32c59d0fb31b2bb9258bd9ee86f55d">GetVelocitiesFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v) const</td></tr>
 <tr class="memdesc:a9f32c59d0fb31b2bb9258bd9ee86f55d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#a9f32c59d0fb31b2bb9258bd9ee86f55d">More...</a><br /></td></tr>
 <tr class="separator:a9f32c59d0fb31b2bb9258bd9ee86f55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a044c1007a62b21d0e7e29d8066166bae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a044c1007a62b21d0e7e29d8066166bae">GetVelocitiesFromArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v_out) const</td></tr>
+<tr class="memdesc:a044c1007a62b21d0e7e29d8066166bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Populates output vector v_out with the generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire model.  <a href="#a044c1007a62b21d0e7e29d8066166bae">More...</a><br /></td></tr>
+<tr class="separator:a044c1007a62b21d0e7e29d8066166bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60e9928aa7802359eaddab6ef5d92763"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a60e9928aa7802359eaddab6ef5d92763">SetVelocitiesInArray</a> (<a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> model_instance, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;v_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; v) const</td></tr>
 <tr class="memdesc:a60e9928aa7802359eaddab6ef5d92763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector of generalized velocities for <code>model_instance</code> in <code>v</code> using <code>v_instance</code>, leaving all other elements in the array untouched.  <a href="#a60e9928aa7802359eaddab6ef5d92763">More...</a><br /></td></tr>
 <tr class="separator:a60e9928aa7802359eaddab6ef5d92763"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4722,7 +4737,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div>
 </div>
 <a id="a4b48791a474f442ccb628dc9b76a24b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b48791a474f442ccb628dc9b76a24b9">&#9670;&nbsp;</a></span>GetPositions() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b48791a474f442ccb628dc9b76a24b9">&#9670;&nbsp;</a></span>GetPositions() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4749,7 +4764,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div>
 </div>
 <a id="abe2a085e96321a9d821551c479aed347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe2a085e96321a9d821551c479aed347">&#9670;&nbsp;</a></span>GetPositions() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2a085e96321a9d821551c479aed347">&#9670;&nbsp;</a></span>GetPositions() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4785,8 +4800,53 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a89e6e2bebbf492386bdfabafd7c883cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89e6e2bebbf492386bdfabafd7c883cb">&#9670;&nbsp;</a></span>GetPositions() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPositions </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>q_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Populates output vector q_out with the generalized positions q of a specified model instance in a given Context. </p>
+<dl class="section note"><dt>Note</dt><dd>q_out is a dense vector of dimension &lsquo;num_positions(model_instance)&rsquo; associated with <code>model_instance</code> and is populated by copying from <code>context</code>. </dd>
+<dd>
+This function is guaranteed to allocate no heap. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>context</code> does not correspond to the Context for a multibody model or <code>model_instance</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abda564c1168979bb8422343d46925b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abda564c1168979bb8422343d46925b9a">&#9670;&nbsp;</a></span>GetPositionsAndVelocities() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abda564c1168979bb8422343d46925b9a">&#9670;&nbsp;</a></span>GetPositionsAndVelocities() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4813,7 +4873,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div>
 </div>
 <a id="afa0be270734139ba7fd908effc13dd54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa0be270734139ba7fd908effc13dd54">&#9670;&nbsp;</a></span>GetPositionsAndVelocities() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0be270734139ba7fd908effc13dd54">&#9670;&nbsp;</a></span>GetPositionsAndVelocities() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4849,8 +4909,54 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a88f6962ac18a44af116a57249fd0b8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88f6962ac18a44af116a57249fd0b8d4">&#9670;&nbsp;</a></span>GetPositionsAndVelocities() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPositionsAndVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>qv_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Populates output vector qv_out representing the generalized positions q and generalized velocities v of a specified model instance in a given Context. </p>
+<dl class="section note"><dt>Note</dt><dd>qv_out is a dense vector of dimensions <code>num_positions(model_instance) + num_velocities(model_instance)</code> associated with <code>model_instance</code> and is populated by copying from <code>context</code>. </dd>
+<dd>
+This function is guaranteed to allocate no heap. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>context</code> does not correspond to the Context for a multibody model or <code>model_instance</code> is invalid. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if qv_out does not have size <code>num_positions(model_instance) + num_velocities(model_instance)</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9b8a17ef762452f820bdd351f8bb41b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b8a17ef762452f820bdd351f8bb41b4">&#9670;&nbsp;</a></span>GetPositionsFromArray()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b8a17ef762452f820bdd351f8bb41b4">&#9670;&nbsp;</a></span>GetPositionsFromArray() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4876,6 +4982,43 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div><div class="memdoc">
 
 <p>Returns a vector of generalized positions for <code>model_instance</code> from a vector <code>q_array</code> of generalized positions for the entire model model. </p>
+<p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">MultibodyPlant::num_positions()</a>. </p>
+
+</div>
+</div>
+<a id="a925d12315105b8efe6a338ef6eb6677c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a925d12315105b8efe6a338ef6eb6677c">&#9670;&nbsp;</a></span>GetPositionsFromArray() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetPositionsFromArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>q_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Populates output vector q_out and with the generalized positions for <code>model_instance</code> from a vector <code>q</code> of generalized positions for the entire model. </p>
 <p>This method throws an exception if <code>q</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553" title="Returns the size of the generalized position vector q for this model.">MultibodyPlant::num_positions()</a>. </p>
 
 </div>
@@ -5018,7 +5161,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div>
 </div>
 <a id="a800453060fc1f94455dff6c07dfde2d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a800453060fc1f94455dff6c07dfde2d1">&#9670;&nbsp;</a></span>GetVelocities() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a800453060fc1f94455dff6c07dfde2d1">&#9670;&nbsp;</a></span>GetVelocities() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5045,7 +5188,7 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 </div>
 </div>
 <a id="acbcd0c2630b23058791b7a3d6bac07a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbcd0c2630b23058791b7a3d6bac07a8">&#9670;&nbsp;</a></span>GetVelocities() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acbcd0c2630b23058791b7a3d6bac07a8">&#9670;&nbsp;</a></span>GetVelocities() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5081,8 +5224,53 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="aac982b98171e628abdf7a95b578d02aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac982b98171e628abdf7a95b578d02aa">&#9670;&nbsp;</a></span>GetVelocities() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>v_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Populates output vector v_out with the generalized velocities v of a specified model instance in a given Context. </p>
+<dl class="section note"><dt>Note</dt><dd>v_out is a dense vector of dimension <code>num_velocities(model_instance)</code> associated with <code>model_instance</code> and is populated by copying from <code>context</code>. </dd>
+<dd>
+This function is guaranteed to allocate no heap. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>context</code> does not correspond to the Context for a multibody model or <code>model_instance</code> is invalid. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9f32c59d0fb31b2bb9258bd9ee86f55d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f32c59d0fb31b2bb9258bd9ee86f55d">&#9670;&nbsp;</a></span>GetVelocitiesFromArray()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f32c59d0fb31b2bb9258bd9ee86f55d">&#9670;&nbsp;</a></span>GetVelocitiesFromArray() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5109,6 +5297,43 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 <p>Returns a vector of generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
 <p>This method throws an exception if the input array is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">MultibodyPlant::num_velocities()</a>. </p>
+
+</div>
+</div>
+<a id="a044c1007a62b21d0e7e29d8066166bae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a044c1007a62b21d0e7e29d8066166bae">&#9670;&nbsp;</a></span>GetVelocitiesFromArray() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetVelocitiesFromArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a>&#160;</td>
+          <td class="paramname"><em>model_instance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>v_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Populates output vector v_out with the generalized velocities for <code>model_instance</code> from a vector <code>v</code> of generalized velocities for the entire model. </p>
+<p>This method throws an exception if <code>v</code> is not of size <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ae0163ac0976659d811e3337647ff0313" title="Returns the size of the generalized velocity vector v for this model.">MultibodyPlant::num_velocities()</a>. </p>
 
 </div>
 </div>
@@ -6091,8 +6316,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6103,7 +6328,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6117,8 +6342,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6129,7 +6354,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

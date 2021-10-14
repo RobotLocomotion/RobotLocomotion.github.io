@@ -48,9 +48,7 @@ var namespacedrake_1_1geometry =
     [ "SurfaceFace", "classdrake_1_1geometry_1_1_surface_face.html", "classdrake_1_1geometry_1_1_surface_face" ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html", "classdrake_1_1geometry_1_1_surface_mesh" ],
     [ "SurfaceMeshTester", "classdrake_1_1geometry_1_1_surface_mesh_tester.html", null ],
-    [ "SurfaceVertex", "classdrake_1_1geometry_1_1_surface_vertex.html", "classdrake_1_1geometry_1_1_surface_vertex" ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", "classdrake_1_1geometry_1_1_volume_element" ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html", "classdrake_1_1geometry_1_1_volume_mesh" ],
-    [ "VolumeMeshTester", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ],
-    [ "VolumeVertex", "classdrake_1_1geometry_1_1_volume_vertex.html", "classdrake_1_1geometry_1_1_volume_vertex" ]
+    [ "VolumeMeshTester", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ]
 ];

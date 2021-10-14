@@ -95,7 +95,6 @@ var searchData=
   ['surfaceface',['SurfaceFace',['../classdrake_1_1geometry_1_1_surface_face.html',1,'drake::geometry']]],
   ['surfacemesh',['SurfaceMesh',['../classdrake_1_1geometry_1_1_surface_mesh.html',1,'drake::geometry']]],
   ['surfacemeshtester',['SurfaceMeshTester',['../classdrake_1_1geometry_1_1_surface_mesh_tester.html',1,'drake::geometry']]],
-  ['surfacevertex',['SurfaceVertex',['../classdrake_1_1geometry_1_1_surface_vertex.html',1,'drake::geometry']]],
   ['symbolicvectorsystem',['SymbolicVectorSystem',['../classdrake_1_1systems_1_1_symbolic_vector_system.html',1,'drake::systems']]],
   ['system',['System',['../classdrake_1_1systems_1_1_system.html',1,'drake::systems']]],
   ['system_3c_20autodiffxd_20_3e',['System&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_system.html',1,'drake::systems']]],

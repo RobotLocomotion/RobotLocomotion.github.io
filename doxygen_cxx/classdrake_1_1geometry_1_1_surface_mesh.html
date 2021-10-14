@@ -116,9 +116,9 @@ class drake::geometry::SurfaceMesh&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a30a54b7961f852a906a1c169e54a175f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a30a54b7961f852a906a1c169e54a175f">SurfaceMesh</a> (std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_face.html">SurfaceFace</a> &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a0c7411608834b8d21a5b5c5981f3b625">faces</a>, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt; T &gt;&gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a7aa18284a3b4e4ccc62ad2bd88625c47">vertices</a>)</td></tr>
-<tr class="memdesc:a30a54b7961f852a906a1c169e54a175f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html" title="SurfaceMesh represents a triangulated surface.">SurfaceMesh</a> from faces and vertices.  <a href="#a30a54b7961f852a906a1c169e54a175f">More...</a><br /></td></tr>
-<tr class="separator:a30a54b7961f852a906a1c169e54a175f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386190f8d3a1bcb42e5c997df1eb0d3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a386190f8d3a1bcb42e5c997df1eb0d3f">SurfaceMesh</a> (std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_face.html">SurfaceFace</a> &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a0c7411608834b8d21a5b5c5981f3b625">faces</a>, std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#ae7f810a1d8f914db3d27e1fb817e7341">vertices</a>)</td></tr>
+<tr class="memdesc:a386190f8d3a1bcb42e5c997df1eb0d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html" title="SurfaceMesh represents a triangulated surface.">SurfaceMesh</a> from faces and vertices.  <a href="#a386190f8d3a1bcb42e5c997df1eb0d3f">More...</a><br /></td></tr>
+<tr class="separator:a386190f8d3a1bcb42e5c997df1eb0d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a505ea28f0f6274285a379c870c44bb37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a505ea28f0f6274285a379c870c44bb37">TransformVertices</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;X_NM)</td></tr>
 <tr class="memdesc:a505ea28f0f6274285a379c870c44bb37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the vertices of this mesh from its initial frame M to the new frame N.  <a href="#a505ea28f0f6274285a379c870c44bb37">More...</a><br /></td></tr>
 <tr class="separator:a505ea28f0f6274285a379c870c44bb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -185,9 +185,6 @@ Mesh type traits</h2></td></tr>
 <tr class="memitem:a6a6d6a4887cc355b6024af7a2a5417a2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a6a6d6a4887cc355b6024af7a2a5417a2">VertexIndex</a> = <a class="el" href="namespacedrake_1_1geometry.html#a4b6bae4ff910e57daa4b0ac8e4f481b8">SurfaceVertexIndex</a></td></tr>
 <tr class="memdesc:a6a6d6a4887cc355b6024af7a2a5417a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for identifying a vertex.  <a href="#a6a6d6a4887cc355b6024af7a2a5417a2">More...</a><br /></td></tr>
 <tr class="separator:a6a6d6a4887cc355b6024af7a2a5417a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19cde33dda9c13a37f1192b0a2cf0a32"><td class="memTemplParams" colspan="2">template&lt;typename U  = T&gt; </td></tr>
-<tr class="memitem:a19cde33dda9c13a37f1192b0a2cf0a32"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a19cde33dda9c13a37f1192b0a2cf0a32">VertexType</a> = <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt; U &gt;</td></tr>
-<tr class="separator:a19cde33dda9c13a37f1192b0a2cf0a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48adb138392ceecf5c0bf71621b112c2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a48adb138392ceecf5c0bf71621b112c2">ElementIndex</a> = <a class="el" href="namespacedrake_1_1geometry.html#a831785d5225564e2a531b4fd2445e1d6">SurfaceFaceIndex</a></td></tr>
 <tr class="memdesc:a48adb138392ceecf5c0bf71621b112c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index for identifying a triangular element.  <a href="#a48adb138392ceecf5c0bf71621b112c2">More...</a><br /></td></tr>
 <tr class="separator:a48adb138392ceecf5c0bf71621b112c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,12 +201,12 @@ Mesh type traits</h2></td></tr>
 <tr class="memitem:a0c7411608834b8d21a5b5c5981f3b625"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_face.html">SurfaceFace</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a0c7411608834b8d21a5b5c5981f3b625">faces</a> () const</td></tr>
 <tr class="memdesc:a0c7411608834b8d21a5b5c5981f3b625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the faces.  <a href="#a0c7411608834b8d21a5b5c5981f3b625">More...</a><br /></td></tr>
 <tr class="separator:a0c7411608834b8d21a5b5c5981f3b625"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7aa18284a3b4e4ccc62ad2bd88625c47"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a7aa18284a3b4e4ccc62ad2bd88625c47">vertices</a> () const</td></tr>
-<tr class="memdesc:a7aa18284a3b4e4ccc62ad2bd88625c47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertices.  <a href="#a7aa18284a3b4e4ccc62ad2bd88625c47">More...</a><br /></td></tr>
-<tr class="separator:a7aa18284a3b4e4ccc62ad2bd88625c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08759e7bd27a84cbdc4a70d758f3ef15"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a08759e7bd27a84cbdc4a70d758f3ef15">vertex</a> (<a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a6a6d6a4887cc355b6024af7a2a5417a2">VertexIndex</a> v) const</td></tr>
-<tr class="memdesc:a08759e7bd27a84cbdc4a70d758f3ef15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex identified by a given index.  <a href="#a08759e7bd27a84cbdc4a70d758f3ef15">More...</a><br /></td></tr>
-<tr class="separator:a08759e7bd27a84cbdc4a70d758f3ef15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f810a1d8f914db3d27e1fb817e7341"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#ae7f810a1d8f914db3d27e1fb817e7341">vertices</a> () const</td></tr>
+<tr class="memdesc:ae7f810a1d8f914db3d27e1fb817e7341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertices.  <a href="#ae7f810a1d8f914db3d27e1fb817e7341">More...</a><br /></td></tr>
+<tr class="separator:ae7f810a1d8f914db3d27e1fb817e7341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbdc05463135b39ff5b4892a33a1faf2"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#abbdc05463135b39ff5b4892a33a1faf2">vertex</a> (<a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a6a6d6a4887cc355b6024af7a2a5417a2">VertexIndex</a> v) const</td></tr>
+<tr class="memdesc:abbdc05463135b39ff5b4892a33a1faf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex identified by a given index.  <a href="#abbdc05463135b39ff5b4892a33a1faf2">More...</a><br /></td></tr>
+<tr class="separator:abbdc05463135b39ff5b4892a33a1faf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a319e621fc359dd8daad48247f95b12fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a319e621fc359dd8daad48247f95b12fa">num_vertices</a> () const</td></tr>
 <tr class="memdesc:a319e621fc359dd8daad48247f95b12fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of vertices in the mesh.  <a href="#a319e621fc359dd8daad48247f95b12fa">More...</a><br /></td></tr>
 <tr class="separator:a319e621fc359dd8daad48247f95b12fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,20 +279,6 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
-<a id="a19cde33dda9c13a37f1192b0a2cf0a32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19cde33dda9c13a37f1192b0a2cf0a32">&#9670;&nbsp;</a></span>VertexType</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a19cde33dda9c13a37f1192b0a2cf0a32">VertexType</a> =  <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt;U&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afdbad8c2048d841ad236bd4d21bf8020"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afdbad8c2048d841ad236bd4d21bf8020">&#9670;&nbsp;</a></span>SurfaceMesh() <span class="overload">[1/3]</span></h2>
@@ -349,8 +332,8 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
-<a id="a30a54b7961f852a906a1c169e54a175f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30a54b7961f852a906a1c169e54a175f">&#9670;&nbsp;</a></span>SurfaceMesh() <span class="overload">[3/3]</span></h2>
+<a id="a386190f8d3a1bcb42e5c997df1eb0d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386190f8d3a1bcb42e5c997df1eb0d3f">&#9670;&nbsp;</a></span>SurfaceMesh() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,7 +347,7 @@ Mesh type traits</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
           <td class="paramname"><em>vertices</em>&#160;</td>
         </tr>
         <tr>
@@ -818,14 +801,14 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
-<a id="a08759e7bd27a84cbdc4a70d758f3ef15"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08759e7bd27a84cbdc4a70d758f3ef15">&#9670;&nbsp;</a></span>vertex()</h2>
+<a id="abbdc05463135b39ff5b4892a33a1faf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbdc05463135b39ff5b4892a33a1faf2">&#9670;&nbsp;</a></span>vertex()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt;T&gt;&amp; vertex </td>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; vertex </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html#a6a6d6a4887cc355b6024af7a2a5417a2">VertexIndex</a>&#160;</td>
           <td class="paramname"><em>v</em></td><td>)</td>
@@ -845,14 +828,14 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
-<a id="a7aa18284a3b4e4ccc62ad2bd88625c47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7aa18284a3b4e4ccc62ad2bd88625c47">&#9670;&nbsp;</a></span>vertices()</h2>
+<a id="ae7f810a1d8f914db3d27e1fb817e7341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f810a1d8f914db3d27e1fb817e7341">&#9670;&nbsp;</a></span>vertices()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_surface_vertex.html">SurfaceVertex</a>&lt;T&gt; &gt;&amp; vertices </td>
+          <td class="memname">const std::vector&lt;<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; &gt;&amp; vertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
