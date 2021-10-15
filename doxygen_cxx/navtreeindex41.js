@@ -166,8 +166,9 @@ var NAVTREEINDEX41 =
 "geometry__py_8h.html":[4,0,0,0,0,4],
 "geometry__py_8h.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de":[4,0,0,0,0,4,2],
 "geometry__py_8h.html#a7429d58f69452750233eb29092d6e679":[4,0,0,0,0,4,0],
+"geometry__py_8h.html#ad3fdf83dabca18e8bee66c72ce462fdc":[4,0,0,0,0,4,3],
 "geometry__py_8h.html#aeeb190e42e2f696d5ed3f8d319db6459":[4,0,0,0,0,4,1],
-"geometry__py_8h.html#af1dd02f74528f84556c55239d82ab9b3":[4,0,0,0,0,4,3],
+"geometry__py_8h.html#af1dd02f74528f84556c55239d82ab9b3":[4,0,0,0,0,4,4],
 "geometry__roles_8h.html":[4,0,0,4,18],
 "geometry__roles_8h.html#a152c7124632aaba612f6b59e0510957e":[4,0,0,4,18,6],
 "geometry__roles_8h.html#a52f8cb466b0827379bc8815f0d58aac3":[4,0,0,4,18,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "group__constraint__types.html":[1,4,0,1],
 "group__constraint__variable__defs.html":[1,4,0,0],
 "group__contact__engineering.html":[1,4,1,1],
-"group__contact__geometry.html":[1,4,1,0],
-"group__contact__surface__constraints.html":[1,4,0,4]
+"group__contact__geometry.html":[1,4,1,0]
 };

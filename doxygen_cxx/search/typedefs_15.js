@@ -25,7 +25,7 @@ var searchData=
   ['vectorxpoly',['VectorXPoly',['../namespacedrake.html#a00cbebcd97766579bb36e35abcf44acf',1,'drake']]],
   ['vectorxtrigpoly',['VectorXTrigPoly',['../namespacedrake.html#a43c35aa3bb5ef6f19e6316bb98cc2daf',1,'drake']]],
   ['vertexid',['VertexId',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301',1,'drake::geometry::optimization::GraphOfConvexSets']]],
-  ['vertexindex',['VertexIndex',['../classdrake_1_1geometry_1_1_surface_mesh.html#a6a6d6a4887cc355b6024af7a2a5417a2',1,'drake::geometry::SurfaceMesh::VertexIndex()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a690188133367040442c5f946a69c859c',1,'drake::geometry::VolumeMesh::VertexIndex()']]],
+  ['vertexindex',['VertexIndex',['../classdrake_1_1geometry_1_1_surface_mesh.html#a519d67ef6b064ad8a278bbc21d559218',1,'drake::geometry::SurfaceMesh::VertexIndex()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a690188133367040442c5f946a69c859c',1,'drake::geometry::VolumeMesh::VertexIndex()']]],
   ['volumeelementindex',['VolumeElementIndex',['../namespacedrake_1_1geometry.html#a521e6b89e03b3021766886e2270056b6',1,'drake::geometry']]],
   ['volumemeshfieldlinear',['VolumeMeshFieldLinear',['../namespacedrake_1_1geometry.html#a6f0a99208aa3dea5d4a3094f4fdf9274',1,'drake::geometry']]],
   ['volumevertex',['VolumeVertex',['../namespacedrake_1_1geometry.html#ac71cb5c41b2fa43e72076f785aa258fd',1,'drake::geometry']]],
