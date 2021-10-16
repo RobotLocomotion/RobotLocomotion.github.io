@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"optitrack__pose__extractor_8h.html#a7cdb84965644b6b67ff535e6263b11fb":[4,0,0,6,2,0,1],
 "optitrack__pose__extractor_8h.html#a9dcf4f420824dfdb3cf8f35a263b1a8c":[4,0,0,6,2,0,3],
 "optitrack__pose__extractor_8h.html#ad2794d5d7a07c09b8acec474ae033283":[4,0,0,6,2,0,0],
 "optitrack__sender_8h.html":[4,0,0,11,8,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "render__engine__vtk__base_8h.html#a4e584cc1e211ddaf85d2e3be432085fb":[4,0,0,4,4,6,3],
 "render__engine__vtk__base_8h.html#a77576ec311ba594b4e3a3cf15f0b11f1":[4,0,0,4,4,6,0],
 "render__engine__vtk__base_8h.html#a7c12b91e0fd027a4d4ea1e2b8bcef65a":[4,0,0,4,4,6,4],
-"render__engine__vtk__base_8h.html#a8d2737524b6193ba17538d7fd5ba934c":[4,0,0,4,4,6,5],
-"render__engine__vtk__factory_8h.html":[4,0,0,4,4,7]
+"render__engine__vtk__base_8h.html#a8d2737524b6193ba17538d7fd5ba934c":[4,0,0,4,4,6,5]
 };

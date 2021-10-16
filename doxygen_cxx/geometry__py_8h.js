@@ -4,5 +4,6 @@ var geometry__py_8h =
     [ "DefineGeometryHydro", "geometry__py_8h.html#aeeb190e42e2f696d5ed3f8d319db6459", null ],
     [ "DefineGeometryOptimization", "geometry__py_8h.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de", null ],
     [ "DefineGeometryRender", "geometry__py_8h.html#ad3fdf83dabca18e8bee66c72ce462fdc", null ],
+    [ "DefineGeometrySceneGraph", "geometry__py_8h.html#a1e766f9fb38d0bcd69a4d11f7fc2efb3", null ],
     [ "DefineGeometryVisualizers", "geometry__py_8h.html#af1dd02f74528f84556c55239d82ab9b3", null ]
 ];

@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html#a79b8e036dca6911e3295a47d99f21f43":[3,0,0,8,63,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html":[3,0,0,8,74],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#a372de693ad40b3f42839c8ec6ac845f4":[3,0,0,8,74,0],
 "structdrake_1_1multibody_1_1_tamsi_solver_iteration_stats.html#ab702e2f7530d6172eea3780d8923bd71":[3,0,0,8,74,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html#a761d331483743e4b9438d443adf076f5":[3,0,0,12,0,6,0,1],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html#a7bb0467431a13b0f68153c300ce815d0":[3,0,0,12,0,6,0,0],
 "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html#a80e22261e2e582e8618d9f59cf04e8c0":[3,0,0,12,0,6,0,2],
-"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html":[3,0,0,12,0,6,1],
-"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html#a0a4dab7f19136a1c6da932a2f1b5268c":[3,0,0,12,0,6,1,0]
+"structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html":[3,0,0,12,0,6,1]
 };

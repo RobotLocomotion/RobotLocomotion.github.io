@@ -79,6 +79,7 @@ var searchData=
   ['definegeometryhydro',['DefineGeometryHydro',['../namespacedrake_1_1pydrake.html#aeeb190e42e2f696d5ed3f8d319db6459',1,'drake::pydrake']]],
   ['definegeometryoptimization',['DefineGeometryOptimization',['../namespacedrake_1_1pydrake.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de',1,'drake::pydrake']]],
   ['definegeometryrender',['DefineGeometryRender',['../namespacedrake_1_1pydrake.html#ad3fdf83dabca18e8bee66c72ce462fdc',1,'drake::pydrake']]],
+  ['definegeometryscenegraph',['DefineGeometrySceneGraph',['../namespacedrake_1_1pydrake.html#a1e766f9fb38d0bcd69a4d11f7fc2efb3',1,'drake::pydrake']]],
   ['definegeometryvisualizers',['DefineGeometryVisualizers',['../namespacedrake_1_1pydrake.html#af1dd02f74528f84556c55239d82ab9b3',1,'drake::pydrake']]],
   ['definetemplateclasswithdefault',['DefineTemplateClassWithDefault',['../namespacedrake_1_1pydrake.html#ab8504fe03e622fa78dbbd4e7ce19fdb6',1,'drake::pydrake']]],
   ['defreaduniqueptr',['DefReadUniquePtr',['../namespacedrake_1_1pydrake.html#a3a22cfe187c4d2e58dacdc4fddf69843',1,'drake::pydrake::DefReadUniquePtr(PyClass *cls, const char *name, const std::unique_ptr&lt; T &gt; Class::*member, const char *doc=&quot;&quot;)'],['../namespacedrake_1_1pydrake.html#a50864a5d92c08bf74cf16b6d004aaa6a',1,'drake::pydrake::DefReadUniquePtr(PyClass *cls, const char *name, const copyable_unique_ptr&lt; T &gt; Class::*member, const char *doc=&quot;&quot;)']]],

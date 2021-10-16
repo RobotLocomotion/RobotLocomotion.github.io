@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"group__contact__geometry.html":[1,4,1,0],
 "group__contact__surface__constraints.html":[1,4,0,4],
 "group__control.html":[1,5,3],
 "group__control.html#ga0fdf8e6372fa9c822431fb5b0a5e5bd9":[1,5,3,3],
@@ -23,10 +24,10 @@ var NAVTREEINDEX42 =
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,13,0],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,0,1,4],
-"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,0,1,2],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,0,1,3],
 "group__discrete__systems.html":[1,3,9],
 "group__discretization.html":[1,4,0,5],
 "group__drake__contacts.html":[1,4,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "is__dynamic__castable_8h.html":[4,0,0,1,2,4],
 "is__dynamic__castable_8h.html#a120160cb3dd89c5c7ae2543a3de457e8":[4,0,0,1,2,4,1],
 "is__dynamic__castable_8h.html#ab9decd0aba05654d37c4d7f3d82655c6":[4,0,0,1,2,4,0],
-"is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,2,4,2],
-"is__less__than__comparable_8h.html":[4,0,0,1,37]
+"is__dynamic__castable_8h.html#ada20909a7ef482cf1fecbe11bbcf67d4":[4,0,0,1,2,4,2]
 };
