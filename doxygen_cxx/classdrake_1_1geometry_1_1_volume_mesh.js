@@ -1,15 +1,15 @@
 var classdrake_1_1geometry_1_1_volume_mesh =
 [
     [ "Barycentric", "classdrake_1_1geometry_1_1_volume_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61", null ],
-    [ "ElementIndex", "classdrake_1_1geometry_1_1_volume_mesh.html#a07bb4dc37395ceb95e7ae1b722ef80f0", null ],
+    [ "ElementIndex", "classdrake_1_1geometry_1_1_volume_mesh.html#a872a4a1d0a30ac750448e114dfe1b300", null ],
     [ "ScalarType", "classdrake_1_1geometry_1_1_volume_mesh.html#a6aec7d49d25322d8fae54028059d27aa", null ],
     [ "VertexIndex", "classdrake_1_1geometry_1_1_volume_mesh.html#a519d67ef6b064ad8a278bbc21d559218", null ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html#ae1f54ec7a16209f802cc46f406f5764b", null ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html#ad1233e4b20b349fa520335f175a1e2f5", null ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html#aa53ca0dc7d58ed59d864ebf55ca42d55", null ],
     [ "CalcBarycentric", "classdrake_1_1geometry_1_1_volume_mesh.html#a7c63c0eb1065ee899847e5ec6af74ccf", null ],
-    [ "CalcGradientVectorOfLinearField", "classdrake_1_1geometry_1_1_volume_mesh.html#a4e1452083acb6b1b873773505c9dbf2c", null ],
-    [ "CalcTetrahedronVolume", "classdrake_1_1geometry_1_1_volume_mesh.html#ad8bc734c832b3100f9da68904efcaca3", null ],
+    [ "CalcGradientVectorOfLinearField", "classdrake_1_1geometry_1_1_volume_mesh.html#a6a402c8710c3a71fffbbc2223e0a8eb4", null ],
+    [ "CalcTetrahedronVolume", "classdrake_1_1geometry_1_1_volume_mesh.html#a38883854e62edb3ab26738f22357996e", null ],
     [ "CalcVolume", "classdrake_1_1geometry_1_1_volume_mesh.html#a54e9b34e14078d808320820e0369c210", null ],
     [ "element", "classdrake_1_1geometry_1_1_volume_mesh.html#a7c5e4af31645f67b92a81eafa0eca03b", null ],
     [ "Equal", "classdrake_1_1geometry_1_1_volume_mesh.html#a106843ecf8c1cd5203dfacb5817bc41d", null ],

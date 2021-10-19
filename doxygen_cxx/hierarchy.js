@@ -1006,7 +1006,6 @@ var hierarchy =
     [ "TypeSafeIndex< class ModelInstanceTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class NumericParameterTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "TypeSafeIndex< class OutputPortTag >", "classdrake_1_1_type_safe_index.html", null ],
-    [ "TypeSafeIndex< class SurfaceFaceTag >", "classdrake_1_1_type_safe_index.html", null ],
     [ "uhash< HashAlgorithm >", "structdrake_1_1uhash.html", [
       [ "hash< drake::geometry::render::RenderLabel >", "structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html", null ],
       [ "hash< drake::Identifier< Tag > >", "structstd_1_1hash_3_01drake_1_1_identifier_3_01_tag_01_4_01_4.html", null ],
