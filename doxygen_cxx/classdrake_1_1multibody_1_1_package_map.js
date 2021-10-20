@@ -7,6 +7,7 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "AddMap", "classdrake_1_1multibody_1_1_package_map.html#a1b6898c14b340f42747bdef9a77abfe3", null ],
     [ "AddPackageXml", "classdrake_1_1multibody_1_1_package_map.html#ab5db13a6fe84a643a043c9347e1bc8d2", null ],
     [ "Contains", "classdrake_1_1multibody_1_1_package_map.html#aeba4aacea21458551c23a35911ae42bb", null ],
+    [ "GetDeprecated", "classdrake_1_1multibody_1_1_package_map.html#a1a614155f6670766fcb9c11088583ce8", null ],
     [ "GetPackageNames", "classdrake_1_1multibody_1_1_package_map.html#afaa68d5d43369307f840901e3d9fed97", null ],
     [ "GetPath", "classdrake_1_1multibody_1_1_package_map.html#aa466c277b13b0a0e2ab7c64fa47917da", null ],
     [ "MakeEmpty", "classdrake_1_1multibody_1_1_package_map.html#a9b54d0bb91bc2d4f6a629ccd3868d4c1", null ],
@@ -16,6 +17,7 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "PopulateFromFolder", "classdrake_1_1multibody_1_1_package_map.html#a510d35f38c93d44fa6a70d727f55cb8c", null ],
     [ "PopulateUpstreamToDrake", "classdrake_1_1multibody_1_1_package_map.html#a5e2fbb72a84c2c5527f8d2b452918602", null ],
     [ "Remove", "classdrake_1_1multibody_1_1_package_map.html#ae80251a33cd5622dc2a12b8193ea79e1", null ],
+    [ "SetDeprecated", "classdrake_1_1multibody_1_1_package_map.html#a36fa8e81eb4b5a8719afa1452c5951ed", null ],
     [ "size", "classdrake_1_1multibody_1_1_package_map.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_package_map.html#a56d456159a3495e76b55c66802b07b04", null ]
 ];

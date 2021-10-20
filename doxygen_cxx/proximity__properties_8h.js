@@ -1,7 +1,7 @@
 var proximity__properties_8h =
 [
-    [ "AddContactMaterial", "proximity__properties_8h.html#a75b8bc3ef835424639b5aa5e0874121b", null ],
-    [ "AddContactMaterial", "proximity__properties_8h.html#a994429610a1aadf4521959e996c5cfac", null ],
+    [ "AddContactMaterial", "proximity__properties_8h.html#aea83d68a61e598f633cd1a00f2581e89", null ],
+    [ "AddContactMaterial", "proximity__properties_8h.html#a76a5329e6d34cf001fce247df17240e9", null ],
     [ "AddRigidHydroelasticProperties", "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00", null ],
     [ "AddRigidHydroelasticProperties", "proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2", null ],
     [ "AddSoftHydroelasticProperties", "proximity__properties_8h.html#ab8c01c8e61753cdc77272c430c452968", null ],

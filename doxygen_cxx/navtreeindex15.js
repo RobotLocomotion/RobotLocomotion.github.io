@@ -1,7 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#adeb7d1c6793c4c1aa997582eb3b65197":[3,0,0,8,79,13],
-"classdrake_1_1multibody_1_1_uniform_gravity_field_element.html#af9b1da34b5924f4441438ce5d7885673":[3,0,0,8,79,15],
 "classdrake_1_1multibody_1_1_unit_inertia.html":[3,0,0,8,80],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a0e321b3b8489b5519c9bc079ad3b521a":[3,0,0,8,80,14],
 "classdrake_1_1multibody_1_1_unit_inertia.html#a15446b478364a5bd0a74419bd7a0b719":[3,0,0,8,80,21],
@@ -249,5 +247,7 @@ var NAVTREEINDEX15 =
 "classdrake_1_1perception_1_1_point_cloud.html#a07e3aba20f7c0ddaa75390bd72acb4af":[3,0,0,9,2,35],
 "classdrake_1_1perception_1_1_point_cloud.html#a086b048d8b89bb9fede5cea340c72f50":[3,0,0,9,2,6],
 "classdrake_1_1perception_1_1_point_cloud.html#a0c9e7b6d5d69349e12d811b80f22562a":[3,0,0,9,2,20],
-"classdrake_1_1perception_1_1_point_cloud.html#a10564c9ccfebe2b5b4bd6002152c68b3":[3,0,0,9,2,41]
+"classdrake_1_1perception_1_1_point_cloud.html#a10564c9ccfebe2b5b4bd6002152c68b3":[3,0,0,9,2,41],
+"classdrake_1_1perception_1_1_point_cloud.html#a2c380ea361d4eb787e35a90fb1aa1b6c":[3,0,0,9,2,0],
+"classdrake_1_1perception_1_1_point_cloud.html#a2f164a433f40e358683ac3f42f406343":[3,0,0,9,2,32]
 };

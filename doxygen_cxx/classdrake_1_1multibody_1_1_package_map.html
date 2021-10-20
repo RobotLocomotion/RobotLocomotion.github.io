@@ -93,6 +93,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_package_ma
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -124,9 +125,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae80251a33cd5622dc2a12b8193ea79e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ae80251a33cd5622dc2a12b8193ea79e1">Remove</a> (const std::string &amp;package_name)</td></tr>
 <tr class="memdesc:ae80251a33cd5622dc2a12b8193ea79e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes package <code>package_name</code> and its previously added path.  <a href="#ae80251a33cd5622dc2a12b8193ea79e1">More...</a><br /></td></tr>
 <tr class="separator:ae80251a33cd5622dc2a12b8193ea79e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36fa8e81eb4b5a8719afa1452c5951ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a36fa8e81eb4b5a8719afa1452c5951ed">SetDeprecated</a> (const std::string &amp;package_name, std::optional&lt; std::string &gt; deprecated_message)</td></tr>
+<tr class="memdesc:a36fa8e81eb4b5a8719afa1452c5951ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets or clears the deprecation message for package <code>package_name</code>.  <a href="#a36fa8e81eb4b5a8719afa1452c5951ed">More...</a><br /></td></tr>
+<tr class="separator:a36fa8e81eb4b5a8719afa1452c5951ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
 <tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of entries in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>.  <a href="#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
 <tr class="separator:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a614155f6670766fcb9c11088583ce8"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a1a614155f6670766fcb9c11088583ce8">GetDeprecated</a> (const std::string &amp;package_name) const</td></tr>
+<tr class="memdesc:a1a614155f6670766fcb9c11088583ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the deprecation message for package <code>package_name</code> if it has been set as deprecated.  <a href="#a1a614155f6670766fcb9c11088583ce8">More...</a><br /></td></tr>
+<tr class="separator:a1a614155f6670766fcb9c11088583ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa68d5d43369307f840901e3d9fed97"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#afaa68d5d43369307f840901e3d9fed97">GetPackageNames</a> () const</td></tr>
 <tr class="memdesc:afaa68d5d43369307f840901e3d9fed97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the package names in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>.  <a href="#afaa68d5d43369307f840901e3d9fed97">More...</a><br /></td></tr>
 <tr class="separator:afaa68d5d43369307f840901e3d9fed97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -329,6 +336,27 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns true if and only if this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> contains <code>package_name</code>. </p>
+
+</div>
+</div>
+<a id="a1a614155f6670766fcb9c11088583ce8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a614155f6670766fcb9c11088583ce8">&#9670;&nbsp;</a></span>GetDeprecated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::string&gt; GetDeprecated </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>package_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the deprecation message for package <code>package_name</code> if it has been set as deprecated. </p>
+<p>A value of std::nullopt implies no deprecation. Aborts if no package named <code>package_name</code> exists in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>. </p>
 
 </div>
 </div>
@@ -539,6 +567,37 @@ Friends</h2></td></tr>
 
 <p>Removes package <code>package_name</code> and its previously added path. </p>
 <p>Throws if <code>package_name</code> is not present in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>. </p>
+
+</div>
+</div>
+<a id="a36fa8e81eb4b5a8719afa1452c5951ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36fa8e81eb4b5a8719afa1452c5951ed">&#9670;&nbsp;</a></span>SetDeprecated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDeprecated </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>package_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>deprecated_message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets or clears the deprecation message for package <code>package_name</code>. </p>
+<p>A <code>deprecated_message</code> value of std::nullopt implies no deprecation. Aborts if no package named <code>package_name</code> exists in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>. </p>
 
 </div>
 </div>

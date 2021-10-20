@@ -156,7 +156,14 @@ release notes draft using the <code class="highlighter-rouge">tools/release_engi
           <li>The output is draft release notes in <code class="highlighter-rouge">doc/_release-notes/v0.N.0.md</code>.</li>
         </ul>
       </li>
-      <li>On the subsequent runs, use <code class="highlighter-rouge">--action=update</code> to refresh the file.</li>
+      <li>On the subsequent runs, use <code class="highlighter-rouge">--action=update</code> to refresh the file.
+        <ul>
+          <li>Try to avoid updating the release notes to refer to changes newer than
+the likely release, i.e., if you run <code class="highlighter-rouge">--update</code> on the morning you’re
+actually doing the release, be sure to pass the <code class="highlighter-rouge">--target_commit=</code>
+argument to avoid including commits that will not be part of the tag.</li>
+        </ul>
+      </li>
     </ol>
   </li>
   <li>For release notes, on an ongoing basis, clean up and relocate the commit
@@ -263,7 +270,8 @@ instructions are atop its source code:
   <li>Update the release notes to have the <code class="highlighter-rouge">YYYYMMDD</code> we choose, and to make
 sure that the nightly build git sha from the prior step matches the
 <code class="highlighter-rouge">newest_commit</code> whose changes are enumerated in the notes.  Some dates
-are YYYYMMDD format, some are YYYY-MM-DD format; be sure to fix them all.</li>
+are YYYYMMDD format, some are YYYY-MM-DD format; be sure to manually fix
+them all.</li>
   <li>Merge the release notes PR</li>
   <li>After merge, go to <a href="https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-bionic-unprovisioned-gcc-bazel-nightly-documentation/">https://drake-jenkins.csail.mit.edu/view/Documentation/job/linux-bionic-unprovisioned-gcc-bazel-nightly-documentation/</a> and push “Build now”.
     <ul>

@@ -1,9 +1,7 @@
 var classdrake_1_1geometry_1_1_surface_mesh =
 [
     [ "Barycentric", "classdrake_1_1geometry_1_1_surface_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61", null ],
-    [ "ElementIndex", "classdrake_1_1geometry_1_1_surface_mesh.html#a872a4a1d0a30ac750448e114dfe1b300", null ],
     [ "ScalarType", "classdrake_1_1geometry_1_1_surface_mesh.html#a6aec7d49d25322d8fae54028059d27aa", null ],
-    [ "VertexIndex", "classdrake_1_1geometry_1_1_surface_mesh.html#a519d67ef6b064ad8a278bbc21d559218", null ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html#afdbad8c2048d841ad236bd4d21bf8020", null ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html#ae0b8c0082bf0fb73fd0bfb583f7c4576", null ],
     [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html#a386190f8d3a1bcb42e5c997df1eb0d3f", null ],

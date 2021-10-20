@@ -1,7 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classdrake_1_1systems_1_1_periodic_event_data.html#ab996311c7a243e244a41ac05300fbe45":[3,0,0,14,75,7],
-"classdrake_1_1systems_1_1_periodic_event_data.html#ad31e9e292fc3e1c8bab07478633e9a5b":[3,0,0,14,75,8],
 "classdrake_1_1systems_1_1_periodic_event_data.html#ae0d549f7573f59c0d28ea09b9afa5368":[3,0,0,14,75,6],
 "classdrake_1_1systems_1_1_periodic_event_data.html#ae588dec607388ee28c77efe336f44eb7":[3,0,0,14,75,0],
 "classdrake_1_1systems_1_1_pid_controlled_spring_mass_system.html":[3,0,0,14,77],
@@ -249,5 +247,7 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879":[3,0,0,14,95,0],
 "classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879a09ceb25b12fa95fdbbb044ddd3d82e4c":[3,0,0,14,95,0,2],
 "classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879a7914d6ccf6ec6df8baab21ed87e9ffcf":[3,0,0,14,95,0,1],
-"classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879ab50d451e0bcc5385a4bdfd6b3bf5482c":[3,0,0,14,95,0,0]
+"classdrake_1_1systems_1_1_simulator_status.html#afbb189a238d55578f51fb5cd5a3f3879ab50d451e0bcc5385a4bdfd6b3bf5482c":[3,0,0,14,95,0,0],
+"classdrake_1_1systems_1_1_sine.html":[1,3,1,21],
+"classdrake_1_1systems_1_1_sine.html#a1825565e674f4eb048cde03a07b6648f":[1,3,1,21,0]
 };

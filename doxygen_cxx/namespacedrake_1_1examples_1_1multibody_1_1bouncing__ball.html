@@ -101,13 +101,13 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1examples_1_1multibod
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6ad3fb77a1b0f3b95908fecbdefb14ba"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html#a6ad3fb77a1b0f3b95908fecbdefb14ba">MakeBouncingBallPlant</a> (double mbp_dt, double radius, double mass, double elastic_modulus, double dissipation, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a>&lt; double &gt; &amp;surface_friction, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;gravity_W, bool rigid_sphere, bool soft_ground, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *scene_graph=nullptr)</td></tr>
-<tr class="memdesc:a6ad3fb77a1b0f3b95908fecbdefb14ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method makes a MultibodyPlant model of a ball falling into a plane.  <a href="#a6ad3fb77a1b0f3b95908fecbdefb14ba">More...</a><br /></td></tr>
-<tr class="separator:a6ad3fb77a1b0f3b95908fecbdefb14ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b5951781d425688a9870415ed071e0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html#aa2b5951781d425688a9870415ed071e0">MakeBouncingBallPlant</a> (double mbp_dt, double radius, double mass, double hydroelastic_modulus, double dissipation, const <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">drake::multibody::CoulombFriction</a>&lt; double &gt; &amp;surface_friction, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; double &gt; &amp;gravity_W, bool rigid_sphere, bool soft_ground, <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; double &gt; *scene_graph=nullptr)</td></tr>
+<tr class="memdesc:aa2b5951781d425688a9870415ed071e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method makes a MultibodyPlant model of a ball falling into a plane.  <a href="#aa2b5951781d425688a9870415ed071e0">More...</a><br /></td></tr>
+<tr class="separator:aa2b5951781d425688a9870415ed071e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6ad3fb77a1b0f3b95908fecbdefb14ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ad3fb77a1b0f3b95908fecbdefb14ba">&#9670;&nbsp;</a></span>MakeBouncingBallPlant()</h2>
+<a id="aa2b5951781d425688a9870415ed071e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b5951781d425688a9870415ed071e0">&#9670;&nbsp;</a></span>MakeBouncingBallPlant()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,7 +134,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>elastic_modulus</em>, </td>
+          <td class="paramname"><em>hydroelastic_modulus</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -188,7 +188,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mbp_dt</td><td>The discrete update period when MultibodyPlant is modeled as a discrete system. If zero, the plant is modeled as a continuous system. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>The radius of the ball. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">mass</td><td>The mass of the ball. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">elastic_modulus</td><td>The modulus of elasticity for the ball. Only used when modeled with the hydroelastic model. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_hydroelastic_materials_properties">Hydroelastic contact</a> documentation for details. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hydroelastic_modulus</td><td>The modulus of elasticity for the ball. Only used when modeled with the hydroelastic model. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_hydroelastic_materials_properties">Hydroelastic contact</a> documentation for details. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dissipation</td><td>The Hunt &amp; Crossley dissipation constant for the ball. Only used with the hydroelastic model. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_hydroelastic_materials_properties">Hydroelastic contact</a> documentation for details. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">surface_friction</td><td>The Coulomb's law coefficients of friction. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">gravity_W</td><td>The acceleration of gravity vector, expressed in the world frame W. </td></tr>

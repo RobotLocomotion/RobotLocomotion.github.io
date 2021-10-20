@@ -1,7 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"structdrake_1_1template__single__tag.html#a0b59870d7a48aad480f84b0f2423dfb2":[3,0,0,48,0],
-"structdrake_1_1test_1_1_limit_malloc_params.html":[3,0,0,15,1],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a34a5b591b64e647d30fcae67a24564df":[3,0,0,15,1,1],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a55bdaee9c2cac50e78a415ab477cf4e2":[3,0,0,15,1,0],
 "structdrake_1_1test_1_1_limit_malloc_params.html#a7febc78e5aba3a9f8f0b9a89f4537b25":[3,0,0,15,1,2],
@@ -68,8 +66,6 @@ var NAVTREEINDEX50 =
 "subvector_8h.html":[4,0,0,11,3,37],
 "supervector_8h.html":[4,0,0,11,3,38],
 "surface__mesh_8h.html":[4,0,0,4,2,41],
-"surface__mesh_8h.html#aa3d6c797d1aed87763423d1ff14f0388":[4,0,0,4,2,41,4],
-"surface__mesh_8h.html#aab40dd9d741f11662823e927f5d269df":[4,0,0,4,2,41,3],
 "surface__mesh__field_8h.html":[4,0,0,4,2,42],
 "surface__mesh__field_8h.html#aeb8521ca427b948bf56882cae0363bd4":[4,0,0,4,2,42,0],
 "symbolic_8h.html":[4,0,0,1,50],
@@ -249,5 +245,9 @@ var NAVTREEINDEX50 =
 "symbolic__expression__cell_8h.html#a429537da181b9861e8e1b51648691059":[4,0,0,1,57,50],
 "symbolic__expression__cell_8h.html#a568d4712bfb6ef78d4908efce797ebd2":[4,0,0,1,57,45],
 "symbolic__expression__cell_8h.html#a6a645e5342fb66cd3fc7de8c38eac6b4":[4,0,0,1,57,57],
-"symbolic__expression__cell_8h.html#a78259c13b2add79a1ad23e2cc8f5b314":[4,0,0,1,57,41]
+"symbolic__expression__cell_8h.html#a78259c13b2add79a1ad23e2cc8f5b314":[4,0,0,1,57,41],
+"symbolic__expression__cell_8h.html#a790f1dea22ffa64d7c75849403aae060":[4,0,0,1,57,55],
+"symbolic__expression__cell_8h.html#a7eaf3f36c1f3fdf51121f77083894794":[4,0,0,1,57,58],
+"symbolic__expression__cell_8h.html#a859d0e7196b00ffd99a347ff8a7d4d76":[4,0,0,1,57,53],
+"symbolic__expression__cell_8h.html#a8e6c5829257cf5c28c162ffad2bd3f58":[4,0,0,1,57,32]
 };
