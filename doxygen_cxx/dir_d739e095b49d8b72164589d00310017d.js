@@ -84,6 +84,7 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "HalfSpace", "classdrake_1_1geometry_1_1_half_space.html", "classdrake_1_1geometry_1_1_half_space" ],
       [ "Mesh", "classdrake_1_1geometry_1_1_mesh.html", "classdrake_1_1geometry_1_1_mesh" ],
       [ "Convex", "classdrake_1_1geometry_1_1_convex.html", "classdrake_1_1geometry_1_1_convex" ],
+      [ "MeshcatCone", "classdrake_1_1geometry_1_1_meshcat_cone.html", "classdrake_1_1geometry_1_1_meshcat_cone" ],
       [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", "classdrake_1_1geometry_1_1_shape_reifier" ],
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", "classdrake_1_1geometry_1_1_shape_name" ]
     ] ],

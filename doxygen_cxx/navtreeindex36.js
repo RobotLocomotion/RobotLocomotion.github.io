@@ -1,5 +1,17 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html":[3,0,0,14,2,11],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a105008fd08e4ebbac1e4975254f5bdf8":[3,0,0,14,2,11,7],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a19abe44a0e2bbfd07154fecb585f8a65":[3,0,0,14,2,11,5],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a5b9312ed98638383282c1f53d3db688c":[3,0,0,14,2,11,0],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a6900cc05ecfe8a2b6220e7b651c3727d":[3,0,0,14,2,11,9],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a6995a0bda6818d1a83c9c200980a6a8b":[3,0,0,14,2,11,15],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a6bfeadac008086dd23d7719337870dc5":[3,0,0,14,2,11,10],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a7b1b966158509621296964ffcb28adf4":[3,0,0,14,2,11,3],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a850776e9c5f466bf26b8eb8039805123":[3,0,0,14,2,11,13],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a88c93ddabb846f5f10e8687e97828d92":[3,0,0,14,2,11,2],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a9162f890b53a1ff266a66f68ce16467c":[3,0,0,14,2,11,17],
+"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a95666380de08d245a2e45b68e5c7449e":[3,0,0,14,2,11,14],
 "classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a997811276d5eab4d3eb55fd3299ceae3":[3,0,0,14,2,11,6],
 "classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#aa6b8ad235e2553d91a6cb24472d8bf9b":[3,0,0,14,2,11,19],
 "classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#ab700df9de8fe36d96b8b6de98f718147":[3,0,0,14,2,11,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac0926d674dddedc1dd650f2f5d78bc5a":[1,3,4,0,11],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac65edc397e5ac441462d19a1873c8a07":[1,3,4,0,8],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac951e9461fe35f8b40719a8ba37acea6":[1,3,4,0,7],
-"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#acdf7e0b5ab9acb099133124fa05833b8":[1,3,4,0,6],
-"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ad43a45a9bfeee26aafe9eef51139485a":[1,3,4,0,5],
-"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#af5f6fd2ec4a6de39d041fd90383a051f":[1,3,4,0,2],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html":[1,3,4,1],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505":[1,3,4,1,4],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a":[1,3,4,1,0],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597":[1,3,4,1,11],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,3,4,1,9],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a339a93a49733a0a196b08687a1340ef0":[1,3,4,1,3],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a4c9ef6be21e15437cc7451c59dc28468":[1,3,4,1,6],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5645c21f2752969e24185b05d223b20a":[1,3,4,1,1],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a5e40db520f6aeef75391a33947b244e7":[1,3,4,1,7],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a631d161f2ccaa5a50659a72ebb2c4a0c":[1,3,4,1,5]
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#acdf7e0b5ab9acb099133124fa05833b8":[1,3,4,0,6]
 };

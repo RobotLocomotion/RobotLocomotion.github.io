@@ -1,5 +1,17 @@
 var NAVTREEINDEX35 =
 {
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#a3aeed4b02e2817f73cbeb9c3bfc820b5":[3,0,0,14,131,3],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#a426b2611dccf0f1b97705d150e586570":[3,0,0,14,131,10],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#a4a9a1d9837da76d5a76a1c036dc22917":[3,0,0,14,131,8],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#a804a54725e78d25bd66d4d5800e6c61b":[3,0,0,14,131,0],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#a8f4a7c93f72ccab5d5953c03a915f9d4":[3,0,0,14,131,6],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#a914dec8b2fca61f76f6c17c06b380bfe":[3,0,0,14,131,7],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa1987ee9e3b84b254f8f2b34d66f0ca3":[3,0,0,14,131,12],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa220cd3808a2ef7b27dcc1715589c77c":[3,0,0,14,131,14],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa45e15b9f1b6b2e2022ffff52eaeba05":[3,0,0,14,131,1],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aa60c7abd51a6b294c7420cf887fe45d1":[3,0,0,14,131,4],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aaed8ebf240db4f3111b9853820024b1f":[3,0,0,14,131,11],
+"classdrake_1_1systems_1_1_witness_triggered_event_data.html#aef7c55391ae2a9db556ad98420557713":[3,0,0,14,131,13],
 "classdrake_1_1systems_1_1_witness_triggered_event_data.html#afbe08f2e3275f85c38d7d8510e377aa3":[3,0,0,14,131,9],
 "classdrake_1_1systems_1_1_wrap_to_system.html":[1,3,1,26],
 "classdrake_1_1systems_1_1_wrap_to_system.html#a1e619ed14fa786ff7fc329b2f5c92625":[1,3,1,26,5],
@@ -237,17 +249,5 @@ var NAVTREEINDEX35 =
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#a8a3d1c41ca05a555fbb78ab53548697c":[3,0,0,14,2,10,8],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#aa37e8848eafd3dbcf70745b329834770":[3,0,0,14,2,10,4],
 "classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abbc50a5c7f39b362c997e98dbcb6387e":[3,0,0,14,2,10,1],
-"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abd361fc0104cfc0020871088466d2b94":[3,0,0,14,2,10,5],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html":[3,0,0,14,2,11],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a105008fd08e4ebbac1e4975254f5bdf8":[3,0,0,14,2,11,7],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a19abe44a0e2bbfd07154fecb585f8a65":[3,0,0,14,2,11,5],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a5b9312ed98638383282c1f53d3db688c":[3,0,0,14,2,11,0],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a6900cc05ecfe8a2b6220e7b651c3727d":[3,0,0,14,2,11,9],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a6995a0bda6818d1a83c9c200980a6a8b":[3,0,0,14,2,11,15],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a6bfeadac008086dd23d7719337870dc5":[3,0,0,14,2,11,10],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a7b1b966158509621296964ffcb28adf4":[3,0,0,14,2,11,3],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a850776e9c5f466bf26b8eb8039805123":[3,0,0,14,2,11,13],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a88c93ddabb846f5f10e8687e97828d92":[3,0,0,14,2,11,2],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a9162f890b53a1ff266a66f68ce16467c":[3,0,0,14,2,11,17],
-"classdrake_1_1systems_1_1controllers_1_1_vector_setpoint.html#a95666380de08d245a2e45b68e5c7449e":[3,0,0,14,2,11,14]
+"classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html#abd361fc0104cfc0020871088466d2b94":[3,0,0,14,2,10,5]
 };

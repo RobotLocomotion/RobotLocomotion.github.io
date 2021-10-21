@@ -648,6 +648,7 @@ var hierarchy =
       [ "Ellipsoid", "classdrake_1_1geometry_1_1_ellipsoid.html", null ],
       [ "HalfSpace", "classdrake_1_1geometry_1_1_half_space.html", null ],
       [ "Mesh", "classdrake_1_1geometry_1_1_mesh.html", null ],
+      [ "MeshcatCone", "classdrake_1_1geometry_1_1_meshcat_cone.html", null ],
       [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", null ]
     ] ],
     [ "ShapeReifier", "classdrake_1_1geometry_1_1_shape_reifier.html", [

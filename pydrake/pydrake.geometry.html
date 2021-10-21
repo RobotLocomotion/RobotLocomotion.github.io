@@ -3758,6 +3758,53 @@ meshcat_path “Meshcat paths” for the semantics.</dd>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatCone">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatCone</code><a class="headerlink" href="#pydrake.geometry.MeshcatCone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.Shape" title="pydrake.geometry.Shape"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.Shape</span></code></a></p>
+<p>Definition of a cone. Its point is at the origin, its height extends
+in the direction of the frame’s +z axis. Or, more formally: a finite
+section of a Lorentz cone (aka “second-order cone”), defined by</p>
+<p>sqrt(x²/a² + y²/b²) ≤ z; z ∈ [0, height],</p>
+<p>where <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> are the lengths of the principle semi-axes of
+the horizontal section at <code class="docutils literal"><span class="pre">z=1</span></code>.</p>
+<p>This shape is currently only supported by Meshcat. It will not appear
+in any renderings, proximity queries, or other visualizers.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatCone.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatCone</em>, <em>height: float</em>, <em>a: float = 1.0</em>, <em>b: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatCone.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs the parameterized cone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">height</span></code>, <cite>a</cite>, or <code class="docutils literal"><span class="pre">b</span></code> are not strictly</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">positive.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatCone.a">
+<code class="descname">a</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatCone</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.MeshcatCone.a" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatCone.b">
+<code class="descname">b</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatCone</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.MeshcatCone.b" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatCone.height">
+<code class="descname">height</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatCone</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.MeshcatCone.height" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp" title="Permalink to this definition">¶</a></dt>
@@ -3790,7 +3837,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cb28&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fb28&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3816,14 +3863,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cb88&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fb88&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cbe8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fbe8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3877,7 +3924,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513ce88&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fe88&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3903,14 +3950,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cee8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fee8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cf48&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400ff48&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
@@ -3962,7 +4009,7 @@ more details.</p>
 publish to the same Meshcat instance.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cb28&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fb28&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of MeshcatVisualizer.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
@@ -3988,14 +4035,14 @@ the lifetime of the object.</dd>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cb88&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fb88&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f455513cbe8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = &lt;pydrake.geometry.MeshcatVisualizerParams object at 0x7f015400fbe8&gt;) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
 <p>Adds a MescatVisualizer and connects it to the given
 QueryObject-valued output port. See
