@@ -117,24 +117,170 @@ analysis.
       <article class="markdown-body">
         <h1 id="previewing">Previewing</h1>
 
-<p>Before installing, you can preview the Python functionality of Drake by using
-Binder: <br />
-<a target="_doc" href="https://mybinder.org/v2/gh/RobotLocomotion/drake/nightly-release-binder?urlpath=/tree/tutorials">
-  <img src="https://mybinder.org/badge_logo.svg" />
-</a> <br />
-As you are exploring, you should also review
-<a href="/python_bindings.html#whats-available-from-python">What’s Available from Python</a>.</p>
+<p>Before installing, you can preview Drake online using our interactive Python
+notebooks. See the <a href="/index.html#tutorials">Tutorials</a> page for details.</p>
 
-<h1 id="choose-an-installation-method">Choose an installation method</h1>
+<h1 id="installation">Installation</h1>
 
-<p>You can choose to download a pre-compiled version of Drake, or to build it from source. The pre-compiled versions are much easier to use, but the source version is easier to update and will make it easier for you to contribute your fixes/improvements.</p>
+<h2 id="supported-configurations">Supported Configurations</h2>
 
-<ul>
-  <li><a href="/from_binary.html">Binary installation (macOS, Ubuntu)</a></li>
-  <li><a href="/from_source.html">Source installation (macOS, Ubuntu)</a></li>
-  <li><a href="/docker.html">Using the Drake Docker Images From Docker Hub</a></li>
-  <li><a href="/release_notes/release_notes.html">Release Notes</a></li>
-</ul>
+<p>The following table shows the configurations and platforms that Drake
+officially supports:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operating System ⁽⁴⁾</th>
+      <th>Architecture</th>
+      <th>Python</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ubuntu 18.04 LTS (Bionic Beaver)</td>
+      <td>x86_64 ⁽¹⁾</td>
+      <td>3.6 ⁽³⁾</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
+      <td>x86_64 ⁽¹⁾</td>
+      <td>3.8 ⁽³⁾</td>
+    </tr>
+    <tr>
+      <td>macOS Catalina (10.15)</td>
+      <td>x86_64 ⁽²⁾</td>
+      <td>3.9 ⁽³⁾</td>
+    </tr>
+    <tr>
+      <td>macOS Big Sur (11)</td>
+      <td>x86_64 ⁽²⁾</td>
+      <td>3.9 ⁽³⁾</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>⁽¹⁾ Drake Ubuntu builds assume support for Intel’s AVX2 and FMA instructions,
+introduced with the Haswell architecture in 2013 with substantial performance
+improvements in the Broadwell architecture in 2014. Drake is compiled with
+<code class="highlighter-rouge">-march=broadwell</code> to exploit these instructions (that also works for Haswell
+machines). Drake can be used on older machines if necessary by building from
+source with that flag removed.</p>
+
+<p>⁽²⁾ Running Drake under Rosetta 2 emulation on arm64 is not supported. Plans
+for any future arm64 support on macOS and/or Ubuntu are discussed in
+<a href="https://github.com/RobotLocomotion/drake/issues/13514">issue #13514</a>.</p>
+
+<p>⁽³⁾ CPython is the only Python implementation supported.</p>
+
+<p>⁽⁴⁾ Drake features that perform image rendering (e.g., camera simulation)
+require a working display server.  Most personal computers will have this
+already built in, but some cloud or docker environments may not.</p>
+
+<p>Additionally, if you compiling your own C++ code against Drake’s C++ code
+and are using Drake’s pre-compiled binaries, then you must use the same
+compiler as our releases:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operating System</th>
+      <th>C/C++ Compiler</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ubuntu 18.04 LTS (Bionic Beaver)</td>
+      <td>GCC 7.5</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
+      <td>GCC 9.3</td>
+    </tr>
+    <tr>
+      <td>macOS Catalina (10.15)</td>
+      <td>Apple LLVM 12.0.0 (Xcode 12.4)</td>
+    </tr>
+    <tr>
+      <td>macOS Big Sur (11)</td>
+      <td>Apple LLVM 12.0.0 (Xcode 12.4)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="available-versions">Available Versions</h2>
+
+<p>Drake publishes stable releases approximately once a month, and also
+offers nightly builds on an ongoing basis.</p>
+
+<p>For new users, we recommend using the stable releases.  New releases
+will be announced on Drake’s GitHub
+<a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page and
+documented in Drake’s <a href="/release_notes/release_notes.html">Release Notes</a>.</p>
+
+<p>Experienced users who want access to the latest features may use the
+nightly builds.</p>
+
+<h2 id="choose-an-installation-method">Choose an Installation Method</h2>
+
+<p>The following table shows the installation methods available for Drake’s
+pre-compiled binaries, per the supported platforms and release versions.</p>
+
+<p>The pip packages only support using Drake via Python.
+All other packages support both C++ and/or Python.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Ubuntu</th>
+      <th>macOS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Using pip</td>
+      <td><a href="/pip.html#stable-releases">Stable</a> ⁽¹⁾</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Using apt (deb)</td>
+      <td><a href="/apt.html#stable-releases">Stable</a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Using tar.gz download</td>
+      <td><a href="/from_binary.html#stable-releases">Stable</a> or <a href="/from_binary.html#nightly-releases">Nightly</a></td>
+      <td><a href="/from_binary.html#stable-releases">Stable</a> or <a href="/from_binary.html#nightly-releases">Nightly</a></td>
+    </tr>
+    <tr>
+      <td>Using Docker Hub</td>
+      <td><a href="/docker.html#stable-releases">Stable</a> or <a href="/docker.html#nightly-releases">Nightly</a></td>
+      <td><a href="/docker.html#stable-releases">Stable</a> or <a href="/docker.html#nightly-releases">Nightly</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>⁽¹⁾ For the moment, we only support <code class="highlighter-rouge">pip install drake</code> for Ubuntu 18.04 LTS
+(Bionic Beaver), not Ubuntu 20.04 LTS (Focal Fossa).  Subscribe to
+<a href="https://github.com/RobotLocomotion/drake/issues/15959">#15959</a> for updates.</p>
+
+<p>Alternatively, you can skip the pre-compiled binaries and
+<a href="/from_source.html">build Drake from source</a>.</p>
+
+<p>We’re considering adding macOS support for Homebrew, i.e., <code class="highlighter-rouge">brew install
+drake</code>.  Please upvote or comment on
+<a href="https://github.com/RobotLocomotion/drake/issues/12782">#12782</a>
+if you are interested.</p>
+
+<h1 id="quickstart">Quickstart</h1>
+
+<p>For Python, refer to
+<a href="/python_bindings.html#using-the-python-bindings">Using the Python Bindings</a>.</p>
+
+<p>For C++, refer to either the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed_apt">example CMake project for apt (deb)</a>
+or the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed">example CMake project for tar.gz download</a>.</p>
 
       </article>
     </div>

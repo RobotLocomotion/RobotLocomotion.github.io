@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Using the Drake Docker Images From Docker Hub</title>
+    <title>Drake: Installation via Docker</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -109,28 +109,70 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Using the Drake Docker Images From Docker Hub</h1>
+      <h1>Installation via Docker</h1>
     </div>
   </header>
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <p>Drake’s continuous integration has nightly jobs that publish the binary
-archives that are described in the <a href="/from_binary.html#nightly-releases">Nightly releases</a> section. The Ubuntu
-18.04 (Bionic) binary archive is also used to publish a Docker image on
-<a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>. You can see the
-available Docker images here:</p>
+        <h1 id="docker-hub">Docker Hub</h1>
 
-<p><a href="https://hub.docker.com/r/robotlocomotion/drake/tags">https://hub.docker.com/r/robotlocomotion/drake/tags</a></p>
+<p>Drake publishes pre-compiled binaries as Docker images on
+<a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>. Refer to
+<a href="/installation.html#supported-configurations">Supported Configurations</a>
+for additional compatibility details.</p>
 
-<p>The <a href="https://hub.docker.com/r/robotlocomotion/drake/tags?name=latest">latest</a>
-image can be pulled from Docker Hub as follows:</p>
+<p>To learn about other installation methods, refer to
+<a href="/installation.html">Installation and Quickstart</a>.</p>
+
+<p>Drake binary releases incorporate a pre-compiled version of
+<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
+<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
+Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
+
+<h2 id="stable-releases">Stable Releases</h2>
+
+<p>The latest stable image can be pulled from
+<a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>
+as follows:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull robotlocomotion/drake:X.Y.Z
+</code></pre></div></div>
+
+<p>Refer to <a href="/release_notes/release_notes.html">Release Notes</a> for a list of
+published X.Y.Z version numbers.</p>
+
+<p>The docker tags for Drake’s stable releases are spelled like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">bionic-X.Y.Z</code> for the Ubuntu 18.04 image of Drake vX.Y.Z.</li>
+  <li><code class="highlighter-rouge">focal-X.Y.Z</code> for the Ubuntu 20.04 image of Drake vX.Y.Z.</li>
+  <li><code class="highlighter-rouge">X.Y.Z</code> is a synonym for one of the above, currently bionic-X.Y.Z.</li>
+</ul>
+
+<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
+
+<h2 id="nightly-releases">Nightly Releases</h2>
+
+<p>The latest nightly image can be pulled from
+<a href="https://hub.docker.com/r/robotlocomotion/drake">Docker Hub</a>
+as follows:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull robotlocomotion/drake:latest
 </code></pre></div></div>
 
-<p>Docker images based on the Ubuntu 20.04 (Focal) binary archive are not
-available.</p>
+<p>The docker tags for Drake’s nightly releases are spelled like:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">bionic-YYYYMMDD</code> for the Ubuntu 18.04 image of Drake as of date YYYY-MM-DD.</li>
+  <li><code class="highlighter-rouge">bionic</code> is a synonym for the most recent <code class="highlighter-rouge">bionic-YYYYMMDD</code>.</li>
+  <li><code class="highlighter-rouge">focal-YYYYMMDD</code> for the Ubuntu 20.04 image of Drake as of date YYYY-MM-DD.</li>
+  <li><code class="highlighter-rouge">focal</code> is a synonym for the most recent <code class="highlighter-rouge">focal-YYYYMMDD</code>.</li>
+  <li><code class="highlighter-rouge">YYYYMMDD</code> is a synonym for one of the above, currently <code class="highlighter-rouge">bionic-YYYYMMDD</code>.</li>
+  <li><code class="highlighter-rouge">latest</code> is a synonym for the most recent <code class="highlighter-rouge">YYYYMMDD</code>.</li>
+</ul>
+
+<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
 
       </article>
     </div>

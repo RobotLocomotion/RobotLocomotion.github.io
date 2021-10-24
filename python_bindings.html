@@ -125,12 +125,8 @@ See "Caveats" in drake/doc/README.txt.
 <div class="sticky">
     <h5>Table of Contents</h5>
 <ul id="markdown-toc">
-  <li><a href="#installation" id="markdown-toc-installation">Installation</a>    <ul>
-      <li><a href="#binary-installation-for-python" id="markdown-toc-binary-installation-for-python">Binary Installation for Python</a></li>
-      <li><a href="#inside-virtualenv" id="markdown-toc-inside-virtualenv">Inside <code class="highlighter-rouge">virtualenv</code></a></li>
-      <li><a href="#building-the-python-bindings" id="markdown-toc-building-the-python-bindings">Building the Python Bindings</a></li>
-    </ul>
-  </li>
+  <li><a href="#background" id="markdown-toc-background">Background</a></li>
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
   <li><a href="#using-the-python-bindings" id="markdown-toc-using-the-python-bindings">Using the Python Bindings</a>    <ul>
       <li><a href="#check-installation" id="markdown-toc-check-installation">Check Installation</a></li>
       <li><a href="#whats-available-from-python" id="markdown-toc-whats-available-from-python">What’s Available from Python</a></li>
@@ -148,7 +144,7 @@ See "Caveats" in drake/doc/README.txt.
 
 <article class="markdown-body">
 
-  <h1 id="installation">Installation</h1>
+  <h1 id="background">Background</h1>
 
   <p>A substantial subset of the Drake C++ functionality is available from Python.
 The Drake Python bindings are generated using <a href="https://github.com/pybind/pybind11">pybind11</a>,
@@ -158,128 +154,16 @@ source files inside the <code class="highlighter-rouge">bindings/pydrake</code> 
 installed as a single package called <code class="highlighter-rouge">pydrake</code>.</p>
 
   <div class="warning">
-    <p>Drake is incompatible with the Python environment supplied by Anaconda. Please
+    <p>Drake does not support the Python environment supplied by Anaconda.
+To use our supported workflow, please
 uninstall Anaconda or remove the Anaconda bin directory from the <code class="highlighter-rouge">PATH</code> before
 building or using the Drake Python bindings.</p>
   </div>
 
-  <p>Before attempting installation, please review the
-<a href="/developers.html#supported-configurations">supported configurations</a> to know what
-versions of Python are supported for your platform.</p>
+  <h1 id="installation">Installation</h1>
 
-  <h2 id="binary-installation-for-python">Binary Installation for Python</h2>
-
-  <p>First, download and extract an <a href="/from_binary.html">available binary package</a>.</p>
-
-  <p>As an example, here is how to download and extract one of the latest releases
-to <code class="highlighter-rouge">/opt</code> (where <code class="highlighter-rouge">&lt;platform&gt;</code> could be <code class="highlighter-rouge">bionic</code>, <code class="highlighter-rouge">focal</code>, or <code class="highlighter-rouge">mac</code>):</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-o</span> drake.tar.gz https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-&lt;platform&gt;.tar.gz
-rm <span class="nt">-rf</span> /opt/drake
-<span class="nb">tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> /opt
-</code></pre></div>  </div>
-
-  <p>Ensure that you have the system dependencies:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/drake/share/drake/setup/install_prereqs
-</code></pre></div>  </div>
-
-  <p>Next, ensure that your <code class="highlighter-rouge">PYTHONPATH</code> is properly configured.</p>
-
-  <p><em>Ubuntu 18.04 (Bionic):</em></p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python3.6/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div>  </div>
-
-  <p><em>Ubuntu 20.04 (Focal):</em></p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div>  </div>
-
-  <p><em>macOS:</em></p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span>/opt/drake/lib/python3.9/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div>  </div>
-
-  <p>See <a href="#using-the-python-bindings">below</a> for usage instructions.</p>
-
-  <h2 id="inside-virtualenv">Inside <code class="highlighter-rouge">virtualenv</code></h2>
-
-  <p>At present, Drake is not installable via <code class="highlighter-rouge">pip</code>. However, you can still
-incorporate its install tree into a <code class="highlighter-rouge">virtualenv</code>
-<a href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">FHS</a>-like
-environment.</p>
-
-  <p>An example, where you should replace <code class="highlighter-rouge">&lt;venv_path&gt;</code> and <code class="highlighter-rouge">&lt;platform&gt;</code>:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Setup drake, and run prerequisites.</span>
-curl <span class="nt">-o</span> drake.tar.gz https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-&lt;platform&gt;.tar.gz
-mkdir <span class="nt">-p</span> &lt;venv_path&gt;
-<span class="nb">tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> &lt;venv_path&gt; <span class="nt">--strip-components</span><span class="o">=</span>1
-<span class="c"># - You may need `sudo` here.</span>
-&lt;venv_path&gt;/share/drake/setup/install_prereqs
-
-<span class="c"># Setup a virtualenv over the drake install.</span>
-python3 <span class="nt">-m</span> virtualenv <span class="nt">-p</span> python3 &lt;venv_path&gt; <span class="nt">--system-site-packages</span>
-</code></pre></div>  </div>
-
-  <div class="note">
-    <p>You can extract Drake into an existing <code class="highlighter-rouge">virtualenv</code> tree if you have already run <code class="highlighter-rouge">install_prereqs</code>; however, you should ensure that you have run <code class="highlighter-rouge">install_prereqs</code>. Before you do this, you should capture / freeze your current requirements to reproduce your environment if there are conflicts.</p>
-  </div>
-
-  <p>To check if this worked, follow the instructions as
-<a href="#using-the-python-bindings">shown below</a>, but either:</p>
-
-  <ul>
-    <li>Use <code class="highlighter-rouge">&lt;venv_path&gt;/bin/python</code> instead of <code class="highlighter-rouge">python3</code>, or</li>
-    <li>Source <code class="highlighter-rouge">&lt;venv_path&gt;/bin/activate</code> in your current shell session.</li>
-  </ul>
-
-  <h2 id="building-the-python-bindings">Building the Python Bindings</h2>
-
-  <p>To use the Python bindings from Drake externally, we recommend using CMake.
-As an example:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/RobotLocomotion/drake.git
-mkdir drake-build
-<span class="nb">cd </span>drake-build
-cmake ../drake
-make <span class="nt">-j</span>
-</code></pre></div>  </div>
-
-  <p>Please note the additional CMake options which affect the Python bindings:</p>
-
-  <ul>
-    <li><code class="highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
-    <li><code class="highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK enabled.</li>
-    <li><code class="highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
-  </ul>
-
-  <p><code class="highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="highlighter-rouge">[...]</code> is
-the default option. An example of building <code class="highlighter-rouge">pydrake</code> with both Gurobi and
-MOSEK, without building tests:</p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-DWITH_GUROBI</span><span class="o">=</span>ON <span class="nt">-DWITH_MOSEK</span><span class="o">=</span>ON ../drake
-</code></pre></div>  </div>
-
-  <p>You will also need to have your <code class="highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
-
-  <p><em>Ubuntu 18.04 (Bionic):</em></p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
-<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.6/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div>  </div>
-
-  <p><em>Ubuntu 20.04 (Focal):</em></p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
-<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div>  </div>
-  <p><em>macOS:</em></p>
-
-  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
-<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.9/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div>  </div>
+  <p>Refer to <a href="/installation.html">Installation</a> for how to install Drake’s
+stable releases using pip.</p>
 
   <h1 id="using-the-python-bindings">Using the Python Bindings</h1>
 
@@ -292,7 +176,7 @@ MOSEK, without building tests:</p>
 </code></pre></div>  </div>
 
   <div class="note">
-    <p>If you are using Gurobi, you must either have it installed in the suggested location under <code class="highlighter-rouge">/opt/...</code>&gt; mentioned in Gurobi 9.0.2, or you must ensure that you define the <code class="highlighter-rouge">${GUROBI_HOME}</code> environment variable, or specify <code class="highlighter-rouge">${GUROBI_INCLUDE_DIR}</code> via CMake.</p>
+    <p>If you are using Gurobi, you must either have it installed in the suggested location under <code class="highlighter-rouge">/opt/...</code> mentioned in Gurobi 9.0.2, or you must ensure that you define the <code class="highlighter-rouge">${GUROBI_HOME}</code> environment variable, or specify <code class="highlighter-rouge">${GUROBI_INCLUDE_DIR}</code> via CMake.</p>
   </div>
 
   <h2 id="whats-available-from-python">What’s Available from Python</h2>
@@ -300,7 +184,8 @@ MOSEK, without building tests:</p>
   <p>You should first browse the <a href="https://drake.mit.edu/pydrake/index.html">Python API</a> to see what
 modules are available. The most up-to-date high-level demonstrations of what
 can be done using <code class="highlighter-rouge">pydrake</code> are in Drake’s <a href="/index.html#tutorials">Tutorials</a> and
-the <a href="http://underactuated.mit.edu/">Underactuated Robotics Textbook</a>.</p>
+the <a href="http://underactuated.mit.edu/">Underactuated Robotics Textbook</a> and
+the <a href="https://manipulation.mit.edu/">Robotic Manipulation Textbook</a>.</p>
 
   <p>You can also see lower-level usages of the API in the <code class="highlighter-rouge">pydrake</code> unit tests
 themselves, which you can find inside of the

@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Source installation (macOS, Ubuntu)</title>
+    <title>Drake: Source Installation</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -109,13 +109,90 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Source installation (macOS, Ubuntu)</h1>
+      <h1>Source Installation</h1>
     </div>
   </header>
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <h1 id="getting-drake">Getting Drake</h1>
+        <h1 id="supported-configurations">Supported Configurations</h1>
+
+<p>The following table shows the configurations and platforms that Drake
+officially supports. Supported configurations are tested in continuous
+integration. Any other configurations are provided on a best-effort basis.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operating System ⁽⁴⁾</th>
+      <th>Architecture</th>
+      <th>Python</th>
+      <th>Bazel</th>
+      <th>CMake</th>
+      <th>C/C++ Compiler ⁽⁵⁾</th>
+      <th>Java</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ubuntu 18.04 LTS (Bionic Beaver)</td>
+      <td>x86_64 ⁽¹⁾</td>
+      <td>3.6 ⁽³⁾</td>
+      <td>4.2</td>
+      <td>3.10</td>
+      <td>GCC 7.5 (default) or Clang 9</td>
+      <td>OpenJDK 11</td>
+    </tr>
+    <tr>
+      <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
+      <td>x86_64 ⁽¹⁾</td>
+      <td>3.8 ⁽³⁾</td>
+      <td>4.2</td>
+      <td>3.16</td>
+      <td>GCC 9.3 (default) or Clang 9</td>
+      <td>OpenJDK 11</td>
+    </tr>
+    <tr>
+      <td>macOS Catalina (10.15)</td>
+      <td>x86_64 ⁽²⁾</td>
+      <td>3.9 ⁽³⁾</td>
+      <td>4.2</td>
+      <td>3.19</td>
+      <td>Apple LLVM 12.0.0 (Xcode 12.4)</td>
+      <td>AdoptOpenJDK 15 (HotSpot JVM)</td>
+    </tr>
+    <tr>
+      <td>macOS Big Sur (11)</td>
+      <td>x86_64 ⁽²⁾</td>
+      <td>3.9 ⁽³⁾</td>
+      <td>4.2</td>
+      <td>3.19</td>
+      <td>Apple LLVM 12.0.0 (Xcode 12.4)</td>
+      <td>AdoptOpenJDK 15 (HotSpot JVM)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>⁽¹⁾ Drake Ubuntu builds assume support for Intel’s AVX2 and FMA instructions,
+introduced with the Haswell architecture in 2013 with substantial performance
+improvements in the Broadwell architecture in 2014. Drake is compiled with
+<code class="highlighter-rouge">-march=broadwell</code> to exploit these instructions (that also works for Haswell
+machines). Drake can be used on older machines if necessary by building from
+source with that flag removed.</p>
+
+<p>⁽²⁾ Running Drake under Rosetta 2 emulation on arm64 is not supported. Plans
+for any future arm64 support on macOS and/or Ubuntu are discussed in
+<a href="https://github.com/RobotLocomotion/drake/issues/13514">issue #13514</a>.</p>
+
+<p>⁽³⁾ CPython is the only Python implementation supported.</p>
+
+<p>⁽⁴⁾ Drake features that perform image rendering (e.g., camera simulation)
+require a working display server.  Most personal computers will have this
+already built in, but some cloud or docker environments may not.</p>
+
+<p>⁽⁵⁾ Drake requires a compiler running in C++17 or C++20 mode.</p>
+
+<h1 id="getting-drake">Getting Drake</h1>
 
 <p>We recommend that you <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/">setup SSH access to GitHub.com</a>
 to avoid needing to type your password each time you access it. The following
@@ -156,7 +233,7 @@ setup steps:</p>
   <li><a href="/ubuntu.html">Ubuntu</a></li>
 </ul>
 
-<p>See <a href="/developers.html#supported-configurations">supported configurations</a>
+<p>See <a href="#supported-configurations">above</a>
 for the configurations and platforms that Drake officially supports.
 All else being equal, we would recommend developers use Ubuntu Bionic.</p>
 
@@ -169,10 +246,51 @@ full details at:</p>
   <li><a href="/bazel.html">Bazel build system</a></li>
 </ul>
 
-<h1 id="historical-note">Historical Note</h1>
+<h2 id="building-the-python-bindings">Building the Python Bindings</h2>
 
-<p>Older releases were built around substantial MATLAB support, and are
-described on <a href="/release_notes/older_releases.html">this release notes page</a>.</p>
+<p>To use the Python bindings from Drake externally, we recommend using CMake.
+As an example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/RobotLocomotion/drake.git
+mkdir drake-build
+<span class="nb">cd </span>drake-build
+cmake ../drake
+make <span class="nt">-j</span>
+</code></pre></div></div>
+
+<p>Please note the additional CMake options which affect the Python bindings:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
+  <li><code class="highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK enabled.</li>
+  <li><code class="highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
+</ul>
+
+<p><code class="highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="highlighter-rouge">[...]</code> is
+the default option. An example of building <code class="highlighter-rouge">pydrake</code> with both Gurobi and
+MOSEK, without building tests:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-DWITH_GUROBI</span><span class="o">=</span>ON <span class="nt">-DWITH_MOSEK</span><span class="o">=</span>ON ../drake
+</code></pre></div></div>
+
+<p>You will also need to have your <code class="highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
+
+<p><em>Ubuntu 18.04 (Bionic):</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.6/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div></div>
+
+<p><em>Ubuntu 20.04 (Focal):</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.8/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div></div>
+<p><em>macOS:</em></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
+<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.9/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
+</code></pre></div></div>
 
       </article>
     </div>

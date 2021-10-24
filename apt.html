@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Drake v0.10.0</title>
+    <title>Drake: Installation via APT (Ubuntu)</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -107,46 +107,73 @@ analysis.
     <div class="page">
       <div class="content">
         <div class="drake-page">
-
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Drake v0.10.0</h1>
+      <h1>Installation via APT (Ubuntu)</h1>
     </div>
   </header>
-
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <a href="/release_notes/release_notes.html">Back to Release Notes</a>
-        <hr/>
-        <p>Nearly four years have passed since the 0.9.x releases, and almost all of the code has been rewritten, so the changes are various and many.</p>
+        <h1 id="apt-packages">APT Packages</h1>
 
-<p>Some of the more recent or substantial changes include:</p>
+<p>Drake publishes pre-compiled binaries as APT packages (<code class="highlighter-rouge">*.deb</code>) for the
+Ubuntu 18.04 (Bionic) and Ubuntu 20.04 (Focal) operating systems. Refer to
+<a href="/installation.html#supported-configurations">Supported Configurations</a>
+for additional compatibility details.</p>
 
-<ul>
-  <li>Expanded <a href="https://drake.mit.edu/doxygen_cxx/group__systems.html">Dynamical Systems</a> APIs and features; now supports Python and/or C++.</li>
-  <li>Expanded <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">MathematicalProgram</a> APIs and features, supported problems, and the suite of solver implementations.</li>
-  <li>Added <a href="https://drake.mit.edu/doxygen_cxx/group__multibody.html">MultibodyPlant dynamics</a> (RigidBodyPlant is no longer actively maintained).</li>
-  <li>Added camera and depth simulation (RgbdSensor) and geometric queries (SceneGraph).</li>
-  <li>Reworked examples.</li>
-  <li>Supports Ubuntu 16, Ubuntu 18, and macOS (see <a href="/installation.html">Installation</a> documentation for details).</li>
-  <li>Removed support for MATLAB; removed support for Windows.</li>
-</ul>
-
-<p>This release provides
-<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.10.0">pre-compiled binaries</a>
-named <code class="highlighter-rouge">drake-20190905-{bionic|xenial|mac}.tar.gz</code>. See
-<a href="/from_binary.html#stable-releases">Stable Releases</a> for instructions on how to use them.</p>
+<p>To learn about other installation methods, refer to
+<a href="/installation.html">Installation and Quickstart</a>.</p>
 
 <p>Drake binary releases incorporate a pre-compiled version of
 <a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
 <a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
 Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
 
+<h2 id="stable-releases">Stable Releases</h2>
+
+<p>To add the Drake APT repository to your machine and install the <code class="highlighter-rouge">drake-dev</code> package,
+please do the following in order:</p>
+
+<p>If you are using a <a href="https://wiki.ubuntu.com/Minimal">minimal</a> cloud or
+container image, you may need to install the following packages:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+  ca-certificates gnupg lsb-release wget
+</code></pre></div></div>
+
+<p>Download a copy of the Drake GPG signing key and add it to an APT trusted keychain:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-qO-</span> https://drake-apt.csail.mit.edu/drake.asc | gpg <span class="nt">--dearmor</span> - <span class="se">\</span>
+  | <span class="nb">sudo </span>tee /etc/apt/trusted.gpg.d/drake.gpg <span class="o">&gt;</span>/dev/null
+</code></pre></div></div>
+
+<p>Add the Drake repository to your APT sources list:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=amd64] https://drake-apt.csail.mit.edu/</span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2"> main"</span> <span class="se">\</span>
+  | <span class="nb">sudo </span>tee /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
+</code></pre></div></div>
+
+<p>Update your local APT package index and install the <code class="highlighter-rouge">drake-dev</code> package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> drake-dev
+</code></pre></div></div>
+
+<p>Most content installs to <code class="highlighter-rouge">/opt/drake</code>, so setting the following environment
+variables may be useful:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib</span><span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span>:+:<span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}}</span><span class="s2">"</span>
+  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
+  <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="k">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="k">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
+
       </article>
     </div>
   </section>
-
 </div>
 
         <footer class="site-footer padding">

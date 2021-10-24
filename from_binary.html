@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Binary installation (macOS, Ubuntu)</title>
+    <title>Drake: Installation via Direct Download</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -109,17 +109,84 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Binary installation (macOS, Ubuntu)</h1>
+      <h1>Installation via Direct Download</h1>
     </div>
   </header>
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <h1 id="nightly-releases">Nightly Releases</h1>
+        <h1 id="binary-packages">Binary Packages</h1>
+
+<p>Drake publishes pre-compiled binaries as binary downloads (<code class="highlighter-rouge">*.tar.gz</code>)
+for all supported operating systems.  Refer to
+<a href="/installation.html#supported-configurations">Supported Configurations</a>
+for compatibility details.</p>
+
+<p>To learn about other installation methods, refer to
+<a href="/installation.html">Installation and Quickstart</a>.</p>
+
+<p>Drake binary releases incorporate a pre-compiled version of
+<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
+<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
+Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
+
+<h2 id="stable-releases">Stable Releases</h2>
 
 <p>Binary packages of Drake for Ubuntu 18.04 (Bionic), Ubuntu 20.04 (Focal) and
-Mac are generated nightly and are tagged <code class="highlighter-rouge">latest</code> or by <code class="highlighter-rouge">yyyymmdd</code>. Latest
-releases are available to download at:</p>
+Mac are available to download as attachments from Drake’s GitHub
+<a href="https://github.com/RobotLocomotion/drake/releases">releases</a> page.</p>
+
+<p>The most recent release is
+<a href="https://github.com/RobotLocomotion/drake/releases/tag/v0.35.0">v0.35.0</a>:</p>
+
+<ul>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v0.35.0/drake-20211021-bionic.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v0.35.0/drake-20211021-bionic.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v0.35.0/drake-20211021-focal.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v0.35.0/drake-20211021-focal.tar.gz</a></li>
+  <li><a href="https://github.com/RobotLocomotion/drake/releases/download/v0.35.0/drake-20211021-mac.tar.gz">https://github.com/RobotLocomotion/drake/releases/download/v0.35.0/drake-20211021-mac.tar.gz</a></li>
+</ul>
+
+<h3 id="use-as-a-c-library">Use as a C++ library</h3>
+
+<p>For an example of using a Drake <code class="highlighter-rouge">*.tar.gz</code> image from a CMake project, refer
+to the
+<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed">drake_cmake_installed</a>
+example.</p>
+
+<h3 id="use-as-a-python-library">Use as a Python library</h3>
+
+<p>In most cases, we suggest using our <a href="/pip.html">pip releases</a>, because that
+will be more convenient than manually downloading.  However, if you need both
+C++ and Python API support, then pip will not work.  This section shows
+how to incorporate a manual download into a
+<a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
+directory.  In the example below, we will name that directory <code class="highlighter-rouge">env</code>, but you
+can choose any name.</p>
+
+<p>Download the binary release <code class="highlighter-rouge">*.tar.gz</code> file, using one of the links above.
+In the example below, we’ll use <code class="highlighter-rouge">drake.tar.gz</code> to refer to it, but your
+download will have a more version-specific filename.</p>
+
+<p>Create and activate the envionment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir <span class="nt">-p</span> env
+<span class="nb">tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> env <span class="nt">--strip-components</span><span class="o">=</span>1
+python3 <span class="nt">-m</span> virtualenv <span class="nt">-p</span> python3 env <span class="nt">--system-site-packages</span>
+<span class="nb">source </span>env/bin/activate
+</code></pre></div></div>
+
+<p>Install dependencies within the environment:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>env/share/drake/setup/install_prereqs
+</code></pre></div></div>
+
+<p>(On Ubuntu, the script might ask to be run under <code class="highlighter-rouge">sudo</code>.)</p>
+
+<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
+
+<h2 id="nightly-releases">Nightly Releases</h2>
+
+<p>Binary packages of Drake for Ubuntu 18.04 (Bionic), Ubuntu 20.04 (Focal) and
+Mac are generated nightly and are available to download at:</p>
 
 <ul>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-bionic.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-bionic.tar.gz</a></li>
@@ -127,101 +194,18 @@ releases are available to download at:</p>
   <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-mac.tar.gz</a></li>
 </ul>
 
-<p>Releases for specific days are available as follows:
-<code class="highlighter-rouge">https://drake-packages.csail.mit.edu/drake/nightly/drake-yyyymmdd-bionic|focal|mac.tar.gz</code></p>
-
-<p>For example: <a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20191026-bionic.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20191026-bionic.tar.gz</a></p>
-
-<p>Note that Drake no longer supports Ubuntu 16.04 (Xenial), but older packages are available here:</p>
+<p>Older packages for specific dates are available by replacing <code class="highlighter-rouge">latest</code> with an
+8-digit date, e.g., <code class="highlighter-rouge">20200102</code> for January 2nd, 2020.</p>
 
 <ul>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-xenial.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-latest-xenial.tar.gz</a></li>
-  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-20191026-xenial.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-20191026-xenial.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-YYYYMMDD-bionic.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-YYYYMMDD-bionic.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-YYYYMMDD-focal.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-YYYYMMDD-focal.tar.gz</a></li>
+  <li><a href="https://drake-packages.csail.mit.edu/drake/nightly/drake-YYYYMMDD-mac.tar.gz">https://drake-packages.csail.mit.edu/drake/nightly/drake-YYYYMMDD-mac.tar.gz</a></li>
 </ul>
 
 <p>Individual packages are archived two years from their date of creation.</p>
 
-<p>Note that for release v0.30.0 and later, Ubuntu binaries require support for
-Intel’s AVX2 and FMA instruction sets which were introduced with the Haswell
-architecture in 2013 with substantial performance improvements in the Broadwell
-architecture in 2014. Drake is compiled with <code class="highlighter-rouge">-march=broadwell</code> to exploit these
-instructions (that also works for Haswell machines). Drake can be used on older
-machines if necessary by building from source with that flag removed.</p>
-
-<p>For the compilers used to produce these releases, see
-<a href="/developers.html#binary-packages">Binary Packages</a>.</p>
-
-<p>Drake binary releases incorporate a pre-compiled version of
-<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
-<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
-Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
-
-<h2 id="example-usage">Example Usage</h2>
-
-<p>An example of how to use the nightly binaries is shown in this
-<a href="https://github.com/RobotLocomotion/drake-external-examples/tree/main/drake_cmake_installed">example CMake project</a>.</p>
-
-<h2 id="binary-installation-for-python">Binary Installation for Python</h2>
-
-<p>To use Python bindings, see <a href="/python_bindings.html#installation">Binary Installation for Python</a>.</p>
-
-<h2 id="docker-images">Docker Images</h2>
-
-<p>You may also use binary releases in Docker images. See
-<a href="/docker.html">Using the Drake Docker Images From Docker Hub</a>
-for more information.</p>
-
-<h2 id="experimental-packages">Experimental Packages</h2>
-
-<p>Drake maintainers may build “experimental” packages on demand using Jenkins by
-following <a href="/jenkins.html#building-binary-packages-on-demand">these instructions</a>.</p>
-
-<h2 id="historical-note">Historical Note</h2>
-
-<p>Older releases were built around substantial MATLAB support, and are
-described on <a href="/release_notes/older_releases.html">release notes page</a>.</p>
-
-<h1 id="apt-packages-for-monthly-tagged-releases">APT Packages for Monthly Tagged Releases</h1>
-
-<p>APT packages are currently available for the Ubuntu 18.04 (Bionic) and
-Ubuntu 20.04 (Focal) operating systems on x86 64-bit architectures.</p>
-
-<h2 id="to-install-the-packages">To Install the Packages</h2>
-
-<p>To add the Drake APT repository to your machine and install the <code class="highlighter-rouge">drake-dev</code> package,
-please do the following in order:</p>
-
-<ol>
-  <li>If you are using a <a href="https://wiki.ubuntu.com/Minimal">minimal</a> cloud or
-container image, you may need to install the following packages:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
-  ca-certificates gnupg lsb-release wget
-</code></pre></div>    </div>
-  </li>
-  <li>Download a copy of the Drake GPG signing key and add it to an APT trusted keychain:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-qO-</span> https://drake-apt.csail.mit.edu/drake.asc | gpg <span class="nt">--dearmor</span> - <span class="se">\</span>
-  | <span class="nb">sudo </span>tee /etc/apt/trusted.gpg.d/drake.gpg <span class="o">&gt;</span>/dev/null
-</code></pre></div>    </div>
-  </li>
-  <li>Add the Drake repository to your APT sources list:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=amd64] https://drake-apt.csail.mit.edu/</span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2"> main"</span> <span class="se">\</span>
-  | <span class="nb">sudo </span>tee /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
-</code></pre></div>    </div>
-  </li>
-  <li>Update your local APT package index and install the <code class="highlighter-rouge">drake-dev</code> package:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> drake-dev
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p>Most content installs to <code class="highlighter-rouge">/opt/drake</code>, so setting the following environment
-variables may be useful:</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib</span><span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span>:+:<span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}}</span><span class="s2">"</span>
-  <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
-  <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="k">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="k">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
-</code></pre></div></div>
+<p>The installation instructions are identical to stable releases as shown above.</p>
 
       </article>
     </div>

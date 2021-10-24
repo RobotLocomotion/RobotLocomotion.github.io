@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Using older (2015) releases</title>
+    <title>Drake: Installation via Pip</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -107,71 +107,81 @@ analysis.
     <div class="page">
       <div class="content">
         <div class="drake-page">
-
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Using older (2015) releases</h1>
+      <h1>Installation via Pip</h1>
     </div>
   </header>
-
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <a href="/release_notes/release_notes.html">Back to Release Notes</a>
-        <hr/>
-        <p>We cannot offer support for older releases, but we still host the binaries for
-reference.</p>
+        <h1 id="pip-packages">Pip Packages</h1>
 
-<p>Download the appropriate binary release (v0.9.x) for your platform
-<a href="https://github.com/RobotLocomotion/drake/releases">https://github.com/RobotLocomotion/drake/releases</a>.
-Simply extract the archive file into a folder of your choice (mine is called <code class="highlighter-rouge">drake-distro</code>).</p>
+<p>Drake publishes pre-compiled binaries as
+<a href="https://pypi.org/project/drake/">PyPI wheel packages</a>.  Refer to
+<a href="/installation.html#supported-configurations">Supported Configurations</a>
+for additional compatibility details.</p>
 
-<p>To view the original MATLAB implementation, you may use the tag
-<a href="https://github.com/RobotLocomotion/drake/tree/last_sha_with_original_matlab">last_sha_with_original_matlab </a>.
-Note, however, that the dependencies on this branch are out of date and we do
-not expect that you will be able to easily compile/run the code, and do not
-provide support for this.</p>
+<p>To learn about other installation methods, refer to
+<a href="/installation.html">Installation and Quickstart</a>.</p>
 
-<h1 id="running-matlab-examples">Running MATLAB examples</h1>
+<!--
+TODO(#15961) The wheels do not yet incorporate SNOPT.
+Once they do, we should uncomment this paragraph:
 
-<p>To run the MATLAB examples, change directories (in MATLAB) into the <code class="highlighter-rouge">drake-distro/drake</code> folder and at the MATLAB prompt do:</p>
+Drake binary releases incorporate a pre-compiled version of
+[SNOPT](https://ccom.ucsd.edu/~optimizers/solvers/snopt/) as part of the
+[Mathematical Program toolbox](https://drake.mit.edu/doxygen_cxx/group__solvers.html).
+Thanks to Philip E. Gill and Elizabeth Wong for their kind support.
+-->
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>addpath_drake
+<h2 id="stable-releases">Stable Releases</h2>
+
+<div class="warning">
+  <p>Drake’s support for pip has only just recently been introduced (as of October
+2021), so still has some known issues (see
+<a href="https://github.com/RobotLocomotion/drake/issues/15954">issue #15954</a>).
+Please <a href="/getting_help.html">let us know</a> if you
+experience any additional problems. To fall back to other installation methods
+in the meantime, refer to <a href="/installation.html">Installation and Quickstart</a>
+for more choices.</p>
+</div>
+
+<div class="warning">
+  <p>Drake’s pip wheels are only published for CPython 3.6 and CPython 3.7 running
+on Linux.  In the future, we intend to publish additional builds.</p>
+</div>
+
+<p>We recommend installing drake into a
+<a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
+directory.  In the example below, we will name that directory <code class="highlighter-rouge">env</code>, but you
+can choose any name.</p>
+
+<p>Create a virtual environment and install Drake:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv env
+env/bin/pip install <span class="nt">--upgrade</span> pip
+env/bin/pip install drake
 </code></pre></div></div>
 
-<p>Then <code class="highlighter-rouge">cd</code> into the examples directories and try some things out.  Here are a few fun ones to get you started:</p>
+<p>Drake requires certain basic runtime libraries from the host linux distribution.</p>
 
-<ul>
-  <li><code class="highlighter-rouge">runLQR</code> in the <code class="highlighter-rouge">examples/CartPole</code> directory</li>
-  <li><code class="highlighter-rouge">runLQR</code> in the <code class="highlighter-rouge">examples/Quadrotor2D</code> directory</li>
-  <li><code class="highlighter-rouge">RimlessWheelPlant.run()</code> in the <code class="highlighter-rouge">examples/RimlessWheel</code> directory</li>
-  <li><code class="highlighter-rouge">StateMachineControl.run()</code> in the <code class="highlighter-rouge">examples/PlanarMonopodHopper</code> directory</li>
-</ul>
+<p>For Ubuntu 18.04, install these additional libraries:</p>
 
-<p>Please note that you will have to run <code class="highlighter-rouge">addpath_drake</code> each time you start MATLAB, or <a href="http://www.mathworks.com/help/matlab/ref/startup.html">add it to your startup.m</a>.</p>
-
-<h1 id="linux-specific">Linux Specific</h1>
-
-<p>The version of the standard C++ libraries that are shipped with the Linux distribution of MATLAB is severely outdated and can cause problems when running mex files that are built against a newer version of the standard.  The typical error message in this case reports <code class="highlighter-rouge">Invalid MEX-Files</code>.</p>
-
-<p>To work around this issue, the symbolic link for the standard C++ library provided by MATLAB must be redirected to point to a more up-to-date version.</p>
-
-<p>First, make sure that a suitable version of the standard library is installed:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install g++-4.4
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+  libpython3.6 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
 </code></pre></div></div>
 
-<p>Now, the symbolic link in MATLAB must be updated to point to the version that was just installed in <code class="highlighter-rouge">/usr/lib</code>.  An example for MATLAB R2014a is shown below:</p>
+<p>Activate the virtual environment:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/local/MATLAB/R2014a/sys/os/glnxa64
-sudo rm libstdc++.so.6
-sudo ln -s /usr/lib/gcc/x86_64-linux-gnu/4.4/libstdc++.so libstdc++.so.6
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source </span>env/bin/activate
 </code></pre></div></div>
+
+<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
 
       </article>
     </div>
   </section>
-
 </div>
 
         <footer class="site-footer padding">
