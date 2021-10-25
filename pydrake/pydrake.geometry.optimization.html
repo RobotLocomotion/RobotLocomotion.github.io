@@ -583,7 +583,7 @@ center (up to precision).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.Iris">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = &lt;pydrake.geometry.optimization.IrisOptions object at 0x7f064cf7b4b0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Iris</code><span class="sig-paren">(</span><em>obstacles: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], sample: numpy.ndarray[numpy.float64[m, 1]], domain: pydrake.geometry.optimization.HPolyhedron, options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, configuration_space_margin=0.01)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.Iris" title="Permalink to this definition">¶</a></dt>
 <dd><p>The IRIS (Iterative Region Inflation by Semidefinite programming)
 algorithm, as described in</p>
 <p>R. L. H. Deits and R. Tedrake, “Computing large convex regions of
@@ -625,6 +625,14 @@ positive integer).</p>
 <dt id="pydrake.geometry.optimization.IrisOptions.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.IrisOptions</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.IrisOptions.configuration_space_margin">
+<code class="descname">configuration_space_margin</code><a class="headerlink" href="#pydrake.geometry.optimization.IrisOptions.configuration_space_margin" title="Permalink to this definition">¶</a></dt>
+<dd><p>For IRIS in configuration space, we retreat by this margin from each
+C-space obstacle in order to avoid the possibility of requiring an
+infinite number of faces to approximate a curved boundary.</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.geometry.optimization.IrisOptions.iteration_limit">
