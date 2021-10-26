@@ -140,6 +140,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02a874939f6aa43e29fc929d223dfb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a02a874939f6aa43e29fc929d223dfb76">Delete</a> () const</td></tr>
 <tr class="memdesc:a02a874939f6aa43e29fc929d223dfb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Meschat::Delete(std::string path), with the path set to <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b" title="A prefix to add to the path for all objects and transforms curated by the MeshcatVisualizer.">MeshcatVisualizerParams::prefix</a>.  <a href="#a02a874939f6aa43e29fc929d223dfb76">More...</a><br /></td></tr>
 <tr class="separator:a02a874939f6aa43e29fc929d223dfb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eaa9f315b13938f997e32471313ef29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a9eaa9f315b13938f997e32471313ef29">StartRecording</a> ()</td></tr>
+<tr class="memdesc:a9eaa9f315b13938f997e32471313ef29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating that subsequent publish events should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>.  <a href="#a9eaa9f315b13938f997e32471313ef29">More...</a><br /></td></tr>
+<tr class="separator:a9eaa9f315b13938f997e32471313ef29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4e410341b1ca35649cafd7b099a1819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab4e410341b1ca35649cafd7b099a1819">StopRecording</a> ()</td></tr>
+<tr class="memdesc:ab4e410341b1ca35649cafd7b099a1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag to pause/stop recording.  <a href="#ab4e410341b1ca35649cafd7b099a1819">More...</a><br /></td></tr>
+<tr class="separator:ab4e410341b1ca35649cafd7b099a1819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86bc96da19b83ba9441d528f38f68472"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a86bc96da19b83ba9441d528f38f68472">PublishRecording</a> () const</td></tr>
+<tr class="memdesc:a86bc96da19b83ba9441d528f38f68472"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> as an animation.  <a href="#a86bc96da19b83ba9441d528f38f68472">More...</a><br /></td></tr>
+<tr class="separator:a86bc96da19b83ba9441d528f38f68472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4272f092573240b5824fbc8caa049ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aa4272f092573240b5824fbc8caa049ce">DeleteRecording</a> ()</td></tr>
+<tr class="memdesc:aa4272f092573240b5824fbc8caa049ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the current animation holding the recorded frames.  <a href="#aa4272f092573240b5824fbc8caa049ce">More...</a><br /></td></tr>
+<tr class="separator:aa4272f092573240b5824fbc8caa049ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecacb78d91811ad96f3b39a83f670179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aecacb78d91811ad96f3b39a83f670179">get_mutable_recording</a> ()</td></tr>
+<tr class="memdesc:aecacb78d91811ad96f3b39a83f670179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object in which the frames will be recorded.  <a href="#aecacb78d91811ad96f3b39a83f670179">More...</a><br /></td></tr>
+<tr class="separator:aecacb78d91811ad96f3b39a83f670179"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8fc721bcba31c5cf4c738b8f7ddc18eb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a8fc721bcba31c5cf4c738b8f7ddc18eb">query_object_input_port</a> () const</td></tr>
 <tr class="memdesc:a8fc721bcba31c5cf4c738b8f7ddc18eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the QueryObject-valued input port.  <a href="#a8fc721bcba31c5cf4c738b8f7ddc18eb">More...</a><br /></td></tr>
 <tr class="separator:a8fc721bcba31c5cf4c738b8f7ddc18eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,29 +211,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2949deb61db7903dae4c0b7cb9633fac inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a2949deb61db7903dae4c0b7cb9633fac">CalcWitnessValue</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1systems_1_1_witness_function.html">WitnessFunction</a>&lt; T &gt; &amp;witness_func) const</td></tr>
 <tr class="memdesc:a2949deb61db7903dae4c0b7cb9633fac inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a witness function at the given context.  <a href="classdrake_1_1systems_1_1_system.html#a2949deb61db7903dae4c0b7cb9633fac">More...</a><br /></td></tr>
 <tr class="separator:a2949deb61db7903dae4c0b7cb9633fac inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">DeclareCacheEntry</a> (std::string description, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a new CacheEntry in this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the most generic form of the calculation function.  <a href="classdrake_1_1systems_1_1_system.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">More...</a><br /></td></tr>
-<tr class="separator:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72cf4ad323350419dfcc5a6601fa0449 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
-<tr class="memitem:a72cf4ad323350419dfcc5a6601fa0449 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a72cf4ad323350419dfcc5a6601fa0449">DeclareCacheEntry</a> (std::string description, ValueType(MySystem::*make)() const, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a72cf4ad323350419dfcc5a6601fa0449 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#a72cf4ad323350419dfcc5a6601fa0449">More...</a><br /></td></tr>
-<tr class="separator:a72cf4ad323350419dfcc5a6601fa0449 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4076a7594095a9ca6936dd70c7254f84 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
-<tr class="memitem:a4076a7594095a9ca6936dd70c7254f84 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a4076a7594095a9ca6936dd70c7254f84">DeclareCacheEntry</a> (std::string description, const ValueType &amp;model_value, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a4076a7594095a9ca6936dd70c7254f84 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature:  <a href="classdrake_1_1systems_1_1_system.html#a4076a7594095a9ca6936dd70c7254f84">More...</a><br /></td></tr>
-<tr class="separator:a4076a7594095a9ca6936dd70c7254f84 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a690a31266a408ea23593fac8e2ea1804 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
-<tr class="memitem:a690a31266a408ea23593fac8e2ea1804 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a690a31266a408ea23593fac8e2ea1804">DeclareCacheEntry</a> (std::string description, const ValueType &amp;model_value, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a690a31266a408ea23593fac8e2ea1804 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#a690a31266a408ea23593fac8e2ea1804">More...</a><br /></td></tr>
-<tr class="separator:a690a31266a408ea23593fac8e2ea1804 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d078e4f799ae50f07ae35389352835f inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
-<tr class="memitem:a7d078e4f799ae50f07ae35389352835f inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7d078e4f799ae50f07ae35389352835f">DeclareCacheEntry</a> (std::string description, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:a7d078e4f799ae50f07ae35389352835f inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature:  <a href="classdrake_1_1systems_1_1_system.html#a7d078e4f799ae50f07ae35389352835f">More...</a><br /></td></tr>
-<tr class="separator:a7d078e4f799ae50f07ae35389352835f inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad291a98842b04b626d781e4e86e7fdfb inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
-<tr class="memitem:ad291a98842b04b626d781e4e86e7fdfb inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ad291a98842b04b626d781e4e86e7fdfb">DeclareCacheEntry</a> (std::string description, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
-<tr class="memdesc:ad291a98842b04b626d781e4e86e7fdfb inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#ad291a98842b04b626d781e4e86e7fdfb">More...</a><br /></td></tr>
-<tr class="separator:ad291a98842b04b626d781e4e86e7fdfb inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf86073429b07d388b0157956bfdbac6 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#adf86073429b07d388b0157956bfdbac6">discrete_state_ticket</a> (<a class="el" href="namespacedrake_1_1systems.html#acf2a50397e9fa764d32553cf98460ba7">DiscreteStateIndex</a> index) const</td></tr>
 <tr class="memdesc:adf86073429b07d388b0157956bfdbac6 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket indicating dependence on a particular discrete state variable xdᵢ (may be a vector).  <a href="classdrake_1_1systems_1_1_system.html#adf86073429b07d388b0157956bfdbac6">More...</a><br /></td></tr>
 <tr class="separator:adf86073429b07d388b0157956bfdbac6 inherit pub_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -606,12 +598,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b9b4fcddbedf789eb2fd5c2a931eab2"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a5b9b4fcddbedf789eb2fd5c2a931eab2">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
-<tr class="memdesc:a5b9b4fcddbedf789eb2fd5c2a931eab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a MescatVisualizer and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port.  <a href="#a5b9b4fcddbedf789eb2fd5c2a931eab2">More...</a><br /></td></tr>
-<tr class="separator:a5b9b4fcddbedf789eb2fd5c2a931eab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6d426d506829f1f5910204d1315da51"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#ad6d426d506829f1f5910204d1315da51">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;query_object_port, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
-<tr class="memdesc:ad6d426d506829f1f5910204d1315da51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a MescatVisualizer and connects it to the given QueryObject-valued output port.  <a href="#ad6d426d506829f1f5910204d1315da51">More...</a><br /></td></tr>
-<tr class="separator:ad6d426d506829f1f5910204d1315da51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a737291fe2f178eb125c8e9cb746af966"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a737291fe2f178eb125c8e9cb746af966">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;scene_graph, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
+<tr class="memdesc:a737291fe2f178eb125c8e9cb746af966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port.  <a href="#a737291fe2f178eb125c8e9cb746af966">More...</a><br /></td></tr>
+<tr class="separator:a737291fe2f178eb125c8e9cb746af966"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bfc53849f26bf84bc4556bcc0757097"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a2bfc53849f26bf84bc4556bcc0757097">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;query_object_port, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html">MeshcatVisualizerParams</a> params={})</td></tr>
+<tr class="memdesc:a2bfc53849f26bf84bc4556bcc0757097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a MescatVisualizer and connects it to the given QueryObject-valued output port.  <a href="#a2bfc53849f26bf84bc4556bcc0757097">More...</a><br /></td></tr>
+<tr class="separator:a2bfc53849f26bf84bc4556bcc0757097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1systems_1_1_system"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdrake_1_1systems_1_1_system')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_system.html">System&lt; T &gt;</a></td></tr>
 <tr class="memitem:a6fe75ddbd79ab1d862df9a50b3c8a624 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">nothing_ticket</a> ()</td></tr>
 <tr class="memdesc:a6fe75ddbd79ab1d862df9a50b3c8a624 inherit pub_static_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a ticket indicating that a computation does not depend on <em>any</em> source value; that is, it is a constant.  <a href="classdrake_1_1systems_1_1_system.html#a6fe75ddbd79ab1d862df9a50b3c8a624">More...</a><br /></td></tr>
@@ -1069,6 +1061,29 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">get_mutable_system_scalar_converter</a> ()</td></tr>
 <tr class="memdesc:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> for <code>this</code> system.  <a href="classdrake_1_1systems_1_1_system.html#a86649644cbbb5db1a63f2ef6dde59edd">More...</a><br /></td></tr>
 <tr class="separator:a86649644cbbb5db1a63f2ef6dde59edd inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">DeclareCacheEntry</a> (std::string description, <a class="el" href="classdrake_1_1systems_1_1_value_producer.html">ValueProducer</a> value_producer, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a new CacheEntry in this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a> using the most generic form of the calculation function.  <a href="classdrake_1_1systems_1_1_system.html#a7da4e8aa9a414faa5b40fc64e8ca40e3">More...</a><br /></td></tr>
+<tr class="separator:a7da4e8aa9a414faa5b40fc64e8ca40e3 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cf4ad323350419dfcc5a6601fa0449 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
+<tr class="memitem:a72cf4ad323350419dfcc5a6601fa0449 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a72cf4ad323350419dfcc5a6601fa0449">DeclareCacheEntry</a> (std::string description, ValueType(MySystem::*make)() const, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a72cf4ad323350419dfcc5a6601fa0449 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#a72cf4ad323350419dfcc5a6601fa0449">More...</a><br /></td></tr>
+<tr class="separator:a72cf4ad323350419dfcc5a6601fa0449 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4076a7594095a9ca6936dd70c7254f84 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
+<tr class="memitem:a4076a7594095a9ca6936dd70c7254f84 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a4076a7594095a9ca6936dd70c7254f84">DeclareCacheEntry</a> (std::string description, const ValueType &amp;model_value, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a4076a7594095a9ca6936dd70c7254f84 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a cache entry by specifying a model value of concrete type <code>ValueType</code> and a calculator function that is a class member function (method) with signature:  <a href="classdrake_1_1systems_1_1_system.html#a4076a7594095a9ca6936dd70c7254f84">More...</a><br /></td></tr>
+<tr class="separator:a4076a7594095a9ca6936dd70c7254f84 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690a31266a408ea23593fac8e2ea1804 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
+<tr class="memitem:a690a31266a408ea23593fac8e2ea1804 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a690a31266a408ea23593fac8e2ea1804">DeclareCacheEntry</a> (std::string description, const ValueType &amp;model_value, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a690a31266a408ea23593fac8e2ea1804 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#a690a31266a408ea23593fac8e2ea1804">More...</a><br /></td></tr>
+<tr class="separator:a690a31266a408ea23593fac8e2ea1804 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d078e4f799ae50f07ae35389352835f inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
+<tr class="memitem:a7d078e4f799ae50f07ae35389352835f inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a7d078e4f799ae50f07ae35389352835f">DeclareCacheEntry</a> (std::string description, void(MySystem::*calc)(const MyContext &amp;, ValueType *) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:a7d078e4f799ae50f07ae35389352835f inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares a cache entry by specifying only a calculator function that is a class member function (method) with signature:  <a href="classdrake_1_1systems_1_1_system.html#a7d078e4f799ae50f07ae35389352835f">More...</a><br /></td></tr>
+<tr class="separator:a7d078e4f799ae50f07ae35389352835f inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad291a98842b04b626d781e4e86e7fdfb inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplParams" colspan="2">template&lt;class MySystem , class MyContext , typename ValueType &gt; </td></tr>
+<tr class="memitem:ad291a98842b04b626d781e4e86e7fdfb inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_cache_entry.html">CacheEntry</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ad291a98842b04b626d781e4e86e7fdfb">DeclareCacheEntry</a> (std::string description, ValueType(MySystem::*calc)(const MyContext &amp;) const, std::set&lt; <a class="el" href="namespacedrake_1_1systems.html#a4dead03a05139d2c4dfc0a7042a936ee">DependencyTicket</a> &gt; prerequisites_of_calc={ <a class="el" href="classdrake_1_1systems_1_1_system_base.html#af0b9bc9f93181e042bdb2c36f4dbea10">all_sources_ticket</a>()})</td></tr>
+<tr class="memdesc:ad291a98842b04b626d781e4e86e7fdfb inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="classdrake_1_1systems_1_1_system.html#ad291a98842b04b626d781e4e86e7fdfb">More...</a><br /></td></tr>
+<tr class="separator:ad291a98842b04b626d781e4e86e7fdfb inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b849c60d9ec6bbfeac42dc3c075a02 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#aa1b849c60d9ec6bbfeac42dc3c075a02">System</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> converter)</td></tr>
 <tr class="memdesc:aa1b849c60d9ec6bbfeac42dc3c075a02 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty System base class object and allocates base class resources, possibly supporting scalar-type conversion support (AutoDiff, etc.) using <code>converter</code>.  <a href="classdrake_1_1systems_1_1_system.html#aa1b849c60d9ec6bbfeac42dc3c075a02">More...</a><br /></td></tr>
 <tr class="separator:aa1b849c60d9ec6bbfeac42dc3c075a02 inherit pro_methods_classdrake_1_1systems_1_1_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1360,8 +1375,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5b9b4fcddbedf789eb2fd5c2a931eab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b9b4fcddbedf789eb2fd5c2a931eab2">&#9670;&nbsp;</a></span>AddToBuilder() <span class="overload">[1/2]</span></h2>
+<a id="a737291fe2f178eb125c8e9cb746af966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737291fe2f178eb125c8e9cb746af966">&#9670;&nbsp;</a></span>AddToBuilder() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1370,7 +1385,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt;T&gt;&amp; AddToBuilder </td>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt;T&gt;&amp; AddToBuilder </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>builder</em>, </td>
@@ -1406,13 +1421,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a MescatVisualizer and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port. </p>
+<p>Adds a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port. </p>
 <p>See <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a163096a84f8361de8dde0c953d449e9a">MeshcatVisualizer::MeshcatVisualizer</a>(MeshcatVisualizer*, <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html" title="The set of parameters for configuring MeshcatVisualizer.">MeshcatVisualizerParams</a>) for details. </p>
 
 </div>
 </div>
-<a id="ad6d426d506829f1f5910204d1315da51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6d426d506829f1f5910204d1315da51">&#9670;&nbsp;</a></span>AddToBuilder() <span class="overload">[2/2]</span></h2>
+<a id="a2bfc53849f26bf84bc4556bcc0757097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bfc53849f26bf84bc4556bcc0757097">&#9670;&nbsp;</a></span>AddToBuilder() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1421,7 +1436,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt;T&gt;&amp; AddToBuilder </td>
+          <td class="memname">static <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html">MeshcatVisualizer</a>&lt;T&gt;&amp; AddToBuilder </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *&#160;</td>
           <td class="paramname"><em>builder</em>, </td>
@@ -1482,6 +1497,47 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="aa4272f092573240b5824fbc8caa049ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4272f092573240b5824fbc8caa049ce">&#9670;&nbsp;</a></span>DeleteRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DeleteRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes the current animation holding the recorded frames. </p>
+<p>Animation options (autoplay, repetitions, etc) will also be reset, and any pointers obtained from <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aecacb78d91811ad96f3b39a83f670179" title="Returns a mutable pointer to this MeshcatVisualizer&#39;s unique MeshcatAnimation object in which the fra...">get_mutable_recording()</a> will be rendered invalid. This does not* currently remove the animation from <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+
+</div>
+</div>
+<a id="aecacb78d91811ad96f3b39a83f670179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecacb78d91811ad96f3b39a83f670179">&#9670;&nbsp;</a></span>get_mutable_recording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a>* get_mutable_recording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable pointer to this <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a>'s unique <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object in which the frames will be recorded. </p>
+<p>This pointer can be used to set animation properties (like autoplay, the loop mode, number of repetitions, etc), and can be passed to supporting visualizers (e.g. <a class="el" href="classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html" title="MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a perception::PointCloud from its...">MeshcatPointCloudVisualizer</a> and MeshcatContactVisualizer) so that they record into the same animation.</p>
+<p>The <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a> object will only remain valid for the lifetime of <code>this</code> or until <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aa4272f092573240b5824fbc8caa049ce" title="Deletes the current animation holding the recorded frames.">DeleteRecording()</a> is called. </p>
+
+</div>
+</div>
 <a id="a7166211a5bf9db6f0ac5269c81d1427e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7166211a5bf9db6f0ac5269c81d1427e">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -1534,6 +1590,26 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a86bc96da19b83ba9441d528f38f68472"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86bc96da19b83ba9441d528f38f68472">&#9670;&nbsp;</a></span>PublishRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PublishRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends the recording to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> as an animation. </p>
+<p>The published animation only includes transforms and properties; the objects that they modify must be sent to the visualizer separately (e.g. by calling <a class="el" href="classdrake_1_1systems_1_1_system.html#a31898e0276f6bbc4edf7111f809afb01" title="This method is the public entry point for dispatching all publish event handlers.">Publish()</a>). </p>
+
+</div>
+</div>
 <a id="a8fc721bcba31c5cf4c738b8f7ddc18eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8fc721bcba31c5cf4c738b8f7ddc18eb">&#9670;&nbsp;</a></span>query_object_input_port()</h2>
 
@@ -1551,6 +1627,47 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Returns the QueryObject-valued input port. </p>
 <p>It should be connected to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a>'s QueryObject-valued output port. Failure to do so will cause a runtime error when attempting to broadcast messages. </p>
+
+</div>
+</div>
+<a id="a9eaa9f315b13938f997e32471313ef29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eaa9f315b13938f997e32471313ef29">&#9670;&nbsp;</a></span>StartRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a>* StartRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a flag indicating that subsequent publish events should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>. </p>
+<p>The data in these events will be combined with any frames previously added to the animation; if the same transform/property is set at the same time, then it will overwrite the existing frame in the animation. Frames are added at the index <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html#abef5586ed551fb5d4ff06983a94dfde7" title="Uses the frame rate to convert from time to the frame number, using std::floor.">MeshcatAnimation::frame</a>(context.get_time()).</p>
+<dl class="section return"><dt>Returns</dt><dd>a mutable pointer to the current recording. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aecacb78d91811ad96f3b39a83f670179" title="Returns a mutable pointer to this MeshcatVisualizer&#39;s unique MeshcatAnimation object in which the fra...">get_mutable_recording()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="ab4e410341b1ca35649cafd7b099a1819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4e410341b1ca35649cafd7b099a1819">&#9670;&nbsp;</a></span>StopRecording()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StopRecording </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a flag to pause/stop recording. </p>
+<p>When stopped, publish events will not add frames to the animation. </p>
 
 </div>
 </div>

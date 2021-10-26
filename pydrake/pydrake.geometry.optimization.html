@@ -350,6 +350,433 @@ the SceneGraph geometry ecosystem.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">GraphOfConvexSets</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Experimental) – This class is not yet fully functional, and the
+interface may change without deprecation.</p>
+<p>GraphOfConvexSets implements the design pattern and optimization
+problems first introduced in</p>
+<p>“Shortest Paths in Graphs of Convex Sets” by Tobia Marcucci, Jack
+Umenberger, Pablo A. Parrilo, Russ Tedrake.
+<a class="reference external" href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
+<p>Each vertex in the graph is associated with a convex set over
+continuous variables, edges in the graph contain convex costs and
+constraints on these continuous variables. We can then formulate
+optimization problems over this graph, such as the shortest path
+problem where each visit to a vertex also corresponds to selecting an
+element from the convex set subject to the costs and constraints.
+Behind the scenes, we construct efficient mixed-integer convex
+transcriptions of the graph problem using MathematicalProgram.</p>
+<p>Design note: This class avoids providing any direct access to the
+MathematicalProgram that it constructs nor to the decision variables /
+constraints. The users should be able to write constraints against
+“placeholder” decision variables on the vertices and edges, but these
+get translated in non-trivial ways to the underlying program.</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an empty graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.AddEdge">
+<code class="descname">AddEdge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, v_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, name: str = ‘’) -&gt; drake::geometry::optimization::GraphOfConvexSets::Edge</li>
+</ol>
+<p>Adds an edge to the graph from VertexId <code class="docutils literal"><span class="pre">u_id</span></code> to VertexId <code class="docutils literal"><span class="pre">v_id</span></code>.
+The ids must refer to valid vertices in this graph. If <code class="docutils literal"><span class="pre">name</span></code> is
+empty then a default name will be provided.</p>
+<ol class="arabic simple" start="2">
+<li>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u: drake::geometry::optimization::GraphOfConvexSets::Vertex, v: drake::geometry::optimization::GraphOfConvexSets::Vertex, name: str = ‘’) -&gt; drake::geometry::optimization::GraphOfConvexSets::Edge</li>
+</ol>
+<p>Adds an edge to the graph from Vertex <code class="docutils literal"><span class="pre">u</span></code> to Vertex <code class="docutils literal"><span class="pre">v</span></code>. The
+vertex references must refer to valid vertices in this graph. If
+<code class="docutils literal"><span class="pre">name</span></code> is empty then a default name will be provided.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.AddVertex">
+<code class="descname">AddVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em>, <em>set: pydrake.geometry.optimization.ConvexSet</em>, <em>name: str = ''</em><span class="sig-paren">)</span> &#x2192; drake::geometry::optimization::GraphOfConvexSets::Vertex<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a vertex to the graph. A copy of <code class="docutils literal"><span class="pre">set</span></code> is cloned and stored
+inside the graph. If <code class="docutils literal"><span class="pre">name</span></code> is empty then a default name will be
+provided.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge">
+<em class="property">class </em><code class="descname">Edge</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>An edge in the graph connects between vertex <code class="docutils literal"><span class="pre">u</span></code> and vertex <code class="docutils literal"><span class="pre">v</span></code>.
+The edge also holds a list of cost and constraints associated with the
+continuous variables.</p>
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddConstraint">
+<code class="descname">AddConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, f: pydrake.symbolic.Formula) -&gt; drake::solvers::Binding&lt;drake::solvers::Constraint&gt;</li>
+</ol>
+<p>Adds a cost to this edge, described by a symbolic::Formula <code class="docutils literal"><span class="pre">f</span></code>
+containing <em>only</em> elements of xu() and xv() as variables.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if f.GetFreeVariables() is not a subset of xu() ∪</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">xv().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: drake::solvers::Binding&lt;drake::solvers::Constraint&gt;) -&gt; drake::solvers::Binding&lt;drake::solvers::Constraint&gt;</li>
+</ol>
+<p>Adds a cost to this edge. <code class="docutils literal"><span class="pre">binding</span></code> must contain <em>only</em> elements of
+xu() and xv() as variables. For technical reasons relating to being
+able to “turn-off” the cost on inactive edges, all costs are
+eventually implemented with a slack variable and a constraint:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the pair &lt;ℓ, Binding&lt;Cost&gt;&gt;.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if binding.variables() is not a subset of xu() ∪</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">xv().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddCost">
+<code class="descname">AddCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression) -&gt; Tuple[pydrake.symbolic.Variable, drake::solvers::Binding&lt;drake::solvers::Cost&gt;]</li>
+</ol>
+<p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal"><span class="pre">e</span></code>
+containing <em>only</em> elements of xu() and xv() as variables. For
+technical reasons relating to being able to “turn-off” the cost on
+inactive edges, all costs are eventually implemented with a slack
+variable and a constraint:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the pair &lt;ℓ, Binding&lt;Cost&gt;&gt;.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if e.GetVariables() is not a subset of xu() ∪ xv().</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: drake::solvers::Binding&lt;drake::solvers::Cost&gt;) -&gt; Tuple[pydrake.symbolic.Variable, drake::solvers::Binding&lt;drake::solvers::Cost&gt;]</li>
+</ol>
+<p>Adds a cost to this edge. <code class="docutils literal"><span class="pre">binding</span></code> must contain <em>only</em> elements of
+xu() and xv() as variables. For technical reasons relating to being
+able to “turn-off” the cost on inactive edges, all costs are
+eventually implemented with a slack variable and a constraint:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+</pre></div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the pair &lt;ℓ, Binding&lt;Cost&gt;&gt;.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if binding.variables() is not a subset of xu() ∪</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">xv().</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddPhiConstraint">
+<code class="descname">AddPhiConstraint</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>phi_value: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.AddPhiConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a constraint on the binary variable associated with this edge.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We intentionally do not return a binding to the constraint created
+by this call, as that would allow the caller to make nonsensical
+modifications to its bounds (i.e. requiring phi == 0.5).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.ClearPhiConstraints">
+<code class="descname">ClearPhiConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.ClearPhiConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes any constraints added with AddPhiConstraint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost">
+<code class="descname">GetSolutionCost</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the sum of the costs associated with this edge in a
+MathematicalProgramResult.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.id">
+<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.GraphOfConvexSets.EdgeId<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unique identifier associated with this Edge.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.name">
+<code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string name associated with this edge.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.phi">
+<code class="descname">phi</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variable<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.phi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the binary variable associated with this edge. It can be used
+to determine whether this edge was active in the solution to an
+optimization problem, by calling GetSolution(phi()) on a returned
+MathematicalProgramResult.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.u">
+<code class="descname">u</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.GraphOfConvexSets.Vertex<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.u" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the “left” Vertex that this edge connects
+to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.v">
+<code class="descname">v</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.GraphOfConvexSets.Vertex<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.v" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the “right” Vertex that this edge
+connects to.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.xu">
+<code class="descname">xu</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.xu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the continuous decision variables associated with vertex
+<code class="docutils literal"><span class="pre">u</span></code>. This can be used for constructing symbolic::Expression costs
+and constraints.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.xv">
+<code class="descname">xv</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.xv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the continuous decision variables associated with vertex
+<code class="docutils literal"><span class="pre">v</span></code>. This can be used for constructing symbolic::Expression costs
+and constraints.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.EdgeId">
+<em class="property">class </em><code class="descname">EdgeId</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.get_new_id">
+<em class="property">static </em><code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.GraphOfConvexSets.EdgeId<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.EdgeId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.EdgeId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.EdgeId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edges">
+<code class="descname">Edges</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; Set[drake::geometry::optimization::GraphOfConvexSets::Edge]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns pointers to the edges stored in the graph. Note that the order
+of the elements is not guaranteed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath">
+<code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, convex_relaxation: bool = False) -&gt; drake::solvers::MathematicalProgramResult</li>
+</ol>
+<p>Formulates and solves the mixed-integer convex formulation of the
+shortest path problem on the graph, as discussed in detail in</p>
+<p>“Shortest Paths in Graphs of Convex Sets” by Tobia Marcucci, Jack
+Umenberger, Pablo A. Parrilo, Russ Tedrake.
+<a class="reference external" href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">source</span></code>:</dt>
+<dd>specifies the source set. The solver will choose any point in that
+set; to start at a particular continuous state consider adding a
+Point set to the graph and using that as the source.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">target</span></code>:</dt>
+<dd>specifies the target set. The solver will choose any point in that
+set.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">convex_relaxation</span></code>:</dt>
+<dd>will solve the relaxed version of the problem. As discussed in the
+paper, we know that this relaxation cannot solve the original
+NP-hard problem for all instances, but there are also many
+instances for which the convex relaxation is tight.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if any of the costs or constraints in the graph are</li>
+<li>incompatible with the shortest path formulation or otherwise</li>
+<li>unsupported. All costs must be non-negative (for all values of the</li>
+<li>continuous variables).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, convex_relaxation: bool = False) -&gt; drake::solvers::MathematicalProgramResult</li>
+</ol>
+<p>Convenience overload that takes const reference arguments for source
+and target.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex">
+<em class="property">class </em><code class="descname">Vertex</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each vertex in the graph has a corresponding ConvexSet, and a
+std::string name.</p>
+<dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.ambient_dimension">
+<code class="descname">ambient_dimension</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.ambient_dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ambient dimension of the ConvexSet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution">
+<code class="descname">GetSolution</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.GetSolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the solution of x() in a MathematicalProgramResult.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.id">
+<code class="descname">id</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.GraphOfConvexSets.VertexId<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unique identifier associated with this Vertex.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.name">
+<code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of the vertex.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the underlying ConvexSet.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertex.x">
+<code class="descname">x</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Vertex</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertex.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a decision variable corresponding to an element of the
+ConvexSet, which can be used for constructing symbolic::Expression
+costs and constraints.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexId">
+<em class="property">class </em><code class="descname">VertexId</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexId" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexId.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexId.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexId.get_new_id">
+<em class="property">static </em><code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.GraphOfConvexSets.VertexId<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexId.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a new identifier for this id type. This new identifier will
+be different from all previous identifiers created. This method does
+<em>not</em> make any guarantees about the values of ids from successive
+invocations. This method is guaranteed to be thread safe.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexId.get_value">
+<code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.VertexId</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexId.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts the underlying representation from the identifier. This is
+considered invalid for invalid ids and is strictly enforced in Debug
+builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexId.is_valid">
+<code class="descname">is_valid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.VertexId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexId.is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports if the id is valid.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexIds">
+<code class="descname">VertexIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; Set[drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexIds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the VertexIds of the vertices stored in the graph. Note that
+the order of the elements is not guaranteed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.geometry.optimization.HPolyhedron">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">HPolyhedron</code><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>

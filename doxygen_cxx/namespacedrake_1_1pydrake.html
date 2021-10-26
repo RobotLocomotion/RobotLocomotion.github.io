@@ -208,6 +208,10 @@ Functions</h2></td></tr>
 <tr class="memitem:af5f81d7315477aaa1694d9aa02a1346b"><td class="memItemLeft" align="right" valign="top">py::object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#af5f81d7315477aaa1694d9aa02a1346b">WrapToMatchInputShape</a> (py::handle func)</td></tr>
 <tr class="memdesc:af5f81d7315477aaa1694d9aa02a1346b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps a overload instance method to reshape the output to be the same as a given input argument.  <a href="#af5f81d7315477aaa1694d9aa02a1346b">More...</a><br /></td></tr>
 <tr class="separator:af5f81d7315477aaa1694d9aa02a1346b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3791768bef1f65b7d83bcd7767e0b307"><td class="memTemplParams" colspan="2">template&lt;typename Class , typename ModuleOrClass &gt; </td></tr>
+<tr class="memitem:a3791768bef1f65b7d83bcd7767e0b307"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a3791768bef1f65b7d83bcd7767e0b307">BindIdentifier</a> (ModuleOrClass m, const std::string &amp;name, const char *id_doc)</td></tr>
+<tr class="memdesc:a3791768bef1f65b7d83bcd7767e0b307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an <a class="el" href="classdrake_1_1_identifier.html" title="A simple identifier class.">Identifier</a> instantiation.  <a href="#a3791768bef1f65b7d83bcd7767e0b307">More...</a><br /></td></tr>
+<tr class="separator:a3791768bef1f65b7d83bcd7767e0b307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a236143263d0a18d6ec439f707140d7e1"><td class="memTemplParams" colspan="2">template&lt;typename Class &gt; </td></tr>
 <tr class="memitem:a236143263d0a18d6ec439f707140d7e1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a236143263d0a18d6ec439f707140d7e1">BindTypeSafeIndex</a> (py::module m, const std::string &amp;name, const std::string &amp;class_doc=&quot;&quot;)</td></tr>
 <tr class="memdesc:a236143263d0a18d6ec439f707140d7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a <a class="el" href="classdrake_1_1_type_safe_index.html" title="A type-safe non-negative index class.">TypeSafeIndex</a> instantiation.  <a href="#a236143263d0a18d6ec439f707140d7e1">More...</a><br /></td></tr>
@@ -576,6 +580,42 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the registered Python type. </dd></dl>
+
+</div>
+</div>
+<a id="a3791768bef1f65b7d83bcd7767e0b307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3791768bef1f65b7d83bcd7767e0b307">&#9670;&nbsp;</a></span>BindIdentifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::pydrake::BindIdentifier </td>
+          <td>(</td>
+          <td class="paramtype">ModuleOrClass&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id_doc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Binds an <a class="el" href="classdrake_1_1_identifier.html" title="A simple identifier class.">Identifier</a> instantiation. </p>
 
 </div>
 </div>

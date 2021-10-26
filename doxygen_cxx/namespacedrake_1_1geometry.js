@@ -28,6 +28,7 @@ var namespacedrake_1_1geometry =
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", "classdrake_1_1geometry_1_1_meshcat" ],
     [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", "classdrake_1_1geometry_1_1_meshcat_animation" ],
     [ "MeshcatCone", "classdrake_1_1geometry_1_1_meshcat_cone.html", "classdrake_1_1geometry_1_1_meshcat_cone" ],
+    [ "MeshcatPointCloudVisualizer", "classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html", "classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer" ],
     [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html", "classdrake_1_1geometry_1_1_meshcat_visualizer" ],
     [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", "structdrake_1_1geometry_1_1_meshcat_visualizer_params" ],
     [ "MeshFieldLinear", "classdrake_1_1geometry_1_1_mesh_field_linear.html", "classdrake_1_1geometry_1_1_mesh_field_linear" ],

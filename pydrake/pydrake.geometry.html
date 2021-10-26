@@ -3518,7 +3518,11 @@ played back.</dd>
 <dt id="pydrake.geometry.MeshcatAnimation.frame">
 <code class="descname">frame</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatAnimation</em>, <em>time_from_start: float</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.MeshcatAnimation.frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uses the frame rate to convert from time to the frame number, using
-std::round. <code class="docutils literal"><span class="pre">time_from_start</span></code> must be non-negative.</p>
+std::floor.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">time</span></code> ≥ start_time().</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3806,6 +3810,216 @@ in any renderings, proximity queries, or other visualizers.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatPointCloudVisualizerCpp</code><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]" title="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_">
+<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatPointCloudVisualizerCpp_</code><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]" title="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]"><code class="xref py py-class docutils literal"><span class="pre">MeshcatPointCloudVisualizerCpp_[float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]" title="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">MeshcatPointCloudVisualizerCpp_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float]">
+<em class="property">class </em><code class="descname">MeshcatPointCloudVisualizerCpp_[float]</code><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a
+perception::PointCloud from its input port to Meshcat.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">cloud&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_ParentCloud (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The PointCloud on the <code class="docutils literal"><span class="pre">cloud</span></code> input port must have XYZ values. RGB
+values are optional. The optional input port <code class="docutils literal"><span class="pre">X_ParentCloud</span></code> sets
+the MeshcatTransform at the path representing the <code class="docutils literal"><span class="pre">cloud</span></code>. If it is
+not connected, then we set <code class="docutils literal"><span class="pre">X_ParentCloud</span></code> to the identity
+transform.
+Note that we are temporarily re-mapping MeshcatPointCloudVisualizer =&gt;
+MeshcatPointCloudVisualizerCpp to avoid collisions with the python
+MeshcatPointCloudVisualizer.  See #13038.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, path: str, publish_period: float = 0.03125</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatPointCloudVisualizer</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>is a shared Meshcat instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>is the Meshcat path (see meshcat_path)</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>is the duration (in simulation seconds) between updates sent to
+the visualizer. It must be non-negative.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].cloud_input_port">
+<code class="descname">cloud_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].cloud_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the RigidTransform-valued input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Meschat::Delete(path), where <code class="docutils literal"><span class="pre">path</span></code> is the value passed in the
+constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].pose_input_port">
+<code class="descname">pose_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].pose_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the PointCloud-valued input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].set_default_rgba">
+<code class="descname">set_default_rgba</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float], arg0: pydrake.geometry.Rgba</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].set_default_rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default color, which is applied to all points only if
+<code class="docutils literal"><span class="pre">has_rgbs()</span> <span class="pre">==</span> <span class="pre">false</span></code> for the cloud on the input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].set_point_size">
+<code class="descname">set_point_size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_.MeshcatPointCloudVisualizerCpp_[float].set_point_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the size of each point in the cloud. The default is 0.001. The
+units are undocumented in threejs
+(<a class="reference external" href="https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial.size">https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial.size</a>),
+but we believe they are in meters.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatPointCloudVisualizerCpp_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a
+perception::PointCloud from its input port to Meshcat.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">cloud&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_ParentCloud (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The PointCloud on the <code class="docutils literal"><span class="pre">cloud</span></code> input port must have XYZ values. RGB
+values are optional. The optional input port <code class="docutils literal"><span class="pre">X_ParentCloud</span></code> sets
+the MeshcatTransform at the path representing the <code class="docutils literal"><span class="pre">cloud</span></code>. If it is
+not connected, then we set <code class="docutils literal"><span class="pre">X_ParentCloud</span></code> to the identity
+transform.
+Note that we are temporarily re-mapping MeshcatPointCloudVisualizer =&gt;
+MeshcatPointCloudVisualizerCpp to avoid collisions with the python
+MeshcatPointCloudVisualizer.  See #13038.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, path: str, publish_period: float = 0.03125</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatPointCloudVisualizer</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>is a shared Meshcat instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>is the Meshcat path (see meshcat_path)</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>is the duration (in simulation seconds) between updates sent to
+the visualizer. It must be non-negative.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].cloud_input_port">
+<code class="descname">cloud_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].cloud_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the RigidTransform-valued input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Meschat::Delete(path), where <code class="docutils literal"><span class="pre">path</span></code> is the value passed in the
+constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].pose_input_port">
+<code class="descname">pose_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].pose_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the PointCloud-valued input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].set_default_rgba">
+<code class="descname">set_default_rgba</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd], arg0: pydrake.geometry.Rgba</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].set_default_rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default color, which is applied to all points only if
+<code class="docutils literal"><span class="pre">has_rgbs()</span> <span class="pre">==</span> <span class="pre">false</span></code> for the cloud on the input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].set_point_size">
+<code class="descname">set_point_size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[AutoDiffXd].set_point_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the size of each point in the cloud. The default is 0.001. The
+units are undocumented in threejs
+(<a class="reference external" href="https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial.size">https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial.size</a>),
+but we believe they are in meters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatPointCloudVisualizerCpp_[float]</code><a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a
+perception::PointCloud from its input port to Meshcat.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">cloud&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">X_ParentCloud (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MeshcatPointCloudVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>The PointCloud on the <code class="docutils literal"><span class="pre">cloud</span></code> input port must have XYZ values. RGB
+values are optional. The optional input port <code class="docutils literal"><span class="pre">X_ParentCloud</span></code> sets
+the MeshcatTransform at the path representing the <code class="docutils literal"><span class="pre">cloud</span></code>. If it is
+not connected, then we set <code class="docutils literal"><span class="pre">X_ParentCloud</span></code> to the identity
+transform.
+Note that we are temporarily re-mapping MeshcatPointCloudVisualizer =&gt;
+MeshcatPointCloudVisualizerCpp to avoid collisions with the python
+MeshcatPointCloudVisualizer.  See #13038.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, path: str, publish_period: float = 0.03125</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance of MeshcatPointCloudVisualizer</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>is a shared Meshcat instance.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>is the Meshcat path (see meshcat_path)</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">publish_period</span></code>:</dt>
+<dd>is the duration (in simulation seconds) between updates sent to
+the visualizer. It must be non-negative.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].cloud_input_port">
+<code class="descname">cloud_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].cloud_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the RigidTransform-valued input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls Meschat::Delete(path), where <code class="docutils literal"><span class="pre">path</span></code> is the value passed in the
+constructor.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].pose_input_port">
+<code class="descname">pose_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].pose_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the PointCloud-valued input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].set_default_rgba">
+<code class="descname">set_default_rgba</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float], arg0: pydrake.geometry.Rgba</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].set_default_rgba" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the default color, which is applied to all points only if
+<code class="docutils literal"><span class="pre">has_rgbs()</span> <span class="pre">==</span> <span class="pre">false</span></code> for the cloud on the input port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].set_point_size">
+<code class="descname">set_point_size</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatPointCloudVisualizerCpp_[float].set_point_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the size of each point in the cloud. The default is 0.001. The
+units are undocumented in threejs
+(<a class="reference external" href="https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial.size">https://threejs.org/docs/index.html?q=PointsMaterial#api/en/materials/PointsMaterial.size</a>),
+but we believe they are in meters.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatVisualizerCpp</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp" title="Permalink to this definition">¶</a></dt>
 <dd><p>alias of <a class="reference internal" href="#pydrake.geometry.MeshcatVisualizerCpp_[float]" title="pydrake.geometry.MeshcatVisualizerCpp_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.MeshcatVisualizerCpp_[float]</span></code></a></p>
@@ -3834,7 +4048,10 @@ configured to visualize geometries with other roles. Only one role can
 be specified. See DrakeVisualizer which uses the same mechanisms for
 more details.</p>
 <p>Instances of MeshcatVisualizer created by scalar-conversion will
-publish to the same Meshcat instance.</p>
+publish to the same Meshcat instance.
+Note that we are temporarily re-mapping MeshcatVisualizer =&gt;
+MeshcatVisualizerCpp to avoid collisions with the python
+MeshcatVisualizer.  See #13038.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=visualizer, delete_on_initialization_event=True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -3865,7 +4082,7 @@ the lifetime of the object.</dd>
 <ol class="arabic simple">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=visualizer, delete_on_initialization_event=True) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
-<p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
+<p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
@@ -3891,11 +4108,69 @@ this should be called on initialization.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].DeleteRecording">
+<code class="descname">DeleteRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].DeleteRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the current animation holding the recorded frames. Animation
+options (autoplay, repetitions, etc) will also be reset, and any
+pointers obtained from get_mutable_recording() will be rendered
+invalid. This does not* currently remove the animation from Meshcat.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].get_mutable_recording">
+<code class="descname">get_mutable_recording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.MeshcatAnimation<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].get_mutable_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable pointer to this MeshcatVisualizer’s unique
+MeshcatAnimation object in which the frames will be recorded. This
+pointer can be used to set animation properties (like autoplay, the
+loop mode, number of repetitions, etc), and can be passed to
+supporting visualizers (e.g. MeshcatPointCloudVisualizer and
+MeshcatContactVisualizer) so that they record into the same animation.</p>
+<p>The MeshcatAnimation object will only remain valid for the lifetime of
+<code class="docutils literal"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].PublishRecording">
+<code class="descname">PublishRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].PublishRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends the recording to Meshcat as an animation. The published
+animation only includes transforms and properties; the objects that
+they modify must be sent to the visualizer separately (e.g. by calling
+Publish()).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].query_object_input_port">
 <code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].query_object_input_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the QueryObject-valued input port. It should be connected to
 SceneGraph’s QueryObject-valued output port. Failure to do so will
 cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].StartRecording">
+<code class="descname">StartRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.MeshcatAnimation<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].StartRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag indicating that subsequent publish events should also be
+“recorded” into a MeshcatAnimation. The data in these events will be
+combined with any frames previously added to the animation; if the
+same transform/property is set at the same time, then it will
+overwrite the existing frame in the animation. Frames are added at the
+index MeshcatAnimation::frame(context.get_time()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a mutable pointer to the current recording. See
+get_mutable_recording().</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].StopRecording">
+<code class="descname">StopRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_.MeshcatVisualizerCpp_[float].StopRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag to pause/stop recording. When stopped, publish events will
+not add frames to the animation.</p>
 </dd></dl>
 
 </dd></dl>
@@ -3921,7 +4196,10 @@ configured to visualize geometries with other roles. Only one role can
 be specified. See DrakeVisualizer which uses the same mechanisms for
 more details.</p>
 <p>Instances of MeshcatVisualizer created by scalar-conversion will
-publish to the same Meshcat instance.</p>
+publish to the same Meshcat instance.
+Note that we are temporarily re-mapping MeshcatVisualizer =&gt;
+MeshcatVisualizerCpp to avoid collisions with the python
+MeshcatVisualizer.  See #13038.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=visualizer, delete_on_initialization_event=True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
@@ -3952,7 +4230,7 @@ the lifetime of the object.</dd>
 <ol class="arabic simple">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=visualizer, delete_on_initialization_event=True) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</li>
 </ol>
-<p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
+<p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
@@ -3978,11 +4256,69 @@ this should be called on initialization.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].DeleteRecording">
+<code class="descname">DeleteRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].DeleteRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the current animation holding the recorded frames. Animation
+options (autoplay, repetitions, etc) will also be reset, and any
+pointers obtained from get_mutable_recording() will be rendered
+invalid. This does not* currently remove the animation from Meshcat.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].get_mutable_recording">
+<code class="descname">get_mutable_recording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.MeshcatAnimation<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].get_mutable_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable pointer to this MeshcatVisualizer’s unique
+MeshcatAnimation object in which the frames will be recorded. This
+pointer can be used to set animation properties (like autoplay, the
+loop mode, number of repetitions, etc), and can be passed to
+supporting visualizers (e.g. MeshcatPointCloudVisualizer and
+MeshcatContactVisualizer) so that they record into the same animation.</p>
+<p>The MeshcatAnimation object will only remain valid for the lifetime of
+<code class="docutils literal"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].PublishRecording">
+<code class="descname">PublishRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].PublishRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends the recording to Meshcat as an animation. The published
+animation only includes transforms and properties; the objects that
+they modify must be sent to the visualizer separately (e.g. by calling
+Publish()).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].query_object_input_port">
 <code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].query_object_input_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the QueryObject-valued input port. It should be connected to
 SceneGraph’s QueryObject-valued output port. Failure to do so will
 cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].StartRecording">
+<code class="descname">StartRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.MeshcatAnimation<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].StartRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag indicating that subsequent publish events should also be
+“recorded” into a MeshcatAnimation. The data in these events will be
+combined with any frames previously added to the animation; if the
+same transform/property is set at the same time, then it will
+overwrite the existing frame in the animation. Frames are added at the
+index MeshcatAnimation::frame(context.get_time()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a mutable pointer to the current recording. See
+get_mutable_recording().</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].StopRecording">
+<code class="descname">StopRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[AutoDiffXd].StopRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag to pause/stop recording. When stopped, publish events will
+not add frames to the animation.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4006,7 +4342,10 @@ configured to visualize geometries with other roles. Only one role can
 be specified. See DrakeVisualizer which uses the same mechanisms for
 more details.</p>
 <p>Instances of MeshcatVisualizer created by scalar-conversion will
-publish to the same Meshcat instance.</p>
+publish to the same Meshcat instance.
+Note that we are temporarily re-mapping MeshcatVisualizer =&gt;
+MeshcatVisualizerCpp to avoid collisions with the python
+MeshcatVisualizer.  See #13038.</p>
 <dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=visualizer, delete_on_initialization_event=True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4037,7 +4376,7 @@ the lifetime of the object.</dd>
 <ol class="arabic simple">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], scene_graph: pydrake.geometry.SceneGraph_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatVisualizerParams = MeshcatVisualizerParams(publish_period=0.015625, role=Role.kIllustration, default_color=Rgba(r=0.9, g=0.9, b=0.9, a=1.0), prefix=visualizer, delete_on_initialization_event=True) -&gt; pydrake.geometry.MeshcatVisualizerCpp_[float]</li>
 </ol>
-<p>Adds a MescatVisualizer and connects it to the given SceneGraph’s
+<p>Adds a MeshcatVisualizer and connects it to the given SceneGraph’s
 QueryObject-valued output port. See
 MeshcatVisualizer::MeshcatVisualizer(MeshcatVisualizer*,
 MeshcatVisualizerParams) for details.</p>
@@ -4063,11 +4402,69 @@ this should be called on initialization.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].DeleteRecording">
+<code class="descname">DeleteRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].DeleteRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the current animation holding the recorded frames. Animation
+options (autoplay, repetitions, etc) will also be reset, and any
+pointers obtained from get_mutable_recording() will be rendered
+invalid. This does not* currently remove the animation from Meshcat.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].get_mutable_recording">
+<code class="descname">get_mutable_recording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.MeshcatAnimation<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].get_mutable_recording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a mutable pointer to this MeshcatVisualizer’s unique
+MeshcatAnimation object in which the frames will be recorded. This
+pointer can be used to set animation properties (like autoplay, the
+loop mode, number of repetitions, etc), and can be passed to
+supporting visualizers (e.g. MeshcatPointCloudVisualizer and
+MeshcatContactVisualizer) so that they record into the same animation.</p>
+<p>The MeshcatAnimation object will only remain valid for the lifetime of
+<code class="docutils literal"><span class="pre">this</span></code> or until DeleteRecording() is called.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].PublishRecording">
+<code class="descname">PublishRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].PublishRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends the recording to Meshcat as an animation. The published
+animation only includes transforms and properties; the objects that
+they modify must be sent to the visualizer separately (e.g. by calling
+Publish()).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].query_object_input_port">
 <code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].query_object_input_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the QueryObject-valued input port. It should be connected to
 SceneGraph’s QueryObject-valued output port. Failure to do so will
 cause a runtime error when attempting to broadcast messages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].StartRecording">
+<code class="descname">StartRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.MeshcatAnimation<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].StartRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag indicating that subsequent publish events should also be
+“recorded” into a MeshcatAnimation. The data in these events will be
+combined with any frames previously added to the animation; if the
+same transform/property is set at the same time, then it will
+overwrite the existing frame in the animation. Frames are added at the
+index MeshcatAnimation::frame(context.get_time()).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a mutable pointer to the current recording. See
+get_mutable_recording().</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatVisualizerCpp_[float].StopRecording">
+<code class="descname">StopRecording</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatVisualizerCpp_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerCpp_[float].StopRecording" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a flag to pause/stop recording. When stopped, publish events will
+not add frames to the animation.</p>
 </dd></dl>
 
 </dd></dl>

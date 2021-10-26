@@ -563,7 +563,8 @@ that doesn’t throw an exception in Debug builds.</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.Context_.Context_[float]">
 <em class="property">class </em><code class="descname">Context_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Context is an abstract class template that represents all the typed
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
 type-erased abstract state variables, abstract-valued input ports,
@@ -594,50 +595,6 @@ details, see system_compatibility.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].DisableCaching">
-<code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].DisableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Caching is enabled by default. Disabling forces every
-<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
-the cached one. Results should be identical with or without caching,
-except for performance. If they are not, there is likely a problem
-with (a) the specified dependencies for some calculation, or (b) a
-misuse of references into cached values that hides modifications from
-the caching system, or (c) a bug in the caching system. The
-<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
-which continue to be maintained even when caching is disabled (though
-they are ignored). Caching can be re-enabled using EnableCaching().</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].EnableCaching">
-<code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].EnableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. Caching is enabled by default but may have been
-disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
-independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
-maintained even when caching is disabled (though they are ignored).
-Hence re-enabling the cache with this method may result in some
-entries being already considered up to date. See
-SetAllCacheEntriesOutOfDate() if you want to ensure that caching
-restarts with everything out of date. You might want to do that, for
-example, for repeatability or because you modified something in the
-debugger and want to make sure it gets used.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].FreezeCache">
-<code class="descname">FreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].FreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Freezes the cache at its current contents, preventing any
-further cache updates. When frozen, accessing an out-of-date cache
-entry causes an exception to be throw. This is applied recursively to
-this Context and all its subcontexts, but <em>not</em> to its parent or
-siblings so it is most useful when called on the root Context. If the
-cache was already frozen this method does nothing but waste a little
-time.</p>
 </dd></dl>
 
 <dl class="method">
@@ -914,14 +871,6 @@ abstract state.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].is_cache_frozen">
-<code class="descname">is_cache_frozen</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].is_cache_frozen" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Reports whether this Context’s cache is currently frozen.
-This checks only locally; it is possible that parent, child, or
-sibling subcontext caches are in a different state than this one.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_.Context_[float].is_stateless">
 <code class="descname">is_stateless</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].is_stateless" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the Context has no state.</p>
@@ -952,21 +901,9 @@ sibling subcontext caches are in a different state than this one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].num_input_ports">
-<code class="descname">num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].num_input_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of input ports in this context.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_.Context_[float].num_numeric_parameter_groups">
 <code class="descname">num_numeric_parameter_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].num_numeric_parameter_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of vector-valued parameters.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].num_output_ports">
-<code class="descname">num_output_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].num_output_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of output ports represented in this context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1047,19 +984,6 @@ out of date when the accuracy setting changes.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].SetAllCacheEntriesOutOfDate">
-<code class="descname">SetAllCacheEntriesOutOfDate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].SetAllCacheEntriesOutOfDate" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Marks all cache entries out of date, recursively for this
-context and all its subcontexts. This forces the next <code class="docutils literal"><span class="pre">Eval()</span></code>
-request for each cache entry to perform a full calculation rather than
-returning the cached one. After that first recalculation, normal
-caching behavior resumes (assuming the cache is not disabled). Results
-should be identical whether this is called or not, since the caching
-system should be maintaining this flag correctly. If they are not, see
-the documentation for SetIsCacheDisabled() for suggestions.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1222,15 +1146,6 @@ parameters to a non-root context.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_.Context_[float].UnfreezeCache">
-<code class="descname">UnfreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_.Context_[float].UnfreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Unfreezes the cache if it was previously frozen. This is
-applied recursively to this Context and all its subcontexts, but <em>not</em>
-to its parent or siblings. If the cache was not frozen, this does
-nothing but waste a little time.</p>
-</dd></dl>
-
 </dd></dl>
 
 </dd></dl>
@@ -1238,7 +1153,8 @@ nothing but waste a little time.</p>
 <dl class="class">
 <dt id="pydrake.systems.framework.Context_[AutoDiffXd]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Context_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Context is an abstract class template that represents all the typed
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
 type-erased abstract state variables, abstract-valued input ports,
@@ -1269,50 +1185,6 @@ details, see system_compatibility.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].DisableCaching">
-<code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].DisableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Caching is enabled by default. Disabling forces every
-<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
-the cached one. Results should be identical with or without caching,
-except for performance. If they are not, there is likely a problem
-with (a) the specified dependencies for some calculation, or (b) a
-misuse of references into cached values that hides modifications from
-the caching system, or (c) a bug in the caching system. The
-<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
-which continue to be maintained even when caching is disabled (though
-they are ignored). Caching can be re-enabled using EnableCaching().</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].EnableCaching">
-<code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].EnableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. Caching is enabled by default but may have been
-disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
-independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
-maintained even when caching is disabled (though they are ignored).
-Hence re-enabling the cache with this method may result in some
-entries being already considered up to date. See
-SetAllCacheEntriesOutOfDate() if you want to ensure that caching
-restarts with everything out of date. You might want to do that, for
-example, for repeatability or because you modified something in the
-debugger and want to make sure it gets used.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].FreezeCache">
-<code class="descname">FreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].FreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Freezes the cache at its current contents, preventing any
-further cache updates. When frozen, accessing an out-of-date cache
-entry causes an exception to be throw. This is applied recursively to
-this Context and all its subcontexts, but <em>not</em> to its parent or
-siblings so it is most useful when called on the root Context. If the
-cache was already frozen this method does nothing but waste a little
-time.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1589,14 +1461,6 @@ abstract state.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].is_cache_frozen">
-<code class="descname">is_cache_frozen</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].is_cache_frozen" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Reports whether this Context’s cache is currently frozen.
-This checks only locally; it is possible that parent, child, or
-sibling subcontext caches are in a different state than this one.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_[AutoDiffXd].is_stateless">
 <code class="descname">is_stateless</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].is_stateless" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the Context has no state.</p>
@@ -1627,21 +1491,9 @@ sibling subcontext caches are in a different state than this one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].num_input_ports">
-<code class="descname">num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].num_input_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of input ports in this context.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_[AutoDiffXd].num_numeric_parameter_groups">
 <code class="descname">num_numeric_parameter_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].num_numeric_parameter_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of vector-valued parameters.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].num_output_ports">
-<code class="descname">num_output_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].num_output_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of output ports represented in this context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1722,19 +1574,6 @@ out of date when the accuracy setting changes.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].SetAllCacheEntriesOutOfDate">
-<code class="descname">SetAllCacheEntriesOutOfDate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].SetAllCacheEntriesOutOfDate" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Marks all cache entries out of date, recursively for this
-context and all its subcontexts. This forces the next <code class="docutils literal"><span class="pre">Eval()</span></code>
-request for each cache entry to perform a full calculation rather than
-returning the cached one. After that first recalculation, normal
-caching behavior resumes (assuming the cache is not disabled). Results
-should be identical whether this is called or not, since the caching
-system should be maintaining this flag correctly. If they are not, see
-the documentation for SetIsCacheDisabled() for suggestions.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1897,21 +1736,13 @@ parameters to a non-root context.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[AutoDiffXd].UnfreezeCache">
-<code class="descname">UnfreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[AutoDiffXd].UnfreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Unfreezes the cache if it was previously frozen. This is
-applied recursively to this Context and all its subcontexts, but <em>not</em>
-to its parent or siblings. If the cache was not frozen, this does
-nothing but waste a little time.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.systems.framework.Context_[Expression]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Context_[Expression]</code><a class="headerlink" href="#pydrake.systems.framework.Context_[Expression]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Context is an abstract class template that represents all the typed
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
 type-erased abstract state variables, abstract-valued input ports,
@@ -1942,50 +1773,6 @@ details, see system_compatibility.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].DisableCaching">
-<code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].DisableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Caching is enabled by default. Disabling forces every
-<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
-the cached one. Results should be identical with or without caching,
-except for performance. If they are not, there is likely a problem
-with (a) the specified dependencies for some calculation, or (b) a
-misuse of references into cached values that hides modifications from
-the caching system, or (c) a bug in the caching system. The
-<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
-which continue to be maintained even when caching is disabled (though
-they are ignored). Caching can be re-enabled using EnableCaching().</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].EnableCaching">
-<code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].EnableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. Caching is enabled by default but may have been
-disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
-independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
-maintained even when caching is disabled (though they are ignored).
-Hence re-enabling the cache with this method may result in some
-entries being already considered up to date. See
-SetAllCacheEntriesOutOfDate() if you want to ensure that caching
-restarts with everything out of date. You might want to do that, for
-example, for repeatability or because you modified something in the
-debugger and want to make sure it gets used.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].FreezeCache">
-<code class="descname">FreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].FreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Freezes the cache at its current contents, preventing any
-further cache updates. When frozen, accessing an out-of-date cache
-entry causes an exception to be throw. This is applied recursively to
-this Context and all its subcontexts, but <em>not</em> to its parent or
-siblings so it is most useful when called on the root Context. If the
-cache was already frozen this method does nothing but waste a little
-time.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2262,14 +2049,6 @@ abstract state.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].is_cache_frozen">
-<code class="descname">is_cache_frozen</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].is_cache_frozen" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Reports whether this Context’s cache is currently frozen.
-This checks only locally; it is possible that parent, child, or
-sibling subcontext caches are in a different state than this one.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_[Expression].is_stateless">
 <code class="descname">is_stateless</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].is_stateless" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the Context has no state.</p>
@@ -2300,21 +2079,9 @@ sibling subcontext caches are in a different state than this one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].num_input_ports">
-<code class="descname">num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].num_input_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of input ports in this context.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_[Expression].num_numeric_parameter_groups">
 <code class="descname">num_numeric_parameter_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].num_numeric_parameter_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of vector-valued parameters.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].num_output_ports">
-<code class="descname">num_output_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].num_output_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of output ports represented in this context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2395,19 +2162,6 @@ out of date when the accuracy setting changes.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].SetAllCacheEntriesOutOfDate">
-<code class="descname">SetAllCacheEntriesOutOfDate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].SetAllCacheEntriesOutOfDate" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Marks all cache entries out of date, recursively for this
-context and all its subcontexts. This forces the next <code class="docutils literal"><span class="pre">Eval()</span></code>
-request for each cache entry to perform a full calculation rather than
-returning the cached one. After that first recalculation, normal
-caching behavior resumes (assuming the cache is not disabled). Results
-should be identical whether this is called or not, since the caching
-system should be maintaining this flag correctly. If they are not, see
-the documentation for SetIsCacheDisabled() for suggestions.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2570,21 +2324,13 @@ parameters to a non-root context.</p>
 </div>
 </dd></dl>
 
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[Expression].UnfreezeCache">
-<code class="descname">UnfreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[Expression].UnfreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Unfreezes the cache if it was previously frozen. This is
-applied recursively to this Context and all its subcontexts, but <em>not</em>
-to its parent or siblings. If the cache was not frozen, this does
-nothing but waste a little time.</p>
-</dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.systems.framework.Context_[float]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">Context_[float]</code><a class="headerlink" href="#pydrake.systems.framework.Context_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Context is an abstract class template that represents all the typed
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.framework.ContextBase" title="pydrake.systems.framework.ContextBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.ContextBase</span></code></a></p>
+<p>Context is an abstract class template that represents all the typed
 values that are used in a System’s computations: time, numeric-valued
 input ports, numerical state, and numerical parameters. There are also
 type-erased abstract state variables, abstract-valued input ports,
@@ -2615,50 +2361,6 @@ details, see system_compatibility.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].DisableCaching">
-<code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].DisableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Disables caching recursively for this context and all its
-subcontexts. Caching is enabled by default. Disabling forces every
-<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
-the cached one. Results should be identical with or without caching,
-except for performance. If they are not, there is likely a problem
-with (a) the specified dependencies for some calculation, or (b) a
-misuse of references into cached values that hides modifications from
-the caching system, or (c) a bug in the caching system. The
-<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
-which continue to be maintained even when caching is disabled (though
-they are ignored). Caching can be re-enabled using EnableCaching().</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].EnableCaching">
-<code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].EnableCaching" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Re-enables caching recursively for this context and all
-its subcontexts. Caching is enabled by default but may have been
-disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
-independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
-maintained even when caching is disabled (though they are ignored).
-Hence re-enabling the cache with this method may result in some
-entries being already considered up to date. See
-SetAllCacheEntriesOutOfDate() if you want to ensure that caching
-restarts with everything out of date. You might want to do that, for
-example, for repeatability or because you modified something in the
-debugger and want to make sure it gets used.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].FreezeCache">
-<code class="descname">FreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].FreezeCache" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Freezes the cache at its current contents, preventing any
-further cache updates. When frozen, accessing an out-of-date cache
-entry causes an exception to be throw. This is applied recursively to
-this Context and all its subcontexts, but <em>not</em> to its parent or
-siblings so it is most useful when called on the root Context. If the
-cache was already frozen this method does nothing but waste a little
-time.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2935,14 +2637,6 @@ abstract state.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].is_cache_frozen">
-<code class="descname">is_cache_frozen</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_[float].is_cache_frozen" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Advanced) Reports whether this Context’s cache is currently frozen.
-This checks only locally; it is possible that parent, child, or
-sibling subcontext caches are in a different state than this one.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_[float].is_stateless">
 <code class="descname">is_stateless</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.Context_[float].is_stateless" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true if the Context has no state.</p>
@@ -2973,21 +2667,9 @@ sibling subcontext caches are in a different state than this one.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].num_input_ports">
-<code class="descname">num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[float].num_input_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of input ports in this context.</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.systems.framework.Context_[float].num_numeric_parameter_groups">
 <code class="descname">num_numeric_parameter_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[float].num_numeric_parameter_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of vector-valued parameters.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].num_output_ports">
-<code class="descname">num_output_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.Context_[float].num_output_ports" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the number of output ports represented in this context.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3068,19 +2750,6 @@ out of date when the accuracy setting changes.</p>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].SetAllCacheEntriesOutOfDate">
-<code class="descname">SetAllCacheEntriesOutOfDate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].SetAllCacheEntriesOutOfDate" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Debugging) Marks all cache entries out of date, recursively for this
-context and all its subcontexts. This forces the next <code class="docutils literal"><span class="pre">Eval()</span></code>
-request for each cache entry to perform a full calculation rather than
-returning the cached one. After that first recalculation, normal
-caching behavior resumes (assuming the cache is not disabled). Results
-should be identical whether this is called or not, since the caching
-system should be maintaining this flag correctly. If they are not, see
-the documentation for SetIsCacheDisabled() for suggestions.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3243,9 +2912,108 @@ parameters to a non-root context.</p>
 </div>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.ContextBase">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">ContextBase</code><a class="headerlink" href="#pydrake.systems.framework.ContextBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides non-templatized Context functionality shared by the
+templatized derived classes. That includes caching, dependency
+tracking, and management of local values for fixed input ports.</p>
+<p>Terminology: in general a Drake System is a tree structure composed of
+“subsystems”, which are themselves System objects. The corresponding
+Context is a parallel tree structure composed of “subcontexts”, which
+are themselves Context objects. There is a one-to-one correspondence
+between subsystems and subcontexts. Within a given System (Context),
+its child subsystems (subcontexts) are indexed using a SubsystemIndex;
+there is no separate SubcontextIndex since the numbering must be
+identical.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.ContextBase.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.ContextBase.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
 <dl class="method">
-<dt id="pydrake.systems.framework.Context_[float].UnfreezeCache">
-<code class="descname">UnfreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.Context_[float].UnfreezeCache" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.systems.framework.ContextBase.DisableCaching">
+<code class="descname">DisableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContextBase.DisableCaching" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Debugging) Disables caching recursively for this context and all its
+subcontexts. Caching is enabled by default. Disabling forces every
+<code class="docutils literal"><span class="pre">Eval()</span></code> method to perform a full calculation rather than returning
+the cached one. Results should be identical with or without caching,
+except for performance. If they are not, there is likely a problem
+with (a) the specified dependencies for some calculation, or (b) a
+misuse of references into cached values that hides modifications from
+the caching system, or (c) a bug in the caching system. The
+<code class="docutils literal"><span class="pre">is_disabled</span></code> flags are independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags,
+which continue to be maintained even when caching is disabled (though
+they are ignored). Caching can be re-enabled using EnableCaching().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.EnableCaching">
+<code class="descname">EnableCaching</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContextBase.EnableCaching" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Debugging) Re-enables caching recursively for this context and all
+its subcontexts. Caching is enabled by default but may have been
+disabled via a call to DisableCaching(). The <code class="docutils literal"><span class="pre">is_disabled</span></code> flags are
+independent of the <code class="docutils literal"><span class="pre">out_of_date</span></code> flags, which continue to be
+maintained even when caching is disabled (though they are ignored).
+Hence re-enabling the cache with this method may result in some
+entries being already considered up to date. See
+SetAllCacheEntriesOutOfDate() if you want to ensure that caching
+restarts with everything out of date. You might want to do that, for
+example, for repeatability or because you modified something in the
+debugger and want to make sure it gets used.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.FreezeCache">
+<code class="descname">FreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContextBase.FreezeCache" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Freezes the cache at its current contents, preventing any
+further cache updates. When frozen, accessing an out-of-date cache
+entry causes an exception to be throw. This is applied recursively to
+this Context and all its subcontexts, but <em>not</em> to its parent or
+siblings so it is most useful when called on the root Context. If the
+cache was already frozen this method does nothing but waste a little
+time.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.is_cache_frozen">
+<code class="descname">is_cache_frozen</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.ContextBase.is_cache_frozen" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Reports whether this Context’s cache is currently frozen.
+This checks only locally; it is possible that parent, child, or
+sibling subcontext caches are in a different state than this one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.num_input_ports">
+<code class="descname">num_input_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.ContextBase.num_input_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of input ports in this context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.num_output_ports">
+<code class="descname">num_output_ports</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.ContextBase.num_output_ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of output ports represented in this context.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.SetAllCacheEntriesOutOfDate">
+<code class="descname">SetAllCacheEntriesOutOfDate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContextBase.SetAllCacheEntriesOutOfDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Debugging) Marks all cache entries out of date, recursively for this
+context and all its subcontexts. This forces the next <code class="docutils literal"><span class="pre">Eval()</span></code>
+request for each cache entry to perform a full calculation rather than
+returning the cached one. After that first recalculation, normal
+caching behavior resumes (assuming the cache is not disabled). Results
+should be identical whether this is called or not, since the caching
+system should be maintaining this flag correctly. If they are not, see
+the documentation for SetIsCacheDisabled() for suggestions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.ContextBase.UnfreezeCache">
+<code class="descname">UnfreezeCache</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ContextBase.UnfreezeCache" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Unfreezes the cache if it was previously frozen. This is
 applied recursively to this Context and all its subcontexts, but <em>not</em>
 to its parent or siblings. If the cache was not frozen, this does

@@ -34,6 +34,7 @@ var searchData=
   ['mesh_5ftraits_2eh',['mesh_traits.h',['../mesh__traits_8h.html',1,'']]],
   ['meshcat_2eh',['meshcat.h',['../meshcat_8h.html',1,'']]],
   ['meshcat_5fanimation_2eh',['meshcat_animation.h',['../meshcat__animation_8h.html',1,'']]],
+  ['meshcat_5fpoint_5fcloud_5fvisualizer_2eh',['meshcat_point_cloud_visualizer.h',['../meshcat__point__cloud__visualizer_8h.html',1,'']]],
   ['meshcat_5ftypes_2eh',['meshcat_types.h',['../meshcat__types_8h.html',1,'']]],
   ['meshcat_5fvisualizer_2eh',['meshcat_visualizer.h',['../meshcat__visualizer_8h.html',1,'']]],
   ['meshcat_5fvisualizer_5fparams_2eh',['meshcat_visualizer_params.h',['../meshcat__visualizer__params_8h.html',1,'']]],
