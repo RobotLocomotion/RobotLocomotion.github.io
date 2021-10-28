@@ -52,7 +52,7 @@ var classdrake_1_1geometry_1_1_geometry_state =
     [ "HasCollisions", "classdrake_1_1geometry_1_1_geometry_state.html#a3f702eb73e7464c00b82974d0c5ff6c9", null ],
     [ "HasRenderer", "classdrake_1_1geometry_1_1_geometry_state.html#a9ab68336b439ffd7ac7f1e1fe6a025db", null ],
     [ "IsValidGeometryName", "classdrake_1_1geometry_1_1_geometry_state.html#a4babe6700dc65baf6c98e0594362eabc", null ],
-    [ "maybe_get_hydroelastic_mesh", "classdrake_1_1geometry_1_1_geometry_state.html#ab840f09f0ed42eafe68c17c65912e646", null ],
+    [ "maybe_get_hydroelastic_mesh", "classdrake_1_1geometry_1_1_geometry_state.html#a92d19b4df9597abbaaefef9ebecfef7a", null ],
     [ "NumAnchoredGeometries", "classdrake_1_1geometry_1_1_geometry_state.html#ab7724ce761af3f670a4011d29505dce7", null ],
     [ "NumDynamicGeometries", "classdrake_1_1geometry_1_1_geometry_state.html#a92fed16317ea47894538967d2e340473", null ],
     [ "NumFramesForSource", "classdrake_1_1geometry_1_1_geometry_state.html#a351bd36048a5437b445fe7419d8ebef6", null ],

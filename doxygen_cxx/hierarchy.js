@@ -735,9 +735,7 @@ var hierarchy =
     ] ],
     [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html", null ],
     [ "Subscriber< Message >", "classdrake_1_1lcm_1_1_subscriber.html", null ],
-    [ "SurfaceFace", "classdrake_1_1geometry_1_1_surface_face.html", null ],
-    [ "SurfaceMesh< T >", "classdrake_1_1geometry_1_1_surface_mesh.html", null ],
-    [ "SurfaceMeshTester< T >", "classdrake_1_1geometry_1_1_surface_mesh_tester.html", null ],
+    [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", null ],
     [ "SystemConstraint< T >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< AutoDiffXd >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< double >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
@@ -989,6 +987,8 @@ var hierarchy =
     [ "TriangleQuadratureRule", "classdrake_1_1multibody_1_1_triangle_quadrature_rule.html", [
       [ "GaussianTriangleQuadratureRule", "classdrake_1_1multibody_1_1_gaussian_triangle_quadrature_rule.html", null ]
     ] ],
+    [ "TriangleSurfaceMesh< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", null ],
+    [ "TriangleSurfaceMeshTester< T >", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
     [ "TrigPoly< T >", "classdrake_1_1_trig_poly.html", null ],
     [ "tuple_element< Index, drake::SortedPair< T > >", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
     [ "type_at< I, Ts >", "structdrake_1_1type__at.html", null ],

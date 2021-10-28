@@ -47,9 +47,9 @@ var namespacedrake_1_1geometry =
     [ "SignedDistancePair", "structdrake_1_1geometry_1_1_signed_distance_pair.html", "structdrake_1_1geometry_1_1_signed_distance_pair" ],
     [ "SignedDistanceToPoint", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", "structdrake_1_1geometry_1_1_signed_distance_to_point" ],
     [ "Sphere", "classdrake_1_1geometry_1_1_sphere.html", "classdrake_1_1geometry_1_1_sphere" ],
-    [ "SurfaceFace", "classdrake_1_1geometry_1_1_surface_face.html", "classdrake_1_1geometry_1_1_surface_face" ],
-    [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html", "classdrake_1_1geometry_1_1_surface_mesh" ],
-    [ "SurfaceMeshTester", "classdrake_1_1geometry_1_1_surface_mesh_tester.html", null ],
+    [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", "classdrake_1_1geometry_1_1_surface_triangle" ],
+    [ "TriangleSurfaceMesh", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", "classdrake_1_1geometry_1_1_triangle_surface_mesh" ],
+    [ "TriangleSurfaceMeshTester", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", "classdrake_1_1geometry_1_1_volume_element" ],
     [ "VolumeMesh", "classdrake_1_1geometry_1_1_volume_mesh.html", "classdrake_1_1geometry_1_1_volume_mesh" ],
     [ "VolumeMeshTester", "classdrake_1_1geometry_1_1_volume_mesh_tester.html", null ]

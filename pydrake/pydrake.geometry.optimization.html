@@ -824,6 +824,20 @@ in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.CartesianPower">
+<code class="descname">CartesianPower</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>n: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.CartesianPower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the <code class="docutils literal"><span class="pre">n</span></code>-ary Cartesian power of <code class="docutils literal"><span class="pre">this</span></code>. The n-ary Cartesian
+power of a set H is the set H ⨉ H ⨉ … ⨉ H, where H is repeated n
+times.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.CartesianProduct">
+<code class="descname">CartesianProduct</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.CartesianProduct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Cartesian product of <code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.ChebyshevCenter">
 <code class="descname">ChebyshevCenter</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.ChebyshevCenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solves a linear program to compute the center of the largest inscribed

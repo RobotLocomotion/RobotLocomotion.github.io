@@ -31,6 +31,8 @@ var searchData=
   ['transform',['Transform',['../classdrake_1_1schema_1_1_transform.html',1,'drake::schema']]],
   ['trianglequadrature',['TriangleQuadrature',['../classdrake_1_1multibody_1_1_triangle_quadrature.html',1,'drake::multibody']]],
   ['trianglequadraturerule',['TriangleQuadratureRule',['../classdrake_1_1multibody_1_1_triangle_quadrature_rule.html',1,'drake::multibody']]],
+  ['trianglesurfacemesh',['TriangleSurfaceMesh',['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html',1,'drake::geometry']]],
+  ['trianglesurfacemeshtester',['TriangleSurfaceMeshTester',['../classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html',1,'drake::geometry']]],
   ['trigpoly',['TrigPoly',['../classdrake_1_1_trig_poly.html',1,'drake']]],
   ['tuple_5felement_3c_20index_2c_20drake_3a_3asortedpair_3c_20t_20_3e_20_3e',['tuple_element&lt; Index, drake::SortedPair&lt; T &gt; &gt;',['../structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html',1,'std']]],
   ['tuple_5fsize_3c_20drake_3a_3asortedpair_3c_20t_20_3e_20_3e',['tuple_size&lt; drake::SortedPair&lt; T &gt; &gt;',['../structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html',1,'std']]],

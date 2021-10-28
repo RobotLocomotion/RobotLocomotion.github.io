@@ -5,6 +5,7 @@ var searchData=
   ['traits',['Traits',['../classdrake_1_1systems_1_1sensors_1_1_image.html#af8c2043b57116aae86b87835b0b01653',1,'drake::systems::sensors::Image']]],
   ['trajectorycallback',['TrajectoryCallback',['../classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a6e1c492b070442dd36f394d9bf0b15a3',1,'drake::systems::trajectory_optimization::MultipleShooting']]],
   ['translation3',['Translation3',['../namespacedrake.html#a50f8d19f395776637448f26e734228f6',1,'drake']]],
+  ['trianglesurfacemeshfieldlinear',['TriangleSurfaceMeshFieldLinear',['../namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd',1,'drake::geometry']]],
   ['triggertype',['TriggerType',['../classdrake_1_1systems_1_1_event.html#a9fc02a89fe46ec20b0e5cf68ecf7eee7',1,'drake::systems::Event']]],
   ['triggertypeset',['TriggerTypeSet',['../namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15',1,'drake::systems::TriggerTypeSet()'],['../namespacedrake_1_1systems_1_1lcm.html#a2b4423532b6895ef22b02d25a3798daa',1,'drake::systems::lcm::TriggerTypeSet()']]],
   ['trigpolyd',['TrigPolyd',['../namespacedrake.html#a69f6fee91b95862e81e39506cae6dc22',1,'drake']]],

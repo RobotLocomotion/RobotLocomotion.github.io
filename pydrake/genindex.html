@@ -907,13 +907,13 @@
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.Sphere.__init__">(pydrake.geometry.Sphere method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceFace.__init__">(pydrake.geometry.SurfaceFace method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceTriangle.__init__">(pydrake.geometry.SurfaceTriangle method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].__init__">(pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].__init__">(pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float] method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[AutoDiffXd].__init__">(pydrake.geometry.SurfaceMesh_[AutoDiffXd] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].__init__">(pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd] method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[float].__init__">(pydrake.geometry.SurfaceMesh_[float] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[float].__init__">(pydrake.geometry.TriangleSurfaceMesh_[float] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.VolumeElement.__init__">(pydrake.geometry.VolumeElement method)</a>
 </li>
@@ -3598,7 +3598,11 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Capsule">Capsule (class in pydrake.geometry)</a>
 </li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.CartesianPower">CartesianPower() (pydrake.geometry.optimization.HPolyhedron method)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CartesianProduct">CartesianProduct (class in pydrake.geometry.optimization)</a>
+</li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.CartesianProduct">CartesianProduct() (pydrake.geometry.optimization.HPolyhedron method)</a>
 </li>
       <li><a href="pydrake.common.eigen_geometry.html#pydrake.common.eigen_geometry.AngleAxis_.AngleAxis_[float].cast[AutoDiffXd]">cast[AutoDiffXd]() (pydrake.common.eigen_geometry.AngleAxis_.AngleAxis_[float] method)</a>
 
@@ -3752,12 +3756,12 @@
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.CameraInfo.center_y">center_y() (pydrake.systems.sensors.CameraInfo method)</a>
 </li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].centroid">centroid() (pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float] method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].centroid">centroid() (pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float] method)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[AutoDiffXd].centroid">(pydrake.geometry.SurfaceMesh_[AutoDiffXd] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].centroid">(pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd] method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[float].centroid">(pydrake.geometry.SurfaceMesh_[float] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[float].centroid">(pydrake.geometry.TriangleSurfaceMesh_[float] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.CentroidalMomentumConstraint">CentroidalMomentumConstraint (class in pydrake.multibody.optimization)</a>
@@ -5658,14 +5662,6 @@
       </ul></li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.ContactWrench.F_Cb_W">F_Cb_W (pydrake.multibody.optimization.ContactWrench attribute)</a>
 </li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].faces">faces() (pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float] method)</a>
-
-      <ul>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[AutoDiffXd].faces">(pydrake.geometry.SurfaceMesh_[AutoDiffXd] method)</a>
-</li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[float].faces">(pydrake.geometry.SurfaceMesh_[float] method)</a>
-</li>
-      </ul></li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.CartesianProduct.factor">factor() (pydrake.geometry.optimization.CartesianProduct method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.EventStatus.Failed">Failed() (pydrake.systems.framework.EventStatus static method)</a>
@@ -5810,8 +5806,6 @@
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[Expression]">FixedOffsetFrame_[Expression] (class in pydrake.multibody.tree)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[float]">FixedOffsetFrame_[float] (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].FixInputPortsFrom">FixInputPortsFrom() (pydrake.systems.framework.System_.System_[float] method)</a>
@@ -5824,6 +5818,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].FixInputPortsFrom">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.InputPort_.InputPort_[float].FixValue">FixValue() (pydrake.systems.framework.InputPort_.InputPort_[float] method)</a>
 
       <ul>
@@ -12868,7 +12864,7 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.EventStatus.ReachedTermination">ReachedTermination() (pydrake.systems.framework.EventStatus static method)</a>
 </li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.ReadObjToSurfaceMesh">ReadObjToSurfaceMesh() (in module pydrake.geometry)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.ReadObjToTriangleSurfaceMesh">ReadObjToTriangleSurfaceMesh() (in module pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.math.html#pydrake.math.RealContinuousLyapunovEquation">RealContinuousLyapunovEquation() (in module pydrake.math)</a>
 </li>
@@ -14580,6 +14576,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_[float].SetContinuousState">(pydrake.systems.framework.Context_[float] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.SetDecisionVariableValueInVector">SetDecisionVariableValueInVector() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].SetDefaultContext">SetDefaultContext() (pydrake.systems.framework.System_.System_[float] method)</a>
@@ -14592,8 +14590,6 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].SetDefaultContext">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetDefaultFreeBodyPose">SetDefaultFreeBodyPose() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
 
       <ul>
@@ -15688,15 +15684,7 @@
       </ul></li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.InitializeParams.suppress_initialization_events">suppress_initialization_events (pydrake.systems.analysis.InitializeParams attribute)</a>
 </li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceFace">SurfaceFace (class in pydrake.geometry)</a>
-</li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh">SurfaceMesh (in module pydrake.geometry)</a>
-</li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float]">SurfaceMesh_.SurfaceMesh_[float] (class in pydrake.geometry)</a>
-</li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[AutoDiffXd]">SurfaceMesh_[AutoDiffXd] (class in pydrake.geometry)</a>
-</li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[float]">SurfaceMesh_[float] (class in pydrake.geometry)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceTriangle">SurfaceTriangle (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.examples.compass_gait.html#pydrake.examples.compass_gait.CompassGaitContinuousState.swing">swing() (pydrake.examples.compass_gait.CompassGaitContinuousState method)</a>
 </li>
@@ -16014,8 +16002,6 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].ToScalarType[AutoDiffXd]">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].ToScalarType[Expression]">ToScalarType[Expression]() (pydrake.systems.framework.System_.System_[float] method)</a>
 
       <ul>
@@ -16026,6 +16012,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].ToScalarType[Expression]">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].ToScalarType[float]">ToScalarType[float]() (pydrake.systems.framework.System_.System_[float] method)</a>
 
       <ul>
@@ -16234,6 +16222,22 @@
         <li><a href="pydrake.math.html#pydrake.math.RotationMatrix_[float].transpose">(pydrake.math.RotationMatrix_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].triangles">triangles() (pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].triangles">(pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[float].triangles">(pydrake.geometry.TriangleSurfaceMesh_[float] method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh">TriangleSurfaceMesh (in module pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float]">TriangleSurfaceMesh_.TriangleSurfaceMesh_[float] (class in pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]">TriangleSurfaceMesh_[AutoDiffXd] (class in pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[float]">TriangleSurfaceMesh_[float] (class in pydrake.geometry)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float].TriaxiallySymmetric">TriaxiallySymmetric() (pydrake.multibody.tree.RotationalInertia_.RotationalInertia_[float] static method)</a>
 
       <ul>
@@ -16830,7 +16834,7 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Joint_[float].velocity_upper_limits">(pydrake.multibody.tree.Joint_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceFace.vertex">vertex() (pydrake.geometry.SurfaceFace method)</a>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceTriangle.vertex">vertex() (pydrake.geometry.SurfaceTriangle method)</a>
 
       <ul>
         <li><a href="pydrake.geometry.html#pydrake.geometry.VolumeElement.vertex">(pydrake.geometry.VolumeElement method)</a>
@@ -16843,11 +16847,11 @@
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.VPolytope.vertices">vertices() (pydrake.geometry.optimization.VPolytope method)</a>
 
       <ul>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].vertices">(pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].vertices">(pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float] method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[AutoDiffXd].vertices">(pydrake.geometry.SurfaceMesh_[AutoDiffXd] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].vertices">(pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd] method)</a>
 </li>
-        <li><a href="pydrake.geometry.html#pydrake.geometry.SurfaceMesh_[float].vertices">(pydrake.geometry.SurfaceMesh_[float] method)</a>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.TriangleSurfaceMesh_[float].vertices">(pydrake.geometry.TriangleSurfaceMesh_[float] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.VolumeMesh_.VolumeMesh_[float].vertices">(pydrake.geometry.VolumeMesh_.VolumeMesh_[float] method)</a>
 </li>

@@ -115,8 +115,8 @@ var NAVTREEINDEX =
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09",
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5",
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a",
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faaae77f3ad25595e35b327334d89410054",
-"symbolic__polynomial_8h.html#a52a4be02d87d5a6d31efbbcb5d3ba934",
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faac9968ab1fa8103acbb3a4f22265f2def",
+"symbolic__polynomial_8h.html#a812892dbfc6443dc1eed055e1915f5e4",
 "wrap__pybind_8h.html#a50864a5d92c08bf74cf16b6d004aaa6a"
 ];
 

@@ -247,13 +247,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_sphere.html">Sphere</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of sphere.  <a href="classdrake_1_1geometry_1_1_sphere.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_face.html">SurfaceFace</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SurfaceFace represents a triangular face in a <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html" title="SurfaceMesh represents a triangulated surface.">SurfaceMesh</a>.  <a href="classdrake_1_1geometry_1_1_surface_face.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SurfaceTriangle represents a triangular face in a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>.  <a href="classdrake_1_1geometry_1_1_surface_triangle.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SurfaceMesh represents a triangulated surface.  <a href="classdrake_1_1geometry_1_1_surface_mesh.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TriangleSurfaceMesh represents a union of triangles.  <a href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh_tester.html">SurfaceMeshTester</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html">TriangleSurfaceMeshTester</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">VolumeElement represents a tetrahedral element in a <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a>.  <a href="classdrake_1_1geometry_1_1_volume_element.html#details">More...</a><br /></td></tr>
@@ -294,10 +294,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a74b8d905842571b365085fdd17378772"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a74b8d905842571b365085fdd17378772"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a> = typename <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical</a>&lt; T, U &gt;::type</td></tr>
 <tr class="separator:a74b8d905842571b365085fdd17378772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8521ca427b948bf56882cae0363bd4"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue , typename T &gt; </td></tr>
-<tr class="memitem:aeb8521ca427b948bf56882cae0363bd4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#aeb8521ca427b948bf56882cae0363bd4">SurfaceMeshFieldLinear</a> = <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt; FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt; T &gt; &gt;</td></tr>
-<tr class="memdesc:aeb8521ca427b948bf56882cae0363bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html" title="SurfaceMesh represents a triangulated surface.">SurfaceMesh</a>.  <a href="#aeb8521ca427b948bf56882cae0363bd4">More...</a><br /></td></tr>
-<tr class="separator:aeb8521ca427b948bf56882cae0363bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982d81c894c425051f4cbb03cd3ca4dd"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue , typename T &gt; </td></tr>
+<tr class="memitem:a982d81c894c425051f4cbb03cd3ca4dd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a> = <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt; FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt; &gt;</td></tr>
+<tr class="memdesc:a982d81c894c425051f4cbb03cd3ca4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>.  <a href="#a982d81c894c425051f4cbb03cd3ca4dd">More...</a><br /></td></tr>
+<tr class="separator:a982d81c894c425051f4cbb03cd3ca4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f0a99208aa3dea5d4a3094f4fdf9274"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue , typename T &gt; </td></tr>
 <tr class="memitem:a6f0a99208aa3dea5d4a3094f4fdf9274"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a6f0a99208aa3dea5d4a3094f4fdf9274">VolumeMeshFieldLinear</a> = <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt; FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &gt;</td></tr>
 <tr class="memdesc:a6f0a99208aa3dea5d4a3094f4fdf9274"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html" title="VolumeMesh represents a tetrahedral volume mesh.">VolumeMesh</a>.  <a href="#a6f0a99208aa3dea5d4a3094f4fdf9274">More...</a><br /></td></tr>
@@ -324,20 +324,20 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a40ca141e2cff1416ab27b5234409dcf5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a40ca141e2cff1416ab27b5234409dcf5">ReadObjToSurfaceMesh</a> (const std::string &amp;filename, double scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
-<tr class="memdesc:a40ca141e2cff1416ab27b5234409dcf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a surface mesh from a Wavefront .obj file and optionally scales coordinates by the given scale factor.  <a href="#a40ca141e2cff1416ab27b5234409dcf5">More...</a><br /></td></tr>
-<tr class="separator:a40ca141e2cff1416ab27b5234409dcf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78decc4125a80819440fcc2f16f6f8d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a78decc4125a80819440fcc2f16f6f8d9">ReadObjToSurfaceMesh</a> (std::istream *input_stream, double scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
-<tr class="memdesc:a78decc4125a80819440fcc2f16f6f8d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of ReadObjToSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream.  <a href="#a78decc4125a80819440fcc2f16f6f8d9">More...</a><br /></td></tr>
-<tr class="separator:a78decc4125a80819440fcc2f16f6f8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4192d45a6ef62766081175664984a770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a4192d45a6ef62766081175664984a770">ReadObjToTriangleSurfaceMesh</a> (const std::string &amp;filename, double scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
+<tr class="memdesc:a4192d45a6ef62766081175664984a770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a surface mesh from a Wavefront .obj file and optionally scales coordinates by the given scale factor.  <a href="#a4192d45a6ef62766081175664984a770">More...</a><br /></td></tr>
+<tr class="separator:a4192d45a6ef62766081175664984a770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a434be853a96eb8f2554128917d1e1a53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a434be853a96eb8f2554128917d1e1a53">ReadObjToTriangleSurfaceMesh</a> (std::istream *input_stream, double scale=1.0, std::function&lt; void(std::string_view)&gt; on_warning={})</td></tr>
+<tr class="memdesc:a434be853a96eb8f2554128917d1e1a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of ReadObjToTriangleSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream.  <a href="#a434be853a96eb8f2554128917d1e1a53">More...</a><br /></td></tr>
+<tr class="separator:a434be853a96eb8f2554128917d1e1a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2134db5f8753db883df9439aa2c38814"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a2134db5f8753db883df9439aa2c38814">operator==</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e1, const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e2)</td></tr>
 <tr class="separator:a2134db5f8753db883df9439aa2c38814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15599d92370af7b991c4a593f6103376"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a15599d92370af7b991c4a593f6103376">operator!=</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e1, const <a class="el" href="classdrake_1_1geometry_1_1_volume_element.html">VolumeElement</a> &amp;e2)</td></tr>
 <tr class="separator:a15599d92370af7b991c4a593f6103376"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
-<tr class="memitem:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a83ec9d5a48501f63fb6a687ab83fdef1">ConvertVolumeToSurfaceMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;volume)</td></tr>
-<tr class="memdesc:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a tetrahedral volume mesh to a triangulated surface mesh of the boundary surface of the volume.  <a href="#a83ec9d5a48501f63fb6a687ab83fdef1">More...</a><br /></td></tr>
-<tr class="separator:a83ec9d5a48501f63fb6a687ab83fdef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5245b5a993317d0c83f529c74f0838e8"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5245b5a993317d0c83f529c74f0838e8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a5245b5a993317d0c83f529c74f0838e8">ConvertVolumeToSurfaceMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;volume)</td></tr>
+<tr class="memdesc:a5245b5a993317d0c83f529c74f0838e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a tetrahedral volume mesh to a triangulated surface mesh of the boundary surface of the volume.  <a href="#a5245b5a993317d0c83f529c74f0838e8">More...</a><br /></td></tr>
+<tr class="separator:a5245b5a993317d0c83f529c74f0838e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af76ed94bef3f81765a1b3ce069562e00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#af76ed94bef3f81765a1b3ce069562e00">AddRigidHydroelasticProperties</a> (double resolution_hint, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:af76ed94bef3f81765a1b3ce069562e00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds properties to the given set of proximity properties sufficient to cause the associated geometry to generate a rigid hydroelastic representation.  <a href="#af76ed94bef3f81765a1b3ce069562e00">More...</a><br /></td></tr>
 <tr class="separator:af76ed94bef3f81765a1b3ce069562e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -546,19 +546,19 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aeb8521ca427b948bf56882cae0363bd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb8521ca427b948bf56882cae0363bd4">&#9670;&nbsp;</a></span>SurfaceMeshFieldLinear</h2>
+<a id="a982d81c894c425051f4cbb03cd3ca4dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982d81c894c425051f4cbb03cd3ca4dd">&#9670;&nbsp;</a></span>TriangleSurfaceMeshFieldLinear</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#aeb8521ca427b948bf56882cae0363bd4">SurfaceMeshFieldLinear</a> =  <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt;FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt;T&gt; &gt;</td>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a> =  <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt;FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;T&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html" title="SurfaceMesh represents a triangulated surface.">SurfaceMesh</a>. </p>
+<p>A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">FieldValue</td><td>A valid Eigen scalar or vector of valid Eigen scalars for the field value. </td></tr>
@@ -923,14 +923,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a83ec9d5a48501f63fb6a687ab83fdef1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83ec9d5a48501f63fb6a687ab83fdef1">&#9670;&nbsp;</a></span>ConvertVolumeToSurfaceMesh()</h2>
+<a id="a5245b5a993317d0c83f529c74f0838e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5245b5a993317d0c83f529c74f0838e8">&#9670;&nbsp;</a></span>ConvertVolumeToSurfaceMesh()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt;T&gt; drake::geometry::ConvertVolumeToSurfaceMesh </td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;T&gt; drake::geometry::ConvertVolumeToSurfaceMesh </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>volume</em></td><td>)</td>
@@ -1061,14 +1061,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a40ca141e2cff1416ab27b5234409dcf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40ca141e2cff1416ab27b5234409dcf5">&#9670;&nbsp;</a></span>ReadObjToSurfaceMesh() <span class="overload">[1/2]</span></h2>
+<a id="a4192d45a6ef62766081175664984a770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4192d45a6ef62766081175664984a770">&#9670;&nbsp;</a></span>ReadObjToTriangleSurfaceMesh() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt;double&gt; drake::geometry::ReadObjToSurfaceMesh </td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;double&gt; drake::geometry::ReadObjToTriangleSurfaceMesh </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filename</em>, </td>
@@ -1112,14 +1112,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a78decc4125a80819440fcc2f16f6f8d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78decc4125a80819440fcc2f16f6f8d9">&#9670;&nbsp;</a></span>ReadObjToSurfaceMesh() <span class="overload">[2/2]</span></h2>
+<a id="a434be853a96eb8f2554128917d1e1a53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a434be853a96eb8f2554128917d1e1a53">&#9670;&nbsp;</a></span>ReadObjToTriangleSurfaceMesh() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_surface_mesh.html">SurfaceMesh</a>&lt;double&gt; drake::geometry::ReadObjToSurfaceMesh </td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;double&gt; drake::geometry::ReadObjToTriangleSurfaceMesh </td>
           <td>(</td>
           <td class="paramtype">std::istream *&#160;</td>
           <td class="paramname"><em>input_stream</em>, </td>
@@ -1144,7 +1144,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overload of ReadObjToSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream. </p>
+<p>Overload of ReadObjToTriangleSurfaceMesh(const std::string&amp;, double) with the Wavefront .obj file given in std::istream. </p>
 
 </div>
 </div>

@@ -91,8 +91,6 @@ var searchData=
   ['string_5fview_5fmap_5fkey_2eh',['string_view_map_key.h',['../string__view__map__key_8h.html',1,'']]],
   ['subvector_2eh',['subvector.h',['../subvector_8h.html',1,'']]],
   ['supervector_2eh',['supervector.h',['../supervector_8h.html',1,'']]],
-  ['surface_5fmesh_2eh',['surface_mesh.h',['../surface__mesh_8h.html',1,'']]],
-  ['surface_5fmesh_5ffield_2eh',['surface_mesh_field.h',['../surface__mesh__field_8h.html',1,'']]],
   ['symbolic_2eh',['symbolic.h',['../symbolic_8h.html',1,'']]],
   ['symbolic_5fchebyshev_5fbasis_5felement_2eh',['symbolic_chebyshev_basis_element.h',['../symbolic__chebyshev__basis__element_8h.html',1,'']]],
   ['symbolic_5fchebyshev_5fpolynomial_2eh',['symbolic_chebyshev_polynomial.h',['../symbolic__chebyshev__polynomial_8h.html',1,'']]],

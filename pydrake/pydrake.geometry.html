@@ -843,7 +843,7 @@ from the origin of the world frame, expressed in the world frame.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].mesh_W">
-<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the surface mesh whose vertex positions are
 measured and expressed in the world frame.</p>
 </dd></dl>
@@ -944,7 +944,7 @@ from the origin of the world frame, expressed in the world frame.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].mesh_W">
-<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].mesh_W" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the surface mesh whose vertex positions are
 measured and expressed in the world frame.</p>
 </dd></dl>
@@ -1043,7 +1043,7 @@ from the origin of the world frame, expressed in the world frame.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[float].mesh_W">
-<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the surface mesh whose vertex positions are
 measured and expressed in the world frame.</p>
 </dd></dl>
@@ -1055,7 +1055,7 @@ measured and expressed in the world frame.</p>
 <code class="descclassname">pydrake.geometry.</code><code class="descname">ConvertVolumeToSurfaceMesh</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.ConvertVolumeToSurfaceMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>ConvertVolumeToSurfaceMesh(volume: pydrake.geometry.VolumeMesh_[float]) -&gt; pydrake.geometry.SurfaceMesh_[float]</li>
+<li>ConvertVolumeToSurfaceMesh(volume: pydrake.geometry.VolumeMesh_[float]) -&gt; pydrake.geometry.TriangleSurfaceMesh_[float]</li>
 </ol>
 <p>Converts a tetrahedral volume mesh to a triangulated surface mesh of
 the boundary surface of the volume.</p>
@@ -1082,7 +1082,7 @@ have extra triangles in addition to the boundary triangles of the
 volume.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>ConvertVolumeToSurfaceMesh(volume: pydrake.geometry.VolumeMesh_[AutoDiffXd]) -&gt; pydrake.geometry.SurfaceMesh_[AutoDiffXd]</li>
+<li>ConvertVolumeToSurfaceMesh(volume: pydrake.geometry.VolumeMesh_[AutoDiffXd]) -&gt; pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</li>
 </ol>
 <p>Converts a tetrahedral volume mesh to a triangulated surface mesh of
 the boundary surface of the volume.</p>
@@ -6552,8 +6552,8 @@ the indicated parent frame P.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="pydrake.geometry.ReadObjToSurfaceMesh">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">ReadObjToSurfaceMesh</code><span class="sig-paren">(</span><em>filename: str</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; drake::geometry::SurfaceMesh&lt;double&gt;<a class="headerlink" href="#pydrake.geometry.ReadObjToSurfaceMesh" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.ReadObjToTriangleSurfaceMesh">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">ReadObjToTriangleSurfaceMesh</code><span class="sig-paren">(</span><em>filename: str</em>, <em>scale: float = 1.0</em><span class="sig-paren">)</span> &#x2192; drake::geometry::TriangleSurfaceMesh&lt;double&gt;<a class="headerlink" href="#pydrake.geometry.ReadObjToTriangleSurfaceMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a surface mesh from a Wavefront .obj file and optionally
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
@@ -9579,13 +9579,14 @@ should be passed through an implementation of a ShapeReifier.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh">
-<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.SurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.TriangleSurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <em>mesh</em> used to represent this geometry in hydroelastic
 contact calculations, if it exists. Most primitives (sphere, cylinder,
 etc.) are actually represented by discrete approximations (i.e., the
 mesh). If there is no mesh, the returned variant will hold neither the
-SurfaceMesh&lt;double&gt; nor the VolumeMesh&lt;double&gt; alternatives. If either
-alternative is present, the pointer is guaranteed to be non-null.</p>
+TriangleSurfaceMesh&lt;double&gt; nor the VolumeMesh&lt;double&gt; alternatives.
+If either alternative is present, the pointer is guaranteed to be
+non-null.</p>
 <p>Just because hydroelastic properties have been assigned to a geometry
 does not* mean there is necessarily a mesh associated with it. Some
 shape types (e.g., half space) have non-mesh representations.</p>
@@ -10324,13 +10325,14 @@ should be passed through an implementation of a ShapeReifier.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[AutoDiffXd].maybe_get_hydroelastic_mesh">
-<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.SurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[AutoDiffXd], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.TriangleSurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[AutoDiffXd].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <em>mesh</em> used to represent this geometry in hydroelastic
 contact calculations, if it exists. Most primitives (sphere, cylinder,
 etc.) are actually represented by discrete approximations (i.e., the
 mesh). If there is no mesh, the returned variant will hold neither the
-SurfaceMesh&lt;double&gt; nor the VolumeMesh&lt;double&gt; alternatives. If either
-alternative is present, the pointer is guaranteed to be non-null.</p>
+TriangleSurfaceMesh&lt;double&gt; nor the VolumeMesh&lt;double&gt; alternatives.
+If either alternative is present, the pointer is guaranteed to be
+non-null.</p>
 <p>Just because hydroelastic properties have been assigned to a geometry
 does not* mean there is necessarily a mesh associated with it. Some
 shape types (e.g., half space) have non-mesh representations.</p>
@@ -11067,13 +11069,14 @@ should be passed through an implementation of a ShapeReifier.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh">
-<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.SurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">maybe_get_hydroelastic_mesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraphInspector_[float], geometry_id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; Union[None, pydrake.geometry.TriangleSurfaceMesh_[float], pydrake.geometry.VolumeMesh_[float]]<a class="headerlink" href="#pydrake.geometry.SceneGraphInspector_[float].maybe_get_hydroelastic_mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the <em>mesh</em> used to represent this geometry in hydroelastic
 contact calculations, if it exists. Most primitives (sphere, cylinder,
 etc.) are actually represented by discrete approximations (i.e., the
 mesh). If there is no mesh, the returned variant will hold neither the
-SurfaceMesh&lt;double&gt; nor the VolumeMesh&lt;double&gt; alternatives. If either
-alternative is present, the pointer is guaranteed to be non-null.</p>
+TriangleSurfaceMesh&lt;double&gt; nor the VolumeMesh&lt;double&gt; alternatives.
+If either alternative is present, the pointer is guaranteed to be
+non-null.</p>
 <p>Just because hydroelastic properties have been assigned to a geometry
 does not* mean there is necessarily a mesh associated with it. Some
 shape types (e.g., half space) have non-mesh representations.</p>
@@ -11849,33 +11852,34 @@ given radius.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.geometry.SurfaceFace">
-<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SurfaceFace</code><a class="headerlink" href="#pydrake.geometry.SurfaceFace" title="Permalink to this definition">¶</a></dt>
-<dd><p>%SurfaceFace represents a triangular face in a SurfaceMesh.</p>
+<dt id="pydrake.geometry.SurfaceTriangle">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SurfaceTriangle</code><a class="headerlink" href="#pydrake.geometry.SurfaceTriangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>%SurfaceTriangle represents a triangular face in a
+TriangleSurfaceMesh.</p>
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceFace.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceFace</em>, <em>v0: int</em>, <em>v1: int</em>, <em>v2: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SurfaceFace.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs SurfaceFace.</p>
+<dt id="pydrake.geometry.SurfaceTriangle.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceTriangle</em>, <em>v0: int</em>, <em>v1: int</em>, <em>v2: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SurfaceTriangle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs SurfaceTriangle.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">v0</span></code>:</dt>
-<dd>Index of the first vertex in SurfaceMesh.</dd>
+<dd>Index of the first vertex in TriangleSurfaceMesh.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">v1</span></code>:</dt>
-<dd>Index of the second vertex in SurfaceMesh.</dd>
+<dd>Index of the second vertex in TriangleSurfaceMesh.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">v2</span></code>:</dt>
-<dd>Index of the last vertex in SurfaceMesh.</dd>
+<dd>Index of the last vertex in TriangleSurfaceMesh.</dd>
 <dt>Precondition:</dt>
 <dd>index values are non-negative.</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceFace.vertex">
-<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceFace</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SurfaceFace.vertex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the vertex index in SurfaceMesh of the i-th vertex of this
-face.</p>
+<dt id="pydrake.geometry.SurfaceTriangle.vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceTriangle</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SurfaceTriangle.vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex index in TriangleSurfaceMesh of the i-th vertex of
+this triangle.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">i</span></code>:</dt>
-<dd>The local index of the vertex in this face.</dd>
+<dd>The local index of the vertex in this triangle.</dd>
 <dt>Precondition:</dt>
 <dd>0 &lt;= i &lt; 3</dd>
 </dl>
@@ -11884,39 +11888,35 @@ face.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pydrake.geometry.SurfaceMesh">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">SurfaceMesh</code><a class="headerlink" href="#pydrake.geometry.SurfaceMesh" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.SurfaceMesh_[float]" title="pydrake.geometry.SurfaceMesh_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.SurfaceMesh_[float]</span></code></a></p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMesh</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMesh_[float]" title="pydrake.geometry.TriangleSurfaceMesh_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.TriangleSurfaceMesh_[float]</span></code></a></p>
 </dd></dl>
 
 <dl class="template">
-<dt id="pydrake.geometry.SurfaceMesh_">
-<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SurfaceMesh_</code><a class="headerlink" href="#pydrake.geometry.SurfaceMesh_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.SurfaceMesh_[float]" title="pydrake.geometry.SurfaceMesh_[float]"><code class="xref py py-class docutils literal"><span class="pre">SurfaceMesh_[float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.SurfaceMesh_[AutoDiffXd]" title="pydrake.geometry.SurfaceMesh_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">SurfaceMesh_[AutoDiffXd]</span></code></a></p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_">
+<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMesh_</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMesh_[float]" title="pydrake.geometry.TriangleSurfaceMesh_[float]"><code class="xref py py-class docutils literal"><span class="pre">TriangleSurfaceMesh_[float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]" title="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">TriangleSurfaceMesh_[AutoDiffXd]</span></code></a></p>
 <dl class="class">
-<dt id="pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float]">
-<em class="property">class </em><code class="descname">SurfaceMesh_[float]</code><a class="headerlink" href="#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>SurfaceMesh represents a triangulated surface.</p>
-<dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
-<dd>The underlying scalar type for coordinates, e.g., double or
-AutoDiffXd. Must be a valid Eigen scalar.</dd>
-</dl>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float]">
+<em class="property">class </em><code class="descname">TriangleSurfaceMesh_[float]</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>TriangleSurfaceMesh represents a union of triangles. The surface is
+not necessarily continuous.</p>
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float], faces: List[pydrake.geometry.SurfaceFace], vertices: List[numpy.ndarray[numpy.float64[3, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a SurfaceMesh from faces and vertices.</p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], triangles: List[pydrake.geometry.SurfaceTriangle], vertices: List[numpy.ndarray[numpy.float64[3, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a TriangleSurfaceMesh from triangles and vertices.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">faces</span></code>:</dt>
-<dd>The triangular faces.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">triangles</span></code>:</dt>
+<dd>The triangular triangles.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
 <dd>The vertices.</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].centroid">
-<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area-weighted geometric centroid of this surface mesh. The
 returned value is the position vector p_MSc from M’s origin to the
 centroid Sc, expressed in frame M. (M is the frame in which this
@@ -11924,18 +11924,18 @@ mesh’s vertices are measured and expressed.) Note that the centroid is
 not necessarily a point on the surface. If the total mesh area is
 exactly zero, we define the centroid to be (0,0,0).</p>
 <p>The centroid location is calculated <em>per face</em> not <em>per vertex</em> so is
-insensitive to whether vertices are shared by faces.</p>
+insensitive to whether vertices are shared by triangles.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].faces">
-<code class="descname">faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceFace]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].faces" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the faces.</p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].triangles">
+<code class="descname">triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceTriangle]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the triangles.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].vertices">
-<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_.SurfaceMesh_[float].vertices" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].vertices">
+<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_.TriangleSurfaceMesh_[float].vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vertices.</p>
 </dd></dl>
 
@@ -11944,29 +11944,25 @@ insensitive to whether vertices are shared by faces.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.geometry.SurfaceMesh_[AutoDiffXd]">
-<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SurfaceMesh_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>SurfaceMesh represents a triangulated surface.</p>
-<dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
-<dd>The underlying scalar type for coordinates, e.g., double or
-AutoDiffXd. Must be a valid Eigen scalar.</dd>
-</dl>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMesh_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>TriangleSurfaceMesh represents a union of triangles. The surface is
+not necessarily continuous.</p>
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[AutoDiffXd], faces: List[pydrake.geometry.SurfaceFace], vertices: List[numpy.ndarray[object[3, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a SurfaceMesh from faces and vertices.</p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd], triangles: List[pydrake.geometry.SurfaceTriangle], vertices: List[numpy.ndarray[object[3, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a TriangleSurfaceMesh from triangles and vertices.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">faces</span></code>:</dt>
-<dd>The triangular faces.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">triangles</span></code>:</dt>
+<dd>The triangular triangles.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
 <dd>The vertices.</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[AutoDiffXd].centroid">
-<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[AutoDiffXd].centroid" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area-weighted geometric centroid of this surface mesh. The
 returned value is the position vector p_MSc from M’s origin to the
 centroid Sc, expressed in frame M. (M is the frame in which this
@@ -11974,47 +11970,43 @@ mesh’s vertices are measured and expressed.) Note that the centroid is
 not necessarily a point on the surface. If the total mesh area is
 exactly zero, we define the centroid to be (0,0,0).</p>
 <p>The centroid location is calculated <em>per face</em> not <em>per vertex</em> so is
-insensitive to whether vertices are shared by faces.</p>
+insensitive to whether vertices are shared by triangles.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[AutoDiffXd].faces">
-<code class="descname">faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceFace]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[AutoDiffXd].faces" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the faces.</p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].triangles">
+<code class="descname">triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceTriangle]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the triangles.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[AutoDiffXd].vertices">
-<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[object[3, 1]]]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[AutoDiffXd].vertices" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].vertices">
+<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[object[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd].vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vertices.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.geometry.SurfaceMesh_[float]">
-<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SurfaceMesh_[float]</code><a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>SurfaceMesh represents a triangulated surface.</p>
-<dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
-<dd>The underlying scalar type for coordinates, e.g., double or
-AutoDiffXd. Must be a valid Eigen scalar.</dd>
-</dl>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">TriangleSurfaceMesh_[float]</code><a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>TriangleSurfaceMesh represents a union of triangles. The surface is
+not necessarily continuous.</p>
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float], faces: List[pydrake.geometry.SurfaceFace], vertices: List[numpy.ndarray[numpy.float64[3, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a SurfaceMesh from faces and vertices.</p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float], triangles: List[pydrake.geometry.SurfaceTriangle], vertices: List[numpy.ndarray[numpy.float64[3, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a TriangleSurfaceMesh from triangles and vertices.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">faces</span></code>:</dt>
-<dd>The triangular faces.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">triangles</span></code>:</dt>
+<dd>The triangular triangles.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
 <dd>The vertices.</dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[float].centroid">
-<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the area-weighted geometric centroid of this surface mesh. The
 returned value is the position vector p_MSc from M’s origin to the
 centroid Sc, expressed in frame M. (M is the frame in which this
@@ -12022,18 +12014,18 @@ mesh’s vertices are measured and expressed.) Note that the centroid is
 not necessarily a point on the surface. If the total mesh area is
 exactly zero, we define the centroid to be (0,0,0).</p>
 <p>The centroid location is calculated <em>per face</em> not <em>per vertex</em> so is
-insensitive to whether vertices are shared by faces.</p>
+insensitive to whether vertices are shared by triangles.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[float].faces">
-<code class="descname">faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceFace]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[float].faces" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the faces.</p>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].triangles">
+<code class="descname">triangles</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[pydrake.geometry.SurfaceTriangle]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].triangles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the triangles.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SurfaceMesh_[float].vertices">
-<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.SurfaceMesh_[float].vertices" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.geometry.TriangleSurfaceMesh_[float].vertices">
+<code class="descname">vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.TriangleSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.TriangleSurfaceMesh_[float].vertices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the vertices.</p>
 </dd></dl>
 

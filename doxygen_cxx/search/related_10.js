@@ -12,7 +12,6 @@ var searchData=
   ['sinh',['sinh',['../classdrake_1_1symbolic_1_1_expression.html#aa5f5c9f26be9d9eef2784073ac8075e0',1,'drake::symbolic::Expression']]],
   ['sqrt',['sqrt',['../classdrake_1_1symbolic_1_1_expression.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::Expression::sqrt()'],['../classdrake_1_1symbolic_1_1_expression_sqrt.html#a79e1b5d9aadd56991632f40804d4bf93',1,'drake::symbolic::ExpressionSqrt::sqrt()']]],
   ['statelesssystem',['StatelessSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_stateless_system.html#a9fb5ca6b2f8041db90ab9d5ff9d580b5',1,'drake::systems::analysis_test::StatelessSystem']]],
-  ['surfacemeshtester_3c_20t_20_3e',['SurfaceMeshTester&lt; T &gt;',['../classdrake_1_1geometry_1_1_surface_mesh.html#a58584b0686ae529c43df85ba38cef480',1,'drake::geometry::SurfaceMesh']]],
   ['swap',['swap',['../classdrake_1_1symbolic_1_1_expression.html#ac36260fe42c812627ad0979214777e5b',1,'drake::symbolic::Expression::swap()'],['../classdrake_1_1symbolic_1_1_formula.html#a2eeeeba05a6af9aa74731c6b0c815ac7',1,'drake::symbolic::Formula::swap()']]],
   ['system',['System',['../classdrake_1_1systems_1_1_system.html#a70a6f9e15c48813e173ebd6d48770fa1',1,'drake::systems::System']]],
   ['system_3c_20t_20_3e',['System&lt; T &gt;',['../classdrake_1_1systems_1_1_system_output.html#acc101f7fb3a61892369e9d49e46d2793',1,'drake::systems::SystemOutput']]],

@@ -29,7 +29,7 @@ var classdrake_1_1geometry_1_1_scene_graph_inspector =
     [ "GetProperties", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ade53caab293c947c586f4ff3ddcf9ca2", null ],
     [ "GetProximityProperties", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a54ca60ee613f990628306a00cf2edf0a", null ],
     [ "GetShape", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a15446aba86e9d94dced6ef95e718e17c", null ],
-    [ "maybe_get_hydroelastic_mesh", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ab840f09f0ed42eafe68c17c65912e646", null ],
+    [ "maybe_get_hydroelastic_mesh", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a92d19b4df9597abbaaefef9ebecfef7a", null ],
     [ "num_frames", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ada7f02e861a8f89fc0b575b2f30333d3", null ],
     [ "num_geometries", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a7239b078735f1096cdf5ae1c8d0f8e69", null ],
     [ "num_sources", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#ad2c3f6828b9b10fa96795d2ac58d1df6", null ],

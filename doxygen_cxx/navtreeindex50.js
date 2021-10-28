@@ -104,9 +104,6 @@ var NAVTREEINDEX50 =
 "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,1,30],
 "subvector_8h.html":[4,0,0,11,3,37],
 "supervector_8h.html":[4,0,0,11,3,38],
-"surface__mesh_8h.html":[4,0,0,4,2,41],
-"surface__mesh__field_8h.html":[4,0,0,4,2,42],
-"surface__mesh__field_8h.html#aeb8521ca427b948bf56882cae0363bd4":[4,0,0,4,2,42,0],
 "symbolic_8h.html":[4,0,0,1,50],
 "symbolic_8h.html#a789c18b4944958dff3f102a1bd47c425":[4,0,0,1,50,0],
 "symbolic__chebyshev__basis__element_8h.html":[4,0,0,1,51],
@@ -249,5 +246,8 @@ var NAVTREEINDEX50 =
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa78d811e98514cd165dda532286610fd2":[4,0,0,1,56,12,20],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa7ecfb3bf076a6a9635f975fe96ac97fd":[4,0,0,1,56,12,25],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa8be6d3e955290ee50c00a4bc92aa7749":[4,0,0,1,56,12,9],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa98ed804abf4edd1f3be3fa894fa8cc3d":[4,0,0,1,56,12,17]
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa98ed804abf4edd1f3be3fa894fa8cc3d":[4,0,0,1,56,12,17],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faaae77f3ad25595e35b327334d89410054":[4,0,0,1,56,12,8],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faaaff6933d8331eca27edc911467980c9c":[4,0,0,1,56,12,24],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faab95a01ffffa8fcdd2a9af961937c097c":[4,0,0,1,56,12,22]
 };

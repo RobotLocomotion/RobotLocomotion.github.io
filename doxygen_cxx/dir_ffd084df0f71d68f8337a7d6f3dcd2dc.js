@@ -43,13 +43,13 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "proximity_doxygen.h", "proximity__doxygen_8h.html", null ],
     [ "proximity_utilities.h", "proximity__utilities_8h.html", null ],
     [ "sorted_triplet.h", "sorted__triplet_8h.html", null ],
-    [ "surface_mesh.h", "surface__mesh_8h.html", [
-      [ "SurfaceFace", "classdrake_1_1geometry_1_1_surface_face.html", "classdrake_1_1geometry_1_1_surface_face" ],
-      [ "SurfaceMeshTester", "classdrake_1_1geometry_1_1_surface_mesh_tester.html", null ],
-      [ "SurfaceMesh", "classdrake_1_1geometry_1_1_surface_mesh.html", "classdrake_1_1geometry_1_1_surface_mesh" ]
-    ] ],
-    [ "surface_mesh_field.h", "surface__mesh__field_8h.html", "surface__mesh__field_8h" ],
     [ "tessellation_strategy.h", "tessellation__strategy_8h.html", null ],
+    [ "triangle_surface_mesh.h", "triangle__surface__mesh_8h.html", [
+      [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", "classdrake_1_1geometry_1_1_surface_triangle" ],
+      [ "TriangleSurfaceMeshTester", "classdrake_1_1geometry_1_1_triangle_surface_mesh_tester.html", null ],
+      [ "TriangleSurfaceMesh", "classdrake_1_1geometry_1_1_triangle_surface_mesh.html", "classdrake_1_1geometry_1_1_triangle_surface_mesh" ]
+    ] ],
+    [ "triangle_surface_mesh_field.h", "triangle__surface__mesh__field_8h.html", "triangle__surface__mesh__field_8h" ],
     [ "volume_mesh.h", "volume__mesh_8h.html", "volume__mesh_8h" ],
     [ "volume_mesh_field.h", "volume__mesh__field_8h.html", "volume__mesh__field_8h" ],
     [ "volume_to_surface_mesh.h", "volume__to__surface__mesh_8h.html", "volume__to__surface__mesh_8h" ]

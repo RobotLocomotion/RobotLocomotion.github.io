@@ -73,5 +73,5 @@ var searchData=
   ['kunspecified',['kUnspecified',['../classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8',1,'drake::geometry::render::RenderLabel']]],
   ['kusedefaultname',['kUseDefaultName',['../namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa',1,'drake::systems']]],
   ['kusehardwareconcurrency',['kUseHardwareConcurrency',['../namespacedrake_1_1systems_1_1analysis.html#a2df45efdced327ad20c26403412fb37f',1,'drake::systems::analysis']]],
-  ['kvertexperelement',['kVertexPerElement',['../classdrake_1_1geometry_1_1_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6',1,'drake::geometry::SurfaceMesh::kVertexPerElement()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a39b0509ce7179535d6b30f11fb305dc6',1,'drake::geometry::VolumeMesh::kVertexPerElement()']]]
+  ['kvertexperelement',['kVertexPerElement',['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a39b0509ce7179535d6b30f11fb305dc6',1,'drake::geometry::TriangleSurfaceMesh::kVertexPerElement()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a39b0509ce7179535d6b30f11fb305dc6',1,'drake::geometry::VolumeMesh::kVertexPerElement()']]]
 ];
