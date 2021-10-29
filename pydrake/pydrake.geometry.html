@@ -3337,7 +3337,7 @@ properties to false.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.Meshcat.SetAnimation">
-<code class="descname">SetAnimation</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>animation: pydrake.geometry.MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetAnimation</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>animation: drake::geometry::MeshcatAnimation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the MeshcatAnimation, which creates a slider interface element to
 play/pause/rewind through a series of animation frames in the
 visualizer.</p>
@@ -3448,11 +3448,15 @@ in all connected meshcat browsers.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.Meshcat.SetTransform">
-<code class="descname">SetTransform</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, X_ParentPath: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetTransform" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the RigidTransform for a given path in the scene tree. An object’s
-pose is the concatenation of all of the transforms along its path, so
-setting the transform of “/foo” will move the objects at “/foo/box1”
-and “/foo/robots/HAL9000”.</p>
+<code class="descname">SetTransform</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetTransform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>SetTransform(self: pydrake.geometry.Meshcat, path: str, X_ParentPath: pydrake.math.RigidTransform_[float]) -&gt; None</li>
+</ol>
+<p>Set the RigidTransform for a given path in the scene tree relative to
+its parent path. An object’s pose is the concatenation of all of the
+transforms along its path, so setting the transform of “/foo” will
+move the objects at “/foo/box1” and “/foo/robots/HAL9000”.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
 <dd>a “/”-delimited string indicating the path in the scene tree. See
@@ -3460,6 +3464,23 @@ meshcat_path “Meshcat paths” for the semantics.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">X_ParentPath</span></code>:</dt>
 <dd>the relative transform from the path to its immediate parent.</dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li>SetTransform(self: pydrake.geometry.Meshcat, path: str, matrix: numpy.ndarray[numpy.float64[4, 4], flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Set the homogeneous transform for a given path in the scene tree
+relative to its parent path. An object’s pose is the concatenation of
+all of the transforms along its path, so setting the transform of
+“/foo” will move the objects at “/foo/box1” and “/foo/robots/HAL9000”.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">matrix</span></code>:</dt>
+<dd>the relative transform from the path to its immediate parent.</dd>
+</dl>
+<p>Note: Prefer to use the overload which takes a RigidTransformd unless
+you need the fully parameterized homogeneous transform (which
+additionally allows scale and sheer).</p>
 </dd></dl>
 
 <dl class="method">
@@ -4487,7 +4508,7 @@ not add frames to the animation.</p>
 <dl class="attribute">
 <dt id="pydrake.geometry.MeshcatVisualizerParams.delete_on_initialization_event">
 <code class="descname">delete_on_initialization_event</code><a class="headerlink" href="#pydrake.geometry.MeshcatVisualizerParams.delete_on_initialization_event" title="Permalink to this definition">¶</a></dt>
-<dd><p>Determines whether to send a Meschat::Delete(“/prefix”) message on an
+<dd><p>Determines whether to send a Meschat::Delete(prefix) message on an
 initialization event to remove any visualizations e.g. from a previous
 simulation. See declare_initialization_events “Declare initialization
 events” for more information.</p>

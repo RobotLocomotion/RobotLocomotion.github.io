@@ -77,6 +77,7 @@ var hierarchy =
     [ "ConstraintSolver< T >", "classdrake_1_1multibody_1_1constraint_1_1_constraint_solver.html", null ],
     [ "ConstraintVelProblemData< T >", "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html", null ],
     [ "ContactResults< T >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
+    [ "ContactResultsToMeshcatParams", "structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html", null ],
     [ "ContactSurface< T >", "classdrake_1_1geometry_1_1_contact_surface.html", null ],
     [ "ContactWrench", "structdrake_1_1multibody_1_1_contact_wrench.html", null ],
     [ "ContextMessageInterface", null, [
@@ -588,8 +589,8 @@ var hierarchy =
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
-    [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
+    [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
@@ -776,6 +777,7 @@ var hierarchy =
             [ "MeshcatVisualizer< T >", "classdrake_1_1geometry_1_1_meshcat_visualizer.html", null ],
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
+            [ "ContactResultsToMeshcat< T >", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html", null ],
             [ "MultibodyTreeSystem< T >", null, [
               [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
                 [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]

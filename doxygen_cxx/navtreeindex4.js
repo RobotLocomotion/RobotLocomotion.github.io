@@ -211,12 +211,13 @@ var NAVTREEINDEX4 =
 "classdrake_1_1geometry_1_1_meshcat.html#a1f39e1fa88e061ddd4dc15a3be1a0450":[3,0,0,3,25,20],
 "classdrake_1_1geometry_1_1_meshcat.html#a37b1b4538dd47e4dc5fd9c671454b4d2":[3,0,0,3,25,18],
 "classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf":[3,0,0,3,25,23],
-"classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5":[3,0,0,3,25,33],
+"classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5":[3,0,0,3,25,34],
+"classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a":[3,0,0,3,25,33],
 "classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e":[3,0,0,3,25,27],
 "classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027":[3,0,0,3,25,30],
 "classdrake_1_1geometry_1_1_meshcat.html#a50fc49ac1d55ac00b10946b748db02dc":[3,0,0,3,25,11],
 "classdrake_1_1geometry_1_1_meshcat.html#a5cbfa93be716f89b71af1a3b0f414bb9":[3,0,0,3,25,15],
-"classdrake_1_1geometry_1_1_meshcat.html#a7770452d0167ddf273f47c90e85dc941":[3,0,0,3,25,34],
+"classdrake_1_1geometry_1_1_meshcat.html#a7770452d0167ddf273f47c90e85dc941":[3,0,0,3,25,35],
 "classdrake_1_1geometry_1_1_meshcat.html#a7b80af00a00e2a047d59cdc4dc1e7754":[3,0,0,3,25,3],
 "classdrake_1_1geometry_1_1_meshcat.html#a7ded5dcf3b477a151c05ff4f9ea3351b":[3,0,0,3,25,5],
 "classdrake_1_1geometry_1_1_meshcat.html#a7e8936185fd67ee1825d107010b66507":[3,0,0,3,25,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "classdrake_1_1geometry_1_1_meshcat_animation.html#a4b3f90babb880bb5f79baeb880642a1d":[3,0,0,3,26,22],
 "classdrake_1_1geometry_1_1_meshcat_animation.html#a58a8ccf1df1c55c0f9ae6b3644307ad3":[3,0,0,3,26,25],
 "classdrake_1_1geometry_1_1_meshcat_animation.html#a64585536626bd9161508801ab417eb69":[3,0,0,3,26,9],
-"classdrake_1_1geometry_1_1_meshcat_animation.html#a709fa80256a74e684b52b7190b5087a3":[3,0,0,3,26,0],
-"classdrake_1_1geometry_1_1_meshcat_animation.html#a709fa80256a74e684b52b7190b5087a3a0bbcc1b750c98554b31b27ad131ae6d4":[3,0,0,3,26,0,1]
+"classdrake_1_1geometry_1_1_meshcat_animation.html#a709fa80256a74e684b52b7190b5087a3":[3,0,0,3,26,0]
 };

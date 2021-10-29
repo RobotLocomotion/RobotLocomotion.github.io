@@ -174,8 +174,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adeec831adfeef24453c8c5b8b9d69625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the default camera, background, grid lines, and axes to their default settings.  <a href="#adeec831adfeef24453c8c5b8b9d69625">More...</a><br /></td></tr>
 <tr class="separator:adeec831adfeef24453c8c5b8b9d69625"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e1b021d8e7be408a7d17d39ce459b39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a1e1b021d8e7be408a7d17d39ce459b39">SetTransform</a> (std::string_view path, const math::RigidTransformd &amp;X_ParentPath)</td></tr>
-<tr class="memdesc:a1e1b021d8e7be408a7d17d39ce459b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RigidTransform for a given path in the scene tree.  <a href="#a1e1b021d8e7be408a7d17d39ce459b39">More...</a><br /></td></tr>
+<tr class="memdesc:a1e1b021d8e7be408a7d17d39ce459b39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RigidTransform for a given path in the scene tree relative to its parent path.  <a href="#a1e1b021d8e7be408a7d17d39ce459b39">More...</a><br /></td></tr>
 <tr class="separator:a1e1b021d8e7be408a7d17d39ce459b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d1b2e65ac43693b86ca290ff84d38a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a">SetTransform</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix4d &gt; &amp;matrix)</td></tr>
+<tr class="memdesc:a48d1b2e65ac43693b86ca290ff84d38a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the homogeneous transform for a given path in the scene tree relative to its parent path.  <a href="#a48d1b2e65ac43693b86ca290ff84d38a">More...</a><br /></td></tr>
+<tr class="separator:a48d1b2e65ac43693b86ca290ff84d38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8">Delete</a> (std::string_view path=&quot;&quot;)</td></tr>
 <tr class="memdesc:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the object at the given <code>path</code> as well as all of its children.  <a href="#af4681ade5efb8da0d67f86ecae9b9ac8">More...</a><br /></td></tr>
 <tr class="separator:af4681ade5efb8da0d67f86ecae9b9ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1136,7 +1139,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a1e1b021d8e7be408a7d17d39ce459b39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e1b021d8e7be408a7d17d39ce459b39">&#9670;&nbsp;</a></span>SetTransform()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1b021d8e7be408a7d17d39ce459b39">&#9670;&nbsp;</a></span>SetTransform() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1161,7 +1164,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the RigidTransform for a given path in the scene tree. </p>
+<p>Set the RigidTransform for a given path in the scene tree relative to its parent path. </p>
 <p>An object's pose is the concatenation of all of the transforms along its path, so setting the transform of "/foo" will move the objects at "/foo/box1" and "/foo/robots/HAL9000". </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
@@ -1169,6 +1172,44 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a48d1b2e65ac43693b86ca290ff84d38a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d1b2e65ac43693b86ca290ff84d38a">&#9670;&nbsp;</a></span>SetTransform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTransform </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix4d &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the homogeneous transform for a given path in the scene tree relative to its parent path. </p>
+<p>An object's pose is the concatenation of all of the transforms along its path, so setting the transform of "/foo" will move the objects at "/foo/box1" and "/foo/robots/HAL9000". </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
+    <tr><td class="paramname">matrix</td><td>the relative transform from the path to its immediate parent.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Note: Prefer to use the overload which takes a RigidTransformd unless you need the fully parameterized homogeneous transform (which additionally allows scale and sheer). </p>
 
 </div>
 </div>

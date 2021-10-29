@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8":[3,0,0,3,1,10,20],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#a20d7c2251981325fcea8a3c5e28b516e":[3,0,0,3,1,10,4],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#a26f7ca5617c42578143d63b1e065e9be":[3,0,0,3,1,10,17],
 "classdrake_1_1geometry_1_1render_1_1_render_label.html#a48e1c3ba342423684e802d1203c197d6":[3,0,0,3,1,10,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html":[1,3,5,4],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html#a33c631ca5c7a05b49c59821d76eaf4e5":[1,3,5,4,0],
 "classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html#ac32c726355096b5f016b76b1361ce18c":[1,3,5,4,1],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html#af117ac8c037e7d6737676b057de2d7bc":[1,3,5,4,2],
-"classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html":[1,3,5,6]
+"classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html#af117ac8c037e7d6737676b057de2d7bc":[1,3,5,4,2]
 };

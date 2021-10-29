@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#aecaad09aa3b66b2a436c6afeabdc49e7":[1,6,4,2,1,2],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#aecaad09aa3b66b2a436c6afeabdc49e7":[1,2,1,2,1,2],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html":[1,2,1,3],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html":[1,6,4,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ae7e7742c1fc3324e9cd80e62fd65095f":[3,0,0,3,1,8,4],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#af70dd3ac8981ebabb0e508ee041ef2b7":[3,0,0,3,1,8,2],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#afa6f7d31e4fabbe7344340a521ea2171":[3,0,0,3,1,8,10],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html":[3,0,0,3,1,10],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html#a1daa747be5f9a14fbc5bec2a244f27f8":[3,0,0,3,1,10,20]
+"classdrake_1_1geometry_1_1render_1_1_render_label.html":[3,0,0,3,1,10]
 };

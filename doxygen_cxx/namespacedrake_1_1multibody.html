@@ -159,6 +159,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html">ContactResultsToLcmSystem</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A System that encodes <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> into a lcmt_contact_results_for_viz message.  <a href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html">ContactResultsToMeshcat</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html" title="ContactResultsToMeshcat is a system that publishes a ContactResults to geometry::Meshcat; it draws do...">ContactResultsToMeshcat</a> is a system that publishes a <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">geometry::Meshcat</a>; it draws double-sided arrows at the location of the contact force with length scaled by the magnitude of the contact force.  <a href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html">ContactResultsToMeshcatParams</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The set of parameters for configuring <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html" title="ContactResultsToMeshcat is a system that publishes a ContactResults to geometry::Meshcat; it draws do...">ContactResultsToMeshcat</a>.  <a href="structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1multibody_1_1_contact_wrench.html">ContactWrench</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the contact wrench (spatial force) from <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> A to <a class="el" href="classdrake_1_1multibody_1_1_body.html" title="Body provides the general abstraction of a body with an API that makes no assumption about whether a ...">Body</a> B applied at point Cb.  <a href="structdrake_1_1multibody_1_1_contact_wrench.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,6 +366,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9b7dce3eb33772802af322ca25ef4864"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864">MinimumDistancePenaltyFunction</a> = <a class="el" href="namespacedrake_1_1solvers.html#adc2a57e87ae4e4088e12967a25a7c229">solvers::MinimumValuePenaltyFunction</a></td></tr>
 <tr class="memdesc:a9b7dce3eb33772802af322ca25ef4864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the penalty function φ(x) and its derivatives dφ(x)/dx.  <a href="#a9b7dce3eb33772802af322ca25ef4864">More...</a><br /></td></tr>
 <tr class="separator:a9b7dce3eb33772802af322ca25ef4864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa098db6f335f188687125e9bb983d27a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#aa098db6f335f188687125e9bb983d27a">ContactResultsToMeshcatd</a> = <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html">ContactResultsToMeshcat</a>&lt; double &gt;</td></tr>
+<tr class="memdesc:aa098db6f335f188687125e9bb983d27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for the <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html" title="ContactResultsToMeshcat is a system that publishes a ContactResults to geometry::Meshcat; it draws do...">ContactResultsToMeshcat</a> class when using the <code>double</code> scalar type.  <a href="#aa098db6f335f188687125e9bb983d27a">More...</a><br /></td></tr>
+<tr class="separator:aa098db6f335f188687125e9bb983d27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody.html#a51c69848adb64ae45eebc1e5af5dbaa6">FrameIndex</a> = <a class="el" href="classdrake_1_1_type_safe_index.html">TypeSafeIndex</a>&lt; class FrameTag &gt;</td></tr>
 <tr class="memdesc:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type used to identify frames by index in a multibody tree system.  <a href="#a51c69848adb64ae45eebc1e5af5dbaa6">More...</a><br /></td></tr>
 <tr class="separator:a51c69848adb64ae45eebc1e5af5dbaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -506,6 +515,22 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type used to identify bodies by index in a multibody tree system. </p>
+
+</div>
+</div>
+<a id="aa098db6f335f188687125e9bb983d27a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa098db6f335f188687125e9bb983d27a">&#9670;&nbsp;</a></span>ContactResultsToMeshcatd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1multibody.html#aa098db6f335f188687125e9bb983d27a">ContactResultsToMeshcatd</a> =  <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html">ContactResultsToMeshcat</a>&lt;double&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A convenient alias for the <a class="el" href="classdrake_1_1multibody_1_1_contact_results_to_meshcat.html" title="ContactResultsToMeshcat is a system that publishes a ContactResults to geometry::Meshcat; it draws do...">ContactResultsToMeshcat</a> class when using the <code>double</code> scalar type. </p>
 
 </div>
 </div>
