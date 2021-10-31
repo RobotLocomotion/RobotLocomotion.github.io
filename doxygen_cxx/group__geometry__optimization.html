@@ -256,11 +256,10 @@ Functions</h2></td></tr>
     <tr><td class="paramname">plant</td><td>describes the kinematics of configuration space. It must be connected to a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> in a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">systems::Diagram</a>. </td></tr>
     <tr><td class="paramname">context</td><td>is a context of the <code>plant</code>. </td></tr>
     <tr><td class="paramname">sample</td><td>is a vector of size plant.num_positions() representing the initial IRIS seed configuration. </td></tr>
-    <tr><td class="paramname">options</td><td>provides additional configuration options.</td></tr>
+    <tr><td class="paramname">options</td><td>provides additional configuration options. In particular, <code>options.enabled_ibex</code> may have a significant impact on the runtime of the algorithm. </td></tr>
   </table>
   </dd>
 </dl>
-<p>Note: This initial implementation <b>does not</b> yet provide a rigorous guarantee that the returned region is collision free. The certification step will be contributed in a follow-up PR. </p>
 
 </div>
 </div>
