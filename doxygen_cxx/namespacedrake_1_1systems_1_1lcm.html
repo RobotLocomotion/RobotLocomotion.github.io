@@ -94,8 +94,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1systems_1_1lcm.html'
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle">
 <div class="title">drake::systems::lcm Namespace Reference</div>  </div>
 </div><!--header-->
@@ -129,12 +128,6 @@ Classes</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a2b4423532b6895ef22b02d25a3798daa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a2b4423532b6895ef22b02d25a3798daa">TriggerTypeSet</a> = <a class="el" href="namespacedrake_1_1systems.html#ac84c84e9fbb652ce19106e2f2e1f3d15">systems::TriggerTypeSet</a></td></tr>
 <tr class="separator:a2b4423532b6895ef22b02d25a3798daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a4aa98e140c3e8e4afdc8535f884e82d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html">LcmPublisherSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a4aa98e140c3e8e4afdc8535f884e82d0">ConnectLcmScope</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; double &gt; &amp;src, const std::string &amp;channel, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *builder, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm, double publish_period=0.0)</td></tr>
-<tr class="memdesc:a4aa98e140c3e8e4afdc8535f884e82d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4aa98e140c3e8e4afdc8535f884e82d0">More...</a><br /></td></tr>
-<tr class="separator:a4aa98e140c3e8e4afdc8535f884e82d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a2b4423532b6895ef22b02d25a3798daa"></a>
@@ -148,57 +141,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a4aa98e140c3e8e4afdc8535f884e82d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4aa98e140c3e8e4afdc8535f884e82d0">&#9670;&nbsp;</a></span>ConnectLcmScope()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html">LcmPublisherSystem</a>* drake::systems::lcm::ConnectLcmScope </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>channel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; double &gt; *&#160;</td>
-          <td class="paramname"><em>builder</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *&#160;</td>
-          <td class="paramname"><em>lcm</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>publish_period</em> = <code>0.0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated:</a></b></dt><dd>Prefer to use LcmScopeSystem::AddToBuilder instead of this function;  the LcmScopeSystem provides more detailed timestamps. <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>
 </div>

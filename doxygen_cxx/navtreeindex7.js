@@ -1,5 +1,15 @@
 var NAVTREEINDEX7 =
 {
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,6,4,2,1,8],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,2,1,2,1,8],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f":[1,6,4,2,1,10],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f":[1,2,1,2,1,10],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad8227ba86a01f26e4f173cd5e219d5d1":[1,6,4,2,1,6],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad8227ba86a01f26e4f173cd5e219d5d1":[1,2,1,2,1,6],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#adda5f965126b626170b367b0d51cd453":[1,6,4,2,1,11],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#adda5f965126b626170b367b0d51cd453":[1,2,1,2,1,11],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ae8f534ba19a206a4b70b81bbbaa981c4":[1,6,4,2,1,5],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ae8f534ba19a206a4b70b81bbbaa981c4":[1,2,1,2,1,5],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#aecaad09aa3b66b2a436c6afeabdc49e7":[1,6,4,2,1,2],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#aecaad09aa3b66b2a436c6afeabdc49e7":[1,2,1,2,1,2],
 "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html":[1,2,1,3],
@@ -239,15 +249,5 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a3e527521497096ba2f7aa8861a056623":[3,0,0,3,1,8,11],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a42d85756ac9f5c62314108e554591064":[3,0,0,3,1,8,5],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7cee58a6cd51d89cd3dfc5cbc0c0c88a":[3,0,0,3,1,8,0],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7e3d19bd99a23652bcc1079d6aabe3a6":[3,0,0,3,1,8,14],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a8169cca4018a438cc0012dbca354201d":[3,0,0,3,1,8,16],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a81e26b02c3a6d32b4187fc3f14261cbf":[3,0,0,3,1,8,17],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a859d9645a6882e4e2d9dd1fd04f284c4":[3,0,0,3,1,8,7],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a883142613402429f357102b1835d180a":[3,0,0,3,1,8,9],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a88a7096a316e3d2340941ddcc0a89832":[3,0,0,3,1,8,6],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#aaa0981a4cafa2db60957d182cccd5bfd":[3,0,0,3,1,8,15],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ae7e7742c1fc3324e9cd80e62fd65095f":[3,0,0,3,1,8,4],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#af70dd3ac8981ebabb0e508ee041ef2b7":[3,0,0,3,1,8,2],
-"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#afa6f7d31e4fabbe7344340a521ea2171":[3,0,0,3,1,8,10],
-"classdrake_1_1geometry_1_1render_1_1_render_label.html":[3,0,0,3,1,10]
+"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7e3d19bd99a23652bcc1079d6aabe3a6":[3,0,0,3,1,8,14]
 };

@@ -5266,8 +5266,8 @@ geometry::IllustrationProperties.</p>
 <ol class="arabic simple" start="2">
 <li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: pydrake.geometry.SceneGraph_[float] = None) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5426,8 +5426,8 @@ in space.</p>
 <ol class="arabic simple" start="2">
 <li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5655,8 +5655,8 @@ C.name().</p>
 <ol class="arabic simple" start="2">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[float]</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9228,8 +9228,8 @@ geometry::IllustrationProperties.</p>
 <ol class="arabic simple" start="2">
 <li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd] = None) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9388,8 +9388,8 @@ in space.</p>
 <ol class="arabic simple" start="2">
 <li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_WB: pydrake.common.eigen_geometry.Isometry3_[AutoDiffXd]) -&gt; None</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9617,8 +9617,8 @@ C.name().</p>
 <ol class="arabic simple" start="2">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], A: pydrake.multibody.tree.Frame_[AutoDiffXd], B: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13188,8 +13188,8 @@ geometry::IllustrationProperties.</p>
 <ol class="arabic simple" start="2">
 <li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: drake::geometry::SceneGraph&lt;drake::symbolic::Expression&gt; = None) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13348,8 +13348,8 @@ in space.</p>
 <ol class="arabic simple" start="2">
 <li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_WB: pydrake.common.eigen_geometry.Isometry3_[Expression]) -&gt; None</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13577,8 +13577,8 @@ C.name().</p>
 <ol class="arabic simple" start="2">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], A: pydrake.multibody.tree.Frame_[Expression], B: pydrake.multibody.tree.Frame_[Expression], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -17148,8 +17148,8 @@ geometry::IllustrationProperties.</p>
 <ol class="arabic simple" start="2">
 <li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: pydrake.geometry.SceneGraph_[float] = None) -&gt; pydrake.geometry.GeometryId</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -17308,8 +17308,8 @@ in space.</p>
 <ol class="arabic simple" start="2">
 <li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -17537,8 +17537,8 @@ C.name().</p>
 <ol class="arabic simple" start="2">
 <li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[float]</li>
 </ol>
-<p>This API using Isometry3 is / will be deprecated soon with the resolution of
-#9865. We only offer it for backwards compatibility. DO NOT USE!.</p>
+<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
+from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">

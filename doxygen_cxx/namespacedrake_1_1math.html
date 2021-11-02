@@ -763,7 +763,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use ExtractGradient(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Use ExtractGradient(). <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -785,7 +785,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Use ExtractValue() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Use ExtractValue() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -1436,7 +1436,7 @@ d₁ = P*d
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
@@ -1458,7 +1458,7 @@ d₁ = P*d
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
@@ -1565,7 +1565,7 @@ d₁ = P*d
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
@@ -1597,7 +1597,7 @@ d₁ = P*d
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
@@ -1704,20 +1704,25 @@ d₁ = P*d
 <p>where A₂ and Q₂ are a change of variables:</p>
 <p>A₂ = A − BR⁻¹Nᵀ and Q₂ = Q − NR⁻¹Nᵀ</p>
 <p>This overload of the DARE is useful for finding the control law uₖ that minimizes the following cost function subject to xₖ₊₁ = Axₖ + Buₖ.</p>
-<pre class="fragment">///     ∞ [xₖ]ᵀ[Q  N][xₖ]
-/// J = Σ [uₖ] [Nᵀ R][uₖ] ΔT
-///    k=0
-/// </pre> <pre class="fragment">This is a more general form of the following. The linear-quadratic regulator
-is the feedback control law uₖ that minimizes the following cost function
-subject to xₖ₊₁ = Axₖ + Buₖ:
+<pre class="fragment">    ∞ [xₖ]ᵀ[Q  N][xₖ]
+J = Σ [uₖ] [Nᵀ R][uₖ] ΔT
+   k=0
+</pre><p>This is a more general form of the following. The linear-quadratic regulator is the feedback control law uₖ that minimizes the following cost function subject to xₖ₊₁ = Axₖ + Buₖ:</p>
+<pre class="fragment">    ∞
+J = Σ (xₖᵀQxₖ + uₖᵀRuₖ) ΔT
+   k=0
+</pre><p>This can be refactored as:</p>
+<pre class="fragment">    ∞ [xₖ]ᵀ[Q 0][xₖ]
+J = Σ [uₖ] [0 R][uₖ] ΔT
+   k=0
+</pre><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if Q − NR⁻¹Nᵀ is not positive semi-definite. </td></tr>
+    <tr><td class="paramname">std::runtime_error</td><td>if R is not positive definite. </td></tr>
+  </table>
+  </dd>
+</dl>
 
-@verbatim
-</pre><p> /// ∞ /// J = Σ (xₖᵀQxₖ + uₖᵀRuₖ) ΔT /// k=0 ///  </p><pre class="fragment">This can be refactored as:
-
-@verbatim
-</pre><p> /// ∞ [xₖ]ᵀ[Q 0][xₖ] /// J = Σ [uₖ] [0 R][uₖ] ΔT /// k=0 ///  </p><pre class="fragment">@throws std::runtime_error if Q − NR⁻¹Nᵀ is not positive semi-definite.
-@throws std::runtime_error if R is not positive definite.
-</pre> 
 </div>
 </div>
 <a id="a00f832c0837ee2ac76c713ed23440e8e"></a>
@@ -2151,7 +2156,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
  This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
@@ -2438,7 +2443,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2572,7 +2577,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2610,7 +2615,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff(). <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2642,7 +2647,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2682,7 +2687,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use InitializeAutoDiffTuple() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use InitializeAutoDiffTuple() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -3050,7 +3055,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3088,7 +3093,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3126,7 +3131,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3158,7 +3163,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3190,7 +3195,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3222,7 +3227,7 @@ subject to xₖ₊₁ = Axₖ + Buₖ:
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3769,7 +3774,7 @@ else
   </table>
   </dd>
 </dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
  This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>

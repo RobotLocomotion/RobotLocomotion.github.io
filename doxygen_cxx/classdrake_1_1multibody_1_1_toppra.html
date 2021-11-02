@@ -264,7 +264,9 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_toppra.html" title="Solves a Time Optimal Path Parameterization based on Reachability Analysis (TOPPRA) to find the faste...">Toppra</a> does not currently support plants that contain bodies with quaternion degrees of freedom. In addition, any plant where q̇ ≠ v will have undefined behavior. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_toppra.html" title="Solves a Time Optimal Path Parameterization based on Reachability Analysis (TOPPRA) to find the faste...">Toppra</a> does not currently support plants that contain bodies with quaternion degrees of freedom. In addition, any plant where q̇ ≠ v will have undefined behavior. </dd>
+<dd>
+The path velocity, ṡ(t), is limited to be between 0 and 1e8 to ensure the reachable set calculated in the backward pass is always bounded. </dd></dl>
 
 </div>
 </div>

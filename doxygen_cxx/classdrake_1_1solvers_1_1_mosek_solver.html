@@ -124,9 +124,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2529e72cdbd13cc298ea09ffdb19db58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0259e731ab5d911ef7952d085788bbf4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html#a0259e731ab5d911ef7952d085788bbf4">~MosekSolver</a> () final</td></tr>
 <tr class="separator:a0259e731ab5d911ef7952d085788bbf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa607644ad523138686a48e0473c8fa77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html#aa607644ad523138686a48e0473c8fa77">set_stream_logging</a> (bool flag, const std::string &amp;log_file)</td></tr>
-<tr class="memdesc:aa607644ad523138686a48e0473c8fa77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Control stream logging.  <a href="#aa607644ad523138686a48e0473c8fa77">More...</a><br /></td></tr>
-<tr class="separator:aa607644ad523138686a48e0473c8fa77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00b55f8b4c1c4f19b45621a84deed66c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mosek_solver.html#a00b55f8b4c1c4f19b45621a84deed66c">Solve</a> (const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;prog, const std::optional&lt; Eigen::VectorXd &gt; &amp;initial_guess=std::nullopt, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">SolverOptions</a> &gt; &amp;solver_options=std::nullopt) const</td></tr>
 <tr class="memdesc:a00b55f8b4c1c4f19b45621a84deed66c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec" title="Solves an optimization program with optional initial guess and solver options.">SolverInterface::Solve()</a>, but the result is a return value instead of an output argument.  <a href="#a00b55f8b4c1c4f19b45621a84deed66c">More...</a><br /></td></tr>
 <tr class="separator:a00b55f8b4c1c4f19b45621a84deed66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -512,45 +509,6 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa607644ad523138686a48e0473c8fa77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa607644ad523138686a48e0473c8fa77">&#9670;&nbsp;</a></span>set_stream_logging()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void set_stream_logging </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>flag</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>log_file</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Control stream logging. </p>
-<p>Refer to <a href="https://docs.mosek.com/9.2/capi/solver-io.html">https://docs.mosek.com/9.2/capi/solver-io.html</a> for more details. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">flag</td><td>Set to true if the user want to turn on stream logging. </td></tr>
-    <tr><td class="paramname">log_file</td><td>If the user wants to output the logging to a file, then set <code>log_file</code> to the name of that file. If the user wants to output the logging to the console, then set log_file to empty string.(Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000038">Deprecated:</a></b></dt><dd>Please set CommonSolverOption::kPrintFileName or  CommonSolverOption::kPrintToConsole in SolverOptions <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/systems/lcm/connect_lcm_scope.h File Reference</title>
+<title>Drake: drake/common/yaml/yaml_io.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('connect__lcm__scope_8h.html','');});
+$(document).ready(function(){initNavTree('yaml__io_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,16 +96,16 @@ $(document).ready(function(){initNavTree('connect__lcm__scope_8h.html','');});
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">connect_lcm_scope.h File Reference</div>  </div>
+<div class="title">yaml_io.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lcm__publisher__system_8h.html">drake/systems/lcm/lcm_publisher_system.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="yaml__write__archive_8h.html">drake/common/yaml/yaml_write_archive.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for connect_lcm_scope.h:</div>
+Include dependency graph for yaml_io.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="connect__lcm__scope_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="yaml__io_8h__incl.svg" width="100%" height="596"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
@@ -113,16 +113,19 @@ Include dependency graph for connect_lcm_scope.h:</div>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1systems"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html">drake::systems</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacedrake_1_1systems_1_1lcm"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html">drake::systems::lcm</a></td></tr>
+<tr class="memitem:namespacedrake_1_1yaml"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html">drake::yaml</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4aa98e140c3e8e4afdc8535f884e82d0"><td class="memItemLeft" align="right" valign="top">LcmPublisherSystem *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems_1_1lcm.html#a4aa98e140c3e8e4afdc8535f884e82d0">ConnectLcmScope</a> (const OutputPort&lt; double &gt; &amp;src, const std::string &amp;channel, systems::DiagramBuilder&lt; double &gt; *builder, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html">drake::lcm::DrakeLcmInterface</a> *lcm, double publish_period=0.0)</td></tr>
-<tr class="memdesc:a4aa98e140c3e8e4afdc8535f884e82d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1systems_1_1lcm.html#a4aa98e140c3e8e4afdc8535f884e82d0">More...</a><br /></td></tr>
-<tr class="separator:a4aa98e140c3e8e4afdc8535f884e82d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e">SaveYamlFile</a> (const std::string &amp;filename, const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
+<tr class="memdesc:ab3b6d04d37236596751e626ed6aa3b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted file.  <a href="namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e">More...</a><br /></td></tr>
+<tr class="separator:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a">SaveYamlString</a> (const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
+<tr class="memdesc:aaf418985a2d3d598d6191b2dc7576e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted string.  <a href="namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a">More...</a><br /></td></tr>
+<tr class="separator:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -130,7 +133,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_b7a0e33b407baa23d8a077e33033c988.html">systems</a></li><li class="navelem"><a class="el" href="dir_b001a274ea8b6b5c370fedfcc7a1b81c.html">lcm</a></li><li class="navelem"><a class="el" href="connect__lcm__scope_8h.html">connect_lcm_scope.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_a36da230f0956f48b11c85f7d599788f.html">common</a></li><li class="navelem"><a class="el" href="dir_a475b9d7562d90f72dfa4821e049558f.html">yaml</a></li><li class="navelem"><a class="el" href="yaml__io_8h.html">yaml_io.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.nl/">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a></li>

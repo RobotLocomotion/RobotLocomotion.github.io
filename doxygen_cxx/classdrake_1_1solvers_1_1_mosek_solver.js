@@ -12,7 +12,6 @@ var classdrake_1_1solvers_1_1_mosek_solver =
     [ "operator=", "classdrake_1_1solvers_1_1_mosek_solver.html#aaa618e714545a95956c1ff3f5212bbbc", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_mosek_solver.html#a4c2fcb538a16428da08a09d427135d87", null ],
     [ "ProgramAttributesSatisfied", "classdrake_1_1solvers_1_1_mosek_solver.html#a793b4bef71b184ac87f03d80b21c04d2", null ],
-    [ "set_stream_logging", "classdrake_1_1solvers_1_1_mosek_solver.html#aa607644ad523138686a48e0473c8fa77", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_mosek_solver.html#a00b55f8b4c1c4f19b45621a84deed66c", null ],
     [ "Solve", "classdrake_1_1solvers_1_1_mosek_solver.html#af2ff6a250a78bb79ef64f7527c51b01c", null ],
     [ "UnsatisfiedProgramAttributes", "classdrake_1_1solvers_1_1_mosek_solver.html#a606861b43d96b23fe439c905aaf715a0", null ]

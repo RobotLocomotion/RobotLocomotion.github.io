@@ -461,6 +461,12 @@ monotonically increasing.</dd>
 quaternion degrees of freedom. In addition, any plant where q̇ ≠ v
 will have undefined behavior.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The path velocity, ṡ(t), is limited to be between 0 and 1e8 to
+ensure the reachable set calculated in the backward pass is always
+bounded.</p>
+</div>
 </dd></dl>
 
 <dl class="method">

@@ -93,7 +93,8 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1yaml.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">drake::yaml Namespace Reference</div>  </div>
 </div><!--header-->
@@ -105,9 +106,133 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML file into a C++ structure, using the Serialize / Archive pattern.  <a href="classdrake_1_1yaml_1_1_yaml_read_archive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html">YamlWriteArchive</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data from a C++ structure into a YAML file, using the Serialize / Archive pattern.  <a href="classdrake_1_1yaml_1_1_yaml_write_archive.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that saves data from a C++ structure into a YAML file.  <a href="classdrake_1_1yaml_1_1_yaml_write_archive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e">SaveYamlFile</a> (const std::string &amp;filename, const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
+<tr class="memdesc:ab3b6d04d37236596751e626ed6aa3b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted file.  <a href="#ab3b6d04d37236596751e626ed6aa3b5e">More...</a><br /></td></tr>
+<tr class="separator:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#aaf418985a2d3d598d6191b2dc7576e4a">SaveYamlString</a> (const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
+<tr class="memdesc:aaf418985a2d3d598d6191b2dc7576e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted string.  <a href="#aaf418985a2d3d598d6191b2dc7576e4a">More...</a><br /></td></tr>
+<tr class="separator:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab3b6d04d37236596751e626ed6aa3b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b6d04d37236596751e626ed6aa3b5e">&#9670;&nbsp;</a></span>SaveYamlFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SaveYamlFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Serializable &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>child_name</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Serializable &gt; &amp;&#160;</td>
+          <td class="paramname"><em>defaults</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves data as a YAML-formatted file. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
+<p>The YAML will consist of a single document with a mapping node at the root. If a <code>child_name</code> is <b>not</b> provided (the default), then the serialized data will appear directly within that top-level mapping node. If a <code>child_name</code> <b>is</b> provided, then the top-level mapping node will contain only one entry, whose key is <code>child_name</code> and value is the serialized <code>data</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Filename to be written to. </td></tr>
+    <tr><td class="paramname">data</td><td>User data to be serialized. </td></tr>
+    <tr><td class="paramname">child_name</td><td>(optional) If provided, the YAML document will be <code>{child_name: { data }}</code> rather than just <code>{ data }</code>. </td></tr>
+    <tr><td class="paramname">defaults</td><td>(optional) If provided, then only data that differs from the given defaults will be serialized.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf418985a2d3d598d6191b2dc7576e4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf418985a2d3d598d6191b2dc7576e4a">&#9670;&nbsp;</a></span>SaveYamlString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SaveYamlString </td>
+          <td>(</td>
+          <td class="paramtype">const Serializable &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>child_name</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Serializable &gt; &amp;&#160;</td>
+          <td class="paramname"><em>defaults</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves data as a YAML-formatted string. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
+<p>The YAML will consist of a single document with a mapping node at the root. If a <code>child_name</code> is <b>not</b> provided (the default), then the serialized data will appear directly within that top-level mapping node. If a <code>child_name</code> <b>is</b> provided, then the top-level mapping node will contain only one entry, whose key is <code>child_name</code> and value is the serialized <code>data</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>User data to be serialized. </td></tr>
+    <tr><td class="paramname">child_name</td><td>(optional) If provided, the YAML document will be <code>{child_name: { data }}</code> rather than just <code>{ data }</code>. </td></tr>
+    <tr><td class="paramname">defaults</td><td>(optional) If provided, then only data that differs from the given defaults will be serialized.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the YAML document as a string.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.15 -->

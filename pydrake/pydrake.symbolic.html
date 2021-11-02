@@ -751,6 +751,12 @@ find the examples.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.symbolic.Expression.get_kind">
+<code class="descname">get_kind</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.ExpressionKind<a class="headerlink" href="#pydrake.symbolic.Expression.get_kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns expression kind.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.symbolic.Expression.GetVariables">
 <code class="descname">GetVariables</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variables<a class="headerlink" href="#pydrake.symbolic.Expression.GetVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Collects variables in expression.</p>
@@ -860,6 +866,192 @@ y).Substitute({{x, y}, {y, x}}) gets (y / x).</p>
 <code class="descname">to_string</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.symbolic.Expression.to_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns string representation of Expression.</p>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.symbolic.ExpressionKind">
+<em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">ExpressionKind</code><a class="headerlink" href="#pydrake.symbolic.ExpressionKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kinds of symbolic expressions.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>Constant : constant (double)</p>
+<p>Var : variable</p>
+<p>Add : addition (+)</p>
+<p>Mul : multiplication (*)</p>
+<p>Div : division (/)</p>
+<p>Log : logarithms</p>
+<p>Abs : absolute value function</p>
+<p>Exp : exponentiation</p>
+<p>Sqrt : square root</p>
+<p>Pow : power function</p>
+<p>Sin : sine</p>
+<p>Cos : cosine</p>
+<p>Tan : tangent</p>
+<p>Asin : arcsine</p>
+<p>Acos : arccosine</p>
+<p>Atan : arctangent</p>
+<p>Atan2 : arctangent2 (atan2(y,x) = atan(y/x))</p>
+<p>Sinh : hyperbolic sine</p>
+<p>Cosh : hyperbolic cosine</p>
+<p>Tanh : hyperbolic tangent</p>
+<p>Min : min</p>
+<p>Max : max</p>
+<p>Ceil : ceil</p>
+<p>Floor : floor</p>
+<p>IfThenElse : if then else</p>
+<p>NaN : NaN</p>
+<p>UninterpretedFunction : Uninterpreted function</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.symbolic.ExpressionKind.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.ExpressionKind</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.ExpressionKind.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Abs">
+<code class="descname">Abs</code><em class="property"> = &lt;ExpressionKind.Abs: 6&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Abs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Acos">
+<code class="descname">Acos</code><em class="property"> = &lt;ExpressionKind.Acos: 14&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Acos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Add">
+<code class="descname">Add</code><em class="property"> = &lt;ExpressionKind.Add: 2&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Asin">
+<code class="descname">Asin</code><em class="property"> = &lt;ExpressionKind.Asin: 13&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Asin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Atan">
+<code class="descname">Atan</code><em class="property"> = &lt;ExpressionKind.Atan: 15&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Atan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Atan2">
+<code class="descname">Atan2</code><em class="property"> = &lt;ExpressionKind.Atan2: 16&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Atan2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Ceil">
+<code class="descname">Ceil</code><em class="property"> = &lt;ExpressionKind.Ceil: 22&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Ceil" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Constant">
+<code class="descname">Constant</code><em class="property"> = &lt;ExpressionKind.Constant: 0&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Constant" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Cos">
+<code class="descname">Cos</code><em class="property"> = &lt;ExpressionKind.Cos: 11&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Cosh">
+<code class="descname">Cosh</code><em class="property"> = &lt;ExpressionKind.Cosh: 18&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Cosh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Div">
+<code class="descname">Div</code><em class="property"> = &lt;ExpressionKind.Div: 4&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Div" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Exp">
+<code class="descname">Exp</code><em class="property"> = &lt;ExpressionKind.Exp: 7&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Floor">
+<code class="descname">Floor</code><em class="property"> = &lt;ExpressionKind.Floor: 23&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Floor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.IfThenElse">
+<code class="descname">IfThenElse</code><em class="property"> = &lt;ExpressionKind.IfThenElse: 24&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.IfThenElse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Log">
+<code class="descname">Log</code><em class="property"> = &lt;ExpressionKind.Log: 5&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Max">
+<code class="descname">Max</code><em class="property"> = &lt;ExpressionKind.Max: 21&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Max" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Min">
+<code class="descname">Min</code><em class="property"> = &lt;ExpressionKind.Min: 20&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Mul">
+<code class="descname">Mul</code><em class="property"> = &lt;ExpressionKind.Mul: 3&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Mul" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.NaN">
+<code class="descname">NaN</code><em class="property"> = &lt;ExpressionKind.NaN: 25&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.NaN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Pow">
+<code class="descname">Pow</code><em class="property"> = &lt;ExpressionKind.Pow: 9&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Pow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Sin">
+<code class="descname">Sin</code><em class="property"> = &lt;ExpressionKind.Sin: 10&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Sinh">
+<code class="descname">Sinh</code><em class="property"> = &lt;ExpressionKind.Sinh: 17&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sinh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Sqrt">
+<code class="descname">Sqrt</code><em class="property"> = &lt;ExpressionKind.Sqrt: 8&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Sqrt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Tan">
+<code class="descname">Tan</code><em class="property"> = &lt;ExpressionKind.Tan: 12&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Tan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Tanh">
+<code class="descname">Tanh</code><em class="property"> = &lt;ExpressionKind.Tanh: 19&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Tanh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.UninterpretedFunction">
+<code class="descname">UninterpretedFunction</code><em class="property"> = &lt;ExpressionKind.UninterpretedFunction: 26&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.UninterpretedFunction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.ExpressionKind.Var">
+<code class="descname">Var</code><em class="property"> = &lt;ExpressionKind.Var: 1&gt;</em><a class="headerlink" href="#pydrake.symbolic.ExpressionKind.Var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -1089,7 +1281,50 @@ expressions.</p>
 <dl class="function">
 <dt id="pydrake.symbolic.if_then_else">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">if_then_else</code><span class="sig-paren">(</span><em>arg0: drake::symbolic::Formula</em>, <em>arg1: pydrake.symbolic.Expression</em>, <em>arg2: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.if_then_else" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Constructs if-then-else expression.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">if_then_else</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">expr_then</span><span class="p">,</span> <span class="n">expr_else</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The value returned by the above if-then-else expression is
+<code class="docutils literal"><span class="pre">expr_then</span></code> if <code class="docutils literal"><span class="pre">cond</span></code> is evaluated to true. Otherwise, it returns
+<code class="docutils literal"><span class="pre">expr_else</span></code>.</p>
+<p>The semantics is similar to the C++’s conditional expression
+constructed by its ternary operator, &#64;c ?:. However, there is a key
+difference between the C++’s conditional expression and our
+<code class="docutils literal"><span class="pre">if_then_else</span></code> expression in a way the arguments are evaluated
+during the construction.</p>
+<ul class="simple">
+<li>In case of the C++’s conditional expression, `` cond ? expr_then :</li>
+</ul>
+<p>expr_else``, the then expression <code class="docutils literal"><span class="pre">expr_then</span></code> (respectively, the else
+expression <code class="docutils literal"><span class="pre">expr_else)</span></code> is <strong>only</strong> evaluated when the conditional
+expression <code class="docutils literal"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal"><span class="pre">cond</span></code> is
+evaluated to <strong>false)</strong>.</p>
+<ul class="simple">
+<li>In case of the symbolic expression, <a href="#id1"><span class="problematic" id="id2">``</span></a>if_then_else(cond, expr_then,</li>
+</ul>
+<p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal"><span class="pre">expr_then</span></code> and <code class="docutils literal"><span class="pre">expr_else</span></code>
+are evaluated first and then passed to the <code class="docutils literal"><span class="pre">if_then_else</span></code> function.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function returns an <strong>expression</strong> and it is different from
+the C++’s if-then-else <strong>statement</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">While it is still possible to define `` min, max, abs`` math
+functions using <code class="docutils literal"><span class="pre">if_then_else</span></code> expression, it is highly
+<strong>recommended</strong> to use the provided native definitions for them
+because it allows solvers to detect specific math functions and to
+have a room for special optimizations.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">More information about the C++’s conditional expression and
+ternary operator is available at
+<a class="reference external" href="http://en.cppreference.com/w/cpp/language/operator_other#Conditional_operator">http://en.cppreference.com/w/cpp/language/operator_other#Conditional_operator</a>.</p>
+</div>
+</dd></dl>
 
 <dl class="function">
 <dt id="pydrake.symbolic.intersect">
@@ -1831,6 +2066,17 @@ are treated as symbolic variables (e.g. decision variable).</dd>
 <dd>Positive integer which specifies the maximum order of the
 resulting polynomial approximating <code class="docutils literal"><span class="pre">f</span></code> around <code class="docutils literal"><span class="pre">a</span></code>.</dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.symbolic.uninterpreted_function">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">uninterpreted_function</code><span class="sig-paren">(</span><em>name: str, arguments: List[pydrake.symbolic.Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.uninterpreted_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs an uninterpreted-function expression with <code class="docutils literal"><span class="pre">name</span></code> and
+<code class="docutils literal"><span class="pre">arguments</span></code>. An uninterpreted function is an opaque function that
+has no other property than its name and a list of its arguments. This
+is useful to applications where it is good enough to provide abstract
+information of a function without exposing full details. Declaring
+sparsity of a system is a typical example.</p>
 </dd></dl>
 
 <dl class="class">

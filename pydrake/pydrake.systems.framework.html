@@ -532,6 +532,163 @@ a must be identical to b.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.systems.framework.CacheEntry">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">CacheEntry</code><a class="headerlink" href="#pydrake.systems.framework.CacheEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>A CacheEntry belongs to a System and represents the properties of one
+of that System’s cached computations. CacheEntry objects are assigned
+CacheIndex values in the order they are declared; these are unique
+within a single System and can be used for quick access to both the
+CacheEntry and the corresponding CacheEntryValue in the System’s
+Context.</p>
+<p>CacheEntry objects are allocated automatically for known System
+computations like output ports and time derivatives, and may also be
+allocated by user code for other cached computations.</p>
+<p>A cache entry’s value is always stored as an AbstractValue, which can
+hold a concrete value of any copyable type. However, once a value has
+been allocated using a particular concrete type, the type cannot be
+changed.</p>
+<p>CacheEntry objects support four important operations: - Allocate()
+returns an object that can hold the cached value. - Calc()
+unconditionally computes the cached value. - Eval() returns a
+reference to the cached value, first updating with Calc() if it was
+out of date. - GetKnownUpToDate() returns a reference to the current
+value that you are certain must already be up to date.</p>
+<p>The allocation and calculation functions must be provided at the time
+a cache entry is declared. That is typically done in a System
+constructor, in a manner very similar to the declaration of output
+ports.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.CacheEntry.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.CacheEntry.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.CacheEntry.cache_index">
+<code class="descname">cache_index</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheEntry</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.CacheIndex<a class="headerlink" href="#pydrake.systems.framework.CacheEntry.cache_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the CacheIndex used to locate this CacheEntry within the
+containing System.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.CacheEntry.get_mutable_cache_entry_value">
+<code class="descname">get_mutable_cache_entry_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheEntry</em>, <em>context: pydrake.systems.framework.ContextBase</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.CacheEntryValue<a class="headerlink" href="#pydrake.systems.framework.CacheEntry.get_mutable_cache_entry_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns a mutable reference to the CacheEntryValue object
+that corresponds to this CacheEntry, from the supplied Context. Note
+that <code class="docutils literal"><span class="pre">context</span></code> is const; cache values are mutable. Don’t call this
+method unless you know what you’re doing. This method is constant time
+and <em>very</em> fast in all circumstances.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.CacheEntry.prerequisites">
+<code class="descname">prerequisites</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheEntry</em><span class="sig-paren">)</span> &#x2192; Set[pydrake.systems.framework.DependencyTicket]<a class="headerlink" href="#pydrake.systems.framework.CacheEntry.prerequisites" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the set of prerequisites needed by this cache
+entry’s Calc() function. These are all within the same subsystem that
+owns this CacheEntry.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.CacheEntry.ticket">
+<code class="descname">ticket</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheEntry</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DependencyTicket<a class="headerlink" href="#pydrake.systems.framework.CacheEntry.ticket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the DependencyTicket used to register dependencies on the
+value of this CacheEntry. This can also be used to locate the
+DependencyTracker that manages dependencies at runtime for the
+associated CacheEntryValue in a Context.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.CacheEntryValue">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">CacheEntryValue</code><a class="headerlink" href="#pydrake.systems.framework.CacheEntryValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) This is the representation in the Context for the value of
+one of a System’s CacheEntry objects. Most users will not use this
+class directly – System and CacheEntry provide the most common APIs,
+and Context provides additional useful methods.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">System, CacheEntry, Context for user-facing APIs.</p>
+</div>
+<p>A CacheEntryValue consists of a single type-erased value, a serial
+number, an <code class="docutils literal"><span class="pre">out_of_date</span></code> flag, and a DependencyTracker ticket.
+Details: - “Out of date” means that some prerequisite of this cache
+entry’s computation has been changed in the current Context since the
+stored value was last computed, and thus must be recomputed prior to
+use. On the other hand, if the entry is <em>not</em> out of date, then it is
+“up to date” meaning that if you were to recompute it using the
+current Context values you would get the identical result (so don’t
+bother!). - The “serial number” is an integer that is incremented
+whenever the value is modified, or made available for mutable access.
+You can use it to recognize that you are looking at the same value as
+you saw at some earlier time. It is also useful for performance
+studies since it is a count of how many times this value was
+recomputed. Note that marking the value “out of date” is <em>not</em> a
+modification; that does not change the serial number. The serial
+number is maintained internally and cannot be user-modified. - The
+DependencyTicket (“ticket”) stored here identifies the
+DependencyTracker (“tracker”) associated with this cache entry. The
+tracker maintains lists of all upstream prerequisites and downstream
+dependents of the value stored here, and also has a pointer to this
+CacheEntryValue that it uses for invalidation. Upstream modifications
+cause the tracker to set the <code class="docutils literal"><span class="pre">out_of_date</span></code> flag here, and mark all
+downstream dependents out of date also. The tracker lives in the same
+subcontext that owns the Cache that owns this CacheEntryValue.</p>
+<p>We sometimes use the terms “invalid” and “invalidate” as synonyms for
+“out of date” and “mark out of date”.</p>
+<p>For debugging purposes, caching may be disabled for an entire Context
+or for particular cache entry values. This is independent of the
+<code class="docutils literal"><span class="pre">out_of_date</span></code> flag described above, which is still expected to be
+operational when caching is disabled. However, when caching is
+disabled the Eval() methods will recompute the contained value even if
+it is not marked out of date. That should have no effect other than to
+slow computation; if results change, something is wrong. There could
+be a problem with the specification of dependencies, a bug in user
+code such as improper retention of a stale reference, or a bug in the
+caching system.</p>
+<dl class="attribute">
+<dt id="pydrake.systems.framework.CacheEntryValue.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.CacheEntryValue.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.CacheEntryValue.GetMutableValueOrThrow">
+<code class="descname">GetMutableValueOrThrow</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.CacheEntryValue</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.systems.framework.CacheEntryValue.GetMutableValueOrThrow" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Convenience method that returns a mutable reference to the
+contained value downcast to its known concrete type. Throws an
+exception if the contained value does not have the indicated concrete
+type. Note that you must call mark_up_to_date() after modifying the
+value through the returned reference. See
+GetMutableAbstractValueOrThrow() above for more information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<li>RuntimeError if there is no value, or if the value is already up</li>
+<li>to date, of it doesn’t actually have type V.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the cache is frozen.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SetValueOrThrow(), set_value(), mark_up_to_date()</p>
+</div>
+<dl class="docutils">
+<dt>Template parameter <code class="docutils literal"><span class="pre">V</span></code>:</dt>
+<dd>The known actual value type.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.systems.framework.CacheIndex">
 <em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">CacheIndex</code><a class="headerlink" href="#pydrake.systems.framework.CacheIndex" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="method">
@@ -13832,6 +13989,45 @@ possible value sources, use all_sources_ticket() instead.</p>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.SystemBase.DeclareCacheEntry">
+<code class="descname">DeclareCacheEntry</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em>, <em>description: str</em>, <em>value_producer: pydrake.systems.framework.ValueProducer</em>, <em>prerequisites_of_calc: Set[pydrake.systems.framework.DependencyTicket] = {DependencyTicket(15)}</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.CacheEntry<a class="headerlink" href="#pydrake.systems.framework.SystemBase.DeclareCacheEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a new CacheEntry in this System using the most generic form
+of the calculation function. Prefer one of the more convenient
+signatures below if you can. The new cache entry is assigned a unique
+CacheIndex and DependencyTicket, which can be obtained from the
+returned CacheEntry.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">description</span></code>:</dt>
+<dd>A human-readable description of this cache entry, most useful for
+debugging and documentation. Not interpreted in any way by Drake;
+it is retained by the cache entry and used to generate the
+description for the corresponding CacheEntryValue in the Context.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value_producer</span></code>:</dt>
+<dd>Provides the computation that maps from a given Context to the
+current value that this cache entry should have, as well as a way
+to allocate storage prior to the computation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">prerequisites_of_calc</span></code>:</dt>
+<dd>Provides the DependencyTicket list containing a ticket for <em>every</em>
+Context value on which <code class="docutils literal"><span class="pre">calc_function</span></code> may depend when it
+computes its result. Defaults to <code class="docutils literal"><span class="pre">{all_sources_ticket()}</span></code> if
+unspecified. If the cache value is truly independent of the
+Context (rare!) say so explicitly by providing the list
+<code class="docutils literal"><span class="pre">{nothing_ticket()}</span></code>; an explicitly empty list <code class="docutils literal"><span class="pre">{}</span></code> is
+forbidden.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a reference to the newly-created CacheEntry.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if given an explicitly empty prerequisite list.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.SystemBase.discrete_state_ticket">
 <code class="descname">discrete_state_ticket</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em>, <em>index: pydrake.systems.framework.DiscreteStateIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DependencyTicket<a class="headerlink" href="#pydrake.systems.framework.SystemBase.discrete_state_ticket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a ticket indicating dependence on a particular discrete state
@@ -13841,6 +14037,12 @@ variable xdᵢ (may be a vector). (We sometimes refer to this as a
 <p class="first admonition-title">See also</p>
 <p class="last">xd_ticket() to obtain a ticket for <em>all</em> discrete variables.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemBase.get_cache_entry">
+<code class="descname">get_cache_entry</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em>, <em>index: pydrake.systems.framework.CacheIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.CacheEntry<a class="headerlink" href="#pydrake.systems.framework.SystemBase.get_cache_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to a CacheEntry given its <code class="docutils literal"><span class="pre">index</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -14637,6 +14839,51 @@ kUseDefaultName constant, without ever having to mention this type.</p>
 <dt id="pydrake.systems.framework.UseDefaultName.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.framework.UseDefaultName.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.framework.ValueProducer">
+<em class="property">class </em><code class="descclassname">pydrake.systems.framework.</code><code class="descname">ValueProducer</code><a class="headerlink" href="#pydrake.systems.framework.ValueProducer" title="Permalink to this definition">¶</a></dt>
+<dd><p>ValueProducer computes an AbstractValue output based on a ContextBase
+input. This is commonly used for declaring output ports and cache
+entries.</p>
+<p>It provides two functions for that purpose: - Allocate() returns new
+storage that is suitably typed to hold the output. - Calc() takes a
+context as input and writes to an output pointer.</p>
+<p>For example, given this example calculator lambda:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="n">function</span> <span class="n">calc</span> <span class="o">=</span> <span class="p">[](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">context</span><span class="p">,</span> <span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">*</span> <span class="n">output</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">context</span><span class="o">.</span><span class="n">get_time</span><span class="p">());</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>We can capture it into a producer and then call it:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ValueProducer</span> <span class="n">producer</span><span class="p">(</span><span class="n">calc</span><span class="p">);</span>
+<span class="n">std</span><span class="p">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">AbstractValue</span><span class="o">&gt;</span> <span class="n">storage</span> <span class="o">=</span> <span class="n">producer</span><span class="o">.</span><span class="n">Allocate</span><span class="p">();</span>
+<span class="n">const</span> <span class="n">LeafContext</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">context</span><span class="p">;</span>
+<span class="n">producer</span><span class="o">.</span><span class="n">Calc</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">());</span>
+<span class="n">EXPECT_THAT</span><span class="p">(</span><span class="n">storage</span><span class="o">-&gt;</span><span class="n">get_value</span><span class="o">&lt;</span><span class="n">std</span><span class="p">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">(),</span> <span class="p">::</span><span class="n">testing</span><span class="p">::</span><span class="n">StartsWith</span><span class="p">(</span><span class="s2">&quot;0.0&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+<p>Sugar is provided to create ValueProducer objects from function
+pointers that operate on un-erased types, so that the user can ignore
+the details of type erasure and Context&lt;T&gt; downcasting. Refer to the
+ValueProducer_constructors “Constructor overloads” for details.</p>
+<dl class="method">
+<dt id="pydrake.systems.framework.ValueProducer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.ValueProducer, allocate: Callable[[], pydrake.common.value.AbstractValue], calc: Callable[[pydrake.systems.framework.ContextBase, pydrake.common.value.AbstractValue], None]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ValueProducer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overload (5d). Refer to the ValueProducer_constructors “Constructor
+overloads” for details.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.systems.framework.ValueProducer.NoopCalc">
+<em class="property">static </em><code class="descname">NoopCalc</code><span class="sig-paren">(</span><em>arg0: pydrake.systems.framework.ContextBase</em>, <em>arg1: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.ValueProducer.NoopCalc" title="Permalink to this definition">¶</a></dt>
+<dd><p>This static function is provided for users who need an empty
+CalcCallback. Passing <code class="docutils literal"><span class="pre">&amp;ValueProducer::NoopCalc</span></code> as ValueProducer’s
+last constructor argument will create a function that does not compute
+anything, but can still allocate.</p>
 </dd></dl>
 
 </dd></dl>

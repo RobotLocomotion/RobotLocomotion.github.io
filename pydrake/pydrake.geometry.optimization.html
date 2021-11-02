@@ -303,6 +303,25 @@ is the dimension of <code class="docutils literal"><span class="pre">x</span></c
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.optimization.ConvexSet.IntersectsWith">
+<code class="descname">IntersectsWith</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em>, <em>other: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.IntersectsWith" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the intersection between <code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code> is
+non-empty.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the ambient dimension of <code class="docutils literal"><span class="pre">other</span></code> is not the same</li>
+<li>as that of <code class="docutils literal"><span class="pre">this</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.optimization.ConvexSet.IsBounded">
 <code class="descname">IsBounded</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.IsBounded" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true iff the set is bounded, e.g. there exists an element-wise
@@ -538,7 +557,21 @@ modifications to its bounds (i.e. requiring phi == 0.5).</p>
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost">
 <code class="descname">GetSolutionCost</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the sum of the costs associated with this edge in a
-MathematicalProgramResult.</p>
+solvers::MathematicalProgramResult.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu">
+<code class="descname">GetSolutionPhiXu</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vector value of the slack variables associated with ϕxᵤ in
+a solvers::MathematicalProgramResult.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv">
+<code class="descname">GetSolutionPhiXv</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionPhiXv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vector value of the slack variables associated with ϕxᵥ in
+a solvers::MathematicalProgramResult.</p>
 </dd></dl>
 
 <dl class="method">
@@ -630,9 +663,27 @@ builds.</p>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edges">
-<code class="descname">Edges</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; Set[drake::geometry::optimization::GraphOfConvexSets::Edge]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edges" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns pointers to the edges stored in the graph. Note that the order
-of the elements is not guaranteed.</p>
+<code class="descname">Edges</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mutable pointers to the edges stored in the graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString">
+<code class="descname">GetGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets, result: Optional[drake::solvers::MathematicalProgramResult], show_slacks: bool = True, precision: int = 3, scientific: bool = False</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Graphviz string describing the graph vertices and edges. If
+<code class="docutils literal"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
+solution values.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">show_slacks</span></code>:</dt>
+<dd>determines whether the values of the intermediate (slack)
+variables are also displayed in the graph.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">precision</span></code>:</dt>
+<dd>sets the floating point precision (how many digits are generated)
+of the annotations.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">scientific</span></code>:</dt>
+<dd>sets the floating point formatting to scientific (if true) or
+fixed (if false).</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -768,10 +819,9 @@ builds.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.optimization.GraphOfConvexSets.VertexIds">
-<code class="descname">VertexIds</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; Set[drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.VertexIds" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the VertexIds of the vertices stored in the graph. Note that
-the order of the elements is not guaranteed.</p>
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Vertices">
+<code class="descname">Vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns mutable pointers to the vertices stored in the graph.</p>
 </dd></dl>
 
 </dd></dl>

@@ -94,7 +94,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_scala
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -120,13 +119,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_scala
 </div>
 <p><code>#include &lt;drake/systems/framework/system_scalar_converter.h&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:aa5deb46f2141a0937f577705ba822e63"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a> { <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63ade1ec1870756a80dffbdc4cda53153e0">kEnabled</a>, 
-<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63a7b04d8795f5fd03c761ce70dab985fee">kDisabled</a>
- }</td></tr>
-<tr class="separator:aa5deb46f2141a0937f577705ba822e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3834c7f6d8a065ef95436cfc0b0ebaa5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a3834c7f6d8a065ef95436cfc0b0ebaa5">SystemScalarConverter</a> ()</td></tr>
@@ -136,10 +128,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a04fcaa98c869b8ff1c345bb5e98f2561">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;)</td></tr>
 <tr class="memdesc:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a converter that uses S's scalar-converting copy constructor to perform system scalar conversion.  <a href="#a04fcaa98c869b8ff1c345bb5e98f2561">More...</a><br /></td></tr>
 <tr class="separator:a04fcaa98c869b8ff1c345bb5e98f2561"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39bc263bfa369d811ee1c1ef60850d5b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class S&gt; </td></tr>
-<tr class="memitem:a39bc263bfa369d811ee1c1ef60850d5b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a39bc263bfa369d811ee1c1ef60850d5b">SystemScalarConverter</a> (<a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;, <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a> sub)</td></tr>
-<tr class="memdesc:a39bc263bfa369d811ee1c1ef60850d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a39bc263bfa369d811ee1c1ef60850d5b">More...</a><br /></td></tr>
-<tr class="separator:a39bc263bfa369d811ee1c1ef60850d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff no conversions are supported.  <a href="#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
 <tr class="separator:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,39 +169,9 @@ Friends</h2></td></tr>
 <tr class="memitem:a66777eb6910798b0be2e4fcbf31c7b84"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#a66777eb6910798b0be2e4fcbf31c7b84">system_scalar_converter_internal::AddPydrakeConverterFunction</a> (<a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> *, const std::function&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; *(const <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; U &gt; &amp;)&gt; &amp;)</td></tr>
 <tr class="separator:a66777eb6910798b0be2e4fcbf31c7b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="aa5deb46f2141a0937f577705ba822e63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5deb46f2141a0937f577705ba822e63">&#9670;&nbsp;</a></span>GuaranteedSubtypePreservation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa5deb46f2141a0937f577705ba822e63ade1ec1870756a80dffbdc4cda53153e0"></a>kEnabled&#160;</td><td class="fielddoc"><p>The argument to Convert must be of the exact type S that was used to populate the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a>. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="aa5deb46f2141a0937f577705ba822e63a7b04d8795f5fd03c761ce70dab985fee"></a>kDisabled&#160;</td><td class="fielddoc"><p>The argument to Convert need not be the exact type S that was used to populate the <a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html" title="Helper class to convert a System into a System&lt;T&gt;, intended for internal use by the System framework,...">SystemScalarConverter</a> &ndash; it can be either exactly that S, or a subtype of that S. </p>
-<p>This permits subtype information to be lost across conversion. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a771bd6bde87a97fedb96b075701fc3e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a771bd6bde87a97fedb96b075701fc3e8">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a771bd6bde87a97fedb96b075701fc3e8">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +197,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a17edf10fa38c2580f3d6aadd3b4a8b80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17edf10fa38c2580f3d6aadd3b4a8b80">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a17edf10fa38c2580f3d6aadd3b4a8b80">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,7 +223,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a3834c7f6d8a065ef95436cfc0b0ebaa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3834c7f6d8a065ef95436cfc0b0ebaa5">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3834c7f6d8a065ef95436cfc0b0ebaa5">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,7 +243,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="a04fcaa98c869b8ff1c345bb5e98f2561"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04fcaa98c869b8ff1c345bb5e98f2561">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fcaa98c869b8ff1c345bb5e98f2561">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,38 +263,6 @@ Friends</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><span class="keyword">class </span>FooSystem final : <span class="keyword">public</span> LeafSystem&lt;T&gt; {</div><div class="line">  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> U&gt;</div><div class="line">  <span class="keyword">explicit</span> FooSystem(<span class="keyword">const</span> FooSystem&lt;U&gt;&amp; other);</div><div class="line">};</div></div><!-- fragment --><p>By default, the converter supports conversions to and from all of the <a class="el" href="group__default__scalars.html">default scalars</a>, but systems may specialize the <a class="el" href="structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html" title="A templated traits class for whether an S&lt;U&gt; can be converted into an S&lt;T&gt;; the default value is true...">scalar_conversion::Traits</a> to disable support for some or all of these conversions. Conversions where <code>T</code> and <code>U</code> types are the same are not supported.</p>
 <p>This an implicit conversion constructor (not marked <code>explicit</code>), in order to make calling code substantially more readable, with relatively little risk of an unwanted accidental conversion happening.</p>
 <p>See <a class="el" href="group__system__scalar__conversion.html">System Scalar Conversion</a> for additional overview documentation. </p>
-
-</div>
-</div>
-<a id="a39bc263bfa369d811ee1c1ef60850d5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39bc263bfa369d811ee1c1ef60850d5b">&#9670;&nbsp;</a></span>SystemScalarConverter() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html">SystemScalarConverter</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structdrake_1_1systems_1_1_system_type_tag.html">SystemTypeTag</a>&lt; S &gt;&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_system_scalar_converter.html#aa5deb46f2141a0937f577705ba822e63">GuaranteedSubtypePreservation</a>&#160;</td>
-          <td class="paramname"><em>sub</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000043">Deprecated:</a></b></dt><dd>Use MakeWithoutSubtypeChecking instead of kDisabled. <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
 
 </div>
 </div>

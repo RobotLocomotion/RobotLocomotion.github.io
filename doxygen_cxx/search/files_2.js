@@ -26,7 +26,6 @@ var searchData=
   ['compute_5fnumerical_5fgradient_2eh',['compute_numerical_gradient.h',['../compute__numerical__gradient_8h.html',1,'']]],
   ['compute_5ftorque_2eh',['compute_torque.h',['../compute__torque_8h.html',1,'']]],
   ['cond_2eh',['cond.h',['../cond_8h.html',1,'']]],
-  ['connect_5flcm_5fscope_2eh',['connect_lcm_scope.h',['../connect__lcm__scope_8h.html',1,'']]],
   ['constant_5fvalue_5fsource_2eh',['constant_value_source.h',['../constant__value__source_8h.html',1,'']]],
   ['constant_5fvector_5fsource_2eh',['constant_vector_source.h',['../constant__vector__source_8h.html',1,'']]],
   ['constants_2eh',['constants.h',['../constants_8h.html',1,'']]],
