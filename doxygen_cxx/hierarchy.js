@@ -920,6 +920,7 @@ var hierarchy =
             [ "ImageWriter", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html", null ],
             [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", null ],
             [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", null ],
+            [ "OptitrackReceiver", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html", null ],
             [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", null ],
             [ "SceneGraph< double >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "SpringMassSystem< double >", "classdrake_1_1systems_1_1_spring_mass_system.html", [

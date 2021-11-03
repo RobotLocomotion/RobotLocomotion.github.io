@@ -1,9 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"classdrake_1_1multibody_1_1_door_hinge.html#a0480114a02d8ac4edc2f4011a3f3e3cd":[3,0,0,8,24,3],
-"classdrake_1_1multibody_1_1_door_hinge.html#a0b35f9a15174cdbc86feb93ab4191cf2":[3,0,0,8,24,7],
-"classdrake_1_1multibody_1_1_door_hinge.html#a14f1e33beb90541be76fcb45dea6af74":[3,0,0,8,24,20],
-"classdrake_1_1multibody_1_1_door_hinge.html#a1a3872435692d59007761e82cb48b17e":[3,0,0,8,24,5],
 "classdrake_1_1multibody_1_1_door_hinge.html#a1c1522be243a3ab3eeca60c8c56696ce":[3,0,0,8,24,1],
 "classdrake_1_1multibody_1_1_door_hinge.html#a23c73f4faed4d94c062ef26f1143c9ea":[3,0,0,8,24,4],
 "classdrake_1_1multibody_1_1_door_hinge.html#a4623cd61fedc3c25436ca083bbbac34a":[3,0,0,8,24,11],
@@ -249,5 +245,9 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_linear_bushing_roll_pitch_yaw.html#aee1560a6ef6187218f3badf6d1e9226b":[3,0,0,8,40,17],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html":[3,0,0,8,41],
 "classdrake_1_1multibody_1_1_linear_spring_damper.html#a0fc55c54d954d864281289c0dead6cce":[3,0,0,8,41,7],
-"classdrake_1_1multibody_1_1_linear_spring_damper.html#a138e6e888ff71dc31cdc64b33f056e68":[3,0,0,8,41,6]
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a138e6e888ff71dc31cdc64b33f056e68":[3,0,0,8,41,6],
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a189a1cc898965e60756ef7fe82b6c112":[3,0,0,8,41,10],
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a1d9140ecb720629803d4b02a6bfaf771":[3,0,0,8,41,16],
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[3,0,0,8,41,5],
+"classdrake_1_1multibody_1_1_linear_spring_damper.html#a2eb10fb2b01b9389bab20bc37bc1bbce":[3,0,0,8,41,1]
 };

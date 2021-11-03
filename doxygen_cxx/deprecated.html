@@ -103,6 +103,18 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake.html#a70a4b2d0744b6552bc50cf687679536b">drake::ExpectRotMat</a>  (const Eigen::Matrix3d &amp;R, double tolerance)</dt>
 <dd><a class="anchor" id="_deprecated000001"></a>This function is being removed. <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#ad2794d5d7a07c09b8acec474ae033283">drake::manipulation::perception::ExtractOptitrackPose</a>  (const optitrack::optitrack_rigid_body_t &amp;message)</dt>
+<dd><a class="anchor" id="_deprecated000011"></a>Possibly use OptitrackReceiver instead. <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a7cdb84965644b6b67ff535e6263b11fb">drake::manipulation::perception::ExtractOptitrackPoses</a>  (const optitrack::optitrack_frame_t &amp;frame)</dt>
+<dd><a class="anchor" id="_deprecated000012"></a>This function is being removed. <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a0ff9cbf42a94d5a5333ba974a0e6b9f0">drake::manipulation::perception::FindOptitrackBody</a>  (const optitrack::optitrack_frame_t &amp;message, int object_id)</dt>
+<dd><a class="anchor" id="_deprecated000013"></a>This function is being removed. <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a9dcf4f420824dfdb3cf8f35a263b1a8c">drake::manipulation::perception::FindOptitrackObjectId</a>  (const optitrack::optitrack_data_descriptions_t &amp;message, const std::string &amp;object_name)</dt>
+<dd><a class="anchor" id="_deprecated000014"></a>This function is being removed. <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a3e0c356cf1d093efb3dfe64660296ab6">drake::manipulation::planner::ComputePoseDiffInCommonFrame</a>  (const Isometry3&lt; double &gt; &amp;X_C0, const Isometry3&lt; double &gt; &amp;X_C1)</dt>
 <dd><a class="anchor" id="_deprecated000015"></a>Use RigidTransform instead of Isometry3 <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
@@ -115,11 +127,11 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#ab72982a8973f482f5cbf66d6656eaf08">drake::math::autoDiffToValueMatrix</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix)</dt>
 <dd><a class="anchor" id="_deprecated000017"></a>Use ExtractValue() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
- This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a6368b8ff52fa8c7df0b3548b77615363">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform)</dt>
 <dd><a class="anchor" id="_deprecated000018"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+ This will be removed from Drake on or after 2021-12-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</dt>
+<dd><a class="anchor" id="_deprecated000019"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">drake::math::DiscardZeroGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</dt>
 <dd><a class="anchor" id="_deprecated000029"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
@@ -130,11 +142,11 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">drake::math::gradientMatrixToAutoDiff</a>  (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
 <dd><a class="anchor" id="_deprecated000027"></a>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>Use InitializeAutoDiff() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a3b7dc3351569c13b9d98ab32fd901af3">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</dt>
 <dd><a class="anchor" id="_deprecated000021"></a>Use InitializeAutoDiff() instead <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a60989b35690cd787112c9d14e8161ec2">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</dt>
 <dd><a class="anchor" id="_deprecated000026"></a>Use InitializeAutoDiff() instead <br />
@@ -200,23 +212,11 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a3caed2b8fffe3482458283030d2b439f">RgbdSensorDiscrete::X_WB_output_port</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000041"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7213aaf748b88198be04bef5eedce4ec">SceneGraph&lt; T &gt;::ExcludeCollisionsBetween</a>  (systems::Context&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setB) const</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Please call collision_filter_manager(context).Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1">SceneGraph&lt; T &gt;::ExcludeCollisionsBetween</a>  (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;setB)</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Please call collision_filter_manager().Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ad4cd139d69275158befe510f61551d6d">SceneGraph&lt; T &gt;::ExcludeCollisionsWithin</a>  (systems::Context&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;set) const</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Please call collision_filter_manager(context).Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921">SceneGraph&lt; T &gt;::ExcludeCollisionsWithin</a>  (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html" title="The GeometrySet, as its name implies, is a convenience class for defining a set of geometries.">GeometrySet</a> &amp;set)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>Please call collision_filter_manager().Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a637679130ce796cc4dfaa97ceb0e7559">SceneGraph&lt; T &gt;::get_pose_bundle_output_port</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000009"></a>PoseBundle is no longer in use. Visualizers typically  connect to SceneGraph's QueryObject port. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a84fa00c683202c7b48333b3c7e6193c8">SceneGraphInspector&lt; T &gt;::all_frame_ids</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Please use GetAllFrameIds() instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Please use GetAllFrameIds() instead. <br />
  This will be removed from Drake on or after 2021-12-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

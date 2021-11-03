@@ -38,6 +38,7 @@ var namespacedrake_1_1systems_1_1sensors =
     [ "LcmPixelTraits< PixelFormat::kRgb >", "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgb_01_4" ],
     [ "LcmPixelTraits< PixelFormat::kRgba >", "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_lcm_pixel_traits_3_01_pixel_format_1_1k_rgba_01_4" ],
     [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender" ],
+    [ "OptitrackReceiver", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver" ],
     [ "RgbdSensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor" ],
     [ "RgbdSensorDiscrete", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete" ],
     [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders" ]

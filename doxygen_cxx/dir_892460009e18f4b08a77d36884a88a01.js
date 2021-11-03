@@ -36,6 +36,9 @@ var dir_892460009e18f4b08a77d36884a88a01 =
       [ "LcmImageTraits< PixelType::kDepth32F >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4" ],
       [ "LcmImageTraits< PixelType::kLabel16I >", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html", "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits_3_01_pixel_type_1_1k_label16_i_01_4" ]
     ] ],
+    [ "optitrack_receiver.h", "optitrack__receiver_8h.html", [
+      [ "OptitrackReceiver", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver" ]
+    ] ],
     [ "optitrack_sender.h", "optitrack__sender_8h.html", [
       [ "OptitrackLcmFrameSender", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html", "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender" ]
     ] ],

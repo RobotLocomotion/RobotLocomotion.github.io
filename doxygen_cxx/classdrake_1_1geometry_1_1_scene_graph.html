@@ -365,36 +365,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d5bf882337dfed524c1da91fb96f618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_collision_filter_manager.html">CollisionFilterManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a3d5bf882337dfed524c1da91fb96f618">collision_filter_manager</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context) const</td></tr>
 <tr class="memdesc:a3d5bf882337dfed524c1da91fb96f618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the collision filter manager for data stored in <code>context</code>.  <a href="#a3d5bf882337dfed524c1da91fb96f618">More...</a><br /></td></tr>
 <tr class="separator:a3d5bf882337dfed524c1da91fb96f618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Collision filtering (Deprecated)</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="scene_graph_collision_filtering"></a>The <em>legacy</em> interface for limiting the scope of penetration queries (i.e., "filtering collisions").</p>
-<p>Please use the <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filter_manager">new API</a> instead.</p>
-<p>The scene graph consists of the set of geometry <code>G = D ⋃ A = {g₀, g₁, ..., gₙ}</code>, where D is the set of dynamic geometry and A is the set of anchored geometry (by definition <code>D ⋂ A = ∅</code>). Collision occurs between pairs of geometries (e.g., (gᵢ, gⱼ)). The set of collision candidate pairs is initially defined as <code>C = (G × G) - (A × A) - F - I</code>, where:</p><ul>
-<li><code>G × G = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G</code> is the cartesian product of the set of SceneGraph geometries.</li>
-<li><code>A × A</code> represents all pairs consisting only of anchored geometry; anchored geometry is never tested against other anchored geometry.</li>
-<li><code>F = (gᵢ, gⱼ)</code>, such that <code>frame(gᵢ) == frame(gⱼ)</code>; the pair where both geometries are rigidly affixed to the same frame. By implication, <code>gᵢ, gⱼ ∈ D</code> as only dynamic geometries are affixed to frames.</li>
-<li><code>I = {(g, g)}, ∀ g ∈ G</code> is the set of all pairs consisting of a geometry with itself; there is no collision between a geometry and itself.</li>
-</ul>
-<p>Only pairs contained in C will be tested as part of penetration queries. These filter methods essentially create new sets of pairs and then subtract them from the candidate set C. See each method for details.</p>
-<p>Modifications to C <em>must</em> be performed before context allocation.</p>
-<dl class="section warning"><dt>Warning</dt><dd>All collision filtering is done based on geometry state at the time of the collision filtering calls. More concretely:<ul>
-<li>For a FrameId in the set, only those geometries attached to the identified frame with the proximity role assigned at the time of the call will be included in the filter. If geometries are subsequently added or assigned the proximity role, they will not be retroactively added to the filter.</li>
-<li>If the set includes geometries which have <em>not</em> been assigned a proximity role, those geometries will be ignored. If a proximity role is subsequently assigned, those geometries will <em>still</em> not be part of any collision filters.</li>
-<li>In general, adding collisions and assinging proximity roles should happen prior to collision filter configuration. </li>
-</ul>
-</dd></dl>
-</div></td></tr>
-<tr class="memitem:a91e9026cf3cd253a4e7260c6dc054921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921">ExcludeCollisionsWithin</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;set)</td></tr>
-<tr class="memdesc:a91e9026cf3cd253a4e7260c6dc054921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes geometry pairs from collision evaluation by updating the candidate pair set <code>C = C - P</code>, where <code>P = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G</code> and <code>G = {g₀, g₁, ..., gₘ}</code> is the input <code>set</code> of geometries.  <a href="#a91e9026cf3cd253a4e7260c6dc054921">More...</a><br /></td></tr>
-<tr class="separator:a91e9026cf3cd253a4e7260c6dc054921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4cd139d69275158befe510f61551d6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#ad4cd139d69275158befe510f61551d6d">ExcludeCollisionsWithin</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;set) const</td></tr>
-<tr class="memdesc:ad4cd139d69275158befe510f61551d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsWithin()</a>.  <a href="#ad4cd139d69275158befe510f61551d6d">More...</a><br /></td></tr>
-<tr class="separator:ad4cd139d69275158befe510f61551d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a822b987f8d0fed87bcd53dd90345bce1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1">ExcludeCollisionsBetween</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;setB)</td></tr>
-<tr class="memdesc:a822b987f8d0fed87bcd53dd90345bce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Excludes geometry pairs from collision evaluation by updating the candidate pair set <code>C = C - P</code>, where <code>P = {(a, b)}, ∀ a ∈ A, b ∈ B</code> and <code>A = {a₀, a₁, ..., aₘ}</code> and <code>B = {b₀, b₁, ..., bₙ}</code> are the input sets of geometries <code>setA</code> and <code>setB</code>, respectively.  <a href="#a822b987f8d0fed87bcd53dd90345bce1">More...</a><br /></td></tr>
-<tr class="separator:a822b987f8d0fed87bcd53dd90345bce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7213aaf748b88198be04bef5eedce4ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a7213aaf748b88198be04bef5eedce4ec">ExcludeCollisionsBetween</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *context, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;setA, const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;setB) const</td></tr>
-<tr class="memdesc:a7213aaf748b88198be04bef5eedce4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsBetween()</a>.  <a href="#a7213aaf748b88198be04bef5eedce4ec">More...</a><br /></td></tr>
-<tr class="separator:a7213aaf748b88198be04bef5eedce4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdrake_1_1systems_1_1_leaf_system"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdrake_1_1systems_1_1_leaf_system')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html">LeafSystem&lt; T &gt;</a></td></tr>
 <tr class="memitem:a5341fd0b682386ac7623a65a898b48a0 inherit pub_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#a5341fd0b682386ac7623a65a898b48a0">~LeafSystem</a> () override</td></tr>
 <tr class="separator:a5341fd0b682386ac7623a65a898b48a0 inherit pub_methods_classdrake_1_1systems_1_1_leaf_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1934,146 +1904,6 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a822b987f8d0fed87bcd53dd90345bce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a822b987f8d0fed87bcd53dd90345bce1">&#9670;&nbsp;</a></span>ExcludeCollisionsBetween() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExcludeCollisionsBetween </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>setA</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>setB</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Excludes geometry pairs from collision evaluation by updating the candidate pair set <code>C = C - P</code>, where <code>P = {(a, b)}, ∀ a ∈ A, b ∈ B</code> and <code>A = {a₀, a₁, ..., aₘ}</code> and <code>B = {b₀, b₁, ..., bₙ}</code> are the input sets of geometries <code>setA</code> and <code>setB</code>, respectively. </p>
-<p>This does <em>not</em> preclude collisions between members of the <em>same</em> set. Modifies the proximity version (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filtering">scene_graph_collision_filtering</a> for requirements and how collision filtering works.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the groups include ids that don't exist in the scene graph. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Please call collision_filter_manager().Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
-
-</div>
-</div>
-<a id="a7213aaf748b88198be04bef5eedce4ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7213aaf748b88198be04bef5eedce4ec">&#9670;&nbsp;</a></span>ExcludeCollisionsBetween() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExcludeCollisionsBetween </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>setA</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>setB</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a822b987f8d0fed87bcd53dd90345bce1" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsBetween()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Please call collision_filter_manager(context).Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
-
-</div>
-</div>
-<a id="a91e9026cf3cd253a4e7260c6dc054921"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91e9026cf3cd253a4e7260c6dc054921">&#9670;&nbsp;</a></span>ExcludeCollisionsWithin() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExcludeCollisionsWithin </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>set</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Excludes geometry pairs from collision evaluation by updating the candidate pair set <code>C = C - P</code>, where <code>P = {(gᵢ, gⱼ)}, ∀ gᵢ, gⱼ ∈ G</code> and <code>G = {g₀, g₁, ..., gₘ}</code> is the input <code>set</code> of geometries. </p>
-<p>This method modifies the underlying model and requires a new Context to be allocated. Modifies the proximity version (see <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_versioning">Detecting changes</a>).</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#scene_graph_collision_filtering">scene_graph_collision_filtering</a> for requirements and how collision filtering works.</dd></dl>
-<dl class="exception"><dt>Exceptions</dt><dd>
-  <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the set includes ids that don't exist in the scene graph. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Please call collision_filter_manager().Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
-
-</div>
-</div>
-<a id="ad4cd139d69275158befe510f61551d6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4cd139d69275158befe510f61551d6d">&#9670;&nbsp;</a></span>ExcludeCollisionsWithin() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ExcludeCollisionsWithin </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
-          <td class="paramname"><em>set</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">systems::Context</a>-modifying variant of <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a91e9026cf3cd253a4e7260c6dc054921" title="Excludes geometry pairs from collision evaluation by updating the candidate pair set C = C - P,...">ExcludeCollisionsWithin()</a>. </p>
-<p>Rather than modifying SceneGraph's model, it modifies the copy of the model stored in the provided context. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Please call collision_filter_manager(context).Apply()  instead <br />
- This will be removed from Drake on or after 2021-11-01.</dd></dl>
-
-</div>
-</div>
 <a id="a637679130ce796cc4dfaa97ceb0e7559"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a637679130ce796cc4dfaa97ceb0e7559">&#9670;&nbsp;</a></span>get_pose_bundle_output_port()</h2>
 
@@ -2179,8 +2009,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2191,7 +2021,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2205,8 +2035,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2217,7 +2047,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

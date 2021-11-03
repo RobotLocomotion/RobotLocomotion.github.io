@@ -1144,7 +1144,7 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id42"><span class="problematic" id="id43">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id18"><span class="problematic" id="id19">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -1876,7 +1876,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id44"><span class="problematic" id="id45">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id20"><span class="problematic" id="id21">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2008,7 +2008,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id46"><span class="problematic" id="id47">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id22"><span class="problematic" id="id23">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2138,7 +2138,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id48"><span class="problematic" id="id49">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id24"><span class="problematic" id="id25">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -3108,7 +3108,7 @@ scale factor.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id50"><span class="problematic" id="id51">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id26"><span class="problematic" id="id27">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -5013,7 +5013,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id52"><span class="problematic" id="id53">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id28"><span class="problematic" id="id29">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5023,7 +5023,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id54"><span class="problematic" id="id55">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id30"><span class="problematic" id="id31">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5145,8 +5145,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id56"><span class="problematic" id="id57">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id58"><span class="problematic" id="id59">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id32"><span class="problematic" id="id33">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id34"><span class="problematic" id="id35">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -5608,7 +5608,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id60"><span class="problematic" id="id61">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id36"><span class="problematic" id="id37">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5618,7 +5618,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id62"><span class="problematic" id="id63">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id38"><span class="problematic" id="id39">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5740,8 +5740,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id64"><span class="problematic" id="id65">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id66"><span class="problematic" id="id67">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id40"><span class="problematic" id="id41">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id42"><span class="problematic" id="id43">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -6201,7 +6201,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id68"><span class="problematic" id="id69">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id44"><span class="problematic" id="id45">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -6211,7 +6211,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id70"><span class="problematic" id="id71">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id46"><span class="problematic" id="id47">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -6333,8 +6333,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id72"><span class="problematic" id="id73">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id74"><span class="problematic" id="id75">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id48"><span class="problematic" id="id49">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -6579,7 +6579,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id82"><span class="problematic" id="id83">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id58"><span class="problematic" id="id59">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -7090,106 +7090,10 @@ model*.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].ExcludeCollisionsBetween">
-<code class="descname">ExcludeCollisionsBetween</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].ExcludeCollisionsBetween" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[float], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>Excludes geometry pairs from collision evaluation by updating the
-candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(a,</span> <span class="pre">b)},</span> <span class="pre">∀</span> <span class="pre">a</span> <span class="pre">∈</span> <span class="pre">A,</span> <span class="pre">b</span> <span class="pre">∈</span>
-<span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">{a₀,</span> <span class="pre">a₁,</span> <span class="pre">...,</span> <span class="pre">aₘ}</span></code> and <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">{b₀,</span> <span class="pre">b₁,</span> <span class="pre">...,</span> <span class="pre">bₙ}</span></code> are
-the input sets of geometries <code class="docutils literal"><span class="pre">setA</span></code> and <code class="docutils literal"><span class="pre">setB</span></code>, respectively. This
-does <em>not</em> preclude collisions between members of the <em>same</em> set.
-Modifies the proximity version (see scene_graph_versioning).</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">scene_graph_collision_filtering for requirements and how collision
-filtering works.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager().Apply() instead This will
-be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>systems::Context-modifying variant of ExcludeCollisionsBetween().
-Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id6"><span class="problematic" id="id7">*</span></a>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager(context).Apply() instead This
-will be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].ExcludeCollisionsWithin">
-<code class="descname">ExcludeCollisionsWithin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].ExcludeCollisionsWithin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[float], set: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>Excludes geometry pairs from collision evaluation by updating the
-candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span>
-<span class="pre">G</span></code> and <code class="docutils literal"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">{g₀,</span> <span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₘ}</span></code> is the input <code class="docutils literal"><span class="pre">set</span></code> of geometries.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Modifies the proximity version (see
-scene_graph_versioning).</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">scene_graph_collision_filtering for requirements and how collision
-filtering works.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id8"><span class="problematic" id="id9">*</span></a>/ (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager().Apply() instead This will
-be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], set: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>systems::Context-modifying variant of ExcludeCollisionsWithin().
-Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager(context).Apply() instead This
-will be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -7835,106 +7739,10 @@ model*.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].ExcludeCollisionsBetween">
-<code class="descname">ExcludeCollisionsBetween</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].ExcludeCollisionsBetween" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[AutoDiffXd], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>Excludes geometry pairs from collision evaluation by updating the
-candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(a,</span> <span class="pre">b)},</span> <span class="pre">∀</span> <span class="pre">a</span> <span class="pre">∈</span> <span class="pre">A,</span> <span class="pre">b</span> <span class="pre">∈</span>
-<span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">{a₀,</span> <span class="pre">a₁,</span> <span class="pre">...,</span> <span class="pre">aₘ}</span></code> and <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">{b₀,</span> <span class="pre">b₁,</span> <span class="pre">...,</span> <span class="pre">bₙ}</span></code> are
-the input sets of geometries <code class="docutils literal"><span class="pre">setA</span></code> and <code class="docutils literal"><span class="pre">setB</span></code>, respectively. This
-does <em>not</em> preclude collisions between members of the <em>same</em> set.
-Modifies the proximity version (see scene_graph_versioning).</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">scene_graph_collision_filtering for requirements and how collision
-filtering works.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id15"><span class="problematic" id="id16">*</span></a>/ (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager().Apply() instead This will
-be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>systems::Context-modifying variant of ExcludeCollisionsBetween().
-Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id17"><span class="problematic" id="id18">*</span></a>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager(context).Apply() instead This
-will be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].ExcludeCollisionsWithin">
-<code class="descname">ExcludeCollisionsWithin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].ExcludeCollisionsWithin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[AutoDiffXd], set: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>Excludes geometry pairs from collision evaluation by updating the
-candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span>
-<span class="pre">G</span></code> and <code class="docutils literal"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">{g₀,</span> <span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₘ}</span></code> is the input <code class="docutils literal"><span class="pre">set</span></code> of geometries.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Modifies the proximity version (see
-scene_graph_versioning).</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">scene_graph_collision_filtering for requirements and how collision
-filtering works.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id19"><span class="problematic" id="id20">*</span></a>/ (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager().Apply() instead This will
-be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], set: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>systems::Context-modifying variant of ExcludeCollisionsWithin().
-Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id21"><span class="problematic" id="id22">*</span></a>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager(context).Apply() instead This
-will be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id23"><span class="problematic" id="id24">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id7"><span class="problematic" id="id8">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -8578,106 +8386,10 @@ model*.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.SceneGraph_[float].ExcludeCollisionsBetween">
-<code class="descname">ExcludeCollisionsBetween</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].ExcludeCollisionsBetween" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[float], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>Excludes geometry pairs from collision evaluation by updating the
-candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(a,</span> <span class="pre">b)},</span> <span class="pre">∀</span> <span class="pre">a</span> <span class="pre">∈</span> <span class="pre">A,</span> <span class="pre">b</span> <span class="pre">∈</span>
-<span class="pre">B</span></code> and <code class="docutils literal"><span class="pre">A</span> <span class="pre">=</span> <span class="pre">{a₀,</span> <span class="pre">a₁,</span> <span class="pre">...,</span> <span class="pre">aₘ}</span></code> and <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">{b₀,</span> <span class="pre">b₁,</span> <span class="pre">...,</span> <span class="pre">bₙ}</span></code> are
-the input sets of geometries <code class="docutils literal"><span class="pre">setA</span></code> and <code class="docutils literal"><span class="pre">setB</span></code>, respectively. This
-does <em>not</em> preclude collisions between members of the <em>same</em> set.
-Modifies the proximity version (see scene_graph_versioning).</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">scene_graph_collision_filtering for requirements and how collision
-filtering works.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the groups include ids that don’t exist in the</li>
-<li>scene graph. <a href="#id26"><span class="problematic" id="id27">*</span></a>/ (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager().Apply() instead This will
-be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>ExcludeCollisionsBetween(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], setA: pydrake.geometry.GeometrySet, setB: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>systems::Context-modifying variant of ExcludeCollisionsBetween().
-Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id28"><span class="problematic" id="id29">*</span></a>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager(context).Apply() instead This
-will be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.geometry.SceneGraph_[float].ExcludeCollisionsWithin">
-<code class="descname">ExcludeCollisionsWithin</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].ExcludeCollisionsWithin" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[float], set: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>Excludes geometry pairs from collision evaluation by updating the
-candidate pair set <code class="docutils literal"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">C</span> <span class="pre">-</span> <span class="pre">P</span></code>, where <code class="docutils literal"><span class="pre">P</span> <span class="pre">=</span> <span class="pre">{(gᵢ,</span> <span class="pre">gⱼ)},</span> <span class="pre">∀</span> <span class="pre">gᵢ,</span> <span class="pre">gⱼ</span> <span class="pre">∈</span>
-<span class="pre">G</span></code> and <code class="docutils literal"><span class="pre">G</span> <span class="pre">=</span> <span class="pre">{g₀,</span> <span class="pre">g₁,</span> <span class="pre">...,</span> <span class="pre">gₘ}</span></code> is the input <code class="docutils literal"><span class="pre">set</span></code> of geometries.</p>
-<p>This method modifies the underlying model and requires a new Context
-to be allocated. Modifies the proximity version (see
-scene_graph_versioning).</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">scene_graph_collision_filtering for requirements and how collision
-filtering works.</p>
-</div>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the set includes ids that don’t exist in the scene</li>
-<li>graph. <a href="#id30"><span class="problematic" id="id31">*</span></a>/ (Deprecated.)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager().Apply() instead This will
-be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>ExcludeCollisionsWithin(self: pydrake.geometry.SceneGraph_[float], context: pydrake.systems.framework.Context_[float], set: pydrake.geometry.GeometrySet) -&gt; None</li>
-</ol>
-<p>systems::Context-modifying variant of ExcludeCollisionsWithin().
-Rather than modifying SceneGraph’s model, it modifies the copy of the
-model stored in the provided context. <a href="#id32"><span class="problematic" id="id33">*</span></a>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Please call collision_filter_manager(context).Apply() instead This
-will be removed from Drake on or after 2021-11-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id34"><span class="problematic" id="id35">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -9053,7 +8765,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id36"><span class="problematic" id="id37">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -9799,7 +9511,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id38"><span class="problematic" id="id39">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id14"><span class="problematic" id="id15">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -10543,7 +10255,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id40"><span class="problematic" id="id41">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id16"><span class="problematic" id="id17">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -11590,7 +11302,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id76"><span class="problematic" id="id77">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id52"><span class="problematic" id="id53">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11677,7 +11389,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id78"><span class="problematic" id="id79">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id54"><span class="problematic" id="id55">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11762,7 +11474,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id80"><span class="problematic" id="id81">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id56"><span class="problematic" id="id57">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result

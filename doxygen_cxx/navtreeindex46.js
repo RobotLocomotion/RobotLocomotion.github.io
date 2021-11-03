@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"quaternion_8h.html#a3b38bdfc1e3df8662c8726bc89a08ed0":[4,0,0,7,24,6],
+"quaternion_8h.html#a5e37615af3b6facc6f7dec51323a628e":[4,0,0,7,24,4],
+"quaternion_8h.html#a7e6bdc00adb60394da9687fc9aa5b0aa":[4,0,0,7,24,9],
 "quaternion_8h.html#a88a6d40e458bc9f766f33b819a7b4900":[4,0,0,7,24,5],
 "quaternion_8h.html#a98411a94334e6d40ef2ca10bfc053118":[4,0,0,7,24,1],
 "quaternion_8h.html#aad74d3c5baa84fa6ef04b6ada5ffcbe5":[4,0,0,7,24,12],
@@ -58,7 +61,7 @@ var NAVTREEINDEX46 =
 "revolute__mobilizer_8h.html":[4,0,0,8,12,36],
 "revolute__spring_8h.html":[4,0,0,8,12,37],
 "rgba_8h.html":[4,0,0,4,33],
-"rgbd__sensor_8h.html":[4,0,0,11,8,12],
+"rgbd__sensor_8h.html":[4,0,0,11,8,13],
 "riccati__linear__solver_8h.html":[4,0,0,10,0,0,9],
 "rigid__body_8h.html":[4,0,0,8,12,38],
 "rigid__transform_8h.html":[4,0,0,7,26],
@@ -78,7 +81,7 @@ var NAVTREEINDEX46 =
 "rod2d_8h.html":[4,0,0,3,15,0],
 "rod2d__geometry_8h.html":[4,0,0,3,15,1],
 "roll__pitch__yaw_8h.html":[4,0,0,7,27],
-"rotary__encoders_8h.html":[4,0,0,11,8,13],
+"rotary__encoders_8h.html":[4,0,0,11,8,14],
 "rotation_8h.html":[4,0,0,1,1,0],
 "rotation__constraint_8h.html":[4,0,0,10,42],
 "rotation__constraint_8h.html#a0c7466e7ce1b8db6de94ad0524f8106d":[4,0,0,10,42,2],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecae654b0ad8f79045aff33844a0c3cdf81":[4,0,0,10,52,0,1],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaebb0e280cb0e7da8a3868247749a4d9d":[4,0,0,10,52,0,7],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaf25185ee32a5e7a033b139d8b7c6ed57":[4,0,0,10,52,0,5],
-"solver__type__converter_8h.html":[4,0,0,10,53],
-"solvers__pybind_8h.html":[4,0,0,0,0,1,0],
-"solvers__pybind_8h.html#ab20a1ef3e56f4759c3fae832d66332f0":[4,0,0,0,0,1,0,0],
-"sorted__pair_8h.html":[4,0,0,1,49]
+"solver__type__converter_8h.html":[4,0,0,10,53]
 };

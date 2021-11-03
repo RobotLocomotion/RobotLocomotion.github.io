@@ -1,9 +1,5 @@
 var NAVTREEINDEX6 =
 {
-"classdrake_1_1geometry_1_1_shape_reifier.html#a95564d6c00e8f315b4337e80b033a299":[3,0,0,3,42,1],
-"classdrake_1_1geometry_1_1_shape_reifier.html#ae4337e25fda81a32e1f4145f71d3f628":[3,0,0,3,42,15],
-"classdrake_1_1geometry_1_1_shape_reifier.html#aef1531bb8dd9ba1f3f408f7c220ae380":[3,0,0,3,42,2],
-"classdrake_1_1geometry_1_1_shape_reifier.html#af104aa17b651dfc2491a960eace62b0b":[3,0,0,3,42,12],
 "classdrake_1_1geometry_1_1_sphere.html":[3,0,0,3,46],
 "classdrake_1_1geometry_1_1_sphere.html#a1f69ff5ed19d8f3052d1b12b972785fc":[3,0,0,3,46,1],
 "classdrake_1_1geometry_1_1_sphere.html#a3abcf0571d81409b4c8043ae979fdab1":[3,0,0,3,46,5],
@@ -249,5 +245,9 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e":[1,6,4,2,1,4],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a8711d41b9a7b76436bbb07bf5f19913e":[1,2,1,2,1,4],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a94669eb1f0e3c1db0bdc6f2db0f48e55":[1,6,4,2,1,1],
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a94669eb1f0e3c1db0bdc6f2db0f48e55":[1,2,1,2,1,1]
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#a94669eb1f0e3c1db0bdc6f2db0f48e55":[1,2,1,2,1,1],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,6,4,2,1,8],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ab7cfc90f4347f8ddf6e8cb5b3b18260d":[1,2,1,2,1,8],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f":[1,6,4,2,1,10],
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html#ad7acb25ff1d4759a67548a22e11c1a5f":[1,2,1,2,1,10]
 };
