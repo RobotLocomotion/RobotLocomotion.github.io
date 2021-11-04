@@ -3881,35 +3881,6 @@ status.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.mathematicalprogram.ModuleShim">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">ModuleShim</code><span class="sig-paren">(</span><em>orig_module</em>, <em>handler</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ModuleShim" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Provides a shim for automatically resolving extra variables.</p>
-<p>This can be used to deprecate import alias in modules to simplify
-dependencies.</p>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference external" href="https://stackoverflow.com/a/7668273/7829525">https://stackoverflow.com/a/7668273/7829525</a></p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This is not necessary in Python &gt;= 3.7 due to PEP 562.</p>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This will not work if called on a cc module during import (e.g. using
-ExecuteExtraPythonCode). Instead, you should rename the module from
-<cite>{name}</cite> to <cite>_{name}</cite>, and import the symbols into the new module using
-_import_cc_module_vars.</p>
-</div>
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.ModuleShim.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>orig_module</em>, <em>handler</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.ModuleShim.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">PositiveSemidefiniteConstraint</code><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.PositiveSemidefiniteConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>

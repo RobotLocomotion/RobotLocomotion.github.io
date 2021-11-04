@@ -417,7 +417,7 @@ Public Member Functions</h2></td></tr>
 <p>We use a dissipation model inspired by the model in [Hunt and Crossley, 1975], parameterized by a dissipation constant with units of inverse of velocity, i.e. <code>s/m</code>.</p>
 <p>The elastic modulus and dissipation can be specified in one of two ways:</p>
 <ul>
-<li>define them in an instance of <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">geometry::ProximityProperties</a> using the function <a class="el" href="namespacedrake_1_1geometry.html#aea83d68a61e598f633cd1a00f2581e89">geometry::AddContactMaterial()</a>, or</li>
+<li>define them in an instance of <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">geometry::ProximityProperties</a> using the function <a class="el" href="namespacedrake_1_1geometry.html#a06f08c367a0ef97e7fc397a8a44d49d8" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial()</a>, or</li>
 <li>define them in an input URDF/SDF as detailed here for SDF or here for URDF.</li>
 </ul>
 <p>With the effective properties of the pair defined as above, the hydroelastic model pressure field is computed according to: </p><pre>

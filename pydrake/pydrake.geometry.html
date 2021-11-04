@@ -184,35 +184,31 @@
 <span class="target" id="module-pydrake.geometry"></span><p>Bindings for <cite>drake::geometry</cite></p>
 <dl class="function">
 <dt id="pydrake.geometry.AddContactMaterial">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">AddContactMaterial</code><span class="sig-paren">(</span><em>hydroelastic_modulus: Optional[float] = None</em>, <em>dissipation: Optional[float] = None</em>, <em>point_stiffness: Optional[float] = None</em>, <em>friction: Optional[drake::multibody::CoulombFriction&lt;double&gt;] = None</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddContactMaterial" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;name Contact Material Utility Functions AddContactMaterial() adds
-contact material properties to the given set of proximity
-<code class="docutils literal"><span class="pre">properties</span></code>. Only the parameters that carry values will be added to
-the given set of <code class="docutils literal"><span class="pre">properties</span></code>; no default values will be provided.
-Downstream consumers of the contact materials can optionally provide
-defaults for missing properties.</p>
-<p>For legacy and backwards compatibility purposes, two overloads for
-AddContactMaterial() are provided. One supports all contact material
-properties <strong>except</strong> <code class="docutils literal"><span class="pre">point_stiffness</span></code>, and the other includes it.
-Users are encouraged to use the overload that contains the argument
-for <code class="docutils literal"><span class="pre">point_stiffness</span></code>.</p>
-<p>These functions will throw an error if: - <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code> is
-not positive - <code class="docutils literal"><span class="pre">dissipation</span></code> is negative - <code class="docutils literal"><span class="pre">point_stiffness</span></code> is
-not positive - Any of the contact material properties have already
-been defined in <code class="docutils literal"><span class="pre">properties</span></code>.</p>
+<code class="descclassname">pydrake.geometry.</code><code class="descname">AddContactMaterial</code><span class="sig-paren">(</span><em>dissipation: Optional[float] = None</em>, <em>point_stiffness: Optional[float] = None</em>, <em>friction: Optional[drake::multibody::CoulombFriction&lt;double&gt;] = None</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddContactMaterial" title="Permalink to this definition">¶</a></dt>
+<dd><p>AddContactMaterial() adds general contact material properties to the
+given set of proximity <code class="docutils literal"><span class="pre">properties</span></code>. These are the properties
+required by the default point contact model. However, other contact
+models can opt to use these properties as well. Only the parameters
+that carry values will be added to the given set of <code class="docutils literal"><span class="pre">properties</span></code>; no
+default values will be provided. Downstream consumers of the contact
+materials can optionally provide defaults for missing properties.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if any parameter doesn’t satisfy the requirements</li>
-<li>listed in contact_material_utility_functions “Contact Material</li>
-<li>Utility Functions”.</li>
+<li>RuntimeError if <code class="docutils literal"><span class="pre">dissipation</span></code> is negative, <code class="docutils literal"><span class="pre">point_stiffness</span></code></li>
+<li>is not positive, of any of the contact material properties have</li>
+<li>already been defined in <a href="#id1"><span class="problematic" id="id2">``</span></a>properties`.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
@@ -261,12 +257,8 @@ MODULE_NOT_WRITTEN_YET.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.AddSoftHydroelasticProperties">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticProperties</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticProperties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>AddSoftHydroelasticProperties(resolution_hint: float, properties: pydrake.geometry.ProximityProperties) -&gt; None</li>
-</ol>
-<p>Adds properties to the given set of proximity properties sufficient to
+<code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticProperties</code><span class="sig-paren">(</span><em>resolution_hint: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds properties to the given set of proximity properties sufficient to
 cause the associated geometry to generate a soft hydroelastic
 representation. The geometry’s pressure field will be the function
 p(e) = Ee, where E is the elastic modulus stored in the given
@@ -278,6 +270,8 @@ guides the level of mesh refinement. It has length units (in
 meters) and roughly corresponds to a typical edge length in the
 resulting mesh. This will be ignored for geometry types that don’t
 require tessellation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>:</dt>
+<dd>A multiplier that maps penetration to pressure.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
 <dd>The properties will be added to this property set.</dd>
 </dl>
@@ -295,20 +289,14 @@ require tessellation.</dd>
 </table>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>0 &lt; <code class="docutils literal"><span class="pre">resolution_hint</span></code> &lt; ∞, <code class="docutils literal"><span class="pre">properties</span></code> is not nullptr, and
-<code class="docutils literal"><span class="pre">properties</span></code> contains a valid elastic modulus value.</dd>
+<dd>0 &lt; <code class="docutils literal"><span class="pre">resolution_hint</span></code> &lt; ∞, 0 &lt; <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>, and
+<code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li>AddSoftHydroelasticProperties(properties: pydrake.geometry.ProximityProperties) -&gt; None</li>
-</ol>
-<p>Overload, intended for shapes that don’t get tessellated in their
-hydroelastic representation (e.g., HalfSpace). See
-MODULE_NOT_WRITTEN_YET.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticPropertiesForHalfSpace</code><span class="sig-paren">(</span><em>slab_thickness: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticPropertiesForHalfSpace</code><span class="sig-paren">(</span><em>slab_thickness: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Soft half spaces are handled as a special case; they do not get
 tessellated. Instead, they are treated as infinite slabs with a finite
 thickness. This variant is required for hydroelastic half spaces.</p>
@@ -316,6 +304,8 @@ thickness. This variant is required for hydroelastic half spaces.</p>
 <dt>Parameter <code class="docutils literal"><span class="pre">slab_thickness</span></code>:</dt>
 <dd>The distance from the half space boundary to its rigid core (this
 helps define the extent field of the half space).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>:</dt>
+<dd>A multiplier that maps penetration to pressure.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
 <dd>The properties will be added to this property set.</dd>
 </dl>
@@ -333,7 +323,8 @@ helps define the extent field of the half space).</dd>
 </table>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>0 &lt; <code class="docutils literal"><span class="pre">slab_thickness</span></code> &lt; ∞ .</dd>
+<dd>0 &lt; <code class="docutils literal"><span class="pre">slab_thickness</span></code> &lt; ∞, 0 &lt; <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>, and
+<code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
 </dl>
 </dd></dl>
 
@@ -627,7 +618,7 @@ any filter identifiers are rendered invalid.</p>
 <p>This example workflow above illustrates some key ideas in using
 transient declarations.</p>
 <ul class="simple">
-<li><a href="#id1"><span class="problematic" id="id2">**</span></a>The persistent configuration can only be modified when there is no</li>
+<li><a href="#id3"><span class="problematic" id="id4">**</span></a>The persistent configuration can only be modified when there is no</li>
 </ul>
 <p>transient history.** Applying a filter declaration should have the effect
 of realizing that declaration. If a pair is <em>declared</em> to be in C, the
@@ -1144,7 +1135,7 @@ with only one polyhedron. We assume that the polyhedron is convex.</dd>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id18"><span class="problematic" id="id19">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id20"><span class="problematic" id="id21">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -1876,7 +1867,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id20"><span class="problematic" id="id21">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id22"><span class="problematic" id="id23">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2008,7 +1999,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id22"><span class="problematic" id="id23">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id24"><span class="problematic" id="id25">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -2138,7 +2129,7 @@ values for KinematicsValue are supported.</p>
 <p>Currently, the following data types with the following scalar types
 are supported:</p>
 <p>Alias | Instantiation | Scalar types
-—————–<a href="#id24"><span class="problematic" id="id25">|-----------------------------------------------|</span></a>————-
+—————–<a href="#id26"><span class="problematic" id="id27">|-----------------------------------------------|</span></a>————-
 FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt; |
 double FramePoseVector | FrameKinematicsVector&lt;RigidTransform&lt;Scalar&gt;&gt;
 | AutoDiffXd FramePoseVector |
@@ -3108,7 +3099,7 @@ scale factor.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <a href="#id26"><span class="problematic" id="id27">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
+<li>RuntimeError if <a href="#id28"><span class="problematic" id="id29">|scale|</span></a> &lt; 1e-8. Note that a negative scale is</li>
 <li>considered valid. We want to preclude scales near zero but</li>
 <li>recognise that scale is a convenience tool for “tweaking” models.</li>
 <li>8 orders of magnitude should be plenty without considering</li>
@@ -5013,7 +5004,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id28"><span class="problematic" id="id29">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id30"><span class="problematic" id="id31">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5023,7 +5014,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id30"><span class="problematic" id="id31">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id32"><span class="problematic" id="id33">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5145,8 +5136,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id32"><span class="problematic" id="id33">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id34"><span class="problematic" id="id35">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id34"><span class="problematic" id="id35">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id36"><span class="problematic" id="id37">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -5608,7 +5599,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id36"><span class="problematic" id="id37">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id38"><span class="problematic" id="id39">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5618,7 +5609,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id38"><span class="problematic" id="id39">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id40"><span class="problematic" id="id41">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5740,8 +5731,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id40"><span class="problematic" id="id41">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id42"><span class="problematic" id="id43">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id42"><span class="problematic" id="id43">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id44"><span class="problematic" id="id45">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -6201,7 +6192,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id44"><span class="problematic" id="id45">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id46"><span class="problematic" id="id47">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -6211,7 +6202,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id46"><span class="problematic" id="id47">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id48"><span class="problematic" id="id49">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -6333,8 +6324,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id48"><span class="problematic" id="id49">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id50"><span class="problematic" id="id51">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id52"><span class="problematic" id="id53">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -6579,7 +6570,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id58"><span class="problematic" id="id59">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id60"><span class="problematic" id="id61">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -7093,7 +7084,7 @@ model*.</p>
 <dt id="pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id4"><span class="problematic" id="id5">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id6"><span class="problematic" id="id7">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -7742,7 +7733,7 @@ model*.</p>
 <dt id="pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[AutoDiffXd].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id7"><span class="problematic" id="id8">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id9"><span class="problematic" id="id10">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -8389,7 +8380,7 @@ model*.</p>
 <dt id="pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port">
 <code class="descname">get_pose_bundle_output_port</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.geometry.SceneGraph_[float].get_pose_bundle_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the output port which produces the PoseBundle for LCM
-communication to drake visualizer. <a href="#id10"><span class="problematic" id="id11">*</span></a>/ (Deprecated.)</p>
+communication to drake visualizer. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>PoseBundle is no longer in use. Visualizers typically connect to
@@ -8765,7 +8756,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id12"><span class="problematic" id="id13">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id14"><span class="problematic" id="id15">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -9511,7 +9502,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id14"><span class="problematic" id="id15">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id16"><span class="problematic" id="id17">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -10255,7 +10246,7 @@ used as:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This includes the id for the world frame. <a href="#id16"><span class="problematic" id="id17">*</span></a>/ (Deprecated.)</p>
+<p>This includes the id for the world frame. <a href="#id18"><span class="problematic" id="id19">*</span></a>/ (Deprecated.)</p>
 <dl class="docutils">
 <dt>Deprecated:</dt>
 <dd>Please use GetAllFrameIds() instead. This will be removed from
@@ -11302,7 +11293,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id52"><span class="problematic" id="id53">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id54"><span class="problematic" id="id55">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11389,7 +11380,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id54"><span class="problematic" id="id55">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id56"><span class="problematic" id="id57">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11474,7 +11465,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id56"><span class="problematic" id="id57">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id58"><span class="problematic" id="id59">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
