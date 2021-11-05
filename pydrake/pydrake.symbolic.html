@@ -867,6 +867,19 @@ y).Substitute({{x, y}, {y, x}}) gets (y / x).</p>
 <dd><p>Returns string representation of Expression.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.symbolic.Expression.Unapply">
+<code class="descname">Unapply</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.symbolic.Expression.Unapply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an expression, returns a tuple (ctor, args) that would re-create an
+equivalent expression when called as ctor(<a href="#id1"><span class="problematic" id="id2">*</span></a>args).  This is a useful way to
+unpack the contents of a compound expression, e.g., to obtain the terms of
+an addition.  In many cases (all arithmetic operators, trig functions,
+max, min, sqrt, etc.), the returned args will all be either Expressions or
+floats; in other cases (e.g., if_then_else) some args will other types
+(e.g., a Formula).  To check the form (i.e., kind) of an expression, use
+e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -1301,7 +1314,7 @@ expression <code class="docutils literal"><span class="pre">expr_else)</span></c
 expression <code class="docutils literal"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal"><span class="pre">cond</span></code> is
 evaluated to <strong>false)</strong>.</p>
 <ul class="simple">
-<li>In case of the symbolic expression, <a href="#id1"><span class="problematic" id="id2">``</span></a>if_then_else(cond, expr_then,</li>
+<li>In case of the symbolic expression, <a href="#id3"><span class="problematic" id="id4">``</span></a>if_then_else(cond, expr_then,</li>
 </ul>
 <p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal"><span class="pre">expr_then</span></code> and <code class="docutils literal"><span class="pre">expr_else</span></code>
 are evaluated first and then passed to the <code class="docutils literal"><span class="pre">if_then_else</span></code> function.</p>

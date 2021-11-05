@@ -1,5 +1,8 @@
 var NAVTREEINDEX45 =
 {
+"namespacemembers_func_o.html":[2,1,1,14],
+"namespacemembers_func_p.html":[2,1,1,15],
+"namespacemembers_func_q.html":[2,1,1,16],
 "namespacemembers_func_r.html":[2,1,1,17],
 "namespacemembers_func_s.html":[2,1,1,18],
 "namespacemembers_func_t.html":[2,1,1,19],
@@ -246,8 +249,5 @@ var NAVTREEINDEX45 =
 "quaternion_8h.html#a056f9de21690e59551e2904bde9ac928":[4,0,0,7,24,8],
 "quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337":[4,0,0,7,24,2],
 "quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d":[4,0,0,7,24,14],
-"quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,24,13],
-"quaternion_8h.html#a2e47f892f2417dfc861a095328019361":[4,0,0,7,24,7],
-"quaternion_8h.html#a3b38bdfc1e3df8662c8726bc89a08ed0":[4,0,0,7,24,6],
-"quaternion_8h.html#a5e37615af3b6facc6f7dec51323a628e":[4,0,0,7,24,4]
+"quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,24,13]
 };

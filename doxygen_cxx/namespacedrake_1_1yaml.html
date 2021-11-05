@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1yaml.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html">YamlReadArchive</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML file into a C++ structure, using the Serialize / Archive pattern.  <a href="classdrake_1_1yaml_1_1_yaml_read_archive.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that loads data from a YAML file into a C++ structure.  <a href="classdrake_1_1yaml_1_1_yaml_read_archive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html">YamlWriteArchive</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that saves data from a C++ structure into a YAML file.  <a href="classdrake_1_1yaml_1_1_yaml_write_archive.html#details">More...</a><br /></td></tr>
@@ -111,6 +111,14 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a622c33e0bb8c19665bf527b03fe9703c"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:a622c33e0bb8c19665bf527b03fe9703c"><td class="memTemplItemLeft" align="right" valign="top">static Serializable&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#a622c33e0bb8c19665bf527b03fe9703c">LoadYamlFile</a> (const std::string &amp;filename, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt, const std::optional&lt; <a class="el" href="structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html">YamlReadArchive::Options</a> &gt; &amp;options=std::nullopt)</td></tr>
+<tr class="memdesc:a622c33e0bb8c19665bf527b03fe9703c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML-formatted file.  <a href="#a622c33e0bb8c19665bf527b03fe9703c">More...</a><br /></td></tr>
+<tr class="separator:a622c33e0bb8c19665bf527b03fe9703c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd8dfac059b6803bdfdc0bc09b634538"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:acd8dfac059b6803bdfdc0bc09b634538"><td class="memTemplItemLeft" align="right" valign="top">static Serializable&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#acd8dfac059b6803bdfdc0bc09b634538">LoadYamlString</a> (const std::string &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt, const std::optional&lt; <a class="el" href="structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html">YamlReadArchive::Options</a> &gt; &amp;options=std::nullopt)</td></tr>
+<tr class="memdesc:acd8dfac059b6803bdfdc0bc09b634538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML-formatted string.  <a href="#acd8dfac059b6803bdfdc0bc09b634538">More...</a><br /></td></tr>
+<tr class="separator:acd8dfac059b6803bdfdc0bc09b634538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
 <tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e">SaveYamlFile</a> (const std::string &amp;filename, const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
 <tr class="memdesc:ab3b6d04d37236596751e626ed6aa3b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted file.  <a href="#ab3b6d04d37236596751e626ed6aa3b5e">More...</a><br /></td></tr>
@@ -121,6 +129,140 @@ Functions</h2></td></tr>
 <tr class="separator:aaf418985a2d3d598d6191b2dc7576e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a622c33e0bb8c19665bf527b03fe9703c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a622c33e0bb8c19665bf527b03fe9703c">&#9670;&nbsp;</a></span>LoadYamlFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Serializable LoadYamlFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>child_name</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Serializable &gt; &amp;&#160;</td>
+          <td class="paramname"><em>defaults</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html">YamlReadArchive::Options</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads data from a YAML-formatted file. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background and examples.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>Filename to be read from. </td></tr>
+    <tr><td class="paramname">child_name</td><td>(optional) If provided, loads data from given-named child of the document's root instead of the root itself. </td></tr>
+    <tr><td class="paramname">defaults</td><td>(optional) If provided, then the structure being read into will be initialized using this value instead of the default constructor, and also (unless the <code>options</code> argument is provided and specifies otherwise) any member fields that are not mentioned in the YAML will retain their default values. </td></tr>
+    <tr><td class="paramname">options</td><td>(optional, advanced) If provided, overrides the nominal parsing options. Most users should not specify this; the default is usually correct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the loaded user data.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function and be default constructible. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acd8dfac059b6803bdfdc0bc09b634538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd8dfac059b6803bdfdc0bc09b634538">&#9670;&nbsp;</a></span>LoadYamlString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static Serializable LoadYamlString </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>child_name</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; Serializable &gt; &amp;&#160;</td>
+          <td class="paramname"><em>defaults</em> = <code>std::nullopt</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html">YamlReadArchive::Options</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads data from a YAML-formatted string. </p>
+<p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background and examples.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the YAML document as a string. </td></tr>
+    <tr><td class="paramname">child_name</td><td>(optional) If provided, loads data from given-named child of the document's root instead of the root itself. </td></tr>
+    <tr><td class="paramname">defaults</td><td>(optional) If provided, then the structure being read into will be initialized using this value instead of the default constructor, and also (unless the <code>options</code> argument is provided and specifies otherwise) any member fields that are not mentioned in the YAML will retain their default values. </td></tr>
+    <tr><td class="paramname">options</td><td>(optional, advanced) If provided, overrides the nominal parsing options. Most users should not specify this; the default is usually correct.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the loaded user data.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function and be default constructible. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab3b6d04d37236596751e626ed6aa3b5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3b6d04d37236596751e626ed6aa3b5e">&#9670;&nbsp;</a></span>SaveYamlFile()</h2>
 

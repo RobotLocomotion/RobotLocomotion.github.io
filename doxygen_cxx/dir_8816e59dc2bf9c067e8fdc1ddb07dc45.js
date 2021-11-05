@@ -8,5 +8,6 @@ var dir_8816e59dc2bf9c067e8fdc1ddb07dc45 =
     [ "polynomial_types_pybind.h", "polynomial__types__pybind_8h.html", "polynomial__types__pybind_8h" ],
     [ "pydrake_doxygen.h", "pydrake__doxygen_8h.html", null ],
     [ "pydrake_pybind.h", "pydrake__pybind_8h.html", "pydrake__pybind_8h" ],
+    [ "symbolic_py_unapply.h", "symbolic__py__unapply_8h.html", null ],
     [ "symbolic_types_pybind.h", "symbolic__types__pybind_8h.html", "symbolic__types__pybind_8h" ]
 ];

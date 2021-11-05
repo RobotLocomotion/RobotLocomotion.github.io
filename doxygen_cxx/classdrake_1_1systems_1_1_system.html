@@ -261,7 +261,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa184508e6a0494c1b8214dab77e34ce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the vector-valued input port with the given <code>port_index</code> as a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> or a specific subclass <code>Vec</code> derived from <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a>.  <a href="#aa184508e6a0494c1b8214dab77e34ce3">More...</a><br /></td></tr>
 <tr class="separator:aa184508e6a0494c1b8214dab77e34ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02557f96761f5c65d36e55bb2084c8c5"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#a02557f96761f5c65d36e55bb2084c8c5">EvalEigenVectorInput</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classint.html">int</a> port_index) const</td></tr>
-<tr class="memdesc:a02557f96761f5c65d36e55bb2084c8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of the vector-valued input port with the given <code>port_index</code> as an Eigen vector.  <a href="#a02557f96761f5c65d36e55bb2084c8c5">More...</a><br /></td></tr>
+<tr class="memdesc:a02557f96761f5c65d36e55bb2084c8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated) Returns the value of the vector-valued input port with the given <code>port_index</code> as an Eigen vector.  <a href="#a02557f96761f5c65d36e55bb2084c8c5">More...</a><br /></td></tr>
 <tr class="separator:a02557f96761f5c65d36e55bb2084c8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Constraint-related functions</div></td></tr>
 <tr class="memitem:ad97e05bf6c16c4bbf058d3cd4978f696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#a69608eb99ec6982ed17d1ac6d3d6dce1">SystemConstraintIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system.html#ad97e05bf6c16c4bbf058d3cd4978f696">AddExternalConstraint</a> (<a class="el" href="classdrake_1_1systems_1_1_external_system_constraint.html">ExternalSystemConstraint</a> constraint)</td></tr>
@@ -3250,14 +3250,16 @@ variable group".) </p><dl class="section see"><dt>See also</dt><dd><a class="el"
       </table>
 </div><div class="memdoc">
 
-<p>Returns the value of the vector-valued input port with the given <code>port_index</code> as an Eigen vector. </p>
+<p>(Deprecated) Returns the value of the vector-valued input port with the given <code>port_index</code> as an Eigen vector. </p>
 <p>Causes the value to become up to date first if necessary. See <a class="el" href="classdrake_1_1systems_1_1_system_base.html#a2cb18001bedce2dfaf75b0ae8a14375e" title="Returns the value of the input port with the given port_index as an AbstractValue,...">EvalAbstractInput()</a> for more information.</p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>port_index</code> selects an existing input port of this <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>. </dd>
 <dd>
 the port must have been declared to be vector-valued. </dd>
 <dd>
 the port must be evaluable (connected or fixed).</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_system.html#aa184508e6a0494c1b8214dab77e34ce3" title="Returns the value of the vector-valued input port with the given port_index as a BasicVector or a spe...">EvalVectorInput()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1_input_port.html#abab8fb340a13be101704b48e46c12724" title="Returns a reference to the up-to-date value of this input port contained in the given Context.">InputPort::Eval()</a> (Deprecated.) </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000039">Deprecated:</a></b></dt><dd>Use get_input_port(index).Eval(context) instead. <br />
+ This will be removed from Drake on or after 2021-03-01.</dd></dl>
 
 </div>
 </div>

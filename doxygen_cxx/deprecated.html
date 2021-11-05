@@ -133,11 +133,11 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">drake::math::DiscardGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</dt>
 <dd><a class="anchor" id="_deprecated000019"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">drake::math::DiscardZeroGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</dt>
-<dd><a class="anchor" id="_deprecated000029"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
- This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a0e1dbe26c9179a94ca05db1b84528b47">drake::math::DiscardZeroGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform, const typename Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::dummy_precision())</dt>
 <dd><a class="anchor" id="_deprecated000028"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
+ This will be removed from Drake on or after 2021-12-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">drake::math::DiscardZeroGradient</a>  (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</dt>
+<dd><a class="anchor" id="_deprecated000029"></a>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">drake::math::gradientMatrixToAutoDiff</a>  (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
 <dd><a class="anchor" id="_deprecated000027"></a>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000036"></a>ModelWeldErrorFunction is no longer supported. <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_signal_logger.html#a3b36477ccd5d5763a6fd9093ffb75b23">LogOutput</a>  </dt>
-<dd><a class="anchor" id="_deprecated000039"></a>Use LogVectorOutput instead. <br />
+<dd><a class="anchor" id="_deprecated000040"></a>Use LogVectorOutput instead. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a95cb1c6952612163b7e60a81a209f692">MeshFieldLinear&lt; T, MeshType &gt;::MeshFieldLinear</a>  (std::string name, std::vector&lt; T &gt; &amp;&amp;values, const MeshType *mesh, bool calculate_gradient=true)</dt>
 <dd><a class="anchor" id="_deprecated000007"></a>This object will no longer store a name <br />
@@ -207,17 +207,20 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000006"></a>is_approx() has been renamed to IsApprox(). <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab1d56f20fb784af0c0d9f0a737d19f68">RgbdSensor::X_WB_output_port</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000040"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
+<dd><a class="anchor" id="_deprecated000041"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a3caed2b8fffe3482458283030d2b439f">RgbdSensorDiscrete::X_WB_output_port</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000041"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
+<dd><a class="anchor" id="_deprecated000042"></a>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a637679130ce796cc4dfaa97ceb0e7559">SceneGraph&lt; T &gt;::get_pose_bundle_output_port</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000009"></a>PoseBundle is no longer in use. Visualizers typically  connect to SceneGraph's QueryObject port. <br />
  This will be removed from Drake on or after 2021-12-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a84fa00c683202c7b48333b3c7e6193c8">SceneGraphInspector&lt; T &gt;::all_frame_ids</a>  () const</dt>
 <dd><a class="anchor" id="_deprecated000010"></a>Please use GetAllFrameIds() instead. <br />
- This will be removed from Drake on or after 2021-12-01.</dd>
+ This will be removed from Drake on or after 2021-12-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a02557f96761f5c65d36e55bb2084c8c5">System&lt; T &gt;::EvalEigenVectorInput</a>  (const Context&lt; T &gt; &amp;context, int port_index) const</dt>
+<dd><a class="anchor" id="_deprecated000039"></a>Use get_input_port(index).Eval(context) instead. <br />
+ This will be removed from Drake on or after 2021-03-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
