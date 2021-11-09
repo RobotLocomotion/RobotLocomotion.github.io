@@ -338,7 +338,9 @@ invoked on the returned object.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which returns direct access to
+the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
@@ -354,6 +356,13 @@ a must be identical to b.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_.BasicVector_[float].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_.BasicVector_[float].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the contained <code class="docutils literal"><span class="pre">VectorX&lt;T&gt;</span></code>. This is the
+preferred method for examining a BasicVector’s value.</p>
 </dd></dl>
 
 </dd></dl>
@@ -397,7 +406,9 @@ invoked on the returned object.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.BasicVector_[AutoDiffXd].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_[AutoDiffXd].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which returns direct access to
+the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
@@ -413,6 +424,13 @@ a must be identical to b.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_[AutoDiffXd].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_[AutoDiffXd].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the contained <code class="docutils literal"><span class="pre">VectorX&lt;T&gt;</span></code>. This is the
+preferred method for examining a BasicVector’s value.</p>
 </dd></dl>
 
 </dd></dl>
@@ -454,7 +472,9 @@ invoked on the returned object.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.BasicVector_[Expression].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_[Expression].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which returns direct access to
+the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
@@ -470,6 +490,13 @@ a must be identical to b.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_[Expression].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_[Expression].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the contained <code class="docutils literal"><span class="pre">VectorX&lt;T&gt;</span></code>. This is the
+preferred method for examining a BasicVector’s value.</p>
 </dd></dl>
 
 </dd></dl>
@@ -511,7 +538,9 @@ invoked on the returned object.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.BasicVector_[float].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_[float].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which returns direct access to
+the underlying VectorX rather than wrapping it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
@@ -527,6 +556,13 @@ a must be identical to b.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.BasicVector_[float].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.BasicVector_[float].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the contained <code class="docutils literal"><span class="pre">VectorX&lt;T&gt;</span></code>. This is the
+preferred method for examining a BasicVector’s value.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5235,22 +5271,27 @@ allow resize() to be called on the vector.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable reference to the vector holding data for the
-indicated group.</p>
+<dd><p>(Advanced) Returns a mutable reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">get_mutable_value()</span></code> to get the
+underlying Eigen object unless you really need the BasicVector
+wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
-indicated group.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which
+returns direct access to the underlying VectorX rather than wrapping
+it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_vector">
 <code class="descname">get_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].get_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const reference to the vector holding data for the indicated
-group.</p>
+<dd><p>(Advanced) Returns a const reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">value(index)</span></code> to get the underlying
+VectorX directly unless you really need the BasicVector wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5284,6 +5325,14 @@ don’t match.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of elements in the only DiscreteValues group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_.DiscreteValues_[float].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the underlying VectorX containing the
+values for the indicated group. This is the preferred method for
+examining the value of a group.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5347,22 +5396,27 @@ allow resize() to be called on the vector.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable reference to the vector holding data for the
-indicated group.</p>
+<dd><p>(Advanced) Returns a mutable reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">get_mutable_value()</span></code> to get the
+underlying Eigen object unless you really need the BasicVector
+wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
-indicated group.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which
+returns direct access to the underlying VectorX rather than wrapping
+it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_vector">
 <code class="descname">get_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].get_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const reference to the vector holding data for the indicated
-group.</p>
+<dd><p>(Advanced) Returns a const reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">value(index)</span></code> to get the underlying
+VectorX directly unless you really need the BasicVector wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5396,6 +5450,14 @@ don’t match.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of elements in the only DiscreteValues group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[AutoDiffXd].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[AutoDiffXd], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[AutoDiffXd].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the underlying VectorX containing the
+values for the indicated group. This is the preferred method for
+examining the value of a group.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5457,22 +5519,27 @@ allow resize() to be called on the vector.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[Expression]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable reference to the vector holding data for the
-indicated group.</p>
+<dd><p>(Advanced) Returns a mutable reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">get_mutable_value()</span></code> to get the
+underlying Eigen object unless you really need the BasicVector
+wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
-indicated group.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which
+returns direct access to the underlying VectorX rather than wrapping
+it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].get_vector">
 <code class="descname">get_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[Expression]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].get_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const reference to the vector holding data for the indicated
-group.</p>
+<dd><p>(Advanced) Returns a const reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">value(index)</span></code> to get the underlying
+VectorX directly unless you really need the BasicVector wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5506,6 +5573,14 @@ don’t match.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_[Expression].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of elements in the only DiscreteValues group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[Expression].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[Expression], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[Expression].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the underlying VectorX containing the
+values for the indicated group. This is the preferred method for
+examining the value of a group.</p>
 </dd></dl>
 
 </dd></dl>
@@ -5567,22 +5642,27 @@ allow resize() to be called on the vector.</p>
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[float].get_mutable_vector">
 <code class="descname">get_mutable_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].get_mutable_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable reference to the vector holding data for the
-indicated group.</p>
+<dd><p>(Advanced) Returns a mutable reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">get_mutable_value()</span></code> to get the
+underlying Eigen object unless you really need the BasicVector
+wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[float].get_value">
 <code class="descname">get_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].get_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the entire vector as a const Eigen::VectorBlock for the
-indicated group.</p>
+<dd><p>(Don’t use this in new code) Returns the entire vector as a const
+Eigen::VectorBlock for the indicated group. Prefer <code class="docutils literal"><span class="pre">value()</span></code> which
+returns direct access to the underlying VectorX rather than wrapping
+it in a VectorBlock.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.DiscreteValues_[float].get_vector">
 <code class="descname">get_vector</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.BasicVector_[float]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].get_vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a const reference to the vector holding data for the indicated
-group.</p>
+<dd><p>(Advanced) Returns a const reference to the BasicVector holding data
+for the indicated group. Prefer <code class="docutils literal"><span class="pre">value(index)</span></code> to get the underlying
+VectorX directly unless you really need the BasicVector wrapping it.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5616,6 +5696,14 @@ don’t match.</p>
 <dt id="pydrake.systems.framework.DiscreteValues_[float].size">
 <code class="descname">size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of elements in the only DiscreteValues group.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiscreteValues_[float].value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiscreteValues_[float], index: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.DiscreteValues_[float].value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a const reference to the underlying VectorX containing the
+values for the indicated group. This is the preferred method for
+examining the value of a group.</p>
 </dd></dl>
 
 </dd></dl>

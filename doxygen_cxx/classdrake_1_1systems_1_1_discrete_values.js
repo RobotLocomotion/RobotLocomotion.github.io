@@ -28,5 +28,7 @@ var classdrake_1_1systems_1_1_discrete_values =
     [ "set_value", "classdrake_1_1systems_1_1_discrete_values.html#a95cee47ba175ab6b8fd8f7cb2f82ab96", null ],
     [ "set_value", "classdrake_1_1systems_1_1_discrete_values.html#a2bfa3897316b313139081b8cf8487576", null ],
     [ "SetFrom", "classdrake_1_1systems_1_1_discrete_values.html#a04f99bc8d40ae24884981b17f4801866", null ],
-    [ "size", "classdrake_1_1systems_1_1_discrete_values.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ]
+    [ "size", "classdrake_1_1systems_1_1_discrete_values.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],
+    [ "value", "classdrake_1_1systems_1_1_discrete_values.html#ada7a60115ea815aaacb024409e2eb3bc", null ],
+    [ "value", "classdrake_1_1systems_1_1_discrete_values.html#afc2495a459b35669af106e72a01e98df", null ]
 ];

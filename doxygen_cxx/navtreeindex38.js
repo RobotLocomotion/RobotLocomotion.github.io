@@ -1,5 +1,10 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a3d57e7972ccf310e19d3b73cac1c2a8c":[1,5,2,8,33],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a48f817634e4b7a64663f19d1d635a7d6":[1,5,2,8,46],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a4c9f21fcdccfdccf7f88cb9395024297":[1,5,2,8,18],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a4d15df8e031ca4601c949f8c3a1afd3e":[1,5,2,8,41],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a520ff45c86c405ef666ce0e7fcdc3b05":[1,5,2,8,11],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5373b0c818a73d7b1730a9a1bd91fb25":[1,5,2,8,14],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5495e0b649d3c61e05c6d3e2082bbe46":[1,5,2,8,19],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a5c8cb57a551d53b568c0014149b05bcf":[1,5,2,8,7],
@@ -244,10 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1yaml_1_1_yaml_read_archive.html#a4bd4465adcc5ded385d371a5d68c6393":[3,0,0,17,0,8],
 "classdrake_1_1yaml_1_1_yaml_read_archive.html#a8189e33097bb92db33d21590028e4bbf":[3,0,0,17,0,6],
 "classdrake_1_1yaml_1_1_yaml_read_archive.html#a8259d3cf087a43e721fe51a2b34cbcde":[3,0,0,17,0,4],
-"classdrake_1_1yaml_1_1_yaml_read_archive.html#a835af27c9294c717ace2e9ad752c2490":[3,0,0,17,0,2],
-"classdrake_1_1yaml_1_1_yaml_read_archive.html#a8ac37fda3cc01a807862fab39d0e5a98":[3,0,0,17,0,3],
-"classdrake_1_1yaml_1_1_yaml_read_archive.html#ad1ea22210a4e6755dc3dba150b909a45":[3,0,0,17,0,7],
-"classdrake_1_1yaml_1_1_yaml_read_archive.html#af391a9486190186f03aafdc2d2a52dd2":[3,0,0,17,0,5],
-"classdrake_1_1yaml_1_1_yaml_read_archive.html#af98867e5146bdd5ce4faa20597595dd3":[3,0,0,17,0,11],
-"classdrake_1_1yaml_1_1_yaml_read_archive.html#afbedead7297b448d93a8a2866c1a10ba":[3,0,0,17,0,1]
+"classdrake_1_1yaml_1_1_yaml_read_archive.html#a835af27c9294c717ace2e9ad752c2490":[3,0,0,17,0,2]
 };

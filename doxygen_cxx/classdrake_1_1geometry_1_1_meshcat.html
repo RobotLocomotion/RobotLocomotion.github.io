@@ -161,6 +161,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;point_cloud, double point_size=0.001, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
 <tr class="memdesc:a4a847b014dcf8f38f0317dfab8eca71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at a given <code>path</code> in the scene tree to be <code>point_cloud</code>.  <a href="#a4a847b014dcf8f38f0317dfab8eca71e">More...</a><br /></td></tr>
 <tr class="separator:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b082d79e267c040cbd066a11cdcb54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa5b082d79e267c040cbd066a11cdcb54">SetLine</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, double line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
+<tr class="memdesc:aa5b082d79e267c040cbd066a11cdcb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a piecewise-linear interpolation between the <code>vertices</code>.  <a href="#aa5b082d79e267c040cbd066a11cdcb54">More...</a><br /></td></tr>
+<tr class="separator:aa5b082d79e267c040cbd066a11cdcb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7094785eea6bf85ebfef30083e7c1dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda">SetLineSegments</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;start, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;end, double line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
+<tr class="memdesc:a7094785eea6bf85ebfef30083e7c1dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a number of line segments.  <a href="#a7094785eea6bf85ebfef30083e7c1dda">More...</a><br /></td></tr>
+<tr class="separator:a7094785eea6bf85ebfef30083e7c1dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3dc13928478563343ff6ef72c16fc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html">PerspectiveCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
 <tr class="memdesc:af3dc13928478563343ff6ef72c16fc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera.  <a href="#af3dc13928478563343ff6ef72c16fc98">More...</a><br /></td></tr>
 <tr class="separator:af3dc13928478563343ff6ef72c16fc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -866,6 +872,121 @@ Public Member Functions</h2></td></tr>
 
 <p>Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to an orthographic camera. </p>
 <p>We provide a default value of <code>path</code> corresponding to the default camera object in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a>. </p>
+
+</div>
+</div>
+<a id="aa5b082d79e267c040cbd066a11cdcb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b082d79e267c040cbd066a11cdcb54">&#9670;&nbsp;</a></span>SetLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLine </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>line_width</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgba</em> = <code><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1,&#160;0.1,&#160;0.1,&#160;1.0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the "object" at <code>path</code> in the scene tree to a piecewise-linear interpolation between the <code>vertices</code>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
+    <tr><td class="paramname">vertices</td><td>are the 3D points defining the lines. </td></tr>
+    <tr><td class="paramname">line_width</td><td>is the width in pixels. Due to limitations in WebGL implementations, the line width may be 1 regardless of the set value. </td></tr>
+    <tr><td class="paramname">rgba</td><td>is the line color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7094785eea6bf85ebfef30083e7c1dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7094785eea6bf85ebfef30083e7c1dda">&#9670;&nbsp;</a></span>SetLineSegments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetLineSegments </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>end</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>line_width</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgba</em> = <code><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1,&#160;0.1,&#160;0.1,&#160;1.0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the "object" at <code>path</code> in the scene tree to a number of line segments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
+    <tr><td class="paramname">start</td><td>is a 3-by-N matrix of 3D points defining the start of each segment. </td></tr>
+    <tr><td class="paramname">end</td><td>is a 3-by-N matrix of 3D points defining the end of each segment. </td></tr>
+    <tr><td class="paramname">line_width</td><td>is the width in pixels. Due to limitations in WebGL implementations, the line width may be 1 regardless of the set value. </td></tr>
+    <tr><td class="paramname">rgba</td><td>is the line color.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if start.cols != end.cols(). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

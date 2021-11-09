@@ -3335,6 +3335,57 @@ visualizer.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetLine">
+<code class="descname">SetLine</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, vertices: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], line_width: float = 1.0, rgba: pydrake.geometry.Rgba = Rgba(r=0.1, g=0.1, b=0.1, a=1.0)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the “object” at <code class="docutils literal"><span class="pre">path</span></code> in the scene tree to a piecewise-linear
+interpolation between the <code class="docutils literal"><span class="pre">vertices</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
+<dd>are the 3D points defining the lines.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">line_width</span></code>:</dt>
+<dd>is the width in pixels. Due to limitations in WebGL
+implementations, the line width may be 1 regardless of the set
+value.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rgba</span></code>:</dt>
+<dd>is the line color.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetLineSegments">
+<code class="descname">SetLineSegments</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, start: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], end: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], line_width: float = 1.0, rgba: pydrake.geometry.Rgba = Rgba(r=0.1, g=0.1, b=0.1, a=1.0)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetLineSegments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the “object” at <code class="docutils literal"><span class="pre">path</span></code> in the scene tree to a number of line
+segments.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">start</span></code>:</dt>
+<dd>is a 3-by-N matrix of 3D points defining the start of each
+segment.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">end</span></code>:</dt>
+<dd>is a 3-by-N matrix of 3D points defining the end of each segment.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">line_width</span></code>:</dt>
+<dd>is the width in pixels. Due to limitations in WebGL
+implementations, the line width may be 1 regardless of the set
+value.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rgba</span></code>:</dt>
+<dd>is the line color.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if start.cols != end.cols().</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.SetObject">
 <code class="descname">SetObject</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.SetObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3495,10 +3546,6 @@ web_url().</p>
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatAnimation</code><a class="headerlink" href="#pydrake.geometry.MeshcatAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>An interface for recording/playback animations in Meshcat. Use
 Meshcat::SetAnimation to publish a MeshcatAnimation to the visualizer.</p>
-<p>NOTE: There is a significant bug in meshcat/three.js that limits the
-ability to set multiple property types in a single animation. Your
-mileage with property animations may vary until we can resolve
-<a class="reference external" href="https://github.com/rdeits/meshcat/issues/105">https://github.com/rdeits/meshcat/issues/105</a>.</p>
 <p>Currently, an animation consists of (only) transforms and properties
 that are set at a particular integer frame number. Although we do not
 support calls to SetObject/Delete in an animation, you can consider

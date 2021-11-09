@@ -134,16 +134,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a00f794bc20ca26b81a247bcee7c7f6a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">size</a> () const final</td></tr>
 <tr class="memdesc:a00f794bc20ca26b81a247bcee7c7f6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of elements in the vector.  <a href="#a00f794bc20ca26b81a247bcee7c7f6a4">More...</a><br /></td></tr>
 <tr class="separator:a00f794bc20ca26b81a247bcee7c7f6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a95cee47ba175ab6b8fd8f7cb2f82ab96">set_value</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;value)</td></tr>
+<tr class="memitem:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a95cee47ba175ab6b8fd8f7cb2f82ab96">set_value</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;<a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc">value</a>)</td></tr>
 <tr class="memdesc:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the vector to the given value.  <a href="#a95cee47ba175ab6b8fd8f7cb2f82ab96">More...</a><br /></td></tr>
 <tr class="separator:a95cee47ba175ab6b8fd8f7cb2f82ab96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d33aecde019e5f62d662aa2ef142b34"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a4d33aecde019e5f62d662aa2ef142b34">get_value</a> () const</td></tr>
-<tr class="memdesc:a4d33aecde019e5f62d662aa2ef142b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entire vector as a const Eigen::VectorBlock.  <a href="#a4d33aecde019e5f62d662aa2ef142b34">More...</a><br /></td></tr>
-<tr class="separator:a4d33aecde019e5f62d662aa2ef142b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada7a60115ea815aaacb024409e2eb3bc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc">value</a> () const</td></tr>
+<tr class="memdesc:ada7a60115ea815aaacb024409e2eb3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const reference to the contained <code>VectorX&lt;T&gt;</code>.  <a href="#ada7a60115ea815aaacb024409e2eb3bc">More...</a><br /></td></tr>
+<tr class="separator:ada7a60115ea815aaacb024409e2eb3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b0db2779927764099fa8878ccaea85e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a1b0db2779927764099fa8878ccaea85e">get_mutable_value</a> ()</td></tr>
 <tr class="memdesc:a1b0db2779927764099fa8878ccaea85e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the entire vector as a mutable Eigen::VectorBlock, which allows mutation of the values, but does not allow <code>resize()</code> to be invoked on the returned object.  <a href="#a1b0db2779927764099fa8878ccaea85e">More...</a><br /></td></tr>
 <tr class="separator:a1b0db2779927764099fa8878ccaea85e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a9c44911481db46e0c8c8ee8708ae70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">SetFromVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;value) final</td></tr>
+<tr class="memitem:a0a9c44911481db46e0c8c8ee8708ae70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">SetFromVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;<a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc">value</a>) final</td></tr>
 <tr class="memdesc:a0a9c44911481db46e0c8c8ee8708ae70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replaces the entire vector with the contents of <code>value</code>.  <a href="#a0a9c44911481db46e0c8c8ee8708ae70">More...</a><br /></td></tr>
 <tr class="separator:a0a9c44911481db46e0c8c8ee8708ae70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02900660573acdccd6d1e4b711a1e5e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">CopyToVector</a> () const final</td></tr>
@@ -158,6 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad8578f2ad77a7caa79d07ff13625e029"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ad8578f2ad77a7caa79d07ff13625e029">Clone</a> () const</td></tr>
 <tr class="memdesc:ad8578f2ad77a7caa79d07ff13625e029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the entire vector to a new <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a>, with the same concrete implementation type.  <a href="#ad8578f2ad77a7caa79d07ff13625e029">More...</a><br /></td></tr>
 <tr class="separator:ad8578f2ad77a7caa79d07ff13625e029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d33aecde019e5f62d662aa2ef142b34"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a4d33aecde019e5f62d662aa2ef142b34">get_value</a> () const</td></tr>
+<tr class="memdesc:a4d33aecde019e5f62d662aa2ef142b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Don't use this in new code) Returns the entire vector as a const Eigen::VectorBlock.  <a href="#a4d33aecde019e5f62d662aa2ef142b34">More...</a><br /></td></tr>
+<tr class="separator:a4d33aecde019e5f62d662aa2ef142b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ae5c3719f3037e71b9bb2f11900929cfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ae5c3719f3037e71b9bb2f11900929cfe">BasicVector</a> (const <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector</a> &amp;)=delete</td></tr>
 <tr class="separator:ae5c3719f3037e71b9bb2f11900929cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,7 +249,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a1054df427ab86f0c7b1de898f26acca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides const access to the element storage.  <a href="#a1054df427ab86f0c7b1de898f26acca4">More...</a><br /></td></tr>
 <tr class="separator:a1054df427ab86f0c7b1de898f26acca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc9deb6f6763e26cb2b9e352f3cce2a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adbc9deb6f6763e26cb2b9e352f3cce2a">values</a> ()</td></tr>
-<tr class="memdesc:adbc9deb6f6763e26cb2b9e352f3cce2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides mutable access to the element storage.  <a href="#adbc9deb6f6763e26cb2b9e352f3cce2a">More...</a><br /></td></tr>
+<tr class="memdesc:adbc9deb6f6763e26cb2b9e352f3cce2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Provides mutable access to the element storage.  <a href="#adbc9deb6f6763e26cb2b9e352f3cce2a">More...</a><br /></td></tr>
 <tr class="separator:adbc9deb6f6763e26cb2b9e352f3cce2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classdrake_1_1systems_1_1_vector_base"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classdrake_1_1systems_1_1_vector_base')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classdrake_1_1systems_1_1_vector_base.html">VectorBase&lt; T &gt;</a></td></tr>
 <tr class="memitem:a146b52fc4bf3790ed55a6c097ca3e76b inherit pro_methods_classdrake_1_1systems_1_1_vector_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_vector_base.html#a146b52fc4bf3790ed55a6c097ca3e76b">VectorBase</a> ()</td></tr>
@@ -663,7 +666,8 @@ Static Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the entire vector as a const Eigen::VectorBlock. </p>
+<p>(Don't use this in new code) Returns the entire vector as a const Eigen::VectorBlock. </p>
+<p>Prefer <code><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc" title="Returns a const reference to the contained VectorX&lt;T&gt;.">value()</a></code> which returns direct access to the underlying VectorX rather than wrapping it in a VectorBlock. </p>
 
 </div>
 </div>
@@ -1040,6 +1044,26 @@ Static Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ada7a60115ea815aaacb024409e2eb3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7a60115ea815aaacb024409e2eb3bc">&#9670;&nbsp;</a></span>value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt;&amp; value </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a const reference to the contained <code>VectorX&lt;T&gt;</code>. </p>
+<p>This is the preferred method for examining a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a>'s value. </p>
+
+</div>
+</div>
 <a id="a1054df427ab86f0c7b1de898f26acca4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1054df427ab86f0c7b1de898f26acca4">&#9670;&nbsp;</a></span>values() <span class="overload">[1/2]</span></h2>
 
@@ -1064,6 +1088,7 @@ Static Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Provides const access to the element storage. </p>
+<p>Prefer the synonymous public <code><a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc" title="Returns a const reference to the contained VectorX&lt;T&gt;.">value()</a></code> method &ndash; this protected method remains for backwards compatibility in derived classes. </p>
 
 </div>
 </div>
@@ -1090,7 +1115,8 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Provides mutable access to the element storage. </p>
+<p>(Advanced) Provides mutable access to the element storage. </p>
+<p>Be careful not to resize the storage unless you really know what you're doing. </p>
 
 </div>
 </div>

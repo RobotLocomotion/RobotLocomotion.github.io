@@ -26,6 +26,7 @@ var classdrake_1_1systems_1_1_basic_vector =
     [ "SetFromVector", "classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70", null ],
     [ "SetZero", "classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f", null ],
     [ "size", "classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4", null ],
+    [ "value", "classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc", null ],
     [ "values", "classdrake_1_1systems_1_1_basic_vector.html#a1054df427ab86f0c7b1de898f26acca4", null ],
     [ "values", "classdrake_1_1systems_1_1_basic_vector.html#adbc9deb6f6763e26cb2b9e352f3cce2a", null ]
 ];

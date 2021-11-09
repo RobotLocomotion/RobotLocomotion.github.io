@@ -1,5 +1,10 @@
 var NAVTREEINDEX45 =
 {
+"namespacemembers_func_j.html":[2,1,1,9],
+"namespacemembers_func_k.html":[2,1,1,10],
+"namespacemembers_func_l.html":[2,1,1,11],
+"namespacemembers_func_m.html":[2,1,1,12],
+"namespacemembers_func_n.html":[2,1,1,13],
 "namespacemembers_func_o.html":[2,1,1,14],
 "namespacemembers_func_p.html":[2,1,1,15],
 "namespacemembers_func_q.html":[2,1,1,16],
@@ -244,10 +249,5 @@ var NAVTREEINDEX45 =
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
-"quartic__scalar__system_8h.html":[4,0,0,11,0,0,11],
-"quaternion_8h.html":[4,0,0,7,24],
-"quaternion_8h.html#a056f9de21690e59551e2904bde9ac928":[4,0,0,7,24,8],
-"quaternion_8h.html#a06541dcb249b4b951ea73d45d2067337":[4,0,0,7,24,2],
-"quaternion_8h.html#a0fc70ebdc0ea497711e6e7b69eddef2d":[4,0,0,7,24,14],
-"quaternion_8h.html#a29059591a43a840c9a7e2f31a2d55130":[4,0,0,7,24,13]
+"quartic__scalar__system_8h.html":[4,0,0,11,0,0,11]
 };
