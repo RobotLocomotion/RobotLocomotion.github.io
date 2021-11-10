@@ -438,7 +438,7 @@ Analysis” by Hung Pham and Quang Cuong Pham, IEEE Transactions on
 Robotics, 2018.</p>
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, path: pydrake.trajectories.Trajectory, plant: pydrake.multibody.plant.MultibodyPlant_[float], gridpoints: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra, path: pydrake.trajectories.Trajectory_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], gridpoints: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs an inverse kinematics problem for a MultibodyPlant. This
 constructor will create and own a context for</p>
 <dl class="docutils">
@@ -616,7 +616,7 @@ limits must be arranged in the same order as the entries in the path.</p>
 
 <dl class="staticmethod">
 <dt id="pydrake.multibody.optimization.Toppra.CalcGridPoints">
-<em class="property">static </em><code class="descname">CalcGridPoints</code><span class="sig-paren">(</span><em>path: pydrake.trajectories.Trajectory</em>, <em>options: pydrake.multibody.optimization.CalcGridPointsOptions</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.CalcGridPoints" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">CalcGridPoints</code><span class="sig-paren">(</span><em>path: pydrake.trajectories.Trajectory_[float], options: pydrake.multibody.optimization.CalcGridPointsOptions</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.CalcGridPoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes a path and generates a sequence of gridpoints selected to
 control the interpolation error of the optimization. The gridpoints
 are selected such that the distance between them is below
@@ -635,7 +635,7 @@ path.start_time() and path.end_time().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.optimization.Toppra.SolvePathParameterization">
-<code class="descname">SolvePathParameterization</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.trajectories.PiecewisePolynomial]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SolvePathParameterization</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.Toppra</em><span class="sig-paren">)</span> &#x2192; Optional[pydrake.trajectories.PiecewisePolynomial_[float]]<a class="headerlink" href="#pydrake.multibody.optimization.Toppra.SolvePathParameterization" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solves the TOPPRA optimization and returns the time optimized path
 parameterization s(t). This can be used with the original path q(s) to
 generate a time parameterized trajectory. The path parameterization

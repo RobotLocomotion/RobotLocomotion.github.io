@@ -1,5 +1,10 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,62,28],
+"symbolic__generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,62,32],
+"symbolic__generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,62,23],
+"symbolic__generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,62,30],
+"symbolic__ldlt_8h.html":[4,0,0,1,63],
 "symbolic__monomial_8h.html":[4,0,0,1,64],
 "symbolic__monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,64,2],
 "symbolic__monomial_8h.html#a8505db5f6e70df16a3cecda394bdcb24":[4,0,0,1,64,3],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "value__pybind_8h.html":[4,0,0,0,0,0,11],
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,11,0],
 "value__to__abstract__value_8h.html":[4,0,0,11,3,52],
-"van__der__pol_8h.html":[4,0,0,3,17,0],
-"vector__base_8h.html":[4,0,0,11,3,53],
-"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
-"vector__log_8h.html":[4,0,0,11,6,26],
-"vector__log__sink_8h.html":[4,0,0,11,6,27],
-"vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3":[4,0,0,11,6,27,1]
+"van__der__pol_8h.html":[4,0,0,3,17,0]
 };

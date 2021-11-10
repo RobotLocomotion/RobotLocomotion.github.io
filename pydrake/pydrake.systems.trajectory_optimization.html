@@ -672,7 +672,7 @@ objectives/constraints for the parent classes will result in an error.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructInputTrajectory">
-<code class="descname">ReconstructInputTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructInputTrajectory" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ReconstructInputTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[float]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructInputTrajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the input trajectory at the solution as a PiecewisePolynomial. The
 order of the trajectory will be determined by the integrator used in
 the dynamic constraints. Requires that the system has at least one
@@ -681,7 +681,7 @@ input port.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructStateTrajectory">
-<code class="descname">ReconstructStateTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructStateTrajectory" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ReconstructStateTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[float]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.ReconstructStateTrajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the state trajectory at the solution as a PiecewisePolynomial. The
 order of the trajectory will be determined by the integrator used in
 the dynamic constraints.</p>
@@ -689,7 +689,7 @@ the dynamic constraints.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialTrajectory">
-<code class="descname">SetInitialTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>traj_init_u: pydrake.trajectories.PiecewisePolynomial</em>, <em>traj_init_x: pydrake.trajectories.PiecewisePolynomial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialTrajectory" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetInitialTrajectory</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting, traj_init_u: pydrake.trajectories.PiecewisePolynomial_[float], traj_init_x: pydrake.trajectories.PiecewisePolynomial_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialTrajectory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

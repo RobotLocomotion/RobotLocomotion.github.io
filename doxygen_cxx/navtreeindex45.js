@@ -1,5 +1,7 @@
 var NAVTREEINDEX45 =
 {
+"namespacemembers_func_h.html":[2,1,1,7],
+"namespacemembers_func_i.html":[2,1,1,8],
 "namespacemembers_func_j.html":[2,1,1,9],
 "namespacemembers_func_k.html":[2,1,1,10],
 "namespacemembers_func_l.html":[2,1,1,11],
@@ -159,6 +161,8 @@ var NAVTREEINDEX45 =
 "polynomial_8h.html#ab0a2621977171e1d2d5b64c55141b9b2":[4,0,0,1,43,4],
 "polynomial_8h.html#ad2b506cc6aeddf8e5f52b327382d0b13":[4,0,0,1,43,6],
 "polynomial__types__pybind_8h.html":[4,0,0,0,0,5],
+"polynomial__types__pybind_8h.html#a699f47bb3a3ec60f5fcebb3176dfd77e":[4,0,0,0,0,5,1],
+"polynomial__types__pybind_8h.html#ac7b6b5b20eb590175ba270d5735844f9":[4,0,0,0,0,5,2],
 "polynomial__types__pybind_8h.html#adbc17196068f19a5cd168e56d49d9231":[4,0,0,0,0,5,0],
 "port__base_8h.html":[4,0,0,11,3,33],
 "port__switch_8h.html":[4,0,0,11,6,16],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
-"quadrature_8h.html":[4,0,0,8,3,5],
-"quadrotor__geometry_8h.html":[4,0,0,3,13,0],
-"quadrotor__plant_8h.html":[4,0,0,3,13,1],
-"quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
-"quartic__scalar__system_8h.html":[4,0,0,11,0,0,11]
+"quadrature_8h.html":[4,0,0,8,3,5]
 };

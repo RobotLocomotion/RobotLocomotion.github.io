@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1yaml_1_1_yaml_write_arch
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that saves data from a C++ structure into a YAML file. </p>
+<div class="textblock"><p>(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that saves data from a C++ structure into a <a class="el" href="namespace_y_a_m_l.html">YAML</a> file. </p>
 </div>
 <p><code>#include &lt;drake/common/yaml/yaml_write_archive.h&gt;</code></p>
 <table class="memberdecls">
@@ -111,17 +111,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a11fa5fb835de47b2d0fa547c73f9f2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e3aefef6223888bec2e7abc5ed6ded2"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
 <tr class="memitem:a1e3aefef6223888bec2e7abc5ed6ded2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html#a1e3aefef6223888bec2e7abc5ed6ded2">Accept</a> (const Serializable &amp;serializable)</td></tr>
-<tr class="memdesc:a1e3aefef6223888bec2e7abc5ed6ded2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Copies the contents of <code>serializable</code> into the YAML object associated with this archive.  <a href="#a1e3aefef6223888bec2e7abc5ed6ded2">More...</a><br /></td></tr>
+<tr class="memdesc:a1e3aefef6223888bec2e7abc5ed6ded2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Copies the contents of <code>serializable</code> into the <a class="el" href="namespace_y_a_m_l.html">YAML</a> object associated with this archive.  <a href="#a1e3aefef6223888bec2e7abc5ed6ded2">More...</a><br /></td></tr>
 <tr class="separator:a1e3aefef6223888bec2e7abc5ed6ded2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4be48306479f62ee5fd61a2e7c850314"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html#a4be48306479f62ee5fd61a2e7c850314">EmitString</a> (const std::string &amp;root_name=&quot;root&quot;) const</td></tr>
-<tr class="memdesc:a4be48306479f62ee5fd61a2e7c850314"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the YAML string for whatever Serializable was most recently passed into Accept.  <a href="#a4be48306479f62ee5fd61a2e7c850314">More...</a><br /></td></tr>
+<tr class="memdesc:a4be48306479f62ee5fd61a2e7c850314"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the <a class="el" href="namespace_y_a_m_l.html">YAML</a> string for whatever Serializable was most recently passed into Accept.  <a href="#a4be48306479f62ee5fd61a2e7c850314">More...</a><br /></td></tr>
 <tr class="separator:a4be48306479f62ee5fd61a2e7c850314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74fcde70ec6dc999250a2aa8cfc22d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html#ad74fcde70ec6dc999250a2aa8cfc22d6">EraseMatchingMaps</a> (const <a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html">YamlWriteArchive</a> &amp;other)</td></tr>
 <tr class="memdesc:ad74fcde70ec6dc999250a2aa8cfc22d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Removes from this archive any map entries that are identical to an entry in <code>other</code>, iff they reside at the same location within the node tree hierarchy, and iff their parent nodes (and grandparent, etc., all the way up to the root) are also all maps.  <a href="#ad74fcde70ec6dc999250a2aa8cfc22d6">More...</a><br /></td></tr>
 <tr class="separator:ad74fcde70ec6dc999250a2aa8cfc22d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af98867e5146bdd5ce4faa20597595dd3"><td class="memTemplParams" colspan="2">template&lt;typename NameValuePair &gt; </td></tr>
 <tr class="memitem:af98867e5146bdd5ce4faa20597595dd3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html#af98867e5146bdd5ce4faa20597595dd3">Visit</a> (const NameValuePair &amp;nvp)</td></tr>
-<tr class="memdesc:af98867e5146bdd5ce4faa20597595dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Copies the value pointed to by <code>nvp.value()</code> into the YAML object.  <a href="#af98867e5146bdd5ce4faa20597595dd3">More...</a><br /></td></tr>
+<tr class="memdesc:af98867e5146bdd5ce4faa20597595dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Copies the value pointed to by <code>nvp.value()</code> into the <a class="el" href="namespace_y_a_m_l.html">YAML</a> object.  <a href="#af98867e5146bdd5ce4faa20597595dd3">More...</a><br /></td></tr>
 <tr class="separator:af98867e5146bdd5ce4faa20597595dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:adb2b0520524752843b0b4adb6dcda87c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html#adb2b0520524752843b0b4adb6dcda87c">YamlWriteArchive</a> (const <a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html">YamlWriteArchive</a> &amp;)=delete</td></tr>
@@ -222,7 +222,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Copies the contents of <code>serializable</code> into the YAML object associated with this archive. </p>
+<p>(Advanced) Copies the contents of <code>serializable</code> into the <a class="el" href="namespace_y_a_m_l.html">YAML</a> object associated with this archive. </p>
 
 </div>
 </div>
@@ -242,7 +242,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Returns the YAML string for whatever Serializable was most recently passed into Accept. </p>
+<p>(Advanced) Returns the <a class="el" href="namespace_y_a_m_l.html">YAML</a> string for whatever Serializable was most recently passed into Accept. </p>
 <p>If the <code>root_name</code> is empty, the returned document will be the Serializable's visited content (which itself is already a Map node) directly. If the visited serializable content is null (in cases <code>Accpet()</code> has not been called or the entries are erased after calling <code><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html#ad74fcde70ec6dc999250a2aa8cfc22d6" title="(Advanced) Removes from this archive any map entries that are identical to an entry in other,...">EraseMatchingMaps()</a></code>), then an empty map <code>{}</code> will be emitted.</p>
 <p>If the <code>root_name</code> is not empty, the returned document will be a single Map node named using <code>root_name</code> with the Serializable's visited content as key-value entries within it. The visited content could be null and the nullness is defined as above. </p>
 
@@ -265,7 +265,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Advanced) Removes from this archive any map entries that are identical to an entry in <code>other</code>, iff they reside at the same location within the node tree hierarchy, and iff their parent nodes (and grandparent, etc., all the way up to the root) are also all maps. </p>
-<p>This enables emitting a minimal YAML representation when the output will be later loaded using <a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html" title="(Advanced) A helper class for YAML Serialization that loads data from a YAML file into a C++ structur...">YamlReadArchive</a>'s option to retain_map_defaults; the "all parents are
+<p>This enables emitting a minimal <a class="el" href="namespace_y_a_m_l.html">YAML</a> representation when the output will be later loaded using <a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html" title="(Advanced) A helper class for YAML Serialization that loads data from a YAML file into a C++ structur...">YamlReadArchive</a>'s option to retain_map_defaults; the "all parents are
 maps" condition is the complement to what retain_map_defaults admits. </p>
 
 </div>
@@ -338,7 +338,7 @@ maps" condition is the complement to what retain_map_defaults admits. </p>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Copies the value pointed to by <code>nvp.value()</code> into the YAML object. </p>
+<p>(Advanced) Copies the value pointed to by <code>nvp.value()</code> into the <a class="el" href="namespace_y_a_m_l.html">YAML</a> object. </p>
 <p>Most users should call Accept, not Visit. </p>
 
 </div>

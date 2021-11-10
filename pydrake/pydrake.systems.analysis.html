@@ -252,7 +252,7 @@ pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;<
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].get_dense_output">
-<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].get_dense_output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[float]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].get_dense_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const pointer to the integrator’s current
 PiecewisePolynomial instance, holding a representation of the
 continuous state trajectory since the last StartDenseIntegration()
@@ -478,7 +478,7 @@ the integrator)</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].StopDenseIntegration">
-<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[float]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops dense integration, yielding ownership of the current dense
 output to the caller.</p>
 <dl class="docutils">
@@ -542,7 +542,7 @@ pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;<
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].get_dense_output">
-<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; drake::trajectories::PiecewisePolynomial&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].get_dense_output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].get_dense_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const pointer to the integrator’s current
 PiecewisePolynomial instance, holding a representation of the
 continuous state trajectory since the last StartDenseIntegration()
@@ -768,7 +768,7 @@ the integrator)</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].StopDenseIntegration">
-<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; drake::trajectories::PiecewisePolynomial&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops dense integration, yielding ownership of the current dense
 output to the caller.</p>
 <dl class="docutils">
@@ -830,7 +830,7 @@ pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;<
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[Expression].get_dense_output">
-<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::trajectories::PiecewisePolynomial&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].get_dense_output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[Expression]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].get_dense_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const pointer to the integrator’s current
 PiecewisePolynomial instance, holding a representation of the
 continuous state trajectory since the last StartDenseIntegration()
@@ -1056,7 +1056,7 @@ the integrator)</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[Expression].StopDenseIntegration">
-<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::trajectories::PiecewisePolynomial&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[Expression]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops dense integration, yielding ownership of the current dense
 output to the caller.</p>
 <dl class="docutils">
@@ -1118,7 +1118,7 @@ pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;<
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[float].get_dense_output">
-<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].get_dense_output" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_dense_output</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[float]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].get_dense_output" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const pointer to the integrator’s current
 PiecewisePolynomial instance, holding a representation of the
 continuous state trajectory since the last StartDenseIntegration()
@@ -1344,7 +1344,7 @@ the integrator)</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[float].StopDenseIntegration">
-<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">StopDenseIntegration</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.trajectories.PiecewisePolynomial_[float]<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].StopDenseIntegration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops dense integration, yielding ownership of the current dense
 output to the caller.</p>
 <dl class="docutils">

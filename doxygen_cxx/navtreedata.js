@@ -109,15 +109,15 @@ var NAVTREEINDEX =
 "gradient__util_8h.html#a41fb0200e4ab7c796576b2fe17408ec8",
 "implicit__integrator__test_8h.html#a9647e79765ce101661ab0a8b861054c1",
 "mixed__integer__optimization__util_8h.html#ab46c83406ebd077e9c93b5ea05946ee2",
-"namespacemembers_func_j.html",
-"quaternion_8h.html",
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecabd0a61a2cf9acec23fccd41c7402ef56",
-"structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html#a99fd5bfdf69925c53ed14a93a238065f",
-"structdrake_1_1solvers_1_1_gurobi_solver_details.html#a803b799247155d71e47493ac3857b909",
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth16_u_01_4.html",
-"symbolic__expression_8h.html#aceba5fef90cbd2790037fa685e3ffdce",
-"symbolic__monomial_8h.html",
-"vector__log__sink_8h.html#af2f7dd25823e78194ea36eabbd525cea"
+"namespacemembers_func_h.html",
+"quadrotor__geometry_8h.html",
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173",
+"structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html",
+"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#acee912d9ade4dfc099e98629d832127e",
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_bgr8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a",
+"symbolic__expression_8h.html#ac6229d493a956efd3da406645ebb6283",
+"symbolic__generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504",
+"vector__base_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

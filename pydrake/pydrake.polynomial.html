@@ -169,9 +169,19 @@
             
   <div class="section" id="module-pydrake.polynomial">
 <span id="pydrake-polynomial"></span><h1>pydrake.polynomial<a class="headerlink" href="#module-pydrake.polynomial" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="attribute">
 <dt id="pydrake.polynomial.Polynomial">
-<em class="property">class </em><code class="descclassname">pydrake.polynomial.</code><code class="descname">Polynomial</code><a class="headerlink" href="#pydrake.polynomial.Polynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.polynomial.</code><code class="descname">Polynomial</code><a class="headerlink" href="#pydrake.polynomial.Polynomial" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.polynomial.Polynomial_[float]" title="pydrake.polynomial.Polynomial_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.polynomial.Polynomial_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.polynomial.Polynomial_">
+<em class="property">template </em><code class="descclassname">pydrake.polynomial.</code><code class="descname">Polynomial_</code><a class="headerlink" href="#pydrake.polynomial.Polynomial_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.polynomial.Polynomial_[float]" title="pydrake.polynomial.Polynomial_[float]"><code class="xref py py-class docutils literal"><span class="pre">Polynomial_[float]</span></code></a>, <a class="reference internal" href="#pydrake.polynomial.Polynomial_[AutoDiffXd]" title="pydrake.polynomial.Polynomial_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">Polynomial_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.polynomial.Polynomial_[Expression]" title="pydrake.polynomial.Polynomial_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">Polynomial_[Expression]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float]">
+<em class="property">class </em><code class="descname">Polynomial_[float]</code><a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
 spotless.</p>
 <p>Polynomial represents a list of additive Monomials, each one of which
@@ -191,27 +201,27 @@ will be reduced to (4.5 * b * a**2) internally after construction.</p>
 divided by scalars (of T) because Polynomials are not closed under
 division.</p>
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>__init__(self: pydrake.polynomial.Polynomial) -&gt; None</li>
+<li>__init__(self: pydrake.polynomial.Polynomial_[float]) -&gt; None</li>
 </ol>
 <p>Construct the vacuous polynomial, “0”.</p>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.polynomial.Polynomial, arg0: float) -&gt; None</li>
+<li>__init__(self: pydrake.polynomial.Polynomial_[float], arg0: float) -&gt; None</li>
 </ol>
 <p>Construct a Polynomial of a single constant. e.g. “5”.</p>
 <ol class="arabic simple" start="3">
-<li>__init__(self: pydrake.polynomial.Polynomial, arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.polynomial.Polynomial_[float], arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>A legacy constructor for univariate polynomials: Takes a vector of
 coefficients for the constant, x, x**2, x**3… Monomials.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.CoefficientsAlmostEqual">
-<code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em>, <em>other: pydrake.polynomial.Polynomial</em>, <em>tol: float = 0.0</em>, <em>tol_type: pydrake.common._module_py.ToleranceType = &lt;ToleranceType.kAbsolute: 0&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial.CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].CoefficientsAlmostEqual">
+<code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float], other: pydrake.polynomial.Polynomial_[float], tol: float = 0.0, tol_type: pydrake.common._module_py.ToleranceType = &lt;ToleranceType.kAbsolute: 0&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if a Polynomial is approximately equal to this one.</p>
 <p>Checks that every coefficient of <code class="docutils literal"><span class="pre">other</span></code> is within <code class="docutils literal"><span class="pre">tol</span></code> of the
 corresponding coefficient of this Polynomial.</p>
@@ -223,8 +233,8 @@ coefficients less than <code class="docutils literal"><span class="pre">tol</spa
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.Derivative">
-<code class="descname">Derivative</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em>, <em>derivative_order: int = 1</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial<a class="headerlink" href="#pydrake.polynomial.Polynomial.Derivative" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].Derivative">
+<code class="descname">Derivative</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float], derivative_order: int = 1</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[float]<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].Derivative" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes the derivative of this (univariate) Polynomial.</p>
 <p>Returns a new Polynomial that is the derivative of this one in its
 sole variable.</p>
@@ -241,28 +251,28 @@ Polynomial.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.GetCoefficients">
-<code class="descname">GetCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.polynomial.Polynomial.GetCoefficients" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].GetCoefficients">
+<code class="descname">GetCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].GetCoefficients" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.GetDegree">
-<code class="descname">GetDegree</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial.GetDegree" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].GetDegree">
+<code class="descname">GetDegree</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].GetDegree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
 <p>The degree of a multivariate Monomial is the product of the degrees of
 each of its terms.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.GetNumberOfCoefficients">
-<code class="descname">GetNumberOfCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial.GetNumberOfCoefficients" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].GetNumberOfCoefficients">
+<code class="descname">GetNumberOfCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].GetNumberOfCoefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of unique Monomials (and thus the number of
 coefficients) in this Polynomial.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.Integral">
-<code class="descname">Integral</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em>, <em>integration_constant: float = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial<a class="headerlink" href="#pydrake.polynomial.Polynomial.Integral" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].Integral">
+<code class="descname">Integral</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float], integration_constant: float = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[float]<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].Integral" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
 <p>Returns a new Polynomial that is the indefinite integral of this one
 in its sole variable.</p>
@@ -283,8 +293,373 @@ term (zeroth-order coefficient) of the resulting Polynomial.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.polynomial.Polynomial.IsAffine">
-<code class="descname">IsAffine</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial.IsAffine" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.polynomial.Polynomial_.Polynomial_[float].IsAffine">
+<code class="descname">IsAffine</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_.Polynomial_[float].IsAffine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.polynomial.</code><code class="descname">Polynomial_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
+spotless.</p>
+<p>Polynomial represents a list of additive Monomials, each one of which
+is a product of a constant coefficient (of T, which by default is
+double) and any number of distinct Terms (variables raised to positive
+integer powers).</p>
+<p>Variables are identified by integer indices rather than symbolic
+names, but an automatic facility is provided to covert variable names
+up to four characters into unique integers, provided those variables
+are named using only lowercase letters and the “#_.” characters
+followed by a number. For example, valid names include “dx4” and
+“m_x”.</p>
+<p>Monomials which have the same variables and powers may be constructed
+but will be automatically combined: (3 * a * b * a) + (1.5 * b * a**2)
+will be reduced to (4.5 * b * a**2) internally after construction.</p>
+<p>Polynomials can be added, subtracted, and multiplied. They may only be
+divided by scalars (of T) because Polynomials are not closed under
+division.</p>
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.polynomial.Polynomial_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Construct the vacuous polynomial, “0”.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.polynomial.Polynomial_[AutoDiffXd], arg0: pydrake.autodiffutils.AutoDiffXd) -&gt; None</li>
+</ol>
+<p>Construct a Polynomial of a single constant. e.g. “5”.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.polynomial.Polynomial_[AutoDiffXd], arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>A legacy constructor for univariate polynomials: Takes a vector of
+coefficients for the constant, x, x**2, x**3… Monomials.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].CoefficientsAlmostEqual">
+<code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd], other: pydrake.polynomial.Polynomial_[AutoDiffXd], tol: pydrake.autodiffutils.AutoDiffXd = 0.0, tol_type: pydrake.common._module_py.ToleranceType = &lt;ToleranceType.kAbsolute: 0&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a Polynomial is approximately equal to this one.</p>
+<p>Checks that every coefficient of <code class="docutils literal"><span class="pre">other</span></code> is within <code class="docutils literal"><span class="pre">tol</span></code> of the
+corresponding coefficient of this Polynomial.</p>
+<p>Note: When <code class="docutils literal"><span class="pre">tol_type</span></code> is kRelative, if any monomials appear in
+<code class="docutils literal"><span class="pre">this</span></code> or <code class="docutils literal"><span class="pre">other</span></code> but not both, then the method returns false
+(since the comparison is relative to a missing zero coefficient). Use
+kAbsolute if you want to ignore non-matching monomials with
+coefficients less than <code class="docutils literal"><span class="pre">tol</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].Derivative">
+<code class="descname">Derivative</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd], derivative_order: int = 1</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[AutoDiffXd]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].Derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the derivative of this (univariate) Polynomial.</p>
+<p>Returns a new Polynomial that is the derivative of this one in its
+sole variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this Polynomial is not univariate.</td>
+</tr>
+</tbody>
+</table>
+<p>If derivative_order is given, takes the nth derivative of this
+Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].GetCoefficients">
+<code class="descname">GetCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].GetCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].GetDegree">
+<code class="descname">GetDegree</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].GetDegree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
+<p>The degree of a multivariate Monomial is the product of the degrees of
+each of its terms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].GetNumberOfCoefficients">
+<code class="descname">GetNumberOfCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].GetNumberOfCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of unique Monomials (and thus the number of
+coefficients) in this Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].Integral">
+<code class="descname">Integral</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd], integration_constant: pydrake.autodiffutils.AutoDiffXd = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[AutoDiffXd]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].Integral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
+<p>Returns a new Polynomial that is the indefinite integral of this one
+in its sole variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this Polynomial is not univariate, or if it has no</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">variables.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If integration_constant is given, adds that constant as the constant
+term (zeroth-order coefficient) of the resulting Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[AutoDiffXd].IsAffine">
+<code class="descname">IsAffine</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_[AutoDiffXd].IsAffine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.polynomial.Polynomial_[Expression]">
+<em class="property">class </em><code class="descclassname">pydrake.polynomial.</code><code class="descname">Polynomial_[Expression]</code><a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression]" title="Permalink to this definition">¶</a></dt>
+<dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
+spotless.</p>
+<p>Polynomial represents a list of additive Monomials, each one of which
+is a product of a constant coefficient (of T, which by default is
+double) and any number of distinct Terms (variables raised to positive
+integer powers).</p>
+<p>Variables are identified by integer indices rather than symbolic
+names, but an automatic facility is provided to covert variable names
+up to four characters into unique integers, provided those variables
+are named using only lowercase letters and the “#_.” characters
+followed by a number. For example, valid names include “dx4” and
+“m_x”.</p>
+<p>Monomials which have the same variables and powers may be constructed
+but will be automatically combined: (3 * a * b * a) + (1.5 * b * a**2)
+will be reduced to (4.5 * b * a**2) internally after construction.</p>
+<p>Polynomials can be added, subtracted, and multiplied. They may only be
+divided by scalars (of T) because Polynomials are not closed under
+division.</p>
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.polynomial.Polynomial_[Expression]) -&gt; None</li>
+</ol>
+<p>Construct the vacuous polynomial, “0”.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.polynomial.Polynomial_[Expression], arg0: pydrake.symbolic.Expression) -&gt; None</li>
+</ol>
+<p>Construct a Polynomial of a single constant. e.g. “5”.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.polynomial.Polynomial_[Expression], arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>A legacy constructor for univariate polynomials: Takes a vector of
+coefficients for the constant, x, x**2, x**3… Monomials.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].CoefficientsAlmostEqual">
+<code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression], other: pydrake.polynomial.Polynomial_[Expression], tol: pydrake.symbolic.Expression = 0.0, tol_type: pydrake.common._module_py.ToleranceType = &lt;ToleranceType.kAbsolute: 0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a Polynomial is approximately equal to this one.</p>
+<p>Checks that every coefficient of <code class="docutils literal"><span class="pre">other</span></code> is within <code class="docutils literal"><span class="pre">tol</span></code> of the
+corresponding coefficient of this Polynomial.</p>
+<p>Note: When <code class="docutils literal"><span class="pre">tol_type</span></code> is kRelative, if any monomials appear in
+<code class="docutils literal"><span class="pre">this</span></code> or <code class="docutils literal"><span class="pre">other</span></code> but not both, then the method returns false
+(since the comparison is relative to a missing zero coefficient). Use
+kAbsolute if you want to ignore non-matching monomials with
+coefficients less than <code class="docutils literal"><span class="pre">tol</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].Derivative">
+<code class="descname">Derivative</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression], derivative_order: int = 1</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[Expression]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].Derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the derivative of this (univariate) Polynomial.</p>
+<p>Returns a new Polynomial that is the derivative of this one in its
+sole variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this Polynomial is not univariate.</td>
+</tr>
+</tbody>
+</table>
+<p>If derivative_order is given, takes the nth derivative of this
+Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].GetCoefficients">
+<code class="descname">GetCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].GetCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].GetDegree">
+<code class="descname">GetDegree</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].GetDegree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
+<p>The degree of a multivariate Monomial is the product of the degrees of
+each of its terms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].GetNumberOfCoefficients">
+<code class="descname">GetNumberOfCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].GetNumberOfCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of unique Monomials (and thus the number of
+coefficients) in this Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].Integral">
+<code class="descname">Integral</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression], integration_constant: pydrake.symbolic.Expression = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[Expression]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].Integral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
+<p>Returns a new Polynomial that is the indefinite integral of this one
+in its sole variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this Polynomial is not univariate, or if it has no</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">variables.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If integration_constant is given, adds that constant as the constant
+term (zeroth-order coefficient) of the resulting Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[Expression].IsAffine">
+<code class="descname">IsAffine</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_[Expression].IsAffine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.polynomial.Polynomial_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.polynomial.</code><code class="descname">Polynomial_[float]</code><a class="headerlink" href="#pydrake.polynomial.Polynomial_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>A scalar multi-variate polynomial, modeled after the msspoly in
+spotless.</p>
+<p>Polynomial represents a list of additive Monomials, each one of which
+is a product of a constant coefficient (of T, which by default is
+double) and any number of distinct Terms (variables raised to positive
+integer powers).</p>
+<p>Variables are identified by integer indices rather than symbolic
+names, but an automatic facility is provided to covert variable names
+up to four characters into unique integers, provided those variables
+are named using only lowercase letters and the “#_.” characters
+followed by a number. For example, valid names include “dx4” and
+“m_x”.</p>
+<p>Monomials which have the same variables and powers may be constructed
+but will be automatically combined: (3 * a * b * a) + (1.5 * b * a**2)
+will be reduced to (4.5 * b * a**2) internally after construction.</p>
+<p>Polynomials can be added, subtracted, and multiplied. They may only be
+divided by scalars (of T) because Polynomials are not closed under
+division.</p>
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.polynomial.Polynomial_[float]) -&gt; None</li>
+</ol>
+<p>Construct the vacuous polynomial, “0”.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.polynomial.Polynomial_[float], arg0: float) -&gt; None</li>
+</ol>
+<p>Construct a Polynomial of a single constant. e.g. “5”.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.polynomial.Polynomial_[float], arg0: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>A legacy constructor for univariate polynomials: Takes a vector of
+coefficients for the constant, x, x**2, x**3… Monomials.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].CoefficientsAlmostEqual">
+<code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float], other: pydrake.polynomial.Polynomial_[float], tol: float = 0.0, tol_type: pydrake.common._module_py.ToleranceType = &lt;ToleranceType.kAbsolute: 0&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a Polynomial is approximately equal to this one.</p>
+<p>Checks that every coefficient of <code class="docutils literal"><span class="pre">other</span></code> is within <code class="docutils literal"><span class="pre">tol</span></code> of the
+corresponding coefficient of this Polynomial.</p>
+<p>Note: When <code class="docutils literal"><span class="pre">tol_type</span></code> is kRelative, if any monomials appear in
+<code class="docutils literal"><span class="pre">this</span></code> or <code class="docutils literal"><span class="pre">other</span></code> but not both, then the method returns false
+(since the comparison is relative to a missing zero coefficient). Use
+kAbsolute if you want to ignore non-matching monomials with
+coefficients less than <code class="docutils literal"><span class="pre">tol</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].Derivative">
+<code class="descname">Derivative</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float], derivative_order: int = 1</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[float]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].Derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the derivative of this (univariate) Polynomial.</p>
+<p>Returns a new Polynomial that is the derivative of this one in its
+sole variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if this Polynomial is not univariate.</td>
+</tr>
+</tbody>
+</table>
+<p>If derivative_order is given, takes the nth derivative of this
+Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].GetCoefficients">
+<code class="descname">GetCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].GetCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].GetDegree">
+<code class="descname">GetDegree</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].GetDegree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the highest degree of any Monomial in this Polynomial.</p>
+<p>The degree of a multivariate Monomial is the product of the degrees of
+each of its terms.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].GetNumberOfCoefficients">
+<code class="descname">GetNumberOfCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].GetNumberOfCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of unique Monomials (and thus the number of
+coefficients) in this Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].Integral">
+<code class="descname">Integral</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float], integration_constant: float = 0.0</em><span class="sig-paren">)</span> &#x2192; pydrake.polynomial.Polynomial_[float]<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].Integral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the integral of this (univariate, non-constant) Polynomial.</p>
+<p>Returns a new Polynomial that is the indefinite integral of this one
+in its sole variable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if this Polynomial is not univariate, or if it has no</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">variables.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If integration_constant is given, adds that constant as the constant
+term (zeroth-order coefficient) of the resulting Polynomial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.polynomial.Polynomial_[float].IsAffine">
+<code class="descname">IsAffine</code><span class="sig-paren">(</span><em>self: pydrake.polynomial.Polynomial_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.polynomial.Polynomial_[float].IsAffine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns true iff this is a sum of terms of degree 1, plus a constant.</p>
 </dd></dl>
 

@@ -98,6 +98,7 @@ var hierarchy =
     [ "ContinuousState< AutoDiffXd >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< double >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
     [ "ContinuousState< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_continuous_state.html", null ],
+    [ "convert< T >", "struct_y_a_m_l_1_1convert.html", null ],
     [ "CoulombFriction< T >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CoulombFriction< double >", "classdrake_1_1multibody_1_1_coulomb_friction.html", null ],
     [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", null ],

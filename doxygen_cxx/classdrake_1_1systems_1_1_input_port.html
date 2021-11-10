@@ -117,7 +117,7 @@ class drake::systems::InputPort&lt; T &gt;</h3>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abab8fb340a13be101704b48e46c12724"><td class="memTemplParams" colspan="2">template&lt;typename ValueType  = Eigen::VectorBlock&lt;const VectorX&lt;T&gt;&gt;&gt; </td></tr>
+<tr class="memitem:abab8fb340a13be101704b48e46c12724"><td class="memTemplParams" colspan="2">template&lt;typename ValueType  = VectorX&lt;T&gt;&gt; </td></tr>
 <tr class="memitem:abab8fb340a13be101704b48e46c12724"><td class="memTemplItemLeft" align="right" valign="top">const ValueType &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_input_port.html#abab8fb340a13be101704b48e46c12724">Eval</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:abab8fb340a13be101704b48e46c12724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the up-to-date value of this input port contained in the given <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a>.  <a href="#abab8fb340a13be101704b48e46c12724">More...</a><br /></td></tr>
 <tr class="separator:abab8fb340a13be101704b48e46c12724"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -361,11 +361,11 @@ Additional Inherited Members</h2></td></tr>
 <p>If the value is not already up to date with respect to its prerequisites, it will recalculate an up-to-date value before the reference is returned. The recalculation may be arbitrarily expensive, but <a class="el" href="classdrake_1_1systems_1_1_input_port.html#abab8fb340a13be101704b48e46c12724" title="Returns a reference to the up-to-date value of this input port contained in the given Context.">Eval()</a> is constant time and <em>very</em> fast if the value is already up to date.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">ValueType</td><td>The type of the const-reference returned by this method. When omitted, the return type is an <code>Eigen::VectorBlock</code> (this is only valid when this is a vector-valued port). For abstract ports, the <code>ValueType</code> either can be the declared type of the port (e.g., <code>lcmt_iiwa_status</code>), or else in advanced use cases can be <code><a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a></code> to get the type-erased value.</td></tr>
+    <tr><td class="paramname">ValueType</td><td>The type of the const-reference returned by this method. When omitted, the return type is <code>const VectorX&lt;T&gt;&amp;</code> (this is only valid when this is a vector-valued port). For abstract ports, the <code>ValueType</code> either can be the declared type of the port (e.g., <code>lcmt_iiwa_status</code>), or else in advanced use cases can be <code><a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a></code> to get the type-erased value.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>reference to the up-to-date value; if a ValueType is provided, the return type is <code>const ValueType&amp;</code>; if a ValueType is omitted, the return type is <code>Eigen::VectorBlock&lt;const VectorX&lt;T&gt;&gt;</code>.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>reference to the up-to-date value; if a ValueType is provided, the return type is <code>const ValueType&amp;</code>; if a ValueType is omitted, the return type is <code>const VectorX&lt;T&gt;&amp;</code>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the port is not connected. (Use <a class="el" href="classdrake_1_1systems_1_1_input_port.html#a5536b94a4642fa4cf47164437dc66ae8" title="Returns true iff this port is connected or has had a fixed value provided in the given Context.">HasValue()</a> to check first, if necessary.)</td></tr>

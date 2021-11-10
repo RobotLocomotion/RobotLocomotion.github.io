@@ -11,8 +11,8 @@ var classdrake_1_1systems_1_1_vector_system =
     [ "DoCalcVectorDiscreteVariableUpdates", "classdrake_1_1systems_1_1_vector_system.html#a83f65743d03c576df8bd30d5d3d8e482", null ],
     [ "DoCalcVectorOutput", "classdrake_1_1systems_1_1_vector_system.html#aef5d5729502ec9a436205f55de33db81", null ],
     [ "DoCalcVectorTimeDerivatives", "classdrake_1_1systems_1_1_vector_system.html#ad9f01cddabb2182fd0fcaa6094a94172", null ],
-    [ "EvalVectorInput", "classdrake_1_1systems_1_1_vector_system.html#a8c6af63b91bf487bee37f57d8fa33777", null ],
-    [ "GetVectorState", "classdrake_1_1systems_1_1_vector_system.html#a312673de32e312d265f8fd8efea0374f", null ],
+    [ "EvalVectorInput", "classdrake_1_1systems_1_1_vector_system.html#a1f41f7b104ce103e57d0c461da5a6b31", null ],
+    [ "GetVectorState", "classdrake_1_1systems_1_1_vector_system.html#ae86067d601be871341aa108ce2b4eefe", null ],
     [ "operator=", "classdrake_1_1systems_1_1_vector_system.html#a64e5065f46589c0dcafcf358366af0ff", null ],
     [ "operator=", "classdrake_1_1systems_1_1_vector_system.html#a15657222d975c52638e0d03e8dddb6c9", null ]
 ];
