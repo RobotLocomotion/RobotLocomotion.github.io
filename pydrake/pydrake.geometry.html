@@ -3425,6 +3425,27 @@ then meshcat will render the colored points.</dd>
 <dd>is the default color, which is only used if
 <code class="docutils literal"><span class="pre">point_cloud.has_rgbs()</span> <span class="pre">==</span> <span class="pre">false</span></code>.</dd>
 </dl>
+<ol class="arabic simple" start="3">
+<li>SetObject(self: pydrake.geometry.Meshcat, path: str, mesh: pydrake.geometry.TriangleSurfaceMesh_[float], rgba: pydrake.geometry.Rgba = Rgba(r=0.1, g=0.1, b=0.1, a=1.0), wireframe: bool = False, wireframe_line_width: float = 1.0) -&gt; None</li>
+</ol>
+<p>Sets the “object” at <code class="docutils literal"><span class="pre">path</span></code> in the scene tree to a
+TriangleSurfaceMesh.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">mesh</span></code>:</dt>
+<dd>is a TriangleSurfaceMesh object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rgba</span></code>:</dt>
+<dd>is the mesh face or wireframe color.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">wireframe</span></code>:</dt>
+<dd>if “true”, then only the triangle edges are visualized, not the
+faces.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">wireframe_line_width</span></code>:</dt>
+<dd>is the width in pixels. Due to limitations in WebGL
+implementations, the line width may be 1 regardless of the set
+value.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3456,6 +3477,25 @@ meshcat_path for the semantics.</dd>
 <p>Sets a single named property of the object at the given path. For
 example,</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Lights/DirectionalLight/&lt;object&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;intensity&quot;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>See meshcat_path “Meshcat paths” for more details about these
+properties and how to address them.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">property</span></code>:</dt>
+<dd>the string name of the property to set</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dd>the new value.</dd>
+</dl>
+<ol class="arabic simple" start="3">
+<li>SetProperty(self: pydrake.geometry.Meshcat, path: str, property: str, value: List[float]) -&gt; None</li>
+</ol>
+<p>Sets a single named property of the object at the given path. For
+example,</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">meshcat</span><span class="o">.</span><span class="n">SetProperty</span><span class="p">(</span><span class="s2">&quot;/Background&quot;</span><span class="p">,</span> <span class="s2">&quot;top_color&quot;</span><span class="p">,</span> <span class="p">{</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">});</span>
 </pre></div>
 </div>
 <p>See meshcat_path “Meshcat paths” for more details about these
@@ -3523,6 +3563,31 @@ meshcat_path “Meshcat paths” for the semantics.</dd>
 <p>Note: Prefer to use the overload which takes a RigidTransformd unless
 you need the fully parameterized homogeneous transform (which
 additionally allows scale and sheer).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.SetTriangleMesh">
+<code class="descname">SetTriangleMesh</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat, path: str, vertices: numpy.ndarray[numpy.float64[3, n], flags.f_contiguous], faces: numpy.ndarray[numpy.int32[3, n], flags.f_contiguous], rgba: pydrake.geometry.Rgba = Rgba(r=0.1, g=0.1, b=0.1, a=1.0), wireframe: bool = False, wireframe_line_width: float = 1.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.SetTriangleMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the “object” at <code class="docutils literal"><span class="pre">path</span></code> in the scene tree to a triangular mesh.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dd>a “/”-delimited string indicating the path in the scene tree. See
+meshcat_path “Meshcat paths” for the semantics.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
+<dd>is a 3-by-N matrix of 3D point defining the vertices of the mesh.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">faces</span></code>:</dt>
+<dd>is a 3-by-N integer matrix with each entry denoting an index into
+vertices and each column denoting one face (aka SurfaceTriangle).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">rgba</span></code>:</dt>
+<dd>is the mesh face or wireframe color.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">wireframe</span></code>:</dt>
+<dd>if “true”, then only the triangle edges are visualized, not the
+faces.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">wireframe_line_width</span></code>:</dt>
+<dd>is the width in pixels. Due to limitations in WebGL
+implementations, the line width may be 1 regardless of the set
+value.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

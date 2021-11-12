@@ -161,12 +161,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html">perception::PointCloud</a> &amp;point_cloud, double point_size=0.001, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(.9,.9,.9, 1.))</td></tr>
 <tr class="memdesc:a4a847b014dcf8f38f0317dfab8eca71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at a given <code>path</code> in the scene tree to be <code>point_cloud</code>.  <a href="#a4a847b014dcf8f38f0317dfab8eca71e">More...</a><br /></td></tr>
 <tr class="separator:a4a847b014dcf8f38f0317dfab8eca71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eccd1ff0cc4c435d813747c387838f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a5eccd1ff0cc4c435d813747c387838f2">SetObject</a> (std::string_view path, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt; &amp;mesh, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, double wireframe_line_width=1.0)</td></tr>
+<tr class="memdesc:a5eccd1ff0cc4c435d813747c387838f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>.  <a href="#a5eccd1ff0cc4c435d813747c387838f2">More...</a><br /></td></tr>
+<tr class="separator:a5eccd1ff0cc4c435d813747c387838f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5b082d79e267c040cbd066a11cdcb54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#aa5b082d79e267c040cbd066a11cdcb54">SetLine</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, double line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
 <tr class="memdesc:aa5b082d79e267c040cbd066a11cdcb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a piecewise-linear interpolation between the <code>vertices</code>.  <a href="#aa5b082d79e267c040cbd066a11cdcb54">More...</a><br /></td></tr>
 <tr class="separator:aa5b082d79e267c040cbd066a11cdcb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7094785eea6bf85ebfef30083e7c1dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda">SetLineSegments</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;start, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;end, double line_width=1.0, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0))</td></tr>
 <tr class="memdesc:a7094785eea6bf85ebfef30083e7c1dda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a number of line segments.  <a href="#a7094785eea6bf85ebfef30083e7c1dda">More...</a><br /></td></tr>
 <tr class="separator:a7094785eea6bf85ebfef30083e7c1dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8087e1809c019639dbec27ab0b505e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af8087e1809c019639dbec27ab0b505e0">SetTriangleMesh</a> (std::string_view path, const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;vertices, const Eigen::Ref&lt; const Eigen::Matrix3Xi &gt; &amp;faces, const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;rgba=<a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1, 0.1, 0.1, 1.0), bool wireframe=false, double wireframe_line_width=1.0)</td></tr>
+<tr class="memdesc:af8087e1809c019639dbec27ab0b505e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the "object" at <code>path</code> in the scene tree to a triangular mesh.  <a href="#af8087e1809c019639dbec27ab0b505e0">More...</a><br /></td></tr>
+<tr class="separator:af8087e1809c019639dbec27ab0b505e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3dc13928478563343ff6ef72c16fc98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af3dc13928478563343ff6ef72c16fc98">SetCamera</a> (<a class="el" href="structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html">PerspectiveCamera</a> camera, std::string path=&quot;/Cameras/default/rotated&quot;)</td></tr>
 <tr class="memdesc:af3dc13928478563343ff6ef72c16fc98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object on <code>path</code> to a perspective camera.  <a href="#af3dc13928478563343ff6ef72c16fc98">More...</a><br /></td></tr>
 <tr class="separator:af3dc13928478563343ff6ef72c16fc98"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -991,7 +997,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a973d81c7adb1da00361eaeab4118604f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a973d81c7adb1da00361eaeab4118604f">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a973d81c7adb1da00361eaeab4118604f">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1035,7 +1041,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a4a847b014dcf8f38f0317dfab8eca71e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a847b014dcf8f38f0317dfab8eca71e">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a847b014dcf8f38f0317dfab8eca71e">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1079,6 +1085,64 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">point_cloud</td><td>a <a class="el" href="classdrake_1_1perception_1_1_point_cloud.html" title="Implements a point cloud (with contiguous storage), whose main goal is to offer a convenient,...">perception::PointCloud</a>; if <code>point_cloud.has_rgbs()</code> is true, then meshcat will render the colored points. </td></tr>
     <tr><td class="paramname">point_size</td><td>is the size of each rendered point. </td></tr>
     <tr><td class="paramname">rgba</td><td>is the default color, which is only used if <code>point_cloud.has_rgbs() == false</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5eccd1ff0cc4c435d813747c387838f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eccd1ff0cc4c435d813747c387838f2">&#9670;&nbsp;</a></span>SetObject() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetObject </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgba</em> = <code><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1,&#160;0.1,&#160;0.1,&#160;1.0)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wireframe</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wireframe_line_width</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the "object" at <code>path</code> in the scene tree to a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
+    <tr><td class="paramname">mesh</td><td>is a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> object. </td></tr>
+    <tr><td class="paramname">rgba</td><td>is the mesh face or wireframe color. </td></tr>
+    <tr><td class="paramname">wireframe</td><td>if "true", then only the triangle edges are visualized, not the faces. </td></tr>
+    <tr><td class="paramname">wireframe_line_width</td><td>is the width in pixels. Due to limitations in WebGL implementations, the line width may be 1 regardless of the set value. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1210,7 +1274,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets a single named property of the object at the given path. </p>
-<p>For example, </p><pre class="fragment">meshcat.SetProperty("box", "position", [1.0, 0.0, 0.0]);
+<p>For example, </p><pre class="fragment">meshcat.SetProperty("/Background", "top_color", {1.0, 0.0, 0.0});
 </pre><p> See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for more details about these properties and how to address them.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1331,6 +1395,71 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <p>Note: Prefer to use the overload which takes a RigidTransformd unless you need the fully parameterized homogeneous transform (which additionally allows scale and sheer). </p>
+
+</div>
+</div>
+<a id="af8087e1809c019639dbec27ab0b505e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8087e1809c019639dbec27ab0b505e0">&#9670;&nbsp;</a></span>SetTriangleMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTriangleMesh </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3Xd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Matrix3Xi &gt; &amp;&#160;</td>
+          <td class="paramname"><em>faces</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a> &amp;&#160;</td>
+          <td class="paramname"><em>rgba</em> = <code><a class="el" href="classdrake_1_1geometry_1_1_rgba.html">Rgba</a>(0.1,&#160;0.1,&#160;0.1,&#160;1.0)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wireframe</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>wireframe_line_width</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the "object" at <code>path</code> in the scene tree to a triangular mesh. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>a "/"-delimited string indicating the path in the scene tree. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#meshcat_path">Meshcat paths</a> for the semantics. </td></tr>
+    <tr><td class="paramname">vertices</td><td>is a 3-by-N matrix of 3D point defining the vertices of the mesh. </td></tr>
+    <tr><td class="paramname">faces</td><td>is a 3-by-N integer matrix with each entry denoting an index into vertices and each column denoting one face (aka <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html" title="SurfaceTriangle represents a triangular face in a TriangleSurfaceMesh.">SurfaceTriangle</a>). </td></tr>
+    <tr><td class="paramname">rgba</td><td>is the mesh face or wireframe color. </td></tr>
+    <tr><td class="paramname">wireframe</td><td>if "true", then only the triangle edges are visualized, not the faces. </td></tr>
+    <tr><td class="paramname">wireframe_line_width</td><td>is the width in pixels. Due to limitations in WebGL implementations, the line width may be 1 regardless of the set value. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

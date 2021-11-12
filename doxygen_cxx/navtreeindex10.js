@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"classdrake_1_1math_1_1_rotation_matrix.html":[3,0,0,7,15],
+"classdrake_1_1math_1_1_rotation_matrix.html#a02349fa508ba55fd7df957169498e824":[3,0,0,7,15,3],
 "classdrake_1_1math_1_1_rotation_matrix.html#a0397fe475999596a9edb1797a418432a":[3,0,0,7,15,23],
 "classdrake_1_1math_1_1_rotation_matrix.html#a0441681fa380dda6c70fe5b5a001bb90":[3,0,0,7,15,13],
 "classdrake_1_1math_1_1_rotation_matrix.html#a05183386f55111df27e380877a9f11b2":[3,0,0,7,15,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "classdrake_1_1multibody_1_1_distance_constraint.html#aa2ac8bf926f4c4b19a02873f753c344c":[1,2,0,2,3],
 "classdrake_1_1multibody_1_1_distance_constraint.html#aad75abb4221bf6e44091ed60c7721241":[1,2,0,2,2],
 "classdrake_1_1multibody_1_1_distance_constraint.html#ad04269b2bfa6bfa65dc5af30515d41a8":[1,2,0,2,4],
-"classdrake_1_1multibody_1_1_door_hinge.html":[3,0,0,8,24],
-"classdrake_1_1multibody_1_1_door_hinge.html#a0480114a02d8ac4edc2f4011a3f3e3cd":[3,0,0,8,24,3],
-"classdrake_1_1multibody_1_1_door_hinge.html#a0b35f9a15174cdbc86feb93ab4191cf2":[3,0,0,8,24,7]
+"classdrake_1_1multibody_1_1_door_hinge.html":[3,0,0,8,24]
 };

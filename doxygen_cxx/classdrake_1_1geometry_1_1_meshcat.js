@@ -30,12 +30,14 @@ var classdrake_1_1geometry_1_1_meshcat =
     [ "SetLineSegments", "classdrake_1_1geometry_1_1_meshcat.html#a7094785eea6bf85ebfef30083e7c1dda", null ],
     [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#a973d81c7adb1da00361eaeab4118604f", null ],
     [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#a4a847b014dcf8f38f0317dfab8eca71e", null ],
+    [ "SetObject", "classdrake_1_1geometry_1_1_meshcat.html#a5eccd1ff0cc4c435d813747c387838f2", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#af890c2ad444b8dcdaeee6453e436b8d3", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#af9eb77512050207a9b91e2da278568a4", null ],
     [ "SetProperty", "classdrake_1_1geometry_1_1_meshcat.html#a4ca09d605f1d8c991e98793136a3b027", null ],
     [ "SetSliderValue", "classdrake_1_1geometry_1_1_meshcat.html#ad933314f09b40dd5758387e29c952c8b", null ],
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a1e1b021d8e7be408a7d17d39ce459b39", null ],
     [ "SetTransform", "classdrake_1_1geometry_1_1_meshcat.html#a48d1b2e65ac43693b86ca290ff84d38a", null ],
+    [ "SetTriangleMesh", "classdrake_1_1geometry_1_1_meshcat.html#af8087e1809c019639dbec27ab0b505e0", null ],
     [ "web_url", "classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5", null ],
     [ "ws_url", "classdrake_1_1geometry_1_1_meshcat.html#a7770452d0167ddf273f47c90e85dc941", null ]
 ];
