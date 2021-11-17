@@ -91,6 +91,8 @@ var NAVTREEINDEX39 =
 "common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,10,8,1],
 "compass__gait_8h.html":[4,0,0,3,4,0],
 "compass__gait__geometry_8h.html":[4,0,0,3,4,1],
+"compliant__contact__manager_8h.html":[4,0,0,8,9,1],
+"compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,9,1,0],
 "compute__numerical__gradient_8h.html":[4,0,0,7,4],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400a":[4,0,0,7,4,1],
 "compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,4,1,2],
@@ -120,9 +122,8 @@ var NAVTREEINDEX39 =
 "constraint__problem__data_8h.html":[4,0,0,8,1,1],
 "constraint__relaxing__ik_8h.html":[4,0,0,6,3,0],
 "constraint__solver_8h.html":[4,0,0,8,1,2],
-"contact__jacobians_8h.html":[4,0,0,8,9,1],
-"contact__model__doxygen_8h.html":[4,0,0,8,9,2],
-"contact__permutation_8h.html":[4,0,0,8,9,3],
+"contact__jacobians_8h.html":[4,0,0,8,9,2],
+"contact__model__doxygen_8h.html":[4,0,0,8,9,3],
 "contact__results_8h.html":[4,0,0,8,9,4],
 "contact__results__to__lcm_8h.html":[4,0,0,8,9,5],
 "contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,9,5,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "dir_0767593f2fce2cf954de79364fec17e6.html":[4,0,0,8,0,1],
 "dir_0897ed8fd6dd400fbb3f13ca4cf30fd4.html":[4,0,0,9],
 "dir_0d10be3e24b4d05732d552ad443cc60a.html":[4,0,0,1,2],
-"dir_0e1ecb96e57b1c1f48b2887ea5038a05.html":[4,0,0,8,0,5],
-"dir_1276f2ac0d82a2c7322b9222608e1820.html":[4,0,0,3,1]
+"dir_0e1ecb96e57b1c1f48b2887ea5038a05.html":[4,0,0,8,0,5]
 };

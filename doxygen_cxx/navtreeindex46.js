@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
 "quadrature_8h.html":[4,0,0,8,3,5],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ec":[4,0,0,10,52,0],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca045139748552611db2ba18934b6f89f6":[4,0,0,10,52,0,14],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca18bc9cbd9bb764958e636263b1b53a9d":[4,0,0,10,52,0,9],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,10,52,0,10],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d":[4,0,0,10,52,0,2]
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca64e0ff0ce277a08ed59a9fe9140a8fd7":[4,0,0,10,52,0,10]
 };

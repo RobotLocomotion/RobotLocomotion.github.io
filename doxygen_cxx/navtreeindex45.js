@@ -1,5 +1,6 @@
 var NAVTREEINDEX45 =
 {
+"namespacemembers_func_e.html":[2,1,1,4],
 "namespacemembers_func_f.html":[2,1,1,5],
 "namespacemembers_func_g.html":[2,1,1,6],
 "namespacemembers_func_h.html":[2,1,1,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX45 =
 "pydrake__pybind_8h.html#af804829ff8c00cbcacaff4b8ed1b83f1":[4,0,0,0,0,7,5],
 "quadratic__form_8h.html":[4,0,0,7,23],
 "quadratic__form_8h.html#a296872692791b1e6d9e27311fc55a694":[4,0,0,7,23,1],
-"quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
-"quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0]
+"quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2]
 };

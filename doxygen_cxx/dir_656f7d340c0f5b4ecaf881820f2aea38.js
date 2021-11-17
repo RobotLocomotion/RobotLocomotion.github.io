@@ -1,9 +1,9 @@
 var dir_656f7d340c0f5b4ecaf881820f2aea38 =
 [
     [ "calc_distance_and_time_derivative.h", "calc__distance__and__time__derivative_8h.html", "calc__distance__and__time__derivative_8h" ],
+    [ "compliant_contact_manager.h", "compliant__contact__manager_8h.html", "compliant__contact__manager_8h" ],
     [ "contact_jacobians.h", "contact__jacobians_8h.html", null ],
     [ "contact_model_doxygen.h", "contact__model__doxygen_8h.html", null ],
-    [ "contact_permutation.h", "contact__permutation_8h.html", null ],
     [ "contact_results.h", "contact__results_8h.html", [
       [ "ContactResults", "classdrake_1_1multibody_1_1_contact_results.html", "classdrake_1_1multibody_1_1_contact_results" ]
     ] ],
