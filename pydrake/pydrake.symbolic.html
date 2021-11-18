@@ -550,11 +550,11 @@ computation (other than dead code) is an error.</p>
 </ol>
 <p>Default constructor. It constructs Zero().</p>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.symbolic.Expression, arg0: float) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Expression, constant: float) -&gt; None</li>
 </ol>
 <p>Constructs a constant.</p>
 <ol class="arabic simple" start="3">
-<li>__init__(self: pydrake.symbolic.Expression, arg0: pydrake.symbolic.Variable) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Expression, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
 <p>Constructs an expression from <code class="docutils literal"><span class="pre">var</span></code>.</p>
 <dl class="docutils">
@@ -625,7 +625,7 @@ computation (other than dead code) is an error.</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Expression.Differentiate">
-<code class="descname">Differentiate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em>, <em>arg0: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.Differentiate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Differentiate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em>, <em>x: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.Differentiate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Differentiates this symbolic expression with respect to the variable
 <code class="docutils literal"><span class="pre">var</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -706,7 +706,7 @@ this expression.</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Expression.EvaluatePartial">
-<code class="descname">EvaluatePartial</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression, arg0: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.EvaluatePartial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvaluatePartial</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.EvaluatePartial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Partially evaluates this expression using an environment <code class="docutils literal"><span class="pre">env</span></code>.
 Internally, this method promotes <code class="docutils literal"><span class="pre">env</span></code> into a substitution (Variable
 → Expression) and call Evaluate::Substitute with it.</p>
@@ -776,7 +776,7 @@ find the examples.</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Expression.Jacobian">
-<code class="descname">Jacobian</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression, arg0: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, n]]<a class="headerlink" href="#pydrake.symbolic.Expression.Jacobian" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Jacobian</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, n]]<a class="headerlink" href="#pydrake.symbolic.Expression.Jacobian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Let <code class="docutils literal"><span class="pre">f</span></code> be this Expression, computes a row vector of derivatives,
 <code class="docutils literal"><span class="pre">[∂f/∂vars(0),</span> <span class="pre">...</span> <span class="pre">,</span> <span class="pre">∂f/∂vars(n-1)]</span></code> with respect to the variables
 <code class="docutils literal"><span class="pre">vars</span></code>.</p>
@@ -822,7 +822,7 @@ find the examples.</p>
 <code class="descname">Substitute</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Expression.Substitute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>Substitute(self: pydrake.symbolic.Expression, arg0: pydrake.symbolic.Variable, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
+<li>Substitute(self: pydrake.symbolic.Expression, var: pydrake.symbolic.Variable, e: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
 </ol>
 <p>Returns a copy of this expression replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
 with <code class="docutils literal"><span class="pre">e</span></code>.</p>
@@ -835,7 +835,7 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>Substitute(self: pydrake.symbolic.Expression, arg0: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; pydrake.symbolic.Expression</li>
+<li>Substitute(self: pydrake.symbolic.Expression, s: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; pydrake.symbolic.Expression</li>
 </ol>
 <p>Returns a copy of this expression replacing all occurrences of the
 variables in <code class="docutils literal"><span class="pre">s</span></code> with corresponding expressions in <code class="docutils literal"><span class="pre">s</span></code>. Note that
@@ -1148,7 +1148,7 @@ codebase. In general, a user of this class should explicitly call
 
 <dl class="method">
 <dt id="pydrake.symbolic.Formula.Evaluate">
-<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula, arg0: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Formula.Evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula</em>, <em>env: Dict[pydrake.symbolic.Variable</em>, <em>float] = {}</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Formula.Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates using a given environment (by default, an empty environment)
 and a random number generator. If there is a random variable in this
 formula which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>, it uses <code class="docutils literal"><span class="pre">random_generator</span></code>
@@ -1197,7 +1197,7 @@ random variable in this formula.</p>
 <code class="descname">Substitute</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Formula.Substitute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>Substitute(self: pydrake.symbolic.Formula, arg0: pydrake.symbolic.Variable, arg1: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Formula</li>
+<li>Substitute(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable, e: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Formula</li>
 </ol>
 <p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
 with <code class="docutils literal"><span class="pre">e</span></code>.</p>
@@ -1210,7 +1210,7 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>Substitute(self: pydrake.symbolic.Formula, arg0: pydrake.symbolic.Variable, arg1: pydrake.symbolic.Variable) -&gt; pydrake.symbolic.Formula</li>
+<li>Substitute(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable, e: pydrake.symbolic.Variable) -&gt; pydrake.symbolic.Formula</li>
 </ol>
 <p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
 with <code class="docutils literal"><span class="pre">e</span></code>.</p>
@@ -1223,7 +1223,7 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="3">
-<li>Substitute(self: pydrake.symbolic.Formula, arg0: pydrake.symbolic.Variable, arg1: float) -&gt; pydrake.symbolic.Formula</li>
+<li>Substitute(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable, e: float) -&gt; pydrake.symbolic.Formula</li>
 </ol>
 <p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
 with <code class="docutils literal"><span class="pre">e</span></code>.</p>
@@ -1236,7 +1236,7 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="4">
-<li>Substitute(self: pydrake.symbolic.Formula, arg0: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; pydrake.symbolic.Formula</li>
+<li>Substitute(self: pydrake.symbolic.Formula, s: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; pydrake.symbolic.Formula</li>
 </ol>
 <p>Returns a copy of this formula replacing all occurrences of the
 variables in <code class="docutils literal"><span class="pre">s</span></code> with corresponding expressions in <code class="docutils literal"><span class="pre">s</span></code>. Note that
@@ -1293,7 +1293,7 @@ expressions.</p>
 
 <dl class="function">
 <dt id="pydrake.symbolic.if_then_else">
-<code class="descclassname">pydrake.symbolic.</code><code class="descname">if_then_else</code><span class="sig-paren">(</span><em>arg0: drake::symbolic::Formula</em>, <em>arg1: pydrake.symbolic.Expression</em>, <em>arg2: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.if_then_else" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">if_then_else</code><span class="sig-paren">(</span><em>f_cond: drake::symbolic::Formula</em>, <em>e_then: pydrake.symbolic.Expression</em>, <em>e_else: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.if_then_else" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs if-then-else expression.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">if_then_else</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">expr_then</span><span class="p">,</span> <span class="n">expr_else</span><span class="p">)</span>
 </pre></div>
@@ -1341,8 +1341,11 @@ ternary operator is available at
 
 <dl class="function">
 <dt id="pydrake.symbolic.intersect">
-<code class="descclassname">pydrake.symbolic.</code><code class="descname">intersect</code><span class="sig-paren">(</span><em>arg0: pydrake.symbolic.Variables</em>, <em>arg1: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variables<a class="headerlink" href="#pydrake.symbolic.intersect" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">intersect</code><span class="sig-paren">(</span><em>vars1: pydrake.symbolic.Variables</em>, <em>vars2: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variables<a class="headerlink" href="#pydrake.symbolic.intersect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the intersection of <code class="docutils literal"><span class="pre">vars1</span></code> and <code class="docutils literal"><span class="pre">vars2</span></code>.</p>
+<p>This function has a time complexity of <code class="docutils literal"><span class="pre">O(N₁</span> <span class="pre">+</span> <span class="pre">N₂)</span></code> where <code class="docutils literal"><span class="pre">N₁</span></code> and
+<code class="docutils literal"><span class="pre">N₂</span></code> are the size of <code class="docutils literal"><span class="pre">vars1</span></code> and <code class="docutils literal"><span class="pre">vars2</span></code> respectively.</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="pydrake.symbolic.inv">
@@ -1355,7 +1358,7 @@ ternary operator is available at
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">IsAffine</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.IsAffine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>IsAffine(arg0: numpy.ndarray[object[m, n], flags.f_contiguous], arg1: pydrake.symbolic.Variables) -&gt; bool</li>
+<li>IsAffine(m: numpy.ndarray[object[m, n], flags.f_contiguous], vars: pydrake.symbolic.Variables) -&gt; bool</li>
 </ol>
 <p>Checks if every element in <code class="docutils literal"><span class="pre">m</span></code> is affine in <code class="docutils literal"><span class="pre">vars</span></code>.</p>
 <div class="admonition note">
@@ -1363,7 +1366,7 @@ ternary operator is available at
 <p class="last">If <code class="docutils literal"><span class="pre">m</span></code> is an empty matrix, it returns true.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>IsAffine(arg0: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; bool</li>
+<li>IsAffine(m: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; bool</li>
 </ol>
 <p>Checks if every element in <code class="docutils literal"><span class="pre">m</span></code> is affine.</p>
 <div class="admonition note">
@@ -1377,7 +1380,7 @@ ternary operator is available at
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">Jacobian</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Jacobian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>Jacobian(arg0: numpy.ndarray[object[m, 1]], arg1: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>Jacobian(f: numpy.ndarray[object[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Computes the Jacobian matrix J of the vector function <code class="docutils literal"><span class="pre">f</span></code> with
 respect to <code class="docutils literal"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
@@ -1393,7 +1396,7 @@ the following 3x2 matrix:</p>
 <dd>{<code class="docutils literal"><span class="pre">vars</span></code> is non-empty}.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>Jacobian(arg0: numpy.ndarray[object[m, 1]], arg1: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>Jacobian(f: numpy.ndarray[object[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Computes the Jacobian matrix J of the vector function <code class="docutils literal"><span class="pre">f</span></code> with
 respect to <code class="docutils literal"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
@@ -1568,15 +1571,15 @@ coefficient part of a monomial.</p>
 </ol>
 <p>Constructs a monomial equal to 1. Namely the total degree is zero.</p>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.symbolic.Monomial, arg0: pydrake.symbolic.Variable) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Monomial, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from <code class="docutils literal"><span class="pre">var</span></code>.</p>
 <ol class="arabic simple" start="3">
-<li>__init__(self: pydrake.symbolic.Monomial, arg0: pydrake.symbolic.Variable, arg1: int) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Monomial, var: pydrake.symbolic.Variable, exponent: int) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from <code class="docutils literal"><span class="pre">var</span></code> and <code class="docutils literal"><span class="pre">exponent</span></code>.</p>
 <ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.symbolic.Monomial, arg0: Dict[pydrake.symbolic.Variable, int]) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Monomial, powers: Dict[pydrake.symbolic.Variable, int]) -&gt; None</li>
 </ol>
 <p>Constructs a Monomial from <code class="docutils literal"><span class="pre">powers</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1610,7 +1613,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.degree">
-<code class="descname">degree</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial</em>, <em>arg0: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Monomial.degree" title="Permalink to this definition">¶</a></dt>
+<code class="descname">degree</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial</em>, <em>v: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Monomial.degree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the degree of this Monomial in a variable <code class="docutils literal"><span class="pre">v</span></code>.</p>
 </dd></dl>
 
@@ -1621,7 +1624,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.Evaluate">
-<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial, arg0: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Monomial.Evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Monomial.Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates under a given environment <code class="docutils literal"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1635,6 +1638,21 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.Monomial.EvaluatePartial">
+<code class="descname">EvaluatePartial</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; Tuple[float, pydrake.symbolic.Monomial]<a class="headerlink" href="#pydrake.symbolic.Monomial.EvaluatePartial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Partially evaluates using a given environment <code class="docutils literal"><span class="pre">env</span></code>. The evaluation
+result is of type pair&lt;double, Monomial&gt;. The first component (:
+double) represents the coefficient part while the second component
+represents the remaining parts of the Monomial which was not
+evaluated.</p>
+<p>Example 1. Evaluate with a fully-specified environment
+(x³*y²).EvaluatePartial({{x, 2}, {y, 3}}) = (2³ * 3² = 8 * 9 = 72,
+Monomial{} = 1).</p>
+<p>Example 2. Evaluate with a partial environment
+(x³*y²).EvaluatePartial({{x, 2}}) = (2³ = 8, y²).</p>
 </dd></dl>
 
 <dl class="method">
@@ -1652,7 +1670,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.pow_in_place">
-<code class="descname">pow_in_place</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial</em>, <em>arg0: int</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Monomial<a class="headerlink" href="#pydrake.symbolic.Monomial.pow_in_place" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pow_in_place</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial</em>, <em>p: int</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Monomial<a class="headerlink" href="#pydrake.symbolic.Monomial.pow_in_place" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns this monomial raised to <code class="docutils literal"><span class="pre">p</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1683,7 +1701,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">MonomialBasis</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.MonomialBasis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>MonomialBasis(arg0: numpy.ndarray[object[m, 1]], arg1: int) -&gt; numpy.ndarray[object[m, 1]]</li>
+<li>MonomialBasis(vars: numpy.ndarray[object[m, 1]], degree: int) -&gt; numpy.ndarray[object[m, 1]]</li>
 </ol>
 <p>Returns all monomials up to a given degree under the graded reverse
 lexicographic order. Note that graded reverse lexicographic order uses
@@ -1698,7 +1716,7 @@ ID. For example, for a given variable ordering x &gt; y &gt; z,
 <dd><code class="docutils literal"><span class="pre">degree</span></code> is a non-negative integer.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>MonomialBasis(arg0: pydrake.symbolic.Variables, arg1: int) -&gt; numpy.ndarray[object[m, 1]]</li>
+<li>MonomialBasis(vars: pydrake.symbolic.Variables, degree: int) -&gt; numpy.ndarray[object[m, 1]]</li>
 </ol>
 <p>Returns all monomials up to a given degree under the graded reverse
 lexicographic order. Note that graded reverse lexicographic order uses
@@ -1745,16 +1763,16 @@ For example, for a given variable ordering x &gt; y &gt; z,
 </ol>
 <p>Constructs a zero polynomial.</p>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.symbolic.Polynomial, arg0: Dict[pydrake.symbolic.Monomial, pydrake.symbolic.Expression]) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Polynomial, map: Dict[pydrake.symbolic.Monomial, pydrake.symbolic.Expression]) -&gt; None</li>
 </ol>
 <p>Constructs a polynomial from a map, Monomial → Expression.</p>
 <ol class="arabic simple" start="3">
-<li>__init__(self: pydrake.symbolic.Polynomial, arg0: pydrake.symbolic.Monomial) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Polynomial, m: pydrake.symbolic.Monomial) -&gt; None</li>
 </ol>
 <p>Constructs a polynomial from a monomial <code class="docutils literal"><span class="pre">m</span></code>. Note that all variables
 in <code class="docutils literal"><span class="pre">m</span></code> are considered as indeterminates.</p>
 <ol class="arabic simple" start="4">
-<li>__init__(self: pydrake.symbolic.Polynomial, arg0: pydrake.symbolic.Expression) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression) -&gt; None</li>
 </ol>
 <p>Constructs a polynomial from an expression <code class="docutils literal"><span class="pre">e</span></code>. Note that all
 variables in <code class="docutils literal"><span class="pre">e</span></code> are considered as indeterminates.</p>
@@ -1767,7 +1785,7 @@ variables in <code class="docutils literal"><span class="pre">e</span></code> ar
 </tbody>
 </table>
 <ol class="arabic simple" start="5">
-<li>__init__(self: pydrake.symbolic.Polynomial, arg0: pydrake.symbolic.Expression, arg1: pydrake.symbolic.Variables) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression, indeterminates: pydrake.symbolic.Variables) -&gt; None</li>
 </ol>
 <p>Constructs a polynomial from an expression <code class="docutils literal"><span class="pre">e</span></code> by decomposing it
 with respect to <code class="docutils literal"><span class="pre">indeterminates</span></code>.</p>
@@ -1785,7 +1803,7 @@ and the provided <code class="docutils literal"><span class="pre">indeterminates
 </tbody>
 </table>
 <ol class="arabic simple" start="6">
-<li>__init__(self: pydrake.symbolic.Polynomial, arg0: pydrake.symbolic.Expression, arg1: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+<li>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression, indeterminates: numpy.ndarray[object[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs a polynomial from an expression <code class="docutils literal"><span class="pre">e</span></code> by decomposing it
 with respect to <code class="docutils literal"><span class="pre">indeterminates</span></code>.</p>
@@ -1806,16 +1824,16 @@ and the provided <code class="docutils literal"><span class="pre">indeterminates
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.AddProduct">
-<code class="descname">AddProduct</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>arg0: pydrake.symbolic.Expression</em>, <em>arg1: pydrake.symbolic.Monomial</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.AddProduct" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddProduct</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>coeff: pydrake.symbolic.Expression</em>, <em>m: pydrake.symbolic.Monomial</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.AddProduct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds <code class="docutils literal"><span class="pre">coeff</span></code> * <code class="docutils literal"><span class="pre">m</span></code> to this polynomial.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.CoefficientsAlmostEqual">
 <code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>p: pydrake.symbolic.Polynomial</em>, <em>tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Polynomial.CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true if this polynomial and <code class="docutils literal"><span class="pre">are</span></code> almost equal (the
+<dd><p>Returns true if this polynomial and <code class="docutils literal"><span class="pre">p</span></code> are almost equal (the
 difference in the corresponding coefficients are all less than
-<code class="docutils literal"><span class="pre">tol)</span></code>, after expanding the coefficients.</p>
+<code class="docutils literal"><span class="pre">tolerance)</span></code>, after expanding the coefficients.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1826,13 +1844,13 @@ difference in the corresponding coefficients are all less than
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Degree">
-<code class="descname">Degree</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>arg0: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Polynomial.Degree" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Degree</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>v: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Polynomial.Degree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the highest degree of this polynomial in a variable <code class="docutils literal"><span class="pre">v</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Differentiate">
-<code class="descname">Differentiate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>arg0: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.Differentiate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Differentiate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>x: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.Differentiate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Differentiates this polynomial with respect to the variable <code class="docutils literal"><span class="pre">x</span></code>.
 Note that a variable <code class="docutils literal"><span class="pre">x</span></code> can be either a decision variable or an
 indeterminate.</p>
@@ -1846,7 +1864,7 @@ indeterminate.</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Evaluate">
-<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, arg0: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Polynomial.Evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Polynomial.Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates this polynomial under a given environment <code class="docutils literal"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1936,7 +1954,7 @@ to decision variables is not supported yet.</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Jacobian">
-<code class="descname">Jacobian</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, arg0: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, n]]<a class="headerlink" href="#pydrake.symbolic.Polynomial.Jacobian" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Jacobian</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, n]]<a class="headerlink" href="#pydrake.symbolic.Polynomial.Jacobian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the Jacobian matrix J of the polynomial with respect to
 <code class="docutils literal"><span class="pre">vars</span></code>. J(0,i) contains ∂f/∂vars(i).</p>
 </dd></dl>
@@ -1966,7 +1984,7 @@ becomes 2x² + 3xy.</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.SetIndeterminates">
-<code class="descname">SetIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>arg0: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.Polynomial.SetIndeterminates" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>new_indeterminates: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.Polynomial.SetIndeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the indeterminates to <code class="docutils literal"><span class="pre">new_indeterminates</span></code>.</p>
 <p>Changing the indeterminates would change
 <code class="docutils literal"><span class="pre">monomial_to_coefficient_map()</span></code>, and also potentially the degree of
@@ -2211,6 +2229,13 @@ CONTINUOUS type by default.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.symbolic.Variable.is_dummy">
+<code class="descname">is_dummy</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variable.is_dummy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if this is a dummy variable (ID = 0) which is created by the
+default constructor.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.symbolic.Variable.log">
 <code class="descname">log</code><span class="sig-paren">(</span><em>self: drake::symbolic::Expression</em><span class="sig-paren">)</span> &#x2192; drake::symbolic::Expression<a class="headerlink" href="#pydrake.symbolic.Variable.log" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -2354,7 +2379,8 @@ Variables::IsStrictSupersetOf).</p>
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.empty">
 <code class="descname">empty</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.empty" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Checks if this set is empty or not.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.EqualTo">
@@ -2366,11 +2392,11 @@ Variables::IsStrictSupersetOf).</p>
 <code class="descname">erase</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Variables.erase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>erase(self: pydrake.symbolic.Variables, arg0: pydrake.symbolic.Variable) -&gt; int</li>
+<li>erase(self: pydrake.symbolic.Variables, key: pydrake.symbolic.Variable) -&gt; int</li>
 </ol>
 <p>Erases <code class="docutils literal"><span class="pre">key</span></code> from a set. Return number of erased elements (0 or 1).</p>
 <ol class="arabic simple" start="2">
-<li>erase(self: pydrake.symbolic.Variables, arg0: pydrake.symbolic.Variables) -&gt; int</li>
+<li>erase(self: pydrake.symbolic.Variables, vars: pydrake.symbolic.Variables) -&gt; int</li>
 </ol>
 <p>Erases variables in <code class="docutils literal"><span class="pre">vars</span></code> from a set. Return number of erased
 elements ([0, vars.size()]).</p>
@@ -2378,7 +2404,7 @@ elements ([0, vars.size()]).</p>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.include">
-<code class="descname">include</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>arg0: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.include" title="Permalink to this definition">¶</a></dt>
+<code class="descname">include</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>key: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.include" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if <code class="docutils literal"><span class="pre">key</span></code> is included in the Variables.</p>
 </dd></dl>
 
@@ -2387,36 +2413,36 @@ elements ([0, vars.size()]).</p>
 <code class="descname">insert</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Variables.insert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>insert(self: pydrake.symbolic.Variables, arg0: pydrake.symbolic.Variable) -&gt; None</li>
+<li>insert(self: pydrake.symbolic.Variables, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
 <p>Inserts a variable <code class="docutils literal"><span class="pre">var</span></code> into a set.</p>
 <ol class="arabic simple" start="2">
-<li>insert(self: pydrake.symbolic.Variables, arg0: pydrake.symbolic.Variables) -&gt; None</li>
+<li>insert(self: pydrake.symbolic.Variables, vars: pydrake.symbolic.Variables) -&gt; None</li>
 </ol>
 <p>Inserts variables in <code class="docutils literal"><span class="pre">vars</span></code> into a set.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsStrictSubsetOf">
-<code class="descname">IsStrictSubsetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>arg0: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsStrictSubsetOf" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IsStrictSubsetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsStrictSubsetOf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a strict subset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsStrictSupersetOf">
-<code class="descname">IsStrictSupersetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>arg0: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsStrictSupersetOf" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IsStrictSupersetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsStrictSupersetOf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a strict superset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsSubsetOf">
-<code class="descname">IsSubsetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>arg0: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsSubsetOf" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IsSubsetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsSubsetOf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a subset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsSupersetOf">
-<code class="descname">IsSupersetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>arg0: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsSupersetOf" title="Permalink to this definition">¶</a></dt>
+<code class="descname">IsSupersetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsSupersetOf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a superset of the Variables.</p>
 </dd></dl>
 

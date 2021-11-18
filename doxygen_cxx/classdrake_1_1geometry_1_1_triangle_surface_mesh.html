@@ -145,10 +145,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a592a16c903cba74df19b8b070bee0b7f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, B &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a592a16c903cba74df19b8b070bee0b7f">CalcCartesianFromBarycentric</a> (<a class="el" href="classint.html">int</a> element_index, const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; B &gt; &amp;b_Q) const</td></tr>
 <tr class="memdesc:a592a16c903cba74df19b8b070bee0b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps the barycentric coordinates <code>Q_barycentric</code> of a point Q in <code>element_index</code> to its position vector p_MQ.  <a href="#a592a16c903cba74df19b8b070bee0b7f">More...</a><br /></td></tr>
 <tr class="separator:a592a16c903cba74df19b8b070bee0b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f8b8029d719af13aafa5e3e8b8ee37"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
-<tr class="memitem:a81f8b8029d719af13aafa5e3e8b8ee37"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a81f8b8029d719af13aafa5e3e8b8ee37">CalcBarycentric</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;p_MQ, <a class="el" href="classint.html">int</a> t) const</td></tr>
-<tr class="memdesc:a81f8b8029d719af13aafa5e3e8b8ee37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate barycentric coordinates with respect to the triangle <code>t</code> of the point Q'.  <a href="#a81f8b8029d719af13aafa5e3e8b8ee37">More...</a><br /></td></tr>
-<tr class="separator:a81f8b8029d719af13aafa5e3e8b8ee37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac405114292ae14c0105bfd82aafb15ca"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
+<tr class="memitem:ac405114292ae14c0105bfd82aafb15ca"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, C &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ac405114292ae14c0105bfd82aafb15ca">CalcBarycentric</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;p_MQ, <a class="el" href="classint.html">int</a> t) const</td></tr>
+<tr class="memdesc:ac405114292ae14c0105bfd82aafb15ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate barycentric coordinates with respect to the triangle <code>t</code> of the point Q'.  <a href="#ac405114292ae14c0105bfd82aafb15ca">More...</a><br /></td></tr>
+<tr class="separator:ac405114292ae14c0105bfd82aafb15ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a972cf7cd80fb7a8357c8202a6c163612"><td class="memItemLeft" align="right" valign="top">std::pair&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;, <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a972cf7cd80fb7a8357c8202a6c163612">CalcBoundingBox</a> () const</td></tr>
 <tr class="memdesc:a972cf7cd80fb7a8357c8202a6c163612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the axis-aligned bounding box of this surface mesh M.  <a href="#a972cf7cd80fb7a8357c8202a6c163612">More...</a><br /></td></tr>
 <tr class="separator:a972cf7cd80fb7a8357c8202a6c163612"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,6 +193,9 @@ Mesh type traits</h2></td></tr>
 <tr class="memitem:a07d5cff6bd9d7af5fe7d3de136a88605"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a07d5cff6bd9d7af5fe7d3de136a88605">element</a> (<a class="el" href="classint.html">int</a> e) const</td></tr>
 <tr class="memdesc:a07d5cff6bd9d7af5fe7d3de136a88605"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the triangular element identified by a given index.  <a href="#a07d5cff6bd9d7af5fe7d3de136a88605">More...</a><br /></td></tr>
 <tr class="separator:a07d5cff6bd9d7af5fe7d3de136a88605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827442245155b7cf36541a979891527c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a827442245155b7cf36541a979891527c">element_centroid</a> (<a class="el" href="classint.html">int</a> t) const</td></tr>
+<tr class="memdesc:a827442245155b7cf36541a979891527c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the centroid of a triangle measured and expressed in the mesh's frame.  <a href="#a827442245155b7cf36541a979891527c">More...</a><br /></td></tr>
+<tr class="separator:a827442245155b7cf36541a979891527c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a013fda545d50a041a8494d61e1a0323c"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_triangle.html">SurfaceTriangle</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a013fda545d50a041a8494d61e1a0323c">triangles</a> () const</td></tr>
 <tr class="memdesc:a013fda545d50a041a8494d61e1a0323c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the triangles.  <a href="#a013fda545d50a041a8494d61e1a0323c">More...</a><br /></td></tr>
 <tr class="separator:a013fda545d50a041a8494d61e1a0323c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -354,14 +357,14 @@ Mesh type traits</h2></td></tr>
 
 </div>
 </div>
-<a id="a81f8b8029d719af13aafa5e3e8b8ee37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81f8b8029d719af13aafa5e3e8b8ee37">&#9670;&nbsp;</a></span>CalcBarycentric()</h2>
+<a id="ac405114292ae14c0105bfd82aafb15ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac405114292ae14c0105bfd82aafb15ca">&#9670;&nbsp;</a></span>CalcBarycentric()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;<a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt;T, C&gt; &gt; CalcBarycentric </td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61">Barycentric</a>&lt;<a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt;T, C&gt; &gt; CalcBarycentric </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; C &gt; &amp;&#160;</td>
           <td class="paramname"><em>p_MQ</em>, </td>
@@ -528,6 +531,26 @@ Mesh type traits</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>e ∈ {0, 1, 2,..., <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html#ae6766e91c9d53192a3ed51298a193827" title="Returns the number of triangles in the mesh.">num_triangles()</a>-1}. </dd></dl>
+
+</div>
+</div>
+<a id="a827442245155b7cf36541a979891527c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827442245155b7cf36541a979891527c">&#9670;&nbsp;</a></span>element_centroid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; element_centroid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the centroid of a triangle measured and expressed in the mesh's frame. </p>
 
 </div>
 </div>

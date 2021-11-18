@@ -4,7 +4,7 @@ var classdrake_1_1symbolic_1_1_expression =
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#a778f1e41ea69d3d964f38d6a734aa974", null ],
     [ "~Expression", "classdrake_1_1symbolic_1_1_expression.html#acb931e73212b416bd9b88b92b2ae5c2f", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#a74c998ba3dfcfd099f0416f3f711127c", null ],
-    [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#a6d87f72ad3393abb40d49b4dd062c1ca", null ],
+    [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#a3613dc76e3436365128993b8d75990ab", null ],
     [ "Expression", "classdrake_1_1symbolic_1_1_expression.html#aed34f1f4b3b0d95aff592cc364b847a6", null ],
     [ "Differentiate", "classdrake_1_1symbolic_1_1_expression.html#acc2280f462d56ffc281e014f96c7f576", null ],
     [ "E", "classdrake_1_1symbolic_1_1_expression.html#ac154b6ee53f396c27f78ad3fd97b2641", null ],

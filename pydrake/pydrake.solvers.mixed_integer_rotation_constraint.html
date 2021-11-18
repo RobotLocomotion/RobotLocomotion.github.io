@@ -307,6 +307,28 @@ bilinear product.</p>
 
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.interval_binning">
+<code class="descname">interval_binning</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mixed_integer_optimization_util.IntervalBinning<a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.interval_binning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.num_intervals_per_half_axis">
+<code class="descname">num_intervals_per_half_axis</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.num_intervals_per_half_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.phi">
+<code class="descname">phi</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.phi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for φ.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.phi_nonnegative">
+<code class="descname">phi_nonnegative</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.phi_nonnegative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Getter for φ₊, the non-negative part of φ.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType">
 <em class="property">class </em><code class="descname">ReturnType</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType" title="Permalink to this definition">¶</a></dt>
@@ -314,6 +336,35 @@ bilinear product.</p>
 <dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType.B_">
+<code class="descname">B_</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType.B_" title="Permalink to this definition">¶</a></dt>
+<dd><p><a href="#id1"><span class="problematic" id="id2">B_</span></a> contains the new binary variables added to the program. B_`i][j]
+represents in which interval R(i, j) lies. If we use linear binning,
+then B_[i][j] is of length 2 * <a href="#id3"><span class="problematic" id="id4">num_intervals_per_half_axis_</span></a>. B_[i][j
+&lt;k&gt;`_ = 1 =&gt; φ(k) ≤ R(i, j) ≤ φ(k + 1) B_`i][j &lt;k&gt;`_ = 0 =&gt; R(i, j) ≥
+φ(k + 1) or R(i, j) ≤ φ(k) If we use logarithmic binning, then
+B_[i][j] is of length 1 + log₂(<a href="#id5"><span class="problematic" id="id6">num_intervals_per_half_axis_</span></a>). If
+B_[i][j] represents integer k in reflected Gray code, then R(i, j) is
+in the interval [φ(k), φ(k+1)].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_">
+<code class="descname">lambda_</code><a class="headerlink" href="#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.ReturnType.lambda_" title="Permalink to this definition">¶</a></dt>
+<dd><p>λ contains part of the new continuous variables added to the program.
+λ_`i][j] is of length 2 * <a href="#id7"><span class="problematic" id="id8">num_intervals_per_half_axis_</span></a> + 1, such that
+R(i, j) = φᵀ * λ_[i][j]. Notice that λ_[i][j] satisfies the special
+ordered set of type 2 (SOS2) constraint. Namely at most two entries in
+λ_[i][j] can be strictly positive, and these two entries have to be
+consecutive. Mathematically</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>∑ₖ λ_[i][j &lt;k&gt;`_ = 1
+λ_`i][j &lt;k&gt;`_ ≥ 0 ∀ k
+∃ m s.t λ_`i][j &lt;n&gt;`_ = 0 if n ≠ m and n ≠ m+1
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>

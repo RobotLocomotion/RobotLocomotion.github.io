@@ -190,6 +190,82 @@
 <span id="pydrake-solvers-mixed-integer-optimization-util"></span><h1>pydrake.solvers.mixed_integer_optimization_util<a class="headerlink" href="#module-pydrake.solvers.mixed_integer_optimization_util" title="Permalink to this headline">¶</a></h1>
 <p>mixed integer optimization utils bindings</p>
 <dl class="function">
+<dt id="pydrake.solvers.mixed_integer_optimization_util.AddBilinearProductMcCormickEnvelopeSos2">
+<code class="descclassname">pydrake.solvers.mixed_integer_optimization_util.</code><code class="descname">AddBilinearProductMcCormickEnvelopeSos2</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram, x: pydrake.symbolic.Variable, y: pydrake.symbolic.Variable, w: pydrake.symbolic.Expression, phi_x: numpy.ndarray[numpy.float64[m, 1]], phi_y: numpy.ndarray[numpy.float64[m, 1]], Bx: numpy.ndarray[object[m, 1]], By: numpy.ndarray[object[m, 1]], binning: pydrake.solvers.mixed_integer_optimization_util.IntervalBinning</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.AddBilinearProductMcCormickEnvelopeSos2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add constraints to the optimization program, such that the bilinear
+product x * y is approximated by w, using Special Ordered Set of Type
+2 (sos2) constraint. To do so, we assume that the range of x is
+[x_min, x_max], and the range of y is [y_min, y_max]. We first
+consider two arrays φˣ, φʸ, satisfying</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>x_min = φˣ₀ &lt; φˣ₁ &lt; ... &lt; φˣₘ = x_max
+y_min = φʸ₀ &lt; φʸ₁ &lt; ... &lt; φʸₙ = y_max
+</pre></div>
+</div>
+<p>, and divide the range of x into intervals [φˣ₀, φˣ₁], [φˣ₁, φˣ₂], …
+, [φˣₘ₋₁, φˣₘ] and the range of y into intervals [φʸ₀, φʸ₁], [φʸ₁,
+φʸ₂], … , [φʸₙ₋₁, φʸₙ]. The xy plane is thus cut into rectangles,
+with each rectangle as [φˣᵢ, φˣᵢ₊₁] x [φʸⱼ, φʸⱼ₊₁]. The convex hull of
+the surface z = x * y for x, y in each rectangle is a tetrahedron. We
+then approximate the bilinear product x * y with w, such that (x, y,
+w) is in one of the tetrahedrons.</p>
+<p>We use two different encoding schemes on the binary variables, to
+determine which interval is active. We can choose either linear or
+logarithmic binning. When using linear binning, for a variable with N
+intervals, we use N binary variables, and B(i) = 1 indicates the
+variable is in the i’th interval. When using logarithmic binning, we
+use ⌈log₂(N)⌉ binary variables. If these binary variables represent
+integer M in the reflected Gray code, then the continuous variable is
+in the M’th interval.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dd>The program to which the bilinear product constraint is added</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">x</span></code>:</dt>
+<dd>The decision variable.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">y</span></code>:</dt>
+<dd>The decision variable.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">w</span></code>:</dt>
+<dd>The expression to approximate x * y</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">phi_x</span></code>:</dt>
+<dd>The end points of the intervals for <code class="docutils literal"><span class="pre">x</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">phi_y</span></code>:</dt>
+<dd>The end points of the intervals for <code class="docutils literal"><span class="pre">y</span></code>.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">Bx</span></code>:</dt>
+<dd>The binary variables for the interval in which x stays encoded as
+described above.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">By</span></code>:</dt>
+<dd>The binary variables for the interval in which y stays encoded as
+described above.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">binning</span></code>:</dt>
+<dd>Determine whether to use linear binning or logarithmic binning.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">lambda The auxiliary continuous variables.</td>
+</tr>
+</tbody>
+</table>
+<p>The constraints we impose are</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>x = (φˣ)ᵀ * ∑ⱼ λᵢⱼ
+y = (φʸ)ᵀ * ∑ᵢ λᵢⱼ
+w = ∑ᵢⱼ φˣᵢ * φʸⱼ * λᵢⱼ
+Both ∑ⱼ λᵢⱼ = λ.rowwise().sum() and ∑ᵢ λᵢⱼ = λ.colwise().sum() satisfy SOS2
+constraint.
+</pre></div>
+</div>
+<p>If x ∈ [φx(M), φx(M+1)] and y ∈ [φy(N), φy(N+1)], then only λ(M, N),
+λ(M + 1, N), λ(M, N + 1) and λ(M+1, N+1) can be strictly positive, all
+other λ(i, j) are zero.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We DO NOT add the constraint Bx(i) ∈ {0, 1}, By(j) ∈ {0, 1} in
+this function. It is the user’s responsibility to ensure that
+these constraints are enforced.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.solvers.mixed_integer_optimization_util.AddLogarithmicSos1Constraint">
 <code class="descclassname">pydrake.solvers.mixed_integer_optimization_util.</code><code class="descname">AddLogarithmicSos1Constraint</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>num_lambda: int</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[m, 1]], numpy.ndarray[object[m, 1]]]<a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.AddLogarithmicSos1Constraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the special ordered set of type 1 (SOS1) constraint. Namely</p>
