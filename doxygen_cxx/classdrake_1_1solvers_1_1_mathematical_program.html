@@ -296,6 +296,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ae0959f2cae1208fa1d8e80fa48242f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0ae0959f2cae1208fa1d8e80fa48242f">Add2NormSquaredCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
 <tr class="memdesc:a0ae0959f2cae1208fa1d8e80fa48242f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a quadratic cost of the form |Ax-b|²=(Ax-b)ᵀ(Ax-b)  <a href="#a0ae0959f2cae1208fa1d8e80fa48242f">More...</a><br /></td></tr>
 <tr class="separator:a0ae0959f2cae1208fa1d8e80fa48242f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412994ba25326bd8b1955cb180add256"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a412994ba25326bd8b1955cb180add256">AddCost</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt; &amp;binding)</td></tr>
+<tr class="memdesc:a412994ba25326bd8b1955cb180add256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm).  <a href="#a412994ba25326bd8b1955cb180add256">More...</a><br /></td></tr>
+<tr class="separator:a412994ba25326bd8b1955cb180add256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac57dac7a44fa56077931a7998f7069e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac57dac7a44fa56077931a7998f7069e2">AddL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
+<tr class="memdesc:ac57dac7a44fa56077931a7998f7069e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm).  <a href="#ac57dac7a44fa56077931a7998f7069e2">More...</a><br /></td></tr>
+<tr class="separator:ac57dac7a44fa56077931a7998f7069e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5853578a7be1dd5279c7e73cd719e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7f5853578a7be1dd5279c7e73cd719e6">AddL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;vars)</td></tr>
+<tr class="memdesc:a7f5853578a7be1dd5279c7e73cd719e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm)  <a href="#a7f5853578a7be1dd5279c7e73cd719e6">More...</a><br /></td></tr>
+<tr class="separator:a7f5853578a7be1dd5279c7e73cd719e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_polynomial_cost.html">PolynomialCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a14edfab282bd8d3d03bf38bb87a5fe51">AddPolynomialCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost term in the polynomial form.  <a href="#a14edfab282bd8d3d03bf38bb87a5fe51">More...</a><br /></td></tr>
 <tr class="separator:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -569,6 +578,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a67254b4fe297880931e6c66562f36353"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_quadratic_cost.html">QuadraticCost</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a67254b4fe297880931e6c66562f36353">quadratic_costs</a> () const</td></tr>
 <tr class="memdesc:a67254b4fe297880931e6c66562f36353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for quadratic costs.  <a href="#a67254b4fe297880931e6c66562f36353">More...</a><br /></td></tr>
 <tr class="separator:a67254b4fe297880931e6c66562f36353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5e169f4d4bb63dd56bcd7cc89a561a1"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af5e169f4d4bb63dd56bcd7cc89a561a1">l2norm_costs</a> () const</td></tr>
+<tr class="memdesc:af5e169f4d4bb63dd56bcd7cc89a561a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for l2norm costs.  <a href="#af5e169f4d4bb63dd56bcd7cc89a561a1">More...</a><br /></td></tr>
+<tr class="separator:af5e169f4d4bb63dd56bcd7cc89a561a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5febe285490e9ce74e824de29f2ecd9f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5febe285490e9ce74e824de29f2ecd9f">linear_constraints</a> () const</td></tr>
 <tr class="memdesc:a5febe285490e9ce74e824de29f2ecd9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for linear constraints.  <a href="#a5febe285490e9ce74e824de29f2ecd9f">More...</a><br /></td></tr>
 <tr class="separator:a5febe285490e9ce74e824de29f2ecd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1773,7 +1785,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ac381d539927a444992b0945068cd8a8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac381d539927a444992b0945068cd8a8e">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[1/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac381d539927a444992b0945068cd8a8e">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[1/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1793,7 +1805,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a60e141e79d84c40fbc83ea8e3aab7823"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60e141e79d84c40fbc83ea8e3aab7823">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[2/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e141e79d84c40fbc83ea8e3aab7823">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[2/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1830,7 +1842,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a24f0ccf74cf7be71ca7bc12d81051cad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24f0ccf74cf7be71ca7bc12d81051cad">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[3/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a24f0ccf74cf7be71ca7bc12d81051cad">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[3/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1867,7 +1879,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a27ef1a1c6bb49d3333ce2c303c0d212e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27ef1a1c6bb49d3333ce2c303c0d212e">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[4/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a27ef1a1c6bb49d3333ce2c303c0d212e">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[4/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1903,7 +1915,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a65c495a4cd615dee9096bec347989e7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65c495a4cd615dee9096bec347989e7e">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[5/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a65c495a4cd615dee9096bec347989e7e">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[5/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1939,7 +1951,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a650567e1d5d23ca7a67dba50fedc7f27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a650567e1d5d23ca7a67dba50fedc7f27">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[6/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a650567e1d5d23ca7a67dba50fedc7f27">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1975,7 +1987,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a6c127750dda0a393e598fef26a63ee27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c127750dda0a393e598fef26a63ee27">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[7/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c127750dda0a393e598fef26a63ee27">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[7/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1996,7 +2008,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a560472e41de2cce737d4622ae22758d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a560472e41de2cce737d4622ae22758d4">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[8/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a560472e41de2cce737d4622ae22758d4">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[8/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2016,8 +2028,29 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 
 </div>
 </div>
+<a id="a412994ba25326bd8b1955cb180add256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412994ba25326bd8b1955cb180add256">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a>&gt; AddCost </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>binding</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm). </p>
+<p>Refer to AddL2NormCost for more details. </p>
+
+</div>
+</div>
 <a id="aa8745eb0e81fcbfc031c8e8c57609284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8745eb0e81fcbfc031c8e8c57609284">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[9/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8745eb0e81fcbfc031c8e8c57609284">&#9670;&nbsp;</a></span>AddCost() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2216,6 +2249,79 @@ Each entry in <code>decision_variables</code> should not be a dummy variable. </
 Each entry in new_indeterminates should not be dummy. </dd>
 <dd>
 Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
+
+</div>
+</div>
+<a id="ac57dac7a44fa56077931a7998f7069e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac57dac7a44fa56077931a7998f7069e2">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a>&gt; AddL2NormCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm). </p>
+<dl class="section note"><dt>Note</dt><dd>Currently no solver supports kL2NormCost, and the user will receive an error message if they add <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html" title="Implements a cost of the form .">L2NormCost</a> and call <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a7f5853578a7be1dd5279c7e73cd719e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f5853578a7be1dd5279c7e73cd719e6">&#9670;&nbsp;</a></span>AddL2NormCost() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a>&gt; AddL2NormCost </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm) </p>
 
 </div>
 </div>
@@ -5437,6 +5543,25 @@ x+y &gt;= 0
 </div><div class="memdoc">
 
 <p>Getter for the initial guess. </p>
+
+</div>
+</div>
+<a id="af5e169f4d4bb63dd56bcd7cc89a561a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5e169f4d4bb63dd56bcd7cc89a561a1">&#9670;&nbsp;</a></span>l2norm_costs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a>&gt; &gt;&amp; l2norm_costs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getter for l2norm costs. </p>
 
 </div>
 </div>

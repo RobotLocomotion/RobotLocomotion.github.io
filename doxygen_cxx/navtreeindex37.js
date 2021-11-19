@@ -1,5 +1,9 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html#a056b4ca89901b1600f9b3514efba12a6":[3,0,0,14,6,4,3],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html#a639c4c5b2ba76aff8b410dc684809d03":[3,0,0,14,6,4,0],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html#a90e8e102510395032a827ac80409b757":[3,0,0,14,6,4,5],
+"classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html#aaf3fc5dad9a8100c67814be8162a0de0":[3,0,0,14,6,4,4],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html#ab455fcec151e482601078f1e81f98e85":[3,0,0,14,6,4,1],
 "classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html#adcff44468796b785677dc7b9362b845e":[3,0,0,14,6,4,2],
 "classdrake_1_1systems_1_1rendering_1_1_pose_vector.html":[3,0,0,14,6,5],
@@ -245,9 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#a63969a3ff95f039bca49c87905e30bd1":[3,0,0,14,9,3,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html#ad3906276b020fabf6c83b599655bb09c":[3,0,0,14,9,3,0],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html":[1,5,2,8],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a01a95dd615e5f5eb223ec175c1734f77":[1,5,2,8,8],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a0684a6e53303770ce0e6c192fb0667f9":[1,5,2,8,3],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a198bf2c564777ff4d7d5acd711e5e349":[1,5,2,8,35],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a267e2b29334f33ec223dd3b2eb55924e":[1,5,2,8,6],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a27c828bd4c3a4d0d842354d6cb356f0a":[1,5,2,8,40]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a01a95dd615e5f5eb223ec175c1734f77":[1,5,2,8,8]
 };

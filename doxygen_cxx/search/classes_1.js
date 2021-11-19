@@ -16,6 +16,7 @@ var searchData=
   ['binding_3c_20drake_3a_3asolvers_3a_3aconstraint_20_3e',['Binding&lt; drake::solvers::Constraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3acost_20_3e',['Binding&lt; drake::solvers::Cost &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3aexponentialconeconstraint_20_3e',['Binding&lt; drake::solvers::ExponentialConeConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
+  ['binding_3c_20drake_3a_3asolvers_3a_3al2normcost_20_3e',['Binding&lt; drake::solvers::L2NormCost &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3alinearcomplementarityconstraint_20_3e',['Binding&lt; drake::solvers::LinearComplementarityConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3alinearconstraint_20_3e',['Binding&lt; drake::solvers::LinearConstraint &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],
   ['binding_3c_20drake_3a_3asolvers_3a_3alinearcost_20_3e',['Binding&lt; drake::solvers::LinearCost &gt;',['../classdrake_1_1solvers_1_1_binding.html',1,'drake::solvers']]],

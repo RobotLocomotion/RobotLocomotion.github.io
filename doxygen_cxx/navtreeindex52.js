@@ -1,5 +1,10 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__generic__polynomial_8h.html#a830fbf97ac01bf807b4915e3087585da":[4,0,0,1,62,35],
+"symbolic__generic__polynomial_8h.html#a876c3318865d9ffaadd1c3f7a711fdfa":[4,0,0,1,62,4],
+"symbolic__generic__polynomial_8h.html#a8d786db05bfa5937e62a34b9519424f3":[4,0,0,1,62,9],
+"symbolic__generic__polynomial_8h.html#a94b919a53ae2bebde988b237088cb822":[4,0,0,1,62,17],
+"symbolic__generic__polynomial_8h.html#a9acca4c621fa798c49dfce0461c6483d":[4,0,0,1,62,2],
 "symbolic__generic__polynomial_8h.html#aac0c3464fe7d151d7846e659e8e1d281":[4,0,0,1,62,24],
 "symbolic__generic__polynomial_8h.html#abaab72f1cd4050603b25467fa909ec24":[4,0,0,1,62,27],
 "symbolic__generic__polynomial_8h.html#abb122f4c4c5c71d0734c3b517a146df9":[4,0,0,1,62,26],
@@ -244,10 +249,5 @@ var NAVTREEINDEX52 =
 "unit__quaternion__constraint_8h.html#a4a29f222bbff1590d2fa6ecb35f87492":[4,0,0,8,5,13,0],
 "universal__joint_8h.html":[4,0,0,8,12,48],
 "universal__mobilizer_8h.html":[4,0,0,8,12,49],
-"unrevised__lemke__solver_8h.html":[4,0,0,10,56],
-"unused_8h.html":[4,0,0,1,78],
-"unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,78,0],
-"utilities_8h.html":[4,0,0,4,38],
-"value_8h.html":[4,0,0,1,79],
-"value__checker_8h.html":[4,0,0,11,3,50]
+"unrevised__lemke__solver_8h.html":[4,0,0,10,56]
 };

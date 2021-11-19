@@ -14,6 +14,7 @@ var program__attribute_8h =
       [ "kRotatedLorentzConeConstraint", "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa9e8364decaab78121a0ceaabb57c72cc", null ],
       [ "kPositiveSemidefiniteConstraint", "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa59e241294144c7cdf7ea7c8e64b361aa", null ],
       [ "kExponentialConeConstraint", "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa6186f6ad8f4222b61ec29ea48a046299", null ],
+      [ "kL2NormCost", "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa2b988d83ab42142c09d442f5b42904f3", null ],
       [ "kBinaryVariable", "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa12a1034a77cf500ebcff46f8e493bb10", null ],
       [ "kCallback", "program__attribute_8h.html#a115b732b5de5502e59437ee38babe95fa288767e402655671f06cd5313e8bada9", null ]
     ] ],

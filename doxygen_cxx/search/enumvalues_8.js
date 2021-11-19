@@ -77,6 +77,7 @@ var searchData=
   ['kinversedynamics',['kInverseDynamics',['../classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa590c94008feb665db8020f3b53d3f32f',1,'drake::systems::controllers::InverseDynamics']]],
   ['kipopt',['kIpopt',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795',1,'drake::solvers']]],
   ['kiterationlimit',['kIterationLimit',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef',1,'drake::solvers']]],
+  ['kl2normcost',['kL2NormCost',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa2b988d83ab42142c09d442f5b42904f3',1,'drake::solvers']]],
   ['klabel',['kLabel',['../namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa6608e709edce0bfd1bb1eb49eb5f8bea',1,'drake::systems::sensors']]],
   ['klabel16i',['kLabel16I',['../namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec',1,'drake::systems::sensors']]],
   ['klcp',['kLCP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aad18a51c134b9ac1c2af4f45766761cf',1,'drake::solvers']]],

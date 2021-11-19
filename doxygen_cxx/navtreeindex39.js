@@ -1,5 +1,9 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_trajectory.html#afbddf9c56911aa6014253b5800fbff83":[3,0,0,16,6,7],
+"classdrake_1_1yaml_1_1_yaml_read_archive.html":[3,0,0,17,0],
+"classdrake_1_1yaml_1_1_yaml_read_archive.html#a2cf67590f7dd50de0aae1275f1653a95":[3,0,0,17,0,9],
+"classdrake_1_1yaml_1_1_yaml_read_archive.html#a2dd47c9c9eb4bdd686bb7f4feb8ba0cd":[3,0,0,17,0,10],
 "classdrake_1_1yaml_1_1_yaml_read_archive.html#a4bd4465adcc5ded385d371a5d68c6393":[3,0,0,17,0,8],
 "classdrake_1_1yaml_1_1_yaml_read_archive.html#a8189e33097bb92db33d21590028e4bbf":[3,0,0,17,0,6],
 "classdrake_1_1yaml_1_1_yaml_read_archive.html#a8259d3cf087a43e721fe51a2b34cbcde":[3,0,0,17,0,4],
@@ -245,9 +249,5 @@ var NAVTREEINDEX39 =
 "differential__inverse__kinematics_8h.html#ga6106c9d0180a87d59f7a36709f7d6785":[4,0,0,6,3,1,6],
 "differential__inverse__kinematics_8h.html#gab53fd2e1578db60ceb43b754671ae539":[4,0,0,6,3,1,5],
 "differential__inverse__kinematics_8h.html#gae10cdb111b55cc12914467fecbe82234":[4,0,0,6,3,1,7],
-"differential__inverse__kinematics__integrator_8h.html":[4,0,0,6,3,2],
-"dir_0200b18f7e83ea48cc715228d7cee9aa.html":[4,0,0,11,1,0],
-"dir_05142ce2278c744298ef3f06d9e628a4.html":[4,0,0,4,4],
-"dir_0767593f2fce2cf954de79364fec17e6.html":[4,0,0,8,0,1],
-"dir_0897ed8fd6dd400fbb3f13ca4cf30fd4.html":[4,0,0,9]
+"differential__inverse__kinematics__integrator_8h.html":[4,0,0,6,3,2]
 };

@@ -123,6 +123,7 @@ var searchData=
   ['kjacodefaultarmnumjoints',['kJacoDefaultArmNumJoints',['../namespacedrake_1_1manipulation_1_1kinova__jaco.html#a688a61fff7d08168bac255b9573991c1',1,'drake::manipulation::kinova_jaco']]],
   ['kjacolcmstatusperiod',['kJacoLcmStatusPeriod',['../namespacedrake_1_1manipulation_1_1kinova__jaco.html#a76e840d3817a28023432836bf34365fe',1,'drake::manipulation::kinova_jaco']]],
   ['kl',['kL',['../structdrake_1_1multibody_1_1constraint_1_1_constraint_accel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06',1,'drake::multibody::constraint::ConstraintAccelProblemData::kL()'],['../structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#a0f29fed6311156aa9a7efefa57dfae06',1,'drake::multibody::constraint::ConstraintVelProblemData::kL()']]],
+  ['kl2normcost',['kL2NormCost',['../namespacedrake_1_1solvers.html#a115b732b5de5502e59437ee38babe95fa2b988d83ab42142c09d442f5b42904f3',1,'drake::solvers']]],
   ['klabel',['kLabel',['../namespacedrake_1_1systems_1_1sensors.html#a60883d4958a60b91661e97027a85072aa6608e709edce0bfd1bb1eb49eb5f8bea',1,'drake::systems::sensors']]],
   ['klabel16i',['kLabel16I',['../namespacedrake_1_1systems_1_1sensors.html#a37140413518dff2aa63096a2e31b9b3da2a67266021c4dc63b8ed214bff50abec',1,'drake::systems::sensors']]],
   ['klcp',['kLCP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15aad18a51c134b9ac1c2af4f45766761cf',1,'drake::solvers']]],
