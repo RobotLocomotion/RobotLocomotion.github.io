@@ -2,7 +2,7 @@ var searchData=
 [
   ['scalarodefunction',['ScalarOdeFunction',['../classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5',1,'drake::systems::ScalarInitialValueProblem']]],
   ['scalarsystemfunction',['ScalarSystemFunction',['../namespacedrake_1_1systems_1_1analysis.html#acba2b2630b11f7f987c6924bcdba3c8e',1,'drake::systems::analysis']]],
-  ['scalartype',['ScalarType',['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a6aec7d49d25322d8fae54028059d27aa',1,'drake::geometry::TriangleSurfaceMesh::ScalarType()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a6aec7d49d25322d8fae54028059d27aa',1,'drake::geometry::VolumeMesh::ScalarType()']]],
+  ['scalartype',['ScalarType',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a6aec7d49d25322d8fae54028059d27aa',1,'drake::geometry::PolygonSurfaceMesh::ScalarType()'],['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a6aec7d49d25322d8fae54028059d27aa',1,'drake::geometry::TriangleSurfaceMesh::ScalarType()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a6aec7d49d25322d8fae54028059d27aa',1,'drake::geometry::VolumeMesh::ScalarType()']]],
   ['seed',['Seed',['../classdrake_1_1systems_1_1_random_source.html#af2020f36164c39afda259dabe269dac2',1,'drake::systems::RandomSource']]],
   ['simulatorfactory',['SimulatorFactory',['../namespacedrake_1_1systems_1_1analysis.html#a093baffca68144967ca38da942917459',1,'drake::systems::analysis']]],
   ['sincosmap',['SinCosMap',['../classdrake_1_1_trig_poly.html#a4a0ea7527b8ec344ff03879a6c08db0c',1,'drake::TrigPoly']]],

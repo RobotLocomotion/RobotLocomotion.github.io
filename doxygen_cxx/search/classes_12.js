@@ -92,6 +92,7 @@ var searchData=
   ['subscriber',['Subscriber',['../classdrake_1_1lcm_1_1_subscriber.html',1,'drake::lcm']]],
   ['subvector',['Subvector',['../classdrake_1_1systems_1_1_subvector.html',1,'drake::systems']]],
   ['supervector',['Supervector',['../classdrake_1_1systems_1_1_supervector.html',1,'drake::systems']]],
+  ['surfacepolygon',['SurfacePolygon',['../classdrake_1_1geometry_1_1_surface_polygon.html',1,'drake::geometry']]],
   ['surfacetriangle',['SurfaceTriangle',['../classdrake_1_1geometry_1_1_surface_triangle.html',1,'drake::geometry']]],
   ['symbolicvectorsystem',['SymbolicVectorSystem',['../classdrake_1_1systems_1_1_symbolic_vector_system.html',1,'drake::systems']]],
   ['system',['System',['../classdrake_1_1systems_1_1_system.html',1,'drake::systems']]],

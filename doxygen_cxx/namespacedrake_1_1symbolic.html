@@ -951,6 +951,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a952d7f91d0e9e67110274daf0d17f132"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a952d7f91d0e9e67110274daf0d17f132">get_rhs_expression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f)</td></tr>
 <tr class="memdesc:a952d7f91d0e9e67110274daf0d17f132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the rhs-argument of a relational formula <code>f</code>.  <a href="#a952d7f91d0e9e67110274daf0d17f132">More...</a><br /></td></tr>
 <tr class="separator:a952d7f91d0e9e67110274daf0d17f132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71017b418d6504f2947c3a1a0e04d799"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a71017b418d6504f2947c3a1a0e04d799">get_unary_expression</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f)</td></tr>
+<tr class="memdesc:a71017b418d6504f2947c3a1a0e04d799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the expression in a unary expression formula <code>f</code>.  <a href="#a71017b418d6504f2947c3a1a0e04d799">More...</a><br /></td></tr>
+<tr class="separator:a71017b418d6504f2947c3a1a0e04d799"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2362f52cf6b8c750209340520e7bc9b4"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a2362f52cf6b8c750209340520e7bc9b4">get_operands</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;f)</td></tr>
 <tr class="memdesc:a2362f52cf6b8c750209340520e7bc9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of formulas in a n-ary formula <code>f</code>.  <a href="#a2362f52cf6b8c750209340520e7bc9b4">More...</a><br /></td></tr>
 <tr class="separator:a2362f52cf6b8c750209340520e7bc9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3039,6 +3042,27 @@ parameter vector", Î±, which depends only on <code>parameters:</code> f = W(n)*Î
 
 <p>Returns the 'then' expression in the if-then-else expression <code>e</code>. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><code>e</code> is an if-then-else expression. </dd></dl>
+
+</div>
+</div>
+<a id="a71017b418d6504f2947c3a1a0e04d799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71017b418d6504f2947c3a1a0e04d799">&#9670;&nbsp;</a></span>get_unary_expression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&amp; drake::symbolic::get_unary_expression </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the expression in a unary expression formula <code>f</code>. </p>
+<p>Currently, an <a class="el" href="namespacedrake_1_1symbolic.html#ac66d112b9b6d693ee82d08c7a01f7a14" title="Returns a Formula for the predicate isnan(e) to the given expression.">isnan()</a> formula is the only kind of unary expression formula. </p><dl class="section pre"><dt>Precondition</dt><dd>{<code>f</code> is a unary expression formula.} </dd></dl>
 
 </div>
 </div>
@@ -10598,39 +10622,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a6718d0b755c47edc3fade14221574a03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6718d0b755c47edc3fade14221574a03">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt;= ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt;= </td>
-          <td>(</td>
-          <td class="paramtype">const Derived &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ScalarType &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than-or-equal operator (&lt;=). </p>
-<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt;= v)</code> has a symbolic formula <code>a(i, j) &lt;= v</code>. </p>
-
-</div>
-</div>
 <a id="ad0de903abee4a9e39dbc9148d86c770c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0de903abee4a9e39dbc9148d86c770c">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10660,7 +10653,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div>
 </div>
 <a id="a52479ecb229048e750782273796768c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52479ecb229048e750782273796768c2">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52479ecb229048e750782273796768c2">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10687,6 +10680,37 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between a scalar <code>v</code> and an array <code>using</code> less-than-or-equal operator (&lt;=). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(v &lt;= a)</code> has a symbolic formula <code>v &lt;= a(i, j)</code>. </p>
+
+</div>
+</div>
+<a id="a6718d0b755c47edc3fade14221574a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6718d0b755c47edc3fade14221574a03">&#9670;&nbsp;</a></span>operator&lt;=() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt;= ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt;= </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ScalarType &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than-or-equal operator (&lt;=). </p>
+<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt;= v)</code> has a symbolic formula <code>a(i, j) &lt;= v</code>. </p>
 
 </div>
 </div>

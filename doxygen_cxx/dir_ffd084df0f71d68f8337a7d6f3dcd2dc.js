@@ -39,6 +39,11 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "penetration_as_point_pair_callback.h", "penetration__as__point__pair__callback_8h.html", null ],
     [ "penetration_doxygen.h", "penetration__doxygen_8h.html", null ],
     [ "plane.h", "plane_8h.html", null ],
+    [ "polygon_surface_mesh.h", "polygon__surface__mesh_8h.html", [
+      [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ],
+      [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", "classdrake_1_1geometry_1_1_surface_polygon" ],
+      [ "PolygonSurfaceMesh", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", "classdrake_1_1geometry_1_1_polygon_surface_mesh" ]
+    ] ],
     [ "posed_half_space.h", "posed__half__space_8h.html", null ],
     [ "proximity_doxygen.h", "proximity__doxygen_8h.html", null ],
     [ "proximity_utilities.h", "proximity__utilities_8h.html", null ],

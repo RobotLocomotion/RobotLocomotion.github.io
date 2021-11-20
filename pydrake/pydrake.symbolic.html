@@ -1087,6 +1087,12 @@ pair.second[pair.first(i).get_id()] = i</dd>
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">floor</code><span class="sig-paren">(</span><em>arg0: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.floor" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="function">
+<dt id="pydrake.symbolic.forall">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">forall</code><span class="sig-paren">(</span><em>vars: pydrake.symbolic.Variables</em>, <em>f: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.symbolic.forall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a formula <code class="docutils literal"><span class="pre">f</span></code>, universally quantified by variables <code class="docutils literal"><span class="pre">vars</span></code>.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.symbolic.Formula">
 <em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">Formula</code><a class="headerlink" href="#pydrake.symbolic.Formula" title="Permalink to this definition">¶</a></dt>
@@ -1134,10 +1140,22 @@ third-party code doing things like <code class="docutils literal"><span class="p
 codebase. In general, a user of this class should explicitly call
 <code class="docutils literal"><span class="pre">Evaluate</span></code> from within Drake for readability.</p>
 </div>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.symbolic.Formula.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.symbolic.Formula.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Formula.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.symbolic.Formula) -&gt; None</li>
+</ol>
+<p>Default constructor. It constructs Zero().</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable) -&gt; None</li>
+</ol>
+<p>Constructs an expression from <code class="docutils literal"><span class="pre">var</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">var</span></code> is neither a dummy nor a BOOLEAN variable.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -1185,6 +1203,11 @@ random variable in this formula.</p>
 <em class="property">static </em><code class="descname">False_</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.symbolic.Formula.False_" title="Permalink to this definition">¶</a></dt>
 <dd><p>Symbolic formula representing false.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.symbolic.Formula.get_kind">
+<code class="descname">get_kind</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.FormulaKind<a class="headerlink" href="#pydrake.symbolic.Formula.get_kind" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Formula.GetFreeVariables">
@@ -1270,6 +1293,133 @@ the substitutions occur simultaneously. For example, (x / y &gt;
 <dd><p>Symbolic formula representing true.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.symbolic.Formula.Unapply">
+<code class="descname">Unapply</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; object<a class="headerlink" href="#pydrake.symbolic.Formula.Unapply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a formula, returns a tuple (ctor, args) that would re-create an
+equivalent formula when called as ctor(<a href="#id3"><span class="problematic" id="id4">*</span></a>args).  This is a useful way to
+unpack the contents of a compound formula, e.g., to obtain the terms of
+a comparison.  For relational formulae (==, &lt;, &gt;, etc.) the returned args
+will both be of type Expression.  For compound formulae (and, or, not) the
+returned args will be of type Formula.  To check the form (i.e., kind) of
+a formula, use f.get_kind(); do not try to infer it from he returned
+ctor’s identity.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.symbolic.FormulaKind">
+<em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">FormulaKind</code><a class="headerlink" href="#pydrake.symbolic.FormulaKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kinds of symbolic formulas.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>False : ⊥</p>
+<p>True : ⊤</p>
+<p>Var : Boolean Variable</p>
+<p>Eq : =</p>
+<p>Neq : !=</p>
+<p>Gt : &gt;</p>
+<p>Geq : &gt;=</p>
+<p>Lt : &lt;</p>
+<p>Leq : &lt;=</p>
+<p>And : Conjunction (∧)</p>
+<p>Or : Disjunction (∨)</p>
+<p>Not : Negation (¬)</p>
+<p>Forall : Universal quantification (∀)</p>
+<p>Isnan : NaN check predicate</p>
+<p>PositiveSemidefinite : Positive semidefinite matrix</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.symbolic.FormulaKind.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.FormulaKind</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.FormulaKind.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.And">
+<code class="descname">And</code><em class="property"> = &lt;FormulaKind.And: 9&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.And" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Eq">
+<code class="descname">Eq</code><em class="property"> = &lt;FormulaKind.Eq: 3&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Eq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.False">
+<code class="descname">False</code><em class="property"> = &lt;FormulaKind.False: 0&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.False" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Forall">
+<code class="descname">Forall</code><em class="property"> = &lt;FormulaKind.Forall: 12&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Forall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Geq">
+<code class="descname">Geq</code><em class="property"> = &lt;FormulaKind.Geq: 6&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Geq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Gt">
+<code class="descname">Gt</code><em class="property"> = &lt;FormulaKind.Gt: 5&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Gt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Isnan">
+<code class="descname">Isnan</code><em class="property"> = &lt;FormulaKind.Isnan: 13&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Isnan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Leq">
+<code class="descname">Leq</code><em class="property"> = &lt;FormulaKind.Leq: 8&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Leq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Lt">
+<code class="descname">Lt</code><em class="property"> = &lt;FormulaKind.Lt: 7&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Lt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.symbolic.FormulaKind.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Neq">
+<code class="descname">Neq</code><em class="property"> = &lt;FormulaKind.Neq: 4&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Neq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Not">
+<code class="descname">Not</code><em class="property"> = &lt;FormulaKind.Not: 11&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Not" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Or">
+<code class="descname">Or</code><em class="property"> = &lt;FormulaKind.Or: 10&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Or" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.PositiveSemidefinite">
+<code class="descname">PositiveSemidefinite</code><em class="property"> = &lt;FormulaKind.PositiveSemidefinite: 14&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.PositiveSemidefinite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.True">
+<code class="descname">True</code><em class="property"> = &lt;FormulaKind.True: 1&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.True" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.symbolic.FormulaKind.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.symbolic.FormulaKind.Var">
+<code class="descname">Var</code><em class="property"> = &lt;FormulaKind.Var: 2&gt;</em><a class="headerlink" href="#pydrake.symbolic.FormulaKind.Var" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="function">
@@ -1314,7 +1464,7 @@ expression <code class="docutils literal"><span class="pre">expr_else)</span></c
 expression <code class="docutils literal"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal"><span class="pre">cond</span></code> is
 evaluated to <strong>false)</strong>.</p>
 <ul class="simple">
-<li>In case of the symbolic expression, <a href="#id3"><span class="problematic" id="id4">``</span></a>if_then_else(cond, expr_then,</li>
+<li>In case of the symbolic expression, <a href="#id5"><span class="problematic" id="id6">``</span></a>if_then_else(cond, expr_then,</li>
 </ul>
 <p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal"><span class="pre">expr_then</span></code> and <code class="docutils literal"><span class="pre">expr_else</span></code>
 are evaluated first and then passed to the <code class="docutils literal"><span class="pre">if_then_else</span></code> function.</p>
@@ -1373,6 +1523,18 @@ ternary operator is available at
 <p class="first admonition-title">Note</p>
 <p class="last">If <code class="docutils literal"><span class="pre">m</span></code> is an empty matrix, it returns true.</p>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.symbolic.isnan">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">isnan</code><span class="sig-paren">(</span><em>e: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.symbolic.isnan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a Formula for the predicate isnan(e) to the given expression.
+This serves as the argument-dependent lookup related to
+std::isnan(double).</p>
+<p>When this formula is evaluated, there are two possible outcomes: -
+Returns false if the e.Evaluate() is not NaN. - Throws RuntimeError if
+NaN is detected during evaluation. Note that the evaluation of
+<code class="docutils literal"><span class="pre">isnan(e)</span></code> never returns true.</p>
 </dd></dl>
 
 <dl class="function">
@@ -2014,6 +2176,30 @@ the polynomial. Here is an example.</p>
 <dd><p>Returns the total degree of this polynomial.</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.symbolic.positive_semidefinite">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">positive_semidefinite</code><span class="sig-paren">(</span><em>m: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.symbolic.positive_semidefinite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a symbolic formula constraining <code class="docutils literal"><span class="pre">m</span></code> to be a
+positive-semidefinite matrix. By definition, a symmetric matrix <code class="docutils literal"><span class="pre">m</span></code>
+is positive-semidefinte if xᵀ m x ≥ 0 for all vector x ∈ ℝⁿ.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">m</span></code> is not symmetric.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method checks if <code class="docutils literal"><span class="pre">m</span></code> is symmetric, which can be costly. If
+you want to avoid it, please consider using
+<code class="docutils literal"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</span></code> or
+<code class="docutils literal"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</span></code>
+instead of <code class="docutils literal"><span class="pre">positive_semidefinite(m)</span></code>.</p>
+</div>
 </dd></dl>
 
 <dl class="function">

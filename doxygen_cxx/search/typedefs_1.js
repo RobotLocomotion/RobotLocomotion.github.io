@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['barycentric',['Barycentric',['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61',1,'drake::geometry::TriangleSurfaceMesh::Barycentric()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61',1,'drake::geometry::VolumeMesh::Barycentric()']]],
+  ['barycentric',['Barycentric',['../classdrake_1_1geometry_1_1_polygon_surface_mesh.html#a9ec52d4217b88f37e7a782129bf52372',1,'drake::geometry::PolygonSurfaceMesh::Barycentric()'],['../classdrake_1_1geometry_1_1_triangle_surface_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61',1,'drake::geometry::TriangleSurfaceMesh::Barycentric()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a5e229cb5af7ebca7873b3cd7b92f0d61',1,'drake::geometry::VolumeMesh::Barycentric()']]],
   ['basefieldt',['BaseFieldT',['../namespacedrake_1_1perception_1_1pc__flags.html#a84b827aabb8c80aa66feec1c385aa6a3',1,'drake::perception::pc_flags']]],
   ['bind',['bind',['../structdrake_1_1type__pack.html#a3d3a828636762306b3bf4b16e74236cb',1,'drake::type_pack']]],
   ['bodyindex',['BodyIndex',['../namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0',1,'drake::multibody']]],

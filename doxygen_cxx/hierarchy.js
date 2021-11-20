@@ -562,6 +562,7 @@ var hierarchy =
     [ "Meshcat::PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", null ],
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
+    [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
@@ -738,6 +739,7 @@ var hierarchy =
     ] ],
     [ "StaticEquilibriumProblem", "classdrake_1_1multibody_1_1_static_equilibrium_problem.html", null ],
     [ "Subscriber< Message >", "classdrake_1_1lcm_1_1_subscriber.html", null ],
+    [ "SurfacePolygon", "classdrake_1_1geometry_1_1_surface_polygon.html", null ],
     [ "SurfaceTriangle", "classdrake_1_1geometry_1_1_surface_triangle.html", null ],
     [ "SystemConstraint< T >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< AutoDiffXd >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
