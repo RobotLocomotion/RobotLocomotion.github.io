@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1is__eigen__nonvector__of.html":[3,0,0,30],
 "structdrake_1_1is__eigen__scalar__same.html":[3,0,0,31],
 "structdrake_1_1is__eigen__type.html":[3,0,0,32],
 "structdrake_1_1is__eigen__vector.html":[3,0,0,33],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[3,0,0,11,6,0,2],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,11,6,0,7],
 "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,11,6,0,4],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,11,6,0,6],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a54e323c0b01720dc2b8d2a67db570f95":[3,0,0,11,6,0,0]
+"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,11,6,0,6]
 };

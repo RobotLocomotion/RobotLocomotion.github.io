@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a62ff37eaf307439d3f3c505707994174":[3,0,0,8,0,3,0,2],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a74a4a2a43d22c8ff8aeed145d6204121":[3,0,0,8,0,3,0,7],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a7ddc4abae4f4cf642916849570be81c9":[3,0,0,8,0,3,0,10],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a9ead6d5f18605f9a0c4e6213ef47880b":[3,0,0,8,0,3,0,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1schema_1_1_gaussian.html#a00398c6c9c4a255df67ab03035ab5628":[3,0,0,11,4,1],
 "classdrake_1_1schema_1_1_gaussian.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,11,4,5],
 "classdrake_1_1schema_1_1_gaussian.html#a2478dc7e6f618e8717c9506950468987":[3,0,0,11,4,4],
-"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,11,4,8],
-"classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[3,0,0,11,4,12]
+"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,11,4,8]
 };

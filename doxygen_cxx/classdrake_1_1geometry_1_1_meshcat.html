@@ -206,6 +206,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a385b6142ccc841b5b51a14825b7cebdf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a385b6142ccc841b5b51a14825b7cebdf">SetAnimation</a> (const <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> &amp;animation)</td></tr>
 <tr class="memdesc:a385b6142ccc841b5b51a14825b7cebdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>, which creates a slider interface element to play/pause/rewind through a series of animation frames in the visualizer.  <a href="#a385b6142ccc841b5b51a14825b7cebdf">More...</a><br /></td></tr>
 <tr class="separator:a385b6142ccc841b5b51a14825b7cebdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8597aabcf1a98187a23fa1db634c9308"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a8597aabcf1a98187a23fa1db634c9308">StaticHtml</a> ()</td></tr>
+<tr class="memdesc:a8597aabcf1a98187a23fa1db634c9308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents.  <a href="#a8597aabcf1a98187a23fa1db634c9308">More...</a><br /></td></tr>
+<tr class="separator:a8597aabcf1a98187a23fa1db634c9308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40769135bba976dde79af9499e8d000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#ae40769135bba976dde79af9499e8d000">HasPath</a> (std::string_view path) const</td></tr>
 <tr class="separator:ae40769135bba976dde79af9499e8d000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac0b91a968117e6d9b8792bc753d9d6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#abac0b91a968117e6d9b8792bc753d9d6">GetPackedObject</a> (std::string_view path) const</td></tr>
@@ -1460,6 +1463,27 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8597aabcf1a98187a23fa1db634c9308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8597aabcf1a98187a23fa1db634c9308">&#9670;&nbsp;</a></span>StaticHtml()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string StaticHtml </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an HTML string that can be saved to a file for a snapshot of the visualizer and its contents. </p>
+<p>The HTML can be viewed in the browser without any connection to a <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> "server" (e.g. <code>this</code>). This is a great way to save and share your 3D content.</p>
+<p>Note that controls (e.g. sliders and buttons) are not included in the HTML output, because their usefulness relies on a connection to the server. </p>
 
 </div>
 </div>

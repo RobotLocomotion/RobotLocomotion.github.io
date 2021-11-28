@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1systems_1_1_multiplexer.html#ad6903251a9fabe82e91127d21a8d6b4d":[1,3,1,16,6],
 "classdrake_1_1systems_1_1_my_vector.html":[3,0,0,14,70],
 "classdrake_1_1systems_1_1_my_vector.html#a1255d449a24ba6e27fd8d4c71763f20e":[3,0,0,14,70,7],
 "classdrake_1_1systems_1_1_my_vector.html#a1d9b8fec329a646df01f5b8afc02fa1d":[3,0,0,14,70,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_scalar_view_dense_output.html#aa710a48ae6cd811c23d11facde7b6bc1":[3,0,0,14,89,2],
 "classdrake_1_1systems_1_1_scalar_view_dense_output.html#aa9bde78de5e70d1642794ce746520155":[3,0,0,14,89,3],
 "classdrake_1_1systems_1_1_scalar_view_dense_output.html#ab2b8af8b409656405ff7825935e4bacc":[3,0,0,14,89,7],
-"classdrake_1_1systems_1_1_scalar_view_dense_output.html#ac083345d14acf38ae166338ca84b3759":[3,0,0,14,89,4],
-"classdrake_1_1systems_1_1_scalar_view_dense_output.html#ac3a310d490afb0c7d60d80053bb151c0":[3,0,0,14,89,11]
+"classdrake_1_1systems_1_1_scalar_view_dense_output.html#ac083345d14acf38ae166338ca84b3759":[3,0,0,14,89,4]
 };

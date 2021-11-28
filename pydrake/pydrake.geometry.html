@@ -3591,6 +3591,18 @@ value.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.StaticHtml">
+<code class="descname">StaticHtml</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.Meshcat.StaticHtml" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an HTML string that can be saved to a file for a snapshot of
+the visualizer and its contents. The HTML can be viewed in the browser
+without any connection to a Meshcat “server” (e.g. <code class="docutils literal"><span class="pre">this</span></code>). This is
+a great way to save and share your 3D content.</p>
+<p>Note that controls (e.g. sliders and buttons) are not included in the
+HTML output, because their usefulness relies on a connection to the
+server.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.web_url">
 <code class="descname">web_url</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.Meshcat.web_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the hosted http URL.</p>

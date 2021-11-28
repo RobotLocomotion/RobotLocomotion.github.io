@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"deprecation__pybind_8h.html#ab0b68ce63cf178e7d4e91f95e0e483e1":[4,0,0,0,0,0,3,0],
 "depth__image__to__point__cloud_8h.html":[4,0,0,9,0],
 "depth__shaders_8h.html":[4,0,0,4,4,1,0],
 "depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "eigen__types_8h.html#ae2b0be18a912f9cacfec6d0a0a6d873c":[4,0,0,1,27,19],
 "eigen__types_8h.html#ae74155a11dfcdaad0adc0349f0956148":[4,0,0,1,27,15],
 "eigen__types_8h.html#aee4ae0d841ea1629551bf77fd5d9ec9e":[4,0,0,1,27,25],
-"eigen__types_8h.html#af13883859324817e6310d04a6d2fe206":[4,0,0,1,27,12],
-"eigen__types_8h.html#af30fe85a821bd0e0ab46f2e165c8e480":[4,0,0,1,27,31]
+"eigen__types_8h.html#af13883859324817e6310d04a6d2fe206":[4,0,0,1,27,12]
 };
