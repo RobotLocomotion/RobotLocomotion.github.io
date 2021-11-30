@@ -1,5 +1,6 @@
 var NAVTREEINDEX14 =
 {
+"classdrake_1_1multibody_1_1_revolute_spring.html#a66db49960b6012ae313d5f66bf3dd15c":[3,0,0,8,61,12],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a6b8142c37ce3b3ebc067d2de28ce88a0":[3,0,0,8,61,11],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a863039c18117243374b3411d76fc8b20":[3,0,0,8,61,15],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a89c49c8f7ca8e6215810784c48acae23":[3,0,0,8,61,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#aea81017fa3b083e60873ff55c361e181":[1,2,0,13,5],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#afd28cdc8a2b7097828f54b10cc668141":[1,2,0,13,6],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html":[1,5,2,3],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a2006baace224820a4278cf419319359a":[1,5,2,3,7],
-"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a26f429aa613c9a34137b6519a45a105e":[1,5,2,3,3]
+"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a2006baace224820a4278cf419319359a":[1,5,2,3,7]
 };

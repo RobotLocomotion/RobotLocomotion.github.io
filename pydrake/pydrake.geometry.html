@@ -3258,6 +3258,16 @@ set in the meshcat browser (e.g. for cameras and lights).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.Flush">
+<code class="descname">Flush</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.Flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blocks the calling thread until all buffered data in the websocket
+thread has been sent to any connected clients. This can be especially
+useful when sending many or large mesh files / texture maps, to avoid
+large “backpressure” and/or simply to make sure that the simulation
+does not get far ahead of the visualization.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.GetButtonClicks">
 <code class="descname">GetButtonClicks</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.Meshcat.GetButtonClicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of times the button <code class="docutils literal"><span class="pre">name</span></code> has been clicked in

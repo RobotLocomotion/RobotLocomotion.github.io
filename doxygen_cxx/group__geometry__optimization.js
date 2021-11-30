@@ -135,6 +135,7 @@ var group__geometry__optimization =
       [ "configuration_space_margin", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db", null ],
       [ "enable_ibex", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b", null ],
       [ "iteration_limit", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72", null ],
+      [ "relative_termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7", null ],
       [ "require_sample_point_is_contained", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d", null ],
       [ "termination_threshold", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca", null ]
     ] ],
@@ -177,6 +178,7 @@ var group__geometry__optimization =
       [ "vertices", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4", null ]
     ] ],
     [ "Iris", "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6", null ],
+    [ "IrisInConfigurationSpace", "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8", null ],
     [ "IrisInConfigurationSpace", "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b", null ],
     [ "MakeIrisObstacles", "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af", null ]
 ];

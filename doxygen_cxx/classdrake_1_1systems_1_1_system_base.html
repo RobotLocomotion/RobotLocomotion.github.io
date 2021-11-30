@@ -97,6 +97,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_system_base.
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_system_base-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SystemBase Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -289,6 +290,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a36ffbedd99e6e5c0fb71753ad2b833b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7">ThrowValidateContextMismatch</a> (const <a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> &amp;) const</td></tr>
 <tr class="memdesc:a36ffbedd99e6e5c0fb71753ad2b833b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception with a message that the sanity check(s) given by ValidateContext have failed.  <a href="#a36ffbedd99e6e5c0fb71753ad2b833b7">More...</a><br /></td></tr>
 <tr class="separator:a36ffbedd99e6e5c0fb71753ad2b833b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777cf2547a697f92ae1f556b0b637150"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a777cf2547a697f92ae1f556b0b637150">GetUnsupportedScalarConversionMessage</a> (const std::type_info &amp;source_type, const std::type_info &amp;destination_type) const</td></tr>
+<tr class="memdesc:a777cf2547a697f92ae1f556b0b637150"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the message to use for a std::exception in the case of unsupported scalar type conversions.  <a href="#a777cf2547a697f92ae1f556b0b637150">More...</a><br /></td></tr>
+<tr class="separator:a777cf2547a697f92ae1f556b0b637150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eb74936487f1ae4658b54979195fa1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a0eb74936487f1ae4658b54979195fa1b">InitializeContextBase</a> (<a class="el" href="classdrake_1_1systems_1_1_context_base.html">ContextBase</a> *context) const</td></tr>
 <tr class="memdesc:a0eb74936487f1ae4658b54979195fa1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method must be invoked from within derived class <a class="el" href="classdrake_1_1systems_1_1_system_base.html#acfa7f79f981ab30a3919aa36e829b62a" title="Derived class implementations should allocate a suitable concrete Context type, then invoke the above...">DoAllocateContext()</a> implementations right after the concrete <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> object has been allocated.  <a href="#a0eb74936487f1ae4658b54979195fa1b">More...</a><br /></td></tr>
 <tr class="separator:a0eb74936487f1ae4658b54979195fa1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -344,12 +348,14 @@ Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a647a29d1660bcca523c4943cdc0ca1c8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a647a29d1660bcca523c4943cdc0ca1c8">ThrowInputPortHasWrongType</a> (const char *func, const std::string &amp;system_pathname, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a>, const std::string &amp;port_name, const std::string &amp;expected_type, const std::string &amp;actual_type)</td></tr>
 <tr class="memdesc:a647a29d1660bcca523c4943cdc0ca1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Throws std::exception because someone called API method <code>func</code> claiming the input port had some value type that was wrong.  <a href="#a647a29d1660bcca523c4943cdc0ca1c8">More...</a><br /></td></tr>
 <tr class="separator:a647a29d1660bcca523c4943cdc0ca1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#ada692f3d9776c32b9f7a74c6637ac5eb">ThrowUnsupportedScalarConversion</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;from, const std::string &amp;destination_type_name)</td></tr>
-<tr class="memdesc:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws a std::exception for unsupported scalar type conversions.  <a href="#ada692f3d9776c32b9f7a74c6637ac5eb">More...</a><br /></td></tr>
-<tr class="separator:ada692f3d9776c32b9f7a74c6637ac5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae5fb494dd1e5a799534b5fc0826062"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="structdrake_1_1systems_1_1_system_base_1_1_context_sizes.html">ContextSizes</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#acae5fb494dd1e5a799534b5fc0826062">get_context_sizes</a> (const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;system)</td></tr>
 <tr class="memdesc:acae5fb494dd1e5a799534b5fc0826062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> to access protected <a class="el" href="classdrake_1_1systems_1_1_system_base.html#ad91661e6330ae28c6e7be235ed7bfd10" title="Obtains access to the declared Context partition sizes as accumulated during LeafSystem or Diagram co...">get_context_sizes()</a> recursively on its subsystems.  <a href="#acae5fb494dd1e5a799534b5fc0826062">More...</a><br /></td></tr>
 <tr class="separator:acae5fb494dd1e5a799534b5fc0826062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a86007c147035e0b8e231296c4aedbfba"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_system_base.html#a86007c147035e0b8e231296c4aedbfba">internal::DiagramSystemBaseAttorney</a></td></tr>
+<tr class="separator:a86007c147035e0b8e231296c4aedbfba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Dependency tickets</h2></td></tr>
@@ -1864,6 +1870,46 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
+<a id="a777cf2547a697f92ae1f556b0b637150"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a777cf2547a697f92ae1f556b0b637150">&#9670;&nbsp;</a></span>GetUnsupportedScalarConversionMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string GetUnsupportedScalarConversionMessage </td>
+          <td>(</td>
+          <td class="paramtype">const std::type_info &amp;&#160;</td>
+          <td class="paramname"><em>source_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::type_info &amp;&#160;</td>
+          <td class="paramname"><em>destination_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns the message to use for a std::exception in the case of unsupported scalar type conversions. </p>
+
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a0bde657bcb9f86ef4396dc5e0c537f42">Diagram&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_diagram.html#a0bde657bcb9f86ef4396dc5e0c537f42">Diagram&lt; double &gt;</a>.</p>
+
+</div>
+</div>
 <a id="aba0bd9017cbe1fbf0f02912f0d45fd10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aba0bd9017cbe1fbf0f02912f0d45fd10">&#9670;&nbsp;</a></span>implicit_time_derivatives_residual_size()</h2>
 
@@ -2964,44 +3010,6 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 </div>
 </div>
-<a id="ada692f3d9776c32b9f7a74c6637ac5eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada692f3d9776c32b9f7a74c6637ac5eb">&#9670;&nbsp;</a></span>ThrowUnsupportedScalarConversion()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void ThrowUnsupportedScalarConversion </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_system_base.html">SystemBase</a> &amp;&#160;</td>
-          <td class="paramname"><em>from</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>destination_type_name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>(Internal use only) Throws a std::exception for unsupported scalar type conversions. </p>
-
-</div>
-</div>
 <a id="a36ffbedd99e6e5c0fb71753ad2b833b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36ffbedd99e6e5c0fb71753ad2b833b7">&#9670;&nbsp;</a></span>ThrowValidateContextMismatch()</h2>
 
@@ -3313,6 +3321,29 @@ the port's value must be retrievable from the stored abstract value using <code>
 
 <p>Returns a ticket indicating dependence on any or all of the miscellaneous continuous state variables z. </p>
 <p>There is no ticket representing just one of the state variables zᵢ. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a86007c147035e0b8e231296c4aedbfba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86007c147035e0b8e231296c4aedbfba">&#9670;&nbsp;</a></span>internal::DiagramSystemBaseAttorney</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class internal::DiagramSystemBaseAttorney</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

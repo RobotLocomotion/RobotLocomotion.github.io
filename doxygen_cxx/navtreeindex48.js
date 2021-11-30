@@ -1,5 +1,15 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1geometry_1_1promoted__numerical.html#ac7ff24def79100330b2186638f93afe1":[3,0,0,3,35,0],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html":[3,0,0,3,1,7],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#a24b99c9946848c937df22ef2b8745d65":[3,0,0,3,1,7,0],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#abbdc8937e3fab606a545e2a6749ee459":[3,0,0,3,1,7,1],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html#aebb830a8d1d43f282fde08aad2b4adca":[3,0,0,3,1,7,2],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html":[3,0,0,3,1,9],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#a21e03ddd563337ed39c36bc8f4463d8a":[3,0,0,3,1,9,0],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#ab0128f21da79318f9d8a2da1d4d3a684":[3,0,0,3,1,9,1],
+"structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html#af07157dad706c34acd6d255451d6a08d":[3,0,0,3,1,9,2],
+"structdrake_1_1is__eigen__nonvector__expression__double__pair.html":[3,0,0,29],
 "structdrake_1_1is__eigen__nonvector__of.html":[3,0,0,30],
 "structdrake_1_1is__eigen__scalar__same.html":[3,0,0,31],
 "structdrake_1_1is__eigen__type.html":[3,0,0,32],
@@ -239,15 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1pydrake_1_1wrap__arg__default.html":[3,0,0,10,3],
 "structdrake_1_1pydrake_1_1wrap__arg__default.html#a48a259ef8336ef23e66f632b0ddad145":[3,0,0,10,3,2],
 "structdrake_1_1pydrake_1_1wrap__arg__default.html#ac0d8dfca95588efef734b244410fa031":[3,0,0,10,3,1],
-"structdrake_1_1pydrake_1_1wrap__arg__default.html#af86f89529a81600b291217b3f9b1a067":[3,0,0,10,3,0],
-"structdrake_1_1scalar__predicate.html":[3,0,0,45],
-"structdrake_1_1scalar__predicate.html#a945d5b96b85fa30cf7587ef08b38f3d2":[3,0,0,45,0],
-"structdrake_1_1scalar__predicate.html#ab6fdcd06e06c892b3492eb6ea8f15be2":[3,0,0,45,1],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html":[3,0,0,11,6,0],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a0f99597eaeadb8f1814c0a27746d7dca":[3,0,0,11,6,0,1],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a1924a4300925ddede3f55cfdd30c1625":[3,0,0,11,6,0,3],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a2c94ff5b5ed6f3d8b4d3e782e8a3566b":[3,0,0,11,6,0,2],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a370df3b5b1ee0045d5f876aa4757fc44":[3,0,0,11,6,0,7],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a4932525a5cc773e1fc8e9364a1b6775b":[3,0,0,11,6,0,4],
-"structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html#a5272723f1677b4033eed7eede51a1da8":[3,0,0,11,6,0,6]
+"structdrake_1_1pydrake_1_1wrap__arg__default.html#af86f89529a81600b291217b3f9b1a067":[3,0,0,10,3,0]
 };

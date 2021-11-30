@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a26f429aa613c9a34137b6519a45a105e":[1,5,2,3,3],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a3e9e39c3838a0bd70efe3fa22b41af59":[1,5,2,3,10],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a58258a9d5b841817c31f720671e1e7d7":[1,5,2,3,2],
 "classdrake_1_1multibody_1_1_static_equilibrium_problem.html#a727804209642a450777a561df6d98d9b":[1,5,2,3,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a288b504edf60fa7ec5d642222dec6b14":[3,0,0,8,0,3,0,9],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a2fc0796487ccc0c7d24e9aa289e4be14":[3,0,0,8,0,3,0,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a4d353cbb4968e31da37a033d0175fa8e":[3,0,0,8,0,3,0,3],
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a5d49035285a5d232617b92f664da8dd0":[3,0,0,8,0,3,0,6],
-"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a5e2ddfe571c1febf950aaaad047c744e":[3,0,0,8,0,3,0,11]
+"classdrake_1_1multibody_1_1benchmarks_1_1pendulum_1_1_pendulum_parameters.html#a5d49035285a5d232617b92f664da8dd0":[3,0,0,8,0,3,0,6]
 };

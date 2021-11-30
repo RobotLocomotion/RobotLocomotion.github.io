@@ -48,6 +48,7 @@ var classdrake_1_1systems_1_1_system_base =
     [ "GetSystemName", "classdrake_1_1systems_1_1_system_base.html#acf2143907221997b4bfd7cf5fc40b422", null ],
     [ "GetSystemPathname", "classdrake_1_1systems_1_1_system_base.html#ac8f54385db97ee385847ad7577dbe34e", null ],
     [ "GetSystemType", "classdrake_1_1systems_1_1_system_base.html#a283b89b5f6b6d1745bc590e6050177a9", null ],
+    [ "GetUnsupportedScalarConversionMessage", "classdrake_1_1systems_1_1_system_base.html#a777cf2547a697f92ae1f556b0b637150", null ],
     [ "implicit_time_derivatives_residual_size", "classdrake_1_1systems_1_1_system_base.html#aba0bd9017cbe1fbf0f02912f0d45fd10", null ],
     [ "InitializeContextBase", "classdrake_1_1systems_1_1_system_base.html#a0eb74936487f1ae4658b54979195fa1b", null ],
     [ "input_port_ticket", "classdrake_1_1systems_1_1_system_base.html#a191b7cb5dcbfee51a62fa042ec14561f", null ],
@@ -87,7 +88,6 @@ var classdrake_1_1systems_1_1_system_base =
     [ "ThrowNegativePortIndex", "classdrake_1_1systems_1_1_system_base.html#aa640b3592c2af42c76fac2d8a048d25c", null ],
     [ "ThrowNotAVectorInputPort", "classdrake_1_1systems_1_1_system_base.html#aee2dfff6a2db34da2c791a7971e2af0c", null ],
     [ "ThrowOutputPortIndexOutOfRange", "classdrake_1_1systems_1_1_system_base.html#af58594b987a3e5b1684d4e38bf00767e", null ],
-    [ "ThrowUnsupportedScalarConversion", "classdrake_1_1systems_1_1_system_base.html#ada692f3d9776c32b9f7a74c6637ac5eb", null ],
     [ "ThrowValidateContextMismatch", "classdrake_1_1systems_1_1_system_base.html#a36ffbedd99e6e5c0fb71753ad2b833b7", null ],
     [ "time_ticket", "classdrake_1_1systems_1_1_system_base.html#a68516072b2dc51a601f2de699691f1c3", null ],
     [ "v_ticket", "classdrake_1_1systems_1_1_system_base.html#ab858ddb6f259d65f760c2032b3bd5164", null ],
@@ -98,5 +98,6 @@ var classdrake_1_1systems_1_1_system_base =
     [ "xc_ticket", "classdrake_1_1systems_1_1_system_base.html#a385e0d5605b81db0fbfc6bdd57affb5e", null ],
     [ "xcdot_ticket", "classdrake_1_1systems_1_1_system_base.html#ab42cd3bff14253894eb0a29edf843b3f", null ],
     [ "xd_ticket", "classdrake_1_1systems_1_1_system_base.html#a64938d044107c8eedc97f89aaf0e4a32", null ],
-    [ "z_ticket", "classdrake_1_1systems_1_1_system_base.html#a340a9b088fc407f703a9e21ed9dee32e", null ]
+    [ "z_ticket", "classdrake_1_1systems_1_1_system_base.html#a340a9b088fc407f703a9e21ed9dee32e", null ],
+    [ "internal::DiagramSystemBaseAttorney", "classdrake_1_1systems_1_1_system_base.html#a86007c147035e0b8e231296c4aedbfba", null ]
 ];
