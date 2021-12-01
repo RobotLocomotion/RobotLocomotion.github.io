@@ -150,9 +150,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ada7f02e861a8f89fc0b575b2f30333d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ada7f02e861a8f89fc0b575b2f30333d3">num_frames</a> () const</td></tr>
 <tr class="memdesc:ada7f02e861a8f89fc0b575b2f30333d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the <em>total</em> number of frames registered in the scene graph (including the world frame).  <a href="#ada7f02e861a8f89fc0b575b2f30333d3">More...</a><br /></td></tr>
 <tr class="separator:ada7f02e861a8f89fc0b575b2f30333d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84fa00c683202c7b48333b3c7e6193c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; T &gt;::FrameIdRange&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a84fa00c683202c7b48333b3c7e6193c8">all_frame_ids</a> () const</td></tr>
-<tr class="memdesc:a84fa00c683202c7b48333b3c7e6193c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a range object for all of the frame ids in the scene graph.  <a href="#a84fa00c683202c7b48333b3c7e6193c8">More...</a><br /></td></tr>
-<tr class="separator:a84fa00c683202c7b48333b3c7e6193c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68887a7088c2c3ff20e3c5c780e9807f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a68887a7088c2c3ff20e3c5c780e9807f">GetAllFrameIds</a> () const</td></tr>
 <tr class="memdesc:a68887a7088c2c3ff20e3c5c780e9807f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all of the frame ids in the scene graph.  <a href="#a68887a7088c2c3ff20e3c5c780e9807f">More...</a><br /></td></tr>
 <tr class="separator:a68887a7088c2c3ff20e3c5c780e9807f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -331,27 +328,6 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a84fa00c683202c7b48333b3c7e6193c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84fa00c683202c7b48333b3c7e6193c8">&#9670;&nbsp;</a></span>all_frame_ids()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;T&gt;::FrameIdRange all_frame_ids </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Provides a range object for all of the frame ids in the scene graph. </p>
-<p>The order is not generally guaranteed; but it will be consistent as long as there are no changes to the topology. This is intended to be used as: </p><div class="fragment"><div class="line"><span class="keywordflow">for</span> (<a class="code" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> <span class="keywordtype">id</span> : inspector.all_frame_ids()) {</div><div class="line"> ...</div><div class="line">}</div></div><!-- fragment --><p>This includes the id for the world frame. (Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Please use GetAllFrameIds() instead. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
-
-</div>
-</div>
 <a id="a75cdc3045cb7af254e83c496149f0985"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75cdc3045cb7af254e83c496149f0985">&#9670;&nbsp;</a></span>BelongsToSource() <span class="overload">[1/2]</span></h2>
 
@@ -1380,8 +1356,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a7b176f170af189d4f31f33371e7d732c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1392,7 +1368,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1406,8 +1382,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b176f170af189d4f31f33371e7d732c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b176f170af189d4f31f33371e7d732c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a9174b38bac2fe383418fa6fa711ee153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9174b38bac2fe383418fa6fa711ee153">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1418,7 +1394,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html">SceneGraphInspector</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

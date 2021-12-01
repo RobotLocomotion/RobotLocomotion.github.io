@@ -66,7 +66,6 @@ var group__sensor__systems =
       [ "query_object_input_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#adf4572bb00056a157be83e44f7f41523", null ],
       [ "X_BC", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab8817bc0f987f64e506b92be652d5644", null ],
       [ "X_BD", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad83228b39a7566b1cf862392f1e5e19a", null ],
-      [ "X_WB_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ab1d56f20fb784af0c0d9f0a737d19f68", null ],
       [ "RgbdSensorTester", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#ad22ccfbb671e72a1246d1fbff52be6b5", null ]
     ] ],
     [ "RotaryEncoders", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", [

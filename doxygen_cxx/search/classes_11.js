@@ -14,7 +14,6 @@ var searchData=
   ['renderenginevtk',['RenderEngineVtk',['../classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html',1,'drake::geometry::render']]],
   ['renderenginevtkparams',['RenderEngineVtkParams',['../structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html',1,'drake::geometry::render']]],
   ['renderlabel',['RenderLabel',['../classdrake_1_1geometry_1_1render_1_1_render_label.html',1,'drake::geometry::render']]],
-  ['renderposetogeometrypose',['RenderPoseToGeometryPose',['../classdrake_1_1systems_1_1rendering_1_1_render_pose_to_geometry_pose.html',1,'drake::systems::rendering']]],
   ['reset_5fafter_5fmove',['reset_after_move',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fafter_5fmove_3c_20int_20_3e',['reset_after_move&lt; int &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],
   ['reset_5fafter_5fmove_3c_20int64_5ft_20_3e',['reset_after_move&lt; int64_t &gt;',['../classdrake_1_1reset__after__move.html',1,'drake']]],

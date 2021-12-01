@@ -584,8 +584,6 @@ var hierarchy =
         [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
       ] ]
     ] ],
-    [ "PoseBundle< T >", "classdrake_1_1systems_1_1rendering_1_1_pose_bundle.html", null ],
-    [ "PoseVelocityInputPorts< T >", "structdrake_1_1systems_1_1rendering_1_1_pose_velocity_input_ports.html", null ],
     [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
@@ -810,8 +808,6 @@ var hierarchy =
             [ "PortSwitch< T >", "classdrake_1_1systems_1_1_port_switch.html", null ],
             [ "RandomSource< T >", "classdrake_1_1systems_1_1_random_source.html", null ],
             [ "MultibodyPositionToGeometryPose< T >", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html", null ],
-            [ "PoseAggregator< T >", "classdrake_1_1systems_1_1rendering_1_1_pose_aggregator.html", null ],
-            [ "RenderPoseToGeometryPose< T >", "classdrake_1_1systems_1_1rendering_1_1_render_pose_to_geometry_pose.html", null ],
             [ "Saturation< T >", "classdrake_1_1systems_1_1_saturation.html", null ],
             [ "Accelerometer< T >", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html", null ],
             [ "BeamModel< T >", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", null ],
@@ -919,7 +915,6 @@ var hierarchy =
             [ "LcmPublisherSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html", null ],
             [ "LcmScopeSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html", null ],
             [ "LcmSubscriberSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html", null ],
-            [ "PoseBundleToDrawMessage", "classdrake_1_1systems_1_1rendering_1_1_pose_bundle_to_draw_message.html", null ],
             [ "ImageToLcmImageArrayT", "classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html", null ],
             [ "ImageWriter", "classdrake_1_1systems_1_1sensors_1_1_image_writer.html", null ],
             [ "LcmImageArrayToImages", "classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html", null ],
@@ -1067,8 +1062,6 @@ var hierarchy =
     [ "VectorBase< T >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< T >", "classdrake_1_1systems_1_1_basic_vector.html", [
         [ "MyVector< T, N >", "classdrake_1_1systems_1_1_my_vector.html", null ],
-        [ "FrameVelocity< T >", "classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html", null ],
-        [ "PoseVector< T >", "classdrake_1_1systems_1_1rendering_1_1_pose_vector.html", null ],
         [ "SpringMassStateVector< T >", "classdrake_1_1systems_1_1_spring_mass_state_vector.html", null ]
       ] ],
       [ "Subvector< T >", "classdrake_1_1systems_1_1_subvector.html", null ],

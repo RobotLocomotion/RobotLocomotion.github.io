@@ -144,7 +144,6 @@ Inputs</h1>
 Outputs</h1>
 <p>SceneGraph has two output ports:</p>
 <p><b>query port</b>: An abstract-valued port containing an instance of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a>. It provides a "ticket" for downstream LeafSystem instances to perform geometric queries on the SceneGraph. To perform geometric queries, downstream LeafSystem instances acquire the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a> from SceneGraph's output port and provide it as a parameter to one of SceneGraph's query methods (e.g., SceneGraph::ComputeContact()). This assumes that the querying system has access to a const pointer to the connected SceneGraph instance. Use <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4" title="Returns the output port which produces the QueryObject for performing geometric queries.">get_query_output_port()</a> to acquire the output port for the query handle.</p>
-<p><b>lcm visualization port</b>: An abstract-valued port containing an instance of PoseBundle. This is a convenience port designed to feed LCM update messages to drake_visualizer for the purpose of visualizing the state of the world's geometry. Additional uses of this port are strongly discouraged; instead, use an appropriate geometric query to obtain the state of the world's geometry.</p>
 <h1><a class="anchor" id="geom_sys_workflow"></a>
 Working with SceneGraph</h1>
 <p>LeafSystem instances can relate to <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> in one of two ways: as a <em>consumer</em> that performs queries, or as a <em>producer</em> that introduces geometry into the shared world and defines its context-dependent kinematics values. It is reasonable for systems to perform either role singly, or both.</p>
@@ -240,9 +239,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6a9586065e37f08cc0dd316e9bdd480"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#af6a9586065e37f08cc0dd316e9bdd480">get_source_pose_port</a> (<a class="el" href="namespacedrake_1_1geometry.html#ac53cb597123131fb23a7af26e8d350bf">SourceId</a> id) const</td></tr>
 <tr class="memdesc:af6a9586065e37f08cc0dd316e9bdd480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a valid source <code>id</code>, returns a <em>pose</em> input port associated with that <code>id</code>.  <a href="#af6a9586065e37f08cc0dd316e9bdd480">More...</a><br /></td></tr>
 <tr class="separator:af6a9586065e37f08cc0dd316e9bdd480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a637679130ce796cc4dfaa97ceb0e7559"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a637679130ce796cc4dfaa97ceb0e7559">get_pose_bundle_output_port</a> () const</td></tr>
-<tr class="memdesc:a637679130ce796cc4dfaa97ceb0e7559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port which produces the PoseBundle for LCM communication to drake visualizer.  <a href="#a637679130ce796cc4dfaa97ceb0e7559">More...</a><br /></td></tr>
-<tr class="separator:a637679130ce796cc4dfaa97ceb0e7559"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26da55d64bd1dda5bda1ea5ae8b985c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html#a26da55d64bd1dda5bda1ea5ae8b985c4">get_query_output_port</a> () const</td></tr>
 <tr class="memdesc:a26da55d64bd1dda5bda1ea5ae8b985c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the output port which produces the <a class="el" href="classdrake_1_1geometry_1_1_query_object.html" title="The QueryObject serves as a mechanism to perform geometry queries on the world&#39;s geometry.">QueryObject</a> for performing geometric queries.  <a href="#a26da55d64bd1dda5bda1ea5ae8b985c4">More...</a><br /></td></tr>
 <tr class="separator:a26da55d64bd1dda5bda1ea5ae8b985c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1904,27 +1900,6 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a637679130ce796cc4dfaa97ceb0e7559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a637679130ce796cc4dfaa97ceb0e7559">&#9670;&nbsp;</a></span>get_pose_bundle_output_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;T&gt;&amp; get_pose_bundle_output_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the output port which produces the PoseBundle for LCM communication to drake visualizer. </p>
-<p>(Deprecated.) </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>PoseBundle is no longer in use. Visualizers typically  connect to SceneGraph's QueryObject port. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
-
-</div>
-</div>
 <a id="a26da55d64bd1dda5bda1ea5ae8b985c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26da55d64bd1dda5bda1ea5ae8b985c4">&#9670;&nbsp;</a></span>get_query_output_port()</h2>
 
@@ -2009,8 +1984,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2021,7 +1996,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -2035,8 +2010,8 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
 
 </div>
 </div>
-<a id="a1124e1d23f8363e47ef7db90e57e4900"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1124e1d23f8363e47ef7db90e57e4900">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a0a8b0295af9d14d2555ceca831cd8a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8b0295af9d14d2555ceca831cd8a14">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2047,7 +2022,7 @@ Due to a bug (see issue <a href="https://github.com/RobotLocomotion/drake/issues
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">SceneGraph</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

@@ -1,6 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#aca1e9f642a2e6fd9aa518f67e0b5fa1b":[1,2,1,2,0,0],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad5f6264143dd3190bb4223e7bfa91442":[1,6,4,2,0,3],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad5f6264143dd3190bb4223e7bfa91442":[1,2,1,2,0,3],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#ad8227ba86a01f26e4f173cd5e219d5d1":[1,6,4,2,0,13],
@@ -249,5 +248,6 @@ var NAVTREEINDEX7 =
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#ab75b0ec1eaa46dd3c8f374cef721d567":[3,0,0,3,1,5,29],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#ac033875c5794ef9811501fbebf0f40a7":[3,0,0,3,1,5,10],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#ad2a9a7e5598e01601a09921bba6765ff":[3,0,0,3,1,5,0],
-"classdrake_1_1geometry_1_1render_1_1_render_engine.html#ad8ba2ce2694d81160bab17d55011bb71":[3,0,0,3,1,5,28]
+"classdrake_1_1geometry_1_1render_1_1_render_engine.html#ad8ba2ce2694d81160bab17d55011bb71":[3,0,0,3,1,5,28],
+"classdrake_1_1geometry_1_1render_1_1_render_engine.html#adc87829fd5d7c0d78e41f47f8225e6f6":[3,0,0,3,1,5,17]
 };

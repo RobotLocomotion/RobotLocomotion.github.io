@@ -118,8 +118,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_r
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr>
 <tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; X_WB (2021-12-01 deprecated)</td></tr>
-<tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr>
 </table>
 </td></tr>
@@ -148,9 +146,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a895ff707132dabf15a997d7aec0b23a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea1c4f5f5823d9fd788df60be071025a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aea1c4f5f5823d9fd788df60be071025a">label_image_output_port</a> () const</td></tr>
 <tr class="separator:aea1c4f5f5823d9fd788df60be071025a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3caed2b8fffe3482458283030d2b439f"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a3caed2b8fffe3482458283030d2b439f">X_WB_output_port</a> () const</td></tr>
-<tr class="memdesc:a3caed2b8fffe3482458283030d2b439f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a3caed2b8fffe3482458283030d2b439f">More...</a><br /></td></tr>
-<tr class="separator:a3caed2b8fffe3482458283030d2b439f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff74e4980084b28c29f132bd18606031"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#aff74e4980084b28c29f132bd18606031">body_pose_in_world_output_port</a> () const</td></tr>
 <tr class="separator:aff74e4980084b28c29f132bd18606031"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
@@ -1298,28 +1293,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns reference to <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" title="A meta-sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">RgbdSensor</a> instance. </p>
-
-</div>
-</div>
-<a id="a3caed2b8fffe3482458283030d2b439f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3caed2b8fffe3482458283030d2b439f">&#9670;&nbsp;</a></span>X_WB_output_port()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt;double&gt;&amp; X_WB_output_port </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="section see"><dt>See also</dt><dd>RgbdSensor::base_pose_output_port(). </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000046">Deprecated:</a></b></dt><dd>Please use the body_pose_in_world_output_port() for a  RigidTransform-valued pose. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
 </div>

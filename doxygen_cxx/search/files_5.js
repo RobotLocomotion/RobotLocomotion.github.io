@@ -20,7 +20,6 @@ var searchData=
   ['frame_2eh',['frame.h',['../frame_8h.html',1,'']]],
   ['frame_5fbase_2eh',['frame_base.h',['../frame__base_8h.html',1,'']]],
   ['frame_5fkinematics_5fvector_2eh',['frame_kinematics_vector.h',['../frame__kinematics__vector_8h.html',1,'']]],
-  ['frame_5fvelocity_2eh',['frame_velocity.h',['../frame__velocity_8h.html',1,'']]],
   ['framework_5fcommon_2eh',['framework_common.h',['../framework__common_8h.html',1,'']]],
   ['framework_5fpy_5fsemantics_2eh',['framework_py_semantics.h',['../framework__py__semantics_8h.html',1,'']]],
   ['framework_5fpy_5fsystems_2eh',['framework_py_systems.h',['../framework__py__systems_8h.html',1,'']]],

@@ -1,6 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"classdrake_1_1schema_1_1_gaussian.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,11,4,8],
 "classdrake_1_1schema_1_1_gaussian.html#a6ed2ab2d0246c66167c4d33f468ca608":[3,0,0,11,4,12],
 "classdrake_1_1schema_1_1_gaussian.html#a71ae8677d96cf723f1e7977c02372744":[3,0,0,11,4,3],
 "classdrake_1_1schema_1_1_gaussian.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,4,9],
@@ -249,5 +248,6 @@ var NAVTREEINDEX17 =
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#aa02a7941f0a2cb1fd510c6e7774421bd":[1,2,0,19,3],
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#abfb09ce6a7fdc8b8cc04e990290a773a":[1,2,0,19,2],
 "classdrake_1_1solvers_1_1_evaluator_constraint.html#ad84d7b3c1202bc9e275ee8c48606e23f":[1,2,0,19,0],
-"classdrake_1_1solvers_1_1_evaluator_constraint.html#af4a741d62e930b18c9250e5c65a854be":[1,2,0,19,8]
+"classdrake_1_1solvers_1_1_evaluator_constraint.html#af4a741d62e930b18c9250e5c65a854be":[1,2,0,19,8],
+"classdrake_1_1solvers_1_1_evaluator_cost.html":[1,2,0,33]
 };

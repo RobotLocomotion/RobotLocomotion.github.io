@@ -300,6 +300,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a74b8d905842571b365085fdd17378772"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
 <tr class="memitem:a74b8d905842571b365085fdd17378772"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a> = typename <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical</a>&lt; T, U &gt;::type</td></tr>
 <tr class="separator:a74b8d905842571b365085fdd17378772"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c174a30e183e46f90e66baf17ad992"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue , typename T &gt; </td></tr>
+<tr class="memitem:a28c174a30e183e46f90e66baf17ad992"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a28c174a30e183e46f90e66baf17ad992">PolygonSurfaceMeshFieldLinear</a> = <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt; FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; T &gt; &gt;</td></tr>
+<tr class="memdesc:a28c174a30e183e46f90e66baf17ad992"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html" title="PolygonSurfaceMesh represents a surface comprised of polygonal elements (three or more sides).">PolygonSurfaceMesh</a>.  <a href="#a28c174a30e183e46f90e66baf17ad992">More...</a><br /></td></tr>
+<tr class="separator:a28c174a30e183e46f90e66baf17ad992"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982d81c894c425051f4cbb03cd3ca4dd"><td class="memTemplParams" colspan="2">template&lt;typename FieldValue , typename T &gt; </td></tr>
 <tr class="memitem:a982d81c894c425051f4cbb03cd3ca4dd"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a> = <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt; FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt; &gt;</td></tr>
 <tr class="memdesc:a982d81c894c425051f4cbb03cd3ca4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a>.  <a href="#a982d81c894c425051f4cbb03cd3ca4dd">More...</a><br /></td></tr>
@@ -505,6 +509,29 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A convenient alias for the <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">MeshcatVisualizer</a> class when using the <code>double</code> scalar type. </p>
+
+</div>
+</div>
+<a id="a28c174a30e183e46f90e66baf17ad992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c174a30e183e46f90e66baf17ad992">&#9670;&nbsp;</a></span>PolygonSurfaceMeshFieldLinear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1geometry.html#a28c174a30e183e46f90e66baf17ad992">PolygonSurfaceMeshFieldLinear</a> =  <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a>&lt;FieldValue, <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt;T&gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A convenience alias for instantiating a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a> on a <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html" title="PolygonSurfaceMesh represents a surface comprised of polygonal elements (three or more sides).">PolygonSurfaceMesh</a>. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">FieldValue</td><td>A valid Eigen scalar or vector of valid Eigen scalars for the field value. </td></tr>
+    <tr><td class="paramname">T</td><td>A valid Eigen scalar for mesh coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

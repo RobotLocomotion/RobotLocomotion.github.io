@@ -13,6 +13,5 @@ var classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete =
     [ "period", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a5ae4ab5e2ebbb46c574d1f0531d86d66", null ],
     [ "query_object_input_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#adf4572bb00056a157be83e44f7f41523", null ],
     [ "sensor", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#afaf00d756e556d58e224c3cb82bd9987", null ],
-    [ "X_WB_output_port", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a3caed2b8fffe3482458283030d2b439f", null ],
     [ "kDefaultPeriod", "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor_discrete.html#a79737f07b9834cf08fd55925be76944d", null ]
 ];

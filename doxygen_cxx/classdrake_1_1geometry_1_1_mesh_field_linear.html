@@ -139,6 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad00f41cac21e92cbde7f49db268eb5b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ad00f41cac21e92cbde7f49db268eb5b3">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a>, const MeshType *<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a>, bool calculate_gradient=true)</td></tr>
 <tr class="memdesc:ad00f41cac21e92cbde7f49db268eb5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html" title="MeshFieldLinear represents a continuous piecewise-linear scalar field f defined on a (triangular or t...">MeshFieldLinear</a>.  <a href="#ad00f41cac21e92cbde7f49db268eb5b3">More...</a><br /></td></tr>
 <tr class="separator:ad00f41cac21e92cbde7f49db268eb5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e1b684c7b9475b8546413042616e348"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a3e1b684c7b9475b8546413042616e348">MeshFieldLinear</a> (std::vector&lt; T &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a>, const MeshType *<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a>, std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;&amp;gradients)</td></tr>
+<tr class="memdesc:a3e1b684c7b9475b8546413042616e348"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructor variant which receives the pre-computed, per-element gradients of the field.  <a href="#a3e1b684c7b9475b8546413042616e348">More...</a><br /></td></tr>
+<tr class="separator:a3e1b684c7b9475b8546413042616e348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cb1c6952612163b7e60a81a209f692"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a95cb1c6952612163b7e60a81a209f692">MeshFieldLinear</a> (std::string <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ad8227ba86a01f26e4f173cd5e219d5d1">name</a>, std::vector&lt; T &gt; &amp;&amp;<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa">values</a>, const MeshType *<a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#ac41d1bc48208a47ffceb25d417eea442">mesh</a>, bool calculate_gradient=true)</td></tr>
 <tr class="memdesc:a95cb1c6952612163b7e60a81a209f692"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a95cb1c6952612163b7e60a81a209f692">More...</a><br /></td></tr>
 <tr class="separator:a95cb1c6952612163b7e60a81a209f692"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,7 +187,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a39db892a867c3f6cd3449eb140751586"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39db892a867c3f6cd3449eb140751586">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a39db892a867c3f6cd3449eb140751586">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +213,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ada6305717a210ca72f5f27a23aa0717f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada6305717a210ca72f5f27a23aa0717f">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ada6305717a210ca72f5f27a23aa0717f">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,7 +239,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ad00f41cac21e92cbde7f49db268eb5b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad00f41cac21e92cbde7f49db268eb5b3">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad00f41cac21e92cbde7f49db268eb5b3">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,8 +291,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a3e1b684c7b9475b8546413042616e348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e1b684c7b9475b8546413042616e348">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html">MeshFieldLinear</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MeshType *&#160;</td>
+          <td class="paramname"><em>mesh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;&amp;&#160;</td>
+          <td class="paramname"><em>gradients</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Constructor variant which receives the pre-computed, per-element gradients of the field. </p>
+<p><code>gradients[i]</code> is the gradient of the linear function defined on the ith element of <code>mesh</code>.</p>
+<p>The caller is responsible for making sure that the gradients are consistent with the field <code>values</code> defined at the vertices. Failure to do so will lead to nonsensical results when evaluating the field <em>near</em> a mesh vertex as opposed to <em>at</em> the vertex.</p>
+<p>As with the other constructor, <code>mesh</code> must remain alive at least as long as this field instance.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>gradients.size() == mesh.num_elements(). </dd></dl>
+
+</div>
+</div>
 <a id="a95cb1c6952612163b7e60a81a209f692"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95cb1c6952612163b7e60a81a209f692">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cb1c6952612163b7e60a81a209f692">&#9670;&nbsp;</a></span>MeshFieldLinear() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,10 +452,17 @@ Public Member Functions</h2></td></tr>
 
 <p>Evaluates the field value at a location on an element. </p>
 <p>The return type depends on both the field's scalar type <code>T</code> and the Barycentric coordinate type <code>B</code>. See <a class="el" href="structdrake_1_1geometry_1_1promoted__numerical.html">promoted_numerical_t</a> for details.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This can only be evaluated if the underlying MeshType itself supports barycentric evaluation (e.g., compare <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html" title="TriangleSurfaceMesh represents a union of triangles.">TriangleSurfaceMesh</a> with <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html" title="PolygonSurfaceMesh represents a surface comprised of polygonal elements (three or more sides).">PolygonSurfaceMesh</a>).</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
     <tr><td class="paramname">b</td><td>The barycentric coordinates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if MeshType doesn't support Barycentric coordinates. </td></tr>
   </table>
   </dd>
 </dl>
@@ -486,6 +536,12 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">e</td><td>The index of the element. </td></tr>
     <tr><td class="paramname">p_MQ</td><td>The position of point Q expressed in frame M, in Cartesian coordinates. M is the frame of the mesh. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the field does not have gradients defined <em>and</em> the MeshType doesn't support Barycentric coordinates. </td></tr>
   </table>
   </dd>
 </dl>

@@ -249,7 +249,6 @@ var searchData=
   ['ksetloglevelhelpmessage',['kSetLogLevelHelpMessage',['../namespacedrake_1_1logging.html#abc074aead70b88bf38e18993bf9c28c3',1,'drake::logging']]],
   ['ksetloglevelunchanged',['kSetLogLevelUnchanged',['../namespacedrake_1_1logging.html#ae6e439f4584cc1f0a6dd0990378604a5',1,'drake::logging']]],
   ['ksetlogpatternhelpmessage',['kSetLogPatternHelpMessage',['../namespacedrake_1_1logging.html#a60321c9dbf7c1ebe763371ab00262d68',1,'drake::logging']]],
-  ['ksize',['kSize',['../classdrake_1_1systems_1_1rendering_1_1_frame_velocity.html#a5d9346b399b0ab493c0cd6c17e64d08a',1,'drake::systems::rendering::FrameVelocity::kSize()'],['../classdrake_1_1systems_1_1rendering_1_1_pose_vector.html#a5d9346b399b0ab493c0cd6c17e64d08a',1,'drake::systems::rendering::PoseVector::kSize()']]],
   ['ksnopt',['kSnopt',['../namespacedrake_1_1solvers.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4',1,'drake::solvers']]],
   ['ksocp',['kSOCP',['../namespacedrake_1_1solvers.html#ab09ca5e1afe9e5a4e8744ecb27839b15a7cd173b34793fe6598118c124401da00',1,'drake::solvers']]],
   ['ksolutionfound',['kSolutionFound',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45',1,'drake::solvers::kSolutionFound()'],['../namespacedrake_1_1manipulation_1_1planner.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9',1,'drake::manipulation::planner::kSolutionFound()']]],
