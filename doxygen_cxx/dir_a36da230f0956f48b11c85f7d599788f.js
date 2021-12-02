@@ -31,7 +31,6 @@ var dir_a36da230f0956f48b11c85f7d599788f =
       [ "dummy_value< int >", "structdrake_1_1dummy__value_3_01int_01_4.html", "structdrake_1_1dummy__value_3_01int_01_4" ]
     ] ],
     [ "eigen_autodiff_types.h", "eigen__autodiff__types_8h.html", "eigen__autodiff__types_8h" ],
-    [ "eigen_stl_types.h", "eigen__stl__types_8h.html", "eigen__stl__types_8h" ],
     [ "eigen_types.h", "eigen__types_8h.html", "eigen__types_8h" ],
     [ "extract_double.h", "extract__double_8h.html", "extract__double_8h" ],
     [ "filesystem.h", "filesystem_8h.html", "filesystem_8h" ],

@@ -6,7 +6,6 @@ var searchData=
   ['eigen_5fmatrix_5fcompare_2eh',['eigen_matrix_compare.h',['../eigen__matrix__compare_8h.html',1,'']]],
   ['eigen_5fpybind_2eh',['eigen_pybind.h',['../eigen__pybind_8h.html',1,'']]],
   ['eigen_5fsparse_5ftriplet_2eh',['eigen_sparse_triplet.h',['../eigen__sparse__triplet_8h.html',1,'']]],
-  ['eigen_5fstl_5ftypes_2eh',['eigen_stl_types.h',['../eigen__stl__types_8h.html',1,'']]],
   ['eigen_5ftypes_2eh',['eigen_types.h',['../eigen__types_8h.html',1,'']]],
   ['equality_5fconstrained_5fqp_5fsolver_2eh',['equality_constrained_qp_solver.h',['../equality__constrained__qp__solver_8h.html',1,'']]],
   ['evaluator_5fbase_2eh',['evaluator_base.h',['../evaluator__base_8h.html',1,'']]],

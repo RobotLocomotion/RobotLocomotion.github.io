@@ -33,8 +33,6 @@ var searchData=
   ['shapename',['ShapeName',['../classdrake_1_1geometry_1_1_shape_name.html',1,'drake::geometry']]],
   ['shapereifier',['ShapeReifier',['../classdrake_1_1geometry_1_1_shape_reifier.html',1,'drake::geometry']]],
   ['shapetag',['ShapeTag',['../structdrake_1_1geometry_1_1_shape_tag.html',1,'drake::geometry']]],
-  ['signallog',['SignalLog',['../classdrake_1_1systems_1_1_signal_log.html',1,'drake::systems']]],
-  ['signallogger',['SignalLogger',['../classdrake_1_1systems_1_1_signal_logger.html',1,'drake::systems']]],
   ['signeddistancepair',['SignedDistancePair',['../structdrake_1_1geometry_1_1_signed_distance_pair.html',1,'drake::geometry']]],
   ['signeddistancetopoint',['SignedDistanceToPoint',['../structdrake_1_1geometry_1_1_signed_distance_to_point.html',1,'drake::geometry']]],
   ['signeddistancewithtimederivative',['SignedDistanceWithTimeDerivative',['../structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html',1,'drake::multibody']]],

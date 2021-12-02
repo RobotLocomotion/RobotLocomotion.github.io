@@ -293,18 +293,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a7b13142534d668d5d490b829b917fa16"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="namespacedrake.html#a790a072a62129732864a20e7a4743298">AutoDiffVecd</a>&lt; Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a7b13142534d668d5d490b829b917fa16">AutoDiffVecXd</a></td></tr>
 <tr class="memdesc:a7b13142534d668d5d490b829b917fa16"><td class="mdescLeft">&#160;</td><td class="mdescRight">A dynamic-sized vector of autodiff variables, each with a dynamic-sized vector of partials.  <a href="#a7b13142534d668d5d490b829b917fa16">More...</a><br /></td></tr>
 <tr class="separator:a7b13142534d668d5d490b829b917fa16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae13e10d823b0e212fdfb27cc8f18065a"><td class="memTemplParams" colspan="2">template&lt;typename Key , typename T &gt; </td></tr>
-<tr class="memitem:ae13e10d823b0e212fdfb27cc8f18065a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae13e10d823b0e212fdfb27cc8f18065a">eigen_aligned_std_map</a> = std::map&lt; Key, T, std::less&lt; Key &gt;, Eigen::aligned_allocator&lt; std::pair&lt; Key const, T &gt; &gt;&gt;</td></tr>
-<tr class="memdesc:ae13e10d823b0e212fdfb27cc8f18065a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::map that uses Eigen::aligned_allocator so that the contained types may be fixed-size Eigen values.  <a href="#ae13e10d823b0e212fdfb27cc8f18065a">More...</a><br /></td></tr>
-<tr class="separator:ae13e10d823b0e212fdfb27cc8f18065a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcadf96d397f45d041d01bf17061bc32"><td class="memTemplParams" colspan="2">template&lt;typename Key , typename T &gt; </td></tr>
-<tr class="memitem:afcadf96d397f45d041d01bf17061bc32"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#afcadf96d397f45d041d01bf17061bc32">eigen_aligned_std_unordered_map</a> = std::unordered_map&lt; Key, T, std::hash&lt; Key &gt;, std::equal_to&lt; Key &gt;, Eigen::aligned_allocator&lt; std::pair&lt; Key const, T &gt; &gt;&gt;</td></tr>
-<tr class="memdesc:afcadf96d397f45d041d01bf17061bc32"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::unordered_map that uses Eigen::aligned_allocator so that the contained types may be fixed-size Eigen values.  <a href="#afcadf96d397f45d041d01bf17061bc32">More...</a><br /></td></tr>
-<tr class="separator:afcadf96d397f45d041d01bf17061bc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4150555527b3cf871fe911f8776f301a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a4150555527b3cf871fe911f8776f301a"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a4150555527b3cf871fe911f8776f301a">eigen_aligned_std_vector</a> = std::vector&lt; T, Eigen::aligned_allocator&lt; T &gt; &gt;</td></tr>
-<tr class="memdesc:a4150555527b3cf871fe911f8776f301a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A std::vector that uses Eigen::aligned_allocator so that the contained types may be fixed-size Eigen values.  <a href="#a4150555527b3cf871fe911f8776f301a">More...</a><br /></td></tr>
-<tr class="separator:a4150555527b3cf871fe911f8776f301a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acda0b15d77e4c1701d160b17a2cb2ea8"><td class="memTemplParams" colspan="2">template&lt;typename Scalar &gt; </td></tr>
 <tr class="memitem:acda0b15d77e4c1701d160b17a2cb2ea8"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#acda0b15d77e4c1701d160b17a2cb2ea8">Vector0</a> = Eigen::Matrix&lt; Scalar, 0, 1 &gt;</td></tr>
 <tr class="memdesc:acda0b15d77e4c1701d160b17a2cb2ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The empty column vector (zero rows, one column), templated on scalar type.  <a href="#acda0b15d77e4c1701d160b17a2cb2ea8">More...</a><br /></td></tr>
@@ -909,54 +897,6 @@ Variables</h2></td></tr>
 
 <p>The default HashAlgorithm concept implementation across Drake. </p>
 <p>This is guaranteed to have a result_type of size_t to be compatible with std::hash. </p>
-
-</div>
-</div>
-<a id="ae13e10d823b0e212fdfb27cc8f18065a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae13e10d823b0e212fdfb27cc8f18065a">&#9670;&nbsp;</a></span>eigen_aligned_std_map</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#ae13e10d823b0e212fdfb27cc8f18065a">eigen_aligned_std_map</a> =  std::map&lt;Key, T, std::less&lt;Key&gt;, Eigen::aligned_allocator&lt;std::pair&lt;Key const, T&gt; &gt;&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A std::map that uses Eigen::aligned_allocator so that the contained types may be fixed-size Eigen values. </p>
-
-</div>
-</div>
-<a id="afcadf96d397f45d041d01bf17061bc32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcadf96d397f45d041d01bf17061bc32">&#9670;&nbsp;</a></span>eigen_aligned_std_unordered_map</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#afcadf96d397f45d041d01bf17061bc32">eigen_aligned_std_unordered_map</a> =  std::unordered_map&lt;Key, T, std::hash&lt;Key&gt;, std::equal_to&lt;Key&gt;, Eigen::aligned_allocator&lt;std::pair&lt;Key const, T&gt; &gt;&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A std::unordered_map that uses Eigen::aligned_allocator so that the contained types may be fixed-size Eigen values. </p>
-
-</div>
-</div>
-<a id="a4150555527b3cf871fe911f8776f301a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4150555527b3cf871fe911f8776f301a">&#9670;&nbsp;</a></span>eigen_aligned_std_vector</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="namespacedrake.html#a4150555527b3cf871fe911f8776f301a">eigen_aligned_std_vector</a> =  std::vector&lt;T, Eigen::aligned_allocator&lt;T&gt; &gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A std::vector that uses Eigen::aligned_allocator so that the contained types may be fixed-size Eigen values. </p>
 
 </div>
 </div>

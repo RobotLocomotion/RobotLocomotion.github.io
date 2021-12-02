@@ -1,8 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#aeb6a061fd038bef7ddf9ebb7883da7e3":[1,3,5,2,7],
-"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html":[3,0,0,6,3,2],
-"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#a0fc2ac08f6a99f0d08bc48995294b02c":[3,0,0,6,3,2,15],
 "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#a29b6ac35fd2ca8b17e10cd0e82a3e473":[3,0,0,6,3,2,14],
 "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#a2a3d0524cca20cb06a142a00b53f0d4e":[3,0,0,6,3,2,7],
 "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html#a30342f766e5b14049b65f710581f4bd1":[3,0,0,6,3,2,11],
@@ -249,5 +246,8 @@ var NAVTREEINDEX9 =
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a004c7da954357916497d26a6592f7660":[3,0,0,7,14,11],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a0ae9b896015d8f38533c7ca838a2d38a":[3,0,0,7,14,0],
 "classdrake_1_1math_1_1_roll_pitch_yaw.html#a0f6f85f8cd20c70b02c858074f024898":[3,0,0,7,14,24],
-"classdrake_1_1math_1_1_roll_pitch_yaw.html#a0f91696896d7b658dc357decb978b1ee":[3,0,0,7,14,22]
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a0f91696896d7b658dc357decb978b1ee":[3,0,0,7,14,22],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a19246fa6997ba1bcfa96c5778206a435":[3,0,0,7,14,16],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a1963c491b2b030410e51cda8a0c1350a":[3,0,0,7,14,28],
+"classdrake_1_1math_1_1_roll_pitch_yaw.html#a1d985b9afd6444973d176f246d937e09":[3,0,0,7,14,14]
 };

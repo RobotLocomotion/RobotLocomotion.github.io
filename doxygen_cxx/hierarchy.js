@@ -455,8 +455,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
+    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -563,8 +563,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
+    [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -670,7 +670,6 @@ var hierarchy =
       [ "ShapeName", "classdrake_1_1geometry_1_1_shape_name.html", null ]
     ] ],
     [ "ShapeTag< ShapeType >", "structdrake_1_1geometry_1_1_shape_tag.html", null ],
-    [ "SignalLog< T >", "classdrake_1_1systems_1_1_signal_log.html", null ],
     [ "SignedDistancePair< T >", "structdrake_1_1geometry_1_1_signed_distance_pair.html", null ],
     [ "SignedDistanceToPoint< T >", "structdrake_1_1geometry_1_1_signed_distance_to_point.html", null ],
     [ "SignedDistanceWithTimeDerivative", "structdrake_1_1multibody_1_1_signed_distance_with_time_derivative.html", null ],
@@ -812,7 +811,6 @@ var hierarchy =
             [ "Accelerometer< T >", "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html", null ],
             [ "BeamModel< T >", "classdrake_1_1systems_1_1sensors_1_1_beam_model.html", null ],
             [ "Gyroscope< T >", "classdrake_1_1systems_1_1sensors_1_1_gyroscope.html", null ],
-            [ "SignalLogger< T >", "classdrake_1_1systems_1_1_signal_logger.html", null ],
             [ "Sine< T >", "classdrake_1_1systems_1_1_sine.html", null ],
             [ "SingleOutputVectorSource< T >", "classdrake_1_1systems_1_1_single_output_vector_source.html", [
               [ "ConstantVectorSource< T >", "classdrake_1_1systems_1_1_constant_vector_source.html", null ],

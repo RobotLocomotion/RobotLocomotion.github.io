@@ -185,14 +185,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a04e58f14dcca01f3684a820cff4c61b0"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a04e58f14dcca01f3684a820cff4c61b0"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, const Eigen::MatrixBase&lt; Derived &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a04e58f14dcca01f3684a820cff4c61b0">DiscardGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix)</td></tr>
 <tr class="separator:a04e58f14dcca01f3684a820cff4c61b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6368b8ff52fa8c7df0b3548b77615363"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:a6368b8ff52fa8c7df0b3548b77615363"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; _Scalar, double &gt;, Eigen::Transform&lt; typename _Scalar::Scalar, _Dim, _Mode, _Options &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a6368b8ff52fa8c7df0b3548b77615363">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform)</td></tr>
-<tr class="memdesc:a6368b8ff52fa8c7df0b3548b77615363"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a6368b8ff52fa8c7df0b3548b77615363">More...</a><br /></td></tr>
-<tr class="separator:a6368b8ff52fa8c7df0b3548b77615363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; _Scalar, double &gt;, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aaf276d6a032d9a1ec3ea0f0f29fc1111">DiscardGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform)</td></tr>
-<tr class="memdesc:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aaf276d6a032d9a1ec3ea0f0f29fc1111">More...</a><br /></td></tr>
-<tr class="separator:aaf276d6a032d9a1ec3ea0f0f29fc1111"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32942f788a67278f27426f128e50e0b2"><td class="memTemplParams" colspan="2">template&lt;typename Derived , typename DerivedAutoDiff &gt; </td></tr>
 <tr class="memitem:a32942f788a67278f27426f128e50e0b2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a32942f788a67278f27426f128e50e0b2">InitializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; num_derivatives, std::optional&lt; <a class="el" href="classint.html">int</a> &gt; deriv_num_start, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *auto_diff_matrix)</td></tr>
 <tr class="memdesc:a32942f788a67278f27426f128e50e0b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a single AutoDiff matrix given the corresponding value matrix.  <a href="#a32942f788a67278f27426f128e50e0b2">More...</a><br /></td></tr>
@@ -213,10 +205,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a3b7dc3351569c13b9d98ab32fd901af3"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Derived, nq &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a3b7dc3351569c13b9d98ab32fd901af3">initializeAutoDiff</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</td></tr>
 <tr class="memdesc:a3b7dc3351569c13b9d98ab32fd901af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a3b7dc3351569c13b9d98ab32fd901af3">More...</a><br /></td></tr>
 <tr class="separator:a3b7dc3351569c13b9d98ab32fd901af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67903de1408fe87ae27f9b5a955c81ff"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a67903de1408fe87ae27f9b5a955c81ff"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a67903de1408fe87ae27f9b5a955c81ff">resizeDerivativesToMatchScalar</a> (Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, const typename Derived::Scalar &amp;scalar)</td></tr>
-<tr class="memdesc:a67903de1408fe87ae27f9b5a955c81ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize derivatives vector of each element of a matrix to match the size of the derivatives vector of a given scalar.  <a href="#a67903de1408fe87ae27f9b5a955c81ff">More...</a><br /></td></tr>
-<tr class="separator:a67903de1408fe87ae27f9b5a955c81ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad148a2735129010d96646652ec1f4986"><td class="memTemplParams" colspan="2">template&lt;typename... Deriveds&gt; </td></tr>
 <tr class="memitem:ad148a2735129010d96646652ec1f4986"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; Deriveds, internal::total_size_at_compile_time&lt; Deriveds... &gt;)&gt;... &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ad148a2735129010d96646652ec1f4986">InitializeAutoDiffTuple</a> (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</td></tr>
 <tr class="separator:ad148a2735129010d96646652ec1f4986"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,10 +236,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a60989b35690cd787112c9d14e8161ec2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9">AutoDiffMatrixType</a>&lt; DerivedValue, DerivedGradient::ColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a60989b35690cd787112c9d14e8161ec2">initializeAutoDiffGivenGradientMatrix</a> (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</td></tr>
 <tr class="memdesc:a60989b35690cd787112c9d14e8161ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a60989b35690cd787112c9d14e8161ec2">More...</a><br /></td></tr>
 <tr class="separator:a60989b35690cd787112c9d14e8161ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplParams" colspan="2">template&lt;typename DerivedGradient , typename DerivedAutoDiff &gt; </td></tr>
-<tr class="memitem:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a9a5aa65ce6d612ea5275c1f724a7f319">gradientMatrixToAutoDiff</a> (const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</td></tr>
-<tr class="memdesc:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a9a5aa65ce6d612ea5275c1f724a7f319">More...</a><br /></td></tr>
-<tr class="separator:a9a5aa65ce6d612ea5275c1f724a7f319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; typename Derived::Scalar, double &gt;, Eigen::Matrix&lt; typename Derived::Scalar::Scalar, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;auto_diff_matrix, const typename Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename Derived::Scalar::Scalar &gt;::dummy_precision())</td></tr>
 <tr class="memdesc:a1ea20cd66ae96c7e1390e7ebb3e2f8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>B = DiscardZeroGradient(A, precision)</code> enables casting from a matrix of AutoDiffScalars to AutoDiffScalar::Scalar type, but first checking that the gradient matrix is empty or zero.  <a href="#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">More...</a><br /></td></tr>
@@ -259,14 +243,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a2f4c633cee6230932aa3be941609ebed"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a2f4c633cee6230932aa3be941609ebed"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Derived::Scalar, double &gt;, const Eigen::MatrixBase&lt; Derived &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2f4c633cee6230932aa3be941609ebed">DiscardZeroGradient</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;matrix, double precision=0.)</td></tr>
 <tr class="separator:a2f4c633cee6230932aa3be941609ebed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e1dbe26c9179a94ca05db1b84528b47"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:a0e1dbe26c9179a94ca05db1b84528b47"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; !std::is_same_v&lt; _Scalar, double &gt;, Eigen::Transform&lt; typename _Scalar::Scalar, _Dim, _Mode, _Options &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a0e1dbe26c9179a94ca05db1b84528b47">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;auto_diff_transform, const typename Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::Real &amp;precision=Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::dummy_precision())</td></tr>
-<tr class="memdesc:a0e1dbe26c9179a94ca05db1b84528b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a0e1dbe26c9179a94ca05db1b84528b47">More...</a><br /></td></tr>
-<tr class="separator:a0e1dbe26c9179a94ca05db1b84528b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51e012b12b2183ef633c86c51d8e0677"><td class="memTemplParams" colspan="2">template&lt;typename _Scalar , int _Dim, int _Mode, int _Options&gt; </td></tr>
-<tr class="memitem:a51e012b12b2183ef633c86c51d8e0677"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; _Scalar, double &gt;, const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a51e012b12b2183ef633c86c51d8e0677">DiscardZeroGradient</a> (const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;transform, double precision=0.)</td></tr>
-<tr class="memdesc:a51e012b12b2183ef633c86c51d8e0677"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a51e012b12b2183ef633c86c51d8e0677">More...</a><br /></td></tr>
-<tr class="separator:a51e012b12b2183ef633c86c51d8e0677"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt;!std::is_same_v&lt; typename Derived::Scalar, double &gt;, <a class="el" href="classint.html">int</a> &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4360e58bcb10c6b20aa3e28fed7297fb">GetDerivativeSize</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;A)</td></tr>
 <tr class="memdesc:a4360e58bcb10c6b20aa3e28fed7297fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of AutoDiffScalars, returns the size of the derivatives.  <a href="#a4360e58bcb10c6b20aa3e28fed7297fb">More...</a><br /></td></tr>
@@ -763,7 +739,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Use ExtractGradient(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use ExtractGradient(). <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -1377,7 +1353,7 @@ d₁ = P*d
 </div>
 </div>
 <a id="abdc21793a127ffbebcb28a2442123390"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdc21793a127ffbebcb28a2442123390">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc21793a127ffbebcb28a2442123390">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1401,7 +1377,7 @@ d₁ = P*d
 </div>
 </div>
 <a id="a04e58f14dcca01f3684a820cff4c61b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04e58f14dcca01f3684a820cff4c61b0">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e58f14dcca01f3684a820cff4c61b0">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1419,52 +1395,8 @@ d₁ = P*d
 
 </div>
 </div>
-<a id="a6368b8ff52fa8c7df0b3548b77615363"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6368b8ff52fa8c7df0b3548b77615363">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; !std::is_same_v&lt;_Scalar, double&gt;, Eigen::Transform&lt;typename _Scalar::Scalar, _Dim, _Mode, _Options&gt; &gt; drake::math::DiscardGradient </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
-          <td class="paramname"><em>auto_diff_transform</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
-
-</div>
-</div>
-<a id="aaf276d6a032d9a1ec3ea0f0f29fc1111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf276d6a032d9a1ec3ea0f0f29fc1111">&#9670;&nbsp;</a></span>DiscardGradient() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt;std::is_same_v&lt;_Scalar, double&gt;, const Eigen::Transform&lt;_Scalar, _Dim, _Mode, _Options&gt;&amp;&gt; drake::math::DiscardGradient </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
-          <td class="paramname"><em>transform</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
-
-</div>
-</div>
 <a id="a1ea20cd66ae96c7e1390e7ebb3e2f8a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea20cd66ae96c7e1390e7ebb3e2f8a8">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1510,7 +1442,7 @@ d₁ = P*d
 </div>
 </div>
 <a id="a2f4c633cee6230932aa3be941609ebed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f4c633cee6230932aa3be941609ebed">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f4c633cee6230932aa3be941609ebed">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1535,70 +1467,6 @@ d₁ = P*d
       </table>
 </div><div class="memdoc">
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="namespacedrake_1_1math.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8" title="B = DiscardZeroGradient(A, precision) enables casting from a matrix of AutoDiffScalars to AutoDiffSca...">DiscardZeroGradient()</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a0e1dbe26c9179a94ca05db1b84528b47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e1dbe26c9179a94ca05db1b84528b47">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; !std::is_same_v&lt;_Scalar, double&gt;, Eigen::Transform&lt;typename _Scalar::Scalar, _Dim, _Mode, _Options&gt; &gt; drake::math::DiscardZeroGradient </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
-          <td class="paramname"><em>auto_diff_transform</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename Eigen::NumTraits&lt; typename _Scalar::Scalar &gt;::Real &amp;&#160;</td>
-          <td class="paramname"><em>precision</em> = <code>Eigen::NumTraits&lt;typename&#160;_Scalar::Scalar&gt;::dummy_precision()</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
-
-</div>
-</div>
-<a id="a51e012b12b2183ef633c86c51d8e0677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51e012b12b2183ef633c86c51d8e0677">&#9670;&nbsp;</a></span>DiscardZeroGradient() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;_Scalar, double&gt;, const Eigen::Transform&lt;_Scalar, _Dim, _Mode, _Options&gt;&amp;&gt; drake::math::DiscardZeroGradient </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Transform&lt; _Scalar, _Dim, _Mode, _Options &gt; &amp;&#160;</td>
-          <td class="paramname"><em>transform</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>precision</em> = <code>0.</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub  if you need this specialization. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
 </div>
@@ -2129,38 +1997,6 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 
 </div>
 </div>
-<a id="a9a5aa65ce6d612ea5275c1f724a7f319"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a5aa65ce6d612ea5275c1f724a7f319">&#9670;&nbsp;</a></span>gradientMatrixToAutoDiff()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::math::gradientMatrixToAutoDiff </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;&#160;</td>
-          <td class="paramname"><em>auto_diff_matrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
-
-</div>
-</div>
 <a id="ab5390cdccf326541855e43a3dd5c2a9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab5390cdccf326541855e43a3dd5c2a9d">&#9670;&nbsp;</a></span>GrayCodeToInteger()</h2>
 
@@ -2276,52 +2112,8 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 
 </div>
 </div>
-<a id="ac01d5aa7f58a485b614ddc46e7be7dd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac01d5aa7f58a485b614ddc46e7be7dd4">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[1/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::math::InitializeAutoDiff </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;&#160;</td>
-          <td class="paramname"><em>gradient</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *&#160;</td>
-          <td class="paramname"><em>auto_diff_matrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes an AutoDiff matrix given a matrix of values and a gradient matrix. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value matrix. Will be accessed with a single index. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gradient</td><td>The gradient matrix. The number of rows must match the total size (nrow x ncol) of the value matrix. Derivatives of value(j) should be stored in row j of the gradient matrix. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">auto_diff_matrix</td><td>The matrix of AutoDiffScalars. Will be resized as needed to have the same dimensions as the value matrix. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a32942f788a67278f27426f128e50e0b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32942f788a67278f27426f128e50e0b2">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32942f788a67278f27426f128e50e0b2">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2368,6 +2160,50 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
     <tr><td class="paramdir">[in]</td><td class="paramname">deriv_num_start</td><td>(Optional) starting index into derivative vector (i.e. element deriv_num_start in derivative vector corresponds to value(0, 0)). <br />
  <em>Default:</em> 0 </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">auto_diff_matrix</td><td>AutoDiff matrix set as described above </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac01d5aa7f58a485b614ddc46e7be7dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01d5aa7f58a485b614ddc46e7be7dd4">&#9670;&nbsp;</a></span>InitializeAutoDiff() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::math::InitializeAutoDiff </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gradient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Eigen::MatrixBase&lt; DerivedAutoDiff &gt; *&#160;</td>
+          <td class="paramname"><em>auto_diff_matrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes an AutoDiff matrix given a matrix of values and a gradient matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>The value matrix. Will be accessed with a single index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gradient</td><td>The gradient matrix. The number of rows must match the total size (nrow x ncol) of the value matrix. Derivatives of value(j) should be stored in row j of the gradient matrix. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">auto_diff_matrix</td><td>The matrix of AutoDiffScalars. Will be resized as needed to have the same dimensions as the value matrix. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2443,7 +2279,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2577,7 +2413,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2615,7 +2451,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff(). <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2647,7 +2483,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2687,7 +2523,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use InitializeAutoDiffTuple() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use InitializeAutoDiffTuple() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -3055,7 +2891,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000032">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3093,7 +2929,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000033">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3131,7 +2967,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000034">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3163,7 +2999,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000035">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3195,7 +3031,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000036">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3227,7 +3063,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000037">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
@@ -3737,45 +3573,6 @@ else
 <p>[1] Barraud, A.Y., "A numerical algorithm to solve AᵀXA - X = Q," IEEE® Trans. Auto. Contr., AC-22, pp. 883-885, 1977.</p>
 <p>[2] <a href="http://slicot.org/objects/software/shared/doc/SB03MD.html">http://slicot.org/objects/software/shared/doc/SB03MD.html</a></p>
 <p>[3] <a href="https://www.mathworks.com/help/control/ref/dlyap.html">https://www.mathworks.com/help/control/ref/dlyap.html</a> </p>
-
-</div>
-</div>
-<a id="a67903de1408fe87ae27f9b5a955c81ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67903de1408fe87ae27f9b5a955c81ff">&#9670;&nbsp;</a></span>resizeDerivativesToMatchScalar()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drake::math::resizeDerivativesToMatchScalar </td>
-          <td>(</td>
-          <td class="paramtype">Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>matrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const typename Derived::Scalar &amp;&#160;</td>
-          <td class="paramname"><em>scalar</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Resize derivatives vector of each element of a matrix to match the size of the derivatives vector of a given scalar. </p>
-<p>If the mat and scalar inputs are AutoDiffScalars, resize the derivatives vector of each element of the matrix mat to match the number of derivatives of the scalar. This is useful in functions that return matrices that do not depend on an AutoDiffScalar argument (e.g. a function with a constant output), while it is desired that information about the number of derivatives is preserved. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">mat</td><td>matrix, for which the derivative vectors of the elements will be resized </td></tr>
-    <tr><td class="paramname">scalar</td><td>scalar to match the derivative size vector against.(Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Apparently unused. File a Drake issue on GitHub if you need this method. <br />
- This will be removed from Drake on or after 2021-12-01.</dd></dl>
 
 </div>
 </div>

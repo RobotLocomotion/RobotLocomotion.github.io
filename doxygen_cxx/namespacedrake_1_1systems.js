@@ -91,8 +91,6 @@ var namespacedrake_1_1systems =
     [ "ScalarInitialValueProblem", "classdrake_1_1systems_1_1_scalar_initial_value_problem.html", "classdrake_1_1systems_1_1_scalar_initial_value_problem" ],
     [ "ScalarViewDenseOutput", "classdrake_1_1systems_1_1_scalar_view_dense_output.html", "classdrake_1_1systems_1_1_scalar_view_dense_output" ],
     [ "SemiExplicitEulerIntegrator", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html", "classdrake_1_1systems_1_1_semi_explicit_euler_integrator" ],
-    [ "SignalLog", "classdrake_1_1systems_1_1_signal_log.html", "classdrake_1_1systems_1_1_signal_log" ],
-    [ "SignalLogger", "classdrake_1_1systems_1_1_signal_logger.html", "classdrake_1_1systems_1_1_signal_logger" ],
     [ "Simulator", "classdrake_1_1systems_1_1_simulator.html", "classdrake_1_1systems_1_1_simulator" ],
     [ "SimulatorConfig", "structdrake_1_1systems_1_1_simulator_config.html", "structdrake_1_1systems_1_1_simulator_config" ],
     [ "SimulatorStatus", "classdrake_1_1systems_1_1_simulator_status.html", "classdrake_1_1systems_1_1_simulator_status" ],

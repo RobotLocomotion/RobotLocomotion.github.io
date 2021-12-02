@@ -25,10 +25,6 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     ] ],
     [ "random_source.h", "random__source_8h.html", "random__source_8h" ],
     [ "saturation.h", "saturation_8h.html", null ],
-    [ "signal_log.h", "signal__log_8h.html", [
-      [ "SignalLog", "classdrake_1_1systems_1_1_signal_log.html", "classdrake_1_1systems_1_1_signal_log" ]
-    ] ],
-    [ "signal_logger.h", "signal__logger_8h.html", null ],
     [ "sine.h", "sine_8h.html", null ],
     [ "symbolic_vector_system.h", "symbolic__vector__system_8h.html", "symbolic__vector__system_8h" ],
     [ "trajectory_affine_system.h", "trajectory__affine__system_8h.html", [
