@@ -20,7 +20,6 @@ var searchData=
   ['reset_5fon_5fcopy',['reset_on_copy',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20const_20internal_3a_3acontextmessageinterface_20_2a_20_3e',['reset_on_copy&lt; const internal::ContextMessageInterface * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20const_20meshtype_20_2a_20_3e',['reset_on_copy&lt; const MeshType * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
-  ['reset_5fon_5fcopy_3c_20const_20t_20_2a_20_3e',['reset_on_copy&lt; const T * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['reset_5fon_5fcopy_3c_20drake_3a_3asystems_3a_3acontextbase_20_2a_20_3e',['reset_on_copy&lt; drake::systems::ContextBase * &gt;',['../classdrake_1_1reset__on__copy.html',1,'drake']]],
   ['returntype',['ReturnType',['../structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html',1,'drake::solvers::MixedIntegerRotationConstraintGenerator']]],
   ['revolutejoint',['RevoluteJoint',['../classdrake_1_1multibody_1_1_revolute_joint.html',1,'drake::multibody']]],

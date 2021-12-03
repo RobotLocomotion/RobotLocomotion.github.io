@@ -15,6 +15,6 @@ var classdrake_1_1geometry_1_1_mesh_field_linear =
     [ "name", "classdrake_1_1geometry_1_1_mesh_field_linear.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_mesh_field_linear.html#a8235f4043f16f99b11bb7b62b16958d3", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_mesh_field_linear.html#aa215f756d02e682e0577a0bf1d63fd49", null ],
-    [ "TransformGradients", "classdrake_1_1geometry_1_1_mesh_field_linear.html#a8efe5031ed37c58f673e62568b8b0e22", null ],
+    [ "Transform", "classdrake_1_1geometry_1_1_mesh_field_linear.html#a0cee06be015dcbf43b784b3f4592febf", null ],
     [ "values", "classdrake_1_1geometry_1_1_mesh_field_linear.html#ab061f844471bd39fe7260db6700079aa", null ]
 ];

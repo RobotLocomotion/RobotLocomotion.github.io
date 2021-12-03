@@ -443,7 +443,6 @@ var hierarchy =
     [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", null ],
     [ "MeshcatVisualizerParams", "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html", null ],
     [ "MeshFieldLinear< T, MeshType >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
-    [ "MeshFieldLinear< T, T >", "classdrake_1_1geometry_1_1_mesh_field_linear.html", null ],
     [ "MixedIntegerBranchAndBound", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound.html", null ],
     [ "MixedIntegerBranchAndBoundNode", "classdrake_1_1solvers_1_1_mixed_integer_branch_and_bound_node.html", null ],
     [ "MixedIntegerRotationConstraintGenerator", "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html", null ],
@@ -455,8 +454,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
+    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -563,8 +562,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -588,10 +587,10 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
-    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
+    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
+    [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html", null ],
     [ "RandomSimulationResult", "structdrake_1_1systems_1_1analysis_1_1_random_simulation_result.html", null ],
@@ -607,7 +606,6 @@ var hierarchy =
     [ "reset_on_copy< T >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< const internal::ContextMessageInterface * >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< const MeshType * >", "classdrake_1_1reset__on__copy.html", null ],
-    [ "reset_on_copy< const T * >", "classdrake_1_1reset__on__copy.html", null ],
     [ "reset_on_copy< drake::systems::ContextBase * >", "classdrake_1_1reset__on__copy.html", null ],
     [ "MixedIntegerRotationConstraintGenerator::ReturnType", "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html", null ],
     [ "RewritingRule", "classdrake_1_1symbolic_1_1_rewriting_rule.html", null ],

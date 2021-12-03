@@ -122,11 +122,13 @@ and moment between nominally rigid objects. IROS 2019: 8238-8245.
          ∇hₘₙ(Q) = ∇eₘ(Q) - ∇eₙ(Q).
 </pre><p>By construction, Q ∈ 𝕊ₘₙ if and only if hₘₙ(Q) = 0. In other words, 𝕊ₘₙ is the zero level set of hₘₙ. It follows that, for Q ∈ 𝕊ₘₙ, ∇hₘₙ(Q) is orthogonal to the surface 𝕊ₘₙ at Q in the direction of increasing eₘ - eₙ.</p>
 <p>Notice that the domain of eₘₙ is the two-dimensional surface 𝕊ₘₙ, while the domain of ∇hₘₙ is the three-dimensional compact set 𝕄 ∩ ℕ. Even though eₘₙ and ∇hₘₙ are defined on different domains (𝕊ₘₙ and 𝕄 ∩ ℕ), our implementation only represents them on their common domain, i.e., 𝕊ₘₙ.</p>
-<h2>Discrete Representation </h2>
-<p>In practice, the contact surface is approximated with a discrete triangle mesh. The triangle mesh's normals are defined <em>per face</em>. The normal of each face is guaranteed to point "out of" N and "into" M. They can be accessed via <code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aa0bd99f737d4d0f7b735ab21bcb44c3b" title="Returns a reference to the surface mesh whose vertex positions are measured and expressed in the worl...">mesh_W()</a>.face_normal(face_index)</code>.</p>
-<p>The pressure values on the contact surface are represented as a continuous, piecewise-linear function, accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a2402225f9be657a7d955dc5e45dd6272" title="Returns a reference to the scalar field eₘₙ.">e_MN()</a>.</p>
-<p>The normals of the mesh are discontinuous at triangle boundaries, but the pressure can be meaningfully evaluated over the entire domain of the mesh.</p>
-<p>When available, the values of ∇eₘ and ∇eₙ are represented as a discontinuous, piecewise-constant function over the triangles &ndash; one vector per triangle. These quantities are accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#abffca2252dbb79562a1f5ac4cf85995e" title="Returns the value of ∇eₘ for the triangle with index index.">EvaluateGradE_M_W()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a6cdc841e3e844de37a7852f75869fad0" title="Returns the value of ∇eₙ for the triangle with index index.">EvaluateGradE_N_W()</a>, respectively.</p>
+<p><a class="anchor" id="contact_surface_discrete_representation"></a></p><h2>Discrete Representation </h2>
+<p>In practice, hydroelastic geometries themselves have a discrete representation: either a triangular surface mesh for rigid geometries or a tetrahedral volume mesh for compliant geometry. This discretization leads to contact surfaces that are likewise discrete.</p>
+<p>Intersection between triangles and tetrahedra (or tetrahedra and tetrahedra) can produce polygons with up to eight sides. A ContactSurface can represent the resulting surface as a mesh of such polygons, or as a mesh of tesselated triangles. The domains of the two representations are identical. The triangular version admits for simple, high-order integration over the domain. Every element is a triangle, and triangles will only disappear and reappear as their areas go to zero. However, this increases the total number of faces in the mesh by more than a factor of three over the polygonal mesh. The polygonal representation produces fewer faces, but high order integration over polygons is problematic. We recommend choosing the cheapest representation that nevertheless supports your required fidelity (see <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae55c420d969868c31e1c0e776523c43a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>).</p>
+<p>The representation of any ContactSurface instance can be reported by calling <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a96d488ade2f4cdc251cfb36601fa8652" title="Reports the representation mode of this contact surface.">representation()</a>. If it returns <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1">HydroelasticContactRepresentation::kTriangle</a>, then the mesh and pressure field can be accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4" title="Returns a reference to the triangular surface mesh whose vertex positions are measured and expressed ...">tri_mesh_W()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e" title="Returns a reference to the scalar field eₘₙ for the triangle mesh.">tri_e_MN()</a>, respectively. If it returns <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb">HydroelasticContactRepresentation::kPolygon</a>, then use <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a485044c2b55a4ca39c50c13455d9337c" title="Returns a reference to the polygonal surface mesh whose vertex positions are measured and expressed i...">poly_mesh_W()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aedec78ea13a9aaf9a3e3b2f3beed70d6" title="Returns a reference to the scalar field eₘₙ for the polygonal mesh.">poly_e_MN()</a>.</p>
+<p>Regardless of representation (polygon or triangle), the normal for each mesh face is guaranteed to point "out of" N and "into" M. They can be accessed via the mesh, e.g., <code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4" title="Returns a reference to the triangular surface mesh whose vertex positions are measured and expressed ...">tri_mesh_W()</a>.face_normal(face_index)</code>. By definition, the normals of the mesh are discontinuous at triangle boundaries.</p>
+<p>The pressure values on the contact surface are represented as a continuous, piecewise-linear function, accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e" title="Returns a reference to the scalar field eₘₙ for the triangle mesh.">tri_e_MN()</a> or <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aedec78ea13a9aaf9a3e3b2f3beed70d6" title="Returns a reference to the scalar field eₘₙ for the polygonal mesh.">poly_e_MN()</a>.</p>
+<p>When available, the values of ∇eₘ and ∇eₙ are represented as a discontinuous, piecewise-constant function over the faces &ndash; one gradient vector per face. These quantities are accessed via <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#abffca2252dbb79562a1f5ac4cf85995e" title="Returns the value of ∇eₘ for the face with index index.">EvaluateGradE_M_W()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a6cdc841e3e844de37a7852f75869fad0" title="Returns the value of ∇eₙ for the face with index index.">EvaluateGradE_N_W()</a>, respectively.</p>
 <h2>Barycentric Coordinates </h2>
 <p>For Point Q on the surface mesh of the contact surface between Geometry M and Geometry N, r_WQ = (x,y,z) is the displacement vector from the origin of the world frame to Q expressed in the coordinate frame of W. We also have the <em>barycentric coordinates</em> (b0, b1, b2) on a triangle of the surface mesh that contains Q. With vertices of the triangle labeled as v₀, v₁, v₂, we can map (b0, b1, b2) to r_WQ by: </p><pre class="fragment">         r_WQ = b0 * r_Wv₀ + b1 * r_Wv₁ + b2 * r_Wv₂,
          b0 + b1 + b2 = 1, bᵢ ∈ [0,1],
@@ -151,42 +153,101 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1bba298d00b3ca9aaccbcaa73ad3901d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9a52b778bb77c0f15e6ad48cbe43bb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac9a52b778bb77c0f15e6ad48cbe43bb0">operator=</a> (<a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a> &amp;&amp;)=default</td></tr>
 <tr class="separator:ac9a52b778bb77c0f15e6ad48cbe43bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5498970ecac2475aa15add749b53b02c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a5498970ecac2475aa15add749b53b02c">ContactSurface</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd">id_M</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee">id_N</a>, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aa0bd99f737d4d0f7b735ab21bcb44c3b">mesh_W</a>, std::unique_ptr&lt; <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt; T, T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a2402225f9be657a7d955dc5e45dd6272">e_MN</a>)</td></tr>
-<tr class="memdesc:a5498970ecac2475aa15add749b53b02c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a>.  <a href="#a5498970ecac2475aa15add749b53b02c">More...</a><br /></td></tr>
-<tr class="separator:a5498970ecac2475aa15add749b53b02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5efaa70cfae27b8a8ea2c8ae4e8bff0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a5efaa70cfae27b8a8ea2c8ae4e8bff0a">ContactSurface</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd">id_M</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee">id_N</a>, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aa0bd99f737d4d0f7b735ab21bcb44c3b">mesh_W</a>, std::unique_ptr&lt; <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt; T, T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a2402225f9be657a7d955dc5e45dd6272">e_MN</a>, std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt; grad_eM_W, std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt; grad_eN_W)</td></tr>
-<tr class="memdesc:a5efaa70cfae27b8a8ea2c8ae4e8bff0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> with the optional gradients of the constituent scalar fields.  <a href="#a5efaa70cfae27b8a8ea2c8ae4e8bff0a">More...</a><br /></td></tr>
-<tr class="separator:a5efaa70cfae27b8a8ea2c8ae4e8bff0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d19415980a599e76803d1c2ac6954cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd">id_M</a> () const</td></tr>
 <tr class="memdesc:a9d19415980a599e76803d1c2ac6954cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry id of Geometry M.  <a href="#a9d19415980a599e76803d1c2ac6954cd">More...</a><br /></td></tr>
 <tr class="separator:a9d19415980a599e76803d1c2ac6954cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a643bdff7b47f07604755e0a7e0707fee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee">id_N</a> () const</td></tr>
 <tr class="memdesc:a643bdff7b47f07604755e0a7e0707fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the geometry id of Geometry N.  <a href="#a643bdff7b47f07604755e0a7e0707fee">More...</a><br /></td></tr>
 <tr class="separator:a643bdff7b47f07604755e0a7e0707fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a162b2f40894082b5057435796adf2c04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a162b2f40894082b5057435796adf2c04">Equal</a> (const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt; &amp;surface) const</td></tr>
+<tr class="memdesc:a162b2f40894082b5057435796adf2c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> object is equal via deep exact comparison.  <a href="#a162b2f40894082b5057435796adf2c04">More...</a><br /></td></tr>
+<tr class="separator:a162b2f40894082b5057435796adf2c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Constructors</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The ContactSurface can be constructed with either a polygon or triangle mesh representation.</p>
+<p>The constructor invoked determines the representation.</p>
+<p>The general shape of each constructor is identical. They take the unique identifiers for the two geometries in contact, a mesh representation, a field representation, and (optional) gradients of the contacting geometries' pressure fields.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_M</td><td>The id of the first geometry M. </td></tr>
+    <tr><td class="paramname">id_N</td><td>The id of the second geometry N. </td></tr>
+    <tr><td class="paramname">mesh_W</td><td>The surface mesh of the contact surface 𝕊ₘₙ between M and N. The mesh vertices are defined in the world frame. </td></tr>
+    <tr><td class="paramname">e_MN</td><td>Represents the scalar field eₘₙ on the surface mesh. </td></tr>
+    <tr><td class="paramname">grad_eM_W</td><td>∇eₘ sampled once per face, expressed in the world frame. </td></tr>
+    <tr><td class="paramname">grad_eN_W</td><td>∇eₙ sampled once per face, expressed in the world frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The face normals in <code>mesh_W</code> point <em>out of</em> geometry N and <em>into</em> M. </dd>
+<dd>
+If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many entries as <code>mesh_W</code> has faces and the ith entry in each should correspond to the ith face in <code>mesh_W</code>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>id_M &gt; id_N</code>, the labels will be swapped and the normals of the mesh reversed (to maintain the documented invariants). Comparing the input parameters with the members of the resulting ContactSurface will reveal if such a swap has occurred. </dd></dl>
+</div></td></tr>
+<tr class="memitem:a56af70f8f16a051a279af30429f76da2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a56af70f8f16a051a279af30429f76da2">ContactSurface</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd">id_M</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee">id_N</a>, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aa0bd99f737d4d0f7b735ab21bcb44c3b">mesh_W</a>, std::unique_ptr&lt; <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt; T, T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a2402225f9be657a7d955dc5e45dd6272">e_MN</a>, std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt; grad_eM_W=nullptr, std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt; grad_eN_W=nullptr)</td></tr>
+<tr class="memdesc:a56af70f8f16a051a279af30429f76da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ContactSurface with a triangle mesh representation.  <a href="#a56af70f8f16a051a279af30429f76da2">More...</a><br /></td></tr>
+<tr class="separator:a56af70f8f16a051a279af30429f76da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af931921055f30df1a5f7185dcefa83a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#af931921055f30df1a5f7185dcefa83a2">ContactSurface</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd">id_M</a>, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee">id_N</a>, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aa0bd99f737d4d0f7b735ab21bcb44c3b">mesh_W</a>, std::unique_ptr&lt; <a class="el" href="namespacedrake_1_1geometry.html#a28c174a30e183e46f90e66baf17ad992">PolygonSurfaceMeshFieldLinear</a>&lt; T, T &gt;&gt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a2402225f9be657a7d955dc5e45dd6272">e_MN</a>, std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt; grad_eM_W=nullptr, std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt; grad_eN_W=nullptr)</td></tr>
+<tr class="memdesc:af931921055f30df1a5f7185dcefa83a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a ContactSurface with a polygonal mesh representation.  <a href="#af931921055f30df1a5f7185dcefa83a2">More...</a><br /></td></tr>
+<tr class="separator:af931921055f30df1a5f7185dcefa83a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Representation-independent API</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These methods represent sugar which masks the details of the mesh representation.</p>
+<p>They facilitate querying various mesh quantities that are common to the two representations, so that code can access the properties without worrying about the representation. If necessary, the actual meshes and fields can be accessed directly via the representation-dependent APIs below. </p>
+</div></td></tr>
+<tr class="memitem:a132d1bbcbcc1ac76319da744805bd865"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a132d1bbcbcc1ac76319da744805bd865">num_faces</a> () const</td></tr>
+<tr class="separator:a132d1bbcbcc1ac76319da744805bd865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319e621fc359dd8daad48247f95b12fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a319e621fc359dd8daad48247f95b12fa">num_vertices</a> () const</td></tr>
+<tr class="separator:a319e621fc359dd8daad48247f95b12fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9531fa7a3036a381a925e5fa35d7a6cb"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9531fa7a3036a381a925e5fa35d7a6cb">area</a> (<a class="el" href="classint.html">int</a> face_index) const</td></tr>
+<tr class="separator:a9531fa7a3036a381a925e5fa35d7a6cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8645defeea4264d39cf1bdf5a66f79"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a5d8645defeea4264d39cf1bdf5a66f79">total_area</a> () const</td></tr>
+<tr class="separator:a5d8645defeea4264d39cf1bdf5a66f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cb31831d648403e64867d5724c5e199"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a3cb31831d648403e64867d5724c5e199">face_normal</a> (<a class="el" href="classint.html">int</a> face_index) const</td></tr>
+<tr class="separator:a3cb31831d648403e64867d5724c5e199"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc1e636e256ca4526d23300e5cdd1c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a4fc1e636e256ca4526d23300e5cdd1c9">centroid</a> (<a class="el" href="classint.html">int</a> face_index) const</td></tr>
+<tr class="separator:a4fc1e636e256ca4526d23300e5cdd1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819bca2023eaa88015e3e51f6e9f557e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a819bca2023eaa88015e3e51f6e9f557e">centroid</a> () const</td></tr>
+<tr class="separator:a819bca2023eaa88015e3e51f6e9f557e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Representation-dependent API</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>These functions provide insight into what representation the ContactSurface instance uses, and provide access to the representation-dependent quantities: mesh and field.</p>
+</div></td></tr>
+<tr class="memitem:ac1777d06cb15879ee1356176db3c77f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1">is_triangle</a> () const</td></tr>
+<tr class="memdesc:ac1777d06cb15879ee1356176db3c77f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simpley reports if this contact surface's mesh representation is triangle.  <a href="#ac1777d06cb15879ee1356176db3c77f1">More...</a><br /></td></tr>
+<tr class="separator:ac1777d06cb15879ee1356176db3c77f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d488ade2f4cdc251cfb36601fa8652"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a96d488ade2f4cdc251cfb36601fa8652">representation</a> () const</td></tr>
+<tr class="memdesc:a96d488ade2f4cdc251cfb36601fa8652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the representation mode of this contact surface.  <a href="#a96d488ade2f4cdc251cfb36601fa8652">More...</a><br /></td></tr>
+<tr class="separator:a96d488ade2f4cdc251cfb36601fa8652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0bd99f737d4d0f7b735ab21bcb44c3b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aa0bd99f737d4d0f7b735ab21bcb44c3b">mesh_W</a> () const</td></tr>
 <tr class="memdesc:aa0bd99f737d4d0f7b735ab21bcb44c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the surface mesh whose vertex positions are measured and expressed in the world frame.  <a href="#aa0bd99f737d4d0f7b735ab21bcb44c3b">More...</a><br /></td></tr>
 <tr class="separator:aa0bd99f737d4d0f7b735ab21bcb44c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2402225f9be657a7d955dc5e45dd6272"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt; T, T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a2402225f9be657a7d955dc5e45dd6272">e_MN</a> () const</td></tr>
 <tr class="memdesc:a2402225f9be657a7d955dc5e45dd6272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the scalar field eₘₙ.  <a href="#a2402225f9be657a7d955dc5e45dd6272">More...</a><br /></td></tr>
 <tr class="separator:a2402225f9be657a7d955dc5e45dd6272"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a162b2f40894082b5057435796adf2c04"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a162b2f40894082b5057435796adf2c04">Equal</a> (const <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt; &amp;surface) const</td></tr>
-<tr class="memdesc:a162b2f40894082b5057435796adf2c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see whether the given <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> object is equal via deep exact comparison.  <a href="#a162b2f40894082b5057435796adf2c04">More...</a><br /></td></tr>
-<tr class="separator:a162b2f40894082b5057435796adf2c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468511b9c93cbc3a3754b93b738d90a4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a468511b9c93cbc3a3754b93b738d90a4">tri_mesh_W</a> () const</td></tr>
+<tr class="memdesc:a468511b9c93cbc3a3754b93b738d90a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the <em>triangular</em> surface mesh whose vertex positions are measured and expressed in the world frame.  <a href="#a468511b9c93cbc3a3754b93b738d90a4">More...</a><br /></td></tr>
+<tr class="separator:a468511b9c93cbc3a3754b93b738d90a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7737bf2804d3747dc021a1ea3c4c509e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt; T, T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a7737bf2804d3747dc021a1ea3c4c509e">tri_e_MN</a> () const</td></tr>
+<tr class="memdesc:a7737bf2804d3747dc021a1ea3c4c509e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the scalar field eₘₙ for the <em>triangle</em> mesh.  <a href="#a7737bf2804d3747dc021a1ea3c4c509e">More...</a><br /></td></tr>
+<tr class="separator:a7737bf2804d3747dc021a1ea3c4c509e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a485044c2b55a4ca39c50c13455d9337c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a485044c2b55a4ca39c50c13455d9337c">poly_mesh_W</a> () const</td></tr>
+<tr class="memdesc:a485044c2b55a4ca39c50c13455d9337c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the <em>polygonal</em> surface mesh whose vertex positions are measured and expressed in the world frame.  <a href="#a485044c2b55a4ca39c50c13455d9337c">More...</a><br /></td></tr>
+<tr class="separator:a485044c2b55a4ca39c50c13455d9337c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedec78ea13a9aaf9a3e3b2f3beed70d6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake_1_1geometry.html#a28c174a30e183e46f90e66baf17ad992">PolygonSurfaceMeshFieldLinear</a>&lt; T, T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#aedec78ea13a9aaf9a3e3b2f3beed70d6">poly_e_MN</a> () const</td></tr>
+<tr class="memdesc:aedec78ea13a9aaf9a3e3b2f3beed70d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the scalar field eₘₙ for the <em>polygonal</em> mesh.  <a href="#aedec78ea13a9aaf9a3e3b2f3beed70d6">More...</a><br /></td></tr>
+<tr class="separator:aedec78ea13a9aaf9a3e3b2f3beed70d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Evaluation of constituent pressure fields</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>The ContactSurface <em>provisionally</em> includes the gradients of the constituent pressure fields (∇eₘ and ∇eₙ) sampled on the contact surface.</p>
 <p>In order for these values to be included in an instance, the gradient for the corresponding mesh must be well defined. For example a rigid mesh will not have a well-defined pressure gradient; as stiffness goes to infinity, the geometry becomes rigid and the gradient <em>direction</em> converges to the direction of the rigid mesh's surface normals, but the magnitude goes to infinity, producing a pressure gradient that would be some variant of <code>&lt;∞, ∞, ∞&gt;</code>.</p>
 <p>Accessing the gradient values must be pre-conditioned on a test that the particular instance of ContactSurface actually contains the gradient data. The presence of gradient data for each geometry must be confirmed separately.</p>
-<p>The values ∇eₘ and ∇eₘ are piecewise constant over the ContactSurface and can only be evaluate on a per-triangle basis. </p>
+<p>The values ∇eₘ and ∇eₘ are piecewise constant over the ContactSurface and can only be evaluate on a per-face basis. </p>
 </div></td></tr>
 <tr class="memitem:a9e133d23830a9b6ffaa3652b26c417d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9e133d23830a9b6ffaa3652b26c417d3">HasGradE_M</a> () const</td></tr>
 <tr class="separator:a9e133d23830a9b6ffaa3652b26c417d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a127d93d3788af836f8fbded056377db2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a127d93d3788af836f8fbded056377db2">HasGradE_N</a> () const</td></tr>
 <tr class="separator:a127d93d3788af836f8fbded056377db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abffca2252dbb79562a1f5ac4cf85995e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#abffca2252dbb79562a1f5ac4cf85995e">EvaluateGradE_M_W</a> (<a class="el" href="classint.html">int</a> index) const</td></tr>
-<tr class="memdesc:abffca2252dbb79562a1f5ac4cf85995e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of ∇eₘ for the triangle with index <code>index</code>.  <a href="#abffca2252dbb79562a1f5ac4cf85995e">More...</a><br /></td></tr>
+<tr class="memdesc:abffca2252dbb79562a1f5ac4cf85995e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of ∇eₘ for the face with index <code>index</code>.  <a href="#abffca2252dbb79562a1f5ac4cf85995e">More...</a><br /></td></tr>
 <tr class="separator:abffca2252dbb79562a1f5ac4cf85995e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cdc841e3e844de37a7852f75869fad0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a6cdc841e3e844de37a7852f75869fad0">EvaluateGradE_N_W</a> (<a class="el" href="classint.html">int</a> index) const</td></tr>
-<tr class="memdesc:a6cdc841e3e844de37a7852f75869fad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of ∇eₙ for the triangle with index <code>index</code>.  <a href="#a6cdc841e3e844de37a7852f75869fad0">More...</a><br /></td></tr>
+<tr class="memdesc:a6cdc841e3e844de37a7852f75869fad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of ∇eₙ for the face with index <code>index</code>.  <a href="#a6cdc841e3e844de37a7852f75869fad0">More...</a><br /></td></tr>
 <tr class="separator:a6cdc841e3e844de37a7852f75869fad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -240,61 +301,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a5498970ecac2475aa15add749b53b02c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5498970ecac2475aa15add749b53b02c">&#9670;&nbsp;</a></span>ContactSurface() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a> </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>id_M</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
-          <td class="paramname"><em>id_N</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt; T &gt;&gt;&#160;</td>
-          <td class="paramname"><em>mesh_W</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt; T, T &gt;&gt;&#160;</td>
-          <td class="paramname"><em>e_MN</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id_M</td><td>The id of the first geometry M. </td></tr>
-    <tr><td class="paramname">id_N</td><td>The id of the second geometry N. </td></tr>
-    <tr><td class="paramname">mesh_W</td><td>The surface mesh of the contact surface 𝕊ₘₙ between M and N. The mesh vertices are defined in the world frame. </td></tr>
-    <tr><td class="paramname">e_MN</td><td>Represents the scalar field eₘₙ on the surface mesh. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The face normals in <code>mesh_W</code> point <em>out of</em> geometry N and <em>into</em> M. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If <code>id_M &gt; id_N</code>, the labels will be swapped and the normals of the mesh reversed (to maintain the documented invariants). Comparing the input parameters with the members of the resulting ContactSurface will reveal if such a swap has occurred. </dd></dl>
-
-</div>
-</div>
-<a id="a5efaa70cfae27b8a8ea2c8ae4e8bff0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5efaa70cfae27b8a8ea2c8ae4e8bff0a">&#9670;&nbsp;</a></span>ContactSurface() <span class="overload">[4/4]</span></h2>
+<a id="a56af70f8f16a051a279af30429f76da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56af70f8f16a051a279af30429f76da2">&#9670;&nbsp;</a></span>ContactSurface() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,13 +335,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt;&#160;</td>
-          <td class="paramname"><em>grad_eM_W</em>, </td>
+          <td class="paramname"><em>grad_eM_W</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt;&#160;</td>
-          <td class="paramname"><em>grad_eN_W</em>&#160;</td>
+          <td class="paramname"><em>grad_eN_W</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -343,26 +351,118 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> with the optional gradients of the constituent scalar fields. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id_M</td><td>The id of the first geometry M. </td></tr>
-    <tr><td class="paramname">id_N</td><td>The id of the second geometry N. </td></tr>
-    <tr><td class="paramname">mesh_W</td><td>The surface mesh of the contact surface 𝕊ₘₙ between M and N. The mesh vertices are defined in the world frame. </td></tr>
-    <tr><td class="paramname">e_MN</td><td>Represents the scalar field eₘₙ on the surface mesh. </td></tr>
-    <tr><td class="paramname">grad_eM_W</td><td>∇eₘ sampled once per face, expressed in the world frame. </td></tr>
-    <tr><td class="paramname">grad_eN_W</td><td>∇eₙ sampled once per face, expressed in the world frame. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The face normals in <code>mesh_W</code> point <em>out of</em> geometry N and <em>into</em> M. </dd>
-<dd>
-If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many entries as <code>mesh_W</code> has faces and the ith entry in each should correspond to the ith face in <code>mesh_W</code>. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If <code>id_M &gt; id_N</code>, the labels will be swapped and the normals of the mesh reversed (to maintain the documented invariants). Comparing the input parameters with the members of the resulting ContactSurface will reveal if such a swap has occurred. </dd></dl>
+<p>Constructs a ContactSurface with a triangle mesh representation. </p>
+
+</div>
+</div>
+<a id="af931921055f30df1a5f7185dcefa83a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af931921055f30df1a5f7185dcefa83a2">&#9670;&nbsp;</a></span>ContactSurface() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>id_M</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>id_N</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>mesh_W</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="namespacedrake_1_1geometry.html#a28c174a30e183e46f90e66baf17ad992">PolygonSurfaceMeshFieldLinear</a>&lt; T, T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>e_MN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt;&#160;</td>
+          <td class="paramname"><em>grad_eM_W</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; std::vector&lt; <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt;&gt;&#160;</td>
+          <td class="paramname"><em>grad_eN_W</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a ContactSurface with a polygonal mesh representation. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9531fa7a3036a381a925e5fa35d7a6cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9531fa7a3036a381a925e5fa35d7a6cb">&#9670;&nbsp;</a></span>area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; area </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>face_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fc1e636e256ca4526d23300e5cdd1c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc1e636e256ca4526d23300e5cdd1c9">&#9670;&nbsp;</a></span>centroid() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; centroid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>face_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a819bca2023eaa88015e3e51f6e9f557e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819bca2023eaa88015e3e51f6e9f557e">&#9670;&nbsp;</a></span>centroid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; centroid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2402225f9be657a7d955dc5e45dd6272"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2402225f9be657a7d955dc5e45dd6272">&#9670;&nbsp;</a></span>e_MN()</h2>
 
@@ -379,6 +479,8 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
 </div><div class="memdoc">
 
 <p>Returns a reference to the scalar field eₘₙ. </p>
+<p>This method is provided for short-term legacy reasons. Once the polygonal mesh representation is fully supported across the entire contact model code path, this will be removed in favor of its explicitly declared <code>tri_</code> or <code>poly_</code> variant.</p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a> returns <code>true</code>. </dd></dl>
 
 </div>
 </div>
@@ -426,14 +528,14 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
       </table>
 </div><div class="memdoc">
 
-<p>Returns the value of ∇eₘ for the triangle with index <code>index</code>. </p>
+<p>Returns the value of ∇eₘ for the face with index <code>index</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9e133d23830a9b6ffaa3652b26c417d3">HasGradE_M()</a> returns false. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>index ∈ [0, mesh().num_triangles())</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>index ∈ [0, mesh().<a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a132d1bbcbcc1ac76319da744805bd865">num_faces()</a>)</code>. </dd></dl>
 
 </div>
 </div>
@@ -453,14 +555,32 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
       </table>
 </div><div class="memdoc">
 
-<p>Returns the value of ∇eₙ for the triangle with index <code>index</code>. </p>
+<p>Returns the value of ∇eₙ for the face with index <code>index</code>. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a127d93d3788af836f8fbded056377db2">HasGradE_N()</a> returns false. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd><code>index ∈ [0, mesh().num_triangles())</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>index ∈ [0, mesh().<a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a132d1bbcbcc1ac76319da744805bd865">num_faces()</a>)</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a3cb31831d648403e64867d5724c5e199"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cb31831d648403e64867d5724c5e199">&#9670;&nbsp;</a></span>face_normal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; face_normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>face_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -538,6 +658,27 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
 
 </div>
 </div>
+<a id="ac1777d06cb15879ee1356176db3c77f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1777d06cb15879ee1356176db3c77f1">&#9670;&nbsp;</a></span>is_triangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_triangle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simpley reports if this contact surface's mesh representation is triangle. </p>
+<p>Equivalent to: </p><pre class="fragment">representation() == HydroelasticContactRepresentation::kTriangle
+</pre><p>and offered as convenient sugar. </p>
+
+</div>
+</div>
 <a id="aa0bd99f737d4d0f7b735ab21bcb44c3b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0bd99f737d4d0f7b735ab21bcb44c3b">&#9670;&nbsp;</a></span>mesh_W()</h2>
 
@@ -554,6 +695,42 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
 </div><div class="memdoc">
 
 <p>Returns a reference to the surface mesh whose vertex positions are measured and expressed in the world frame. </p>
+<p>This method is provided for short-term legacy reasons. Once the polygonal mesh representation is fully supported across the entire contact model code path, this will be removed in favor of its explicitly declared <code>tri_</code> or <code>poly_</code> variant.</p>
+<dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a> returns <code>true</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a132d1bbcbcc1ac76319da744805bd865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132d1bbcbcc1ac76319da744805bd865">&#9670;&nbsp;</a></span>num_faces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_faces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a319e621fc359dd8daad48247f95b12fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319e621fc359dd8daad48247f95b12fa">&#9670;&nbsp;</a></span>num_vertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_vertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -598,6 +775,123 @@ If given, <code>grad_eM_W</code> and <code>grad_eN_W</code> must have as many en
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedec78ea13a9aaf9a3e3b2f3beed70d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedec78ea13a9aaf9a3e3b2f3beed70d6">&#9670;&nbsp;</a></span>poly_e_MN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1geometry.html#a28c174a30e183e46f90e66baf17ad992">PolygonSurfaceMeshFieldLinear</a>&lt;T, T&gt;&amp; poly_e_MN </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the scalar field eₘₙ for the <em>polygonal</em> mesh. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>false</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a485044c2b55a4ca39c50c13455d9337c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a485044c2b55a4ca39c50c13455d9337c">&#9670;&nbsp;</a></span>poly_mesh_W()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html">PolygonSurfaceMesh</a>&lt;T&gt;&amp; poly_mesh_W </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex positions are measured and expressed in the world frame. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>false</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a96d488ade2f4cdc251cfb36601fa8652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d488ade2f4cdc251cfb36601fa8652">&#9670;&nbsp;</a></span>representation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the representation mode of this contact surface. </p>
+<p>If accessing the mesh or field directly, the APIs that can be successfully exercised are related to this methods return value. See below. </p>
+
+</div>
+</div>
+<a id="a5d8645defeea4264d39cf1bdf5a66f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8645defeea4264d39cf1bdf5a66f79">&#9670;&nbsp;</a></span>total_area()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T&amp; total_area </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7737bf2804d3747dc021a1ea3c4c509e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7737bf2804d3747dc021a1ea3c4c509e">&#9670;&nbsp;</a></span>tri_e_MN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake_1_1geometry.html#a982d81c894c425051f4cbb03cd3ca4dd">TriangleSurfaceMeshFieldLinear</a>&lt;T, T&gt;&amp; tri_e_MN </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the scalar field eₘₙ for the <em>triangle</em> mesh. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>true</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a468511b9c93cbc3a3754b93b738d90a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468511b9c93cbc3a3754b93b738d90a4">&#9670;&nbsp;</a></span>tri_mesh_W()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1geometry_1_1_triangle_surface_mesh.html">TriangleSurfaceMesh</a>&lt;T&gt;&amp; tri_mesh_W </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a reference to the <em>triangular</em> surface mesh whose vertex positions are measured and expressed in the world frame. </p>
+<dl class="section pre"><dt>Precondition</dt><dd><code><a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#ac1777d06cb15879ee1356176db3c77f1" title="Simpley reports if this contact surface&#39;s mesh representation is triangle.">is_triangle()</a></code> returns <code>true</code>. </dd></dl>
 
 </div>
 </div>

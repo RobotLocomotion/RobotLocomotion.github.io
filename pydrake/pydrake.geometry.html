@@ -789,18 +789,41 @@ Even though eₘₙ and ∇hₘₙ are defined on different domains (𝕊ₘₙ 
 ℕ), our implementation only represents them on their common domain,
 i.e., 𝕊ₘₙ.</p>
 <p>Discrete Representation ————————-</p>
-<p>In practice, the contact surface is approximated with a discrete
-triangle mesh. The triangle mesh’s normals are defined <em>per face</em>. The
-normal of each face is guaranteed to point “out of” N and “into” M.
-They can be accessed via <code class="docutils literal"><span class="pre">mesh_W().face_normal(face_index)</span></code>.</p>
+<p>In practice, hydroelastic geometries themselves have a discrete
+representation: either a triangular surface mesh for rigid geometries
+or a tetrahedral volume mesh for compliant geometry. This
+discretization leads to contact surfaces that are likewise discrete.</p>
+<p>Intersection between triangles and tetrahedra (or tetrahedra and
+tetrahedra) can produce polygons with up to eight sides. A
+ContactSurface can represent the resulting surface as a mesh of such
+polygons, or as a mesh of tesselated triangles. The domains of the two
+representations are identical. The triangular version admits for
+simple, high-order integration over the domain. Every element is a
+triangle, and triangles will only disappear and reappear as their
+areas go to zero. However, this increases the total number of faces in
+the mesh by more than a factor of three over the polygonal mesh. The
+polygonal representation produces fewer faces, but high order
+integration over polygons is problematic. We recommend choosing the
+cheapest representation that nevertheless supports your required
+fidelity (see QueryObject::ComputeContactSurfaces()).</p>
+<p>The representation of any ContactSurface instance can be reported by
+calling representation(). If it returns
+HydroelasticContactRepresentation::kTriangle, then the mesh and
+pressure field can be accessed via tri_mesh_W() and tri_e_MN(),
+respectively. If it returns
+HydroelasticContactRepresentation::kPolygon, then use poly_mesh_W()
+and poly_e_MN().</p>
+<p>Regardless of representation (polygon or triangle), the normal for
+each mesh face is guaranteed to point “out of” N and “into” M. They
+can be accessed via the mesh, e.g.,
+<code class="docutils literal"><span class="pre">tri_mesh_W().face_normal(face_index)</span></code>. By definition, the normals
+of the mesh are discontinuous at triangle boundaries.</p>
 <p>The pressure values on the contact surface are represented as a
-continuous, piecewise-linear function, accessed via e_MN().</p>
-<p>The normals of the mesh are discontinuous at triangle boundaries, but
-the pressure can be meaningfully evaluated over the entire domain of
-the mesh.</p>
+continuous, piecewise-linear function, accessed via tri_e_MN() or
+poly_e_MN().</p>
 <p>When available, the values of ∇eₘ and ∇eₙ are represented as a
-discontinuous, piecewise-constant function over the triangles – one
-vector per triangle. These quantities are accessed via
+discontinuous, piecewise-constant function over the faces – one
+gradient vector per face. These quantities are accessed via
 EvaluateGradE_M_W() and EvaluateGradE_N_W(), respectively.</p>
 <p>Barycentric Coordinates ————————-</p>
 <p>For Point Q on the surface mesh of the contact surface between
@@ -837,6 +860,14 @@ from the origin of the world frame, expressed in the world frame.</p>
 <code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the surface mesh whose vertex positions are
 measured and expressed in the world frame.</p>
+<p>This method is provided for short-term legacy reasons. Once the
+polygonal mesh representation is fully supported across the entire
+contact model code path, this will be removed in favor of its
+explicitly declared <code class="docutils literal"><span class="pre">tri_</span></code> or <code class="docutils literal"><span class="pre">poly_</span></code> variant.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>is_triangle() returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -890,18 +921,41 @@ Even though eₘₙ and ∇hₘₙ are defined on different domains (𝕊ₘₙ 
 ℕ), our implementation only represents them on their common domain,
 i.e., 𝕊ₘₙ.</p>
 <p>Discrete Representation ————————-</p>
-<p>In practice, the contact surface is approximated with a discrete
-triangle mesh. The triangle mesh’s normals are defined <em>per face</em>. The
-normal of each face is guaranteed to point “out of” N and “into” M.
-They can be accessed via <code class="docutils literal"><span class="pre">mesh_W().face_normal(face_index)</span></code>.</p>
+<p>In practice, hydroelastic geometries themselves have a discrete
+representation: either a triangular surface mesh for rigid geometries
+or a tetrahedral volume mesh for compliant geometry. This
+discretization leads to contact surfaces that are likewise discrete.</p>
+<p>Intersection between triangles and tetrahedra (or tetrahedra and
+tetrahedra) can produce polygons with up to eight sides. A
+ContactSurface can represent the resulting surface as a mesh of such
+polygons, or as a mesh of tesselated triangles. The domains of the two
+representations are identical. The triangular version admits for
+simple, high-order integration over the domain. Every element is a
+triangle, and triangles will only disappear and reappear as their
+areas go to zero. However, this increases the total number of faces in
+the mesh by more than a factor of three over the polygonal mesh. The
+polygonal representation produces fewer faces, but high order
+integration over polygons is problematic. We recommend choosing the
+cheapest representation that nevertheless supports your required
+fidelity (see QueryObject::ComputeContactSurfaces()).</p>
+<p>The representation of any ContactSurface instance can be reported by
+calling representation(). If it returns
+HydroelasticContactRepresentation::kTriangle, then the mesh and
+pressure field can be accessed via tri_mesh_W() and tri_e_MN(),
+respectively. If it returns
+HydroelasticContactRepresentation::kPolygon, then use poly_mesh_W()
+and poly_e_MN().</p>
+<p>Regardless of representation (polygon or triangle), the normal for
+each mesh face is guaranteed to point “out of” N and “into” M. They
+can be accessed via the mesh, e.g.,
+<code class="docutils literal"><span class="pre">tri_mesh_W().face_normal(face_index)</span></code>. By definition, the normals
+of the mesh are discontinuous at triangle boundaries.</p>
 <p>The pressure values on the contact surface are represented as a
-continuous, piecewise-linear function, accessed via e_MN().</p>
-<p>The normals of the mesh are discontinuous at triangle boundaries, but
-the pressure can be meaningfully evaluated over the entire domain of
-the mesh.</p>
+continuous, piecewise-linear function, accessed via tri_e_MN() or
+poly_e_MN().</p>
 <p>When available, the values of ∇eₘ and ∇eₙ are represented as a
-discontinuous, piecewise-constant function over the triangles – one
-vector per triangle. These quantities are accessed via
+discontinuous, piecewise-constant function over the faces – one
+gradient vector per face. These quantities are accessed via
 EvaluateGradE_M_W() and EvaluateGradE_N_W(), respectively.</p>
 <p>Barycentric Coordinates ————————-</p>
 <p>For Point Q on the surface mesh of the contact surface between
@@ -938,6 +992,14 @@ from the origin of the world frame, expressed in the world frame.</p>
 <code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the surface mesh whose vertex positions are
 measured and expressed in the world frame.</p>
+<p>This method is provided for short-term legacy reasons. Once the
+polygonal mesh representation is fully supported across the entire
+contact model code path, this will be removed in favor of its
+explicitly declared <code class="docutils literal"><span class="pre">tri_</span></code> or <code class="docutils literal"><span class="pre">poly_</span></code> variant.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>is_triangle() returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -989,18 +1051,41 @@ Even though eₘₙ and ∇hₘₙ are defined on different domains (𝕊ₘₙ 
 ℕ), our implementation only represents them on their common domain,
 i.e., 𝕊ₘₙ.</p>
 <p>Discrete Representation ————————-</p>
-<p>In practice, the contact surface is approximated with a discrete
-triangle mesh. The triangle mesh’s normals are defined <em>per face</em>. The
-normal of each face is guaranteed to point “out of” N and “into” M.
-They can be accessed via <code class="docutils literal"><span class="pre">mesh_W().face_normal(face_index)</span></code>.</p>
+<p>In practice, hydroelastic geometries themselves have a discrete
+representation: either a triangular surface mesh for rigid geometries
+or a tetrahedral volume mesh for compliant geometry. This
+discretization leads to contact surfaces that are likewise discrete.</p>
+<p>Intersection between triangles and tetrahedra (or tetrahedra and
+tetrahedra) can produce polygons with up to eight sides. A
+ContactSurface can represent the resulting surface as a mesh of such
+polygons, or as a mesh of tesselated triangles. The domains of the two
+representations are identical. The triangular version admits for
+simple, high-order integration over the domain. Every element is a
+triangle, and triangles will only disappear and reappear as their
+areas go to zero. However, this increases the total number of faces in
+the mesh by more than a factor of three over the polygonal mesh. The
+polygonal representation produces fewer faces, but high order
+integration over polygons is problematic. We recommend choosing the
+cheapest representation that nevertheless supports your required
+fidelity (see QueryObject::ComputeContactSurfaces()).</p>
+<p>The representation of any ContactSurface instance can be reported by
+calling representation(). If it returns
+HydroelasticContactRepresentation::kTriangle, then the mesh and
+pressure field can be accessed via tri_mesh_W() and tri_e_MN(),
+respectively. If it returns
+HydroelasticContactRepresentation::kPolygon, then use poly_mesh_W()
+and poly_e_MN().</p>
+<p>Regardless of representation (polygon or triangle), the normal for
+each mesh face is guaranteed to point “out of” N and “into” M. They
+can be accessed via the mesh, e.g.,
+<code class="docutils literal"><span class="pre">tri_mesh_W().face_normal(face_index)</span></code>. By definition, the normals
+of the mesh are discontinuous at triangle boundaries.</p>
 <p>The pressure values on the contact surface are represented as a
-continuous, piecewise-linear function, accessed via e_MN().</p>
-<p>The normals of the mesh are discontinuous at triangle boundaries, but
-the pressure can be meaningfully evaluated over the entire domain of
-the mesh.</p>
+continuous, piecewise-linear function, accessed via tri_e_MN() or
+poly_e_MN().</p>
 <p>When available, the values of ∇eₘ and ∇eₙ are represented as a
-discontinuous, piecewise-constant function over the triangles – one
-vector per triangle. These quantities are accessed via
+discontinuous, piecewise-constant function over the faces – one
+gradient vector per face. These quantities are accessed via
 EvaluateGradE_M_W() and EvaluateGradE_N_W(), respectively.</p>
 <p>Barycentric Coordinates ————————-</p>
 <p>For Point Q on the surface mesh of the contact surface between
@@ -1037,6 +1122,14 @@ from the origin of the world frame, expressed in the world frame.</p>
 <code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the surface mesh whose vertex positions are
 measured and expressed in the world frame.</p>
+<p>This method is provided for short-term legacy reasons. Once the
+polygonal mesh representation is fully supported across the entire
+contact model code path, this will be removed in favor of its
+explicitly declared <code class="docutils literal"><span class="pre">tri_</span></code> or <code class="docutils literal"><span class="pre">poly_</span></code> variant.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>is_triangle() returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
