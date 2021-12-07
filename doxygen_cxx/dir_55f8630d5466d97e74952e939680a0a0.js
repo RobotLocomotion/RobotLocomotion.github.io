@@ -20,9 +20,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
     [ "matrix_gain.h", "matrix__gain_8h.html", null ],
     [ "multiplexer.h", "multiplexer_8h.html", null ],
     [ "pass_through.h", "pass__through_8h.html", null ],
-    [ "port_switch.h", "port__switch_8h.html", [
-      [ "PortSwitch", "classdrake_1_1systems_1_1_port_switch.html", "classdrake_1_1systems_1_1_port_switch" ]
-    ] ],
+    [ "port_switch.h", "port__switch_8h.html", null ],
     [ "random_source.h", "random__source_8h.html", "random__source_8h" ],
     [ "saturation.h", "saturation_8h.html", null ],
     [ "sine.h", "sine_8h.html", null ],

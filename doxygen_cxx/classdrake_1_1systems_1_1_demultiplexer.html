@@ -105,6 +105,22 @@ class drake::systems::Demultiplexer&lt; T &gt;</h3>
 
 <p>This system splits a vector valued signal on its input into multiple outputs. </p>
 <p>The input to this system directly feeds through to its output.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_demultiplexer.html" title="This system splits a vector valued signal on its input into multiple outputs.">Demultiplexer</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; ...</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -1246,6 +1262,22 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Constructs Demultiplexer with one vector valued output ports with sizes specified as the vector <code>output_ports_sizes</code>. </p>
 <p>The number of output ports is the length of this vector. The size of each output port is the value of the corresponding element of the vector <code>output_ports_sizes</code>.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_demultiplexer.html" title="This system splits a vector valued signal on its input into multiple outputs.">Demultiplexer</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; ...</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y(output_ports_sizes.size() - 1)</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if <code>output_ports_sizes</code> is a zero length vector. </td></tr>
@@ -1297,6 +1329,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs Demultiplexer with one vector valued input port of size <code>size</code> and vector valued output ports of size <code>output_ports_size</code>. </p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_demultiplexer.html" title="This system splits a vector valued signal on its input into multiple outputs.">Demultiplexer</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; ...</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y((size / output_ports_size) - 1)</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if output_ports_sizes can not exactly divide <code>size</code>. The number of output ports is therefore <code>size / output_ports_size</code>.</td></tr>

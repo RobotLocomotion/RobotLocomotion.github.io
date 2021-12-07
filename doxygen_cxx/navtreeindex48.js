@@ -1,5 +1,11 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a12c9ae23f7c0c50dc5417ea2d15dd48b":[1,5,2,1,0,3],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[1,5,2,1,0,0],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a70e95748d802a0f66bba15e61dc5fb0e":[1,5,2,1,0,2],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html":[1,5,2,1,1],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#a4536120bd982cc479d398466140732ba":[1,5,2,1,1,1],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#a7b9aa884cf273e49da0dd0de4cbfbb8b":[1,5,2,1,1,2],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#ab882a795ac2ee341cce7a9d85981f155":[1,5,2,1,1,0],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html":[3,0,0,8,36],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a01704b4700155ed98ed7358fd3e99ed6":[3,0,0,8,36,1],
@@ -243,11 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1solvers_1_1_osqp_solver_details.html":[3,0,0,12,50],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[3,0,0,12,50,4],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[3,0,0,12,50,8],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[3,0,0,12,50,2],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a73e4cc856cf85fecbb324b0280f30d21":[3,0,0,12,50,6],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#aa9ace1f8c3bba54c72c4fdf3201b20f5":[3,0,0,12,50,3],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#aab6f168571c2073e01e240524b8a3da0":[3,0,0,12,50,1],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ab5c39c91d4d833dd5319e70ee4c697bb":[3,0,0,12,50,5],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ad8777b50c3dafc67e4f54047b62473b4":[3,0,0,12,50,0],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#ae50bc0c53de4da41809fb75c465f04d6":[3,0,0,12,50,7]
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[3,0,0,12,50,2]
 };

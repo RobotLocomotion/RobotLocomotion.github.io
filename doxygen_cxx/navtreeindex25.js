@@ -1,5 +1,11 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a618a7156f2f0156043d67b52b94d702e":[3,0,0,13,54,11],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a672570c853ab5b4b494f749ebabc5862":[3,0,0,13,54,4],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a688e3c02bb3dc730f24bff8364a4fed6":[3,0,0,13,54,0],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a6a34c3811302f4b4327894098646c214":[3,0,0,13,54,28],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a7d207a076fb35defb73b3690b281d0d5":[3,0,0,13,54,14],
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a822414d62611168edf444dbf255f4ac8":[3,0,0,13,54,37],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a898ba21eb4484cd70f1f4e840c9f843c":[3,0,0,13,54,36],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a8ccb7c7bd130704b3a7927248cc27339":[3,0,0,13,54,13],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a8d315d0db5e68af87171f64284cebc31":[3,0,0,13,54,16],
@@ -243,11 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_variables.html#a1aec6c980c893318bf83de95c7ff9ef8":[3,0,0,13,66,29],
 "classdrake_1_1symbolic_1_1_variables.html#a2865e08e130af4d6ce7b300290254836":[3,0,0,13,66,42],
 "classdrake_1_1symbolic_1_1_variables.html#a29305669b60ca1680752e2fc3592ba99":[3,0,0,13,66,11],
-"classdrake_1_1symbolic_1_1_variables.html#a2a55cab2691178eef7cc62a407d991bf":[3,0,0,13,66,5],
-"classdrake_1_1symbolic_1_1_variables.html#a2f80ef2ee2e40042f3b89a2a66a9eef5":[3,0,0,13,66,8],
-"classdrake_1_1symbolic_1_1_variables.html#a327bfe8ae1f7565885bce845f31eaca1":[3,0,0,13,66,25],
-"classdrake_1_1symbolic_1_1_variables.html#a39112ae08f6ffc7ee58c6aa79772e094":[3,0,0,13,66,12],
-"classdrake_1_1symbolic_1_1_variables.html#a39a3d31668fdda426cee8880c1447e42":[3,0,0,13,66,43],
-"classdrake_1_1symbolic_1_1_variables.html#a429c8ecf45dd86c7e495cecef8594f1a":[3,0,0,13,66,20],
-"classdrake_1_1symbolic_1_1_variables.html#a4f375bc23dee72c93ffeffcdc1ca5e6a":[3,0,0,13,66,6]
+"classdrake_1_1symbolic_1_1_variables.html#a2a55cab2691178eef7cc62a407d991bf":[3,0,0,13,66,5]
 };

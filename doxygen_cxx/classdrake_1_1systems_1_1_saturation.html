@@ -105,7 +105,7 @@ class drake::systems::Saturation&lt; T &gt;</h3>
 
 <p>An element-wise hard saturation block with inputs signal <code>u</code>, saturation values \( u_{min} \) and/or \( u_{max} \), and output <code>y</code> respectively as in: </p>
 <p class="formulaDsp">
-\[ y = u, u_{min} &lt; u &lt; u_{min} \]
+\[ y = u, u_{min} &lt; u &lt; u_{max} \]
 </p>
  <p class="formulaDsp">
 \[ y = u_{min}, u \le u_{min} \]
@@ -119,6 +119,23 @@ class drake::systems::Saturation&lt; T &gt;</h3>
 \[ u_{min} &lt;= u_{max} \]
 </p>
 <p>The quantities \( u_{min} \), and \( u_{max} \) can be supplied as inputs in separate ports or be initialised as constants using the appropriate constructor by passing their default value. If these quantities are not defined as constants but they are not connected to appropriate sources, their values are taken by default to be \( u_{min} = -\infty \), and \( u_{max} = \infty \) respectively. In this "variable" configuration, at least one of the input ports must be connected.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_saturation.html" title="An element-wise hard saturation block with inputs signal u, saturation values  and/or ,...">Saturation</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+</table>
+</td></tr>
+</table>
+<p>Ports show in <span style="color:gray">gray</span> may be absent, depending on how the system is constructed.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -1265,6 +1282,23 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a variable Saturation system where the upper and lower values are represented by vectors of identical size and can be supplied via the max_value_port and min_value_port respectively. </p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u1&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u2&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_saturation.html" title="An element-wise hard saturation block with inputs signal u, saturation values  and/or ,...">Saturation</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+</table>
+</td></tr>
+</table>
+<p>Port <code>u1</code> is the source of \( u_{max} \); port <code>u2</code> is the source of \( u_{min} \).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">input_size</td><td>sets size of the input and output ports.</td></tr>
@@ -1302,6 +1336,18 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a constant Saturation system where the upper and lower values are represented by vectors of identical size supplied via this constructor. </p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_saturation.html" title="An element-wise hard saturation block with inputs signal u, saturation values  and/or ,...">Saturation</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">u_min</td><td>the lower (vector) limit to the saturation. </td></tr>

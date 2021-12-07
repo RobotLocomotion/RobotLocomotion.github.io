@@ -1,5 +1,11 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1solvers_1_1_solver_interface.html#a7a9200fb686048e552f8b009386963b0":[3,0,0,12,64,4],
+"classdrake_1_1solvers_1_1_solver_interface.html#a97e6e96f4fdf50c424c68b6583f33023":[3,0,0,12,64,11],
+"classdrake_1_1solvers_1_1_solver_interface.html#abf3f7966f1746f4f30c609c769f8b906":[3,0,0,12,64,2],
+"classdrake_1_1solvers_1_1_solver_interface.html#ac90e60f81a12700b6f94e534d625ba25":[3,0,0,12,64,6],
+"classdrake_1_1solvers_1_1_solver_interface.html#ad1e8a72fc26766f97bb9a3ab312b0921":[3,0,0,12,64,9],
+"classdrake_1_1solvers_1_1_solver_interface.html#ae9b1880991b1fc732485c99036790983":[3,0,0,12,64,0],
 "classdrake_1_1solvers_1_1_solver_interface.html#aec933bef2f8c7a702a6fd5c59feac5ec":[3,0,0,12,64,10],
 "classdrake_1_1solvers_1_1_solver_options.html":[3,0,0,12,65],
 "classdrake_1_1solvers_1_1_solver_options.html#a00057ee2a6cf17318bf940681f2aeb20":[3,0,0,12,65,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#a51ef1f0de8ddf315bf73199b2ea04584":[3,0,0,12,0,10,6],
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#a88f15ca26a3f6e753729fba5a8affe0e":[3,0,0,12,0,10,4],
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#a9ddcbb28264a0f754661ea403904f186":[3,0,0,12,0,10,9],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#aa7aa5b0e9c11b93537a0bd8e1f23c85c":[3,0,0,12,0,10,11],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#aa9f529aab2f7ad2db30a64e79601937b":[3,0,0,12,0,10,3],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#aabab6367e152ffc5861cc5f9cc011e68":[3,0,0,12,0,10,17],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#aacfcc6c727169aa82516a6d7aec7253e":[3,0,0,12,0,10,5],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#ab1914adce82be6e6f074f0bfdaf63563":[3,0,0,12,0,10,22],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#ab19d21d8e6e9c6001befc4ec5c3ed0d7":[3,0,0,12,0,10,2],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#ac23ae80b76392b990905060e507ded90":[3,0,0,12,0,10,13]
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_residual.html#aa7aa5b0e9c11b93537a0bd8e1f23c85c":[3,0,0,12,0,10,11]
 };

@@ -1104,6 +1104,30 @@ in W (for point Bo, the body frame’s origin).</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_.Body_[float].floating_position_suffix">
+<code class="descname">floating_position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].floating_position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <code class="docutils literal"><span class="pre">k`th</span> <span class="pre">position</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``position_index_in_body</span></code> must be in [0, 7) if
+<cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_.Body_[float].floating_positions_start">
 <code class="descname">floating_positions_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].floating_positions_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
@@ -1139,6 +1163,29 @@ starting at this index.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Body_.Body_[float].floating_velocity_suffix">
+<code class="descname">floating_velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_.Body_[float].floating_velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in the floating base.
+``velocity_index_in_body`</cite> must be in [0,6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if called pre-finalize, see</li>
 <li>MultibodyPlant::Finalize().</li>
 </ul>
@@ -1438,6 +1485,30 @@ in W (for point Bo, the body frame’s origin).</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_position_suffix">
+<code class="descname">floating_position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].floating_position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <code class="docutils literal"><span class="pre">k`th</span> <span class="pre">position</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``position_index_in_body</span></code> must be in [0, 7) if
+<cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_positions_start">
 <code class="descname">floating_positions_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].floating_positions_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
@@ -1473,6 +1544,29 @@ starting at this index.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Body_[AutoDiffXd].floating_velocity_suffix">
+<code class="descname">floating_velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[AutoDiffXd].floating_velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in the floating base.
+``velocity_index_in_body`</cite> must be in [0,6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if called pre-finalize, see</li>
 <li>MultibodyPlant::Finalize().</li>
 </ul>
@@ -1770,6 +1864,30 @@ in W (for point Bo, the body frame’s origin).</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_[Expression].floating_position_suffix">
+<code class="descname">floating_position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].floating_position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <code class="docutils literal"><span class="pre">k`th</span> <span class="pre">position</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``position_index_in_body</span></code> must be in [0, 7) if
+<cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_[Expression].floating_positions_start">
 <code class="descname">floating_positions_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].floating_positions_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
@@ -1805,6 +1923,29 @@ starting at this index.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Body_[Expression].floating_velocity_suffix">
+<code class="descname">floating_velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[Expression].floating_velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in the floating base.
+``velocity_index_in_body`</cite> must be in [0,6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if called pre-finalize, see</li>
 <li>MultibodyPlant::Finalize().</li>
 </ul>
@@ -2102,6 +2243,30 @@ in W (for point Bo, the body frame’s origin).</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Body_[float].floating_position_suffix">
+<code class="descname">floating_position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].floating_position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <code class="docutils literal"><span class="pre">k`th</span> <span class="pre">position</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">floating</span> <span class="pre">base.</span>
+<span class="pre">``position_index_in_body</span></code> must be in [0, 7) if
+<cite>has_quaternion_dofs()`</cite> is true, otherwise in [0, 6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Body_[float].floating_positions_start">
 <code class="descname">floating_positions_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].floating_positions_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) For floating bodies (see is_floating()) this method returns
@@ -2137,6 +2302,29 @@ starting at this index.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if called pre-finalize, see</li>
+<li>MultibodyPlant::Finalize().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Body_[float].floating_velocity_suffix">
+<code class="descname">floating_velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Body_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Body_[float].floating_velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in the floating base.
+``velocity_index_in_body`</cite> must be in [0,6).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if is_floating() is false.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if called pre-finalize, see</li>
 <li>MultibodyPlant::Finalize().</li>
 </ul>
@@ -5115,6 +5303,18 @@ system.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Joint_.Joint_[float].position_suffix">
+<code class="descname">position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_.Joint_[float].position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th position in this joint. ``position_index_in_joint`</cite>
+must be in [0, num_positions()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Joint_.Joint_[float].position_upper_limits">
 <code class="descname">position_upper_limits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Joint_.Joint_[float].position_upper_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the position upper limits.</p>
@@ -5257,6 +5457,18 @@ systems.</p>
 <dd><p>Returns the index to the first generalized velocity for this joint
 within the vector v of generalized velocities for the full multibody
 system.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Joint_.Joint_[float].velocity_suffix">
+<code class="descname">velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_.Joint_[float].velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in this joint. ``velocity_index_in_joint`</cite>
+must be in [0, num_velocities()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -5531,6 +5743,18 @@ system.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Joint_[AutoDiffXd].position_suffix">
+<code class="descname">position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_[AutoDiffXd].position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th position in this joint. ``position_index_in_joint`</cite>
+must be in [0, num_positions()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Joint_[AutoDiffXd].position_upper_limits">
 <code class="descname">position_upper_limits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Joint_[AutoDiffXd].position_upper_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the position upper limits.</p>
@@ -5673,6 +5897,18 @@ systems.</p>
 <dd><p>Returns the index to the first generalized velocity for this joint
 within the vector v of generalized velocities for the full multibody
 system.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Joint_[AutoDiffXd].velocity_suffix">
+<code class="descname">velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_[AutoDiffXd].velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in this joint. ``velocity_index_in_joint`</cite>
+must be in [0, num_velocities()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -5945,6 +6181,18 @@ system.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Joint_[Expression].position_suffix">
+<code class="descname">position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_[Expression].position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th position in this joint. ``position_index_in_joint`</cite>
+must be in [0, num_positions()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Joint_[Expression].position_upper_limits">
 <code class="descname">position_upper_limits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Joint_[Expression].position_upper_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the position upper limits.</p>
@@ -6087,6 +6335,18 @@ systems.</p>
 <dd><p>Returns the index to the first generalized velocity for this joint
 within the vector v of generalized velocities for the full multibody
 system.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Joint_[Expression].velocity_suffix">
+<code class="descname">velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_[Expression].velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in this joint. ``velocity_index_in_joint`</cite>
+must be in [0, num_velocities()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -6359,6 +6619,18 @@ system.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Joint_[float].position_suffix">
+<code class="descname">position_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_[float].position_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th position in this joint. ``position_index_in_joint`</cite>
+must be in [0, num_positions()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Joint_[float].position_upper_limits">
 <code class="descname">position_upper_limits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Joint_[float].position_upper_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the position upper limits.</p>
@@ -6501,6 +6773,18 @@ systems.</p>
 <dd><p>Returns the index to the first generalized velocity for this joint
 within the vector v of generalized velocities for the full multibody
 system.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Joint_[float].velocity_suffix">
+<code class="descname">velocity_suffix</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Joint_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.Joint_[float].velocity_suffix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string suffix (e.g. to be appended to the name()) to
+identify the <cite>k`th velocity in this joint. ``velocity_index_in_joint`</cite>
+must be in [0, num_velocities()).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>the MultibodyPlant must be finalized.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">

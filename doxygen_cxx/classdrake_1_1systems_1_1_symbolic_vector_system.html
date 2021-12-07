@@ -107,6 +107,19 @@ class drake::systems::SymbolicVectorSystem&lt; T &gt;</h3>
 <p>The resulting system has only zero or one vector input ports, zero or one vector of continuous or discrete state (depending on the specified time_period), zero or one vector of numeric parameters, and only zero or one vector output ports.</p>
 <p>See SymbolicVectorSystemBuilder to make the construction a little nicer.</p>
 <p>For example, to define the system: ẋ = -x + x³, y = x, we could write </p><div class="fragment"><div class="line">symbolic::Variable x(<span class="stringliteral">&quot;x&quot;</span>);</div><div class="line"><span class="keyword">auto</span> system = SymbolicVectorSystemBuilder().state(x)</div><div class="line">                                           .dynamics(-x + <a class="code" href="namespacedrake.html#a95cb9413bd3124511459d856f6eef5f3">pow</a>(x,3))</div><div class="line">                                           .output(x)</div><div class="line">                                           .Build();</div></div><!-- fragment --><p>Note: This will not be as performant as writing your own <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html" title="A superclass template that extends System with some convenience utilities that are not applicable to ...">LeafSystem</a>. It is meant primarily for rapid prototyping.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1_symbolic_vector_system.html" title="A LeafSystem that is defined by vectors of symbolic::Expression representing the dynamics and output.">SymbolicVectorSystem</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr>
+</table>
+</td></tr>
+</table>
+<p>Either port <code>u0</code> or port <code>y0</code> may be absent, depending on the values supplied at construction.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>

@@ -157,6 +157,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc1bbbf124d24c628bb23796cfa5c594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#adc1bbbf124d24c628bb23796cfa5c594">floating_velocities_start</a> () const</td></tr>
 <tr class="memdesc:adc1bbbf124d24c628bb23796cfa5c594"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a>) this method returns the index of the first generalized velocity in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model.  <a href="#adc1bbbf124d24c628bb23796cfa5c594">More...</a><br /></td></tr>
 <tr class="separator:adc1bbbf124d24c628bb23796cfa5c594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160c046a3ba58d0ba931096b6bd38b2a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a160c046a3ba58d0ba931096b6bd38b2a">floating_position_suffix</a> (<a class="el" href="classint.html">int</a> position_index_in_body) const</td></tr>
+<tr class="memdesc:a160c046a3ba58d0ba931096b6bd38b2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a160c046a3ba58d0ba931096b6bd38b2a">More...</a><br /></td></tr>
+<tr class="separator:a160c046a3ba58d0ba931096b6bd38b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#a4bf67c08cb5fb34309c4c220d9872d29">floating_velocity_suffix</a> (<a class="el" href="classint.html">int</a> velocity_index_in_body) const</td></tr>
+<tr class="memdesc:a4bf67c08cb5fb34309c4c220d9872d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string suffix (e.g.  <a href="#a4bf67c08cb5fb34309c4c220d9872d29">More...</a><br /></td></tr>
+<tr class="separator:a4bf67c08cb5fb34309c4c220d9872d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9539540983caa3c52d28faf7f2d4d33"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_body.html#af9539540983caa3c52d28faf7f2d4d33">get_default_mass</a> () const</td></tr>
 <tr class="memdesc:af9539540983caa3c52d28faf7f2d4d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the default mass (not Context dependent) for <code>this</code> body.  <a href="#af9539540983caa3c52d28faf7f2d4d33">More...</a><br /></td></tr>
 <tr class="separator:af9539540983caa3c52d28faf7f2d4d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -814,6 +820,33 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a160c046a3ba58d0ba931096b6bd38b2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160c046a3ba58d0ba931096b6bd38b2a">&#9670;&nbsp;</a></span>floating_position_suffix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string floating_position_suffix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>position_index_in_body</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string suffix (e.g. </p>
+<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body.">name()</a>) to identify the <code>k</code>th position in the floating base. <code>position_index_in_body</code> must be in [0, 7) if <code><a class="el" href="classdrake_1_1multibody_1_1_body.html#ad6cb65d33b350a9ae5f21211c48a9b31" title="(Advanced) If true, this body is a floating body modeled with a quaternion floating mobilizer.">has_quaternion_dofs()</a></code> is true, otherwise in [0, 6). </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is false. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8e98e34e5da5ecfc7e03086b70cf5489"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e98e34e5da5ecfc7e03086b70cf5489">&#9670;&nbsp;</a></span>floating_positions_start()</h2>
 
@@ -857,6 +890,33 @@ Friends</h2></td></tr>
 <p>(Advanced) For floating bodies (see <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a>) this method returns the index of the first generalized velocity in the state vector for a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> model. </p>
 <p>Velocities for this body are then contiguous starting at this index. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4bf67c08cb5fb34309c4c220d9872d29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf67c08cb5fb34309c4c220d9872d29">&#9670;&nbsp;</a></span>floating_velocity_suffix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string floating_velocity_suffix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>velocity_index_in_body</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a string suffix (e.g. </p>
+<p>to be appended to the <a class="el" href="classdrake_1_1multibody_1_1_body.html#ad8227ba86a01f26e4f173cd5e219d5d1" title="Gets the name associated with this body.">name()</a>) to identify the <code>k</code>th velocity in the floating base. <code>velocity_index_in_body</code> must be in [0,6). </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <a class="el" href="classdrake_1_1multibody_1_1_body.html#a7df065349a370f3007ee52c6ede868d0" title="(Advanced) Returns true if this body is granted 6-dofs by a Mobilizer.">is_floating()</a> is false. </td></tr>
     <tr><td class="paramname">std::exception</td><td>if called pre-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">MultibodyPlant::Finalize()</a>. </td></tr>
   </table>
   </dd>

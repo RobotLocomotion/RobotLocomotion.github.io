@@ -206,7 +206,7 @@
 <em class="property">class </em><code class="descname">Adder_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.Adder_.Adder_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>An adder for arbitrarily many inputs of equal size.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">input(0)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">input(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Adder_.Adder_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Adder_[float], num_inputs: int, size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Adder_.Adder_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an Adder System.</p>
@@ -227,7 +227,7 @@
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Adder_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.Adder_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>An adder for arbitrarily many inputs of equal size.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">input(0)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">input(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Adder_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Adder_[AutoDiffXd], num_inputs: int, size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Adder_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an Adder System.</p>
@@ -246,7 +246,7 @@
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Adder_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.Adder_[Expression]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
 <p>An adder for arbitrarily many inputs of equal size.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">input(0)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">input(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Adder_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Adder_[Expression], num_inputs: int, size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Adder_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an Adder System.</p>
@@ -265,7 +265,7 @@
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Adder_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.Adder_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>An adder for arbitrarily many inputs of equal size.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">input(0)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">input(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Adder</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; sum</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Adder_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Adder_[float], num_inputs: int, size: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Adder_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct an Adder System.</p>
@@ -346,7 +346,7 @@ to the subsystem input port.</p>
 <em class="property">class </em><code class="descname">AffineSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.AffineSystem_.AffineSystem_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A discrete OR continuous affine system (with constant coefficients).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u(t)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(t)</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
 <code class="docutils literal"><span class="pre">y</span></code> denote the output vector.</p>
 <p>If <code class="docutils literal"><span class="pre">time_period</span> <span class="pre">&gt;</span> <span class="pre">0.0</span></code>, the affine system will have the following
 discrete-time state update:</p>
@@ -452,7 +452,7 @@ positive semi-definite.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">AffineSystem_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.AffineSystem_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A discrete OR continuous affine system (with constant coefficients).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u(t)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(t)</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
 <code class="docutils literal"><span class="pre">y</span></code> denote the output vector.</p>
 <p>If <code class="docutils literal"><span class="pre">time_period</span> <span class="pre">&gt;</span> <span class="pre">0.0</span></code>, the affine system will have the following
 discrete-time state update:</p>
@@ -556,7 +556,7 @@ positive semi-definite.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">AffineSystem_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.AffineSystem_[Expression]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
 <p>A discrete OR continuous affine system (with constant coefficients).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u(t)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(t)</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
 <code class="docutils literal"><span class="pre">y</span></code> denote the output vector.</p>
 <p>If <code class="docutils literal"><span class="pre">time_period</span> <span class="pre">&gt;</span> <span class="pre">0.0</span></code>, the affine system will have the following
 discrete-time state update:</p>
@@ -660,7 +660,7 @@ positive semi-definite.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">AffineSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.AffineSystem_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A discrete OR continuous affine system (with constant coefficients).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u(t)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(t)</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Let <code class="docutils literal"><span class="pre">u</span></code> denote the input vector, <code class="docutils literal"><span class="pre">x</span></code> denote the state vector, and
 <code class="docutils literal"><span class="pre">y</span></code> denote the output vector.</p>
 <p>If <code class="docutils literal"><span class="pre">time_period</span> <span class="pre">&gt;</span> <span class="pre">0.0</span></code>, the affine system will have the following
 discrete-time state update:</p>
@@ -765,7 +765,7 @@ positive semi-definite.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A (stateless) vector system implemented as a multi-linear
 (barycentric) interpolation on a mesh over the inputs.</p>
-<p>This has many potential uses, including representing the policies that
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>BarycentricMeshSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>This has many potential uses, including representing the policies that
 are generated by numerical control design methods like approximate
 dynamic programming.</p>
 <div class="admonition seealso">
@@ -811,7 +811,7 @@ mesh.MeshValuesFrom(function) is one useful tool for creating it.</p>
 <em class="property">class </em><code class="descname">ConstantValueSource_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_.ConstantValueSource_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A source block that always outputs a constant value.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantValueSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantValueSource_.ConstantValueSource_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantValueSource_[float], value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_.ConstantValueSource_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
@@ -829,7 +829,7 @@ mesh.MeshValuesFrom(function) is one useful tool for creating it.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">ConstantValueSource_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A source block that always outputs a constant value.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantValueSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantValueSource_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantValueSource_[AutoDiffXd], value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
@@ -845,7 +845,7 @@ mesh.MeshValuesFrom(function) is one useful tool for creating it.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">ConstantValueSource_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_[Expression]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
 <p>A source block that always outputs a constant value.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantValueSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantValueSource_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantValueSource_[Expression], value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
@@ -861,7 +861,7 @@ mesh.MeshValuesFrom(function) is one useful tool for creating it.</p>
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">ConstantValueSource_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A source block that always outputs a constant value.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantValueSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantValueSource_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantValueSource_[float], value: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantValueSource_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
@@ -888,7 +888,7 @@ mesh.MeshValuesFrom(function) is one useful tool for creating it.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A source block with a constant output port at all times. The value of
 the output port is a parameter of the system (see Parameters).</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantVectorSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantVectorSource_.ConstantVectorSource_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantVectorSource_[float], source_value: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantVectorSource_.ConstantVectorSource_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system with a vector output that is constant and equals
@@ -924,7 +924,7 @@ given <code class="docutils literal"><span class="pre">context</span></code>.</p
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A source block with a constant output port at all times. The value of
 the output port is a parameter of the system (see Parameters).</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantVectorSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantVectorSource_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantVectorSource_[AutoDiffXd], source_value: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantVectorSource_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system with a vector output that is constant and equals
@@ -958,7 +958,7 @@ given <code class="docutils literal"><span class="pre">context</span></code>.</p
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
 <p>A source block with a constant output port at all times. The value of
 the output port is a parameter of the system (see Parameters).</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantVectorSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantVectorSource_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantVectorSource_[Expression], source_value: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantVectorSource_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system with a vector output that is constant and equals
@@ -992,7 +992,7 @@ given <code class="docutils literal"><span class="pre">context</span></code>.</p
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A source block with a constant output port at all times. The value of
 the output port is a parameter of the system (see Parameters).</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ConstantVectorSource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.ConstantVectorSource_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.ConstantVectorSource_[float], source_value: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.ConstantVectorSource_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system with a vector output that is constant and equals
@@ -1043,7 +1043,7 @@ given <code class="docutils literal"><span class="pre">context</span></code>.</p
 <p>This system splits a vector valued signal on its input into multiple
 outputs.</p>
 <p>The input to this system directly feeds through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Demultiplexer_.Demultiplexer_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Demultiplexer_.Demultiplexer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1052,7 +1052,7 @@ outputs.</p>
 </ol>
 <p>Constructs Demultiplexer with one vector valued input port of size
 <code class="docutils literal"><span class="pre">size</span></code> and vector valued output ports of size <code class="docutils literal"><span class="pre">output_ports_size</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y((size / output_ports_size) - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1081,7 +1081,7 @@ sizes specified as the vector <code class="docutils literal"><span class="pre">o
 output ports is the length of this vector. The size of each output
 port is the value of the corresponding element of the vector
 <code class="docutils literal"><span class="pre">output_ports_sizes</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(output_ports_sizes.size() - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1122,7 +1122,7 @@ will be the size of the input port.</dd>
 <p>This system splits a vector valued signal on its input into multiple
 outputs.</p>
 <p>The input to this system directly feeds through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Demultiplexer_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Demultiplexer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1131,7 +1131,7 @@ outputs.</p>
 </ol>
 <p>Constructs Demultiplexer with one vector valued input port of size
 <code class="docutils literal"><span class="pre">size</span></code> and vector valued output ports of size <code class="docutils literal"><span class="pre">output_ports_size</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y((size / output_ports_size) - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1160,7 +1160,7 @@ sizes specified as the vector <code class="docutils literal"><span class="pre">o
 output ports is the length of this vector. The size of each output
 port is the value of the corresponding element of the vector
 <code class="docutils literal"><span class="pre">output_ports_sizes</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(output_ports_sizes.size() - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1199,7 +1199,7 @@ will be the size of the input port.</dd>
 <p>This system splits a vector valued signal on its input into multiple
 outputs.</p>
 <p>The input to this system directly feeds through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Demultiplexer_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Demultiplexer_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1208,7 +1208,7 @@ outputs.</p>
 </ol>
 <p>Constructs Demultiplexer with one vector valued input port of size
 <code class="docutils literal"><span class="pre">size</span></code> and vector valued output ports of size <code class="docutils literal"><span class="pre">output_ports_size</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y((size / output_ports_size) - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1237,7 +1237,7 @@ sizes specified as the vector <code class="docutils literal"><span class="pre">o
 output ports is the length of this vector. The size of each output
 port is the value of the corresponding element of the vector
 <code class="docutils literal"><span class="pre">output_ports_sizes</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(output_ports_sizes.size() - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1276,7 +1276,7 @@ will be the size of the input port.</dd>
 <p>This system splits a vector valued signal on its input into multiple
 outputs.</p>
 <p>The input to this system directly feeds through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(N-1)</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Demultiplexer_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Demultiplexer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1285,7 +1285,7 @@ outputs.</p>
 </ol>
 <p>Constructs Demultiplexer with one vector valued input port of size
 <code class="docutils literal"><span class="pre">size</span></code> and vector valued output ports of size <code class="docutils literal"><span class="pre">output_ports_size</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y((size / output_ports_size) - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1314,7 +1314,7 @@ sizes specified as the vector <code class="docutils literal"><span class="pre">o
 output ports is the length of this vector. The size of each output
 port is the value of the corresponding element of the vector
 <code class="docutils literal"><span class="pre">output_ports_sizes</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Demultiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y(output_ports_sizes.size() - 1)</td></tr></table></td></tr></table><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
@@ -1814,7 +1814,7 @@ cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
 frequencies much larger than the cutoff frequency and a zero shift for
 low frequencies.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>FirstOrderLowPassFilter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.FirstOrderLowPassFilter_.FirstOrderLowPassFilter_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.FirstOrderLowPassFilter_.FirstOrderLowPassFilter_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1903,7 +1903,7 @@ cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
 frequencies much larger than the cutoff frequency and a zero shift for
 low frequencies.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>FirstOrderLowPassFilter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.FirstOrderLowPassFilter_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.FirstOrderLowPassFilter_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -1990,7 +1990,7 @@ cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
 frequencies much larger than the cutoff frequency and a zero shift for
 low frequencies.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>FirstOrderLowPassFilter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.FirstOrderLowPassFilter_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.FirstOrderLowPassFilter_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2077,7 +2077,7 @@ cutoff frequency, the Bode plot approaches a 20 dB per decade negative
 slope. The Bode plot in phase exhibits a -90 degrees shift (lag) for
 frequencies much larger than the cutoff frequency and a zero shift for
 low frequencies.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>FirstOrderLowPassFilter</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.FirstOrderLowPassFilter_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.FirstOrderLowPassFilter_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2227,7 +2227,7 @@ nor random) of the AffineSystem based on <code class="docutils literal"><span cl
 <p>An element-wise gain block with input <code class="docutils literal"><span class="pre">u</span></code> and output <code class="docutils literal"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">k</span> <span class="pre">*</span> <span class="pre">u</span></code>
 with <code class="docutils literal"><span class="pre">k</span></code> a constant vector. The input to this system directly feeds
 through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Gain_.Gain_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Gain_.Gain_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2265,7 +2265,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <p>An element-wise gain block with input <code class="docutils literal"><span class="pre">u</span></code> and output <code class="docutils literal"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">k</span> <span class="pre">*</span> <span class="pre">u</span></code>
 with <code class="docutils literal"><span class="pre">k</span></code> a constant vector. The input to this system directly feeds
 through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Gain_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Gain_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2301,7 +2301,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <p>An element-wise gain block with input <code class="docutils literal"><span class="pre">u</span></code> and output <code class="docutils literal"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">k</span> <span class="pre">*</span> <span class="pre">u</span></code>
 with <code class="docutils literal"><span class="pre">k</span></code> a constant vector. The input to this system directly feeds
 through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Gain_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Gain_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2337,7 +2337,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <p>An element-wise gain block with input <code class="docutils literal"><span class="pre">u</span></code> and output <code class="docutils literal"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">k</span> <span class="pre">*</span> <span class="pre">u</span></code>
 with <code class="docutils literal"><span class="pre">k</span></code> a constant vector. The input to this system directly feeds
 through to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Gain</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Gain_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Gain_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2381,7 +2381,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <em class="property">class </em><code class="descname">Integrator_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.Integrator_.Integrator_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>An integrator for a continuous vector input.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Integrator_.Integrator_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Integrator_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Integrator_.Integrator_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs an Integrator system.</p>
@@ -2407,7 +2407,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Integrator_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.Integrator_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>An integrator for a continuous vector input.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Integrator_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Integrator_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Integrator_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs an Integrator system.</p>
@@ -2431,7 +2431,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Integrator_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.Integrator_[Expression]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[Expression]" title="pydrake.systems.framework.LeafSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[Expression]</span></code></a></p>
 <p>An integrator for a continuous vector input.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Integrator_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Integrator_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Integrator_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs an Integrator system.</p>
@@ -2455,7 +2455,7 @@ subscript <code class="docutils literal"><span class="pre">i</span></code> indic
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">Integrator_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.Integrator_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>An integrator for a continuous vector input.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Integrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Integrator_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Integrator_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Integrator_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs an Integrator system.</p>
@@ -2577,7 +2577,7 @@ nor random) of the LinearSystem based on <code class="docutils literal"><span cl
 <em class="property">class </em><code class="descname">LinearSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearSystem_.LinearSystem_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.primitives.AffineSystem_[float]" title="pydrake.systems.primitives.AffineSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.AffineSystem_[float]</span></code></a></p>
 <p>A discrete OR continuous linear system.</p>
-<p>If time_period&gt;0.0, then the linear system will have the following
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>If time_period&gt;0.0, then the linear system will have the following
 discrete- time state update:</p>
 <div class="math">
 \[x[n+1] = A x[n] + B u[n],\]</div>
@@ -2619,7 +2619,7 @@ following dimensions: | Matrix | Num Rows | Num Columns |
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearSystem_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearSystem_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.primitives.AffineSystem_[AutoDiffXd]" title="pydrake.systems.primitives.AffineSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.AffineSystem_[AutoDiffXd]</span></code></a></p>
 <p>A discrete OR continuous linear system.</p>
-<p>If time_period&gt;0.0, then the linear system will have the following
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>If time_period&gt;0.0, then the linear system will have the following
 discrete- time state update:</p>
 <div class="math">
 \[x[n+1] = A x[n] + B u[n],\]</div>
@@ -2659,7 +2659,7 @@ following dimensions: | Matrix | Num Rows | Num Columns |
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearSystem_[Expression]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearSystem_[Expression]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.primitives.AffineSystem_[Expression]" title="pydrake.systems.primitives.AffineSystem_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.AffineSystem_[Expression]</span></code></a></p>
 <p>A discrete OR continuous linear system.</p>
-<p>If time_period&gt;0.0, then the linear system will have the following
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>If time_period&gt;0.0, then the linear system will have the following
 discrete- time state update:</p>
 <div class="math">
 \[x[n+1] = A x[n] + B u[n],\]</div>
@@ -2699,7 +2699,7 @@ following dimensions: | Matrix | Num Rows | Num Columns |
 <em class="property">class </em><code class="descclassname">pydrake.systems.primitives.</code><code class="descname">LinearSystem_[float]</code><a class="headerlink" href="#pydrake.systems.primitives.LinearSystem_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.systems.primitives.AffineSystem_[float]" title="pydrake.systems.primitives.AffineSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.primitives.AffineSystem_[float]</span></code></a></p>
 <p>A discrete OR continuous linear system.</p>
-<p>If time_period&gt;0.0, then the linear system will have the following
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>If time_period&gt;0.0, then the linear system will have the following
 discrete- time state update:</p>
 <div class="math">
 \[x[n+1] = A x[n] + B u[n],\]</div>
@@ -2752,7 +2752,7 @@ following dimensions: | Matrix | Num Rows | Num Columns |
 A*w_in + b. The user can obtain the probability density of w_out. When
 the class is instantiated with autodiff scalar, the user can also
 obtain the gradient of the probability density of w_out.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
 zero.</p>
 <p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
 <p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
@@ -2879,7 +2879,7 @@ rows.</dd>
 A*w_in + b. The user can obtain the probability density of w_out. When
 the class is instantiated with autodiff scalar, the user can also
 obtain the gradient of the probability density of w_out.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
 zero.</p>
 <p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
 <p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
@@ -3004,7 +3004,7 @@ rows.</dd>
 A*w_in + b. The user can obtain the probability density of w_out. When
 the class is instantiated with autodiff scalar, the user can also
 obtain the gradient of the probability density of w_out.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in (random signal)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A (matrix)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b (vector, optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">w_in&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">A&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">b&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>LinearTransformDensity</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; w_out_density</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">b</span></code> port can remain disconnected, in which case it defaults to
 zero.</p>
 <p><code class="docutils literal"><span class="pre">A</span></code> should be a matrix using a column-major order.</p>
 <p>The user should make sure that the input port <code class="docutils literal"><span class="pre">w_in</span></code> is connected
@@ -3285,6 +3285,7 @@ coefficient matrix is <code class="docutils literal"><span class="pre">D</span><
 and a state <code class="docutils literal"><span class="pre">x</span></code>, the output of this system, <code class="docutils literal"><span class="pre">y</span></code>, is:</p>
 <div class="math">
 \[y = D u\]</div>
+<p>name: MatrixGain input_ports: - u0 output_ports: - y0</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">AffineSystem</p>
@@ -3313,6 +3314,7 @@ coefficient matrix is <code class="docutils literal"><span class="pre">D</span><
 and a state <code class="docutils literal"><span class="pre">x</span></code>, the output of this system, <code class="docutils literal"><span class="pre">y</span></code>, is:</p>
 <div class="math">
 \[y = D u\]</div>
+<p>name: MatrixGain input_ports: - u0 output_ports: - y0</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">AffineSystem</p>
@@ -3339,6 +3341,7 @@ coefficient matrix is <code class="docutils literal"><span class="pre">D</span><
 and a state <code class="docutils literal"><span class="pre">x</span></code>, the output of this system, <code class="docutils literal"><span class="pre">y</span></code>, is:</p>
 <div class="math">
 \[y = D u\]</div>
+<p>name: MatrixGain input_ports: - u0 output_ports: - y0</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">AffineSystem</p>
@@ -3365,6 +3368,7 @@ coefficient matrix is <code class="docutils literal"><span class="pre">D</span><
 and a state <code class="docutils literal"><span class="pre">x</span></code>, the output of this system, <code class="docutils literal"><span class="pre">y</span></code>, is:</p>
 <div class="math">
 \[y = D u\]</div>
+<p>name: MatrixGain input_ports: - u0 output_ports: - y0</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">AffineSystem</p>
@@ -3398,7 +3402,7 @@ and a state <code class="docutils literal"><span class="pre">x</span></code>, th
 <p>This system combines multiple vector-valued inputs into a
 vector-valued output. The input to this system directly feeds through
 to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Multiplexer_.Multiplexer_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Multiplexer_.Multiplexer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3408,13 +3412,13 @@ to its output.</p>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code> scalar-valued
 input ports, and one vector-valued output port of size
 <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code>.</p>
-<ol class="arabic simple" start="2">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(num_scalar_inputs - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[float], input_sizes: List[int]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">input_sizes.size()</span></code> vector-valued
 input ports where the i-th input has size <code class="docutils literal"><span class="pre">input_sizes[i]</span></code>, and one
 vector- valued output port of size <code class="docutils literal"><span class="pre">sum(input_sizes)</span></code>.</p>
-<ol class="arabic simple" start="3">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(input_sizes.size() - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[float], model_vector: pydrake.systems.framework.BasicVector_[float]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with model_vector.size() scalar-valued inputs
@@ -3439,7 +3443,7 @@ system scalar conversion. See system_scalar_conversion.</p>
 <p>This system combines multiple vector-valued inputs into a
 vector-valued output. The input to this system directly feeds through
 to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Multiplexer_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Multiplexer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3449,13 +3453,13 @@ to its output.</p>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code> scalar-valued
 input ports, and one vector-valued output port of size
 <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code>.</p>
-<ol class="arabic simple" start="2">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(num_scalar_inputs - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[AutoDiffXd], input_sizes: List[int]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">input_sizes.size()</span></code> vector-valued
 input ports where the i-th input has size <code class="docutils literal"><span class="pre">input_sizes[i]</span></code>, and one
 vector- valued output port of size <code class="docutils literal"><span class="pre">sum(input_sizes)</span></code>.</p>
-<ol class="arabic simple" start="3">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(input_sizes.size() - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[AutoDiffXd], model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with model_vector.size() scalar-valued inputs
@@ -3478,7 +3482,7 @@ system scalar conversion. See system_scalar_conversion.</p>
 <p>This system combines multiple vector-valued inputs into a
 vector-valued output. The input to this system directly feeds through
 to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Multiplexer_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Multiplexer_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3488,13 +3492,13 @@ to its output.</p>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code> scalar-valued
 input ports, and one vector-valued output port of size
 <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code>.</p>
-<ol class="arabic simple" start="2">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(num_scalar_inputs - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[Expression], input_sizes: List[int]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">input_sizes.size()</span></code> vector-valued
 input ports where the i-th input has size <code class="docutils literal"><span class="pre">input_sizes[i]</span></code>, and one
 vector- valued output port of size <code class="docutils literal"><span class="pre">sum(input_sizes)</span></code>.</p>
-<ol class="arabic simple" start="3">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(input_sizes.size() - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[Expression], model_vector: pydrake.systems.framework.BasicVector_[Expression]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with model_vector.size() scalar-valued inputs
@@ -3517,7 +3521,7 @@ system scalar conversion. See system_scalar_conversion.</p>
 <p>This system combines multiple vector-valued inputs into a
 vector-valued output. The input to this system directly feeds through
 to its output.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(N-1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.Multiplexer_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Multiplexer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3527,13 +3531,13 @@ to its output.</p>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code> scalar-valued
 input ports, and one vector-valued output port of size
 <code class="docutils literal"><span class="pre">num_scalar_inputs</span></code>.</p>
-<ol class="arabic simple" start="2">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(num_scalar_inputs - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[float], input_sizes: List[int]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with <code class="docutils literal"><span class="pre">input_sizes.size()</span></code> vector-valued
 input ports where the i-th input has size <code class="docutils literal"><span class="pre">input_sizes[i]</span></code>, and one
 vector- valued output port of size <code class="docutils literal"><span class="pre">sum(input_sizes)</span></code>.</p>
-<ol class="arabic simple" start="3">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">u(input_sizes.size() - 1)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Multiplexer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.systems.primitives.Multiplexer_[float], model_vector: pydrake.systems.framework.BasicVector_[float]) -&gt; None</li>
 </ol>
 <p>Constructs a Multiplexer with model_vector.size() scalar-valued inputs
@@ -3586,7 +3590,7 @@ effectively creating an output port that feeds through the input to
 the Diagram and that can now be connected to the inputs of the inner
 subsystems to the Diagram. A detailed discussion of the PidController
 can be found at <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/3132">https://github.com/RobotLocomotion/drake/pull/3132</a>.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.PassThrough_.PassThrough_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_.PassThrough_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3646,7 +3650,7 @@ effectively creating an output port that feeds through the input to
 the Diagram and that can now be connected to the inputs of the inner
 subsystems to the Diagram. A detailed discussion of the PidController
 can be found at <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/3132">https://github.com/RobotLocomotion/drake/pull/3132</a>.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.PassThrough_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3704,7 +3708,7 @@ effectively creating an output port that feeds through the input to
 the Diagram and that can now be connected to the inputs of the inner
 subsystems to the Diagram. A detailed discussion of the PidController
 can be found at <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/3132">https://github.com/RobotLocomotion/drake/pull/3132</a>.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.PassThrough_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3762,7 +3766,7 @@ effectively creating an output port that feeds through the input to
 the Diagram and that can now be connected to the inputs of the inner
 subsystems to the Diagram. A detailed discussion of the PidController
 can be found at <a class="reference external" href="https://github.com/RobotLocomotion/drake/pull/3132">https://github.com/RobotLocomotion/drake/pull/3132</a>.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PassThrough</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.PassThrough_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.PassThrough_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -3890,7 +3894,7 @@ analysis).</p>
 saturation values <span class="math">\(u_{min}\)</span> and/or <span class="math">\(u_{max}\)</span>, and output
 <code class="docutils literal"><span class="pre">y</span></code> respectively as in:</p>
 <div class="math">
-\[y = u, u_{min} &lt; u &lt; u_{min}\]</div>
+\[y = u, u_{min} &lt; u &lt; u_{max}\]</div>
 <div class="math">
 \[y = u_{min}, u \le u_{min}\]</div>
 <div class="math">
@@ -3909,13 +3913,15 @@ appropriate sources, their values are taken by default to be
 <span class="math">\(u_{min} = -\infty\)</span>, and <span class="math">\(u_{max} = \infty\)</span> respectively.
 In this “variable” configuration, at least one of the input ports must
 be connected.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Ports show in &lt;span style=”color:gray”&gt;gray&lt;/span&gt; may be absent,
+depending on how the system is constructed.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Saturation_.Saturation_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Saturation_[float], min_value: numpy.ndarray[numpy.float64[m, 1]], max_value: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Saturation_.Saturation_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a constant Saturation system where the upper and lower
 values are represented by vectors of identical size supplied via this
 constructor.</p>
-<dl class="docutils">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">u_min</span></code>:</dt>
 <dd>the lower (vector) limit to the saturation.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">u_max</span></code>:</dt>
@@ -3937,7 +3943,7 @@ constructor.</p>
 saturation values <span class="math">\(u_{min}\)</span> and/or <span class="math">\(u_{max}\)</span>, and output
 <code class="docutils literal"><span class="pre">y</span></code> respectively as in:</p>
 <div class="math">
-\[y = u, u_{min} &lt; u &lt; u_{min}\]</div>
+\[y = u, u_{min} &lt; u &lt; u_{max}\]</div>
 <div class="math">
 \[y = u_{min}, u \le u_{min}\]</div>
 <div class="math">
@@ -3956,13 +3962,15 @@ appropriate sources, their values are taken by default to be
 <span class="math">\(u_{min} = -\infty\)</span>, and <span class="math">\(u_{max} = \infty\)</span> respectively.
 In this “variable” configuration, at least one of the input ports must
 be connected.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Ports show in &lt;span style=”color:gray”&gt;gray&lt;/span&gt; may be absent,
+depending on how the system is constructed.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Saturation_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Saturation_[AutoDiffXd], min_value: numpy.ndarray[object[m, 1]], max_value: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Saturation_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a constant Saturation system where the upper and lower
 values are represented by vectors of identical size supplied via this
 constructor.</p>
-<dl class="docutils">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">u_min</span></code>:</dt>
 <dd>the lower (vector) limit to the saturation.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">u_max</span></code>:</dt>
@@ -3982,7 +3990,7 @@ constructor.</p>
 saturation values <span class="math">\(u_{min}\)</span> and/or <span class="math">\(u_{max}\)</span>, and output
 <code class="docutils literal"><span class="pre">y</span></code> respectively as in:</p>
 <div class="math">
-\[y = u, u_{min} &lt; u &lt; u_{min}\]</div>
+\[y = u, u_{min} &lt; u &lt; u_{max}\]</div>
 <div class="math">
 \[y = u_{min}, u \le u_{min}\]</div>
 <div class="math">
@@ -4001,13 +4009,15 @@ appropriate sources, their values are taken by default to be
 <span class="math">\(u_{min} = -\infty\)</span>, and <span class="math">\(u_{max} = \infty\)</span> respectively.
 In this “variable” configuration, at least one of the input ports must
 be connected.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Ports show in &lt;span style=”color:gray”&gt;gray&lt;/span&gt; may be absent,
+depending on how the system is constructed.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Saturation_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Saturation_[Expression], min_value: numpy.ndarray[object[m, 1]], max_value: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Saturation_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a constant Saturation system where the upper and lower
 values are represented by vectors of identical size supplied via this
 constructor.</p>
-<dl class="docutils">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">u_min</span></code>:</dt>
 <dd>the lower (vector) limit to the saturation.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">u_max</span></code>:</dt>
@@ -4027,7 +4037,7 @@ constructor.</p>
 saturation values <span class="math">\(u_{min}\)</span> and/or <span class="math">\(u_{max}\)</span>, and output
 <code class="docutils literal"><span class="pre">y</span></code> respectively as in:</p>
 <div class="math">
-\[y = u, u_{min} &lt; u &lt; u_{min}\]</div>
+\[y = u, u_{min} &lt; u &lt; u_{max}\]</div>
 <div class="math">
 \[y = u_{min}, u \le u_{min}\]</div>
 <div class="math">
@@ -4046,13 +4056,15 @@ appropriate sources, their values are taken by default to be
 <span class="math">\(u_{min} = -\infty\)</span>, and <span class="math">\(u_{max} = \infty\)</span> respectively.
 In this “variable” configuration, at least one of the input ports must
 be connected.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u2</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Ports show in &lt;span style=”color:gray”&gt;gray&lt;/span&gt; may be absent,
+depending on how the system is constructed.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Saturation_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.Saturation_[float], min_value: numpy.ndarray[numpy.float64[m, 1]], max_value: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.Saturation_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a constant Saturation system where the upper and lower
 values are represented by vectors of identical size supplied via this
 constructor.</p>
-<dl class="docutils">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Saturation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">u_min</span></code>:</dt>
 <dd>the lower (vector) limit to the saturation.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">u_max</span></code>:</dt>
@@ -4089,6 +4101,10 @@ time as the source of values for the time variable or an external
 source. If an external time source is specified, the system is created
 with an input port for the time source. Otherwise, the system is
 created with zero input ports.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Sine</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y1</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y2</td></tr></table></td></tr></table><p>Port <code class="docutils literal"><span class="pre">u0</span></code> is present if and only if the constructor parameter
+<code class="docutils literal"><span class="pre">is_time_based</span></code> is false.</p>
+<p>Port <code class="docutils literal"><span class="pre">y0</span></code> emits the value <code class="docutils literal"><span class="pre">y</span></code>; port <code class="docutils literal"><span class="pre">y1</span></code> emits the first
+derivative; port <code class="docutils literal"><span class="pre">y2</span></code> emits the second derivative.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Sine_.Sine_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Sine_.Sine_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4150,6 +4166,10 @@ time as the source of values for the time variable or an external
 source. If an external time source is specified, the system is created
 with an input port for the time source. Otherwise, the system is
 created with zero input ports.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Sine</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y1</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y2</td></tr></table></td></tr></table><p>Port <code class="docutils literal"><span class="pre">u0</span></code> is present if and only if the constructor parameter
+<code class="docutils literal"><span class="pre">is_time_based</span></code> is false.</p>
+<p>Port <code class="docutils literal"><span class="pre">y0</span></code> emits the value <code class="docutils literal"><span class="pre">y</span></code>; port <code class="docutils literal"><span class="pre">y1</span></code> emits the first
+derivative; port <code class="docutils literal"><span class="pre">y2</span></code> emits the second derivative.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Sine_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Sine_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4209,6 +4229,10 @@ time as the source of values for the time variable or an external
 source. If an external time source is specified, the system is created
 with an input port for the time source. Otherwise, the system is
 created with zero input ports.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Sine</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y1</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y2</td></tr></table></td></tr></table><p>Port <code class="docutils literal"><span class="pre">u0</span></code> is present if and only if the constructor parameter
+<code class="docutils literal"><span class="pre">is_time_based</span></code> is false.</p>
+<p>Port <code class="docutils literal"><span class="pre">y0</span></code> emits the value <code class="docutils literal"><span class="pre">y</span></code>; port <code class="docutils literal"><span class="pre">y1</span></code> emits the first
+derivative; port <code class="docutils literal"><span class="pre">y2</span></code> emits the second derivative.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Sine_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Sine_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4268,6 +4292,10 @@ time as the source of values for the time variable or an external
 source. If an external time source is specified, the system is created
 with an input port for the time source. Otherwise, the system is
 created with zero input ports.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>Sine</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y1</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y2</td></tr></table></td></tr></table><p>Port <code class="docutils literal"><span class="pre">u0</span></code> is present if and only if the constructor parameter
+<code class="docutils literal"><span class="pre">is_time_based</span></code> is false.</p>
+<p>Port <code class="docutils literal"><span class="pre">y0</span></code> emits the value <code class="docutils literal"><span class="pre">y</span></code>; port <code class="docutils literal"><span class="pre">y1</span></code> emits the first
+derivative; port <code class="docutils literal"><span class="pre">y2</span></code> emits the second derivative.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.Sine_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.Sine_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4620,6 +4648,8 @@ nicer.</p>
 </div>
 <p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal"><span class="pre">u0</span></code> or port <code class="docutils literal"><span class="pre">y0</span></code> may be absent, depending on the
+values supplied at construction.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.SymbolicVectorSystem_.SymbolicVectorSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.SymbolicVectorSystem_.SymbolicVectorSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4741,6 +4771,8 @@ nicer.</p>
 </div>
 <p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal"><span class="pre">u0</span></code> or port <code class="docutils literal"><span class="pre">y0</span></code> may be absent, depending on the
+values supplied at construction.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.SymbolicVectorSystem_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.SymbolicVectorSystem_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4860,6 +4892,8 @@ nicer.</p>
 </div>
 <p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal"><span class="pre">u0</span></code> or port <code class="docutils literal"><span class="pre">y0</span></code> may be absent, depending on the
+values supplied at construction.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.SymbolicVectorSystem_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.SymbolicVectorSystem_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
@@ -4979,6 +5013,8 @@ nicer.</p>
 </div>
 <p>Note: This will not be as performant as writing your own LeafSystem.
 It is meant primarily for rapid prototyping.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u0</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SymbolicVectorSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:gray">y0</span></td></tr></table></td></tr></table><p>Either port <code class="docutils literal"><span class="pre">u0</span></code> or port <code class="docutils literal"><span class="pre">y0</span></code> may be absent, depending on the
+values supplied at construction.</p>
 <dl class="method">
 <dt id="pydrake.systems.primitives.SymbolicVectorSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.SymbolicVectorSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -5092,7 +5128,7 @@ case) or <code class="docutils literal"><span class="pre">var[n+1]</span></code>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A continuous- or discrete-time Affine Time-Varying system with system
 matrices described by trajectories.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectoryAffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectoryAffineSystem_.TrajectoryAffineSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryAffineSystem_[float], A: pydrake.trajectories.Trajectory_[float], B: pydrake.trajectories.Trajectory_[float], f0: pydrake.trajectories.Trajectory_[float], C: pydrake.trajectories.Trajectory_[float], D: pydrake.trajectories.Trajectory_[float], y0: pydrake.trajectories.Trajectory_[float], time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryAffineSystem_.TrajectoryAffineSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a TrajectoryAffineSystem from trajectories of matrices.</p>
@@ -5172,7 +5208,7 @@ positive semi-definite.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A continuous- or discrete-time Affine Time-Varying system with system
 matrices described by trajectories.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectoryAffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectoryAffineSystem_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryAffineSystem_[AutoDiffXd], A: pydrake.trajectories.Trajectory_[float], B: pydrake.trajectories.Trajectory_[float], f0: pydrake.trajectories.Trajectory_[float], C: pydrake.trajectories.Trajectory_[float], D: pydrake.trajectories.Trajectory_[float], y0: pydrake.trajectories.Trajectory_[float], time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryAffineSystem_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a TrajectoryAffineSystem from trajectories of matrices.</p>
@@ -5250,7 +5286,7 @@ positive semi-definite.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A continuous- or discrete-time Affine Time-Varying system with system
 matrices described by trajectories.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectoryAffineSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectoryAffineSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryAffineSystem_[float], A: pydrake.trajectories.Trajectory_[float], B: pydrake.trajectories.Trajectory_[float], f0: pydrake.trajectories.Trajectory_[float], C: pydrake.trajectories.Trajectory_[float], D: pydrake.trajectories.Trajectory_[float], y0: pydrake.trajectories.Trajectory_[float], time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryAffineSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a TrajectoryAffineSystem from trajectories of matrices.</p>
@@ -5338,7 +5374,7 @@ positive semi-definite.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A continuous- or discrete-time Linear Time-Varying system with system
 matrices described by trajectories.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectoryLinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], A: pydrake.trajectories.Trajectory_[float], B: pydrake.trajectories.Trajectory_[float], C: pydrake.trajectories.Trajectory_[float], D: pydrake.trajectories.Trajectory_[float], time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_.TrajectoryLinearSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a PiecewisePolynomialLinearSystem from a
@@ -5409,7 +5445,7 @@ positive semi-definite.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>A continuous- or discrete-time Linear Time-Varying system with system
 matrices described by trajectories.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectoryLinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd], A: pydrake.trajectories.Trajectory_[float], B: pydrake.trajectories.Trajectory_[float], C: pydrake.trajectories.Trajectory_[float], D: pydrake.trajectories.Trajectory_[float], time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a PiecewisePolynomialLinearSystem from a
@@ -5478,7 +5514,7 @@ positive semi-definite.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A continuous- or discrete-time Linear Time-Varying system with system
 matrices described by trajectories.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectoryLinearSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectoryLinearSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectoryLinearSystem_[float], A: pydrake.trajectories.Trajectory_[float], B: pydrake.trajectories.Trajectory_[float], C: pydrake.trajectories.Trajectory_[float], D: pydrake.trajectories.Trajectory_[float], time_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectoryLinearSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a PiecewisePolynomialLinearSystem from a
@@ -5548,7 +5584,7 @@ positive semi-definite.</p>
 <p>A source block that generates the value of a Trajectory for a given
 time. The output is vector values, and may vary with the time (as
 reflected in the context) at which the output is evaluated.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>TrajectorySource</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.TrajectorySource.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.TrajectorySource, trajectory: pydrake.trajectories.Trajectory_[float], output_derivative_order: int = 0, zero_derivatives_beyond_limits: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.TrajectorySource.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
@@ -6591,7 +6627,7 @@ Precisely, the output element <code class="docutils literal"><span class="pre">i
 </div>
 <p>for the unique integer value <code class="docutils literal"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.WrapToSystem_.WrapToSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.WrapToSystem_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.WrapToSystem_.WrapToSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system to pass through a fixed-size input vector to the
@@ -6624,7 +6660,7 @@ Precisely, the output element <code class="docutils literal"><span class="pre">i
 </div>
 <p>for the unique integer value <code class="docutils literal"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.WrapToSystem_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.WrapToSystem_[AutoDiffXd], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.WrapToSystem_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system to pass through a fixed-size input vector to the
@@ -6655,7 +6691,7 @@ Precisely, the output element <code class="docutils literal"><span class="pre">i
 </div>
 <p>for the unique integer value <code class="docutils literal"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.WrapToSystem_[Expression].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.WrapToSystem_[Expression], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.WrapToSystem_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system to pass through a fixed-size input vector to the
@@ -6686,7 +6722,7 @@ Precisely, the output element <code class="docutils literal"><span class="pre">i
 </div>
 <p>for the unique integer value <code class="docutils literal"><span class="pre">kᵢ</span></code> that lands the output in the
 desired interval.</p>
-<dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>WrapToSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.primitives.WrapToSystem_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.WrapToSystem_[float], arg0: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.primitives.WrapToSystem_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system to pass through a fixed-size input vector to the

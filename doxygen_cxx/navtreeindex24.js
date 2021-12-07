@@ -1,5 +1,11 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1symbolic_1_1_expression_sqrt.html":[3,0,0,13,32],
+"classdrake_1_1symbolic_1_1_expression_sqrt.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,32,4],
+"classdrake_1_1symbolic_1_1_expression_sqrt.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,13,32,1],
+"classdrake_1_1symbolic_1_1_expression_sqrt.html#a79e1b5d9aadd56991632f40804d4bf93":[3,0,0,13,32,5],
+"classdrake_1_1symbolic_1_1_expression_sqrt.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,32,2],
+"classdrake_1_1symbolic_1_1_expression_sqrt.html#ac21c54ef15156cd4af1db872faf9b070":[3,0,0,13,32,0],
 "classdrake_1_1symbolic_1_1_expression_sqrt.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,13,32,3],
 "classdrake_1_1symbolic_1_1_expression_tan.html":[3,0,0,13,33],
 "classdrake_1_1symbolic_1_1_expression_tan.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,33,4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a5966109222fa239e12f75def142e918f":[3,0,0,13,54,23],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a5efdcd71d90ecbc3bbf2db67ce162afb":[3,0,0,13,54,9],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a5f770bc2798f001aea053446ec6224e3":[3,0,0,13,54,25],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a5fa8c680344d3852790ee27bc591f965":[3,0,0,13,54,43],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a618a7156f2f0156043d67b52b94d702e":[3,0,0,13,54,11],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a672570c853ab5b4b494f749ebabc5862":[3,0,0,13,54,4],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a688e3c02bb3dc730f24bff8364a4fed6":[3,0,0,13,54,0],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a6a34c3811302f4b4327894098646c214":[3,0,0,13,54,28],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a7d207a076fb35defb73b3690b281d0d5":[3,0,0,13,54,14],
-"classdrake_1_1symbolic_1_1_generic_polynomial.html#a822414d62611168edf444dbf255f4ac8":[3,0,0,13,54,37]
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a5fa8c680344d3852790ee27bc591f965":[3,0,0,13,54,43]
 };

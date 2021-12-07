@@ -1,5 +1,11 @@
 var NAVTREEINDEX45 =
 {
+"namespacemembers_w.html":[2,1,0,22],
+"namespacemembers_x.html":[2,1,0,23],
+"namespacemsgpack.html":[2,0,2],
+"namespaces.html":[2,0],
+"never__destroyed_8h.html":[4,0,0,1,38],
+"nice__type__name_8h.html":[4,0,0,1,39],
 "nice__type__name__override_8h.html":[4,0,0,1,40],
 "nlopt__solver_8h.html":[4,0,0,10,38],
 "non__convex__optimization__util_8h.html":[4,0,0,10,39],
@@ -243,11 +249,5 @@ var NAVTREEINDEX45 =
 "random_8h.html#a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0":[4,0,0,1,43,1,1],
 "random_8h.html#adc2cd15bd61a427917d479a38a1a3580":[4,0,0,1,43,2],
 "random__polynomial__matrix_8h.html":[4,0,0,1,2,8],
-"random__polynomial__matrix_8h.html#ac4fc5709db8aa88c23fc8f401ee3d2de":[4,0,0,1,2,8,0],
-"random__rotation_8h.html":[4,0,0,7,25],
-"random__rotation_8h.html#a6c92561b046b32c1ebe172bd32dc8276":[4,0,0,7,25,1],
-"random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4":[4,0,0,7,25,3],
-"random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f":[4,0,0,7,25,0],
-"random__rotation_8h.html#af27920d083eb816f24f832091a662f28":[4,0,0,7,25,2],
-"random__source_8h.html":[4,0,0,11,6,17]
+"random__polynomial__matrix_8h.html#ac4fc5709db8aa88c23fc8f401ee3d2de":[4,0,0,1,2,8,0]
 };

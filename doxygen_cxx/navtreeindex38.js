@@ -1,5 +1,11 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50":[1,5,2,8,44],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#aed75c6e52b003291a450cf15e43bd1f9":[1,5,2,8,37],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af0902a117906bfadcd656e87f7822782":[1,5,2,8,9],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af334d3331e06b30983a8c1aff483e16e":[1,5,2,8,43],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af9709cba7f24bc9a9e84bbd09fdc0cde":[1,5,2,8,23],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#afdb93529350e8cd4872dfc89198e2cfa":[1,5,2,8,32],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#aff3e6c4f0b60a31114bec85318e0617f":[1,5,2,8,2],
 "classdrake_1_1test_1_1_limit_malloc.html":[3,0,0,15,0],
 "classdrake_1_1test_1_1_limit_malloc.html#a14d16b667a4d7d25d44e45315f9a7deb":[3,0,0,15,0,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX38 =
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad909a0d6f40d56faad5e3f60fe0326c5":[3,0,1,3,14],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee44966b6c6ff31b5e49a515bea53295":[3,0,1,3,4],
 "classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,27],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0ae5c6c04205be18238368d567627683":[3,0,1,27,4],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,1,27,0],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a225e2ed3f17775ce1451a71cc508510a":[3,0,1,27,14],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a22653ca7a051add2d056e116fffeb744":[3,0,1,27,3],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,1,27,10],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,1,27,8],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a4c7cb2cda263a8eaace8b17ec56f7f29":[3,0,1,27,15]
+"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a0ae5c6c04205be18238368d567627683":[3,0,1,27,4]
 };
