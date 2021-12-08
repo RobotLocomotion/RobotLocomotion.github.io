@@ -232,6 +232,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a0d8c42739dc16a87225c2b0057517b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a7a0d8c42739dc16a87225c2b0057517b">operator/</a> (const T &amp;positive_scalar) const</td></tr>
 <tr class="memdesc:a7a0d8c42739dc16a87225c2b0057517b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides <code>this</code> rotational inertia by a positive scalar(&gt; 0).  <a href="#a7a0d8c42739dc16a87225c2b0057517b">More...</a><br /></td></tr>
 <tr class="separator:a7a0d8c42739dc16a87225c2b0057517b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0393e660bf996a3937e40ef2dc3e6757"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a0393e660bf996a3937e40ef2dc3e6757">MultiplyByScalarSkipValidityCheck</a> (const T &amp;s) const</td></tr>
+<tr class="memdesc:a0393e660bf996a3937e40ef2dc3e6757"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Multiplies a rotational inertia by a scalar.  <a href="#a0393e660bf996a3937e40ef2dc3e6757">More...</a><br /></td></tr>
+<tr class="separator:a0393e660bf996a3937e40ef2dc3e6757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae461fd75b1b4eba6c95a57621adb4e9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ae461fd75b1b4eba6c95a57621adb4e9d">SetToNaN</a> ()</td></tr>
 <tr class="memdesc:ae461fd75b1b4eba6c95a57621adb4e9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets <code>this</code> rotational inertia so all its elements are equal to NaN.  <a href="#ae461fd75b1b4eba6c95a57621adb4e9d">More...</a><br /></td></tr>
 <tr class="separator:ae461fd75b1b4eba6c95a57621adb4e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +307,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a96949d335bfe501c62587705d47ce6ad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a96949d335bfe501c62587705d47ce6ad">TriaxiallySymmetric</a> (const T &amp;I_triaxial)</td></tr>
 <tr class="memdesc:a96949d335bfe501c62587705d47ce6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a rotational inertia with equal moments of inertia along its diagonal and with each product of inertia set to zero.  <a href="#a96949d335bfe501c62587705d47ce6ad">More...</a><br /></td></tr>
 <tr class="separator:a96949d335bfe501c62587705d47ce6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a9857b35a25e766eda6fb149fb9134"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a66a9857b35a25e766eda6fb149fb9134">MakeFromMomentsAndProductsOfInertia</a> (const T &amp;Ixx, const T &amp;Iyy, const T &amp;Izz, const T &amp;Ixy, const T &amp;Ixz, const T &amp;Iyz, bool skip_validity_check=false)</td></tr>
+<tr class="memdesc:a66a9857b35a25e766eda6fb149fb9134"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Creates a rotational inertia with moments of inertia Ixx, Iyy, Izz, and with products of inertia Ixy, Ixz, Iyz.  <a href="#a66a9857b35a25e766eda6fb149fb9134">More...</a><br /></td></tr>
+<tr class="separator:a66a9857b35a25e766eda6fb149fb9134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -324,10 +330,10 @@ Friends</h2></td></tr>
 Related Functions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
 </td></tr>
-<tr class="memitem:ab220ab02073a10f117b7b355a7596010"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab220ab02073a10f117b7b355a7596010"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ab220ab02073a10f117b7b355a7596010">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
-<tr class="memdesc:ab220ab02073a10f117b7b355a7596010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insertion operator to write RotationalInertia's into a <code>std::ostream</code>.  <a href="#ab220ab02073a10f117b7b355a7596010">More...</a><br /></td></tr>
-<tr class="separator:ab220ab02073a10f117b7b355a7596010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;I)</td></tr>
+<tr class="memdesc:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> into a std::ostream.  <a href="#ac917bf1dfed2a1cfe26be9d258285a2d">More...</a><br /></td></tr>
+<tr class="separator:ac917bf1dfed2a1cfe26be9d258285a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a719e23ae8c26b0c8cf0c7f30dd112559"></a>
@@ -807,6 +813,88 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a66a9857b35a25e766eda6fb149fb9134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a9857b35a25e766eda6fb149fb9134">&#9670;&nbsp;</a></span>MakeFromMomentsAndProductsOfInertia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;T&gt; MakeFromMomentsAndProductsOfInertia </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Ixx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Iyy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Izz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Ixy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Ixz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>Iyz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>skip_validity_check</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Creates a rotational inertia with moments of inertia Ixx, Iyy, Izz, and with products of inertia Ixy, Ixz, Iyz. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Ixx,Iyy,Izz</td><td>Moments of inertia. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Ixy,Ixz,Iyz</td><td>Products of inertia. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">skip_validity_check</td><td>If set to false, the rotational inertia is checked via <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a> to ensure it is physically valid. If set to true (not generally recommended), the check is skipped (which reduces some computational cost). The default value is false. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if skip_validity_check is false and <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a03e71eb4bd2a7648a411e1cbaf94812b" title="Performs several necessary checks to verify whether this rotational inertia could be physically valid...">CouldBePhysicallyValid()</a> fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="af016e2a9451f4692a56bec5209ddbaf5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af016e2a9451f4692a56bec5209ddbaf5">&#9670;&nbsp;</a></span>MinusEqualsUnchecked()</h2>
 
@@ -843,6 +931,35 @@ Related Functions</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>This operator may produce an invalid rotational inertia. Use <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a9616b9b963139066953c80ac978c362a" title="Subtracts a rotational inertia I_BP_E from this rotational inertia.">operator-=()</a> to perform necessary (but insufficient) checks on the physical validity of the resulting rotational inertia. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>: Although this method is mathematically useful, it may result in a rotational inertia that is physically invalid. This method helps perform intermediate calculations which do not necessarily represent a real rotational inertia. For example, an efficient way to shift a rotational inertia from an arbitrary point P to an arbitrary point Q is mathematical equivalent to a + (b - c). Although <code>a</code> must be physically valid and the result <code>a + (b - c)</code> must be physically valid, the intermediate quantity (b - c) is not necessarily physically valid. This method allows (b - c) to be calculated without requiring (b - c) to be physically valid. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a9616b9b963139066953c80ac978c362a" title="Subtracts a rotational inertia I_BP_E from this rotational inertia.">operator-=()</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a0393e660bf996a3937e40ef2dc3e6757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0393e660bf996a3937e40ef2dc3e6757">&#9670;&nbsp;</a></span>MultiplyByScalarSkipValidityCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt;T&gt; MultiplyByScalarSkipValidityCheck </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Multiplies a rotational inertia by a scalar. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>Scalar which multiplies <code>this</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>this</code> rotational inertia multiplied by <code>s</code>. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html#a5c0f659ca0d1286108f3238040cea74a" title="Multiplies a nonnegative scalar (&gt;= 0) by the rotational inertia I_BP_E.">operator*(const T&amp;, const RotationalInertia&lt;T&gt;&amp;)</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This method works even if <code>s</code> is negative or <code>this</code> is invalid. This method is useful for error messages associated with an invalid inertia. </dd></dl>
 
 </div>
 </div>
@@ -1143,8 +1260,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab78d207e550d7d227b7e7f37557fb66a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab78d207e550d7d227b7e7f37557fb66a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ac25060922d76f06276ac5f169e748ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac25060922d76f06276ac5f169e748ebd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1155,7 +1272,7 @@ Related Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1169,8 +1286,8 @@ Related Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac25060922d76f06276ac5f169e748ebd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac25060922d76f06276ac5f169e748ebd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ab78d207e550d7d227b7e7f37557fb66a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78d207e550d7d227b7e7f37557fb66a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1181,7 +1298,7 @@ Related Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html">RotationalInertia</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1726,8 +1843,8 @@ This method is more efficient (by 6 multiplications) than first shifting to the 
 
 </div>
 </div>
-<a id="ab220ab02073a10f117b7b355a7596010"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab220ab02073a10f117b7b355a7596010">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<a id="ac917bf1dfed2a1cfe26be9d258285a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac917bf1dfed2a1cfe26be9d258285a2d">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1739,7 +1856,7 @@ This method is more efficient (by 6 multiplications) than first shifting to the 
           <td class="memname">std::ostream &amp; operator&lt;&lt; </td>
           <td>(</td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>o</em>, </td>
+          <td class="paramname"><em>out</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1760,8 +1877,7 @@ This method is more efficient (by 6 multiplications) than first shifting to the 
 </table>
 </div><div class="memdoc">
 
-<p>Insertion operator to write RotationalInertia's into a <code>std::ostream</code>. </p>
-<p>Especially useful for debugging. </p>
+<p>Writes an instance of <a class="el" href="classdrake_1_1multibody_1_1_rotational_inertia.html" title="This class describes the mass distribution (inertia properties) of a body or composite body about a p...">RotationalInertia</a> into a std::ostream. </p>
 
 </div>
 </div>

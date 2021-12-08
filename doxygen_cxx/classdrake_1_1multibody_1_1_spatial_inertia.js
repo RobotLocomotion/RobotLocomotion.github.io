@@ -25,5 +25,5 @@ var classdrake_1_1multibody_1_1_spatial_inertia =
     [ "SetNaN", "classdrake_1_1multibody_1_1_spatial_inertia.html#a09b2415a4b0787515507518d9c0dd4e5", null ],
     [ "Shift", "classdrake_1_1multibody_1_1_spatial_inertia.html#aa0eb83927e03cc49eb573ea200767cee", null ],
     [ "ShiftInPlace", "classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539", null ],
-    [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a478f065fcb2da44767e1be0e9c27a56f", null ]
+    [ "operator<<", "classdrake_1_1multibody_1_1_spatial_inertia.html#a3b6fb089613f2cdc65359c65d5a5d504", null ]
 ];

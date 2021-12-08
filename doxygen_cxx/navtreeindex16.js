@@ -1,5 +1,7 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1cceadfb10b5a80fb76244297d7ae81":[3,0,0,8,0,1,0,21],
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html":[3,0,0,8,0,2,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a06b2aa94973b357511d0702cf1901dd0":[3,0,0,8,0,2,0,6],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a0d402be2ee9c3cf08973fc59ad961b4e":[3,0,0,8,0,2,0,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a722b8e19a396259de4990b566f07dc6b":[3,0,0,8,0,2,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1schema_1_1_distribution.html#a96887b3bb3afb94189e83692d84ab5fa":[3,0,0,11,2,2],
 "classdrake_1_1schema_1_1_distribution.html#a96d061b5d4c9fccae1b7d0f6d3b553f5":[3,0,0,11,2,4],
 "classdrake_1_1schema_1_1_distribution.html#a97e7a46e54c1954b71dbf6e135c469ac":[3,0,0,11,2,3],
-"classdrake_1_1schema_1_1_distribution.html#a9d3cf962cad098bed1d405fc68d796d9":[3,0,0,11,2,1],
-"classdrake_1_1schema_1_1_distribution.html#aa85bfec07ed75a3d3eda800ccd6873ae":[3,0,0,11,2,6],
-"classdrake_1_1schema_1_1_distribution.html#aae4627122ef9160d80f0dcae3d4cea8c":[3,0,0,11,2,5]
+"classdrake_1_1schema_1_1_distribution.html#a9d3cf962cad098bed1d405fc68d796d9":[3,0,0,11,2,1]
 };

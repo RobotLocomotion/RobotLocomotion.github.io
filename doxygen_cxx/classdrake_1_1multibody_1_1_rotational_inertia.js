@@ -16,7 +16,9 @@ var classdrake_1_1multibody_1_1_rotational_inertia =
     [ "get_products", "classdrake_1_1multibody_1_1_rotational_inertia.html#a73703796210df51bb25acbb19168913a", null ],
     [ "IsNaN", "classdrake_1_1multibody_1_1_rotational_inertia.html#a1a73339c4b21bba9c3fa975f7a6c4220", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1multibody_1_1_rotational_inertia.html#a0546b3ac658fccec61a5156a926765dd", null ],
+    [ "MakeFromMomentsAndProductsOfInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a66a9857b35a25e766eda6fb149fb9134", null ],
     [ "MinusEqualsUnchecked", "classdrake_1_1multibody_1_1_rotational_inertia.html#af016e2a9451f4692a56bec5209ddbaf5", null ],
+    [ "MultiplyByScalarSkipValidityCheck", "classdrake_1_1multibody_1_1_rotational_inertia.html#a0393e660bf996a3937e40ef2dc3e6757", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_rotational_inertia.html#a6ad677024790190d7f913839cbdf0902", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_rotational_inertia.html#a275b3628b6e487b99b5a26b40e7c9454", null ],
     [ "operator *=", "classdrake_1_1multibody_1_1_rotational_inertia.html#a772d06048b8ada1e80045b45a32e51f0", null ],
@@ -27,8 +29,8 @@ var classdrake_1_1multibody_1_1_rotational_inertia =
     [ "operator-=", "classdrake_1_1multibody_1_1_rotational_inertia.html#a9616b9b963139066953c80ac978c362a", null ],
     [ "operator/", "classdrake_1_1multibody_1_1_rotational_inertia.html#a7a0d8c42739dc16a87225c2b0057517b", null ],
     [ "operator/=", "classdrake_1_1multibody_1_1_rotational_inertia.html#a3cb6014636db3579a84defd7824ee4c1", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_rotational_inertia.html#ab78d207e550d7d227b7e7f37557fb66a", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_rotational_inertia.html#ac25060922d76f06276ac5f169e748ebd", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_rotational_inertia.html#ab78d207e550d7d227b7e7f37557fb66a", null ],
     [ "ReExpress", "classdrake_1_1multibody_1_1_rotational_inertia.html#a08eb5284c5ec57a645aee167798a1f2c", null ],
     [ "ReExpressInPlace", "classdrake_1_1multibody_1_1_rotational_inertia.html#a800af438924a7ab6a1eeaf5a58865f28", null ],
     [ "rows", "classdrake_1_1multibody_1_1_rotational_inertia.html#ad107abcacb84cbabb41b87ba81360f91", null ],
@@ -43,6 +45,6 @@ var classdrake_1_1multibody_1_1_rotational_inertia =
     [ "Trace", "classdrake_1_1multibody_1_1_rotational_inertia.html#a23798f37ae600d4d79b8a2e71586c4c7", null ],
     [ "TriaxiallySymmetric", "classdrake_1_1multibody_1_1_rotational_inertia.html#a96949d335bfe501c62587705d47ce6ad", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_rotational_inertia.html#a5c0f659ca0d1286108f3238040cea74a", null ],
-    [ "operator<<", "classdrake_1_1multibody_1_1_rotational_inertia.html#ab220ab02073a10f117b7b355a7596010", null ],
+    [ "operator<<", "classdrake_1_1multibody_1_1_rotational_inertia.html#ac917bf1dfed2a1cfe26be9d258285a2d", null ],
     [ "RotationalInertia", "classdrake_1_1multibody_1_1_rotational_inertia.html#a82936d10a31afe3ae91f3025a39d3224", null ]
 ];
