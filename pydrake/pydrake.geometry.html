@@ -856,17 +856,13 @@ from the origin of the world frame, expressed in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].mesh_W">
-<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a reference to the surface mesh whose vertex positions are
-measured and expressed in the world frame.</p>
-<p>This method is provided for short-term legacy reasons. Once the
-polygonal mesh representation is fully supported across the entire
-contact model code path, this will be removed in favor of its
-explicitly declared <code class="docutils literal"><span class="pre">tri_</span></code> or <code class="docutils literal"><span class="pre">poly_</span></code> variant.</p>
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].tri_mesh_W">
+<code class="descname">tri_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].tri_mesh_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>triangular</em> surface mesh whose vertex
+positions are measured and expressed in the world frame.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>is_triangle() returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+<dd><code class="docutils literal"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -988,17 +984,13 @@ from the origin of the world frame, expressed in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].mesh_W">
-<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].mesh_W" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a reference to the surface mesh whose vertex positions are
-measured and expressed in the world frame.</p>
-<p>This method is provided for short-term legacy reasons. Once the
-polygonal mesh representation is fully supported across the entire
-contact model code path, this will be removed in favor of its
-explicitly declared <code class="docutils literal"><span class="pre">tri_</span></code> or <code class="docutils literal"><span class="pre">poly_</span></code> variant.</p>
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].tri_mesh_W">
+<code class="descname">tri_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].tri_mesh_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>triangular</em> surface mesh whose vertex
+positions are measured and expressed in the world frame.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>is_triangle() returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+<dd><code class="docutils literal"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1118,17 +1110,13 @@ from the origin of the world frame, expressed in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.geometry.ContactSurface_[float].mesh_W">
-<code class="descname">mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].mesh_W" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a reference to the surface mesh whose vertex positions are
-measured and expressed in the world frame.</p>
-<p>This method is provided for short-term legacy reasons. Once the
-polygonal mesh representation is fully supported across the entire
-contact model code path, this will be removed in favor of its
-explicitly declared <code class="docutils literal"><span class="pre">tri_</span></code> or <code class="docutils literal"><span class="pre">poly_</span></code> variant.</p>
+<dt id="pydrake.geometry.ContactSurface_[float].tri_mesh_W">
+<code class="descname">tri_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.TriangleSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].tri_mesh_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>triangular</em> surface mesh whose vertex
+positions are measured and expressed in the world frame.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>is_triangle() returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+<dd><code class="docutils literal"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal"><span class="pre">True</span></code>.</dd>
 </dl>
 </dd></dl>
 

@@ -177,12 +177,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3b16adde799eb804619dc86f3703f4f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f">ComputePointPairPenetration</a> () const</td></tr>
 <tr class="memdesc:af3b16adde799eb804619dc86f3703f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the penetrations across all pairs of geometries in the world with the penetrations characterized by pairs of points (see <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html" title="A characterization of the intersection of two penetrating geometries.">PenetrationAsPointPair</a>), providing some measure of the penetration "depth" of the two objects, but <em>not</em> the overlapping volume.  <a href="#af3b16adde799eb804619dc86f3703f4f">More...</a><br /></td></tr>
 <tr class="separator:af3b16adde799eb804619dc86f3703f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae55c420d969868c31e1c0e776523c43a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae55c420d969868c31e1c0e776523c43a">ComputeContactSurfaces</a> () const</td></tr>
-<tr class="memdesc:ae55c420d969868c31e1c0e776523c43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports pairwise intersections and characterizes each non-empty intersection as a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> for hydroelastic contact model.  <a href="#ae55c420d969868c31e1c0e776523c43a">More...</a><br /></td></tr>
-<tr class="separator:ae55c420d969868c31e1c0e776523c43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e4c6280a50cf4149f1552b84720d008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a6e4c6280a50cf4149f1552b84720d008">ComputeContactSurfacesWithFallback</a> (std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt;&gt; *surfaces, std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt;&gt; *point_pairs) const</td></tr>
-<tr class="memdesc:a6e4c6280a50cf4149f1552b84720d008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports pairwise intersections and characterizes each non-empty intersection as a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> <em>where possible</em> and as a <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html" title="A characterization of the intersection of two penetrating geometries.">PenetrationAsPointPair</a> where not.  <a href="#a6e4c6280a50cf4149f1552b84720d008">More...</a><br /></td></tr>
-<tr class="separator:a6e4c6280a50cf4149f1552b84720d008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a24d33e8aaf8d925665a962e9cda20a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0a24d33e8aaf8d925665a962e9cda20a">ComputeContactSurfaces</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation) const</td></tr>
+<tr class="memdesc:a0a24d33e8aaf8d925665a962e9cda20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports pairwise intersections and characterizes each non-empty intersection as a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> for hydroelastic contact model.  <a href="#a0a24d33e8aaf8d925665a962e9cda20a">More...</a><br /></td></tr>
+<tr class="separator:a0a24d33e8aaf8d925665a962e9cda20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae024d5918f2291c1c67cddd3be2921c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae024d5918f2291c1c67cddd3be2921c3">ComputeContactSurfacesWithFallback</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt;&gt; *surfaces, std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt;&gt; *point_pairs) const</td></tr>
+<tr class="memdesc:ae024d5918f2291c1c67cddd3be2921c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports pairwise intersections and characterizes each non-empty intersection as a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> <em>where possible</em> and as a <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html" title="A characterization of the intersection of two penetrating geometries.">PenetrationAsPointPair</a> where not.  <a href="#ae024d5918f2291c1c67cddd3be2921c3">More...</a><br /></td></tr>
+<tr class="separator:ae024d5918f2291c1c67cddd3be2921c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48676624208ba13c78edbc098203f1ea"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a48676624208ba13c78edbc098203f1ea">FindCollisionCandidates</a> () const</td></tr>
 <tr class="memdesc:a48676624208ba13c78edbc098203f1ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a conservative culling mechanism to create a subset of all possible geometry pairs based on non-zero intersections.  <a href="#a48676624208ba13c78edbc098203f1ea">More...</a><br /></td></tr>
 <tr class="separator:a48676624208ba13c78edbc098203f1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,8 +301,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae55c420d969868c31e1c0e776523c43a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae55c420d969868c31e1c0e776523c43a">&#9670;&nbsp;</a></span>ComputeContactSurfaces()</h2>
+<a id="a0a24d33e8aaf8d925665a962e9cda20a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a24d33e8aaf8d925665a962e9cda20a">&#9670;&nbsp;</a></span>ComputeContactSurfaces()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -310,7 +310,8 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt;T&gt; &gt; ComputeContactSurfaces </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a>&#160;</td>
+          <td class="paramname"><em>representation</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -350,12 +351,18 @@ Friends</h2></td></tr>
 </ul>
 <h3>Scalar support</h3>
 <p>This method provides support for both double and AutoDiffXd. Like with the other proximity queries, derivatives can only be introduced via geometry poses*. We cannot differentiate w.r.t. geometric properties (e.g., radius, length, etc.)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">representation</td><td>Controls the mesh representation of the contact surface. See <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#contact_surface_discrete_representation">contact surface representation</a> for more details.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>A vector populated with all detected intersections characterized as contact surfaces. The ordering of the results is guaranteed to be consistent &ndash; for fixed geometry poses, the results will remain the same. </dd></dl>
 
 </div>
 </div>
-<a id="a6e4c6280a50cf4149f1552b84720d008"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6e4c6280a50cf4149f1552b84720d008">&#9670;&nbsp;</a></span>ComputeContactSurfacesWithFallback()</h2>
+<a id="ae024d5918f2291c1c67cddd3be2921c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae024d5918f2291c1c67cddd3be2921c3">&#9670;&nbsp;</a></span>ComputeContactSurfacesWithFallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,6 +370,12 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void ComputeContactSurfacesWithFallback </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a>&#160;</td>
+          <td class="paramname"><em>representation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt;&gt; *&#160;</td>
           <td class="paramname"><em>surfaces</em>, </td>
         </tr>
@@ -381,12 +394,13 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reports pairwise intersections and characterizes each non-empty intersection as a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a> <em>where possible</em> and as a <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html" title="A characterization of the intersection of two penetrating geometries.">PenetrationAsPointPair</a> where not. </p>
-<p>This method can be thought of as a combination of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae55c420d969868c31e1c0e776523c43a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">ComputeContactSurfaces()</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">ComputePointPairPenetration()</a>. For each geometry pair, we attempt to compute a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a>. If that fails, rather than throwing, we attempt to characterize the contact as a point pair. If that fails, we throw. See the documentation of those constituent methods to understand the circumstances in which they fail.</p>
+<p>This method can be thought of as a combination of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0a24d33e8aaf8d925665a962e9cda20a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">ComputeContactSurfaces()</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">ComputePointPairPenetration()</a>. For each geometry pair, we attempt to compute a <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html" title="The ContactSurface characterizes the intersection of two geometries M and N as a contact surface with...">ContactSurface</a>. If that fails, rather than throwing, we attempt to characterize the contact as a point pair. If that fails, we throw. See the documentation of those constituent methods to understand the circumstances in which they fail.</p>
 <p>The ordering of the <em>added</em> results is guaranteed to be consistent &ndash; for fixed geometry poses, the results will remain the same.</p>
 <h3>Scalar support</h3>
-<p>The scalar support is a combination of the scalar support offered by <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae55c420d969868c31e1c0e776523c43a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">ComputeContactSurfaces()</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">ComputePointPairPenetration()</a>. This method supports double and AutoDiffXd to the extent that those constituent methods do.</p>
+<p>The scalar support is a combination of the scalar support offered by <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0a24d33e8aaf8d925665a962e9cda20a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">ComputeContactSurfaces()</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">ComputePointPairPenetration()</a>. This method supports double and AutoDiffXd to the extent that those constituent methods do.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">representation</td><td>Controls the mesh representation of the contact surface. See <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#contact_surface_discrete_representation">contact surface representation</a> for more details. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">surfaces</td><td>The vector that contact surfaces will be added to. The vector will <em>not</em> be cleared. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">point_pairs</td><td>The vector that fall back point pair data will be added to. The vector will <em>not</em> be cleared. </td></tr>
   </table>
@@ -395,7 +409,7 @@ Friends</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>Neither <code>surfaces</code> nor <code>point_pairs</code> is nullptr. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>for the reasons described in <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae55c420d969868c31e1c0e776523c43a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">ComputeContactSurfaces()</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">ComputePointPairPenetration()</a>. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>for the reasons described in <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0a24d33e8aaf8d925665a962e9cda20a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">ComputeContactSurfaces()</a> and <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">ComputePointPairPenetration()</a>. </td></tr>
   </table>
   </dd>
 </dl>

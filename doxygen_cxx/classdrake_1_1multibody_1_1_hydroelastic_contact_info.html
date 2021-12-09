@@ -191,7 +191,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">contact_surface</td><td>Contact surface between two geometries M and N, see <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a9d19415980a599e76803d1c2ac6954cd" title="Returns the geometry id of Geometry M.">geometry::ContactSurface::id_M()</a> and <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html#a643bdff7b47f07604755e0a7e0707fee" title="Returns the geometry id of Geometry N.">geometry::ContactSurface::id_N()</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">F_Ac_W</td><td>Spatial force applied on body A, at contact surface centroid C, and expressed in the world frame W. The position <code>p_WC</code> of C in the world frame W can be obtained with <code>ContactSurface::mesh_W().centroid()</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">F_Ac_W</td><td>Spatial force applied on body A, at contact surface centroid C, and expressed in the world frame W. The position <code>p_WC</code> of C in the world frame W can be obtained with <code>ContactSurface::centroid()</code>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">quadrature_point_data</td><td>Hydroelastic field data at each quadrature point. Data must be provided in accordance to the convention that geometry M and N are attached to bodies A and B, respectively. Refer to <a class="el" href="structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html" title="Results from intermediate calculations used during the quadrature routine.">HydroelasticQuadraturePointData</a> for further details. </td></tr>
   </table>
   </dd>
@@ -320,7 +320,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets the spatial force applied on body A, at the centroid point C of the surface mesh M, and expressed in the world frame W. </p>
-<p>The position <code>p_WC</code> of the centroid point C in the world frame W can be obtained with <code><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.mesh_W().centroid()</code>. </p>
+<p>The position <code>p_WC</code> of the centroid point C in the world frame W can be obtained with <code><a class="el" href="classdrake_1_1multibody_1_1_hydroelastic_contact_info.html#ac38327b0cc2eae38d5291f0507738411" title="Returns a reference to the ContactSurface data structure.">contact_surface()</a>.centroid()</code>. </p>
 
 </div>
 </div>

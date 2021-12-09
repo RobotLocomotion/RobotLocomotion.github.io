@@ -1,7 +1,5 @@
 var NAVTREEINDEX45 =
 {
-"namespacemembers_v.html":[2,1,0,21],
-"namespacemembers_vars.html":[2,1,2],
 "namespacemembers_w.html":[2,1,0,22],
 "namespacemembers_x.html":[2,1,0,23],
 "namespacemsgpack.html":[2,0,2],
@@ -249,5 +247,7 @@ var NAVTREEINDEX45 =
 "random_8h.html#a72383be4710d27584d0821effc6506a5a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,1,43,1,0],
 "random_8h.html#a72383be4710d27584d0821effc6506a5a601bf5851ffd28f5e6219c0f1945c8d6":[4,0,0,1,43,1,2],
 "random_8h.html#a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0":[4,0,0,1,43,1,1],
-"random_8h.html#adc2cd15bd61a427917d479a38a1a3580":[4,0,0,1,43,2]
+"random_8h.html#adc2cd15bd61a427917d479a38a1a3580":[4,0,0,1,43,2],
+"random__polynomial__matrix_8h.html":[4,0,0,1,2,8],
+"random__polynomial__matrix_8h.html#ac4fc5709db8aa88c23fc8f401ee3d2de":[4,0,0,1,2,8,0]
 };

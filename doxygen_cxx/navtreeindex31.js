@@ -1,7 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classdrake_1_1systems_1_1_linear_transform_density.html#afe984a0b26d77f8ce5c3731559b6e3c0":[1,3,1,14,1],
-"classdrake_1_1systems_1_1_linear_transform_density.html#affc1de2b26d80b8f18d7ff6310987c71":[1,3,1,14,3],
 "classdrake_1_1systems_1_1_matrix_gain.html":[1,3,1,15],
 "classdrake_1_1systems_1_1_matrix_gain.html#a3af0b57a7a890abc45d1e2fadd6d7871":[1,3,1,15,0],
 "classdrake_1_1systems_1_1_matrix_gain.html#a3dab884c7b4061cd0e774d1300d1a7e6":[1,3,1,15,3],
@@ -249,5 +247,7 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html":[3,0,0,14,88],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a072b01e07598a528f9ad9ec7d4daeebf":[3,0,0,14,88,5],
 "classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a3039082d5cf5d9b4884c666c2e0dd033":[3,0,0,14,88,3],
-"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5":[3,0,0,14,88,1]
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a677a34d51ed872e958deb90ce676eec5":[3,0,0,14,88,1],
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a96bb7ace98119838841607ca5d803730":[3,0,0,14,88,11],
+"classdrake_1_1systems_1_1_scalar_initial_value_problem.html#a9e14d71a4415b5bbeb479c4b42712615":[3,0,0,14,88,2]
 };
