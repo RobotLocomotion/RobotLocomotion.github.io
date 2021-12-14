@@ -371,6 +371,41 @@ four digit year, two digit month, two digit day).</li>
   </li>
 </ol>
 
+<h2 id="post-release-wheel-builds">Post-release wheel builds</h2>
+
+<p>After tagging the release, you must manually build and upload a PyPI release.</p>
+
+<p>If you haven’t done so already, follow Drake’s PyPI
+<a href="https://docs.google.com/document/d/17D0yzyr0kGH44eWpiNY7E33A8hW1aiJRmADaoAlVISE/edit#">account setup</a>
+instructions to obtain a username and password.</p>
+
+<ol>
+  <li>Use your Ubuntu 20.04 workstation for these steps.  (Do not use any other OS.)</li>
+  <li>Create some empty scratch folder to use for these steps, and then <code class="highlighter-rouge">cd</code> into it.</li>
+  <li>Run <code class="highlighter-rouge">sudo apt install docker.io twine</code>
+    <ol>
+      <li>If you get an “docker.sock connect” error, you might need to give yourself Docker permissions:
+        <ol>
+          <li>Run <code class="highlighter-rouge">sudo usermod -aG docker $USER</code></li>
+          <li>Run <code class="highlighter-rouge">newgrp docker</code></li>
+        </ol>
+      </li>
+      <li>If Docker still doesn’t work, you might need to logout and/or reboot first.</li>
+    </ol>
+  </li>
+  <li>Run <code class="highlighter-rouge">git clone --filter=blob:none https://github.com/RobotLocomotion/drake.git</code></li>
+  <li>Run <code class="highlighter-rouge">cd drake</code></li>
+  <li>Run <code class="highlighter-rouge">git checkout v0.N.0</code></li>
+  <li>Run <code class="highlighter-rouge">cd tools/wheel/dev</code></li>
+  <li>Run <code class="highlighter-rouge">./build-wheels --test 0.N.0</code></li>
+  <li>Wait a long time for it to finish (around 60 minutes on a beefy workstation). It will take over all of your computer’s resources, so don’t plan to do much else concurrently.</li>
+  <li>There should have been exactly two whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to each of the wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64</code>, etc.)
+    <ol>
+      <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
+    </ol>
+  </li>
+</ol>
+
       </article>
     </div>
   </section>
