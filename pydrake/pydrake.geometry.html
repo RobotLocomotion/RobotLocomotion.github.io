@@ -844,6 +844,108 @@ from the origin of the world frame, expressed in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], face_index: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centroid(self: pydrake.geometry.ContactSurface_[float], face_index: int) -&gt; numpy.ndarray[numpy.float64[3, 1]]</li>
+<li>centroid(self: pydrake.geometry.ContactSurface_[float]) -&gt; numpy.ndarray[numpy.float64[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], surface: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given ContactSurface object is equal via
+deep exact comparison. NaNs are treated as not equal as per the IEEE
+standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">surface</span></code>:</dt>
+<dd>The contact surface for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the given contact surface is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].EvaluateGradE_M_W">
+<code class="descname">EvaluateGradE_M_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].EvaluateGradE_M_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of ∇eₘ for the face with index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if HasGradE_M() returns false.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">mesh().num_faces())</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].EvaluateGradE_N_W">
+<code class="descname">EvaluateGradE_N_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].EvaluateGradE_N_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of ∇eₙ for the face with index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if HasGradE_N() returns false.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">mesh().num_faces())</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], face_index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].HasGradE_M">
+<code class="descname">HasGradE_M</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].HasGradE_M" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> contains values for ∇eₘ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].HasGradE_N">
+<code class="descname">HasGradE_N</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].HasGradE_N" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> contains values for ∇eₙ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].id_M">
 <code class="descname">id_M</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].id_M" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the geometry id of Geometry M.</p>
@@ -854,6 +956,49 @@ from the origin of the world frame, expressed in the world frame.</p>
 <code class="descname">id_N</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].id_N" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the geometry id of Geometry N.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].is_triangle">
+<code class="descname">is_triangle</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].is_triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simpley reports if this contact surface’s mesh representation is
+triangle. Equivalent to:</p>
+<p>representation() == HydroelasticContactRepresentation::kTriangle</p>
+<p>and offered as convenient sugar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].num_faces">
+<code class="descname">num_faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].num_faces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].poly_mesh_W">
+<code class="descname">poly_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].poly_mesh_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex
+positions are measured and expressed in the world frame.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal"><span class="pre">False</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].representation">
+<code class="descname">representation</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the representation mode of this contact surface. If accessing
+the mesh or field directly, the APIs that can be successfully
+exercised are related to this methods return value. See below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.ContactSurface_.ContactSurface_[float].total_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_.ContactSurface_[float].tri_mesh_W">
@@ -972,6 +1117,108 @@ from the origin of the world frame, expressed in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd], face_index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centroid(self: pydrake.geometry.ContactSurface_[AutoDiffXd], face_index: int) -&gt; numpy.ndarray[object[3, 1]]</li>
+<li>centroid(self: pydrake.geometry.ContactSurface_[AutoDiffXd]) -&gt; numpy.ndarray[object[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd], surface: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given ContactSurface object is equal via
+deep exact comparison. NaNs are treated as not equal as per the IEEE
+standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">surface</span></code>:</dt>
+<dd>The contact surface for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the given contact surface is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].EvaluateGradE_M_W">
+<code class="descname">EvaluateGradE_M_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd], index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].EvaluateGradE_M_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of ∇eₘ for the face with index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if HasGradE_M() returns false.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">mesh().num_faces())</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].EvaluateGradE_N_W">
+<code class="descname">EvaluateGradE_N_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd], index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].EvaluateGradE_N_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of ∇eₙ for the face with index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if HasGradE_N() returns false.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">mesh().num_faces())</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd], face_index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].HasGradE_M">
+<code class="descname">HasGradE_M</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].HasGradE_M" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> contains values for ∇eₘ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].HasGradE_N">
+<code class="descname">HasGradE_N</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].HasGradE_N" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> contains values for ∇eₙ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].id_M">
 <code class="descname">id_M</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].id_M" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the geometry id of Geometry M.</p>
@@ -982,6 +1229,49 @@ from the origin of the world frame, expressed in the world frame.</p>
 <code class="descname">id_N</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].id_N" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the geometry id of Geometry N.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].is_triangle">
+<code class="descname">is_triangle</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].is_triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simpley reports if this contact surface’s mesh representation is
+triangle. Equivalent to:</p>
+<p>representation() == HydroelasticContactRepresentation::kTriangle</p>
+<p>and offered as convenient sugar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].num_faces">
+<code class="descname">num_faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].num_faces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].poly_mesh_W">
+<code class="descname">poly_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].poly_mesh_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex
+positions are measured and expressed in the world frame.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal"><span class="pre">False</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].representation">
+<code class="descname">representation</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the representation mode of this contact surface. If accessing
+the mesh or field directly, the APIs that can be successfully
+exercised are related to this methods return value. See below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.ContactSurface_[AutoDiffXd].total_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[AutoDiffXd].tri_mesh_W">
@@ -1098,6 +1388,108 @@ from the origin of the world frame, expressed in the world frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], face_index: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>centroid(self: pydrake.geometry.ContactSurface_[float], face_index: int) -&gt; numpy.ndarray[numpy.float64[3, 1]]</li>
+<li>centroid(self: pydrake.geometry.ContactSurface_[float]) -&gt; numpy.ndarray[numpy.float64[3, 1]]</li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], surface: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given ContactSurface object is equal via
+deep exact comparison. NaNs are treated as not equal as per the IEEE
+standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">surface</span></code>:</dt>
+<dd>The contact surface for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the given contact surface is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].EvaluateGradE_M_W">
+<code class="descname">EvaluateGradE_M_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].EvaluateGradE_M_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of ∇eₘ for the face with index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if HasGradE_M() returns false.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">mesh().num_faces())</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].EvaluateGradE_N_W">
+<code class="descname">EvaluateGradE_N_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].EvaluateGradE_N_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of ∇eₙ for the face with index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if HasGradE_N() returns false.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">index</span> <span class="pre">∈</span> <span class="pre">[0,</span> <span class="pre">mesh().num_faces())</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float], face_index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].HasGradE_M">
+<code class="descname">HasGradE_M</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].HasGradE_M" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> contains values for ∇eₘ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].HasGradE_N">
+<code class="descname">HasGradE_N</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].HasGradE_N" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> contains values for ∇eₙ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[float].id_M">
 <code class="descname">id_M</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].id_M" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the geometry id of Geometry M.</p>
@@ -1108,6 +1500,49 @@ from the origin of the world frame, expressed in the world frame.</p>
 <code class="descname">id_N</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].id_N" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the geometry id of Geometry N.</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].is_triangle">
+<code class="descname">is_triangle</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].is_triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simpley reports if this contact surface’s mesh representation is
+triangle. Equivalent to:</p>
+<p>representation() == HydroelasticContactRepresentation::kTriangle</p>
+<p>and offered as convenient sugar.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].num_faces">
+<code class="descname">num_faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].num_faces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].poly_mesh_W">
+<code class="descname">poly_mesh_W</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PolygonSurfaceMesh_[float]<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].poly_mesh_W" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the <em>polygonal</em> surface mesh whose vertex
+positions are measured and expressed in the world frame.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">is_triangle()</span></code> returns <code class="docutils literal"><span class="pre">False</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].representation">
+<code class="descname">representation</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports the representation mode of this contact surface. If accessing
+the mesh or field directly, the APIs that can be successfully
+exercised are related to this methods return value. See below.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.ContactSurface_[float].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.ContactSurface_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.ContactSurface_[float].total_area" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.ContactSurface_[float].tri_mesh_W">
@@ -3131,6 +3566,44 @@ expressed in frame F.</dd>
 </dd></dl>
 
 <dl class="class">
+<dt id="pydrake.geometry.HydroelasticContactRepresentation">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">HydroelasticContactRepresentation</code><a class="headerlink" href="#pydrake.geometry.HydroelasticContactRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports on how a hydroelastic contact surface is represented. See
+contact_surface_discrete_representation “the documentation in
+ContactSurface” for more details.</p>
+<p>Members:</p>
+<blockquote>
+<div><p>kTriangle :</p>
+<p>kPolygon :</p>
+</div></blockquote>
+<dl class="method">
+<dt id="pydrake.geometry.HydroelasticContactRepresentation.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.HydroelasticContactRepresentation</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.HydroelasticContactRepresentation.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.HydroelasticContactRepresentation.kPolygon">
+<code class="descname">kPolygon</code><em class="property"> = &lt;HydroelasticContactRepresentation.kPolygon: 1&gt;</em><a class="headerlink" href="#pydrake.geometry.HydroelasticContactRepresentation.kPolygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.HydroelasticContactRepresentation.kTriangle">
+<code class="descname">kTriangle</code><em class="property"> = &lt;HydroelasticContactRepresentation.kTriangle: 0&gt;</em><a class="headerlink" href="#pydrake.geometry.HydroelasticContactRepresentation.kTriangle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.HydroelasticContactRepresentation.name">
+<code class="descname">name</code><a class="headerlink" href="#pydrake.geometry.HydroelasticContactRepresentation.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.HydroelasticContactRepresentation.value">
+<code class="descname">value</code><a class="headerlink" href="#pydrake.geometry.HydroelasticContactRepresentation.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pydrake.geometry.IllustrationProperties">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">IllustrationProperties</code><a class="headerlink" href="#pydrake.geometry.IllustrationProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.GeometryProperties" title="pydrake.geometry.GeometryProperties"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.GeometryProperties</span></code></a></p>
@@ -4968,6 +5441,600 @@ render::RenderEngineVtk</p>
 
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pydrake.geometry.PolygonSurfaceMesh">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMesh</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh_[float]" title="pydrake.geometry.PolygonSurfaceMesh_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.PolygonSurfaceMesh_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_">
+<em class="property">template </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMesh_</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh_[float]" title="pydrake.geometry.PolygonSurfaceMesh_[float]"><code class="xref py py-class docutils literal"><span class="pre">PolygonSurfaceMesh_[float]</span></code></a>, <a class="reference internal" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]" title="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">PolygonSurfaceMesh_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float]">
+<em class="property">class </em><code class="descname">PolygonSurfaceMesh_[float]</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>PolygonSurfaceMesh represents a surface comprised of <em>polygonal</em>
+elements (three or more sides).</p>
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.PolygonSurfaceMesh_[float]) -&gt; None</li>
+</ol>
+<p>Advanced() Constructs an <em>empty</em> mesh. This enables compatibility with
+STL container types and facilitates some unit tests. Otherwise, it
+shouldn’t be used.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.PolygonSurfaceMesh_[float], face_data: List[int], vertices: List[numpy.ndarray[numpy.float64[3, 1]]]) -&gt; None</li>
+</ol>
+<p>Constructs a mesh from specified vertex and mesh data.</p>
+<p>The vertices are simply a vector of position vectors (interpreted as
+being measured and expressed in the mesh’s frame M).</p>
+<p>The polygon data is more complex. Syntactically, it is a sequence of
+integers which <em>encodes</em> P polygons. Each polygon can have an
+arbitrary number of vertices. The encoding of the P polygons is as
+follows:</p>
+<p><a href="#id18"><span class="problematic" id="id19">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p>Each polygon is defined in sequence. The definition consists of an
+integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
+and cₘ in the illustration above). The next cᵢ integers in the
+sequence are zero-based indices into the vector of vertex positions
+(indicating which vertices the polygon spans). The vertex indices are
+sorted such that the plane normal found by applying the right-handed
+rule is used as the face normal.</p>
+<p>This implies the following: Polygon one: Located at index i₁ = 0 in
+<code class="docutils literal"><span class="pre">face_data</span></code>. c₁ = face_data[i₁] is the number of vertices in polygon
+one. Polygon two: Located at index i₂ = i₁ + c₁ + 1 in <code class="docutils literal"><span class="pre">face_data</span></code>.
+c₂ = face_data[i₂] is the number of vertices in polygon zero. Polygon
+j: Located at index iⱼ = iⱼ₋₁ + cⱼ₋₁ + 1 cⱼ = face_data[iⱼ]</p>
+<p>The polygons must all be planar and convex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">face_data</span></code>:</dt>
+<dd>The sequence of counts and indices which encode the faces of the
+mesh (see above).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
+<dd>The vertex positions, measured and expressed in this mesh’s frame.</dd>
+<dt>Precondition:</dt>
+<dd>The indices in <code class="docutils literal"><span class="pre">face_data</span></code> all refer to valid indices into
+<code class="docutils literal"><span class="pre">vertices</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], f: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns area of a polygonal element.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].CalcBoundingBox">
+<code class="descname">CalcBoundingBox</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[3, 1]], numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].CalcBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the axis-aligned bounding box of this surface mesh M.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the center and the size vector of the box expressed in M’s frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometric centroid of this mesh measured and expressed in
+the mesh’s frame M. (M is the frame in which this mesh’s vertices are
+measured and expressed.) Note that the centroid is not necessarily a
+point on the surface. If the total mesh area is exactly zero, we
+define the centroid to be (0,0,0).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfacePolygon<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the polygonal element identified by the given index <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>e ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].element_centroid">
+<code class="descname">element_centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].element_centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometric centroid of the element indicated be index
+<code class="docutils literal"><span class="pre">e</span></code>, measured and expressed in the mesh’s frame M.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], mesh: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given PolygonSurfaceMesh object is equal via
+deep exact comparison. NaNs are treated as not equal as per the IEEE
+standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].face_data">
+<code class="descname">face_data</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].face_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], f: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit face normal vector of a polygon. It respects the
+right-handed normal rule. A near-zero-area triangle may get an
+unreliable normal vector. A zero-area triangle will get a zero vector.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the mesh. For PolygonSurfaceMesh, an
+element is a polygon. Returns the same number as num_faces() and
+enables mesh consumers to be templated on mesh type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_faces">
+<code class="descname">num_faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of polygonal elements in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].ReverseFaceWinding">
+<code class="descname">ReverseFaceWinding</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].ReverseFaceWinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverses the ordering of all the faces’ indices.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].total_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total area of all the faces of this surface mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].TransformVertices">
+<code class="descname">TransformVertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], X_NM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].TransformVertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the vertices of this mesh from its initial frame M to the
+new frame N.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by the given index <code class="docutils literal"><span class="pre">v</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2, …, num_vertices()-1}.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMesh_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>PolygonSurfaceMesh represents a surface comprised of <em>polygonal</em>
+elements (three or more sides).</p>
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Advanced() Constructs an <em>empty</em> mesh. This enables compatibility with
+STL container types and facilitates some unit tests. Otherwise, it
+shouldn’t be used.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], face_data: List[int], vertices: List[numpy.ndarray[object[3, 1]]]) -&gt; None</li>
+</ol>
+<p>Constructs a mesh from specified vertex and mesh data.</p>
+<p>The vertices are simply a vector of position vectors (interpreted as
+being measured and expressed in the mesh’s frame M).</p>
+<p>The polygon data is more complex. Syntactically, it is a sequence of
+integers which <em>encodes</em> P polygons. Each polygon can have an
+arbitrary number of vertices. The encoding of the P polygons is as
+follows:</p>
+<p><a href="#id20"><span class="problematic" id="id21">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p>Each polygon is defined in sequence. The definition consists of an
+integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
+and cₘ in the illustration above). The next cᵢ integers in the
+sequence are zero-based indices into the vector of vertex positions
+(indicating which vertices the polygon spans). The vertex indices are
+sorted such that the plane normal found by applying the right-handed
+rule is used as the face normal.</p>
+<p>This implies the following: Polygon one: Located at index i₁ = 0 in
+<code class="docutils literal"><span class="pre">face_data</span></code>. c₁ = face_data[i₁] is the number of vertices in polygon
+one. Polygon two: Located at index i₂ = i₁ + c₁ + 1 in <code class="docutils literal"><span class="pre">face_data</span></code>.
+c₂ = face_data[i₂] is the number of vertices in polygon zero. Polygon
+j: Located at index iⱼ = iⱼ₋₁ + cⱼ₋₁ + 1 cⱼ = face_data[iⱼ]</p>
+<p>The polygons must all be planar and convex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">face_data</span></code>:</dt>
+<dd>The sequence of counts and indices which encode the faces of the
+mesh (see above).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
+<dd>The vertex positions, measured and expressed in this mesh’s frame.</dd>
+<dt>Precondition:</dt>
+<dd>The indices in <code class="docutils literal"><span class="pre">face_data</span></code> all refer to valid indices into
+<code class="docutils literal"><span class="pre">vertices</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], f: int</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns area of a polygonal element.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].CalcBoundingBox">
+<code class="descname">CalcBoundingBox</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[3, 1]], numpy.ndarray[object[3, 1]]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].CalcBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the axis-aligned bounding box of this surface mesh M.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the center and the size vector of the box expressed in M’s frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometric centroid of this mesh measured and expressed in
+the mesh’s frame M. (M is the frame in which this mesh’s vertices are
+measured and expressed.) Note that the centroid is not necessarily a
+point on the surface. If the total mesh area is exactly zero, we
+define the centroid to be (0,0,0).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfacePolygon<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the polygonal element identified by the given index <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>e ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].element_centroid">
+<code class="descname">element_centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].element_centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometric centroid of the element indicated be index
+<code class="docutils literal"><span class="pre">e</span></code>, measured and expressed in the mesh’s frame M.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], mesh: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given PolygonSurfaceMesh object is equal via
+deep exact comparison. NaNs are treated as not equal as per the IEEE
+standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].face_data">
+<code class="descname">face_data</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].face_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], f: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit face normal vector of a polygon. It respects the
+right-handed normal rule. A near-zero-area triangle may get an
+unreliable normal vector. A zero-area triangle will get a zero vector.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the mesh. For PolygonSurfaceMesh, an
+element is a polygon. Returns the same number as num_faces() and
+enables mesh consumers to be templated on mesh type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_faces">
+<code class="descname">num_faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of polygonal elements in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].ReverseFaceWinding">
+<code class="descname">ReverseFaceWinding</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].ReverseFaceWinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverses the ordering of all the faces’ indices.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].total_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total area of all the faces of this surface mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].TransformVertices">
+<code class="descname">TransformVertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], X_NM: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].TransformVertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the vertices of this mesh from its initial frame M to the
+new frame N.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by the given index <code class="docutils literal"><span class="pre">v</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2, …, num_vertices()-1}.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">PolygonSurfaceMesh_[float]</code><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>PolygonSurfaceMesh represents a surface comprised of <em>polygonal</em>
+elements (three or more sides).</p>
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.PolygonSurfaceMesh_[float]) -&gt; None</li>
+</ol>
+<p>Advanced() Constructs an <em>empty</em> mesh. This enables compatibility with
+STL container types and facilitates some unit tests. Otherwise, it
+shouldn’t be used.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.PolygonSurfaceMesh_[float], face_data: List[int], vertices: List[numpy.ndarray[numpy.float64[3, 1]]]) -&gt; None</li>
+</ol>
+<p>Constructs a mesh from specified vertex and mesh data.</p>
+<p>The vertices are simply a vector of position vectors (interpreted as
+being measured and expressed in the mesh’s frame M).</p>
+<p>The polygon data is more complex. Syntactically, it is a sequence of
+integers which <em>encodes</em> P polygons. Each polygon can have an
+arbitrary number of vertices. The encoding of the P polygons is as
+follows:</p>
+<p><a href="#id22"><span class="problematic" id="id23">|c₁|v₁₀|v₁₁|</span></a>…|cᵢ|cᵢ₀|cᵢ₁|…|cₚ|cₚ₀|cₚ₁|…|</p>
+<p>Each polygon is defined in sequence. The definition consists of an
+integer indicating the <em>number</em> of vertices in that polygon (c₁, cᵢ,
+and cₘ in the illustration above). The next cᵢ integers in the
+sequence are zero-based indices into the vector of vertex positions
+(indicating which vertices the polygon spans). The vertex indices are
+sorted such that the plane normal found by applying the right-handed
+rule is used as the face normal.</p>
+<p>This implies the following: Polygon one: Located at index i₁ = 0 in
+<code class="docutils literal"><span class="pre">face_data</span></code>. c₁ = face_data[i₁] is the number of vertices in polygon
+one. Polygon two: Located at index i₂ = i₁ + c₁ + 1 in <code class="docutils literal"><span class="pre">face_data</span></code>.
+c₂ = face_data[i₂] is the number of vertices in polygon zero. Polygon
+j: Located at index iⱼ = iⱼ₋₁ + cⱼ₋₁ + 1 cⱼ = face_data[iⱼ]</p>
+<p>The polygons must all be planar and convex.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">face_data</span></code>:</dt>
+<dd>The sequence of counts and indices which encode the faces of the
+mesh (see above).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">vertices</span></code>:</dt>
+<dd>The vertex positions, measured and expressed in this mesh’s frame.</dd>
+<dt>Precondition:</dt>
+<dd>The indices in <code class="docutils literal"><span class="pre">face_data</span></code> all refer to valid indices into
+<code class="docutils literal"><span class="pre">vertices</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].area">
+<code class="descname">area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], f: int</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns area of a polygonal element.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].CalcBoundingBox">
+<code class="descname">CalcBoundingBox</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[3, 1]], numpy.ndarray[numpy.float64[3, 1]]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].CalcBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the axis-aligned bounding box of this surface mesh M.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the center and the size vector of the box expressed in M’s frame.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].centroid">
+<code class="descname">centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometric centroid of this mesh measured and expressed in
+the mesh’s frame M. (M is the frame in which this mesh’s vertices are
+measured and expressed.) Note that the centroid is not necessarily a
+point on the surface. If the total mesh area is exactly zero, we
+define the centroid to be (0,0,0).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SurfacePolygon<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the polygonal element identified by the given index <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>e ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].element_centroid">
+<code class="descname">element_centroid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], e: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].element_centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometric centroid of the element indicated be index
+<code class="docutils literal"><span class="pre">e</span></code>, measured and expressed in the mesh’s frame M.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].Equal">
+<code class="descname">Equal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], mesh: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].Equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks to see whether the given PolygonSurfaceMesh object is equal via
+deep exact comparison. NaNs are treated as not equal as per the IEEE
+standard.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">mesh</span></code>:</dt>
+<dd>The mesh for comparison.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the given mesh is equal.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].face_data">
+<code class="descname">face_data</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; List[int]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].face_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].face_normal">
+<code class="descname">face_normal</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], f: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].face_normal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit face normal vector of a polygon. It respects the
+right-handed normal rule. A near-zero-area triangle may get an
+unreliable normal vector. A zero-area triangle will get a zero vector.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>f ∈ {0, 1, 2, …, num_faces()-1}.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of elements in the mesh. For PolygonSurfaceMesh, an
+element is a polygon. Returns the same number as num_faces() and
+enables mesh consumers to be templated on mesh type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].num_faces">
+<code class="descname">num_faces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].num_faces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of polygonal elements in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in the mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].ReverseFaceWinding">
+<code class="descname">ReverseFaceWinding</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].ReverseFaceWinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reverses the ordering of all the faces’ indices.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].total_area">
+<code class="descname">total_area</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].total_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the total area of all the faces of this surface mesh.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].TransformVertices">
+<code class="descname">TransformVertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], X_NM: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].TransformVertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms the vertices of this mesh from its initial frame M to the
+new frame N.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.PolygonSurfaceMesh_[float].vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.PolygonSurfaceMesh_[float], v: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.geometry.PolygonSurfaceMesh_[float].vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex identified by the given index <code class="docutils literal"><span class="pre">v</span></code>.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>v ∈ {0, 1, 2, …, num_vertices()-1}.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.geometry.ProximityProperties">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">ProximityProperties</code><a class="headerlink" href="#pydrake.geometry.ProximityProperties" title="Permalink to this definition">¶</a></dt>
@@ -5079,6 +6146,118 @@ and scalars. At that point, the table will simply disappear.</p>
 <dt id="pydrake.geometry.QueryObject_.QueryObject_[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.QueryObject_.QueryObject_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a default QueryObject (all pointers are null).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject_.QueryObject_[float].ComputeContactSurfaces">
+<code class="descname">ComputeContactSurfaces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[float], representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::ContactSurface&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject_.QueryObject_[float].ComputeContactSurfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports pairwise intersections and characterizes each non-empty
+intersection as a ContactSurface for hydroelastic contact model. The
+computation is subject to collision filtering.</p>
+<p>For two intersecting geometries g_A and g_B, it is guaranteed that
+they will map to <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> in a fixed, repeatable manner,
+where <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> are GeometryId’s of geometries g_A and g_B
+respectively.</p>
+<p>In the current incarnation, this function represents an incomplete
+implementation. That has several implications, as described below:</p>
+<ul class="simple">
+<li>This table shows which shapes can be declared for use in hydroelastic</li>
+</ul>
+<p>contact, and what compliance can be assigned.</p>
+<div class="line-block">
+<div class="line">Shape | Soft | Rigid | | :——-: | :—: | :—- | | Sphere | yes</div>
+<div class="line">yes | | Cylinder | yes | yes | | Box | yes | yes | | Capsule | yes |</div>
+</div>
+<p>yes | | Ellipsoid | yes | yes | | HalfSpace | yes | yes | | Mesh | no
+| yes | | Convex | no | yes |</p>
+<ul class="simple">
+<li>We do not currently support contact between two geometries with the</li>
+</ul>
+<p>same* compliance; one geometry <em>must</em> be soft, and the other <em>must</em> be
+rigid. If geometries with the same compliance collide, an exception will
+be thrown. More particularly, if such a geometry pair <em>cannot be culled</em>
+an exception will be thrown. No exception is thrown if the pair has been
+filtered.
+- The elasticity modulus E (N/m^2) of each geometry is set in
+ProximityProperties (see AddContactMaterial()).
+- The tessellation of the corresponding meshes is controlled by the
+resolution hint (where appropriate), as defined by
+AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
+<p><strong>Scalar support</strong></p>
+<p>This method provides support for both double and AutoDiffXd. Like with
+the other proximity queries, derivatives can only be introduced via
+geometry poses*. We cannot differentiate w.r.t. geometric properties
+(e.g., radius, length, etc.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">representation</span></code>:</dt>
+<dd>Controls the mesh representation of the contact surface. See
+contact_surface_discrete_representation “contact surface
+representation” for more details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector populated with all detected intersections characterized
+as contact surfaces. The ordering of the results is guaranteed to
+be consistent – for fixed geometry poses, the results will remain
+the same.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject_.QueryObject_[float].ComputeContactSurfacesWithFallback">
+<code class="descname">ComputeContactSurfacesWithFallback</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[float], representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; Tuple[List[drake::geometry::ContactSurface&lt;double&gt;], List[drake::geometry::PenetrationAsPointPair&lt;double&gt;]]<a class="headerlink" href="#pydrake.geometry.QueryObject_.QueryObject_[float].ComputeContactSurfacesWithFallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports pairwise intersections and characterizes each non-empty
+intersection as a ContactSurface <em>where possible</em> and as a
+PenetrationAsPointPair where not.</p>
+<p>This method can be thought of as a combination of
+ComputeContactSurfaces() and ComputePointPairPenetration(). For each
+geometry pair, we attempt to compute a ContactSurface. If that fails,
+rather than throwing, we attempt to characterize the contact as a
+point pair. If that fails, we throw. See the documentation of those
+constituent methods to understand the circumstances in which they
+fail.</p>
+<p>The ordering of the <em>added</em> results is guaranteed to be consistent –
+for fixed geometry poses, the results will remain the same.</p>
+<p><strong>Scalar support</strong></p>
+<p>The scalar support is a combination of the scalar support offered by
+ComputeContactSurfaces() and ComputePointPairPenetration(). This
+method supports double and AutoDiffXd to the extent that those
+constituent methods do.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">representation</span></code>:</dt>
+<dd>Controls the mesh representation of the contact surface. See
+contact_surface_discrete_representation “contact surface
+representation” for more details.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">surfaces</span></code>:</dt>
+<dd>The vector that contact surfaces will be added to. The vector will
+<em>not</em> be cleared.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">point_pairs</span></code>:</dt>
+<dd>The vector that fall back point pair data will be added to. The
+vector will <em>not</em> be cleared.</dd>
+<dt>Precondition:</dt>
+<dd>Neither <code class="docutils literal"><span class="pre">surfaces</span></code> nor <code class="docutils literal"><span class="pre">point_pairs</span></code> is nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError for the reasons described in ComputeContactSurfaces()</li>
+<li>and ComputePointPairPenetration().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">surfaces</span></code> and <code class="docutils literal"><span class="pre">point_pairs</span></code> are output pointers in C++,
+but are return values in the Python bindings.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -5219,7 +6398,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id18"><span class="problematic" id="id19">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id24"><span class="problematic" id="id25">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5229,7 +6408,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id20"><span class="problematic" id="id21">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id26"><span class="problematic" id="id27">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5351,8 +6530,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id22"><span class="problematic" id="id23">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id24"><span class="problematic" id="id25">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id28"><span class="problematic" id="id29">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id30"><span class="problematic" id="id31">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -5677,6 +6856,118 @@ and scalars. At that point, the table will simply disappear.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.QueryObject_[AutoDiffXd].ComputeContactSurfaces">
+<code class="descname">ComputeContactSurfaces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[AutoDiffXd], representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::ContactSurface&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject_[AutoDiffXd].ComputeContactSurfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports pairwise intersections and characterizes each non-empty
+intersection as a ContactSurface for hydroelastic contact model. The
+computation is subject to collision filtering.</p>
+<p>For two intersecting geometries g_A and g_B, it is guaranteed that
+they will map to <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> in a fixed, repeatable manner,
+where <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> are GeometryId’s of geometries g_A and g_B
+respectively.</p>
+<p>In the current incarnation, this function represents an incomplete
+implementation. That has several implications, as described below:</p>
+<ul class="simple">
+<li>This table shows which shapes can be declared for use in hydroelastic</li>
+</ul>
+<p>contact, and what compliance can be assigned.</p>
+<div class="line-block">
+<div class="line">Shape | Soft | Rigid | | :——-: | :—: | :—- | | Sphere | yes</div>
+<div class="line">yes | | Cylinder | yes | yes | | Box | yes | yes | | Capsule | yes |</div>
+</div>
+<p>yes | | Ellipsoid | yes | yes | | HalfSpace | yes | yes | | Mesh | no
+| yes | | Convex | no | yes |</p>
+<ul class="simple">
+<li>We do not currently support contact between two geometries with the</li>
+</ul>
+<p>same* compliance; one geometry <em>must</em> be soft, and the other <em>must</em> be
+rigid. If geometries with the same compliance collide, an exception will
+be thrown. More particularly, if such a geometry pair <em>cannot be culled</em>
+an exception will be thrown. No exception is thrown if the pair has been
+filtered.
+- The elasticity modulus E (N/m^2) of each geometry is set in
+ProximityProperties (see AddContactMaterial()).
+- The tessellation of the corresponding meshes is controlled by the
+resolution hint (where appropriate), as defined by
+AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
+<p><strong>Scalar support</strong></p>
+<p>This method provides support for both double and AutoDiffXd. Like with
+the other proximity queries, derivatives can only be introduced via
+geometry poses*. We cannot differentiate w.r.t. geometric properties
+(e.g., radius, length, etc.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">representation</span></code>:</dt>
+<dd>Controls the mesh representation of the contact surface. See
+contact_surface_discrete_representation “contact surface
+representation” for more details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector populated with all detected intersections characterized
+as contact surfaces. The ordering of the results is guaranteed to
+be consistent – for fixed geometry poses, the results will remain
+the same.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject_[AutoDiffXd].ComputeContactSurfacesWithFallback">
+<code class="descname">ComputeContactSurfacesWithFallback</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[AutoDiffXd], representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; Tuple[List[drake::geometry::ContactSurface&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;], List[drake::geometry::PenetrationAsPointPair&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]]<a class="headerlink" href="#pydrake.geometry.QueryObject_[AutoDiffXd].ComputeContactSurfacesWithFallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports pairwise intersections and characterizes each non-empty
+intersection as a ContactSurface <em>where possible</em> and as a
+PenetrationAsPointPair where not.</p>
+<p>This method can be thought of as a combination of
+ComputeContactSurfaces() and ComputePointPairPenetration(). For each
+geometry pair, we attempt to compute a ContactSurface. If that fails,
+rather than throwing, we attempt to characterize the contact as a
+point pair. If that fails, we throw. See the documentation of those
+constituent methods to understand the circumstances in which they
+fail.</p>
+<p>The ordering of the <em>added</em> results is guaranteed to be consistent –
+for fixed geometry poses, the results will remain the same.</p>
+<p><strong>Scalar support</strong></p>
+<p>The scalar support is a combination of the scalar support offered by
+ComputeContactSurfaces() and ComputePointPairPenetration(). This
+method supports double and AutoDiffXd to the extent that those
+constituent methods do.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">representation</span></code>:</dt>
+<dd>Controls the mesh representation of the contact surface. See
+contact_surface_discrete_representation “contact surface
+representation” for more details.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">surfaces</span></code>:</dt>
+<dd>The vector that contact surfaces will be added to. The vector will
+<em>not</em> be cleared.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">point_pairs</span></code>:</dt>
+<dd>The vector that fall back point pair data will be added to. The
+vector will <em>not</em> be cleared.</dd>
+<dt>Precondition:</dt>
+<dd>Neither <code class="docutils literal"><span class="pre">surfaces</span></code> nor <code class="docutils literal"><span class="pre">point_pairs</span></code> is nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError for the reasons described in ComputeContactSurfaces()</li>
+<li>and ComputePointPairPenetration().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">surfaces</span></code> and <code class="docutils literal"><span class="pre">point_pairs</span></code> are output pointers in C++,
+but are return values in the Python bindings.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.QueryObject_[AutoDiffXd].ComputePointPairPenetration">
 <code class="descname">ComputePointPairPenetration</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::PenetrationAsPointPair&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject_[AutoDiffXd].ComputePointPairPenetration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the penetrations across all pairs of geometries in the world
@@ -5814,7 +7105,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id26"><span class="problematic" id="id27">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id32"><span class="problematic" id="id33">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -5824,7 +7115,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id28"><span class="problematic" id="id29">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id34"><span class="problematic" id="id35">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -5946,8 +7237,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id30"><span class="problematic" id="id31">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id32"><span class="problematic" id="id33">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id36"><span class="problematic" id="id37">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id38"><span class="problematic" id="id39">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -6270,6 +7561,118 @@ and scalars. At that point, the table will simply disappear.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.QueryObject_[float].ComputeContactSurfaces">
+<code class="descname">ComputeContactSurfaces</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[float], representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::ContactSurface&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject_[float].ComputeContactSurfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports pairwise intersections and characterizes each non-empty
+intersection as a ContactSurface for hydroelastic contact model. The
+computation is subject to collision filtering.</p>
+<p>For two intersecting geometries g_A and g_B, it is guaranteed that
+they will map to <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> in a fixed, repeatable manner,
+where <code class="docutils literal"><span class="pre">id_A</span></code> and <code class="docutils literal"><span class="pre">id_B</span></code> are GeometryId’s of geometries g_A and g_B
+respectively.</p>
+<p>In the current incarnation, this function represents an incomplete
+implementation. That has several implications, as described below:</p>
+<ul class="simple">
+<li>This table shows which shapes can be declared for use in hydroelastic</li>
+</ul>
+<p>contact, and what compliance can be assigned.</p>
+<div class="line-block">
+<div class="line">Shape | Soft | Rigid | | :——-: | :—: | :—- | | Sphere | yes</div>
+<div class="line">yes | | Cylinder | yes | yes | | Box | yes | yes | | Capsule | yes |</div>
+</div>
+<p>yes | | Ellipsoid | yes | yes | | HalfSpace | yes | yes | | Mesh | no
+| yes | | Convex | no | yes |</p>
+<ul class="simple">
+<li>We do not currently support contact between two geometries with the</li>
+</ul>
+<p>same* compliance; one geometry <em>must</em> be soft, and the other <em>must</em> be
+rigid. If geometries with the same compliance collide, an exception will
+be thrown. More particularly, if such a geometry pair <em>cannot be culled</em>
+an exception will be thrown. No exception is thrown if the pair has been
+filtered.
+- The elasticity modulus E (N/m^2) of each geometry is set in
+ProximityProperties (see AddContactMaterial()).
+- The tessellation of the corresponding meshes is controlled by the
+resolution hint (where appropriate), as defined by
+AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
+<p><strong>Scalar support</strong></p>
+<p>This method provides support for both double and AutoDiffXd. Like with
+the other proximity queries, derivatives can only be introduced via
+geometry poses*. We cannot differentiate w.r.t. geometric properties
+(e.g., radius, length, etc.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">representation</span></code>:</dt>
+<dd>Controls the mesh representation of the contact surface. See
+contact_surface_discrete_representation “contact surface
+representation” for more details.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector populated with all detected intersections characterized
+as contact surfaces. The ordering of the results is guaranteed to
+be consistent – for fixed geometry poses, the results will remain
+the same.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.QueryObject_[float].ComputeContactSurfacesWithFallback">
+<code class="descname">ComputeContactSurfacesWithFallback</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[float], representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; Tuple[List[drake::geometry::ContactSurface&lt;double&gt;], List[drake::geometry::PenetrationAsPointPair&lt;double&gt;]]<a class="headerlink" href="#pydrake.geometry.QueryObject_[float].ComputeContactSurfacesWithFallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reports pairwise intersections and characterizes each non-empty
+intersection as a ContactSurface <em>where possible</em> and as a
+PenetrationAsPointPair where not.</p>
+<p>This method can be thought of as a combination of
+ComputeContactSurfaces() and ComputePointPairPenetration(). For each
+geometry pair, we attempt to compute a ContactSurface. If that fails,
+rather than throwing, we attempt to characterize the contact as a
+point pair. If that fails, we throw. See the documentation of those
+constituent methods to understand the circumstances in which they
+fail.</p>
+<p>The ordering of the <em>added</em> results is guaranteed to be consistent –
+for fixed geometry poses, the results will remain the same.</p>
+<p><strong>Scalar support</strong></p>
+<p>The scalar support is a combination of the scalar support offered by
+ComputeContactSurfaces() and ComputePointPairPenetration(). This
+method supports double and AutoDiffXd to the extent that those
+constituent methods do.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">representation</span></code>:</dt>
+<dd>Controls the mesh representation of the contact surface. See
+contact_surface_discrete_representation “contact surface
+representation” for more details.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">surfaces</span></code>:</dt>
+<dd>The vector that contact surfaces will be added to. The vector will
+<em>not</em> be cleared.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">point_pairs</span></code>:</dt>
+<dd>The vector that fall back point pair data will be added to. The
+vector will <em>not</em> be cleared.</dd>
+<dt>Precondition:</dt>
+<dd>Neither <code class="docutils literal"><span class="pre">surfaces</span></code> nor <code class="docutils literal"><span class="pre">point_pairs</span></code> is nullptr.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError for the reasons described in ComputeContactSurfaces()</li>
+<li>and ComputePointPairPenetration().</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">surfaces</span></code> and <code class="docutils literal"><span class="pre">point_pairs</span></code> are output pointers in C++,
+but are return values in the Python bindings.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.QueryObject_[float].ComputePointPairPenetration">
 <code class="descname">ComputePointPairPenetration</code><span class="sig-paren">(</span><em>self: pydrake.geometry.QueryObject_[float]</em><span class="sig-paren">)</span> &#x2192; List[drake::geometry::PenetrationAsPointPair&lt;double&gt;]<a class="headerlink" href="#pydrake.geometry.QueryObject_[float].ComputePointPairPenetration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the penetrations across all pairs of geometries in the world
@@ -6407,7 +7810,7 @@ geometries and penetrating geometries.</p>
 and B.</p>
 <p>If the objects do not overlap (i.e., A ⋂ B = ∅), φ &gt; 0 and represents
 the minimal distance between the two objects. More formally: φ =
-min(<a href="#id34"><span class="problematic" id="id35">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
+min(<a href="#id40"><span class="problematic" id="id41">|Aₚ - Bₚ|</span></a>) ∀ Aₚ ∈ A and Bₚ ∈ B.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The pair (Aₚ, Bₚ) is a “witness” of the distance. The pair need
@@ -6417,7 +7820,7 @@ not be unique (think of two parallel planes).</p>
 interpreted as the negative penetration depth. It is the smallest
 length of the vector v, such that by shifting one object along that
 vector relative to the other, the two objects will no longer be
-overlapping. More formally, φ(A, B) = -min <a href="#id36"><span class="problematic" id="id37">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
+overlapping. More formally, φ(A, B) = -min <a href="#id42"><span class="problematic" id="id43">|v|</span></a>. s.t (Tᵥ · A) ⋂ B = ∅
 where Tᵥ is a rigid transformation that displaces A by the vector v,
 namely Tᵥ · A = {u + v | ∀ u ∈ A}. By implication, there exist points
 Aₚ and Bₚ on the surfaces of objects A and B, respectively, such that
@@ -6539,8 +7942,8 @@ outside Gᵢ, then ∇φᵢ(p) equals the unit vector in the direction from
 the nearest point Nᵢ on Gᵢ’s surface to p. If p is inside Gᵢ, then
 ∇φᵢ(p) is in the direction from p to Nᵢ. This observation is written
 formally as:</p>
-<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id38"><span class="problematic" id="id39">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
-<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id40"><span class="problematic" id="id41">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
+<p>∇φᵢ(p) = (p - Nᵢ)/<a href="#id44"><span class="problematic" id="id45">|p - Nᵢ|</span></a> if p is outside Gᵢ</p>
+<p>∇φᵢ(p) = -(p - Nᵢ)/<a href="#id46"><span class="problematic" id="id47">|p - Nᵢ|</span></a> if p is inside Gᵢ</p>
 <p>Note that ∇φᵢ(p) is also defined on Gᵢ’s surface, but we cannot use
 the above formula.</p>
 <p><strong>Characterizing the returned values</strong></p>
@@ -6785,7 +8188,7 @@ the indicated parent frame P.</p>
 scales coordinates by the given scale factor. Polygons will be
 triangulated if they are not triangles already. All objects in the
 .obj file will be merged into the surface mesh. See
-<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id48"><span class="problematic" id="id49">Wavefront_</span></a>.obj_file for the file format.</p>
+<a class="reference external" href="https://en.wikipedia.org/wiki/">https://en.wikipedia.org/wiki/</a><a href="#id54"><span class="problematic" id="id55">Wavefront_</span></a>.obj_file for the file format.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">filename</span></code>:</dt>
 <dd>A valid file name with absolute path or relative path.</dd>
@@ -11391,7 +12794,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id42"><span class="problematic" id="id43">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id48"><span class="problematic" id="id49">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11478,7 +12881,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id44"><span class="problematic" id="id45">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id50"><span class="problematic" id="id51">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11563,7 +12966,7 @@ query point Q, expressed in world frame W.</dd>
 <p class="last"><code class="docutils literal"><span class="pre">grad_W</span></code> is not well defined everywhere. For example, when
 computing the distance from a point to a sphere, and the point
 coincides with the center of the sphere, grad_W is not well
-defined (as it can be computed as p_GQ / <a href="#id46"><span class="problematic" id="id47">|p_GQ|</span></a>, but the
+defined (as it can be computed as p_GQ / <a href="#id52"><span class="problematic" id="id53">|p_GQ|</span></a>, but the
 denominator is 0). When grad_W is not well defined, and we
 instantiate SignedDistanceToPoint&lt;T&gt; with T being an
 AutoDiffScalar (like AutoDiffXd), the gradient of the query result
@@ -11670,6 +13073,37 @@ given radius.</p>
 <dt id="pydrake.geometry.Sphere.radius">
 <code class="descname">radius</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Sphere</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.Sphere.radius" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.SurfacePolygon">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">SurfacePolygon</code><a class="headerlink" href="#pydrake.geometry.SurfacePolygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representation of a polygonal face in a SurfacePolygon.</p>
+<dl class="attribute">
+<dt id="pydrake.geometry.SurfacePolygon.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.geometry.SurfacePolygon.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SurfacePolygon.num_vertices">
+<code class="descname">num_vertices</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfacePolygon</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SurfacePolygon.num_vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of vertices in this face.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.SurfacePolygon.vertex">
+<code class="descname">vertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.SurfacePolygon</em>, <em>i: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.SurfacePolygon.vertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the vertex index in PolygonSurfaceMesh of the i-th vertex of
+this face.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">i</span></code>:</dt>
+<dd>The local index of the vertex in this face.</dd>
+<dt>Precondition:</dt>
+<dd>0 &lt;= i &lt; num_vertices()</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

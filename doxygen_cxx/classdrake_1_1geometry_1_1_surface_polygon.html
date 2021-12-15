@@ -113,6 +113,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abc9f496f717b32bceb3fdeff1a2051b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html#abc9f496f717b32bceb3fdeff1a2051b5">vertex</a> (<a class="el" href="classint.html">int</a> i) const</td></tr>
 <tr class="memdesc:abc9f496f717b32bceb3fdeff1a2051b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertex index in <a class="el" href="classdrake_1_1geometry_1_1_polygon_surface_mesh.html" title="PolygonSurfaceMesh represents a surface comprised of polygonal elements (three or more sides).">PolygonSurfaceMesh</a> of the i-th vertex of this face.  <a href="#abc9f496f717b32bceb3fdeff1a2051b5">More...</a><br /></td></tr>
 <tr class="separator:abc9f496f717b32bceb3fdeff1a2051b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72230bfb6a0839de4d2521980d40cb74"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html">SurfacePolygon</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html#a72230bfb6a0839de4d2521980d40cb74">copy_to_unique</a> () const</td></tr>
+<tr class="memdesc:a72230bfb6a0839de4d2521980d40cb74"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns a copy of this, wrapped in a unique_ptr.  <a href="#a72230bfb6a0839de4d2521980d40cb74">More...</a><br /></td></tr>
+<tr class="separator:a72230bfb6a0839de4d2521980d40cb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a3e0fd3c71ff74446da73887257927a20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html#a3e0fd3c71ff74446da73887257927a20">SurfacePolygon</a> (const <a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html">SurfacePolygon</a> &amp;)=delete</td></tr>
 <tr class="separator:a3e0fd3c71ff74446da73887257927a20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,6 +186,26 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a72230bfb6a0839de4d2521980d40cb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72230bfb6a0839de4d2521980d40cb74">&#9670;&nbsp;</a></span>copy_to_unique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1_surface_polygon.html">SurfacePolygon</a>&gt; copy_to_unique </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Internal use only) Returns a copy of this, wrapped in a unique_ptr. </p>
+<p>This function is only intended for use by Drake's Python bindings. </p>
+
+</div>
+</div>
 <a id="a319e621fc359dd8daad48247f95b12fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a319e621fc359dd8daad48247f95b12fa">&#9670;&nbsp;</a></span>num_vertices()</h2>
 

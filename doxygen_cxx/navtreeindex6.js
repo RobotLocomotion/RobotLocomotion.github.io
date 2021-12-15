@@ -44,13 +44,14 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1_sphere.html#ace82bb641fd573d97c739a81bfd6d91d":[3,0,0,3,47,0],
 "classdrake_1_1geometry_1_1_sphere.html#ad4eb22638a3841217373d2caee0d6a74":[3,0,0,3,47,2],
 "classdrake_1_1geometry_1_1_surface_polygon.html":[3,0,0,3,48],
-"classdrake_1_1geometry_1_1_surface_polygon.html#a0e2bbe23908d535cbdbbd0b6fe170b7f":[3,0,0,3,48,3],
-"classdrake_1_1geometry_1_1_surface_polygon.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,3,48,2],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a0e2bbe23908d535cbdbbd0b6fe170b7f":[3,0,0,3,48,4],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a319e621fc359dd8daad48247f95b12fa":[3,0,0,3,48,3],
 "classdrake_1_1geometry_1_1_surface_polygon.html#a3e0fd3c71ff74446da73887257927a20":[3,0,0,3,48,0],
 "classdrake_1_1geometry_1_1_surface_polygon.html#a52d1e1c09cc3b5fbdc51c38be7d832c0":[3,0,0,3,48,1],
-"classdrake_1_1geometry_1_1_surface_polygon.html#a9ac8460e4e9e72730d4ad340632d1896":[3,0,0,3,48,4],
-"classdrake_1_1geometry_1_1_surface_polygon.html#abc9f496f717b32bceb3fdeff1a2051b5":[3,0,0,3,48,5],
-"classdrake_1_1geometry_1_1_surface_polygon.html#afaa681c53b3d6f7f1b04b89c720b51de":[3,0,0,3,48,6],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a72230bfb6a0839de4d2521980d40cb74":[3,0,0,3,48,2],
+"classdrake_1_1geometry_1_1_surface_polygon.html#a9ac8460e4e9e72730d4ad340632d1896":[3,0,0,3,48,5],
+"classdrake_1_1geometry_1_1_surface_polygon.html#abc9f496f717b32bceb3fdeff1a2051b5":[3,0,0,3,48,6],
+"classdrake_1_1geometry_1_1_surface_polygon.html#afaa681c53b3d6f7f1b04b89c720b51de":[3,0,0,3,48,7],
 "classdrake_1_1geometry_1_1_surface_triangle.html":[3,0,0,3,49],
 "classdrake_1_1geometry_1_1_surface_triangle.html#a0acda69eaae2958c8480f15e8240e32f":[3,0,0,3,49,6],
 "classdrake_1_1geometry_1_1_surface_triangle.html#a24cc48855af644139e066507739ad145":[3,0,0,3,49,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a6620f5394586ae49fffc5aec0d872b67":[1,2,1,2,0,2],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a70f4c533eb1879f1674ab4b2b8083d4c":[1,6,4,2,0,17],
 "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a70f4c533eb1879f1674ab4b2b8083d4c":[1,2,1,2,0,17],
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a7d79fc3d9d1ff6828f96d4f00cfd8295":[1,6,4,2,0,18],
-"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a7d79fc3d9d1ff6828f96d4f00cfd8295":[1,2,1,2,0,18]
+"classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a7d79fc3d9d1ff6828f96d4f00cfd8295":[1,6,4,2,0,18]
 };
