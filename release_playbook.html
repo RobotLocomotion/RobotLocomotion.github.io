@@ -396,7 +396,7 @@ instructions to obtain a username and password.</p>
   <li>Run <code class="highlighter-rouge">git clone --filter=blob:none https://github.com/RobotLocomotion/drake.git</code></li>
   <li>Run <code class="highlighter-rouge">cd drake</code></li>
   <li>Run <code class="highlighter-rouge">git checkout v0.N.0</code></li>
-  <li>Run <code class="highlighter-rouge">cd tools/wheel/dev</code></li>
+  <li>Run <code class="highlighter-rouge">cd tools/wheel</code></li>
   <li>Run <code class="highlighter-rouge">./build-wheels --test 0.N.0</code></li>
   <li>Wait a long time for it to finish (around 60 minutes on a beefy workstation). It will take over all of your computer’s resources, so don’t plan to do much else concurrently.</li>
   <li>There should have been exactly two whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to each of the wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64</code>, etc.)

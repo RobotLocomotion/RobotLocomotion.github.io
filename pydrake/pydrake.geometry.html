@@ -297,7 +297,7 @@ require tessellation.</dd>
 <dl class="function">
 <dt id="pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticPropertiesForHalfSpace</code><span class="sig-paren">(</span><em>slab_thickness: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Soft half spaces are handled as a special case; they do not get
+<dd><p>Compliant half spaces are handled as a special case; they do not get
 tessellated. Instead, they are treated as infinite slabs with a finite
 thickness. This variant is required for hydroelastic half spaces.</p>
 <dl class="docutils">
@@ -6165,21 +6165,21 @@ implementation. That has several implications, as described below:</p>
 </ul>
 <p>contact, and what compliance can be assigned.</p>
 <div class="line-block">
-<div class="line">Shape | Soft | Rigid | | :——-: | :—: | :—- | | Sphere | yes</div>
-<div class="line">yes | | Cylinder | yes | yes | | Box | yes | yes | | Capsule | yes |</div>
+<div class="line">Shape | Compliant | Rigid | | :——-: | :——-: | :—: | |</div>
 </div>
-<p>yes | | Ellipsoid | yes | yes | | HalfSpace | yes | yes | | Mesh | no
-| yes | | Convex | no | yes |</p>
+<p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
+Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
+yes | | Mesh | no | yes | | Convex | no | yes |</p>
 <ul class="simple">
-<li>We do not currently support contact between two geometries with the</li>
+<li>We do not currently support contact between two geometries with</li>
 </ul>
-<p>same* compliance; one geometry <em>must</em> be soft, and the other <em>must</em> be
-rigid. If geometries with the same compliance collide, an exception will
-be thrown. More particularly, if such a geometry pair <em>cannot be culled</em>
-an exception will be thrown. No exception is thrown if the pair has been
-filtered.
-- The elasticity modulus E (N/m^2) of each geometry is set in
-ProximityProperties (see AddContactMaterial()).
+<p>the <em>same</em> compliance type; one geometry <em>must</em> be compliant, and the
+other <em>must</em> be rigid. If geometries with the same compliance type
+collide, an exception will be thrown. More particularly, if such a
+geometry pair <em>cannot be culled</em> an exception will be thrown. No
+exception is thrown if the pair has been filtered.
+- The hydroelastic modulus (N/m^2) of each compliant geometry is set in
+ProximityProperties by AddSoftHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
 resolution hint (where appropriate), as defined by
 AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
@@ -6872,21 +6872,21 @@ implementation. That has several implications, as described below:</p>
 </ul>
 <p>contact, and what compliance can be assigned.</p>
 <div class="line-block">
-<div class="line">Shape | Soft | Rigid | | :——-: | :—: | :—- | | Sphere | yes</div>
-<div class="line">yes | | Cylinder | yes | yes | | Box | yes | yes | | Capsule | yes |</div>
+<div class="line">Shape | Compliant | Rigid | | :——-: | :——-: | :—: | |</div>
 </div>
-<p>yes | | Ellipsoid | yes | yes | | HalfSpace | yes | yes | | Mesh | no
-| yes | | Convex | no | yes |</p>
+<p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
+Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
+yes | | Mesh | no | yes | | Convex | no | yes |</p>
 <ul class="simple">
-<li>We do not currently support contact between two geometries with the</li>
+<li>We do not currently support contact between two geometries with</li>
 </ul>
-<p>same* compliance; one geometry <em>must</em> be soft, and the other <em>must</em> be
-rigid. If geometries with the same compliance collide, an exception will
-be thrown. More particularly, if such a geometry pair <em>cannot be culled</em>
-an exception will be thrown. No exception is thrown if the pair has been
-filtered.
-- The elasticity modulus E (N/m^2) of each geometry is set in
-ProximityProperties (see AddContactMaterial()).
+<p>the <em>same</em> compliance type; one geometry <em>must</em> be compliant, and the
+other <em>must</em> be rigid. If geometries with the same compliance type
+collide, an exception will be thrown. More particularly, if such a
+geometry pair <em>cannot be culled</em> an exception will be thrown. No
+exception is thrown if the pair has been filtered.
+- The hydroelastic modulus (N/m^2) of each compliant geometry is set in
+ProximityProperties by AddSoftHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
 resolution hint (where appropriate), as defined by
 AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
@@ -7577,21 +7577,21 @@ implementation. That has several implications, as described below:</p>
 </ul>
 <p>contact, and what compliance can be assigned.</p>
 <div class="line-block">
-<div class="line">Shape | Soft | Rigid | | :——-: | :—: | :—- | | Sphere | yes</div>
-<div class="line">yes | | Cylinder | yes | yes | | Box | yes | yes | | Capsule | yes |</div>
+<div class="line">Shape | Compliant | Rigid | | :——-: | :——-: | :—: | |</div>
 </div>
-<p>yes | | Ellipsoid | yes | yes | | HalfSpace | yes | yes | | Mesh | no
-| yes | | Convex | no | yes |</p>
+<p>Sphere | yes | yes | | Cylinder | yes | yes | | Box | yes | yes | |
+Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
+yes | | Mesh | no | yes | | Convex | no | yes |</p>
 <ul class="simple">
-<li>We do not currently support contact between two geometries with the</li>
+<li>We do not currently support contact between two geometries with</li>
 </ul>
-<p>same* compliance; one geometry <em>must</em> be soft, and the other <em>must</em> be
-rigid. If geometries with the same compliance collide, an exception will
-be thrown. More particularly, if such a geometry pair <em>cannot be culled</em>
-an exception will be thrown. No exception is thrown if the pair has been
-filtered.
-- The elasticity modulus E (N/m^2) of each geometry is set in
-ProximityProperties (see AddContactMaterial()).
+<p>the <em>same</em> compliance type; one geometry <em>must</em> be compliant, and the
+other <em>must</em> be rigid. If geometries with the same compliance type
+collide, an exception will be thrown. More particularly, if such a
+geometry pair <em>cannot be culled</em> an exception will be thrown. No
+exception is thrown if the pair has been filtered.
+- The hydroelastic modulus (N/m^2) of each compliant geometry is set in
+ProximityProperties by AddSoftHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
 resolution hint (where appropriate), as defined by
 AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
