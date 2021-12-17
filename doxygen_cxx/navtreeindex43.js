@@ -130,7 +130,7 @@ var NAVTREEINDEX43 =
 "make__pendulum__plant_8h.html":[4,0,0,8,0,5,0],
 "make__pendulum__plant_8h.html#a30233325115a0476081c9049714ce476":[4,0,0,8,0,5,0,1],
 "make__rolling__sphere__plant_8h.html":[4,0,0,3,9,1,0],
-"make__rolling__sphere__plant_8h.html#aa2b5951781d425688a9870415ed071e0":[4,0,0,3,9,1,0,0],
+"make__rolling__sphere__plant_8h.html#a71f0d16bece761c6642485c0b5b696e7":[4,0,0,3,9,1,0,0],
 "make__sphere__field_8h.html":[4,0,0,4,2,23],
 "make__sphere__mesh_8h.html":[4,0,0,4,2,24],
 "manipulation__station_8h.html":[4,0,0,3,7,0],
@@ -186,6 +186,8 @@ var NAVTREEINDEX43 =
 "mesh__traits_8h.html#a74b8d905842571b365085fdd17378772":[4,0,0,4,2,31,1],
 "meshcat_8h.html":[4,0,0,4,24],
 "meshcat__animation_8h.html":[4,0,0,4,25],
+"meshcat__environment_8h.html":[4,0,0,4,5,2],
+"meshcat__environment_8h.html#a45ad74b0a867a6876fe2a44b3d2b4cb2":[4,0,0,4,5,2,0],
 "meshcat__point__cloud__visualizer_8h.html":[4,0,0,4,26],
 "meshcat__point__cloud__visualizer_8h.html#a13b4d36d0491327603af75e4f6d0c52a":[4,0,0,4,26,2],
 "meshcat__types_8h.html":[4,0,0,4,27],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "multibody__doxygen_8h.html":[4,0,0,8,14],
 "multibody__element_8h.html":[4,0,0,8,12,21],
 "multibody__forces_8h.html":[4,0,0,8,12,22],
-"multibody__graph_8h.html":[4,0,0,8,11,0],
-"multibody__plant_8h.html":[4,0,0,8,9,15],
-"multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4e":[4,0,0,8,9,15,2]
+"multibody__graph_8h.html":[4,0,0,8,11,0]
 };

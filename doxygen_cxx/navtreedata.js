@@ -108,16 +108,16 @@ var NAVTREEINDEX =
 "find__collision__candidates__callback_8h.html",
 "group__analysis.html",
 "integration__constraint_8h.html",
-"multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea0f9136530df40294d8404d10cc150423",
-"namespacemembers_vars.html",
-"random__polynomial__matrix_8h.html#ac4fc5709db8aa88c23fc8f401ee3d2de",
-"spatial__inertia_8h.html",
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a0d6fc2daabf951fe18a222fab56c2ba6",
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0",
-"structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html",
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faac9968ab1fa8103acbb3a4f22265f2def",
-"symbolic__polynomial_8h.html#a5ee4b0876c4a92c7bd3030b193ce0dbd",
-"wrap__pybind_8h.html#a3a22cfe187c4d2e58dacdc4fddf69843"
+"multibody__plant_8h.html",
+"namespacemembers_u.html",
+"random_8h.html#adc2cd15bd61a427917d479a38a1a3580",
+"spatial__derivative_8h.html#afebf465d77636f970101b962f87460af",
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html",
+"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f",
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#adc250b4c9ae780fa619885b581260e43",
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faaaff6933d8331eca27edc911467980c9c",
+"symbolic__polynomial_8h.html#a52a4be02d87d5a6d31efbbcb5d3ba934",
+"wrap__pybind_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

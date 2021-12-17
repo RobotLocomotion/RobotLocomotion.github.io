@@ -183,6 +183,79 @@
 </div>
 <span class="target" id="module-pydrake.geometry"></span><p>Bindings for <cite>drake::geometry</cite></p>
 <dl class="function">
+<dt id="pydrake.geometry.AddCompliantHydroelasticProperties">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">AddCompliantHydroelasticProperties</code><span class="sig-paren">(</span><em>resolution_hint: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddCompliantHydroelasticProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds properties to the given set of proximity properties sufficient to
+cause the associated geometry to generate a compliant hydroelastic
+representation. The geometry’s pressure field will be the function
+p(e) = Ee, where E is the hydroelastic modulus stored in the given
+<code class="docutils literal"><span class="pre">properties</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">resolution_hint</span></code>:</dt>
+<dd>If the geometry is to be tessellated, it is the parameter that
+guides the level of mesh refinement. It has length units (in
+meters) and roughly corresponds to a typical edge length in the
+resulting mesh. This will be ignored for geometry types that don’t
+require tessellation.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>:</dt>
+<dd>A multiplier that maps penetration to pressure.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
+<dd>The properties will be added to this property set.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError If <code class="docutils literal"><span class="pre">properties</span></code> already has properties with the</li>
+<li>names that this function would need to add.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt; <code class="docutils literal"><span class="pre">resolution_hint</span></code> &lt; ∞, 0 &lt; <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>, and
+<code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.geometry.AddCompliantHydroelasticPropertiesForHalfSpace">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">AddCompliantHydroelasticPropertiesForHalfSpace</code><span class="sig-paren">(</span><em>slab_thickness: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddCompliantHydroelasticPropertiesForHalfSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compliant half spaces are handled as a special case; they do not get
+tessellated. Instead, they are treated as infinite slabs with a finite
+thickness. This variant is required for hydroelastic half spaces.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">slab_thickness</span></code>:</dt>
+<dd>The distance from the half space boundary to its rigid core (this
+helps define the extent field of the half space).</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>:</dt>
+<dd>A multiplier that maps penetration to pressure.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
+<dd>The properties will be added to this property set.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError If <code class="docutils literal"><span class="pre">properties</span></code> already has properties with the</li>
+<li>names that this function would need to add.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>0 &lt; <code class="docutils literal"><span class="pre">slab_thickness</span></code> &lt; ∞, 0 &lt; <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>, and
+<code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.geometry.AddContactMaterial">
 <code class="descclassname">pydrake.geometry.</code><code class="descname">AddContactMaterial</code><span class="sig-paren">(</span><em>dissipation: Optional[float] = None</em>, <em>point_stiffness: Optional[float] = None</em>, <em>friction: Optional[drake::multibody::CoulombFriction&lt;double&gt;] = None</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddContactMaterial" title="Permalink to this definition">¶</a></dt>
 <dd><p>AddContactMaterial() adds general contact material properties to the
@@ -253,79 +326,6 @@ for geometry types that don’t require tessellation.</dd>
 <p>Overload, intended for shapes that don’t get tessellated in their
 hydroelastic representation (e.g., HalfSpace and Mesh). See
 MODULE_NOT_WRITTEN_YET.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.geometry.AddSoftHydroelasticProperties">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticProperties</code><span class="sig-paren">(</span><em>resolution_hint: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticProperties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds properties to the given set of proximity properties sufficient to
-cause the associated geometry to generate a soft hydroelastic
-representation. The geometry’s pressure field will be the function
-p(e) = Ee, where E is the elastic modulus stored in the given
-<code class="docutils literal"><span class="pre">properties</span></code>.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">resolution_hint</span></code>:</dt>
-<dd>If the geometry is to be tessellated, it is the parameter that
-guides the level of mesh refinement. It has length units (in
-meters) and roughly corresponds to a typical edge length in the
-resulting mesh. This will be ignored for geometry types that don’t
-require tessellation.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>:</dt>
-<dd>A multiplier that maps penetration to pressure.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
-<dd>The properties will be added to this property set.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError If <code class="docutils literal"><span class="pre">properties</span></code> already has properties with the</li>
-<li>names that this function would need to add.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>0 &lt; <code class="docutils literal"><span class="pre">resolution_hint</span></code> &lt; ∞, 0 &lt; <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>, and
-<code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace">
-<code class="descclassname">pydrake.geometry.</code><code class="descname">AddSoftHydroelasticPropertiesForHalfSpace</code><span class="sig-paren">(</span><em>slab_thickness: float</em>, <em>hydroelastic_modulus: float</em>, <em>properties: pydrake.geometry.ProximityProperties</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.AddSoftHydroelasticPropertiesForHalfSpace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compliant half spaces are handled as a special case; they do not get
-tessellated. Instead, they are treated as infinite slabs with a finite
-thickness. This variant is required for hydroelastic half spaces.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">slab_thickness</span></code>:</dt>
-<dd>The distance from the half space boundary to its rigid core (this
-helps define the extent field of the half space).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>:</dt>
-<dd>A multiplier that maps penetration to pressure.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
-<dd>The properties will be added to this property set.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError If <code class="docutils literal"><span class="pre">properties</span></code> already has properties with the</li>
-<li>names that this function would need to add.</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>0 &lt; <code class="docutils literal"><span class="pre">slab_thickness</span></code> &lt; ∞, 0 &lt; <code class="docutils literal"><span class="pre">hydroelastic_modulus</span></code>, and
-<code class="docutils literal"><span class="pre">properties</span></code> is not nullptr.</dd>
-</dl>
 </dd></dl>
 
 <dl class="class">
@@ -6179,10 +6179,11 @@ collide, an exception will be thrown. More particularly, if such a
 geometry pair <em>cannot be culled</em> an exception will be thrown. No
 exception is thrown if the pair has been filtered.
 - The hydroelastic modulus (N/m^2) of each compliant geometry is set in
-ProximityProperties by AddSoftHydroelasticProperties().
+ProximityProperties by AddCompliantHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
 resolution hint (where appropriate), as defined by
-AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
+AddCompliantHydroelasticProperties() and
+AddRigidHydroelasticProperties().</p>
 <p><strong>Scalar support</strong></p>
 <p>This method provides support for both double and AutoDiffXd. Like with
 the other proximity queries, derivatives can only be introduced via
@@ -6886,10 +6887,11 @@ collide, an exception will be thrown. More particularly, if such a
 geometry pair <em>cannot be culled</em> an exception will be thrown. No
 exception is thrown if the pair has been filtered.
 - The hydroelastic modulus (N/m^2) of each compliant geometry is set in
-ProximityProperties by AddSoftHydroelasticProperties().
+ProximityProperties by AddCompliantHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
 resolution hint (where appropriate), as defined by
-AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
+AddCompliantHydroelasticProperties() and
+AddRigidHydroelasticProperties().</p>
 <p><strong>Scalar support</strong></p>
 <p>This method provides support for both double and AutoDiffXd. Like with
 the other proximity queries, derivatives can only be introduced via
@@ -7591,10 +7593,11 @@ collide, an exception will be thrown. More particularly, if such a
 geometry pair <em>cannot be culled</em> an exception will be thrown. No
 exception is thrown if the pair has been filtered.
 - The hydroelastic modulus (N/m^2) of each compliant geometry is set in
-ProximityProperties by AddSoftHydroelasticProperties().
+ProximityProperties by AddCompliantHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
 resolution hint (where appropriate), as defined by
-AddSoftHydroelasticProperties() and AddRigidHydroelasticProperties().</p>
+AddCompliantHydroelasticProperties() and
+AddRigidHydroelasticProperties().</p>
 <p><strong>Scalar support</strong></p>
 <p>This method provides support for both double and AutoDiffXd. Like with
 the other proximity queries, derivatives can only be introduced via
