@@ -3637,6 +3637,13 @@ two time scales <code class="docutils literal"><span class="pre">tc</span></code
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_contact_surface_representation">
+<code class="descname">get_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current representation of contact surfaces used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -4070,6 +4077,14 @@ Post-finalize calls will always return the same value.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">RegisterCollisionGeometry(), Finalize()</p>
 </div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetDefaultContactSurfaceRepresentation">
+<em class="property">static </em><code class="descname">GetDefaultContactSurfaceRepresentation</code><span class="sig-paren">(</span><em>time_step: float</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetDefaultContactSurfaceRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default value for contact representation, given the desired
+time step. Discrete systems default to use polygons; continuous
+systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5284,6 +5299,15 @@ ContactModel::kPoint.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].set_contact_surface_representation">
+<code class="descname">set_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], surface_representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].set_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the representation of contact surfaces to be used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant. See geometry::HydroelasticContactRepresentation for
+available options. See GetDefaultContactSurfaceRepresentation() for
+explanation of default values.</p>
 </dd></dl>
 
 <dl class="method">
@@ -7599,6 +7623,13 @@ two time scales <code class="docutils literal"><span class="pre">tc</span></code
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_contact_surface_representation">
+<code class="descname">get_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current representation of contact surfaces used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -8032,6 +8063,14 @@ Post-finalize calls will always return the same value.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">RegisterCollisionGeometry(), Finalize()</p>
 </div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDefaultContactSurfaceRepresentation">
+<em class="property">static </em><code class="descname">GetDefaultContactSurfaceRepresentation</code><span class="sig-paren">(</span><em>time_step: float</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetDefaultContactSurfaceRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default value for contact representation, given the desired
+time step. Discrete systems default to use polygons; continuous
+systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9246,6 +9285,15 @@ ContactModel::kPoint.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_contact_surface_representation">
+<code class="descname">set_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], surface_representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].set_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the representation of contact surfaces to be used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant. See geometry::HydroelasticContactRepresentation for
+available options. See GetDefaultContactSurfaceRepresentation() for
+explanation of default values.</p>
 </dd></dl>
 
 <dl class="method">
@@ -11559,6 +11607,13 @@ two time scales <code class="docutils literal"><span class="pre">tc</span></code
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_contact_surface_representation">
+<code class="descname">get_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current representation of contact surfaces used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -11992,6 +12047,14 @@ Post-finalize calls will always return the same value.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">RegisterCollisionGeometry(), Finalize()</p>
 </div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetDefaultContactSurfaceRepresentation">
+<em class="property">static </em><code class="descname">GetDefaultContactSurfaceRepresentation</code><span class="sig-paren">(</span><em>time_step: float</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetDefaultContactSurfaceRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default value for contact representation, given the desired
+time step. Discrete systems default to use polygons; continuous
+systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13206,6 +13269,15 @@ ContactModel::kPoint.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].set_contact_surface_representation">
+<code class="descname">set_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], surface_representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].set_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the representation of contact surfaces to be used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant. See geometry::HydroelasticContactRepresentation for
+available options. See GetDefaultContactSurfaceRepresentation() for
+explanation of default values.</p>
 </dd></dl>
 
 <dl class="method">
@@ -15519,6 +15591,13 @@ two time scales <code class="docutils literal"><span class="pre">tc</span></code
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].get_contact_surface_representation">
+<code class="descname">get_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].get_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current representation of contact surfaces used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].get_force_element">
 <code class="descname">get_force_element</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], force_element_index: pydrake.multibody.tree.ForceElementIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.ForceElement_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].get_force_element" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the force element with unique index
@@ -15952,6 +16031,14 @@ Post-finalize calls will always return the same value.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">RegisterCollisionGeometry(), Finalize()</p>
 </div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].GetDefaultContactSurfaceRepresentation">
+<em class="property">static </em><code class="descname">GetDefaultContactSurfaceRepresentation</code><span class="sig-paren">(</span><em>time_step: float</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.HydroelasticContactRepresentation<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].GetDefaultContactSurfaceRepresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default value for contact representation, given the desired
+time step. Discrete systems default to use polygons; continuous
+systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="method">
@@ -17166,6 +17253,15 @@ ContactModel::kPoint.</p>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].set_contact_surface_representation">
+<code class="descname">set_contact_surface_representation</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], surface_representation: pydrake.geometry.HydroelasticContactRepresentation</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].set_contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the representation of contact surfaces to be used by <code class="docutils literal"><span class="pre">this</span></code>
+MultibodyPlant. See geometry::HydroelasticContactRepresentation for
+available options. See GetDefaultContactSurfaceRepresentation() for
+explanation of default values.</p>
 </dd></dl>
 
 <dl class="method">

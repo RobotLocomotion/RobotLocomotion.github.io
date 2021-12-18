@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae0ee3cf6bf50e6695a4c35c725eaa823":[1,5,2,8,10],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae53f152a770c0e399fd18519a82111ca":[1,5,2,8,15],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae67390ae3d55a7e0e060b4def47e53ee":[1,5,2,8,27],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae6f30b165f1275d62dea7f27b441a41b":[1,5,2,8,48],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae8a8a3244e3e70007474108a9b024d50":[1,5,2,8,44],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#aed75c6e52b003291a450cf15e43bd1f9":[1,5,2,8,37],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab2a120b051838aa55cd3cf694a3c75d1":[3,0,1,3,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,1,3,1],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,1,3,7],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,1,3,13],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad909a0d6f40d56faad5e3f60fe0326c5":[3,0,1,3,14],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee44966b6c6ff31b5e49a515bea53295":[3,0,1,3,4],
-"classstd_1_1normal__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,27]
+"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,1,3,13]
 };

@@ -1,5 +1,8 @@
 var NAVTREEINDEX42 =
 {
+"group__acrobot__systems.html":[1,3,12,0],
+"group__acrobot__systems.html#gafb2ab3ad52a7daf958473b205ceb8877":[1,3,12,0,8],
+"group__algorithms.html":[1,5],
 "group__analysis.html":[1,5,1],
 "group__analysis.html#ga2ccd9a43fd950b9e3490dd8c98534c3e":[1,5,1,3],
 "group__analysis.html#ga9f3c726f3a915c5188fbcd8bff683cb5":[1,5,1,1],
@@ -62,14 +65,14 @@ var NAVTREEINDEX42 =
 "group__geometry__infrastructure.html":[1,6,0],
 "group__geometry__optimization.html":[1,6,4],
 "group__geometry__optimization.html":[1,2,1],
-"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,2,1,10],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,6,4,10],
+"group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,2,1,10],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,2,1,11],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,6,4,11],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,2,1,12],
 "group__geometry__optimization.html#gad54a224f37c1a0dc86eaec300ef874af":[1,6,4,12],
-"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,6,4,9],
 "group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,2,1,9],
+"group__geometry__optimization.html#gafd8111a93cb3461e05bec3477ee736f6":[1,6,4,9],
 "group__geometry__roles.html":[1,6,1],
 "group__hash__append.html":[1,0,2,0],
 "group__identification.html":[1,5,5],
@@ -246,8 +249,5 @@ var NAVTREEINDEX42 =
 "integer__inequality__solver_8h.html":[4,0,0,10,25],
 "integer__inequality__solver_8h.html#a897158ddd3d5fd975edd151850ecc639":[4,0,0,10,25,0],
 "integer__optimization__util_8h.html":[4,0,0,10,26],
-"integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,10,26,0],
-"integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,10,26,3],
-"integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,10,26,1],
-"integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,10,26,2]
+"integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,10,26,0]
 };

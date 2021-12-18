@@ -406,62 +406,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afdcdcb4e7798a5aef9bc3111402dfa5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">geometry::FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afdcdcb4e7798a5aef9bc3111402dfa5e">GetBodyFrameIdOrThrow</a> (<a class="el" href="namespacedrake_1_1multibody.html#acbe033def48af7bf4857957f70f4d3e0">BodyIndex</a> body_index) const</td></tr>
 <tr class="memdesc:afdcdcb4e7798a5aef9bc3111402dfa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the body with <code>body_index</code> belongs to the called plant, it returns the <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb" title="Type used to identify geometry frames in SceneGraph.">geometry::FrameId</a> associated with it.  <a href="#afdcdcb4e7798a5aef9bc3111402dfa5e">More...</a><br /></td></tr>
 <tr class="separator:afdcdcb4e7798a5aef9bc3111402dfa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Contact modeling</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_contact_modeling"></a> Use methods in this section to choose the contact model and to provide parameters for that model. Currently Drake supports an advanced compliant contact model we call <em>Hydroelastic contact</em> and a penalty-based point contact model as a reliable fallback.</p>
-<p><a class="anchor" id="mbp_hydroelastic_materials_properties"></a></p><h4>Hydroelastic contact</h4>
-<p>To understand how material properties enter into the modeling of contact traction in the hydroelastic model, the user is referred to [R. Elandt 2019] for details. For brevity, here we limit ourselves to state the relationship between the material properties and the computation of the normal traction or "pressure" <code>p(x)</code> at each point <code>x</code> in the contact patch. Given two bodies A and B, with hydroelastic moduli <code>Eᵃ</code> and <code>Eᵇ</code> respectively and dissipation <code>dᵃ</code> and <code>dᵇ</code> respectively, we define the effective material properties of the pair according to: </p><pre>
-  E = Eᵃ⋅Eᵇ/(Eᵃ + Eᵇ),
-  d = E/Eᵃ⋅dᵃ + E/Eᵇ⋅dᵇ = Eᵇ/(Eᵃ+Eᵇ)⋅dᵃ + Eᵃ/(Eᵃ+Eᵇ)⋅dᵇ
-</pre><p> The effective hydroelastic modulus computation is based on that of the effective elastic modulus in the Hertz theory of contact. Dissipation is weighted in accordance with the fact that the softer material will deform more and faster and thus the softer material dissipation is given more importance. Hydroelastic modulus has units of pressure, i.e. <code>Pa (N/m²)</code>. The hydroelastic modulus is often estimated based on the Young's modulus of the material though in the hydroelastic model it represents an effective elastic property. For instance, [R. Elandt 2019] chooses to use <code>E = G</code>, with <code>G</code> the P-wave elastic modulus <code>G = (1-ν)/(1+ν)/(1-2ν)E</code>, with ν the Poisson ratio, consistent with the theory of layered solids in which plane sections remain planar after compression. Another possibility is to specify <code>E = E*</code>, with <code>E*</code> the effective elastic modulus given by the Hertz theory of contact, <code>E* = E/(1-ν²)</code>. In all of these cases a sound estimation of <code>hydroelastic_modulus</code> starts with the Young's modulus of the material.</p>
-<dl class="section note"><dt>Note</dt><dd><code>hydroelastic_modulus</code> has units of stress/strain, measured in Pascal or N/m² like the more-familiar elastic moduli discussed above. However, it is quantitatively different and may require experimentation to match empirical behavior.</dd></dl>
-<p>We use a dissipation model inspired by the model in [Hunt and Crossley, 1975], parameterized by a dissipation constant with units of inverse of velocity, i.e. <code>s/m</code>.</p>
-<p>The dissipation can be specified in one of two ways:</p>
-<ul>
-<li>define it in an instance of <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">geometry::ProximityProperties</a> using the function <a class="el" href="namespacedrake_1_1geometry.html#a06f08c367a0ef97e7fc397a8a44d49d8" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial()</a>, or</li>
-<li>define it in an input URDF/SDF as detailed here for SDF or here for URDF.</li>
-</ul>
-<p>The hydroelastic modulus can be specified in one of two ways:</p>
-<ul>
-<li>define it in an instance of <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">geometry::ProximityProperties</a> using the function <a class="el" href="namespacedrake_1_1geometry.html#a5a4cec840d5cb801271dbe609deaf0fe" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddCompliantHydroelasticProperties()</a> and <a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda" title="Compliant half spaces are handled as a special case; they do not get tessellated.">geometry::AddCompliantHydroelasticPropertiesForHalfSpace()</a>, or</li>
-<li>define it in an input URDF/SDF as detailed here for SDF or here for URDF.</li>
-</ul>
-<p>With the effective properties of the pair defined as above, the hydroelastic model pressure field is computed according to: </p><pre>
-  p(x) = E⋅ε(x)⋅(1 - d⋅vₙ(x))₊
-</pre><p> where we defined the effective strain: </p><pre>
-  ε(x) = εᵃ(x) + εᵇ(x)
-</pre><p> which relates to the quasi-static pressure field p₀(x) (i.e. when velocity is neglected) by: </p><pre>
-  p₀(x) = E⋅ε(x) = Eᵃ⋅εᵃ(x) = Eᵇ⋅εᵇ(x)
-</pre><p> that is, the hydroelastic model computes the contact patch assuming quasi-static equilibrium. The separation speed <code>vₙ(x)</code> is computed as the component in the direction of the contact surface's normal <code>n̂(x)</code> of the relative velocity between points <code>Ax</code> and <code>Bx</code> at point <code>x</code> instantaneously moving with body frames A and B respectively, i.e. <code>vₙ(x) = ᴬˣvᴮˣ⋅n̂(x)</code>, where the normal <code>n̂(x)</code> points from body A into body B.</p>
-<p>[Elandt 2019] R. Elandt, E. Drumwright, M. Sherman, and A. Ruina. A pressure field model for fast, robust approximation of net contact force and moment between nominally rigid objects. Proc. IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems (IROS), 2019.</p>
-<p>[Hunt and Crossley 1975] Hunt, KH and Crossley, FRE, 1975. Coefficient of restitution interpreted as damping in vibroimpact. Journal of Applied Mechanics, vol. 42, pp. 440–445.</p>
-<p><a class="anchor" id="mbp_penalty_method"></a></p><h4>Penalty method point contact</h4>
-<p>Currently MultibodyPlant uses a rigid contact model that is, bodies in the model are infinitely stiff or ideal rigid bodies. Therefore, the mathematical description of the rigid contact model needs to include non-penetration constraints among bodies in the formulation. There are several numerical methods to impose and solve these constraints. In a penalty method approach, we allow for a certain amount of interpenetration and we compute contact forces according to a simple law of the form: </p><pre>
-  fₙ = k(1+dẋ)x
-</pre><p> where the normal contact force <code>fₙ</code> is made a continuous function of the penetration distance x between the bodies (defined to be positive when the bodies are in contact) and the penetration distance rate ẋ (with ẋ &gt; 0 meaning the penetration distance is increasing and therefore the interpenetration between the bodies is also increasing). k and d are the combined penalty method coefficients for stiffness and dissipation, given a pair of colliding geometries. For flexibility of parameterization, stiffness and dissipation are set on a per-geometry basis (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#accessing_contact_properties">accessing_contact_properties</a>). Given two geometries with individual stiffness and dissipation parameters (k₁, d₁) and (k₂, d₂), we define the rule for combined stiffness (k) and dissipation (d) as: </p><pre>
-    k = (k₁⋅k₂)/(k₁+k₂)
-    d = (k₂/(k₁+k₂))⋅d₁ + (k₁/(k₁+k₂))⋅d₂
-</pre><p> These parameters are optional for each geometry. For any geometry not assigned these parameters by a user Pre-Finalize, MultibodyPlant will assign default values such that the combined parameters of two geometries with default values match those estimated using the user-supplied "penetration allowance", as described below.</p>
-<p>These are ad-hoc parameters which need to be tuned as a trade-off between:</p><ul>
-<li>The accuracy of the numerical approximation to rigid contact, which requires a stiffness that approaches infinity, and</li>
-<li>the computational cost of the numerical integration, which will require smaller time steps for stiffer systems.</li>
-</ul>
-<p>There is no exact procedure for choosing these coefficients, and estimating them manually can be cumbersome since in general they will depend on the scale of the problem including masses, speeds and even body sizes. However, MultibodyPlant aids the estimation of these coefficients using a heuristic function based on a user-supplied "penetration allowance", see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a>. The penetration allowance is a number in meters that specifies the order of magnitude of the average penetration between bodies in the system that the user is willing to accept as reasonable for the problem being solved. For instance, in the robotics manipulation of ordinary daily objects the user might set this number to 1 millimeter. However, the user might want to increase it for the simulation of heavy walking robots for which an allowance of 1 millimeter would result in a very stiff system.</p>
-<p>As for the dissipation coefficient in the simple law above, MultibodyPlant chooses the dissipation coefficient d to model inelastic collisions and therefore sets it so that the penetration distance x behaves as a critically damped oscillator. That is, at the limit of ideal rigid contact (very stiff penalty coefficient k or equivalently the penetration allowance goes to zero), this method behaves as a unilateral constraint on the penetration distance, which models a perfect inelastic collision. For most applications, such as manipulation and walking, this is the desired behavior.</p>
-<p>When <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a> is called, MultibodyPlant will estimate reasonable penalty method coefficients as a function of the input penetration allowance. Users will want to run their simulation a number of times and assess they are satisfied with the level of inter-penetration actually observed in the simulation; if the observed penetration is too large, the user will want to set a smaller penetration allowance. If the system is too stiff and the time integration requires very small time steps while at the same time the user can afford larger inter-penetrations, the user will want to increase the penetration allowance. Typically, the observed penetration will be proportional to the penetration allowance. Thus scaling the penetration allowance by say a factor of 0.5, would typically results in inter-penetrations being reduced by the same factor of 0.5. In summary, users should choose the largest penetration allowance that results in inter-penetration levels that are acceptable for the particular application (even when in theory this penetration should be zero for perfectly rigid bodies.)</p>
-<p>For a given penetration allowance, the contact interaction that takes two bodies with a non-zero approaching velocity to zero approaching velocity, takes place in a finite amount of time (for ideal rigid contact this time is zero.) A good estimate of this time period is given by a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3338392f611d5d9f93d0ea90e172c68c" title="Returns a time-scale estimate tc based on the requested penetration allowance δ set with set_penetrat...">get_contact_penalty_method_time_scale()</a>. Users might want to query this value to either set the maximum time step in error-controlled time integration or to set the time step for fixed time step integration. As a guidance, typical fixed time step integrators will become unstable for time steps larger than about a tenth of this time scale.</p>
-<p>For further details on contact modeling in Drake, please refer to the section <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a> of our documentation. </p>
-</div></td></tr>
-<tr class="memitem:ad253ab790ff8e142080cedd210e982da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad253ab790ff8e142080cedd210e982da">set_contact_model</a> (<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a> model)</td></tr>
-<tr class="memdesc:ad253ab790ff8e142080cedd210e982da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the contact model to be used by <code>this</code> MultibodyPlant, see ContactModel for available options.  <a href="#ad253ab790ff8e142080cedd210e982da">More...</a><br /></td></tr>
-<tr class="separator:ad253ab790ff8e142080cedd210e982da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e5e058b968b927f6342a8127aea663a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a">set_penetration_allowance</a> (double penetration_allowance=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.penetration_allowance)</td></tr>
-<tr class="memdesc:a1e5e058b968b927f6342a8127aea663a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose non-penetration among bodies.  <a href="#a1e5e058b968b927f6342a8127aea663a">More...</a><br /></td></tr>
-<tr class="separator:a1e5e058b968b927f6342a8127aea663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3338392f611d5d9f93d0ea90e172c68c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3338392f611d5d9f93d0ea90e172c68c">get_contact_penalty_method_time_scale</a> () const</td></tr>
-<tr class="memdesc:a3338392f611d5d9f93d0ea90e172c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a time-scale estimate <code>tc</code> based on the requested penetration allowance δ set with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a>.  <a href="#a3338392f611d5d9f93d0ea90e172c68c">More...</a><br /></td></tr>
-<tr class="separator:a3338392f611d5d9f93d0ea90e172c68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa94cf2eeba3e27ad35132211ae6d074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance</a> (double v_stiction=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.stiction_tolerance)</td></tr>
-<tr class="separator:afa94cf2eeba3e27ad35132211ae6d074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">State accessors and mutators</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="mbp_state_accessors_and_mutators"></a> The following state methods allow getting and setting the kinematic state variables <code>[q; v]</code>, where <code>q</code> is the vector of generalized positions and <code>v</code> is the vector of generalized velocities. The state resides in a <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a> that is supplied as the first argument to every method.</p>
 <dl class="section note"><dt>Note</dt><dd>State vectors for the full system are returned as live references into the Context, not independent copies. In contrast, state vectors for individual model instances are returned as copies because the state associated with a model instance is generally not contiguous in a Context.</dd></dl>
@@ -952,6 +896,73 @@ Related Functions</h2></td></tr>
 <tr class="memitem:aad665c93a561c6ccbe2bba07d1d6193a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html">AddMultibodyPlantSceneGraphResult</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aad665c93a561c6ccbe2bba07d1d6193a">AddMultibodyPlantSceneGraph</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt;&gt; plant, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html">geometry::SceneGraph</a>&lt; T &gt;&gt; scene_graph=nullptr)</td></tr>
 <tr class="memdesc:aad665c93a561c6ccbe2bba07d1d6193a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> and a SceneGraph instance to a diagram builder, connecting the geometry ports.  <a href="#aad665c93a561c6ccbe2bba07d1d6193a">More...</a><br /></td></tr>
 <tr class="separator:aad665c93a561c6ccbe2bba07d1d6193a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Contact modeling</h2></td></tr>
+<tr><td class="ititle" colspan="2"><p><a class="anchor" id="amgrp19f37bb53399999ba472a1916993ae30"></a><a class="anchor" id="mbp_contact_modeling"></a> Use methods in this section to choose the contact model and to provide parameters for that model. Currently Drake supports an advanced compliant contact model we call <em>Hydroelastic contact</em> and a penalty-based point contact model as a reliable fallback.</p>
+<p><a class="anchor" id="mbp_hydroelastic_materials_properties"></a></p><h4>Hydroelastic contact</h4>
+<p>To understand how material properties enter into the modeling of contact traction in the hydroelastic model, the user is referred to [R. Elandt 2019] for details. For brevity, here we limit ourselves to state the relationship between the material properties and the computation of the normal traction or "pressure" <code>p(x)</code> at each point <code>x</code> in the contact patch. Given two bodies A and B, with hydroelastic moduli <code>Eᵃ</code> and <code>Eᵇ</code> respectively and dissipation <code>dᵃ</code> and <code>dᵇ</code> respectively, we define the effective material properties of the pair according to: </p><pre>
+  E = Eᵃ⋅Eᵇ/(Eᵃ + Eᵇ),
+  d = E/Eᵃ⋅dᵃ + E/Eᵇ⋅dᵇ = Eᵇ/(Eᵃ+Eᵇ)⋅dᵃ + Eᵃ/(Eᵃ+Eᵇ)⋅dᵇ
+</pre><p> The effective hydroelastic modulus computation is based on that of the effective elastic modulus in the Hertz theory of contact. Dissipation is weighted in accordance with the fact that the softer material will deform more and faster and thus the softer material dissipation is given more importance. Hydroelastic modulus has units of pressure, i.e. <code>Pa (N/m²)</code>. The hydroelastic modulus is often estimated based on the Young's modulus of the material though in the hydroelastic model it represents an effective elastic property. For instance, [R. Elandt 2019] chooses to use <code>E = G</code>, with <code>G</code> the P-wave elastic modulus <code>G = (1-ν)/(1+ν)/(1-2ν)E</code>, with ν the Poisson ratio, consistent with the theory of layered solids in which plane sections remain planar after compression. Another possibility is to specify <code>E = E*</code>, with <code>E*</code> the effective elastic modulus given by the Hertz theory of contact, <code>E* = E/(1-ν²)</code>. In all of these cases a sound estimation of <code>hydroelastic_modulus</code> starts with the Young's modulus of the material.</p>
+<dl class="section note"><dt>Note</dt><dd><code>hydroelastic_modulus</code> has units of stress/strain, measured in Pascal or N/m² like the more-familiar elastic moduli discussed above. However, it is quantitatively different and may require experimentation to match empirical behavior.</dd></dl>
+<p>We use a dissipation model inspired by the model in [Hunt and Crossley, 1975], parameterized by a dissipation constant with units of inverse of velocity, i.e. <code>s/m</code>.</p>
+<p>The dissipation can be specified in one of two ways:</p>
+<ul>
+<li>define it in an instance of <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">geometry::ProximityProperties</a> using the function <a class="el" href="namespacedrake_1_1geometry.html#a06f08c367a0ef97e7fc397a8a44d49d8" title="AddContactMaterial() adds general contact material properties to the given set of proximity propertie...">geometry::AddContactMaterial()</a>, or</li>
+<li>define it in an input URDF/SDF as detailed here for SDF or here for URDF.</li>
+</ul>
+<p>The hydroelastic modulus can be specified in one of two ways:</p>
+<ul>
+<li>define it in an instance of <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html" title="The set of properties for geometry used in a proximity role.">geometry::ProximityProperties</a> using the function <a class="el" href="namespacedrake_1_1geometry.html#a5a4cec840d5cb801271dbe609deaf0fe" title="Adds properties to the given set of proximity properties sufficient to cause the associated geometry ...">geometry::AddCompliantHydroelasticProperties()</a> and <a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda" title="Compliant half spaces are handled as a special case; they do not get tessellated.">geometry::AddCompliantHydroelasticPropertiesForHalfSpace()</a>, or</li>
+<li>define it in an input URDF/SDF as detailed here for SDF or here for URDF.</li>
+</ul>
+<p>With the effective properties of the pair defined as above, the hydroelastic model pressure field is computed according to: </p><pre>
+  p(x) = E⋅ε(x)⋅(1 - d⋅vₙ(x))₊
+</pre><p> where we defined the effective strain: </p><pre>
+  ε(x) = εᵃ(x) + εᵇ(x)
+</pre><p> which relates to the quasi-static pressure field p₀(x) (i.e. when velocity is neglected) by: </p><pre>
+  p₀(x) = E⋅ε(x) = Eᵃ⋅εᵃ(x) = Eᵇ⋅εᵇ(x)
+</pre><p> that is, the hydroelastic model computes the contact patch assuming quasi-static equilibrium. The separation speed <code>vₙ(x)</code> is computed as the component in the direction of the contact surface's normal <code>n̂(x)</code> of the relative velocity between points <code>Ax</code> and <code>Bx</code> at point <code>x</code> instantaneously moving with body frames A and B respectively, i.e. <code>vₙ(x) = ᴬˣvᴮˣ⋅n̂(x)</code>, where the normal <code>n̂(x)</code> points from body A into body B.</p>
+<p>[Elandt 2019] R. Elandt, E. Drumwright, M. Sherman, and A. Ruina. A pressure field model for fast, robust approximation of net contact force and moment between nominally rigid objects. Proc. IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems (IROS), 2019.</p>
+<p>[Hunt and Crossley 1975] Hunt, KH and Crossley, FRE, 1975. Coefficient of restitution interpreted as damping in vibroimpact. Journal of Applied Mechanics, vol. 42, pp. 440–445.</p>
+<p><a class="anchor" id="mbp_penalty_method"></a></p><h4>Penalty method point contact</h4>
+<p>Currently MultibodyPlant uses a rigid contact model that is, bodies in the model are infinitely stiff or ideal rigid bodies. Therefore, the mathematical description of the rigid contact model needs to include non-penetration constraints among bodies in the formulation. There are several numerical methods to impose and solve these constraints. In a penalty method approach, we allow for a certain amount of interpenetration and we compute contact forces according to a simple law of the form: </p><pre>
+  fₙ = k(1+dẋ)x
+</pre><p> where the normal contact force <code>fₙ</code> is made a continuous function of the penetration distance x between the bodies (defined to be positive when the bodies are in contact) and the penetration distance rate ẋ (with ẋ &gt; 0 meaning the penetration distance is increasing and therefore the interpenetration between the bodies is also increasing). k and d are the combined penalty method coefficients for stiffness and dissipation, given a pair of colliding geometries. For flexibility of parameterization, stiffness and dissipation are set on a per-geometry basis (<a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#accessing_contact_properties">accessing_contact_properties</a>). Given two geometries with individual stiffness and dissipation parameters (k₁, d₁) and (k₂, d₂), we define the rule for combined stiffness (k) and dissipation (d) as: </p><pre>
+    k = (k₁⋅k₂)/(k₁+k₂)
+    d = (k₂/(k₁+k₂))⋅d₁ + (k₁/(k₁+k₂))⋅d₂
+</pre><p> These parameters are optional for each geometry. For any geometry not assigned these parameters by a user Pre-Finalize, MultibodyPlant will assign default values such that the combined parameters of two geometries with default values match those estimated using the user-supplied "penetration allowance", as described below.</p>
+<p>These are ad-hoc parameters which need to be tuned as a trade-off between:</p><ul>
+<li>The accuracy of the numerical approximation to rigid contact, which requires a stiffness that approaches infinity, and</li>
+<li>the computational cost of the numerical integration, which will require smaller time steps for stiffer systems.</li>
+</ul>
+<p>There is no exact procedure for choosing these coefficients, and estimating them manually can be cumbersome since in general they will depend on the scale of the problem including masses, speeds and even body sizes. However, MultibodyPlant aids the estimation of these coefficients using a heuristic function based on a user-supplied "penetration allowance", see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a>. The penetration allowance is a number in meters that specifies the order of magnitude of the average penetration between bodies in the system that the user is willing to accept as reasonable for the problem being solved. For instance, in the robotics manipulation of ordinary daily objects the user might set this number to 1 millimeter. However, the user might want to increase it for the simulation of heavy walking robots for which an allowance of 1 millimeter would result in a very stiff system.</p>
+<p>As for the dissipation coefficient in the simple law above, MultibodyPlant chooses the dissipation coefficient d to model inelastic collisions and therefore sets it so that the penetration distance x behaves as a critically damped oscillator. That is, at the limit of ideal rigid contact (very stiff penalty coefficient k or equivalently the penetration allowance goes to zero), this method behaves as a unilateral constraint on the penetration distance, which models a perfect inelastic collision. For most applications, such as manipulation and walking, this is the desired behavior.</p>
+<p>When <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a> is called, MultibodyPlant will estimate reasonable penalty method coefficients as a function of the input penetration allowance. Users will want to run their simulation a number of times and assess they are satisfied with the level of inter-penetration actually observed in the simulation; if the observed penetration is too large, the user will want to set a smaller penetration allowance. If the system is too stiff and the time integration requires very small time steps while at the same time the user can afford larger inter-penetrations, the user will want to increase the penetration allowance. Typically, the observed penetration will be proportional to the penetration allowance. Thus scaling the penetration allowance by say a factor of 0.5, would typically results in inter-penetrations being reduced by the same factor of 0.5. In summary, users should choose the largest penetration allowance that results in inter-penetration levels that are acceptable for the particular application (even when in theory this penetration should be zero for perfectly rigid bodies.)</p>
+<p>For a given penetration allowance, the contact interaction that takes two bodies with a non-zero approaching velocity to zero approaching velocity, takes place in a finite amount of time (for ideal rigid contact this time is zero.) A good estimate of this time period is given by a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3338392f611d5d9f93d0ea90e172c68c" title="Returns a time-scale estimate tc based on the requested penetration allowance δ set with set_penetrat...">get_contact_penalty_method_time_scale()</a>. Users might want to query this value to either set the maximum time step in error-controlled time integration or to set the time step for fixed time step integration. As a guidance, typical fixed time step integrators will become unstable for time steps larger than about a tenth of this time scale.</p>
+<p>For further details on contact modeling in Drake, please refer to the section <a class="el" href="group__drake__contacts.html">Contact Modeling in Drake</a> of our documentation. </p>
+</td></tr>
+<tr class="memitem:ad253ab790ff8e142080cedd210e982da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad253ab790ff8e142080cedd210e982da">set_contact_model</a> (<a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a> model)</td></tr>
+<tr class="memdesc:ad253ab790ff8e142080cedd210e982da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the contact model to be used by <code>this</code> MultibodyPlant, see ContactModel for available options.  <a href="#ad253ab790ff8e142080cedd210e982da">More...</a><br /></td></tr>
+<tr class="separator:ad253ab790ff8e142080cedd210e982da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6df8a26aa42b59344e931ac9d6f5357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad6df8a26aa42b59344e931ac9d6f5357">set_contact_surface_representation</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a> representation)</td></tr>
+<tr class="memdesc:ad6df8a26aa42b59344e931ac9d6f5357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the representation of contact surfaces to be used by <code>this</code> MultibodyPlant.  <a href="#ad6df8a26aa42b59344e931ac9d6f5357">More...</a><br /></td></tr>
+<tr class="separator:ad6df8a26aa42b59344e931ac9d6f5357"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b82332abfb08a94d367659c3f566e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2b82332abfb08a94d367659c3f566e21">get_contact_surface_representation</a> () const</td></tr>
+<tr class="memdesc:a2b82332abfb08a94d367659c3f566e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current representation of contact surfaces used by <code>this</code> MultibodyPlant.  <a href="#a2b82332abfb08a94d367659c3f566e21">More...</a><br /></td></tr>
+<tr class="separator:a2b82332abfb08a94d367659c3f566e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e5e058b968b927f6342a8127aea663a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a">set_penetration_allowance</a> (double penetration_allowance=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.penetration_allowance)</td></tr>
+<tr class="memdesc:a1e5e058b968b927f6342a8127aea663a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose non-penetration among bodies.  <a href="#a1e5e058b968b927f6342a8127aea663a">More...</a><br /></td></tr>
+<tr class="separator:a1e5e058b968b927f6342a8127aea663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3338392f611d5d9f93d0ea90e172c68c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a3338392f611d5d9f93d0ea90e172c68c">get_contact_penalty_method_time_scale</a> () const</td></tr>
+<tr class="memdesc:a3338392f611d5d9f93d0ea90e172c68c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a time-scale estimate <code>tc</code> based on the requested penetration allowance δ set with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a" title="Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose...">set_penetration_allowance()</a>.  <a href="#a3338392f611d5d9f93d0ea90e172c68c">More...</a><br /></td></tr>
+<tr class="separator:a3338392f611d5d9f93d0ea90e172c68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa94cf2eeba3e27ad35132211ae6d074"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance</a> (double v_stiction=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.stiction_tolerance)</td></tr>
+<tr class="separator:afa94cf2eeba3e27ad35132211ae6d074"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cf63581a2d40a28d9cf65a3017839b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b">GetDefaultContactSurfaceRepresentation</a> (double <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6">time_step</a>)</td></tr>
+<tr class="memdesc:a93cf63581a2d40a28d9cf65a3017839b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the default value for contact representation, given the desired time step.  <a href="#a93cf63581a2d40a28d9cf65a3017839b">More...</a><br /></td></tr>
+<tr class="separator:a93cf63581a2d40a28d9cf65a3017839b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3aeb03d90d213da4702f2dc5e484fc86"></a>
@@ -3478,6 +3489,25 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="a2b82332abfb08a94d367659c3f566e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b82332abfb08a94d367659c3f566e21">&#9670;&nbsp;</a></span>get_contact_surface_representation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a> get_contact_surface_representation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current representation of contact surfaces used by <code>this</code> MultibodyPlant. </p>
+
+</div>
+</div>
 <a id="a0506236fd49c1dab4ab5bdd8102ba9fc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0506236fd49c1dab4ab5bdd8102ba9fc">&#9670;&nbsp;</a></span>get_force_element()</h2>
 
@@ -4137,6 +4167,35 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>Returns an array of GeometryId's identifying the different contact geometries for <code>body</code> previously registered with a SceneGraph. </p>
 <dl class="section note"><dt>Note</dt><dd>This method can be called at any time during the lifetime of <code>this</code> plant, either pre- or post-finalize, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. Post-finalize calls will always return the same value. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ac9b4f41a4f2575707d43ea031ce5a9ea" title="Registers geometry in a SceneGraph with a given geometry::Shape to be used for the contact modeling o...">RegisterCollisionGeometry()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> </dd></dl>
+
+</div>
+</div>
+<a id="a93cf63581a2d40a28d9cf65a3017839b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93cf63581a2d40a28d9cf65a3017839b">&#9670;&nbsp;</a></span>GetDefaultContactSurfaceRepresentation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a> GetDefaultContactSurfaceRepresentation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>time_step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return the default value for contact representation, given the desired time step. </p>
+<p>Discrete systems default to use polygons; continuous systems default to use triangles. </p>
 
 </div>
 </div>
@@ -6323,8 +6382,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6335,7 +6394,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6349,8 +6408,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6361,7 +6420,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6702,6 +6761,27 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad6df8a26aa42b59344e931ac9d6f5357"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6df8a26aa42b59344e931ac9d6f5357">&#9670;&nbsp;</a></span>set_contact_surface_representation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_contact_surface_representation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a>&#160;</td>
+          <td class="paramname"><em>representation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the representation of contact surfaces to be used by <code>this</code> MultibodyPlant. </p>
+<p>See <a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979" title="Reports on how a hydroelastic contact surface is represented.">geometry::HydroelasticContactRepresentation</a> for available options. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a93cf63581a2d40a28d9cf65a3017839b" title="Return the default value for contact representation, given the desired time step.">GetDefaultContactSurfaceRepresentation()</a> for explanation of default values. </p>
 
 </div>
 </div>

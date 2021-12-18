@@ -7437,6 +7437,39 @@ has been overloaded (not recommended).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent">
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur periodically
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepEvent">
 <code class="descname">DeclarePerStepEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], event: pydrake.systems.framework.Event_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -7955,6 +7988,39 @@ Publish() dispatcher but does not provide a handler function. This
 does guarantee that a Simulator step will end exactly at the publish
 time, but otherwise has no effect unless the DoPublish() dispatcher
 has been overloaded (not recommended).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent">
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur periodically
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -8477,6 +8543,39 @@ has been overloaded (not recommended).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent">
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur periodically
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepEvent">
 <code class="descname">DeclarePerStepEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], event: pydrake.systems.framework.Event_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -8993,6 +9092,39 @@ Publish() dispatcher but does not provide a handler function. This
 does guarantee that a Simulator step will end exactly at the publish
 time, but otherwise has no effect unless the DoPublish() dispatcher
 has been overloaded (not recommended).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent">
+<code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur periodically
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span> <span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -10498,8 +10630,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_.State_[float].get_mutable_abstract_state">
-<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
+<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[float]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a mutable reference to the abstract component of the state,
+which may be of size zero.</p>
+<ol class="arabic simple" start="2">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[float], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
 Asserts if <code class="docutils literal"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -10510,8 +10651,13 @@ Asserts if <code class="docutils literal"><span class="pre">index</span></code> 
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_.State_[float].get_mutable_discrete_state">
-<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_.State_[float].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[float]) -&gt; drake::systems::DiscreteValues&lt;double&gt;</li>
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[float], index: int) -&gt; pydrake.systems.framework.BasicVector_[float]</li>
+</ol>
+</dd></dl>
 
 </dd></dl>
 
@@ -10554,8 +10700,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[AutoDiffXd].get_mutable_abstract_state">
-<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_[AutoDiffXd].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
+<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[AutoDiffXd].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[AutoDiffXd]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a mutable reference to the abstract component of the state,
+which may be of size zero.</p>
+<ol class="arabic simple" start="2">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[AutoDiffXd], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
 Asserts if <code class="docutils literal"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -10566,8 +10721,13 @@ Asserts if <code class="docutils literal"><span class="pre">index</span></code> 
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[AutoDiffXd].get_mutable_discrete_state">
-<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.systems.framework.State_[AutoDiffXd].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[AutoDiffXd].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[AutoDiffXd]) -&gt; drake::systems::DiscreteValues&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;</li>
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[AutoDiffXd], index: int) -&gt; pydrake.systems.framework.BasicVector_[AutoDiffXd]</li>
+</ol>
+</dd></dl>
 
 </dd></dl>
 
@@ -10608,8 +10768,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[Expression].get_mutable_abstract_state">
-<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_[Expression].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
+<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[Expression].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[Expression]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a mutable reference to the abstract component of the state,
+which may be of size zero.</p>
+<ol class="arabic simple" start="2">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[Expression], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
 Asserts if <code class="docutils literal"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -10620,8 +10789,13 @@ Asserts if <code class="docutils literal"><span class="pre">index</span></code> 
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[Expression].get_mutable_discrete_state">
-<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.systems.framework.State_[Expression].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[Expression].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[Expression]) -&gt; drake::systems::DiscreteValues&lt;drake::symbolic::Expression&gt;</li>
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[Expression], index: int) -&gt; pydrake.systems.framework.BasicVector_[Expression]</li>
+</ol>
+</dd></dl>
 
 </dd></dl>
 
@@ -10662,8 +10836,17 @@ may not maintain state in any place other than a State object.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[float].get_mutable_abstract_state">
-<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.AbstractValues<a class="headerlink" href="#pydrake.systems.framework.State_[float].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
+<code class="descname">get_mutable_abstract_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[float].get_mutable_abstract_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[float]) -&gt; pydrake.systems.framework.AbstractValues</li>
+</ol>
+<p>Returns a mutable reference to the abstract component of the state,
+which may be of size zero.</p>
+<ol class="arabic simple" start="2">
+<li>get_mutable_abstract_state(self: pydrake.systems.framework.State_[float], index: int) -&gt; pydrake.common.value.AbstractValue</li>
+</ol>
+<p>Returns a mutable pointer to element <code class="docutils literal"><span class="pre">index</span></code> of the abstract state.
 Asserts if <code class="docutils literal"><span class="pre">index</span></code> doesn’t exist.</p>
 </dd></dl>
 
@@ -10674,8 +10857,13 @@ Asserts if <code class="docutils literal"><span class="pre">index</span></code> 
 
 <dl class="method">
 <dt id="pydrake.systems.framework.State_[float].get_mutable_discrete_state">
-<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; drake::systems::DiscreteValues&lt;double&gt;<a class="headerlink" href="#pydrake.systems.framework.State_[float].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">get_mutable_discrete_state</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.State_[float].get_mutable_discrete_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[float]) -&gt; drake::systems::DiscreteValues&lt;double&gt;</li>
+<li>get_mutable_discrete_state(self: pydrake.systems.framework.State_[float], index: int) -&gt; pydrake.systems.framework.BasicVector_[float]</li>
+</ol>
+</dd></dl>
 
 </dd></dl>
 

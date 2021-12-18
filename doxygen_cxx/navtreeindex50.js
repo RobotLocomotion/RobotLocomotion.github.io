@@ -1,5 +1,9 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,14,8,16,0],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgb8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,16,2],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html":[3,0,0,14,8,17],
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,17,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#adc250b4c9ae780fa619885b581260e43":[3,0,0,14,8,17,0],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_rgba8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,17,2],
 "structdrake_1_1systems_1_1sensors_1_1_lcm_image_traits.html":[3,0,0,14,8,20],
@@ -245,9 +249,5 @@ var NAVTREEINDEX50 =
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa62b6d55816cf737bfc6f42e60df1a3f2":[4,0,0,1,55,12,3],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa6a061313d22e51e0f25b7cd4dc065233":[4,0,0,1,55,12,21],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa76cfc54de4e2b9cde17334c821217d11":[4,0,0,1,55,12,13],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa78d811e98514cd165dda532286610fd2":[4,0,0,1,55,12,20],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa7ecfb3bf076a6a9635f975fe96ac97fd":[4,0,0,1,55,12,25],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa8be6d3e955290ee50c00a4bc92aa7749":[4,0,0,1,55,12,9],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa98ed804abf4edd1f3be3fa894fa8cc3d":[4,0,0,1,55,12,17],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faaae77f3ad25595e35b327334d89410054":[4,0,0,1,55,12,8]
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa78d811e98514cd165dda532286610fd2":[4,0,0,1,55,12,20]
 };

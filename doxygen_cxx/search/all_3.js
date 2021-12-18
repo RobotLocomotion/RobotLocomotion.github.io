@@ -355,6 +355,7 @@ var searchData=
   ['contact_5fsurface_2eh',['contact_surface.h',['../contact__surface_8h.html',1,'']]],
   ['contact_20surface_20constraints',['Contact surface constraints',['../group__contact__surface__constraints.html',1,'']]],
   ['contact_5fsurface_5fdoxygen_2eh',['contact_surface_doxygen.h',['../contact__surface__doxygen_8h.html',1,'']]],
+  ['contact_5fsurface_5frepresentation',['contact_surface_representation',['../structdrake_1_1multibody_1_1_multibody_plant_config.html#a662fe783b3fe8423c76e73ea8910a544',1,'drake::multibody::MultibodyPlantConfig']]],
   ['contact_5fsurface_5futility_2eh',['contact_surface_utility.h',['../contact__surface__utility_8h.html',1,'']]],
   ['contact_5fwrench_2eh',['contact_wrench.h',['../contact__wrench_8h.html',1,'']]],
   ['contact_5fwrench_5fevaluator',['contact_wrench_evaluator',['../structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a7b9cdbe2581368f7be7b952fff45b58e',1,'drake::multibody::GeometryPairContactWrenchEvaluatorBinding']]],

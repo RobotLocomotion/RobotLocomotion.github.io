@@ -1,5 +1,8 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac65edc397e5ac441462d19a1873c8a07":[1,3,4,0,8],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ac951e9461fe35f8b40719a8ba37acea6":[1,3,4,0,7],
+"classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#acdf7e0b5ab9acb099133124fa05833b8":[1,3,4,0,6],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#ad43a45a9bfeee26aafe9eef51139485a":[1,3,4,0,5],
 "classdrake_1_1systems_1_1sensors_1_1_accelerometer.html#af5f6fd2ec4a6de39d041fd90383a051f":[1,3,4,0,2],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html":[1,3,4,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ad0da7cef1acfba329513b0c072bbe784":[1,5,2,8,49],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ad5d70f396be36bd160c2eb380c39bd9a":[1,5,2,8,45],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#adb23e0ee6a1a0fa9904a0b3247baacb6":[1,5,2,8,21],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#adfdd25520386a4df952c26050e544f0f":[1,5,2,8,24],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae0ee3cf6bf50e6695a4c35c725eaa823":[1,5,2,8,10],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae53f152a770c0e399fd18519a82111ca":[1,5,2,8,15],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ae67390ae3d55a7e0e060b4def47e53ee":[1,5,2,8,27]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#adfdd25520386a4df952c26050e544f0f":[1,5,2,8,24]
 };
