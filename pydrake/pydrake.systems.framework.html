@@ -7327,6 +7327,40 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent">
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at initialization
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationEvent">
 <code class="descname">DeclareInitializationEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], event: pydrake.systems.framework.Event_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -7366,6 +7400,74 @@ already set to TriggerType::kInitialization.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationPublishEvent">
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and that
+it should invoke the given event handler method. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent">
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at
+initialization and that it should invoke the given event handler
+method. The handler should be a class member function (method) with
+this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareNumericParameter">
 <code class="descname">DeclareNumericParameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareNumericParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
@@ -7385,6 +7487,40 @@ invokes the DiscreteUpdate() dispatcher but does not provide a handler
 function. This does guarantee that a Simulator step will end exactly
 at the update time, but otherwise has no effect unless the
 DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent">
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur periodically and
+that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -7437,6 +7573,39 @@ has been overloaded (not recommended).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicPublishEvent">
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur periodically and that it
+should invoke the given event handler method. The handler should be a
+class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent">
 <code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
@@ -7466,6 +7635,41 @@ information.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent">
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
 </div>
 </dd></dl>
 
@@ -7508,6 +7712,90 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepPublishEvent">
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and at
+the end of every trajectory-advancing step and that it should invoke
+the given event handler method. The handler should be a class member
+function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">These per-step publish events are independent of the Simulator’s
+optional “publish every time step” and “publish at initialization”
+features. Generally if you are declaring per-step publish events
+yourself you should turn off those Simulation options.</p>
+</div>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_at_initialization()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_every_time_step()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent">
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -7881,6 +8169,40 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationDiscreteUpdateEvent">
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at initialization
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationEvent">
 <code class="descname">DeclareInitializationEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], event: pydrake.systems.framework.Event_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -7920,6 +8242,74 @@ already set to TriggerType::kInitialization.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationPublishEvent">
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and that
+it should invoke the given event handler method. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationUnrestrictedUpdateEvent">
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at
+initialization and that it should invoke the given event handler
+method. The handler should be a class member function (method) with
+this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareNumericParameter">
 <code class="descname">DeclareNumericParameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], model_vector: pydrake.systems.framework.BasicVector_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareNumericParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
@@ -7939,6 +8329,40 @@ invokes the DiscreteUpdate() dispatcher but does not provide a handler
 function. This does guarantee that a Simulator step will end exactly
 at the update time, but otherwise has no effect unless the
 DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateEvent">
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur periodically and
+that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -7991,6 +8415,39 @@ has been overloaded (not recommended).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublishEvent">
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur periodically and that it
+should invoke the given event handler method. The handler should be a
+class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent">
 <code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
@@ -8020,6 +8477,41 @@ information.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepDiscreteUpdateEvent">
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
 </div>
 </dd></dl>
 
@@ -8062,6 +8554,90 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepPublishEvent">
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and at
+the end of every trajectory-advancing step and that it should invoke
+the given event handler method. The handler should be a class member
+function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">These per-step publish events are independent of the Simulator’s
+optional “publish every time step” and “publish at initialization”
+features. Generally if you are declaring per-step publish events
+yourself you should turn off those Simulation options.</p>
+</div>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_at_initialization()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_every_time_step()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepUnrestrictedUpdateEvent">
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -8433,6 +9009,40 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent">
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at initialization
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationEvent">
 <code class="descname">DeclareInitializationEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], event: pydrake.systems.framework.Event_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -8472,6 +9082,74 @@ already set to TriggerType::kInitialization.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationPublishEvent">
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and that
+it should invoke the given event handler method. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationUnrestrictedUpdateEvent">
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at
+initialization and that it should invoke the given event handler
+method. The handler should be a class member function (method) with
+this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareNumericParameter">
 <code class="descname">DeclareNumericParameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], model_vector: pydrake.systems.framework.BasicVector_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareNumericParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
@@ -8491,6 +9169,40 @@ invokes the DiscreteUpdate() dispatcher but does not provide a handler
 function. This does guarantee that a Simulator step will end exactly
 at the update time, but otherwise has no effect unless the
 DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateEvent">
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur periodically and
+that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -8543,6 +9255,39 @@ has been overloaded (not recommended).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublishEvent">
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur periodically and that it
+should invoke the given event handler method. The handler should be a
+class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent">
 <code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
@@ -8572,6 +9317,41 @@ information.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepDiscreteUpdateEvent">
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
 </div>
 </dd></dl>
 
@@ -8614,6 +9394,90 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepPublishEvent">
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and at
+the end of every trajectory-advancing step and that it should invoke
+the given event handler method. The handler should be a class member
+function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">These per-step publish events are independent of the Simulator’s
+optional “publish every time step” and “publish at initialization”
+features. Generally if you are declaring per-step publish events
+yourself you should turn off those Simulation options.</p>
+</div>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_at_initialization()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_every_time_step()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepUnrestrictedUpdateEvent">
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -8985,6 +9849,40 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent">
+<code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at initialization
+and that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationEvent">
 <code class="descname">DeclareInitializationEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], event: pydrake.systems.framework.Event_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>(Advanced) Declares that a particular Event object should be
@@ -9024,6 +9922,74 @@ already set to TriggerType::kInitialization.</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationPublishEvent">
+<code class="descname">DeclareInitializationPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and that
+it should invoke the given event handler method. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent">
+<code class="descname">DeclareInitializationUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareInitializationUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at
+initialization and that it should invoke the given event handler
+method. The handler should be a class member function (method) with
+this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_initialization_events “Declare initialization events” for
+more information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclareInitializationEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclareNumericParameter">
 <code class="descname">DeclareNumericParameter</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], model_vector: pydrake.systems.framework.BasicVector_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareNumericParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares a numeric parameter using the given <code class="docutils literal"><span class="pre">model_vector</span></code>.
@@ -9043,6 +10009,40 @@ invokes the DiscreteUpdate() dispatcher but does not provide a handler
 function. This does guarantee that a Simulator step will end exactly
 at the update time, but otherwise has no effect unless the
 DoDiscreteUpdate() dispatcher has been overloaded (not recommended).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent">
+<code class="descname">DeclarePeriodicDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur periodically and
+that it should invoke the given event handler method. The handler
+should be a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -9095,6 +10095,39 @@ has been overloaded (not recommended).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicPublishEvent">
+<code class="descname">DeclarePeriodicPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur periodically and that it
+should invoke the given event handler method. The handler should be a
+class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_periodic_events “Declare periodic events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent">
 <code class="descname">DeclarePeriodicUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], period_sec: float, offset_sec: float, update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePeriodicUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that an UnrestrictedUpdate event should occur periodically
@@ -9124,6 +10157,41 @@ information.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">DeclarePeriodicEvent()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent">
+<code class="descname">DeclarePerStepDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a DiscreteUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
 </div>
 </dd></dl>
 
@@ -9166,6 +10234,90 @@ this call.</p>
 <dd><cite>event</cite>’s associated trigger type must be TriggerType::kUnknown or
 already set to TriggerType::kPerStep.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePerStepPublishEvent">
+<code class="descname">DeclarePerStepPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that a Publish event should occur at initialization and at
+the end of every trajectory-advancing step and that it should invoke
+the given event handler method. The handler should be a class member
+function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">These per-step publish events are independent of the Simulator’s
+optional “publish every time step” and “publish at initialization”
+features. Generally if you are declaring per-step publish events
+yourself you should turn off those Simulation options.</p>
+</div>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepUnrestrictedUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_at_initialization()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">Simulator::set_publish_every_time_step()</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent">
+<code class="descname">DeclarePerStepUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclarePerStepUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares that an UnrestrictedUpdate event should occur at the start of
+every trajectory-advancing step and that it should invoke the given
+event handler method. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUpdate</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_per-step_events “Declare per-step events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepPublishEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepDiscreteUpdateEvent()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DeclarePerStepEvent()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
