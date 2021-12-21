@@ -197,6 +197,7 @@
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.Deterministic) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.Deterministic, other: pydrake.common.schema.Deterministic) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.Deterministic, value: float) -&gt; None</li>
 </ol>
 </dd></dl>
@@ -223,6 +224,7 @@
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.DeterministicVectorX) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.DeterministicVectorX, other: pydrake.common.schema.DeterministicVectorX) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.DeterministicVectorX, value: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 </dd></dl>
@@ -305,6 +307,7 @@ unusually public member fields in our subclasses.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.Gaussian) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.Gaussian, other: pydrake.common.schema.Gaussian) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.Gaussian, mean: float, stddev: float) -&gt; None</li>
 </ol>
 </dd></dl>
@@ -343,6 +346,7 @@ applied to every element of <code class="docutils literal"><span class="pre">mea
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.GaussianVectorX) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.GaussianVectorX, other: pydrake.common.schema.GaussianVectorX) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.GaussianVectorX, mean: numpy.ndarray[numpy.float64[m, 1]], stddev: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 </dd></dl>
@@ -441,10 +445,11 @@ unusually public member fields.</p>
 </ol>
 <p>Constructs the Identity rotation.</p>
 <ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.common.schema.Rotation, other: pydrake.common.schema.Rotation) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.Rotation, arg0: pydrake.math.RotationMatrix_[float]) -&gt; None</li>
 </ol>
 <p>Constructs an Rpy rotation with the given value.</p>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.common.schema.Rotation, arg0: pydrake.math.RollPitchYaw_[float]) -&gt; None</li>
 </ol>
 <p>Constructs an Rpy rotation with the given value.</p>
@@ -533,6 +538,7 @@ unusually public member fields.</p>
 </ol>
 <p>Constructs the Identity transform.</p>
 <ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.common.schema.Transform, other: pydrake.common.schema.Transform) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.Transform, arg0: pydrake.math.RigidTransform_[float]) -&gt; None</li>
 </ol>
 <p>Constructs the given transform.</p>
@@ -600,6 +606,7 @@ in use.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.Uniform) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.Uniform, other: pydrake.common.schema.Uniform) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.Uniform, min: float, max: float) -&gt; None</li>
 </ol>
 </dd></dl>
@@ -627,6 +634,7 @@ in use.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.UniformDiscrete) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.UniformDiscrete, other: pydrake.common.schema.UniformDiscrete) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.UniformDiscrete, values: List[float]) -&gt; None</li>
 </ol>
 </dd></dl>
@@ -654,6 +662,7 @@ in use.</p>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common.schema.UniformVectorX) -&gt; None</li>
+<li>__init__(self: pydrake.common.schema.UniformVectorX, other: pydrake.common.schema.UniformVectorX) -&gt; None</li>
 <li>__init__(self: pydrake.common.schema.UniformVectorX, min: numpy.ndarray[numpy.float64[m, 1]], max: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 </dd></dl>

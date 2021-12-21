@@ -102,6 +102,22 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_i
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html" title="An ImageToLcmImageArrayT takes as input an ImageRgba8U, ImageDepth32F and ImageLabel16I.">ImageToLcmImageArrayT</a> takes as input an ImageRgba8U, ImageDepth32F and ImageLabel16I. </p>
 <p>This system outputs an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> containing a <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;lcmt_image_array&gt;</code> LCM message that defines an array of images (lcmt_image). This message can then be sent to other processes that sbscribe it using LcmPublisherSystem. Note that you should NOT assume any particular order of those images stored in lcmt_image_array, instead check the semantic of those images with lcmt_image::pixel_format before using them.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">...&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html" title="An ImageToLcmImageArrayT takes as input an ImageRgba8U, ImageDepth32F and ImageLabel16I.">ImageToLcmImageArrayT</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="section note"><dt>Note</dt><dd>The output message's header field <code>seq</code> is always zero. </dd></dl>
 </div>
 <p><code>#include &lt;drake/systems/sensors/image_to_lcm_image_array_t.h&gt;</code></p>

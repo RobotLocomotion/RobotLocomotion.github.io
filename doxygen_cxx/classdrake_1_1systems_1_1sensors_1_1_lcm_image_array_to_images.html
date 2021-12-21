@@ -101,7 +101,21 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1sensors_1_1_l
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html" title="An LcmImageArrayToImages takes as input an AbstractValue containing a Value&lt;lcmt_image_array&gt; LCM mes...">LcmImageArrayToImages</a> takes as input an <a class="el" href="classdrake_1_1_abstract_value.html" title="A fully type-erased container class.">AbstractValue</a> containing a <code><a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a>&lt;lcmt_image_array&gt;</code> LCM message that defines an array of images (lcmt_image). </p>
-<p>The system has output ports for one color image as an ImageRgba8U and one depth image as ImageDepth32F (intended to be similar to the API of RgbdCamera, though without the label image port). </p>
+<p>The system has output ports for one color image as an ImageRgba8U and one depth image as ImageDepth32F (intended to be similar to the API of RgbdCamera, though without the label image port).</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">image_array_t&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html" title="An LcmImageArrayToImages takes as input an AbstractValue containing a Value&lt;lcmt_image_array&gt; LCM mes...">LcmImageArrayToImages</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; depth_image</td></tr>
+</table>
+</td></tr>
+</table>
 </div>
 <p><code>#include &lt;drake/systems/sensors/lcm_image_array_to_images.h&gt;</code></p>
 <table class="memberdecls">

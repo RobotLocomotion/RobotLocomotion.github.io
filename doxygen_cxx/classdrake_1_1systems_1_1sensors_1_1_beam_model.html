@@ -107,6 +107,26 @@ class drake::systems::sensors::BeamModel&lt; T &gt;</h3>
 <p>This system takes a depth measurement signal as input, and outputs a noisy measurement version of that signal, with some probability of returning the true measurement with Gaussian noise, but also with some probability of occlusions (short returns), of missed detections (returning the max depth), and of returning just a (uniform) random measurement.</p>
 <p>Four additional input ports (each of the same dimension as the depth signal) are provided for the random inputs: One for determining which of the events occurred (true + noise, short return, max return, or uniform return), and one each for modeling the distribution of short true but noisy returns, short returns, and uniform returns).</p>
 <p>We deviate from the textbook model in one respect: both here and in the textbook, the distribution over short returns and the distribution over getting a noisy version of the true return (aka a "hit") are truncated. The short returns are from an exponential distribution but truncated to be less than the input depth, and "hits" are drawn from a Gaussian centered at the input depth but truncated at the maximum range of the sensor. In the book, these distributions are normalized so that the total probability of getting a short return and/or hit stays constant (independent of the input depth). Here we do not normalize, so that the probability of getting a short return decreases as the input depth is smaller (there is a modeled obstacle closer to the robot), and the tails of the "hit" distribution simply cause more max returns as the input depth gets closer to the max range. This was done both because it is arguably a better model and because it keeps the code much simpler (to allow AutoDiff and Symbolic) given the modeling framework we have here that builds the output out of simple (non-truncated) random variable inputs.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">depth&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">event&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">hit&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">short&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">uniform&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1sensors_1_1_beam_model.html" title="Implements the &quot;Beam Models of Range Finders&quot; from section 6.3 of Probabilistic Robotics (2006),...">BeamModel</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; depth</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
