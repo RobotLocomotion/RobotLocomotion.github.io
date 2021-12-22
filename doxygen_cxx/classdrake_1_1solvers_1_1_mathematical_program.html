@@ -305,6 +305,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7f5853578a7be1dd5279c7e73cd719e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html">L2NormCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a7f5853578a7be1dd5279c7e73cd719e6">AddL2NormCost</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;vars)</td></tr>
 <tr class="memdesc:a7f5853578a7be1dd5279c7e73cd719e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm)  <a href="#a7f5853578a7be1dd5279c7e73cd719e6">More...</a><br /></td></tr>
 <tr class="separator:a7f5853578a7be1dd5279c7e73cd719e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6060c77125050d8c1b479a83d983a569"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a6060c77125050d8c1b479a83d983a569">AddL2NormCostUsingConicConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;vars)</td></tr>
+<tr class="memdesc:a6060c77125050d8c1b479a83d983a569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an L2 norm cost min |Ax+b|₂ as a linear cost min s on the slack variable s, together with a Lorentz cone constraint s ≥ |Ax+b|₂ Many conic optimization solvers (Gurobi, Mosek, SCS, etc) natively prefers this form of linear cost + conic constraints.  <a href="#a6060c77125050d8c1b479a83d983a569">More...</a><br /></td></tr>
+<tr class="separator:a6060c77125050d8c1b479a83d983a569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_polynomial_cost.html">PolynomialCost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a14edfab282bd8d3d03bf38bb87a5fe51">AddPolynomialCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost term in the polynomial form.  <a href="#a14edfab282bd8d3d03bf38bb87a5fe51">More...</a><br /></td></tr>
 <tr class="separator:a14edfab282bd8d3d03bf38bb87a5fe51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2322,6 +2325,43 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm) </p>
+
+</div>
+</div>
+<a id="a6060c77125050d8c1b479a83d983a569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6060c77125050d8c1b479a83d983a569">&#9670;&nbsp;</a></span>AddL2NormCostUsingConicConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a>&gt;, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_lorentz_cone_constraint.html">LorentzConeConstraint</a>&gt; &gt; AddL2NormCostUsingConicConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake_1_1solvers.html#aca924499b3b011a50d3bd9d051295efa">VectorXDecisionVariable</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds an L2 norm cost min |Ax+b|₂ as a linear cost min s on the slack variable s, together with a Lorentz cone constraint s ≥ |Ax+b|₂ Many conic optimization solvers (Gurobi, Mosek, SCS, etc) natively prefers this form of linear cost + conic constraints. </p>
+<p>So if you are going to use one of these conic solvers, then add the L2 norm cost using this function instead of <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac57dac7a44fa56077931a7998f7069e2" title="Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don&#39;t take the square of the...">AddL2NormCost()</a>. </p><dl class="section return"><dt>Returns</dt><dd>(s, linear_cost, lorentz_cone_constraint). <code>s</code> is the slack variable (with variable name string as "slack"), <code>linear_cost</code> is the cost on <code>s</code>, and <code>lorentz_cone_constraint</code> is the constraint s≥|Ax+b|₂ </dd></dl>
 
 </div>
 </div>
@@ -6839,8 +6879,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6851,7 +6891,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6865,8 +6905,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6877,7 +6917,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

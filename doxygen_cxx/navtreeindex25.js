@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1symbolic_1_1_generic_polynomial.html#a551ac047f79cf65d503e15b99895abbb":[3,0,0,13,54,33],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a5966109222fa239e12f75def142e918f":[3,0,0,13,54,23],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a5efdcd71d90ecbc3bbf2db67ce162afb":[3,0,0,13,54,9],
 "classdrake_1_1symbolic_1_1_generic_polynomial.html#a5f770bc2798f001aea053446ec6224e3":[3,0,0,13,54,25],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_variables.html":[3,0,0,13,66],
 "classdrake_1_1symbolic_1_1_variables.html#a00e1556d54da02f5412793687f5ff4cc":[3,0,0,13,66,39],
 "classdrake_1_1symbolic_1_1_variables.html#a05e36ab8e742176eb11f37b020a5c12c":[3,0,0,13,66,2],
-"classdrake_1_1symbolic_1_1_variables.html#a07da1fdc890b6949f1a20a1961c6fc44":[3,0,0,13,66,36],
-"classdrake_1_1symbolic_1_1_variables.html#a16c059f560c7656816ddfd25d306e96d":[3,0,0,13,66,27]
+"classdrake_1_1symbolic_1_1_variables.html#a07da1fdc890b6949f1a20a1961c6fc44":[3,0,0,13,66,36]
 };

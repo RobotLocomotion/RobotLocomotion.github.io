@@ -112,20 +112,15 @@ class drake::geometry::SceneGraph&lt; T &gt;</h3>
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">source_pose{0}&rarr;</td></tr>
-<tr>
-<td align="right" style="padding:5px 0px 5px 0px">...&rarr;</td></tr>
-<tr>
-<td align="right" style="padding:5px 0px 5px 0px">source_pose{N-1}&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px"><em style="color:gray">(source name)</em>_pose&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
-<tr>
-<td align="left" style="padding:5px 0px 5px 0px">&rarr; lcm_visualization</td></tr>
 <tr>
 <td align="left" style="padding:5px 0px 5px 0px">&rarr; query</td></tr>
 </table>
 </td></tr>
 </table>
+<p>For each registered "geometry source", there is an input port whose name begins with <em style="color:gray">(source name)</em>.</p>
 <p>Only registered "geometry sources" can introduce geometry into SceneGraph. Geometry sources will typically be other leaf systems, but, in the case of <em>anchored</em> (i.e., stationary) geometry, it could also be some other block of code (e.g., adding a common ground plane with which all systems' geometries interact). For dynamic geometry (geometry whose pose depends on a Context), the geometry source must also provide pose values for all of the geometries the source owns, via a port connection on SceneGraph. For N geometry sources, the SceneGraph instance will have N pose input ports.</p>
 <p>The basic workflow for interacting with SceneGraph is:</p>
 <ul>

@@ -140,9 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02a874939f6aa43e29fc929d223dfb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a02a874939f6aa43e29fc929d223dfb76">Delete</a> () const</td></tr>
 <tr class="memdesc:a02a874939f6aa43e29fc929d223dfb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Meschat::Delete(std::string path), with the path set to <a class="el" href="structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b" title="A prefix to add to the path for all objects and transforms curated by the MeshcatVisualizer.">MeshcatVisualizerParams::prefix</a>.  <a href="#a02a874939f6aa43e29fc929d223dfb76">More...</a><br /></td></tr>
 <tr class="separator:a02a874939f6aa43e29fc929d223dfb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eaa9f315b13938f997e32471313ef29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a9eaa9f315b13938f997e32471313ef29">StartRecording</a> ()</td></tr>
-<tr class="memdesc:a9eaa9f315b13938f997e32471313ef29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating that subsequent publish events should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>.  <a href="#a9eaa9f315b13938f997e32471313ef29">More...</a><br /></td></tr>
-<tr class="separator:a9eaa9f315b13938f997e32471313ef29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d3dfd0973e9d83d859aebbec3d3b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#a65d3dfd0973e9d83d859aebbec3d3b83">StartRecording</a> (bool set_transforms_while_recording=true)</td></tr>
+<tr class="memdesc:a65d3dfd0973e9d83d859aebbec3d3b83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag indicating that subsequent publish events should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>.  <a href="#a65d3dfd0973e9d83d859aebbec3d3b83">More...</a><br /></td></tr>
+<tr class="separator:a65d3dfd0973e9d83d859aebbec3d3b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e410341b1ca35649cafd7b099a1819"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab4e410341b1ca35649cafd7b099a1819">StopRecording</a> ()</td></tr>
 <tr class="memdesc:ab4e410341b1ca35649cafd7b099a1819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a flag to pause/stop recording.  <a href="#ab4e410341b1ca35649cafd7b099a1819">More...</a><br /></td></tr>
 <tr class="separator:ab4e410341b1ca35649cafd7b099a1819"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1602,8 +1602,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a9eaa9f315b13938f997e32471313ef29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eaa9f315b13938f997e32471313ef29">&#9670;&nbsp;</a></span>StartRecording()</h2>
+<a id="a65d3dfd0973e9d83d859aebbec3d3b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d3dfd0973e9d83d859aebbec3d3b83">&#9670;&nbsp;</a></span>StartRecording()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1611,7 +1611,8 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html">MeshcatAnimation</a>* StartRecording </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>set_transforms_while_recording</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1619,6 +1620,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets a flag indicating that subsequent publish events should also be "recorded" into a <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html" title="An interface for recording/playback animations in Meshcat.">MeshcatAnimation</a>. </p>
 <p>The data in these events will be combined with any frames previously added to the animation; if the same transform/property is set at the same time, then it will overwrite the existing frame in the animation. Frames are added at the index <a class="el" href="classdrake_1_1geometry_1_1_meshcat_animation.html#abef5586ed551fb5d4ff06983a94dfde7" title="Uses the frame rate to convert from time to the frame number, using std::floor.">MeshcatAnimation::frame</a>(context.get_time()).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set_transforms_while_recording</td><td>if true, then each Publish will set the transform in <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> <em>and</em> record the transform in the animation. Set to false to avoid updating the visualization during recording. Note that animations do not support SetObject, so the objects must still be sent to the visualizer during the recording.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>a mutable pointer to the current recording. See <a class="el" href="classdrake_1_1geometry_1_1_meshcat_visualizer.html#aecacb78d91811ad96f3b39a83f670179" title="Returns a mutable pointer to this MeshcatVisualizer&#39;s unique MeshcatAnimation object in which the fra...">get_mutable_recording()</a>. </dd></dl>
 
 </div>

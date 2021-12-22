@@ -1543,6 +1543,28 @@ receive an error message if they add L2NormCost and call Solve().</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddL2NormCostUsingConicConstraint">
+<code class="descname">AddL2NormCostUsingConicConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.symbolic.Variable, pydrake.solvers.mathematicalprogram.Binding[LinearCost], pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddL2NormCostUsingConicConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an L2 norm cost min <a href="#id5"><span class="problematic" id="id6">|</span></a>Ax+b|₂ as a linear cost min s on the slack
+variable s, together with a Lorentz cone constraint s ≥ <a href="#id7"><span class="problematic" id="id8">|</span></a>Ax+b|₂ Many
+conic optimization solvers (Gurobi, Mosek, SCS, etc) natively prefers
+this form of linear cost + conic constraints. So if you are going to
+use one of these conic solvers, then add the L2 norm cost using this
+function instead of AddL2NormCost().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(s, linear_cost, lorentz_cone_constraint). <code class="docutils literal"><span class="pre">s</span></code> is the slack
+variable (with variable name string as “slack”), <code class="docutils literal"><span class="pre">linear_cost</span></code>
+is the cost on <code class="docutils literal"><span class="pre">s</span></code>, and <code class="docutils literal"><span class="pre">lorentz_cone_constraint</span></code> is the
+constraint s≥|Ax+b|₂</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearComplementarityConstraint">
 <code class="descname">AddLinearComplementarityConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg1: numpy.ndarray[numpy.float64[m, 1]], arg2: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearComplementarityConstraint]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddLinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a linear complementarity constraints referencing a subset of the
@@ -1568,8 +1590,8 @@ symbolic expression.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if 1. <code class="docutils literal"><span class="pre">e</span></code> is a non-linear expression. 2. <a href="#id5"><span class="problematic" id="id6">``</span></a>lb &lt;= e</li>
-<li>&lt;= ub`` is a trivial constraint such as 1 &lt;= 2 &lt;= 3. 3. <a href="#id7"><span class="problematic" id="id8">``</span></a>lb &lt;= e</li>
+<li>RuntimeError if 1. <code class="docutils literal"><span class="pre">e</span></code> is a non-linear expression. 2. <a href="#id9"><span class="problematic" id="id10">``</span></a>lb &lt;= e</li>
+<li>&lt;= ub`` is a trivial constraint such as 1 &lt;= 2 &lt;= 3. 3. <a href="#id11"><span class="problematic" id="id12">``</span></a>lb &lt;= e</li>
 <li>&lt;= ub`` is unsatisfiable such as 1 &lt;= -5 &lt;= 3</li>
 </ul>
 </td>
@@ -1650,12 +1672,12 @@ f) throws an exception for f ∈ <code class="docutils literal"><span class="pre
 <ol class="arabic simple">
 <li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
-<p>Adds a linear cost term of the form a’<a href="#id9"><span class="problematic" id="id10">*</span></a>x + b.</p>
+<p>Adds a linear cost term of the form a’<a href="#id13"><span class="problematic" id="id14">*</span></a>x + b.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">e</span></code>:</dt>
 <dd>A linear symbolic expression.</dd>
 <dt>Precondition:</dt>
-<dd>e is a linear expression a’<a href="#id11"><span class="problematic" id="id12">*</span></a>x + b, where each entry of x is a
+<dd>e is a linear expression a’<a href="#id15"><span class="problematic" id="id16">*</span></a>x + b, where each entry of x is a
 decision variable in the mathematical program.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1670,12 +1692,12 @@ variables.</td>
 <ol class="arabic simple" start="2">
 <li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, a: numpy.ndarray[numpy.float64[m, 1]], b: float, vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
-<p>Adds a linear cost term of the form a’<a href="#id13"><span class="problematic" id="id14">*</span></a>x + b. Applied to a subset of
+<p>Adds a linear cost term of the form a’<a href="#id17"><span class="problematic" id="id18">*</span></a>x + b. Applied to a subset of
 the variables and pushes onto the linear cost data structure.</p>
 <ol class="arabic simple" start="3">
 <li>AddLinearCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, a: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
-<p>Adds a linear cost term of the form a’<a href="#id15"><span class="problematic" id="id16">*</span></a>x. Applied to a subset of the
+<p>Adds a linear cost term of the form a’<a href="#id19"><span class="problematic" id="id20">*</span></a>x. Applied to a subset of the
 variables and pushes onto the linear cost data structure.</p>
 </dd></dl>
 
@@ -1858,7 +1880,7 @@ more details.</dd>
 variables.</dd>
 </dl>
 <p>Precondition:
-1. <code class="docutils literal"><span class="pre">v1</span></code> is a linear expression, in the form of c’<a href="#id17"><span class="problematic" id="id18">*</span></a>x + d.
+1. <code class="docutils literal"><span class="pre">v1</span></code> is a linear expression, in the form of c’<a href="#id21"><span class="problematic" id="id22">*</span></a>x + d.
 2. <code class="docutils literal"><span class="pre">v2</span></code> is a quadratic expression, in the form of</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span><span class="s1">&#39;*Q*x + b&#39;</span><span class="n">x</span> <span class="o">+</span> <span class="n">a</span>
 </pre></div>
@@ -1880,7 +1902,7 @@ Lorentz cone, where</p>
  <span class="n">y</span> <span class="o">=</span> <span class="n">R</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">d</span>
 </pre></div>
 </div>
-<p>while (R, d) satisfies y’<a href="#id19"><span class="problematic" id="id20">*</span></a>y = x’<a href="#id21"><span class="problematic" id="id22">*</span></a>Q*x + b’<a href="#id23"><span class="problematic" id="id24">*</span></a>x + a For example, to add
+<p>while (R, d) satisfies y’<a href="#id23"><span class="problematic" id="id24">*</span></a>y = x’<a href="#id25"><span class="problematic" id="id26">*</span></a>Q*x + b’<a href="#id27"><span class="problematic" id="id28">*</span></a>x + a For example, to add
 the Lorentz cone constraint</p>
 <p>x+1 &gt;= sqrt(y² + 2y + x² + 4), the user could call</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
@@ -1989,13 +2011,13 @@ exponential cone constraint (currently SCS does).</p>
 <code class="descname">AddPositiveDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the constraint that a symmetric matrix is diagonally dominant
 with non-negative diagonal entries. A symmetric matrix X is diagonally
-dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id41"><span class="problematic" id="id42">|X(i, j)|</span></a>
+dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id45"><span class="problematic" id="id46">|X(i, j)|</span></a>
 ∀ j ≠ i namely in each row, the diagonal entry is larger than the sum
 of the absolute values of all other entries in the same row. A matrix
 being diagonally dominant with non-negative diagonals is a sufficient
 (but not necessary) condition of a matrix being positive semidefinite.
 Internally we will create a matrix Y as slack variables, such that
-Y(i, j) represents the absolute value <a href="#id43"><span class="problematic" id="id44">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
+Y(i, j) represents the absolute value <a href="#id47"><span class="problematic" id="id48">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
 entries Y(i, i) = X(i, i) The users can refer to “DSOS and SDSOS
 Optimization: More Tractable Alternatives to Sum of Squares and
 Semidefinite Optimization” by Amir Ali Ahmadi and Anirudha Majumdar,
@@ -2009,7 +2031,7 @@ X.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Y The slack variable. Y(i, j) represents <a href="#id45"><span class="problematic" id="id46">|X(i, j)|</span></a> ∀ j ≠ i, with
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Y The slack variable. Y(i, j) represents <a href="#id49"><span class="problematic" id="id50">|X(i, j)|</span></a> ∀ j ≠ i, with
 the constraint Y(i, j) &gt;= X(i, j) and Y(i, j) &gt;= -X(i, j). Y is a
 symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</td>
 </tr>
@@ -2064,7 +2086,7 @@ variable M that are also newly added.</td>
 </tbody>
 </table>
 <p>For example, to add a constraint that</p>
-<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id47"><span class="problematic" id="id48">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
+<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id51"><span class="problematic" id="id52">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
 <span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Expression</span><span class="o">&gt;</span> <span class="n">e</span>
@@ -2083,7 +2105,7 @@ The user could call</p>
 <ol class="arabic simple">
 <li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</li>
 </ol>
-<p>Add a quadratic cost term of the form 0.5*x’<a href="#id25"><span class="problematic" id="id26">*</span></a>Q*x + b’<a href="#id27"><span class="problematic" id="id28">*</span></a>x + c. Notice
+<p>Add a quadratic cost term of the form 0.5*x’<a href="#id29"><span class="problematic" id="id30">*</span></a>Q*x + b’<a href="#id31"><span class="problematic" id="id32">*</span></a>x + c. Notice
 that in the optimization program, the constant term <code class="docutils literal"><span class="pre">c</span></code> in the cost
 is ignored.</p>
 <dl class="docutils">
@@ -2109,7 +2131,7 @@ whether the cost is convex or not.</dd>
 <ol class="arabic simple" start="2">
 <li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</li>
 </ol>
-<p>Adds a cost term of the form 0.5*x’<a href="#id29"><span class="problematic" id="id30">*</span></a>Q*x + b’x Applied to subset of the
+<p>Adds a cost term of the form 0.5*x’<a href="#id33"><span class="problematic" id="id34">*</span></a>Q*x + b’x Applied to subset of the
 variables.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">is_convex</span></code>:</dt>
@@ -2122,7 +2144,7 @@ cost is convex or not.</dd>
 <ol class="arabic simple" start="3">
 <li>AddQuadraticCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], c: float, vars: numpy.ndarray[object[m, 1]], is_convex: Optional[bool] = None) -&gt; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]</li>
 </ol>
-<p>Adds a cost term of the form 0.5*x’<a href="#id31"><span class="problematic" id="id32">*</span></a>Q*x + b’x + c Applied to subset of
+<p>Adds a cost term of the form 0.5*x’<a href="#id35"><span class="problematic" id="id36">*</span></a>Q*x + b’x + c Applied to subset of
 the variables.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">is_convex</span></code>:</dt>
@@ -2137,7 +2159,7 @@ cost is convex or not.</dd>
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddQuadraticErrorCost">
 <code class="descname">AddQuadraticErrorCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], x_desired: numpy.ndarray[numpy.float64[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[QuadraticCost]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddQuadraticErrorCost" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds a cost term of the form (x-x_desired)’<a href="#id33"><span class="problematic" id="id34">*</span></a>Q*(x-x_desired).</p>
+<dd><p>Adds a cost term of the form (x-x_desired)’<a href="#id37"><span class="problematic" id="id38">*</span></a>Q*(x-x_desired).</p>
 </dd></dl>
 
 <dl class="method">
@@ -2173,10 +2195,10 @@ bound variables.</dd>
 <p>Precondition:
 1. <code class="docutils literal"><span class="pre">linear_expression1</span></code> is a linear (affine) expression, in the form of</p>
 <blockquote>
-<div>v1 = c1’<a href="#id35"><span class="problematic" id="id36">*</span></a>x + d1.</div></blockquote>
+<div>v1 = c1’<a href="#id39"><span class="problematic" id="id40">*</span></a>x + d1.</div></blockquote>
 <ol class="arabic simple" start="2">
 <li><code class="docutils literal"><span class="pre">linear_expression2</span></code> is a linear (affine) expression, in the form of
-v2 = c2’<a href="#id37"><span class="problematic" id="id38">*</span></a>x + d2.</li>
+v2 = c2’<a href="#id41"><span class="problematic" id="id42">*</span></a>x + d2.</li>
 </ol>
 <ol class="arabic simple" start="2">
 <li><code class="docutils literal"><span class="pre">quadratic_expression</span></code> is a quadratic expression, in the form of</li>
@@ -4145,7 +4167,7 @@ more details.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
 <p>lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a
 symmetric matrix Q. For a non-symmetric matrix Q₀, we can define Q =
-(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id39"><span class="problematic" id="id40">*</span></a>x. The first
+(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id43"><span class="problematic" id="id44">*</span></a>x. The first
 equality holds because the transpose of a scalar is the scalar itself.
 Hence we can always convert a non-symmetric matrix Q₀ to a symmetric
 matrix Q.</p>

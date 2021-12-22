@@ -7327,6 +7327,82 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent">
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
+Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
+multiple handlers to be called upon a call to
+CalcDiscreteVariableUpdates(); these handlers which will be called
+with the same const Context in arbitrary order. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedPublishEvent">
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
+will cause multiple handlers to be called upon a call to Publish();
+these handlers which will be called with the same const Context in
+arbitrary order. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent">
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
+DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
+be called upon a call to CalcUnrestrictedUpdate(); these handlers
+which will be called with the same const Context in arbitrary
+order.The handler should be a class member function (method) with this
+signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent">
 <code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_.LeafSystem_[float].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
@@ -8165,6 +8241,82 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">num_state_variables</span></code> must be non-negative.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedDiscreteUpdateEvent">
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.DiscreteValues_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
+Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
+multiple handlers to be called upon a call to
+CalcDiscreteVariableUpdates(); these handlers which will be called
+with the same const Context in arbitrary order. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedPublishEvent">
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], publish: Callable[[pydrake.systems.framework.Context_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
+will cause multiple handlers to be called upon a call to Publish();
+these handlers which will be called with the same const Context in
+arbitrary order. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedUnrestrictedUpdateEvent">
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[AutoDiffXd], update: Callable[[pydrake.systems.framework.Context_[AutoDiffXd], pydrake.systems.framework.State_[AutoDiffXd]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[AutoDiffXd].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
+DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
+be called upon a call to CalcUnrestrictedUpdate(); these handlers
+which will be called with the same const Context in arbitrary
+order.The handler should be a class member function (method) with this
+signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
 </dl>
 </dd></dl>
 
@@ -9009,6 +9161,82 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedDiscreteUpdateEvent">
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
+Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
+multiple handlers to be called upon a call to
+CalcDiscreteVariableUpdates(); these handlers which will be called
+with the same const Context in arbitrary order. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedPublishEvent">
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], publish: Callable[[pydrake.systems.framework.Context_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
+will cause multiple handlers to be called upon a call to Publish();
+these handlers which will be called with the same const Context in
+arbitrary order. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedUnrestrictedUpdateEvent">
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.State_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
+DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
+be called upon a call to CalcUnrestrictedUpdate(); these handlers
+which will be called with the same const Context in arbitrary
+order.The handler should be a class member function (method) with this
+signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent">
 <code class="descname">DeclareInitializationDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[Expression], update: Callable[[pydrake.systems.framework.Context_[Expression], pydrake.systems.framework.DiscreteValues_[Expression]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[Expression].DeclareInitializationDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Declares that a DiscreteUpdate event should occur at initialization
@@ -9845,6 +10073,82 @@ signature that accepts a <code class="docutils literal"><span class="pre">model_
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd><code class="docutils literal"><span class="pre">num_state_variables</span></code> must be non-negative.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent">
+<code class="descname">DeclareForcedDiscreteUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.DiscreteValues_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedDiscreteUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcDiscreteVariableUpdates(const Context&amp;, DiscreteValues&lt;T&gt;*).
+Multiple calls to DeclareForcedDiscreteUpdateEvent() will cause
+multiple handlers to be called upon a call to
+CalcDiscreteVariableUpdates(); these handlers which will be called
+with the same const Context in arbitrary order. The handler should be
+a class member function (method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyDiscreteVariableUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">DiscreteValues</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareForcedPublishEvent">
+<code class="descname">DeclareForcedPublishEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], publish: Callable[[pydrake.systems.framework.Context_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedPublishEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+Publish(const Context&amp;). Multiple calls to DeclareForcedPublishEvent()
+will cause multiple handlers to be called upon a call to Publish();
+these handlers which will be called with the same const Context in
+arbitrary order. The handler should be a class member function
+(method) with this signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyPublish</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">publish</span></code> must not be null.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent">
+<code class="descname">DeclareForcedUnrestrictedUpdateEvent</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], update: Callable[[pydrake.systems.framework.Context_[float], pydrake.systems.framework.State_[float]], pydrake.systems.framework.EventStatus]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.LeafSystem_[float].DeclareForcedUnrestrictedUpdateEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Declares a function that is called whenever a user directly calls
+CalcUnrestrictedUpdate(const Context&amp;, State&lt;T&gt;*). Multiple calls to
+DeclareForcedUnrestrictedUpdateEvent() will cause multiple handlers to
+be called upon a call to CalcUnrestrictedUpdate(); these handlers
+which will be called with the same const Context in arbitrary
+order.The handler should be a class member function (method) with this
+signature:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">EventStatus</span> <span class="n">MySystem</span><span class="p">::</span><span class="n">MyUnrestrictedUpdates</span><span class="p">(</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span><span class="p">,</span>
+<span class="n">State</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;*</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal"><span class="pre">MySystem</span></code> is a class derived from <code class="docutils literal"><span class="pre">LeafSystem&lt;T&gt;</span></code> and the
+method name is arbitrary.</p>
+<p>See declare_forced_events “Declare forced events” for more
+information.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">this</span></code> must be dynamic_cast-able to MySystem.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">update</span></code> must not be null.</dd>
 </dl>
 </dd></dl>
 
@@ -12328,6 +12632,21 @@ these equations.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].CalcUnrestrictedUpdate">
+<code class="descname">CalcUnrestrictedUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], state: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].CalcUnrestrictedUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method forces an unrestricted update on the system given a
+<code class="docutils literal"><span class="pre">context</span></code>, and the updated state is stored in <code class="docutils literal"><span class="pre">state</span></code>. The
+unrestricted update event will have a trigger type of kForced, with no
+additional data, attribute or custom callback.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcUnrestrictedUpdate(const Context&lt;T&gt;&amp;, const
+EventCollection&lt;UnrestrictedUpdateEvent&lt;T&gt;&gt;*, State&lt;T&gt;* state) for
+more information.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_.System_[float].CreateDefaultContext">
 <code class="descname">CreateDefaultContext</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Context_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].CreateDefaultContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>This convenience method allocates a context using AllocateContext()
@@ -13098,6 +13417,21 @@ state vector in <code class="docutils literal"><span class="pre">context</span><
 <p class="first admonition-title">See also</p>
 <p class="last">CalcImplicitTimeDerivativesResidual() for the implicit form of
 these equations.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[AutoDiffXd].CalcUnrestrictedUpdate">
+<code class="descname">CalcUnrestrictedUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], state: pydrake.systems.framework.State_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].CalcUnrestrictedUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method forces an unrestricted update on the system given a
+<code class="docutils literal"><span class="pre">context</span></code>, and the updated state is stored in <code class="docutils literal"><span class="pre">state</span></code>. The
+unrestricted update event will have a trigger type of kForced, with no
+additional data, attribute or custom callback.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcUnrestrictedUpdate(const Context&lt;T&gt;&amp;, const
+EventCollection&lt;UnrestrictedUpdateEvent&lt;T&gt;&gt;*, State&lt;T&gt;* state) for
+more information.</p>
 </div>
 </dd></dl>
 
@@ -13874,6 +14208,21 @@ these equations.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[Expression].CalcUnrestrictedUpdate">
+<code class="descname">CalcUnrestrictedUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression], context: pydrake.systems.framework.Context_[Expression], state: pydrake.systems.framework.State_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].CalcUnrestrictedUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method forces an unrestricted update on the system given a
+<code class="docutils literal"><span class="pre">context</span></code>, and the updated state is stored in <code class="docutils literal"><span class="pre">state</span></code>. The
+unrestricted update event will have a trigger type of kForced, with no
+additional data, attribute or custom callback.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcUnrestrictedUpdate(const Context&lt;T&gt;&amp;, const
+EventCollection&lt;UnrestrictedUpdateEvent&lt;T&gt;&gt;*, State&lt;T&gt;* state) for
+more information.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[Expression].CreateDefaultContext">
 <code class="descname">CreateDefaultContext</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.Context_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].CreateDefaultContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>This convenience method allocates a context using AllocateContext()
@@ -14642,6 +14991,21 @@ state vector in <code class="docutils literal"><span class="pre">context</span><
 <p class="first admonition-title">See also</p>
 <p class="last">CalcImplicitTimeDerivativesResidual() for the implicit form of
 these equations.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[float].CalcUnrestrictedUpdate">
+<code class="descname">CalcUnrestrictedUpdate</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], state: pydrake.systems.framework.State_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.framework.System_[float].CalcUnrestrictedUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method forces an unrestricted update on the system given a
+<code class="docutils literal"><span class="pre">context</span></code>, and the updated state is stored in <code class="docutils literal"><span class="pre">state</span></code>. The
+unrestricted update event will have a trigger type of kForced, with no
+additional data, attribute or custom callback.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcUnrestrictedUpdate(const Context&lt;T&gt;&amp;, const
+EventCollection&lt;UnrestrictedUpdateEvent&lt;T&gt;&gt;*, State&lt;T&gt;* state) for
+more information.</p>
 </div>
 </dd></dl>
 

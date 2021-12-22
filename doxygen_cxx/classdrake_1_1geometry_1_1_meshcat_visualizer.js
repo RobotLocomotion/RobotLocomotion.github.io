@@ -13,7 +13,7 @@ var classdrake_1_1geometry_1_1_meshcat_visualizer =
     [ "operator=", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a316cced3dff4e708a487c71152437ec7", null ],
     [ "PublishRecording", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a86bc96da19b83ba9441d528f38f68472", null ],
     [ "query_object_input_port", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a8fc721bcba31c5cf4c738b8f7ddc18eb", null ],
-    [ "StartRecording", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a9eaa9f315b13938f997e32471313ef29", null ],
+    [ "StartRecording", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a65d3dfd0973e9d83d859aebbec3d3b83", null ],
     [ "StopRecording", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#ab4e410341b1ca35649cafd7b099a1819", null ],
     [ "MeshcatVisualizer", "classdrake_1_1geometry_1_1_meshcat_visualizer.html#a163096a84f8361de8dde0c953d449e9a", null ]
 ];
