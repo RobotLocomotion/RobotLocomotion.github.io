@@ -199,6 +199,14 @@
 <p class="last">Currently our ClpSolver has a memory issue when solving a QP. The
 user should be aware of this risk.</p>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The authors can adjust the problem scaling option by setting
+“scaling” as mentioned in
+<a class="reference external" href="https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706">https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706</a>
+For example prog.SetSolverOption(ClpSolver::id(), “scaling”, 0);
+will do “no scaling”. The default is 1.</p>
+</div>
 <dl class="method">
 <dt id="pydrake.solvers.clp.ClpSolver.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.clp.ClpSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.clp.ClpSolver.__init__" title="Permalink to this definition">¶</a></dt>

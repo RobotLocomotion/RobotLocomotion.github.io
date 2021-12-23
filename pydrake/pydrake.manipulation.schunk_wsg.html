@@ -240,7 +240,10 @@ two input ports: one for the commanded finger position represented as
 the desired signed distance between the fingers in meters, and one for
 the commanded force limit. The commanded position and force limit are
 scalars (BasicVector&lt;double&gt; of size 1).</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_schunk_wsg_command</td></tr></table></td></tr></table><dl class="method">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgCommandSender</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; lcmt_schunk_wsg_command</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">force_limit</span></code> input port can be left unconnected; in this case,
+the <code class="docutils literal"><span class="pre">default_force_limit</span></code> value given at construction time will be
+used.</p>
+<dl class="method">
 <dt id="pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender</em>, <em>default_force_limit: float = 40.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.schunk_wsg.SchunkWsgCommandSender.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -270,7 +273,10 @@ scalars (BasicVector&lt;double&gt; of size 1).</p>
 position control mode adding a discrete-derivative to estimate the
 desired velocity from the desired position commands. It is a thin
 wrapper around SchunkWsgPdController.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">desired_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWSGPositionController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; grip_force</td></tr></table></td></tr></table><div class="admonition seealso">
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">desired_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">force_limit&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWSGPositionController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_force</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; grip_force</td></tr></table></td></tr></table><p>The <code class="docutils literal"><span class="pre">force_limit</span></code> input port can be left unconnected; in this case,
+the <code class="docutils literal"><span class="pre">default_force_limit</span></code> value given at construction time will be
+used.</p>
+<div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">SchunkWsgPdController</p>
 </div>

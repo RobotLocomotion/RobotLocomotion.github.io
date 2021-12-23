@@ -199,10 +199,11 @@ a floating-base model coordinate, e.g. for visualization),</li>
 challenges of simulation around the Zeno phenomenon at the standing
 fixed point).</li>
 </ul>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RimlessWheel</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; minimal_state (theta and thetadot only)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; floating_base_state</td></tr></table></td></tr></table><p>Continuous States: theta, thetadot. Discrete States: stance toe
-position, double support indicator. Parameters: mass, length, number
-of spokes, etc, are all set as Context parameters using
-RimlessWheelParams.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RimlessWheel</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; minimal_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; floating_base_state</td></tr></table></td></tr></table><p>Continuous States: theta, thetadot (emitted at <code class="docutils literal"><span class="pre">minimal_state</span></code>
+port). Discrete States: stance toe position (emitted at
+<code class="docutils literal"><span class="pre">floating_base_state</span></code> port), double support indicator. Parameters:
+mass, length, number of spokes, etc, are all set as Context parameters
+using RimlessWheelParams.</p>
 <dl class="method">
 <dt id="pydrake.examples.rimless_wheel.RimlessWheel.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.rimless_wheel.RimlessWheel</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.rimless_wheel.RimlessWheel.__init__" title="Permalink to this definition">¶</a></dt>

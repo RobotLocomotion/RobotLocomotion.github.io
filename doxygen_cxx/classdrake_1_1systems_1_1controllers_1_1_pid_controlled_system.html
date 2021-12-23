@@ -118,6 +118,24 @@ class drake::systems::controllers::PidControlledSystem&lt; T &gt;</h3>
 </ul>
 <p>All output ports of the plant are exposed as output ports of the <a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html" title="A system that encapsulates a PidController and a controlled System (a.k.a the &quot;plant&quot;).">PidControlledSystem</a> in the same order (and therefore with the same index) as they appear in the plant.</p>
 <p>Some of the constructors include a parameter called <code>feedback_selector</code>. It is used to select the <em>controlled</em> states from the plant's state output port. Let <code>S</code> be the gain matrix in parameter <code>feedback_selector</code>. <code>S</code> must have dimensions of <code>(2 * U, 2 * Q)</code>. Typically, <code>S</code> contains one <code>1</code> in each row, and zeros everywhere else. <code>S</code> does not affect the desired state input. Let 'x' be the full state of the plant (size 2 * Q), and 'x_d' be the desired state (size 2 * U), <code>S</code> is used to compute the state error as <code>x_err = S * x - x_d</code>.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">feedforward_control&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html" title="A system that encapsulates a PidController and a controlled System (a.k.a the &quot;plant&quot;).">PidControlledSystem</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; (exported output port of plant, with same name)</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; ...</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; (exported output port of plant, with same name)</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>

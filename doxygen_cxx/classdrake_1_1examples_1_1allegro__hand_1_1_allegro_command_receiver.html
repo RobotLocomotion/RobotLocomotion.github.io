@@ -101,7 +101,22 @@ $(document).ready(function(){initNavTree('classdrake_1_1examples_1_1allegro__han
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handles lcmt_allegro_command messages from a LcmSubscriberSystem. </p>
-<p>Has two output ports: one for the commanded position for each joint along with a zero velocity for each joint, and another for commanded additional feedforward joint torque. The joint torque command is currently not used. </p>
+<p>Has two output ports: one for the commanded position for each joint along with a zero velocity for each joint, and another for commanded additional feedforward joint torque. The joint torque command is currently not used.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html" title="Handles lcmt_allegro_command messages from a LcmSubscriberSystem.">AllegroCommandReceiver</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y1</td></tr>
+</table>
+</td></tr>
+</table>
+<p>Port <code>u0</code> accepts command messages. Ports <code>y0</code> and <code>y1</code> emit commanded position and feedforward torque, respectively. </p>
 </div>
 <p><code>#include &lt;drake/examples/allegro_hand/allegro_lcm.h&gt;</code></p>
 <table class="memberdecls">

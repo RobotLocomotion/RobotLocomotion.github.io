@@ -123,6 +123,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and outputs lcmt_planar_gripper_status messages.  <a href="classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html">PlanarManipulandStatusDecoder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles lcmt_planar_manipuland_status messages from a LcmSubscriberSystem.  <a href="classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html">PlanarManipulandStatusEncoder</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and outputs lcmt_planar_manipuland_status messages.  <a href="classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html#details">More...</a><br /></td></tr>
@@ -191,7 +192,6 @@ Variables</h2></td></tr>
 <tr class="memitem:a45bb02e62ab70fa88d0b8983a5713391"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1planar__gripper.html#a45bb02e62ab70fa88d0b8983a5713391">kGripperLcmStatusPeriod</a> = 0.010</td></tr>
 <tr class="separator:a45bb02e62ab70fa88d0b8983a5713391"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a909c985f8e6897a3936dda06c9648da4"><td class="memItemLeft" align="right" valign="top">constexpr double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1examples_1_1planar__gripper.html#a909c985f8e6897a3936dda06c9648da4">kPlanarManipulandStatusPeriod</a> = 0.010</td></tr>
-<tr class="memdesc:a909c985f8e6897a3936dda06c9648da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles lcmt_planar_manipuland_status messages from a LcmSubscriberSystem.  <a href="#a909c985f8e6897a3936dda06c9648da4">More...</a><br /></td></tr>
 <tr class="separator:a909c985f8e6897a3936dda06c9648da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -954,11 +954,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Handles lcmt_planar_manipuland_status messages from a LcmSubscriberSystem. </p>
-<p>This system has one abstract valued input port which expects a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_planar_manipuland_status</code>.</p>
-<p>This system has one vector valued output port which reports measured pose (y, z, theta) and velocity (ydot, zdot, thetadot) of the manipuland.</p>
-<p>All ports will continue to output their initial state (typically zero) until a message is received. </p>
 
 </div>
 </div>

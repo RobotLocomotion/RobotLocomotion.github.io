@@ -116,7 +116,26 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 </ul>
 </li>
 </ul>
-<p>Note that the "feed forward force" input is ignored for <a class="el" href="namespacedrake_1_1manipulation_1_1schunk__wsg.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a">ControlMode::kPosition</a> and the "desired grip state" input is ignored for <a class="el" href="namespacedrake_1_1manipulation_1_1schunk__wsg.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a">ControlMode::kPosition</a>. </p>
+<p>Note that the "feed forward force" input is ignored for <a class="el" href="namespacedrake_1_1manipulation_1_1schunk__wsg.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a">ControlMode::kPosition</a> and the "desired grip state" input is ignored for <a class="el" href="namespacedrake_1_1manipulation_1_1schunk__wsg.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a">ControlMode::kPosition</a>.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">joint_state&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">max_force&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">desired_grip_state</span>&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">feed_forward_force</span>&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_plain_controller.html" title="This class implements a controller for a Schunk WSG gripper as a systems::Diagram.">SchunkWsgPlainController</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; control</td></tr>
+</table>
+</td></tr>
+</table>
+<p>The <code>desired_grip_state</code> port is present only when the control mode is <code>kPosition</code>; the <code>feed_forward_force</code> port is present only when the control mode is <code>kForce</code>. </p>
 </div>
 <p><code>#include &lt;drake/manipulation/schunk_wsg/schunk_wsg_plain_controller.h&gt;</code></p>
 <table class="memberdecls">

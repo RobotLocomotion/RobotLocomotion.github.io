@@ -103,6 +103,23 @@ $(document).ready(function(){initNavTree('classdrake_1_1examples_1_1allegro__han
 <div class="textblock"><p>Creates and outputs lcmt_allegro_status messages. </p>
 <p>This system has three vector-valued input ports, one for the plant's current state, one for the most recently received position command, and one for the most recently received joint torque command. The state and command ports contain a position and velocity for each joint, which is supposed to be in the order of thumb(4)-index(4)-middle(4)-ring(4).</p>
 <p>This system has one abstract valued output port that contains a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_allegro_status</code>. Note that this system does not actually send this message on an LCM channel. To send the message, the output of this system should be connected to an input port of a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html" title="Publishes an LCM message containing information from its input port.">systems::lcm::LcmPublisherSystem</a> that accepts a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_allegro_status</code>.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u1&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u2&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html" title="Creates and outputs lcmt_allegro_status messages.">AllegroStatusSender</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+</table>
+</td></tr>
+</table>
+<p>Ports <code>u0</code>, <code>u1</code>, and <code>u2</code> accept state, commanded position, and commanded torque, respectively. Port <code>y0</code> emits status messages.</p>
 <p>This system is presently only used in simulation. </p>
 </div>
 <p><code>#include &lt;drake/examples/allegro_hand/allegro_lcm.h&gt;</code></p>

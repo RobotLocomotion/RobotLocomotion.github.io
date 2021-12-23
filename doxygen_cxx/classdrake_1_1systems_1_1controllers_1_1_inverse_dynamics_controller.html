@@ -113,7 +113,7 @@ class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr>
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">desired_acceleration*&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html" title="A state feedback controller that uses a PidController to generate desired accelerations,...">InverseDynamicsController</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
@@ -121,6 +121,7 @@ class drake::systems::controllers::InverseDynamicsController&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
+<p>Ports show in <span style="color:gray">gray</span> may be absent, depending on how the system is constructed.</p>
 <p>This controller always has a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for estimated robot state <code>(q, v)</code>, a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for reference robot state <code>(q*, v*)</code> and a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> output port for computed torque <code>torque</code>. A constructor flag can be set to track reference acceleration <code>vd*</code> as well. When set, a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port is also declared, and it's content is used as <code>vd*</code>. When unset, <code>vd*</code> is be treated as zero.</p>
 <p>Note that this class assumes the robot is fully actuated, its position and velocity have the same dimension, and it does not have a floating base. If violated, the program will abort. This controller was not designed for closed-loop systems: the controller accounts for neither constraint forces nor actuator forces applied at loop constraints. Use on such systems is not recommended.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a> for an accounting of <a class="el" href="namespacedrake.html#adcc2d90ce6051e150effadd72fac548c" title="Checks truth for all elements in matrix m.">all</a> forces incorporated into the inverse dynamics computation.</dd></dl>

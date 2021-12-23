@@ -102,7 +102,21 @@ $(document).ready(function(){initNavTree('classdrake_1_1examples_1_1planar__grip
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates and outputs lcmt_planar_gripper_status messages. </p>
 <p>This system has two vector-valued input ports containing the current position and velocity (state) as well as fingertip forces (fy, fz).</p>
-<p>This system has one abstract valued output port that contains a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_planar_gripper_status</code>. Note that this system does not actually send this message on an LCM channel. To send the message, the output of this system should be connected to an input port of a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html" title="Publishes an LCM message containing information from its input port.">systems::lcm::LcmPublisherSystem</a> that accepts a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_planar_gripper_status</code>. </p>
+<p>This system has one abstract valued output port that contains a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_planar_gripper_status</code>. Note that this system does not actually send this message on an LCM channel. To send the message, the output of this system should be connected to an input port of a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html" title="Publishes an LCM message containing information from its input port.">systems::lcm::LcmPublisherSystem</a> that accepts a <a class="el" href="classdrake_1_1_value.html" title="A container class for an arbitrary type T (with some restrictions).">Value</a> object templated on type <code>lcmt_planar_gripper_status</code>.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">state&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">fingertip_force&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html" title="Creates and outputs lcmt_planar_gripper_status messages.">GripperStatusEncoder</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; lcmt_gripper_status</td></tr>
+</table>
+</td></tr>
+</table>
 </div>
 <p><code>#include &lt;drake/examples/planar_gripper/planar_gripper_lcm.h&gt;</code></p>
 <table class="memberdecls">

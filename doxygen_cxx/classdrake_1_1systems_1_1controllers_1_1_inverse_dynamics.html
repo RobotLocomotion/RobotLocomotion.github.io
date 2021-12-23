@@ -108,6 +108,21 @@ class drake::systems::controllers::InverseDynamics&lt; T &gt;</h3>
 <p>The system also provides a pure gravity compensation mode. This system provides a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for the state <code>(q, v)</code>, where <code>q</code> is the generalized position and <code>v</code> is the generalized velocity, and a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> output port for the computed generalized forces. There is an additional <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html" title="BasicVector is a semantics-free wrapper around an Eigen vector that satisfies VectorBase.">BasicVector</a> input port for desired acceleration when configured to be <b>not</b> in pure gravity compensation mode.</p>
 <p><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html" title="A state feedback controller that uses a PidController to generate desired accelerations,...">InverseDynamicsController</a> uses a PID controller to generate desired acceleration and uses this class to compute generalized forces. This class should be used directly if desired acceleration is computed differently.</p>
 <dl class="section see"><dt>See also</dt><dd>Constructors for descriptions of how (and which) forces are incorporated into the inverse dynamics computation.</dd></dl>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" title="Solves inverse dynamics with no consideration for joint actuator force limits.">InverseDynamics</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+</table>
+</td></tr>
+</table>
+<p>Port <code>u0</code> accepts system state; port <code>y0</code> emits generalized forces. Port <code>u1</code> is only present when the <code>mode</code> at construction is not <code>kGravityCompensation</code>. When present, <code>u1</code> accepts desired accelerations.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be <code>double</code>. </td></tr>

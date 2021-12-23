@@ -127,7 +127,7 @@ class drake::systems::sensors::BeamModel&lt; T &gt;</h3>
 </table>
 </td></tr>
 </table>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
+<p>It is convenient to use <code><a class="el" href="namespacedrake_1_1systems.html#a0545ab65838b464875abb7385495531a" title="For each subsystem input port in builder that is (a) not yet connected and (b) labeled as random in t...">systems::AddRandomInputs()</a></code> to supply all the random input signals: </p><div class="fragment"><div class="line">DiagramBuilder&lt;double&gt; builder;</div><div class="line"><span class="keyword">auto</span> beam_model = builder.AddSystem&lt;<a class="code" href="classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a">BeamModel</a>&gt;(1, 5.0);</div><div class="line">builder.ExportInput(beam_model-&gt;get_depth_input_port(), <span class="stringliteral">&quot;depth&quot;</span>);</div><div class="line">builder.ExportOutput(beam_model-&gt;get_output_port(0), <span class="stringliteral">&quot;depth&quot;</span>);</div><div class="line"><a class="code" href="namespacedrake_1_1systems.html#a0545ab65838b464875abb7385495531a">AddRandomInputs</a>(0.01, &amp;builder);</div><div class="line"><span class="keyword">auto</span> diagram = builder.Build();</div></div><!-- fragment --><dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
   </table>

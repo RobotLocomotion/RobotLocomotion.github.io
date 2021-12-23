@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr>
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">force_limit (optional)&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px">force_limit&rarr;</td></tr>
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">state&rarr;</td></tr>
 </table>
@@ -123,6 +123,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1schunk__
 </table>
 </td></tr>
 </table>
+<p>The <code>force_limit</code> input port can be left unconnected; in this case, the <code>default_force_limit</code> value given at construction time will be used.</p>
 <p>The desired_state is a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector&lt;double&gt;</a> of size 2 (position and velocity of the distance between the fingers). The force_limit is a scalar (<a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector&lt;double&gt;</a> of size 1) and is optional; if the input port is not connected then the constant value passed into the constructor is used. The state is a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector&lt;double&gt;</a> of size 4 (positions and velocities of the two fingers). The output generalized_force is a <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html">BasicVector&lt;double&gt;</a> of size 2 (generalized force inputs to the two fingers). The output grip_force is a scalar surrogate for the force measurement from the driver, f = abs(f₀-f₁) which, like the gripper itself, only reports a positive force. </p>
 </div>
 <p><code>#include &lt;drake/manipulation/schunk_wsg/schunk_wsg_position_controller.h&gt;</code></p>

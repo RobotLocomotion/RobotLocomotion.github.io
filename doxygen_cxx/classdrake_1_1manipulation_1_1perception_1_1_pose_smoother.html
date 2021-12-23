@@ -102,7 +102,22 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1percepti
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class accepts the pose of a rigid body (composed by a Eigen::Isometry3d) and returns a smoothed pose by performing either the first or both of these processes : i. </p>
 <p>Rejecting outliers on the basis of user-defined linear/angular velocity thresholds on consecutive pose data values. ii. Moving average smoothing of the resulting data within a specified window size. Note on quaternion averaging : While a "correct" quaternion averaging algorithm requires averaging the corresponding attitudes, this class implements a simplification based on the version described in <a href="http://wiki.unity3d.com/index.php/Averaging_Quaternions_and_Vectors">http://wiki.unity3d.com/index.php/Averaging_Quaternions_and_Vectors</a> and in the introduction of Markley et al. References: L. Markley, Y. Cheng, J. L. Crassidis, and Y. Oshman, "Quaternion
-Averaging", NASA Technical note, available to download at <a href="https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20070017872.pdf">https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20070017872.pdf</a> </p>
+Averaging", NASA Technical note, available to download at <a href="https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20070017872.pdf">https://ntrs.nasa.gov/archive/nasa/casi.ntrs.nasa.gov/20070017872.pdf</a></p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">u0&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html" title="This class accepts the pose of a rigid body (composed by a Eigen::Isometry3d) and returns a smoothed ...">PoseSmoother</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y0</td></tr>
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; y1</td></tr>
+</table>
+</td></tr>
+</table>
+<p>Port <code>u0</code> accepts poses. Ports <code>y0</code> and <code>y1</code> produce smoothed poses and velocities, respectively. </p>
 </div>
 <p><code>#include &lt;drake/manipulation/perception/pose_smoother.h&gt;</code></p>
 <table class="memberdecls">

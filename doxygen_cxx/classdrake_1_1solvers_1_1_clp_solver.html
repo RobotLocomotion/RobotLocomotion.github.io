@@ -102,7 +102,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_clp_solver.h
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A wrapper to call CLP using Drake's <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. </p>
-<dl class="section note"><dt>Note</dt><dd>Currently our <a class="el" href="classdrake_1_1solvers_1_1_clp_solver.html" title="A wrapper to call CLP using Drake&#39;s MathematicalProgram.">ClpSolver</a> has a memory issue when solving a QP. The user should be aware of this risk. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Currently our <a class="el" href="classdrake_1_1solvers_1_1_clp_solver.html" title="A wrapper to call CLP using Drake&#39;s MathematicalProgram.">ClpSolver</a> has a memory issue when solving a QP. The user should be aware of this risk. </dd>
+<dd>
+The authors can adjust the problem scaling option by setting "scaling" as mentioned in <a href="https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706">https://github.com/coin-or/Clp/blob/43129ba1a7fd66ce70fe0761fcd696951917ed2e/src/ClpModel.hpp#L705-L706</a> For example prog.SetSolverOption(<a class="el" href="classdrake_1_1solvers_1_1_clp_solver.html#a4dc451b7db72a168d9f0da1746011b45">ClpSolver::id()</a>, "scaling", 0); will do "no scaling". The default is 1. </dd></dl>
 </div>
 <p><code>#include &lt;drake/solvers/clp_solver.h&gt;</code></p>
 <table class="memberdecls">

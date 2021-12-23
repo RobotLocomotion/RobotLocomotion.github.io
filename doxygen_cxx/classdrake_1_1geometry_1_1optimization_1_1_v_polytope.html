@@ -112,8 +112,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a998766f2cd4f7b1388bf2881f81cb92c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a998766f2cd4f7b1388bf2881f81cb92c">VPolytope</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4">vertices</a>)</td></tr>
 <tr class="memdesc:a998766f2cd4f7b1388bf2881f81cb92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the polytope from a d-by-n matrix, where d is the ambient dimension, and n is the number of vertices.  <a href="#a998766f2cd4f7b1388bf2881f81cb92c">More...</a><br /></td></tr>
 <tr class="separator:a998766f2cd4f7b1388bf2881f81cb92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a4273586a8615db9cc3b904577a49e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a24a4273586a8615db9cc3b904577a49e">VPolytope</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;H)</td></tr>
+<tr class="memdesc:a24a4273586a8615db9cc3b904577a49e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the polytope from a bounded polyhedron (using Qhull).  <a href="#a24a4273586a8615db9cc3b904577a49e">More...</a><br /></td></tr>
+<tr class="separator:a24a4273586a8615db9cc3b904577a49e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0523f84331ef73195b38a43b8d24519"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ab0523f84331ef73195b38a43b8d24519">VPolytope</a> (const <a class="el" href="classdrake_1_1geometry_1_1_query_object.html">QueryObject</a>&lt; double &gt; &amp;query_object, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id, std::optional&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; reference_frame=std::nullopt)</td></tr>
-<tr class="memdesc:ab0523f84331ef73195b38a43b8d24519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the polytope from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry.  <a href="#ab0523f84331ef73195b38a43b8d24519">More...</a><br /></td></tr>
+<tr class="memdesc:ab0523f84331ef73195b38a43b8d24519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the polytope from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry.  <a href="#ab0523f84331ef73195b38a43b8d24519">More...</a><br /></td></tr>
 <tr class="separator:ab0523f84331ef73195b38a43b8d24519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af39035d161c3b21e796ed5ed8ee960da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#af39035d161c3b21e796ed5ed8ee960da">~VPolytope</a> () final</td></tr>
 <tr class="separator:af39035d161c3b21e796ed5ed8ee960da"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,7 +227,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aac3d1f5aefb51ebcb0cc51ee3b475f38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac3d1f5aefb51ebcb0cc51ee3b475f38">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[1/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3d1f5aefb51ebcb0cc51ee3b475f38">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +253,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a10263a95681a903c83052465a41e8e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10263a95681a903c83052465a41e8e14">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a10263a95681a903c83052465a41e8e14">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +279,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a998766f2cd4f7b1388bf2881f81cb92c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a998766f2cd4f7b1388bf2881f81cb92c">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a998766f2cd4f7b1388bf2881f81cb92c">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,8 +307,42 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a24a4273586a8615db9cc3b904577a49e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a4273586a8615db9cc3b904577a49e">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html">VPolytope</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>H</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the polytope from a bounded polyhedron (using Qhull). </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if H is unbounded or if Qhull terminates with an error. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab0523f84331ef73195b38a43b8d24519"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0523f84331ef73195b38a43b8d24519">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0523f84331ef73195b38a43b8d24519">&#9670;&nbsp;</a></span>VPolytope() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,7 +373,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct the polytope from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry. </p>
+<p>Constructs the polytope from a <a class="el" href="classdrake_1_1geometry_1_1_scene_graph.html" title="SceneGraph serves as the nexus for all geometry (and geometry-based operations) in a Diagram.">SceneGraph</a> geometry. </p>
 
 </div>
 </div>

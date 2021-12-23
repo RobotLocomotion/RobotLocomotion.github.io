@@ -106,6 +106,22 @@ class drake::examples::kuka_iiwa_arm::KukaTorqueController&lt; T &gt;</h3>
 <p>Controller that take emulates the <a class="el" href="namespacedrake_1_1examples_1_1kuka__iiwa__arm.html">kuka_iiwa_arm</a> when operated in torque control mode. </p>
 <p>The controller specifies a stiffness and damping ratio at each of the joints. Because the critical damping constant is a function of the configuration the damping is non-linear. See <a href="https://github.com/RobotLocomotion/drake-iiwa-driver/blob/master/kuka-driver/sunrise_1.11/DrakeFRITorqueDriver.java">https://github.com/RobotLocomotion/drake-iiwa-driver/blob/master/kuka-driver/sunrise_1.11/DrakeFRITorqueDriver.java</a></p>
 <p>for details on the low-level controller. Note that the input_port_desired_state() method takes a full state for convenient wiring with other Systems, but ignores the velocity component.</p>
+<table align="center" cellpadding="0" cellspacing="0">
+<tr align="center">
+<td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">commanded_torque&rarr;</td></tr>
+</table>
+</td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html" title="Controller that take emulates the kuka_iiwa_arm when operated in torque control mode.">KukaTorqueController</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" style="padding:5px 0px 5px 0px">&rarr; control</td></tr>
+</table>
+</td></tr>
+</table>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be <code>double</code>. </td></tr>

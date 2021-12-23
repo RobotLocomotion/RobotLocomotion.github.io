@@ -1362,9 +1362,25 @@ dimension, and n is the number of vertices. The vertices do not have
 to be ordered, nor minimal (they can contain points inside their
 convex hull).</p>
 <ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.VPolytope, H: pydrake.geometry.optimization.HPolyhedron) -&gt; None</li>
+</ol>
+<p>Constructs the polytope from a bounded polyhedron (using Qhull).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if H is unbounded or if Qhull terminates with an</li>
+<li><code class="xref py py-exc docutils literal"><span class="pre">error.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.geometry.optimization.VPolytope, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
-<p>Construct the polytope from a SceneGraph geometry.</p>
+<p>Constructs the polytope from a SceneGraph geometry.</p>
 </dd></dl>
 
 <dl class="staticmethod">
