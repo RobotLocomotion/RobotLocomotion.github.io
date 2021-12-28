@@ -157,10 +157,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a93791e61ab486b4022c389d634b4facc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a const iterator to the end.  <a href="#a93791e61ab486b4022c389d634b4facc">More...</a><br /></td></tr>
 <tr class="separator:a93791e61ab486b4022c389d634b4facc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a153880e8b1e045676f1b093093fec91c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html#a153880e8b1e045676f1b093093fec91c">insert</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html#a70598db5223360d917ed0fbb6cf61127">key_type</a> &amp;key, const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a> &amp;elem)</td></tr>
-<tr class="memdesc:a153880e8b1e045676f1b093093fec91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a pair (<code>key</code>, <code>elem</code>).  <a href="#a153880e8b1e045676f1b093093fec91c">More...</a><br /></td></tr>
+<tr class="memdesc:a153880e8b1e045676f1b093093fec91c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a pair (<code>key</code>, <code>elem</code>) if this environment doesn't contain <code>key</code>.  <a href="#a153880e8b1e045676f1b093093fec91c">More...</a><br /></td></tr>
 <tr class="separator:a153880e8b1e045676f1b093093fec91c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1fde034ff21259de810fb2ecbf8214a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html#ad1fde034ff21259de810fb2ecbf8214a">insert</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_environment.html#a70598db5223360d917ed0fbb6cf61127">key_type</a> &gt;&gt; &amp;keys, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b">mapped_type</a> &gt;&gt; &amp;elements)</td></tr>
-<tr class="memdesc:ad1fde034ff21259de810fb2ecbf8214a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of symbolic variables <code>keys</code> and a matrix of values <code>elements</code>, inserts each pair (keys(i, j), elements(i, j)) into the environment.  <a href="#ad1fde034ff21259de810fb2ecbf8214a">More...</a><br /></td></tr>
+<tr class="memdesc:ad1fde034ff21259de810fb2ecbf8214a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a matrix of symbolic variables <code>keys</code> and a matrix of values <code>elements</code>, inserts each pair (keys(i, j), elements(i, j)) into the environment if this environment doesn't contain keys(i, j) .  <a href="#ad1fde034ff21259de810fb2ecbf8214a">More...</a><br /></td></tr>
 <tr class="separator:ad1fde034ff21259de810fb2ecbf8214a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_environment.html#a644718bb2fb240de962dc3c9a1fdf0dc">empty</a> () const</td></tr>
 <tr class="memdesc:a644718bb2fb240de962dc3c9a1fdf0dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the container is empty.  <a href="#a644718bb2fb240de962dc3c9a1fdf0dc">More...</a><br /></td></tr>
@@ -675,7 +675,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Inserts a pair (<code>key</code>, <code>elem</code>). </p>
+<p>Inserts a pair (<code>key</code>, <code>elem</code>) if this environment doesn't contain <code>key</code>. </p>
+<p>Similar to insert function in map, if the key already exists in this environment, then calling insert(key, elem) doesn't change the existing key-value in this environment. </p>
 
 </div>
 </div>
@@ -705,7 +706,8 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given a matrix of symbolic variables <code>keys</code> and a matrix of values <code>elements</code>, inserts each pair (keys(i, j), elements(i, j)) into the environment. </p>
+<p>Given a matrix of symbolic variables <code>keys</code> and a matrix of values <code>elements</code>, inserts each pair (keys(i, j), elements(i, j)) into the environment if this environment doesn't contain keys(i, j) . </p>
+<p>Similar to insert function in map, if keys(i, j) already exists in this environment, then this function doesn't change the its existing value in this environment.</p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the size of <code>keys</code> is different from the size of <code>elements</code>. </td></tr>
