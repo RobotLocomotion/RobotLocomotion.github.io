@@ -1988,9 +1988,10 @@ is 1.</dd>
 <dd><p>Adds the cost to maximize the log determinant of symmetric matrix X.
 log(det(X)) is a concave function of X, so we can maximize it through
 convex optimization. In order to do that, we introduce slack variables
-t, and a lower triangular matrix Z, with the constraints ⌈X Z⌉ is
-positive semidifinite. ⌊Zᵀ diag(Z)⌋ log(Z(i, i)) &gt;= t(i) and we will
-minimize -∑ᵢt(i).</p>
+t, and a lower triangular matrix Z, with the constraints</p>
+<p>⌈X Z⌉ is positive semidifinite. ⌊Zᵀ diag(Z)⌋</p>
+<p>log(Z(i, i)) &gt;= t(i)</p>
+<p>and we will minimize -∑ᵢt(i).</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">X</span></code>:</dt>
 <dd>A symmetric positive semidefinite matrix X, whose log(det(X)) will
@@ -2002,7 +2003,9 @@ be maximized.</dd>
 <p class="first admonition-title">Note</p>
 <p class="last">The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential
 cone constraint. Please make sure your have a solver that supports
-exponential cone constraint (currently SCS does).</p>
+exponential cone constraint (currently SCS does). Refer to
+<a class="reference external" href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a>
+for more details.</p>
 </div>
 </dd></dl>
 

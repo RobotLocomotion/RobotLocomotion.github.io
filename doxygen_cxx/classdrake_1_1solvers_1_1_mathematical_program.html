@@ -3749,14 +3749,18 @@ c &gt; 0. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds the cost to maximize the log determinant of symmetric matrix X. </p>
-<p>log(det(X)) is a concave function of X, so we can maximize it through convex optimization. In order to do that, we introduce slack variables t, and a lower triangular matrix Z, with the constraints ⌈X Z⌉ is positive semidifinite. ⌊Zᵀ diag(Z)⌋ log(Z(i, i)) &gt;= t(i) and we will minimize -∑ᵢt(i). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>log(det(X)) is a concave function of X, so we can maximize it through convex optimization. In order to do that, we introduce slack variables t, and a lower triangular matrix Z, with the constraints </p><pre class="fragment">⌈X         Z⌉ is positive semidifinite.
+⌊Zᵀ  diag(Z)⌋
+
+log(Z(i, i)) &gt;= t(i)
+</pre><p>and we will minimize -∑ᵢt(i). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">X</td><td>A symmetric positive semidefinite matrix X, whose log(det(X)) will be maximized. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd>X is a symmetric matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details. </dd></dl>
 
 </div>
 </div>
