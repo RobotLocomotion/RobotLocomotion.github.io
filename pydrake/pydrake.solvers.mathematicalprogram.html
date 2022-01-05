@@ -1218,6 +1218,30 @@ also 0, so a gradient-based nonlinear solver can get stuck.</p>
 
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.LorentzConeConstraint.UpdateCoefficients">
+<code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LorentzConeConstraint, new_A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], new_b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LorentzConeConstraint.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the coefficients, the updated constraint is z=new_A * x +
+new_b in the Lorentz cone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the new_A.cols() != A.cols(), namely the variable</li>
+<li>size should not change.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">new_A</span></code> has to have at least 2 rows and new_A.rows() ==
+new_b.rows().</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="function">
@@ -2336,35 +2360,44 @@ M[i][j] contains dummy variables.</td>
 <code class="descname">AddSosConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddSosConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, p: pydrake.symbolic.Polynomial, monomial_basis: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, p: pydrake.symbolic.Polynomial, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Adds constraints that a given polynomial <code class="docutils literal"><span class="pre">p</span></code> is a sums-of-squares
 (SOS), that is, <code class="docutils literal"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>, where m is the
 <code class="docutils literal"><span class="pre">monomial_basis</span></code>. It returns the coefficients matrix Q, which is
 positive semidefinite.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+<dd>The type of the polynomial. $*Default:* is kSos, but the user can
+also use kSdsos and kDsos. Refer to NonnegativePolynomial for
+details on different types of sos polynomials.</dd>
+</dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">It calls <code class="docutils literal"><span class="pre">Reparse</span></code> to enforce <code class="docutils literal"><span class="pre">p</span></code> to have this
 MathematicalProgram’s indeterminates if necessary.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, p: pydrake.symbolic.Polynomial) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, p: pydrake.symbolic.Polynomial, type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
 </ol>
 <p>Adds constraints that a given polynomial <code class="docutils literal"><span class="pre">p</span></code> is a sums-of-squares
 (SOS), that is, <code class="docutils literal"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>, where m is a
 monomial basis selected from the sparsity of <code class="docutils literal"><span class="pre">p</span></code>. It returns a pair
-of constraint bindings expressing:</p>
+of constraint bindings expressing: - The coefficients matrix Q, which
+is positive semidefinite. - The monomial basis m.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+<dd>The type of the polynomial. $*Default:* is kSos, but the user can
+also use kSdsos and kDsos. Refer to NonnegativePolynomial for the
+details on different type of sos polynomials.</dd>
+</dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">It calls <code class="docutils literal"><span class="pre">Reparse</span></code> to enforce <code class="docutils literal"><span class="pre">p</span></code> to have this
 MathematicalProgram’s indeterminates if necessary.</p>
 </div>
-<ul class="simple">
-<li>The coefficients matrix Q, which is positive semidefinite. - The</li>
-</ul>
-<p>monomial basis m.</p>
 <ol class="arabic simple" start="3">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, monomial_basis: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Adds constraints that a given symbolic expression <code class="docutils literal"><span class="pre">e</span></code> is a
 sums-of-squares (SOS), that is, <code class="docutils literal"><span class="pre">p</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>,
@@ -2372,18 +2405,23 @@ where m is the <code class="docutils literal"><span class="pre">monomial_basis</
 a polynomial with respect to <code class="docutils literal"><span class="pre">indeterminates()</span></code> in this mathematical
 program. It returns the coefficients matrix Q, which is positive
 semidefinite.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+<dd>Refer to NonnegativePolynomial class documentation.</dd>
+</dl>
 <ol class="arabic simple" start="4">
-<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
+<li>AddSosConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, e: pydrake.symbolic.Expression, type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]]]</li>
 </ol>
 <p>Adds constraints that a given symbolic expression <code class="docutils literal"><span class="pre">e</span></code> is a
 sums-of-squares (SOS), that is, <code class="docutils literal"><span class="pre">e</span></code> can be decomposed into <code class="docutils literal"><span class="pre">mᵀQm</span></code>.
 Note that it decomposes <code class="docutils literal"><span class="pre">e</span></code> into a polynomial with respect to
 <code class="docutils literal"><span class="pre">indeterminates()</span></code> in this mathematical program. It returns a pair
-expressing:</p>
-<ul class="simple">
-<li>The coefficients matrix Q, which is positive semidefinite. - The</li>
-</ul>
-<p>monomial basis m.</p>
+expressing: - The coefficients matrix Q, which is positive
+semidefinite. - The monomial basis m.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+<dd>Refer to NonnegativePolynomial class documentation.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -3063,7 +3101,7 @@ this name as a base. The variable name would be “a1”, “a2”, etc.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.NewEvenDegreeNonnegativePolynomial">
-<code class="descname">NewEvenDegreeNonnegativePolynomial</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>indeterminates: pydrake.symbolic.Variables</em>, <em>degree: int</em>, <em>type: drake::solvers::MathematicalProgram::NonnegativePolynomial</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]], numpy.ndarray[object[m, n]]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.NewEvenDegreeNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewEvenDegreeNonnegativePolynomial</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>indeterminates: pydrake.symbolic.Variables</em>, <em>degree: int</em>, <em>type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]], numpy.ndarray[object[m, n]]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.NewEvenDegreeNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>See even_degree_nonnegative_polynomial for more details. Variant that
 produces different non-negative polynomials depending on <code class="docutils literal"><span class="pre">type</span></code>.</p>
 <dl class="docutils">
@@ -3129,7 +3167,7 @@ std::vector&lt;std::string&gt;&amp; names);</p>
 <code class="descname">NewNonnegativePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.NewNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]], type: drake::solvers::MathematicalProgram::NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Returns a pair of nonnegative polynomial p = mᵀQm and the Gramian
 matrix Q, where m is <code class="docutils literal"><span class="pre">monomial_basis</span></code>. Adds Q as decision variables
@@ -3154,7 +3192,7 @@ as decision variables to the program.</td>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: drake::solvers::MathematicalProgram::NonnegativePolynomial) -&gt; pydrake.symbolic.Polynomial</li>
+<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
 <p>Overloads NewNonnegativePolynomial(), except the Gramian matrix Q is
 an input instead of an output. Depending on the type of the
@@ -3164,7 +3202,7 @@ semidefinite. - if type = kSdsos, we impose the Gramian matrix being
 scaled diagonally dominant. - if type = kDsos, we impose the Gramian
 matrix being positive diagonally dominant.</p>
 <ol class="arabic simple" start="3">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: drake::solvers::MathematicalProgram::NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Overloads NewNonnegativePolynomial(). Instead of passing the monomial
 basis, we use a monomial basis that contains all monomials of
@@ -4316,6 +4354,29 @@ cone, if</p>
 <dt id="pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.b">
 <code class="descname">b</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.b" title="Permalink to this definition">¶</a></dt>
 <dd><p>Getter for b.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.UpdateCoefficients">
+<code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint, new_A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], new_b: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.RotatedLorentzConeConstraint.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the coefficients, the updated constraint is z=new_A * x +
+new_b in the rotated Lorentz cone.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the new_A.cols() != A.cols(), namely the variable</li>
+<li>size should not change.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>new_A.rows() &gt;= 3 and new_A.rows() == new_b.rows().</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

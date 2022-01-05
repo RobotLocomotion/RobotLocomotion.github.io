@@ -124,6 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aae45694d3595659922653fd027d15cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5afb75bb7c4f86306f91f1152f867caf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a5afb75bb7c4f86306f91f1152f867caf">~RotatedLorentzConeConstraint</a> () override</td></tr>
 <tr class="separator:a5afb75bb7c4f86306f91f1152f867caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a5c62a9fdaa320f7568a7ab93a80180dc">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_b)</td></tr>
+<tr class="memdesc:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the coefficients, the updated constraint is z=new_A * x + new_b in the rotated Lorentz cone.  <a href="#a5c62a9fdaa320f7568a7ab93a80180dc">More...</a><br /></td></tr>
+<tr class="separator:a5c62a9fdaa320f7568a7ab93a80180dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a9cbe28e9a396f2bb9f9d1896c7f80574"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html#a9cbe28e9a396f2bb9f9d1896c7f80574">RotatedLorentzConeConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &amp;)=delete</td></tr>
 <tr class="separator:a9cbe28e9a396f2bb9f9d1896c7f80574"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -397,8 +400,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="adf1f1058a8a0186583d99300edb9910b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf1f1058a8a0186583d99300edb9910b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8a05ef01049fc8847bc6f4640cf69be5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a05ef01049fc8847bc6f4640cf69be5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a05ef01049fc8847bc6f4640cf69be5">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,29 +452,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="adf1f1058a8a0186583d99300edb9910b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf1f1058a8a0186583d99300edb9910b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a5c62a9fdaa320f7568a7ab93a80180dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c62a9fdaa320f7568a7ab93a80180dc">&#9670;&nbsp;</a></span>UpdateCoefficients()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a>&amp; operator= </td>
+          <td class="memname">void UpdateCoefficients </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Updates the coefficients, the updated constraint is z=new_A * x + new_b in the rotated Lorentz cone. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the new_A.cols() != A.cols(), namely the variable size should not change. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>new_A.rows() &gt;= 3 and new_A.rows() == new_b.rows(). </dd></dl>
 
 </div>
 </div>

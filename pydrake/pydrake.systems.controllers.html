@@ -843,11 +843,11 @@ quadratic cost term S. The optimal feedback control is u = -Kx;</td>
 quadratic regulator (LQR). If <code class="docutils literal"><span class="pre">system</span></code> is a continuous-time system,
 then solves the continuous-time LQR problem:</p>
 <div class="math">
-\[\min_u \int_0^\infty x^T(t)Qx(t) + u^T(t)Ru(t) dt.\]</div>
+\[\min_u \int_0^\infty x^T(t)Qx(t) + u^T(t)Ru(t) + + 2x^T(t)Nu(t) dt.\]</div>
 <p>If <code class="docutils literal"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
 LQR problem:</p>
 <div class="math">
-\[\min_u \sum_0^\infty x^T[n]Qx[n] + u^T[n]Ru[n].\]</div>
+\[\min_u \sum_0^\infty x^T[n]Qx[n] + u^T[n]Ru[n] + 2x^T[n]Nu[n].\]</div>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
 <dd>The System to be controlled.</dd>
@@ -880,11 +880,13 @@ System which implements that regulator in the original System’s
 coordinates. If <code class="docutils literal"><span class="pre">system</span></code> is a continuous-time system, then solves
 the continuous-time LQR problem:</p>
 <div class="math">
-\[\min_u \int_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0) dt.\]</div>
+\[\min_u \int_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0) + 2
+(x-x_0)^TN(u-u_0) dt.\]</div>
 <p>If <code class="docutils literal"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
 LQR problem:</p>
 <div class="math">
-\[\min_u \sum_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0),\]</div>
+\[\min_u \sum_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0) +
+2(x-x_0)^TN(u-u_0),\]</div>
 <p>where <span class="math">\(x_0\)</span> is the nominal state and <span class="math">\(u_0\)</span> is the nominal
 input. The system is considered discrete if it has a single discrete
 state vector and a single unique periodic update event declared.</p>

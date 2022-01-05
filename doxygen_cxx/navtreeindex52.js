@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__polynomial_8h.html#a1aa3f21ab39b7fb01be90ed9255df5f9":[4,0,0,1,66,25],
+"symbolic__polynomial_8h.html#a289b47480364e01b67e3c86aa33a0fe4":[4,0,0,1,66,20],
 "symbolic__polynomial_8h.html#a30f8eee8c5c646b5f3fc43baf3ce5854":[4,0,0,1,66,34],
 "symbolic__polynomial_8h.html#a369ea32ea396cc86951892020d5c4a4b":[4,0,0,1,66,30],
 "symbolic__polynomial_8h.html#a42522d07a4a9c32a89e8b4eea9a00a60":[4,0,0,1,66,22],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "vtk__util_8h.html#abdb94acdad86ca639785432a868abbd0":[4,0,0,4,4,9,1],
 "vtk__util_8h.html#abfb696bdfb8aca5a7cec2ab0e167c889":[4,0,0,4,4,9,3],
 "weld__joint_8h.html":[4,0,0,8,12,51],
-"weld__mobilizer_8h.html":[4,0,0,8,12,52],
-"witness__function_8h.html":[4,0,0,11,3,55],
-"witness__function_8h.html#afe8fe136944074e97f02b7e3835347b3":[4,0,0,11,3,55,2]
+"weld__mobilizer_8h.html":[4,0,0,8,12,52]
 };

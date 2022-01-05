@@ -14,5 +14,6 @@ var classdrake_1_1solvers_1_1_lorentz_cone_constraint =
     [ "b", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#aae45694d3595659922653fd027d15cb6", null ],
     [ "eval_type", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#ac21e1e783a8fb1816cba0db29cf0efd2", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a47dc7cc63c329390bf34f2033f0b23ac", null ],
-    [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7f34e62d2679ef1dbea01e82d39a2698", null ]
+    [ "operator=", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a7f34e62d2679ef1dbea01e82d39a2698", null ],
+    [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_lorentz_cone_constraint.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
 ];
