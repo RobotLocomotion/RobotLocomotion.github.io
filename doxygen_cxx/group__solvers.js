@@ -89,7 +89,7 @@ var group__solvers =
       [ "AddLorentzConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a8a9082746a4852ea5087b2a6e3cc57ee", null ],
       [ "AddMaximizeGeometricMeanCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a1b273f94c3acb3e4a807c4faf2208dd7", null ],
       [ "AddMaximizeGeometricMeanCost", "classdrake_1_1solvers_1_1_mathematical_program.html#afd73d9e39ea0c1f64c70ccd3b0535a67", null ],
-      [ "AddMaximizeLogDeterminantSymmetricMatrixCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a4a50f30d4d949127aeb16dc8fdd4c2c8", null ],
+      [ "AddMaximizeLogDeterminantSymmetricMatrixCost", "classdrake_1_1solvers_1_1_mathematical_program.html#aa3c4d6b9048536662622e58584c3a8df", null ],
       [ "AddPolynomialConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a4f25487f506aa0756bc7aeda562822d5", null ],
       [ "AddPolynomialConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#af852e72493bb5ab3157c85bc9776826f", null ],
       [ "AddPolynomialCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a14edfab282bd8d3d03bf38bb87a5fe51", null ],

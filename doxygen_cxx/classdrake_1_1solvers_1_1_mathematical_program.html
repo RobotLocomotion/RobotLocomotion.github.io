@@ -314,9 +314,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8745eb0e81fcbfc031c8e8c57609284"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_cost.html">Cost</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa8745eb0e81fcbfc031c8e8c57609284">AddCost</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &amp;e)</td></tr>
 <tr class="memdesc:aa8745eb0e81fcbfc031c8e8c57609284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a cost in the symbolic form.  <a href="#aa8745eb0e81fcbfc031c8e8c57609284">More...</a><br /></td></tr>
 <tr class="separator:aa8745eb0e81fcbfc031c8e8c57609284"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a50f30d4d949127aeb16dc8fdd4c2c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a4a50f30d4d949127aeb16dc8fdd4c2c8">AddMaximizeLogDeterminantSymmetricMatrixCost</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
-<tr class="memdesc:a4a50f30d4d949127aeb16dc8fdd4c2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the cost to maximize the log determinant of symmetric matrix X.  <a href="#a4a50f30d4d949127aeb16dc8fdd4c2c8">More...</a><br /></td></tr>
-<tr class="separator:a4a50f30d4d949127aeb16dc8fdd4c2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3c4d6b9048536662622e58584c3a8df"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a> &gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa3c4d6b9048536662622e58584c3a8df">AddMaximizeLogDeterminantSymmetricMatrixCost</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;X)</td></tr>
+<tr class="memdesc:aa3c4d6b9048536662622e58584c3a8df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the cost to maximize the log determinant of symmetric matrix X.  <a href="#aa3c4d6b9048536662622e58584c3a8df">More...</a><br /></td></tr>
+<tr class="separator:aa3c4d6b9048536662622e58584c3a8df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13e9e45a96eb6158f483aa0c81d2c7ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a13e9e45a96eb6158f483aa0c81d2c7ae">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:a13e9e45a96eb6158f483aa0c81d2c7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a generic constraint to the program.  <a href="#a13e9e45a96eb6158f483aa0c81d2c7ae">More...</a><br /></td></tr>
 <tr class="separator:a13e9e45a96eb6158f483aa0c81d2c7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3732,14 +3732,14 @@ c &gt; 0. </dd></dl>
 
 </div>
 </div>
-<a id="a4a50f30d4d949127aeb16dc8fdd4c2c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a50f30d4d949127aeb16dc8fdd4c2c8">&#9670;&nbsp;</a></span>AddMaximizeLogDeterminantSymmetricMatrixCost()</h2>
+<a id="aa3c4d6b9048536662622e58584c3a8df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3c4d6b9048536662622e58584c3a8df">&#9670;&nbsp;</a></span>AddMaximizeLogDeterminantSymmetricMatrixCost()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AddMaximizeLogDeterminantSymmetricMatrixCost </td>
+          <td class="memname">std::tuple&lt;<a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_cost.html">LinearCost</a>&gt;, <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a>&gt;, <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt; &gt; AddMaximizeLogDeterminantSymmetricMatrixCost </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>X</em></td><td>)</td>
@@ -3759,8 +3759,11 @@ log(Z(i, i)) &gt;= t(i)
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>(cost, t, Z) cost is -∑ᵢt(i), we also return the newly created slack variables t and the lower triangular matrix Z. Note that Z is not a matrix of <a class="el" href="classdrake_1_1symbolic_1_1_variable.html" title="Represents a symbolic variable.">symbolic::Variable</a> but <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a>, because the upper-diagonal entries of Z are not variable, but expression 0. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd>X is a symmetric matrix. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>We implicitly require that <code>X</code> being positive semidefinite (psd) (as X is the diagonal entry of the big psd matrix above). If your <code>X</code> is not necessarily psd, then don't call this function. </dd>
+<dd>
+The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details. </dd></dl>
 
 </div>
 </div>

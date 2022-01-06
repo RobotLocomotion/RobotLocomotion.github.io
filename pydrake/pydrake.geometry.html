@@ -5524,6 +5524,15 @@ mesh (see above).</dd>
 <dd>The indices in <code class="docutils literal"><span class="pre">face_data</span></code> all refer to valid indices into
 <code class="docutils literal"><span class="pre">vertices</span></code>.</dd>
 </dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">face_data</span></code> includes a zero-area polygon, that polygon will
+have a non-NaN centroid chosen arbitrarily. For hydroelastics,
+this is acceptable because its zero area will neutralize its
+contribution to computation of contact wrench. If all polygons
+have zero area, the mesh’s centroid will be chosen arbitrarily as
+well.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -5720,6 +5729,15 @@ mesh (see above).</dd>
 <dd>The indices in <code class="docutils literal"><span class="pre">face_data</span></code> all refer to valid indices into
 <code class="docutils literal"><span class="pre">vertices</span></code>.</dd>
 </dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">face_data</span></code> includes a zero-area polygon, that polygon will
+have a non-NaN centroid chosen arbitrarily. For hydroelastics,
+this is acceptable because its zero area will neutralize its
+contribution to computation of contact wrench. If all polygons
+have zero area, the mesh’s centroid will be chosen arbitrarily as
+well.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -5914,6 +5932,15 @@ mesh (see above).</dd>
 <dd>The indices in <code class="docutils literal"><span class="pre">face_data</span></code> all refer to valid indices into
 <code class="docutils literal"><span class="pre">vertices</span></code>.</dd>
 </dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <code class="docutils literal"><span class="pre">face_data</span></code> includes a zero-area polygon, that polygon will
+have a non-NaN centroid chosen arbitrarily. For hydroelastics,
+this is acceptable because its zero area will neutralize its
+contribution to computation of contact wrench. If all polygons
+have zero area, the mesh’s centroid will be chosen arbitrarily as
+well.</p>
+</div>
 </dd></dl>
 
 <dl class="method">

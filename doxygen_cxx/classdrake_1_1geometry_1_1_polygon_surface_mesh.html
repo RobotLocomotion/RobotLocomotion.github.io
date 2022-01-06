@@ -342,7 +342,8 @@ Mesh type traits</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>The indices in <code>face_data</code> all refer to valid indices into <code>vertices</code>. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>The indices in <code>face_data</code> all refer to valid indices into <code>vertices</code>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If <code>face_data</code> includes a zero-area polygon, that polygon will have a non-NaN centroid chosen arbitrarily. For hydroelastics, this is acceptable because its zero area will neutralize its contribution to computation of contact wrench. If all polygons have zero area, the mesh's centroid will be chosen arbitrarily as well. </dd></dl>
 
 </div>
 </div>

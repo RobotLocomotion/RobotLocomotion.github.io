@@ -2008,7 +2008,7 @@ is 1.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddMaximizeLogDeterminantSymmetricMatrixCost">
-<code class="descname">AddMaximizeLogDeterminantSymmetricMatrixCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddMaximizeLogDeterminantSymmetricMatrixCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddMaximizeLogDeterminantSymmetricMatrixCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearCost], numpy.ndarray[object[m, 1]], numpy.ndarray[object[m, n]]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddMaximizeLogDeterminantSymmetricMatrixCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the cost to maximize the log determinant of symmetric matrix X.
 log(det(X)) is a concave function of X, so we can maximize it through
 convex optimization. In order to do that, we introduce slack variables
@@ -2020,9 +2020,29 @@ t, and a lower triangular matrix Z, with the constraints</p>
 <dt>Parameter <code class="docutils literal"><span class="pre">X</span></code>:</dt>
 <dd>A symmetric positive semidefinite matrix X, whose log(det(X)) will
 be maximized.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(cost, t, Z) cost is -∑ᵢt(i), we also return the newly created
+slack variables t and the lower triangular matrix Z. Note that Z
+is not a matrix of symbolic::Variable but symbolic::Expression,
+because the upper-diagonal entries of Z are not variable, but
+expression 0.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
 <dt>Precondition:</dt>
 <dd>X is a symmetric matrix.</dd>
 </dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We implicitly require that <code class="docutils literal"><span class="pre">X</span></code> being positive semidefinite (psd)
+(as X is the diagonal entry of the big psd matrix above). If your
+<code class="docutils literal"><span class="pre">X</span></code> is not necessarily psd, then don’t call this function.</p>
+</div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential
