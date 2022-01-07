@@ -1,5 +1,14 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#a9eb8351c5e1b3a7a35793ae13a35fdd7":[1,5,2,8,22],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#aacc0c26923b19361fd6d4361468d4b02":[1,5,2,8,28],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ab0a28fec382d5b41c8193e698d9d3d99":[1,5,2,8,47],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ab49f6e9326df207d977c7ac16b1b9ef5":[1,5,2,8,30],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ab73513d4918d09cf5e9f729aca68c7c7":[1,5,2,8,34],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#aba9607c2694941163fbae6973488fd0a":[1,5,2,8,38],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#abb8b403c020ea0cc825ebf70d011ea54":[1,5,2,8,20],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ac08027b5984061187f889dfff692e1a8":[1,5,2,8,5],
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ac1e9e3e110151e83db01f19f0dd99f46":[1,5,2,8,0],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ac5ec168ba2fdfe3900aca37b8580c8ad":[1,5,2,8,4],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ad0da7cef1acfba329513b0c072bbe784":[1,5,2,8,49],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#ad5d70f396be36bd160c2eb380c39bd9a":[1,5,2,8,45],
@@ -240,14 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1yaml_1_1_yaml_write_archive.html#aed2a3370d019639c501af0a383a2da01":[3,0,0,17,1,6],
 "classdrake_1_1yaml_1_1_yaml_write_archive.html#af98867e5146bdd5ce4faa20597595dd3":[3,0,0,17,1,8],
 "classes.html":[3,1],
-"classintegral__constant.html":[3,0,3],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,3],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,1,3,12],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,1,3,2],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a1c819a8d5b38cc935879f361b40c4b75":[3,0,1,3,0],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a26709732b110585adcbcc580e1e1d0e9":[3,0,1,3,10],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a2f4a903b4dccbfa52fa4a2db82073b45":[3,0,1,3,8],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a3af4f2d4069e14a1b6ff6d509f180e71":[3,0,1,3,6],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a46fa4205ca3491f551cd0936632104c5":[3,0,1,3,11],
-"classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a90e4c78138b3a7bb0bb23723daef33a8":[3,0,1,3,5]
+"classintegral__constant.html":[3,0,3]
 };

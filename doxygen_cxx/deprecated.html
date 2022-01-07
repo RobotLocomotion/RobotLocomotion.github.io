@@ -130,29 +130,21 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#ab72982a8973f482f5cbf66d6656eaf08">drake::math::autoDiffToValueMatrix</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix)</dt>
 <dd><a class="anchor" id="_deprecated000019"></a>Use ExtractValue() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>Use InitializeAutoDiff() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a3b7dc3351569c13b9d98ab32fd901af3">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</dt>
 <dd><a class="anchor" id="_deprecated000021"></a>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
-<dd><a class="anchor" id="_deprecated000024"></a>Use InitializeAutoDiff(). <br />
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</dt>
+<dd><a class="anchor" id="_deprecated000020"></a>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a60989b35690cd787112c9d14e8161ec2">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</dt>
 <dd><a class="anchor" id="_deprecated000025"></a>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
+<dd><a class="anchor" id="_deprecated000024"></a>Use InitializeAutoDiff(). <br />
+ This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a8d2993436a049675d4aefab5e8661862">drake::math::initializeAutoDiffTuple</a>  (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</dt>
 <dd><a class="anchor" id="_deprecated000022"></a>Use InitializeAutoDiffTuple() instead <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a12cd1e9dec4704f09c44c240f5b95346">drake::math::LinearSolve</a>  (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html" title="Solves a linear system of equations A*x=b.">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</dt>
-<dd><p class="startdd"><a class="anchor" id="_deprecated000026"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</p>
-<p class="interdd"><a class="anchor" id="_deprecated000027"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</p>
-<p class="enddd"><a class="anchor" id="_deprecated000028"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01. </p>
-</dd>
 <dt>Member <a class="el" href="namespacedrake_1_1math.html#a86c6f5510dba4ed848869421642a507b">drake::math::LinearSolve</a>  (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</dt>
 <dd><p class="startdd"><a class="anchor" id="_deprecated000029"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01.</p>
@@ -161,15 +153,26 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <p class="enddd"><a class="anchor" id="_deprecated000031"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
  This will be removed from Drake on or after 2022-01-01. </p>
 </dd>
-<dt>Member <a class="el" href="group__visualization.html#ga8e22883065d455ac5735099a9b11eea4">drake::multibody::ConnectContactResultsToDrakeVisualizer</a>  (systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt; double &gt;</a> &amp;plant, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr, std::optional&lt; double &gt; publish_period=std::nullopt)</dt>
-<dd><a class="anchor" id="_deprecated000033"></a>Provide a SceneGraph as the third argument. <br />
- This will be removed from Drake on or after 2022-01-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1math.html#a12cd1e9dec4704f09c44c240f5b95346">drake::math::LinearSolve</a>  (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html" title="Solves a linear system of equations A*x=b.">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</dt>
+<dd><p class="startdd"><a class="anchor" id="_deprecated000026"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+ This will be removed from Drake on or after 2022-01-01.</p>
+<p class="interdd"><a class="anchor" id="_deprecated000027"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+ This will be removed from Drake on or after 2022-01-01.</p>
+<p class="enddd"><a class="anchor" id="_deprecated000028"></a>Please use SolveLinearSystem() instead of LinearSolve() <br />
+ This will be removed from Drake on or after 2022-01-01. </p>
+</dd>
 <dt>Member <a class="el" href="group__visualization.html#gad44196ed37f99aa73a136a3dc7f20354">drake::multibody::ConnectContactResultsToDrakeVisualizer</a>  (systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt; double &gt;</a> &amp;plant, const systems::OutputPort&lt; double &gt; &amp;contact_results_port, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr, std::optional&lt; double &gt; publish_period=std::nullopt)</dt>
 <dd><a class="anchor" id="_deprecated000034"></a>Provide a SceneGraph as the third argument. <br />
+ This will be removed from Drake on or after 2022-01-01. </dd>
+<dt>Member <a class="el" href="group__visualization.html#ga8e22883065d455ac5735099a9b11eea4">drake::multibody::ConnectContactResultsToDrakeVisualizer</a>  (systems::DiagramBuilder&lt; double &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant&lt; double &gt;</a> &amp;plant, <a class="el" href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" title="A pure virtual interface that enables LCM to be mocked.">lcm::DrakeLcmInterface</a> *lcm=nullptr, std::optional&lt; double &gt; publish_period=std::nullopt)</dt>
+<dd><a class="anchor" id="_deprecated000033"></a>Provide a SceneGraph as the third argument. <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a579842c4ce66b332e8ed281b9b03f503">drake::multibody::parsing::ProcessModelDirectives</a>  (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html" title="Top-level structure for a model directives yaml file schema.">ModelDirectives</a> &amp;directives, drake::multibody::MultibodyPlant&lt; double &gt; *plant, std::vector&lt; ModelInstanceInfo &gt; *added_models, <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.">drake::multibody::Parser</a> *parser, ModelWeldErrorFunctionToBeDeprecated)</dt>
 <dd><a class="anchor" id="_deprecated000032"></a>ModelWeldErrorFunction is no longer supported. <br />
  This will be removed from Drake on or after 2022-02-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa3c4d6b9048536662622e58584c3a8df">MathematicalProgram::AddMaximizeLogDeterminantSymmetricMatrixCost</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt; symbolic::Expression &gt;</a>&gt; &amp;X)</dt>
+<dd><a class="anchor" id="_deprecated000035"></a>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
+ This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1geometry_1_1_mesh_field_linear.html#a95cb1c6952612163b7e60a81a209f692">MeshFieldLinear&lt; T, MeshType &gt;::MeshFieldLinear</a>  (std::string name, std::vector&lt; T &gt; &amp;&amp;values, const MeshType *mesh, bool calculate_gradient=true)</dt>
 <dd><a class="anchor" id="_deprecated000011"></a>This object will no longer store a name <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
@@ -189,7 +192,7 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 <dd><a class="anchor" id="_deprecated000006"></a>is_approx() has been renamed to IsApprox(). <br />
  This will be removed from Drake on or after 2022-01-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a02557f96761f5c65d36e55bb2084c8c5">System&lt; T &gt;::EvalEigenVectorInput</a>  (const Context&lt; T &gt; &amp;context, int port_index) const</dt>
-<dd><a class="anchor" id="_deprecated000035"></a>Use get_input_port(index).Eval(context) instead. <br />
+<dd><a class="anchor" id="_deprecated000036"></a>Use get_input_port(index).Eval(context) instead. <br />
  This will be removed from Drake on or after 2021-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html#a8259d3cf087a43e721fe51a2b34cbcde">YamlReadArchive::YamlReadArchive</a>  (const YAML::Node &amp;root, const <a class="el" href="structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html" title="Configuration for YamlReadArchive to govern when certain conditions are errors or not.">Options</a> &amp;options)</dt>
 <dd><a class="anchor" id="_deprecated000008"></a>Use LoadYamlFile or LoadYamlString instead. <br />

@@ -1,5 +1,14 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a1a3999d885274e660c1c7415c8dd9062":[3,0,0,8,25,0],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a4ce3ff1bdfdd2c1e0789980e855281df":[3,0,0,8,25,8],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a6a17f667a28ba9785e8cae9c9fdd71ed":[3,0,0,8,25,7],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a727f367eb7b4a0d5d2b9ba7c72bcfb23":[3,0,0,8,25,4],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a8268d3340ff301fdeb101f319116b2ff":[3,0,0,8,25,6],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a952e3892ae1c82e97ef660d78fba0db2":[3,0,0,8,25,5],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#aacf351ea5aed0b77d57004ad6f67c5f1":[3,0,0,8,25,2],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7":[3,0,0,8,25,3],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77":[3,0,0,8,25,1],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html":[3,0,0,8,26],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa16e72abb129f3fdc036799c6888d06":[3,0,0,8,26,1],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa431e4aae58cdaabaca8b4a4117a20c":[3,0,0,8,26,2],
@@ -240,14 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,23,3],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[3,0,0,12,23,4],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,12,23,5],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[3,0,0,12,23,1],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[3,0,0,12,31],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,12,31,0],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,12,31,1],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,12,38,0],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,12,38,0,1],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,12,38,0,0],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,12,42],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a049167e80a2c377c18ea0185894e0003":[3,0,0,12,42,1],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,12,42,0]
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[3,0,0,12,23,1]
 };

@@ -687,6 +687,54 @@ fixed (if false).</dd>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.RemoveEdge">
+<code class="descname">RemoveEdge</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.RemoveEdge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge_id: drake::Identifier&lt;drake::geometry::optimization::EdgeTag&gt;) -&gt; None</li>
+</ol>
+<p>Removes edge <code class="docutils literal"><span class="pre">edge_id</span></code> from the graph.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The edge must be part of the graph.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge: drake::geometry::optimization::GraphOfConvexSets::Edge) -&gt; None</li>
+</ol>
+<p>Removes edge <code class="docutils literal"><span class="pre">edge</span></code> from the graph.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The edge must be part of the graph.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.RemoveVertex">
+<code class="descname">RemoveVertex</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.RemoveVertex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;) -&gt; None</li>
+</ol>
+<p>Removes vertex <code class="docutils literal"><span class="pre">vertex_id</span></code> from the graph as well as any edges from
+or to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in
+the graph.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The vertex must be part of the graph.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex: drake::geometry::optimization::GraphOfConvexSets::Vertex) -&gt; None</li>
+</ol>
+<p>Removes vertex <code class="docutils literal"><span class="pre">vertex</span></code> from the graph as well as any edges from or
+to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in the
+graph.</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>The vertex must be part of the graph.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath">
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>

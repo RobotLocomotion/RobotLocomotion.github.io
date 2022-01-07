@@ -1,5 +1,14 @@
 var NAVTREEINDEX51 =
 {
+"symbolic__expression_8h.html#aebd6758ef1c73c0ab835a7e8c6aad187":[4,0,0,1,55,42],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30fa":[4,0,0,1,55,12],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa0986d137604183312e6d3599578bc6cd":[4,0,0,1,55,12,10],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa1266b4e6f81e60733ec6c717e0181f60":[4,0,0,1,55,12,12],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa1e34af023adeb7d5f484f8eb4b9826b6":[4,0,0,1,55,12,6],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa2e59a51ac43bc3415c1b8ce7b3f98579":[4,0,0,1,55,12,26],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa4371c3565b771b40c187487cc0190392":[4,0,0,1,55,12,18],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa43d11850893d2fe84a1e618121c1cc0a":[4,0,0,1,55,12,4],
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa5816dfcaf3b6dbb486ef9c8c006ff613":[4,0,0,1,55,12,16],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa5a92344ee95acf10c31901b36418be77":[4,0,0,1,55,12,1],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa62b6d55816cf737bfc6f42e60df1a3f2":[4,0,0,1,55,12,3],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa6a061313d22e51e0f25b7cd4dc065233":[4,0,0,1,55,12,21],
@@ -240,14 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic__monomial__basis__element_8h.html#aec1d54669ca8ae5ea474b5904c50e85e":[4,0,0,1,64,4],
 "symbolic__monomial__basis__element_8h.html#af71ffcec2b8e06d52b7c6e8f53106160":[4,0,0,1,64,3],
 "symbolic__monomial__util_8h.html":[4,0,0,1,65],
-"symbolic__monomial__util_8h.html#a04c0029b04f957181b0cb2bdae701514":[4,0,0,1,65,2],
-"symbolic__monomial__util_8h.html#aa40528027cce753aacb377913342f536":[4,0,0,1,65,4],
-"symbolic__monomial__util_8h.html#ade6ac4e26dcd9023a9f8146aa75454c7":[4,0,0,1,65,5],
-"symbolic__monomial__util_8h.html#af297794f22c0458592aeea637cce060a":[4,0,0,1,65,3],
-"symbolic__monomial__util_8h.html#aff00cd9261b602f7ce7708286d2dae05":[4,0,0,1,65,1],
-"symbolic__polynomial_8h.html":[4,0,0,1,66],
-"symbolic__polynomial_8h.html#a03731fe9a001a20e071a7a9e106061bd":[4,0,0,1,66,33],
-"symbolic__polynomial_8h.html#a07af9a80db0ccabb8ec35d2dcf3cff3b":[4,0,0,1,66,2],
-"symbolic__polynomial_8h.html#a0e4fa4bbef7ce58efc247dd1717a2ded":[4,0,0,1,66,29],
-"symbolic__polynomial_8h.html#a1a0eab276a88883d8e2607630cb93bc5":[4,0,0,1,66,11]
+"symbolic__monomial__util_8h.html#a04c0029b04f957181b0cb2bdae701514":[4,0,0,1,65,2]
 };

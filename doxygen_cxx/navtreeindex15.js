@@ -1,5 +1,13 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a":[3,0,0,8,70,2],
+"classdrake_1_1multibody_1_1_spatial_vector.html#aefdcb096285e383be3e6a8c2380b616c":[3,0,0,8,70,22],
+"classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,8,70,29],
+"classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb":[3,0,0,8,70,19],
+"classdrake_1_1multibody_1_1_spatial_velocity.html":[3,0,0,8,71],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a05ce28d659cae24ea01cc942e18386f0":[3,0,0,8,71,9],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[3,0,0,8,71,4],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a32edb1bdd326029aeb86e0d42b33260f":[3,0,0,8,71,7],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a47fa418f35f8eda9daeb93fe84e99177":[3,0,0,8,71,8],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a5a64e3269925223ee2e383596d2285a7":[3,0,0,8,71,11],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a5e4cd1c12daac7a48d8f20ed22f7c430":[3,0,0,8,71,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a413c2fdd82a613d488e5635193a3faa7":[3,0,0,8,0,1,0,7],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4653e7c5e088f5e0518c952b61a57534":[3,0,0,8,0,1,0,5],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4a2ba40c254f5a2f3f977aa57b8e7ab3":[3,0,0,8,0,1,0,16],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4ba8488b887c1bdf282313e3146a3329":[3,0,0,8,0,1,0,10],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a6abcadacdf03165ccd4517e929b485e5":[3,0,0,8,0,1,0,12],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a744199d465a259b68439db88e664f3f0":[3,0,0,8,0,1,0,20],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8696222319acdad543fd736ce6e71ba0":[3,0,0,8,0,1,0,19],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa40126fd3d5fd6a6a4df7a7257cccef4":[3,0,0,8,0,1,0,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa4225efc34525bb490ba5f5a22885f82":[3,0,0,8,0,1,0,17],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aac0785ee2738a3557e0fa509ced5c90a":[3,0,0,8,0,1,0,11],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[3,0,0,8,0,1,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[3,0,0,8,0,1,0,6]
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a4ba8488b887c1bdf282313e3146a3329":[3,0,0,8,0,1,0,10]
 };
