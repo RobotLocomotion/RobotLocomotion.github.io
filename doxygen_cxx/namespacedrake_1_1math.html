@@ -499,10 +499,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a34a14f4ecff0af11999f7d416c3316bf"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename LinearSolver::MatrixType::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename LinearSolver::MatrixType::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename LinearSolver::MatrixType::Scalar, DerivedB::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a34a14f4ecff0af11999f7d416c3316bf">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:a34a14f4ecff0af11999f7d416c3316bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when the matrix in linear_solver and b are both double or <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> matrices.  <a href="#a34a14f4ecff0af11999f7d416c3316bf">More...</a><br /></td></tr>
 <tr class="separator:a34a14f4ecff0af11999f7d416c3316bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12cd1e9dec4704f09c44c240f5b95346"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a12cd1e9dec4704f09c44c240f5b95346"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a12cd1e9dec4704f09c44c240f5b95346">LinearSolve</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a12cd1e9dec4704f09c44c240f5b95346"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a12cd1e9dec4704f09c44c240f5b95346">More...</a><br /></td></tr>
-<tr class="separator:a12cd1e9dec4704f09c44c240f5b95346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ecf90a76392d69deecb8feb29e19a7"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedB &gt; </td></tr>
 <tr class="memitem:ac1ecf90a76392d69deecb8feb29e19a7"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename LinearSolver::MatrixType::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedB::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ac1ecf90a76392d69deecb8feb29e19a7">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:ac1ecf90a76392d69deecb8feb29e19a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized the matrix in linear_solver is a double-valued matrix and b is an AutoDiffScalar-valued matrix.  <a href="#ac1ecf90a76392d69deecb8feb29e19a7">More...</a><br /></td></tr>
@@ -511,18 +507,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a2fe42b78445dde235cc217342ba8ab87"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2fe42b78445dde235cc217342ba8ab87">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:a2fe42b78445dde235cc217342ba8ab87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is a double-valued matrix and b is an AutoDiffScalar-valued matrix.  <a href="#a2fe42b78445dde235cc217342ba8ab87">More...</a><br /></td></tr>
 <tr class="separator:a2fe42b78445dde235cc217342ba8ab87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d78302ef5c3f80aa09817593812dcdd"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a7d78302ef5c3f80aa09817593812dcdd"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a7d78302ef5c3f80aa09817593812dcdd">LinearSolve</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a7d78302ef5c3f80aa09817593812dcdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a7d78302ef5c3f80aa09817593812dcdd">More...</a><br /></td></tr>
-<tr class="separator:a7d78302ef5c3f80aa09817593812dcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bfcba20c731dc23e4f48c367e36c9de"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
 <tr class="memitem:a9bfcba20c731dc23e4f48c367e36c9de"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_autodiff_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a9bfcba20c731dc23e4f48c367e36c9de">SolveLinearSystem</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:a9bfcba20c731dc23e4f48c367e36c9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specialized when A is an AutoDiffScalar-valued matrix, and b can contain either AutoDiffScalar or double.  <a href="#a9bfcba20c731dc23e4f48c367e36c9de">More...</a><br /></td></tr>
 <tr class="separator:a9bfcba20c731dc23e4f48c367e36c9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5ec3391f3d547f6b46ce73e0e0a1b6b"><td class="memTemplParams" colspan="2">template&lt;typename LinearSolver , typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:af5ec3391f3d547f6b46ce73e0e0a1b6b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_autodiff_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#af5ec3391f3d547f6b46ce73e0e0a1b6b">LinearSolve</a> (const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;linear_solver, const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:af5ec3391f3d547f6b46ce73e0e0a1b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#af5ec3391f3d547f6b46ce73e0e0a1b6b">More...</a><br /></td></tr>
-<tr class="separator:af5ec3391f3d547f6b46ce73e0e0a1b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Get linear solver</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="get_linear_solver"></a></p>
 <p>Create the linear solver for a given matrix A, which will be used to solve the linear system of equations A * x = b.</p>
@@ -575,18 +563,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a579e00c8ae91d6bcdb32eb4d723eba73"><td class="memTemplItemLeft" align="right" valign="top">internal::Solution&lt; DerivedA, DerivedB &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a579e00c8ae91d6bcdb32eb4d723eba73">SolveLinearSystem</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
 <tr class="memdesc:a579e00c8ae91d6bcdb32eb4d723eba73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves system A*x=b.  <a href="#a579e00c8ae91d6bcdb32eb4d723eba73">More...</a><br /></td></tr>
 <tr class="separator:a579e00c8ae91d6bcdb32eb4d723eba73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86c6f5510dba4ed848869421642a507b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a86c6f5510dba4ed848869421642a507b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_double_or_symbolic_v&lt; typename DerivedA::Scalar &gt; &amp;&amp;internal::is_double_or_symbolic_v&lt; typename DerivedB::Scalar &gt; &amp;&amp;std::is_same_v&lt; typename DerivedA::Scalar, typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a86c6f5510dba4ed848869421642a507b">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a86c6f5510dba4ed848869421642a507b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a86c6f5510dba4ed848869421642a507b">More...</a><br /></td></tr>
-<tr class="separator:a86c6f5510dba4ed848869421642a507b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad4eca59638f19dc2e5e8deac51e355b"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:aad4eca59638f19dc2e5e8deac51e355b"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; std::is_same_v&lt; typename DerivedA::Scalar, double &gt; &amp;&amp;internal::is_autodiff_v&lt; typename DerivedB::Scalar &gt;, Eigen::Matrix&lt; typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#aad4eca59638f19dc2e5e8deac51e355b">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:aad4eca59638f19dc2e5e8deac51e355b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#aad4eca59638f19dc2e5e8deac51e355b">More...</a><br /></td></tr>
-<tr class="separator:aad4eca59638f19dc2e5e8deac51e355b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4705e356b7b9ad53a283e0c91be060e3"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, int... &gt; typename LinearSolverType, typename DerivedA , typename DerivedB &gt; </td></tr>
-<tr class="memitem:a4705e356b7b9ad53a283e0c91be060e3"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; internal::is_autodiff_v&lt; typename DerivedA::Scalar &gt;, Eigen::Matrix&lt; typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime &gt; &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a4705e356b7b9ad53a283e0c91be060e3">LinearSolve</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;A, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;b)</td></tr>
-<tr class="memdesc:a4705e356b7b9ad53a283e0c91be060e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a4705e356b7b9ad53a283e0c91be060e3">More...</a><br /></td></tr>
-<tr class="separator:a4705e356b7b9ad53a283e0c91be060e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="af0249a3cc715341eaf27380878eb1df9"></a>
@@ -739,7 +715,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>Use ExtractGradient(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd>Use ExtractGradient(). <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -761,7 +737,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Use ExtractValue() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000013">Deprecated:</a></b></dt><dd>Use ExtractValue() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2279,7 +2255,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000014">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2413,7 +2389,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2451,7 +2427,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000024">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff(). <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff(). <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2483,7 +2459,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd>Use InitializeAutoDiff() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2523,7 +2499,7 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
 </div><div class="memdoc">
 
 <p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000022">Deprecated:</a></b></dt><dd>Use InitializeAutoDiffTuple() instead <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd>Use InitializeAutoDiffTuple() instead <br />
  This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
@@ -2855,216 +2831,6 @@ J = Σ [uₖ] [0 R][uₖ] ΔT
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>AutoDiffScalar matrix corresponding to the Jacobian of f evaluated at x. </dd></dl>
-
-</div>
-</div>
-<a id="a12cd1e9dec4704f09c44c240f5b95346"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12cd1e9dec4704f09c44c240f5b95346">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[1/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;&#160;</td>
-          <td class="paramname"><em>linear_solver</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</dd></dl>
-
-</div>
-</div>
-<a id="a7d78302ef5c3f80aa09817593812dcdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d78302ef5c3f80aa09817593812dcdd">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[2/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;&#160;</td>
-          <td class="paramname"><em>linear_solver</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</dd></dl>
-
-</div>
-</div>
-<a id="af5ec3391f3d547f6b46ce73e0e0a1b6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5ec3391f3d547f6b46ce73e0e0a1b6b">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[3/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; internal::is_autodiff_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_linear_solver.html">LinearSolver</a> &amp;&#160;</td>
-          <td class="paramname"><em>linear_solver</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000028">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</dd></dl>
-
-</div>
-</div>
-<a id="a86c6f5510dba4ed848869421642a507b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86c6f5510dba4ed848869421642a507b">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[4/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; internal::is_double_or_symbolic_v&lt;typename DerivedA::Scalar&gt; &amp;&amp; internal::is_double_or_symbolic_v&lt;typename DerivedB::Scalar&gt; &amp;&amp; std::is_same_v&lt;typename DerivedA::Scalar, typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000029">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</dd></dl>
-
-</div>
-</div>
-<a id="aad4eca59638f19dc2e5e8deac51e355b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad4eca59638f19dc2e5e8deac51e355b">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[5/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; std::is_same_v&lt;typename DerivedA::Scalar, double&gt; &amp;&amp; internal::is_autodiff_v&lt;typename DerivedB::Scalar&gt;, Eigen::Matrix&lt;typename DerivedB::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000030">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</dd></dl>
-
-</div>
-</div>
-<a id="a4705e356b7b9ad53a283e0c91be060e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4705e356b7b9ad53a283e0c91be060e3">&#9670;&nbsp;</a></span>LinearSolve() <span class="overload">[6/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if&lt; internal::is_autodiff_v&lt;typename DerivedA::Scalar&gt;, Eigen::Matrix&lt;typename DerivedA::Scalar, DerivedA::RowsAtCompileTime, DerivedB::ColsAtCompileTime&gt; &gt;::type drake::math::LinearSolve </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
-          <td class="paramname"><em>b</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000031">Deprecated:</a></b></dt><dd>Please use SolveLinearSystem() instead of LinearSolve() <br />
- This will be removed from Drake on or after 2022-01-01.</dd></dl>
 
 </div>
 </div>

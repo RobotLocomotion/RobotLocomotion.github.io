@@ -1,7 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classdrake_1_1systems_1_1_linear_system.html#ae145dc8b64927588ad2124efb1c46492":[1,3,1,12,0],
-"classdrake_1_1systems_1_1_linear_system.html#aff2ef43d29e6390e87d9980157c9affa":[1,3,1,12,7],
 "classdrake_1_1systems_1_1_linear_transform_density.html":[1,3,1,14],
 "classdrake_1_1systems_1_1_linear_transform_density.html#a086487c22ae3d8ec31df6d7858c53b61":[1,3,1,14,12],
 "classdrake_1_1systems_1_1_linear_transform_density.html#a2b526debf89053e6eeb958feea50f297":[1,3,1,14,6],
@@ -249,5 +247,7 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_saturation.html#a87198e44c71388d56697531009915e3b":[1,3,1,20,0],
 "classdrake_1_1systems_1_1_saturation.html#aada3471b0f354f15d264e98b0a028255":[1,3,1,20,1],
 "classdrake_1_1systems_1_1_saturation.html#ab7d62f151dd49852cd2902f7eadf4ce2":[1,3,1,20,9],
-"classdrake_1_1systems_1_1_saturation.html#abcfc22af164f8b6ee671b0d598fd2466":[1,3,1,20,4]
+"classdrake_1_1systems_1_1_saturation.html#abcfc22af164f8b6ee671b0d598fd2466":[1,3,1,20,4],
+"classdrake_1_1systems_1_1_saturation.html#ae5d33e1b76fd695a8f12ce8b9c62a034":[1,3,1,20,7],
+"classdrake_1_1systems_1_1_scalar_dense_output.html":[3,0,0,14,87]
 };

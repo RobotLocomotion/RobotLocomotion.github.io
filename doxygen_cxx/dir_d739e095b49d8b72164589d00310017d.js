@@ -23,7 +23,6 @@ var dir_d739e095b49d8b72164589d00310017d =
       [ "GeometryFrame", "classdrake_1_1geometry_1_1_geometry_frame.html", "classdrake_1_1geometry_1_1_geometry_frame" ]
     ] ],
     [ "geometry_ids.h", "geometry__ids_8h.html", "geometry__ids_8h" ],
-    [ "geometry_index.h", "geometry__index_8h.html", "geometry__index_8h" ],
     [ "geometry_infrastructure_doxygen.h", "geometry__infrastructure__doxygen_8h.html", null ],
     [ "geometry_instance.h", "geometry__instance_8h.html", [
       [ "GeometryInstance", "classdrake_1_1geometry_1_1_geometry_instance.html", "classdrake_1_1geometry_1_1_geometry_instance" ]

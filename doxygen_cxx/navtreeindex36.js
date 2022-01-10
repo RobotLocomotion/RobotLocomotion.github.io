@@ -1,7 +1,5 @@
 var NAVTREEINDEX36 =
 {
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8a":[1,3,2,0,0],
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa363239aa366c2133625364645b4bdf25":[1,3,2,0,0,1],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa590c94008feb665db8020f3b53d3f32f":[1,3,2,0,0,0],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a87fbace92efba2a49277e2be09510e57":[1,3,2,0,5],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a886c4d74a756a93f2d3deeac70983cbe":[1,3,2,0,8],
@@ -249,5 +247,7 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a23186071020bd638fb54e1cc70517a5f":[1,3,11,2,2],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3154e21e3ddd2f7aec07d8ec9a7ea2de":[1,3,11,2,3],
 "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a3e7b10c80993d5689758c27cf5fdf220":[1,3,11,2,1],
-"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a7185a9bb03c2b8faa2067ad2708b5899":[1,3,11,2,7]
+"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#a7185a9bb03c2b8faa2067ad2708b5899":[1,3,11,2,7],
+"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae234bdb0bf0d63dc927a8e35d44d3f91":[1,3,11,2,6],
+"classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae44005e3185b2dd4aaab4b94e06a5d2e":[1,3,11,2,8]
 };
