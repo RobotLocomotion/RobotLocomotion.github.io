@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"index.html":[],
+"initial__value__problem_8h.html":[4,0,0,11,0,8],
 "input__port_8h.html":[4,0,0,11,3,24],
 "input__port__base_8h.html":[4,0,0,11,3,25],
 "integer__inequality__solver_8h.html":[4,0,0,10,25],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "moving__average__filter_8h.html":[4,0,0,6,5,1],
 "mpc__data_8h.html":[4,0,0,10,0,0,5],
 "mpc__feasibility_8h.html":[4,0,0,10,0,0,6],
-"mpc__residual_8h.html":[4,0,0,10,0,0,7],
-"mpc__variable_8h.html":[4,0,0,10,0,0,8],
-"multibody__doxygen_8h.html":[4,0,0,8,14]
+"mpc__residual_8h.html":[4,0,0,10,0,0,7]
 };

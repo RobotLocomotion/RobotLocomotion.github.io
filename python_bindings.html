@@ -449,6 +449,51 @@ trace. As an example:</p>
     <p>If you are developing in Drake and are using the <code class="highlighter-rouge">drake_py_unittest</code> macro, you can specify the argument <code class="highlighter-rouge">--trace=user</code> to get the same behavior.</p>
   </div>
 
+  <!-- TODO(eric.cousineau): Move this into pydrake.common.debug. -->
+
+  <p>Additionally, you can also decorate your function to break on an exception so
+you can get a REPL (which works in a terminal or in a Jupyter notebook) to
+actively inspect the context (like <code class="highlighter-rouge">dbstop if error</code> in MATLAB).</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">contextmanager</span>
+<span class="kn">import</span> <span class="nn">pdb</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+
+
+<span class="nd">@contextmanager</span>
+<span class="k">def</span> <span class="nf">launch_pdb_on_exception</span><span class="p">():</span>
+    <span class="s">"""
+    Provides a context that will launch interactive pdb console automatically
+    if an exception is raised.
+
+    Example usage with @iex decorator shorthand below:
+
+        @iex
+        def my_bad_function():
+            x = 1
+            assert False
+
+        my_bad_function()
+        # Should bring up debugger at `assert` statement.
+    """</span>
+    <span class="c"># Adapted from:</span>
+    <span class="c"># https://github.com/gotcha/ipdb/blob/fc83b4f5f/ipdb/__main__.py#L219-L232</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">yield</span>
+    <span class="k">except</span> <span class="nb">Exception</span><span class="p">:</span>
+        <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
+        <span class="n">pdb</span><span class="o">.</span><span class="n">post_mortem</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+        <span class="c"># Resume original execution.</span>
+        <span class="k">raise</span>
+
+
+<span class="c"># Mirror `@ipdb.iex` decorator. See docs for `launch_pdb_on_exception()`.</span>
+<span class="n">iex</span> <span class="o">=</span> <span class="n">launch_pdb_on_exception</span><span class="p">()</span>
+</code></pre></div>  </div>
+
   <p>This generally should help you trace where the code is dying. However, if you
 still need to dig in, you can build the bindings in debug mode, without symbol
 stripping, so you can debug with <code class="highlighter-rouge">gdb</code> or <code class="highlighter-rouge">lldb</code>:</p>

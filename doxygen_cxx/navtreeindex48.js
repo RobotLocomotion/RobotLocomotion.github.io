@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,8,26,0],
+"structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html":[3,0,0,8,33],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a686ecfe3314ad57f5e31caf2ff5f69e9":[3,0,0,8,33,0],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a7b9cdbe2581368f7be7b952fff45b58e":[3,0,0,8,33,1],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#ad7bdb8b88983c9548bd9b85ad7b8e8da":[3,0,0,8,33,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,12,42,0],
 "structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,12,42,2],
 "structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,12,43],
-"structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,12,44],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,12,45],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,12,46]
+"structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,12,44]
 };

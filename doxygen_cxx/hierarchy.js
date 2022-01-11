@@ -432,12 +432,7 @@ var hierarchy =
     [ "MassDamperSpringAnalyticalSolution< T >", "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html", null ],
     [ "MatGradMult< DerivedDA, DerivedB >", "structdrake_1_1math_1_1_mat_grad_mult.html", null ],
     [ "MatGradMultMat< DerivedA, DerivedB, DerivedDA >", "structdrake_1_1math_1_1_mat_grad_mult_mat.html", null ],
-    [ "MathematicalProgram", "classdrake_1_1solvers_1_1_mathematical_program.html", [
-      [ "MultipleShooting", "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html", [
-        [ "DirectCollocation", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html", null ],
-        [ "DirectTranscription", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html", null ]
-      ] ]
-    ] ],
+    [ "MathematicalProgram", "classdrake_1_1solvers_1_1_mathematical_program.html", null ],
     [ "MathematicalProgramResult", "classdrake_1_1solvers_1_1_mathematical_program_result.html", null ],
     [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", null ],
     [ "MeshcatAnimation", "classdrake_1_1geometry_1_1_meshcat_animation.html", null ],
@@ -511,6 +506,10 @@ var hierarchy =
     [ "MultibodyForces< T >", "classdrake_1_1multibody_1_1_multibody_forces.html", null ],
     [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", null ],
     [ "MultibodyPlantTester", "classdrake_1_1multibody_1_1_multibody_plant_tester.html", null ],
+    [ "MultipleShooting", "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html", [
+      [ "DirectCollocation", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html", null ],
+      [ "DirectTranscription", "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html", null ]
+    ] ],
     [ "MultiplyEigenSizes< a, b >", "structdrake_1_1_multiply_eigen_sizes.html", null ],
     [ "NameValue< T >", "classdrake_1_1_name_value.html", null ],
     [ "never_destroyed< T >", "classdrake_1_1never__destroyed.html", null ],

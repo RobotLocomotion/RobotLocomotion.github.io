@@ -4527,8 +4527,12 @@ new_b in the rotated Lorentz cone.</p>
 
 <dl class="function">
 <dt id="pydrake.solvers.mathematicalprogram.Solve">
-<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Solve</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>initial_guess: Optional[numpy.ndarray[numpy.float64[m</em>, <em>1]]] = None</em>, <em>solver_options: Optional[pydrake.solvers.mathematicalprogram.SolverOptions] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgramResult<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Solve" title="Permalink to this definition">¶</a></dt>
-<dd><p>Solves an optimization program, with optional initial guess and solver
+<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Solve</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>Solve(prog: pydrake.solvers.mathematicalprogram.MathematicalProgram, initial_guess: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, solver_options: Optional[pydrake.solvers.mathematicalprogram.SolverOptions] = None) -&gt; pydrake.solvers.mathematicalprogram.MathematicalProgramResult</li>
+</ol>
+<p>Solves an optimization program, with optional initial guess and solver
 options. This function first chooses the best solver depending on the
 availability of the solver and the program formulation; it then
 constructs that solver and call the Solve function of that solver. The
@@ -4557,6 +4561,10 @@ argument to Solve</dd>
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>Solve(trajopt: drake::systems::trajectory_optimization::MultipleShooting) -&gt; pydrake.solvers.mathematicalprogram.MathematicalProgramResult</li>
+</ol>
+<p>This method calls Solve(trajopt.prog()).</p>
 </dd></dl>
 
 <dl class="class">
