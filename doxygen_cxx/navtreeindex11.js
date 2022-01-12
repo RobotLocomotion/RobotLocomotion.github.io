@@ -1,6 +1,6 @@
 var NAVTREEINDEX11 =
 {
-"classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#ad1376723b3d536e09a7783e3f252e429":[1,3,11,0,8],
+"classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#aaccb65a551c978a2987efc277a771d8f":[1,3,11,0,6],
 "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html":[1,3,11,1],
 "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a02a874939f6aa43e29fc929d223dfb76":[1,3,11,1,7],
 "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a1f42402f8e176ba6a28e858c03af83fc":[1,3,11,1,2],

@@ -303,6 +303,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae6f93bf07bd55dd7ab860b0c321713c0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#ae6f93bf07bd55dd7ab860b0c321713c0">PointMass</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_FQ)</td></tr>
 <tr class="memdesc:ae6f93bf07bd55dd7ab860b0c321713c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a unit inertia for a point mass of unit mass located at point Q, whose location in a frame F is given by the position vector <code>p_FQ</code> (that is, p_FoQ_F).  <a href="#ae6f93bf07bd55dd7ab860b0c321713c0">More...</a><br /></td></tr>
 <tr class="separator:ae6f93bf07bd55dd7ab860b0c321713c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899b4cbf351386105263110c57276122"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#a899b4cbf351386105263110c57276122">SolidEllipsoid</a> (const T &amp;a, const T &amp;b, const T &amp;c)</td></tr>
+<tr class="memdesc:a899b4cbf351386105263110c57276122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass solid ellipsoid of uniform density taken about its center.  <a href="#a899b4cbf351386105263110c57276122">More...</a><br /></td></tr>
+<tr class="separator:a899b4cbf351386105263110c57276122"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf3d4bf1e85ad1942c12478e5e3aa906"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#adf3d4bf1e85ad1942c12478e5e3aa906">SolidSphere</a> (const T &amp;r)</td></tr>
 <tr class="memdesc:adf3d4bf1e85ad1942c12478e5e3aa906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass solid sphere of uniform density and radius <code>r</code> taken about its center.  <a href="#adf3d4bf1e85ad1942c12478e5e3aa906">More...</a><br /></td></tr>
 <tr class="separator:adf3d4bf1e85ad1942c12478e5e3aa906"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1269,6 +1272,51 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a899b4cbf351386105263110c57276122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899b4cbf351386105263110c57276122">&#9670;&nbsp;</a></span>SolidEllipsoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; SolidEllipsoid </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the unit inertia for a unit-mass solid ellipsoid of uniform density taken about its center. </p>
+<p>The lengths of the semi-axes of the ellipsoid in the principal x,y,z-axes are <code>a</code>, <code>b</code>, and <code>c</code> respectively. </p>
 
 </div>
 </div>

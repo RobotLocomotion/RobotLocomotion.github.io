@@ -238,16 +238,28 @@ optimization.</dd>
 <dd>A valid input port index for <code class="docutils literal"><span class="pre">system</span></code> or InputPortSelection. All
 other inputs on the system will be left disconnected (if they are
 disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be fixed to their current
-values (if they are connected/fixed in <code class="docutils literal"><span class="pre">context)</span></code>.</dd>
-<dt><em>Default:</em> kUseFirstInputIfItExists.</dt>
-<dd>$Parameter <code class="docutils literal"><span class="pre">assume_non_continuous_states_are_fixed</span></code>:</dd>
+values (if they are connected/fixed in <code class="docutils literal"><span class="pre">context)</span></code>. $*Default:*
+kUseFirstInputIfItExists.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">assume_non_continuous_states_are_fixed</span></code>:</dt>
+<dd>Boolean which, if true, allows this algorithm to optimize without
+considering the dynamics of any non-continuous states. This is
+helpful for optimizing systems that might have some additional
+book-keeping variables in their state. Only use this if you are
+sure that the dynamics of the additional state variables cannot
+impact the dynamics of the continuous states. $*Default:* false.</dd>
 </dl>
-<p>Boolean which, if true, allows this algorithm to optimize without
-considering the dynamics of any non-continuous states. This is helpful
-for optimizing systems that might have some additional book-keeping
-variables in their state. Only use this if you are sure that the
-dynamics of the additional state variables cannot impact the dynamics
-of the continuous states. $*Default:* false.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">system</span></code> is not supported by this direct</li>
+<li>collocation method.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -269,6 +281,18 @@ different decision variables, along the trajectory).</p>
 <p class="first admonition-title">See also</p>
 <p class="last">DirectCollocation constructor for a description of the parameters.</p>
 </div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal"><span class="pre">system</span></code> is not supported by this direct</li>
+<li>collocation method.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>

@@ -2286,6 +2286,32 @@ resulting polynomial approximating <code class="docutils literal"><span class="p
 </dd></dl>
 
 <dl class="function">
+<dt id="pydrake.symbolic.ToLatex">
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">ToLatex</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.ToLatex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ToLatex(e: pydrake.symbolic.Expression, precision: int = 3) -&gt; str</li>
+</ol>
+<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">e</span></code> with floating point
+coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<ol class="arabic simple" start="2">
+<li>ToLatex(f: pydrake.symbolic.Formula, precision: int = 3) -&gt; str</li>
+</ol>
+<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">f</span></code> with floating point
+coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>ToLatex(M: numpy.ndarray[object[m, n]], precision: int = 3) -&gt; str</li>
+</ol>
+<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">M</span></code> with floating point
+coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<ol class="arabic simple" start="4">
+<li>ToLatex(M: numpy.ndarray[numpy.float64[m, n]], precision: int = 3) -&gt; str</li>
+</ol>
+<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">M</span></code> with floating point
+coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.symbolic.uninterpreted_function">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">uninterpreted_function</code><span class="sig-paren">(</span><em>name: str, arguments: List[pydrake.symbolic.Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.uninterpreted_function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs an uninterpreted-function expression with <code class="docutils literal"><span class="pre">name</span></code> and

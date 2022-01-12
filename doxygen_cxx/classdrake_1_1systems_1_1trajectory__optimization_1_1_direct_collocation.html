@@ -392,15 +392,21 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs the MathematicalProgram% and adds the collocation constraints. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">system</td><td>A dynamical system to be used in the dynamic constraints. This system must support <a class="el" href="classdrake_1_1systems_1_1_system.html#aaa81bdf4638506d1ba5ee11e05821651" title="Creates a deep copy of this System, transmogrified to use the autodiff scalar type,...">System::ToAutoDiffXd</a>. Note that this is aliased for the lifetime of this object. </td></tr>
-    <tr><td class="paramname">context</td><td>Required to describe any parameters of the system. The values of the state in this context do not have any effect. This context will also be "cloned" by the optimization; changes to the context after calling this method will NOT impact the trajectory optimization. </td></tr>
-    <tr><td class="paramname">num_time_samples</td><td>The number of breakpoints in the trajectory. </td></tr>
-    <tr><td class="paramname">minimum_timestep</td><td>Minimum spacing between sample times. </td></tr>
-    <tr><td class="paramname">maximum_timestep</td><td>Maximum spacing between sample times. </td></tr>
+    <tr><td class="paramname">system</td><td>A dynamical system to be used in the dynamic constraints. This system must support <a class="el" href="classdrake_1_1systems_1_1_system.html#aaa81bdf4638506d1ba5ee11e05821651" title="Creates a deep copy of this System, transmogrified to use the autodiff scalar type,...">System::ToAutoDiffXd</a>. Note that this is aliased for the lifetime of this object.</td></tr>
+    <tr><td class="paramname">context</td><td>Required to describe any parameters of the system. The values of the state in this context do not have any effect. This context will also be "cloned" by the optimization; changes to the context after calling this method will NOT impact the trajectory optimization.</td></tr>
+    <tr><td class="paramname">num_time_samples</td><td>The number of breakpoints in the trajectory.</td></tr>
+    <tr><td class="paramname">minimum_timestep</td><td>Minimum spacing between sample times.</td></tr>
+    <tr><td class="paramname">maximum_timestep</td><td>Maximum spacing between sample times.</td></tr>
     <tr><td class="paramname">input_port_index</td><td>A valid input port index for <code>system</code> or InputPortSelection. All other inputs on the system will be left disconnected (if they are disconnected in <code>context</code>) or will be fixed to their current values (if they are connected/fixed in <code>context</code>). <br />
- <em>Default:</em> kUseFirstInputIfItExists. </td></tr>
+ <em>Default:</em> kUseFirstInputIfItExists.</td></tr>
     <tr><td class="paramname">assume_non_continuous_states_are_fixed</td><td>Boolean which, if true, allows this algorithm to optimize without considering the dynamics of any non-continuous states. This is helpful for optimizing systems that might have some additional book-keeping variables in their state. Only use this if you are sure that the dynamics of the additional state variables cannot impact the dynamics of the continuous states. <br />
- <em>Default:</em> false. </td></tr>
+ <em>Default:</em> false.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>system</code> is not supported by this direct collocation method. </td></tr>
   </table>
   </dd>
 </dl>

@@ -2291,7 +2291,7 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 </div><div class="memdoc">
 
 <p>Adds an L2 norm cost |Ax+b|₂ (notice this cost is not quadratic since we don't take the square of the L2 norm). </p>
-<dl class="section note"><dt>Note</dt><dd>Currently no solver supports kL2NormCost, and the user will receive an error message if they add <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html" title="Implements a cost of the form .">L2NormCost</a> and call <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Currently no solver supports kL2NormCost, and the user will receive an error message if they add <a class="el" href="classdrake_1_1solvers_1_1_l2_norm_cost.html" title="Implements a cost of the form ‖Ax + b‖₂.">L2NormCost</a> and call <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a>. </dd></dl>
 
 </div>
 </div>
@@ -3802,7 +3802,7 @@ log(Z(i, i)) &gt;= t(i)
 <dl class="section note"><dt>Note</dt><dd>We implicitly require that <code>X</code> being positive semidefinite (psd) (as X is the diagonal entry of the big psd matrix above). If your <code>X</code> is not necessarily psd, then don't call this function. </dd>
 <dd>
 The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000023">Deprecated:</a></b></dt><dd>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
  This will be removed from Drake on or after 2022-05-01.</dd></dl>
 
 </div>

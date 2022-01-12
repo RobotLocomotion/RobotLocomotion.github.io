@@ -360,6 +360,21 @@ var group__solver__evaluators =
       [ "Q", "classdrake_1_1solvers_1_1_quadratic_cost.html#a12ae196564e0fc7d445a35031ce5bfd7", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_quadratic_cost.html#ad8c35d27fe08f9f0273d03bbd7f3f940", null ]
     ] ],
+    [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html", [
+      [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html#af07bddc22f2b1e732e919385ef1c3d4d", null ],
+      [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a1a0e4dcd0603f7c7ed930fa928087d54", null ],
+      [ "L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a853b185d1359bf1ed3e8bc1da9a9cb89", null ],
+      [ "~L1NormCost", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a98c1be79276d7ddb736e1e17b9d4ab0d", null ],
+      [ "A", "classdrake_1_1solvers_1_1_l1_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
+      [ "b", "classdrake_1_1solvers_1_1_l1_norm_cost.html#aae45694d3595659922653fd027d15cb6", null ],
+      [ "DoDisplay", "classdrake_1_1solvers_1_1_l1_norm_cost.html#afd5ade712b02fa2e71e8c26811c9494a", null ],
+      [ "DoEval", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
+      [ "DoEval", "classdrake_1_1solvers_1_1_l1_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
+      [ "DoEval", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a17be3710c66eca9567f09c640fd2ba41", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a9a99f0ecef212a5e3d88790649f6a032", null ],
+      [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l1_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
+    ] ],
     [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html", [
       [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a78d0728758456a66a6723d1cd6d46c93", null ],
       [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a9aaeea3b8a2befc955b9f21128888cb3", null ],
@@ -374,6 +389,21 @@ var group__solver__evaluators =
       [ "operator=", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a4cf3e98daed7e5998c947592c2d7c3e0", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_l2_norm_cost.html#addd377d5a0ba976169de8d2a389ff352", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l2_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
+    ] ],
+    [ "LInfNormCost", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html", [
+      [ "LInfNormCost", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#afc5b050af4733b3fa901bce72323fb7f", null ],
+      [ "LInfNormCost", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a81cfcad3fd0e7a14b9549c397bd7d6aa", null ],
+      [ "LInfNormCost", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a6e9dfc57bddcdce7615d0b26b43048d6", null ],
+      [ "~LInfNormCost", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a230e57a52e0dd0105a445a9477a9c1f1", null ],
+      [ "A", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ace583a472a3bdc1b67f05d6a6571a903", null ],
+      [ "b", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aae45694d3595659922653fd027d15cb6", null ],
+      [ "DoDisplay", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#afd5ade712b02fa2e71e8c26811c9494a", null ],
+      [ "DoEval", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a863f7df9d3ee10378794b4c6842a4377", null ],
+      [ "DoEval", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#aa2431c2dbd82437d8f621033d8af8231", null ],
+      [ "DoEval", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5eea9354674efc1c07bf537319628ead", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab6304fd980ebd27b25e88b5d2cfec5e8", null ],
+      [ "operator=", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#ab765f2102252bded1d21b19ac5184576", null ],
+      [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a5c62a9fdaa320f7568a7ab93a80180dc", null ]
     ] ],
     [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html", [
       [ "EvaluatorCost", "classdrake_1_1solvers_1_1_evaluator_cost.html#a1fdd829cd580b7b4bba065313c9617c2", null ],

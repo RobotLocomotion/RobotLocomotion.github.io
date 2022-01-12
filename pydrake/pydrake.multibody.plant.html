@@ -437,19 +437,8 @@ of Coulomb’s law coefficients of friction.</dd>
 
 <dl class="function">
 <dt id="pydrake.multibody.plant.ConnectContactResultsToDrakeVisualizer">
-<code class="descclassname">pydrake.multibody.plant.</code><code class="descname">ConnectContactResultsToDrakeVisualizer</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.ConnectContactResultsToDrakeVisualizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>ConnectContactResultsToDrakeVisualizer(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: drake::multibody::MultibodyPlant&lt;double&gt;, lcm: pydrake.lcm.DrakeLcmInterface = None, publish_period: Optional[float] = None) -&gt; pydrake.systems.lcm.LcmPublisherSystem</li>
-</ol>
-<p>MultibodyPlant-connecting, default-named geometry overload.
-$Deprecated:</p>
-<p>Provide a SceneGraph as the third argument. This will be removed from
-Drake on or after 2022-01-01.</p>
-<ol class="arabic simple" start="2">
-<li>ConnectContactResultsToDrakeVisualizer(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: drake::multibody::MultibodyPlant&lt;double&gt;, scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, publish_period: Optional[float] = None) -&gt; pydrake.systems.lcm.LcmPublisherSystem</li>
-</ol>
-<p>MultibodyPlant-connecting, SceneGraph-named geometry overload.</p>
+<code class="descclassname">pydrake.multibody.plant.</code><code class="descname">ConnectContactResultsToDrakeVisualizer</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], plant: drake::multibody::MultibodyPlant&lt;double&gt;, scene_graph: pydrake.geometry.SceneGraph_[float], lcm: pydrake.lcm.DrakeLcmInterface = None, publish_period: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.lcm.LcmPublisherSystem<a class="headerlink" href="#pydrake.multibody.plant.ConnectContactResultsToDrakeVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>MultibodyPlant-connecting overload.</p>
 </dd></dl>
 
 <dl class="class">
@@ -715,7 +704,7 @@ symbolic::Expression without error, but not necessarily evaluated.</p>
 <p>Generally, you shouldn’t construct ContactResultsToLcmSystem instances
 directly. We recommend using one of the overloaded
 contact_result_vis_creation “ConnectContactResultsToDrakeVisualizer()”
-methods to add contact visualization to your diagram.</p>
+functions to add contact visualization to your diagram.</p>
 <p><strong>How contacts are described in visualization</strong></p>
 <p>In the visualizer, each contact between two bodies is uniquely
 characterized by two triples of names: (model instance name, body
@@ -733,7 +722,7 @@ may not be helpful when viewing the visualized results. Instead,
 ContactResultsToLcmSystem can use the names associated with the id in
 a geometry::SceneGraph instance. The only method for doing this is via
 the contact_result_vis_creation
-“ConnectContactResultsToDrakeVisualizer()” methods and requires the
+“ConnectContactResultsToDrakeVisualizer()” functions and requires the
 diagram to be instantiated as double valued. If a diagram with a
 different scalar type is required, it should subsequently be scalar
 converted.</p>

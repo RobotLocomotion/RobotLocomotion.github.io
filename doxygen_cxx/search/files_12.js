@@ -104,6 +104,7 @@ var searchData=
   ['symbolic_5fformula_5fcell_2eh',['symbolic_formula_cell.h',['../symbolic__formula__cell_8h.html',1,'']]],
   ['symbolic_5fformula_5fvisitor_2eh',['symbolic_formula_visitor.h',['../symbolic__formula__visitor_8h.html',1,'']]],
   ['symbolic_5fgeneric_5fpolynomial_2eh',['symbolic_generic_polynomial.h',['../symbolic__generic__polynomial_8h.html',1,'']]],
+  ['symbolic_5flatex_2eh',['symbolic_latex.h',['../symbolic__latex_8h.html',1,'']]],
   ['symbolic_5fldlt_2eh',['symbolic_ldlt.h',['../symbolic__ldlt_8h.html',1,'']]],
   ['symbolic_5fmonomial_2eh',['symbolic_monomial.h',['../symbolic__monomial_8h.html',1,'']]],
   ['symbolic_5fmonomial_5fbasis_5felement_2eh',['symbolic_monomial_basis_element.h',['../symbolic__monomial__basis__element_8h.html',1,'']]],

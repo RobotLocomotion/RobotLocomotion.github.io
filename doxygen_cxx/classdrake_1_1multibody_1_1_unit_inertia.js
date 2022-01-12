@@ -27,6 +27,7 @@ var classdrake_1_1multibody_1_1_unit_inertia =
     [ "SolidCube", "classdrake_1_1multibody_1_1_unit_inertia.html#a224f50a8d9351914db96e47ddb5767fb", null ],
     [ "SolidCylinder", "classdrake_1_1multibody_1_1_unit_inertia.html#aa752eb88a4a3eb76242ccb373b81ccf3", null ],
     [ "SolidCylinderAboutEnd", "classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62", null ],
+    [ "SolidEllipsoid", "classdrake_1_1multibody_1_1_unit_inertia.html#a899b4cbf351386105263110c57276122", null ],
     [ "SolidSphere", "classdrake_1_1multibody_1_1_unit_inertia.html#adf3d4bf1e85ad1942c12478e5e3aa906", null ],
     [ "StraightLine", "classdrake_1_1multibody_1_1_unit_inertia.html#aa7e6f8e48b01a027112221c2e59ddbad", null ],
     [ "ThinRod", "classdrake_1_1multibody_1_1_unit_inertia.html#a902f33de7ecd8ef964190051ee56588c", null ],
