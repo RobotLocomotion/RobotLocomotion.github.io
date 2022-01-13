@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,61,32],
 "symbolic__generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,61,23],
 "symbolic__generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,61,30],
 "symbolic__latex_8h.html":[4,0,0,1,62],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "utilities_8h.html":[4,0,0,4,37],
 "value_8h.html":[4,0,0,1,79],
 "value__checker_8h.html":[4,0,0,11,3,50],
-"value__producer_8h.html":[4,0,0,11,3,51],
-"value__pybind_8h.html":[4,0,0,0,0,0,11]
+"value__producer_8h.html":[4,0,0,11,3,51]
 };

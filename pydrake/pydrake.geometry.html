@@ -381,6 +381,24 @@ z-axes, respectively.</p>
 
 </dd></dl>
 
+<dl class="function">
+<dt id="pydrake.geometry.CalcVolume">
+<code class="descclassname">pydrake.geometry.</code><code class="descname">CalcVolume</code><span class="sig-paren">(</span><em>shape: pydrake.geometry.Shape</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.CalcVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the volume (in meters^3) for the Shape.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if the derived type hasn’t overloaded this</li>
+<li>implementation (yet).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="class">
 <dt id="pydrake.geometry.Capsule">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">Capsule</code><a class="headerlink" href="#pydrake.geometry.Capsule" title="Permalink to this definition">¶</a></dt>
@@ -4471,7 +4489,7 @@ in the direction of the frame’s +z axis. Or, more formally: a finite
 section of a Lorentz cone (aka “second-order cone”), defined by</p>
 <p>sqrt(x²/a² + y²/b²) ≤ z; z ∈ [0, height],</p>
 <p>where <code class="docutils literal"><span class="pre">a</span></code> and <code class="docutils literal"><span class="pre">b</span></code> are the lengths of the principle semi-axes of
-the horizontal section at <code class="docutils literal"><span class="pre">z=1</span></code>.</p>
+the horizontal section at <code class="docutils literal"><span class="pre">z=height()</span></code>.</p>
 <p>This shape is currently only supported by Meshcat. It will not appear
 in any renderings, proximity queries, or other visualizers.</p>
 <dl class="method">

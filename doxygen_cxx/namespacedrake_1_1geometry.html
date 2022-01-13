@@ -365,6 +365,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a331f457a6ce0d146213faa844725dcda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a331f457a6ce0d146213faa844725dcda">AddCompliantHydroelasticPropertiesForHalfSpace</a> (double slab_thickness, double hydroelastic_modulus, <a class="el" href="classdrake_1_1geometry_1_1_proximity_properties.html">ProximityProperties</a> *properties)</td></tr>
 <tr class="memdesc:a331f457a6ce0d146213faa844725dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compliant half spaces are handled as a special case; they do not get tessellated.  <a href="#a331f457a6ce0d146213faa844725dcda">More...</a><br /></td></tr>
 <tr class="separator:a331f457a6ce0d146213faa844725dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#ae129ecc1484c1fab6e4d4b3e04d25198">CalcVolume</a> (const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;shape)</td></tr>
+<tr class="memdesc:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>.  <a href="#ae129ecc1484c1fab6e4d4b3e04d25198">More...</a><br /></td></tr>
+<tr class="separator:ae129ecc1484c1fab6e4d4b3e04d25198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45ad74b0a867a6876fe2a44b3d2b4cb2"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1geometry.html#a45ad74b0a867a6876fe2a44b3d2b4cb2">GetTestEnvironmentMeshcat</a> ()</td></tr>
 <tr class="memdesc:a45ad74b0a867a6876fe2a44b3d2b4cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a singleton <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">Meshcat</a> object to be used during unit tests.  <a href="#a45ad74b0a867a6876fe2a44b3d2b4cb2">More...</a><br /></td></tr>
 <tr class="separator:a45ad74b0a867a6876fe2a44b3d2b4cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -907,6 +910,32 @@ Functions</h2></td></tr>
 
 <p>Overload, intended for shapes that don't get tessellated in their hydroelastic representation (e.g., <a class="el" href="classdrake_1_1geometry_1_1_half_space.html" title="Definition of a half space.">HalfSpace</a> and <a class="el" href="classdrake_1_1geometry_1_1_mesh.html" title="Definition of a general (possibly non-convex) triangular surface mesh.">Mesh</a>). </p>
 <p>See MODULE_NOT_WRITTEN_YET. </p>
+
+</div>
+</div>
+<a id="ae129ecc1484c1fab6e4d4b3e04d25198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae129ecc1484c1fab6e4d4b3e04d25198">&#9670;&nbsp;</a></span>CalcVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double drake::geometry::CalcVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_shape.html">Shape</a> &amp;&#160;</td>
+          <td class="paramname"><em>shape</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates the volume (in meters^3) for the <a class="el" href="classdrake_1_1geometry_1_1_shape.html" title="The base interface for all shape specifications.">Shape</a>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the derived type hasn't overloaded this implementation (yet). </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
