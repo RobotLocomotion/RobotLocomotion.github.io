@@ -398,6 +398,11 @@ macOS.</p>
 20.04 (Focal), the option is ignored. The macOS <code class="highlighter-rouge">install_prereqs</code> setup
 script does not install kcov, and passing a <code class="highlighter-rouge">--with-kcov</code> option is an error.</p>
 
+<p>In some cases, running kcov builds and regular builds from the same source
+tree will lead to Bazel error messages like “this rule is missing dependency
+declarations”.  To resolve that problem, either run the kcov build from a
+fresh checkout, or else run a <code class="highlighter-rouge">bazel clean</code>.</p>
+
 <p>To analyze test coverage, run one (or more) tests under <code class="highlighter-rouge">kcov</code>:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test --config=kcov common:polynomial_test
