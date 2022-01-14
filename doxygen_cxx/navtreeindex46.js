@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
 "quartic__scalar__system_8h.html":[4,0,0,11,0,0,11],
 "quaternion_8h.html":[4,0,0,7,24],
@@ -157,13 +158,13 @@ var NAVTREEINDEX46 =
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
 "scope__exit_8h.html":[4,0,0,1,46],
-"scoped__names_8h.html":[4,0,0,8,8,12],
-"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,8,12,5],
-"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,8,12,6],
-"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,8,12,3],
-"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,8,12,4],
-"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,8,12,1],
-"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,8,12,2],
+"scoped__names_8h.html":[4,0,0,8,8,13],
+"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,8,13,5],
+"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,8,13,6],
+"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,8,13,3],
+"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,8,13,4],
+"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,8,13,1],
+"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,8,13,2],
 "scoped__singleton_8h.html":[4,0,0,1,47],
 "screw__joint_8h.html":[4,0,0,8,12,40],
 "screw__mobilizer_8h.html":[4,0,0,8,12,41],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca65fbd0baf8ecc955767af55707dbd36d":[4,0,0,10,52,0,2],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6619293bd01e7ea8efb3682f16bf55c4":[4,0,0,10,52,0,12],
 "solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca6e645ae8d30d672d9800a422f4be4c9d":[4,0,0,10,52,0,11],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173":[4,0,0,10,52,0,3],
-"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306ecaa1f0780f88b19c3a73710b47fc57d795":[4,0,0,10,52,0,6]
+"solver__type_8h.html#a8b06041d7c1fb05f379714f4312306eca71cedba88b736e372f499099329d5173":[4,0,0,10,52,0,3]
 };

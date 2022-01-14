@@ -150,8 +150,12 @@ for more choices.</p>
 </div>
 
 <div class="warning">
-  <p>Drake’s pip wheels are only published for CPython 3.6, CPython 3.7, and CPython
-3.8 running on Linux.  In the future, we intend to publish additional builds.</p>
+  <p>Drake’s pip wheels are only published for CPython 3.6 through CPython 3.9
+running on Linux.  In the future, we intend to publish macOS wheel builds.</p>
+</div>
+
+<div class="warning">
+  <p>Support for CPython 3.6 and CPython 3.7 will end on 2022-04-01.</p>
 </div>
 
 <p>We recommend installing drake into a
@@ -172,6 +176,12 @@ env/bin/pip install drake
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
   libpython3.6 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
+</code></pre></div></div>
+
+<p>For Ubuntu 20.04, install these additional libraries:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+  libpython3.8 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
 </code></pre></div></div>
 
 <p>Activate the virtual environment:</p>
