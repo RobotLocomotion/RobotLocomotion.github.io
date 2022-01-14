@@ -139,6 +139,14 @@ time (in order to switch to Python 3.8 or Python 3.9).</li>
       <li>macOS users already use Python 3.9, so will not be affected.</li>
     </ul>
   </li>
+  <li>The use of <code class="highlighter-rouge">drake-visualizer</code> on macOS is deprecated and will be removed
+from Drake on or after April 1st, 2022.
+    <ul>
+      <li>On Ubuntu 20.04, support of <code class="highlighter-rouge">drake-visualizer</code> remains intact.</li>
+      <li>On Ubuntu 18.04, support of <code class="highlighter-rouge">drake-visualizer</code> will remain intact as
+long as our overall support of 18.04 (which ends on April 1st, 2022).</li>
+    </ul>
+  </li>
 </ul>
 
 <h1 id="breaking-changes-since-v0370">Breaking changes since v0.37.0</h1>
@@ -323,6 +331,7 @@ MultipleShooting.prog().</li>
 <h2 id="newly-deprecated-apis">Newly-deprecated APIs</h2>
 
 <ul>
+  <li>The use of <code class="highlighter-rouge">drake-visualizer</code> on macOS is deprecated.</li>
   <li>drake::manipulation::perception::PoseSmoother (<a href="https://github.com/RobotLocomotion/drake/pull/16343">#16343</a>)</li>
   <li>drake::solvers::MathematicalProgram::AddMaximizeLogDeterminantSymmetricMatrixCost has been renamed to AddMaximizeLogDeterminantCost (<a href="https://github.com/RobotLocomotion/drake/pull/16309">#16309</a>)</li>
   <li>drake::systems::RandomSourced alias (<a href="https://github.com/RobotLocomotion/drake/pull/16359">#16359</a>)</li>
