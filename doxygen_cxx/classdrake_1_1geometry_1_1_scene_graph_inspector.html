@@ -203,6 +203,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24456cafacabea2e6816ab4334cd2bf6"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#a24456cafacabea2e6816ab4334cd2bf6">GetName</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id) const</td></tr>
 <tr class="memdesc:a24456cafacabea2e6816ab4334cd2bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the name of the frame with the given <code>frame_id</code>.  <a href="#a24456cafacabea2e6816ab4334cd2bf6">More...</a><br /></td></tr>
 <tr class="separator:a24456cafacabea2e6816ab4334cd2bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca30abcce190c0618f4b6e57f7f56658"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#aca30abcce190c0618f4b6e57f7f56658">GetParentFrame</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id) const</td></tr>
+<tr class="memdesc:aca30abcce190c0618f4b6e57f7f56658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the FrameId of the parent of <code>frame_id</code>.  <a href="#aca30abcce190c0618f4b6e57f7f56658">More...</a><br /></td></tr>
+<tr class="separator:aca30abcce190c0618f4b6e57f7f56658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d8b283a6b3658b20db27e88d407f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_scene_graph_inspector.html#ae8d8b283a6b3658b20db27e88d407f19">GetFrameGroup</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id) const</td></tr>
 <tr class="memdesc:ae8d8b283a6b3658b20db27e88d407f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the frame group for the frame with the given <code>frame_id</code>.  <a href="#ae8d8b283a6b3658b20db27e88d407f19">More...</a><br /></td></tr>
 <tr class="separator:ae8d8b283a6b3658b20db27e88d407f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -930,6 +933,32 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>If <code>geometry_id</code> does not map to a registered geometry. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca30abcce190c0618f4b6e57f7f56658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca30abcce190c0618f4b6e57f7f56658">&#9670;&nbsp;</a></span>GetParentFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> GetParentFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&#160;</td>
+          <td class="paramname"><em>frame_id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reports the FrameId of the parent of <code>frame_id</code>. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if <code>frame_id</code> does not map to a registered frame. </td></tr>
   </table>
   </dd>
 </dl>

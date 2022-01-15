@@ -1,5 +1,8 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a3f20636148fdd94d52564127774875d7":[3,0,0,8,11,3],
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a4895028b237386dd36645a9b8f0f30f4":[3,0,0,8,11,0],
+"structdrake_1_1multibody_1_1_calc_grid_points_options.html#a53380b3b14c20bdfcb3bc9970c421231":[3,0,0,8,11,1],
 "structdrake_1_1multibody_1_1_calc_grid_points_options.html#ae62d09bc52470752b2fd4589c92049f5":[3,0,0,8,11,2],
 "structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html":[3,0,0,8,18],
 "structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,18,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,12,10,1],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,12,10,2],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#ab48163f67547336c2aadfc248321044a":[3,0,0,12,10,4],
-"structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,12,10,3],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,12,19,0],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a2ba66ff1f8bcabeda61e465e276e747c":[3,0,0,12,19,0,3],
-"structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a70af31c7e36b58a0a371ab585a605ed0":[3,0,0,12,19,0,2]
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,12,10,3]
 };

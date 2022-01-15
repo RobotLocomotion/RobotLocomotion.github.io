@@ -321,6 +321,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa752eb88a4a3eb76242ccb373b81ccf3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aa752eb88a4a3eb76242ccb373b81ccf3">SolidCylinder</a> (const T &amp;r, const T &amp;L, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;b_E=<a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;::UnitZ())</td></tr>
 <tr class="memdesc:aa752eb88a4a3eb76242ccb373b81ccf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass cylinder B, of uniform density, having its axis of revolution along input vector <code>b_E</code>.  <a href="#aa752eb88a4a3eb76242ccb373b81ccf3">More...</a><br /></td></tr>
 <tr class="separator:aa752eb88a4a3eb76242ccb373b81ccf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed68ed5145171fc5505a5c7c848bfae5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#aed68ed5145171fc5505a5c7c848bfae5">SolidCapsule</a> (const T &amp;r, const T &amp;L)</td></tr>
+<tr class="memdesc:aed68ed5145171fc5505a5c7c848bfae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a uniform density unit-mass capsule C whose axis of revolution is along the z-axis.  <a href="#aed68ed5145171fc5505a5c7c848bfae5">More...</a><br /></td></tr>
+<tr class="separator:aed68ed5145171fc5505a5c7c848bfae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af26c23e707688c5fe5f0c71f22fbee62"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html#af26c23e707688c5fe5f0c71f22fbee62">SolidCylinderAboutEnd</a> (const T &amp;r, const T &amp;L)</td></tr>
 <tr class="memdesc:af26c23e707688c5fe5f0c71f22fbee62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unit inertia for a unit-mass cylinder of uniform density oriented along the z-axis computed about a point at the center of its base.  <a href="#af26c23e707688c5fe5f0c71f22fbee62">More...</a><br /></td></tr>
 <tr class="separator:af26c23e707688c5fe5f0c71f22fbee62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1120,6 +1123,61 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Lx</td><td>The length of the box edge in the principal x-axis. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Ly</td><td>The length of the box edge in the principal y-axis. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Lz</td><td>The length of the box edge in the principal z-axis. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed68ed5145171fc5505a5c7c848bfae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed68ed5145171fc5505a5c7c848bfae5">&#9670;&nbsp;</a></span>SolidCapsule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classdrake_1_1multibody_1_1_unit_inertia.html">UnitInertia</a>&lt;T&gt; SolidCapsule </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>L</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Computes the unit inertia for a uniform density unit-mass capsule C whose axis of revolution is along the z-axis. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>The radius of the the cylinder/half-sphere part of the capsule. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">L</td><td>The length of the cylindrical part of the capsule. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td><ul>
+<li>Radius r is negative.</li>
+<li>Length L is negative. </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>

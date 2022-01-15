@@ -107,7 +107,12 @@ class drake::systems::DiagramBuilder&lt; T &gt;</h3>
 <p><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a> is a factory class for <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>. </p>
 <p>It is single use: after calling Build or BuildInto, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a> gives up ownership of the constituent systems, and should therefore be discarded; all member functions will throw an exception after this point.</p>
 <p>When a <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> (or <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a>) that owns systems is destroyed, the systems will be destroyed in the reverse of the order they were added.</p>
-<p>A system must be added to the <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a> with AddSystem or AddNamedSystem before it can be wired up in any way. Every system must have a unique, non-empty name. </p>
+<p>A system must be added to the <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html" title="DiagramBuilder is a factory class for Diagram.">DiagramBuilder</a> with AddSystem or AddNamedSystem before it can be wired up in any way. Every system must have a unique, non-empty name.</p>
+<p><a class="anchor" id="DiagramBuilder_feedthrough"></a></p><h2>Building large Diagrams</h2>
+<p>When building large Diagrams with many added systems and input-output port connections, the runtime performance of <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76" title="Builds the Diagram that has been described by the calls to Connect, ExportInput, and ExportOutput.">DiagramBuilder::Build()</a> might become relevant.</p>
+<p>As part of its correctness checks, the <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#aa4aef2b1fed54592b99071ee8df81f76" title="Builds the Diagram that has been described by the calls to Connect, ExportInput, and ExportOutput.">DiagramBuilder::Build()</a> function performs a graph search of the diagram's dependencies. In the graph, the nodes are the child systems that have been added to the diagram, and the edges are the diagram connections from one child's output port to another child's input port(s). The builder must confirm that the graph is acyclic; a cycle would imply an infinite loop in an output calculation function. With a large graph, this check can be computationally expensive. To speed it up, ensure that your output ports do not gratuitously depend on irrelevant input ports.</p>
+<p>The dependencies are supplied via the <code>prerequisites_of_calc</code> argument to DeclareOutputPort family of functions. If the default value is used (i.e., when no prerequisites are provided), the default is to assume the output port value is dependent on all possible sources.</p>
+<p>Refer to the <a class="el" href="classdrake_1_1systems_1_1_leaf_system.html#DeclareLeafOutputPort_feedthrough">Direct feedthrough</a> documentation for additional details and examples. In particular, the <a class="el" href="classdrake_1_1systems_1_1_system_base.html#abcd2ceca3da3b633da04d2f11c206b30" title="Returns a ticket indicating dependence on every possible independent source value except input ports.">SystemBase::all_sources_except_input_ports_ticket()</a> is a convenient shortcut for outputs that do not depend on any inputs. </p>
 </div>
 <p><code>#include &lt;drake/systems/framework/diagram_builder.h&gt;</code></p>
 <table class="memberdecls">
@@ -508,10 +513,11 @@ Public Member Functions</h2></td></tr>
 <p>Builds the <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> that has been described by the calls to Connect, ExportInput, and ExportOutput. </p>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
-    <tr><td class="paramname">std::exception</td><td>if the graph is not buildable. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if the graph is not buildable.</td></tr>
   </table>
   </dd>
 </dl>
+<p>See <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#DiagramBuilder_feedthrough">Building large Diagrams</a> for tips on improving runtime performance of this function. </p>
 
 </div>
 </div>

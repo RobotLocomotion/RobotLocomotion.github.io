@@ -22,6 +22,7 @@ var classdrake_1_1geometry_1_1_scene_graph_inspector =
     [ "GetName", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a832092603067759319cdf2e81c4cb67c", null ],
     [ "GetOwningSourceName", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a23a84671f9c3e47d6edd43b89d517193", null ],
     [ "GetOwningSourceName", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#aaa4abd9a74ade8a4bf623f06c1f3b9ed", null ],
+    [ "GetParentFrame", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#aca30abcce190c0618f4b6e57f7f56658", null ],
     [ "GetPerceptionProperties", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a50bbeaf688249f73750680af158ab444", null ],
     [ "GetPoseInFrame", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a3d31605981da8ffc831d41009cc22a3d", null ],
     [ "GetPoseInParent", "classdrake_1_1geometry_1_1_scene_graph_inspector.html#a33a4eab8cdd87647bbae03cca106fe55", null ],
