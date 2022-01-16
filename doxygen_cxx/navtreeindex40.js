@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdcabc17c60a85668aa4d8463d9204acb6f9":[4,0,0,6,3,1,2,0],
 "differential__inverse__kinematics_8h.html#ad6126afebe3f7bb144758cd0e2663f38":[4,0,0,6,3,1,3],
 "differential__inverse__kinematics_8h.html#ga6106c9d0180a87d59f7a36709f7d6785":[4,0,0,6,3,1,6],
 "differential__inverse__kinematics_8h.html#gab53fd2e1578db60ceb43b754671ae539":[4,0,0,6,3,1,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "expect__throws__message_8h.html":[4,0,0,1,2,3],
 "expect__throws__message_8h.html#a54f58abfffc9eb33036fb5897911017e":[4,0,0,1,2,3,3],
 "expect__throws__message_8h.html#a6998ae8e94de7f2305a8e90e2f108d7f":[4,0,0,1,2,3,0],
-"expect__throws__message_8h.html#a92ea4ce5690987ffdcb6a9cc868c1eeb":[4,0,0,1,2,3,1],
-"expect__throws__message_8h.html#aa74c5ca3daeb1e31077efbb2e5e319c4":[4,0,0,1,2,3,2]
+"expect__throws__message_8h.html#a92ea4ce5690987ffdcb6a9cc868c1eeb":[4,0,0,1,2,3,1]
 };

@@ -3452,10 +3452,15 @@ diagonally dominant.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(p, Q) The polynomial p and the Gramian matrix Q. Q has been added
-as decision variables to the program.</td>
+as decision variables to the program. / (Deprecated.)</td>
 </tr>
 </tbody>
 </table>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use NewSosPolynomial instead of NewNonnegativePolynomial This will
+be removed from Drake on or after 2022-05-01.</dd>
+</dl>
 <ol class="arabic simple" start="2">
 <li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
@@ -3465,7 +3470,12 @@ polynomial, we will impose different constraint on the Gramian matrix.
 - if type = kSos, we impose the Gramian matrix being positive
 semidefinite. - if type = kSdsos, we impose the Gramian matrix being
 scaled diagonally dominant. - if type = kDsos, we impose the Gramian
-matrix being positive diagonally dominant.</p>
+matrix being positive diagonally dominant. / (Deprecated.)</p>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use NewSosPolynomial instead of NewNonnegativePolynomial This will
+be removed from Drake on or after 2022-05-01.</dd>
+</dl>
 <ol class="arabic simple" start="3">
 <li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
@@ -3473,11 +3483,7 @@ matrix being positive diagonally dominant.</p>
 basis, we use a monomial basis that contains all monomials of
 <code class="docutils literal"><span class="pre">indeterminates</span></code> of total order up to <code class="docutils literal"><span class="pre">degree</span></code> / 2, hence the
 returned polynomial p contains all the monomials of <code class="docutils literal"><span class="pre">indeterminates</span></code>
-of total order up to <code class="docutils literal"><span class="pre">degree</span></code>. Depending on the type of the
-polynomial, we will impose different constraint on the polynomial. -
-if type = kSos, we impose the polynomial being SOS. - if type =
-kSdsos, we impose the polynomial being SDSOS. - if type = kDsos, we
-impose the polynomial being DSOS.</p>
+of total order up to <code class="docutils literal"><span class="pre">degree</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">indeterminates</span></code>:</dt>
 <dd>All the indeterminates in the polynomial p.</dd>
@@ -3498,7 +3504,10 @@ as decision variables to the program.</td>
 </table>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">degree</span></code> is a positive even number.</dd>
+<dd><code class="docutils literal"><span class="pre">degree</span></code> is a positive even number. / (Deprecated.)</dd>
+<dt>Deprecated:</dt>
+<dd>Use NewSosPolynomial instead of NewNonnegativePolynomial This will
+be removed from Drake on or after 2022-05-01.</dd>
 </dl>
 </dd></dl>
 
@@ -3525,26 +3534,44 @@ this name as a base. The variable name would be “a1”, “a2”, etc.</dd>
 <code class="descname">NewSosPolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.NewSosPolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]]) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
 </ol>
 <p>Returns a pair of a SOS polynomial p = mᵀQm and the Gramian matrix Q,
 where m is the <code class="docutils literal"><span class="pre">monomial</span></code> basis. For example,
 <code class="docutils literal"><span class="pre">NewSosPolynomial(Vector2&lt;Monomial&gt;{x,y})</span></code> returns a polynomial p =
-Q₍₀,₀₎x² + 2Q₍₁,₀₎xy + Q₍₁,₁₎y² and Q.</p>
+Q₍₀,₀₎x² + 2Q₍₁,₀₎xy + Q₍₁,₁₎y² and Q. Depending on the type of the
+polynomial, we will impose different constraint on the polynomial. -
+if type = kSos, we impose the polynomial being SOS. - if type =
+kSdsos, we impose the polynomial being SDSOS. - if type = kDsos, we
+impose the polynomial being DSOS.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Q is a symmetric monomial_basis.rows() x monomial_basis.rows()
 matrix.</p>
 </div>
 <ol class="arabic simple" start="2">
-<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
-<p>Returns a pair of a SOS polynomial p = m(x)ᵀQm(x) of degree <code class="docutils literal"><span class="pre">degree</span></code>
-and the Gramian matrix Q that should be PSD, where m(x) is the result
-of calling <code class="docutils literal"><span class="pre">MonomialBasis(indeterminates,</span> <span class="pre">degree/2)</span></code>. For example,
+<p>Overloads NewSosPolynomial, except the Gramian matrix Q is an input
+instead of an output.</p>
+<ol class="arabic simple" start="3">
+<li>NewSosPolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial = &lt;NonnegativePolynomial.kSos: 0&gt;) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
+</ol>
+<p>Overloads NewSosPolynomial. Returns a pair of a SOS polynomial p =
+m(x)ᵀQm(x) of degree <code class="docutils literal"><span class="pre">degree</span></code> and the Gramian matrix Q that should
+be PSD, where m(x) is the result of calling
+<code class="docutils literal"><span class="pre">MonomialBasis(indeterminates,</span> <span class="pre">degree/2)</span></code>. For example,
 <code class="docutils literal"><span class="pre">NewSosPolynomial({x},</span> <span class="pre">4)</span></code> returns a pair of a polynomial p =
 Q₍₀,₀₎x⁴ + 2Q₍₁,₀₎ x³ + (2Q₍₂,₀₎ + Q₍₁,₁₎)x² + 2Q₍₂,₁₎x + Q₍₂,₂₎ and
 Q.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+<dd>Depending on the type of the polynomial, we will impose different
+constraint on the polynomial. - if type = kSos, we impose the
+polynomial being SOS. - if type = kSdsos, we impose the polynomial
+being SDSOS. - if type = kDsos, we impose the polynomial being
+DSOS.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />

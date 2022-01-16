@@ -1,5 +1,6 @@
 var NAVTREEINDEX25 =
 {
+"classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#a3660c96e65bec4f7831e74691a14c129":[3,0,0,13,51,4],
 "classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,13,51,8],
 "classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#a882ee7e7437fe91b4189db3708886e01":[3,0,0,13,51,0],
 "classdrake_1_1symbolic_1_1_formula_positive_semidefinite.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,13,51,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX25 =
 "classdrake_1_1symbolic_1_1_rewriting_rule.html":[3,0,0,13,63],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#a03a724bde9b3515a17a17582f0fa4e72":[3,0,0,13,63,7],
 "classdrake_1_1symbolic_1_1_rewriting_rule.html#a07e1ce22402070bc1c7fe07795c0956f":[3,0,0,13,63,3],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#a96e9f78299ed9be2d52dca0ad339eee2":[3,0,0,13,63,2],
-"classdrake_1_1symbolic_1_1_rewriting_rule.html#aab096cd1612d522eb6c2e4c4507f2db7":[3,0,0,13,63,6]
+"classdrake_1_1symbolic_1_1_rewriting_rule.html#a96e9f78299ed9be2d52dca0ad339eee2":[3,0,0,13,63,2]
 };

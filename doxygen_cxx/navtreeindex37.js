@@ -1,5 +1,6 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039":[1,3,6,3,11],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ae4c8ea51d7cc6205ac01333ea7842d4c":[1,3,6,3,7],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#af2357d108e636ddbf871eb98f5021ac8":[1,3,6,3,0],
 "classdrake_1_1systems_1_1lcm_1_1_serializer.html":[3,0,0,14,5,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a6c4f7a4cf911fd88036fd474faf8a089":[1,5,2,7,6],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#a90e4464c1cc3d3a1819ac1b595e2b025":[1,5,2,7,2],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#aae7a39fc88c07d0083ea1a3cccf3e6a9":[1,5,2,7,5],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#abe60713e85d1a59b9899dedc5da326c3":[1,5,2,7,3],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_mid_point_integration_constraint.html":[3,0,0,14,9,3]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_transcription.html#abe60713e85d1a59b9899dedc5da326c3":[1,5,2,7,3]
 };
