@@ -310,6 +310,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_matrix_gain.html">MatrixGain</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A system that specializes <a class="el" href="classdrake_1_1systems_1_1_linear_system.html" title="A discrete OR continuous linear system.">LinearSystem</a> by setting coefficient matrices <code>A</code>, <code>B</code>, and <code>C</code> to all be zero.  <a href="classdrake_1_1systems_1_1_matrix_gain.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html">MultilayerPerceptron</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html" title="The MultilayerPerceptron (MLP) is one of the most common forms of neural networks used in reinforceme...">MultilayerPerceptron</a> (MLP) is one of the most common forms of neural networks used in reinforcement learning (RL) today.  <a href="classdrake_1_1systems_1_1_multilayer_perceptron.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multiplexer.html">Multiplexer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This system combines multiple vector-valued inputs into a vector-valued output.  <a href="classdrake_1_1systems_1_1_multiplexer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -611,6 +614,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacedrake_1_1systems.html#afe8fe136944074e97f02b7e3835347b3ae2ea39b7ef80705cf65b9c6497eb2705">kCrossesZero</a>
  }</td></tr>
 <tr class="separator:afe8fe136944074e97f02b7e3835347b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30ed135f597ef0f136767f629a0472b0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">PerceptronActivationType</a> { <a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0ad4f1ba5b64f241750117f22a6d63618c">kIdentity</a>, 
+<a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0aaf7b6001c9a71950fb6858250e78f0fc">kReLU</a>, 
+<a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0ab8f0b26c641a7ec61d715a2ebeb4734d">kTanh</a>
+ }</td></tr>
+<tr class="memdesc:a30ed135f597ef0f136767f629a0472b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies one of the common activation functions in a neural network.  <a href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">More...</a><br /></td></tr>
+<tr class="separator:a30ed135f597ef0f136767f629a0472b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -1145,6 +1154,27 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a00432489001229d1f63cb6d373403a6ea04b33f9fae5ed24fc651a8d4be9d9041"></a>kNoOutput&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a00432489001229d1f63cb6d373403a6ea2e0016ab225d09e0af0e4648992d8be5"></a>kUseFirstOutputIfItExists&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a30ed135f597ef0f136767f629a0472b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30ed135f597ef0f136767f629a0472b0">&#9670;&nbsp;</a></span>PerceptronActivationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">PerceptronActivationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specifies one of the common activation functions in a neural network. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a30ed135f597ef0f136767f629a0472b0ad4f1ba5b64f241750117f22a6d63618c"></a>kIdentity&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30ed135f597ef0f136767f629a0472b0aaf7b6001c9a71950fb6858250e78f0fc"></a>kReLU&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a30ed135f597ef0f136767f629a0472b0ab8f0b26c641a7ec61d715a2ebeb4734d"></a>kTanh&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

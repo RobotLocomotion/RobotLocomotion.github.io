@@ -12,5 +12,6 @@ var searchData=
   ['multibodyelementtester',['MultibodyElementTester',['../classdrake_1_1multibody_1_1_multibody_element.html#a59cf1173a305d4864320bf9e1bf60f35',1,'drake::multibody::MultibodyElement']]],
   ['multibodyplant',['MultibodyPlant',['../classdrake_1_1multibody_1_1_multibody_plant.html#a47a63154823dffd5838329527aafbd58',1,'drake::multibody::MultibodyPlant']]],
   ['multibodyplanttester',['MultibodyPlantTester',['../classdrake_1_1multibody_1_1_multibody_plant.html#a42efef893a4d8eed1d593caff328f599',1,'drake::multibody::MultibodyPlant']]],
+  ['multilayerperceptron',['MultilayerPerceptron',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a4203b6254bcd02ce5a385c42adc8a621',1,'drake::systems::MultilayerPerceptron']]],
   ['multiplexer',['Multiplexer',['../classdrake_1_1systems_1_1_multiplexer.html#a4dcb4fb0e76f378b4a7c2802eb5c1dc6',1,'drake::systems::Multiplexer']]]
 ];

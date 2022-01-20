@@ -69,6 +69,7 @@ var namespacedrake_1_1systems =
     [ "LinearSystem", "classdrake_1_1systems_1_1_linear_system.html", "classdrake_1_1systems_1_1_linear_system" ],
     [ "LinearTransformDensity", "classdrake_1_1systems_1_1_linear_transform_density.html", "classdrake_1_1systems_1_1_linear_transform_density" ],
     [ "MatrixGain", "classdrake_1_1systems_1_1_matrix_gain.html", "classdrake_1_1systems_1_1_matrix_gain" ],
+    [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html", "classdrake_1_1systems_1_1_multilayer_perceptron" ],
     [ "Multiplexer", "classdrake_1_1systems_1_1_multiplexer.html", "classdrake_1_1systems_1_1_multiplexer" ],
     [ "MyVector", "classdrake_1_1systems_1_1_my_vector.html", "classdrake_1_1systems_1_1_my_vector" ],
     [ "OutputPort", "classdrake_1_1systems_1_1_output_port.html", "classdrake_1_1systems_1_1_output_port" ],

@@ -18,6 +18,7 @@ var dir_55f8630d5466d97e74952e939680a0a0 =
       [ "Traits< LinearTransformDensity >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html", null ]
     ] ],
     [ "matrix_gain.h", "matrix__gain_8h.html", null ],
+    [ "multilayer_perceptron.h", "multilayer__perceptron_8h.html", "multilayer__perceptron_8h" ],
     [ "multiplexer.h", "multiplexer_8h.html", null ],
     [ "pass_through.h", "pass__through_8h.html", null ],
     [ "port_switch.h", "port__switch_8h.html", null ],

@@ -77,7 +77,6 @@ var searchData=
   ['copyable_5funique_5fptr_3c_20internal_3a_3ashaderprogram_20_3e',['copyable_unique_ptr&lt; internal::ShaderProgram &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['cost',['Cost',['../classdrake_1_1solvers_1_1_cost.html',1,'drake::solvers']]],
   ['coulombfriction',['CoulombFriction',['../classdrake_1_1multibody_1_1_coulomb_friction.html',1,'drake::multibody']]],
-  ['coulombfriction_3c_20double_20_3e',['CoulombFriction&lt; double &gt;',['../classdrake_1_1multibody_1_1_coulomb_friction.html',1,'drake::multibody']]],
   ['csdpsolver',['CsdpSolver',['../classdrake_1_1solvers_1_1_csdp_solver.html',1,'drake::solvers']]],
   ['csdpsolverdetails',['CsdpSolverDetails',['../structdrake_1_1solvers_1_1_csdp_solver_details.html',1,'drake::solvers']]],
   ['cubicscalarsystem',['CubicScalarSystem',['../classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html',1,'drake::systems::analysis_test']]],
