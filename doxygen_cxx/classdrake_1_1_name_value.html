@@ -104,9 +104,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1_name_value.html','');})
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::NameValue&lt; T &gt;</h3>
 
-<p>A basic implementation of the Name-Value Pair concept as used in the Serialize / Archive pattern. </p>
-<p>See, for example: <a href="https://www.boost.org/doc/libs/release/libs/serialization/doc/wrappers.html#nvp">https://www.boost.org/doc/libs/release/libs/serialization/doc/wrappers.html#nvp</a></p>
-<p><a class="el" href="classdrake_1_1_name_value.html" title="A basic implementation of the Name-Value Pair concept as used in the Serialize / Archive pattern.">NameValue</a> stores a pointer to a const <code>name</code> and a pointer to a mutable <code>value</code>. Both pointers must remain valid throughout the lifetime of an object. NameValue objects are typically short-lived, existing only for a transient moment while an Archive is visiting some Serializable field. </p>
+<p>(Advanced) A basic implementation of the Name-Value Pair concept as used in the Serialize / Archive pattern. </p>
+<p>NameValue stores a pointer to a const <code>name</code> and a pointer to a mutable <code>value</code>. Both pointers must remain valid throughout the lifetime of an object. NameValue objects are typically short-lived, existing only for a transient moment while an Archive is visiting some Serializable field.</p>
+<p>For more information, refer to Drake's <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> and especially the <a class="el" href="group__yaml__serialization.html#implementing_serialize">Implementing Serialize</a> section, or also the <a href="https://www.boost.org/doc/libs/release/libs/serialization/doc/wrappers.html#nvp">Boost Name-Value Pairs</a> documentation for background. </p>
 </div>
 <p><code>#include &lt;drake/common/name_value.h&gt;</code></p>
 <table class="memberdecls">
@@ -119,7 +119,7 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acbc958ccd011dfef6c5f0a08d1f49ade"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_name_value.html#acbc958ccd011dfef6c5f0a08d1f49ade">NameValue</a> (const char *name_in, T *value_in)</td></tr>
-<tr class="memdesc:acbc958ccd011dfef6c5f0a08d1f49ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced.) Constructs a NameValue.  <a href="#acbc958ccd011dfef6c5f0a08d1f49ade">More...</a><br /></td></tr>
+<tr class="memdesc:acbc958ccd011dfef6c5f0a08d1f49ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Constructs a NameValue.  <a href="#acbc958ccd011dfef6c5f0a08d1f49ade">More...</a><br /></td></tr>
 <tr class="separator:acbc958ccd011dfef6c5f0a08d1f49ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ae3185c2455daf1ca31d1baa1e8f038ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_name_value.html#ae3185c2455daf1ca31d1baa1e8f038ef">NameValue</a> (const <a class="el" href="classdrake_1_1_name_value.html">NameValue</a> &amp;)=delete</td></tr>
@@ -232,7 +232,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>(Advanced.) Constructs a NameValue. </p>
+<p>(Advanced) Constructs a NameValue. </p>
 <p>Prefer DRAKE_NVP instead of this constructor. Both pointers are aliased and must remain valid for the lifetime of this object. Neither pointer can be nullptr. </p>
 
 </div>

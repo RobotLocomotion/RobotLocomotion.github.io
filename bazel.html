@@ -428,6 +428,14 @@ data would be scattered within the directory tree linked as
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tools/dynamic_analysis/kcov_tool clean
 </code></pre></div></div>
 
+<h3 id="kcov-and-python">kcov and Python</h3>
+
+<p>Coverage reports for Python sources produced by kcov are useful, but can be
+misleading. As of Ubuntu 20.04 and kcov 38, Python reports do not render
+coverage for multi-line statements properly. Statements that use delimiter
+pairs to span more than two lines, or statements that use string token pasting
+across multiple lines may be mistakenly shown as only partially executed.</p>
+
       </article>
     </div>
   </section>

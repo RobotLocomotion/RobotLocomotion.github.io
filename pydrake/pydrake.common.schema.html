@@ -241,8 +241,9 @@
 <em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">Distribution</code><a class="headerlink" href="#pydrake.common.schema.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for a single distribution, to be used with YAML archives.
 (See class DistributionVector for vector-valued distributions.)</p>
-<p>See serialize_tips for implementation details, especially the
-unusually public member fields in our subclasses.</p>
+<p>See implementing_serialize “Implementing Serialize” for implementation
+details, especially the unusually public member fields of our
+subclasses.</p>
 <dl class="attribute">
 <dt id="pydrake.common.schema.Distribution.__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.common.schema.Distribution.__init__" title="Permalink to this definition">¶</a></dt>
@@ -271,7 +272,7 @@ unusually public member fields in our subclasses.</p>
 <em class="property">class </em><code class="descclassname">pydrake.common.schema.</code><code class="descname">DistributionVector</code><a class="headerlink" href="#pydrake.common.schema.DistributionVector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Base class for a vector of distributions, to be used with YAML
 archives. (See class Distribution for scalar-valued distributions.)</p>
-<p>See serialize_tips for implementation details, especially the
+<p>See implementing_serialize for implementation details, especially the
 unusually public member fields in our subclasses.</p>
 <dl class="attribute">
 <dt id="pydrake.common.schema.DistributionVector.__init__">
@@ -434,8 +435,8 @@ GetDeterministicValue() or ToSymbolic() to obtain a RotationMatrix
 value that can be operated on.</p>
 <p>For an overview of configuring stochastic transforms, see
 schema_transform and schema_stochastic.</p>
-<p>See serialize_tips for implementation details, especially the
-unusually public member fields.</p>
+<p>See implementing_serialize “Implementing Serialize” for implementation
+details, especially the unusually public member fields.</p>
 <dl class="method">
 <dt id="pydrake.common.schema.Rotation.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Rotation.__init__" title="Permalink to this definition">¶</a></dt>
@@ -527,8 +528,8 @@ in use.</p>
 respect to a base frame.</p>
 <p>For an overview of configuring stochastic transforms, see
 schema_transform and schema_stochastic.</p>
-<p>See serialize_tips for implementation details, especially the
-unusually public member fields.</p>
+<p>See implementing_serialize “Implementing Serialize” for implementation
+details, especially the unusually public member fields.</p>
 <dl class="method">
 <dt id="pydrake.common.schema.Transform.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.schema.Transform.__init__" title="Permalink to this definition">¶</a></dt>

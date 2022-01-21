@@ -2175,15 +2175,25 @@ call</p>
 <code class="descname">AddMaximizeGeometricMeanCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddMaximizeGeometricMeanCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddMaximizeGeometricMeanCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], x: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+<li>AddMaximizeGeometricMeanCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]], x: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
 <p>An overloaded version of maximize_geometric_mean.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">cost The added cost (note that since MathematicalProgram only
+minimizes the cost, the returned cost evaluates to -c *
+power(∏ᵢx(i), 1/n).</td>
+</tr>
+</tbody>
+</table>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>A.rows() == b.rows(), A.rows() &gt;= 2.</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>AddMaximizeGeometricMeanCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, x: numpy.ndarray[object[m, 1]], c: float) -&gt; None</li>
+<li>AddMaximizeGeometricMeanCost(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, x: numpy.ndarray[object[m, 1]], c: float) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearCost]</li>
 </ol>
 <p>An overloaded version of maximize_geometric_mean. We add the cost to
 maximize the geometric mean of x, i.e., c*power(∏ᵢx(i), 1/n).</p>
@@ -2191,6 +2201,18 @@ maximize the geometric mean of x, i.e., c*power(∏ᵢx(i), 1/n).</p>
 <dt>Parameter <code class="docutils literal"><span class="pre">c</span></code>:</dt>
 <dd>The positive coefficient of the geometric mean cost, $*Default:*
 is 1.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">cost The added cost (note that since MathematicalProgram only
+minimizes the cost, the returned cost evaluates to -c *
+power(∏ᵢx(i), 1/n).</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
 <dt>Precondition:</dt>
 <dd>x.rows() &gt;= 2.</dd>
 <dt>Precondition:</dt>

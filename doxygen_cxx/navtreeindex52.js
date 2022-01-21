@@ -1,8 +1,5 @@
 var NAVTREEINDEX52 =
 {
-"symbolic__formula__cell_8h.html#ad60a650ffd29c64c25be2dc84bfefccc":[4,0,0,1,59,18],
-"symbolic__formula__cell_8h.html#adfca6086d970d576d51fa5364416a297":[4,0,0,1,59,27],
-"symbolic__formula__visitor_8h.html":[4,0,0,1,60],
 "symbolic__formula__visitor_8h.html#aa2748b5dc34bc17a6c6e98ac1d0cc1ad":[4,0,0,1,60,0],
 "symbolic__generic__polynomial_8h.html":[4,0,0,1,61],
 "symbolic__generic__polynomial_8h.html#a120ae90dfc24dd3f7b4f42aededbabfd":[4,0,0,1,61,31],
@@ -238,7 +235,7 @@ var NAVTREEINDEX52 =
 "text__logging_8h.html#ae32fd151ebc2dab30d9546f1dbef0c79":[4,0,0,1,75,3],
 "text__logging_8h.html#ae6e439f4584cc1f0a6dd0990378604a5":[4,0,0,1,75,8],
 "text__logging_8h.html#aed13fee35863fff48d177f80c979bca0":[4,0,0,1,75,2],
-"text__logging__pybind_8h.html":[4,0,0,0,0,0,8],
+"text__logging__pybind_8h.html":[4,0,0,0,0,0,9],
 "texture__library_8h.html":[4,0,0,4,4,0,11],
 "toppra_8h.html":[4,0,0,8,7,10],
 "toppra_8h.html#ad8fa828762d54ed2db5efec5df1b5082":[4,0,0,8,7,10,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX52 =
 "trajectory__linear__system_8h.html":[4,0,0,11,6,23],
 "trajectory__source_8h.html":[4,0,0,11,6,24],
 "transform_8h.html":[4,0,0,1,1,2],
-"triangle__quadrature_8h.html":[4,0,0,8,13,1]
+"triangle__quadrature_8h.html":[4,0,0,8,13,1],
+"triangle__quadrature__rule_8h.html":[4,0,0,8,13,2],
+"triangle__surface__mesh_8h.html":[4,0,0,4,2,45],
+"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,46]
 };

@@ -103,10 +103,10 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1yaml.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html">YamlReadArchive</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that loads data from a <a class="el" href="namespace_y_a_m_l.html">YAML</a> file into a C++ structure.  <a href="classdrake_1_1yaml_1_1_yaml_read_archive.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that loads data from a YAML file into a C++ structure.  <a href="classdrake_1_1yaml_1_1_yaml_read_archive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1yaml_1_1_yaml_write_archive.html">YamlWriteArchive</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that saves data from a C++ structure into a <a class="el" href="namespace_y_a_m_l.html">YAML</a> file.  <a href="classdrake_1_1yaml_1_1_yaml_write_archive.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) A helper class for <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> that saves data from a C++ structure into a YAML file.  <a href="classdrake_1_1yaml_1_1_yaml_write_archive.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -181,7 +181,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">filename</td><td>Filename to be read from. </td></tr>
     <tr><td class="paramname">child_name</td><td>(optional) If provided, loads data from given-named child of the document's root instead of the root itself. </td></tr>
-    <tr><td class="paramname">defaults</td><td>(optional) If provided, then the structure being read into will be initialized using this value instead of the default constructor, and also (unless the <code>options</code> argument is provided and specifies otherwise) any member fields that are not mentioned in the <a class="el" href="namespace_y_a_m_l.html">YAML</a> will retain their default values. </td></tr>
+    <tr><td class="paramname">defaults</td><td>(optional) If provided, then the structure being read into will be initialized using this value instead of the default constructor, and also (unless the <code>options</code> argument is provided and specifies otherwise) any member fields that are not mentioned in the YAML will retain their default values. </td></tr>
     <tr><td class="paramname">options</td><td>(optional, advanced) If provided, overrides the nominal parsing options. Most users should not specify this; the default is usually correct.</td></tr>
   </table>
   </dd>
@@ -189,7 +189,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the loaded user data.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function and be default constructible. </td></tr>
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function and be default constructible. </td></tr>
   </table>
   </dd>
 </dl>
@@ -246,9 +246,9 @@ Functions</h2></td></tr>
 <p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background and examples.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>the <a class="el" href="namespace_y_a_m_l.html">YAML</a> document as a string. </td></tr>
+    <tr><td class="paramname">data</td><td>the YAML document as a string. </td></tr>
     <tr><td class="paramname">child_name</td><td>(optional) If provided, loads data from given-named child of the document's root instead of the root itself. </td></tr>
-    <tr><td class="paramname">defaults</td><td>(optional) If provided, then the structure being read into will be initialized using this value instead of the default constructor, and also (unless the <code>options</code> argument is provided and specifies otherwise) any member fields that are not mentioned in the <a class="el" href="namespace_y_a_m_l.html">YAML</a> will retain their default values. </td></tr>
+    <tr><td class="paramname">defaults</td><td>(optional) If provided, then the structure being read into will be initialized using this value instead of the default constructor, and also (unless the <code>options</code> argument is provided and specifies otherwise) any member fields that are not mentioned in the YAML will retain their default values. </td></tr>
     <tr><td class="paramname">options</td><td>(optional, advanced) If provided, overrides the nominal parsing options. Most users should not specify this; the default is usually correct.</td></tr>
   </table>
   </dd>
@@ -256,7 +256,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>the loaded user data.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function and be default constructible. </td></tr>
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function and be default constructible. </td></tr>
   </table>
   </dd>
 </dl>
@@ -303,19 +303,19 @@ Functions</h2></td></tr>
 
 <p>Saves data as a YAML-formatted file. </p>
 <p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
-<p>The <a class="el" href="namespace_y_a_m_l.html">YAML</a> will consist of a single document with a mapping node at the root. If a <code>child_name</code> is <b>not</b> provided (the default), then the serialized data will appear directly within that top-level mapping node. If a <code>child_name</code> <b>is</b> provided, then the top-level mapping node will contain only one entry, whose key is <code>child_name</code> and value is the serialized <code>data</code>.</p>
+<p>The YAML will consist of a single document with a mapping node at the root. If a <code>child_name</code> is <b>not</b> provided (the default), then the serialized data will appear directly within that top-level mapping node. If a <code>child_name</code> <b>is</b> provided, then the top-level mapping node will contain only one entry, whose key is <code>child_name</code> and value is the serialized <code>data</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>Filename to be written to. </td></tr>
     <tr><td class="paramname">data</td><td>User data to be serialized. </td></tr>
-    <tr><td class="paramname">child_name</td><td>(optional) If provided, the <a class="el" href="namespace_y_a_m_l.html">YAML</a> document will be <code>{child_name: { data }}</code> rather than just <code>{ data }</code>. </td></tr>
+    <tr><td class="paramname">child_name</td><td>(optional) If provided, the YAML document will be <code>{child_name: { data }}</code> rather than just <code>{ data }</code>. </td></tr>
     <tr><td class="paramname">defaults</td><td>(optional) If provided, then only data that differs from the given defaults will be serialized.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function. </td></tr>
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function. </td></tr>
   </table>
   </dd>
 </dl>
@@ -356,19 +356,19 @@ Functions</h2></td></tr>
 
 <p>Saves data as a YAML-formatted string. </p>
 <p>Refer to <a class="el" href="group__yaml__serialization.html">YAML Serialization</a> for background.</p>
-<p>The <a class="el" href="namespace_y_a_m_l.html">YAML</a> will consist of a single document with a mapping node at the root. If a <code>child_name</code> is <b>not</b> provided (the default), then the serialized data will appear directly within that top-level mapping node. If a <code>child_name</code> <b>is</b> provided, then the top-level mapping node will contain only one entry, whose key is <code>child_name</code> and value is the serialized <code>data</code>.</p>
+<p>The YAML will consist of a single document with a mapping node at the root. If a <code>child_name</code> is <b>not</b> provided (the default), then the serialized data will appear directly within that top-level mapping node. If a <code>child_name</code> <b>is</b> provided, then the top-level mapping node will contain only one entry, whose key is <code>child_name</code> and value is the serialized <code>data</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>User data to be serialized. </td></tr>
-    <tr><td class="paramname">child_name</td><td>(optional) If provided, the <a class="el" href="namespace_y_a_m_l.html">YAML</a> document will be <code>{child_name: { data }}</code> rather than just <code>{ data }</code>. </td></tr>
+    <tr><td class="paramname">child_name</td><td>(optional) If provided, the YAML document will be <code>{child_name: { data }}</code> rather than just <code>{ data }</code>. </td></tr>
     <tr><td class="paramname">defaults</td><td>(optional) If provided, then only data that differs from the given defaults will be serialized.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>the <a class="el" href="namespace_y_a_m_l.html">YAML</a> document as a string.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>the YAML document as a string.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__serialize__tips.html">Serialize</a> function. </td></tr>
+    <tr><td class="paramname">Serializable</td><td>must implement a <a class="el" href="group__yaml__serialization.html#implementing_serialize">Serialize</a> function. </td></tr>
   </table>
   </dd>
 </dl>

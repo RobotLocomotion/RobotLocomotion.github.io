@@ -106,7 +106,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1schema_1_1_rotation.html
 <div class="textblock"><p>A specification for an SO(3) rotation, to be used for serialization purposes, e.g., to define stochastic scenarios. </p>
 <p>This structure specifies either one specific rotation or else a distribution of possible rotations. It does not provide mathematical operators to compose or mutate rotations. Instead, users should call either <a class="el" href="classdrake_1_1schema_1_1_rotation.html#a2efdc7d120a60532613625edf2b20ea1" title="If this is deterministic, retrieves its value.">GetDeterministicValue()</a> or <a class="el" href="classdrake_1_1schema_1_1_rotation.html#aa28404dc624e8c707b31e562883f713e" title="Returns the symbolic form of this rotation.">ToSymbolic()</a> to obtain a RotationMatrix value that can be operated on.</p>
 <p>For an overview of configuring stochastic transforms, see <a class="el" href="group__schema__transform.html">Configuring transforms</a> and <a class="el" href="group__schema__stochastic.html">Configuring distributions</a>.</p>
-<p>See <a class="el" href="group__serialize__tips.html">Writing a Serialize method</a> for implementation details, especially the unusually public member fields. </p>
+<p>See <a class="el" href="group__yaml__serialization.html#implementing_serialize">Implementing Serialize</a> for implementation details, especially the unusually public member fields. </p>
 </div>
 <p><code>#include &lt;drake/common/schema/rotation.h&gt;</code></p>
 <table class="memberdecls">

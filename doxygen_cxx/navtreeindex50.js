@@ -1,8 +1,5 @@
 var NAVTREEINDEX50 =
 {
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,14,7,0,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,14,7,1],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,14,7,1,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,14,7,2],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,7,2,0],
@@ -249,5 +246,8 @@ var NAVTREEINDEX50 =
 "symbolic__expression_8h.html#a7d45b86ae4b7872576bb3fac8b22ca94":[4,0,0,1,55,118],
 "symbolic__expression_8h.html#a8da800513f72f528dffddd89f9263b3a":[4,0,0,1,55,38],
 "symbolic__expression_8h.html#a8dd352ee762ef421653cd8941fa5ce22":[4,0,0,1,55,72],
-"symbolic__expression_8h.html#a8f0355c03127b4d0312e5f761a0f530a":[4,0,0,1,55,24]
+"symbolic__expression_8h.html#a8f0355c03127b4d0312e5f761a0f530a":[4,0,0,1,55,24],
+"symbolic__expression_8h.html#a8f5dcbc71dc0b20b3debbeafdd5f1614":[4,0,0,1,55,61],
+"symbolic__expression_8h.html#a901d5aa27994e415a1eb4145968dc25c":[4,0,0,1,55,41],
+"symbolic__expression_8h.html#a9084a43cdfa02b10cb216c7bfff0dcb3":[4,0,0,1,55,100]
 };

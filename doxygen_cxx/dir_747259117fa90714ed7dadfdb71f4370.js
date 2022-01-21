@@ -7,6 +7,7 @@ var dir_747259117fa90714ed7dadfdb71f4370 =
     [ "eigen_geometry_pybind.h", "eigen__geometry__pybind_8h.html", null ],
     [ "eigen_pybind.h", "eigen__pybind_8h.html", "eigen__pybind_8h" ],
     [ "identifier_pybind.h", "identifier__pybind_8h.html", "identifier__pybind_8h" ],
+    [ "monostate_pybind.h", "monostate__pybind_8h.html", null ],
     [ "sorted_pair_pybind.h", "sorted__pair__pybind_8h.html", null ],
     [ "text_logging_pybind.h", "text__logging__pybind_8h.html", null ],
     [ "type_pack.h", "type__pack_8h.html", "type__pack_8h" ],

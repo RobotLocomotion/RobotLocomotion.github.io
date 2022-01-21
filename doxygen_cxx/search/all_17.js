@@ -1,7 +1,6 @@
 var searchData=
 [
   ['working_20with_20contacts_20in_20drake',['Working with Contacts in Drake',['../group__contact__engineering.html',1,'']]],
-  ['writing_20a_20serialize_20method',['Writing a Serialize method',['../group__serialize__tips.html',1,'']]],
   ['waitformessage',['WaitForMessage',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#ac456d9170ae4b25ded776deffac5f039',1,'drake::systems::lcm::LcmSubscriberSystem']]],
   ['warn',['Warn',['../structdrake_1_1logging_1_1_warn.html',1,'Warn'],['../structdrake_1_1logging_1_1_warn.html#adfebb4989e81d5d715e9ef669de87dfe',1,'drake::logging::Warn::Warn()']]],
   ['warndeprecated',['WarnDeprecated',['../namespacedrake_1_1pydrake.html#a88a20567ddf6e5978a874a3cb46353f4',1,'drake::pydrake']]],

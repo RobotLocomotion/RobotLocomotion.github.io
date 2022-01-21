@@ -1,8 +1,5 @@
 var NAVTREEINDEX49 =
 {
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html":[3,0,0,11,6,2],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a1c90bdc946c78848a793eb4fc2e9b7e5":[3,0,0,11,6,2,1],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a2b5855cfba3ee924b2dd12eed326deba":[3,0,0,11,6,2,2],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a48fd1a491d4b55da113c50ad56ac0e0b":[3,0,0,11,6,2,3],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,11,6,2,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a81fc1edc9be7f6ca52a5c9f2d1f284a6":[3,0,0,11,6,2,4],
@@ -152,8 +149,8 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#ab853a3a6d8692d0994a854ad92b6ab3d":[3,0,0,14,56,0,4],
 "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#adf1d22081db0a89308fb34077071cf71":[3,0,0,14,56,0,1],
 "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#aef990c4b0f5f5b03d6ebe637c2dab762":[3,0,0,14,56,0,6],
-"structdrake_1_1systems_1_1_initialize_params.html":[1,5,0,2],
-"structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,5,0,2,0],
+"structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
+"structdrake_1_1systems_1_1_initialize_params.html#a719eb34446ec802c2f31bf8d8b2ab4fa":[1,4,0,2,0],
 "structdrake_1_1systems_1_1_periodic_event_data_comparator.html":[3,0,0,14,77],
 "structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,14,77,0],
 "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html":[3,0,0,14,89,0],
@@ -247,7 +244,10 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html":[3,0,0,14,2,7],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a1f3150ccf61b245d0363a198068ebf3d":[3,0,0,14,2,7,1],
 "structdrake_1_1systems_1_1controllers_1_1_linear_quadratic_regulator_result.html#a8f78ef113f89e86b283522fb7e59b308":[3,0,0,14,2,7,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,3,2,3,0],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,3,2,3,0,1],
-"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,3,2,3,0,0]
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html":[1,2,2,3,0],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a08e211873bd62f93a57ad06fdc27b3b2":[1,2,2,3,0,1],
+"structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html#a52ff55f212eefdef42762a59fd067f31":[1,2,2,3,0,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html":[3,0,0,14,7,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_from_double_traits.html#ada71661baddc01a12a0ca7a6a70d9c4f":[3,0,0,14,7,0,0],
+"structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html":[3,0,0,14,7,1]
 };

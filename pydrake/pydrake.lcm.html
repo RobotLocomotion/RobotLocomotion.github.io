@@ -229,6 +229,18 @@ drake::lcm::Publish() or drake::lcm::Subscribe() instead.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.lcm.DrakeLcmInterface.get_lcm_url">
+<code class="descname">get_lcm_url</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcmInterface</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.get_lcm_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a URL describing the transport of this LCM interface.</p>
+<p>When the URL refers to a transport offered by LCM itself (e.g., memq
+or udpm), then this function must return the conventional URL
+spelling. If the implementation of DrakeLcmInterface is using a
+non-standard back end, the result implementation-defined.</p>
+<p>In either case, it is always formatted using URI syntax rules per the
+RFC(s).</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.lcm.DrakeLcmInterface.HandleSubscriptions">
 <code class="descname">HandleSubscriptions</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcmInterface</em>, <em>timeout_millis: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.HandleSubscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invokes the HandlerFunction callbacks for all subscriptions’ pending
