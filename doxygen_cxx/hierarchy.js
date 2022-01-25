@@ -582,12 +582,12 @@ var hierarchy =
         [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
       ] ]
     ] ],
-    [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
+    [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
+    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
@@ -783,6 +783,7 @@ var hierarchy =
               [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
               [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
+            [ "JointSliders< T >", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", null ],
             [ "Propeller< T >", "classdrake_1_1multibody_1_1_propeller.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],
             [ "RobertsonSystem< T >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html", null ],

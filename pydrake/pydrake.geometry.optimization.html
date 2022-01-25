@@ -1431,6 +1431,16 @@ convex hull).</p>
 <p>Constructs the polytope from a SceneGraph geometry.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.geometry.optimization.VPolytope.CalcVolume">
+<code class="descname">CalcVolume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.VPolytope</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.CalcVolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the volume of this V-Polytope.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">this function calls qhull to compute the volume.</p>
+</div>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.VPolytope.MakeBox">
 <em class="property">static </em><code class="descname">MakeBox</code><span class="sig-paren">(</span><em>lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.VPolytope<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeBox" title="Permalink to this definition">¶</a></dt>

@@ -1,0 +1,473 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.multibody.meshcat &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pydrake  documentation" href="index.html"/>
+        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
+        <link rel="next" title="pydrake.multibody.optimization" href="pydrake.multibody.optimization.html"/>
+        <link rel="prev" title="pydrake.multibody.math" href="pydrake.multibody.math.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.all.html">pydrake.multibody.all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.benchmarks.html">pydrake.multibody.benchmarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.inverse_kinematics.html">pydrake.multibody.inverse_kinematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.math.html">pydrake.multibody.math</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.multibody.meshcat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.optimization.html">pydrake.multibody.optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.parsing.html">pydrake.multibody.parsing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.plant.html">pydrake.multibody.plant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.multibody.tree.html">pydrake.multibody.tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.multibody.html">pydrake.multibody</a> &raquo;</li>
+        
+      <li>pydrake.multibody.meshcat</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.multibody.meshcat">
+<span id="pydrake-multibody-meshcat"></span><h1>pydrake.multibody.meshcat<a class="headerlink" href="#module-pydrake.multibody.meshcat" title="Permalink to this headline">¶</a></h1>
+<p>Interface code for Meshcat-based visualization</p>
+<dl class="attribute">
+<dt id="pydrake.multibody.meshcat.JointSliders">
+<code class="descclassname">pydrake.multibody.meshcat.</code><code class="descname">JointSliders</code><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders_[float]" title="pydrake.multibody.meshcat.JointSliders_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.multibody.meshcat.JointSliders_[float]</span></code></a></p>
+</dd></dl>
+
+<dl class="template">
+<dt id="pydrake.multibody.meshcat.JointSliders_">
+<em class="property">template </em><code class="descclassname">pydrake.multibody.meshcat.</code><code class="descname">JointSliders_</code><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders_[float]" title="pydrake.multibody.meshcat.JointSliders_[float]"><code class="xref py py-class docutils literal"><span class="pre">JointSliders_[float]</span></code></a>, <a class="reference internal" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd]" title="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">JointSliders_[AutoDiffXd]</span></code></a></p>
+<dl class="class">
+<dt id="pydrake.multibody.meshcat.JointSliders_.JointSliders_[float]">
+<em class="property">class </em><code class="descname">JointSliders_[float]</code><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>JointSliders adds slider bars to the Meshcat control panel for the
+joints of a MultibodyPlant. These might be useful for interactive or
+teleoperation demos. The sliders’ current values are available on the
+<code class="docutils literal"><span class="pre">positions</span></code> output port of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal"><span class="pre">plant.num_positions()</span></code>, and the order of
+its elements matches <code class="docutils literal"><span class="pre">plant.GetPositions()</span></code>.</p>
+<p>At the moment, any positions that are not associated with joints
+(e.g., floating-base “mobilizers”) are held fixed at a nominal value.
+In the future, this class might add in sliders for a floating base as
+well.</p>
+<p>Beware that the output port of this system always provides the
+sliders’ current values, even if evaluated by multiple different
+downstream input ports during a single computation. If you need to
+have a synchronized view of the slider data, place a
+systems::ZeroOrderHold system between the sliders and downstream
+calculations.</p>
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[float], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a meshcat slider for each joint in the given plant.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>The Meshcat instance where the sliders will be added.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant to create sliders for. The plant pointer is
+aliased for the lifetime of this JointSliders object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dd>(Optional) If provided, the sliders’ initial values will be as
+given; otherwise, the plant’s default values will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>(Optional) The lower limit of the slider will be the maximum value
+of this number and any limit specified in the Joint. May be a
+single value or else a vector of length plant.num_positions(). If
+no value is provided, a sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>(Optional) The upper limit of the slider will be the minimum value
+of this number and any limit specified in the Joint. May be a
+single value or else a vector of length plant.num_positions(). If
+no value is provided, a sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">step</span></code>:</dt>
+<dd>(Optional) The step argument of the slider, which is the smallest
+increment by which the slider can change values (and therefore
+update our output port’s value). May be a single value or else a
+vector of length plant.num_positions(). If no value is provided, a
+sensible default will be used.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes our sliders from the associated meshcat instance.</p>
+<p>From this point on, our output port produces the initial_value from
+the constructor, not any slider values.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is not safe to call this when a CalcOutput might be happening
+on this instance concurrently on another thread.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.meshcat.</code><code class="descname">JointSliders_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
+<p>JointSliders adds slider bars to the Meshcat control panel for the
+joints of a MultibodyPlant. These might be useful for interactive or
+teleoperation demos. The sliders’ current values are available on the
+<code class="docutils literal"><span class="pre">positions</span></code> output port of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal"><span class="pre">plant.num_positions()</span></code>, and the order of
+its elements matches <code class="docutils literal"><span class="pre">plant.GetPositions()</span></code>.</p>
+<p>At the moment, any positions that are not associated with joints
+(e.g., floating-base “mobilizers”) are held fixed at a nominal value.
+In the future, this class might add in sliders for a floating base as
+well.</p>
+<p>Beware that the output port of this system always provides the
+sliders’ current values, even if evaluated by multiple different
+downstream input ports during a single computation. If you need to
+have a synchronized view of the slider data, place a
+systems::ZeroOrderHold system between the sliders and downstream
+calculations.</p>
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a meshcat slider for each joint in the given plant.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>The Meshcat instance where the sliders will be added.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant to create sliders for. The plant pointer is
+aliased for the lifetime of this JointSliders object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dd>(Optional) If provided, the sliders’ initial values will be as
+given; otherwise, the plant’s default values will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>(Optional) The lower limit of the slider will be the maximum value
+of this number and any limit specified in the Joint. May be a
+single value or else a vector of length plant.num_positions(). If
+no value is provided, a sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>(Optional) The upper limit of the slider will be the minimum value
+of this number and any limit specified in the Joint. May be a
+single value or else a vector of length plant.num_positions(). If
+no value is provided, a sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">step</span></code>:</dt>
+<dd>(Optional) The step argument of the slider, which is the smallest
+increment by which the slider can change values (and therefore
+update our output port’s value). May be a single value or else a
+vector of length plant.num_positions(). If no value is provided, a
+sensible default will be used.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes our sliders from the associated meshcat instance.</p>
+<p>From this point on, our output port produces the initial_value from
+the constructor, not any slider values.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is not safe to call this when a CalcOutput might be happening
+on this instance concurrently on another thread.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.meshcat.JointSliders_[float]">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.meshcat.</code><code class="descname">JointSliders_[float]</code><a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float]" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>JointSliders adds slider bars to the Meshcat control panel for the
+joints of a MultibodyPlant. These might be useful for interactive or
+teleoperation demos. The sliders’ current values are available on the
+<code class="docutils literal"><span class="pre">positions</span></code> output port of this system.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>JointSliders</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; positions</td></tr></table></td></tr></table><p>The output port is of size <code class="docutils literal"><span class="pre">plant.num_positions()</span></code>, and the order of
+its elements matches <code class="docutils literal"><span class="pre">plant.GetPositions()</span></code>.</p>
+<p>At the moment, any positions that are not associated with joints
+(e.g., floating-base “mobilizers”) are held fixed at a nominal value.
+In the future, this class might add in sliders for a floating base as
+well.</p>
+<p>Beware that the output port of this system always provides the
+sliders’ current values, even if evaluated by multiple different
+downstream input ports during a single computation. If you need to
+have a synchronized view of the slider data, place a
+systems::ZeroOrderHold system between the sliders and downstream
+calculations.</p>
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_[float].__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], meshcat: pydrake.geometry.Meshcat, plant: pydrake.multibody.plant.MultibodyPlant_[float], initial_value: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, lower_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, upper_limit: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None, step: Union[None, float, numpy.ndarray[numpy.float64[m, 1]]] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a meshcat slider for each joint in the given plant.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">meshcat</span></code>:</dt>
+<dd>The Meshcat instance where the sliders will be added.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant to create sliders for. The plant pointer is
+aliased for the lifetime of this JointSliders object.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dd>(Optional) If provided, the sliders’ initial values will be as
+given; otherwise, the plant’s default values will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dd>(Optional) The lower limit of the slider will be the maximum value
+of this number and any limit specified in the Joint. May be a
+single value or else a vector of length plant.num_positions(). If
+no value is provided, a sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dd>(Optional) The upper limit of the slider will be the minimum value
+of this number and any limit specified in the Joint. May be a
+single value or else a vector of length plant.num_positions(). If
+no value is provided, a sensible default will be used.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">step</span></code>:</dt>
+<dd>(Optional) The step argument of the slider, which is the smallest
+increment by which the slider can change values (and therefore
+update our output port’s value). May be a single value or else a
+vector of length plant.num_positions(). If no value is provided, a
+sensible default will be used.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_[float].Delete">
+<code class="descname">Delete</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].Delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes our sliders from the associated meshcat instance.</p>
+<p>From this point on, our output port produces the initial_value from
+the constructor, not any slider values.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">It is not safe to call this when a CalcOutput might be happening
+on this instance concurrently on another thread.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.multibody.optimization.html" class="btn btn-neutral float-right" title="pydrake.multibody.optimization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.multibody.math.html" class="btn btn-neutral" title="pydrake.multibody.math" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

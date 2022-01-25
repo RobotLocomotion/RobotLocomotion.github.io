@@ -3470,8 +3470,8 @@ gradients of a scalar loss function with respect to the network
 parameters.</p>
 <p>Note: The class uses the System Cache to minimize the number of
 dynamic memory allocations for repeated calls to this function with
-the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls requires
-memory allocations.</p>
+the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls to this
+method or BatchOutput requires memory allocations.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">X</span></code>:</dt>
 <dd>is a batch input, with one input per column.</dd>
@@ -3502,6 +3502,27 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id9"><span class="problematic" id="id10">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].BatchOutput">
+<code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].BatchOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrix <code class="docutils literal"><span class="pre">Y</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
 </dd></dl>
 
 <dl class="method">
@@ -3672,8 +3693,8 @@ gradients of a scalar loss function with respect to the network
 parameters.</p>
 <p>Note: The class uses the System Cache to minimize the number of
 dynamic memory allocations for repeated calls to this function with
-the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls requires
-memory allocations.</p>
+the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls to this
+method or BatchOutput requires memory allocations.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">X</span></code>:</dt>
 <dd>is a batch input, with one input per column.</dd>
@@ -3704,6 +3725,27 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id11"><span class="problematic" id="id12">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].BatchOutput">
+<code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].BatchOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrix <code class="docutils literal"><span class="pre">Y</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
 </dd></dl>
 
 <dl class="method">
@@ -3872,8 +3914,8 @@ gradients of a scalar loss function with respect to the network
 parameters.</p>
 <p>Note: The class uses the System Cache to minimize the number of
 dynamic memory allocations for repeated calls to this function with
-the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls requires
-memory allocations.</p>
+the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls to this
+method or BatchOutput requires memory allocations.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">X</span></code>:</dt>
 <dd>is a batch input, with one input per column.</dd>
@@ -3904,6 +3946,27 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id13"><span class="problematic" id="id14">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.MultilayerPerceptron_[Expression].BatchOutput">
+<code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[Expression].BatchOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrix <code class="docutils literal"><span class="pre">Y</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[object[m, n]]</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
 </dd></dl>
 
 <dl class="method">
@@ -4072,8 +4135,8 @@ gradients of a scalar loss function with respect to the network
 parameters.</p>
 <p>Note: The class uses the System Cache to minimize the number of
 dynamic memory allocations for repeated calls to this function with
-the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls requires
-memory allocations.</p>
+the same sized <code class="docutils literal"><span class="pre">X</span></code>. Changing the batch size between calls to this
+method or BatchOutput requires memory allocations.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">X</span></code>:</dt>
 <dd>is a batch input, with one input per column.</dd>
@@ -4104,6 +4167,27 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id15"><span class="problematic" id="id16">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.primitives.MultilayerPerceptron_[float].BatchOutput">
+<code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[float].BatchOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrix <code class="docutils literal"><span class="pre">Y</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
 </dd></dl>
 
 <dl class="method">

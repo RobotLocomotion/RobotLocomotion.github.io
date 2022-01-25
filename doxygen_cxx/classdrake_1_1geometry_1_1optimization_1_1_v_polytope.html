@@ -123,6 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a893af2ada07d691fd0f87888cc3f9ca4"><td class="memItemLeft" align="right" valign="top">const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a893af2ada07d691fd0f87888cc3f9ca4">vertices</a> () const</td></tr>
 <tr class="memdesc:a893af2ada07d691fd0f87888cc3f9ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vertices in a d-by-n matrix, where d is the ambient dimension, and n is the number of vertices.  <a href="#a893af2ada07d691fd0f87888cc3f9ca4">More...</a><br /></td></tr>
 <tr class="separator:a893af2ada07d691fd0f87888cc3f9ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a2847efc4f87e996464d9d71159e27b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a7a2847efc4f87e996464d9d71159e27b">CalcVolume</a> () const</td></tr>
+<tr class="memdesc:a7a2847efc4f87e996464d9d71159e27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the volume of this V-Polytope.  <a href="#a7a2847efc4f87e996464d9d71159e27b">More...</a><br /></td></tr>
+<tr class="separator:a7a2847efc4f87e996464d9d71159e27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7a4d7c125954dfde3c15238c852eeed"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#aa7a4d7c125954dfde3c15238c852eeed">PointInSet</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;x, double tol=0) const</td></tr>
 <tr class="memdesc:aa7a4d7c125954dfde3c15238c852eeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the point is within <code>tol</code> of the set under the L∞-norm.  <a href="#aa7a4d7c125954dfde3c15238c852eeed">More...</a><br /></td></tr>
 <tr class="separator:aa7a4d7c125954dfde3c15238c852eeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -401,6 +404,26 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7a2847efc4f87e996464d9d71159e27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a2847efc4f87e996464d9d71159e27b">&#9670;&nbsp;</a></span>CalcVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double CalcVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Computes the volume of this V-Polytope. </p>
+<dl class="section note"><dt>Note</dt><dd>this function calls qhull to compute the volume. </dd></dl>
+
+</div>
+</div>
 <a id="a3f9ab23e6550deb5b0aed63101cac134"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f9ab23e6550deb5b0aed63101cac134">&#9670;&nbsp;</a></span>MakeBox()</h2>
 

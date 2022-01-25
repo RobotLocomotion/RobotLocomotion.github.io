@@ -12,5 +12,5 @@ var searchData=
   ['configuring_20distributions',['Configuring distributions',['../group__schema__stochastic.html',1,'']]],
   ['configuring_20transforms',['Configuring transforms',['../group__schema__transform.html',1,'']]],
   ['costs_20and_20constraints',['Costs and Constraints',['../group__solver__evaluators.html',1,'']]],
-  ['continuous_20approximation_20of_20coulomb',['Continuous Approximation of Coulomb',['../group__stribeck__approximation.html',1,'']]]
+  ['continuous_20approximation_20of_20coulomb_20friction',['Continuous Approximation of Coulomb Friction',['../group__stribeck__approximation.html',1,'']]]
 ];

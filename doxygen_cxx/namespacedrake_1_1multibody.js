@@ -2,6 +2,7 @@ var namespacedrake_1_1multibody =
 [
     [ "benchmarks", "namespacedrake_1_1multibody_1_1benchmarks.html", "namespacedrake_1_1multibody_1_1benchmarks" ],
     [ "constraint", "namespacedrake_1_1multibody_1_1constraint.html", "namespacedrake_1_1multibody_1_1constraint" ],
+    [ "meshcat", "namespacedrake_1_1multibody_1_1meshcat.html", "namespacedrake_1_1multibody_1_1meshcat" ],
     [ "parsing", "namespacedrake_1_1multibody_1_1parsing.html", "namespacedrake_1_1multibody_1_1parsing" ],
     [ "test", "namespacedrake_1_1multibody_1_1test.html", "namespacedrake_1_1multibody_1_1test" ],
     [ "test_utilities", "namespacedrake_1_1multibody_1_1test__utilities.html", "namespacedrake_1_1multibody_1_1test__utilities" ],

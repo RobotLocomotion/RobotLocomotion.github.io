@@ -135,7 +135,7 @@ var searchData=
   ['calcvectorcallback',['CalcVectorCallback',['../classdrake_1_1systems_1_1_leaf_output_port.html#a62d51f59c5dcae13358abd4585fb734d',1,'drake::systems::LeafOutputPort']]],
   ['calcvectoroutput',['CalcVectorOutput',['../classdrake_1_1systems_1_1_vector_system.html#abdcf055421e02a1bb92b463f4383ff57',1,'drake::systems::VectorSystem']]],
   ['calcvelocitychangefromconstraintimpulses',['CalcVelocityChangeFromConstraintImpulses',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html#a3354557be04354641f4041e953c15ab8',1,'drake::examples::bead_on_a_wire::BeadOnAWire']]],
-  ['calcvolume',['CalcVolume',['../classdrake_1_1geometry_1_1_volume_mesh.html#a54e9b34e14078d808320820e0369c210',1,'drake::geometry::VolumeMesh::CalcVolume()'],['../namespacedrake_1_1geometry.html#ae129ecc1484c1fab6e4d4b3e04d25198',1,'drake::geometry::CalcVolume()']]],
+  ['calcvolume',['CalcVolume',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#a7a2847efc4f87e996464d9d71159e27b',1,'drake::geometry::optimization::VPolytope::CalcVolume()'],['../classdrake_1_1geometry_1_1_volume_mesh.html#a54e9b34e14078d808320820e0369c210',1,'drake::geometry::VolumeMesh::CalcVolume()'],['../namespacedrake_1_1geometry.html#ae129ecc1484c1fab6e4d4b3e04d25198',1,'drake::geometry::CalcVolume()']]],
   ['calcwitnessvalue',['CalcWitnessValue',['../classdrake_1_1systems_1_1_system.html#a2949deb61db7903dae4c0b7cb9633fac',1,'drake::systems::System::CalcWitnessValue()'],['../classdrake_1_1systems_1_1_witness_function.html#a99ad09b580175decbf00aa9858a4d450',1,'drake::systems::WitnessFunction::CalcWitnessValue()']]],
   ['call_5fpython_2eh',['call_python.h',['../call__python_8h.html',1,'']]],
   ['callbackfunction',['CallbackFunction',['../classdrake_1_1solvers_1_1_visualization_callback.html#a84c15b60ba647eabef0aaa2d5dd3943e',1,'drake::solvers::VisualizationCallback']]],
@@ -498,5 +498,5 @@ var searchData=
   ['configuring_20distributions',['Configuring distributions',['../group__schema__stochastic.html',1,'']]],
   ['configuring_20transforms',['Configuring transforms',['../group__schema__transform.html',1,'']]],
   ['costs_20and_20constraints',['Costs and Constraints',['../group__solver__evaluators.html',1,'']]],
-  ['continuous_20approximation_20of_20coulomb',['Continuous Approximation of Coulomb',['../group__stribeck__approximation.html',1,'']]]
+  ['continuous_20approximation_20of_20coulomb_20friction',['Continuous Approximation of Coulomb Friction',['../group__stribeck__approximation.html',1,'']]]
 ];

@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('group__contact__engineering.html','');
 <p>Contact modeling in Drake is controlled by a small set of parameters:</p><ol type="1">
 <li>Per-geometry coefficients of friction. Refer to the documentation for <a class="el" href="classdrake_1_1multibody_1_1_coulomb_friction.html">CoulombFriction</a> for details, which also includes a description for modeling the interaction between two surfaces with different coefficients of friction.</li>
 <li>Global parameters controlling the stiffness of normal penalty forces. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a> offers a single global parameter, the "penetration allowance", described in detail in section <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_penalty_method">Contact by penalty method</a>.</li>
-<li>Global parameter controlling the Stribeck approximation of Coulomb friction, refer to section <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb</a> for details. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance()</a> provides additional information and guidelines on how to set this parameter.</li>
+<li>Global parameter controlling the Stribeck approximation of Coulomb friction, refer to section <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a> for details. <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance()</a> provides additional information and guidelines on how to set this parameter.</li>
 </ol>
 <dl class="section note"><dt>Note</dt><dd>When modeling the multibody system as discrete (refer to the <a class="el" href="group__contact__engineering.html#time_advancement_strategy">Choice of Time Advancement Strategy</a> section), only the dynamic coefficient of friction is used while the static coefficient of friction is ignored.</dd></dl>
 <p><a class="anchor" id="time_advancement_strategy"></a></p><h2>Choice of Time Advancement Strategy</h2>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('group__contact__engineering.html','');
 <p class="startli">Both of these issues can be addressed by changing the geometry that represent the body's contact surface. For some shapes (e.g., boxes), we can introduce two sets of collision elements: discrete "points" at the corners, and a box capturing the volume (see <code>block_for_pick_and_place.urdf</code> as an example). With this strategy, the contact "points" are actually small-radius spheres. The volume-capturing box should actually be inset from those spheres such that when the box is lying on a plane (such that the logical contact manifold would be a face), only the contact points make contact, providing reliable points of contact. However, for arbitrary configurations contact with the box will provide more general contact.</p>
 </li>
 </ul>
-<p>Next topic: <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb</a> </p>
+<p>Next topic: <a class="el" href="group__stribeck__approximation.html">Continuous Approximation of Coulomb Friction</a> </p>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.15 -->
