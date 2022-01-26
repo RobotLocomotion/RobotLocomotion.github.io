@@ -523,6 +523,7 @@ var hierarchy =
     [ "NewVariableNames< Size >", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html", null ],
     [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", null ],
     [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", null ],
+    [ "NonsmoothAugmentedLagrangian", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html", null ],
     [ "NonSymbolicTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html", [
       [ "Traits< examples::quadrotor::QuadrotorPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html", null ],
       [ "Traits< examples::rimless_wheel::RimlessWheel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html", null ],
@@ -582,12 +583,12 @@ var hierarchy =
         [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
       ] ]
     ] ],
-    [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
+    [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
+    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],

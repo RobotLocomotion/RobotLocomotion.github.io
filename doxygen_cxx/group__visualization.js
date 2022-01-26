@@ -6,8 +6,9 @@ var group__visualization =
       [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a109aee7d97f74edfd4a41a92387ab6de", null ],
       [ "~JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a0bef86c00f2afad929304ad1866d1c33", null ],
       [ "Delete", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ae46167a57acc0c6fa6019e49e6e6f011", null ],
       [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7b72a389cedd87c311dfe0587de68211", null ],
-      [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ae46167a57acc0c6fa6019e49e6e6f011", null ]
+      [ "Run", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7efa8b3ad513010aefc21c33a2ff9b2f", null ]
     ] ],
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", [
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a112929f5c749cb92d963ef345ee24c16", null ],

@@ -51,6 +51,7 @@ var namespacedrake_1_1solvers =
     [ "NewVariableNames< Size >", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4" ],
     [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html", "classdrake_1_1solvers_1_1_nlopt_solver" ],
     [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", "structdrake_1_1solvers_1_1_nlopt_solver_details" ],
+    [ "NonsmoothAugmentedLagrangian", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian" ],
     [ "OsqpSolver", "classdrake_1_1solvers_1_1_osqp_solver.html", "classdrake_1_1solvers_1_1_osqp_solver" ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", "structdrake_1_1solvers_1_1_osqp_solver_details" ],
     [ "PolynomialConstraint", "classdrake_1_1solvers_1_1_polynomial_constraint.html", "classdrake_1_1solvers_1_1_polynomial_constraint" ],

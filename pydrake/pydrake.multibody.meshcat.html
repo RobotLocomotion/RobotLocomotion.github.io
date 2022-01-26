@@ -259,6 +259,29 @@ on this instance concurrently on another thread.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Run">
+<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], diagram: pydrake.systems.framework.Diagram_[float], timeout: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_.JointSliders_[float].Run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
+whenever our sliders’ values change. Blocks until the user clicks a
+“Stop” button in the MeshCat control panel, or if the timeout limit is
+reached.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">timeout</span></code>:</dt>
+<dd>(Optional) In the absence of a button click, the duration (in
+seconds) to wait before returning. If the button is clicked, this
+function will return promptly, without waiting for the timeout.
+When no timeout is given, this function will block indefinitely.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagram</span></code> must contain this JointSliders system.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagarm</span></code> must contain the <code class="docutils literal"><span class="pre">plant</span></code> that was passed into this
+JointSliders system’s constructor.</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -328,6 +351,29 @@ on this instance concurrently on another thread.</p>
 </div>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Run">
+<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[AutoDiffXd], diagram: pydrake.systems.framework.Diagram_[AutoDiffXd], timeout: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[AutoDiffXd].Run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
+whenever our sliders’ values change. Blocks until the user clicks a
+“Stop” button in the MeshCat control panel, or if the timeout limit is
+reached.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">timeout</span></code>:</dt>
+<dd>(Optional) In the absence of a button click, the duration (in
+seconds) to wait before returning. If the button is clicked, this
+function will return promptly, without waiting for the timeout.
+When no timeout is given, this function will block indefinitely.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagram</span></code> must contain this JointSliders system.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagarm</span></code> must contain the <code class="docutils literal"><span class="pre">plant</span></code> that was passed into this
+JointSliders system’s constructor.</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -393,6 +439,29 @@ the constructor, not any slider values.</p>
 <p class="last">It is not safe to call this when a CalcOutput might be happening
 on this instance concurrently on another thread.</p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.JointSliders_[float].Run">
+<code class="descname">Run</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.JointSliders_[float], diagram: pydrake.systems.framework.Diagram_[float], timeout: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.JointSliders_[float].Run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Publishes the given Diagram (typically, to cause it to be visualized)
+whenever our sliders’ values change. Blocks until the user clicks a
+“Stop” button in the MeshCat control panel, or if the timeout limit is
+reached.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">timeout</span></code>:</dt>
+<dd>(Optional) In the absence of a button click, the duration (in
+seconds) to wait before returning. If the button is clicked, this
+function will return promptly, without waiting for the timeout.
+When no timeout is given, this function will block indefinitely.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagram</span></code> must be a top-level (i.e., “root”) diagram.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagram</span></code> must contain this JointSliders system.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">diagarm</span></code> must contain the <code class="docutils literal"><span class="pre">plant</span></code> that was passed into this
+JointSliders system’s constructor.</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

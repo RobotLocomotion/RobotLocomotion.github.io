@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#a35645a72a3d54b806247f93343b9c985":[1,2,5,1,1],
 "classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#a73920691a597a34bf59fe2b6da79eab3":[1,2,5,1,2],
 "classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#ab390d4ff554ce0ee52608c4eb58e7bf2":[1,2,5,1,5],
 "classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#ad95246103f568ec3362a1bec742d89f4":[1,2,5,1,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1math_1_1_rigid_transform.html#aa6d583e730b5dd2193c7ff9f1293fcde":[3,0,0,7,13,18],
 "classdrake_1_1math_1_1_rigid_transform.html#aa8b1205e300a07901a70079bbbd1e566":[3,0,0,7,13,19],
 "classdrake_1_1math_1_1_rigid_transform.html#aa9832cec727611df141fdd479838b3c7":[3,0,0,7,13,29],
-"classdrake_1_1math_1_1_rigid_transform.html#aaa71b78707a3d79cbcb1a8f3cc854bee":[3,0,0,7,13,2],
-"classdrake_1_1math_1_1_rigid_transform.html#aaac6934d2979499ff35457a8583ce60a":[3,0,0,7,13,0]
+"classdrake_1_1math_1_1_rigid_transform.html#aaa71b78707a3d79cbcb1a8f3cc854bee":[3,0,0,7,13,2]
 };

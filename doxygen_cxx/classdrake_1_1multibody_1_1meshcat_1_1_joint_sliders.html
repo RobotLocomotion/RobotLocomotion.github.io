@@ -138,6 +138,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bef86c00f2afad929304ad1866d1c33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a0bef86c00f2afad929304ad1866d1c33">~JointSliders</a> () final</td></tr>
 <tr class="memdesc:a0bef86c00f2afad929304ad1866d1c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ac2e5aab0612d67400354a4fe71278a21" title="Removes our sliders from the associated meshcat instance.">Delete()</a>, if one has not already been done.  <a href="#a0bef86c00f2afad929304ad1866d1c33">More...</a><br /></td></tr>
 <tr class="separator:a0bef86c00f2afad929304ad1866d1c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7efa8b3ad513010aefc21c33a2ff9b2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a7efa8b3ad513010aefc21c33a2ff9b2f">Run</a> (const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">systems::Diagram</a>&lt; T &gt; &amp;diagram, std::optional&lt; double &gt; timeout=std::nullopt) const</td></tr>
+<tr class="memdesc:a7efa8b3ad513010aefc21c33a2ff9b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publishes the given Diagram (typically, to cause it to be visualized) whenever our sliders' values change.  <a href="#a7efa8b3ad513010aefc21c33a2ff9b2f">More...</a><br /></td></tr>
+<tr class="separator:a7efa8b3ad513010aefc21c33a2ff9b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a9fc78a729b6fdd395e1cb7b6b2db3047"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047">JointSliders</a> (const <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html">JointSliders</a> &amp;)=delete</td></tr>
 <tr class="separator:a9fc78a729b6fdd395e1cb7b6b2db3047"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1344,8 +1347,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ae46167a57acc0c6fa6019e49e6e6f011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae46167a57acc0c6fa6019e49e6e6f011">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html">JointSliders</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html">JointSliders</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7b72a389cedd87c311dfe0587de68211"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b72a389cedd87c311dfe0587de68211">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b72a389cedd87c311dfe0587de68211">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1370,29 +1399,45 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae46167a57acc0c6fa6019e49e6e6f011"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae46167a57acc0c6fa6019e49e6e6f011">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a7efa8b3ad513010aefc21c33a2ff9b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7efa8b3ad513010aefc21c33a2ff9b2f">&#9670;&nbsp;</a></span>Run()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html">JointSliders</a>&amp; operator= </td>
+          <td class="memname">void Run </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html">JointSliders</a>&lt; T &gt; &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_diagram.html">systems::Diagram</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>diagram</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::optional&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>std::nullopt</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Publishes the given Diagram (typically, to cause it to be visualized) whenever our sliders' values change. </p>
+<p>Blocks until the user clicks a "Stop" button in the MeshCat control panel, or if the timeout limit is reached.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>(Optional) In the absence of a button click, the duration (in seconds) to wait before returning. If the button is clicked, this function will return promptly, without waiting for the timeout. When no timeout is given, this function will block indefinitely.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>diagram</code> must be a top-level (i.e., "root") diagram. </dd>
+<dd>
+<code>diagram</code> must contain this <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html" title="JointSliders adds slider bars to the Meshcat control panel for the joints of a MultibodyPlant.">JointSliders</a> system. </dd>
+<dd>
+<code>diagarm</code> must contain the <code>plant</code> that was passed into this <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html" title="JointSliders adds slider bars to the Meshcat control panel for the joints of a MultibodyPlant.">JointSliders</a> system's constructor. </dd></dl>
 
 </div>
 </div>

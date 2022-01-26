@@ -1,5 +1,7 @@
 var NAVTREEINDEX17 =
 {
+"classdrake_1_1schema_1_1_deterministic.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,11,0,8],
+"classdrake_1_1schema_1_1_deterministic.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,0,9],
 "classdrake_1_1schema_1_1_deterministic.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,11,0,10],
 "classdrake_1_1schema_1_1_deterministic.html#ad272232f05a04ba6ba72b35d6e80d10e":[3,0,0,11,0,0],
 "classdrake_1_1schema_1_1_deterministic.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,11,0,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX17 =
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html":[3,0,0,12,12],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,12,12,12],
 "classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a030544dd34f8d35fa24233b4e399fdfa":[3,0,0,12,12,2],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,12,12,6],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,12,12,7],
-"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a3b0cd2e1b756f4a3ae8b3f54c07c081b":[3,0,0,12,12,9]
+"classdrake_1_1solvers_1_1_equality_constrained_q_p_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,12,12,6]
 };
