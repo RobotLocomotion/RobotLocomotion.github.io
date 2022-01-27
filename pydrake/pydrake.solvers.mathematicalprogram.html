@@ -1480,7 +1480,7 @@ optimization.</p>
 <code class="descname">AddBoundingBoxConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddBoundingBoxConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, 1]], arg1: numpy.ndarray[numpy.float64[m, 1]], arg2: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</li>
+<li>AddBoundingBoxConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, arg0: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg1: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], arg2: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]</li>
 </ol>
 <p>Adds bounding box constraints referencing potentially a subset of the
 decision variables.</p>
@@ -1490,7 +1490,7 @@ decision variables.</p>
 <dt>Parameter <code class="docutils literal"><span class="pre">ub</span></code>:</dt>
 <dd>The upper bound.</dd>
 <dt>Parameter <code class="docutils literal"><span class="pre">vars</span></code>:</dt>
-<dd>Will imposes constraint lb(i) &lt;= vars(i) &lt;= ub(i).</dd>
+<dd>Will imposes constraint lb(i, j) &lt;= vars(i, j) &lt;= ub(i, j).</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1647,7 +1647,7 @@ throws an exception for any f ∈ formulas.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddDecisionVariables">
-<code class="descname">AddDecisionVariables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, decision_variables: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddDecisionVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddDecisionVariables</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, decision_variables: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddDecisionVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends new variables to the end of the existing variables.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">decision_variables</span></code>:</dt>
@@ -1729,7 +1729,7 @@ variables.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddIndeterminates">
-<code class="descname">AddIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, new_indeterminates: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddIndeterminates" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, new_indeterminates: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddIndeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds indeterminates. This method appends some indeterminates to the
 end of the program’s old indeterminates.</p>
 <dl class="docutils">
@@ -1824,7 +1824,7 @@ symbolic expression.</p>
 <dd>A scalar, the upper bound.</dd>
 </dl>
 <ol class="arabic simple" start="3">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, 1]], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, v: numpy.ndarray[object[m, n], flags.f_contiguous], lb: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], ub: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Adds linear constraints represented by symbolic expressions to the
 program. It throws if &#64;v includes a non-linear expression or <code class="docutils literal"><span class="pre">lb</span> <span class="pre">&lt;=</span> <span class="pre">v</span>
@@ -1854,7 +1854,7 @@ be infinite but only if there are no other terms. For example, <code class="docu
 <span class="pre">∞</span></code> is allowed. However, <code class="docutils literal"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">∞</span> <span class="pre">&lt;=</span> <span class="pre">0</span></code> is not allowed because <code class="docutils literal"><span class="pre">x</span> <span class="pre">↦</span>
 <span class="pre">∞</span></code> introduces <code class="docutils literal"><span class="pre">nan</span></code> in the evaluation.</p>
 <ol class="arabic simple" start="5">
-<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
+<li>AddLinearConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]</li>
 </ol>
 <p>Add a linear constraint represented by an
 Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case of

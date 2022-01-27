@@ -18,8 +18,6 @@ var namespacedrake_1_1multibody =
     [ "ComPositionConstraint", "classdrake_1_1multibody_1_1_com_position_constraint.html", "classdrake_1_1multibody_1_1_com_position_constraint" ],
     [ "ContactResults", "classdrake_1_1multibody_1_1_contact_results.html", "classdrake_1_1multibody_1_1_contact_results" ],
     [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system" ],
-    [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html", "classdrake_1_1multibody_1_1_contact_results_to_meshcat" ],
-    [ "ContactResultsToMeshcatParams", "structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html", "structdrake_1_1multibody_1_1_contact_results_to_meshcat_params" ],
     [ "ContactWrench", "structdrake_1_1multibody_1_1_contact_wrench.html", "structdrake_1_1multibody_1_1_contact_wrench" ],
     [ "ContactWrenchEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html", "classdrake_1_1multibody_1_1_contact_wrench_evaluator" ],
     [ "ContactWrenchFromForceInWorldFrameEvaluator", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator.html", "classdrake_1_1multibody_1_1_contact_wrench_from_force_in_world_frame_evaluator" ],

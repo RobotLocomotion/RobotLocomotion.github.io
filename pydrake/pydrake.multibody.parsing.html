@@ -390,7 +390,15 @@ this method returns without doing anything.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal"><span class="pre">model_file</span></code>:</dt>
 <dd>The model file whose directory is the start of the search for
-<code class="docutils literal"><span class="pre">package.xml</span></code> files. This file must be an SDF or URDF file.</dd>
+<code class="docutils literal"><span class="pre">package.xml</span></code> files. This file must be an SDF or URDF file.
+(Deprecated.)</dd>
+<dt>Deprecated:</dt>
+<dd>You should remove all calls to this function. There is no
+replacement, because the feature should be irrelevant. This
+function is a no-op unless you are also using one of the
+deprecated package.xml files internal to Drake without using
+Drake’s multibody::Parser class. This will be removed from Drake
+on or after 2022-05-01.</dd>
 </dl>
 </dd></dl>
 

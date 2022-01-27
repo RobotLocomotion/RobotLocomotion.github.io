@@ -1,5 +1,9 @@
 var NAVTREEINDEX40 =
 {
+"decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,10,16,0],
+"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,10,16,2],
+"decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,10,16,5],
+"decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,10,16,1],
 "default__scalars_8h.html":[4,0,0,1,13],
 "default__scalars__pybind_8h.html":[4,0,0,0,0,0,2],
 "default__scalars__pybind_8h.html#a52292ed585da63084b8914356a744d04":[4,0,0,0,0,0,2,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX40 =
 "eigen__types_8h.html#a01ae662d5635b7c9efe03d15d976f7a8":[4,0,0,1,26,33],
 "eigen__types_8h.html#a06406a5da633da84f911e2979aa48549":[4,0,0,1,26,11],
 "eigen__types_8h.html#a0ad29daab565ce347c4d1c5aae6a76c2":[4,0,0,1,26,38],
-"eigen__types_8h.html#a11f9aa896d31437a219ed19fa944fe20":[4,0,0,1,26,17],
-"eigen__types_8h.html#a14aa433aedda321a15238f2d4074d4c3":[4,0,0,1,26,40],
-"eigen__types_8h.html#a218f39990d2d9090c7a25c9c18cbf832":[4,0,0,1,26,28],
-"eigen__types_8h.html#a28c58d881c60e96f48a7a4e32a699b95":[4,0,0,1,26,21],
-"eigen__types_8h.html#a3922cc0c6264e8ff225a6aa0dd993667":[4,0,0,1,26,13]
+"eigen__types_8h.html#a11f9aa896d31437a219ed19fa944fe20":[4,0,0,1,26,17]
 };

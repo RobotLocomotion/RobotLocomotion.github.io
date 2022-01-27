@@ -78,8 +78,8 @@ var hierarchy =
     [ "ConstraintSolver< T >", "classdrake_1_1multibody_1_1constraint_1_1_constraint_solver.html", null ],
     [ "ConstraintVelProblemData< T >", "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html", null ],
     [ "ContactResults< T >", "classdrake_1_1multibody_1_1_contact_results.html", null ],
-    [ "ContactResultsToMeshcatParams", "structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html", null ],
     [ "ContactSurface< T >", "classdrake_1_1geometry_1_1_contact_surface.html", null ],
+    [ "ContactVisualizerParams", "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html", null ],
     [ "ContactWrench", "structdrake_1_1multibody_1_1_contact_wrench.html", null ],
     [ "ContextMessageInterface", null, [
       [ "ContextBase", "classdrake_1_1systems_1_1_context_base.html", [
@@ -776,7 +776,6 @@ var hierarchy =
             [ "MeshcatVisualizer< T >", "classdrake_1_1geometry_1_1_meshcat_visualizer.html", null ],
             [ "SceneGraph< T >", "classdrake_1_1geometry_1_1_scene_graph.html", null ],
             [ "ContactResultsToLcmSystem< T >", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html", null ],
-            [ "ContactResultsToMeshcat< T >", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html", null ],
             [ "MultibodyTreeSystem< T >", null, [
               [ "MultibodyPlant< T >", "classdrake_1_1multibody_1_1_multibody_plant.html", [
                 [ "AxiallySymmetricFreeBodyPlant< T >", "classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html", null ]
@@ -784,6 +783,7 @@ var hierarchy =
               [ "MultibodyPlant< AutoDiffXd >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ],
               [ "MultibodyPlant< double >", "classdrake_1_1multibody_1_1_multibody_plant.html", null ]
             ] ],
+            [ "ContactVisualizer< T >", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", null ],
             [ "JointSliders< T >", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", null ],
             [ "Propeller< T >", "classdrake_1_1multibody_1_1_propeller.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],

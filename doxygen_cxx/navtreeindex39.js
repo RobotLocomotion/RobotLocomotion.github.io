@@ -191,8 +191,9 @@ var NAVTREEINDEX39 =
 "contact__results__to__lcm_8h.html#ga34c9c8f0a78446ac29edf4a3202127c3":[4,0,0,8,10,5,0],
 "contact__results__to__lcm_8h.html#ga732349f929601b37e30b15ad557057e7":[4,0,0,8,10,5,1],
 "contact__results__to__meshcat_8h.html":[4,0,0,8,10,6],
-"contact__results__to__meshcat_8h.html#aa098db6f335f188687125e9bb983d27a":[4,0,0,8,10,6,0],
+"contact__results__to__meshcat_8h.html#abdcc7c49e7ddb912031c85d2788b338d":[4,0,0,8,10,6,0],
 "contact__results__to__meshcat__params_8h.html":[4,0,0,8,10,7],
+"contact__results__to__meshcat__params_8h.html#a48997ca3a6b7f8e1a0202e5ec214d750":[4,0,0,8,10,7,0],
 "contact__solver_8h.html":[4,0,0,8,2,2],
 "contact__solver__results_8h.html":[4,0,0,8,2,3],
 "contact__solver__utils_8h.html":[4,0,0,8,2,4],
@@ -202,6 +203,9 @@ var NAVTREEINDEX39 =
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
 "contact__surface__doxygen_8h.html":[4,0,0,4,2,6],
 "contact__surface__utility_8h.html":[4,0,0,4,2,7],
+"contact__visualizer_8h.html":[4,0,0,8,7,0],
+"contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,0],
+"contact__visualizer__params_8h.html":[4,0,0,8,7,1],
 "contact__wrench_8h.html":[4,0,0,8,8,1],
 "contact__wrench__evaluator_8h.html":[4,0,0,8,8,2],
 "context_8h.html":[4,0,0,11,3,7],
@@ -245,9 +249,5 @@ var NAVTREEINDEX39 =
 "decision__variable_8h.html":[4,0,0,10,16],
 "decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,10,16,3],
 "decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,10,16,6],
-"decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,10,16,4],
-"decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,10,16,0],
-"decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,10,16,2],
-"decision__variable_8h.html#aca924499b3b011a50d3bd9d051295efa":[4,0,0,10,16,5],
-"decision__variable_8h.html#acf84184cb10b49233b007295d1880e17":[4,0,0,10,16,1]
+"decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,10,16,4]
 };

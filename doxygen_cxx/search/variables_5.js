@@ -18,6 +18,6 @@ var searchData=
   ['feasible_5fsolutions_5fcount',['feasible_solutions_count',['../structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html#a8f0c05ff392b24376b9094bb67a2228b',1,'drake::solvers::GurobiSolver::SolveStatusInfo']]],
   ['file',['file',['../structdrake_1_1multibody_1_1parsing_1_1_add_model.html#aefc35c7944eed319c89bc1b399f0eb67',1,'drake::multibody::parsing::AddModel::file()'],['../structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#aefc35c7944eed319c89bc1b399f0eb67',1,'drake::multibody::parsing::AddDirectives::file()']]],
   ['fmul',['Fmul',['../structdrake_1_1solvers_1_1_snopt_solver_details.html#a7263cb2847210d145fcb11838abe81b5',1,'drake::solvers::SnoptSolverDetails']]],
-  ['force_5fthreshold',['force_threshold',['../structdrake_1_1multibody_1_1_contact_results_to_meshcat_params.html#ae3c085d0521d5da888d23da447ae4328',1,'drake::multibody::ContactResultsToMeshcatParams']]],
+  ['force_5fthreshold',['force_threshold',['../structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328',1,'drake::multibody::meshcat::ContactVisualizerParams']]],
   ['fov',['fov',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a',1,'drake::geometry::Meshcat::PerspectiveCamera']]]
 ];

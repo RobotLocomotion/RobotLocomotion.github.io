@@ -1,5 +1,18 @@
 var group__visualization =
 [
+    [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", [
+      [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9d3709b3681d9f50698dbd9080c827f1", null ],
+      [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aae75b8668056f3231cb82ac04ed73ce9", null ],
+      [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ac9b5cfee1d50590650a48d6b68ceb219", null ],
+      [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9560757160ae5aeaaacfd6ef5f4f99c6", null ],
+      [ "AddToBuilder", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aaba6d246b4ea1358d5c2f8abcb85278d", null ],
+      [ "AddToBuilder", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a0f88790be4048256c7114ea749bc001f", null ],
+      [ "contact_results_input_port", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aa6953740727efc515d9bd7be55a7bd00", null ],
+      [ "Delete", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a02a874939f6aa43e29fc929d223dfb76", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a4dff073e68a37c49c5a9ca802b2a9eb4", null ],
+      [ "operator=", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#afc1d4a4b88a63d5d17cb306a04c8cb2b", null ],
+      [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ab5736fb85c92c045f489a412701a164a", null ]
+    ] ],
     [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", [
       [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a9fc78a729b6fdd395e1cb7b6b2db3047", null ],
       [ "JointSliders", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59", null ],
@@ -22,19 +35,6 @@ var group__visualization =
       [ "ConnectWithNameLookup", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a8b5771795cfa78648ca7107ac7018d76", null ],
       [ "ContactResultsToLcmSystem", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a52e146614b835c3cd67c775437624198", null ],
       [ "ContactResultsToLcmTester", "classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#a262ee4015b7d6ad9197779c7f7443683", null ]
-    ] ],
-    [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html", [
-      [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a9e356ad8571b908d97f1b382f253a0ec", null ],
-      [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a79cb84728a20b19cf1d2ba835ec1bea8", null ],
-      [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a1f42402f8e176ba6a28e858c03af83fc", null ],
-      [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a331523bdf9ee8559d1fb423f12e30930", null ],
-      [ "AddToBuilder", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#ae2f217452016fc516e7a952e09118671", null ],
-      [ "AddToBuilder", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a88665fca3db4c7c80e64c204d8815598", null ],
-      [ "contact_results_input_port", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#aa6953740727efc515d9bd7be55a7bd00", null ],
-      [ "Delete", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a02a874939f6aa43e29fc929d223dfb76", null ],
-      [ "operator=", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#aaf105ed3ac8d89bd055fa5ffe295f027", null ],
-      [ "operator=", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a6f6ac6e3297c852ab82c622e1980bfa3", null ],
-      [ "ContactResultsToMeshcat", "classdrake_1_1multibody_1_1_contact_results_to_meshcat.html#a36eb704118e6e191917e4ad3d1b8c114", null ]
     ] ],
     [ "MultibodyPositionToGeometryPose", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html", [
       [ "MultibodyPositionToGeometryPose", "classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html#ae6accdc02e6e608cb47e7818e236ba0f", null ],

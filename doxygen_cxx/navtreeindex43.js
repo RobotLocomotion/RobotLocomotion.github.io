@@ -1,5 +1,9 @@
 var NAVTREEINDEX43 =
 {
+"hierarchy.html":[3,2],
+"hopf__coordinate_8h.html":[4,0,0,7,17],
+"hopf__coordinate_8h.html#a82d0a7052d08481add2e9086b98144dd":[4,0,0,7,17,0],
+"hopf__coordinate_8h.html#ab948fdacb210871495edea82aa001473":[4,0,0,7,17,1],
 "hpolyhedron_8h.html":[4,0,0,4,1,3],
 "hydroelastic__callback_8h.html":[4,0,0,4,2,13],
 "hydroelastic__contact__info_8h.html":[4,0,0,8,10,12],
@@ -135,7 +139,7 @@ var NAVTREEINDEX43 =
 "jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[4,0,0,7,18,0],
 "joint_8h.html":[4,0,0,8,13,14],
 "joint__actuator_8h.html":[4,0,0,8,13,15],
-"joint__sliders_8h.html":[4,0,0,8,7,0],
+"joint__sliders_8h.html":[4,0,0,8,7,2],
 "kalman__filter_8h.html":[4,0,0,11,2,0],
 "kalman__filter_8h.html#ga3949eebe88ae99b71a997dfa0bad5cff":[4,0,0,11,2,0,1],
 "kalman__filter_8h.html#ga483f8a39c210ad058dfc19ae26d93e16":[4,0,0,11,2,0,0],
@@ -245,9 +249,5 @@ var NAVTREEINDEX43 =
 "math_2autodiff_8h.html#a6394a85153c159ec7ddf8d3b27f63917":[4,0,0,7,0,8],
 "math_2autodiff_8h.html#a8d2993436a049675d4aefab5e8661862":[4,0,0,7,0,12],
 "math_2autodiff_8h.html#ab72982a8973f482f5cbf66d6656eaf08":[4,0,0,7,0,2],
-"math_2autodiff_8h.html#abb0cd738c70309748ff3cbc5c6b2d50e":[4,0,0,7,0,5],
-"math_2autodiff_8h.html#abdc21793a127ffbebcb28a2442123390":[4,0,0,7,0,3],
-"math_2autodiff_8h.html#ad148a2735129010d96646652ec1f4986":[4,0,0,7,0,11],
-"math_2autodiff_8h.html#af0249a3cc715341eaf27380878eb1df9":[4,0,0,7,0,1],
-"mathematical__program_8h.html":[4,0,0,10,30]
+"math_2autodiff_8h.html#abb0cd738c70309748ff3cbc5c6b2d50e":[4,0,0,7,0,5]
 };
