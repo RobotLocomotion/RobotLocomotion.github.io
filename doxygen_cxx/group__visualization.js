@@ -5,6 +5,7 @@ var group__visualization =
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aae75b8668056f3231cb82ac04ed73ce9", null ],
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#ac9b5cfee1d50590650a48d6b68ceb219", null ],
       [ "ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9560757160ae5aeaaacfd6ef5f4f99c6", null ],
+      [ "~ContactVisualizer", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a466314c408fa5362f2f1cedcb81365eb", null ],
       [ "AddToBuilder", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aaba6d246b4ea1358d5c2f8abcb85278d", null ],
       [ "AddToBuilder", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a0f88790be4048256c7114ea749bc001f", null ],
       [ "contact_results_input_port", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aa6953740727efc515d9bd7be55a7bd00", null ],

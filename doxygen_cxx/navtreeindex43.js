@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"hermitian__dense__output_8h.html":[4,0,0,11,0,5],
 "hierarchy.html":[3,2],
 "hopf__coordinate_8h.html":[4,0,0,7,17],
 "hopf__coordinate_8h.html#a82d0a7052d08481add2e9086b98144dd":[4,0,0,7,17,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "math_2autodiff_8h.html#a563f68724c579b35cdaf62b72c056e5e":[4,0,0,7,0,7],
 "math_2autodiff_8h.html#a6394a85153c159ec7ddf8d3b27f63917":[4,0,0,7,0,8],
 "math_2autodiff_8h.html#a8d2993436a049675d4aefab5e8661862":[4,0,0,7,0,12],
-"math_2autodiff_8h.html#ab72982a8973f482f5cbf66d6656eaf08":[4,0,0,7,0,2],
-"math_2autodiff_8h.html#abb0cd738c70309748ff3cbc5c6b2d50e":[4,0,0,7,0,5]
+"math_2autodiff_8h.html#ab72982a8973f482f5cbf66d6656eaf08":[4,0,0,7,0,2]
 };

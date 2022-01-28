@@ -1,5 +1,6 @@
 var NAVTREEINDEX42 =
 {
+"functions_vars_q.html":[3,3,2,16],
 "functions_vars_r.html":[3,3,2,17],
 "functions_vars_s.html":[3,3,2,18],
 "functions_vars_t.html":[3,3,2,19],
@@ -135,12 +136,12 @@ var NAVTREEINDEX42 =
 "group__default__scalars.html":[1,6,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[4,0,0,1,13,1],
 "group__default__scalars.html#ga0659aa8320fcb199bb53a153120a4d14":[1,6,1,1],
-"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,13,5],
 "group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[1,6,1,5],
+"group__default__scalars.html#ga3273477e81e9dcb7d96cfb28382798b6":[4,0,0,1,13,5],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[4,0,0,1,13,0],
 "group__default__scalars.html#ga6333534b3097a37c55fbacf434491e2e":[1,6,1,0],
-"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[4,0,0,1,13,4],
+"group__default__scalars.html#ga9f6a41d03cbe6efaef098ae88ccbed6e":[1,6,1,4],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[1,6,1,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
@@ -160,8 +161,8 @@ var NAVTREEINDEX42 =
 "group__example__systems.html":[1,2,12],
 "group__geometry.html":[1,5],
 "group__geometry__infrastructure.html":[1,5,0],
-"group__geometry__optimization.html":[1,5,4],
 "group__geometry__optimization.html":[1,1,1],
+"group__geometry__optimization.html":[1,5,4],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,1,1,10],
 "group__geometry__optimization.html#ga3a51e0fec449a0abcf498f78a2a390a8":[1,5,4,10],
 "group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b":[1,1,1,11],
@@ -248,6 +249,5 @@ var NAVTREEINDEX42 =
 "hash_8h.html#a8ec36c65f95147192214391781b75b08":[4,0,0,1,32,10],
 "hash_8h.html#ace5b5f07e7cce19025b862a56d85e6aa":[4,0,0,1,32,4],
 "hash_8h.html#ae04ca99007a983e597a71955c96c5925":[4,0,0,1,32,6],
-"hash_8h.html#aeacd6804761e9fb9f0fa26a6766f1444":[4,0,0,1,32,5],
-"hermitian__dense__output_8h.html":[4,0,0,11,0,5]
+"hash_8h.html#aeacd6804761e9fb9f0fa26a6766f1444":[4,0,0,1,32,5]
 };

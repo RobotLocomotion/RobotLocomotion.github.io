@@ -118,6 +118,7 @@ class drake::multibody::meshcat::ContactVisualizer&lt; T &gt;</h3>
 </td></tr>
 </table>
 <p>Note: This system current only visualizes "point pair" contacts.</p>
+<dl class="section warning"><dt>Warning</dt><dd>In the current implementation, <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> methods must be called from the same thread where the class instance was constructed. For example, running multiple simulations in parallel using the same <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> instance is not yet supported. We may generalize this in the future.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
@@ -136,6 +137,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9560757160ae5aeaaacfd6ef5f4f99c6"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a9560757160ae5aeaaacfd6ef5f4f99c6">ContactVisualizer</a> (const <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html">ContactVisualizer</a>&lt; U &gt; &amp;other)</td></tr>
 <tr class="memdesc:a9560757160ae5aeaaacfd6ef5f4f99c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor.  <a href="#a9560757160ae5aeaaacfd6ef5f4f99c6">More...</a><br /></td></tr>
 <tr class="separator:a9560757160ae5aeaaacfd6ef5f4f99c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466314c408fa5362f2f1cedcb81365eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a466314c408fa5362f2f1cedcb81365eb">~ContactVisualizer</a> () final</td></tr>
+<tr class="separator:a466314c408fa5362f2f1cedcb81365eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02a874939f6aa43e29fc929d223dfb76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a02a874939f6aa43e29fc929d223dfb76">Delete</a> () const</td></tr>
 <tr class="memdesc:a02a874939f6aa43e29fc929d223dfb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#af4681ade5efb8da0d67f86ecae9b9ac8" title="Deletes the object at the given path as well as all of its children.">geometry::Meshcat::Delete(std::string_view path)</a>, with the path set to <code>prefix</code>.  <a href="#a02a874939f6aa43e29fc929d223dfb76">More...</a><br /></td></tr>
 <tr class="separator:a02a874939f6aa43e29fc929d223dfb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -583,7 +586,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aaba6d246b4ea1358d5c2f8abcb85278d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html">ContactVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#aaba6d246b4ea1358d5c2f8abcb85278d">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;plant, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html">ContactVisualizerParams</a> params={})</td></tr>
-<tr class="memdesc:aaba6d246b4ea1358d5c2f8abcb85278d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s ContactResults-valued output port.  <a href="#aaba6d246b4ea1358d5c2f8abcb85278d">More...</a><br /></td></tr>
+<tr class="memdesc:aaba6d246b4ea1358d5c2f8abcb85278d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">multibody::ContactResults</a>-valued output port.  <a href="#aaba6d246b4ea1358d5c2f8abcb85278d">More...</a><br /></td></tr>
 <tr class="separator:aaba6d246b4ea1358d5c2f8abcb85278d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f88790be4048256c7114ea749bc001f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html">ContactVisualizer</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#a0f88790be4048256c7114ea749bc001f">AddToBuilder</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">systems::DiagramBuilder</a>&lt; T &gt; *builder, const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">systems::OutputPort</a>&lt; T &gt; &amp;contact_results_port, std::shared_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">geometry::Meshcat</a> &gt; meshcat, <a class="el" href="structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html">ContactVisualizerParams</a> params={})</td></tr>
 <tr class="memdesc:a0f88790be4048256c7114ea749bc001f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">multibody::ContactResults</a>-valued output port.  <a href="#a0f88790be4048256c7114ea749bc001f">More...</a><br /></td></tr>
@@ -1316,6 +1319,31 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a466314c408fa5362f2f1cedcb81365eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466314c408fa5362f2f1cedcb81365eb">&#9670;&nbsp;</a></span>~ContactVisualizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">~<a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html">ContactVisualizer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aaba6d246b4ea1358d5c2f8abcb85278d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaba6d246b4ea1358d5c2f8abcb85278d">&#9670;&nbsp;</a></span>AddToBuilder() <span class="overload">[1/2]</span></h2>
@@ -1363,7 +1391,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Adds a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s ContactResults-valued output port. </p>
+<p>Adds a <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> and connects it to the given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>'s <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">multibody::ContactResults</a>-valued output port. </p>
 
 </div>
 </div>

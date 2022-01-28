@@ -3704,10 +3704,14 @@ http/websocket server. Users can navigate their browser to the hosted
 URL to visualize the Meshcat scene. Note that, unlike many
 visualizers, one cannot open the visualizer until this server is
 running.</p>
-<p>In the current implementation, Meshcat methods must be called from the
-same thread where the class instance was constructed. For example,
-running multiple simulations in parallel using the same Meshcat
-instance is not yet supported. We may generalize this in the future.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">In the current implementation, Meshcat methods must be called from
+the same thread where the class instance was constructed. For
+example, running multiple simulations in parallel using the same
+Meshcat instance is not yet supported. We may generalize this in
+the future.</p>
+</div>
 <p><a class="reference external" href="https://github.com/rdeits/meshcat#api">https://github.com/rdeits/meshcat#api</a> provides a nice introduction to
 the websocket API that we wrap with this class. One of the core
 concepts is the “scene tree” – a directory-like structure of objects,
@@ -3869,6 +3873,11 @@ in all browsers.</p>
 </tbody>
 </table>
 </dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.Meshcat.HasPath">
+<code class="descname">HasPath</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>path: str</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.Meshcat.HasPath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.Meshcat.port">

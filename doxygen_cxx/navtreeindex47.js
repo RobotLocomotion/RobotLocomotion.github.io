@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"shader__program_8h.html":[4,0,0,4,4,0,8],
+"shader__program__data_8h.html":[4,0,0,4,4,0,9],
 "shape__meshes_8h.html":[4,0,0,4,4,0,10],
 "shape__specification_8h.html":[4,0,0,4,36],
 "shape__specification_8h.html#ae129ecc1484c1fab6e4d4b3e04d25198":[4,0,0,4,36,13],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_signed_distance_to_point.html#aeb3c413ef5458b371a43891454665d9d":[3,0,0,3,46,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,1,1,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html":[1,5,4,5],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,5,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,5,1],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,5,6]
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,5,1]
 };

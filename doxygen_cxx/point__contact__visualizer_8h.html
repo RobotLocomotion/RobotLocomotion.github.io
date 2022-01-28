@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Drake: drake/multibody/meshcat/contact_visualizer.h File Reference</title>
+<title>Drake: drake/multibody/meshcat/point_contact_visualizer.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -73,7 +73,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('contact__visualizer_8h.html','');});
+$(document).ready(function(){initNavTree('point__contact__visualizer_8h.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,39 +93,24 @@ $(document).ready(function(){initNavTree('contact__visualizer_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle">
-<div class="title">contact_visualizer.h File Reference</div>  </div>
+<div class="title">point_contact_visualizer.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="meshcat_8h.html">drake/geometry/meshcat.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="contact__visualizer__params_8h.html">drake/multibody/meshcat/contact_visualizer_params.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="multibody__plant_8h.html">drake/multibody/plant/multibody_plant.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="diagram__builder_8h.html">drake/systems/framework/diagram_builder.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="leaf__system_8h.html">drake/systems/framework/leaf_system.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for contact_visualizer.h:</div>
+Include dependency graph for point_contact_visualizer.h:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="contact__visualizer_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="contact__visualizer_8h__dep__incl.svg" width="231" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="point__contact__visualizer_8h__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html">ContactVisualizer&lt; T &gt;</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> is a system that publishes a <a class="el" href="classdrake_1_1multibody_1_1_contact_results.html" title="A container class storing the contact results information for each contact pair for a given state of ...">ContactResults</a> to <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html" title="Provides an interface to Meshcat (https://github.com/rdeits/meshcat).">geometry::Meshcat</a>; it draws double-sided arrows at the location of the contact force with length scaled by the magnitude of the contact force.  <a href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html">drake</a></td></tr>
@@ -134,12 +119,6 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1meshcat"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1meshcat.html">drake::multibody::meshcat</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:aaef19a49dabf0bd3fe0fd47e32a84706"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1meshcat.html#aaef19a49dabf0bd3fe0fd47e32a84706">ContactVisualizerd</a> = ContactVisualizer&lt; double &gt;</td></tr>
-<tr class="memdesc:aaef19a49dabf0bd3fe0fd47e32a84706"><td class="mdescLeft">&#160;</td><td class="mdescRight">A convenient alias for the <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double-s...">ContactVisualizer</a> class when using the <code>double</code> scalar type.  <a href="namespacedrake_1_1multibody_1_1meshcat.html#aaef19a49dabf0bd3fe0fd47e32a84706">More...</a><br /></td></tr>
-<tr class="separator:aaef19a49dabf0bd3fe0fd47e32a84706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -147,7 +126,7 @@ Typedefs</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_4e7f59081b2683f4314b7e1101ce9a3e.html">meshcat</a></li><li class="navelem"><a class="el" href="contact__visualizer_8h.html">contact_visualizer.h</a></li>
+    <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_39b8b3c6654246a9c12332c930bc7d3f.html">multibody</a></li><li class="navelem"><a class="el" href="dir_4e7f59081b2683f4314b7e1101ce9a3e.html">meshcat</a></li><li class="navelem"><a class="el" href="point__contact__visualizer_8h.html">point_contact_visualizer.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.nl/">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a></li>
