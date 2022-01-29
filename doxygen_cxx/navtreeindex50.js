@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a07223f916e770d3b62d2a1d1ca40ba23":[3,0,0,14,2,1,7],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a0e3cbe33d19f96def02ebd180f9267a0":[3,0,0,14,2,1,5],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a2f676e6424410f6f9742e3f7177cb90c":[3,0,0,14,2,1,2],
 "structdrake_1_1systems_1_1controllers_1_1_dynamic_programming_options.html#a346a6402fcd260661880427be3759741":[3,0,0,14,2,1,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "symbolic__expression_8h.html#a208a1c5a02e5bff9ba66d7b7db588ba0":[4,0,0,1,55,55],
 "symbolic__expression_8h.html#a20be18c2d4942e2e64987a30c7e37c1d":[4,0,0,1,55,36],
 "symbolic__expression_8h.html#a23b9105cdfbe657bfe90eaf47d9e8f11":[4,0,0,1,55,69],
-"symbolic__expression_8h.html#a24ba050d5b6f088d5fe578396b3ad646":[4,0,0,1,55,13],
-"symbolic__expression_8h.html#a251f0e1c8ae1894d0a09ccaeb5e79a41":[4,0,0,1,55,31]
+"symbolic__expression_8h.html#a24ba050d5b6f088d5fe578396b3ad646":[4,0,0,1,55,13]
 };

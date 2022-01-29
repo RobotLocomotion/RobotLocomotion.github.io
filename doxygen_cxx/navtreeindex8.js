@@ -62,6 +62,7 @@ var NAVTREEINDEX8 =
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a883142613402429f357102b1835d180a":[3,0,0,3,1,8,9],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a88a7096a316e3d2340941ddcc0a89832":[3,0,0,3,1,8,6],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#aaa0981a4cafa2db60957d182cccd5bfd":[3,0,0,3,1,8,15],
+"classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#abe2f0ee9ad9d7dac08f17c0e8551b177":[3,0,0,3,1,8,18],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ae7e7742c1fc3324e9cd80e62fd65095f":[3,0,0,3,1,8,4],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#af70dd3ac8981ebabb0e508ee041ef2b7":[3,0,0,3,1,8,2],
 "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#afa6f7d31e4fabbe7344340a521ea2171":[3,0,0,3,1,8,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html#aebf6f8af02a42296da926793dc1417ea":[1,2,5,0,3],
 "classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html#af1e714bec80dcfdd955adc894f6b74eb":[1,2,5,0,1],
 "classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html":[1,2,5,1],
-"classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#a1bcf227bb1e2c3462a0c5dbd231463d1":[1,2,5,1,3],
-"classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#a1c3daa07cee3147450e9cd74f9dda6b6":[1,2,5,1,0]
+"classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#a1bcf227bb1e2c3462a0c5dbd231463d1":[1,2,5,1,3]
 };

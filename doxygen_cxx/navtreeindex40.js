@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,10,16,6],
 "decision__variable_8h.html#aa20d09ae94d1e722c2961fbaca37f967":[4,0,0,10,16,4],
 "decision__variable_8h.html#aa708f80d971209e3d46c1e41f05c1393":[4,0,0,10,16,0],
 "decision__variable_8h.html#ac04cfbe6b8d63ecb463fc087385ce061":[4,0,0,10,16,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX40 =
 "eigen__sparse__triplet_8h.html#a9681555f84d48a48d09601d913246934":[4,0,0,7,11,0],
 "eigen__types_8h.html":[4,0,0,1,26],
 "eigen__types_8h.html#a01ae662d5635b7c9efe03d15d976f7a8":[4,0,0,1,26,33],
-"eigen__types_8h.html#a06406a5da633da84f911e2979aa48549":[4,0,0,1,26,11],
-"eigen__types_8h.html#a0ad29daab565ce347c4d1c5aae6a76c2":[4,0,0,1,26,38]
+"eigen__types_8h.html#a06406a5da633da84f911e2979aa48549":[4,0,0,1,26,11]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__formula_8h.html#afc6dff8519d02993c6699ddb3ebb28cf":[4,0,0,1,58,37],
 "symbolic__formula_8h.html#afef2e4ae842f5cec22644a1627929c20":[4,0,0,1,58,7],
 "symbolic__formula_8h.html#aff01b0d18262c1673124bd659870a3a4":[4,0,0,1,58,18],
 "symbolic__formula__cell_8h.html":[4,0,0,1,59],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "system__identification_8h.html":[4,0,0,10,56],
 "system__output_8h.html":[4,0,0,11,3,44],
 "system__scalar__conversion__doxygen_8h.html":[4,0,0,11,3,45],
-"system__scalar__converter_8h.html":[4,0,0,11,3,46],
-"system__symbolic__inspector_8h.html":[4,0,0,11,3,47]
+"system__scalar__converter_8h.html":[4,0,0,11,3,46]
 };
