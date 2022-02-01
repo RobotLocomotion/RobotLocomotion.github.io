@@ -20,6 +20,11 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
@@ -39,6 +44,21 @@
    <div id="projectname">Drake
    </div>
   </td>
+   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+</td>
  </tr>
  </tbody>
 </table>
@@ -50,16 +70,6 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
-<script type="text/javascript" src="menudata.js"></script>
-<script type="text/javascript" src="menu.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(function() {
-  initMenu('',true,false,'search.php','Search');
-  $(document).ready(function() { init_search(); });
-});
-/* @license-end */</script>
-<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -94,14 +104,10 @@ $(document).ready(function(){initNavTree('dir_d739e095b49d8b72164589d00310017d.h
 <div class="contents">
 <h3>geometry &rarr; math Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in drake/geometry</th><th class="dirtab">Includes file in drake/math</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="geometry__instance_8h.html">geometry_instance.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="internal__geometry_8h.html">internal_geometry.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="meshcat_8h.html">meshcat.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="meshcat__animation_8h.html">meshcat_animation.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="meshcat__types_8h.html">meshcat_types.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="proximity__engine_8h.html">proximity_engine.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="query__object_8h.html">query_object.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="shape__specification_8h.html">shape_specification.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="utilities_8h.html">utilities.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a>&#160;/&#160;<a class="el" href="dir_44483f0323bd602a0990582f52e44742.html">gl_renderer</a>&#160;/&#160;<a class="el" href="opengl__geometry_8h.html">opengl_geometry.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a>&#160;/&#160;<a class="el" href="dir_44483f0323bd602a0990582f52e44742.html">gl_renderer</a>&#160;/&#160;<a class="el" href="render__engine__gl_8h.html">render_engine_gl.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3d84dd5e420c33a089db2aba1794a356.html">optimization</a>&#160;/&#160;<a class="el" href="convex__set_8h.html">convex_set.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3d84dd5e420c33a089db2aba1794a356.html">optimization</a>&#160;/&#160;<a class="el" href="test__utilities_8h.html">test_utilities.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="aabb_8h.html">aabb.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="boxes__overlap_8h.html">boxes_overlap.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="bvh_8h.html">bvh.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="distance__to__point__callback_8h.html">distance_to_point_callback.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="distance__to__shape__callback_8h.html">distance_to_shape_callback.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="field__intersection_8h.html">field_intersection.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="hydroelastic__callback_8h.html">hydroelastic_callback.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="hydroelastic__callback_8h.html">hydroelastic_callback.h</a></td><td class="dirtab"><a class="el" href="rotation__matrix_8h.html">rotation_matrix.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="mesh__field__linear_8h.html">mesh_field_linear.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="mesh__intersection_8h.html">mesh_intersection.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="mesh__plane__intersection_8h.html">mesh_plane_intersection.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="obb_8h.html">obb.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="penetration__as__point__pair__callback_8h.html">penetration_as_point_pair_callback.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="polygon__surface__mesh_8h.html">polygon_surface_mesh.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html">proximity</a>&#160;/&#160;<a class="el" href="triangle__surface__mesh_8h.html">triangle_surface_mesh.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_3ff34c62de56b2df4097a6c50ce2d7ff.html">query_results</a>&#160;/&#160;<a class="el" href="contact__surface_8h.html">contact_surface.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a>&#160;/&#160;<a class="el" href="render__camera_8h.html">render_camera.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a>&#160;/&#160;<a class="el" href="render__engine_8h.html">render_engine.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_05142ce2278c744298ef3f06d9e628a4.html">render</a>&#160;/&#160;<a class="el" href="vtk__util_8h.html">vtk_util.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="dir_dd40e4ced6d50249f5b665722b0662c5.html">test_utilities</a>&#160;/&#160;<a class="el" href="dummy__render__engine_8h.html">dummy_render_engine.h</a></td><td class="dirtab"><a class="el" href="rigid__transform_8h.html">rigid_transform.h</a></td></tr></table></div><!-- contents -->
 </div><!-- doc-content -->
-<!-- HTML footer for doxygen 1.8.15 -->
-<!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
   <ul>
     <li class="navelem"><a class="el" href="dir_f1666844dc41ec91c14125b680b7be1b.html">drake</a></li><li class="navelem"><a class="el" href="dir_d739e095b49d8b72164589d00310017d.html">geometry</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.nl/">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a></li>
   </ul>
 </div>
 </body>
