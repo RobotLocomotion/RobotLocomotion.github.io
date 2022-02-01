@@ -316,8 +316,6 @@ var searchData=
   ['autodiff_5ftypes_5fpybind_2eh',['autodiff_types_pybind.h',['../autodiff__types__pybind_8h.html',1,'']]],
   ['autodiffd',['AutoDiffd',['../namespacedrake.html#a5f4077c4918078fb55bfb6b73968cb0a',1,'drake']]],
   ['autodiffmatrixtype',['AutoDiffMatrixType',['../namespacedrake_1_1math.html#af0249a3cc715341eaf27380878eb1df9',1,'drake::math']]],
-  ['autodifftogradientmatrix',['AutoDiffToGradientMatrix',['../structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html',1,'AutoDiffToGradientMatrix&lt; Derived &gt;'],['../namespacedrake_1_1math.html#a83fe4512cb9f4a0997cbc08243404e63',1,'drake::math::autoDiffToGradientMatrix(const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix, int num_derivatives=Eigen::Dynamic)']]],
-  ['autodifftovaluematrix',['AutoDiffToValueMatrix',['../structdrake_1_1math_1_1_auto_diff_to_value_matrix.html',1,'AutoDiffToValueMatrix&lt; Derived &gt;'],['../namespacedrake_1_1math.html#ab72982a8973f482f5cbf66d6656eaf08',1,'drake::math::autoDiffToValueMatrix(const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix)']]],
   ['autodiffvecd',['AutoDiffVecd',['../namespacedrake.html#a790a072a62129732864a20e7a4743298',1,'drake']]],
   ['autodiffvecxd',['AutoDiffVecXd',['../namespacedrake.html#a7b13142534d668d5d490b829b917fa16',1,'drake']]],
   ['autodiffxd',['AutoDiffXd',['../namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc',1,'drake']]],

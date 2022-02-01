@@ -155,6 +155,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7770452d0167ddf273f47c90e85dc941"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a7770452d0167ddf273f47c90e85dc941">ws_url</a> () const</td></tr>
 <tr class="memdesc:a7770452d0167ddf273f47c90e85dc941"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the ws:// URL for direct connection to the websocket interface.  <a href="#a7770452d0167ddf273f47c90e85dc941">More...</a><br /></td></tr>
 <tr class="separator:a7770452d0167ddf273f47c90e85dc941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85bcb12442dbc8a27d51e005ec7a922f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a85bcb12442dbc8a27d51e005ec7a922f">GetNumActiveConnections</a> () const</td></tr>
+<tr class="memdesc:a85bcb12442dbc8a27d51e005ec7a922f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the number of currently-open websocket connections.  <a href="#a85bcb12442dbc8a27d51e005ec7a922f">More...</a><br /></td></tr>
+<tr class="separator:a85bcb12442dbc8a27d51e005ec7a922f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a548a7b441b7900dcbd5481778c7dec9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html#a548a7b441b7900dcbd5481778c7dec9f">Flush</a> () const</td></tr>
 <tr class="memdesc:a548a7b441b7900dcbd5481778c7dec9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the calling thread until all buffered data in the websocket thread has been sent to any connected clients.  <a href="#a548a7b441b7900dcbd5481778c7dec9f">More...</a><br /></td></tr>
 <tr class="separator:a548a7b441b7900dcbd5481778c7dec9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -577,6 +580,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a85bcb12442dbc8a27d51e005ec7a922f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85bcb12442dbc8a27d51e005ec7a922f">&#9670;&nbsp;</a></span>GetNumActiveConnections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> GetNumActiveConnections </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns the number of currently-open websocket connections. </p>
+
+</div>
+</div>
 <a id="abac0b91a968117e6d9b8792bc753d9d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abac0b91a968117e6d9b8792bc753d9d6">&#9670;&nbsp;</a></span>GetPackedObject()</h2>
 
@@ -685,8 +707,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac40bc1b2063091ffce4741216b559b53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac40bc1b2063091ffce4741216b559b53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a37b1b4538dd47e4dc5fd9c671454b4d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b1b4538dd47e4dc5fd9c671454b4d2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -697,7 +719,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -711,8 +733,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a37b1b4538dd47e4dc5fd9c671454b4d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37b1b4538dd47e4dc5fd9c671454b4d2">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ac40bc1b2063091ffce4741216b559b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40bc1b2063091ffce4741216b559b53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -723,7 +745,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_meshcat.html">Meshcat</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

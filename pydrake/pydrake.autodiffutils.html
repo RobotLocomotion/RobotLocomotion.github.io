@@ -72,11 +72,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -170,28 +175,6 @@
   <div class="section" id="module-pydrake.autodiffutils">
 <span id="pydrake-autodiffutils"></span><h1>pydrake.autodiffutils<a class="headerlink" href="#module-pydrake.autodiffutils" title="Permalink to this headline">¶</a></h1>
 <p>Bindings for Eigen AutoDiff Scalars</p>
-<dl class="function">
-<dt id="pydrake.autodiffutils.autoDiffToGradientMatrix">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">autoDiffToGradientMatrix</code><span class="sig-paren">(</span><em>autodiff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.autoDiffToGradientMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use ExtractGradient(). This will be removed from Drake on or after
-2022-02-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.autodiffutils.autoDiffToValueMatrix">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">autoDiffToValueMatrix</code><span class="sig-paren">(</span><em>autodiff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.autoDiffToValueMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use ExtractValue() instead This will be removed from Drake on or
-after 2022-02-01.</dd>
-</dl>
-</dd></dl>
-
 <dl class="class">
 <dt id="pydrake.autodiffutils.AutoDiffXd">
 <em class="property">class </em><code class="descclassname">pydrake.autodiffutils.</code><code class="descname">AutoDiffXd</code><a class="headerlink" href="#pydrake.autodiffutils.AutoDiffXd" title="Permalink to this definition">¶</a></dt>
@@ -453,28 +436,6 @@ be stored in row j of the gradient matrix.</dd>
 <dt>Returns <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
 <dd>The matrix of AutoDiffScalars. Will have the same dimensions as
 the value matrix.</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.autodiffutils.initializeAutoDiff">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiff</code><span class="sig-paren">(</span><em>mat: numpy.ndarray[numpy.float64[m, n]], num_derivatives: int = -1, deriv_num_start: int = 0</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiff" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use InitializeAutoDiff() instead This will be removed from Drake
-on or after 2022-02-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix">
-<code class="descclassname">pydrake.autodiffutils.</code><code class="descname">initializeAutoDiffGivenGradientMatrix</code><span class="sig-paren">(</span><em>val: numpy.ndarray[numpy.float64[m, 1]], gradient: numpy.ndarray[numpy.float64[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use InitializeAutoDiff() instead This will be removed from Drake
-on or after 2022-02-01.</dd>
 </dl>
 </dd></dl>
 

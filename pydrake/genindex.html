@@ -71,11 +71,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -2464,10 +2469,10 @@
         <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_[float].AddModelInstance">(pydrake.multibody.plant.MultibodyPlant_[float] method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.AddMultibodyPlantSceneGraph">AddMultibodyPlantSceneGraph() (in module pydrake.multibody.plant)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].AddNamedSystem">AddNamedSystem() (pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float] method)</a>
 
       <ul>
@@ -2694,6 +2699,16 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[Expression].AllocateDiscreteVariables">(pydrake.systems.framework.System_[Expression] method)</a>
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].AllocateDiscreteVariables">(pydrake.systems.framework.System_[float] method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].AllocateImplicitTimeDerivativesResidual">AllocateImplicitTimeDerivativesResidual() (pydrake.systems.framework.System_.System_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[AutoDiffXd].AllocateImplicitTimeDerivativesResidual">(pydrake.systems.framework.System_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[Expression].AllocateImplicitTimeDerivativesResidual">(pydrake.systems.framework.System_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].AllocateImplicitTimeDerivativesResidual">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].AllocateOutput">AllocateOutput() (pydrake.systems.framework.System_.System_[float] method)</a>
@@ -2930,10 +2945,6 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.atan2">(pydrake.symbolic.Variable method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.autoDiffToGradientMatrix">autoDiffToGradientMatrix() (in module pydrake.autodiffutils)</a>
-</li>
-      <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.autoDiffToValueMatrix">autoDiffToValueMatrix() (in module pydrake.autodiffutils)</a>
-</li>
       <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.AutoDiffXd">AutoDiffXd (class in pydrake.autodiffutils)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatAnimation.autoplay">autoplay() (pydrake.geometry.MeshcatAnimation method)</a>
@@ -3572,6 +3583,16 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge_[Expression].CalcHingeTorque">(pydrake.multibody.tree.DoorHinge_[Expression] method)</a>
 </li>
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.DoorHinge_[float].CalcHingeTorque">(pydrake.multibody.tree.DoorHinge_[float] method)</a>
+</li>
+      </ul></li>
+      <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].CalcImplicitTimeDerivativesResidual">CalcImplicitTimeDerivativesResidual() (pydrake.systems.framework.System_.System_[float] method)</a>
+
+      <ul>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[AutoDiffXd].CalcImplicitTimeDerivativesResidual">(pydrake.systems.framework.System_[AutoDiffXd] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[Expression].CalcImplicitTimeDerivativesResidual">(pydrake.systems.framework.System_[Expression] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_[float].CalcImplicitTimeDerivativesResidual">(pydrake.systems.framework.System_[float] method)</a>
 </li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].CalcInverseDynamics">CalcInverseDynamics() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
@@ -9690,6 +9711,8 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraphInspector_[float].GetName">(pydrake.geometry.SceneGraphInspector_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.GetNumActiveConnections">GetNumActiveConnections() (pydrake.geometry.Meshcat method)</a>
+</li>
       <li><a href="pydrake.polynomial.html#pydrake.polynomial.Polynomial_.Polynomial_[float].GetNumberOfCoefficients">GetNumberOfCoefficients() (pydrake.polynomial.Polynomial_.Polynomial_[float] method)</a>
 
       <ul>
@@ -10668,6 +10691,8 @@
 </li>
       <li><a href="pydrake.systems.sensors.html#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]">ImageTraits[PixelType.kRgba8U] (class in pydrake.systems.sensors)</a>
 </li>
+      <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.implicit_time_derivatives_residual_size">implicit_time_derivatives_residual_size() (pydrake.systems.framework.SystemBase method)</a>
+</li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variables.include">include() (pydrake.symbolic.Variables method)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.MathematicalProgram.indeterminate">indeterminate() (pydrake.solvers.mathematicalprogram.MathematicalProgram method)</a>
@@ -10761,10 +10786,6 @@
 </li>
       </ul></li>
       <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.InitializeAutoDiff">InitializeAutoDiff() (in module pydrake.autodiffutils)</a>
-</li>
-      <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.initializeAutoDiff">initializeAutoDiff() (in module pydrake.autodiffutils)</a>
-</li>
-      <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.initializeAutoDiffGivenGradientMatrix">initializeAutoDiffGivenGradientMatrix() (in module pydrake.autodiffutils)</a>
 </li>
       <li><a href="pydrake.autodiffutils.html#pydrake.autodiffutils.InitializeAutoDiffTuple">InitializeAutoDiffTuple() (in module pydrake.autodiffutils)</a>
 </li>
@@ -12951,6 +12972,8 @@
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_[float].num_abstract_states">(pydrake.systems.framework.Context_[float] method)</a>
 </li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.num_abstract_states">(pydrake.systems.framework.SystemBase method)</a>
+</li>
       </ul></li>
       <li><a href="pydrake.multibody.plant.html#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].num_actuated_dofs">num_actuated_dofs() (pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float] method)</a>
 
@@ -13021,6 +13044,8 @@
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_[float].num_continuous_states">(pydrake.systems.framework.Context_[float] method)</a>
 </li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.num_continuous_states">(pydrake.systems.framework.SystemBase method)</a>
+</li>
       </ul></li>
       <li><a href="pydrake.trajectories.html#pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_[float].num_control_points">num_control_points() (pydrake.trajectories.BsplineTrajectory_.BsplineTrajectory_[float] method)</a>
 
@@ -13040,6 +13065,8 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_[Expression].num_discrete_state_groups">(pydrake.systems.framework.Context_[Expression] method)</a>
 </li>
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.Context_[float].num_discrete_state_groups">(pydrake.systems.framework.Context_[float] method)</a>
+</li>
+        <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.num_discrete_state_groups">(pydrake.systems.framework.SystemBase method)</a>
 </li>
       </ul></li>
   </ul></td>

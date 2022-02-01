@@ -73,11 +73,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -3272,11 +3277,6 @@ for more information.</p>
 </ol>
 <p>Creates an unnamed material Frame F. See overload with name for more
 information.</p>
-<ol class="arabic simple" start="5">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], name: str, P: pydrake.multibody.tree.Frame_[float], X_PF: pydrake.common.eigen_geometry.Isometry3_[float], model_instance: Optional[pydrake.multibody.tree.ModelInstanceIndex] = None) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3349,11 +3349,6 @@ for more information.</p>
 </ol>
 <p>Creates an unnamed material Frame F. See overload with name for more
 information.</p>
-<ol class="arabic simple" start="5">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd], name: str, P: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PF: pydrake.common.eigen_geometry.Isometry3_[float], model_instance: Optional[pydrake.multibody.tree.ModelInstanceIndex] = None) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3424,11 +3419,6 @@ for more information.</p>
 </ol>
 <p>Creates an unnamed material Frame F. See overload with name for more
 information.</p>
-<ol class="arabic simple" start="5">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[Expression], name: str, P: pydrake.multibody.tree.Frame_[Expression], X_PF: pydrake.common.eigen_geometry.Isometry3_[float], model_instance: Optional[pydrake.multibody.tree.ModelInstanceIndex] = None) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3499,11 +3489,6 @@ for more information.</p>
 </ol>
 <p>Creates an unnamed material Frame F. See overload with name for more
 information.</p>
-<ol class="arabic simple" start="5">
-<li>__init__(self: pydrake.multibody.tree.FixedOffsetFrame_[float], name: str, P: pydrake.multibody.tree.Frame_[float], X_PF: pydrake.common.eigen_geometry.Isometry3_[float], model_instance: Optional[pydrake.multibody.tree.ModelInstanceIndex] = None) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -20544,19 +20529,10 @@ definition of the angles.</p>
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
 <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> so that their relative pose <code class="docutils literal"><span class="pre">X_PC</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, parent_frame_P: pydrake.multibody.tree.Frame_[float], child_frame_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -20577,19 +20553,10 @@ from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.<
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
 <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> so that their relative pose <code class="docutils literal"><span class="pre">X_PC</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[AutoDiffXd], name: str, parent_frame_P: pydrake.multibody.tree.Frame_[AutoDiffXd], child_frame_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -20608,19 +20575,10 @@ from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.<
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[Expression].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[Expression], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[Expression], frame_on_child_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[Expression], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[Expression], frame_on_child_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
 <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> so that their relative pose <code class="docutils literal"><span class="pre">X_PC</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[Expression], name: str, parent_frame_P: pydrake.multibody.tree.Frame_[Expression], child_frame_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -20639,19 +20597,10 @@ from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.<
 them together.</p>
 <dl class="method">
 <dt id="pydrake.multibody.tree.WeldJoint_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.WeldJoint_[float], name: str, frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.tree.WeldJoint_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor for a WeldJoint between a <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and a
 <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> so that their relative pose <code class="docutils literal"><span class="pre">X_PC</span></code> is fixed as
 if they were “welded” together.</p>
-<ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.multibody.tree.WeldJoint_[float], name: str, parent_frame_P: pydrake.multibody.tree.Frame_[float], child_frame_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">

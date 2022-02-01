@@ -682,12 +682,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a107ff2f218f356d05f8cdc3b7d254eb2">temp_directory</a> ()</td></tr>
 <tr class="memdesc:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a directory location suitable for temporary files.  <a href="#a107ff2f218f356d05f8cdc3b7d254eb2">More...</a><br /></td></tr>
 <tr class="separator:a107ff2f218f356d05f8cdc3b7d254eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70a4b2d0744b6552bc50cf687679536b"><td class="memItemLeft" align="right" valign="top">::testing::AssertionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a70a4b2d0744b6552bc50cf687679536b">ExpectRotMat</a> (const Eigen::Matrix3d &amp;R, double tolerance)</td></tr>
-<tr class="memdesc:a70a4b2d0744b6552bc50cf687679536b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expects that a rotation matrix belongs to SO(3): R ∈ SO(3) =&gt; Rᵀ R = I (orthonormal) det(R) = 1 (right-hand rule)  <a href="#a70a4b2d0744b6552bc50cf687679536b">More...</a><br /></td></tr>
-<tr class="separator:a70a4b2d0744b6552bc50cf687679536b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d39c8b675a5b3a3dbb626e73c621c6b"><td class="memItemLeft" align="right" valign="top">::testing::AssertionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a3d39c8b675a5b3a3dbb626e73c621c6b">CompareTransforms</a> (const Eigen::Isometry3d &amp;X_expected, const Eigen::Isometry3d &amp;X_actual, double tolerance)</td></tr>
-<tr class="memdesc:a3d39c8b675a5b3a3dbb626e73c621c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two SE(3) Transforms.  <a href="#a3d39c8b675a5b3a3dbb626e73c621c6b">More...</a><br /></td></tr>
-<tr class="separator:a3d39c8b675a5b3a3dbb626e73c621c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886235c479e3d60c4d088505191293bc"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedB &gt; </td></tr>
 <tr class="memitem:a886235c479e3d60c4d088505191293bc"><td class="memTemplItemLeft" align="right" valign="top">::testing::AssertionResult&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a886235c479e3d60c4d088505191293bc">CompareMatrices</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;m1, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;m2, double tolerance=0.0, <a class="el" href="namespacedrake.html#a487584d4d770172ae2f665bde7462de2">MatrixCompareType</a> compare_type=<a class="el" href="namespacedrake.html#a487584d4d770172ae2f665bde7462de2adc4d53aa0d117d8b189b36d161af4e96">MatrixCompareType::absolute</a>)</td></tr>
 <tr class="memdesc:a886235c479e3d60c4d088505191293bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two matrices to determine whether they are equal to within a certain threshold.  <a href="#a886235c479e3d60c4d088505191293bc">More...</a><br /></td></tr>
@@ -1955,52 +1949,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a3d39c8b675a5b3a3dbb626e73c621c6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d39c8b675a5b3a3dbb626e73c621c6b">&#9670;&nbsp;</a></span>CompareTransforms()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">::testing::AssertionResult drake::CompareTransforms </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
-          <td class="paramname"><em>X_expected</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
-          <td class="paramname"><em>X_actual</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tolerance</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Compares two SE(3) Transforms. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">X_expected</td><td>Expected SE(3) transform. </td></tr>
-    <tr><td class="paramname">X_actual</td><td>Actual SE(3) transform. </td></tr>
-    <tr><td class="paramname">tolerance</td><td>The tolerance for determining equivalence for the rotation matrix cases (using ExpectRotMat) and comparing both transforms as matrices.(Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
-
-</div>
-</div>
 <a id="a0b6d557a3ef060688cb028f17975ffca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b6d557a3ef060688cb028f17975ffca">&#9670;&nbsp;</a></span>cond() <span class="overload">[1/4]</span></h2>
 
@@ -2182,45 +2130,6 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <p>Note that this function only supports default deleters. </p>
-
-</div>
-</div>
-<a id="a70a4b2d0744b6552bc50cf687679536b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70a4b2d0744b6552bc50cf687679536b">&#9670;&nbsp;</a></span>ExpectRotMat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">::testing::AssertionResult drake::ExpectRotMat </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::Matrix3d &amp;&#160;</td>
-          <td class="paramname"><em>R</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>tolerance</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Expects that a rotation matrix belongs to SO(3): R ∈ SO(3) =&gt; Rᵀ R = I (orthonormal) det(R) = 1 (right-hand rule) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">R</td><td>Rotation matrix. </td></tr>
-    <tr><td class="paramname">tolerance</td><td>The tolerance for determining equivalence for the orthonormal and right-hand rule cases.(Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
 </div>

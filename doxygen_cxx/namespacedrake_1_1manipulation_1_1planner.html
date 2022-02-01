@@ -140,9 +140,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ad6126afebe3f7bb144758cd0e2663f38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#ad6126afebe3f7bb144758cd0e2663f38">ComputePoseDiffInCommonFrame</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_C0, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_C1)</td></tr>
 <tr class="memdesc:ad6126afebe3f7bb144758cd0e2663f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the pose "difference" between <code>X_C0</code> and <code>X_C1</code> such that the linear part equals p_C1 - p_C0, and the angular part equals R_C1 * R_C0.inv(), where p and R stand for the position and rotation parts, and C is the common frame.  <a href="#ad6126afebe3f7bb144758cd0e2663f38">More...</a><br /></td></tr>
 <tr class="separator:ad6126afebe3f7bb144758cd0e2663f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e0c356cf1d093efb3dfe64660296ab6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a3e0c356cf1d093efb3dfe64660296ab6">ComputePoseDiffInCommonFrame</a> (const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;X_C0, const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;X_C1)</td></tr>
-<tr class="memdesc:a3e0c356cf1d093efb3dfe64660296ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a3e0c356cf1d093efb3dfe64660296ab6">More...</a><br /></td></tr>
-<tr class="separator:a3e0c356cf1d093efb3dfe64660296ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab53fd2e1578db60ceb43b754671ae539"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning.html#gab53fd2e1578db60ceb43b754671ae539">DoDifferentialInverseKinematics</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;&gt; &amp;q_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;&gt; &amp;v_current, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;&gt; &amp;V, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; double &gt;&gt; &amp;J, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:gab53fd2e1578db60ceb43b754671ae539"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes a generalized velocity v_next, via the following MathematicalProgram:  <a href="group__planning.html#gab53fd2e1578db60ceb43b754671ae539">More...</a><br /></td></tr>
 <tr class="separator:gab53fd2e1578db60ceb43b754671ae539"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,9 +149,6 @@ Functions</h2></td></tr>
 <tr class="memitem:gae10cdb111b55cc12914467fecbe82234"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__planning.html#gae10cdb111b55cc12914467fecbe82234">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; double &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
 <tr class="memdesc:gae10cdb111b55cc12914467fecbe82234"><td class="mdescLeft">&#160;</td><td class="mdescRight">A wrapper over DoDifferentialInverseKinematics(robot, context, V_WE_desired, frame_E, params) that tracks frame E's pose in the world frame.  <a href="group__planning.html#gae10cdb111b55cc12914467fecbe82234">More...</a><br /></td></tr>
 <tr class="separator:gae10cdb111b55cc12914467fecbe82234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1419d6264a35506905a455d205a3af13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a1419d6264a35506905a455d205a3af13">DoDifferentialInverseKinematics</a> (const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;robot, const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;context, const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;X_WE_desired, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;parameters)</td></tr>
-<tr class="memdesc:a1419d6264a35506905a455d205a3af13"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a1419d6264a35506905a455d205a3af13">More...</a><br /></td></tr>
-<tr class="separator:a1419d6264a35506905a455d205a3af13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a3e26d472253fc2fe452f8b4bb2d1bcdc"></a>
@@ -219,7 +213,7 @@ Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad6126afebe3f7bb144758cd0e2663f38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6126afebe3f7bb144758cd0e2663f38">&#9670;&nbsp;</a></span>ComputePoseDiffInCommonFrame() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6126afebe3f7bb144758cd0e2663f38">&#9670;&nbsp;</a></span>ComputePoseDiffInCommonFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,88 +239,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Computes the pose "difference" between <code>X_C0</code> and <code>X_C1</code> such that the linear part equals p_C1 - p_C0, and the angular part equals R_C1 * R_C0.inv(), where p and R stand for the position and rotation parts, and C is the common frame. </p>
-
-</div>
-</div>
-<a id="a3e0c356cf1d093efb3dfe64660296ab6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e0c356cf1d093efb3dfe64660296ab6">&#9670;&nbsp;</a></span>ComputePoseDiffInCommonFrame() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a14aa433aedda321a15238f2d4074d4c3">Vector6</a>&lt;double&gt; drake::manipulation::planner::ComputePoseDiffInCommonFrame </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_C0</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_C1</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>Use RigidTransform instead of Isometry3 <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="a1419d6264a35506905a455d205a3af13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1419d6264a35506905a455d205a3af13">&#9670;&nbsp;</a></span>DoDifferentialInverseKinematics()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html">DifferentialInverseKinematicsResult</a> drake::manipulation::planner::DoDifferentialInverseKinematics </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">multibody::MultibodyPlant</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>robot</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>X_WE_desired</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">multibody::Frame</a>&lt; double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>frame_E</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html">DifferentialInverseKinematicsParameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>parameters</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000012">Deprecated:</a></b></dt><dd>Use RigidTransform instead of Isometry3 <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
 
 </div>
 </div>

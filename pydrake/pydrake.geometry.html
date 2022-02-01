@@ -72,11 +72,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -3861,6 +3866,12 @@ in all browsers.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.Meshcat.GetNumActiveConnections">
+<code class="descname">GetNumActiveConnections</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.Meshcat.GetNumActiveConnections" title="Permalink to this definition">¶</a></dt>
+<dd><p>(Advanced) Returns the number of currently-open websocket connections.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.Meshcat.GetSliderValue">
 <code class="descname">GetSliderValue</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.Meshcat.GetSliderValue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the current <code class="docutils literal"><span class="pre">value</span></code> of the slider <code class="docutils literal"><span class="pre">name</span></code>.</p>
@@ -6249,13 +6260,15 @@ implementation. That has several implications, as described below:</p>
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
 yes | | Mesh | no | yes | | Convex | no | yes |</p>
 <ul class="simple">
-<li>We do not currently support contact between two geometries with</li>
+<li>We do not support contact between two rigid geometries. One geometry</li>
 </ul>
-<p>the <em>same</em> compliance type; one geometry <em>must</em> be compliant, and the
-other <em>must</em> be rigid. If geometries with the same compliance type
-collide, an exception will be thrown. More particularly, if such a
-geometry pair <em>cannot be culled</em> an exception will be thrown. No
-exception is thrown if the pair has been filtered.
+<p>must* be compliant, and the other could be rigid or compliant. If
+two rigid geometries collide, an exception will be thrown. More
+particularly, if such a geometry pair <em>cannot be culled</em> an exception
+will be thrown. No exception is thrown if the pair has been filtered.
+- If you need all combinations of rigid-rigid contact, rigid-compliant
+contact, and compliant-compliant contact, you might consider
+ComputeContactSurfacesWithFallback().
 - The hydroelastic modulus (N/m^2) of each compliant geometry is set in
 ProximityProperties by AddCompliantHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
@@ -6957,13 +6970,15 @@ implementation. That has several implications, as described below:</p>
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
 yes | | Mesh | no | yes | | Convex | no | yes |</p>
 <ul class="simple">
-<li>We do not currently support contact between two geometries with</li>
+<li>We do not support contact between two rigid geometries. One geometry</li>
 </ul>
-<p>the <em>same</em> compliance type; one geometry <em>must</em> be compliant, and the
-other <em>must</em> be rigid. If geometries with the same compliance type
-collide, an exception will be thrown. More particularly, if such a
-geometry pair <em>cannot be culled</em> an exception will be thrown. No
-exception is thrown if the pair has been filtered.
+<p>must* be compliant, and the other could be rigid or compliant. If
+two rigid geometries collide, an exception will be thrown. More
+particularly, if such a geometry pair <em>cannot be culled</em> an exception
+will be thrown. No exception is thrown if the pair has been filtered.
+- If you need all combinations of rigid-rigid contact, rigid-compliant
+contact, and compliant-compliant contact, you might consider
+ComputeContactSurfacesWithFallback().
 - The hydroelastic modulus (N/m^2) of each compliant geometry is set in
 ProximityProperties by AddCompliantHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the
@@ -7663,13 +7678,15 @@ implementation. That has several implications, as described below:</p>
 Capsule | yes | yes | | Ellipsoid | yes | yes | | HalfSpace | yes |
 yes | | Mesh | no | yes | | Convex | no | yes |</p>
 <ul class="simple">
-<li>We do not currently support contact between two geometries with</li>
+<li>We do not support contact between two rigid geometries. One geometry</li>
 </ul>
-<p>the <em>same</em> compliance type; one geometry <em>must</em> be compliant, and the
-other <em>must</em> be rigid. If geometries with the same compliance type
-collide, an exception will be thrown. More particularly, if such a
-geometry pair <em>cannot be culled</em> an exception will be thrown. No
-exception is thrown if the pair has been filtered.
+<p>must* be compliant, and the other could be rigid or compliant. If
+two rigid geometries collide, an exception will be thrown. More
+particularly, if such a geometry pair <em>cannot be culled</em> an exception
+will be thrown. No exception is thrown if the pair has been filtered.
+- If you need all combinations of rigid-rigid contact, rigid-compliant
+contact, and compliant-compliant contact, you might consider
+ComputeContactSurfacesWithFallback().
 - The hydroelastic modulus (N/m^2) of each compliant geometry is set in
 ProximityProperties by AddCompliantHydroelasticProperties().
 - The tessellation of the corresponding meshes is controlled by the

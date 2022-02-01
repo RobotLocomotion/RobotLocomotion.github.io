@@ -30,7 +30,5 @@ var searchData=
   ['anglebetweenvectorsconstraint',['AngleBetweenVectorsConstraint',['../classdrake_1_1multibody_1_1_angle_between_vectors_constraint.html',1,'drake::multibody']]],
   ['antiderivativefunction',['AntiderivativeFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html',1,'drake::systems']]],
   ['articulatedbodyinertia',['ArticulatedBodyInertia',['../classdrake_1_1multibody_1_1_articulated_body_inertia.html',1,'drake::multibody']]],
-  ['autodifftogradientmatrix',['AutoDiffToGradientMatrix',['../structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html',1,'drake::math']]],
-  ['autodifftovaluematrix',['AutoDiffToValueMatrix',['../structdrake_1_1math_1_1_auto_diff_to_value_matrix.html',1,'drake::math']]],
   ['axiallysymmetricfreebodyplant',['AxiallySymmetricFreeBodyPlant',['../classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html',1,'drake::multibody::test']]]
 ];

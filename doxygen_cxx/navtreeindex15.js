@@ -1,14 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a47fa418f35f8eda9daeb93fe84e99177":[3,0,0,8,70,8],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a5a64e3269925223ee2e383596d2285a7":[3,0,0,8,70,11],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a5e4cd1c12daac7a48d8f20ed22f7c430":[3,0,0,8,70,1],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a6e448f12a07992d19939e1682ccadd3f":[3,0,0,8,70,2],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a6f3d914695e66945fc14bb098058b1f3":[3,0,0,8,70,10],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a76cdcb77d7658e74e7e1f9fc0026e9bb":[3,0,0,8,70,6],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a7d173a00c859d5a2e3cfe3ce6939edd9":[3,0,0,8,70,5],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a889ae298998a0a345c1acb9b6ac8b49e":[3,0,0,8,70,12],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#aa49c8d1902588c6cfdd19991f3f0ed59":[3,0,0,8,70,13],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#adbef805dde23a6114cde3d86d0154422":[3,0,0,8,70,3],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#ae3115bd02fecbbfbd3b862aefc85a527":[3,0,0,8,70,0],
 "classdrake_1_1multibody_1_1_static_equilibrium_constraint.html":[1,1,0,13],
@@ -249,5 +240,14 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#a8696222319acdad543fd736ce6e71ba0":[3,0,0,8,0,1,0,19],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa40126fd3d5fd6a6a4df7a7257cccef4":[3,0,0,8,0,1,0,2],
 "classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aa4225efc34525bb490ba5f5a22885f82":[3,0,0,8,0,1,0,17],
-"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aac0785ee2738a3557e0fa509ced5c90a":[3,0,0,8,0,1,0,11]
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#aac0785ee2738a3557e0fa509ced5c90a":[3,0,0,8,0,1,0,11],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ab9d21b7f46fc5396a5bcb384329aafcc":[3,0,0,8,0,1,0,0],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac27ea51cbeb04b391324d41be106fa56":[3,0,0,8,0,1,0,6],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ac2fac2797ddcf116f6f64598e3ae32e8":[3,0,0,8,0,1,0,13],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#acf6a22cc6dde41e4e400173d030d0cc5":[3,0,0,8,0,1,0,4],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#ae6661ef16d96601597c456583c29726a":[3,0,0,8,0,1,0,8],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1b54c9510e1344d14ea980a7dc2cb9e":[3,0,0,8,0,1,0,3],
+"classdrake_1_1multibody_1_1benchmarks_1_1free__body_1_1_free_body.html#af1cceadfb10b5a80fb76244297d7ae81":[3,0,0,8,0,1,0,21],
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html":[3,0,0,8,0,2,0],
+"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a06b2aa94973b357511d0702cf1901dd0":[3,0,0,8,0,2,0,6]
 };

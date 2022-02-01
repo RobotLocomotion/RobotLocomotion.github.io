@@ -95,7 +95,6 @@ $(document).ready(function(){initNavTree('process__model__directives_8h.html',''
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">process_model_directives.h File Reference</div>  </div>
@@ -104,7 +103,6 @@ $(document).ready(function(){initNavTree('process__model__directives_8h.html',''
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="model__directives_8h.html">drake/multibody/parsing/model_directives.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="package__map_8h.html">drake/multibody/parsing/package_map.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="parser_8h.html">drake/multibody/parsing/parser.h</a>&quot;</code><br />
@@ -132,13 +130,6 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacedrake_1_1multibody_1_1parsing"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html">drake::multibody::parsing</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:acb8379b9a7d94f6f329bd47306f886d4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#acb8379b9a7d94f6f329bd47306f886d4">ModelWeldErrorFunctionToBeDeprecated</a> = std::function&lt; std::optional&lt; drake::math::RigidTransformd &gt;(const std::string &amp;parent, const std::string &amp;child)&gt;</td></tr>
-<tr class="separator:acb8379b9a7d94f6f329bd47306f886d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b80e0388633d5663c1ba6141624b09b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a2b80e0388633d5663c1ba6141624b09b">ModelWeldErrorFunction</a> = ModelWeldErrorFunctionToBeDeprecated</td></tr>
-<tr class="separator:a2b80e0388633d5663c1ba6141624b09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a57aafdf49e089598a1e344d8e7a74249"><td class="memItemLeft" align="right" valign="top">ModelDirectives&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a57aafdf49e089598a1e344d8e7a74249">LoadModelDirectives</a> (const std::string &amp;filename)</td></tr>
@@ -152,9 +143,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a0f308887c21af1be20293ef44af5425e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a0f308887c21af1be20293ef44af5425e">ProcessModelDirectives</a> (const ModelDirectives &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant, std::vector&lt; ModelInstanceInfo &gt; *added_models=nullptr, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser=nullptr)</td></tr>
 <tr class="memdesc:a0f308887c21af1be20293ef44af5425e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes model directives for a given <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.  <a href="namespacedrake_1_1multibody_1_1parsing.html#a0f308887c21af1be20293ef44af5425e">More...</a><br /></td></tr>
 <tr class="separator:a0f308887c21af1be20293ef44af5425e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a579842c4ce66b332e8ed281b9b03f503"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a579842c4ce66b332e8ed281b9b03f503">ProcessModelDirectives</a> (const ModelDirectives &amp;directives, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">drake::multibody::MultibodyPlant</a>&lt; double &gt; *plant, std::vector&lt; ModelInstanceInfo &gt; *added_models, <a class="el" href="classdrake_1_1multibody_1_1_parser.html">drake::multibody::Parser</a> *parser, ModelWeldErrorFunctionToBeDeprecated)</td></tr>
-<tr class="memdesc:a579842c4ce66b332e8ed281b9b03f503"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="namespacedrake_1_1multibody_1_1parsing.html#a579842c4ce66b332e8ed281b9b03f503">More...</a><br /></td></tr>
-<tr class="separator:a579842c4ce66b332e8ed281b9b03f503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

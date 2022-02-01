@@ -73,11 +73,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -207,8 +212,12 @@ legacy LCM vizualization messages.</p>
 
 <dl class="method">
 <dt id="pydrake.visualization.meldis.Meldis.serve_forever">
-<code class="descname">serve_forever</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis.serve_forever" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">serve_forever</code><span class="sig-paren">(</span><em>*</em>, <em>idle_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis.serve_forever" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run indefinitely, forwarding LCM =&gt; MeshCat messages.</p>
+<p>If provided, the optional idle_timeout must be strictly positive and
+this loop will sys.exit after that many seconds without any websocket
+connections.</p>
+</dd></dl>
 
 </dd></dl>
 

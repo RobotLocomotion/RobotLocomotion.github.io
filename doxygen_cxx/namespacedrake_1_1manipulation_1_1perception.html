@@ -93,8 +93,7 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1manipulation_1_1perc
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
 <div class="title">drake::manipulation::perception Namespace Reference</div>  </div>
 </div><!--header-->
@@ -102,154 +101,10 @@ $(document).ready(function(){initNavTree('namespacedrake_1_1manipulation_1_1perc
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html">OptitrackPoseExtractor</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts and provides an output of the pose of a desired object as an Eigen::Isometry3d from an Optitrack LCM OPTITRACK_FRAME_T message, the pose transformed to a desired coordinate frame.  <a href="classdrake_1_1manipulation_1_1perception_1_1_optitrack_pose_extractor.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html">PoseSmoother</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class accepts the pose of a rigid body (composed by a Eigen::Isometry3d) and returns a smoothed pose by performing either the first or both of these processes : i.  <a href="classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:ad2794d5d7a07c09b8acec474ae033283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#ad2794d5d7a07c09b8acec474ae033283">ExtractOptitrackPose</a> (const optitrack::optitrack_rigid_body_t &amp;message)</td></tr>
-<tr class="memdesc:ad2794d5d7a07c09b8acec474ae033283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the pose of an Optitrack rigid body.  <a href="#ad2794d5d7a07c09b8acec474ae033283">More...</a><br /></td></tr>
-<tr class="separator:ad2794d5d7a07c09b8acec474ae033283"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cdb84965644b6b67ff535e6263b11fb"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="classint.html">int</a>, <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt; double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a7cdb84965644b6b67ff535e6263b11fb">ExtractOptitrackPoses</a> (const optitrack::optitrack_frame_t &amp;frame)</td></tr>
-<tr class="memdesc:a7cdb84965644b6b67ff535e6263b11fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts poses of all objects from an Optitrack message.  <a href="#a7cdb84965644b6b67ff535e6263b11fb">More...</a><br /></td></tr>
-<tr class="separator:a7cdb84965644b6b67ff535e6263b11fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ff9cbf42a94d5a5333ba974a0e6b9f0"><td class="memItemLeft" align="right" valign="top">std::optional&lt; optitrack::optitrack_rigid_body_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a0ff9cbf42a94d5a5333ba974a0e6b9f0">FindOptitrackBody</a> (const optitrack::optitrack_frame_t &amp;message, <a class="el" href="classint.html">int</a> object_id)</td></tr>
-<tr class="memdesc:a0ff9cbf42a94d5a5333ba974a0e6b9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a rigid body from an optitrack frame message given an object ID.  <a href="#a0ff9cbf42a94d5a5333ba974a0e6b9f0">More...</a><br /></td></tr>
-<tr class="separator:a0ff9cbf42a94d5a5333ba974a0e6b9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dcf4f420824dfdb3cf8f35a263b1a8c"><td class="memItemLeft" align="right" valign="top">std::optional&lt; <a class="el" href="classint.html">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a9dcf4f420824dfdb3cf8f35a263b1a8c">FindOptitrackObjectId</a> (const optitrack::optitrack_data_descriptions_t &amp;message, const std::string &amp;object_name)</td></tr>
-<tr class="memdesc:a9dcf4f420824dfdb3cf8f35a263b1a8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the object ID from an Optitrack description message.  <a href="#a9dcf4f420824dfdb3cf8f35a263b1a8c">More...</a><br /></td></tr>
-<tr class="separator:a9dcf4f420824dfdb3cf8f35a263b1a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ad2794d5d7a07c09b8acec474ae033283"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2794d5d7a07c09b8acec474ae033283">&#9670;&nbsp;</a></span>ExtractOptitrackPose()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt;double&gt; drake::manipulation::perception::ExtractOptitrackPose </td>
-          <td>(</td>
-          <td class="paramtype">const optitrack::optitrack_rigid_body_t &amp;&#160;</td>
-          <td class="paramname"><em>message</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the pose of an Optitrack rigid body. </p>
-<dl class="section return"><dt>Returns</dt><dd>X_OB, the pose of the body <code>B</code> in the optitrack frame <code>O</code>.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Possibly use OptitrackReceiver instead. <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="a7cdb84965644b6b67ff535e6263b11fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cdb84965644b6b67ff535e6263b11fb">&#9670;&nbsp;</a></span>ExtractOptitrackPoses()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::map&lt;<a class="el" href="classint.html">int</a>, <a class="el" href="namespacedrake.html#a9eb383d64a842ca9002f66b2e10254aa">Isometry3</a>&lt;double&gt; &gt; drake::manipulation::perception::ExtractOptitrackPoses </td>
-          <td>(</td>
-          <td class="paramtype">const optitrack::optitrack_frame_t &amp;&#160;</td>
-          <td class="paramname"><em>frame</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Extracts poses of all objects from an Optitrack message. </p>
-<dl class="section return"><dt>Returns</dt><dd>Mapping from object ID to pose.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="a0ff9cbf42a94d5a5333ba974a0e6b9f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ff9cbf42a94d5a5333ba974a0e6b9f0">&#9670;&nbsp;</a></span>FindOptitrackBody()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt;optitrack::optitrack_rigid_body_t&gt; drake::manipulation::perception::FindOptitrackBody </td>
-          <td>(</td>
-          <td class="paramtype">const optitrack::optitrack_frame_t &amp;&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>object_id</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets a rigid body from an optitrack frame message given an object ID. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">message</td><td>Optitrack message. </td></tr>
-    <tr><td class="paramname">object_id</td><td>ID to be searched for in the frame message. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Rigid body object, or <code>nullopt</code> if not found.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
-
-</div>
-</div>
-<a id="a9dcf4f420824dfdb3cf8f35a263b1a8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dcf4f420824dfdb3cf8f35a263b1a8c">&#9670;&nbsp;</a></span>FindOptitrackObjectId()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::optional&lt;<a class="el" href="classint.html">int</a>&gt; drake::manipulation::perception::FindOptitrackObjectId </td>
-          <td>(</td>
-          <td class="paramtype">const optitrack::optitrack_data_descriptions_t &amp;&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>object_name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Gets the object ID from an Optitrack description message. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">message</td><td>Description message. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Object ID if found, or <code>nullopt</code> if not found.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01.</dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- HTML footer for doxygen 1.8.15 -->

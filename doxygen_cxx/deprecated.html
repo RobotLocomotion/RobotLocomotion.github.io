@@ -97,80 +97,32 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="namespacedrake.html#a3d39c8b675a5b3a3dbb626e73c621c6b">drake::CompareTransforms</a>  (const Eigen::Isometry3d &amp;X_expected, const Eigen::Isometry3d &amp;X_actual, double tolerance)</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake.html#a70a4b2d0744b6552bc50cf687679536b">drake::ExpectRotMat</a>  (const Eigen::Matrix3d &amp;R, double tolerance)</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b">drake::geometry::optimization::IrisInConfigurationSpace</a>  (const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const systems::Context&lt; double &gt; &amp;context, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html" title="Configuration options for the IRIS algorithm.">IrisOptions</a> &amp;options=IrisOptions())</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use IrisInConfigurationSpace() with sample set in context. <br />
+<dd><a class="anchor" id="_deprecated000004"></a>Use IrisInConfigurationSpace() with sample set in context. <br />
  This will be removed from Drake on or after 2022-03-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#ad2794d5d7a07c09b8acec474ae033283">drake::manipulation::perception::ExtractOptitrackPose</a>  (const optitrack::optitrack_rigid_body_t &amp;message)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Possibly use OptitrackReceiver instead. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a7cdb84965644b6b67ff535e6263b11fb">drake::manipulation::perception::ExtractOptitrackPoses</a>  (const optitrack::optitrack_frame_t &amp;frame)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a0ff9cbf42a94d5a5333ba974a0e6b9f0">drake::manipulation::perception::FindOptitrackBody</a>  (const optitrack::optitrack_frame_t &amp;message, int object_id)</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1perception.html#a9dcf4f420824dfdb3cf8f35a263b1a8c">drake::manipulation::perception::FindOptitrackObjectId</a>  (const optitrack::optitrack_data_descriptions_t &amp;message, const std::string &amp;object_name)</dt>
-<dd><a class="anchor" id="_deprecated000010"></a>This function is being removed. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a3e0c356cf1d093efb3dfe64660296ab6">drake::manipulation::planner::ComputePoseDiffInCommonFrame</a>  (const Isometry3&lt; double &gt; &amp;X_C0, const Isometry3&lt; double &gt; &amp;X_C1)</dt>
-<dd><a class="anchor" id="_deprecated000011"></a>Use RigidTransform instead of Isometry3 <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1manipulation_1_1planner.html#a1419d6264a35506905a455d205a3af13">drake::manipulation::planner::DoDifferentialInverseKinematics</a>  (const multibody::MultibodyPlant&lt; double &gt; &amp;robot, const systems::Context&lt; double &gt; &amp;context, const Isometry3&lt; double &gt; &amp;X_WE_desired, const multibody::Frame&lt; double &gt; &amp;frame_E, const <a class="el" href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_parameters.html" title="Contains parameters for differential inverse kinematics.">DifferentialInverseKinematicsParameters</a> &amp;parameters)</dt>
-<dd><a class="anchor" id="_deprecated000012"></a>Use RigidTransform instead of Isometry3 <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a83fe4512cb9f4a0997cbc08243404e63">drake::math::autoDiffToGradientMatrix</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix, int num_derivatives=Eigen::Dynamic)</dt>
-<dd><a class="anchor" id="_deprecated000017"></a>Use ExtractGradient(). <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#ab72982a8973f482f5cbf66d6656eaf08">drake::math::autoDiffToValueMatrix</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;autodiff_matrix)</dt>
-<dd><a class="anchor" id="_deprecated000013"></a>Use ExtractValue() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a6394a85153c159ec7ddf8d3b27f63917">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;value, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix, Eigen::DenseIndex num_derivatives=Eigen::Dynamic, Eigen::DenseIndex deriv_num_start=0)</dt>
-<dd><a class="anchor" id="_deprecated000014"></a>Use InitializeAutoDiff() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a3b7dc3351569c13b9d98ab32fd901af3">drake::math::initializeAutoDiff</a>  (const Eigen::MatrixBase&lt; Derived &gt; &amp;mat, Eigen::DenseIndex num_derivatives=-1, Eigen::DenseIndex deriv_num_start=0)</dt>
-<dd><a class="anchor" id="_deprecated000015"></a>Use InitializeAutoDiff() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a36e2a9bc07853150c96614244960dc23">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;value, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient, Eigen::MatrixBase&lt; DerivedAutoDiff &gt; &amp;auto_diff_matrix)</dt>
-<dd><a class="anchor" id="_deprecated000018"></a>Use InitializeAutoDiff(). <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a60989b35690cd787112c9d14e8161ec2">drake::math::initializeAutoDiffGivenGradientMatrix</a>  (const Eigen::MatrixBase&lt; DerivedValue &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedGradient &gt; &amp;gradient)</dt>
-<dd><a class="anchor" id="_deprecated000019"></a>Use InitializeAutoDiff() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1math.html#a8d2993436a049675d4aefab5e8661862">drake::math::initializeAutoDiffTuple</a>  (const Eigen::MatrixBase&lt; Deriveds &gt; &amp;... args)</dt>
-<dd><a class="anchor" id="_deprecated000016"></a>Use InitializeAutoDiffTuple() instead <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
-<dt>Member <a class="el" href="namespacedrake_1_1multibody_1_1parsing.html#a579842c4ce66b332e8ed281b9b03f503">drake::multibody::parsing::ProcessModelDirectives</a>  (const <a class="el" href="structdrake_1_1multibody_1_1parsing_1_1_model_directives.html" title="Top-level structure for a model directives yaml file schema.">ModelDirectives</a> &amp;directives, drake::multibody::MultibodyPlant&lt; double &gt; *plant, std::vector&lt; ModelInstanceInfo &gt; *added_models, <a class="el" href="classdrake_1_1multibody_1_1_parser.html" title="Parses SDF and URDF input files into a MultibodyPlant and (optionally) a SceneGraph.">drake::multibody::Parser</a> *parser, ModelWeldErrorFunctionToBeDeprecated)</dt>
-<dd><a class="anchor" id="_deprecated000021"></a>ModelWeldErrorFunction is no longer supported. <br />
- This will be removed from Drake on or after 2022-02-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa3c4d6b9048536662622e58584c3a8df">MathematicalProgram::AddMaximizeLogDeterminantSymmetricMatrixCost</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt; symbolic::Expression &gt;</a>&gt; &amp;X)</dt>
-<dd><a class="anchor" id="_deprecated000025"></a>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
- This will be removed from Drake on or after 2022-05-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a903fd7b5970fb835030958fe57d8cd6e">MathematicalProgram::NewNonnegativePolynomial</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt; symbolic::Monomial &gt;</a>&gt; &amp;monomial_basis, NonnegativePolynomial type)</dt>
-<dd><a class="anchor" id="_deprecated000022"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
- This will be removed from Drake on or after 2022-05-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a60415069ede137e871e1edd1f8194fe2">MathematicalProgram::NewNonnegativePolynomial</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html" title="Represents a set of variables.">symbolic::Variables</a> &amp;indeterminates, int degree, NonnegativePolynomial type)</dt>
-<dd><a class="anchor" id="_deprecated000024"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+<dd><a class="anchor" id="_deprecated000009"></a>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a789535f4318138071bb47f2ffb265407">MathematicalProgram::NewNonnegativePolynomial</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt; symbolic::Variable &gt;</a>&gt; &amp;gramian, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt; symbolic::Monomial &gt;</a>&gt; &amp;monomial_basis, NonnegativePolynomial type)</dt>
-<dd><a class="anchor" id="_deprecated000023"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+<dd><a class="anchor" id="_deprecated000007"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+ This will be removed from Drake on or after 2022-05-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a903fd7b5970fb835030958fe57d8cd6e">MathematicalProgram::NewNonnegativePolynomial</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt; symbolic::Monomial &gt;</a>&gt; &amp;monomial_basis, NonnegativePolynomial type)</dt>
+<dd><a class="anchor" id="_deprecated000006"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+ This will be removed from Drake on or after 2022-05-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a60415069ede137e871e1edd1f8194fe2">MathematicalProgram::NewNonnegativePolynomial</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html" title="Represents a set of variables.">symbolic::Variables</a> &amp;indeterminates, int degree, NonnegativePolynomial type)</dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a5e2fbb72a84c2c5527f8d2b452918602">PackageMap::PopulateUpstreamToDrake</a>  (const std::string &amp;model_file)</dt>
-<dd><a class="anchor" id="_deprecated000020"></a>You should remove all calls to this function. There is no replacement,  because the feature should be irrelevant. This function is a no-op  unless you are also using one of the deprecated package.xml files  internal to Drake without using Drake's multibody::Parser class. <br />
+<dd><a class="anchor" id="_deprecated000005"></a>You should remove all calls to this function. There is no replacement,  because the feature should be irrelevant. This function is a no-op  unless you are also using one of the deprecated package.xml files  internal to Drake without using Drake's multibody::Parser class. <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a02557f96761f5c65d36e55bb2084c8c5">System&lt; T &gt;::EvalEigenVectorInput</a>  (const Context&lt; T &gt; &amp;context, int port_index) const</dt>
-<dd><a class="anchor" id="_deprecated000026"></a>Use get_input_port(index).Eval(context) instead. <br />
- This will be removed from Drake on or after 2022-03-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html#a8ac37fda3cc01a807862fab39d0e5a98">YamlReadArchive::YamlReadArchive</a>  (const YAML::Node &amp;root)</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>Use LoadYamlFile or LoadYamlString instead. <br />
+<dd><a class="anchor" id="_deprecated000010"></a>Use get_input_port(index).Eval(context) instead. <br />
  This will be removed from Drake on or after 2022-03-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html#a8259d3cf087a43e721fe51a2b34cbcde">YamlReadArchive::YamlReadArchive</a>  (const YAML::Node &amp;root, const <a class="el" href="structdrake_1_1yaml_1_1_yaml_read_archive_1_1_options.html" title="Configuration for YamlReadArchive to govern when certain conditions are errors or not.">Options</a> &amp;options)</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>Use LoadYamlFile or LoadYamlString instead. <br />
+<dd><a class="anchor" id="_deprecated000002"></a>Use LoadYamlFile or LoadYamlString instead. <br />
+ This will be removed from Drake on or after 2022-03-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1yaml_1_1_yaml_read_archive.html#a8ac37fda3cc01a807862fab39d0e5a98">YamlReadArchive::YamlReadArchive</a>  (const YAML::Node &amp;root)</dt>
+<dd><a class="anchor" id="_deprecated000001"></a>Use LoadYamlFile or LoadYamlString instead. <br />
  This will be removed from Drake on or after 2022-03-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->

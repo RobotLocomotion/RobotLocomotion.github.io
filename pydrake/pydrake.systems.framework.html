@@ -73,11 +73,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -12701,6 +12706,17 @@ state as the output argument to Update.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].AllocateImplicitTimeDerivativesResidual">
+<code class="descname">AllocateImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].AllocateImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Eigen VectorX suitable for use as the output argument to
+the CalcImplicitTimeDerivativesResidual() method. The returned VectorX
+will have size implicit_time_derivatives_residual_size() with the
+elements uninitialized. This is just a convenience method – you are
+free to use any properly-sized mutable Eigen object as the residual
+vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_.System_[float].AllocateOutput">
 <code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.SystemOutput_[float]<a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].AllocateOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a container that can hold the values of all of this System’s
@@ -12736,6 +12752,154 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 <code class="docutils literal"><span class="pre">context</span></code>, and the updated discrete state is stored in
 <code class="docutils literal"><span class="pre">discrete_state</span></code>. The discrete update event will have a trigger type
 of kForced, with no attribute or custom callback.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_.System_[float].CalcImplicitTimeDerivativesResidual">
+<code class="descname">CalcImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_.System_[float].CalcImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], proposed_derivatives: pydrake.systems.framework.ContinuousState_[float], residual: numpy.ndarray[numpy.float64[m, 1], flags.writeable]) -&gt; None</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], proposed_derivatives: pydrake.systems.framework.ContinuousState_[float]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -13500,6 +13664,17 @@ state as the output argument to Update.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[AutoDiffXd].AllocateImplicitTimeDerivativesResidual">
+<code class="descname">AllocateImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].AllocateImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Eigen VectorX suitable for use as the output argument to
+the CalcImplicitTimeDerivativesResidual() method. The returned VectorX
+will have size implicit_time_derivatives_residual_size() with the
+elements uninitialized. This is just a convenience method – you are
+free to use any properly-sized mutable Eigen object as the residual
+vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[AutoDiffXd].AllocateOutput">
 <code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.SystemOutput_[AutoDiffXd]<a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].AllocateOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a container that can hold the values of all of this System’s
@@ -13535,6 +13710,154 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 <code class="docutils literal"><span class="pre">context</span></code>, and the updated discrete state is stored in
 <code class="docutils literal"><span class="pre">discrete_state</span></code>. The discrete update event will have a trigger type
 of kForced, with no attribute or custom callback.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[AutoDiffXd].CalcImplicitTimeDerivativesResidual">
+<code class="descname">CalcImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_[AutoDiffXd].CalcImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], proposed_derivatives: pydrake.systems.framework.ContinuousState_[AutoDiffXd], residual: numpy.ndarray[object[m, 1], flags.writeable]) -&gt; None</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], proposed_derivatives: pydrake.systems.framework.ContinuousState_[AutoDiffXd]) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -14297,6 +14620,17 @@ state as the output argument to Update.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[Expression].AllocateImplicitTimeDerivativesResidual">
+<code class="descname">AllocateImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].AllocateImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Eigen VectorX suitable for use as the output argument to
+the CalcImplicitTimeDerivativesResidual() method. The returned VectorX
+will have size implicit_time_derivatives_residual_size() with the
+elements uninitialized. This is just a convenience method – you are
+free to use any properly-sized mutable Eigen object as the residual
+vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[Expression].AllocateOutput">
 <code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.SystemOutput_[Expression]<a class="headerlink" href="#pydrake.systems.framework.System_[Expression].AllocateOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a container that can hold the values of all of this System’s
@@ -14332,6 +14666,154 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 <code class="docutils literal"><span class="pre">context</span></code>, and the updated discrete state is stored in
 <code class="docutils literal"><span class="pre">discrete_state</span></code>. The discrete update event will have a trigger type
 of kForced, with no attribute or custom callback.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[Expression].CalcImplicitTimeDerivativesResidual">
+<code class="descname">CalcImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_[Expression].CalcImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[Expression], context: pydrake.systems.framework.Context_[Expression], proposed_derivatives: pydrake.systems.framework.ContinuousState_[Expression], residual: numpy.ndarray[object[m, 1], flags.writeable]) -&gt; None</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[Expression], context: pydrake.systems.framework.Context_[Expression], proposed_derivatives: pydrake.systems.framework.ContinuousState_[Expression]) -&gt; numpy.ndarray[object[m, 1]]</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -15094,6 +15576,17 @@ state as the output argument to Update.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.System_[float].AllocateImplicitTimeDerivativesResidual">
+<code class="descname">AllocateImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.systems.framework.System_[float].AllocateImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an Eigen VectorX suitable for use as the output argument to
+the CalcImplicitTimeDerivativesResidual() method. The returned VectorX
+will have size implicit_time_derivatives_residual_size() with the
+elements uninitialized. This is just a convenience method – you are
+free to use any properly-sized mutable Eigen object as the residual
+vector.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.System_[float].AllocateOutput">
 <code class="descname">AllocateOutput</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.System_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.SystemOutput_[float]<a class="headerlink" href="#pydrake.systems.framework.System_[float].AllocateOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a container that can hold the values of all of this System’s
@@ -15129,6 +15622,154 @@ EvalConservativePower() to avoid unnecessary recalculation.</p>
 <code class="docutils literal"><span class="pre">context</span></code>, and the updated discrete state is stored in
 <code class="docutils literal"><span class="pre">discrete_state</span></code>. The discrete update event will have a trigger type
 of kForced, with no attribute or custom callback.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.System_[float].CalcImplicitTimeDerivativesResidual">
+<code class="descname">CalcImplicitTimeDerivativesResidual</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.framework.System_[float].CalcImplicitTimeDerivativesResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], proposed_derivatives: pydrake.systems.framework.ContinuousState_[float], residual: numpy.ndarray[numpy.float64[m, 1], flags.writeable]) -&gt; None</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>CalcImplicitTimeDerivativesResidual(self: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], proposed_derivatives: pydrake.systems.framework.ContinuousState_[float]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>Evaluates the implicit form of the System equations and returns the
+residual.</p>
+<p>The explicit and implicit forms of the System equations are</p>
+<ol class="arabic simple">
+<li>ẋ꜀ = fₑ(𝓒) explicit (2) 0 = fᵢ(𝓒; ẋ꜀) implicit</li>
+</ol>
+<p>where <code class="docutils literal"><span class="pre">𝓒</span> <span class="pre">=</span> <span class="pre">{a,</span> <span class="pre">p,</span> <span class="pre">t,</span> <span class="pre">x,</span> <span class="pre">u}</span></code> is the current value of the given
+Context from which accuracy a, parameters p, time t, state x (<code class="docutils literal"><span class="pre">={x꜀</span>
+<span class="pre">xd</span> <span class="pre">xₐ}</span></code>) and input values u are obtained. Substituting (1) into (2)
+shows that the following condition must always hold:</p>
+<ol class="arabic simple" start="3">
+<li>fᵢ(𝓒; fₑ(𝓒)) = 0 always true</li>
+</ol>
+<p>When <code class="docutils literal"><span class="pre">fᵢ(𝓒;</span> <span class="pre">ẋ꜀ₚ)</span></code> is evaluated with a proposed time derivative ẋ꜀ₚ
+that differs from ẋ꜀ the result will be non-zero; we call that the
+<em>residual</em> of the implicit equation. Given a Context and proposed time
+derivative ẋ꜀ₚ, this method returns the residual r such that</p>
+<ol class="arabic simple" start="4">
+<li>r = fᵢ(𝓒; ẋ꜀ₚ).</li>
+</ol>
+<p>The returned r will typically be the same length as x꜀ although that
+is not required. And even if r and x꜀ are the same size, there will
+not necessarily be any elementwise correspondence between them. (That
+is, you should not assume that r[i] is the “residual” of ẋ꜀ₚ[i].) For
+a Diagram, r is the concatenation of residuals from each of the
+subsystems, in order of subsystem index within the Diagram.</p>
+<p>A default implementation fᵢ⁽ᵈᵉᶠ⁾ for the implicit form is always
+provided and makes use of the explicit form as follows:</p>
+<ol class="arabic simple" start="5">
+<li>fᵢ⁽ᵈᵉᶠ⁾(𝓒; ẋ꜀ₚ) ≜ ẋ꜀ₚ − fₑ(𝓒)</li>
+</ol>
+<p>which satisfies condition (3) by construction. (Note that the default
+implementation requires the residual to have the same size as x꜀.)
+Substantial efficiency gains can often be obtained by replacing the
+default function with a customized implementation. Override
+DoCalcImplicitTimeDerivativesResidual() to replace the default
+implementation with a better one.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dd>The source for time, state, inputs, etc. to be used in calculating
+the residual.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">proposed_derivatives</span></code>:</dt>
+<dd>The proposed value ẋ꜀ₚ for the time derivatives of x꜀.</dd>
+<dt>Parameter <code class="docutils literal"><span class="pre">residual</span></code>:</dt>
+<dd>The result r of evaluating the implicit function. Can be any
+mutable Eigen vector object of size
+implicit_time_derivatives_residual_size().</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">proposed_derivatives</span></code> is compatible with this System.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal"><span class="pre">residual</span></code> is of size implicit_time_derivatives_residual_size().</dd>
+</dl>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">SystemBase::implicit_time_derivatives_residual_size()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">LeafSystem::DeclareImplicitTimeDerivativesResidualSize()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">DoCalcImplicitTimeDerivativesResidual()</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcTimeDerivatives()</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -16097,6 +16738,15 @@ qualification if present.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.SystemBase.implicit_time_derivatives_residual_size">
+<code class="descname">implicit_time_derivatives_residual_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.SystemBase.implicit_time_derivatives_residual_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the size of the implicit time derivatives residual vector. By
+default this is the same as num_continuous_states() but a LeafSystem
+can change it during construction via
+LeafSystem::DeclareImplicitTimeDerivativesResidualSize().</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.SystemBase.input_port_ticket">
 <code class="descname">input_port_ticket</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em>, <em>index: pydrake.systems.framework.InputPortIndex</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.DependencyTicket<a class="headerlink" href="#pydrake.systems.framework.SystemBase.input_port_ticket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a ticket indicating dependence on input port uᵢ indicated by
@@ -16135,6 +16785,25 @@ prerequisite list, it must be the only entry.</p>
 <dt id="pydrake.systems.framework.SystemBase.num_abstract_parameters">
 <code class="descname">num_abstract_parameters</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.SystemBase.num_abstract_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of declared abstract parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemBase.num_abstract_states">
+<code class="descname">num_abstract_states</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.SystemBase.num_abstract_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of declared abstract state variables.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemBase.num_continuous_states">
+<code class="descname">num_continuous_states</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.SystemBase.num_continuous_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of declared continuous state variables.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.SystemBase.num_discrete_state_groups">
+<code class="descname">num_discrete_state_groups</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.SystemBase</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.systems.framework.SystemBase.num_discrete_state_groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of declared discrete state groups (each group is a
+vector-valued discrete state variable).</p>
 </dd></dl>
 
 <dl class="method">

@@ -73,11 +73,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -5016,20 +5021,11 @@ property of type CoulombFriction&lt;double&gt;.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].RegisterVisualGeometry">
-<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Overload for visual geometry registration; it converts the
+<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overload for visual geometry registration; it converts the
 <code class="docutils literal"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
-<ol class="arabic simple" start="2">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: pydrake.geometry.SceneGraph_[float] = None) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5170,12 +5166,8 @@ state corresponds to zero generalized positions and velocities.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetFreeBodyPose">
-<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
+<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
 the world frame W.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -5194,11 +5186,6 @@ in space.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -5391,21 +5378,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
 <p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
 pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
@@ -5423,11 +5408,6 @@ C.name().</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[float]</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9002,20 +8982,11 @@ property of type CoulombFriction&lt;double&gt;.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterVisualGeometry">
-<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Overload for visual geometry registration; it converts the
+<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overload for visual geometry registration; it converts the
 <code class="docutils literal"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
-<ol class="arabic simple" start="2">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: pydrake.geometry.SceneGraph_[AutoDiffXd] = None) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9156,12 +9127,8 @@ state corresponds to zero generalized positions and velocities.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetFreeBodyPose">
-<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_WB: pydrake.math.RigidTransform_[AutoDiffXd]) -&gt; None</li>
-</ol>
-<p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
+<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_WB: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
 the world frame W.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -9180,11 +9147,6 @@ in space.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], body: pydrake.multibody.tree.Body_[AutoDiffXd], X_WB: pydrake.common.eigen_geometry.Isometry3_[AutoDiffXd]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -9377,21 +9339,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame_on_parent_P: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frame_on_parent_P: pydrake.multibody.tree.Frame_[AutoDiffXd], frame_on_child_C: pydrake.multibody.tree.Frame_[AutoDiffXd], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</p>
 <p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
 pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
@@ -9409,11 +9369,6 @@ C.name().</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], A: pydrake.multibody.tree.Frame_[AutoDiffXd], B: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[AutoDiffXd]</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -12986,20 +12941,11 @@ property of type CoulombFriction&lt;double&gt;.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterVisualGeometry">
-<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Overload for visual geometry registration; it converts the
+<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overload for visual geometry registration; it converts the
 <code class="docutils literal"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
-<ol class="arabic simple" start="2">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: drake::geometry::SceneGraph&lt;drake::symbolic::Expression&gt; = None) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13140,12 +13086,8 @@ state corresponds to zero generalized positions and velocities.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetFreeBodyPose">
-<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_WB: pydrake.math.RigidTransform_[Expression]) -&gt; None</li>
-</ol>
-<p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
+<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_WB: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
 the world frame W.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -13164,11 +13106,6 @@ in space.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[Expression], context: pydrake.systems.framework.Context_[Expression], body: pydrake.multibody.tree.Body_[Expression], X_WB: pydrake.common.eigen_geometry.Isometry3_[Expression]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -13361,21 +13298,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], frame_on_parent_P: pydrake.multibody.tree.Frame_[Expression], frame_on_child_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], frame_on_parent_P: pydrake.multibody.tree.Frame_[Expression], frame_on_child_C: pydrake.multibody.tree.Frame_[Expression], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</p>
 <p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
 pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
@@ -13393,11 +13328,6 @@ C.name().</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[Expression], A: pydrake.multibody.tree.Frame_[Expression], B: pydrake.multibody.tree.Frame_[Expression], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[Expression]</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -16970,20 +16900,11 @@ property of type CoulombFriction&lt;double&gt;.</dd>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].RegisterVisualGeometry">
-<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Overload for visual geometry registration; it converts the
+<code class="descname">RegisterVisualGeometry</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.math.RigidTransform_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.GeometryId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].RegisterVisualGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overload for visual geometry registration; it converts the
 <code class="docutils literal"><span class="pre">diffuse_color</span></code> (RGBA with values in the range [0, 1]) into a
 geometry::DrakeVisualizer-compatible set of
 geometry::IllustrationProperties.</p>
-<ol class="arabic simple" start="2">
-<li>RegisterVisualGeometry(self: pydrake.multibody.plant.MultibodyPlant_[float], body: pydrake.multibody.tree.Body_[float], X_BG: pydrake.common.eigen_geometry.Isometry3_[float], shape: pydrake.geometry.Shape, name: str, diffuse_color: numpy.ndarray[numpy.float64[4, 1]], scene_graph: pydrake.geometry.SceneGraph_[float] = None) -&gt; pydrake.geometry.GeometryId</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -17124,12 +17045,8 @@ state corresponds to zero generalized positions and velocities.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].SetFreeBodyPose">
-<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.math.RigidTransform_[float]) -&gt; None</li>
-</ol>
-<p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
+<code class="descname">SetFreeBodyPose</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetFreeBodyPose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets <code class="docutils literal"><span class="pre">context</span></code> to store the pose <code class="docutils literal"><span class="pre">X_WB</span></code> of a given <code class="docutils literal"><span class="pre">body</span></code> B in
 the world frame W.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -17148,11 +17065,6 @@ in space.</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>SetFreeBodyPose(self: pydrake.multibody.plant.MultibodyPlant_[float], context: pydrake.systems.framework.Context_[float], body: pydrake.multibody.tree.Body_[float], X_WB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; None</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">
@@ -17345,21 +17257,19 @@ post-finalize, see Finalize().</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].WeldFrames">
-<code class="descname">WeldFrames</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</li>
-</ol>
-<blockquote>
-<div><dl class="docutils">
+<code class="descname">WeldFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].WeldFrames" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], frame_on_parent_P: pydrake.multibody.tree.Frame_[float], frame_on_child_C: pydrake.multibody.tree.Frame_[float], X_PC: pydrake.math.RigidTransform_[float] = RigidTransform(</dt>
+<dd><dl class="first docutils">
 <dt>R=RotationMatrix([</dt>
 <dd>[1.0, 0.0, 0.0],
 [0.0, 1.0, 0.0],
 [0.0, 0.0, 1.0],</dd>
 </dl>
-<p>]),
+<p class="last">]),
 p=[0.0, 0.0, 0.0],</p>
-</div></blockquote>
+</dd>
+</dl>
 <p>)) -&gt; pydrake.multibody.tree.WeldJoint_[float]</p>
 <p>Welds <code class="docutils literal"><span class="pre">frame_on_parent_P</span></code> and <code class="docutils literal"><span class="pre">frame_on_child_C</span></code> with relative
 pose <code class="docutils literal"><span class="pre">X_PC</span></code>. That is, the pose of frame C in frame P is fixed, with
@@ -17377,11 +17287,6 @@ C.name().</p>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>WeldFrames(self: pydrake.multibody.plant.MultibodyPlant_[float], A: pydrake.multibody.tree.Frame_[float], B: pydrake.multibody.tree.Frame_[float], X_AB: pydrake.common.eigen_geometry.Isometry3_[float]) -&gt; pydrake.multibody.tree.WeldJoint_[float]</li>
-</ol>
-<p>Use of Isometry3 with the MultibodyPlant API is deprecated and will be removed
-from Drake on or after 2022-02-01.  Pass a pydrake.math.RigidTransform instead.</p>
 </dd></dl>
 
 <dl class="method">

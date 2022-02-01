@@ -1,14 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classdrake_1_1multibody_1_1_revolute_joint.html#aacf23a66ccb8427ff099cae2be7e4443":[3,0,0,8,59,18],
-"classdrake_1_1multibody_1_1_revolute_joint.html#aad91b55e6b714db4ba96190e6fab07ac":[3,0,0,8,59,8],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ab01a357a30cd9cd570e133c5ced20a83":[3,0,0,8,59,20],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ab3c16872b1d7ca25be9f833acd33264b":[3,0,0,8,59,10],
-"classdrake_1_1multibody_1_1_revolute_joint.html#abfd0eba87edfca3b02cfc44475f06c4c":[3,0,0,8,59,5],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ac1e29fac911642a88c94035e8e781595":[3,0,0,8,59,15],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ac29ca0ee759d2862539406a971f95169":[3,0,0,8,59,6],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ad8a91d30e147e5f361e07c1dca026a73":[3,0,0,8,59,2],
-"classdrake_1_1multibody_1_1_revolute_joint.html#addceb3a2a537456ecc55a5ffc35a0df1":[3,0,0,8,59,12],
 "classdrake_1_1multibody_1_1_revolute_joint.html#ae26a8ca6ae73b2565d897bb3533fed47":[3,0,0,8,59,17],
 "classdrake_1_1multibody_1_1_revolute_joint.html#ae58dc70f3e0535c09582b85ecbc612a7":[3,0,0,8,59,9],
 "classdrake_1_1multibody_1_1_revolute_joint.html#ae7694cbff7ae64c752fd446aa8eba843":[3,0,0,8,59,19],
@@ -249,5 +240,14 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_spatial_velocity.html":[3,0,0,8,70],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a05ce28d659cae24ea01cc942e18386f0":[3,0,0,8,70,9],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a151e062d652d72e6b0e9ad4610ac69fd":[3,0,0,8,70,4],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#a32edb1bdd326029aeb86e0d42b33260f":[3,0,0,8,70,7]
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a32edb1bdd326029aeb86e0d42b33260f":[3,0,0,8,70,7],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a47fa418f35f8eda9daeb93fe84e99177":[3,0,0,8,70,8],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a5a64e3269925223ee2e383596d2285a7":[3,0,0,8,70,11],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a5e4cd1c12daac7a48d8f20ed22f7c430":[3,0,0,8,70,1],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a6e448f12a07992d19939e1682ccadd3f":[3,0,0,8,70,2],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a6f3d914695e66945fc14bb098058b1f3":[3,0,0,8,70,10],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a76cdcb77d7658e74e7e1f9fc0026e9bb":[3,0,0,8,70,6],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a7d173a00c859d5a2e3cfe3ce6939edd9":[3,0,0,8,70,5],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#a889ae298998a0a345c1acb9b6ac8b49e":[3,0,0,8,70,12],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#aa49c8d1902588c6cfdd19991f3f0ed59":[3,0,0,8,70,13]
 };

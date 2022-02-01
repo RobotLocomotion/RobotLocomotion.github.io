@@ -1,14 +1,5 @@
 var NAVTREEINDEX32 =
 {
-"classdrake_1_1systems_1_1_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,14,79,13],
-"classdrake_1_1systems_1_1_port_switch.html":[1,2,1,19],
-"classdrake_1_1systems_1_1_port_switch.html#a42afa2d5baf37b6e696e70754ceba78a":[1,2,1,19,7],
-"classdrake_1_1systems_1_1_port_switch.html#a555d7b37f161287f0e3da64b704a923e":[1,2,1,19,9],
-"classdrake_1_1systems_1_1_port_switch.html#a70bae3e32e13dfcb337769dab4bba993":[1,2,1,19,4],
-"classdrake_1_1systems_1_1_port_switch.html#a71f6929a31f52d51b73860df2864a279":[1,2,1,19,1],
-"classdrake_1_1systems_1_1_port_switch.html#a91084087966ac57838fb20dca1b0eaca":[1,2,1,19,10],
-"classdrake_1_1systems_1_1_port_switch.html#aad40e5721a78d9074fcee16b44654609":[1,2,1,19,5],
-"classdrake_1_1systems_1_1_port_switch.html#abf898974b7089a8af8355c76fce511a5":[1,2,1,19,0],
 "classdrake_1_1systems_1_1_port_switch.html#ae23dedf36651fbe8b011774d2e2e79c4":[1,2,1,19,8],
 "classdrake_1_1systems_1_1_port_switch.html#ae86b44e4e4485b3bdb10099838be3576":[1,2,1,19,3],
 "classdrake_1_1systems_1_1_port_switch.html#afa41b6a155c572d9867663fbcb8591a2":[1,2,1,19,2],
@@ -249,5 +240,14 @@ var NAVTREEINDEX32 =
 "classdrake_1_1systems_1_1_spring_mass_system.html#a7d09d500d8b69c7d2a55a2fb1aa44153":[3,0,0,14,98,0],
 "classdrake_1_1systems_1_1_spring_mass_system.html#a9098d0ae6f252dac0398c077e576c77f":[3,0,0,14,98,2],
 "classdrake_1_1systems_1_1_spring_mass_system.html#a975d1afe0c456b5181617d02bd38bed3":[3,0,0,14,98,24],
-"classdrake_1_1systems_1_1_spring_mass_system.html#ab0df7644ead3f0151ac34e40b24da048":[3,0,0,14,98,21]
+"classdrake_1_1systems_1_1_spring_mass_system.html#ab0df7644ead3f0151ac34e40b24da048":[3,0,0,14,98,21],
+"classdrake_1_1systems_1_1_spring_mass_system.html#ab7c33c03ef643416af5d92815b99a1a0":[3,0,0,14,98,20],
+"classdrake_1_1systems_1_1_spring_mass_system.html#abe19d25907e50ffe5c78566765e52489":[3,0,0,14,98,8],
+"classdrake_1_1systems_1_1_spring_mass_system.html#ac38135f823919cf70f2d2fa4cb628c38":[3,0,0,14,98,14],
+"classdrake_1_1systems_1_1_spring_mass_system.html#ad039f0073ec403449cbbfa071b7818af":[3,0,0,14,98,16],
+"classdrake_1_1systems_1_1_spring_mass_system.html#ad427d817a0c728995b90a4176febcd56":[3,0,0,14,98,12],
+"classdrake_1_1systems_1_1_state.html":[3,0,0,14,99],
+"classdrake_1_1systems_1_1_state.html#a148d3864f35c71287e491482722a8c61":[3,0,0,14,99,21],
+"classdrake_1_1systems_1_1_state.html#a14e7b568c69d3e9a1978962ec008138c":[3,0,0,14,99,0],
+"classdrake_1_1systems_1_1_state.html#a1b3f9382208d13e11984a54afa711577":[3,0,0,14,99,14]
 };

@@ -73,11 +73,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -387,7 +392,7 @@ getter methods for documentation of parameters.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.render.MakeRenderEngineGl">
-<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7f6c2621a230&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7fc0f94273b0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will produce a “dummy” implementation.</p>

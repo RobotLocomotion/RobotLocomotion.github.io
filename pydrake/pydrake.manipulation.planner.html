@@ -73,11 +73,16 @@
           
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search pydrake only…" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
 </div>
+
 
           
         </div>
@@ -647,15 +652,6 @@ be set to v, otherwise it will be nullopt.</td>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="4">
-<li>DoDifferentialInverseKinematics(robot: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], X_WE_desired: pydrake.common.eigen_geometry.Isometry3_[float], frame_E: drake::multibody::Frame&lt;double&gt;, parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters) -&gt; pydrake.manipulation.planner.DifferentialInverseKinematicsResult</li>
-</ol>
-<p>(Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use RigidTransform instead of Isometry3 This will be removed from
-Drake on or after 2022-02-01.</dd>
-</dl>
 </dd></dl>
 
 </div>

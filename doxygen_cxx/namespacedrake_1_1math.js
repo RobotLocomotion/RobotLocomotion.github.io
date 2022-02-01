@@ -1,7 +1,5 @@
 var namespacedrake_1_1math =
 [
-    [ "AutoDiffToGradientMatrix", "structdrake_1_1math_1_1_auto_diff_to_gradient_matrix.html", "structdrake_1_1math_1_1_auto_diff_to_gradient_matrix" ],
-    [ "AutoDiffToValueMatrix", "structdrake_1_1math_1_1_auto_diff_to_value_matrix.html", "structdrake_1_1math_1_1_auto_diff_to_value_matrix" ],
     [ "BarycentricMesh", "classdrake_1_1math_1_1_barycentric_mesh.html", "classdrake_1_1math_1_1_barycentric_mesh" ],
     [ "BsplineBasis", "classdrake_1_1math_1_1_bspline_basis.html", "classdrake_1_1math_1_1_bspline_basis" ],
     [ "GetSubMatrixGradientArray", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html", "structdrake_1_1math_1_1_get_sub_matrix_gradient_array" ],

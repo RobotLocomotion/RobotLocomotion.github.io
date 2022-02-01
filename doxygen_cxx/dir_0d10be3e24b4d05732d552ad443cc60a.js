@@ -1,6 +1,5 @@
 var dir_0d10be3e24b4d05732d552ad443cc60a =
 [
-    [ "eigen_geometry_compare.h", "eigen__geometry__compare_8h.html", "eigen__geometry__compare_8h" ],
     [ "eigen_matrix_compare.h", "eigen__matrix__compare_8h.html", "eigen__matrix__compare_8h" ],
     [ "expect_no_throw.h", "expect__no__throw_8h.html", "expect__no__throw_8h" ],
     [ "expect_throws_message.h", "expect__throws__message_8h.html", "expect__throws__message_8h" ],

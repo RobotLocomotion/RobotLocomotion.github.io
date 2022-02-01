@@ -1,14 +1,5 @@
 var NAVTREEINDEX31 =
 {
-"classdrake_1_1systems_1_1_leaf_system.html#a60b72f3a421d0dacc918c304649b6573":[3,0,0,14,65,55],
-"classdrake_1_1systems_1_1_leaf_system.html#a650d4bdc065de71ea29a608f9e5a1261":[3,0,0,14,65,83],
-"classdrake_1_1systems_1_1_leaf_system.html#a6516c166d4aedeab3ae31544bbaecbba":[3,0,0,14,65,39],
-"classdrake_1_1systems_1_1_leaf_system.html#a6a1b41173a1b0149226c9d5b7c3601ce":[3,0,0,14,65,80],
-"classdrake_1_1systems_1_1_leaf_system.html#a6d3e2a9b0eaa77ef62f14507ccf55884":[3,0,0,14,65,58],
-"classdrake_1_1systems_1_1_leaf_system.html#a701786c8b19b2283f2215e3ec794f8d2":[3,0,0,14,65,79],
-"classdrake_1_1systems_1_1_leaf_system.html#a73802c567b68a8eefc411e56493d6a93":[3,0,0,14,65,8],
-"classdrake_1_1systems_1_1_leaf_system.html#a79bf931890fb3c7e9e4fd0f2696ca994":[3,0,0,14,65,30],
-"classdrake_1_1systems_1_1_leaf_system.html#a7d68430eb8f9451787a183c48fca2c81":[3,0,0,14,65,31],
 "classdrake_1_1systems_1_1_leaf_system.html#a7fb4770f2d9a82d9012da69ed102ffe5":[3,0,0,14,65,48],
 "classdrake_1_1systems_1_1_leaf_system.html#a83479e1867e83638b90266c1aed0b6a3":[3,0,0,14,65,72],
 "classdrake_1_1systems_1_1_leaf_system.html#a8bd6ca8a128bb2663ebaa27d6851c68d":[3,0,0,14,65,71],
@@ -249,5 +240,14 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_port_base.html#ad8de5a4140c75fa7092841909d238a54":[3,0,0,14,79,14],
 "classdrake_1_1systems_1_1_port_base.html#adbd7baa1fba1a5fac0582b5d56378237":[3,0,0,14,79,2],
 "classdrake_1_1systems_1_1_port_base.html#aea1591b1773209f55ccc85356efb639a":[3,0,0,14,79,7],
-"classdrake_1_1systems_1_1_port_base.html#aec11c25e1727cfb34267f023c55523b8":[3,0,0,14,79,8]
+"classdrake_1_1systems_1_1_port_base.html#aec11c25e1727cfb34267f023c55523b8":[3,0,0,14,79,8],
+"classdrake_1_1systems_1_1_port_base.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,14,79,13],
+"classdrake_1_1systems_1_1_port_switch.html":[1,2,1,19],
+"classdrake_1_1systems_1_1_port_switch.html#a42afa2d5baf37b6e696e70754ceba78a":[1,2,1,19,7],
+"classdrake_1_1systems_1_1_port_switch.html#a555d7b37f161287f0e3da64b704a923e":[1,2,1,19,9],
+"classdrake_1_1systems_1_1_port_switch.html#a70bae3e32e13dfcb337769dab4bba993":[1,2,1,19,4],
+"classdrake_1_1systems_1_1_port_switch.html#a71f6929a31f52d51b73860df2864a279":[1,2,1,19,1],
+"classdrake_1_1systems_1_1_port_switch.html#a91084087966ac57838fb20dca1b0eaca":[1,2,1,19,10],
+"classdrake_1_1systems_1_1_port_switch.html#aad40e5721a78d9074fcee16b44654609":[1,2,1,19,5],
+"classdrake_1_1systems_1_1_port_switch.html#abf898974b7089a8af8355c76fce511a5":[1,2,1,19,0]
 };

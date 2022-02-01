@@ -30,8 +30,6 @@ var searchData=
   ['findlog',['FindLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#a021106c5eb21e08b8fce9400e5ed8721',1,'drake::systems::VectorLogSink']]],
   ['findmutablelog',['FindMutableLog',['../classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c',1,'drake::systems::VectorLogSink']]],
   ['findnonconvexquadraticcost',['FindNonconvexQuadraticCost',['../namespacedrake_1_1solvers.html#a2393a50b2a4547a3a88aa89c9f77e4bb',1,'drake::solvers']]],
-  ['findoptitrackbody',['FindOptitrackBody',['../namespacedrake_1_1manipulation_1_1perception.html#a0ff9cbf42a94d5a5333ba974a0e6b9f0',1,'drake::manipulation::perception']]],
-  ['findoptitrackobjectid',['FindOptitrackObjectId',['../namespacedrake_1_1manipulation_1_1perception.html#a9dcf4f420824dfdb3cf8f35a263b1a8c',1,'drake::manipulation::perception']]],
   ['findresource',['FindResource',['../namespacedrake.html#a535bb41fc091d96d7de06b87e68c9afb',1,'drake']]],
   ['findresourceorthrow',['FindResourceOrThrow',['../namespacedrake.html#ac72eb43ba982b5a4d188c85aa14e0cc6',1,'drake']]],
   ['findresourceresult',['FindResourceResult',['../classdrake_1_1_find_resource_result.html#abc10476ea4826c86c6b9f940c9206bd9',1,'drake::FindResourceResult::FindResourceResult(const FindResourceResult &amp;)=default'],['../classdrake_1_1_find_resource_result.html#a98da321acd317fd87def222ebc979f3c',1,'drake::FindResourceResult::FindResourceResult(FindResourceResult &amp;&amp;)=default']]],
