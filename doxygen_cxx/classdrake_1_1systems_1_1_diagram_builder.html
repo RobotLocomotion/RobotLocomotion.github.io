@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_diagram_buil
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classdrake_1_1systems_1_1_diagram_builder-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -126,6 +127,15 @@ class drake::systems::DiagramBuilder&lt; T &gt;</h3>
 </div>
 <p><code>#include &lt;drake/systems/framework/diagram_builder.h&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a9bc06cc14ff4029014149ef478301c51"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a> = typename <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt;::<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a></td></tr>
+<tr class="memdesc:a9bc06cc14ff4029014149ef478301c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">A designator for a "system + input port" pair, to uniquely refer to some input port on one of this builder's subsystems.  <a href="#a9bc06cc14ff4029014149ef478301c51">More...</a><br /></td></tr>
+<tr class="separator:a9bc06cc14ff4029014149ef478301c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68bd845a9f1b989bd61fcefcbfb086b5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a> = typename <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt; T &gt;::<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a></td></tr>
+<tr class="memdesc:a68bd845a9f1b989bd61fcefcbfb086b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">A designator for a "system + output port" pair, to uniquely refer to some output port on one of this builder's subsystems.  <a href="#a68bd845a9f1b989bd61fcefcbfb086b5">More...</a><br /></td></tr>
+<tr class="separator:a68bd845a9f1b989bd61fcefcbfb086b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9d9bf2010c6e99cac26349048fb86cfd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9d9bf2010c6e99cac26349048fb86cfd">DiagramBuilder</a> ()</td></tr>
@@ -165,6 +175,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7d78e9d85a3593c7656aeddbf90d4766"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1systems_1_1_system.html">System</a>&lt; T &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a7d78e9d85a3593c7656aeddbf90d4766">GetMutableSystems</a> ()</td></tr>
 <tr class="memdesc:a7d78e9d85a3593c7656aeddbf90d4766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of contained Systems.  <a href="#a7d78e9d85a3593c7656aeddbf90d4766">More...</a><br /></td></tr>
 <tr class="separator:a7d78e9d85a3593c7656aeddbf90d4766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc3f35c7cd5f2a99c88deb5829655c6"><td class="memItemLeft" align="right" valign="top">const std::map&lt; <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#adbc3f35c7cd5f2a99c88deb5829655c6">connection_map</a> () const</td></tr>
+<tr class="memdesc:adbc3f35c7cd5f2a99c88deb5829655c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns a reference to the map of connections between Systems.  <a href="#adbc3f35c7cd5f2a99c88deb5829655c6">More...</a><br /></td></tr>
+<tr class="separator:adbc3f35c7cd5f2a99c88deb5829655c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8352f868d18200ed5f6894edc303d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a3a8352f868d18200ed5f6894edc303d7">Connect</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;src, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;dest)</td></tr>
 <tr class="memdesc:a3a8352f868d18200ed5f6894edc303d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that input port <code>dest</code> is connected to output port <code>src</code>.  <a href="#a3a8352f868d18200ed5f6894edc303d7">More...</a><br /></td></tr>
 <tr class="separator:a3a8352f868d18200ed5f6894edc303d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,6 +218,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9707232e37c28463f285aaab01f88c49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9707232e37c28463f285aaab01f88c49">operator=</a> (<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html">DiagramBuilder</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a9707232e37c28463f285aaab01f88c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a9bc06cc14ff4029014149ef478301c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bc06cc14ff4029014149ef478301c51">&#9670;&nbsp;</a></span>InputPortLocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a> =  typename <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt;T&gt;::<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A designator for a "system + input port" pair, to uniquely refer to some input port on one of this builder's subsystems. </p>
+
+</div>
+</div>
+<a id="a68bd845a9f1b989bd61fcefcbfb086b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68bd845a9f1b989bd61fcefcbfb086b5">&#9670;&nbsp;</a></span>OutputPortLocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a> =  typename <a class="el" href="classdrake_1_1systems_1_1_diagram.html">Diagram</a>&lt;T&gt;::<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A designator for a "system + output port" pair, to uniquely refer to some output port on one of this builder's subsystems. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa3171750ccde03a5c67ba3acb598435a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3171750ccde03a5c67ba3acb598435a">&#9670;&nbsp;</a></span>DiagramBuilder() <span class="overload">[1/3]</span></h2>
@@ -723,6 +769,26 @@ Public Member Functions</h2></td></tr>
 <p>Connects an input to the entire <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, indicated by <code>diagram_port_index</code>, to the given <code>input</code> port of a constituent system. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>The <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> input indicated by <code>diagram_port_index</code> must have been previously built via <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a1db762bc34903d5e5eb8f1c26ec2f255" title="Declares that the given input port of a constituent system is connected to a new input to the entire ...">ExportInput()</a>. </dd></dl>
 <dl class="section post"><dt>Postcondition</dt><dd><code>input</code> is connected to the indicated <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a> input port. </dd></dl>
+
+</div>
+</div>
+<a id="adbc3f35c7cd5f2a99c88deb5829655c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbc3f35c7cd5f2a99c88deb5829655c6">&#9670;&nbsp;</a></span>connection_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::map&lt;<a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51">InputPortLocator</a>, <a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5">OutputPortLocator</a>&gt;&amp; connection_map </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) Returns a reference to the map of connections between Systems. </p>
+<p>The reference becomes invalid upon any call to Build or BuildInto. </p>
 
 </div>
 </div>

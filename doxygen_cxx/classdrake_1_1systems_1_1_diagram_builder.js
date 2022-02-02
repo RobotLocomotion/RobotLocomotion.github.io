@@ -1,5 +1,7 @@
 var classdrake_1_1systems_1_1_diagram_builder =
 [
+    [ "InputPortLocator", "classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51", null ],
+    [ "OutputPortLocator", "classdrake_1_1systems_1_1_diagram_builder.html#a68bd845a9f1b989bd61fcefcbfb086b5", null ],
     [ "DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html#aa3171750ccde03a5c67ba3acb598435a", null ],
     [ "DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html#ae8a44a2dfe05cf9e0ffce42b77187427", null ],
     [ "DiagramBuilder", "classdrake_1_1systems_1_1_diagram_builder.html#a9d9bf2010c6e99cac26349048fb86cfd", null ],
@@ -17,6 +19,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "Connect", "classdrake_1_1systems_1_1_diagram_builder.html#a1c5498b90bc93c5cd35726505d321d51", null ],
     [ "ConnectInput", "classdrake_1_1systems_1_1_diagram_builder.html#a012c3506eca742cfc49748788fc65f0c", null ],
     [ "ConnectInput", "classdrake_1_1systems_1_1_diagram_builder.html#a0dfc0f09507bae90b63752a1eb4f28b8", null ],
+    [ "connection_map", "classdrake_1_1systems_1_1_diagram_builder.html#adbc3f35c7cd5f2a99c88deb5829655c6", null ],
     [ "empty", "classdrake_1_1systems_1_1_diagram_builder.html#a644718bb2fb240de962dc3c9a1fdf0dc", null ],
     [ "ExportInput", "classdrake_1_1systems_1_1_diagram_builder.html#a1db762bc34903d5e5eb8f1c26ec2f255", null ],
     [ "ExportOutput", "classdrake_1_1systems_1_1_diagram_builder.html#a1eb25ed5b825b50aadf96f3c0f0e54d6", null ],

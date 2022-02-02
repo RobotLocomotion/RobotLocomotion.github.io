@@ -15,7 +15,7 @@ var searchData=
   ['initializationpublisher',['InitializationPublisher',['../classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#af142c9c35836b98f67b234861650f5cc',1,'drake::systems::lcm::LcmPublisherSystem']]],
   ['inputportidentifier',['InputPortIdentifier',['../classdrake_1_1systems_1_1_diagram_context.html#a7c90957cc237333a64602189fb2cef39',1,'drake::systems::DiagramContext']]],
   ['inputportindex',['InputPortIndex',['../namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0',1,'drake::systems']]],
-  ['inputportlocator',['InputPortLocator',['../classdrake_1_1systems_1_1_diagram.html#a21d7fa5adcb9feb95f3d52d9ab400d02',1,'drake::systems::Diagram']]],
+  ['inputportlocator',['InputPortLocator',['../classdrake_1_1systems_1_1_diagram.html#a21d7fa5adcb9feb95f3d52d9ab400d02',1,'drake::systems::Diagram::InputPortLocator()'],['../classdrake_1_1systems_1_1_diagram_builder.html#a9bc06cc14ff4029014149ef478301c51',1,'drake::systems::DiagramBuilder::InputPortLocator()']]],
   ['integrablefunction',['IntegrableFunction',['../classdrake_1_1systems_1_1_antiderivative_function.html#aa77b1a0ffd8ec53e3327d467726e08ba',1,'drake::systems::AntiderivativeFunction']]],
   ['intervalbox',['IntervalBox',['../classdrake_1_1solvers_1_1_dreal_solver.html#a7743f92393cbd4b54a406f138f345fbe',1,'drake::solvers::DrealSolver']]],
   ['is_5fcloneable',['is_cloneable',['../namespacedrake.html#a158f68939b94f6c2c5ea353d652919da',1,'drake']]],

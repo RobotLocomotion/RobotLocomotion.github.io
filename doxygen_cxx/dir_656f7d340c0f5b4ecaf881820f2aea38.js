@@ -21,6 +21,7 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
     ] ],
     [ "hydroelastic_quadrature_point_data.h", "hydroelastic__quadrature__point__data_8h.html", "hydroelastic__quadrature__point__data_8h" ],
     [ "hydroelastic_traction_calculator.h", "hydroelastic__traction__calculator_8h.html", null ],
+    [ "internal_geometry_names.h", "internal__geometry__names_8h.html", null ],
     [ "multibody_plant.h", "multibody__plant_8h.html", "multibody__plant_8h" ],
     [ "multibody_plant_config.h", "multibody__plant__config_8h.html", [
       [ "MultibodyPlantConfig", "structdrake_1_1multibody_1_1_multibody_plant_config.html", "structdrake_1_1multibody_1_1_multibody_plant_config" ]

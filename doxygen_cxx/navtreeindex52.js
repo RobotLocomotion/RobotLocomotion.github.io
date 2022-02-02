@@ -1,5 +1,9 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__generic__polynomial_8h.html#ad6ff0b6772551662f2b02b77b5889504":[4,0,0,1,61,28],
+"symbolic__generic__polynomial_8h.html#adfcadf9b33656022c0c071a8af3fd85e":[4,0,0,1,61,32],
+"symbolic__generic__polynomial_8h.html#aed13274bad687cfe8b3a1effa40d3117":[4,0,0,1,61,23],
+"symbolic__generic__polynomial_8h.html#afc778273d730c518678796b632e4de8f":[4,0,0,1,61,30],
 "symbolic__latex_8h.html":[4,0,0,1,62],
 "symbolic__latex_8h.html#a38b1d770b9e21d7e4f36649630b10891":[4,0,0,1,62,2],
 "symbolic__latex_8h.html#a50f946a2d656be1b946c8f2f6bf00810":[4,0,0,1,62,0],
@@ -180,11 +184,11 @@ var NAVTREEINDEX52 =
 "system__type__tag_8h.html":[4,0,0,11,3,48],
 "system__visitor_8h.html":[4,0,0,11,3,49],
 "systems_8h.html":[4,0,0,11,12],
-"tamsi__solver_8h.html":[4,0,0,8,10,24],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2":[4,0,0,8,10,24,3],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727":[4,0,0,8,10,24,3,2],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a":[4,0,0,8,10,24,3,1],
-"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,24,3,0],
+"tamsi__solver_8h.html":[4,0,0,8,10,25],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2":[4,0,0,8,10,25,3],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a03dd71797c3ae46b778a3ab8591a9727":[4,0,0,8,10,25,3,2],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a1131fdd052242dd97fe2fe1d7a9a804a":[4,0,0,8,10,25,3,1],
+"tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,25,3,0],
 "temp__directory_8h.html":[4,0,0,1,74],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,74,0],
 "tessellation__strategy_8h.html":[4,0,0,4,2,44],
@@ -245,9 +249,5 @@ var NAVTREEINDEX52 =
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,78,0],
 "utilities_8h.html":[4,0,0,4,38],
 "value_8h.html":[4,0,0,1,79],
-"value__checker_8h.html":[4,0,0,11,3,50],
-"value__producer_8h.html":[4,0,0,11,3,51],
-"value__pybind_8h.html":[4,0,0,0,0,0,12],
-"value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,12,0],
-"value__to__abstract__value_8h.html":[4,0,0,11,3,52]
+"value__checker_8h.html":[4,0,0,11,3,50]
 };
