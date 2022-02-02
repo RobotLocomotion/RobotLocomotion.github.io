@@ -1,11 +1,5 @@
 var NAVTREEINDEX34 =
 {
-"classdrake_1_1systems_1_1_system_base.html#a1a03d2d5e70020145bd659eba780f967":[3,0,0,14,106,62],
-"classdrake_1_1systems_1_1_system_base.html#a1a4ef0e0e633c6f722ee518308d7cb5a":[3,0,0,14,106,5],
-"classdrake_1_1systems_1_1_system_base.html#a1b3f9382208d13e11984a54afa711577":[3,0,0,14,106,41],
-"classdrake_1_1systems_1_1_system_base.html#a1cd0ce5bd76208e8110ad85a956e3127":[3,0,0,14,106,4],
-"classdrake_1_1systems_1_1_system_base.html#a209c59864026db2a428f593601ee7ffc":[3,0,0,14,106,35],
-"classdrake_1_1systems_1_1_system_base.html#a2200e7d8b6b39e758e5df64ee81c356a":[3,0,0,14,106,82],
 "classdrake_1_1systems_1_1_system_base.html#a2789768c5d75378c081683a8016f0784":[3,0,0,14,106,18],
 "classdrake_1_1systems_1_1_system_base.html#a283b89b5f6b6d1745bc590e6050177a9":[3,0,0,14,106,47],
 "classdrake_1_1systems_1_1_system_base.html#a28830dced98dcdc1f498d8d250db0ae4":[3,0,0,14,106,22],
@@ -249,5 +243,11 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#ad7fc22ae04b6001b46cfd40df9fe9bc7":[1,2,1,23,7],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#ada7073062c5b60ebaea25d97ac20305b":[1,2,1,23,3],
 "classdrake_1_1systems_1_1_trajectory_affine_system.html#aea96b5c62e3f5963025ad1977a4d8bdd":[1,2,1,23,6],
-"classdrake_1_1systems_1_1_trajectory_affine_system.html#aef9c9f9c119fdd14e8addc3b190b41d2":[1,2,1,23,1]
+"classdrake_1_1systems_1_1_trajectory_affine_system.html#aef9c9f9c119fdd14e8addc3b190b41d2":[1,2,1,23,1],
+"classdrake_1_1systems_1_1_trajectory_linear_system.html":[1,2,1,24],
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#a076147c8e4d6818575b8e504438417b3":[1,2,1,24,5],
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#a07f1c0db1c310730c653ac4c2300f588":[1,2,1,24,4],
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#a3ddfe4411a4acd3b65bae5cbce4a1be8":[1,2,1,24,1],
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#a45a2578c215aa677979d65353e382cf2":[1,2,1,24,2],
+"classdrake_1_1systems_1_1_trajectory_linear_system.html#a489b43c52c6472385870eaac48249941":[1,2,1,24,9]
 };

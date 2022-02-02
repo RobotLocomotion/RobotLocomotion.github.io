@@ -1,11 +1,5 @@
 var NAVTREEINDEX14 =
 {
-"classdrake_1_1multibody_1_1_revolute_joint.html#ae26a8ca6ae73b2565d897bb3533fed47":[3,0,0,8,59,17],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ae58dc70f3e0535c09582b85ecbc612a7":[3,0,0,8,59,9],
-"classdrake_1_1multibody_1_1_revolute_joint.html#ae7694cbff7ae64c752fd446aa8eba843":[3,0,0,8,59,19],
-"classdrake_1_1multibody_1_1_revolute_spring.html":[3,0,0,8,60],
-"classdrake_1_1multibody_1_1_revolute_spring.html#a0fc55c54d954d864281289c0dead6cce":[3,0,0,8,60,5],
-"classdrake_1_1multibody_1_1_revolute_spring.html#a138e6e888ff71dc31cdc64b33f056e68":[3,0,0,8,60,4],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a189a1cc898965e60756ef7fe82b6c112":[3,0,0,8,60,7],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a2a3b98d7bf6ebbdb80f69b550edc86ab":[3,0,0,8,60,3],
 "classdrake_1_1multibody_1_1_revolute_spring.html#a48f25252c7b270e0d4b1ef43b96041bd":[3,0,0,8,60,6],
@@ -249,5 +243,11 @@ var NAVTREEINDEX14 =
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a76cdcb77d7658e74e7e1f9fc0026e9bb":[3,0,0,8,70,6],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a7d173a00c859d5a2e3cfe3ce6939edd9":[3,0,0,8,70,5],
 "classdrake_1_1multibody_1_1_spatial_velocity.html#a889ae298998a0a345c1acb9b6ac8b49e":[3,0,0,8,70,12],
-"classdrake_1_1multibody_1_1_spatial_velocity.html#aa49c8d1902588c6cfdd19991f3f0ed59":[3,0,0,8,70,13]
+"classdrake_1_1multibody_1_1_spatial_velocity.html#aa49c8d1902588c6cfdd19991f3f0ed59":[3,0,0,8,70,13],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#adbef805dde23a6114cde3d86d0154422":[3,0,0,8,70,3],
+"classdrake_1_1multibody_1_1_spatial_velocity.html#ae3115bd02fecbbfbd3b862aefc85a527":[3,0,0,8,70,0],
+"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html":[1,1,0,13],
+"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a067072a2d1a33d106edc9fd2580731f1":[1,1,0,13,1],
+"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a0ed0f83f02683c361320074259c77a82":[1,1,0,13,4],
+"classdrake_1_1multibody_1_1_static_equilibrium_constraint.html#a5e525a19d46b30f1d607e4f56019bbc0":[1,1,0,13,2]
 };

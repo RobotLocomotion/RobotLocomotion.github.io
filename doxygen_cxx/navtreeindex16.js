@@ -1,11 +1,5 @@
 var NAVTREEINDEX16 =
 {
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a0d402be2ee9c3cf08973fc59ad961b4e":[3,0,0,8,0,2,0,3],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a722b8e19a396259de4990b566f07dc6b":[3,0,0,8,0,2,0,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a765c17a1b88356c2d9d9b20659d4292d":[3,0,0,8,0,2,0,1],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a8fcedd77201a6ff4ee603c107277a650":[3,0,0,8,0,2,0,4],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#a9ff0e526c91586fb7a450151370377eb":[3,0,0,8,0,2,0,5],
-"classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab01f43989767b1d4836d5ed824e121cd":[3,0,0,8,0,2,0,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ab8cc6237eaa898941ec89897b9fd0414":[3,0,0,8,0,2,0,8],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#acabb927a720a280e0de5d5a7ffc586cb":[3,0,0,8,0,2,0,9],
 "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html#ad136510994e0802edec084f8f0dea379":[3,0,0,8,0,2,0,7],
@@ -249,5 +243,11 @@ var NAVTREEINDEX16 =
 "classdrake_1_1schema_1_1_deterministic.html#ad272232f05a04ba6ba72b35d6e80d10e":[3,0,0,11,0,0],
 "classdrake_1_1schema_1_1_deterministic.html#aee90379adb0307effb138f4871edbc5c":[3,0,0,11,0,11],
 "classdrake_1_1schema_1_1_deterministic.html#af7adf59f949c5e77dcc2eee074d02208":[3,0,0,11,0,7],
-"classdrake_1_1schema_1_1_deterministic_vector.html":[3,0,0,11,1]
+"classdrake_1_1schema_1_1_deterministic_vector.html":[3,0,0,11,1],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a04d8ff3a3d7cd3f8ad34bbc853c03fdb":[3,0,0,11,1,6],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a0a6c2511eabe93951ecba0bd0e887d48":[3,0,0,11,1,4],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a0cc4f4435cdfc7f37c1091be688a22de":[3,0,0,11,1,11],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a1d969737bf8d1e959fd7c19c4c57bf46":[3,0,0,11,1,5],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a47368fe9dde1da5c10f132422f6d03f0":[3,0,0,11,1,3],
+"classdrake_1_1schema_1_1_deterministic_vector.html#a63d94ab9a00029414ee4c5fe4d760b28":[3,0,0,11,1,7]
 };

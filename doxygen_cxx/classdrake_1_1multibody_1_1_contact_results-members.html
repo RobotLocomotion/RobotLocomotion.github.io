@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -59,6 +60,18 @@
           </span>
         </div>
 </td>
+   <td>
+    <div id="DDGSearch">
+     <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+      <input type="text" name="q" placeholder="Search C++ API only…" />
+      <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx" />
+     </form>
+     <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+      <input type="text" name="q" placeholder="Search all of Drake…" />
+      <input type="hidden" name="sites" value="drake.mit.edu" />
+     </form>
+    </div">
+   </td>
  </tr>
  </tbody>
 </table>
@@ -117,7 +130,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_contact_re
   <tr><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ade01b0d7de50d59e8c0739eed77d1979">num_point_pair_contacts</a>() const</td><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a7f74cd31bd1bc9b0366f9f8cea2b9dd9">operator=</a>(const ContactResults &amp;)</td><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults&lt; T &gt;</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a6876ed6779266e390e4e81587f7e4f56">operator=</a>(ContactResults &amp;&amp;)=default</td><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults&lt; T &gt;</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ae95eb61a1c41436ae224ea8bf8719259">point_pair_contact_info</a>(int i) const</td><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#a208fb8b999d2a234339e911892f24369">plant</a>() const</td><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults&lt; T &gt;</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html#ae95eb61a1c41436ae224ea8bf8719259">point_pair_contact_info</a>(int i) const</td><td class="entry"><a class="el" href="classdrake_1_1multibody_1_1_contact_results.html">ContactResults&lt; T &gt;</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
@@ -125,5 +139,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_contact_re
   <ul>
   </ul>
 </div>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
 </body>
 </html>

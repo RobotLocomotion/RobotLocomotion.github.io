@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['jacocommandreceiver',['JacoCommandReceiver',['../classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html',1,'drake::manipulation::kinova_jaco']]],
   ['jacocommandsender',['JacoCommandSender',['../classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html',1,'drake::manipulation::kinova_jaco']]],
   ['jacostatusreceiver',['JacoStatusReceiver',['../classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html',1,'drake::manipulation::kinova_jaco']]],
   ['jacostatussender',['JacoStatusSender',['../classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html',1,'drake::manipulation::kinova_jaco']]],

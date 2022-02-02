@@ -522,6 +522,7 @@ var hierarchy =
     [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", null ],
     [ "NonsmoothAugmentedLagrangian", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html", null ],
     [ "NonSymbolicTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html", [
+      [ "Traits< drake::multibody::meshcat::ContactVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html", null ],
       [ "Traits< examples::quadrotor::QuadrotorPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html", null ],
       [ "Traits< examples::rimless_wheel::RimlessWheel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html", null ],
       [ "Traits< geometry::DrakeVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html", null ],
@@ -877,7 +878,6 @@ var hierarchy =
             [ "QuadrotorGeometry", "classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html", null ],
             [ "RimlessWheelGeometry", "classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html", null ],
             [ "Rod2dGeometry", "classdrake_1_1examples_1_1rod2d_1_1_rod2d_geometry.html", null ],
-            [ "JacoCommandReceiver", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html", null ],
             [ "JacoCommandSender", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html", null ],
             [ "JacoStatusReceiver", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html", null ],
             [ "JacoStatusSender", "classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html", null ],

@@ -1,11 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"classdrake_1_1multibody_1_1_joint_actuator.html#a7f583cc35433f57b5096490cbc45f55a":[3,0,0,8,38,10],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a933d2740c848bc263cbf64089066b275":[3,0,0,8,38,6],
-"classdrake_1_1multibody_1_1_joint_actuator.html#ab38cff77a3b73d5982cd54dae58eb10f":[3,0,0,8,38,19],
-"classdrake_1_1multibody_1_1_joint_actuator.html#ab3f0ccdbb102d410f4423b6d66f93fb3":[3,0,0,8,38,21],
-"classdrake_1_1multibody_1_1_joint_actuator.html#ab74fcb0ef0b21a9444d55353ca835daa":[3,0,0,8,38,13],
-"classdrake_1_1multibody_1_1_joint_actuator.html#ac1dd511b968cee9545a54a228020546e":[3,0,0,8,38,3],
 "classdrake_1_1multibody_1_1_joint_actuator.html#ac2abe86d242ea7704d469dcabe028f3f":[3,0,0,8,38,1],
 "classdrake_1_1multibody_1_1_joint_actuator.html#ac63a3f2893508b6b53a2afe0f9e87741":[3,0,0,8,38,15],
 "classdrake_1_1multibody_1_1_joint_actuator.html#ad0a76a710eff20920ee421eeefc81072":[3,0,0,8,38,2],
@@ -249,5 +243,11 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_multibody_plant.html#ab128a8bba10523922358bc35df103753":[1,2,14,144],
 "classdrake_1_1multibody_1_1_multibody_plant.html#ab2ad1faa7547d440f008cdddd32d85e8":[1,2,14,50],
 "classdrake_1_1multibody_1_1_multibody_plant.html#ab4647f809edf71e7e4356ebe730b3726":[1,2,14,35],
-"classdrake_1_1multibody_1_1_multibody_plant.html#ab55401ca376182fd5025d534c63963d0":[1,2,14,180]
+"classdrake_1_1multibody_1_1_multibody_plant.html#ab55401ca376182fd5025d534c63963d0":[1,2,14,180],
+"classdrake_1_1multibody_1_1_multibody_plant.html#ab56a3621a122cdff1729f71b756a75d0":[1,2,14,68],
+"classdrake_1_1multibody_1_1_multibody_plant.html#ab669e070e6178c4aeeb067a1f4b6122e":[1,2,14,159],
+"classdrake_1_1multibody_1_1_multibody_plant.html#ab7cbd4d7b77f1021660c007125c88ece":[1,2,14,125],
+"classdrake_1_1multibody_1_1_multibody_plant.html#ab99be499eb59f00037b05ec60b51e177":[1,2,14,98],
+"classdrake_1_1multibody_1_1_multibody_plant.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[1,2,14,158],
+"classdrake_1_1multibody_1_1_multibody_plant.html#aba4403ae1b096297581cb24957ede9aa":[1,2,14,22]
 };

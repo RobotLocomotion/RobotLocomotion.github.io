@@ -554,6 +554,14 @@ method aborts.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.ContactResults_.ContactResults_[float].plant">
+<code class="descname">plant</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[float]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::MultibodyPlant&lt;double&gt;<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_.ContactResults_[float].plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plant that produced these contact results. In most cases
+the result will be non-null, but default-constructed results might
+have nulls.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.ContactResults_.ContactResults_[float].point_pair_contact_info">
 <code class="descname">point_pair_contact_info</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[float], i: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.PointPairContactInfo_[float]<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_.ContactResults_[float].point_pair_contact_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the ith PointPairContactInfo instance. The input index i
@@ -595,6 +603,14 @@ method aborts.</p>
 <dt id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].num_point_pair_contacts">
 <code class="descname">num_point_pair_contacts</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_[AutoDiffXd].num_point_pair_contacts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of point pair contacts.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.ContactResults_[AutoDiffXd].plant">
+<code class="descname">plant</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::MultibodyPlant&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_[AutoDiffXd].plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plant that produced these contact results. In most cases
+the result will be non-null, but default-constructed results might
+have nulls.</p>
 </dd></dl>
 
 <dl class="method">
@@ -640,6 +656,14 @@ method aborts.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.ContactResults_[Expression].plant">
+<code class="descname">plant</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::MultibodyPlant&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_[Expression].plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plant that produced these contact results. In most cases
+the result will be non-null, but default-constructed results might
+have nulls.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.ContactResults_[Expression].point_pair_contact_info">
 <code class="descname">point_pair_contact_info</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[Expression], i: int</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.plant.PointPairContactInfo_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_[Expression].point_pair_contact_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieves the ith PointPairContactInfo instance. The input index i
@@ -679,6 +703,14 @@ method aborts.</p>
 <dt id="pydrake.multibody.plant.ContactResults_[float].num_point_pair_contacts">
 <code class="descname">num_point_pair_contacts</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_[float].num_point_pair_contacts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of point pair contacts.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.ContactResults_[float].plant">
+<code class="descname">plant</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.ContactResults_[float]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::MultibodyPlant&lt;double&gt;<a class="headerlink" href="#pydrake.multibody.plant.ContactResults_[float].plant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the plant that produced these contact results. In most cases
+the result will be non-null, but default-constructed results might
+have nulls.</p>
 </dd></dl>
 
 <dl class="method">

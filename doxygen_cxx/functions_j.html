@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.8.15-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -59,6 +60,18 @@
           </span>
         </div>
 </td>
+   <td>
+    <div id="DDGSearch">
+     <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+      <input type="text" name="q" placeholder="Search C++ API only…" />
+      <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx" />
+     </form>
+     <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+      <input type="text" name="q" placeholder="Search all of Drake…" />
+      <input type="hidden" name="sites" value="drake.mit.edu" />
+     </form>
+    </div">
+   </td>
  </tr>
  </tbody>
 </table>
@@ -113,9 +126,6 @@ $(document).ready(function(){initNavTree('functions_j.html','');});
 <li>JacobianComputationScheme
 : <a class="el" href="classdrake_1_1systems_1_1_implicit_integrator.html#a2b4a6fa64aa084c108eb7b54df744990">ImplicitIntegrator&lt; T &gt;</a>
 </li>
-<li>JacoCommandReceiver()
-: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_receiver.html#abd60fa170582d8abc5ed8b6cb65637ad">JacoCommandReceiver</a>
-</li>
 <li>JacoCommandSender()
 : <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#ac729fa3f0a996804cc0ebf8c5f328c4a">JacoCommandSender</a>
 </li>
@@ -123,7 +133,7 @@ $(document).ready(function(){initNavTree('functions_j.html','');});
 : <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html#a6e5b8a20129aa9531dd46bbbcec20432">JacoStatusReceiver</a>
 </li>
 <li>JacoStatusSender()
-: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#ad6752ddebc3042c2052d04274d436f93">JacoStatusSender</a>
+: <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a7e4c5ac1cf2a03519f75baa5849cab14">JacoStatusSender</a>
 </li>
 <li>joint()
 : <a class="el" href="classdrake_1_1multibody_1_1_door_hinge.html#aec72adf302d35f0e2d9fb630bb99d4d2">DoorHinge&lt; T &gt;</a>
@@ -138,14 +148,14 @@ $(document).ready(function(){initNavTree('functions_j.html','');});
 <li>joint_velocities
 : <a class="el" href="structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aac0e5776ad59e265686244006b0be308">DifferentialInverseKinematicsResult</a>
 </li>
-<li>JointActuator
-: <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#ab3f0ccdbb102d410f4423b6d66f93fb3">JointActuator&lt; T &gt;</a>
+<li>JointActuator()
+: <a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#ad0a76a710eff20920ee421eeefc81072">JointActuator&lt; T &gt;</a>
 </li>
 <li>JointImplementation()
 : <a class="el" href="structdrake_1_1multibody_1_1_joint_1_1_joint_implementation.html#a003ffd6a91f75e2a858b2fefaa2a061c">Joint&lt; T &gt;::JointImplementation</a>
 </li>
 <li>JointSliders()
-: <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#ab4cae2915765bb20ab1fec015246ab59">JointSliders&lt; T &gt;</a>
+: <a class="el" href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html#a109aee7d97f74edfd4a41a92387ab6de">JointSliders&lt; T &gt;</a>
 </li>
 <li>JointTester
 : <a class="el" href="classdrake_1_1multibody_1_1_revolute_joint.html#a4c23b3d7f4f0a32f27069602e0d8397f">RevoluteJoint&lt; T &gt;</a>
@@ -158,5 +168,9 @@ $(document).ready(function(){initNavTree('functions_j.html','');});
   <ul>
   </ul>
 </div>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
 </body>
 </html>
