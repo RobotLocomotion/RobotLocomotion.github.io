@@ -88,6 +88,7 @@ var NAVTREEINDEX0 =
 "cache__entry_8h.html":[4,0,0,11,3,6],
 "calc__distance__and__time__derivative_8h.html":[4,0,0,8,10,0],
 "calc__distance__and__time__derivative_8h.html#a57577cfb87838e5b949fd703e227acfc":[4,0,0,8,10,0,1],
+"calc__lame__parameters_8h.html":[4,0,0,8,3,0],
 "call__python_8h.html":[4,0,0,1,0,0],
 "call__python_8h.html#a861302e6bce6e41acf42b94c21ee5020":[4,0,0,1,0,0,3],
 "call__python_8h.html#ab90532d79bea92048d0ee230ed8d4b59":[4,0,0,1,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial_1_1_monomial.html#a88e2ca1fa7efb383c5d61833fdae264c":[3,0,0,40,0,6],
 "classdrake_1_1_polynomial_1_1_monomial.html#a8d2a0b0dd246af6385d78567af484840":[3,0,0,40,0,1],
 "classdrake_1_1_polynomial_1_1_monomial.html#a8e7b10a07a1df37f95789d09cfe0e831":[3,0,0,40,0,5],
-"classdrake_1_1_polynomial_1_1_monomial.html#aa13862903d5f48177be04d2a293e2e17":[3,0,0,40,0,4],
-"classdrake_1_1_polynomial_1_1_monomial.html#ab8282237674bfa40903297054ee5a845":[3,0,0,40,0,0]
+"classdrake_1_1_polynomial_1_1_monomial.html#aa13862903d5f48177be04d2a293e2e17":[3,0,0,40,0,4]
 };

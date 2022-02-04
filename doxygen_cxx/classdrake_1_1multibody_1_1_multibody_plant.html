@@ -249,10 +249,14 @@ class drake::multibody::MultibodyPlant&lt; T &gt;</h3>
 <p>See Drake issue #12942 for more discussion.</p>
 <p><a class="anchor" id="mbp_finalize_stage"></a></p><h3>Finalize() stage</h3>
 <p>Once the user is done adding modeling elements and registering geometry, a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> must be performed. This call will:</p><ul>
-<li>Build the underlying MultibodyTree topology, see MultibodyTree::Finalize() for details,</li>
+<li>Build the underlying tree structure of the multibody model,</li>
 <li>declare the plant's state,</li>
 <li>declare the plant's input and output ports,</li>
-<li>declare input and output ports for communication with a SceneGraph.</li>
+<li>declare collision filters to ignore collisions:<ul>
+<li>between bodies connected by a joint,</li>
+<li>between bodies welded (directly or transitively) to the world.</li>
+</ul>
+</li>
 </ul>
 <p><a class="anchor" id="mbp_table_of_contents"></a> <a class="anchor" id="mbp_references"></a></p><h3>References</h3>
 <ul>
@@ -975,6 +979,18 @@ Contact modeling</h2></td></tr>
 <tr class="memitem:a2b82332abfb08a94d367659c3f566e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">geometry::HydroelasticContactRepresentation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a2b82332abfb08a94d367659c3f566e21">get_contact_surface_representation</a> () const</td></tr>
 <tr class="memdesc:a2b82332abfb08a94d367659c3f566e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current representation of contact surfaces used by <code>this</code> MultibodyPlant.  <a href="#a2b82332abfb08a94d367659c3f566e21">More...</a><br /></td></tr>
 <tr class="separator:a2b82332abfb08a94d367659c3f566e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48b99c84d8ddb8c64d389ef23dc6f22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af48b99c84d8ddb8c64d389ef23dc6f22">SetContactSolver</a> (std::unique_ptr&lt; contact_solvers::internal::ContactSolver&lt; T &gt;&gt; solver)</td></tr>
+<tr class="memdesc:af48b99c84d8ddb8c64d389ef23dc6f22"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use only by advanced developers wanting to try out their custom contact solvers.  <a href="#af48b99c84d8ddb8c64d389ef23dc6f22">More...</a><br /></td></tr>
+<tr class="separator:af48b99c84d8ddb8c64d389ef23dc6f22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca600d62fcd45c7fabf7f2ea5c9524f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aca600d62fcd45c7fabf7f2ea5c9524f6">SetDiscreteUpdateManager</a> (std::unique_ptr&lt; internal::DiscreteUpdateManager&lt; T &gt;&gt; manager)</td></tr>
+<tr class="memdesc:aca600d62fcd45c7fabf7f2ea5c9524f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use only by advanced developers wanting to try out their custom time stepping strategies, including contact resolution.  <a href="#aca600d62fcd45c7fabf7f2ea5c9524f6">More...</a><br /></td></tr>
+<tr class="separator:aca600d62fcd45c7fabf7f2ea5c9524f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1707a92abaf3f31e24ea5412f18e076"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#aa1707a92abaf3f31e24ea5412f18e076">AddPhysicalModel</a> (std::unique_ptr&lt; internal::PhysicalModel&lt; T &gt;&gt; model)</td></tr>
+<tr class="memdesc:aa1707a92abaf3f31e24ea5412f18e076"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use only by advanced developers wanting to try out their new physical models.  <a href="#aa1707a92abaf3f31e24ea5412f18e076">More...</a><br /></td></tr>
+<tr class="separator:aa1707a92abaf3f31e24ea5412f18e076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82c2e4c49a23beaf764f4c5f416d58bd"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::unique_ptr&lt; internal::PhysicalModel&lt; T &gt; &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a82c2e4c49a23beaf764f4c5f416d58bd">physical_models</a> () const</td></tr>
+<tr class="memdesc:a82c2e4c49a23beaf764f4c5f416d58bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For use only by advanced developers.  <a href="#a82c2e4c49a23beaf764f4c5f416d58bd">More...</a><br /></td></tr>
+<tr class="separator:a82c2e4c49a23beaf764f4c5f416d58bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e5e058b968b927f6342a8127aea663a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a1e5e058b968b927f6342a8127aea663a">set_penetration_allowance</a> (double penetration_allowance=<a class="el" href="structdrake_1_1multibody_1_1_multibody_plant_config.html">MultibodyPlantConfig</a>{}.penetration_allowance)</td></tr>
 <tr class="memdesc:a1e5e058b968b927f6342a8127aea663a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the penetration allowance used to estimate the coefficients in the penalty method used to impose non-penetration among bodies.  <a href="#a1e5e058b968b927f6342a8127aea663a">More...</a><br /></td></tr>
 <tr class="separator:a1e5e058b968b927f6342a8127aea663a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1367,6 +1383,42 @@ Contact modeling</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa1707a92abaf3f31e24ea5412f18e076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1707a92abaf3f31e24ea5412f18e076">&#9670;&nbsp;</a></span>AddPhysicalModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddPhysicalModel </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; internal::PhysicalModel&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>model</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For use only by advanced developers wanting to try out their new physical models. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
+<p>With this method <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> takes ownership of <code>model</code> and calls its DeclareSystemResources() method at <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, giving specific physical model implementations a chance to declare the system resources it needs.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">model</td><td>After this call the model is owned by <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>model != nullptr. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called post-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will no longer support scalar conversion to or from <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> after a call to this method. </dd></dl>
 
 </div>
 </div>
@@ -3216,9 +3268,9 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 <p>This method must be called after all elements in the model (joints, bodies, force elements, constraints, etc.) are added and before any computations are performed. </p>
 <p>It essentially compiles all the necessary "topological information", i.e. how bodies, joints and, any other elements connect with each other, and performs all the required pre-processing to enable computations at a later stage.</p>
 <p>If the finalize stage is successful, the topology of this MultibodyPlant is valid, meaning that the topology is up-to-date after this call. No more multibody elements can be added after a call to <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>.</p>
-<p>At <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, state and input/output ports for <code>this</code> plant are declared. If <code>this</code> plant registered geometry with a SceneGraph, input and output ports to enable communication with that SceneGraph are declared as well.</p>
-<p>If geometry has been registered on a SceneGraph instance, that instance must be provided to the <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a> method so that any geometric implications of the finalization process can be appropriately handled.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840" title="Returns true if this MultibodyPlant was finalized with a call to Finalize().">is_finalized()</a>.</dd></dl>
+<p>At <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, state and input/output ports for <code>this</code> plant are declared.</p>
+<p>For a full account of the effects of <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>, see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_finalize_stage">Finalize() stage</a>.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#acf7bb2a3531c09a97fb3623ac582d840" title="Returns true if this MultibodyPlant was finalized with a call to Finalize().">is_finalized()</a>, <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#mbp_finalize_stage">Finalize() stage</a>.</dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the MultibodyPlant has already been finalized. </td></tr>
@@ -6457,6 +6509,26 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
+<a id="a82c2e4c49a23beaf764f4c5f416d58bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82c2e4c49a23beaf764f4c5f416d58bd">&#9670;&nbsp;</a></span>physical_models()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;std::unique_ptr&lt;internal::PhysicalModel&lt;T&gt; &gt; &gt;&amp; physical_models </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For use only by advanced developers. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. </dd></dl>
+
+</div>
+</div>
 <a id="a4a6d28ce9c8119bee923e827eb6f02ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a6d28ce9c8119bee923e827eb6f02ed">&#9670;&nbsp;</a></span>RegisterAsSourceForSceneGraph()</h2>
 
@@ -6905,6 +6977,35 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
 
 </div>
 </div>
+<a id="af48b99c84d8ddb8c64d389ef23dc6f22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48b99c84d8ddb8c64d389ef23dc6f22">&#9670;&nbsp;</a></span>SetContactSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetContactSolver </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; contact_solvers::internal::ContactSolver&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>solver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For use only by advanced developers wanting to try out their custom contact solvers. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">solver</td><td>The contact solver to be used for simulations of discrete models with frictional contact. Discrete updates will use this solver after this call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>solver != nullptr. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd><code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will no longer support scalar conversion to or from <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> after a call to this method. </dd></dl>
+
+</div>
+</div>
 <a id="a054aef89f09b26103692515fea766e9e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a054aef89f09b26103692515fea766e9e">&#9670;&nbsp;</a></span>SetDefaultFreeBodyPose()</h2>
 
@@ -6983,6 +7084,43 @@ to allow?" There are two opposing design issues in picking a value for vₛ. On 
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aca600d62fcd45c7fabf7f2ea5c9524f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca600d62fcd45c7fabf7f2ea5c9524f6">&#9670;&nbsp;</a></span>SetDiscreteUpdateManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDiscreteUpdateManager </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; internal::DiscreteUpdateManager&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>manager</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For use only by advanced developers wanting to try out their custom time stepping strategies, including contact resolution. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
+<p>With this method <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> takes ownership of <code>manager</code>.</p>
+<dl class="section note"><dt>Note</dt><dd>Setting a contact manager bypasses the mechanism to set a different contact solver with <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#af48b99c84d8ddb8c64d389ef23dc6f22" title="For use only by advanced developers wanting to try out their custom contact solvers.">SetContactSolver()</a>. Use only one of these two experimental mechanims but never both.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manager</td><td>After this call the new manager is used to advance discrete states. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>manager != nullptr. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. See <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8fee61d7a783cade1a3d07fe86284d27" title="This method must be called after all elements in the model (joints, bodies, force elements,...">Finalize()</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a> will no longer support scalar conversion to or from <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">symbolic::Expression</a> after a call to this method. </dd></dl>
 
 </div>
 </div>

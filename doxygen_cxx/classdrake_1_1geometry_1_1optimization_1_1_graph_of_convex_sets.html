@@ -125,9 +125,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1optimization
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>(Experimental) &ndash; This class is not yet fully functional, and the interface may change without deprecation. </p>
-<p><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html" title="(Experimental) – This class is not yet fully functional, and the interface may change without depreca...">GraphOfConvexSets</a> implements the design pattern and optimization problems first introduced in</p>
+<div class="textblock"><p><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html" title="GraphOfConvexSets implements the design pattern and optimization problems first introduced in the pap...">GraphOfConvexSets</a> implements the design pattern and optimization problems first introduced in the paper "Shortest Paths in Graphs of Convex Sets". </p>
 <p>"Shortest Paths in Graphs of Convex Sets" by Tobia Marcucci, Jack Umenberger, Pablo A. Parrilo, Russ Tedrake. <a href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time.</dd></dl>
 <p>Each vertex in the graph is associated with a convex set over continuous variables, edges in the graph contain convex costs and constraints on these continuous variables. We can then formulate optimization problems over this graph, such as the shortest path problem where each visit to a vertex also corresponds to selecting an element from the convex set subject to the costs and constraints. Behind the scenes, we construct efficient mixed-integer convex transcriptions of the graph problem using MathematicalProgram.</p>
 <p>Design note: This class avoids providing any direct access to the MathematicalProgram that it constructs nor to the decision variables / constraints. The users should be able to write constraints against "placeholder" decision variables on the vertices and edges, but these get translated in non-trivial ways to the underlying program. </p>
 </div>

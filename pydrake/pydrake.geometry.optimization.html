@@ -376,13 +376,18 @@ the SceneGraph geometry ecosystem.</p>
 <dl class="class">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">GraphOfConvexSets</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Experimental) – This class is not yet fully functional, and the
-interface may change without deprecation.</p>
-<p>GraphOfConvexSets implements the design pattern and optimization
-problems first introduced in</p>
+<dd><p>GraphOfConvexSets implements the design pattern and optimization
+problems first introduced in the paper “Shortest Paths in Graphs of
+Convex Sets”.</p>
 <p>“Shortest Paths in Graphs of Convex Sets” by Tobia Marcucci, Jack
 Umenberger, Pablo A. Parrilo, Russ Tedrake.
 <a class="reference external" href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature is considered to be <strong>experimental</strong> and may change
+or be removed at any time, without any deprecation notice ahead of
+time.</p>
+</div>
 <p>Each vertex in the graph is associated with a convex set over
 continuous variables, edges in the graph contain convex costs and
 constraints on these continuous variables. We can then formulate

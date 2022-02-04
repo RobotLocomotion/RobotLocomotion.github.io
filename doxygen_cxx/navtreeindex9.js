@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#a40f26f7d3890b9dd6f90aae8b8e7ec6f":[1,2,5,1,1],
 "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#a6329f7d7632378d3468c21998625d154":[1,2,5,1,0],
 "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#a7e19cbe0d0e26536ec4e025d06e7337a":[1,2,5,1,8],
 "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#a84ba40d686f61340829ffab0302c60d2":[1,2,5,1,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "classdrake_1_1math_1_1_rigid_transform.html#ada1d92575e2e4beb3bfa036983c33923":[3,0,0,7,11,1],
 "classdrake_1_1math_1_1_rigid_transform.html#ae31756c2694bacdfdf6b0c75602d498b":[3,0,0,7,11,35],
 "classdrake_1_1math_1_1_rigid_transform.html#ae4c29dcfbeeb594af24ae82cff87f35f":[3,0,0,7,11,25],
-"classdrake_1_1math_1_1_rigid_transform.html#af22020b0567a392bfc275031a868657f":[3,0,0,7,11,30],
-"classdrake_1_1math_1_1_rigid_transform.html#af5ba8ece1175e9cb229649a048096e79":[3,0,0,7,11,27]
+"classdrake_1_1math_1_1_rigid_transform.html#af22020b0567a392bfc275031a868657f":[3,0,0,7,11,30]
 };

@@ -163,6 +163,7 @@ var searchData=
   ['addoutputport',['AddOutputPort',['../classdrake_1_1systems_1_1_context_base.html#ac1dc6301a310fa2e6220be9e4c578baa',1,'drake::systems::ContextBase::AddOutputPort()'],['../classdrake_1_1systems_1_1_system_base.html#a89be3ba9e76827e83fb1e139e5b750cc',1,'drake::systems::SystemBase::AddOutputPort()']]],
   ['addpackagexml',['AddPackageXml',['../classdrake_1_1multibody_1_1_package_map.html#ab5db13a6fe84a643a043c9347e1bc8d2',1,'drake::multibody::PackageMap']]],
   ['addphiconstraint',['AddPhiConstraint',['../classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_edge.html#a4c70942e2ec05eaa8e728b58dc5b4149',1,'drake::geometry::optimization::GraphOfConvexSets::Edge']]],
+  ['addphysicalmodel',['AddPhysicalModel',['../classdrake_1_1multibody_1_1_multibody_plant.html#aa1707a92abaf3f31e24ea5412f18e076',1,'drake::multibody::MultibodyPlant']]],
   ['addpointinnonnegativescalingconstraints',['AddPointInNonnegativeScalingConstraints',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#a1fb1329a9d7f2b0adf69ae203a9be035',1,'drake::geometry::optimization::ConvexSet']]],
   ['addpointinsetconstraints',['AddPointInSetConstraints',['../classdrake_1_1geometry_1_1optimization_1_1_convex_set.html#accc952b29c3cc22980f9a3fffe0d23ff',1,'drake::geometry::optimization::ConvexSet']]],
   ['addpointtopointdistanceconstraint',['AddPointToPointDistanceConstraint',['../classdrake_1_1multibody_1_1_inverse_kinematics.html#ae52548b9b4f07c155cb5ecf46d1088ae',1,'drake::multibody::InverseKinematics']]],

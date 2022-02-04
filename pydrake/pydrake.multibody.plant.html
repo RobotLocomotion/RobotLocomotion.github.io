@@ -1812,10 +1812,11 @@ not included.</p>
 <p><a href="#id17"><span class="problematic" id="id18">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
-Build the underlying MultibodyTree topology, see
-MultibodyTree::Finalize() for details, - declare the plant’s state, -
-declare the plant’s input and output ports, - declare input and output
-ports for communication with a SceneGraph.</p>
+Build the underlying tree structure of the multibody model, - declare
+the plant’s state, - declare the plant’s input and output ports, -
+declare collision filters to ignore collisions: - between bodies
+connected by a joint, - between bodies welded (directly or
+transitively) to the world.</p>
 <p><a href="#id19"><span class="problematic" id="id20">**</span></a>** References</p>
 <ul class="simple">
 <li>[Featherstone 2008] Featherstone, R., 2008.</li>
@@ -3169,16 +3170,12 @@ MultibodyPlant is valid, meaning that the topology is up-to-date after
 this call. No more multibody elements can be added after a call to
 Finalize().</p>
 <p>At Finalize(), state and input/output ports for <code class="docutils literal"><span class="pre">this</span></code> plant are
-declared. If <code class="docutils literal"><span class="pre">this</span></code> plant registered geometry with a SceneGraph,
-input and output ports to enable communication with that SceneGraph
-are declared as well.</p>
-<p>If geometry has been registered on a SceneGraph instance, that
-instance must be provided to the Finalize() method so that any
-geometric implications of the finalization process can be
-appropriately handled.</p>
+declared.</p>
+<p>For a full account of the effects of Finalize(), see
+mbp_finalize_stage “Finalize() stage”.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">is_finalized().</p>
+<p class="last">is_finalized(), mbp_finalize_stage “Finalize() stage”.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -5773,10 +5770,11 @@ not included.</p>
 <p><a href="#id45"><span class="problematic" id="id46">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
-Build the underlying MultibodyTree topology, see
-MultibodyTree::Finalize() for details, - declare the plant’s state, -
-declare the plant’s input and output ports, - declare input and output
-ports for communication with a SceneGraph.</p>
+Build the underlying tree structure of the multibody model, - declare
+the plant’s state, - declare the plant’s input and output ports, -
+declare collision filters to ignore collisions: - between bodies
+connected by a joint, - between bodies welded (directly or
+transitively) to the world.</p>
 <p><a href="#id47"><span class="problematic" id="id48">**</span></a>** References</p>
 <ul class="simple">
 <li>[Featherstone 2008] Featherstone, R., 2008.</li>
@@ -7130,16 +7128,12 @@ MultibodyPlant is valid, meaning that the topology is up-to-date after
 this call. No more multibody elements can be added after a call to
 Finalize().</p>
 <p>At Finalize(), state and input/output ports for <code class="docutils literal"><span class="pre">this</span></code> plant are
-declared. If <code class="docutils literal"><span class="pre">this</span></code> plant registered geometry with a SceneGraph,
-input and output ports to enable communication with that SceneGraph
-are declared as well.</p>
-<p>If geometry has been registered on a SceneGraph instance, that
-instance must be provided to the Finalize() method so that any
-geometric implications of the finalization process can be
-appropriately handled.</p>
+declared.</p>
+<p>For a full account of the effects of Finalize(), see
+mbp_finalize_stage “Finalize() stage”.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">is_finalized().</p>
+<p class="last">is_finalized(), mbp_finalize_stage “Finalize() stage”.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -9732,10 +9726,11 @@ not included.</p>
 <p><a href="#id73"><span class="problematic" id="id74">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
-Build the underlying MultibodyTree topology, see
-MultibodyTree::Finalize() for details, - declare the plant’s state, -
-declare the plant’s input and output ports, - declare input and output
-ports for communication with a SceneGraph.</p>
+Build the underlying tree structure of the multibody model, - declare
+the plant’s state, - declare the plant’s input and output ports, -
+declare collision filters to ignore collisions: - between bodies
+connected by a joint, - between bodies welded (directly or
+transitively) to the world.</p>
 <p><a href="#id75"><span class="problematic" id="id76">**</span></a>** References</p>
 <ul class="simple">
 <li>[Featherstone 2008] Featherstone, R., 2008.</li>
@@ -11089,16 +11084,12 @@ MultibodyPlant is valid, meaning that the topology is up-to-date after
 this call. No more multibody elements can be added after a call to
 Finalize().</p>
 <p>At Finalize(), state and input/output ports for <code class="docutils literal"><span class="pre">this</span></code> plant are
-declared. If <code class="docutils literal"><span class="pre">this</span></code> plant registered geometry with a SceneGraph,
-input and output ports to enable communication with that SceneGraph
-are declared as well.</p>
-<p>If geometry has been registered on a SceneGraph instance, that
-instance must be provided to the Finalize() method so that any
-geometric implications of the finalization process can be
-appropriately handled.</p>
+declared.</p>
+<p>For a full account of the effects of Finalize(), see
+mbp_finalize_stage “Finalize() stage”.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">is_finalized().</p>
+<p class="last">is_finalized(), mbp_finalize_stage “Finalize() stage”.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -13691,10 +13682,11 @@ not included.</p>
 <p><a href="#id101"><span class="problematic" id="id102">**</span></a>** Finalize() stage</p>
 <p>Once the user is done adding modeling elements and registering
 geometry, a call to Finalize() must be performed. This call will: -
-Build the underlying MultibodyTree topology, see
-MultibodyTree::Finalize() for details, - declare the plant’s state, -
-declare the plant’s input and output ports, - declare input and output
-ports for communication with a SceneGraph.</p>
+Build the underlying tree structure of the multibody model, - declare
+the plant’s state, - declare the plant’s input and output ports, -
+declare collision filters to ignore collisions: - between bodies
+connected by a joint, - between bodies welded (directly or
+transitively) to the world.</p>
 <p><a href="#id103"><span class="problematic" id="id104">**</span></a>** References</p>
 <ul class="simple">
 <li>[Featherstone 2008] Featherstone, R., 2008.</li>
@@ -15048,16 +15040,12 @@ MultibodyPlant is valid, meaning that the topology is up-to-date after
 this call. No more multibody elements can be added after a call to
 Finalize().</p>
 <p>At Finalize(), state and input/output ports for <code class="docutils literal"><span class="pre">this</span></code> plant are
-declared. If <code class="docutils literal"><span class="pre">this</span></code> plant registered geometry with a SceneGraph,
-input and output ports to enable communication with that SceneGraph
-are declared as well.</p>
-<p>If geometry has been registered on a SceneGraph instance, that
-instance must be provided to the Finalize() method so that any
-geometric implications of the finalization process can be
-appropriately handled.</p>
+declared.</p>
+<p>For a full account of the effects of Finalize(), see
+mbp_finalize_stage “Finalize() stage”.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">is_finalized().</p>
+<p class="last">is_finalized(), mbp_finalize_stage “Finalize() stage”.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

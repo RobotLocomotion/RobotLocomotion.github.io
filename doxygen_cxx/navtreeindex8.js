@@ -1,5 +1,6 @@
 var NAVTREEINDEX8 =
 {
+"classdrake_1_1geometry_1_1render_1_1_render_engine.html#a37016bd327ce6e07ba719d9b1bf5e1e6":[3,0,0,3,1,5,11],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3a05e57a0c1352d5b7bf21ec5b040848":[3,0,0,3,1,5,9],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a3dab418ee39075dd18acab2e85f5cf47":[3,0,0,3,1,5,19],
 "classdrake_1_1geometry_1_1render_1_1_render_engine.html#a4cb486ce4bf7773a6f1413415b378645":[3,0,0,3,1,5,23],
@@ -248,6 +249,5 @@ var NAVTREEINDEX8 =
 "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ab9d39322cf14f89933ec5d2242954caf":[1,4,2,0,1],
 "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ac67009538c552962f51823f97ace3d8c":[1,4,2,0,4],
 "classdrake_1_1manipulation_1_1planner_1_1_constraint_relaxing_ik.html#ac7cc87bab55e667b8983af5b53cd738e":[1,4,2,0,2],
-"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html":[1,2,5,1],
-"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html#a40f26f7d3890b9dd6f90aae8b8e7ec6f":[1,2,5,1,1]
+"classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html":[1,2,5,1]
 };
