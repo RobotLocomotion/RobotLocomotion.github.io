@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,12,6],
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,6,0],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,12,10],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,12,10,0],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,12,10,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,14,7,15],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,14,7,15,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html":[3,0,0,14,7,16],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,14,7,16,1],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a":[3,0,0,14,7,16,0],
-"structdrake_1_1systems_1_1sensors_1_1_color.html":[3,0,0,14,8,3]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,14,7,16,1]
 };

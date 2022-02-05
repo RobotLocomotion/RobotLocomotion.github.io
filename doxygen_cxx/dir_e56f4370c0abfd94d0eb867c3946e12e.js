@@ -24,6 +24,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "parser.h", "parser_8h.html", [
       [ "Parser", "classdrake_1_1multibody_1_1_parser.html", "classdrake_1_1multibody_1_1_parser" ]
     ] ],
+    [ "parsing_doxygen.h", "parsing__doxygen_8h.html", null ],
     [ "process_model_directives.h", "process__model__directives_8h.html", "process__model__directives_8h" ],
     [ "scoped_names.h", "scoped__names_8h.html", "scoped__names_8h" ]
 ];

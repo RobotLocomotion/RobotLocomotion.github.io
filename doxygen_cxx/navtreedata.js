@@ -107,17 +107,17 @@ var NAVTREEINDEX =
 "detail__path__utils_8h.html",
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a25c2dc47991b3df171ed5192bcf70390",
 "geometry__roles_8h.html#a52f8cb466b0827379bc8815f0d58aac3aaf1adf7ec3673b4f5765cfbc5d43b7dc",
-"image__to__lcm__image__array__t_8h.html",
-"minimum__value__constraint_8h.html#a0d06c693e90f6849f70d4b549f015e1e",
-"namespacedrake_1_1test.html",
-"pydrake__pybind_8h.html",
-"solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724",
-"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a01c3e8a16f2e4c2d3ca103b183aa4f0d",
-"structdrake_1_1solvers_1_1_csdp_solver_details.html",
-"structdrake_1_1systems_1_1sensors_1_1_color.html#a3ff0123200292ec4b7e3e6319d048fa0",
-"symbolic__expression_8h.html#ab5beb575f1104a060ab02a89544fef1d",
-"symbolic__generic__polynomial_8h.html#a7632adf109d2b13d0a4fb81e7cb81f96",
-"unit__inertia_8h.html"
+"image_8h.html#af9f2ff2c09bd6626d594951724ed1d9a",
+"minimum__value__constraint_8h.html",
+"namespacedrake_1_1systems_1_1trajectory__optimization.html",
+"proximity__utilities_8h.html",
+"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9",
+"structdrake_1_1math_1_1_mat_grad_mult_mat.html#a21269c8d264a02b47f4bb4da4e41ec3d",
+"structdrake_1_1solvers_1_1_clp_solver_details.html",
+"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter_3_01_t_00_01_t_01_4.html#a922b853b1fa03c63528dda71698c419a",
+"symbolic__expression_8h.html#ab1ebc87f878cdb6a3f0339711d591a26",
+"symbolic__generic__polynomial_8h.html#a6a635f8429c26e19e7582b7753751636",
+"type__safe__index__pybind_8h.html#a236143263d0a18d6ec439f707140d7e1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"image_8h.html#af9f2ff2c09bd6626d594951724ed1d9a":[4,0,0,11,8,5,8],
 "image__to__lcm__image__array__t_8h.html":[4,0,0,11,8,6],
 "image__writer_8h.html":[4,0,0,11,8,7],
 "image__writer_8h.html#a29bd196cbf701b14b87cc1b67d1b78f9":[4,0,0,11,8,7,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "meshcat__visualizer__params_8h.html":[4,0,0,4,28],
 "meshing__utilities_8h.html":[4,0,0,4,2,32],
 "minimum__distance__constraint_8h.html":[4,0,0,8,5,9],
-"minimum__distance__constraint_8h.html#a9b7dce3eb33772802af322ca25ef4864":[4,0,0,8,5,9,0],
-"minimum__value__constraint_8h.html":[4,0,0,10,33]
+"minimum__distance__constraint_8h.html#a9b7dce3eb33772802af322ca25ef4864":[4,0,0,8,5,9,0]
 };

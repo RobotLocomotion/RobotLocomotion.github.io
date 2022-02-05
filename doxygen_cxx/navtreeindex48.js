@@ -1,5 +1,7 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1math_1_1_mat_grad_mult_mat.html#a21269c8d264a02b47f4bb4da4e41ec3d":[3,0,0,7,9,0],
+"structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html":[3,0,0,8,7],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a01c3e8a16f2e4c2d3ca103b183aa4f0d":[3,0,0,8,7,4],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a22edde1cca11d8d8bfb16621d27aecc4":[3,0,0,8,7,3],
 "structdrake_1_1multibody_1_1_add_multibody_plant_scene_graph_result.html#a6a14f00b7d05307bc3cae0288beb6503":[3,0,0,8,7,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d":[3,0,0,12,1,0],
 "structdrake_1_1solvers_1_1_bound.html":[3,0,0,12,3],
 "structdrake_1_1solvers_1_1_bound.html#abb82b111deb51f3a5917cf8780fee484":[3,0,0,12,3,0],
-"structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,12,3,1],
-"structdrake_1_1solvers_1_1_clp_solver_details.html":[3,0,0,12,6],
-"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,6,0]
+"structdrake_1_1solvers_1_1_bound.html#ae0e265c074f457e193b30ff0d77c750b":[3,0,0,12,3,1]
 };

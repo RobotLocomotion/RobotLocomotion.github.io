@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"proximity__utilities_8h.html":[4,0,0,4,2,42],
+"pydrake__doxygen_8h.html":[4,0,0,0,0,6],
 "pydrake__pybind_8h.html":[4,0,0,0,0,7],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,7,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,7,9],
@@ -175,13 +177,13 @@ var NAVTREEINDEX46 =
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
 "scope__exit_8h.html":[4,0,0,1,46],
-"scoped__names_8h.html":[4,0,0,8,9,13],
-"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,13,5],
-"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,9,13,6],
-"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,13,3],
-"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,9,13,4],
-"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,9,13,1],
-"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,13,2],
+"scoped__names_8h.html":[4,0,0,8,9,14],
+"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,14,5],
+"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,9,14,6],
+"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,14,3],
+"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,9,14,4],
+"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,9,14,1],
+"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,14,2],
 "scoped__singleton_8h.html":[4,0,0,1,47],
 "screw__joint_8h.html":[4,0,0,8,13,40],
 "screw__mobilizer_8h.html":[4,0,0,8,13,41],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,10,48,2],
 "solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,48,1],
 "solver__base_8h.html":[4,0,0,10,49],
-"solver__id_8h.html":[4,0,0,10,50],
-"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,10,50,3],
-"solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,10,50,5]
+"solver__id_8h.html":[4,0,0,10,50]
 };
