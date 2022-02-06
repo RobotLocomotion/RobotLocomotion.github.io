@@ -1552,15 +1552,16 @@ plant or just the subset corresponding to the model instance; for
 example, one GetPositions() method obtains the generalized positions
 for the entire plant while another GetPositions() method obtains the
 generalized positions for model instance.</p>
-<p>Model instances are frequently defined through SDF files (using the
-<code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDF files are parsed
-(by Parser). There are two special multibody::ModelInstanceIndex
-values. The world body is always multibody::ModelInstanceIndex 0.
-multibody::ModelInstanceIndex 1 is reserved for all elements with no
-explicit model instance and is generally only relevant for elements
-created programmatically (and only when a model instance is not
-explicitly specified). Note that Parser creates model instances
-(resulting in a multibody::ModelInstanceIndex ≥ 2) as needed.</p>
+<p>Model instances are frequently defined through SDFormat files (using
+the <code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDFormat files
+are parsed (by Parser). There are two special
+multibody::ModelInstanceIndex values. The world body is always
+multibody::ModelInstanceIndex 0. multibody::ModelInstanceIndex 1 is
+reserved for all elements with no explicit model instance and is
+generally only relevant for elements created programmatically (and
+only when a model instance is not explicitly specified). Note that
+Parser creates model instances (resulting in a
+multibody::ModelInstanceIndex ≥ 2) as needed.</p>
 <p>See num_model_instances(), num_positions(), num_velocities(),
 num_actuated_dofs(), AddModelInstance() GetPositionsAndVelocities(),
 GetPositions(), GetVelocities(), SetPositionsAndVelocities(),
@@ -1590,9 +1591,9 @@ generalized velocities v, [Seth 2010]. <code class="docutils literal"><span clas
 matrix. The vector <code class="docutils literal"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
 the system’s generalized forces. These incorporate gravity, springs,
 externally applied body forces, constraint forces, and contact forces.</p>
-<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Loading models from SDF files</p>
-<p>Drake has the capability to load multibody models from SDF and URDF
-files. Consider the example below which loads an acrobot model:</p>
+<p><a href="#id5"><span class="problematic" id="id6">**</span></a>** Loading models from SDFormat files</p>
+<p>Drake has the capability to load multibody models from SDFormat and
+URDF files. Consider the example below which loads an acrobot model:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">acrobot</span><span class="p">;</span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
@@ -5510,15 +5511,16 @@ plant or just the subset corresponding to the model instance; for
 example, one GetPositions() method obtains the generalized positions
 for the entire plant while another GetPositions() method obtains the
 generalized positions for model instance.</p>
-<p>Model instances are frequently defined through SDF files (using the
-<code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDF files are parsed
-(by Parser). There are two special multibody::ModelInstanceIndex
-values. The world body is always multibody::ModelInstanceIndex 0.
-multibody::ModelInstanceIndex 1 is reserved for all elements with no
-explicit model instance and is generally only relevant for elements
-created programmatically (and only when a model instance is not
-explicitly specified). Note that Parser creates model instances
-(resulting in a multibody::ModelInstanceIndex ≥ 2) as needed.</p>
+<p>Model instances are frequently defined through SDFormat files (using
+the <code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDFormat files
+are parsed (by Parser). There are two special
+multibody::ModelInstanceIndex values. The world body is always
+multibody::ModelInstanceIndex 0. multibody::ModelInstanceIndex 1 is
+reserved for all elements with no explicit model instance and is
+generally only relevant for elements created programmatically (and
+only when a model instance is not explicitly specified). Note that
+Parser creates model instances (resulting in a
+multibody::ModelInstanceIndex ≥ 2) as needed.</p>
 <p>See num_model_instances(), num_positions(), num_velocities(),
 num_actuated_dofs(), AddModelInstance() GetPositionsAndVelocities(),
 GetPositions(), GetVelocities(), SetPositionsAndVelocities(),
@@ -5548,9 +5550,9 @@ generalized velocities v, [Seth 2010]. <code class="docutils literal"><span clas
 matrix. The vector <code class="docutils literal"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
 the system’s generalized forces. These incorporate gravity, springs,
 externally applied body forces, constraint forces, and contact forces.</p>
-<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Loading models from SDF files</p>
-<p>Drake has the capability to load multibody models from SDF and URDF
-files. Consider the example below which loads an acrobot model:</p>
+<p><a href="#id33"><span class="problematic" id="id34">**</span></a>** Loading models from SDFormat files</p>
+<p>Drake has the capability to load multibody models from SDFormat and
+URDF files. Consider the example below which loads an acrobot model:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">acrobot</span><span class="p">;</span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
@@ -9466,15 +9468,16 @@ plant or just the subset corresponding to the model instance; for
 example, one GetPositions() method obtains the generalized positions
 for the entire plant while another GetPositions() method obtains the
 generalized positions for model instance.</p>
-<p>Model instances are frequently defined through SDF files (using the
-<code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDF files are parsed
-(by Parser). There are two special multibody::ModelInstanceIndex
-values. The world body is always multibody::ModelInstanceIndex 0.
-multibody::ModelInstanceIndex 1 is reserved for all elements with no
-explicit model instance and is generally only relevant for elements
-created programmatically (and only when a model instance is not
-explicitly specified). Note that Parser creates model instances
-(resulting in a multibody::ModelInstanceIndex ≥ 2) as needed.</p>
+<p>Model instances are frequently defined through SDFormat files (using
+the <code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDFormat files
+are parsed (by Parser). There are two special
+multibody::ModelInstanceIndex values. The world body is always
+multibody::ModelInstanceIndex 0. multibody::ModelInstanceIndex 1 is
+reserved for all elements with no explicit model instance and is
+generally only relevant for elements created programmatically (and
+only when a model instance is not explicitly specified). Note that
+Parser creates model instances (resulting in a
+multibody::ModelInstanceIndex ≥ 2) as needed.</p>
 <p>See num_model_instances(), num_positions(), num_velocities(),
 num_actuated_dofs(), AddModelInstance() GetPositionsAndVelocities(),
 GetPositions(), GetVelocities(), SetPositionsAndVelocities(),
@@ -9504,9 +9507,9 @@ generalized velocities v, [Seth 2010]. <code class="docutils literal"><span clas
 matrix. The vector <code class="docutils literal"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
 the system’s generalized forces. These incorporate gravity, springs,
 externally applied body forces, constraint forces, and contact forces.</p>
-<p><a href="#id61"><span class="problematic" id="id62">**</span></a>** Loading models from SDF files</p>
-<p>Drake has the capability to load multibody models from SDF and URDF
-files. Consider the example below which loads an acrobot model:</p>
+<p><a href="#id61"><span class="problematic" id="id62">**</span></a>** Loading models from SDFormat files</p>
+<p>Drake has the capability to load multibody models from SDFormat and
+URDF files. Consider the example below which loads an acrobot model:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">acrobot</span><span class="p">;</span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
@@ -13422,15 +13425,16 @@ plant or just the subset corresponding to the model instance; for
 example, one GetPositions() method obtains the generalized positions
 for the entire plant while another GetPositions() method obtains the
 generalized positions for model instance.</p>
-<p>Model instances are frequently defined through SDF files (using the
-<code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDF files are parsed
-(by Parser). There are two special multibody::ModelInstanceIndex
-values. The world body is always multibody::ModelInstanceIndex 0.
-multibody::ModelInstanceIndex 1 is reserved for all elements with no
-explicit model instance and is generally only relevant for elements
-created programmatically (and only when a model instance is not
-explicitly specified). Note that Parser creates model instances
-(resulting in a multibody::ModelInstanceIndex ≥ 2) as needed.</p>
+<p>Model instances are frequently defined through SDFormat files (using
+the <code class="docutils literal"><span class="pre">model</span></code> tag) and are automatically created when SDFormat files
+are parsed (by Parser). There are two special
+multibody::ModelInstanceIndex values. The world body is always
+multibody::ModelInstanceIndex 0. multibody::ModelInstanceIndex 1 is
+reserved for all elements with no explicit model instance and is
+generally only relevant for elements created programmatically (and
+only when a model instance is not explicitly specified). Note that
+Parser creates model instances (resulting in a
+multibody::ModelInstanceIndex ≥ 2) as needed.</p>
 <p>See num_model_instances(), num_positions(), num_velocities(),
 num_actuated_dofs(), AddModelInstance() GetPositionsAndVelocities(),
 GetPositions(), GetVelocities(), SetPositionsAndVelocities(),
@@ -13460,9 +13464,9 @@ generalized velocities v, [Seth 2010]. <code class="docutils literal"><span clas
 matrix. The vector <code class="docutils literal"><span class="pre">τ</span> <span class="pre">∈</span> <span class="pre">ℝⁿᵛ</span></code> on the right hand side of Eq. (1) is
 the system’s generalized forces. These incorporate gravity, springs,
 externally applied body forces, constraint forces, and contact forces.</p>
-<p><a href="#id89"><span class="problematic" id="id90">**</span></a>** Loading models from SDF files</p>
-<p>Drake has the capability to load multibody models from SDF and URDF
-files. Consider the example below which loads an acrobot model:</p>
+<p><a href="#id89"><span class="problematic" id="id90">**</span></a>** Loading models from SDFormat files</p>
+<p>Drake has the capability to load multibody models from SDFormat and
+URDF files. Consider the example below which loads an acrobot model:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">MultibodyPlant</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">acrobot</span><span class="p">;</span>
 <span class="n">SceneGraph</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">scene_graph</span><span class="p">;</span>
 <span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">acrobot</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">scene_graph</span><span class="p">);</span>
