@@ -24,6 +24,7 @@ var searchData=
   ['mathematical_5fprogram_5fresult_2eh',['mathematical_program_result.h',['../mathematical__program__result_8h.html',1,'']]],
   ['matrix_5fgain_2eh',['matrix_gain.h',['../matrix__gain_8h.html',1,'']]],
   ['matrix_5futil_2eh',['matrix_util.h',['../matrix__util_8h.html',1,'']]],
+  ['matrix_5futilities_2eh',['matrix_utilities.h',['../matrix__utilities_8h.html',1,'']]],
   ['measure_5fexecution_2eh',['measure_execution.h',['../measure__execution_8h.html',1,'']]],
   ['mesh_5fdeformer_2eh',['mesh_deformer.h',['../mesh__deformer_8h.html',1,'']]],
   ['mesh_5ffield_5flinear_2eh',['mesh_field_linear.h',['../mesh__field__linear_8h.html',1,'']]],

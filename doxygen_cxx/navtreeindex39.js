@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,16,5,6],
+"classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,16,6],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,16,6,16],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a945567d9505ef681194f053ef5a1c2":[3,0,0,16,6,12],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0d2a23aec55910c9e1102de7ab8c3249":[3,0,0,16,6,3],
@@ -42,7 +44,6 @@ var NAVTREEINDEX39 =
 "classdrake_1_1yaml_1_1_yaml_write_archive.html#aed2a3370d019639c501af0a383a2da01":[3,0,0,17,1,6],
 "classdrake_1_1yaml_1_1_yaml_write_archive.html#af98867e5146bdd5ce4faa20597595dd3":[3,0,0,17,1,8],
 "classes.html":[3,1],
-"classintegral__constant.html":[3,0,2],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,3],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a03f87782de17fa3cc06eae968fe10b34":[3,0,1,3,12],
 "classstd_1_1exponential__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a04a274a495def8512740b2abae7247dd":[3,0,1,3,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1],
 "depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,1,0,0],
 "detail__common_8h.html":[4,0,0,8,9,0],
-"detail__ignition_8h.html":[4,0,0,8,9,1],
-"detail__mujoco__parser_8h.html":[4,0,0,8,9,2]
+"detail__ignition_8h.html":[4,0,0,8,9,1]
 };

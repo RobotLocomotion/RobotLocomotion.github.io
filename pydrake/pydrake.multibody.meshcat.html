@@ -208,7 +208,7 @@ geometry::Meshcat; it draws double-sided arrows at the location of the
 contact force with length scaled by the magnitude of the contact
 force. The most common use of this system is to connect its input port
 to the contact results output port of a MultibodyPlant.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">In the current implementation, ContactVisualizer methods must be
@@ -231,12 +231,24 @@ may generalize this in the future.</p>
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
-multibody::ContactResults-valued output port.</p>
+multibody::ContactResults-valued output port and
+geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+</ol>
+<p>Adds a ContactVisualizer and connects it to the given
+multibody::ContactResults-valued output port and the given
+geometry::QueryObject-valued output port.</p>
+<ol class="arabic simple" start="3">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This overload is dispreferred because it cannot show any geometry
+names in the visualizer.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -260,6 +272,15 @@ parameters to determine whether this should be called on
 initialization.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float].query_object_input_port">
+<code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float].query_object_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometry::QueryObject-valued input port. It should be
+(optionally) connected to SceneGraph’s get_query_output_port().
+Failure to do so will prevent the display from showing names for the
+geometry.</p>
+</dd></dl>
+
 </dd></dl>
 
 </dd></dl>
@@ -273,7 +294,7 @@ geometry::Meshcat; it draws double-sided arrows at the location of the
 contact force with length scaled by the magnitude of the contact
 force. The most common use of this system is to connect its input port
 to the contact results output port of a MultibodyPlant.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">In the current implementation, ContactVisualizer methods must be
@@ -296,12 +317,24 @@ may generalize this in the future.</p>
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
-multibody::ContactResults-valued output port.</p>
+multibody::ContactResults-valued output port and
+geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
+</ol>
+<p>Adds a ContactVisualizer and connects it to the given
+multibody::ContactResults-valued output port and the given
+geometry::QueryObject-valued output port.</p>
+<ol class="arabic simple" start="3">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This overload is dispreferred because it cannot show any geometry
+names in the visualizer.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -325,6 +358,15 @@ parameters to determine whether this should be called on
 initialization.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd].query_object_input_port">
+<code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd].query_object_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometry::QueryObject-valued input port. It should be
+(optionally) connected to SceneGraph’s get_query_output_port().
+Failure to do so will prevent the display from showing names for the
+geometry.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -336,7 +378,7 @@ geometry::Meshcat; it draws double-sided arrows at the location of the
 contact force with length scaled by the magnitude of the contact
 force. The most common use of this system is to connect its input port
 to the contact results output port of a MultibodyPlant.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">In the current implementation, ContactVisualizer methods must be
@@ -359,12 +401,24 @@ may generalize this in the future.</p>
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
-multibody::ContactResults-valued output port.</p>
+multibody::ContactResults-valued output port and
+geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+</ol>
+<p>Adds a ContactVisualizer and connects it to the given
+multibody::ContactResults-valued output port and the given
+geometry::QueryObject-valued output port.</p>
+<ol class="arabic simple" start="3">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This overload is dispreferred because it cannot show any geometry
+names in the visualizer.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -386,6 +440,15 @@ the visualizer, or by a previous instance of this visualizer using the
 same prefix. Use the <code class="docutils literal"><span class="pre">delete_on_initialization_event</span></code> in the
 parameters to determine whether this should be called on
 initialization.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.meshcat.ContactVisualizer_[float].query_object_input_port">
+<code class="descname">query_object_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[float].query_object_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the geometry::QueryObject-valued input port. It should be
+(optionally) connected to SceneGraph’s get_query_output_port().
+Failure to do so will prevent the display from showing names for the
+geometry.</p>
 </dd></dl>
 
 </dd></dl>

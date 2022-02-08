@@ -1,8 +1,5 @@
 var NAVTREEINDEX46 =
 {
-"proximity__utilities_8h.html":[4,0,0,4,2,42],
-"pydrake__doxygen_8h.html":[4,0,0,0,0,6],
-"pydrake__pybind_8h.html":[4,0,0,0,0,7],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,7,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,7,9],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,7,4],
@@ -17,7 +14,7 @@ var NAVTREEINDEX46 =
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
-"quadrature_8h.html":[4,0,0,8,3,7],
+"quadrature_8h.html":[4,0,0,8,3,8],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
@@ -205,7 +202,7 @@ var NAVTREEINDEX46 =
 "shape__to__string_8h.html":[4,0,0,4,37],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,8],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,9],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -249,5 +246,8 @@ var NAVTREEINDEX46 =
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,10,48,2],
 "solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,48,1],
 "solver__base_8h.html":[4,0,0,10,49],
-"solver__id_8h.html":[4,0,0,10,50]
+"solver__id_8h.html":[4,0,0,10,50],
+"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,10,50,3],
+"solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,10,50,5],
+"solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,10,50,4]
 };

@@ -165,7 +165,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad018e0a1ac62facba097fa20704046da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor.  <a href="#ad018e0a1ac62facba097fa20704046da">More...</a><br /></td></tr>
 <tr class="separator:ad018e0a1ac62facba097fa20704046da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2efb988c6fc13502a486a9798f0a5e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ad2efb988c6fc13502a486a9798f0a5e0">SetRandomParameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, <a class="el" href="classdrake_1_1systems_1_1_parameters.html">Parameters</a>&lt; T &gt; *parameters, <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> *generator) const override</td></tr>
-<tr class="memdesc:ad2efb988c6fc13502a486a9798f0a5e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all of the parameters (all weights and biases) in the <code>parameters</code> from a zero-mean, 0.01*unit-covariance Gaussian distribution.  <a href="#ad2efb988c6fc13502a486a9798f0a5e0">More...</a><br /></td></tr>
+<tr class="memdesc:ad2efb988c6fc13502a486a9798f0a5e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all of the parameters (all weights and biases) in the <code>parameters</code> using the "LeCun initialization": a uniform distribution with mean zero and standard deviation √(1/m), where m is the number of connections feeding into the corresponding node.  <a href="#ad2efb988c6fc13502a486a9798f0a5e0">More...</a><br /></td></tr>
 <tr class="separator:ad2efb988c6fc13502a486a9798f0a5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94d706bd8cf29b411268e2cad2daa8e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a94d706bd8cf29b411268e2cad2daa8e6">num_parameters</a> () const</td></tr>
 <tr class="memdesc:a94d706bd8cf29b411268e2cad2daa8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of parameters in the network, including all weights and biases.  <a href="#a94d706bd8cf29b411268e2cad2daa8e6">More...</a><br /></td></tr>
@@ -1932,7 +1932,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sets all of the parameters (all weights and biases) in the <code>parameters</code> from a zero-mean, 0.01*unit-covariance Gaussian distribution. </p>
+<p>Sets all of the parameters (all weights and biases) in the <code>parameters</code> using the "LeCun initialization": a uniform distribution with mean zero and standard deviation √(1/m), where m is the number of connections feeding into the corresponding node. </p>
+<p>See eq. (16) in <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf">http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf</a> .</p>
 <p>This is typically called via <a class="el" href="classdrake_1_1systems_1_1_system.html#a6a5a403983483dda39f8196a241225f2" title="Sets Context fields to random values.">System&lt;T&gt;::SetRandomContext</a>. By contrast, <a class="el" href="classdrake_1_1systems_1_1_system.html#ab4e6ee413f4f47a20f6dcc2cbd831b88" title="Sets Context fields to their default values.">System&lt;T&gt;::SetDefaultContext</a> will set all weights and biases to zero. </p>
 
 <p>Reimplemented from <a class="el" href="classdrake_1_1systems_1_1_system.html#af7a8969fd7784256a68402b391f8902b">System&lt; T &gt;</a>.</p>

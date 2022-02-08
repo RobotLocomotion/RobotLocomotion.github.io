@@ -34,6 +34,5 @@ var annotated_dup =
       [ "tuple_element< Index, drake::SortedPair< T > >", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", "structstd_1_1tuple__element_3_01_index_00_01drake_1_1_sorted_pair_3_01_t_01_4_01_4" ],
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ],
       [ "uniform_real_distribution< drake::symbolic::Expression >", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html", "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4" ]
-    ] ],
-    [ "integral_constant", "classintegral__constant.html", null ]
+    ] ]
 ];

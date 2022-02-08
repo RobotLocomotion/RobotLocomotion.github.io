@@ -372,7 +372,7 @@ var hierarchy =
     [ "InitializeParams", "structdrake_1_1systems_1_1_initialize_params.html", null ],
     [ "InitialValueProblem< T >", "classdrake_1_1systems_1_1_initial_value_problem.html", null ],
     [ "AntiderivativeFunction< T >::IntegrableFunctionContext", "structdrake_1_1systems_1_1_antiderivative_function_1_1_integrable_function_context.html", null ],
-    [ "integral_constant", "classintegral__constant.html", [
+    [ "integral_constant", null, [
       [ "tuple_size< drake::SortedPair< T > >", "structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html", null ]
     ] ],
     [ "HermitianDenseOutput< T >::IntegrationStep", "classdrake_1_1systems_1_1_hermitian_dense_output_1_1_integration_step.html", null ],
