@@ -12888,7 +12888,7 @@ instance i.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterAsSourceForSceneGraph">
-<code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], scene_graph: drake::geometry::SceneGraph&lt;drake::symbolic::Expression&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RegisterAsSourceForSceneGraph</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], scene_graph: pydrake.geometry.SceneGraph_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.SourceId<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].RegisterAsSourceForSceneGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers <code class="docutils literal"><span class="pre">this</span></code> plant to serve as a source for an instance of
 SceneGraph. This registration allows MultibodyPlant to register
 geometry with <code class="docutils literal"><span class="pre">scene_graph</span></code> for visualization and/or collision
@@ -17547,7 +17547,7 @@ bodies including:</p>
 </ul>
 <dl class="method">
 <dt id="pydrake.multibody.plant.PointPairContactInfo_[Expression].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.PointPairContactInfo_[Expression], bodyA_index: pydrake.multibody.tree.BodyIndex, bodyB_index: pydrake.multibody.tree.BodyIndex, f_Bc_W: numpy.ndarray[object[3, 1]], p_WC: numpy.ndarray[object[3, 1]], separation_speed: pydrake.symbolic.Expression, slip_speed: pydrake.symbolic.Expression, point_pair: drake::geometry::PenetrationAsPointPair&lt;drake::symbolic::Expression&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.PointPairContactInfo_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.PointPairContactInfo_[Expression], bodyA_index: pydrake.multibody.tree.BodyIndex, bodyB_index: pydrake.multibody.tree.BodyIndex, f_Bc_W: numpy.ndarray[object[3, 1]], p_WC: numpy.ndarray[object[3, 1]], separation_speed: pydrake.symbolic.Expression, slip_speed: pydrake.symbolic.Expression, point_pair: pydrake.geometry.PenetrationAsPointPair_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.PointPairContactInfo_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the contact information for a given pair of two colliding
 bodies.</p>
 <dl class="docutils">
@@ -17608,7 +17608,7 @@ frame W.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.PointPairContactInfo_[Expression].point_pair">
-<code class="descname">point_pair</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.PointPairContactInfo_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::geometry::PenetrationAsPointPair&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.multibody.plant.PointPairContactInfo_[Expression].point_pair" title="Permalink to this definition">¶</a></dt>
+<code class="descname">point_pair</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.PointPairContactInfo_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.PenetrationAsPointPair_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.PointPairContactInfo_[Expression].point_pair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns additional information for the geometric contact query for
 <code class="docutils literal"><span class="pre">this</span></code> pair as a PenetrationAsPointPair.</p>
 </dd></dl>

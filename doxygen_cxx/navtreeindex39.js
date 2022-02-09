@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,16,5,12],
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,16,5,1],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,16,5,6],
 "classdrake_1_1trajectories_1_1_trajectory.html":[3,0,0,16,6],
 "classdrake_1_1trajectories_1_1_trajectory.html#a0a8606a2bfd8a6ecade8bf4f95fb40c5":[3,0,0,16,6,16],
@@ -247,7 +249,5 @@ var NAVTREEINDEX39 =
 "depth__image__to__point__cloud_8h.html":[4,0,0,9,0],
 "depth__shaders_8h.html":[4,0,0,4,4,1,0],
 "depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1],
-"depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,1,0,0],
-"detail__common_8h.html":[4,0,0,8,9,0],
-"detail__ignition_8h.html":[4,0,0,8,9,1]
+"depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,1,0,0]
 };

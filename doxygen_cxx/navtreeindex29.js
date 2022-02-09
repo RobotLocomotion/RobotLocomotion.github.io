@@ -1,5 +1,6 @@
 var NAVTREEINDEX29 =
 {
+"classdrake_1_1systems_1_1_discrete_derivative.html#a0af346932bf913c979543659c4140abe":[1,2,1,6,4],
 "classdrake_1_1systems_1_1_discrete_derivative.html#a338c661d94c2b17045ea58a6b5a7964b":[1,2,1,6,3],
 "classdrake_1_1systems_1_1_discrete_derivative.html#a744e16c81b5d48f99c670520907a7ead":[1,2,1,6,2],
 "classdrake_1_1systems_1_1_discrete_derivative.html#a8daceb7a3c384d6ad9f305e42b5fc1c6":[1,2,1,6,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX29 =
 "classdrake_1_1systems_1_1_implicit_integrator.html#a96119f70789af0cbf1d24aa2f1b5501e":[3,0,0,14,54,7],
 "classdrake_1_1systems_1_1_implicit_integrator.html#a96135fce772e7841dfcac85def67ef9e":[3,0,0,14,54,17],
 "classdrake_1_1systems_1_1_implicit_integrator.html#a97d9511d54e67f6e362939655844611a":[3,0,0,14,54,28],
-"classdrake_1_1systems_1_1_implicit_integrator.html#a9c104fab032303d56e32d24c2f52bfaf":[3,0,0,14,54,3],
-"classdrake_1_1systems_1_1_implicit_integrator.html#aa0ad96385997c3cc8d63d625ccd74615":[3,0,0,14,54,16]
+"classdrake_1_1systems_1_1_implicit_integrator.html#a9c104fab032303d56e32d24c2f52bfaf":[3,0,0,14,54,3]
 };

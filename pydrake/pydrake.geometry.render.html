@@ -392,7 +392,7 @@ getter methods for documentation of parameters.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.render.MakeRenderEngineGl">
-<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7fba9608d3f0&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7f9707595270&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will produce a “dummy” implementation.</p>
@@ -437,13 +437,22 @@ the geometry.³ |</p>
 The default color is a bright orange. This default value can be
 changed to a different value at construction.</p>
 <p>² If no path is specified, or the file cannot be read, the diffuse
-rgba value is used (or its default). ³ RenderEngineVtk implements a
-legacy feature for associating textures with <em>meshes</em>. If <em>no</em>
-<code class="docutils literal"><span class="pre">(phong,</span> <span class="pre">diffuse_map)</span></code> property is provided (or it refers to a file
-that doesn’t exist), for a mesh named <code class="docutils literal"><span class="pre">/path/to/mesh.obj</span></code>,
-RenderEngineVtk will search for a file <code class="docutils literal"><span class="pre">/path/to/mesh.png</span></code>
-(replacing “obj” with “png”). If that image exists, it will be used as
-a texture on the mesh object.</p>
+rgba value is used (or its default).</p>
+<p>³ RenderEngineVtk implements a legacy feature for associating textures
+with <em>meshes</em>. If <em>no</em> <code class="docutils literal"><span class="pre">(phong,</span> <span class="pre">diffuse_map)</span></code> property is provided
+(or it refers to a file that doesn’t exist), for a mesh named
+<code class="docutils literal"><span class="pre">/path/to/mesh.obj</span></code>, RenderEngineVtk will search for a file
+<code class="docutils literal"><span class="pre">/path/to/mesh.png</span></code> (replacing “obj” with “png”). If that image
+exists, it will be used as a texture on the mesh object.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">RenderEngineVtk does not support the OBJ format <code class="docutils literal"><span class="pre">usemtl</span></code>
+directive. Instead, it has two ways to associate a color texture
+with an obj file: - File name matching; see footnote 3 above. -
+Explicit assignment of arbitrary texture files from within model
+files. In SDFormat, use the tag tag_drake_diffuse_map. In URDF,
+use <code class="docutils literal"><span class="pre">//visual/material/texture</span></code>.</p>
+</div>
 <p><strong>Depth images</strong></p>
 <p>No specific properties required.</p>
 <p><strong>Label images</strong></p>

@@ -11,6 +11,7 @@ var classdrake_1_1systems_1_1_multilayer_perceptron =
     [ "BatchOutput", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a2377729b655dd819b56450c0d290c6d8", null ],
     [ "GetBiases", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad987717e0092f8c8b9b2970c8104c075", null ],
     [ "GetBiases", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad61888e98afa0d43e63140c9bad35e57", null ],
+    [ "GetMutableParameters", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ac5fc0acd1a5e69bb7cceb5ca4fd06eb7", null ],
     [ "GetParameters", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a5bdd4d4f07c9c594d136288d3156ed57", null ],
     [ "GetWeights", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ac90a385e6af29fc97d05c5e5aa781d85", null ],
     [ "GetWeights", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ac683d527cf42ddf2d44f6cf35d64152a", null ],

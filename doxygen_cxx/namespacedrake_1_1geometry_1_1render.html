@@ -293,7 +293,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructs a <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation which uses a VTK-based OpenGL renderer. </p>
-<p><a class="anchor" id="render_engine_vtk_properties"></a></p><h2>Geometry perception properties</h2>
+<p><a class="anchor" id="render_engine_vtk_properties"></a> </p><h2>Geometry perception properties</h2>
 <p>This <a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine.html" title="The engine for performing rasterization operations on geometry.">RenderEngine</a> implementation looks for the following properties when registering visual geometry, categorized by rendered image type.</p>
 <h3>RGB images</h3>
 <table class="markdownTable">
@@ -305,7 +305,13 @@ Functions</h2></td></tr>
 <td class="markdownTableBodyCenter">phong  </td><td class="markdownTableBodyCenter">diffuse_map  </td><td class="markdownTableBodyCenter">no²  </td><td class="markdownTableBodyCenter">std::string  </td><td class="markdownTableBodyLeft">The path to a texture to apply to the geometry.³   </td></tr>
 </table>
 <p>¹ If no diffuse value is given, a default rgba value will be applied. The default color is a bright orange. This default value can be changed to a different value at construction. <br />
- ² If no path is specified, or the file cannot be read, the diffuse rgba value is used (or its default). ³ RenderEngineVtk implements a legacy feature for associating textures with <em>meshes</em>. If <em>no</em> <code>(phong, diffuse_map)</code> property is provided (or it refers to a file that doesn't exist), for a mesh named <code>/path/to/mesh.obj</code>, RenderEngineVtk will search for a file <code>/path/to/mesh.png</code> (replacing "obj" with "png"). If that image exists, it will be used as a texture on the mesh object.</p>
+ ² If no path is specified, or the file cannot be read, the diffuse rgba value is used (or its default). <br />
+ ³ RenderEngineVtk implements a legacy feature for associating textures with <em>meshes</em>. If <em>no</em> <code>(phong, diffuse_map)</code> property is provided (or it refers to a file that doesn't exist), for a mesh named <code>/path/to/mesh.obj</code>, RenderEngineVtk will search for a file <code>/path/to/mesh.png</code> (replacing "obj" with "png"). If that image exists, it will be used as a texture on the mesh object.</p>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html" title="See documentation of MakeRenderEngineVtk().">RenderEngineVtk</a> does not support the OBJ format <code>usemtl</code> directive. Instead, it has two ways to associate a color texture with an obj file:<ul>
+<li>File name matching; see footnote 3 above.</li>
+<li>Explicit assignment of arbitrary texture files from within model files. In SDFormat, use the tag <a class="el" href="group__multibody__parsing.html#tag_drake_diffuse_map">drake:diffuse_map</a>. In URDF, use <code>//visual/material/texture</code>.</li>
+</ul>
+</dd></dl>
 <h3>Depth images</h3>
 <p>No specific properties required.</p>
 <h3>Label images</h3>

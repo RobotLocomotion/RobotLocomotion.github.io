@@ -179,6 +179,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bdd4d4f07c9c594d136288d3156ed57"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a5bdd4d4f07c9c594d136288d3156ed57">GetParameters</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a5bdd4d4f07c9c594d136288d3156ed57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to all of the parameters (weights and biases) as a single vector.  <a href="#a5bdd4d4f07c9c594d136288d3156ed57">More...</a><br /></td></tr>
 <tr class="separator:a5bdd4d4f07c9c594d136288d3156ed57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fc0acd1a5e69bb7cceb5ca4fd06eb7"><td class="memItemLeft" align="right" valign="top">Eigen::VectorBlock&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ac5fc0acd1a5e69bb7cceb5ca4fd06eb7">GetMutableParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context) const</td></tr>
+<tr class="memdesc:ac5fc0acd1a5e69bb7cceb5ca4fd06eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to all of the parameters (weights and biases) as a single vector.  <a href="#ac5fc0acd1a5e69bb7cceb5ca4fd06eb7">More...</a><br /></td></tr>
+<tr class="separator:ac5fc0acd1a5e69bb7cceb5ca4fd06eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86e3b1bbf110ec91755b9f8be7ad7796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a86e3b1bbf110ec91755b9f8be7ad7796">SetParameters</a> (<a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;params) const</td></tr>
 <tr class="memdesc:a86e3b1bbf110ec91755b9f8be7ad7796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all of the parameters in the network (weights and biases) using a single vector.  <a href="#a86e3b1bbf110ec91755b9f8be7ad7796">More...</a><br /></td></tr>
 <tr class="separator:a86e3b1bbf110ec91755b9f8be7ad7796"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1615,6 +1618,26 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the biases in <code>params</code> used in the mapping from <code>layer</code> to <code>layer+1</code>. </p>
+
+</div>
+</div>
+<a id="ac5fc0acd1a5e69bb7cceb5ca4fd06eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5fc0acd1a5e69bb7cceb5ca4fd06eb7">&#9670;&nbsp;</a></span>GetMutableParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorBlock&lt;<a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;T&gt; &gt; GetMutableParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a mutable reference to all of the parameters (weights and biases) as a single vector. </p>
 
 </div>
 </div>

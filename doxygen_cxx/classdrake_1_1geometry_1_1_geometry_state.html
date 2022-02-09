@@ -133,7 +133,7 @@ class drake::geometry::GeometryState&lt; T &gt;</h3>
 <dl class="section note"><dt>Note</dt><dd>This is intended as an internal class only.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -345,12 +345,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af3b16adde799eb804619dc86f3703f4f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#af3b16adde799eb804619dc86f3703f4f">ComputePointPairPenetration</a> () const</td></tr>
 <tr class="memdesc:af3b16adde799eb804619dc86f3703f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#af3b16adde799eb804619dc86f3703f4f" title="Computes the penetrations across all pairs of geometries in the world with the penetrations character...">QueryObject::ComputePointPairPenetration()</a>.  <a href="#af3b16adde799eb804619dc86f3703f4f">More...</a><br /></td></tr>
 <tr class="separator:af3b16adde799eb804619dc86f3703f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a24d33e8aaf8d925665a962e9cda20a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a0a24d33e8aaf8d925665a962e9cda20a">ComputeContactSurfaces</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation) const</td></tr>
-<tr class="memdesc:a0a24d33e8aaf8d925665a962e9cda20a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0a24d33e8aaf8d925665a962e9cda20a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>.  <a href="#a0a24d33e8aaf8d925665a962e9cda20a">More...</a><br /></td></tr>
-<tr class="separator:a0a24d33e8aaf8d925665a962e9cda20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae024d5918f2291c1c67cddd3be2921c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ae024d5918f2291c1c67cddd3be2921c3">ComputeContactSurfacesWithFallback</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt;&gt; *surfaces, std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt;&gt; *point_pairs) const</td></tr>
-<tr class="memdesc:ae024d5918f2291c1c67cddd3be2921c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae024d5918f2291c1c67cddd3be2921c3" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface wher...">QueryObject::ComputeContactSurfacesWithFallback()</a>.  <a href="#ae024d5918f2291c1c67cddd3be2921c3">More...</a><br /></td></tr>
-<tr class="separator:ae024d5918f2291c1c67cddd3be2921c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15e2fff4faa847eb6a7ba82e1d4f035"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
+<tr class="memitem:ab15e2fff4faa847eb6a7ba82e1d4f035"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt; T1 &gt;::is_bool, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#ab15e2fff4faa847eb6a7ba82e1d4f035">ComputeContactSurfaces</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation) const</td></tr>
+<tr class="memdesc:ab15e2fff4faa847eb6a7ba82e1d4f035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>.  <a href="#ab15e2fff4faa847eb6a7ba82e1d4f035">More...</a><br /></td></tr>
+<tr class="separator:ab15e2fff4faa847eb6a7ba82e1d4f035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
+<tr class="memitem:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt; T1 &gt;::is_bool, void &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a9c5e3da8410ee9aa2ae555912d9c98e6">ComputeContactSurfacesWithFallback</a> (<a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a> representation, std::vector&lt; <a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt; T &gt;&gt; *surfaces, std::vector&lt; <a class="el" href="structdrake_1_1geometry_1_1_penetration_as_point_pair.html">PenetrationAsPointPair</a>&lt; T &gt;&gt; *point_pairs) const</td></tr>
+<tr class="memdesc:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5e3da8410ee9aa2ae555912d9c98e6" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface wher...">QueryObject::ComputeContactSurfacesWithFallback()</a>.  <a href="#a9c5e3da8410ee9aa2ae555912d9c98e6">More...</a><br /></td></tr>
+<tr class="separator:a9c5e3da8410ee9aa2ae555912d9c98e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48676624208ba13c78edbc098203f1ea"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structdrake_1_1_sorted_pair.html">SortedPair</a>&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a48676624208ba13c78edbc098203f1ea">FindCollisionCandidates</a> () const</td></tr>
 <tr class="memdesc:a48676624208ba13c78edbc098203f1ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a48676624208ba13c78edbc098203f1ea" title="Applies a conservative culling mechanism to create a subset of all possible geometry pairs based on n...">QueryObject::FindCollisionCandidates()</a>.  <a href="#a48676624208ba13c78edbc098203f1ea">More...</a><br /></td></tr>
 <tr class="separator:a48676624208ba13c78edbc098203f1ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -401,9 +403,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aba077b59ee3574bbe9a0a602c14293c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#aba077b59ee3574bbe9a0a602c14293c3" title="Renders a label image for the given camera posed with respect to the indicated parent frame P.">QueryObject::RenderLabelImage()</a>.  <a href="#aba077b59ee3574bbe9a0a602c14293c3">More...</a><br /></td></tr>
 <tr class="separator:aba077b59ee3574bbe9a0a602c14293c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Scalar conversion</div></td></tr>
-<tr class="memitem:aef8bd10a70a30fc4fd3150b9b332696e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#aef8bd10a70a30fc4fd3150b9b332696e">ToAutoDiffXd</a> () const</td></tr>
-<tr class="memdesc:aef8bd10a70a30fc4fd3150b9b332696e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deep copy of this state using the AutoDiffXd scalar with all scalar values initialized from the current values.  <a href="#aef8bd10a70a30fc4fd3150b9b332696e">More...</a><br /></td></tr>
-<tr class="separator:aef8bd10a70a30fc4fd3150b9b332696e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb330d5f15f3831a5fd8f712dc66245"><td class="memTemplParams" colspan="2">template&lt;typename T1  = T&gt; </td></tr>
+<tr class="memitem:a6fb330d5f15f3831a5fd8f712dc66245"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt;!std::is_same_v&lt; T1, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a> &gt;, std::unique_ptr&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt; <a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a> &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html#a6fb330d5f15f3831a5fd8f712dc66245">ToAutoDiffXd</a> () const</td></tr>
+<tr class="memdesc:a6fb330d5f15f3831a5fd8f712dc66245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a deep copy of this state using the AutoDiffXd scalar with all scalar values initialized from the current values.  <a href="#a6fb330d5f15f3831a5fd8f712dc66245">More...</a><br /></td></tr>
+<tr class="separator:a6fb330d5f15f3831a5fd8f712dc66245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -772,14 +775,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a0a24d33e8aaf8d925665a962e9cda20a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a24d33e8aaf8d925665a962e9cda20a">&#9670;&nbsp;</a></span>ComputeContactSurfaces()</h2>
+<a id="ab15e2fff4faa847eb6a7ba82e1d4f035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15e2fff4faa847eb6a7ba82e1d4f035">&#9670;&nbsp;</a></span>ComputeContactSurfaces()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt;T&gt; &gt; ComputeContactSurfaces </td>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt;T1&gt;::is_bool, std::vector&lt;<a class="el" href="classdrake_1_1geometry_1_1_contact_surface.html">ContactSurface</a>&lt;T&gt; &gt; &gt; ComputeContactSurfaces </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a>&#160;</td>
           <td class="paramname"><em>representation</em></td><td>)</td>
@@ -788,18 +791,18 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a0a24d33e8aaf8d925665a962e9cda20a" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>. </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ab15e2fff4faa847eb6a7ba82e1d4f035" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface for ...">QueryObject::ComputeContactSurfaces()</a>. </p>
 
 </div>
 </div>
-<a id="ae024d5918f2291c1c67cddd3be2921c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae024d5918f2291c1c67cddd3be2921c3">&#9670;&nbsp;</a></span>ComputeContactSurfacesWithFallback()</h2>
+<a id="a9c5e3da8410ee9aa2ae555912d9c98e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5e3da8410ee9aa2ae555912d9c98e6">&#9670;&nbsp;</a></span>ComputeContactSurfacesWithFallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ComputeContactSurfacesWithFallback </td>
+          <td class="memname">std::enable_if_t&lt;<a class="el" href="structdrake_1_1scalar__predicate.html">scalar_predicate</a>&lt;T1&gt;::is_bool, void&gt; ComputeContactSurfacesWithFallback </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a227f80cb57c9c87f6ecc4e839e364979">HydroelasticContactRepresentation</a>&#160;</td>
           <td class="paramname"><em>representation</em>, </td>
@@ -824,7 +827,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#ae024d5918f2291c1c67cddd3be2921c3" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface wher...">QueryObject::ComputeContactSurfacesWithFallback()</a>. </p>
+<p>Implementation of <a class="el" href="classdrake_1_1geometry_1_1_query_object.html#a9c5e3da8410ee9aa2ae555912d9c98e6" title="Reports pairwise intersections and characterizes each non-empty intersection as a ContactSurface wher...">QueryObject::ComputeContactSurfacesWithFallback()</a>. </p>
 
 </div>
 </div>
@@ -2465,14 +2468,14 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aef8bd10a70a30fc4fd3150b9b332696e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef8bd10a70a30fc4fd3150b9b332696e">&#9670;&nbsp;</a></span>ToAutoDiffXd()</h2>
+<a id="a6fb330d5f15f3831a5fd8f712dc66245"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb330d5f15f3831a5fd8f712dc66245">&#9670;&nbsp;</a></span>ToAutoDiffXd()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt; &gt; ToAutoDiffXd </td>
+          <td class="memname">std::enable_if_t&lt;!std::is_same_v&lt;T1, <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">symbolic::Expression</a>&gt;, std::unique_ptr&lt;<a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a>&lt;<a class="el" href="namespacedrake.html#a35725b277b02aeb79f24fd7f724e6dbc">AutoDiffXd</a>&gt; &gt; &gt; ToAutoDiffXd </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

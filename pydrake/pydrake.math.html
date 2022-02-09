@@ -2028,37 +2028,19 @@ sqrt condition number.</p>
 <dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">IsIdentityToEpsilon().</p>
+<p class="last">IsNearlyIdentity().</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsIdentityToEpsilon">
 <code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
-RigidTransform.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsIdentityToInternalTolerance() and if the
-position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
-<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
-<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
-is to multiply a characteristic length (e.g., the magnitude of a
-characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+<dt>Deprecated:</dt>
+<dd>Use RigidTransform::IsNearlyIdentity() This will be removed from
+Drake on or after 2022-06-01.</dd>
 </dl>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">IsExactlyIdentity().</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -2087,6 +2069,35 @@ RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
 <p class="last">Consider scaling tolerance with the largest of magA and magB,
 where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
 vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsNearlyIdentity">
+<code class="descname">IsNearlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsNearlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
 </div>
 </dd></dl>
 
@@ -2693,37 +2704,19 @@ sqrt condition number.</p>
 <dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">IsIdentityToEpsilon().</p>
+<p class="last">IsNearlyIdentity().</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsIdentityToEpsilon">
 <code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
-RigidTransform.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsIdentityToInternalTolerance() and if the
-position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
-<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
-<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
-is to multiply a characteristic length (e.g., the magnitude of a
-characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+<dt>Deprecated:</dt>
+<dd>Use RigidTransform::IsNearlyIdentity() This will be removed from
+Drake on or after 2022-06-01.</dd>
 </dl>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">IsExactlyIdentity().</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -2752,6 +2745,35 @@ RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
 <p class="last">Consider scaling tolerance with the largest of magA and magB,
 where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
 vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsNearlyIdentity">
+<code class="descname">IsNearlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsNearlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
 </div>
 </dd></dl>
 
@@ -3356,37 +3378,19 @@ sqrt condition number.</p>
 <dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">IsIdentityToEpsilon().</p>
+<p class="last">IsNearlyIdentity().</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.math.RigidTransform_[Expression].IsIdentityToEpsilon">
 <code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
-RigidTransform.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsIdentityToInternalTolerance() and if the
-position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
-<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
-<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
-is to multiply a characteristic length (e.g., the magnitude of a
-characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+<dt>Deprecated:</dt>
+<dd>Use RigidTransform::IsNearlyIdentity() This will be removed from
+Drake on or after 2022-06-01.</dd>
 </dl>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">IsExactlyIdentity().</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -3415,6 +3419,35 @@ RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
 <p class="last">Consider scaling tolerance with the largest of magA and magB,
 where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
 vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].IsNearlyIdentity">
+<code class="descname">IsNearlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].IsNearlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
 </div>
 </dd></dl>
 
@@ -4067,37 +4100,19 @@ sqrt condition number.</p>
 <dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if <code class="docutils literal"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">IsIdentityToEpsilon().</p>
+<p class="last">IsNearlyIdentity().</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.math.RigidTransform_[float].IsIdentityToEpsilon">
 <code class="descname">IsIdentityToEpsilon</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[float].IsIdentityToEpsilon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
-RigidTransform.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
-RotationMatrix::IsIdentityToInternalTolerance() and if the
-position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
-<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
-</tr>
-</tbody>
-</table>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
-<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
-is to multiply a characteristic length (e.g., the magnitude of a
-characteristic position vector) by an epsilon (e.g.,
-RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+<dt>Deprecated:</dt>
+<dd>Use RigidTransform::IsNearlyIdentity() This will be removed from
+Drake on or after 2022-06-01.</dd>
 </dl>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last">IsExactlyIdentity().</p>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -4126,6 +4141,35 @@ RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
 <p class="last">Consider scaling tolerance with the largest of magA and magB,
 where magA and magB denoted the magnitudes of <code class="docutils literal"><span class="pre">this</span></code> position
 vector and <code class="docutils literal"><span class="pre">other</span></code> position vectors, respectively.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].IsNearlyIdentity">
+<code class="descname">IsNearlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], translation_tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[float].IsNearlyIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal"><span class="pre">this</span></code> is within tolerance of the identity
+RigidTransform.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal"><span class="pre">translation_tolerance</span></code>:</dt>
+<dd>a non-negative number. One way to choose <code class="docutils literal"><span class="pre">translation_tolerance</span></code>
+is to multiply a characteristic length (e.g., the magnitude of a
+characteristic position vector) by an epsilon (e.g.,
+RotationMatrix::get_internal_tolerance_for_orthonormality()).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><code class="docutils literal"><span class="pre">True</span></code> if the RotationMatrix portion of <code class="docutils literal"><span class="pre">this</span></code> satisfies
+RotationMatrix::IsIdentityToInternalTolerance() and if the
+position vector portion of <code class="docutils literal"><span class="pre">this</span></code> is equal to zero vector within
+<code class="docutils literal"><span class="pre">translation_tolerance</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">IsExactlyIdentity().</p>
 </div>
 </dd></dl>
 
@@ -6114,13 +6158,10 @@ means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
 <li>contains a NaN or infinity or <a href="#id11"><span class="problematic" id="id12">|b_A|</span></a> &lt; 1.0E-10.</li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
 </td>
 </tr>
 </tbody>
@@ -6785,13 +6826,10 @@ means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
 <li>contains a NaN or infinity or <a href="#id13"><span class="problematic" id="id14">|b_A|</span></a> &lt; 1.0E-10.</li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
 </td>
 </tr>
 </tbody>
@@ -7454,13 +7492,10 @@ means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
 <li>contains a NaN or infinity or <a href="#id15"><span class="problematic" id="id16">|b_A|</span></a> &lt; 1.0E-10.</li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
 </td>
 </tr>
 </tbody>
@@ -8171,13 +8206,10 @@ means u_A is Bx, 1 means u_A is By, and 2 means u_A is Bz.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if b_A cannot be made into a unit vector because b_A</li>
 <li>contains a NaN or infinity or <a href="#id17"><span class="problematic" id="id18">|b_A|</span></a> &lt; 1.0E-10.</li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">RuntimeError if the underlying type is symbolic (non-numeric).</p>
 </td>
 </tr>
 </tbody>

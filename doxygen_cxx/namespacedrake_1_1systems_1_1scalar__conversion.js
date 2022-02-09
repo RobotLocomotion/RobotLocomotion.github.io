@@ -9,7 +9,6 @@ var namespacedrake_1_1systems_1_1scalar__conversion =
     [ "Traits< geometry::DrakeVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html", null ],
     [ "Traits< geometry::MeshcatPointCloudVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html", null ],
     [ "Traits< geometry::MeshcatVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html", null ],
-    [ "Traits< geometry::SceneGraph >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4.html", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_scene_graph_01_4" ],
     [ "Traits< LinearTransformDensity >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html", null ],
     [ "Traits< RandomSource >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html", null ],
     [ "Traits< sensors::BeamModel >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html", null ],

@@ -27,6 +27,7 @@ var classdrake_1_1math_1_1_rigid_transform =
     [ "IsExactlyIdentity", "classdrake_1_1math_1_1_rigid_transform.html#ac804feef1db1925cdb41771475381a17", null ],
     [ "IsIdentityToEpsilon", "classdrake_1_1math_1_1_rigid_transform.html#ae4c29dcfbeeb594af24ae82cff87f35f", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1math_1_1_rigid_transform.html#a5015553d30ad4312a6b0cbb56c4d1d4c", null ],
+    [ "IsNearlyIdentity", "classdrake_1_1math_1_1_rigid_transform.html#a3e39a200466c08cbbe985741fb3b9964", null ],
     [ "operator *", "classdrake_1_1math_1_1_rigid_transform.html#af5ba8ece1175e9cb229649a048096e79", null ],
     [ "operator *", "classdrake_1_1math_1_1_rigid_transform.html#a7408076cfba12eda75c0c354d70c6a96", null ],
     [ "operator *", "classdrake_1_1math_1_1_rigid_transform.html#aa9832cec727611df141fdd479838b3c7", null ],

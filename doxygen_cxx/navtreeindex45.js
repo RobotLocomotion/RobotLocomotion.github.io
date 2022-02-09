@@ -1,12 +1,16 @@
 var NAVTREEINDEX45 =
 {
+"namespacedrake_1_1systems_1_1test.html":[2,0,0,14,10],
+"namespacedrake_1_1systems_1_1trajectory__optimization.html":[2,0,0,14,11],
+"namespacedrake_1_1systems_1_1trajectory__optimization.html":[3,0,0,14,9],
 "namespacedrake_1_1test.html":[3,0,0,15],
-"namespacedrake_1_1trajectories.html":[3,0,0,16],
+"namespacedrake_1_1test.html":[2,0,0,15],
 "namespacedrake_1_1trajectories.html":[2,0,0,16],
-"namespacedrake_1_1yaml.html":[2,0,0,17],
+"namespacedrake_1_1trajectories.html":[3,0,0,16],
 "namespacedrake_1_1yaml.html":[3,0,0,17],
-"namespacemembers.html":[2,1,0],
+"namespacedrake_1_1yaml.html":[2,0,0,17],
 "namespacemembers.html":[2,1,0,0],
+"namespacemembers.html":[2,1,0],
 "namespacemembers_b.html":[2,1,0,1],
 "namespacemembers_c.html":[2,1,0,2],
 "namespacemembers_d.html":[2,1,0,3],
@@ -14,8 +18,8 @@ var NAVTREEINDEX45 =
 "namespacemembers_enum.html":[2,1,4],
 "namespacemembers_eval.html":[2,1,5],
 "namespacemembers_f.html":[2,1,0,5],
-"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func.html":[2,1,1],
+"namespacemembers_func.html":[2,1,1,0],
 "namespacemembers_func_b.html":[2,1,1,1],
 "namespacemembers_func_c.html":[2,1,1,2],
 "namespacemembers_func_d.html":[2,1,1,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX45 =
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,30,2],
 "proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,30,1],
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,30,0],
-"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,30,4],
-"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,30,3],
-"proximity__utilities_8h.html":[4,0,0,4,2,42],
-"pydrake__doxygen_8h.html":[4,0,0,0,0,6],
-"pydrake__pybind_8h.html":[4,0,0,0,0,7]
+"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,30,4]
 };

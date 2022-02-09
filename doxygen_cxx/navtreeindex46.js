@@ -1,5 +1,9 @@
 var NAVTREEINDEX46 =
 {
+"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,30,3],
+"proximity__utilities_8h.html":[4,0,0,4,2,42],
+"pydrake__doxygen_8h.html":[4,0,0,0,0,6],
+"pydrake__pybind_8h.html":[4,0,0,0,0,7],
 "pydrake__pybind_8h.html#a14724461c57557eb0646af0081b97ef2":[4,0,0,0,0,7,7],
 "pydrake__pybind_8h.html#a3001fa4c52ff2d0f13a58523f67be8e0":[4,0,0,0,0,7,9],
 "pydrake__pybind_8h.html#a4937c776ae795edfe27824821a0d14a5":[4,0,0,0,0,7,4],
@@ -173,6 +177,7 @@ var NAVTREEINDEX46 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
+"schur__complement_8h.html":[4,0,0,8,3,9],
 "scope__exit_8h.html":[4,0,0,1,46],
 "scoped__names_8h.html":[4,0,0,8,9,14],
 "scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,14,5],
@@ -202,7 +207,7 @@ var NAVTREEINDEX46 =
 "shape__to__string_8h.html":[4,0,0,4,37],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,9],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,10],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -244,10 +249,5 @@ var NAVTREEINDEX46 =
 "solve_8h.html":[4,0,0,10,48],
 "solve_8h.html#a07bf1722e3e347d7878ae44be98b4b92":[4,0,0,10,48,0],
 "solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,10,48,2],
-"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,48,1],
-"solver__base_8h.html":[4,0,0,10,49],
-"solver__id_8h.html":[4,0,0,10,50],
-"solver__id_8h.html#a710dbb02b7a2ce05760b1534cd7b32d9":[4,0,0,10,50,3],
-"solver__id_8h.html#a8463238715a273b4709959e9bf23b9af":[4,0,0,10,50,5],
-"solver__id_8h.html#af22da0124afc42f58ae6e42e1a97b724":[4,0,0,10,50,4]
+"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,48,1]
 };

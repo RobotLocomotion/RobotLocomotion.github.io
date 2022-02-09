@@ -9,5 +9,6 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "linear_simplex_element.h", "linear__simplex__element_8h.html", null ],
     [ "matrix_utilities.h", "matrix__utilities_8h.html", null ],
     [ "quadrature.h", "quadrature_8h.html", null ],
+    [ "schur_complement.h", "schur__complement_8h.html", null ],
     [ "simplex_gaussian_quadrature.h", "simplex__gaussian__quadrature_8h.html", null ]
 ];
