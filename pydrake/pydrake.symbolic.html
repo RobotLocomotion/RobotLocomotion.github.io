@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="next" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="prev" title="pydrake.solvers.snopt" href="pydrake.solvers.snopt.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems" href="pydrake.systems.html" />
+    <link rel="prev" title="pydrake.solvers.snopt" href="pydrake.solvers.snopt.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -122,7 +116,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -130,9 +124,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -238,30 +233,30 @@
 <dl class="function">
 <dt id="pydrake.symbolic.DecomposeAffineExpression">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">DecomposeAffineExpression</code><span class="sig-paren">(</span><em>e: pydrake.symbolic.Expression, map_var_to_index: Dict[int, int]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[1, n]], float]<a class="headerlink" href="#pydrake.symbolic.DecomposeAffineExpression" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decomposes an affine combination <code class="docutils literal"><span class="pre">e</span></code> = c0 + c1 * v1 + … cn * vn
+<dd><p>Decomposes an affine combination <code class="docutils literal notranslate"><span class="pre">e</span></code> = c0 + c1 * v1 + … cn * vn
 into the following:</p>
 <p>constant term : c0 coefficient vector : [c1, …, cn] variable vector
 : [v1, …, vn]</p>
 <p>Then, it extracts the coefficient and the constant term. A map from
-variable ID to int, <code class="docutils literal"><span class="pre">map_var_to_index</span></code>, is used to decide a
+variable ID to int, <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>, is used to decide a
 variable’s index in a linear combination.</p>
 <p>Precondition:
-1. <code class="docutils literal"><span class="pre">coeffs</span></code> is a row vector of double, whose length matches with the size of
-<code class="docutils literal"><span class="pre">map_var_to_index</span></code>.
+1. <code class="docutils literal notranslate"><span class="pre">coeffs</span></code> is a row vector of double, whose length matches with the size of
+<code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>.
 2. e.is_polynomial() is true.
 3. e is an affine expression.</p>
 <blockquote>
-<div>$Template parameter <code class="docutils literal"><span class="pre">Derived</span></code>:</div></blockquote>
+<div>$Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</div></blockquote>
 <p>An Eigen row vector type with Derived::Scalar == double.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">e</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
 <dd>The symbolic affine expression</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">map_var_to_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>:</dt>
 <dd>A mapping from variable ID to variable index, such that
 map_var_to_index[vi.get_ID()] = i.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">coeffs</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">coeffs</span></code>:</dt>
 <dd>A row vector. coeffs(i) = ci.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">constant_term</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constant_term</span></code>:</dt>
 <dd>c0 in the equation above.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -282,12 +277,12 @@ has 1 variable, 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable.</td>
 <ol class="arabic simple">
 <li>DecomposeAffineExpressions(expressions: numpy.ndarray[object[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, 1]]]</li>
 </ol>
-<p>Decomposes <code class="docutils literal"><span class="pre">expressions</span></code> into <code class="docutils literal"><span class="pre">M</span></code> * <code class="docutils literal"><span class="pre">vars</span></code> + <code class="docutils literal"><span class="pre">v</span></code>.</p>
+<p>Decomposes <code class="docutils literal notranslate"><span class="pre">expressions</span></code> into <code class="docutils literal notranslate"><span class="pre">M</span></code> * <code class="docutils literal notranslate"><span class="pre">vars</span></code> + <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">expressions</span></code> is not affine in <code class="docutils literal"><span class="pre">vars</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">expressions</span></code> is not affine in <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -300,16 +295,16 @@ has 1 variable, 2 * x(0) + 3 * x(1) - 2 * x(0) has 1 variable.</td>
 <ol class="arabic simple" start="2">
 <li>DecomposeAffineExpressions(v: numpy.ndarray[object[m, 1]]) -&gt; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[object[m, 1]]]</li>
 </ol>
-<p>Given a vector of affine expressions v, decompose it to <span class="math">\(v = A
+<p>Given a vector of affine expressions v, decompose it to <span class="math notranslate nohighlight">\(v = A
 vars + b\)</span></p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">v</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v</span></code>:</dt>
 <dd>A vector of affine expressions</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
 <dd>The matrix containing the linear coefficients.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">b</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
 <dd>The vector containing all the constant terms.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">vars</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt>
 <dd>All variables.</dd>
 </dl>
 </dd></dl>
@@ -317,12 +312,12 @@ vars + b\)</span></p>
 <dl class="function">
 <dt id="pydrake.symbolic.DecomposeLinearExpressions">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">DecomposeLinearExpressions</code><span class="sig-paren">(</span><em>expressions: numpy.ndarray[object[m, 1]], vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.symbolic.DecomposeLinearExpressions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decomposes <code class="docutils literal"><span class="pre">expressions</span></code> into <code class="docutils literal"><span class="pre">M</span></code> * <code class="docutils literal"><span class="pre">vars</span></code>.</p>
+<dd><p>Decomposes <code class="docutils literal notranslate"><span class="pre">expressions</span></code> into <code class="docutils literal notranslate"><span class="pre">M</span></code> * <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">expressions</span></code> is not linear in <code class="docutils literal"><span class="pre">vars</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">expressions</span></code> is not linear in <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -335,12 +330,12 @@ vars + b\)</span></p>
 <dl class="function">
 <dt id="pydrake.symbolic.DecomposeLumpedParameters">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">DecomposeLumpedParameters</code><span class="sig-paren">(</span><em>f: numpy.ndarray[object[m, 1]], parameters: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[m, n]], numpy.ndarray[object[m, 1]], numpy.ndarray[object[m, 1]]]<a class="headerlink" href="#pydrake.symbolic.DecomposeLumpedParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a vector of Expressions <code class="docutils literal"><span class="pre">f</span></code> and a list of <code class="docutils literal"><span class="pre">parameters</span></code> we
-define all additional variables in <code class="docutils literal"><span class="pre">f</span></code> to be a vector of
+<dd><p>Given a vector of Expressions <code class="docutils literal notranslate"><span class="pre">f</span></code> and a list of <code class="docutils literal notranslate"><span class="pre">parameters</span></code> we
+define all additional variables in <code class="docutils literal notranslate"><span class="pre">f</span></code> to be a vector of
 “non-parameter variables”, n. This method returns a factorization of
-<code class="docutils literal"><span class="pre">f</span></code> into an equivalent “data matrix”, W, which depends only on the
+<code class="docutils literal notranslate"><span class="pre">f</span></code> into an equivalent “data matrix”, W, which depends only on the
 non-parameter variables, and a “lumped parameter vector”, α, which
-depends only on <code class="docutils literal"><span class="pre">parameters:</span></code> f = W(n)*α(parameters) + w0(n).</p>
+depends only on <code class="docutils literal notranslate"><span class="pre">parameters:</span></code> f = W(n)*α(parameters) + w0(n).</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The current implementation makes some simple attempts to minimize
@@ -354,8 +349,8 @@ involves the complexity of comparing two arbitrary Expressions
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">f</span></code> is not decomposable in this way (cells</li>
-<li>containing <code class="docutils literal"><span class="pre">parameters</span></code> may only be added or multiplied with</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">f</span></code> is not decomposable in this way (cells</li>
+<li>containing <code class="docutils literal notranslate"><span class="pre">parameters</span></code> may only be added or multiplied with</li>
 <li>cells containing non-parameter variables).</li>
 </ul>
 </td>
@@ -370,24 +365,24 @@ involves the complexity of comparing two arbitrary Expressions
 <dl class="function">
 <dt id="pydrake.symbolic.DecomposeQuadraticPolynomial">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">DecomposeQuadraticPolynomial</code><span class="sig-paren">(</span><em>poly: pydrake.symbolic.Polynomial, map_var_to_index: Dict[int, int]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, 1]], float]<a class="headerlink" href="#pydrake.symbolic.DecomposeQuadraticPolynomial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given a quadratic polynomial <code class="docutils literal"><span class="pre">poly</span></code>, decomposes it into the form 0.5
+<dd><p>Given a quadratic polynomial <code class="docutils literal notranslate"><span class="pre">poly</span></code>, decomposes it into the form 0.5
 * x’ Q * x + b’ * x + c</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">poly</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">poly</span></code>:</dt>
 <dd>Quadratic polynomial to decompose.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">map_var_to_index</span></code>:</dt>
-<dd>maps variables in <code class="docutils literal"><span class="pre">poly.GetVariables()</span></code> to the index in the
-vector <code class="docutils literal"><span class="pre">x</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">map_var_to_index</span></code>:</dt>
+<dd>maps variables in <code class="docutils literal notranslate"><span class="pre">poly.GetVariables()</span></code> to the index in the
+vector <code class="docutils literal notranslate"><span class="pre">x</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt>
 <dd>[out] The Hessian of the quadratic expression.</dd>
 <dt>Precondition:</dt>
-<dd>The size of Q should be <code class="docutils literal"><span class="pre">num_variables</span> <span class="pre">x</span> <span class="pre">num_variables</span></code>. Q is a
+<dd>The size of Q should be <code class="docutils literal notranslate"><span class="pre">num_variables</span> <span class="pre">x</span> <span class="pre">num_variables</span></code>. Q is a
 symmetric matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">b</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">b</span></code>:</dt>
 <dd>[out] The linear term of the quadratic expression.</dd>
 <dt>Precondition:</dt>
-<dd>The size of <code class="docutils literal"><span class="pre">b</span></code> should be <code class="docutils literal"><span class="pre">num_variables</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">c</span></code>:</dt>
+<dd>The size of <code class="docutils literal notranslate"><span class="pre">b</span></code> should be <code class="docutils literal notranslate"><span class="pre">num_variables</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">c</span></code>:</dt>
 <dd>[out] The constant term of the quadratic expression.</dd>
 </dl>
 </dd></dl>
@@ -399,24 +394,24 @@ symmetric matrix.</dd>
 <ol class="arabic simple">
 <li>Evaluate(m: numpy.ndarray[object[m, n]], env: Dict[pydrake.symbolic.Variable, float] = {}, generator: pydrake.common._module_py.RandomGenerator = None) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
 </ol>
-<p>Evaluates a symbolic matrix <code class="docutils literal"><span class="pre">m</span></code> using <code class="docutils literal"><span class="pre">env</span></code> and
-<code class="docutils literal"><span class="pre">random_generator</span></code>.</p>
-<p>If there is a random variable in <code class="docutils literal"><span class="pre">m</span></code> which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>,
-this function uses <code class="docutils literal"><span class="pre">random_generator</span></code> to sample a value and use the
-value to substitute all occurrences of the random variable in <code class="docutils literal"><span class="pre">m</span></code>.</p>
+<p>Evaluates a symbolic matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> using <code class="docutils literal notranslate"><span class="pre">env</span></code> and
+<code class="docutils literal notranslate"><span class="pre">random_generator</span></code>.</p>
+<p>If there is a random variable in <code class="docutils literal notranslate"><span class="pre">m</span></code> which is unassigned in <code class="docutils literal notranslate"><span class="pre">env</span></code>,
+this function uses <code class="docutils literal notranslate"><span class="pre">random_generator</span></code> to sample a value and use the
+value to substitute all occurrences of the random variable in <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a matrix of double whose size is the size of <code class="docutils literal"><span class="pre">m</span></code>.</p>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a matrix of double whose size is the size of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first">RuntimeError if NaN is detected during evaluation.</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">m</span></code> includes unassigned random variables but</li>
-<li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">m</span></code> includes unassigned random variables but</li>
+<li><code class="docutils literal notranslate"><span class="pre">random_generator</span></code> is <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -425,12 +420,12 @@ value to substitute all occurrences of the random variable in <code class="docut
 <ol class="arabic simple" start="2">
 <li>Evaluate(m: numpy.ndarray[object[m, n]], env: Dict[pydrake.symbolic.Variable, float]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
 </ol>
-<p>Evaluates a matrix <code class="docutils literal"><span class="pre">m</span></code> of symbolic polynomials using <code class="docutils literal"><span class="pre">env</span></code>.</p>
+<p>Evaluates a matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> of symbolic polynomials using <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a matrix of double whose size is the size of <code class="docutils literal"><span class="pre">m</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a matrix of double whose size is the size of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if NaN is detected during evaluation.</td>
 </tr>
@@ -447,13 +442,13 @@ its total degree is even. So xy is an even degree monomial (degree 2)
 while x²y is not (degree 3). Note that graded reverse lexicographic
 order uses the total order among Variable which is based on a
 variable’s unique ID. For example, for a given variable ordering x &gt; y
-&gt; z, <code class="docutils literal"><span class="pre">EvenDegreeMonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">2)</span></code> returns a column vector
-<code class="docutils literal"><span class="pre">[x²,</span> <span class="pre">xy,</span> <span class="pre">y²,</span> <span class="pre">xz,</span> <span class="pre">yz,</span> <span class="pre">z²,</span> <span class="pre">1]</span></code>.</p>
+&gt; z, <code class="docutils literal notranslate"><span class="pre">EvenDegreeMonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">2)</span></code> returns a column vector
+<code class="docutils literal notranslate"><span class="pre">[x²,</span> <span class="pre">xy,</span> <span class="pre">y²,</span> <span class="pre">xz,</span> <span class="pre">yz,</span> <span class="pre">z²,</span> <span class="pre">1]</span></code>.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">vars</span></code> is a non-empty set.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">vars</span></code> is a non-empty set.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">degree</span></code> is a non-negative integer.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">degree</span></code> is a non-negative integer.</dd>
 </dl>
 </dd></dl>
 
@@ -467,7 +462,7 @@ variable’s unique ID. For example, for a given variable ordering x &gt; y
 <em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">Expression</code><a class="headerlink" href="#pydrake.symbolic.Expression" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a symbolic form of an expression.</p>
 <p>Its syntax tree is as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="p">:</span><span class="o">=</span> <span class="n">Var</span> <span class="o">|</span> <span class="n">Constant</span> <span class="o">|</span> <span class="n">E</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="n">E</span> <span class="o">|</span> <span class="n">E</span> <span class="o">*</span> <span class="o">...</span> <span class="o">*</span> <span class="n">E</span> <span class="o">|</span> <span class="n">E</span> <span class="o">/</span> <span class="n">E</span> <span class="o">|</span> <span class="n">log</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="p">:</span><span class="o">=</span> <span class="n">Var</span> <span class="o">|</span> <span class="n">Constant</span> <span class="o">|</span> <span class="n">E</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="n">E</span> <span class="o">|</span> <span class="n">E</span> <span class="o">*</span> <span class="o">...</span> <span class="o">*</span> <span class="n">E</span> <span class="o">|</span> <span class="n">E</span> <span class="o">/</span> <span class="n">E</span> <span class="o">|</span> <span class="n">log</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
 <span class="o">|</span> <span class="nb">abs</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">exp</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="nb">pow</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">sin</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">cos</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">tan</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
 <span class="o">|</span> <span class="n">asin</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">acos</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">atan</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">atan2</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">sinh</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">cosh</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">tanh</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
 <span class="o">|</span> <span class="nb">min</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="nb">max</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">ceil</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">floor</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">|</span> <span class="n">if_then_else</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">E</span><span class="p">)</span>
@@ -493,7 +488,7 @@ sub-expressions.</p>
 <p class="last">A subtraction E1 - E2 is represented as E1 + (-1 * E2) internally.</p>
 </div>
 <p>The following simple simplifications are implemented:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">+</span> <span class="mi">0</span>             <span class="o">-&gt;</span>  <span class="n">E</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">+</span> <span class="mi">0</span>             <span class="o">-&gt;</span>  <span class="n">E</span>
 <span class="mi">0</span> <span class="o">+</span> <span class="n">E</span>             <span class="o">-&gt;</span>  <span class="n">E</span>
 <span class="n">E</span> <span class="o">-</span> <span class="mi">0</span>             <span class="o">-&gt;</span>  <span class="n">E</span>
 <span class="n">E</span> <span class="o">-</span> <span class="n">E</span>             <span class="o">-&gt;</span>  <span class="mi">0</span>
@@ -511,7 +506,7 @@ sub-expressions.</p>
 </pre></div>
 </div>
 <p>Constant folding is implemented:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">E</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span> <span class="o">+</span> <span class="n">E</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>  <span class="o">-&gt;</span>  <span class="n">E</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span><span class="p">)</span>    <span class="o">//</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="n">are</span> <span class="n">constants</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">E</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span> <span class="o">+</span> <span class="n">E</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>  <span class="o">-&gt;</span>  <span class="n">E</span><span class="p">(</span><span class="n">c1</span> <span class="o">+</span> <span class="n">c2</span><span class="p">)</span>    <span class="o">//</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span> <span class="n">are</span> <span class="n">constants</span>
 <span class="n">E</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span> <span class="o">-</span> <span class="n">E</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>  <span class="o">-&gt;</span>  <span class="n">E</span><span class="p">(</span><span class="n">c1</span> <span class="o">-</span> <span class="n">c2</span><span class="p">)</span>
 <span class="n">E</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span> <span class="o">*</span> <span class="n">E</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>  <span class="o">-&gt;</span>  <span class="n">E</span><span class="p">(</span><span class="n">c1</span> <span class="o">*</span> <span class="n">c2</span><span class="p">)</span>
 <span class="n">E</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span> <span class="o">/</span> <span class="n">E</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>  <span class="o">-&gt;</span>  <span class="n">E</span><span class="p">(</span><span class="n">c1</span> <span class="o">/</span> <span class="n">c2</span><span class="p">)</span>
@@ -533,11 +528,11 @@ We allow the user to form ExpressionNaN cells in a symbolic tree. For
 example, the user can initialize an Expression to NaN and then
 overwrite it later. However, evaluating a tree that has NaN in its
 evaluated sub-trees is an error (see rule (3) below). 2. It’s still
-valid for code to check <code class="docutils literal"><span class="pre">isnan</span></code> in order to fail-fast. So we provide
+valid for code to check <code class="docutils literal notranslate"><span class="pre">isnan</span></code> in order to fail-fast. So we provide
 isnan(const Expression&amp;) for the common case of non-NaN value
 returning False. This way, code can fail-fast with double yet still
 compile with Expression. 3. If there are expressions that embed
-separate cases (<code class="docutils literal"><span class="pre">if_then_else</span></code>), some of the sub-expressions may be
+separate cases (<code class="docutils literal notranslate"><span class="pre">if_then_else</span></code>), some of the sub-expressions may be
 not used in evaluation when they are in the not-taken case (for NaN
 reasons or any other reason). Bad values within those not-taken
 branches does not cause exceptions. 4. The isnan check is different
@@ -561,10 +556,10 @@ computation (other than dead code) is an error.</p>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.symbolic.Expression, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
-<p>Constructs an expression from <code class="docutils literal"><span class="pre">var</span></code>.</p>
+<p>Constructs an expression from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">var</span></code> is neither a dummy nor a BOOLEAN variable.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">var</span></code> is neither a dummy nor a BOOLEAN variable.</dd>
 </dl>
 </dd></dl>
 
@@ -632,7 +627,7 @@ computation (other than dead code) is an error.</p>
 <dt id="pydrake.symbolic.Expression.Differentiate">
 <code class="descname">Differentiate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em>, <em>x: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.Differentiate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Differentiates this symbolic expression with respect to the variable
-<code class="docutils literal"><span class="pre">var</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -676,8 +671,8 @@ so, you check the following:</p>
 </ol>
 <p>Evaluates using a given environment (by default, an empty environment)
 and a random number generator. If there is a random variable in this
-expression which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>, this method uses
-<code class="docutils literal"><span class="pre">random_generator</span></code> to sample a value and use the value to substitute
+expression which is unassigned in <code class="docutils literal notranslate"><span class="pre">env</span></code>, this method uses
+<code class="docutils literal notranslate"><span class="pre">random_generator</span></code> to sample a value and use the value to substitute
 all occurrences of the variable in this expression.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -685,13 +680,13 @@ all occurrences of the variable in this expression.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError if there exists a non-random variable in this</li>
-<li>expression whose assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+<li>expression whose assignment is not provided by <code class="docutils literal notranslate"><span class="pre">env</span></code>.</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
 <li>RuntimeError if an unassigned random variable is detected while</li>
-<li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">random_generator</span></code> is <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -704,7 +699,7 @@ all occurrences of the variable in this expression.</p>
 <li>Evaluate(self: pydrake.symbolic.Expression, generator: pydrake.common._module_py.RandomGenerator) -&gt; float</li>
 </ol>
 <p>Evaluates using an empty environment and a random number generator. It
-uses <code class="docutils literal"><span class="pre">random_generator</span></code> to sample values for the random variables in
+uses <code class="docutils literal notranslate"><span class="pre">random_generator</span></code> to sample values for the random variables in
 this expression.</p>
 <p>See the above overload for the exceptions that it might throw.</p>
 </dd></dl>
@@ -712,8 +707,8 @@ this expression.</p>
 <dl class="method">
 <dt id="pydrake.symbolic.Expression.EvaluatePartial">
 <code class="descname">EvaluatePartial</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.EvaluatePartial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Partially evaluates this expression using an environment <code class="docutils literal"><span class="pre">env</span></code>.
-Internally, this method promotes <code class="docutils literal"><span class="pre">env</span></code> into a substitution (Variable
+<dd><p>Partially evaluates this expression using an environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.
+Internally, this method promotes <code class="docutils literal notranslate"><span class="pre">env</span></code> into a substitution (Variable
 → Expression) and call Evaluate::Substitute with it.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -734,10 +729,10 @@ Internally, this method promotes <code class="docutils literal"><span class="pre
 <dt id="pydrake.symbolic.Expression.Expand">
 <code class="descname">Expand</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.Expression.Expand" title="Permalink to this definition">¶</a></dt>
 <dd><p>Expands out products and positive integer powers in expression. For
-example, <code class="docutils literal"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">-</span> <span class="pre">1)</span></code> is expanded to <code class="docutils literal"><span class="pre">x^2</span> <span class="pre">-</span> <span class="pre">1</span></code> and <code class="docutils literal"><span class="pre">(x</span> <span class="pre">+</span>
-<span class="pre">y)^2</span></code> is expanded to <code class="docutils literal"><span class="pre">x^2</span> <span class="pre">+</span> <span class="pre">2xy</span> <span class="pre">+</span> <span class="pre">y^2</span></code>. Note that Expand applies
-recursively to sub-expressions. For instance, <code class="docutils literal"><span class="pre">sin(2</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">+</span> <span class="pre">y))</span></code> is
-expanded to <code class="docutils literal"><span class="pre">sin(2x</span> <span class="pre">+</span> <span class="pre">2y)</span></code>. It also simplifies “division by
+example, <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">-</span> <span class="pre">1)</span></code> is expanded to <code class="docutils literal notranslate"><span class="pre">x^2</span> <span class="pre">-</span> <span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">+</span>
+<span class="pre">y)^2</span></code> is expanded to <code class="docutils literal notranslate"><span class="pre">x^2</span> <span class="pre">+</span> <span class="pre">2xy</span> <span class="pre">+</span> <span class="pre">y^2</span></code>. Note that Expand applies
+recursively to sub-expressions. For instance, <code class="docutils literal notranslate"><span class="pre">sin(2</span> <span class="pre">*</span> <span class="pre">(x</span> <span class="pre">+</span> <span class="pre">y))</span></code> is
+expanded to <code class="docutils literal notranslate"><span class="pre">sin(2x</span> <span class="pre">+</span> <span class="pre">2y)</span></code>. It also simplifies “division by
 constant” cases. See “drake/common/test/symbolic_expansion_test.cc” to
 find the examples.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -782,9 +777,9 @@ find the examples.</p>
 <dl class="method">
 <dt id="pydrake.symbolic.Expression.Jacobian">
 <code class="descname">Jacobian</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Expression, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, n]]<a class="headerlink" href="#pydrake.symbolic.Expression.Jacobian" title="Permalink to this definition">¶</a></dt>
-<dd><p>Let <code class="docutils literal"><span class="pre">f</span></code> be this Expression, computes a row vector of derivatives,
-<code class="docutils literal"><span class="pre">[∂f/∂vars(0),</span> <span class="pre">...</span> <span class="pre">,</span> <span class="pre">∂f/∂vars(n-1)]</span></code> with respect to the variables
-<code class="docutils literal"><span class="pre">vars</span></code>.</p>
+<dd><p>Let <code class="docutils literal notranslate"><span class="pre">f</span></code> be this Expression, computes a row vector of derivatives,
+<code class="docutils literal notranslate"><span class="pre">[∂f/∂vars(0),</span> <span class="pre">...</span> <span class="pre">,</span> <span class="pre">∂f/∂vars(n-1)]</span></code> with respect to the variables
+<code class="docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -829,8 +824,8 @@ find the examples.</p>
 <ol class="arabic simple">
 <li>Substitute(self: pydrake.symbolic.Expression, var: pydrake.symbolic.Variable, e: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Expression</li>
 </ol>
-<p>Returns a copy of this expression replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
-with <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<p>Returns a copy of this expression replacing all occurrences of <code class="docutils literal notranslate"><span class="pre">var</span></code>
+with <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -843,7 +838,7 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 <li>Substitute(self: pydrake.symbolic.Expression, s: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; pydrake.symbolic.Expression</li>
 </ol>
 <p>Returns a copy of this expression replacing all occurrences of the
-variables in <code class="docutils literal"><span class="pre">s</span></code> with corresponding expressions in <code class="docutils literal"><span class="pre">s</span></code>. Note that
+variables in <code class="docutils literal notranslate"><span class="pre">s</span></code> with corresponding expressions in <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note that
 the substitutions occur simultaneously. For example, (x /
 y).Substitute({{x, y}, {y, x}}) gets (y / x).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1076,12 +1071,12 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 <dl class="function">
 <dt id="pydrake.symbolic.ExtractVariablesFromExpression">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">ExtractVariablesFromExpression</code><span class="sig-paren">(</span><em>e: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[m, 1]], Dict[int, int]]<a class="headerlink" href="#pydrake.symbolic.ExtractVariablesFromExpression" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given an expression <code class="docutils literal"><span class="pre">e</span></code>, extracts all variables inside <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<dd><p>Given an expression <code class="docutils literal notranslate"><span class="pre">e</span></code>, extracts all variables inside <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">e</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
 <dd>A symbolic expression.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">pair</span></code>:</dt>
-<dd>pair.first is the variables in <code class="docutils literal"><span class="pre">e</span></code>. pair.second is the mapping
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">pair</span></code>:</dt>
+<dd>pair.first is the variables in <code class="docutils literal notranslate"><span class="pre">e</span></code>. pair.second is the mapping
 from the variable ID to the index in pair.first, such that
 pair.second[pair.first(i).get_id()] = i</dd>
 </dl>
@@ -1095,7 +1090,7 @@ pair.second[pair.first(i).get_id()] = i</dd>
 <dl class="function">
 <dt id="pydrake.symbolic.forall">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">forall</code><span class="sig-paren">(</span><em>vars: pydrake.symbolic.Variables</em>, <em>f: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.symbolic.forall" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a formula <code class="docutils literal"><span class="pre">f</span></code>, universally quantified by variables <code class="docutils literal"><span class="pre">vars</span></code>.</p>
+<dd><p>Returns a formula <code class="docutils literal notranslate"><span class="pre">f</span></code>, universally quantified by variables <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 </dd></dl>
 
 <dl class="class">
@@ -1103,7 +1098,7 @@ pair.second[pair.first(i).get_id()] = i</dd>
 <em class="property">class </em><code class="descclassname">pydrake.symbolic.</code><code class="descname">Formula</code><a class="headerlink" href="#pydrake.symbolic.Formula" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a symbolic form of a first-order logic formula.</p>
 <p>It has the following grammar:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>F := ⊥ | ⊤ | Var | E = E | E ≠ E | E &gt; E | E ≥ E | E &lt; E | E ≤ E
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>F := ⊥ | ⊤ | Var | E = E | E ≠ E | E &gt; E | E ≥ E | E &lt; E | E ≤ E
 | E ∧ ... ∧ E | E ∨ ... ∨ E | ¬F | ∀ x₁, ..., xn. F
 </pre></div>
 </div>
@@ -1117,7 +1112,7 @@ sharing sub-expressions.</p>
 <p class="last">The sharing of sub-expressions is not yet implemented.</p>
 </div>
 <p>The following simple simplifications are implemented:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>E1 = E2        -&gt;  True    (if E1 and E2 are structurally equal)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>E1 = E2        -&gt;  True    (if E1 and E2 are structurally equal)
 E1 ≠ E2        -&gt;  False   (if E1 and E2 are structurally equal)
 E1 &gt; E2        -&gt;  False   (if E1 and E2 are structurally equal)
 E1 ≥ E2        -&gt;  True    (if E1 and E2 are structurally equal)
@@ -1131,8 +1126,8 @@ F1 ∨ F2        -&gt;  True    (if either F1 or F2 is True)
 <p>We flatten nested conjunctions (or disjunctions) at the construction.
 A conjunction (resp. disjunction) takes a set of conjuncts (resp.
 disjuncts). Note that any duplicated conjunct/disjunct is removed. For
-example, both of <code class="docutils literal"><span class="pre">f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">(f2</span> <span class="pre">&amp;&amp;</span> <span class="pre">f1)</span></code> and <code class="docutils literal"><span class="pre">(f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">f2)</span> <span class="pre">&amp;&amp;</span> <span class="pre">f1</span></code> are
-flattened to <code class="docutils literal"><span class="pre">f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">f2</span> <span class="pre">&amp;&amp;</span> <span class="pre">f1</span></code> and simplified into <code class="docutils literal"><span class="pre">f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">f2</span></code>. As a
+example, both of <code class="docutils literal notranslate"><span class="pre">f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">(f2</span> <span class="pre">&amp;&amp;</span> <span class="pre">f1)</span></code> and <code class="docutils literal notranslate"><span class="pre">(f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">f2)</span> <span class="pre">&amp;&amp;</span> <span class="pre">f1</span></code> are
+flattened to <code class="docutils literal notranslate"><span class="pre">f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">f2</span> <span class="pre">&amp;&amp;</span> <span class="pre">f1</span></code> and simplified into <code class="docutils literal notranslate"><span class="pre">f1</span> <span class="pre">&amp;&amp;</span> <span class="pre">f2</span></code>. As a
 result, the two are identified as the same formula.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -1140,10 +1135,10 @@ result, the two are identified as the same formula.</p>
 evaluates a symbolic formula under an empty environment. If a
 symbolic formula includes variables, the conversion operator
 throws an exception. This operator is only intended for
-third-party code doing things like <code class="docutils literal"><span class="pre">(imag(SymbolicExpression(0))</span>
+third-party code doing things like <code class="docutils literal notranslate"><span class="pre">(imag(SymbolicExpression(0))</span>
 <span class="pre">==</span> <span class="pre">SymbolicExpression(0))</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">};</span></code> that we found in Eigen3
 codebase. In general, a user of this class should explicitly call
-<code class="docutils literal"><span class="pre">Evaluate</span></code> from within Drake for readability.</p>
+<code class="docutils literal notranslate"><span class="pre">Evaluate</span></code> from within Drake for readability.</p>
 </div>
 <dl class="method">
 <dt id="pydrake.symbolic.Formula.__init__">
@@ -1156,10 +1151,10 @@ codebase. In general, a user of this class should explicitly call
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
-<p>Constructs an expression from <code class="docutils literal"><span class="pre">var</span></code>.</p>
+<p>Constructs an expression from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">var</span></code> is neither a dummy nor a BOOLEAN variable.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">var</span></code> is neither a dummy nor a BOOLEAN variable.</dd>
 </dl>
 </dd></dl>
 
@@ -1174,7 +1169,7 @@ codebase. In general, a user of this class should explicitly call
 <code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Formula</em>, <em>env: Dict[pydrake.symbolic.Variable</em>, <em>float] = {}</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Formula.Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluates using a given environment (by default, an empty environment)
 and a random number generator. If there is a random variable in this
-formula which is unassigned in <code class="docutils literal"><span class="pre">env</span></code>, it uses <code class="docutils literal"><span class="pre">random_generator</span></code>
+formula which is unassigned in <code class="docutils literal notranslate"><span class="pre">env</span></code>, it uses <code class="docutils literal notranslate"><span class="pre">random_generator</span></code>
 to sample a value and use it to substitute all occurrences of the
 random variable in this formula.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1182,14 +1177,14 @@ random variable in this formula.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first simple">
-<li>RuntimeError if a variable <code class="docutils literal"><span class="pre">v</span></code> is needed for an evaluation but</li>
-<li>not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+<li>RuntimeError if a variable <code class="docutils literal notranslate"><span class="pre">v</span></code> is needed for an evaluation but</li>
+<li>not provided by <code class="docutils literal notranslate"><span class="pre">env</span></code>.</li>
 </ul>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if an unassigned random variable is detected while</li>
-<li><code class="docutils literal"><span class="pre">random_generator</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">random_generator</span></code> is <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -1227,8 +1222,8 @@ random variable in this formula.</p>
 <ol class="arabic simple">
 <li>Substitute(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable, e: pydrake.symbolic.Expression) -&gt; pydrake.symbolic.Formula</li>
 </ol>
-<p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
-with <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal notranslate"><span class="pre">var</span></code>
+with <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1240,8 +1235,8 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 <ol class="arabic simple" start="2">
 <li>Substitute(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable, e: pydrake.symbolic.Variable) -&gt; pydrake.symbolic.Formula</li>
 </ol>
-<p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
-with <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal notranslate"><span class="pre">var</span></code>
+with <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1253,8 +1248,8 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li>Substitute(self: pydrake.symbolic.Formula, var: pydrake.symbolic.Variable, e: float) -&gt; pydrake.symbolic.Formula</li>
 </ol>
-<p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal"><span class="pre">var</span></code>
-with <code class="docutils literal"><span class="pre">e</span></code>.</p>
+<p>Returns a copy of this formula replacing all occurrences of <code class="docutils literal notranslate"><span class="pre">var</span></code>
+with <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1267,7 +1262,7 @@ with <code class="docutils literal"><span class="pre">e</span></code>.</p>
 <li>Substitute(self: pydrake.symbolic.Formula, s: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; pydrake.symbolic.Formula</li>
 </ol>
 <p>Returns a copy of this formula replacing all occurrences of the
-variables in <code class="docutils literal"><span class="pre">s</span></code> with corresponding expressions in <code class="docutils literal"><span class="pre">s</span></code>. Note that
+variables in <code class="docutils literal notranslate"><span class="pre">s</span></code> with corresponding expressions in <code class="docutils literal notranslate"><span class="pre">s</span></code>. Note that
 the substitutions occur simultaneously. For example, (x / y &gt;
 0).Substitute({{x, y}, {y, x}}) gets (y / x &gt; 0).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1437,8 +1432,8 @@ expressions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if there is an expression in <code class="docutils literal"><span class="pre">vec</span></code> which is not a</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">variable.</span></code></li>
+<li>RuntimeError if there is an expression in <code class="docutils literal notranslate"><span class="pre">vec</span></code> which is not a</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">variable.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -1450,29 +1445,29 @@ expressions.</p>
 <dt id="pydrake.symbolic.if_then_else">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">if_then_else</code><span class="sig-paren">(</span><em>f_cond: drake::symbolic::Formula</em>, <em>e_then: pydrake.symbolic.Expression</em>, <em>e_else: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.if_then_else" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs if-then-else expression.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">if_then_else</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">expr_then</span><span class="p">,</span> <span class="n">expr_else</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">if_then_else</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">expr_then</span><span class="p">,</span> <span class="n">expr_else</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The value returned by the above if-then-else expression is
-<code class="docutils literal"><span class="pre">expr_then</span></code> if <code class="docutils literal"><span class="pre">cond</span></code> is evaluated to true. Otherwise, it returns
-<code class="docutils literal"><span class="pre">expr_else</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">expr_then</span></code> if <code class="docutils literal notranslate"><span class="pre">cond</span></code> is evaluated to true. Otherwise, it returns
+<code class="docutils literal notranslate"><span class="pre">expr_else</span></code>.</p>
 <p>The semantics is similar to the C++’s conditional expression
 constructed by its ternary operator, &#64;c ?:. However, there is a key
 difference between the C++’s conditional expression and our
-<code class="docutils literal"><span class="pre">if_then_else</span></code> expression in a way the arguments are evaluated
+<code class="docutils literal notranslate"><span class="pre">if_then_else</span></code> expression in a way the arguments are evaluated
 during the construction.</p>
 <ul class="simple">
 <li>In case of the C++’s conditional expression, `` cond ? expr_then :</li>
 </ul>
-<p>expr_else``, the then expression <code class="docutils literal"><span class="pre">expr_then</span></code> (respectively, the else
-expression <code class="docutils literal"><span class="pre">expr_else)</span></code> is <strong>only</strong> evaluated when the conditional
-expression <code class="docutils literal"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal"><span class="pre">cond</span></code> is
+<p>expr_else``, the then expression <code class="docutils literal notranslate"><span class="pre">expr_then</span></code> (respectively, the else
+expression <code class="docutils literal notranslate"><span class="pre">expr_else)</span></code> is <strong>only</strong> evaluated when the conditional
+expression <code class="docutils literal notranslate"><span class="pre">cond</span></code> is evaluated to <strong>true</strong> (respectively, when <code class="docutils literal notranslate"><span class="pre">cond</span></code> is
 evaluated to <strong>false)</strong>.</p>
 <ul class="simple">
 <li>In case of the symbolic expression, <a href="#id5"><span class="problematic" id="id6">``</span></a>if_then_else(cond, expr_then,</li>
 </ul>
-<p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal"><span class="pre">expr_then</span></code> and <code class="docutils literal"><span class="pre">expr_else</span></code>
-are evaluated first and then passed to the <code class="docutils literal"><span class="pre">if_then_else</span></code> function.</p>
+<p>expr_else)``, however, <strong>both</strong> arguments <code class="docutils literal notranslate"><span class="pre">expr_then</span></code> and <code class="docutils literal notranslate"><span class="pre">expr_else</span></code>
+are evaluated first and then passed to the <code class="docutils literal notranslate"><span class="pre">if_then_else</span></code> function.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This function returns an <strong>expression</strong> and it is different from
@@ -1481,7 +1476,7 @@ the C++’s if-then-else <strong>statement</strong>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">While it is still possible to define `` min, max, abs`` math
-functions using <code class="docutils literal"><span class="pre">if_then_else</span></code> expression, it is highly
+functions using <code class="docutils literal notranslate"><span class="pre">if_then_else</span></code> expression, it is highly
 <strong>recommended</strong> to use the provided native definitions for them
 because it allows solvers to detect specific math functions and to
 have a room for special optimizations.</p>
@@ -1497,9 +1492,9 @@ ternary operator is available at
 <dl class="function">
 <dt id="pydrake.symbolic.intersect">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">intersect</code><span class="sig-paren">(</span><em>vars1: pydrake.symbolic.Variables</em>, <em>vars2: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Variables<a class="headerlink" href="#pydrake.symbolic.intersect" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the intersection of <code class="docutils literal"><span class="pre">vars1</span></code> and <code class="docutils literal"><span class="pre">vars2</span></code>.</p>
-<p>This function has a time complexity of <code class="docutils literal"><span class="pre">O(N₁</span> <span class="pre">+</span> <span class="pre">N₂)</span></code> where <code class="docutils literal"><span class="pre">N₁</span></code> and
-<code class="docutils literal"><span class="pre">N₂</span></code> are the size of <code class="docutils literal"><span class="pre">vars1</span></code> and <code class="docutils literal"><span class="pre">vars2</span></code> respectively.</p>
+<dd><p>Returns the intersection of <code class="docutils literal notranslate"><span class="pre">vars1</span></code> and <code class="docutils literal notranslate"><span class="pre">vars2</span></code>.</p>
+<p>This function has a time complexity of <code class="docutils literal notranslate"><span class="pre">O(N₁</span> <span class="pre">+</span> <span class="pre">N₂)</span></code> where <code class="docutils literal notranslate"><span class="pre">N₁</span></code> and
+<code class="docutils literal notranslate"><span class="pre">N₂</span></code> are the size of <code class="docutils literal notranslate"><span class="pre">vars1</span></code> and <code class="docutils literal notranslate"><span class="pre">vars2</span></code> respectively.</p>
 </dd></dl>
 
 <dl class="function">
@@ -1515,18 +1510,18 @@ ternary operator is available at
 <ol class="arabic simple">
 <li>IsAffine(m: numpy.ndarray[object[m, n], flags.f_contiguous], vars: pydrake.symbolic.Variables) -&gt; bool</li>
 </ol>
-<p>Checks if every element in <code class="docutils literal"><span class="pre">m</span></code> is affine in <code class="docutils literal"><span class="pre">vars</span></code>.</p>
+<p>Checks if every element in <code class="docutils literal notranslate"><span class="pre">m</span></code> is affine in <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If <code class="docutils literal"><span class="pre">m</span></code> is an empty matrix, it returns true.</p>
+<p class="last">If <code class="docutils literal notranslate"><span class="pre">m</span></code> is an empty matrix, it returns true.</p>
 </div>
 <ol class="arabic simple" start="2">
 <li>IsAffine(m: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; bool</li>
 </ol>
-<p>Checks if every element in <code class="docutils literal"><span class="pre">m</span></code> is affine.</p>
+<p>Checks if every element in <code class="docutils literal notranslate"><span class="pre">m</span></code> is affine.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If <code class="docutils literal"><span class="pre">m</span></code> is an empty matrix, it returns true.</p>
+<p class="last">If <code class="docutils literal notranslate"><span class="pre">m</span></code> is an empty matrix, it returns true.</p>
 </div>
 </dd></dl>
 
@@ -1539,7 +1534,7 @@ std::isnan(double).</p>
 <p>When this formula is evaluated, there are two possible outcomes: -
 Returns false if the e.Evaluate() is not NaN. - Throws RuntimeError if
 NaN is detected during evaluation. Note that the evaluation of
-<code class="docutils literal"><span class="pre">isnan(e)</span></code> never returns true.</p>
+<code class="docutils literal notranslate"><span class="pre">isnan(e)</span></code> never returns true.</p>
 </dd></dl>
 
 <dl class="function">
@@ -1549,27 +1544,27 @@ NaN is detected during evaluation. Note that the evaluation of
 <ol class="arabic simple">
 <li>Jacobian(f: numpy.ndarray[object[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
-<p>Computes the Jacobian matrix J of the vector function <code class="docutils literal"><span class="pre">f</span></code> with
-respect to <code class="docutils literal"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
+<p>Computes the Jacobian matrix J of the vector function <code class="docutils literal notranslate"><span class="pre">f</span></code> with
+respect to <code class="docutils literal notranslate"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
 <p>For example, Jacobian([x * cos(y), x * sin(y), x^2], {x, y}) returns
 the following 3x2 matrix:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">=</span> <span class="o">|</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>   <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">|</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">=</span> <span class="o">|</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>   <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">|</span>
    <span class="o">|</span><span class="n">sin</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>    <span class="n">x</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">|</span>
    <span class="o">|</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span>             <span class="mi">0</span><span class="o">|</span>
 </pre></div>
 </div>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>{<code class="docutils literal"><span class="pre">vars</span></code> is non-empty}.</dd>
+<dd>{<code class="docutils literal notranslate"><span class="pre">vars</span></code> is non-empty}.</dd>
 </dl>
 <ol class="arabic simple" start="2">
 <li>Jacobian(f: numpy.ndarray[object[m, 1]], vars: numpy.ndarray[object[m, 1]]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
-<p>Computes the Jacobian matrix J of the vector function <code class="docutils literal"><span class="pre">f</span></code> with
-respect to <code class="docutils literal"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
+<p>Computes the Jacobian matrix J of the vector function <code class="docutils literal notranslate"><span class="pre">f</span></code> with
+respect to <code class="docutils literal notranslate"><span class="pre">vars</span></code>. J(i,j) contains ∂f(i)/∂vars(j).</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>{<code class="docutils literal"><span class="pre">vars</span></code> is non-empty}.</dd>
+<dd>{<code class="docutils literal notranslate"><span class="pre">vars</span></code> is non-empty}.</dd>
 </dl>
 </dd></dl>
 
@@ -1598,13 +1593,13 @@ respect to <code class="docutils literal"><span class="pre">vars</span></code>. 
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">MakeMatrixBinaryVariable</code><span class="sig-paren">(</span><em>rows: int</em>, <em>cols: int</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.symbolic.MakeMatrixBinaryVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dynamically-sized Eigen matrix of symbolic binary variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The number of rows in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">cols</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt>
 <dd>The number of cols in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The (i, j)-th element will be
-named as <code class="docutils literal"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
+named as <code class="docutils literal notranslate"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1614,13 +1609,13 @@ named as <code class="docutils literal"><span class="pre">name(i,</span> <span c
 <dd><p>Creates a dynamically-sized Eigen matrix of symbolic Boolean
 variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The number of rows in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">cols</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt>
 <dd>The number of cols in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The (i, j)-th element will be
-named as <code class="docutils literal"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
+named as <code class="docutils literal notranslate"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1630,13 +1625,13 @@ named as <code class="docutils literal"><span class="pre">name(i,</span> <span c
 <dd><p>Creates a dynamically-sized Eigen matrix of symbolic continuous
 variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The number of rows in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">cols</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt>
 <dd>The number of cols in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The (i, j)-th element will be
-named as <code class="docutils literal"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
+named as <code class="docutils literal notranslate"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1645,14 +1640,14 @@ named as <code class="docutils literal"><span class="pre">name(i,</span> <span c
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">MakeMatrixVariable</code><span class="sig-paren">(</span><em>rows: int</em>, <em>cols: int</em>, <em>name: str</em>, <em>type: pydrake.symbolic.Variable.Type = &lt;Type.CONTINUOUS: 0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.symbolic.MakeMatrixVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dynamically-sized Eigen matrix of symbolic variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The number of rows in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">cols</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cols</span></code>:</dt>
 <dd>The number of cols in the new matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The (i, j)-th element will be
-named as <code class="docutils literal"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+named as <code class="docutils literal notranslate"><span class="pre">name(i,</span> <span class="pre">j)</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">type</span></code>:</dt>
 <dd>The type of variables in the matrix.</dd>
 </dl>
 </dd></dl>
@@ -1662,11 +1657,11 @@ named as <code class="docutils literal"><span class="pre">name(i,</span> <span c
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">MakeVectorBinaryVariable</code><span class="sig-paren">(</span><em>rows: int</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.symbolic.MakeVectorBinaryVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dynamically-sized Eigen vector of symbolic binary variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The size of vector.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The i-th element will be named as
-<code class="docutils literal"><span class="pre">name(i)</span></code>.</dd>
+<code class="docutils literal notranslate"><span class="pre">name(i)</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1676,11 +1671,11 @@ named as <code class="docutils literal"><span class="pre">name(i,</span> <span c
 <dd><p>Creates a dynamically-sized Eigen vector of symbolic Boolean
 variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The size of vector.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The i-th element will be named as
-<code class="docutils literal"><span class="pre">name(i)</span></code>.</dd>
+<code class="docutils literal notranslate"><span class="pre">name(i)</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1690,11 +1685,11 @@ variables.</p>
 <dd><p>Creates a dynamically-sized Eigen vector of symbolic continuous
 variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The size of vector.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The i-th element will be named as
-<code class="docutils literal"><span class="pre">name(i)</span></code>.</dd>
+<code class="docutils literal notranslate"><span class="pre">name(i)</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -1703,12 +1698,12 @@ variables.</p>
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">MakeVectorVariable</code><span class="sig-paren">(</span><em>rows: int</em>, <em>name: str</em>, <em>type: pydrake.symbolic.Variable.Type = &lt;Type.CONTINUOUS: 0&gt;</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.symbolic.MakeVectorVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a dynamically-sized Eigen vector of symbolic variables.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">rows</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">rows</span></code>:</dt>
 <dd>The size of vector.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The common prefix for variables. The i-th element will be named as
-<code class="docutils literal"><span class="pre">name(i)</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">type</span></code>:</dt>
+<code class="docutils literal notranslate"><span class="pre">name(i)</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">type</span></code>:</dt>
 <dd>The type of variables in the vector.</dd>
 </dl>
 </dd></dl>
@@ -1740,39 +1735,39 @@ coefficient part of a monomial.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.symbolic.Monomial, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
-<p>Constructs a Monomial from <code class="docutils literal"><span class="pre">var</span></code>.</p>
+<p>Constructs a Monomial from <code class="docutils literal notranslate"><span class="pre">var</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.symbolic.Monomial, var: pydrake.symbolic.Variable, exponent: int) -&gt; None</li>
 </ol>
-<p>Constructs a Monomial from <code class="docutils literal"><span class="pre">var</span></code> and <code class="docutils literal"><span class="pre">exponent</span></code>.</p>
+<p>Constructs a Monomial from <code class="docutils literal notranslate"><span class="pre">var</span></code> and <code class="docutils literal notranslate"><span class="pre">exponent</span></code>.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.symbolic.Monomial, powers: Dict[pydrake.symbolic.Variable, int]) -&gt; None</li>
 </ol>
-<p>Constructs a Monomial from <code class="docutils literal"><span class="pre">powers</span></code>.</p>
+<p>Constructs a Monomial from <code class="docutils literal notranslate"><span class="pre">powers</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">powers</span></code> includes a negative exponent.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">powers</span></code> includes a negative exponent.</td>
 </tr>
 </tbody>
 </table>
 <ol class="arabic simple" start="5">
 <li>__init__(self: pydrake.symbolic.Monomial, vars: numpy.ndarray[object[m, 1]], exponents: numpy.ndarray[numpy.int32[m, 1]]) -&gt; None</li>
 </ol>
-<p>Constructs a Monomial from a vector of variables <code class="docutils literal"><span class="pre">vars</span></code> and their
-corresponding integer exponents <code class="docutils literal"><span class="pre">exponents</span></code>. For example,
-<code class="docutils literal"><span class="pre">Monomial([x,</span> <span class="pre">y,</span> <span class="pre">z],</span> <span class="pre">[2,</span> <span class="pre">0,</span> <span class="pre">1])</span></code> constructs a Monomial <code class="docutils literal"><span class="pre">x²z</span></code>.</p>
+<p>Constructs a Monomial from a vector of variables <code class="docutils literal notranslate"><span class="pre">vars</span></code> and their
+corresponding integer exponents <code class="docutils literal notranslate"><span class="pre">exponents</span></code>. For example,
+<code class="docutils literal notranslate"><span class="pre">Monomial([x,</span> <span class="pre">y,</span> <span class="pre">z],</span> <span class="pre">[2,</span> <span class="pre">0,</span> <span class="pre">1])</span></code> constructs a Monomial <code class="docutils literal notranslate"><span class="pre">x²z</span></code>.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>The size of <code class="docutils literal"><span class="pre">vars</span></code> should be the same as the size of
-<code class="docutils literal"><span class="pre">exponents</span></code>.</dd>
+<dd>The size of <code class="docutils literal notranslate"><span class="pre">vars</span></code> should be the same as the size of
+<code class="docutils literal notranslate"><span class="pre">exponents</span></code>.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">exponents</span></code> includes a negative integer.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">exponents</span></code> includes a negative integer.</td>
 </tr>
 </tbody>
 </table>
@@ -1781,7 +1776,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.degree">
 <code class="descname">degree</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial</em>, <em>v: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Monomial.degree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the degree of this Monomial in a variable <code class="docutils literal"><span class="pre">v</span></code>.</p>
+<dd><p>Returns the degree of this Monomial in a variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1792,14 +1787,14 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.Evaluate">
 <code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Monomial.Evaluate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates under a given environment <code class="docutils literal"><span class="pre">env</span></code>.</p>
+<dd><p>Evaluates under a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if there is a variable in this monomial whose</li>
-<li>assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+<li>assignment is not provided by <code class="docutils literal notranslate"><span class="pre">env</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -1810,7 +1805,7 @@ corresponding integer exponents <code class="docutils literal"><span class="pre"
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.EvaluatePartial">
 <code class="descname">EvaluatePartial</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; Tuple[float, pydrake.symbolic.Monomial]<a class="headerlink" href="#pydrake.symbolic.Monomial.EvaluatePartial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Partially evaluates using a given environment <code class="docutils literal"><span class="pre">env</span></code>. The evaluation
+<dd><p>Partially evaluates using a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>. The evaluation
 result is of type pair&lt;double, Monomial&gt;. The first component (:
 double) represents the coefficient part while the second component
 represents the remaining parts of the Monomial which was not
@@ -1838,12 +1833,12 @@ Monomial{} = 1).</p>
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.pow_in_place">
 <code class="descname">pow_in_place</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial</em>, <em>p: int</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Monomial<a class="headerlink" href="#pydrake.symbolic.Monomial.pow_in_place" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns this monomial raised to <code class="docutils literal"><span class="pre">p</span></code>.</p>
+<dd><p>Returns this monomial raised to <code class="docutils literal notranslate"><span class="pre">p</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">p</span></code> is negative.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">p</span></code> is negative.</td>
 </tr>
 </tbody>
 </table>
@@ -1874,13 +1869,13 @@ Monomial{} = 1).</p>
 lexicographic order. Note that graded reverse lexicographic order uses
 the total order among Variable which is based on a variable’s unique
 ID. For example, for a given variable ordering x &gt; y &gt; z,
-<code class="docutils literal"><span class="pre">MonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">2)</span></code> returns a column vector <code class="docutils literal"><span class="pre">[x^2,</span> <span class="pre">xy,</span>
+<code class="docutils literal notranslate"><span class="pre">MonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">2)</span></code> returns a column vector <code class="docutils literal notranslate"><span class="pre">[x^2,</span> <span class="pre">xy,</span>
 <span class="pre">y^2,</span> <span class="pre">xz,</span> <span class="pre">yz,</span> <span class="pre">z^2,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">1]</span></code>.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">vars</span></code> is a non-empty set.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">vars</span></code> is a non-empty set.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">degree</span></code> is a non-negative integer.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">degree</span></code> is a non-negative integer.</dd>
 </dl>
 <ol class="arabic simple" start="2">
 <li>MonomialBasis(vars: pydrake.symbolic.Variables, degree: int) -&gt; numpy.ndarray[object[m, 1]]</li>
@@ -1889,13 +1884,13 @@ ID. For example, for a given variable ordering x &gt; y &gt; z,
 lexicographic order. Note that graded reverse lexicographic order uses
 the total order among Variable which is based on a variable’s unique
 ID. For example, for a given variable ordering x &gt; y &gt; z,
-<code class="docutils literal"><span class="pre">MonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">2)</span></code> returns a column vector <code class="docutils literal"><span class="pre">[x^2,</span> <span class="pre">xy,</span>
+<code class="docutils literal notranslate"><span class="pre">MonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">2)</span></code> returns a column vector <code class="docutils literal notranslate"><span class="pre">[x^2,</span> <span class="pre">xy,</span>
 <span class="pre">y^2,</span> <span class="pre">xz,</span> <span class="pre">yz,</span> <span class="pre">z^2,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">1]</span></code>.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">vars</span></code> is a non-empty set.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">vars</span></code> is a non-empty set.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">degree</span></code> is a non-negative integer.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">degree</span></code> is a non-negative integer.</dd>
 </dl>
 </dd></dl>
 
@@ -1908,13 +1903,13 @@ degree is odd. So x²y is an odd degree monomial (degree 3) while xy is
 not (degree 2). Note that graded reverse lexicographic order uses the
 total order among Variable which is based on a variable’s unique ID.
 For example, for a given variable ordering x &gt; y &gt; z,
-<code class="docutils literal"><span class="pre">OddDegreeMonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">3)</span></code> returns a column vector
-<code class="docutils literal"><span class="pre">[x³,</span> <span class="pre">x²y,</span> <span class="pre">xy²,</span> <span class="pre">y³,</span> <span class="pre">x²z,</span> <span class="pre">xyz,</span> <span class="pre">y²z,</span> <span class="pre">xz²,</span> <span class="pre">yz²,</span> <span class="pre">z³,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">OddDegreeMonomialBasis({x,</span> <span class="pre">y,</span> <span class="pre">z},</span> <span class="pre">3)</span></code> returns a column vector
+<code class="docutils literal notranslate"><span class="pre">[x³,</span> <span class="pre">x²y,</span> <span class="pre">xy²,</span> <span class="pre">y³,</span> <span class="pre">x²z,</span> <span class="pre">xyz,</span> <span class="pre">y²z,</span> <span class="pre">xz²,</span> <span class="pre">yz²,</span> <span class="pre">z³,</span> <span class="pre">x,</span> <span class="pre">y,</span> <span class="pre">z]</span></code></p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">vars</span></code> is a non-empty set.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">vars</span></code> is a non-empty set.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">degree</span></code> is a non-negative integer.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">degree</span></code> is a non-negative integer.</dd>
 </dl>
 </dd></dl>
 
@@ -1936,54 +1931,54 @@ For example, for a given variable ordering x &gt; y &gt; z,
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.symbolic.Polynomial, m: pydrake.symbolic.Monomial) -&gt; None</li>
 </ol>
-<p>Constructs a polynomial from a monomial <code class="docutils literal"><span class="pre">m</span></code>. Note that all variables
-in <code class="docutils literal"><span class="pre">m</span></code> are considered as indeterminates.</p>
+<p>Constructs a polynomial from a monomial <code class="docutils literal notranslate"><span class="pre">m</span></code>. Note that all variables
+in <code class="docutils literal notranslate"><span class="pre">m</span></code> are considered as indeterminates.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression) -&gt; None</li>
 </ol>
-<p>Constructs a polynomial from an expression <code class="docutils literal"><span class="pre">e</span></code>. Note that all
-variables in <code class="docutils literal"><span class="pre">e</span></code> are considered as indeterminates.</p>
+<p>Constructs a polynomial from an expression <code class="docutils literal notranslate"><span class="pre">e</span></code>. Note that all
+variables in <code class="docutils literal notranslate"><span class="pre">e</span></code> are considered as indeterminates.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">e</span></code> is not a polynomial.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">e</span></code> is not a polynomial.</td>
 </tr>
 </tbody>
 </table>
 <ol class="arabic simple" start="5">
 <li>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression, indeterminates: pydrake.symbolic.Variables) -&gt; None</li>
 </ol>
-<p>Constructs a polynomial from an expression <code class="docutils literal"><span class="pre">e</span></code> by decomposing it
-with respect to <code class="docutils literal"><span class="pre">indeterminates</span></code>.</p>
+<p>Constructs a polynomial from an expression <code class="docutils literal notranslate"><span class="pre">e</span></code> by decomposing it
+with respect to <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">It collects the intersection of the variables appeared in <code class="docutils literal"><span class="pre">e</span></code>
-and the provided <code class="docutils literal"><span class="pre">indeterminates</span></code>.</p>
+<p class="last">It collects the intersection of the variables appeared in <code class="docutils literal notranslate"><span class="pre">e</span></code>
+and the provided <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">e</span></code> is not a polynomial in <code class="docutils literal"><span class="pre">indeterminates</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">e</span></code> is not a polynomial in <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>.</td>
 </tr>
 </tbody>
 </table>
 <ol class="arabic simple" start="6">
 <li>__init__(self: pydrake.symbolic.Polynomial, e: pydrake.symbolic.Expression, indeterminates: numpy.ndarray[object[m, 1]]) -&gt; None</li>
 </ol>
-<p>Constructs a polynomial from an expression <code class="docutils literal"><span class="pre">e</span></code> by decomposing it
-with respect to <code class="docutils literal"><span class="pre">indeterminates</span></code>.</p>
+<p>Constructs a polynomial from an expression <code class="docutils literal notranslate"><span class="pre">e</span></code> by decomposing it
+with respect to <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">It collects the intersection of the variables appeared in <code class="docutils literal"><span class="pre">e</span></code>
-and the provided <code class="docutils literal"><span class="pre">indeterminates</span></code>.</p>
+<p class="last">It collects the intersection of the variables appeared in <code class="docutils literal notranslate"><span class="pre">e</span></code>
+and the provided <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">e</span></code> is not a polynomial in <code class="docutils literal"><span class="pre">indeterminates</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">e</span></code> is not a polynomial in <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1992,15 +1987,15 @@ and the provided <code class="docutils literal"><span class="pre">indeterminates
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.AddProduct">
 <code class="descname">AddProduct</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>coeff: pydrake.symbolic.Expression</em>, <em>m: pydrake.symbolic.Monomial</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.AddProduct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds <code class="docutils literal"><span class="pre">coeff</span></code> * <code class="docutils literal"><span class="pre">m</span></code> to this polynomial.</p>
+<dd><p>Adds <code class="docutils literal notranslate"><span class="pre">coeff</span></code> * <code class="docutils literal notranslate"><span class="pre">m</span></code> to this polynomial.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.CoefficientsAlmostEqual">
 <code class="descname">CoefficientsAlmostEqual</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>p: pydrake.symbolic.Polynomial</em>, <em>tolerance: float</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Polynomial.CoefficientsAlmostEqual" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true if this polynomial and <code class="docutils literal"><span class="pre">p</span></code> are almost equal (the
+<dd><p>Returns true if this polynomial and <code class="docutils literal notranslate"><span class="pre">p</span></code> are almost equal (the
 difference in the corresponding coefficients are all less than
-<code class="docutils literal"><span class="pre">tolerance)</span></code>, after expanding the coefficients.</p>
+<code class="docutils literal notranslate"><span class="pre">tolerance)</span></code>, after expanding the coefficients.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2012,34 +2007,34 @@ difference in the corresponding coefficients are all less than
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Degree">
 <code class="descname">Degree</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>v: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.symbolic.Polynomial.Degree" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the highest degree of this polynomial in a variable <code class="docutils literal"><span class="pre">v</span></code>.</p>
+<dd><p>Returns the highest degree of this polynomial in a variable <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Differentiate">
 <code class="descname">Differentiate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>x: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.Differentiate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Differentiates this polynomial with respect to the variable <code class="docutils literal"><span class="pre">x</span></code>.
-Note that a variable <code class="docutils literal"><span class="pre">x</span></code> can be either a decision variable or an
+<dd><p>Differentiates this polynomial with respect to the variable <code class="docutils literal notranslate"><span class="pre">x</span></code>.
+Note that a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> can be either a decision variable or an
 indeterminate.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.EqualTo">
 <code class="descname">EqualTo</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>arg0: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Polynomial.EqualTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true if this polynomial and <code class="docutils literal"><span class="pre">p</span></code> are structurally equal.</p>
+<dd><p>Returns true if this polynomial and <code class="docutils literal notranslate"><span class="pre">p</span></code> are structurally equal.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.Evaluate">
 <code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Polynomial.Evaluate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates this polynomial under a given environment <code class="docutils literal"><span class="pre">env</span></code>.</p>
+<dd><p>Evaluates this polynomial under a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if there is a variable in this polynomial whose</li>
-<li>assignment is not provided by <code class="docutils literal"><span class="pre">env</span></code>.</li>
+<li>assignment is not provided by <code class="docutils literal notranslate"><span class="pre">env</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -2054,7 +2049,7 @@ indeterminate.</p>
 <ol class="arabic simple">
 <li>EvaluatePartial(self: pydrake.symbolic.Polynomial, env: Dict[pydrake.symbolic.Variable, float]) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
-<p>Partially evaluates this polynomial using an environment <code class="docutils literal"><span class="pre">env</span></code>.</p>
+<p>Partially evaluates this polynomial using an environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2066,8 +2061,8 @@ indeterminate.</p>
 <ol class="arabic simple" start="2">
 <li>EvaluatePartial(self: pydrake.symbolic.Polynomial, var: pydrake.symbolic.Variable, c: float) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
-<p>Partially evaluates this polynomial by substituting <code class="docutils literal"><span class="pre">var</span></code> with
-<code class="docutils literal"><span class="pre">c</span></code>.</p>
+<p>Partially evaluates this polynomial by substituting <code class="docutils literal notranslate"><span class="pre">var</span></code> with
+<code class="docutils literal notranslate"><span class="pre">c</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2091,15 +2086,15 @@ indeterminate.</p>
 <ol class="arabic simple">
 <li>Integrate(self: pydrake.symbolic.Polynomial, x: pydrake.symbolic.Variable) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
-<p>Integrates this polynomial with respect to an indeterminate <code class="docutils literal"><span class="pre">x</span></code>.
+<p>Integrates this polynomial with respect to an indeterminate <code class="docutils literal notranslate"><span class="pre">x</span></code>.
 Integration with respect to decision variables is not supported yet.
-If <code class="docutils literal"><span class="pre">x</span></code> is not an indeterminate nor decision variable, then it will
+If <code class="docutils literal notranslate"><span class="pre">x</span></code> is not an indeterminate nor decision variable, then it will
 be added to the list of indeterminates.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">x</span></code> is a decision variable.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a decision variable.</td>
 </tr>
 </tbody>
 </table>
@@ -2107,13 +2102,13 @@ be added to the list of indeterminates.</p>
 <li>Integrate(self: pydrake.symbolic.Polynomial, x: pydrake.symbolic.Variable, a: float, b: float) -&gt; pydrake.symbolic.Polynomial</li>
 </ol>
 <p>Computes the definite integrate of this polynomial with respect to the
-indeterminate <code class="docutils literal"><span class="pre">x</span></code> over the domain [a, b]. Integration with respect
+indeterminate <code class="docutils literal notranslate"><span class="pre">x</span></code> over the domain [a, b]. Integration with respect
 to decision variables is not supported yet.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">x</span></code> is a decision variable.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">x</span></code> is a decision variable.</td>
 </tr>
 </tbody>
 </table>
@@ -2123,7 +2118,7 @@ to decision variables is not supported yet.</p>
 <dt id="pydrake.symbolic.Polynomial.Jacobian">
 <code class="descname">Jacobian</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, vars: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, n]]<a class="headerlink" href="#pydrake.symbolic.Polynomial.Jacobian" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the Jacobian matrix J of the polynomial with respect to
-<code class="docutils literal"><span class="pre">vars</span></code>. J(0,i) contains ∂f/∂vars(i).</p>
+<code class="docutils literal notranslate"><span class="pre">vars</span></code>. J(0,i) contains ∂f/∂vars(i).</p>
 </dd></dl>
 
 <dl class="method">
@@ -2137,14 +2132,14 @@ of this polynomial.</p>
 <dt id="pydrake.symbolic.Polynomial.RemoveTermsWithSmallCoefficients">
 <code class="descname">RemoveTermsWithSmallCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>coefficient_tol: float</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Polynomial<a class="headerlink" href="#pydrake.symbolic.Polynomial.RemoveTermsWithSmallCoefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes the terms whose absolute value of the coefficients are smaller
-than or equal to <code class="docutils literal"><span class="pre">coefficient_tol</span></code> For example, if the polynomial is
+than or equal to <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code> For example, if the polynomial is
 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling
 RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial
 becomes 2x² + 3xy.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">coefficient_tol</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">coefficient_tol</span></code>:</dt>
 <dd>A positive scalar.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">polynomial_cleaned</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">polynomial_cleaned</span></code>:</dt>
 <dd>A polynomial whose terms with small coefficients are removed.</dd>
 </dl>
 </dd></dl>
@@ -2152,11 +2147,11 @@ becomes 2x² + 3xy.</p>
 <dl class="method">
 <dt id="pydrake.symbolic.Polynomial.SetIndeterminates">
 <code class="descname">SetIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial</em>, <em>new_indeterminates: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.symbolic.Polynomial.SetIndeterminates" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the indeterminates to <code class="docutils literal"><span class="pre">new_indeterminates</span></code>.</p>
+<dd><p>Sets the indeterminates to <code class="docutils literal notranslate"><span class="pre">new_indeterminates</span></code>.</p>
 <p>Changing the indeterminates would change
-<code class="docutils literal"><span class="pre">monomial_to_coefficient_map()</span></code>, and also potentially the degree of
+<code class="docutils literal notranslate"><span class="pre">monomial_to_coefficient_map()</span></code>, and also potentially the degree of
 the polynomial. Here is an example.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">p</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">quadratic</span> <span class="n">polynomial</span> <span class="k">with</span> <span class="n">x</span> <span class="n">being</span> <span class="n">the</span> <span class="n">indeterminates</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span> <span class="n">p</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">quadratic</span> <span class="n">polynomial</span> <span class="k">with</span> <span class="n">x</span> <span class="n">being</span> <span class="n">the</span> <span class="n">indeterminates</span><span class="o">.</span>
 <span class="n">symbolic</span><span class="p">::</span><span class="n">Polynomial</span> <span class="n">p</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">c</span><span class="p">,</span> <span class="p">{</span><span class="n">x</span><span class="p">});</span>
 <span class="o">//</span> <span class="n">p</span><span class="o">.</span><span class="n">monomial_to_coefficient_map</span><span class="p">()</span> <span class="n">contains</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">:</span><span class="n">a</span><span class="p">}</span><span class="o">.</span>
 <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">p</span><span class="o">.</span><span class="n">TotalDegree</span><span class="p">();</span> <span class="o">//</span> <span class="n">prints</span> <span class="mf">2.</span>
@@ -2186,24 +2181,24 @@ the polynomial. Here is an example.</p>
 <dl class="function">
 <dt id="pydrake.symbolic.positive_semidefinite">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">positive_semidefinite</code><span class="sig-paren">(</span><em>m: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Formula<a class="headerlink" href="#pydrake.symbolic.positive_semidefinite" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a symbolic formula constraining <code class="docutils literal"><span class="pre">m</span></code> to be a
-positive-semidefinite matrix. By definition, a symmetric matrix <code class="docutils literal"><span class="pre">m</span></code>
+<dd><p>Returns a symbolic formula constraining <code class="docutils literal notranslate"><span class="pre">m</span></code> to be a
+positive-semidefinite matrix. By definition, a symmetric matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>
 is positive-semidefinte if xᵀ m x ≥ 0 for all vector x ∈ ℝⁿ.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">m</span></code> is not symmetric.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">m</span></code> is not symmetric.</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">This method checks if <code class="docutils literal"><span class="pre">m</span></code> is symmetric, which can be costly. If
+<p class="last">This method checks if <code class="docutils literal notranslate"><span class="pre">m</span></code> is symmetric, which can be costly. If
 you want to avoid it, please consider using
-<code class="docutils literal"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</span></code> or
-<code class="docutils literal"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</span></code>
-instead of <code class="docutils literal"><span class="pre">positive_semidefinite(m)</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Lower&gt;())</span></code> or
+<code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m.triangularView&lt;Eigen::Upper&gt;())</span></code>
+instead of <code class="docutils literal notranslate"><span class="pre">positive_semidefinite(m)</span></code>.</p>
 </div>
 </dd></dl>
 
@@ -2234,13 +2229,13 @@ instead of <code class="docutils literal"><span class="pre">positive_semidefinit
 <ol class="arabic simple">
 <li>Substitute(m: numpy.ndarray[object[m, n]], subst: Dict[pydrake.symbolic.Variable, pydrake.symbolic.Expression]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
-<p>Substitutes a symbolic matrix <code class="docutils literal"><span class="pre">m</span></code> using a given substitution
-<code class="docutils literal"><span class="pre">subst</span></code>.</p>
+<p>Substitutes a symbolic matrix <code class="docutils literal notranslate"><span class="pre">m</span></code> using a given substitution
+<code class="docutils literal notranslate"><span class="pre">subst</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a matrix of symbolic expressions whose size is the size of <code class="docutils literal"><span class="pre">m</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a matrix of symbolic expressions whose size is the size of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if NaN is detected during substitution.</td>
 </tr>
@@ -2249,12 +2244,12 @@ instead of <code class="docutils literal"><span class="pre">positive_semidefinit
 <ol class="arabic simple" start="2">
 <li>Substitute(m: numpy.ndarray[object[m, n]], var: pydrake.symbolic.Variable, e: pydrake.symbolic.Expression) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
-<p>Substitutes <code class="docutils literal"><span class="pre">var</span></code> with <code class="docutils literal"><span class="pre">e</span></code> in a symbolic matrix <code class="docutils literal"><span class="pre">m</span></code>.</p>
+<p>Substitutes <code class="docutils literal notranslate"><span class="pre">var</span></code> with <code class="docutils literal notranslate"><span class="pre">e</span></code> in a symbolic matrix <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a matrix of symbolic expressions whose size is the size of <code class="docutils literal"><span class="pre">m</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a matrix of symbolic expressions whose size is the size of <code class="docutils literal notranslate"><span class="pre">m</span></code>.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if NaN is detected during substitution.</td>
 </tr>
@@ -2275,18 +2270,18 @@ instead of <code class="docutils literal"><span class="pre">positive_semidefinit
 <dl class="function">
 <dt id="pydrake.symbolic.TaylorExpand">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">TaylorExpand</code><span class="sig-paren">(</span><em>f: drake::symbolic::Expression, a: Dict[pydrake.symbolic.Variable, float], order: int</em><span class="sig-paren">)</span> &#x2192; drake::symbolic::Expression<a class="headerlink" href="#pydrake.symbolic.TaylorExpand" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the Taylor series expansion of <code class="docutils literal"><span class="pre">f</span></code> around <code class="docutils literal"><span class="pre">a</span></code> of order
-<code class="docutils literal"><span class="pre">order</span></code>.</p>
+<dd><p>Returns the Taylor series expansion of <code class="docutils literal notranslate"><span class="pre">f</span></code> around <code class="docutils literal notranslate"><span class="pre">a</span></code> of order
+<code class="docutils literal notranslate"><span class="pre">order</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">f</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">f</span></code>:</dt>
 <dd>Symbolic expression to approximate using Taylor series expansion.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">a</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">a</span></code>:</dt>
 <dd>Symbolic environment which specifies the point of approximation.
 If a partial environment is provided, the unspecified variables
 are treated as symbolic variables (e.g. decision variable).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">order</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">order</span></code>:</dt>
 <dd>Positive integer which specifies the maximum order of the
-resulting polynomial approximating <code class="docutils literal"><span class="pre">f</span></code> around <code class="docutils literal"><span class="pre">a</span></code>.</dd>
+resulting polynomial approximating <code class="docutils literal notranslate"><span class="pre">f</span></code> around <code class="docutils literal notranslate"><span class="pre">a</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -2297,30 +2292,30 @@ resulting polynomial approximating <code class="docutils literal"><span class="p
 <ol class="arabic simple">
 <li>ToLatex(e: pydrake.symbolic.Expression, precision: int = 3) -&gt; str</li>
 </ol>
-<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">e</span></code> with floating point
-coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<p>Generates a LaTeX string representation of <code class="docutils literal notranslate"><span class="pre">e</span></code> with floating point
+coefficients displayed using <code class="docutils literal notranslate"><span class="pre">precision</span></code>.</p>
 <ol class="arabic simple" start="2">
 <li>ToLatex(f: pydrake.symbolic.Formula, precision: int = 3) -&gt; str</li>
 </ol>
-<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">f</span></code> with floating point
-coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<p>Generates a LaTeX string representation of <code class="docutils literal notranslate"><span class="pre">f</span></code> with floating point
+coefficients displayed using <code class="docutils literal notranslate"><span class="pre">precision</span></code>.</p>
 <ol class="arabic simple" start="3">
 <li>ToLatex(M: numpy.ndarray[object[m, n]], precision: int = 3) -&gt; str</li>
 </ol>
-<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">M</span></code> with floating point
-coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<p>Generates a LaTeX string representation of <code class="docutils literal notranslate"><span class="pre">M</span></code> with floating point
+coefficients displayed using <code class="docutils literal notranslate"><span class="pre">precision</span></code>.</p>
 <ol class="arabic simple" start="4">
 <li>ToLatex(M: numpy.ndarray[numpy.float64[m, n]], precision: int = 3) -&gt; str</li>
 </ol>
-<p>Generates a LaTeX string representation of <code class="docutils literal"><span class="pre">M</span></code> with floating point
-coefficients displayed using <code class="docutils literal"><span class="pre">precision</span></code>.</p>
+<p>Generates a LaTeX string representation of <code class="docutils literal notranslate"><span class="pre">M</span></code> with floating point
+coefficients displayed using <code class="docutils literal notranslate"><span class="pre">precision</span></code>.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="pydrake.symbolic.uninterpreted_function">
 <code class="descclassname">pydrake.symbolic.</code><code class="descname">uninterpreted_function</code><span class="sig-paren">(</span><em>name: str, arguments: List[pydrake.symbolic.Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.symbolic.uninterpreted_function" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs an uninterpreted-function expression with <code class="docutils literal"><span class="pre">name</span></code> and
-<code class="docutils literal"><span class="pre">arguments</span></code>. An uninterpreted function is an opaque function that
+<dd><p>Constructs an uninterpreted-function expression with <code class="docutils literal notranslate"><span class="pre">name</span></code> and
+<code class="docutils literal notranslate"><span class="pre">arguments</span></code>. An uninterpreted function is an opaque function that
 has no other property than its name and a list of its arguments. This
 is useful to applications where it is good enough to provide abstract
 information of a function without exposing full details. Declaring
@@ -2336,7 +2331,7 @@ sparsity of a system is a typical example.</p>
 <p class="last">Expression::Evaluate and Formula::Evaluate methods take a symbolic
 environment (Variable → double) and a random number generator.
 When an expression or a formula includes random variables,
-<code class="docutils literal"><span class="pre">Evaluate</span></code> methods use the random number generator to draw a
+<code class="docutils literal notranslate"><span class="pre">Evaluate</span></code> methods use the random number generator to draw a
 number for a random variable from the given distribution. Then
 this numeric value is used to substitute all the occurrences of
 the corresponding random variable in an expression or a formula.</p>
@@ -2502,10 +2497,10 @@ default constructor.</p>
 <em class="property">class </em><code class="descname">Type</code><a class="headerlink" href="#pydrake.symbolic.Variable.Type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Members:</p>
 <blockquote>
-<div><p>CONTINUOUS : A CONTINUOUS variable takes a <code class="docutils literal"><span class="pre">double</span></code> value.</p>
-<p>INTEGER : An INTEGER variable takes an <code class="docutils literal"><span class="pre">int</span></code> value.</p>
+<div><p>CONTINUOUS : A CONTINUOUS variable takes a <code class="docutils literal notranslate"><span class="pre">double</span></code> value.</p>
+<p>INTEGER : An INTEGER variable takes an <code class="docutils literal notranslate"><span class="pre">int</span></code> value.</p>
 <p>BINARY : A BINARY variable takes an integer value from {0, 1}.</p>
-<p>BOOLEAN : A BOOLEAN variable takes a <code class="docutils literal"><span class="pre">bool</span></code> value.</p>
+<p>BOOLEAN : A BOOLEAN variable takes a <code class="docutils literal notranslate"><span class="pre">bool</span></code> value.</p>
 <p>RANDOM_UNIFORM : A random variable whose value will be drawn from uniform real</p>
 </div></blockquote>
 <p>distributed ∈ [0,1).</p>
@@ -2611,18 +2606,18 @@ Variables::IsStrictSupersetOf).</p>
 <ol class="arabic simple">
 <li>erase(self: pydrake.symbolic.Variables, key: pydrake.symbolic.Variable) -&gt; int</li>
 </ol>
-<p>Erases <code class="docutils literal"><span class="pre">key</span></code> from a set. Return number of erased elements (0 or 1).</p>
+<p>Erases <code class="docutils literal notranslate"><span class="pre">key</span></code> from a set. Return number of erased elements (0 or 1).</p>
 <ol class="arabic simple" start="2">
 <li>erase(self: pydrake.symbolic.Variables, vars: pydrake.symbolic.Variables) -&gt; int</li>
 </ol>
-<p>Erases variables in <code class="docutils literal"><span class="pre">vars</span></code> from a set. Return number of erased
+<p>Erases variables in <code class="docutils literal notranslate"><span class="pre">vars</span></code> from a set. Return number of erased
 elements ([0, vars.size()]).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.include">
 <code class="descname">include</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>key: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.include" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">key</span></code> is included in the Variables.</p>
+<dd><p>Return true if <code class="docutils literal notranslate"><span class="pre">key</span></code> is included in the Variables.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2632,35 +2627,35 @@ elements ([0, vars.size()]).</p>
 <ol class="arabic simple">
 <li>insert(self: pydrake.symbolic.Variables, var: pydrake.symbolic.Variable) -&gt; None</li>
 </ol>
-<p>Inserts a variable <code class="docutils literal"><span class="pre">var</span></code> into a set.</p>
+<p>Inserts a variable <code class="docutils literal notranslate"><span class="pre">var</span></code> into a set.</p>
 <ol class="arabic simple" start="2">
 <li>insert(self: pydrake.symbolic.Variables, vars: pydrake.symbolic.Variables) -&gt; None</li>
 </ol>
-<p>Inserts variables in <code class="docutils literal"><span class="pre">vars</span></code> into a set.</p>
+<p>Inserts variables in <code class="docutils literal notranslate"><span class="pre">vars</span></code> into a set.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsStrictSubsetOf">
 <code class="descname">IsStrictSubsetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsStrictSubsetOf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a strict subset of the Variables.</p>
+<dd><p>Return true if <code class="docutils literal notranslate"><span class="pre">vars</span></code> is a strict subset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsStrictSupersetOf">
 <code class="descname">IsStrictSupersetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsStrictSupersetOf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a strict superset of the Variables.</p>
+<dd><p>Return true if <code class="docutils literal notranslate"><span class="pre">vars</span></code> is a strict superset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsSubsetOf">
 <code class="descname">IsSubsetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsSubsetOf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a subset of the Variables.</p>
+<dd><p>Return true if <code class="docutils literal notranslate"><span class="pre">vars</span></code> is a subset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.symbolic.Variables.IsSupersetOf">
 <code class="descname">IsSupersetOf</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Variables</em>, <em>vars: pydrake.symbolic.Variables</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.symbolic.Variables.IsSupersetOf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return true if <code class="docutils literal"><span class="pre">vars</span></code> is a superset of the Variables.</p>
+<dd><p>Return true if <code class="docutils literal notranslate"><span class="pre">vars</span></code> is a superset of the Variables.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2681,9 +2676,7 @@ elements ([0, vars.size()]).</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -2692,7 +2685,7 @@ elements ([0, vars.size()]).</p>
         <a href="pydrake.systems.html" class="btn btn-neutral float-right" title="pydrake.systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.solvers.snopt.html" class="btn btn-neutral" title="pydrake.solvers.snopt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.solvers.snopt.html" class="btn btn-neutral float-left" title="pydrake.solvers.snopt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2716,37 +2709,15 @@ elements ([0, vars.size()]).</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

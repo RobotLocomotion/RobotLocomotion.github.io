@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.systems.rendering" href="pydrake.systems.rendering.html"/>
-        <link rel="prev" title="pydrake.systems.primitives" href="pydrake.systems.primitives.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.rendering" href="pydrake.systems.rendering.html" />
+    <link rel="prev" title="pydrake.systems.primitives" href="pydrake.systems.primitives.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -198,7 +192,7 @@
 <dl class="class">
 <dt id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer">
 <em class="property">class </em><code class="descclassname">pydrake.systems.pyplot_visualizer.</code><code class="descname">PyPlotVisualizer</code><span class="sig-paren">(</span><em>draw_period=None, facecolor=[1, 1, 1], figsize=None, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Base class from planar visualization that relies on pyplot.</p>
 <p>In the configuration set up here, this visualizer provides one
 visualization window (self.fig) with axes (self.ax). The axes can
@@ -211,8 +205,27 @@ with the appropriate message type.
 appropriate state.</p>
 <dl class="method">
 <dt id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>draw_period=None, facecolor=[1, 1, 1], figsize=None, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float]) -&gt; None</li>
+</ol>
+<p>Default constructor that declares no inputs, outputs, state,
+parameters, events, nor scalar-type conversion support (AutoDiff,
+etc.). To enable AutoDiff support, use the SystemScalarConverter-based
+constructor.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.framework.LeafSystem_[float], converter: pydrake.systems.framework.SystemScalarConverter) -&gt; None</li>
+</ol>
+<p>Constructor that declares no inputs, outputs, state, parameters, or
+events, but allows subclasses to declare scalar-type conversion
+support (AutoDiff, etc.).</p>
+<p>The scalar-type conversion support will use <code class="docutils literal notranslate"><span class="pre">converter</span></code>. To enable
+scalar-type conversion support, pass a <code class="docutils literal notranslate"><span class="pre">SystemTypeTag&lt;S&gt;{}</span></code> where
+<code class="docutils literal notranslate"><span class="pre">S</span></code> must be the exact class of <code class="docutils literal notranslate"><span class="pre">this</span></code> being constructed.</p>
+<p>See system_scalar_conversion for detailed background and examples
+related to scalar-type conversion support.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.animate">
@@ -239,8 +252,28 @@ matches the sample timestep of the log.</li>
 
 <dl class="method">
 <dt id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.DoPublish">
-<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.Context_[float], arg1: List[pydrake.systems.framework.PublishEvent_[float]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.pyplot_visualizer.PyPlotVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived-class event dispatcher for all simultaneous publish events in
+<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
+require behavior other than the default dispatch behavior (not
+common). The default behavior is to traverse events in the arbitrary
+order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
+callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
+event.</p>
+<p>Do not override this just to handle an event – instead declare the
+event and a handler callback for it using one of the
+<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
+<p>This method is called only from the virtual DispatchPublishHandler,
+which is only called from the public non-virtual Publish(), which will
+have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
+valid.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Const current context.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt>
+<dd>All the publish events that need handling.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.pyplot_visualizer.PyPlotVisualizer.draw">
@@ -276,9 +309,7 @@ interpolation).</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -287,7 +318,7 @@ interpolation).</p>
         <a href="pydrake.systems.rendering.html" class="btn btn-neutral float-right" title="pydrake.systems.rendering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.primitives.html" class="btn btn-neutral" title="pydrake.systems.primitives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.primitives.html" class="btn btn-neutral float-left" title="pydrake.systems.primitives" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -311,37 +342,15 @@ interpolation).</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

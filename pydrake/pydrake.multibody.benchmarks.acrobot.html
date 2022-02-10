@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.multibody.benchmarks" href="pydrake.multibody.benchmarks.html"/>
-        <link rel="next" title="pydrake.multibody.benchmarks.all" href="pydrake.multibody.benchmarks.all.html"/>
-        <link rel="prev" title="pydrake.multibody.benchmarks" href="pydrake.multibody.benchmarks.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.multibody.benchmarks.all" href="pydrake.multibody.benchmarks.all.html" />
+    <link rel="prev" title="pydrake.multibody.benchmarks" href="pydrake.multibody.benchmarks.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -138,7 +131,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -146,9 +139,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -204,8 +198,8 @@ the parameters stored by this class and their default values.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The default constructor initializes the parameters in accordance
-to the <code class="docutils literal"><span class="pre">acrobot.sdf</span></code> file in this same directory. Therefore this
-file and <code class="docutils literal"><span class="pre">acrobot.sdf</span></code> MUST be kept in sync.</p>
+to the <code class="docutils literal notranslate"><span class="pre">acrobot.sdf</span></code> file in this same directory. Therefore this
+file and <code class="docutils literal notranslate"><span class="pre">acrobot.sdf</span></code> MUST be kept in sync.</p>
 </div>
 <dl class="method">
 <dt id="pydrake.multibody.benchmarks.acrobot.AcrobotParameters.__init__">
@@ -217,8 +211,8 @@ the parameters stored by this class and their default values.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The default constructor initializes the parameters in accordance
-to the <code class="docutils literal"><span class="pre">acrobot.sdf</span></code> file in this same directory. Therefore this
-file and <code class="docutils literal"><span class="pre">acrobot.sdf</span></code> MUST be kept in sync.</p>
+to the <code class="docutils literal notranslate"><span class="pre">acrobot.sdf</span></code> file in this same directory. Therefore this
+file and <code class="docutils literal notranslate"><span class="pre">acrobot.sdf</span></code> MUST be kept in sync.</p>
 </div>
 </dd></dl>
 
@@ -232,15 +226,15 @@ underactuated system as described in &lt;a
 href=”<a class="reference external" href="http://underactuated.mit.edu/underactuated.html?chapter=3">http://underactuated.mit.edu/underactuated.html?chapter=3</a>”&gt;Chapter
 3 of Underactuated Robotics&lt;/a&gt;.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">default_parameters</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">default_parameters</span></code>:</dt>
 <dd>Default parameters of the model set at construction. These
 parameters include masses, link lengths, rotational inertias, etc.
 Refer to the documentation of AcrobotParameters for further
 details.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">finalize</span></code>:</dt>
-<dd>If <code class="docutils literal"><span class="pre">True</span></code>, MultibodyPlant::Finalize() gets called on the new
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">finalize</span></code>:</dt>
+<dd>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, MultibodyPlant::Finalize() gets called on the new
 plant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">scene_graph</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt>
 <dd>If a SceneGraph is provided with this argument, this factory
 method will register the new multibody plant to be a source for
 that geometry system and it will also register geometry for
@@ -253,9 +247,7 @@ registered.</dd>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -264,7 +256,7 @@ registered.</dd>
         <a href="pydrake.multibody.benchmarks.all.html" class="btn btn-neutral float-right" title="pydrake.multibody.benchmarks.all" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.multibody.benchmarks.html" class="btn btn-neutral" title="pydrake.multibody.benchmarks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.multibody.benchmarks.html" class="btn btn-neutral float-left" title="pydrake.multibody.benchmarks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -288,37 +280,15 @@ registered.</dd>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

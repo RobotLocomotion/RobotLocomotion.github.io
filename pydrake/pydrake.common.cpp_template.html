@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
-        <link rel="next" title="pydrake.common.deprecation" href="pydrake.common.deprecation.html"/>
-        <link rel="prev" title="pydrake.common.cpp_param" href="pydrake.common.cpp_param.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.common.deprecation" href="pydrake.common.deprecation.html" />
+    <link rel="prev" title="pydrake.common.cpp_param" href="pydrake.common.cpp_param.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -136,7 +129,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -144,9 +137,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -222,7 +216,7 @@ necessarily be the scope of the instantiation).</li>
 <dl class="class">
 <dt id="pydrake.common.cpp_template.TemplateBase">
 <em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateBase</code><span class="sig-paren">(</span><em>name</em>, <em>allow_default=True</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Provides a mechanism to map parameters (types or literals) to
 instantiations, following C++ mechanics.</p>
 <dl class="method">
@@ -309,7 +303,7 @@ example, <cite>Impl</cite> will be renamed to <cite>MyTemplate[int]</cite> when
 <cite>param=(int,)</cite>.</p>
 </div>
 <p class="rubric">Example</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@TemplateClass</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="s2">&quot;MyTemplate&quot;</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@TemplateClass</span><span class="o">.</span><span class="n">define</span><span class="p">(</span><span class="s2">&quot;MyTemplate&quot;</span><span class="p">,</span>
                       <span class="n">param_list</span><span class="o">=</span><span class="p">[(</span><span class="nb">int</span><span class="p">,),</span> <span class="p">(</span><span class="nb">float</span><span class="p">,)])</span>
 <span class="k">def</span> <span class="nf">MyTemplate</span><span class="p">(</span><span class="n">param</span><span class="p">):</span>
     <span class="n">T</span><span class="p">,</span> <span class="o">=</span> <span class="n">param</span>
@@ -339,12 +333,12 @@ example, <cite>Impl</cite> will be renamed to <cite>MyTemplate[int]</cite> when
 <li><strong>date</strong> – (Optional) String of the form “YYYY-MM-DD”.
 If supplied, will reformat the message to add the date as is
 done with DRAKE_DEPRECATED and its processing in mkdoc.py. This
-must be present if <code class="docutils literal"><span class="pre">message</span></code> does not contain the date
+must be present if <code class="docutils literal notranslate"><span class="pre">message</span></code> does not contain the date
 itself.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(instantiation, param), where <code class="docutils literal"><span class="pre">param</span></code> is the resolved parameters.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">(instantiation, param), where <code class="docutils literal notranslate"><span class="pre">param</span></code> is the resolved parameters.</p>
 </td>
 </tr>
 </tbody>
@@ -394,12 +388,18 @@ parameters.</td>
 <dl class="class">
 <dt id="pydrake.common.cpp_template.TemplateClass">
 <em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateClass</code><span class="sig-paren">(</span><em>name</em>, <em>override_meta=True</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
 <p>Extension of <cite>TemplateBase</cite> for classes.</p>
 <dl class="method">
 <dt id="pydrake.common.cpp_template.TemplateClass.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>override_meta=True</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateClass.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Args:
+name: Name of the template object.
+allow_default: Allow a default value (None) to resolve to the</p>
+<blockquote>
+<div>parameters of the instantiation that was first added.</div></blockquote>
+<p>scope: Parent scope for the template object.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.common.cpp_template.TemplateClass.is_subclass_of_instantiation">
@@ -420,19 +420,25 @@ parameters.</td>
 <dl class="class">
 <dt id="pydrake.common.cpp_template.TemplateFunction">
 <em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateFunction</code><span class="sig-paren">(</span><em>name</em>, <em>allow_default=True</em>, <em>scope=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateFunction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
 <p>Extension of <cite>TemplateBase</cite> for functions.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.common.cpp_template.TemplateMethod">
 <em class="property">class </em><code class="descclassname">pydrake.common.cpp_template.</code><code class="descname">TemplateMethod</code><span class="sig-paren">(</span><em>name</em>, <em>cls</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateMethod" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.cpp_template.TemplateBase" title="pydrake.common.cpp_template.TemplateBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.cpp_template.TemplateBase</span></code></a></p>
 <p>Extension of <cite>TemplateBase</cite> for class methods.</p>
 <dl class="method">
 <dt id="pydrake.common.cpp_template.TemplateMethod.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>name</em>, <em>cls</em>, <em>scope=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.cpp_template.TemplateMethod.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Args:
+name: Name of the template object.
+allow_default: Allow a default value (None) to resolve to the</p>
+<blockquote>
+<div>parameters of the instantiation that was first added.</div></blockquote>
+<p>scope: Parent scope for the template object.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -440,9 +446,7 @@ parameters.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -451,7 +455,7 @@ parameters.</td>
         <a href="pydrake.common.deprecation.html" class="btn btn-neutral float-right" title="pydrake.common.deprecation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.common.cpp_param.html" class="btn btn-neutral" title="pydrake.common.cpp_param" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.common.cpp_param.html" class="btn btn-neutral float-left" title="pydrake.common.cpp_param" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -475,37 +479,15 @@ parameters.</td>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

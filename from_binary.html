@@ -174,15 +174,15 @@ download will have a more version-specific filename.</p>
 
 <p>Create and activate the envionment:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir <span class="nt">-p</span> env
-<span class="nb">tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> env <span class="nt">--strip-components</span><span class="o">=</span>1
-python3 <span class="nt">-m</span> virtualenv <span class="nt">-p</span> python3 env <span class="nt">--system-site-packages</span>
-<span class="nb">source </span>env/bin/activate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span> <span class="nt">-p</span> <span class="nb">env
+tar</span> <span class="nt">-xvzf</span> drake.tar.gz <span class="nt">-C</span> <span class="nb">env</span> <span class="nt">--strip-components</span><span class="o">=</span>1
+python3 <span class="nt">-m</span> virtualenv <span class="nt">-p</span> python3 <span class="nb">env</span> <span class="nt">--system-site-packages</span>
+<span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
 <p>Install dependencies within the environment:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>env/share/drake/setup/install_prereqs
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">env</span>/share/drake/setup/install_prereqs
 </code></pre></div></div>
 
 <p>(On Ubuntu, the script might ask to be run under <code class="highlighter-rouge">sudo</code>.)</p>

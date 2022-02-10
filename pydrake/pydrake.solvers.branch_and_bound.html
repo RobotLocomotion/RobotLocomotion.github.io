@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.solvers" href="pydrake.solvers.html"/>
-        <link rel="next" title="pydrake.solvers.clp" href="pydrake.solvers.clp.html"/>
-        <link rel="prev" title="pydrake.solvers.all" href="pydrake.solvers.all.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.solvers.clp" href="pydrake.solvers.clp.html" />
+    <link rel="prev" title="pydrake.solvers.all" href="pydrake.solvers.all.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -139,7 +132,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -147,9 +140,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -213,9 +207,9 @@ variables with continuous variables.</p>
 <dd><p>Construct a branch-and-bound tree from a mixed-integer optimization
 program.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt>
 <dd>A mixed-integer optimization program.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">solver_id</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">solver_id</span></code>:</dt>
 <dd>The ID of the solver for the optimization.</dd>
 </dl>
 </dd></dl>
@@ -238,14 +232,14 @@ are sorted in the ascending order based on their costs. Each solution
 is found in a separate node in the branch-and-bound tree, so the
 values of the binary variables are different in each solution.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">mip_var</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mip_var</span></code>:</dt>
 <dd>A variable in the original MIP.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">nth_best_solution</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt>
 <dd>. The index of the best integral solution.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">mip_var</span></code> is a variable in the original MIP.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">mip_var</span></code> is a variable in the original MIP.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -262,14 +256,14 @@ values of the binary variables are different in each solution.</p>
 solutions are sorted in the ascending order based on their costs. Each
 solution is found in a separate node in the branch-and-bound tree, so</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">mip_vars</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mip_vars</span></code>:</dt>
 <dd>Variables in the original MIP.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">nth_best_solution</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt>
 <dd>. The index of the best integral solution.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">mip_vars</span></code> are variables in the original MIP.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">mip_vars</span></code> are variables in the original MIP.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -286,14 +280,14 @@ solution is found in a separate node in the branch-and-bound tree, so</p>
 solutions are sorted in the ascending order based on their costs. Each
 solution is found in a separate node in the branch-and-bound tree, so</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">mip_vars</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mip_vars</span></code>:</dt>
 <dd>Variables in the original MIP.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">nth_best_solution</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code>:</dt>
 <dd>. The index of the best integral solution.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">mip_vars</span></code> are variables in the original MIP.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">mip_vars</span></code> are variables in the original MIP.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">nth_best_solution</span></code> is between 0 and solutions().size().</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -311,10 +305,10 @@ solution is found in a separate node in the branch-and-bound tree, so</p>
 <dd><p>Get the n’th sub-optimal cost. The costs are sorted in the ascending
 order. The sub-optimal costs do not include the optimal cost.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">nth_suboptimal_cost</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">nth_suboptimal_cost</span></code>:</dt>
 <dd>The n’th sub-optimal cost.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">nth_suboptimal_cost</span></code> is between 0 and solutions().size() - 1.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">nth_suboptimal_cost</span></code> is between 0 and solutions().size() - 1.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -332,7 +326,7 @@ order. The sub-optimal costs do not include the optimal cost.</p>
 <dd><p>Solve the mixed-integer problem (MIP) through a branch and bound
 process.</p>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">solution_result</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">solution_result</span></code>:</dt>
 <dd>If solution_result=SolutionResult::kSolutionFound, then the best
 solutions are stored inside solutions(). The user can access the
 value of each variable(s) through GetSolution(…). If
@@ -349,9 +343,7 @@ problem is primal unbounded.</dd>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -360,7 +352,7 @@ problem is primal unbounded.</dd>
         <a href="pydrake.solvers.clp.html" class="btn btn-neutral float-right" title="pydrake.solvers.clp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.solvers.all.html" class="btn btn-neutral" title="pydrake.solvers.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.solvers.all.html" class="btn btn-neutral float-left" title="pydrake.solvers.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -384,37 +376,15 @@ problem is primal unbounded.</dd>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

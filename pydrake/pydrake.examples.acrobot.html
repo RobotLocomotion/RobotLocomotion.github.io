@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.examples" href="pydrake.examples.html"/>
-        <link rel="next" title="pydrake.examples.compass_gait" href="pydrake.examples.compass_gait.html"/>
-        <link rel="prev" title="pydrake.examples" href="pydrake.examples.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.examples.compass_gait" href="pydrake.examples.compass_gait.html" />
+    <link rel="prev" title="pydrake.examples" href="pydrake.examples.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -133,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -141,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -191,7 +185,7 @@
 <dl class="class">
 <dt id="pydrake.examples.acrobot.AcrobotGeometry">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">AcrobotGeometry</code><a class="headerlink" href="#pydrake.examples.acrobot.AcrobotGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Expresses an AcrobotPlant’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>AcrobotGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -209,28 +203,28 @@ static method to create and add it to a DiagramBuilder directly.</p>
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], acrobot_state_port: pydrake.systems.framework.OutputPort_[float], acrobot_params: pydrake.examples.acrobot.AcrobotParams, scene_graph: pydrake.geometry.SceneGraph_[float]) -&gt; pydrake.examples.acrobot.AcrobotGeometry</li>
 </ol>
 <p>Creates, adds, and connects an AcrobotGeometry system into the given
-<code class="docutils literal"><span class="pre">builder</span></code>. Both the <code class="docutils literal"><span class="pre">acrobot_state.get_system()</span></code> and
-<code class="docutils literal"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal"><span class="pre">builder</span></code>
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>. Both the <code class="docutils literal notranslate"><span class="pre">acrobot_state.get_system()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>
 already.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">acrobot_params</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">acrobot_params</span></code>:</dt>
 <dd>sets the parameters of the geometry registered with
-<code class="docutils literal"><span class="pre">scene_graph</span></code>.</dd>
+<code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>.</dd>
 </dl>
-<p>The <code class="docutils literal"><span class="pre">scene_graph</span></code> pointer is not retained by the AcrobotGeometry
+<p>The <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> pointer is not retained by the AcrobotGeometry
 system. The return value pointer is an alias of the new
-AcrobotGeometry system that is owned by the <code class="docutils literal"><span class="pre">builder</span></code>.</p>
+AcrobotGeometry system that is owned by the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 <ol class="arabic simple" start="2">
 <li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], acrobot_state_port: pydrake.systems.framework.OutputPort_[float], scene_graph: pydrake.geometry.SceneGraph_[float]) -&gt; pydrake.examples.acrobot.AcrobotGeometry</li>
 </ol>
 <p>Creates, adds, and connects an AcrobotGeometry system into the given
-<code class="docutils literal"><span class="pre">builder</span></code>. Both the <code class="docutils literal"><span class="pre">acrobot_state.get_system()</span></code> and
-<code class="docutils literal"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal"><span class="pre">builder</span></code>
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>. Both the <code class="docutils literal notranslate"><span class="pre">acrobot_state.get_system()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>
 already.</p>
 <p>Acrobot parameters are set to their default values.</p>
-<p>The <code class="docutils literal"><span class="pre">scene_graph</span></code> pointer is not retained by the AcrobotGeometry
+<p>The <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> pointer is not retained by the AcrobotGeometry
 system. The return value pointer is an alias of the new
-AcrobotGeometry system that is owned by the <code class="docutils literal"><span class="pre">builder</span></code>.</p>
+AcrobotGeometry system that is owned by the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -238,14 +232,14 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dl class="class">
 <dt id="pydrake.examples.acrobot.AcrobotInput">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">AcrobotInput</code><a class="headerlink" href="#pydrake.examples.acrobot.AcrobotInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.acrobot.AcrobotInput.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.acrobot.AcrobotInput</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.acrobot.AcrobotInput.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">tau</span></code> defaults to 0.0 Nm.</li>
+<li><code class="docutils literal notranslate"><span class="pre">tau</span></code> defaults to 0.0 Nm.</li>
 </ul>
 </dd></dl>
 
@@ -261,7 +255,7 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Torque at the elbow</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">tau</span></code> is expressed in units of Nm.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">tau</span></code> is expressed in units of Nm.</p>
 </div>
 </dd></dl>
 
@@ -270,24 +264,24 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dl class="class">
 <dt id="pydrake.examples.acrobot.AcrobotParams">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">AcrobotParams</code><a class="headerlink" href="#pydrake.examples.acrobot.AcrobotParams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.acrobot.AcrobotParams.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.acrobot.AcrobotParams</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.acrobot.AcrobotParams.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">m1</span></code> defaults to 1.0 kg.</li>
-<li><code class="docutils literal"><span class="pre">m2</span></code> defaults to 1.0 kg.</li>
-<li><code class="docutils literal"><span class="pre">l1</span></code> defaults to 1.0 m.</li>
-<li><code class="docutils literal"><span class="pre">l2</span></code> defaults to 2.0 m.</li>
-<li><code class="docutils literal"><span class="pre">lc1</span></code> defaults to 0.5 m.</li>
-<li><code class="docutils literal"><span class="pre">lc2</span></code> defaults to 1.0 m.</li>
-<li><code class="docutils literal"><span class="pre">Ic1</span></code> defaults to 0.083 kg*m^2.</li>
-<li><code class="docutils literal"><span class="pre">Ic2</span></code> defaults to 0.33 kg*m^2.</li>
-<li><code class="docutils literal"><span class="pre">b1</span></code> defaults to 0.1 kg*m^2/s.</li>
-<li><code class="docutils literal"><span class="pre">b2</span></code> defaults to 0.1 kg*m^2/s.</li>
-<li><code class="docutils literal"><span class="pre">gravity</span></code> defaults to 9.81 m/s^2.</li>
+<li><code class="docutils literal notranslate"><span class="pre">m1</span></code> defaults to 1.0 kg.</li>
+<li><code class="docutils literal notranslate"><span class="pre">m2</span></code> defaults to 1.0 kg.</li>
+<li><code class="docutils literal notranslate"><span class="pre">l1</span></code> defaults to 1.0 m.</li>
+<li><code class="docutils literal notranslate"><span class="pre">l2</span></code> defaults to 2.0 m.</li>
+<li><code class="docutils literal notranslate"><span class="pre">lc1</span></code> defaults to 0.5 m.</li>
+<li><code class="docutils literal notranslate"><span class="pre">lc2</span></code> defaults to 1.0 m.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Ic1</span></code> defaults to 0.083 kg*m^2.</li>
+<li><code class="docutils literal notranslate"><span class="pre">Ic2</span></code> defaults to 0.33 kg*m^2.</li>
+<li><code class="docutils literal notranslate"><span class="pre">b1</span></code> defaults to 0.1 kg*m^2/s.</li>
+<li><code class="docutils literal notranslate"><span class="pre">b2</span></code> defaults to 0.1 kg*m^2/s.</li>
+<li><code class="docutils literal notranslate"><span class="pre">gravity</span></code> defaults to 9.81 m/s^2.</li>
 </ul>
 </dd></dl>
 
@@ -297,11 +291,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Damping coefficient of the shoulder joint.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">b1</span></code> is expressed in units of kg*m^2/s.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">b1</span></code> is expressed in units of kg*m^2/s.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">b1</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">b1</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -311,11 +305,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Damping coefficient of the elbow joint.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">b2</span></code> is expressed in units of kg*m^2/s.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">b2</span></code> is expressed in units of kg*m^2/s.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">b2</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">b2</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -325,11 +319,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Gravitational constant.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">gravity</span></code> is expressed in units of m/s^2.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">gravity</span></code> is expressed in units of m/s^2.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">gravity</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">gravity</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -339,11 +333,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Inertia of link 1 about the center of mass of link 1.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Ic1</span></code> is expressed in units of kg*m^2.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Ic1</span></code> is expressed in units of kg*m^2.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Ic1</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Ic1</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -353,11 +347,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Inertia of link 2 about the center of mass of link 2.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Ic2</span></code> is expressed in units of kg*m^2.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Ic2</span></code> is expressed in units of kg*m^2.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">Ic2</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">Ic2</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -367,11 +361,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Length of link 1.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">l1</span></code> is expressed in units of m.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">l1</span></code> is expressed in units of m.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">l1</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">l1</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -381,11 +375,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Vertical distance from shoulder joint to center of mass of link 1.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">lc1</span></code> is expressed in units of m.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">lc1</span></code> is expressed in units of m.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">lc1</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">lc1</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -395,11 +389,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Vertical distance from elbow joint to center of mass of link 1.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">lc2</span></code> is expressed in units of m.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">lc2</span></code> is expressed in units of m.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">lc2</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">lc2</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -409,11 +403,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Mass of link 1.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">m1</span></code> is expressed in units of kg.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">m1</span></code> is expressed in units of kg.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">m1</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">m1</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -423,11 +417,11 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dd><p>Mass of link 2.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">m2</span></code> is expressed in units of kg.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">m2</span></code> is expressed in units of kg.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">m2</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">m2</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -496,7 +490,7 @@ AcrobotGeometry system that is owned by the <code class="docutils literal"><span
 <dl class="class">
 <dt id="pydrake.examples.acrobot.AcrobotPlant">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">AcrobotPlant</code><a class="headerlink" href="#pydrake.examples.acrobot.AcrobotPlant" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>The Acrobot - a canonical underactuated system as described in &lt;a
 href=”<a class="reference external" href="http://underactuated.mit.edu/underactuated.html?chapter=3">http://underactuated.mit.edu/underactuated.html?chapter=3</a>”&gt;Chapter
 3 of Underactuated Robotics&lt;/a&gt;.</p>
@@ -555,7 +549,7 @@ acrobot.</p>
 <dl class="class">
 <dt id="pydrake.examples.acrobot.AcrobotSpongController">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">AcrobotSpongController</code><a class="headerlink" href="#pydrake.examples.acrobot.AcrobotSpongController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>The Spong acrobot swing-up controller as described in: Spong, Mark W.
 “Swing up control of the acrobot.” Robotics and Automation, 1994.
 Proceedings., 1994 IEEE International Conference on. IEEE, 1994.</p>
@@ -584,17 +578,17 @@ robot we have in lab.</p>
 <dl class="class">
 <dt id="pydrake.examples.acrobot.AcrobotState">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">AcrobotState</code><a class="headerlink" href="#pydrake.examples.acrobot.AcrobotState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.acrobot.AcrobotState.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.acrobot.AcrobotState</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.acrobot.AcrobotState.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">theta1</span></code> defaults to 0.0 rad.</li>
-<li><code class="docutils literal"><span class="pre">theta2</span></code> defaults to 0.0 rad.</li>
-<li><code class="docutils literal"><span class="pre">theta1dot</span></code> defaults to 0.0 rad/s.</li>
-<li><code class="docutils literal"><span class="pre">theta2dot</span></code> defaults to 0.0 rad/s.</li>
+<li><code class="docutils literal notranslate"><span class="pre">theta1</span></code> defaults to 0.0 rad.</li>
+<li><code class="docutils literal notranslate"><span class="pre">theta2</span></code> defaults to 0.0 rad.</li>
+<li><code class="docutils literal notranslate"><span class="pre">theta1dot</span></code> defaults to 0.0 rad/s.</li>
+<li><code class="docutils literal notranslate"><span class="pre">theta2dot</span></code> defaults to 0.0 rad/s.</li>
 </ul>
 </dd></dl>
 
@@ -628,7 +622,7 @@ robot we have in lab.</p>
 <dd><p>The shoulder joint angle</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">theta1</span></code> is expressed in units of rad.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">theta1</span></code> is expressed in units of rad.</p>
 </div>
 </dd></dl>
 
@@ -638,7 +632,7 @@ robot we have in lab.</p>
 <dd><p>The shoulder joint velocity</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">theta1dot</span></code> is expressed in units of rad/s.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">theta1dot</span></code> is expressed in units of rad/s.</p>
 </div>
 </dd></dl>
 
@@ -648,7 +642,7 @@ robot we have in lab.</p>
 <dd><p>The elbow joint angle</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">theta2</span></code> is expressed in units of rad.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">theta2</span></code> is expressed in units of rad.</p>
 </div>
 </dd></dl>
 
@@ -658,7 +652,7 @@ robot we have in lab.</p>
 <dd><p>The elbow joint velocity</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">theta2dot</span></code> is expressed in units of rad/s.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">theta2dot</span></code> is expressed in units of rad/s.</p>
 </div>
 </dd></dl>
 
@@ -667,17 +661,17 @@ robot we have in lab.</p>
 <dl class="class">
 <dt id="pydrake.examples.acrobot.SpongControllerParams">
 <em class="property">class </em><code class="descclassname">pydrake.examples.acrobot.</code><code class="descname">SpongControllerParams</code><a class="headerlink" href="#pydrake.examples.acrobot.SpongControllerParams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.acrobot.SpongControllerParams.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.acrobot.SpongControllerParams</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.acrobot.SpongControllerParams.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">k_e</span></code> defaults to 5.0 s.</li>
-<li><code class="docutils literal"><span class="pre">k_p</span></code> defaults to 50.0 s^-2.</li>
-<li><code class="docutils literal"><span class="pre">k_d</span></code> defaults to 5.0 s^-1.</li>
-<li><code class="docutils literal"><span class="pre">balancing_threshold</span></code> defaults to 1e3 None.</li>
+<li><code class="docutils literal notranslate"><span class="pre">k_e</span></code> defaults to 5.0 s.</li>
+<li><code class="docutils literal notranslate"><span class="pre">k_p</span></code> defaults to 50.0 s^-2.</li>
+<li><code class="docutils literal notranslate"><span class="pre">k_d</span></code> defaults to 5.0 s^-1.</li>
+<li><code class="docutils literal notranslate"><span class="pre">balancing_threshold</span></code> defaults to 1e3 None.</li>
 </ul>
 </dd></dl>
 
@@ -687,11 +681,11 @@ robot we have in lab.</p>
 <dd><p>Cost value at which to switch from swing up to balancing.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">balancing_threshold</span></code> is expressed in units of None.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">balancing_threshold</span></code> is expressed in units of None.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">balancing_threshold</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">balancing_threshold</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -701,11 +695,11 @@ robot we have in lab.</p>
 <dd><p>Partial feedback linearization derivative gain.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">k_d</span></code> is expressed in units of s^-1.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">k_d</span></code> is expressed in units of s^-1.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">k_d</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">k_d</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -715,11 +709,11 @@ robot we have in lab.</p>
 <dd><p>Energy shaping gain.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">k_e</span></code> is expressed in units of s.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">k_e</span></code> is expressed in units of s.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">k_e</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">k_e</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -729,11 +723,11 @@ robot we have in lab.</p>
 <dd><p>Partial feedback linearization proportional gain.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">k_p</span></code> is expressed in units of s^-2.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">k_p</span></code> is expressed in units of s^-2.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">k_p</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">k_p</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -767,9 +761,7 @@ robot we have in lab.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -778,7 +770,7 @@ robot we have in lab.</p>
         <a href="pydrake.examples.compass_gait.html" class="btn btn-neutral float-right" title="pydrake.examples.compass_gait" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.examples.html" class="btn btn-neutral" title="pydrake.examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.examples.html" class="btn btn-neutral float-left" title="pydrake.examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -802,37 +794,15 @@ robot we have in lab.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

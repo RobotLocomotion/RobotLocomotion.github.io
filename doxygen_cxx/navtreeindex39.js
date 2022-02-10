@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,16,5,20],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,16,5,12],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,16,5,1],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af88c3d4b35f53401069500f721083309":[3,0,0,16,5,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "deprecation__pybind_8h.html#ab0b68ce63cf178e7d4e91f95e0e483e1":[4,0,0,0,0,0,3,0],
 "depth__image__to__point__cloud_8h.html":[4,0,0,9,0],
 "depth__shaders_8h.html":[4,0,0,4,4,1,0],
-"depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1],
-"depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,1,0,0]
+"depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1]
 };

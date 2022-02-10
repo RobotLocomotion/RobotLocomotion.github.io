@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.trajectories" href="pydrake.trajectories.html"/>
-        <link rel="prev" title="pydrake.systems.system_sliders" href="pydrake.systems.system_sliders.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.trajectories" href="pydrake.trajectories.html" />
+    <link rel="prev" title="pydrake.systems.system_sliders" href="pydrake.systems.system_sliders.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -198,7 +192,7 @@
 <dl class="function">
 <dt id="pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint">
 <code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">AddDirectCollocationConstraint</code><span class="sig-paren">(</span><em>constraint: pydrake.systems.trajectory_optimization.DirectCollocationConstraint, timestep: numpy.ndarray[object[m, 1]], state: numpy.ndarray[object[m, 1]], next_state: numpy.ndarray[object[m, 1]], input: numpy.ndarray[object[m, 1]], next_input: numpy.ndarray[object[m, 1]], prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.AddDirectCollocationConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal"><span class="pre">prog</span></code>,
+<dd><p>Helper method to add a DirectCollocationConstraint to the <code class="docutils literal notranslate"><span class="pre">prog</span></code>,
 ensuring that the order of variables in the binding matches the order
 expected by the constraint.</p>
 </dd></dl>
@@ -206,7 +200,7 @@ expected by the constraint.</p>
 <dl class="class">
 <dt id="pydrake.systems.trajectory_optimization.DirectCollocation">
 <em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">DirectCollocation</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectCollocation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="pydrake.systems.trajectory_optimization.MultipleShooting"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.trajectory_optimization.MultipleShooting</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="pydrake.systems.trajectory_optimization.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.trajectory_optimization.MultipleShooting</span></code></a></p>
 <p>DirectCollocation implements the approach to trajectory optimization
 as described in C. R. Hargraves and S. W. Paris. Direct trajectory
 optimization using nonlinear programming and collocation. J Guidance,
@@ -223,29 +217,29 @@ system.</p>
 <dd><p>Constructs the MathematicalProgram% and adds the collocation
 constraints.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A dynamical system to be used in the dynamic constraints. This
 system must support System::ToAutoDiffXd. Note that this is
 aliased for the lifetime of this object.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>Required to describe any parameters of the system. The values of
 the state in this context do not have any effect. This context
 will also be “cloned” by the optimization; changes to the context
 after calling this method will NOT impact the trajectory
 optimization.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_time_samples</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt>
 <dd>The number of breakpoints in the trajectory.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">minimum_timestep</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">minimum_timestep</span></code>:</dt>
 <dd>Minimum spacing between sample times.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">maximum_timestep</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">maximum_timestep</span></code>:</dt>
 <dd>Maximum spacing between sample times.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">input_port_index</span></code>:</dt>
-<dd>A valid input port index for <code class="docutils literal"><span class="pre">system</span></code> or InputPortSelection. All
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt>
+<dd>A valid input port index for <code class="docutils literal notranslate"><span class="pre">system</span></code> or InputPortSelection. All
 other inputs on the system will be left disconnected (if they are
-disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be fixed to their current
-values (if they are connected/fixed in <code class="docutils literal"><span class="pre">context)</span></code>. $*Default:*
+disconnected in <code class="docutils literal notranslate"><span class="pre">context)</span></code> or will be fixed to their current
+values (if they are connected/fixed in <code class="docutils literal notranslate"><span class="pre">context)</span></code>. $*Default:*
 kUseFirstInputIfItExists.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">assume_non_continuous_states_are_fixed</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">assume_non_continuous_states_are_fixed</span></code>:</dt>
 <dd>Boolean which, if true, allows this algorithm to optimize without
 considering the dynamics of any non-continuous states. This is
 helpful for optimizing systems that might have some additional
@@ -258,7 +252,7 @@ impact the dynamics of the continuous states. $*Default:* false.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">system</span></code> is not supported by this direct</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">system</span></code> is not supported by this direct</li>
 <li>collocation method.</li>
 </ul>
 </td>
@@ -272,7 +266,7 @@ impact the dynamics of the continuous states. $*Default:* false.</dd>
 <dl class="class">
 <dt id="pydrake.systems.trajectory_optimization.DirectCollocationConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">DirectCollocationConstraint</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectCollocationConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
 <p>Implements the direct collocation constraints for a first-order hold
 on the input and a cubic polynomial representation of the state
 trajectories.</p>
@@ -291,7 +285,7 @@ different decision variables, along the trajectory).</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">system</span></code> is not supported by this direct</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">system</span></code> is not supported by this direct</li>
 <li>collocation method.</li>
 </ul>
 </td>
@@ -305,7 +299,7 @@ different decision variables, along the trajectory).</p>
 <dl class="class">
 <dt id="pydrake.systems.trajectory_optimization.DirectTranscription">
 <em class="property">class </em><code class="descclassname">pydrake.systems.trajectory_optimization.</code><code class="descname">DirectTranscription</code><a class="headerlink" href="#pydrake.systems.trajectory_optimization.DirectTranscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="pydrake.systems.trajectory_optimization.MultipleShooting"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.trajectory_optimization.MultipleShooting</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.trajectory_optimization.MultipleShooting" title="pydrake.systems.trajectory_optimization.MultipleShooting"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.trajectory_optimization.MultipleShooting</span></code></a></p>
 <p>DirectTranscription is perhaps the simplest implementation of a
 multiple shooting method, where we have decision variables
 representing the control and input at every sample time in the
@@ -324,24 +318,24 @@ systems (with a single periodic timestep update). Continuous-time
 systems must call one of the constructors that takes bounds on the
 timestep as an argument.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A dynamical system to be used in the dynamic constraints. This
 system must support System::ToAutoDiffXd. Note that this is
 aliased for the lifetime of this object.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>Required to describe any parameters of the system. The values of
 the state in this context do not have any effect. This context
 will also be “cloned” by the optimization; changes to the context
 after calling this method will NOT impact the trajectory
 optimization.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_time_samples</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt>
 <dd>The number of breakpoints in the trajectory.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">input_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt>
 <dd>A valid input port index or valid InputPortSelection for
-<code class="docutils literal"><span class="pre">system</span></code>. All other inputs on the system will be left
-disconnected (if they are disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be
+<code class="docutils literal notranslate"><span class="pre">system</span></code>. All other inputs on the system will be left
+disconnected (if they are disconnected in <code class="docutils literal notranslate"><span class="pre">context)</span></code> or will be
 set to their current values (if they are connected/fixed in
-<code class="docutils literal"><span class="pre">context)</span></code>.</dd>
+<code class="docutils literal notranslate"><span class="pre">context)</span></code>.</dd>
 </dl>
 <p><em>Default:</em> kUseFirstInputIfItExists.</p>
 <ol class="arabic simple" start="2">
@@ -351,26 +345,26 @@ set to their current values (if they are connected/fixed in
 This version of the constructor is only for continuous-time systems;
 the dynamics constraints use explicit forward Euler integration.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A dynamical system to be used in the dynamic constraints. This
 system must support System::ToAutoDiffXd. Note that this is
 aliased for the lifetime of this object.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>Required to describe any parameters of the system. The values of
 the state in this context do not have any effect. This context
 will also be “cloned” by the optimization; changes to the context
 after calling this method will NOT impact the trajectory
 optimization.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_time_samples</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_time_samples</span></code>:</dt>
 <dd>The number of breakpoints in the trajectory.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">fixed_timestep</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fixed_timestep</span></code>:</dt>
 <dd>The spacing between sample times.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">input_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_port_index</span></code>:</dt>
 <dd>A valid input port index or valid InputPortSelection for
-<code class="docutils literal"><span class="pre">system</span></code>. All other inputs on the system will be left
-disconnected (if they are disconnected in <code class="docutils literal"><span class="pre">context)</span></code> or will be
+<code class="docutils literal notranslate"><span class="pre">system</span></code>. All other inputs on the system will be left
+disconnected (if they are disconnected in <code class="docutils literal notranslate"><span class="pre">context)</span></code> or will be
 set to their current values (if they are connected/fixed in
-<code class="docutils literal"><span class="pre">context)</span></code>.</dd>
+<code class="docutils literal notranslate"><span class="pre">context)</span></code>.</dd>
 </dl>
 <p><em>Default:</em> kUseFirstInputIfItExists.</p>
 </dd></dl>
@@ -410,14 +404,14 @@ these).</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.Add2NormSquaredCost">
-<code class="descname">Add2NormSquaredCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.Add2NormSquaredCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Add2NormSquaredCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.Add2NormSquaredCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().Add2NormSquaredCost(…) instead of trajopt.Add2NormSquaredCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddBoundingBoxConstraint">
-<code class="descname">AddBoundingBoxConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddBoundingBoxConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddBoundingBoxConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddBoundingBoxConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddBoundingBoxConstraint(…) instead of trajopt.AddBoundingBoxConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -433,7 +427,7 @@ num_states-by-N MatrixXd of the current (intermediate) state
 trajectory at the break points, inputs is a num_inputs-by-N MatrixXd
 of the current (intermediate) input trajectory at the break points and
 values is a vector of num_rows-by-N MatrixXds of the current
-(intermediate) extra sequential variables specified by <code class="docutils literal"><span class="pre">names</span></code> at
+(intermediate) extra sequential variables specified by <code class="docutils literal notranslate"><span class="pre">names</span></code> at
 the break points.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -448,7 +442,7 @@ programming solver as the default solver.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraint">
-<code class="descname">AddConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddConstraint(…) instead of trajopt.AddConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -472,14 +466,14 @@ substituted with the relevant variables for each time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddCost">
-<code class="descname">AddCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddCost(…) instead of trajopt.AddCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddDecisionVariables">
-<code class="descname">AddDecisionVariables</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddDecisionVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddDecisionVariables</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddDecisionVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddDecisionVariables(…) instead of trajopt.AddDecisionVariables(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -489,9 +483,9 @@ substituted with the relevant variables for each time index.</p>
 <code class="descname">AddDurationBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddDurationBounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a constraint on the total duration of the trajectory.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_bound</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_bound</span></code>:</dt>
 <dd>A scalar double lower bound.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_bound</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_bound</span></code>:</dt>
 <dd>A scalar double upper bound.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -508,7 +502,7 @@ substituted with the relevant variables for each time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualityConstraintBetweenPolynomials">
-<code class="descname">AddEqualityConstraintBetweenPolynomials</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualityConstraintBetweenPolynomials" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddEqualityConstraintBetweenPolynomials</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddEqualityConstraintBetweenPolynomials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddEqualityConstraintBetweenPolynomials(…) instead of trajopt.AddEqualityConstraintBetweenPolynomials(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -531,7 +525,7 @@ substituted with the relevant variables for each time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddExponentialConeConstraint">
-<code class="descname">AddExponentialConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddExponentialConeConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddExponentialConeConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddExponentialConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddExponentialConeConstraint(…) instead of trajopt.AddExponentialConeConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -544,7 +538,7 @@ substituted with the relevant variables for each time index.</p>
 <li>AddFinalCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, e: pydrake.symbolic.Expression) -&gt; pydrake.solvers.mathematicalprogram.Binding[Cost]</li>
 </ol>
 <p>Adds a cost to the final time, of the form</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[cost = e(t,x,u),\]</div>
 <p>where any instances of time(), state(), and/or input() placeholder
 variables, as well as placeholder variables returned by calls to
@@ -580,7 +574,7 @@ MultipleShooting::AddFinalCost; to “unhide” this method.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddIndeterminates">
-<code class="descname">AddIndeterminates</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddIndeterminates" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddIndeterminates</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddIndeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddIndeterminates(…) instead of trajopt.AddIndeterminates(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -607,119 +601,119 @@ programming solver as the default solver.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddL2NormCost">
-<code class="descname">AddL2NormCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddL2NormCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddL2NormCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddL2NormCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddL2NormCost(…) instead of trajopt.AddL2NormCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddL2NormCostUsingConicConstraint">
-<code class="descname">AddL2NormCostUsingConicConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddL2NormCostUsingConicConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddL2NormCostUsingConicConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddL2NormCostUsingConicConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddL2NormCostUsingConicConstraint(…) instead of trajopt.AddL2NormCostUsingConicConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearComplementarityConstraint">
-<code class="descname">AddLinearComplementarityConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearComplementarityConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearComplementarityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddLinearComplementarityConstraint(…) instead of trajopt.AddLinearComplementarityConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearConstraint">
-<code class="descname">AddLinearConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddLinearConstraint(…) instead of trajopt.AddLinearConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearCost">
-<code class="descname">AddLinearCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddLinearCost(…) instead of trajopt.AddLinearCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearEqualityConstraint">
-<code class="descname">AddLinearEqualityConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearEqualityConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearEqualityConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearEqualityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddLinearEqualityConstraint(…) instead of trajopt.AddLinearEqualityConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearMatrixInequalityConstraint">
-<code class="descname">AddLinearMatrixInequalityConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearMatrixInequalityConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLinearMatrixInequalityConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLinearMatrixInequalityConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddLinearMatrixInequalityConstraint(…) instead of trajopt.AddLinearMatrixInequalityConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddLorentzConeConstraint">
-<code class="descname">AddLorentzConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddLorentzConeConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddLorentzConeConstraint(…) instead of trajopt.AddLorentzConeConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddMaximizeGeometricMeanCost">
-<code class="descname">AddMaximizeGeometricMeanCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddMaximizeGeometricMeanCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddMaximizeGeometricMeanCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddMaximizeGeometricMeanCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddMaximizeGeometricMeanCost(…) instead of trajopt.AddMaximizeGeometricMeanCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddMaximizeLogDeterminantCost">
-<code class="descname">AddMaximizeLogDeterminantCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddMaximizeLogDeterminantCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddMaximizeLogDeterminantCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddMaximizeLogDeterminantCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddMaximizeLogDeterminantCost(…) instead of trajopt.AddMaximizeLogDeterminantCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddPolynomialConstraint">
-<code class="descname">AddPolynomialConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPolynomialConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddPolynomialConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPolynomialConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddPolynomialConstraint(…) instead of trajopt.AddPolynomialConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddPolynomialCost">
-<code class="descname">AddPolynomialCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPolynomialCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddPolynomialCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPolynomialCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddPolynomialCost(…) instead of trajopt.AddPolynomialCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddPositiveDiagonallyDominantMatrixConstraint">
-<code class="descname">AddPositiveDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddPositiveDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddPositiveDiagonallyDominantMatrixConstraint(…) instead of trajopt.AddPositiveDiagonallyDominantMatrixConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddPositiveSemidefiniteConstraint">
-<code class="descname">AddPositiveSemidefiniteConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPositiveSemidefiniteConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddPositiveSemidefiniteConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddPositiveSemidefiniteConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddPositiveSemidefiniteConstraint(…) instead of trajopt.AddPositiveSemidefiniteConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddQuadraticCost">
-<code class="descname">AddQuadraticCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddQuadraticCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddQuadraticCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddQuadraticCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddQuadraticCost(…) instead of trajopt.AddQuadraticCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddQuadraticErrorCost">
-<code class="descname">AddQuadraticErrorCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddQuadraticErrorCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddQuadraticErrorCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddQuadraticErrorCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddQuadraticErrorCost(…) instead of trajopt.AddQuadraticErrorCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddRotatedLorentzConeConstraint">
-<code class="descname">AddRotatedLorentzConeConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddRotatedLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddRotatedLorentzConeConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddRotatedLorentzConeConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddRotatedLorentzConeConstraint(…) instead of trajopt.AddRotatedLorentzConeConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -732,7 +726,7 @@ programming solver as the default solver.</p>
 <li>AddRunningCost(self: pydrake.systems.trajectory_optimization.MultipleShooting, g: pydrake.symbolic.Expression) -&gt; None</li>
 </ol>
 <p>Adds an integrated cost to all time steps, of the form</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[cost = \int_0^T g(t,x,u) dt,\]</div>
 <p>where any instances of time(), state(), and/or input() placeholder
 variables, as well as placeholder variables returned by calls to
@@ -748,14 +742,14 @@ common output of most symbolic linear algebra operations.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddScaledDiagonallyDominantMatrixConstraint">
-<code class="descname">AddScaledDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddScaledDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddScaledDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddScaledDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddScaledDiagonallyDominantMatrixConstraint(…) instead of trajopt.AddScaledDiagonallyDominantMatrixConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddSosConstraint">
-<code class="descname">AddSosConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddSosConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddSosConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddSosConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddSosConstraint(…) instead of trajopt.AddSosConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -785,9 +779,9 @@ programming solver as the default solver.</p>
 <code class="descname">AddTimeIntervalBounds</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>lower_bound: float</em>, <em>upper_bound: float</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddTimeIntervalBounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds bounds on all time intervals.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_bound</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_bound</span></code>:</dt>
 <dd>A scalar double lower bound.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_bound</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_bound</span></code>:</dt>
 <dd>A scalar double upper bound.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -804,84 +798,84 @@ programming solver as the default solver.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddVisualizationCallback">
-<code class="descname">AddVisualizationCallback</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddVisualizationCallback" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddVisualizationCallback</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddVisualizationCallback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().AddVisualizationCallback(…) instead of trajopt.AddVisualizationCallback(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.bounding_box_constraints">
-<code class="descname">bounding_box_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.bounding_box_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">bounding_box_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.bounding_box_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().bounding_box_constraints(…) instead of trajopt.bounding_box_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.CheckSatisfied">
-<code class="descname">CheckSatisfied</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.CheckSatisfied" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CheckSatisfied</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.CheckSatisfied" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().CheckSatisfied(…) instead of trajopt.CheckSatisfied(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.CheckSatisfiedAtInitialGuess">
-<code class="descname">CheckSatisfiedAtInitialGuess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.CheckSatisfiedAtInitialGuess" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CheckSatisfiedAtInitialGuess</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.CheckSatisfiedAtInitialGuess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().CheckSatisfiedAtInitialGuess(…) instead of trajopt.CheckSatisfiedAtInitialGuess(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.decision_variable">
-<code class="descname">decision_variable</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.decision_variable" title="Permalink to this definition">¶</a></dt>
+<code class="descname">decision_variable</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.decision_variable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().decision_variable(…) instead of trajopt.decision_variable(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.decision_variable_index">
-<code class="descname">decision_variable_index</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.decision_variable_index" title="Permalink to this definition">¶</a></dt>
+<code class="descname">decision_variable_index</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.decision_variable_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().decision_variable_index(…) instead of trajopt.decision_variable_index(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.decision_variables">
-<code class="descname">decision_variables</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.decision_variables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">decision_variables</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.decision_variables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().decision_variables(…) instead of trajopt.decision_variables(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.EvalBinding">
-<code class="descname">EvalBinding</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalBinding" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvalBinding</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().EvalBinding(…) instead of trajopt.EvalBinding(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.EvalBindingAtInitialGuess">
-<code class="descname">EvalBindingAtInitialGuess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalBindingAtInitialGuess" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvalBindingAtInitialGuess</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalBindingAtInitialGuess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().EvalBindingAtInitialGuess(…) instead of trajopt.EvalBindingAtInitialGuess(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.EvalBindings">
-<code class="descname">EvalBindings</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalBindings" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvalBindings</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalBindings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().EvalBindings(…) instead of trajopt.EvalBindings(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.EvalVisualizationCallbacks">
-<code class="descname">EvalVisualizationCallbacks</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalVisualizationCallbacks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">EvalVisualizationCallbacks</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.EvalVisualizationCallbacks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().EvalVisualizationCallbacks(…) instead of trajopt.EvalVisualizationCallbacks(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.exponential_cone_constraints">
-<code class="descname">exponential_cone_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.exponential_cone_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">exponential_cone_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.exponential_cone_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().exponential_cone_constraints(…) instead of trajopt.exponential_cone_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -895,21 +889,21 @@ final time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.FindDecisionVariableIndex">
-<code class="descname">FindDecisionVariableIndex</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.FindDecisionVariableIndex" title="Permalink to this definition">¶</a></dt>
+<code class="descname">FindDecisionVariableIndex</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.FindDecisionVariableIndex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().FindDecisionVariableIndex(…) instead of trajopt.FindDecisionVariableIndex(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.FindDecisionVariableIndices">
-<code class="descname">FindDecisionVariableIndices</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.FindDecisionVariableIndices" title="Permalink to this definition">¶</a></dt>
+<code class="descname">FindDecisionVariableIndices</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.FindDecisionVariableIndices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().FindDecisionVariableIndices(…) instead of trajopt.FindDecisionVariableIndices(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.FindIndeterminateIndex">
-<code class="descname">FindIndeterminateIndex</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.FindIndeterminateIndex" title="Permalink to this definition">¶</a></dt>
+<code class="descname">FindIndeterminateIndex</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.FindIndeterminateIndex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().FindIndeterminateIndex(…) instead of trajopt.FindIndeterminateIndex(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -921,49 +915,49 @@ final time index.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.generic_constraints">
-<code class="descname">generic_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.generic_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generic_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.generic_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().generic_constraints(…) instead of trajopt.generic_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.generic_costs">
-<code class="descname">generic_costs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.generic_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">generic_costs</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.generic_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().generic_costs(…) instead of trajopt.generic_costs(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetAllConstraints">
-<code class="descname">GetAllConstraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetAllConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetAllConstraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetAllConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetAllConstraints(…) instead of trajopt.GetAllConstraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetAllCosts">
-<code class="descname">GetAllCosts</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetAllCosts" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetAllCosts</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetAllCosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetAllCosts(…) instead of trajopt.GetAllCosts(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetAllLinearConstraints">
-<code class="descname">GetAllLinearConstraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetAllLinearConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetAllLinearConstraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetAllLinearConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetAllLinearConstraints(…) instead of trajopt.GetAllLinearConstraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetBindingVariableValues">
-<code class="descname">GetBindingVariableValues</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetBindingVariableValues" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetBindingVariableValues</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetBindingVariableValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetBindingVariableValues(…) instead of trajopt.GetBindingVariableValues(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetInitialGuess">
-<code class="descname">GetInitialGuess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetInitialGuess" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetInitialGuess</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetInitialGuess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetInitialGuess(…) instead of trajopt.GetInitialGuess(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -985,7 +979,7 @@ each breakpoint at the solution.</p>
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableAtIndex">
 <code class="descname">GetSequentialVariableAtIndex</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>name: str</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSequentialVariableAtIndex" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the decision variables associated with the sequential variable
-<code class="docutils literal"><span class="pre">name</span></code> at time index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">name</span></code> at time index <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">NewSequentialVariable().</p>
@@ -998,7 +992,7 @@ each breakpoint at the solution.</p>
 <dd><p>Returns a matrix containing the sequential variable values (arranged
 in columns) at each breakpoint at the solution.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>The name of sequential variable to get the results for. Must
 correspond to an already added sequential variable.</dd>
 </dl>
@@ -1006,21 +1000,21 @@ correspond to an already added sequential variable.</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsDouble">
-<code class="descname">GetSolverOptionsDouble</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsDouble" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolverOptionsDouble</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsDouble" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetSolverOptionsDouble(…) instead of trajopt.GetSolverOptionsDouble(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsInt">
-<code class="descname">GetSolverOptionsInt</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsInt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolverOptionsInt</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsInt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetSolverOptionsInt(…) instead of trajopt.GetSolverOptionsInt(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsStr">
-<code class="descname">GetSolverOptionsStr</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsStr" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetSolverOptionsStr</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetSolverOptionsStr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetSolverOptionsStr(…) instead of trajopt.GetSolverOptionsStr(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1034,35 +1028,35 @@ each breakpoint at the solution.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.GetVariableScaling">
-<code class="descname">GetVariableScaling</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetVariableScaling" title="Permalink to this definition">¶</a></dt>
+<code class="descname">GetVariableScaling</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.GetVariableScaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().GetVariableScaling(…) instead of trajopt.GetVariableScaling(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.indeterminate">
-<code class="descname">indeterminate</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.indeterminate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">indeterminate</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.indeterminate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().indeterminate(…) instead of trajopt.indeterminate(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.indeterminates">
-<code class="descname">indeterminates</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.indeterminates" title="Permalink to this definition">¶</a></dt>
+<code class="descname">indeterminates</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.indeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().indeterminates(…) instead of trajopt.indeterminates(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.indeterminates_index">
-<code class="descname">indeterminates_index</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.indeterminates_index" title="Permalink to this definition">¶</a></dt>
+<code class="descname">indeterminates_index</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.indeterminates_index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().indeterminates_index(…) instead of trajopt.indeterminates_index(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.initial_guess">
-<code class="descname">initial_guess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.initial_guess" title="Permalink to this definition">¶</a></dt>
+<code class="descname">initial_guess</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.initial_guess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().initial_guess(…) instead of trajopt.initial_guess(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1091,124 +1085,124 @@ objectives/constraints for the parent classes will result in an error.</p>
 <li>input(self: pydrake.systems.trajectory_optimization.MultipleShooting, index: int) -&gt; numpy.ndarray[object[m, 1]]</li>
 </ol>
 <p>Returns the decision variables associated with the input, u, at time
-index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+index <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.l2norm_costs">
-<code class="descname">l2norm_costs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.l2norm_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">l2norm_costs</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.l2norm_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().l2norm_costs(…) instead of trajopt.l2norm_costs(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.linear_constraints">
-<code class="descname">linear_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().linear_constraints(…) instead of trajopt.linear_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.linear_costs">
-<code class="descname">linear_costs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_costs</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().linear_costs(…) instead of trajopt.linear_costs(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.linear_equality_constraints">
-<code class="descname">linear_equality_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_equality_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_equality_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_equality_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().linear_equality_constraints(…) instead of trajopt.linear_equality_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.linear_matrix_inequality_constraints">
-<code class="descname">linear_matrix_inequality_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_matrix_inequality_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">linear_matrix_inequality_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.linear_matrix_inequality_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().linear_matrix_inequality_constraints(…) instead of trajopt.linear_matrix_inequality_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.lorentz_cone_constraints">
-<code class="descname">lorentz_cone_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">lorentz_cone_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().lorentz_cone_constraints(…) instead of trajopt.lorentz_cone_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.MakeCost">
-<code class="descname">MakeCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.MakeCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">MakeCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.MakeCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().MakeCost(…) instead of trajopt.MakeCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.MakePolynomial">
-<code class="descname">MakePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.MakePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">MakePolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.MakePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().MakePolynomial(…) instead of trajopt.MakePolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewBinaryVariables">
-<code class="descname">NewBinaryVariables</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewBinaryVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewBinaryVariables</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewBinaryVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewBinaryVariables(…) instead of trajopt.NewBinaryVariables(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewContinuousVariables">
-<code class="descname">NewContinuousVariables</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewContinuousVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewContinuousVariables</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewContinuousVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewContinuousVariables(…) instead of trajopt.NewContinuousVariables(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeFreePolynomial">
-<code class="descname">NewEvenDegreeFreePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeFreePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewEvenDegreeFreePolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeFreePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewEvenDegreeFreePolynomial(…) instead of trajopt.NewEvenDegreeFreePolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeNonnegativePolynomial">
-<code class="descname">NewEvenDegreeNonnegativePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewEvenDegreeNonnegativePolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewEvenDegreeNonnegativePolynomial(…) instead of trajopt.NewEvenDegreeNonnegativePolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeSosPolynomial">
-<code class="descname">NewEvenDegreeSosPolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeSosPolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewEvenDegreeSosPolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewEvenDegreeSosPolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewEvenDegreeSosPolynomial(…) instead of trajopt.NewEvenDegreeSosPolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewFreePolynomial">
-<code class="descname">NewFreePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewFreePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewFreePolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewFreePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewFreePolynomial(…) instead of trajopt.NewFreePolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewIndeterminates">
-<code class="descname">NewIndeterminates</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewIndeterminates" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewIndeterminates</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewIndeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewIndeterminates(…) instead of trajopt.NewIndeterminates(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewNonnegativePolynomial">
-<code class="descname">NewNonnegativePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewNonnegativePolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewNonnegativePolynomial(…) instead of trajopt.NewNonnegativePolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewOddDegreeFreePolynomial">
-<code class="descname">NewOddDegreeFreePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewOddDegreeFreePolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewOddDegreeFreePolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewOddDegreeFreePolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewOddDegreeFreePolynomial(…) instead of trajopt.NewOddDegreeFreePolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1227,35 +1221,35 @@ objectives/constraints for the parent classes will result in an error.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewSosPolynomial">
-<code class="descname">NewSosPolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewSosPolynomial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewSosPolynomial</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewSosPolynomial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewSosPolynomial(…) instead of trajopt.NewSosPolynomial(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.NewSymmetricContinuousVariables">
-<code class="descname">NewSymmetricContinuousVariables</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewSymmetricContinuousVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">NewSymmetricContinuousVariables</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.NewSymmetricContinuousVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().NewSymmetricContinuousVariables(…) instead of trajopt.NewSymmetricContinuousVariables(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.num_indeterminates">
-<code class="descname">num_indeterminates</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.num_indeterminates" title="Permalink to this definition">¶</a></dt>
+<code class="descname">num_indeterminates</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.num_indeterminates" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().num_indeterminates(…) instead of trajopt.num_indeterminates(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.num_vars">
-<code class="descname">num_vars</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.num_vars" title="Permalink to this definition">¶</a></dt>
+<code class="descname">num_vars</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.num_vars" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().num_vars(…) instead of trajopt.num_vars(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.positive_semidefinite_constraints">
-<code class="descname">positive_semidefinite_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.positive_semidefinite_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">positive_semidefinite_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.positive_semidefinite_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().positive_semidefinite_constraints(…) instead of trajopt.positive_semidefinite_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1269,7 +1263,7 @@ trajectory optimization problem.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.quadratic_costs">
-<code class="descname">quadratic_costs</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.quadratic_costs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">quadratic_costs</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.quadratic_costs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().quadratic_costs(…) instead of trajopt.quadratic_costs(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1293,56 +1287,56 @@ the dynamic constraints.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.RemoveConstraint">
-<code class="descname">RemoveConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.RemoveConstraint" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RemoveConstraint</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.RemoveConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().RemoveConstraint(…) instead of trajopt.RemoveConstraint(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.RemoveCost">
-<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.RemoveCost" title="Permalink to this definition">¶</a></dt>
+<code class="descname">RemoveCost</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.RemoveCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().RemoveCost(…) instead of trajopt.RemoveCost(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.Reparse">
-<code class="descname">Reparse</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.Reparse" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Reparse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.Reparse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().Reparse(…) instead of trajopt.Reparse(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.required_capabilities">
-<code class="descname">required_capabilities</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.required_capabilities" title="Permalink to this definition">¶</a></dt>
+<code class="descname">required_capabilities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.required_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().required_capabilities(…) instead of trajopt.required_capabilities(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.rotated_lorentz_cone_constraints">
-<code class="descname">rotated_lorentz_cone_constraints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.rotated_lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotated_lorentz_cone_constraints</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.rotated_lorentz_cone_constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().rotated_lorentz_cone_constraints(…) instead of trajopt.rotated_lorentz_cone_constraints(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetDecisionVariableValueInVector">
-<code class="descname">SetDecisionVariableValueInVector</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetDecisionVariableValueInVector" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetDecisionVariableValueInVector</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetDecisionVariableValueInVector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().SetDecisionVariableValueInVector(…) instead of trajopt.SetDecisionVariableValueInVector(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialGuess">
-<code class="descname">SetInitialGuess</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialGuess" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetInitialGuess</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialGuess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().SetInitialGuess(…) instead of trajopt.SetInitialGuess(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialGuessForAllVariables">
-<code class="descname">SetInitialGuessForAllVariables</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialGuessForAllVariables" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetInitialGuessForAllVariables</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetInitialGuessForAllVariables" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().SetInitialGuessForAllVariables(…) instead of trajopt.SetInitialGuessForAllVariables(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1354,21 +1348,21 @@ the dynamic constraints.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetSolverOption">
-<code class="descname">SetSolverOption</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetSolverOption" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetSolverOption</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetSolverOption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().SetSolverOption(…) instead of trajopt.SetSolverOption(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.SetVariableScaling">
-<code class="descname">SetVariableScaling</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetVariableScaling" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetVariableScaling</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.SetVariableScaling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().SetVariableScaling(…) instead of trajopt.SetVariableScaling(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.solver_options">
-<code class="descname">solver_options</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.solver_options" title="Permalink to this definition">¶</a></dt>
+<code class="descname">solver_options</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.solver_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().solver_options(…) instead of trajopt.solver_options(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1390,7 +1384,7 @@ objectives/constraints for the parent classes will result in an error.</p>
 <li>state(self: pydrake.systems.trajectory_optimization.MultipleShooting, index: int) -&gt; numpy.ndarray[object[m, 1]]</li>
 </ol>
 <p>Returns the decision variables associated with the state, x, at time
-index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+index <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1408,7 +1402,7 @@ will result in an error.</p>
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.timestep">
 <code class="descname">timestep</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[1, 1]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.timestep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the decision variable associated with the timestep, h, at time
-index <code class="docutils literal"><span class="pre">index</span></code>.</p>
+index <code class="docutils literal notranslate"><span class="pre">index</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1421,7 +1415,7 @@ index <code class="docutils literal"><span class="pre">index</span></code>.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.visualization_callbacks">
-<code class="descname">visualization_callbacks</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.visualization_callbacks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">visualization_callbacks</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.visualization_callbacks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Warning:</p>
 <p>Use trajopt.prog().visualization_callbacks(…) instead of trajopt.visualization_callbacks(…). The deprecated code will be removed from Drake on or after 2022-05-01.</p>
 </dd></dl>
@@ -1447,9 +1441,7 @@ index <code class="docutils literal"><span class="pre">index</span></code>.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1458,7 +1450,7 @@ index <code class="docutils literal"><span class="pre">index</span></code>.</p>
         <a href="pydrake.trajectories.html" class="btn btn-neutral float-right" title="pydrake.trajectories" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.system_sliders.html" class="btn btn-neutral" title="pydrake.systems.system_sliders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.system_sliders.html" class="btn btn-neutral float-left" title="pydrake.systems.system_sliders" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1482,37 +1474,15 @@ index <code class="docutils literal"><span class="pre">index</span></code>.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

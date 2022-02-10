@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.systems.system_sliders" href="pydrake.systems.system_sliders.html"/>
-        <link rel="prev" title="pydrake.systems.scalar_conversion" href="pydrake.systems.scalar_conversion.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.system_sliders" href="pydrake.systems.system_sliders.html" />
+    <link rel="prev" title="pydrake.systems.scalar_conversion" href="pydrake.systems.scalar_conversion.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -223,34 +217,34 @@ Here, we’ll highlight one or two points as it relates to this struct.</p>
 <p>The mapping from 3D to 2D is decomposed into two sets of properties:
 extrinsic and intrinsic. The extrinsic properties define the pose of
 the camera in the environment – specifically, given the camera frame
-<code class="docutils literal"><span class="pre">C</span></code>, it defines <code class="docutils literal"><span class="pre">X_WC</span></code>. Once a point <code class="docutils literal"><span class="pre">Q</span></code> is measured and
-expressed in the camera’s frame (i.e., <code class="docutils literal"><span class="pre">p_CQ_C</span></code>), the intrinsic
+<code class="docutils literal notranslate"><span class="pre">C</span></code>, it defines <code class="docutils literal notranslate"><span class="pre">X_WC</span></code>. Once a point <code class="docutils literal notranslate"><span class="pre">Q</span></code> is measured and
+expressed in the camera’s frame (i.e., <code class="docutils literal notranslate"><span class="pre">p_CQ_C</span></code>), the intrinsic
 matrix projects it into the 2D image. CameraInfo does _not* concern
 itself with the extrinsic properties (other classes are responsible
 for that – see RgbdSensor).</p>
 <p>CameraInfo defines the parameters of the intrinsic projection. The
 projection can be captured by the camera or intrinsic matrix which
 essentially maps points in the camera frame C to the image plane. The
-camera looks along the positive <code class="docutils literal"><span class="pre">Cz</span></code> axis, and the <code class="docutils literal"><span class="pre">Cy</span></code> axis
-points down. The projection matrix is called <code class="docutils literal"><span class="pre">A</span></code> in the OpenCV
-documentation, but typically called <code class="docutils literal"><span class="pre">K</span></code> in computer vision
+camera looks along the positive <code class="docutils literal notranslate"><span class="pre">Cz</span></code> axis, and the <code class="docutils literal notranslate"><span class="pre">Cy</span></code> axis
+points down. The projection matrix is called <code class="docutils literal notranslate"><span class="pre">A</span></code> in the OpenCV
+documentation, but typically called <code class="docutils literal notranslate"><span class="pre">K</span></code> in computer vision
 literature:</p>
 <p>│ f_x 0 c_x │ K = │ 0 f_y c_y │, i.e., │ 0 0 1 │</p>
 <ul class="simple">
 <li>This matrix maps a point in the camera frame C to the projective space of the</li>
 </ul>
-<p>image (via homogeneous coordinates). The resulting image coordinate <code class="docutils literal"><span class="pre">(u,</span> <span class="pre">v)</span></code>
+<p>image (via homogeneous coordinates). The resulting image coordinate <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code>
 is extracted by dividing out the homogeneous scale factor.
 - (c_x, c_y) defines the principal point.
 - (f_x, f_y) defines the model focal length.</p>
 <p>In other words, for point Q in the world frame, its projected position
-in the 2D image <code class="docutils literal"><span class="pre">(u_Q,</span> <span class="pre">v_Q)</span></code> is calculated as:</p>
+in the 2D image <code class="docutils literal notranslate"><span class="pre">(u_Q,</span> <span class="pre">v_Q)</span></code> is calculated as:</p>
 <p>│ u_Q │ s│ v_Q │ = K ⋅ X_CW ⋅ p_WQ │ 1 │</p>
 <p>Note: The expression on the right will generally produce a homogeneous
-coordinate vector of the form <code class="docutils literal"><span class="pre">(s</span> <span class="pre">*</span> <span class="pre">u_Q,</span> <span class="pre">s</span> <span class="pre">*</span> <span class="pre">v_Q,</span> <span class="pre">s)</span></code>. The texture
+coordinate vector of the form <code class="docutils literal notranslate"><span class="pre">(s</span> <span class="pre">*</span> <span class="pre">u_Q,</span> <span class="pre">s</span> <span class="pre">*</span> <span class="pre">v_Q,</span> <span class="pre">s)</span></code>. The texture
 coordinate is defined as the first two measures when the <em>third</em>
 measure is 1. The magic of homogeneous coordinates allows us to simply
-factor out <code class="docutils literal"><span class="pre">s</span></code>.</p>
+factor out <code class="docutils literal notranslate"><span class="pre">s</span></code>.</p>
 <p><strong>Alignment of the camera frame with the image</strong></p>
 <p>When looking at the resulting image and reasoning about the camera
 that produced it, one can say that Cz points into the image, Cx is
@@ -265,7 +259,7 @@ The terms are ordered alphabetically for ease of reference.</p>
 <ul class="simple">
 <li><strong>aperture</strong>: the opening in a camera through which light passes. The origin</li>
 </ul>
-<p>of the camera frame <code class="docutils literal"><span class="pre">Co</span></code> is located at the aperture’s center.
+<p>of the camera frame <code class="docutils literal notranslate"><span class="pre">Co</span></code> is located at the aperture’s center.
 - in a physical camera it may contain a lens and the size of the camera
 affects optical artifacts such as depth of field.
 - in the pinhole model, there is no lens and the aperture is a single point.
@@ -275,10 +269,10 @@ view angle).
 - In a physical camera, it is the distance (in meters) between the center of
 the lens and the plane at which all incoming, parallel light rays converge
 (assuming a radially symmetric lens).
-- in the pinhole model, <code class="docutils literal"><span class="pre">(f_x,</span> <span class="pre">f_y)</span></code> is described as “focal length”, but the
+- in the pinhole model, <code class="docutils literal notranslate"><span class="pre">(f_x,</span> <span class="pre">f_y)</span></code> is described as “focal length”, but the
 units are in pixels and the interpretation is different. The relationship
-between <code class="docutils literal"><span class="pre">(f_x,</span> <span class="pre">f_y)</span></code> and the physical focal length <code class="docutils literal"><span class="pre">F</span></code> is <code class="docutils literal"><span class="pre">f_i</span> <span class="pre">=</span> <span class="pre">F</span> <span class="pre">*</span> <span class="pre">s_i</span></code>,
-where <code class="docutils literal"><span class="pre">(s_x,</span> <span class="pre">s_y)</span></code> are the number of pixels per meter in the x- and
+between <code class="docutils literal notranslate"><span class="pre">(f_x,</span> <span class="pre">f_y)</span></code> and the physical focal length <code class="docutils literal notranslate"><span class="pre">F</span></code> is <code class="docutils literal notranslate"><span class="pre">f_i</span> <span class="pre">=</span> <span class="pre">F</span> <span class="pre">*</span> <span class="pre">s_i</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">(s_x,</span> <span class="pre">s_y)</span></code> are the number of pixels per meter in the x- and
 y-directions (of the image). Both values described as “focal length” have
 analogous effects on field of view and scale of objects in the image.
 - <strong>frame</strong>: (Also “pose”) an origin point and a space-spanning basis in 2D/3D,
@@ -289,10 +283,10 @@ discussing cameras (unless explicitly noted).
 - <strong>image</strong>: an array of measurements such that the measured values have
 spatial relationships based on where they are in the array.
 - <strong>image frame</strong>: the 2D frame embedded in 3D space spanning the image plane.
-The image frame’s x- and y-axes are parallel with <code class="docutils literal"><span class="pre">Cx</span></code> and <code class="docutils literal"><span class="pre">Cy</span></code>,
-respectively. Coordinates are expressed as the pair <code class="docutils literal"><span class="pre">(u,</span> <span class="pre">v)</span></code> and the camera’s
+The image frame’s x- and y-axes are parallel with <code class="docutils literal notranslate"><span class="pre">Cx</span></code> and <code class="docutils literal notranslate"><span class="pre">Cy</span></code>,
+respectively. Coordinates are expressed as the pair <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> and the camera’s
 image lies on the plane spanned by the frame’s basis. The <em>center</em> of the
-pixel in the first row and first column is at <code class="docutils literal"><span class="pre">(u=0,</span> <span class="pre">v=0)</span></code>.
+pixel in the first row and first column is at <code class="docutils literal notranslate"><span class="pre">(u=0,</span> <span class="pre">v=0)</span></code>.
 - <strong>image plane</strong>: a plane in 3D which is perpendicular to the camera’s viewing
 direction. Conceptually, the image lies on this plane.
 - In a physical pinhole camera, the aperture is between the image plane and
@@ -300,7 +294,7 @@ the environment being imaged.
 - In the pinhole model, the image plane lies between the environment and
 aperture (i.e., in the positive Cz direction from Co).
 - <strong>imager</strong>: a sensor whose measurements are reported in images.
-- <strong>principal point</strong>: The projection of the camera origin, <code class="docutils literal"><span class="pre">Co</span></code>, on the image
+- <strong>principal point</strong>: The projection of the camera origin, <code class="docutils literal notranslate"><span class="pre">Co</span></code>, on the image
 plane. Its value is measured from the image’s origin in pixels.
 - <strong>sensor</strong>: a measurement device.
 - <strong>viewing direction</strong>: the direction the camera is facing. Defined as being
@@ -313,18 +307,18 @@ parallel with Cz.</p>
 <li>__init__(self: pydrake.systems.sensors.CameraInfo, width: int, height: int, fov_y: float) -&gt; None</li>
 </ol>
 <p>Constructs this instance from image size and vertical field of view.
-We assume the principal point is in the center of the image; <code class="docutils literal"><span class="pre">(center</span>
-<span class="pre">x,</span> <span class="pre">center_y)</span></code> is equal to <code class="docutils literal"><span class="pre">(width</span> <span class="pre">/</span> <span class="pre">2.0</span> <span class="pre">-</span> <span class="pre">0.5,</span> <span class="pre">height</span> <span class="pre">/</span> <span class="pre">2.0</span> <span class="pre">-</span>
-<span class="pre">0.5)</span></code>. We also assume the focal lengths <code class="docutils literal"><span class="pre">focal_x</span></code> and <code class="docutils literal"><span class="pre">focal_y</span></code>
+We assume the principal point is in the center of the image; <code class="docutils literal notranslate"><span class="pre">(center</span>
+<span class="pre">x,</span> <span class="pre">center_y)</span></code> is equal to <code class="docutils literal notranslate"><span class="pre">(width</span> <span class="pre">/</span> <span class="pre">2.0</span> <span class="pre">-</span> <span class="pre">0.5,</span> <span class="pre">height</span> <span class="pre">/</span> <span class="pre">2.0</span> <span class="pre">-</span>
+<span class="pre">0.5)</span></code>. We also assume the focal lengths <code class="docutils literal notranslate"><span class="pre">focal_x</span></code> and <code class="docutils literal notranslate"><span class="pre">focal_y</span></code>
 are identical (modeling a radially symmetric lens). The value is
 derived from field of view and image size as:</p>
 <p>focal_x = focal_y = height * 0.5 / tan(0.5 * fov_y)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>The image width in pixels, must be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>The image height in pixels, must be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">fov_y</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fov_y</span></code>:</dt>
 <dd>The vertical field of view in radians.</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -351,18 +345,18 @@ center_y from the provided intrinsic_matrix.</p>
 <p>Constructor that directly sets the image size, principal point, and
 focal lengths.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>The image width in pixels, must be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>The image height in pixels, must be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">focal_x</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">focal_x</span></code>:</dt>
 <dd>The <em>model</em> “focal length” x in pixels (as documented above).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">focal_y</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">focal_y</span></code>:</dt>
 <dd>The <em>model</em> “focal length” y in pixels (as documented above).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">center_x</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">center_x</span></code>:</dt>
 <dd>The x coordinate of the principal point in pixels (as documented
 above).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">center_y</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">center_y</span></code>:</dt>
 <dd>The y coordinate of the principal point in pixels (as documented
 above).</dd>
 </dl>
@@ -415,7 +409,7 @@ above).</dd>
 <dl class="template">
 <dt id="pydrake.systems.sensors.Image">
 <em class="property">template </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">Image</code><a class="headerlink" href="#pydrake.systems.sensors.Image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth16U]" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth32F]" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kLabel16I]" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal"><span class="pre">Image[PixelType.kLabel16I]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth16U]" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth32F]" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kLabel16I]" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image[PixelType.kLabel16I]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]">
 <em class="property">class </em><code class="descname">Image[PixelType.kRgba8U]</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
@@ -430,9 +424,9 @@ above).</dd>
 image. All the channel values in all the pixels are initialized with
 zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -441,11 +435,11 @@ zero.</p>
 <p>Image size and initial value constructor. Specifies a width, height
 and an initial value for all the channels in all the pixels.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt>
 <dd>A value set to all the channels in all the pixels</dd>
 </dl>
 </dd></dl>
@@ -502,7 +496,7 @@ channels in a pixel</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].Traits">
 <code class="descname">Traits</code><a class="headerlink" href="#pydrake.systems.sensors.Image.Image[PixelType.kRgba8U].Traits" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -529,9 +523,9 @@ channels in a pixel</p>
 image. All the channel values in all the pixels are initialized with
 zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -540,11 +534,11 @@ zero.</p>
 <p>Image size and initial value constructor. Specifies a width, height
 and an initial value for all the channels in all the pixels.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt>
 <dd>A value set to all the channels in all the pixels</dd>
 </dl>
 </dd></dl>
@@ -601,7 +595,7 @@ channels in a pixel</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.Image[PixelType.kDepth16U].Traits">
 <code class="descname">Traits</code><a class="headerlink" href="#pydrake.systems.sensors.Image[PixelType.kDepth16U].Traits" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -626,9 +620,9 @@ channels in a pixel</p>
 image. All the channel values in all the pixels are initialized with
 zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -637,11 +631,11 @@ zero.</p>
 <p>Image size and initial value constructor. Specifies a width, height
 and an initial value for all the channels in all the pixels.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt>
 <dd>A value set to all the channels in all the pixels</dd>
 </dl>
 </dd></dl>
@@ -698,7 +692,7 @@ channels in a pixel</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.Image[PixelType.kDepth32F].Traits">
 <code class="descname">Traits</code><a class="headerlink" href="#pydrake.systems.sensors.Image[PixelType.kDepth32F].Traits" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -723,9 +717,9 @@ channels in a pixel</p>
 image. All the channel values in all the pixels are initialized with
 zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -734,11 +728,11 @@ zero.</p>
 <p>Image size and initial value constructor. Specifies a width, height
 and an initial value for all the channels in all the pixels.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt>
 <dd>A value set to all the channels in all the pixels</dd>
 </dl>
 </dd></dl>
@@ -795,7 +789,7 @@ channels in a pixel</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.Image[PixelType.kLabel16I].Traits">
 <code class="descname">Traits</code><a class="headerlink" href="#pydrake.systems.sensors.Image[PixelType.kLabel16I].Traits" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]" title="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]" title="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -820,9 +814,9 @@ channels in a pixel</p>
 image. All the channel values in all the pixels are initialized with
 zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -831,11 +825,11 @@ zero.</p>
 <p>Image size and initial value constructor. Specifies a width, height
 and an initial value for all the channels in all the pixels.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">width</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">width</span></code>:</dt>
 <dd>Size of width for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">height</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">height</span></code>:</dt>
 <dd>Size of height for image which should be greater than zero.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">initial_value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">initial_value</span></code>:</dt>
 <dd>A value set to all the channels in all the pixels</dd>
 </dl>
 </dd></dl>
@@ -892,7 +886,7 @@ channels in a pixel</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.Image[PixelType.kRgba8U].Traits">
 <code class="descname">Traits</code><a class="headerlink" href="#pydrake.systems.sensors.Image[PixelType.kRgba8U].Traits" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -906,34 +900,34 @@ channels in a pixel</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageDepth16U">
 <code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageDepth16U</code><a class="headerlink" href="#pydrake.systems.sensors.ImageDepth16U" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth16U]" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth16U]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth16U]" title="pydrake.systems.sensors.Image[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth16U]</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageDepth32F">
 <code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageDepth32F</code><a class="headerlink" href="#pydrake.systems.sensors.ImageDepth32F" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth32F]" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth32F]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kDepth32F]" title="pydrake.systems.sensors.Image[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kDepth32F]</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageLabel16I">
 <code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageLabel16I</code><a class="headerlink" href="#pydrake.systems.sensors.ImageLabel16I" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kLabel16I]" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kLabel16I]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kLabel16I]" title="pydrake.systems.sensors.Image[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kLabel16I]</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageRgba8U">
 <code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageRgba8U</code><a class="headerlink" href="#pydrake.systems.sensors.ImageRgba8U" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.sensors.Image[PixelType.kRgba8U]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.sensors.Image[PixelType.kRgba8U]" title="pydrake.systems.sensors.Image[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.sensors.Image[PixelType.kRgba8U]</span></code></a></p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.systems.sensors.ImageToLcmImageArrayT">
 <em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageToLcmImageArrayT</code><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>An ImageToLcmImageArrayT takes as input an ImageRgba8U, ImageDepth32F
 and ImageLabel16I. This system outputs an AbstractValue containing a
-<code class="docutils literal"><span class="pre">Value&lt;lcmt_image_array&gt;</span></code> LCM message that defines an array of
+<code class="docutils literal notranslate"><span class="pre">Value&lt;lcmt_image_array&gt;</span></code> LCM message that defines an array of
 images (lcmt_image). This message can then be sent to other processes
 that sbscribe it using LcmPublisherSystem. Note that you should NOT
 assume any particular order of those images stored in
@@ -941,7 +935,7 @@ lcmt_image_array, instead check the semantic of those images with
 lcmt_image::pixel_format before using them.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">...&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">(user assigned port name)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ImageToLcmImageArrayT</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The output message’s header field <code class="docutils literal"><span class="pre">seq</span></code> is always zero.</p>
+<p class="last">The output message’s header field <code class="docutils literal notranslate"><span class="pre">seq</span></code> is always zero.</p>
 </div>
 <dl class="method">
 <dt id="pydrake.systems.sensors.ImageToLcmImageArrayT.__init__">
@@ -953,13 +947,13 @@ lcmt_image::pixel_format before using them.</p>
 <p>An ImageToLcmImageArrayT constructor. Declares three input ports –
 one color image, one depth image, and one label image.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">color_frame_name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">color_frame_name</span></code>:</dt>
 <dd>The frame name used for color image.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">depth_frame_name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">depth_frame_name</span></code>:</dt>
 <dd>The frame name used for depth image.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">label_frame_name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">label_frame_name</span></code>:</dt>
 <dd>The frame name used for label image.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">do_compress</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">do_compress</span></code>:</dt>
 <dd>When true, zlib compression will be performed. The default is
 false.</dd>
 </dl>
@@ -980,7 +974,7 @@ the color/depth/label constructor is used.</p>
 <dl class="template">
 <dt id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort">
 <em class="property">template </em><code class="descname">DeclareImageInputPort</code><a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort.DeclareImageInputPort[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort.DeclareImageInputPort[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">DeclareImageInputPort[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal"><span class="pre">DeclareImageInputPort[PixelType.kDepth16U]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">DeclareImageInputPort[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal"><span class="pre">DeclareImageInputPort[PixelType.kLabel16I]</span></code></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort.DeclareImageInputPort[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort.DeclareImageInputPort[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kRgba8U]</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kDepth16U]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kDepth32F]</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">DeclareImageInputPort[PixelType.kLabel16I]</span></code></p>
 <dl class="method">
 <dt id="pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort.DeclareImageInputPort[PixelType.kRgba8U]">
 <code class="descname">DeclareImageInputPort[PixelType.kRgba8U]</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.ImageToLcmImageArrayT</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.DeclareImageInputPort.DeclareImageInputPort[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
@@ -1019,7 +1013,7 @@ the color/depth/label constructor is used.</p>
 <dt id="pydrake.systems.sensors.ImageToLcmImageArrayT.image_array_t_msg_output_port">
 <code class="descname">image_array_t_msg_output_port</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.ImageToLcmImageArrayT</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.OutputPort_[float]<a class="headerlink" href="#pydrake.systems.sensors.ImageToLcmImageArrayT.image_array_t_msg_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the abstract valued output port that contains a
-<code class="docutils literal"><span class="pre">Value&lt;lcmt_image_array&gt;</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">Value&lt;lcmt_image_array&gt;</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1034,7 +1028,7 @@ the color/depth/label constructor is used.</p>
 <dl class="template">
 <dt id="pydrake.systems.sensors.ImageTraits">
 <em class="property">template </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">ImageTraits</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]" title="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"><code class="xref py py-class docutils literal"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kRgba8U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth16U]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]" title="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kDepth32F]</span></code></a>, <a class="reference internal" href="#pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]" title="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I]"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageTraits[PixelType.kLabel16I]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]">
 <em class="property">class </em><code class="descname">ImageTraits[PixelType.kRgba8U]</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U]" title="Permalink to this definition">¶</a></dt>
@@ -1047,7 +1041,7 @@ the color/depth/label constructor is used.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].ChannelType">
 <code class="descname">ChannelType</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits.ImageTraits[PixelType.kRgba8U].ChannelType" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.uint8</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1076,7 +1070,7 @@ the color/depth/label constructor is used.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U].ChannelType">
 <code class="descname">ChannelType</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth16U].ChannelType" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.uint16</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint16</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1103,7 +1097,7 @@ the color/depth/label constructor is used.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F].ChannelType">
 <code class="descname">ChannelType</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits[PixelType.kDepth32F].ChannelType" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.float32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float32</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1130,7 +1124,7 @@ the color/depth/label constructor is used.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I].ChannelType">
 <code class="descname">ChannelType</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits[PixelType.kLabel16I].ChannelType" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.int16</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.int16</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1157,7 +1151,7 @@ the color/depth/label constructor is used.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U].ChannelType">
 <code class="descname">ChannelType</code><a class="headerlink" href="#pydrake.systems.sensors.ImageTraits[PixelType.kRgba8U].ChannelType" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.uint8</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1259,7 +1253,7 @@ the color/depth/label constructor is used.</p>
 <dl class="class">
 <dt id="pydrake.systems.sensors.RgbdSensor">
 <em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">RgbdSensor</code><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A meta-sensor that houses RGB, depth, and label cameras, producing
 their corresponding images based on the contents of the
 geometry::SceneGraph.</p>
@@ -1278,7 +1272,7 @@ are rigidly fixed to B and X_WB is what is used to pose the sensor in the
 world (or, alternatively, X_PB where P is some parent frame for which X_WP
 is known).</p>
 <p>By default, frames B, C, and D are coincident and aligned. These can
-be changed using the <code class="docutils literal"><span class="pre">camera_poses</span></code> constructor parameter. Frames C
+be changed using the <code class="docutils literal notranslate"><span class="pre">camera_poses</span></code> constructor parameter. Frames C
 and D are always rigidly affixed to the sensor body frame B. As
 documented in the camera_axes_in_image “CameraInfo documentation”, the
 color and depth cameras “look” in the positive Cz and Dz directions,
@@ -1296,13 +1290,13 @@ further reasoning need to be applied.</p>
 <ul class="simple">
 <li>depth_image_32f: One channel, float, representing the Z value in</li>
 </ul>
-<p><code class="docutils literal"><span class="pre">D</span></code> in <em>meters</em>. The values 0 and infinity are reserved for out-of-range
+<p><code class="docutils literal notranslate"><span class="pre">D</span></code> in <em>meters</em>. The values 0 and infinity are reserved for out-of-range
 depth returns (too close or too far, respectively, as defined by
 geometry::render::DepthRenderCamera “DepthRenderCamera”).</p>
 <ul class="simple">
 <li>depth_image_16u: One channel, uint16_t, representing the Z value in</li>
 </ul>
-<p><code class="docutils literal"><span class="pre">D</span></code> in <em>millimeters</em>. The values 0 and 65535 are reserved for out-of-range
+<p><code class="docutils literal notranslate"><span class="pre">D</span></code> in <em>millimeters</em>. The values 0 and 65535 are reserved for out-of-range
 depth returns (too close or too far, respectively, as defined by
 geometry::render::DepthRenderCamera “DepthRenderCamera”).
 Additionally, 65535 will also be returned if the
@@ -1335,9 +1329,9 @@ both color/label and depth cameras.</p>
 </ol>
 <p>Constructs an RgbdSensor with fully specified render camera models for
 both the depth camera. The color camera in inferred from the
-<code class="docutils literal"><span class="pre">depth_camera</span></code>; it shares the same
+<code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>; it shares the same
 geometry::render::RenderCameraCore and is configured to show the
-window based on the value of <code class="docutils literal"><span class="pre">show_color_window</span></code>.</p>
+window based on the value of <code class="docutils literal notranslate"><span class="pre">show_color_window</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1401,13 +1395,13 @@ ImageLabel16I.</p>
 <dl class="method">
 <dt id="pydrake.systems.sensors.RgbdSensor.X_BC">
 <code class="descname">X_BC</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensor</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.X_BC" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal"><span class="pre">X_BC</span></code>.</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">X_BC</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.sensors.RgbdSensor.X_BD">
 <code class="descname">X_BD</code><span class="sig-paren">(</span><em>self: pydrake.systems.sensors.RgbdSensor</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.systems.sensors.RgbdSensor.X_BD" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal"><span class="pre">X_BD</span></code>.</p>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">X_BD</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1415,7 +1409,7 @@ ImageLabel16I.</p>
 <dl class="class">
 <dt id="pydrake.systems.sensors.RgbdSensorDiscrete">
 <em class="property">class </em><code class="descclassname">pydrake.systems.sensors.</code><code class="descname">RgbdSensorDiscrete</code><a class="headerlink" href="#pydrake.systems.sensors.RgbdSensorDiscrete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>Wraps a continuous RgbdSensor with a zero-order hold to create a
 discrete sensor.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">geometry_query&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>RgbdSensorDiscrete</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; color_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_32f</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; depth_image_16u</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; label_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_pose_in_world</td></tr></table></td></tr></table><dl class="method">
@@ -1424,13 +1418,13 @@ discrete sensor.</p>
 <dd><p>Constructs a diagram containing a (non-registered) RgbdSensor that
 will update at a given rate.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">sensor</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">sensor</span></code>:</dt>
 <dd>The continuous sensor used to generate periodic images.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">period</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">period</span></code>:</dt>
 <dd>Update period (sec).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">render_label_image</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">render_label_image</span></code>:</dt>
 <dd>If true, renders label image (which requires additional overhead).
-If false, <code class="docutils literal"><span class="pre">label_image_output_port</span></code> will raise an error if
+If false, <code class="docutils literal notranslate"><span class="pre">label_image_output_port</span></code> will raise an error if
 called.</dd>
 </dl>
 </dd></dl>
@@ -1512,9 +1506,7 @@ called.</dd>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1523,7 +1515,7 @@ called.</dd>
         <a href="pydrake.systems.system_sliders.html" class="btn btn-neutral float-right" title="pydrake.systems.system_sliders" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.scalar_conversion.html" class="btn btn-neutral" title="pydrake.systems.scalar_conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.scalar_conversion.html" class="btn btn-neutral float-left" title="pydrake.systems.scalar_conversion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1547,37 +1539,15 @@ called.</dd>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"image_8h.html#a1d38997213d63bf974b9ea19fc5abf0d":[4,0,0,11,8,5,7],
 "image_8h.html#a48e75e9f3da7e6ca9cc886086e177d2a":[4,0,0,11,8,5,9],
 "image_8h.html#a6393b712a3bad92da3403b2fe09c4dad":[4,0,0,11,8,5,6],
 "image_8h.html#a746567d80e8e7ae22cae20c9dbe78f3b":[4,0,0,11,8,5,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "meshcat__types_8h.html":[4,0,0,4,26],
 "meshcat__types_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,26,0],
 "meshcat__visualizer_8h.html":[4,0,0,4,27],
-"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,27,2],
-"meshcat__visualizer__params_8h.html":[4,0,0,4,28]
+"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,27,2]
 };

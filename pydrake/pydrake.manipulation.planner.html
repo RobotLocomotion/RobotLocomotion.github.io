@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.manipulation" href="pydrake.manipulation.html"/>
-        <link rel="next" title="pydrake.manipulation.schunk_wsg" href="pydrake.manipulation.schunk_wsg.html"/>
-        <link rel="prev" title="pydrake.manipulation.kuka_iiwa" href="pydrake.manipulation.kuka_iiwa.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.manipulation.schunk_wsg" href="pydrake.manipulation.schunk_wsg.html" />
+    <link rel="prev" title="pydrake.manipulation.kuka_iiwa" href="pydrake.manipulation.kuka_iiwa.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -130,7 +123,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -138,9 +131,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -188,7 +182,7 @@
 <dl class="class">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator">
 <em class="property">class </em><code class="descclassname">pydrake.manipulation.planner.</code><code class="descname">DifferentialInverseKinematicsIntegrator</code><a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A LeafSystem which uses DoDifferentialInverseKinematics to produce
 joint position commands.</p>
 <p>Rather than calling DoDifferentialInverseKinematics on the current
@@ -197,7 +191,7 @@ internal state and integrates successive velocity commands open loop.
 Using measured joint positions in a feedback loop can lead to undamped
 oscillations in the redundant joints; we hope to resolve this and are
 tracking it in #9773.</p>
-<p>Note: It is highly recommended that the user calls <code class="docutils literal"><span class="pre">SetPosition()</span></code>
+<p>Note: It is highly recommended that the user calls <code class="docutils literal notranslate"><span class="pre">SetPosition()</span></code>
 once to initialize the position commands to match the initial
 positions of the robot.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">X_WE_desired&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DifferentialInverseKinematicsIntegrator</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; joint_positions</td></tr></table></td></tr></table><dl class="method">
@@ -205,27 +199,27 @@ positions of the robot.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator</em>, <em>robot: drake::multibody::MultibodyPlant&lt;double&gt;</em>, <em>frame_E: drake::multibody::Frame&lt;double&gt;</em>, <em>time_step: float</em>, <em>parameters: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>robot_context: pydrake.systems.framework.Context_[float] = None</em>, <em>log_only_when_result_state_changes: bool = True</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the system.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt>
 <dd>A MultibodyPlant describing the robot.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">frame_E</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
 <dd>End-effector frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">time_step</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt>
 <dd>the discrete time step of the (Euler) integration.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt>
 <dd>Collection of various problem specific constraints and constants.
-The <code class="docutils literal"><span class="pre">timestep</span></code> parameter will be set to <code class="docutils literal"><span class="pre">time_step</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">robot_context</span></code>:</dt>
+The <code class="docutils literal notranslate"><span class="pre">timestep</span></code> parameter will be set to <code class="docutils literal notranslate"><span class="pre">time_step</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot_context</span></code>:</dt>
 <dd>Optional Context of the MultibodyPlant. The position values of
 this context will be overwritten during integration; you only need
 to pass this in if the robot has any non-default parameters.
-$*Default:* <code class="docutils literal"><span class="pre">robot.CreateDefaultContext()</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">log_only_when_result_state_changes</span></code>:</dt>
+$*Default:* <code class="docutils literal notranslate"><span class="pre">robot.CreateDefaultContext()</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">log_only_when_result_state_changes</span></code>:</dt>
 <dd>is a boolean that determines whether the system will log on every
 differential IK failure, or only when the failure state changes.
-When the value is <code class="docutils literal"><span class="pre">True</span></code>, it will cause the system to have an
+When the value is <code class="docutils literal notranslate"><span class="pre">True</span></code>, it will cause the system to have an
 additional discrete state variable to store the most recent
-DifferentialInverseKinematicsStatus. Set this to <code class="docutils literal"><span class="pre">False</span></code> if you
-want IsDifferenceEquationSystem() to return <code class="docutils literal"><span class="pre">True</span></code>.</dd>
+DifferentialInverseKinematicsStatus. Set this to <code class="docutils literal notranslate"><span class="pre">False</span></code> if you
+want IsDifferenceEquationSystem() to return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</dd>
 </dl>
 <p>Note: All references must remain valid for the lifetime of this
 system.</p>
@@ -234,7 +228,7 @@ system.</p>
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator.ForwardKinematics">
 <code class="descname">ForwardKinematics</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator, context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator.ForwardKinematics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides X_WE as a function of the joint position set in <code class="docutils literal"><span class="pre">context</span></code>.</p>
+<dd><p>Provides X_WE as a function of the joint position set in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -269,13 +263,13 @@ position commands to match the initial positions of the robot.</p>
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>num_positions: int = 0</em>, <em>num_velocities: int = 0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor. Initializes the nominal joint position to zeros of size
-<code class="docutils literal"><span class="pre">num_positions</span></code>. Timestep is initialized to 1. The end effector
+<code class="docutils literal notranslate"><span class="pre">num_positions</span></code>. Timestep is initialized to 1. The end effector
 gains are initialized to ones. All constraints are initialized to
 nullopt.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">num_positions</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_positions</span></code>:</dt>
 <dd>Number of generalized positions.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_velocities</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_velocities</span></code>:</dt>
 <dd>Number of generalized velocities.</dd>
 </dl>
 </dd></dl>
@@ -336,7 +330,7 @@ specify relative importance among different dimensions.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if any element of <code class="docutils literal"><span class="pre">gain_E</span></code> is larger than 1 or</li>
+<li>RuntimeError if any element of <code class="docutils literal notranslate"><span class="pre">gain_E</span></code> is larger than 1 or</li>
 <li>smaller than 0.</li>
 </ul>
 </td>
@@ -350,7 +344,7 @@ specify relative importance among different dimensions.</p>
 <code class="descname">set_joint_acceleration_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: Tuple[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_acceleration_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the joint acceleration limits.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">q_bounds</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt>
 <dd>The first element is the lower bound, and the second is the upper
 bound.</dd>
 </dl>
@@ -359,7 +353,7 @@ bound.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the first or second element of <code class="docutils literal"><span class="pre">q_bounds</span></code> has</li>
+<li>RuntimeError if the first or second element of <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code> has</li>
 <li>the wrong dimension or any element of the second element is</li>
 <li>smaller than its corresponding part in the first element.</li>
 </ul>
@@ -374,7 +368,7 @@ bound.</dd>
 <code class="descname">set_joint_position_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: Tuple[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_position_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the joint position limits.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">q_bounds</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt>
 <dd>The first element is the lower bound, and the second is the upper
 bound.</dd>
 </dl>
@@ -383,7 +377,7 @@ bound.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the first or second element of <code class="docutils literal"><span class="pre">q_bounds</span></code> has</li>
+<li>RuntimeError if the first or second element of <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code> has</li>
 <li>the wrong dimension or any element of the second element is</li>
 <li>smaller than its corresponding part in the first element.</li>
 </ul>
@@ -398,7 +392,7 @@ bound.</dd>
 <code class="descname">set_joint_velocity_limits</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters, arg0: Tuple[numpy.ndarray[numpy.float64[m, 1]], numpy.ndarray[numpy.float64[m, 1]]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_joint_velocity_limits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the joint velocity limits.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">q_bounds</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code>:</dt>
 <dd>The first element is the lower bound, and the second is the upper
 bound.</dd>
 </dl>
@@ -407,7 +401,7 @@ bound.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the first or second element of <code class="docutils literal"><span class="pre">q_bounds</span></code> has</li>
+<li>RuntimeError if the first or second element of <code class="docutils literal notranslate"><span class="pre">q_bounds</span></code> has</li>
 <li>the wrong dimension or any element of the second element is</li>
 <li>smaller than its corresponding part in the first element.</li>
 </ul>
@@ -425,7 +419,7 @@ bound.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal"><span class="pre">nominal_joint_position</span></code>’s dimension differs.</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">nominal_joint_position</span></code>’s dimension differs.</td>
 </tr>
 </tbody>
 </table>
@@ -434,7 +428,7 @@ bound.</dd>
 <dl class="method">
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep">
 <code class="descname">set_timestep</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_timestep" title="Permalink to this definition">¶</a></dt>
-<dd><p>&#64;name Setters. Sets timestep to <code class="docutils literal"><span class="pre">dt</span></code>.</p>
+<dd><p>&#64;name Setters. Sets timestep to <code class="docutils literal notranslate"><span class="pre">dt</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -449,7 +443,7 @@ bound.</dd>
 <dt id="pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit">
 <code class="descname">set_unconstrained_degrees_of_freedom_velocity_limit</code><span class="sig-paren">(</span><em>self: pydrake.manipulation.planner.DifferentialInverseKinematicsParameters</em>, <em>arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.manipulation.planner.DifferentialInverseKinematicsParameters.set_unconstrained_degrees_of_freedom_velocity_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the max magnitude of the velocity in the unconstrained degree of
-freedom to <code class="docutils literal"><span class="pre">limit</span></code>.</p>
+freedom to <code class="docutils literal notranslate"><span class="pre">limit</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -532,7 +526,7 @@ freedom to <code class="docutils literal"><span class="pre">limit</span></code>.
 </ol>
 <p>Computes a generalized velocity v_next, via the following
 MathematicalProgram:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">min_</span><span class="p">{</span><span class="n">v_next</span><span class="p">,</span><span class="n">alpha</span><span class="p">}</span>   <span class="mi">100</span> <span class="o">*</span> <span class="o">|</span> <span class="n">alpha</span> <span class="o">-</span> <span class="o">|</span><span class="n">V</span><span class="o">|</span> <span class="o">|^</span><span class="mi">2</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">min_</span><span class="p">{</span><span class="n">v_next</span><span class="p">,</span><span class="n">alpha</span><span class="p">}</span>   <span class="mi">100</span> <span class="o">*</span> <span class="o">|</span> <span class="n">alpha</span> <span class="o">-</span> <span class="o">|</span><span class="n">V</span><span class="o">|</span> <span class="o">|^</span><span class="mi">2</span>
                        <span class="o">//</span> <span class="n">iff</span> <span class="n">J</span><span class="o">.</span><span class="n">rows</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">J</span><span class="o">.</span><span class="n">cols</span><span class="p">(),</span> <span class="n">then</span>
                          <span class="o">+</span> <span class="o">|</span> <span class="n">q_current</span> <span class="o">+</span> <span class="n">v_next</span><span class="o">*</span><span class="n">dt</span> <span class="o">-</span> <span class="n">q_nominal</span> <span class="o">|^</span><span class="mi">2</span>
 
@@ -559,7 +553,7 @@ MathematicalProgram:</p>
 </div>
 <p>Intuitively, this finds a v_next such that J*v_next is in the same
 direction as V, and the difference between <a href="#id1"><span class="problematic" id="id2">|V|</span></a> and <a href="#id3"><span class="problematic" id="id4">|J * v_next|</span></a> is
-minimized while all constraints in <code class="docutils literal"><span class="pre">parameters</span></code> are satisfied as
+minimized while all constraints in <code class="docutils literal notranslate"><span class="pre">parameters</span></code> are satisfied as
 well. If the problem is redundant, a secondary objective to minimize
 <a href="#id5"><span class="problematic" id="id6">|q_current + v_next * dt - q_nominal|</span></a> is added to the problem.</p>
 <p>It is possible that the solver is unable to find such a generalized
@@ -567,18 +561,18 @@ velocity while not violating the constraints, in which case, status
 will be set to kStuck in the returned
 DifferentialInverseKinematicsResult.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">q_current</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">q_current</span></code>:</dt>
 <dd>The current generalized position.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">v_current</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">v_current</span></code>:</dt>
 <dd>The current generalized position.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">V</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V</span></code>:</dt>
 <dd>Desired spatial velocity. It must have the same number of rows as
-<code class="docutils literal"><span class="pre">J</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">J</span></code>:</dt>
+<code class="docutils literal notranslate"><span class="pre">J</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">J</span></code>:</dt>
 <dd>Jacobian with respect to generalized velocities v. It must have
-the same number of rows as <code class="docutils literal"><span class="pre">V</span></code>. J * v need to represent the same
-spatial velocity as <code class="docutils literal"><span class="pre">V</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+the same number of rows as <code class="docutils literal notranslate"><span class="pre">V</span></code>. J * v need to represent the same
+spatial velocity as <code class="docutils literal notranslate"><span class="pre">V</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt>
 <dd>Collection of various problem specific constraints and constants.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -595,21 +589,21 @@ be set to v, otherwise it will be nullopt.</td>
 </ol>
 <p>A wrapper over DoDifferentialInverseKinematics(q_current, v_current,
 V, J, params) that tracks frame E’s spatial velocity. q_current and
-v_current are taken from <code class="docutils literal"><span class="pre">context</span></code>. V is computed by first
-transforming <code class="docutils literal"><span class="pre">V_WE</span></code> to V_WE_E, then taking the element-wise product
-between V_WE_E and the gains (specified in frame E) in <code class="docutils literal"><span class="pre">parameters</span></code>,
+v_current are taken from <code class="docutils literal notranslate"><span class="pre">context</span></code>. V is computed by first
+transforming <code class="docutils literal notranslate"><span class="pre">V_WE</span></code> to V_WE_E, then taking the element-wise product
+between V_WE_E and the gains (specified in frame E) in <code class="docutils literal notranslate"><span class="pre">parameters</span></code>,
 and only selecting the non zero elements. J is computed similarly.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt>
 <dd>A MultibodyPlant model.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>Must be the Context of the MultibodyPlant. Contains the current
 generalized position and velocity.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">V_WE_desired</span></code>:</dt>
-<dd>Desired world frame spatial velocity of <code class="docutils literal"><span class="pre">frame_E</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">frame_E</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">V_WE_desired</span></code>:</dt>
+<dd>Desired world frame spatial velocity of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
 <dd>End effector frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt>
 <dd>Collection of various problem specific constraints and constants.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -626,21 +620,21 @@ be set to v, otherwise it will be nullopt.</td>
 </ol>
 <p>A wrapper over DoDifferentialInverseKinematics(robot, context,
 V_WE_desired, frame_E, params) that tracks frame E’s pose in the world
-frame. q_current and v_current are taken from <code class="docutils literal"><span class="pre">cache</span></code>. V_WE is
+frame. q_current and v_current are taken from <code class="docutils literal notranslate"><span class="pre">cache</span></code>. V_WE is
 computed by ComputePoseDiffInCommonFrame(X_WE, X_WE_desired) / dt,
-where X_WE is computed from <code class="docutils literal"><span class="pre">context</span></code>, and dt is taken from
-<code class="docutils literal"><span class="pre">parameters</span></code>.</p>
+where X_WE is computed from <code class="docutils literal notranslate"><span class="pre">context</span></code>, and dt is taken from
+<code class="docutils literal notranslate"><span class="pre">parameters</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">robot</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">robot</span></code>:</dt>
 <dd>A MultibodyPlant model.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>Must be the Context of the MultibodyPlant. Contains the current
 generalized position and velocity.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">X_WE_desired</span></code>:</dt>
-<dd>Desired pose of <code class="docutils literal"><span class="pre">frame_E</span></code> in the world frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">frame_E</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WE_desired</span></code>:</dt>
+<dd>Desired pose of <code class="docutils literal notranslate"><span class="pre">frame_E</span></code> in the world frame.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frame_E</span></code>:</dt>
 <dd>End effector frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">parameters</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameters</span></code>:</dt>
 <dd>Collection of various problem specific constraints and constants.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -658,9 +652,7 @@ be set to v, otherwise it will be nullopt.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -669,7 +661,7 @@ be set to v, otherwise it will be nullopt.</td>
         <a href="pydrake.manipulation.schunk_wsg.html" class="btn btn-neutral float-right" title="pydrake.manipulation.schunk_wsg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.manipulation.kuka_iiwa.html" class="btn btn-neutral" title="pydrake.manipulation.kuka_iiwa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.manipulation.kuka_iiwa.html" class="btn btn-neutral float-left" title="pydrake.manipulation.kuka_iiwa" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -693,37 +685,15 @@ be set to v, otherwise it will be nullopt.</td>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

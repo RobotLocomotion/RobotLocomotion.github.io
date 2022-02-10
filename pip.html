@@ -165,28 +165,28 @@ can choose any name.</p>
 
 <p>Create a virtual environment and install Drake:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv env
-env/bin/pip install <span class="nt">--upgrade</span> pip
-env/bin/pip install drake
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
+env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
+<span class="nb">env</span>/bin/pip <span class="nb">install </span>drake
 </code></pre></div></div>
 
 <p>Drake requires certain basic runtime libraries from the host linux distribution.</p>
 
 <p>For Ubuntu 18.04, install these additional libraries:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
   libpython3.6 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
 </code></pre></div></div>
 
 <p>For Ubuntu 20.04, install these additional libraries:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
   libpython3.8 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
 </code></pre></div></div>
 
 <p>Activate the virtual environment:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source </span>env/bin/activate
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source env</span>/bin/activate
 </code></pre></div></div>
 
 <p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>

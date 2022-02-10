@@ -1,5 +1,6 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a643ccb05dea44d65aa2d91b422f20f12":[1,1,0,38,0],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a66022c63d007d32a9812270a90890e7f":[1,1,0,38,11],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a6ce6c2bf02e868cb54161dd4d8a26e29":[1,1,0,38,1],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a863f7df9d3ee10378794b4c6842a4377":[1,1,0,38,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a854d7d9baf86ffadcceca2620d4b347d":[3,0,0,16,5,13],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aa1a71ddfb9ab85211d522ad0e948c426":[3,0,0,16,5,5],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#aaeabb3c1dcb114550eee132dcebb3a6e":[3,0,0,16,5,9],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,16,5,16],
-"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,16,5,20]
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,16,5,16]
 };

@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.solvers" href="pydrake.solvers.html"/>
-        <link rel="next" title="pydrake.solvers.gurobi" href="pydrake.solvers.gurobi.html"/>
-        <link rel="prev" title="pydrake.solvers.csdp" href="pydrake.solvers.csdp.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.solvers.gurobi" href="pydrake.solvers.gurobi.html" />
+    <link rel="prev" title="pydrake.solvers.csdp" href="pydrake.solvers.csdp.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -139,7 +132,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -147,9 +140,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -197,7 +191,7 @@
 <dl class="class">
 <dt id="pydrake.solvers.dreal.DrealSolver">
 <em class="property">class </em><code class="descclassname">pydrake.solvers.dreal.</code><code class="descname">DrealSolver</code><a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
 <p>An implementation of SolverInterface for the dReal4 solver
 (<a class="reference external" href="https://github.com/dreal/dreal4">https://github.com/dreal/dreal4</a>).</p>
 <p>Currently this implementation supports the following options: *
@@ -221,16 +215,16 @@ details. Default value = True.</p>
 <dl class="staticmethod">
 <dt id="pydrake.solvers.dreal.DrealSolver.CheckSatisfiability">
 <em class="property">static </em><code class="descname">CheckSatisfiability</code><span class="sig-paren">(</span><em>f: pydrake.symbolic.Formula</em>, <em>delta: float</em><span class="sig-paren">)</span> &#x2192; Optional[Dict[pydrake.symbolic.Variable, pydrake.solvers.dreal.DrealSolver.Interval]]<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.CheckSatisfiability" title="Permalink to this definition">¶</a></dt>
-<dd><p>Checks the satisfiability of a given formula <code class="docutils literal"><span class="pre">f</span></code> with a given
-precision <code class="docutils literal"><span class="pre">delta</span></code>.</p>
+<dd><p>Checks the satisfiability of a given formula <code class="docutils literal notranslate"><span class="pre">f</span></code> with a given
+precision <code class="docutils literal notranslate"><span class="pre">delta</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a model, a mapping from a variable to an interval, if <code class="docutils literal"><span class="pre">f</span></code> is
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a model, a mapping from a variable to an interval, if <code class="docutils literal notranslate"><span class="pre">f</span></code> is
 δ-satisfiable.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a nullopt, if <code class="docutils literal"><span class="pre">is</span></code> unsatisfiable.</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a nullopt, if <code class="docutils literal notranslate"><span class="pre">is</span></code> unsatisfiable.</td>
 </tr>
 </tbody>
 </table>
@@ -251,8 +245,8 @@ precision <code class="docutils literal"><span class="pre">delta</span></code>.<
 <dd><p>Constructs an interval [low, high].</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>Its lower bound <code class="docutils literal"><span class="pre">low</span></code> must be less than or equal to its upper
-bound <code class="docutils literal"><span class="pre">high</span></code>.</dd>
+<dd>Its lower bound <code class="docutils literal notranslate"><span class="pre">low</span></code> must be less than or equal to its upper
+bound <code class="docutils literal notranslate"><span class="pre">high</span></code>.</dd>
 </dl>
 </dd></dl>
 
@@ -321,8 +315,8 @@ bound <code class="docutils literal"><span class="pre">high</span></code>.</dd>
 <dl class="staticmethod">
 <dt id="pydrake.solvers.dreal.DrealSolver.Minimize">
 <em class="property">static </em><code class="descname">Minimize</code><span class="sig-paren">(</span><em>objective: pydrake.symbolic.Expression</em>, <em>constraint: pydrake.symbolic.Formula</em>, <em>delta: float</em>, <em>local_optimization: pydrake.solvers.dreal.DrealSolver.LocalOptimization</em><span class="sig-paren">)</span> &#x2192; Optional[Dict[pydrake.symbolic.Variable, pydrake.solvers.dreal.DrealSolver.Interval]]<a class="headerlink" href="#pydrake.solvers.dreal.DrealSolver.Minimize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Finds a solution to minimize <code class="docutils literal"><span class="pre">objective</span></code> function while satisfying a
-given <code class="docutils literal"><span class="pre">constraint</span></code> using <code class="docutils literal"><span class="pre">delta</span></code>. When <code class="docutils literal"><span class="pre">local_optimization</span></code> is
+<dd><p>Finds a solution to minimize <code class="docutils literal notranslate"><span class="pre">objective</span></code> function while satisfying a
+given <code class="docutils literal notranslate"><span class="pre">constraint</span></code> using <code class="docutils literal notranslate"><span class="pre">delta</span></code>. When <code class="docutils literal notranslate"><span class="pre">local_optimization</span></code> is
 Localoptimization::kUse, enable “–local-optimization” dReal option
 which uses NLopt’s local-optimization algorithms to refine
 counterexamples in the process of global optimization.</p>
@@ -345,9 +339,7 @@ exists.</td>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -356,7 +348,7 @@ exists.</td>
         <a href="pydrake.solvers.gurobi.html" class="btn btn-neutral float-right" title="pydrake.solvers.gurobi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.solvers.csdp.html" class="btn btn-neutral" title="pydrake.solvers.csdp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.solvers.csdp.html" class="btn btn-neutral float-left" title="pydrake.solvers.csdp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -380,37 +372,15 @@ exists.</td>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

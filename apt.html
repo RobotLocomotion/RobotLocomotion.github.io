@@ -145,26 +145,26 @@ please do the following in order:</p>
 container image, you may need to install the following packages:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> <span class="se">\</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
   ca-certificates gnupg lsb-release wget
 </code></pre></div></div>
 
 <p>Download a copy of the Drake GPG signing key and add it to an APT trusted keychain:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-qO-</span> https://drake-apt.csail.mit.edu/drake.asc | gpg <span class="nt">--dearmor</span> - <span class="se">\</span>
-  | <span class="nb">sudo </span>tee /etc/apt/trusted.gpg.d/drake.gpg <span class="o">&gt;</span>/dev/null
+  | <span class="nb">sudo tee</span> /etc/apt/trusted.gpg.d/drake.gpg <span class="o">&gt;</span>/dev/null
 </code></pre></div></div>
 
 <p>Add the Drake repository to your APT sources list:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=amd64] https://drake-apt.csail.mit.edu/</span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2"> </span><span class="k">$(</span>lsb_release <span class="nt">-cs</span><span class="k">)</span><span class="s2"> main"</span> <span class="se">\</span>
-  | <span class="nb">sudo </span>tee /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"deb [arch=amd64] https://drake-apt.csail.mit.edu/</span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> </span><span class="si">$(</span>lsb_release <span class="nt">-cs</span><span class="si">)</span><span class="s2"> main"</span> <span class="se">\</span>
+  | <span class="nb">sudo tee</span> /etc/apt/sources.list.d/drake.list <span class="o">&gt;</span>/dev/null
 </code></pre></div></div>
 
 <p>Update your local APT package index and install the <code class="highlighter-rouge">drake-dev</code> package:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get install <span class="nt">--no-install-recommends</span> drake-dev
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> drake-dev
 </code></pre></div></div>
 
 <p>Most content installs to <code class="highlighter-rouge">/opt/drake</code>, so setting the following environment
@@ -172,7 +172,7 @@ variables may be useful:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib</span><span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span>:+:<span class="k">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">}}</span><span class="s2">"</span>
   <span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/opt/drake/bin</span><span class="k">${</span><span class="nv">PATH</span>:+:<span class="k">${</span><span class="nv">PATH</span><span class="k">}}</span><span class="s2">"</span>
-  <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="k">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="k">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
+  <span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="s2">"/opt/drake/lib/python</span><span class="si">$(</span>python3 <span class="nt">-c</span> <span class="s1">'import sys; print("{0}.{1}".format(*sys.version_info))'</span><span class="si">)</span><span class="s2">/site-packages</span><span class="k">${</span><span class="nv">PYTHONPATH</span>:+:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}}</span><span class="s2">"</span>
 </code></pre></div></div>
 
 <p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>

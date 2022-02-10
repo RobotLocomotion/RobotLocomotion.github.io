@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
-        <link rel="next" title="pydrake.common.cpp_param" href="pydrake.common.cpp_param.html"/>
-        <link rel="prev" title="pydrake.common.compatibility" href="pydrake.common.compatibility.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.common.cpp_param" href="pydrake.common.cpp_param.html" />
+    <link rel="prev" title="pydrake.common.compatibility" href="pydrake.common.compatibility.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -136,7 +129,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -144,9 +137,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -194,22 +188,23 @@
 <dl class="class">
 <dt id="pydrake.common.containers.EqualToDict">
 <em class="property">class </em><code class="descclassname">pydrake.common.containers.</code><code class="descname">EqualToDict</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.EqualToDict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">pydrake.common.containers._DictKeyWrap</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.containers._DictKeyWrap</span></code></p>
 <p>Implements a dictionary where keys are compared using type and
 <cite>lhs.EqualTo(rhs)</cite>.</p>
 <dl class="method">
 <dt id="pydrake.common.containers.EqualToDict.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.EqualToDict.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="pydrake.common.containers.namedview">
 <code class="descclassname">pydrake.common.containers.</code><code class="descname">namedview</code><span class="sig-paren">(</span><em>name</em>, <em>fields</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.namedview" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a class that is a named view with given <code class="docutils literal"><span class="pre">fields</span></code>. When the class
+<dd><p>Creates a class that is a named view with given <code class="docutils literal notranslate"><span class="pre">fields</span></code>. When the class
 is instantiated, it must be given the object that it will be a proxy for.
-Similar to <code class="docutils literal"><span class="pre">namedtuple</span></code>.</p>
+Similar to <code class="docutils literal notranslate"><span class="pre">namedtuple</span></code>.</p>
 <dl class="docutils">
 <dt>Example::</dt>
 <dd><p class="first">MyView = namedview(“MyView”, (‘a’, ‘b’))</p>
@@ -220,20 +215,20 @@ value[1] = 100  # <cite>view</cite> is now [10, 100]
 view[:] = 3  # <cite>value</cite> is now [3, 3]</p>
 </dd>
 </dl>
-<p>For more details, see <code class="docutils literal"><span class="pre">NamedViewBase</span></code>.</p>
+<p>For more details, see <code class="docutils literal notranslate"><span class="pre">NamedViewBase</span></code>.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.common.containers.NamedViewBase">
 <em class="property">class </em><code class="descclassname">pydrake.common.containers.</code><code class="descname">NamedViewBase</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.NamedViewBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Base for classes generated by <code class="docutils literal"><span class="pre">namedview</span></code>.</p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base for classes generated by <code class="docutils literal notranslate"><span class="pre">namedview</span></code>.</p>
 <p>Inspired by: <a class="reference external" href="https://bitbucket.org/ericvsmith/namedlist">https://bitbucket.org/ericvsmith/namedlist</a></p>
 <dl class="method">
 <dt id="pydrake.common.containers.NamedViewBase.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.containers.NamedViewBase.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates a view on <code class="docutils literal"><span class="pre">value</span></code>. Any mutations on this instance will be
-reflected in <code class="docutils literal"><span class="pre">value</span></code>, and any mutations on <code class="docutils literal"><span class="pre">value</span></code> will be
+<dd><p>Creates a view on <code class="docutils literal notranslate"><span class="pre">value</span></code>. Any mutations on this instance will be
+reflected in <code class="docutils literal notranslate"><span class="pre">value</span></code>, and any mutations on <code class="docutils literal notranslate"><span class="pre">value</span></code> will be
 reflected in this instance.</p>
 </dd></dl>
 
@@ -249,9 +244,7 @@ reflected in this instance.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -260,7 +253,7 @@ reflected in this instance.</p>
         <a href="pydrake.common.cpp_param.html" class="btn btn-neutral float-right" title="pydrake.common.cpp_param" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.common.compatibility.html" class="btn btn-neutral" title="pydrake.common.compatibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.common.compatibility.html" class="btn btn-neutral float-left" title="pydrake.common.compatibility" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -284,37 +277,15 @@ reflected in this instance.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

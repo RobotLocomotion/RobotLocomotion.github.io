@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.solvers" href="pydrake.solvers.html"/>
-        <link rel="next" title="pydrake.solvers.mixed_integer_rotation_constraint" href="pydrake.solvers.mixed_integer_rotation_constraint.html"/>
-        <link rel="prev" title="pydrake.solvers.mathematicalprogram" href="pydrake.solvers.mathematicalprogram.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.solvers.mixed_integer_rotation_constraint" href="pydrake.solvers.mixed_integer_rotation_constraint.html" />
+    <link rel="prev" title="pydrake.solvers.mathematicalprogram" href="pydrake.solvers.mathematicalprogram.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -139,7 +132,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -147,9 +140,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -202,7 +196,7 @@ product x * y is approximated by w, using Special Ordered Set of Type
 2 (sos2) constraint. To do so, we assume that the range of x is
 [x_min, x_max], and the range of y is [y_min, y_max]. We first
 consider two arrays φˣ, φʸ, satisfying</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>x_min = φˣ₀ &lt; φˣ₁ &lt; ... &lt; φˣₘ = x_max
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x_min = φˣ₀ &lt; φˣ₁ &lt; ... &lt; φˣₘ = x_max
 y_min = φʸ₀ &lt; φʸ₁ &lt; ... &lt; φʸₙ = y_max
 </pre></div>
 </div>
@@ -222,25 +216,25 @@ use ⌈log₂(N)⌉ binary variables. If these binary variables represent
 integer M in the reflected Gray code, then the continuous variable is
 in the M’th interval.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt>
 <dd>The program to which the bilinear product constraint is added</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">x</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
 <dd>The decision variable.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">y</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">y</span></code>:</dt>
 <dd>The decision variable.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">w</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">w</span></code>:</dt>
 <dd>The expression to approximate x * y</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">phi_x</span></code>:</dt>
-<dd>The end points of the intervals for <code class="docutils literal"><span class="pre">x</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">phi_y</span></code>:</dt>
-<dd>The end points of the intervals for <code class="docutils literal"><span class="pre">y</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Bx</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">phi_x</span></code>:</dt>
+<dd>The end points of the intervals for <code class="docutils literal notranslate"><span class="pre">x</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">phi_y</span></code>:</dt>
+<dd>The end points of the intervals for <code class="docutils literal notranslate"><span class="pre">y</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Bx</span></code>:</dt>
 <dd>The binary variables for the interval in which x stays encoded as
 described above.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">By</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">By</span></code>:</dt>
 <dd>The binary variables for the interval in which y stays encoded as
 described above.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">binning</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">binning</span></code>:</dt>
 <dd>Determine whether to use linear binning or logarithmic binning.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -252,7 +246,7 @@ described above.</dd>
 </tbody>
 </table>
 <p>The constraints we impose are</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>x = (φˣ)ᵀ * ∑ⱼ λᵢⱼ
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x = (φˣ)ᵀ * ∑ⱼ λᵢⱼ
 y = (φʸ)ᵀ * ∑ᵢ λᵢⱼ
 w = ∑ᵢⱼ φˣᵢ * φʸⱼ * λᵢⱼ
 Both ∑ⱼ λᵢⱼ = λ.rowwise().sum() and ∑ᵢ λᵢⱼ = λ.colwise().sum() satisfy SOS2
@@ -274,7 +268,7 @@ these constraints are enforced.</p>
 <dt id="pydrake.solvers.mixed_integer_optimization_util.AddLogarithmicSos1Constraint">
 <code class="descclassname">pydrake.solvers.mixed_integer_optimization_util.</code><code class="descname">AddLogarithmicSos1Constraint</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>num_lambda: int</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[m, 1]], numpy.ndarray[object[m, 1]]]<a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.AddLogarithmicSos1Constraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the special ordered set of type 1 (SOS1) constraint. Namely</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>λ(0) + ... + λ(n-1) = 1
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>λ(0) + ... + λ(n-1) = 1
   λ(i) ≥ 0 ∀i
   ∃ j ∈ {0, 1, ..., n-1}, s.t λ(j) = 1
 </pre></div>
@@ -285,9 +279,9 @@ in λ. For more information, please refer to Modeling Disjunctive
 Constraints with a Logarithmic Number of Binary Variables and
 Constraints by J. Vielma and G. Nemhauser, 2011.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt>
 <dd>The program to which the SOS1 constraint is added.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_lambda</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_lambda</span></code>:</dt>
 <dd>n in the documentation above.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -322,7 +316,7 @@ Gray code.</td>
 <code class="descclassname">pydrake.solvers.mixed_integer_optimization_util.</code><code class="descname">AddSos2Constraint</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram, lambdas: numpy.ndarray[object[m, 1]], y: numpy.ndarray[object[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mixed_integer_optimization_util.AddSos2Constraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the special ordered set 2 (SOS2) constraint. y(i) takes binary
 values (either 0 or 1).</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="n">λ</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">λ</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">=&gt;</span> <span class="n">λ</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="n">λ</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span>
 </pre></div>
 </div>
 <div class="admonition seealso">
@@ -331,13 +325,13 @@ values (either 0 or 1).</p>
 constraint.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">prog</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt>
 <dd>The optimization program to which the SOS2 constraint is added.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">lambda</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lambda</span></code>:</dt>
 <dd>At most two entries in λ can be strictly positive, and these two
 entries have to be adjacent. All other entries are zero. Moreover,
 these two entries should sum up to 1.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">y</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">y</span></code>:</dt>
 <dd>y(i) takes binary value, and determines which two entries in λ can
 be strictly positive. Throw a runtime error if y.rows() !=
 lambda.rows() - 1.</dd>
@@ -392,9 +386,7 @@ variables. For more details,</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -403,7 +395,7 @@ variables. For more details,</p>
         <a href="pydrake.solvers.mixed_integer_rotation_constraint.html" class="btn btn-neutral float-right" title="pydrake.solvers.mixed_integer_rotation_constraint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.solvers.mathematicalprogram.html" class="btn btn-neutral" title="pydrake.solvers.mathematicalprogram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.solvers.mathematicalprogram.html" class="btn btn-neutral float-left" title="pydrake.solvers.mathematicalprogram" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -427,37 +419,15 @@ variables. For more details,</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

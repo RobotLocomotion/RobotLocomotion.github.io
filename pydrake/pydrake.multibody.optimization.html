@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.multibody" href="pydrake.multibody.html"/>
-        <link rel="next" title="pydrake.multibody.parsing" href="pydrake.multibody.parsing.html"/>
-        <link rel="prev" title="pydrake.multibody.meshcat" href="pydrake.multibody.meshcat.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.multibody.parsing" href="pydrake.multibody.parsing.html" />
+    <link rel="prev" title="pydrake.multibody.meshcat" href="pydrake.multibody.meshcat.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -134,7 +127,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -142,9 +135,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -222,7 +216,7 @@
 <dl class="class">
 <dt id="pydrake.multibody.optimization.CentroidalMomentumConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">CentroidalMomentumConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
 <p>Impose the constraint CentroidalMomentum(q, v) - h_WC = 0 with
 decision variables [q;v;h_WC] or CentroidalAngularMomentum(q, v) -
 k_WC = 0 with decision variables [q; v; k_WC] h_WC is the 6D spatial
@@ -233,11 +227,11 @@ frame W.</p>
 <dl class="method">
 <dt id="pydrake.multibody.optimization.CentroidalMomentumConstraint.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.CentroidalMomentumConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instances: Optional[List[pydrake.multibody.tree.ModelInstanceIndex]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd], angular_only: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.CentroidalMomentumConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct centroidal momentum constraint If <code class="docutils literal"><span class="pre">angular_only</span></code> = false,
+<dd><p>Construct centroidal momentum constraint If <code class="docutils literal notranslate"><span class="pre">angular_only</span></code> = false,
 we impose the constraint CentroidalMomentum(q, v) - h_WC = 0 where
 CentroidalMomentum computes the spatial momentum of the robot about
 its center-of-mass, expressed in the world frame. The decision
-variables are [q;v;h_WC]. If <code class="docutils literal"><span class="pre">angular_only</span></code> = true, we impose the
+variables are [q;v;h_WC]. If <code class="docutils literal notranslate"><span class="pre">angular_only</span></code> = true, we impose the
 constraint CentroidalAngularMomentum(q, v) - k_WC = 0 where
 CentroidalAngularMomentum(q, v) computes the angular momentum of the
 robot about its center-of-mass, expressed in the world frame. The
@@ -250,10 +244,10 @@ since we can’t compute the Jacobian of the momentum using
 MultibodyPlant&lt;double&gt; yet.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>The plant for which the constraint is imposed.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">model_instances</span></code>:</dt>
-<dd>We compute the model with these model instances in <code class="docutils literal"><span class="pre">plant</span></code>. If
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_instances</span></code>:</dt>
+<dd>We compute the model with these model instances in <code class="docutils literal notranslate"><span class="pre">plant</span></code>. If
 model_instances=std::nullopt, then we compute the momentum of all
 model instances except the world.</dd>
 </dl>
@@ -303,7 +297,7 @@ in the world frame W.</p>
 <dl class="class">
 <dt id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint">
 <em class="property">class </em><code class="descclassname">pydrake.multibody.optimization.</code><code class="descname">QuaternionEulerIntegrationConstraint</code><a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
 <p>If we have a body with orientation quaternion z₁ at time t₁, and a
 quaternion z₂ at time t₂ = t₁ + h, with the angular velocity ω
 (expressed in the world frame), we impose the constraint that the body
@@ -317,7 +311,7 @@ product between quaternions.</p>
 undertand this is that -z represents the rotation that first rotate
 the frame by a quaternion z, and then continue to rotate about that
 axis for 360 degress. We provide the option
-<code class="docutils literal"><span class="pre">allow_quaternion_negation</span></code> flag, that if set to true, then we
+<code class="docutils literal notranslate"><span class="pre">allow_quaternion_negation</span></code> flag, that if set to true, then we
 require that the quaternion z₂ = ±Δz⊗z₁. Otherwise we require z₂ =
 Δz⊗z₁. Mathematically, the constraint we impose is</p>
 <p>If allow_quaternion_negation = true:</p>
@@ -353,7 +347,7 @@ optimization anyway).</p>
 <dt id="pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint</em>, <em>allow_quaternion_negation: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.QuaternionEulerIntegrationConstraint.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">allow_quaternion_negation</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">allow_quaternion_negation</span></code>:</dt>
 <dd>. Refer to the class documentation.</dd>
 </dl>
 </dd></dl>
@@ -375,16 +369,16 @@ limit.</p>
 <dt id="pydrake.multibody.optimization.StaticEquilibriumProblem.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], ignored_collision_pairs: Set[Tuple[pydrake.geometry.GeometryId, pydrake.geometry.GeometryId]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>The plant for which the static equilibrium posture is computed.
-<code class="docutils literal"><span class="pre">plant</span></code> should remain alive as long as this
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> should remain alive as long as this
 StaticEquilibriumProblem exists.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>The context for <code class="docutils literal"><span class="pre">plant</span></code>. <code class="docutils literal"><span class="pre">context</span></code> should remain alive as long
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>The context for <code class="docutils literal notranslate"><span class="pre">plant</span></code>. <code class="docutils literal notranslate"><span class="pre">context</span></code> should remain alive as long
 as this StaticEquilibriumProblem exists.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">ignored_collision_pairs</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code>:</dt>
 <dd>The contact between the pair of geometry in
-<code class="docutils literal"><span class="pre">ignored_collision_pairs</span></code> will be ignored. We will not impose
+<code class="docutils literal notranslate"><span class="pre">ignored_collision_pairs</span></code> will be ignored. We will not impose
 non-penetration constraint between these pairs, and no contact
 wrench will be applied between these pairs.</dd>
 </dl>
@@ -400,7 +394,7 @@ wrench will be applied between these pairs.</dd>
 <code class="descname">GetContactWrenchSolution</code><span class="sig-paren">(</span><em>self: pydrake.multibody.optimization.StaticEquilibriumProblem</em>, <em>result: pydrake.solvers.mathematicalprogram.MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; List[pydrake.multibody.optimization.ContactWrench]<a class="headerlink" href="#pydrake.multibody.optimization.StaticEquilibriumProblem.GetContactWrenchSolution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the solution to all contact wrenches.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">result</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">result</span></code>:</dt>
 <dd>The result of solving prog().</dd>
 </dl>
 </dd></dl>
@@ -448,14 +442,14 @@ Robotics, 2018.</p>
 <dd><p>Constructs an inverse kinematics problem for a MultibodyPlant. This
 constructor will create and own a context for</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">path</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">path</span></code>:</dt>
 <dd>The trajectory on which the TOPPRA problem will be solved.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>The robot that will follow the solved trajectory. Used for
 enforcing torque and frame specific constraints.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">gridpoints</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gridpoints</span></code>:</dt>
 <dd>The points along the path to discretize the problem and enforce
 constraints at. The first and last gridpoint must equal the path
 start and end time respectively. Gridpoints must also be
@@ -483,13 +477,13 @@ frame, measured and and expressed in the world frame. The limits
 should be given as [α_WF, a_WF], where α_WF is the frame’s angular
 acceleration and v_WF is the frame’s translational acceleration.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">constraint_frame</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt>
 <dd>The frame to limit the acceleration of.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt>
 <dd>The lower acceleration limit for constraint_frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt>
 <dd>The upper acceleration limit for constraint_frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">discretization</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt>
 <dd>The discretization scheme to use for this linear constraint. See
 ToppraDiscretization for details.</dd>
 </dl>
@@ -511,9 +505,9 @@ respectively.</td>
 <dd><p>Adds a limit on the magnitude of the translational velocity of the
 given frame, measured and expressed in the world frame.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">constraint_frame</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt>
 <dd>The frame to limit the translational speed of.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt>
 <dd>The upper translational speed limit for constraint_frame.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -535,11 +529,11 @@ frame, measured and and expressed in the world frame. The limits
 should be given as [ω_WF, v_WF], where ω_WF is the frame’s angular
 velocity and v_WF is the frame’s translational velocity.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">constraint_frame</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_frame</span></code>:</dt>
 <dd>The frame to limit the velocity of.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt>
 <dd>The lower velocity limit for constraint_frame.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt>
 <dd>The upper velocity limit for constraint_frame.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -560,11 +554,11 @@ limit during the backward pass.</td>
 The limits must be arranged in the same order as the entries in the
 path.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt>
 <dd>The lower acceleration limit for each degree of freedom.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt>
 <dd>The upper acceleration limit for each degree of freedom.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">discretization</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt>
 <dd>The discretization scheme to use for this linear constraint. See
 ToppraDiscretization for details.</dd>
 </dl>
@@ -588,11 +582,11 @@ limits must be arranged in the same order as the entries in the path.
 This constrains the generalized torques applied to the plant and does
 not reason about contact forces.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt>
 <dd>The lower torque limit for each degree of freedom.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt>
 <dd>The upper torque limit for each degree of freedom.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">discretization</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">discretization</span></code>:</dt>
 <dd>The discretization scheme to use for this linear constraint. See
 ToppraDiscretization for details.</dd>
 </dl>
@@ -613,9 +607,9 @@ torque limit on the backward pass and forward pass respectively.</td>
 <dd><p>Adds a velocity limit to all the degrees of freedom in the plant. The
 limits must be arranged in the same order as the entries in the path.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">lower_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lower_limit</span></code>:</dt>
 <dd>The lower velocity limit for each degree of freedom.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">upper_limit</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">upper_limit</span></code>:</dt>
 <dd>The upper velocity limit for each degree of freedom.</dd>
 </dl>
 </dd></dl>
@@ -626,13 +620,13 @@ limits must be arranged in the same order as the entries in the path.</p>
 <dd><p>Takes a path and generates a sequence of gridpoints selected to
 control the interpolation error of the optimization. The gridpoints
 are selected such that the distance between them is below
-<code class="docutils literal"><span class="pre">max_seg_length</span></code>, there are at least <code class="docutils literal"><span class="pre">min_points</span></code> number of
+<code class="docutils literal notranslate"><span class="pre">max_seg_length</span></code>, there are at least <code class="docutils literal notranslate"><span class="pre">min_points</span></code> number of
 gridpoints and the interpolation error, estimated with the equation</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>errₑₛₜ = max(|q̈ Δₛ²|) / 2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>errₑₛₜ = max(|q̈ Δₛ²|) / 2
 </pre></div>
 </div>
 <p>where Δₛ is the distance between sequential gridpoints, is less than
-<code class="docutils literal"><span class="pre">max_err</span></code>. Gridpoints are selected by adding the midpoint between
+<code class="docutils literal notranslate"><span class="pre">max_err</span></code>. Gridpoints are selected by adding the midpoint between
 two gridpoints whenever the distance between them is too large or the
 estimated error is too high. This results in more points in parts of
 the path with higher curvature. All grid points will lie between
@@ -694,9 +688,7 @@ at minor computational cost.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -705,7 +697,7 @@ at minor computational cost.</p>
         <a href="pydrake.multibody.parsing.html" class="btn btn-neutral float-right" title="pydrake.multibody.parsing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.multibody.meshcat.html" class="btn btn-neutral" title="pydrake.multibody.meshcat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.multibody.meshcat.html" class="btn btn-neutral float-left" title="pydrake.multibody.meshcat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -729,37 +721,15 @@ at minor computational cost.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

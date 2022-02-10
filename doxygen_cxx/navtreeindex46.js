@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,30,4],
 "proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,30,3],
 "proximity__utilities_8h.html":[4,0,0,4,2,42],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "solution__result_8h.html#acb1201a087105dc635e2bd748486171c":[4,0,0,10,47,2],
 "solve_8h.html":[4,0,0,10,48],
 "solve_8h.html#a07bf1722e3e347d7878ae44be98b4b92":[4,0,0,10,48,0],
-"solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,10,48,2],
-"solve_8h.html#a78328b8267370289c8c653bc67efde5e":[4,0,0,10,48,1]
+"solve_8h.html#a6f8160cf69cc8a3cd41dfec1fb08a8fa":[4,0,0,10,48,2]
 };

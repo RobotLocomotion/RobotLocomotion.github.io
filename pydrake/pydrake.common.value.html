@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.common" href="pydrake.common.html"/>
-        <link rel="next" title="pydrake.common.yaml" href="pydrake.common.yaml.html"/>
-        <link rel="prev" title="pydrake.common.schema" href="pydrake.common.schema.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.common.yaml" href="pydrake.common.yaml.html" />
+    <link rel="prev" title="pydrake.common.schema" href="pydrake.common.schema.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -136,7 +129,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -144,9 +137,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -212,7 +206,7 @@
 The reference remains valid only until this object is set or
 destroyed.</p>
 <dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
 <dd>The originally declared type of this AbstractValue, e.g., from
 AbstractValue::Make&lt;T&gt;() or Value&lt;T&gt;::Value(). If T does not
 match, a RuntimeError will be thrown with a helpful error message.</dd>
@@ -226,7 +220,7 @@ match, a RuntimeError will be thrown with a helpful error message.</dd>
 The reference remains valid only until this object is set or
 destroyed.</p>
 <dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
 <dd>The originally declared type of this AbstractValue, e.g., from
 AbstractValue::Make&lt;T&gt;() or Value&lt;T&gt;::Value(). If T does not
 match, a RuntimeError will be thrown with a helpful error message.</dd>
@@ -235,8 +229,8 @@ match, a RuntimeError will be thrown with a helpful error message.</dd>
 
 <dl class="method">
 <dt id="pydrake.common.value.AbstractValue.Make">
-<code class="descname">Make</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.AbstractValue.Make" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns an AbstractValue containing the given <code class="docutils literal"><span class="pre">value</span></code>.</p>
+<code class="descname">Make</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.AbstractValue.Make" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an AbstractValue containing the given <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -244,7 +238,7 @@ match, a RuntimeError will be thrown with a helpful error message.</dd>
 <code class="descname">set_value</code><span class="sig-paren">(</span><em>self: pydrake.common.value.AbstractValue</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.value.AbstractValue.set_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the value wrapped in this AbstractValue.</p>
 <dl class="docutils">
-<dt>Template parameter <code class="docutils literal"><span class="pre">T</span></code>:</dt>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">T</span></code>:</dt>
 <dd>The originally declared type of this AbstractValue, e.g., from
 AbstractValue::Make&lt;T&gt;() or Value&lt;T&gt;::Value(). If T does not
 match, a RuntimeError will be thrown with a helpful error message.</dd>
@@ -254,7 +248,7 @@ match, a RuntimeError will be thrown with a helpful error message.</dd>
 <dl class="method">
 <dt id="pydrake.common.value.AbstractValue.SetFrom">
 <code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.common.value.AbstractValue</em>, <em>arg0: pydrake.common.value.AbstractValue</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.common.value.AbstractValue.SetFrom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copies the value in <code class="docutils literal"><span class="pre">other</span></code> to this value. If other is not
+<dd><p>Copies the value in <code class="docutils literal notranslate"><span class="pre">other</span></code> to this value. If other is not
 compatible with this object, a RuntimeError will be thrown with a
 helpful error message.</p>
 </dd></dl>
@@ -264,11 +258,11 @@ helpful error message.</p>
 <dl class="template">
 <dt id="pydrake.common.value.Value">
 <em class="property">template </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value</code><a class="headerlink" href="#pydrake.common.value.Value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.common.value.Value[str]" title="pydrake.common.value.Value[str]"><code class="xref py py-class docutils literal"><span class="pre">Value[str]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[bool]" title="pydrake.common.value.Value[bool]"><code class="xref py py-class docutils literal"><span class="pre">Value[bool]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[float]" title="pydrake.common.value.Value[float]"><code class="xref py py-class docutils literal"><span class="pre">Value[float]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[object]" title="pydrake.common.value.Value[object]"><code class="xref py py-class docutils literal"><span class="pre">Value[object]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Isometry3_[float]]" title="pydrake.common.value.Value[Isometry3_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Isometry3_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Isometry3_[AutoDiffXd]]" title="pydrake.common.value.Value[Isometry3_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Isometry3_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Isometry3_[Expression]]" title="pydrake.common.value.Value[Isometry3_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Isometry3_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RigidTransform_[float]]" title="pydrake.common.value.Value[RigidTransform_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[RigidTransform_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RigidTransform_[float]]]" title="pydrake.common.value.Value[List[RigidTransform_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[RigidTransform_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RotationMatrix_[float]]" title="pydrake.common.value.Value[RotationMatrix_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[RotationMatrix_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RotationMatrix_[float]]]" title="pydrake.common.value.Value[List[RotationMatrix_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[RotationMatrix_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RigidTransform_[AutoDiffXd]]" title="pydrake.common.value.Value[RigidTransform_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[RigidTransform_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[RigidTransform_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]]" title="pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[RotationMatrix_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[RotationMatrix_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RigidTransform_[Expression]]" title="pydrake.common.value.Value[RigidTransform_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[RigidTransform_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RigidTransform_[Expression]]]" title="pydrake.common.value.Value[List[RigidTransform_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[RigidTransform_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RotationMatrix_[Expression]]" title="pydrake.common.value.Value[RotationMatrix_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[RotationMatrix_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RotationMatrix_[Expression]]]" title="pydrake.common.value.Value[List[RotationMatrix_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[RotationMatrix_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[BasicVector_[float]]" title="pydrake.common.value.Value[BasicVector_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[BasicVector_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[BasicVector_[AutoDiffXd]]" title="pydrake.common.value.Value[BasicVector_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[BasicVector_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[BasicVector_[Expression]]" title="pydrake.common.value.Value[BasicVector_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[BasicVector_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Rgba]" title="pydrake.common.value.Value[Rgba]"><code class="xref py py-class docutils literal"><span class="pre">Value[Rgba]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RenderLabel]" title="pydrake.common.value.Value[RenderLabel]"><code class="xref py py-class docutils literal"><span class="pre">Value[RenderLabel]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[FramePoseVector_[float]]" title="pydrake.common.value.Value[FramePoseVector_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[FramePoseVector_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[QueryObject_[float]]" title="pydrake.common.value.Value[QueryObject_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[QueryObject_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]]" title="pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[FramePoseVector_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[QueryObject_[AutoDiffXd]]" title="pydrake.common.value.Value[QueryObject_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[QueryObject_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[FramePoseVector_[Expression]]" title="pydrake.common.value.Value[FramePoseVector_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[FramePoseVector_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[QueryObject_[Expression]]" title="pydrake.common.value.Value[QueryObject_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[QueryObject_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kRgba8U]]" title="pydrake.common.value.Value[Image[PixelType.kRgba8U]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kRgba8U]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kDepth16U]]" title="pydrake.common.value.Value[Image[PixelType.kDepth16U]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kDepth16U]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kDepth32F]]" title="pydrake.common.value.Value[Image[PixelType.kDepth32F]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kDepth32F]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kLabel16I]]" title="pydrake.common.value.Value[Image[PixelType.kLabel16I]]"><code class="xref py py-class docutils literal"><span class="pre">Value[Image[PixelType.kLabel16I]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[PointCloud]" title="pydrake.common.value.Value[PointCloud]"><code class="xref py py-class docutils literal"><span class="pre">Value[PointCloud]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialVelocity_[float]]" title="pydrake.common.value.Value[SpatialVelocity_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialVelocity_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialVelocity_[float]]]" title="pydrake.common.value.Value[List[SpatialVelocity_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialVelocity_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialMomentum_[float]]" title="pydrake.common.value.Value[SpatialMomentum_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialMomentum_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialMomentum_[float]]]" title="pydrake.common.value.Value[List[SpatialMomentum_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialMomentum_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialAcceleration_[float]]" title="pydrake.common.value.Value[SpatialAcceleration_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialAcceleration_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialAcceleration_[float]]]" title="pydrake.common.value.Value[List[SpatialAcceleration_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialAcceleration_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialForce_[float]]" title="pydrake.common.value.Value[SpatialForce_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialForce_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialForce_[float]]]" title="pydrake.common.value.Value[List[SpatialForce_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialForce_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialVelocity_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialVelocity_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialMomentum_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialMomentum_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialAcceleration_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialAcceleration_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialForce_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialForce_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialForce_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialForce_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialVelocity_[Expression]]" title="pydrake.common.value.Value[SpatialVelocity_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialVelocity_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialVelocity_[Expression]]]" title="pydrake.common.value.Value[List[SpatialVelocity_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialVelocity_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialMomentum_[Expression]]" title="pydrake.common.value.Value[SpatialMomentum_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialMomentum_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialMomentum_[Expression]]]" title="pydrake.common.value.Value[List[SpatialMomentum_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialMomentum_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialAcceleration_[Expression]]" title="pydrake.common.value.Value[SpatialAcceleration_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialAcceleration_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]]" title="pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialAcceleration_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialForce_[Expression]]" title="pydrake.common.value.Value[SpatialForce_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[SpatialForce_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialForce_[Expression]]]" title="pydrake.common.value.Value[List[SpatialForce_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[SpatialForce_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[HydroelasticContactInfo_[float]]" title="pydrake.common.value.Value[HydroelasticContactInfo_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[HydroelasticContactInfo_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactResults_[float]]" title="pydrake.common.value.Value[ContactResults_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[ContactResults_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CoulombFriction_[float]]" title="pydrake.common.value.Value[CoulombFriction_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[CoulombFriction_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]]" title="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]]"><code class="xref py py-class docutils literal"><span class="pre">Value[ExternallyAppliedSpatialForce_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]]" title="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[ExternallyAppliedSpatialForce_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]]" title="pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[HydroelasticContactInfo_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactResults_[AutoDiffXd]]" title="pydrake.common.value.Value[ContactResults_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[ContactResults_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]]" title="pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[CoulombFriction_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]" title="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]"><code class="xref py py-class docutils literal"><span class="pre">Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[HydroelasticContactInfo_[Expression]]" title="pydrake.common.value.Value[HydroelasticContactInfo_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[HydroelasticContactInfo_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactResults_[Expression]]" title="pydrake.common.value.Value[ContactResults_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[ContactResults_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CoulombFriction_[Expression]]" title="pydrake.common.value.Value[CoulombFriction_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[CoulombFriction_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]]" title="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]]"><code class="xref py py-class docutils literal"><span class="pre">Value[ExternallyAppliedSpatialForce_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]]" title="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]]"><code class="xref py py-class docutils literal"><span class="pre">Value[List[ExternallyAppliedSpatialForce_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactWrench]" title="pydrake.common.value.Value[ContactWrench]"><code class="xref py py-class docutils literal"><span class="pre">Value[ContactWrench]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ClpSolverDetails]" title="pydrake.common.value.Value[ClpSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[ClpSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CsdpSolverDetails]" title="pydrake.common.value.Value[CsdpSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[CsdpSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[GurobiSolverDetails]" title="pydrake.common.value.Value[GurobiSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[GurobiSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[IpoptSolverDetails]" title="pydrake.common.value.Value[IpoptSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[IpoptSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[MosekSolverDetails]" title="pydrake.common.value.Value[MosekSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[MosekSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[OsqpSolverDetails]" title="pydrake.common.value.Value[OsqpSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[OsqpSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SnoptSolverDetails]" title="pydrake.common.value.Value[SnoptSolverDetails]"><code class="xref py py-class docutils literal"><span class="pre">Value[SnoptSolverDetails]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.common.value.Value[str]" title="pydrake.common.value.Value[str]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[str]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[bool]" title="pydrake.common.value.Value[bool]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[bool]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[float]" title="pydrake.common.value.Value[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[float]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[object]" title="pydrake.common.value.Value[object]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[object]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Isometry3_[float]]" title="pydrake.common.value.Value[Isometry3_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Isometry3_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Isometry3_[AutoDiffXd]]" title="pydrake.common.value.Value[Isometry3_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Isometry3_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Isometry3_[Expression]]" title="pydrake.common.value.Value[Isometry3_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Isometry3_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RigidTransform_[float]]" title="pydrake.common.value.Value[RigidTransform_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RigidTransform_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RigidTransform_[float]]]" title="pydrake.common.value.Value[List[RigidTransform_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[RigidTransform_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RotationMatrix_[float]]" title="pydrake.common.value.Value[RotationMatrix_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RotationMatrix_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RotationMatrix_[float]]]" title="pydrake.common.value.Value[List[RotationMatrix_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[RotationMatrix_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RigidTransform_[AutoDiffXd]]" title="pydrake.common.value.Value[RigidTransform_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RigidTransform_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[RigidTransform_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]]" title="pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RotationMatrix_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[RotationMatrix_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RigidTransform_[Expression]]" title="pydrake.common.value.Value[RigidTransform_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RigidTransform_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RigidTransform_[Expression]]]" title="pydrake.common.value.Value[List[RigidTransform_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[RigidTransform_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RotationMatrix_[Expression]]" title="pydrake.common.value.Value[RotationMatrix_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RotationMatrix_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[RotationMatrix_[Expression]]]" title="pydrake.common.value.Value[List[RotationMatrix_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[RotationMatrix_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[BasicVector_[float]]" title="pydrake.common.value.Value[BasicVector_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[BasicVector_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[BasicVector_[AutoDiffXd]]" title="pydrake.common.value.Value[BasicVector_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[BasicVector_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[BasicVector_[Expression]]" title="pydrake.common.value.Value[BasicVector_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[BasicVector_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Rgba]" title="pydrake.common.value.Value[Rgba]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Rgba]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[RenderLabel]" title="pydrake.common.value.Value[RenderLabel]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[RenderLabel]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[FramePoseVector_[float]]" title="pydrake.common.value.Value[FramePoseVector_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[FramePoseVector_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[QueryObject_[float]]" title="pydrake.common.value.Value[QueryObject_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[QueryObject_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]]" title="pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[FramePoseVector_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[QueryObject_[AutoDiffXd]]" title="pydrake.common.value.Value[QueryObject_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[QueryObject_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[FramePoseVector_[Expression]]" title="pydrake.common.value.Value[FramePoseVector_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[FramePoseVector_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[QueryObject_[Expression]]" title="pydrake.common.value.Value[QueryObject_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[QueryObject_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kRgba8U]]" title="pydrake.common.value.Value[Image[PixelType.kRgba8U]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Image[PixelType.kRgba8U]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kDepth16U]]" title="pydrake.common.value.Value[Image[PixelType.kDepth16U]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Image[PixelType.kDepth16U]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kDepth32F]]" title="pydrake.common.value.Value[Image[PixelType.kDepth32F]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Image[PixelType.kDepth32F]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[Image[PixelType.kLabel16I]]" title="pydrake.common.value.Value[Image[PixelType.kLabel16I]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[Image[PixelType.kLabel16I]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[PointCloud]" title="pydrake.common.value.Value[PointCloud]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[PointCloud]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialVelocity_[float]]" title="pydrake.common.value.Value[SpatialVelocity_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialVelocity_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialVelocity_[float]]]" title="pydrake.common.value.Value[List[SpatialVelocity_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialVelocity_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialMomentum_[float]]" title="pydrake.common.value.Value[SpatialMomentum_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialMomentum_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialMomentum_[float]]]" title="pydrake.common.value.Value[List[SpatialMomentum_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialMomentum_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialAcceleration_[float]]" title="pydrake.common.value.Value[SpatialAcceleration_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialAcceleration_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialAcceleration_[float]]]" title="pydrake.common.value.Value[List[SpatialAcceleration_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialAcceleration_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialForce_[float]]" title="pydrake.common.value.Value[SpatialForce_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialForce_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialForce_[float]]]" title="pydrake.common.value.Value[List[SpatialForce_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialForce_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialVelocity_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialVelocity_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialMomentum_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialMomentum_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialAcceleration_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialAcceleration_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialForce_[AutoDiffXd]]" title="pydrake.common.value.Value[SpatialForce_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialForce_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialForce_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialVelocity_[Expression]]" title="pydrake.common.value.Value[SpatialVelocity_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialVelocity_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialVelocity_[Expression]]]" title="pydrake.common.value.Value[List[SpatialVelocity_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialVelocity_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialMomentum_[Expression]]" title="pydrake.common.value.Value[SpatialMomentum_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialMomentum_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialMomentum_[Expression]]]" title="pydrake.common.value.Value[List[SpatialMomentum_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialMomentum_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialAcceleration_[Expression]]" title="pydrake.common.value.Value[SpatialAcceleration_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialAcceleration_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]]" title="pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialAcceleration_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SpatialForce_[Expression]]" title="pydrake.common.value.Value[SpatialForce_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SpatialForce_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[SpatialForce_[Expression]]]" title="pydrake.common.value.Value[List[SpatialForce_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[SpatialForce_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[HydroelasticContactInfo_[float]]" title="pydrake.common.value.Value[HydroelasticContactInfo_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[HydroelasticContactInfo_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactResults_[float]]" title="pydrake.common.value.Value[ContactResults_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ContactResults_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CoulombFriction_[float]]" title="pydrake.common.value.Value[CoulombFriction_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[CoulombFriction_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]]" title="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ExternallyAppliedSpatialForce_[float]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]]" title="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[ExternallyAppliedSpatialForce_[float]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]]" title="pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[HydroelasticContactInfo_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactResults_[AutoDiffXd]]" title="pydrake.common.value.Value[ContactResults_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ContactResults_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]]" title="pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[CoulombFriction_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]" title="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]" title="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[HydroelasticContactInfo_[Expression]]" title="pydrake.common.value.Value[HydroelasticContactInfo_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[HydroelasticContactInfo_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactResults_[Expression]]" title="pydrake.common.value.Value[ContactResults_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ContactResults_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CoulombFriction_[Expression]]" title="pydrake.common.value.Value[CoulombFriction_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[CoulombFriction_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]]" title="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ExternallyAppliedSpatialForce_[Expression]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]]" title="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[List[ExternallyAppliedSpatialForce_[Expression]]]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ContactWrench]" title="pydrake.common.value.Value[ContactWrench]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ContactWrench]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[ClpSolverDetails]" title="pydrake.common.value.Value[ClpSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[ClpSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[CsdpSolverDetails]" title="pydrake.common.value.Value[CsdpSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[CsdpSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[GurobiSolverDetails]" title="pydrake.common.value.Value[GurobiSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[GurobiSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[IpoptSolverDetails]" title="pydrake.common.value.Value[IpoptSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[IpoptSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[MosekSolverDetails]" title="pydrake.common.value.Value[MosekSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[MosekSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[OsqpSolverDetails]" title="pydrake.common.value.Value[OsqpSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[OsqpSolverDetails]</span></code></a>, <a class="reference internal" href="#pydrake.common.value.Value[SnoptSolverDetails]" title="pydrake.common.value.Value[SnoptSolverDetails]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Value[SnoptSolverDetails]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.common.value.Value.Value[str]">
 <em class="property">class </em><code class="descname">Value[str]</code><a class="headerlink" href="#pydrake.common.value.Value.Value[str]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value.Value[str].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value.Value[str].__init__" title="Permalink to this definition">¶</a></dt>
@@ -301,7 +295,7 @@ helpful error message.</p>
 <dl class="class">
 <dt id="pydrake.common.value.Value[BasicVector_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[BasicVector_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[BasicVector_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[BasicVector_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[BasicVector_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -346,7 +340,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[BasicVector_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[BasicVector_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[BasicVector_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[BasicVector_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[BasicVector_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -391,7 +385,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[BasicVector_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[BasicVector_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[BasicVector_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[BasicVector_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[BasicVector_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -436,7 +430,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[bool]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[bool]</code><a class="headerlink" href="#pydrake.common.value.Value[bool]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[bool].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[bool].__init__" title="Permalink to this definition">¶</a></dt>
@@ -467,7 +461,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ClpSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ClpSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[ClpSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ClpSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ClpSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -499,7 +493,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ContactResults_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ContactResults_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[ContactResults_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ContactResults_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ContactResults_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -531,7 +525,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ContactResults_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ContactResults_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[ContactResults_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ContactResults_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ContactResults_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -563,7 +557,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ContactResults_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ContactResults_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[ContactResults_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ContactResults_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ContactResults_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -595,7 +589,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ContactWrench]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ContactWrench]</code><a class="headerlink" href="#pydrake.common.value.Value[ContactWrench]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ContactWrench].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ContactWrench].__init__" title="Permalink to this definition">¶</a></dt>
@@ -627,7 +621,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[CoulombFriction_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[CoulombFriction_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -659,7 +653,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[CoulombFriction_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[CoulombFriction_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[CoulombFriction_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[CoulombFriction_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[CoulombFriction_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -691,7 +685,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[CoulombFriction_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[CoulombFriction_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[CoulombFriction_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[CoulombFriction_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[CoulombFriction_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -723,7 +717,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[CsdpSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[CsdpSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[CsdpSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[CsdpSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[CsdpSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -755,7 +749,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -787,7 +781,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ExternallyAppliedSpatialForce_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -819,7 +813,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[ExternallyAppliedSpatialForce_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[ExternallyAppliedSpatialForce_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -851,7 +845,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[float]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[float]</code><a class="headerlink" href="#pydrake.common.value.Value[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[float].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -882,7 +876,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[FramePoseVector_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[FramePoseVector_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -914,7 +908,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[FramePoseVector_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[FramePoseVector_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[FramePoseVector_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[FramePoseVector_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[FramePoseVector_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -946,7 +940,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[FramePoseVector_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[FramePoseVector_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[FramePoseVector_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[FramePoseVector_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[FramePoseVector_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -978,7 +972,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[GurobiSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[GurobiSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[GurobiSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[GurobiSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[GurobiSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1010,7 +1004,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[HydroelasticContactInfo_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[HydroelasticContactInfo_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1042,7 +1036,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[HydroelasticContactInfo_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[HydroelasticContactInfo_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[HydroelasticContactInfo_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[HydroelasticContactInfo_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[HydroelasticContactInfo_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1074,7 +1068,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[HydroelasticContactInfo_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[HydroelasticContactInfo_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[HydroelasticContactInfo_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[HydroelasticContactInfo_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[HydroelasticContactInfo_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1106,7 +1100,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Image[PixelType.kDepth16U]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Image[PixelType.kDepth16U]]</code><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kDepth16U]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Image[PixelType.kDepth16U]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kDepth16U]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1138,7 +1132,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Image[PixelType.kDepth32F]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Image[PixelType.kDepth32F]]</code><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kDepth32F]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Image[PixelType.kDepth32F]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kDepth32F]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1170,7 +1164,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Image[PixelType.kLabel16I]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Image[PixelType.kLabel16I]]</code><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kLabel16I]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Image[PixelType.kLabel16I]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kLabel16I]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1202,7 +1196,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Image[PixelType.kRgba8U]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Image[PixelType.kRgba8U]]</code><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kRgba8U]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Image[PixelType.kRgba8U]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Image[PixelType.kRgba8U]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1234,7 +1228,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[IpoptSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[IpoptSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[IpoptSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[IpoptSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[IpoptSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1266,7 +1260,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Isometry3_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Isometry3_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[Isometry3_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Isometry3_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Isometry3_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1298,7 +1292,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Isometry3_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Isometry3_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[Isometry3_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Isometry3_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Isometry3_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1330,7 +1324,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Isometry3_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Isometry3_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[Isometry3_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Isometry3_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Isometry3_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1362,7 +1356,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1393,7 +1387,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[ExternallyAppliedSpatialForce_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1424,7 +1418,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[ExternallyAppliedSpatialForce_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[ExternallyAppliedSpatialForce_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1455,7 +1449,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[RigidTransform_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[RigidTransform_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1486,7 +1480,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[RigidTransform_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[RigidTransform_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[RigidTransform_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[RigidTransform_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[RigidTransform_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1517,7 +1511,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[RigidTransform_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[RigidTransform_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[RigidTransform_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[RigidTransform_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[RigidTransform_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1548,7 +1542,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[RotationMatrix_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[RotationMatrix_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1579,7 +1573,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[RotationMatrix_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[RotationMatrix_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[RotationMatrix_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[RotationMatrix_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[RotationMatrix_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1610,7 +1604,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[RotationMatrix_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[RotationMatrix_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[RotationMatrix_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[RotationMatrix_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[RotationMatrix_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1641,7 +1635,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialAcceleration_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialAcceleration_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1672,7 +1666,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialAcceleration_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialAcceleration_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1703,7 +1697,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialAcceleration_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialAcceleration_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialAcceleration_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialAcceleration_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialAcceleration_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1734,7 +1728,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialForce_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialForce_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1765,7 +1759,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialForce_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialForce_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialForce_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialForce_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialForce_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1796,7 +1790,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialForce_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialForce_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialForce_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialForce_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialForce_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1827,7 +1821,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialMomentum_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialMomentum_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1858,7 +1852,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialMomentum_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialMomentum_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialMomentum_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialMomentum_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialMomentum_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1889,7 +1883,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialMomentum_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialMomentum_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialMomentum_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialMomentum_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialMomentum_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1920,7 +1914,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialVelocity_[AutoDiffXd]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialVelocity_[AutoDiffXd]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1951,7 +1945,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialVelocity_[Expression]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialVelocity_[Expression]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialVelocity_[Expression]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialVelocity_[Expression]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialVelocity_[Expression]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1982,7 +1976,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[List[SpatialVelocity_[float]]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[List[SpatialVelocity_[float]]]</code><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialVelocity_[float]]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[List[SpatialVelocity_[float]]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[List[SpatialVelocity_[float]]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2013,7 +2007,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[MosekSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[MosekSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[MosekSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[MosekSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[MosekSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2045,7 +2039,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[object]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[object]</code><a class="headerlink" href="#pydrake.common.value.Value[object]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[object].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[object].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2077,7 +2071,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[OsqpSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[OsqpSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[OsqpSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[OsqpSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[OsqpSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2109,7 +2103,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[PointCloud]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[PointCloud]</code><a class="headerlink" href="#pydrake.common.value.Value[PointCloud]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[PointCloud].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[PointCloud].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2141,7 +2135,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[QueryObject_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[QueryObject_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[QueryObject_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[QueryObject_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[QueryObject_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2173,7 +2167,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[QueryObject_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[QueryObject_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[QueryObject_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[QueryObject_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[QueryObject_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2205,7 +2199,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[QueryObject_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[QueryObject_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[QueryObject_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[QueryObject_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[QueryObject_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2237,7 +2231,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RenderLabel]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RenderLabel]</code><a class="headerlink" href="#pydrake.common.value.Value[RenderLabel]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RenderLabel].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RenderLabel].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2269,7 +2263,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[Rgba]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[Rgba]</code><a class="headerlink" href="#pydrake.common.value.Value[Rgba]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[Rgba].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[Rgba].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2301,7 +2295,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RigidTransform_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RigidTransform_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[RigidTransform_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RigidTransform_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RigidTransform_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2333,7 +2327,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RigidTransform_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RigidTransform_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[RigidTransform_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RigidTransform_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RigidTransform_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2365,7 +2359,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RigidTransform_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RigidTransform_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[RigidTransform_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RigidTransform_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RigidTransform_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2397,7 +2391,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RotationMatrix_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RotationMatrix_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2429,7 +2423,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RotationMatrix_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RotationMatrix_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[RotationMatrix_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RotationMatrix_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RotationMatrix_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2461,7 +2455,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[RotationMatrix_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[RotationMatrix_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[RotationMatrix_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[RotationMatrix_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[RotationMatrix_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2493,7 +2487,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SnoptSolverDetails]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SnoptSolverDetails]</code><a class="headerlink" href="#pydrake.common.value.Value[SnoptSolverDetails]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SnoptSolverDetails].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SnoptSolverDetails].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2525,7 +2519,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialAcceleration_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialAcceleration_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2557,7 +2551,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialAcceleration_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialAcceleration_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialAcceleration_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialAcceleration_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialAcceleration_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2589,7 +2583,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialAcceleration_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialAcceleration_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialAcceleration_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialAcceleration_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialAcceleration_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2621,7 +2615,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialForce_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialForce_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialForce_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialForce_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialForce_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2653,7 +2647,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialForce_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialForce_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialForce_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialForce_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialForce_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2685,7 +2679,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialForce_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialForce_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialForce_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialForce_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialForce_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2717,7 +2711,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialMomentum_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialMomentum_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2749,7 +2743,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialMomentum_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialMomentum_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialMomentum_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialMomentum_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialMomentum_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2781,7 +2775,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialMomentum_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialMomentum_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialMomentum_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialMomentum_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialMomentum_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2813,7 +2807,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialVelocity_[AutoDiffXd]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialVelocity_[AutoDiffXd]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2845,7 +2839,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialVelocity_[Expression]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialVelocity_[Expression]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialVelocity_[Expression]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialVelocity_[Expression]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialVelocity_[Expression]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2877,7 +2871,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[SpatialVelocity_[float]]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[SpatialVelocity_[float]]</code><a class="headerlink" href="#pydrake.common.value.Value[SpatialVelocity_[float]]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[SpatialVelocity_[float]].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[SpatialVelocity_[float]].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2909,7 +2903,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 <dl class="class">
 <dt id="pydrake.common.value.Value[str]">
 <em class="property">class </em><code class="descclassname">pydrake.common.value.</code><code class="descname">Value[str]</code><a class="headerlink" href="#pydrake.common.value.Value[str]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.common.value.AbstractValue" title="pydrake.common.value.AbstractValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.common.value.AbstractValue</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.common.value.Value[str].__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.common.value.Value[str].__init__" title="Permalink to this definition">¶</a></dt>
@@ -2941,9 +2935,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -2952,7 +2944,7 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
         <a href="pydrake.common.yaml.html" class="btn btn-neutral float-right" title="pydrake.common.yaml" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.common.schema.html" class="btn btn-neutral" title="pydrake.common.schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.common.schema.html" class="btn btn-neutral float-left" title="pydrake.common.schema" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -2976,37 +2968,15 @@ be destroyed when it is replaced, since it is stored using <cite>unique_ptr&lt;&
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

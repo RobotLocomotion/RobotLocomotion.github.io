@@ -359,7 +359,7 @@ Figure 1: Computational structure of a Drake System.</div></div>
 <li>Doubled-line edges indicate that the item has a multiplicity of 0..many (∀i).</li>
 </ul>
 <p><div class="dotgraph">
-<iframe scrolling="no" frameborder="0" src="dot_cache_doxygen_trackers.svg" width="1874" height="1307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<iframe scrolling="no" frameborder="0" src="dot_cache_doxygen_trackers.svg" width="1855" height="1307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </p>
 <p><a class="anchor" id="cache_design_implementation"></a></p><h2>Implementation</h2>
 <p>The logical cache entry object is split into two pieces to reflect the const and mutable aspects. Given a CacheIndex, either piece may be obtained very efficiently. The <code>const</code> part is a <a class="el" href="classdrake_1_1systems_1_1_cache_entry.html" title="A CacheEntry belongs to a System and represents the properties of one of that System&#39;s cached computa...">CacheEntry</a> owned by the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>, and consists of:</p>

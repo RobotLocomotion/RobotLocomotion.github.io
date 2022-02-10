@@ -3833,7 +3833,7 @@ log(Z(i, i)) &gt;= t(i)
 <dl class="section note"><dt>Note</dt><dd>We implicitly require that <code>X</code> being positive semidefinite (psd) (as X is the diagonal entry of the big psd matrix above). If your <code>X</code> is not necessarily psd, then don't call this function. </dd>
 <dd>
 The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential cone constraint. Please make sure your have a solver that supports exponential cone constraint (currently SCS does). Refer to <a href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a> for more details.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000011">Deprecated:</a></b></dt><dd>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
  This will be removed from Drake on or after 2022-05-01.</dd></dl>
 
 </div>
@@ -6712,7 +6712,7 @@ x+y &gt;= 0
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>(p, Q) The polynomial p and the Gramian matrix Q. Q has been added as decision variables to the program.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
  This will be removed from Drake on or after 2022-05-01.</dd></dl>
 </li>
 </ul>
@@ -6755,7 +6755,7 @@ x+y &gt;= 0
 <p>Depending on the type of the polynomial, we will impose different constraint on the Gramian matrix.</p><ul>
 <li>if type = kSos, we impose the Gramian matrix being positive semidefinite.</li>
 <li>if type = kSdsos, we impose the Gramian matrix being scaled diagonally dominant.</li>
-<li>if type = kDsos, we impose the Gramian matrix being positive diagonally dominant.(Deprecated.) <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+<li>if type = kDsos, we impose the Gramian matrix being positive diagonally dominant.(Deprecated.) <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
  This will be removed from Drake on or after 2022-05-01.</dd></dl>
 </li>
 </ul>
@@ -6805,7 +6805,7 @@ x+y &gt;= 0
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>(p, Q) The polynomial p and the Gramian matrix Q. Q has been added as decision variables to the program. </dd></dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code>degree</code> is a positive even number.(Deprecated.) </dd></dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000010">Deprecated:</a></b></dt><dd>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
  This will be removed from Drake on or after 2022-05-01.</dd></dl>
 
 </div>

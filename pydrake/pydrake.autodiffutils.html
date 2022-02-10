@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="next" title="pydrake.common" href="pydrake.common.html"/>
-        <link rel="prev" title="pydrake.all" href="pydrake.all.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.common" href="pydrake.common.html" />
+    <link rel="prev" title="pydrake.all" href="pydrake.all.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -122,7 +116,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -130,9 +124,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -316,26 +311,26 @@
 <dl class="function">
 <dt id="pydrake.autodiffutils.ExtractGradient">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">ExtractGradient</code><span class="sig-paren">(</span><em>auto_diff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.ExtractGradient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extracts the <code class="docutils literal"><span class="pre">derivatives()</span></code> portion from a matrix of AutoDiffScalar
+<dd><p>Extracts the <code class="docutils literal notranslate"><span class="pre">derivatives()</span></code> portion from a matrix of AutoDiffScalar
 entries. (Each entry contains a value and derivatives.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>:</dt>
 <dd>An object whose Eigen type represents a matrix of AutoDiffScalar
 entries.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_derivatives</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code>:</dt>
 <dd>(Optional) The number of derivatives to return in case the input
-matrix has none, which we interpret as <code class="docutils literal"><span class="pre">num_derivatives</span></code> zeroes.
-If <code class="docutils literal"><span class="pre">num_derivatives</span></code> is supplied and the input matrix has
+matrix has none, which we interpret as <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code> zeroes.
+If <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code> is supplied and the input matrix has
 derivatives, the sizes must match.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">gradient_matrix</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">gradient_matrix</span></code>:</dt>
 <dd>An Eigen::Matrix with number of rows equal to the total size (rows
 x cols) of the input matrix and number of columns equal to the
 number of derivatives. Each output row corresponds to one entry of
 the input matrix, in input row order.</dd>
-<dt>Template parameter <code class="docutils literal"><span class="pre">Derived</span></code>:</dt>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt>
 <dd>An Eigen type representing a matrix with AutoDiffScalar entries.
 The type will be inferred from the type of the
-<code class="docutils literal"><span class="pre">auto_diff_matrix</span></code> parameter at the call site.</dd>
+<code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code> parameter at the call site.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -348,7 +343,7 @@ The type will be inferred from the type of the
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">num_derivatives</span></code> is specified but the input</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code> is specified but the input</li>
 <li>matrix has a different, non-zero number of derivatives.</li>
 </ul>
 </td>
@@ -360,30 +355,30 @@ The type will be inferred from the type of the
 <dl class="function">
 <dt id="pydrake.autodiffutils.ExtractValue">
 <code class="descclassname">pydrake.autodiffutils.</code><code class="descname">ExtractValue</code><span class="sig-paren">(</span><em>auto_diff_matrix: numpy.ndarray[object[m, n]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.autodiffutils.ExtractValue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extracts the <code class="docutils literal"><span class="pre">value()</span></code> portion from a matrix of AutoDiffScalar
+<dd><p>Extracts the <code class="docutils literal notranslate"><span class="pre">value()</span></code> portion from a matrix of AutoDiffScalar
 entries. (Each entry contains a value and some derivatives.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>:</dt>
 <dd>An object whose Eigen type represents a matrix of AutoDiffScalar
 entries.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt>
 <dd>An Eigen::Matrix of the same dimensions as the input matrix, but
 containing only the value portion of each entry, without the
 derivatives.</dd>
-<dt>Template parameter <code class="docutils literal"><span class="pre">Derived</span></code>:</dt>
+<dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt>
 <dd>An Eigen type representing a matrix with AutoDiffScalar entries.
 The type will be inferred from the type of the
-<code class="docutils literal"><span class="pre">auto_diff_matrix</span></code> parameter at the call site.</dd>
+<code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code> parameter at the call site.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Drake provides several similar functions: DiscardGradient() is
-specialized so that it can be applied to a <code class="docutils literal"><span class="pre">Matrix&lt;T&gt;</span></code> where T
+specialized so that it can be applied to a <code class="docutils literal notranslate"><span class="pre">Matrix&lt;T&gt;</span></code> where T
 could be an AutoDiffScalar or an ordinary double, in which case it
 returns the original matrix at no cost. DiscardZeroGradient() is
 similar but requires that the discarded gradient was zero.
 drake::ExtractDoubleOrThrow() has many specializations, including
-one for <code class="docutils literal"><span class="pre">Matrix&lt;AutoDiffScalar&gt;</span></code> that behaves identically to
+one for <code class="docutils literal notranslate"><span class="pre">Matrix&lt;AutoDiffScalar&gt;</span></code> that behaves identically to
 ExtractValue().</p>
 </div>
 <div class="admonition seealso">
@@ -401,24 +396,24 @@ ExtractValue().</p>
 </ol>
 <p>Initializes a single AutoDiff matrix given the corresponding value
 matrix.</p>
-<p>Creates an AutoDiff matrix that matches <code class="docutils literal"><span class="pre">value</span></code> in size with
-derivative of compile time size <code class="docutils literal"><span class="pre">nq</span></code> and runtime size
-<code class="docutils literal"><span class="pre">num_derivatives</span></code>. Sets its values to be equal to <code class="docutils literal"><span class="pre">value</span></code>, and for
-each element i of <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>, sets derivative number
-<code class="docutils literal"><span class="pre">deriv_num_start</span></code> + i to one (all other derivatives set to zero).</p>
+<p>Creates an AutoDiff matrix that matches <code class="docutils literal notranslate"><span class="pre">value</span></code> in size with
+derivative of compile time size <code class="docutils literal notranslate"><span class="pre">nq</span></code> and runtime size
+<code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code>. Sets its values to be equal to <code class="docutils literal notranslate"><span class="pre">value</span></code>, and for
+each element i of <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>, sets derivative number
+<code class="docutils literal notranslate"><span class="pre">deriv_num_start</span></code> + i to one (all other derivatives set to zero).</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt>
 <dd>‘regular’ matrix of values</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_derivatives</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_derivatives</span></code>:</dt>
 <dd>(Optional) size of the derivatives vector</dd>
 <dt><em>Default:</em> total size of the value matrix</dt>
-<dd>$Parameter <code class="docutils literal"><span class="pre">deriv_num_start</span></code>:</dd>
+<dd>$Parameter <code class="docutils literal notranslate"><span class="pre">deriv_num_start</span></code>:</dd>
 </dl>
 <p>(Optional) starting index into derivative vector (i.e. element
 deriv_num_start in derivative vector corresponds to matrix(0, 0)).</p>
 <dl class="docutils">
 <dt><em>Default:</em> 0</dt>
-<dd>$Returns <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dd>
+<dd>$Returns <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>:</dd>
 </dl>
 <p>The result as described above.</p>
 <ol class="arabic simple" start="2">
@@ -427,13 +422,13 @@ deriv_num_start in derivative vector corresponds to matrix(0, 0)).</p>
 <p>Returns an AutoDiff matrix given a matrix of values and a gradient
 matrix.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">value</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">value</span></code>:</dt>
 <dd>The value matrix. Will be accessed with a single index.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">gradient</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">gradient</span></code>:</dt>
 <dd>The gradient matrix. The number of rows must match the total size
 (nrow x ncol) of the value matrix. Derivatives of value(j) should
 be stored in row j of the gradient matrix.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">auto_diff_matrix</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">auto_diff_matrix</span></code>:</dt>
 <dd>The matrix of AutoDiffScalars. Will have the same dimensions as
 the value matrix.</dd>
 </dl>
@@ -461,9 +456,7 @@ in C++.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -472,7 +465,7 @@ in C++.</p>
         <a href="pydrake.common.html" class="btn btn-neutral float-right" title="pydrake.common" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.all.html" class="btn btn-neutral" title="pydrake.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.all.html" class="btn btn-neutral float-left" title="pydrake.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -496,37 +489,15 @@ in C++.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

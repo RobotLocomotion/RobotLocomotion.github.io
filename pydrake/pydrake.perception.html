@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="next" title="pydrake.polynomial" href="pydrake.polynomial.html"/>
-        <link rel="prev" title="pydrake.multibody.tree" href="pydrake.multibody.tree.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.polynomial" href="pydrake.polynomial.html" />
+    <link rel="prev" title="pydrake.multibody.tree" href="pydrake.multibody.tree.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -122,7 +116,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -130,9 +124,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -226,7 +221,7 @@
 <dl class="class">
 <dt id="pydrake.perception.DepthImageToPointCloud">
 <em class="property">class </em><code class="descclassname">pydrake.perception.</code><code class="descname">DepthImageToPointCloud</code><a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Converts a depth image to a point cloud.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">depth_image&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">color_image (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">camera_pose (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>DepthImageToPointCloud</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; point_cloud</td></tr></table></td></tr></table><p>The system has an input port that takes a depth image, an optional
 input port that takes a color image, and an additional optional input
@@ -246,16 +241,16 @@ convention used by the Point Cloud Library (PCL).</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.perception.DepthImageToPointCloud</em>, <em>camera_info: pydrake.systems.sensors.CameraInfo</em>, <em>pixel_type: pydrake.systems.sensors.PixelType = &lt;PixelType.kDepth32F: 6&gt;</em>, <em>scale: float = 1.0</em>, <em>fields: int = &lt;BaseField.kXYZs: 2&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.DepthImageToPointCloud.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the converter.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">camera_info</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">camera_info</span></code>:</dt>
 <dd>The camera info.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">depth_pixel_type</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">depth_pixel_type</span></code>:</dt>
 <dd>The pixel type of the depth image input. Only 16U and 32F are
 supported.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">scale</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scale</span></code>:</dt>
 <dd>The depth image input is multiplied by this scale factor before
 projecting to a point cloud. (This is useful for converting mm to
 meters, etc.)</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">fields</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fields</span></code>:</dt>
 <dd>The fields the point cloud contains.</dd>
 </dl>
 </dd></dl>
@@ -295,8 +290,8 @@ present.</p>
 <dl class="class">
 <dt id="pydrake.perception.Fields">
 <em class="property">class </em><code class="descclassname">pydrake.perception.</code><code class="descname">Fields</code><a class="headerlink" href="#pydrake.perception.Fields" title="Permalink to this definition">¶</a></dt>
-<dd><p>Allows combination of <code class="docutils literal"><span class="pre">BaseField</span></code> and <code class="docutils literal"><span class="pre">DescriptorType</span></code> for a
-<code class="docutils literal"><span class="pre">PointCloud</span></code>. You may combine multiple <code class="docutils literal"><span class="pre">BaseField`s,</span> <span class="pre">but</span> <span class="pre">you</span> <span class="pre">may</span>
+<dd><p>Allows combination of <code class="docutils literal notranslate"><span class="pre">BaseField</span></code> and <code class="docutils literal notranslate"><span class="pre">DescriptorType</span></code> for a
+<code class="docutils literal notranslate"><span class="pre">PointCloud</span></code>. You may combine multiple <code class="docutils literal notranslate"><span class="pre">BaseField`s,</span> <span class="pre">but</span> <span class="pre">you</span> <span class="pre">may</span>
 <span class="pre">have</span> <span class="pre">only</span> <span class="pre">zero</span> <span class="pre">or</span> <span class="pre">one</span> <span class="pre">`DescriptorType</span></code>.</p>
 <p>This provides the mechanism to use basic bit-mask operators (| &amp;) to
 combine / intersect fields for convenience.</p>
@@ -308,7 +303,7 @@ combine / intersect fields for convenience.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">base_fields</span></code> is not composed of valid</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">base_fields</span></code> is not composed of valid</li>
 <li><a href="#id1"><span class="problematic" id="id2">`</span></a>BaseField`s.</li>
 </ul>
 </td>
@@ -373,7 +368,7 @@ that they are invalidated whenever memory is reallocated for the
 values. Given this, minimize the lifetime of these references to
 be as short as possible. Additionally, algorithms wanting fast
 access to values should avoid the single point accessors /
-mutatotrs (e.g. <code class="docutils literal"><span class="pre">xyz(i)</span></code>, <cite>mutable_descriptor(i)</cite>) to avoid
+mutatotrs (e.g. <code class="docutils literal notranslate"><span class="pre">xyz(i)</span></code>, <cite>mutable_descriptor(i)</cite>) to avoid
 overhead when accessing a single element (either copying or
 creating a reference).</p>
 </div>
@@ -398,15 +393,15 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.perception.PointCloud, new_size: int = 0, fields: pydrake.perception.Fields = Fields(base_fields=2)) -&gt; None</li>
 </ol>
-<p>Constructs a point cloud of a given <code class="docutils literal"><span class="pre">new_size</span></code>, with the prescribed
-<code class="docutils literal"><span class="pre">fields</span></code>. If <code class="docutils literal"><span class="pre">kDescriptors</span></code> is one of the fields, then
-<code class="docutils literal"><span class="pre">descriptor</span></code> should be included and should not be <code class="docutils literal"><span class="pre">kNone</span></code>.</p>
+<p>Constructs a point cloud of a given <code class="docutils literal notranslate"><span class="pre">new_size</span></code>, with the prescribed
+<code class="docutils literal notranslate"><span class="pre">fields</span></code>. If <code class="docutils literal notranslate"><span class="pre">kDescriptors</span></code> is one of the fields, then
+<code class="docutils literal notranslate"><span class="pre">descriptor</span></code> should be included and should not be <code class="docutils literal notranslate"><span class="pre">kNone</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">new_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_size</span></code>:</dt>
 <dd>Size of the point cloud after construction.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">fields</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fields</span></code>:</dt>
 <dd>Fields that the point cloud contains.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">skip_initialize</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">skip_initialize</span></code>:</dt>
 <dd>Do not default-initialize new values.</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -418,13 +413,13 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dl class="attribute">
 <dt id="pydrake.perception.PointCloud.C">
 <code class="descname">C</code><a class="headerlink" href="#pydrake.perception.PointCloud.C" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.uint8</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.uint8</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pydrake.perception.PointCloud.D">
 <code class="descname">D</code><a class="headerlink" href="#pydrake.perception.PointCloud.D" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.float32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float32</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -472,7 +467,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns mutable access to a normal.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_normals()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -482,7 +477,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns mutable access to normals.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_normals()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -492,7 +487,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns mutable access to an RGB color.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_rgbs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -502,7 +497,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns mutable access to RGB colors.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_rgbs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -512,7 +507,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns mutable access to an XYZ value.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_xyzs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -522,7 +517,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns mutable access to XYZ values.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_xyzs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -532,7 +527,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns access to a normal.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_normals()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -542,7 +537,7 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Returns access to normals.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_normals()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_normals()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -552,12 +547,12 @@ and Trends® in Robotics 4.1 (2015): 1-104.</p>
 <dd><p>Conservative resize; will maintain existing data, and initialize new
 data to their invalid values.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">new_size</span></code>:</dt>
-<dd>The new size of the value. If less than the present <code class="docutils literal"><span class="pre">size()</span></code>,
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_size</span></code>:</dt>
+<dd>The new size of the value. If less than the present <code class="docutils literal notranslate"><span class="pre">size()</span></code>,
 then the values will be truncated. If greater than the present
-<code class="docutils literal"><span class="pre">size()</span></code>, then the new values will be uninitialized if
-<code class="docutils literal"><span class="pre">skip_initialize</span></code> is not true.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">skip_initialize</span></code>:</dt>
+<code class="docutils literal notranslate"><span class="pre">size()</span></code>, then the new values will be uninitialized if
+<code class="docutils literal notranslate"><span class="pre">skip_initialize</span></code> is not true.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">skip_initialize</span></code>:</dt>
 <dd>Do not default-initialize new values.</dd>
 </dl>
 </dd></dl>
@@ -568,7 +563,7 @@ then the values will be truncated. If greater than the present
 <dd><p>Returns access to an RGB color.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_rgbs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -578,7 +573,7 @@ then the values will be truncated. If greater than the present
 <dd><p>Returns access to RGB colors.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_rgbs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_rgbs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -587,13 +582,13 @@ then the values will be truncated. If greater than the present
 <code class="descname">SetFrom</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloud</em>, <em>other: pydrake.perception.PointCloud</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.PointCloud.SetFrom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copies all points from another point cloud.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">other</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
 <dd>Other point cloud.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">fields_in</span></code>:</dt>
-<dd>Fields to copy. If this is <code class="docutils literal"><span class="pre">kInherit</span></code>, then both clouds must
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">fields_in</span></code>:</dt>
+<dd>Fields to copy. If this is <code class="docutils literal notranslate"><span class="pre">kInherit</span></code>, then both clouds must
 have the exact same fields. Otherwise, both clouds must support
 the fields indicated this parameter.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">allow_resize</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">allow_resize</span></code>:</dt>
 <dd>Permit resizing to the other cloud’s size.</dd>
 </dl>
 </dd></dl>
@@ -607,7 +602,7 @@ the fields indicated this parameter.</dd>
 <dl class="attribute">
 <dt id="pydrake.perception.PointCloud.T">
 <code class="descname">T</code><a class="headerlink" href="#pydrake.perception.PointCloud.T" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">numpy.float32</span></code></p>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.float32</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -616,7 +611,7 @@ the fields indicated this parameter.</dd>
 <dd><p>Returns access to an XYZ value.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_xyzs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -626,7 +621,7 @@ the fields indicated this parameter.</dd>
 <dd><p>Returns access to XYZ values.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">has_xyzs()</span></code> must be true.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">has_xyzs()</span></code> must be true.</dd>
 </dl>
 </dd></dl>
 
@@ -635,7 +630,7 @@ the fields indicated this parameter.</dd>
 <dl class="class">
 <dt id="pydrake.perception.PointCloudToLcm">
 <em class="property">class </em><code class="descclassname">pydrake.perception.</code><code class="descname">PointCloudToLcm</code><a class="headerlink" href="#pydrake.perception.PointCloudToLcm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Converts PointCloud inputs to lcmt_point_cloud output messages. The
 message can be transmitted to other processes using
 LcmPublisherSystem.</p>
@@ -647,7 +642,7 @@ though may be added in a future revision.</p>
 <dt id="pydrake.perception.PointCloudToLcm.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.perception.PointCloudToLcm</em>, <em>frame_name: str = ''</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.perception.PointCloudToLcm.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a system that outputs messages using the given
-<code class="docutils literal"><span class="pre">frame_name</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">frame_name</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -656,9 +651,7 @@ though may be added in a future revision.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -667,7 +660,7 @@ though may be added in a future revision.</p>
         <a href="pydrake.polynomial.html" class="btn btn-neutral float-right" title="pydrake.polynomial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.multibody.tree.html" class="btn btn-neutral" title="pydrake.multibody.tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.multibody.tree.html" class="btn btn-neutral float-left" title="pydrake.multibody.tree" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -691,37 +684,15 @@ though may be added in a future revision.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

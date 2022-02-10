@@ -20,6 +20,7 @@ var classdrake_1_1math_1_1_rotation_matrix =
     [ "IsExactlyIdentity", "classdrake_1_1math_1_1_rotation_matrix.html#ac804feef1db1925cdb41771475381a17", null ],
     [ "IsIdentityToInternalTolerance", "classdrake_1_1math_1_1_rotation_matrix.html#a143570ba23e5a444790c7070a7447f09", null ],
     [ "IsNearlyEqualTo", "classdrake_1_1math_1_1_rotation_matrix.html#aa5d5438bbed70f2290a46a73e91cc78a", null ],
+    [ "IsNearlyIdentity", "classdrake_1_1math_1_1_rotation_matrix.html#a4cc6cdc7e3174f2af399d7cc2a156b7b", null ],
     [ "IsOrthonormal", "classdrake_1_1math_1_1_rotation_matrix.html#a7a5e8235ea5f9bb34bfa71b745546864", null ],
     [ "IsValid", "classdrake_1_1math_1_1_rotation_matrix.html#a1ecdff2808f2ecf66cc0fe97f5173b98", null ],
     [ "IsValid", "classdrake_1_1math_1_1_rotation_matrix.html#af6346cc9235f2cedd86a802d0d4a8451", null ],

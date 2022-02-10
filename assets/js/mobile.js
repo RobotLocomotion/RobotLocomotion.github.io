@@ -1,12 +1,1 @@
-/*
-Enables clicking for the mobile "hamburger" (three-line) menu item.
-*/
-
-const siteHeader = document.querySelector('.site-header')
-const mobileButton = document.querySelector('.menu-mobile-toggle')
-const body = document.querySelector('body')
-
-mobileButton.addEventListener('click', function(event) {
-  siteHeader.classList.toggle('open');
-  body.classList.toggle('overflow-hidden');
-})
+/media/ephemeral0/ubuntu/workspace/linux-focal-unprovisioned-gcc-bazel-nightly-documentation/src/doc/assets/js/mobile.js

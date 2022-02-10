@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.examples" href="pydrake.examples.html"/>
-        <link rel="next" title="pydrake.examples.rimless_wheel" href="pydrake.examples.rimless_wheel.html"/>
-        <link rel="prev" title="pydrake.examples.pendulum" href="pydrake.examples.pendulum.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.examples.rimless_wheel" href="pydrake.examples.rimless_wheel.html" />
+    <link rel="prev" title="pydrake.examples.pendulum" href="pydrake.examples.pendulum.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -133,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -141,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -191,7 +185,7 @@
 <dl class="class">
 <dt id="pydrake.examples.quadrotor.QuadrotorGeometry">
 <em class="property">class </em><code class="descclassname">pydrake.examples.quadrotor.</code><code class="descname">QuadrotorGeometry</code><a class="headerlink" href="#pydrake.examples.quadrotor.QuadrotorGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Expresses a QuadrotorPlant’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>QuadrotorGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -205,12 +199,12 @@ static method to create and add it to a DiagramBuilder directly.</p>
 <dt id="pydrake.examples.quadrotor.QuadrotorGeometry.AddToBuilder">
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], quadrotor_state_port: pydrake.systems.framework.OutputPort_[float], scene_graph: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.quadrotor.QuadrotorGeometry<a class="headerlink" href="#pydrake.examples.quadrotor.QuadrotorGeometry.AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates, adds, and connects a QuadrotorGeometry system into the given
-<code class="docutils literal"><span class="pre">builder</span></code>. Both the <code class="docutils literal"><span class="pre">quadrotor_state.get_system()</span></code> and
-<code class="docutils literal"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal"><span class="pre">builder</span></code>
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>. Both the <code class="docutils literal notranslate"><span class="pre">quadrotor_state.get_system()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>
 already.</p>
-<p>The <code class="docutils literal"><span class="pre">scene_graph</span></code> pointer is not retained by the QuadrotorGeometry
+<p>The <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> pointer is not retained by the QuadrotorGeometry
 system. The return value pointer is an alias of the new
-QuadrotorGeometry system that is owned by the <code class="docutils literal"><span class="pre">builder</span></code>.</p>
+QuadrotorGeometry system that is owned by the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -226,10 +220,10 @@ quadrotor.</p>
 <dl class="class">
 <dt id="pydrake.examples.quadrotor.QuadrotorPlant">
 <em class="property">class </em><code class="descclassname">pydrake.examples.quadrotor.</code><code class="descname">QuadrotorPlant</code><a class="headerlink" href="#pydrake.examples.quadrotor.QuadrotorPlant" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>The Quadrotor - an underactuated aerial vehicle. This version of the
 Quadrotor is implemented to match the dynamics of the plant specified
-in the <code class="docutils literal"><span class="pre">quadrotor.urdf</span></code> model file.</p>
+in the <code class="docutils literal notranslate"><span class="pre">quadrotor.urdf</span></code> model file.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">propellor_force&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>QuadrotorPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; state</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.examples.quadrotor.QuadrotorPlant.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.examples.quadrotor.QuadrotorPlant.__init__" title="Permalink to this definition">¶</a></dt>
@@ -255,9 +249,9 @@ in the <code class="docutils literal"><span class="pre">quadrotor.urdf</span></c
 <dl class="function">
 <dt id="pydrake.examples.quadrotor.StabilizingLQRController">
 <code class="descclassname">pydrake.examples.quadrotor.</code><code class="descname">StabilizingLQRController</code><span class="sig-paren">(</span><em>quadrotor_plant: pydrake.examples.quadrotor.QuadrotorPlant, nominal_position: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.primitives.AffineSystem_[float]<a class="headerlink" href="#pydrake.examples.quadrotor.StabilizingLQRController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generates an LQR controller to move to <code class="docutils literal"><span class="pre">nominal_position</span></code>.
+<dd><p>Generates an LQR controller to move to <code class="docutils literal notranslate"><span class="pre">nominal_position</span></code>.
 Internally computes the nominal input corresponding to a hover at
-position <code class="docutils literal"><span class="pre">x0</span></code>.</p>
+position <code class="docutils literal notranslate"><span class="pre">x0</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">systems::LinearQuadraticRegulator.</p>
@@ -268,9 +262,7 @@ position <code class="docutils literal"><span class="pre">x0</span></code>.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -279,7 +271,7 @@ position <code class="docutils literal"><span class="pre">x0</span></code>.</p>
         <a href="pydrake.examples.rimless_wheel.html" class="btn btn-neutral float-right" title="pydrake.examples.rimless_wheel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.examples.pendulum.html" class="btn btn-neutral" title="pydrake.examples.pendulum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.examples.pendulum.html" class="btn btn-neutral float-left" title="pydrake.examples.pendulum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -303,37 +295,15 @@ position <code class="docutils literal"><span class="pre">x0</span></code>.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

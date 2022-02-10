@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.systems.controllers" href="pydrake.systems.controllers.html"/>
-        <link rel="prev" title="pydrake.systems.all" href="pydrake.systems.all.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.controllers" href="pydrake.systems.controllers.html" />
+    <link rel="prev" title="pydrake.systems.all" href="pydrake.systems.all.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -199,7 +193,7 @@
 <dl class="function">
 <dt id="pydrake.systems.analysis.GetIntegrationSchemes">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">GetIntegrationSchemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#pydrake.systems.analysis.GetIntegrationSchemes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the allowed string values for the <code class="docutils literal"><span class="pre">scheme</span></code> parameter in
+<dd><p>Returns the allowed string values for the <code class="docutils literal notranslate"><span class="pre">scheme</span></code> parameter in
 ResetIntegratorFromFlags() and SimulatorConfig::integration_scheme.</p>
 </dd></dl>
 
@@ -228,27 +222,27 @@ default; it may be useful to suppress them when reusing a simulator.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.IntegratorBase">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">IntegratorBase</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
 </dd></dl>
 
 <dl class="template">
 <dt id="pydrake.systems.analysis.IntegratorBase_">
 <em class="property">template </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">IntegratorBase_</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">IntegratorBase_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">IntegratorBase_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[Expression]" title="pydrake.systems.analysis.IntegratorBase_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">IntegratorBase_[Expression]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[Expression]" title="pydrake.systems.analysis.IntegratorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">IntegratorBase_[Expression]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float]">
 <em class="property">class </em><code class="descname">IntegratorBase_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
-pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
+pattern <code class="docutils literal notranslate"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -270,7 +264,7 @@ if any (may be nullptr).</p>
 <code class="descname">get_fixed_step_mode</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].get_fixed_step_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets whether an integrator is running in fixed step mode. If the
 integrator does not support error estimation, this function will
-always return <code class="docutils literal"><span class="pre">True</span></code>.</p>
+always return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_fixed_step_mode()</p>
@@ -292,7 +286,7 @@ hit a discrete event.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].get_requested_minimum_step_size">
 <code class="descname">get_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].get_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> for this integrator.</p>
+<dd><p>Gets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> for this integrator.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_requested_minimum_step_size()</p>
@@ -345,7 +339,7 @@ computation required for error estimation will still be performed.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if integrator does not support error estimation and</li>
-<li><code class="docutils literal"><span class="pre">flag</span></code> is set to <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">flag</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -376,13 +370,13 @@ at the maximum step size <em>unless</em> an event would be missed.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].set_requested_minimum_step_size">
 <code class="descname">set_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_.IntegratorBase_[float].set_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> that may be taken by
+<dd><p>Sets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> that may be taken by
 this integrator. No step smaller than this will be taken except under
 circumstances as described integrator-minstep “above”. This setting
-will be ignored if it is smaller than the absolute minimum <code class="docutils literal"><span class="pre">h_floor</span></code>
+will be ignored if it is smaller than the absolute minimum <code class="docutils literal notranslate"><span class="pre">h_floor</span></code>
 also described above. Default value is zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">min_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_step_size</span></code>:</dt>
 <dd>a non-negative value. Setting this value to zero will cause the
 integrator to use a reasonable value instead (see
 get_working_minimum_step_size()).</dd>
@@ -404,7 +398,7 @@ get_working_minimum_step_size()).</dd>
 integrator accuracy The precise meaning of <em>accuracy</em> is a complicated
 discussion, but it translates roughly to the number of significant
 digits you want in the results. By convention it is supplied as
-<code class="docutils literal"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
+<code class="docutils literal notranslate"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
 significant digits. For more discussion of accuracy, see
 accuracy_and_tolerance and ref. <a class="reference external" href="https://dx.doi.org/10.1016/j.piutam.2011.04.023">[1]</a>.</p>
 <p>Integrators vary in the range of accuracy (loosest to tightest) that
@@ -413,7 +407,7 @@ to be used that lies somewhere within this range and attempts to
 balance computation and accuracy. If you request accuracy outside the
 supported range for the chosen integrator it will be quietly adjusted
 to be in range. You can find out the accuracy setting actually being
-used using <code class="docutils literal"><span class="pre">get_accuracy_in_use()</span></code>.</p>
+used using <code class="docutils literal notranslate"><span class="pre">get_accuracy_in_use()</span></code>.</p>
 <p>Implicit integrators additionally use the accuracy setting for
 determining when the underlying Newton-Raphson root finding process
 has converged. For those integrators, the accuracy setting also limits
@@ -448,7 +442,7 @@ integrator does not support it, this method will throw an exception.</p>
 <dd><p>Sets whether the integrator should throw a RuntimeError when the
 integrator’s step size selection algorithm determines that it must
 take a step smaller than the minimum step size (for, e.g., purposes of
-error control). Default is <code class="docutils literal"><span class="pre">True</span></code>. If <code class="docutils literal"><span class="pre">False</span></code>, the integrator will
+error control). Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the integrator will
 advance time and state using the minimum specified step size in such
 situations. See integrator-minstep “this section” for more detail.</p>
 </dd></dl>
@@ -531,14 +525,14 @@ integrator anymore.</dd>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
-pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
+pattern <code class="docutils literal notranslate"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
@@ -560,7 +554,7 @@ if any (may be nullptr).</p>
 <code class="descname">get_fixed_step_mode</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].get_fixed_step_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets whether an integrator is running in fixed step mode. If the
 integrator does not support error estimation, this function will
-always return <code class="docutils literal"><span class="pre">True</span></code>.</p>
+always return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_fixed_step_mode()</p>
@@ -582,7 +576,7 @@ hit a discrete event.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].get_requested_minimum_step_size">
 <code class="descname">get_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].get_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> for this integrator.</p>
+<dd><p>Gets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> for this integrator.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_requested_minimum_step_size()</p>
@@ -635,7 +629,7 @@ computation required for error estimation will still be performed.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if integrator does not support error estimation and</li>
-<li><code class="docutils literal"><span class="pre">flag</span></code> is set to <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">flag</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -666,13 +660,13 @@ at the maximum step size <em>unless</em> an event would be missed.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].set_requested_minimum_step_size">
 <code class="descname">set_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[AutoDiffXd], arg0: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd].set_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> that may be taken by
+<dd><p>Sets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> that may be taken by
 this integrator. No step smaller than this will be taken except under
 circumstances as described integrator-minstep “above”. This setting
-will be ignored if it is smaller than the absolute minimum <code class="docutils literal"><span class="pre">h_floor</span></code>
+will be ignored if it is smaller than the absolute minimum <code class="docutils literal notranslate"><span class="pre">h_floor</span></code>
 also described above. Default value is zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">min_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_step_size</span></code>:</dt>
 <dd>a non-negative value. Setting this value to zero will cause the
 integrator to use a reasonable value instead (see
 get_working_minimum_step_size()).</dd>
@@ -694,7 +688,7 @@ get_working_minimum_step_size()).</dd>
 integrator accuracy The precise meaning of <em>accuracy</em> is a complicated
 discussion, but it translates roughly to the number of significant
 digits you want in the results. By convention it is supplied as
-<code class="docutils literal"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
+<code class="docutils literal notranslate"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
 significant digits. For more discussion of accuracy, see
 accuracy_and_tolerance and ref. <a class="reference external" href="https://dx.doi.org/10.1016/j.piutam.2011.04.023">[1]</a>.</p>
 <p>Integrators vary in the range of accuracy (loosest to tightest) that
@@ -703,7 +697,7 @@ to be used that lies somewhere within this range and attempts to
 balance computation and accuracy. If you request accuracy outside the
 supported range for the chosen integrator it will be quietly adjusted
 to be in range. You can find out the accuracy setting actually being
-used using <code class="docutils literal"><span class="pre">get_accuracy_in_use()</span></code>.</p>
+used using <code class="docutils literal notranslate"><span class="pre">get_accuracy_in_use()</span></code>.</p>
 <p>Implicit integrators additionally use the accuracy setting for
 determining when the underlying Newton-Raphson root finding process
 has converged. For those integrators, the accuracy setting also limits
@@ -738,7 +732,7 @@ integrator does not support it, this method will throw an exception.</p>
 <dd><p>Sets whether the integrator should throw a RuntimeError when the
 integrator’s step size selection algorithm determines that it must
 take a step smaller than the minimum step size (for, e.g., purposes of
-error control). Default is <code class="docutils literal"><span class="pre">True</span></code>. If <code class="docutils literal"><span class="pre">False</span></code>, the integrator will
+error control). Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the integrator will
 advance time and state using the minimum specified step size in such
 situations. See integrator-minstep “this section” for more detail.</p>
 </dd></dl>
@@ -819,14 +813,14 @@ integrator anymore.</dd>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
-pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
+pattern <code class="docutils literal notranslate"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.IntegratorBase_[Expression].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
@@ -848,7 +842,7 @@ if any (may be nullptr).</p>
 <code class="descname">get_fixed_step_mode</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].get_fixed_step_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets whether an integrator is running in fixed step mode. If the
 integrator does not support error estimation, this function will
-always return <code class="docutils literal"><span class="pre">True</span></code>.</p>
+always return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_fixed_step_mode()</p>
@@ -870,7 +864,7 @@ hit a discrete event.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[Expression].get_requested_minimum_step_size">
 <code class="descname">get_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].get_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> for this integrator.</p>
+<dd><p>Gets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> for this integrator.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_requested_minimum_step_size()</p>
@@ -923,7 +917,7 @@ computation required for error estimation will still be performed.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if integrator does not support error estimation and</li>
-<li><code class="docutils literal"><span class="pre">flag</span></code> is set to <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">flag</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -954,13 +948,13 @@ at the maximum step size <em>unless</em> an event would be missed.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[Expression].set_requested_minimum_step_size">
 <code class="descname">set_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[Expression], arg0: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[Expression].set_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> that may be taken by
+<dd><p>Sets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> that may be taken by
 this integrator. No step smaller than this will be taken except under
 circumstances as described integrator-minstep “above”. This setting
-will be ignored if it is smaller than the absolute minimum <code class="docutils literal"><span class="pre">h_floor</span></code>
+will be ignored if it is smaller than the absolute minimum <code class="docutils literal notranslate"><span class="pre">h_floor</span></code>
 also described above. Default value is zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">min_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_step_size</span></code>:</dt>
 <dd>a non-negative value. Setting this value to zero will cause the
 integrator to use a reasonable value instead (see
 get_working_minimum_step_size()).</dd>
@@ -982,7 +976,7 @@ get_working_minimum_step_size()).</dd>
 integrator accuracy The precise meaning of <em>accuracy</em> is a complicated
 discussion, but it translates roughly to the number of significant
 digits you want in the results. By convention it is supplied as
-<code class="docutils literal"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
+<code class="docutils literal notranslate"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
 significant digits. For more discussion of accuracy, see
 accuracy_and_tolerance and ref. <a class="reference external" href="https://dx.doi.org/10.1016/j.piutam.2011.04.023">[1]</a>.</p>
 <p>Integrators vary in the range of accuracy (loosest to tightest) that
@@ -991,7 +985,7 @@ to be used that lies somewhere within this range and attempts to
 balance computation and accuracy. If you request accuracy outside the
 supported range for the chosen integrator it will be quietly adjusted
 to be in range. You can find out the accuracy setting actually being
-used using <code class="docutils literal"><span class="pre">get_accuracy_in_use()</span></code>.</p>
+used using <code class="docutils literal notranslate"><span class="pre">get_accuracy_in_use()</span></code>.</p>
 <p>Implicit integrators additionally use the accuracy setting for
 determining when the underlying Newton-Raphson root finding process
 has converged. For those integrators, the accuracy setting also limits
@@ -1026,7 +1020,7 @@ integrator does not support it, this method will throw an exception.</p>
 <dd><p>Sets whether the integrator should throw a RuntimeError when the
 integrator’s step size selection algorithm determines that it must
 take a step smaller than the minimum step size (for, e.g., purposes of
-error control). Default is <code class="docutils literal"><span class="pre">True</span></code>. If <code class="docutils literal"><span class="pre">False</span></code>, the integrator will
+error control). Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the integrator will
 advance time and state using the minimum specified step size in such
 situations. See integrator-minstep “this section” for more detail.</p>
 </dd></dl>
@@ -1107,14 +1101,14 @@ integrator anymore.</dd>
 <dd><p>An abstract class for an integrator for ODEs and DAEs as represented
 by a Drake System. Integrators solve initial value problems of the
 form:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ẋ(t) = f(t, x(t)) with f : ℝ × ℝⁿ → ℝⁿ
 </pre></div>
 </div>
-<p>(i.e., <code class="docutils literal"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
+<p>(i.e., <code class="docutils literal notranslate"><span class="pre">f()</span></code> is an ordinary differential equation) given initial
 conditions (t₀, x₀). Thus, integrators advance the continuous state of
 a dynamical system forward in time.</p>
 <p>Drake’s subclasses of IntegratorBase&lt;T&gt; should follow the naming
-pattern <code class="docutils literal"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
+pattern <code class="docutils literal notranslate"><span class="pre">FooIntegrator&lt;T&gt;</span></code> by convention.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.IntegratorBase_[float].__init__">
 <code class="descname">__init__</code><a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].__init__" title="Permalink to this definition">¶</a></dt>
@@ -1136,7 +1130,7 @@ if any (may be nullptr).</p>
 <code class="descname">get_fixed_step_mode</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].get_fixed_step_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets whether an integrator is running in fixed step mode. If the
 integrator does not support error estimation, this function will
-always return <code class="docutils literal"><span class="pre">True</span></code>.</p>
+always return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_fixed_step_mode()</p>
@@ -1158,7 +1152,7 @@ hit a discrete event.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[float].get_requested_minimum_step_size">
 <code class="descname">get_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].get_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> for this integrator.</p>
+<dd><p>Gets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> for this integrator.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">set_requested_minimum_step_size()</p>
@@ -1211,7 +1205,7 @@ computation required for error estimation will still be performed.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if integrator does not support error estimation and</li>
-<li><code class="docutils literal"><span class="pre">flag</span></code> is set to <code class="docutils literal"><span class="pre">False</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">flag</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -1242,13 +1236,13 @@ at the maximum step size <em>unless</em> an event would be missed.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.IntegratorBase_[float].set_requested_minimum_step_size">
 <code class="descname">set_requested_minimum_step_size</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.IntegratorBase_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.IntegratorBase_[float].set_requested_minimum_step_size" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the requested minimum step size <code class="docutils literal"><span class="pre">h_min</span></code> that may be taken by
+<dd><p>Sets the requested minimum step size <code class="docutils literal notranslate"><span class="pre">h_min</span></code> that may be taken by
 this integrator. No step smaller than this will be taken except under
 circumstances as described integrator-minstep “above”. This setting
-will be ignored if it is smaller than the absolute minimum <code class="docutils literal"><span class="pre">h_floor</span></code>
+will be ignored if it is smaller than the absolute minimum <code class="docutils literal notranslate"><span class="pre">h_floor</span></code>
 also described above. Default value is zero.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">min_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">min_step_size</span></code>:</dt>
 <dd>a non-negative value. Setting this value to zero will cause the
 integrator to use a reasonable value instead (see
 get_working_minimum_step_size()).</dd>
@@ -1270,7 +1264,7 @@ get_working_minimum_step_size()).</dd>
 integrator accuracy The precise meaning of <em>accuracy</em> is a complicated
 discussion, but it translates roughly to the number of significant
 digits you want in the results. By convention it is supplied as
-<code class="docutils literal"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
+<code class="docutils literal notranslate"><span class="pre">10^-digits</span></code>, meaning that an accuracy of 1e-3 provides about three
 significant digits. For more discussion of accuracy, see
 accuracy_and_tolerance and ref. <a class="reference external" href="https://dx.doi.org/10.1016/j.piutam.2011.04.023">[1]</a>.</p>
 <p>Integrators vary in the range of accuracy (loosest to tightest) that
@@ -1279,7 +1273,7 @@ to be used that lies somewhere within this range and attempts to
 balance computation and accuracy. If you request accuracy outside the
 supported range for the chosen integrator it will be quietly adjusted
 to be in range. You can find out the accuracy setting actually being
-used using <code class="docutils literal"><span class="pre">get_accuracy_in_use()</span></code>.</p>
+used using <code class="docutils literal notranslate"><span class="pre">get_accuracy_in_use()</span></code>.</p>
 <p>Implicit integrators additionally use the accuracy setting for
 determining when the underlying Newton-Raphson root finding process
 has converged. For those integrators, the accuracy setting also limits
@@ -1314,7 +1308,7 @@ integrator does not support it, this method will throw an exception.</p>
 <dd><p>Sets whether the integrator should throw a RuntimeError when the
 integrator’s step size selection algorithm determines that it must
 take a step smaller than the minimum step size (for, e.g., purposes of
-error control). Default is <code class="docutils literal"><span class="pre">True</span></code>. If <code class="docutils literal"><span class="pre">False</span></code>, the integrator will
+error control). Default is <code class="docutils literal notranslate"><span class="pre">True</span></code>. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the integrator will
 advance time and state using the minimum specified step size in such
 situations. See integrator-minstep “this section” for more detail.</p>
 </dd></dl>
@@ -1396,7 +1390,7 @@ integrator anymore.</dd>
 random simulations drawn from independent samples of the distributions
 governing the stochastic simulation.</p>
 <p>In pseudo-code, this algorithm implements:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">num_samples</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">num_samples</span>
     <span class="n">const</span> <span class="n">generator_snapshot</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
     <span class="n">output</span> <span class="o">=</span> <span class="n">RandomSimulation</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">generator</span><span class="p">)</span>
     <span class="n">data</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">std</span><span class="p">::</span><span class="n">pair</span><span class="p">(</span><span class="n">generator_snapshot</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
@@ -1405,23 +1399,23 @@ governing the stochastic simulation.</p>
 </div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last">RandomSimulation() for details about <code class="docutils literal"><span class="pre">make_simulator</span></code>,
-<code class="docutils literal"><span class="pre">output</span></code>, and <code class="docutils literal"><span class="pre">final_time</span></code>.</p>
+<p class="last">RandomSimulation() for details about <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code>,
+<code class="docutils literal notranslate"><span class="pre">output</span></code>, and <code class="docutils literal notranslate"><span class="pre">final_time</span></code>.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">num_samples</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_samples</span></code>:</dt>
 <dd>Number of independent samples to draw from the distribution (and
 equivalently, the number of simulations to run).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">generator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">generator</span></code>:</dt>
 <dd>Random number generator to be used to generate the random samples.
 If null, then a new RandomGenerator will be allocated and used
 internally (and repeated calls to this method will return
 identical results). To produce statistically “independent” samples
 on a future call to MonteCarloSimulation, you should make repeated
 uses of the same RandomGenerator object.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">num_parallel_executions</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">num_parallel_executions</span></code>:</dt>
 <dd>Specify number of parallel executions to use while performing
-<code class="docutils literal"><span class="pre">num_samples</span></code> simulations. The default value, kNoConcurrency,
+<code class="docutils literal notranslate"><span class="pre">num_samples</span></code> simulations. The default value, kNoConcurrency,
 specifies that simulations should be executed in serial. To use
 the default concurrency available on your hardware (equivalent to
 num_parallel_executions=std::thread::hardware_concurrency()), use
@@ -1437,15 +1431,15 @@ must be &gt;= 1.</dd>
 </tbody>
 </table>
 <p>Thread safety when parallel execution is specified: -
-<code class="docutils literal"><span class="pre">make_simulator</span></code> and <code class="docutils literal"><span class="pre">generator</span></code> are only accessed from the main
+<code class="docutils literal notranslate"><span class="pre">make_simulator</span></code> and <code class="docutils literal notranslate"><span class="pre">generator</span></code> are only accessed from the main
 thread.</p>
 <ul class="simple">
-<li>Each simulator created by <code class="docutils literal"><span class="pre">make_simulator</span></code> and its context are only
+<li>Each simulator created by <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code> and its context are only
 accessed from within a single worker thread; however, any resource shared
 between these simulators must be safe for concurrent use.</li>
-<li><code class="docutils literal"><span class="pre">output</span></code> is called from within worker threads performing simulation with
+<li><code class="docutils literal notranslate"><span class="pre">output</span></code> is called from within worker threads performing simulation with
 the simulator and context belonging to each worker thread. It must be safe
-to make concurrent calls to <code class="docutils literal"><span class="pre">output</span></code> (i.e. any mutable state inside the
+to make concurrent calls to <code class="docutils literal notranslate"><span class="pre">output</span></code> (i.e. any mutable state inside the
 function must be safe for concurrent use).</li>
 </ul>
 </dd></dl>
@@ -1460,7 +1454,7 @@ function must be safe for concurrent use).</li>
 <p>This method outputs to stdout relevant simulation statistics for a
 simulator that advanced the state of a system forward in time.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>The simulator to output statistics for.</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -1469,7 +1463,7 @@ simulator that advanced the state of a system forward in time.</p>
 <p>This method outputs to stdout relevant simulation statistics for a
 simulator that advanced the state of a system forward in time.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>The simulator to output statistics for.</dd>
 </dl>
 </dd></dl>
@@ -1478,45 +1472,45 @@ simulator that advanced the state of a system forward in time.</p>
 <dt id="pydrake.systems.analysis.RandomSimulation">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RandomSimulation</code><span class="sig-paren">(</span><em>make_simulator: Callable[[pydrake.common._module_py.RandomGenerator], pydrake.systems.analysis.Simulator_[float]], output: Callable[[pydrake.systems.framework.System_[float], pydrake.systems.framework.Context_[float]], float], final_time: float, generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.analysis.RandomSimulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run a deterministic simulation of a (stochastic) System using the
-<code class="docutils literal"><span class="pre">generator</span></code> to instantiate all “random” quantities.</p>
+<code class="docutils literal notranslate"><span class="pre">generator</span></code> to instantiate all “random” quantities.</p>
 <p>In pseudo-code, this algorithm implements:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span> <span class="o">=</span> <span class="n">make_simulator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span> <span class="o">=</span> <span class="n">make_simulator</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
   <span class="n">simulator</span><span class="o">.</span><span class="n">get_system</span><span class="p">()</span><span class="o">.</span><span class="n">SetRandomContext</span><span class="p">(</span><span class="n">generator</span><span class="p">)</span>
   <span class="n">simulator</span><span class="o">.</span><span class="n">AdvanceTo</span><span class="p">(</span><span class="n">final_time</span><span class="p">)</span>
   <span class="k">return</span> <span class="n">output</span><span class="p">(</span><span class="n">simulator</span><span class="o">.</span><span class="n">get_context</span><span class="p">())</span>
 </pre></div>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">make_simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code>:</dt>
 <dd>Callers to this method define a stochastic simulation by providing
-the <code class="docutils literal"><span class="pre">make_simulator</span></code> factory method to return a Simulator using
+the <code class="docutils literal notranslate"><span class="pre">make_simulator</span></code> factory method to return a Simulator using
 the supplied RandomGenerator as the only source of randomness.
 This interface was designed to support cases where the
 System/Diagram is random (not only the Context), e.g. in the case
 where are variable number of objects are added to a multibody
 simulation.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">output</span></code>:</dt>
-<dd>The scalar random variable output, denoted <code class="docutils literal"><span class="pre">output</span></code>, is defined
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">output</span></code>:</dt>
+<dd>The scalar random variable output, denoted <code class="docutils literal notranslate"><span class="pre">output</span></code>, is defined
 as a function of the Simulator’s System’s Context, evaluated at
-the <code class="docutils literal"><span class="pre">final_time</span></code>. Monte-Carlo investigations that studying the
+the <code class="docutils literal notranslate"><span class="pre">final_time</span></code>. Monte-Carlo investigations that studying the
 details of an entire trajectory can still use this interface, e.g.
 by including a “runtime monitor” System that latches the
 worst-case deviation of a specification into it’s Context to be
 queried at the final time.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">final_time</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">final_time</span></code>:</dt>
 <dd>The time that each instance of the Simulator is stepped to. In
 many cases, this will be equivalent to the duration of the
 simulation, but it need not be because SetRandomContext() could
 initialize the time to a non-zero value, or an event could trigger
 premature termination of the simulation (see #4447).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">generator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">generator</span></code>:</dt>
 <dd>Random number generator to be used to generate the random samples.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the <code class="docutils literal"><span class="pre">output</span></code> evaluated from the Context at <code class="docutils literal"><span class="pre">final_time</span></code>.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the <code class="docutils literal notranslate"><span class="pre">output</span></code> evaluated from the Context at <code class="docutils literal notranslate"><span class="pre">final_time</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1527,7 +1521,7 @@ premature termination of the simulation (see #4447).</dd>
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RandomSimulationResult</code><a class="headerlink" href="#pydrake.systems.analysis.RandomSimulationResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A snapshot of the generator used to produce the random simulation.
 Use, e.g.,</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RandomGenerator</span> <span class="n">generator</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">generator_snapshot</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RandomGenerator</span> <span class="n">generator</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">generator_snapshot</span><span class="p">)</span>
   <span class="n">RandomSimulation</span><span class="p">(</span><span class="n">make_simulator</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">final_time</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">generator</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1560,20 +1554,20 @@ of reproducing the simulation.</p>
 <dl class="function">
 <dt id="pydrake.systems.analysis.RegionOfAttraction">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RegionOfAttraction</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], options: pydrake.systems.analysis.RegionOfAttractionOptions = RegionOfAttractionOptions(lyapunov_candidate=0, state_variables=[])</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttraction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Estimates the region of attraction of the time-invariant <code class="docutils literal"><span class="pre">system</span></code> at
-the fixed point defined by <code class="docutils literal"><span class="pre">context</span></code>.</p>
+<dd><p>Estimates the region of attraction of the time-invariant <code class="docutils literal notranslate"><span class="pre">system</span></code> at
+the fixed point defined by <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <p>This implementation only searches for the largest level set of the
-<code class="docutils literal"><span class="pre">lyapunov_candidate</span></code> function from <code class="docutils literal"><span class="pre">options</span></code> (or a candidate
+<code class="docutils literal notranslate"><span class="pre">lyapunov_candidate</span></code> function from <code class="docutils literal notranslate"><span class="pre">options</span></code> (or a candidate
 obtained from solving the Lyapunov equation on the linearization).</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>a time-invariant continuous-time System that supports scalar-type
 conversion to symbolic::Expression. The dynamics of the system
 must be polynomial.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>a Context that defines the parameters of the system and the
 fixed-point about which we are analyzing the regional stability.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
 <dd>provides a variety of configuration options.</dd>
 </dl>
 <div class="admonition seealso">
@@ -1586,22 +1580,22 @@ fixed-point about which we are analyzing the regional stability.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a symbolic::Expression representing a Lyapunov function using the
 symbolic Variables named x0, x1…, where the order matches the
-continuous state vector in the <code class="docutils literal"><span class="pre">context</span></code>, or the vector
+continuous state vector in the <code class="docutils literal notranslate"><span class="pre">context</span></code>, or the vector
 state_variables passed in through the options structure (if it is
 non-empty). The level set {x | V(x)&lt;=1} containing the fixed-point
-in <code class="docutils literal"><span class="pre">context</span></code> represents the region of attraction.</td>
+in <code class="docutils literal notranslate"><span class="pre">context</span></code> represents the region of attraction.</td>
 </tr>
 </tbody>
 </table>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd>For the given <code class="docutils literal"><span class="pre">system</span></code> and <code class="docutils literal"><span class="pre">context</span></code>, any required input ports
-on <code class="docutils literal"><span class="pre">system</span></code> must be “defined”, i.e., connected to other systems
+<dd>For the given <code class="docutils literal notranslate"><span class="pre">system</span></code> and <code class="docutils literal notranslate"><span class="pre">context</span></code>, any required input ports
+on <code class="docutils literal notranslate"><span class="pre">system</span></code> must be “defined”, i.e., connected to other systems
 in a larger diagram or holding fixed values; see
 System::FixInputPortsFrom for possible caveats. Analyzing a
 closed-loop system would typically be accomplished by having both
 the plant and the controller in a diagram (which then has no input
-ports), and passing the diagram into this method as <code class="docutils literal"><span class="pre">system</span></code>.</dd>
+ports), and passing the diagram into this method as <code class="docutils literal notranslate"><span class="pre">system</span></code>.</dd>
 </dl>
 <p>Note: There are more numerical recipes for region of attraction
 analysis that could extend the current implementation. Do report an
@@ -1646,16 +1640,16 @@ in the system.</p>
 <li>ResetIntegratorFromFlags(simulator: pydrake.systems.analysis.Simulator_[float], scheme: str, max_step_size: float) -&gt; pydrake.systems.analysis.IntegratorBase_[float]</li>
 </ol>
 <p>Resets the integrator used to advanced the continuous time dynamics of
-the system associated with <code class="docutils literal"><span class="pre">simulator</span></code> according to the given
+the system associated with <code class="docutils literal notranslate"><span class="pre">simulator</span></code> according to the given
 arguments.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>On input, a valid pointer to a Simulator. On output the integrator
-for <code class="docutils literal"><span class="pre">simulator</span></code> is reset according to the given arguments.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">scheme</span></code>:</dt>
+for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given arguments.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scheme</span></code>:</dt>
 <dd>Integration scheme to be used, e.g., “runge_kutta2”. See
 GetIntegrationSchemes() for a the list of valid options.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt>
 <dd>The IntegratorBase::set_maximum_step_size() value.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1663,7 +1657,7 @@ GetIntegrationSchemes() for a the list of valid options.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the newly created integrator owned by
-<code class="docutils literal"><span class="pre">simulator</span></code>.</td>
+<code class="docutils literal notranslate"><span class="pre">simulator</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1671,16 +1665,16 @@ GetIntegrationSchemes() for a the list of valid options.</dd>
 <li>ResetIntegratorFromFlags(simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd], scheme: str, max_step_size: pydrake.autodiffutils.AutoDiffXd) -&gt; pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</li>
 </ol>
 <p>Resets the integrator used to advanced the continuous time dynamics of
-the system associated with <code class="docutils literal"><span class="pre">simulator</span></code> according to the given
+the system associated with <code class="docutils literal notranslate"><span class="pre">simulator</span></code> according to the given
 arguments.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>On input, a valid pointer to a Simulator. On output the integrator
-for <code class="docutils literal"><span class="pre">simulator</span></code> is reset according to the given arguments.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">scheme</span></code>:</dt>
+for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given arguments.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scheme</span></code>:</dt>
 <dd>Integration scheme to be used, e.g., “runge_kutta2”. See
 GetIntegrationSchemes() for a the list of valid options.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt>
 <dd>The IntegratorBase::set_maximum_step_size() value.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1688,7 +1682,7 @@ GetIntegrationSchemes() for a the list of valid options.</dd>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A reference to the newly created integrator owned by
-<code class="docutils literal"><span class="pre">simulator</span></code>.</td>
+<code class="docutils literal notranslate"><span class="pre">simulator</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -1697,17 +1691,17 @@ GetIntegrationSchemes() for a the list of valid options.</dd>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta2Integrator</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[float]" title="pydrake.systems.analysis.RungeKutta2Integrator_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.RungeKutta2Integrator_[float]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[float]" title="pydrake.systems.analysis.RungeKutta2Integrator_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.RungeKutta2Integrator_[float]</span></code></a></p>
 </dd></dl>
 
 <dl class="template">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_">
 <em class="property">template </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta2Integrator_</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[float]" title="pydrake.systems.analysis.RungeKutta2Integrator_[float]"><code class="xref py py-class docutils literal"><span class="pre">RungeKutta2Integrator_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]" title="pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">RungeKutta2Integrator_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[Expression]" title="pydrake.systems.analysis.RungeKutta2Integrator_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">RungeKutta2Integrator_[Expression]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[float]" title="pydrake.systems.analysis.RungeKutta2Integrator_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta2Integrator_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]" title="pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta2Integrator_[AutoDiffXd]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta2Integrator_[Expression]" title="pydrake.systems.analysis.RungeKutta2Integrator_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta2Integrator_[Expression]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_.RungeKutta2Integrator_[float]">
 <em class="property">class </em><code class="descname">RungeKutta2Integrator_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_.RungeKutta2Integrator_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_.RungeKutta2Integrator_[float].__init__">
@@ -1715,12 +1709,12 @@ GetIntegrationSchemes() for a the list of valid options.</dd>
 <dd><p>Constructs fixed-step integrator for a given system using the given
 context for initial conditions.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A reference to the system to be simulated</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt>
 <dd>The maximum (fixed) step size; the integrator will not take larger
 step sizes than this.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>pointer to the context (nullptr is ok, but the caller must set a
 non-null context before Initialize()-ing the integrator).</dd>
 </dl>
@@ -1737,7 +1731,7 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta2Integrator_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_[AutoDiffXd].__init__">
@@ -1745,12 +1739,12 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dd><p>Constructs fixed-step integrator for a given system using the given
 context for initial conditions.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A reference to the system to be simulated</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt>
 <dd>The maximum (fixed) step size; the integrator will not take larger
 step sizes than this.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>pointer to the context (nullptr is ok, but the caller must set a
 non-null context before Initialize()-ing the integrator).</dd>
 </dl>
@@ -1765,7 +1759,7 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_[Expression]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta2Integrator_[Expression]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_[Expression]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[Expression]" title="pydrake.systems.analysis.IntegratorBase_[Expression]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[Expression]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[Expression]" title="pydrake.systems.analysis.IntegratorBase_[Expression]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[Expression]</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_[Expression].__init__">
@@ -1773,12 +1767,12 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dd><p>Constructs fixed-step integrator for a given system using the given
 context for initial conditions.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A reference to the system to be simulated</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt>
 <dd>The maximum (fixed) step size; the integrator will not take larger
 step sizes than this.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>pointer to the context (nullptr is ok, but the caller must set a
 non-null context before Initialize()-ing the integrator).</dd>
 </dl>
@@ -1793,7 +1787,7 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_[float]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta2Integrator_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta2Integrator_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
 <p>A second-order, explicit Runge Kutta integrator.</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.RungeKutta2Integrator_[float].__init__">
@@ -1801,12 +1795,12 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dd><p>Constructs fixed-step integrator for a given system using the given
 context for initial conditions.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>A reference to the system to be simulated</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">max_step_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">max_step_size</span></code>:</dt>
 <dd>The maximum (fixed) step size; the integrator will not take larger
 step sizes than this.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>pointer to the context (nullptr is ok, but the caller must set a
 non-null context before Initialize()-ing the integrator).</dd>
 </dl>
@@ -1821,24 +1815,24 @@ non-null context before Initialize()-ing the integrator).</dd>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.RungeKutta3Integrator">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta3Integrator</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_[float]" title="pydrake.systems.analysis.RungeKutta3Integrator_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.RungeKutta3Integrator_[float]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_[float]" title="pydrake.systems.analysis.RungeKutta3Integrator_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.RungeKutta3Integrator_[float]</span></code></a></p>
 </dd></dl>
 
 <dl class="template">
 <dt id="pydrake.systems.analysis.RungeKutta3Integrator_">
 <em class="property">template </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta3Integrator_</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_[float]" title="pydrake.systems.analysis.RungeKutta3Integrator_[float]"><code class="xref py py-class docutils literal"><span class="pre">RungeKutta3Integrator_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]" title="pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">RungeKutta3Integrator_[AutoDiffXd]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_[float]" title="pydrake.systems.analysis.RungeKutta3Integrator_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta3Integrator_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]" title="pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">RungeKutta3Integrator_[AutoDiffXd]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta3Integrator_.RungeKutta3Integrator_[float]">
 <em class="property">class </em><code class="descname">RungeKutta3Integrator_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_.RungeKutta3Integrator_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
 <p>A third-order Runge Kutta integrator with a third order error
 estimate.</p>
 <p>For a discussion of this Runge-Kutta method, see [Butcher, 1987]. The
 embedded error estimate was derived using the method mentioned in
 [Hairer, 1993].</p>
 <p>The Butcher tableau for this integrator follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">|</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span>
 <span class="mi">0</span>      <span class="o">|</span>
 <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>    <span class="o">|</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
 <span class="mi">1</span>      <span class="o">|</span> <span class="o">-</span><span class="mi">1</span>          <span class="mi">2</span>
@@ -1877,14 +1871,14 @@ rev. ed. Springer, 1993. p. 166.</li>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta3Integrator_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]" title="pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[AutoDiffXd]</span></code></a></p>
 <p>A third-order Runge Kutta integrator with a third order error
 estimate.</p>
 <p>For a discussion of this Runge-Kutta method, see [Butcher, 1987]. The
 embedded error estimate was derived using the method mentioned in
 [Hairer, 1993].</p>
 <p>The Butcher tableau for this integrator follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">|</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span>
 <span class="mi">0</span>      <span class="o">|</span>
 <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>    <span class="o">|</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
 <span class="mi">1</span>      <span class="o">|</span> <span class="o">-</span><span class="mi">1</span>          <span class="mi">2</span>
@@ -1921,14 +1915,14 @@ rev. ed. Springer, 1993. p. 166.</li>
 <dl class="class">
 <dt id="pydrake.systems.analysis.RungeKutta3Integrator_[float]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RungeKutta3Integrator_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.RungeKutta3Integrator_[float]" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.systems.analysis.IntegratorBase_[float]" title="pydrake.systems.analysis.IntegratorBase_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.IntegratorBase_[float]</span></code></a></p>
 <p>A third-order Runge Kutta integrator with a third order error
 estimate.</p>
 <p>For a discussion of this Runge-Kutta method, see [Butcher, 1987]. The
 embedded error estimate was derived using the method mentioned in
 [Hairer, 1993].</p>
 <p>The Butcher tableau for this integrator follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">|</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span>
 <span class="mi">0</span>      <span class="o">|</span>
 <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>    <span class="o">|</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
 <span class="mi">1</span>      <span class="o">|</span> <span class="o">-</span><span class="mi">1</span>          <span class="mi">2</span>
@@ -1965,18 +1959,18 @@ rev. ed. Springer, 1993. p. 166.</li>
 <dl class="attribute">
 <dt id="pydrake.systems.analysis.Simulator">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">Simulator</code><a class="headerlink" href="#pydrake.systems.analysis.Simulator" title="Permalink to this definition">¶</a></dt>
-<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.Simulator_[float]" title="pydrake.systems.analysis.Simulator_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.analysis.Simulator_[float]</span></code></a></p>
+<dd><p>alias of <a class="reference internal" href="#pydrake.systems.analysis.Simulator_[float]" title="pydrake.systems.analysis.Simulator_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.analysis.Simulator_[float]</span></code></a></p>
 </dd></dl>
 
 <dl class="template">
 <dt id="pydrake.systems.analysis.Simulator_">
 <em class="property">template </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">Simulator_</code><a class="headerlink" href="#pydrake.systems.analysis.Simulator_" title="Permalink to this definition">¶</a></dt>
-<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.Simulator_[float]" title="pydrake.systems.analysis.Simulator_[float]"><code class="xref py py-class docutils literal"><span class="pre">Simulator_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd]" title="pydrake.systems.analysis.Simulator_[AutoDiffXd]"><code class="xref py py-class docutils literal"><span class="pre">Simulator_[AutoDiffXd]</span></code></a></p>
+<dd><p>Instantiations: <a class="reference internal" href="#pydrake.systems.analysis.Simulator_[float]" title="pydrake.systems.analysis.Simulator_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Simulator_[float]</span></code></a>, <a class="reference internal" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd]" title="pydrake.systems.analysis.Simulator_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">Simulator_[AutoDiffXd]</span></code></a></p>
 <dl class="class">
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float]">
 <em class="property">class </em><code class="descname">Simulator_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for advancing the state of hybrid dynamic systems, represented
-by <code class="docutils literal"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
+by <code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
 Context for a given System, Simulator advances time and produces a
 series of Context values that forms a trajectory satisfying the
 system’s dynamic equations to a specified accuracy. Only the Context
@@ -2022,7 +2016,7 @@ advances from {t, x⁻(t)} to {t, x⁺(t)} as a result of the update.
 While those Context values are user-visible, the details of stepping
 here require an intermediate value which we’ll denote {t, x*(t)}.</p>
 <p>Recall that Drake’s state x is partitioned into continuous, discrete,
-and abstract partitions xc, xd, and xa, so <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
+and abstract partitions xc, xd, and xa, so <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
 Within a single step, these are updated in three stages: -</p>
 <p>Unrestricted update (can change x) -</p>
 <p>Discrete update (can change only xd) -</p>
@@ -2044,9 +2038,9 @@ report errors or detect a termination condition; that is not shown in
 the pseudocode below.</p>
 <p>The pseudocode will clarify the effects on time and state of each of
 the update stages above. This algorithm is given a starting Context
-value <code class="docutils literal"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal"><span class="pre">{tₑ,</span>
+value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
 <span class="pre">x⁻(tₑ)}</span></code>, where tₑ is <em>no later</em> than a given tₘₐₓ.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
 // end value {tₑ, x⁻(tₑ)}, where tₛ ≤ tₑ ≤ tₘₐₓ.
 procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)
 
@@ -2092,7 +2086,7 @@ return {tₑ, x⁻(tₑ)}
 AdvancePendingEvents(), and Initialize() functions. Termination and
 error conditions detected by event handlers or the monitor are
 reported as status returns from these methods.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
 procedure AdvanceTo(tₘₐₓ) → status
 t ← current_time
 while t &lt; tₘₐₓ
@@ -2131,7 +2125,7 @@ performs pending updates (in this case only initialization events can
 be “pending”, and even those may be optionally suppressed). Time
 doesn’t advance so there is no continuous update phase and witnesses
 cannot trigger. Finally, again like Step(), the initial trajectory
-point <code class="docutils literal"><span class="pre">{t₀,</span> <span class="pre">x⁻(t₀)}</span></code> is provided to the handlers for any triggered
+point <code class="docutils literal notranslate"><span class="pre">{t₀,</span> <span class="pre">x⁻(t₀)}</span></code> is provided to the handlers for any triggered
 publish events. That includes initialization publish events (if not
 suppressed), per-step publish events, and periodic or timed publish
 events that trigger at t₀, followed by a call to the monitor()
@@ -2148,11 +2142,11 @@ System must not have unresolved input ports if the values of those
 ports are necessary for computations performed during simulation (see
 class documentation).</p>
 <p>The Simulator holds an internal, non-owned reference to the System
-object so you must ensure that <code class="docutils literal"><span class="pre">system</span></code> has a longer lifetime than
+object so you must ensure that <code class="docutils literal notranslate"><span class="pre">system</span></code> has a longer lifetime than
 the Simulator. It also owns a compatible Context internally that takes
 on each of the trajectory values. You may optionally provide a Context
 that will be used as the initial condition for the simulation;
-otherwise the Simulator will obtain a default Context from <code class="docutils literal"><span class="pre">system</span></code>.</p>
+otherwise the Simulator will obtain a default Context from <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2162,19 +2156,19 @@ otherwise the Simulator will obtain a default Context from <code class="docutils
 pending from the previous AdvanceTo() call, without advancing time.
 See the Simulator class description for details about how Simulator
 advances time and handles events. In the terminology used there, this
-method advances the internal Context from <code class="docutils literal"><span class="pre">{t,</span> <span class="pre">x⁻(t)}</span></code> to <code class="docutils literal"><span class="pre">{t,</span>
+method advances the internal Context from <code class="docutils literal notranslate"><span class="pre">{t,</span> <span class="pre">x⁻(t)}</span></code> to <code class="docutils literal notranslate"><span class="pre">{t,</span>
 <span class="pre">x⁺(t)}</span></code>.</p>
 <p>Normally, these update events would be handled at the start of the
 next AdvanceTo() call, so this method is rarely needed. It can be
 useful at the end of a simulation or to get intermediate results when
-you are specifically interested in the <code class="docutils literal"><span class="pre">x⁺(t)</span></code> result.</p>
-<p>This method is equivalent to <code class="docutils literal"><span class="pre">AdvanceTo(current_time)</span></code>, where
-<code class="docutils literal"><span class="pre">current_time=simulator.get_context().get_time())</span></code>. If there are no
+you are specifically interested in the <code class="docutils literal notranslate"><span class="pre">x⁺(t)</span></code> result.</p>
+<p>This method is equivalent to <code class="docutils literal notranslate"><span class="pre">AdvanceTo(current_time)</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">current_time=simulator.get_context().get_time())</span></code>. If there are no
 pending events, nothing happens except possibly a final per-step
 publish call (if enabled) followed by a call to the monitor() function
 (if one has been provided).</p>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function.</dd>
@@ -2188,16 +2182,16 @@ function.</dd>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].AdvanceTo">
 <code class="descname">AdvanceTo</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], boundary_time: float</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.analysis.SimulatorStatus<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].AdvanceTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Advances the System’s trajectory until <code class="docutils literal"><span class="pre">boundary_time</span></code> is reached in
+<dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
 the context or some other termination condition occurs. A variety of
-<code class="docutils literal"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
+<code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
 conditions that may be thrown by the System when it is asked to
 perform computations. Be sure to enclose your simulation in a
-<code class="docutils literal"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal"><span class="pre">what()</span></code> message.</p>
+<code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal notranslate"><span class="pre">what()</span></code> message.</p>
 <p>We recommend that you call Initialize() prior to making the first call
 to AdvanceTo(). However, if you don’t it will be called for you the
 first time that you attempt a step, possibly resulting in unexpected
-error conditions. See documentation for <code class="docutils literal"><span class="pre">Initialize()</span></code> for the error
+error conditions. See documentation for <code class="docutils literal notranslate"><span class="pre">Initialize()</span></code> for the error
 conditions it might produce.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -2206,12 +2200,12 @@ Context or Simulator options between successive AdvanceTo() calls.
 See Initialize() for more information.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">boundary_time</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt>
 <dd>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
 the monitor function requests termination or reports an error
 condition.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function. The time in the context will be set either to the
@@ -2245,12 +2239,12 @@ time. A return of 1 means the simulation just matched real time, 2
 means the simulation was twice as fast as real time, 0.5 means it was
 running in 2X slow motion, etc.</p>
 <p>The value returned here is calculated as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
   <span class="n">rate</span> <span class="o">=</span> <span class="o">-------------------------------------------</span>
                <span class="n">realtime_now</span> <span class="o">-</span> <span class="n">initial_realtime</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">initial</span></code> times are recorded when Initialize() or
+<p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
 ResetStatistics() is called. The returned rate is undefined if
 Initialize() has not yet been called.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2333,8 +2327,8 @@ the target with set_target_realtime_rate().</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].has_context">
 <code class="descname">has_context</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].has_context" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if this Simulator has an internally-maintained
-Context. This is always true unless <code class="docutils literal"><span class="pre">reset_context()</span></code> has been
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if this Simulator has an internally-maintained
+Context. This is always true unless <code class="docutils literal notranslate"><span class="pre">reset_context()</span></code> has been
 called.</p>
 </dd></dl>
 
@@ -2374,11 +2368,11 @@ responsible for ensuring the correctness of the initial state.</p>
 constraints – it is up to you to make sure that constraints are
 satisfied by the initial conditions.</p>
 </div>
-<p>This method will throw <code class="docutils literal"><span class="pre">RuntimeError</span></code> if the combination of options
+<p>This method will throw <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if the combination of options
 doesn’t make sense. Other failures are possible from the System and
 integrator in use.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">params</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt>
 <dd>(optional) a parameter structure (</dd>
 </dl>
 <div class="admonition seealso">
@@ -2386,7 +2380,7 @@ integrator in use.</p>
 <p class="last">InitializeParams).</p>
 </div>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function.</dd>
@@ -2405,7 +2399,7 @@ current Context is deleted. This is useful for supplying a new set of
 initial conditions. You should invoke Initialize() after replacing the
 Context.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The new context, which may be null. If the context is null, a new
 context must be set before attempting to step the system forward.</dd>
 </dl>
@@ -2415,7 +2409,7 @@ context must be set before attempting to step the system forward.</dd>
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].ResetStatistics">
 <code class="descname">ResetStatistics</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].ResetStatistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forget accumulated statistics. Statistics are reset to the values they
-have post construction or immediately after <code class="docutils literal"><span class="pre">Initialize()</span></code>.</p>
+have post construction or immediately after <code class="docutils literal notranslate"><span class="pre">Initialize()</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2437,11 +2431,11 @@ of Initialize() and AdvancePendingEvents(). (See the Simulator class
 documentation for more detail about what happens when in these
 methods.) The monitor receives the top-level (root) Context, from
 which any sub-Context can be obtained using
-<code class="docutils literal"><span class="pre">subsystem.GetMyContextFromRoot()</span></code>, provided the necessary subsystem
+<code class="docutils literal notranslate"><span class="pre">subsystem.GetMyContextFromRoot()</span></code>, provided the necessary subsystem
 reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span>
             <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
             <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
@@ -2451,7 +2445,7 @@ is advanced:</p>
 </div>
 <p>Terminate early but successfully on a condition in a subsystem of the
 System diagram being simulated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">subcontext</span> <span class="o">=</span>
       <span class="n">my_subsystem</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">my_subsystem</span><span class="o">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span> <span class="p">{</span>
@@ -2468,7 +2462,7 @@ returned status will indicate the termination reason, and a
 human-readable termination message containing the message provided by
 the monitor can be obtained with status.FormatMessage().</p>
 <p>Failure due to plant center of mass falling below a threshold:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">plant_context</span> <span class="o">=</span>
       <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
   <span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">com</span> <span class="o">=</span>
@@ -2511,7 +2505,7 @@ forced-publish event handler, that will be called. Otherwise, nothing
 will happen unless the DoPublish() dispatcher has been overridden.</p>
 <p>Enabling this option does not cause a forced-publish to be triggered
 at initialization; if you want that you should also call
-<code class="docutils literal"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
+<code class="docutils literal notranslate"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
 at the end of every step, you will usually also want one at the end of
 initialization, requiring both options to be enabled.</p>
 <div class="admonition seealso">
@@ -2546,7 +2540,7 @@ integration accuracy, using a faster integration method or fixed
 time step, or using a simpler model.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">realtime_rate</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">realtime_rate</span></code>:</dt>
 <dd>Desired rate relative to real time. Set to 1 to track real time, 2
 to run twice as fast as real time, 0.5 for half speed, etc. Zero
 or negative restores the rate to its default of 0, meaning the
@@ -2562,7 +2556,7 @@ simulation will proceed as fast as possible.</dd>
 <dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">Simulator_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for advancing the state of hybrid dynamic systems, represented
-by <code class="docutils literal"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
+by <code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
 Context for a given System, Simulator advances time and produces a
 series of Context values that forms a trajectory satisfying the
 system’s dynamic equations to a specified accuracy. Only the Context
@@ -2608,7 +2602,7 @@ advances from {t, x⁻(t)} to {t, x⁺(t)} as a result of the update.
 While those Context values are user-visible, the details of stepping
 here require an intermediate value which we’ll denote {t, x*(t)}.</p>
 <p>Recall that Drake’s state x is partitioned into continuous, discrete,
-and abstract partitions xc, xd, and xa, so <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
+and abstract partitions xc, xd, and xa, so <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
 Within a single step, these are updated in three stages: -</p>
 <p>Unrestricted update (can change x) -</p>
 <p>Discrete update (can change only xd) -</p>
@@ -2630,9 +2624,9 @@ report errors or detect a termination condition; that is not shown in
 the pseudocode below.</p>
 <p>The pseudocode will clarify the effects on time and state of each of
 the update stages above. This algorithm is given a starting Context
-value <code class="docutils literal"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal"><span class="pre">{tₑ,</span>
+value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
 <span class="pre">x⁻(tₑ)}</span></code>, where tₑ is <em>no later</em> than a given tₘₐₓ.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
 // end value {tₑ, x⁻(tₑ)}, where tₛ ≤ tₑ ≤ tₘₐₓ.
 procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)
 
@@ -2678,7 +2672,7 @@ return {tₑ, x⁻(tₑ)}
 AdvancePendingEvents(), and Initialize() functions. Termination and
 error conditions detected by event handlers or the monitor are
 reported as status returns from these methods.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
 procedure AdvanceTo(tₘₐₓ) → status
 t ← current_time
 while t &lt; tₘₐₓ
@@ -2717,7 +2711,7 @@ performs pending updates (in this case only initialization events can
 be “pending”, and even those may be optionally suppressed). Time
 doesn’t advance so there is no continuous update phase and witnesses
 cannot trigger. Finally, again like Step(), the initial trajectory
-point <code class="docutils literal"><span class="pre">{t₀,</span> <span class="pre">x⁻(t₀)}</span></code> is provided to the handlers for any triggered
+point <code class="docutils literal notranslate"><span class="pre">{t₀,</span> <span class="pre">x⁻(t₀)}</span></code> is provided to the handlers for any triggered
 publish events. That includes initialization publish events (if not
 suppressed), per-step publish events, and periodic or timed publish
 events that trigger at t₀, followed by a call to the monitor()
@@ -2734,11 +2728,11 @@ System must not have unresolved input ports if the values of those
 ports are necessary for computations performed during simulation (see
 class documentation).</p>
 <p>The Simulator holds an internal, non-owned reference to the System
-object so you must ensure that <code class="docutils literal"><span class="pre">system</span></code> has a longer lifetime than
+object so you must ensure that <code class="docutils literal notranslate"><span class="pre">system</span></code> has a longer lifetime than
 the Simulator. It also owns a compatible Context internally that takes
 on each of the trajectory values. You may optionally provide a Context
 that will be used as the initial condition for the simulation;
-otherwise the Simulator will obtain a default Context from <code class="docutils literal"><span class="pre">system</span></code>.</p>
+otherwise the Simulator will obtain a default Context from <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2748,19 +2742,19 @@ otherwise the Simulator will obtain a default Context from <code class="docutils
 pending from the previous AdvanceTo() call, without advancing time.
 See the Simulator class description for details about how Simulator
 advances time and handles events. In the terminology used there, this
-method advances the internal Context from <code class="docutils literal"><span class="pre">{t,</span> <span class="pre">x⁻(t)}</span></code> to <code class="docutils literal"><span class="pre">{t,</span>
+method advances the internal Context from <code class="docutils literal notranslate"><span class="pre">{t,</span> <span class="pre">x⁻(t)}</span></code> to <code class="docutils literal notranslate"><span class="pre">{t,</span>
 <span class="pre">x⁺(t)}</span></code>.</p>
 <p>Normally, these update events would be handled at the start of the
 next AdvanceTo() call, so this method is rarely needed. It can be
 useful at the end of a simulation or to get intermediate results when
-you are specifically interested in the <code class="docutils literal"><span class="pre">x⁺(t)</span></code> result.</p>
-<p>This method is equivalent to <code class="docutils literal"><span class="pre">AdvanceTo(current_time)</span></code>, where
-<code class="docutils literal"><span class="pre">current_time=simulator.get_context().get_time())</span></code>. If there are no
+you are specifically interested in the <code class="docutils literal notranslate"><span class="pre">x⁺(t)</span></code> result.</p>
+<p>This method is equivalent to <code class="docutils literal notranslate"><span class="pre">AdvanceTo(current_time)</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">current_time=simulator.get_context().get_time())</span></code>. If there are no
 pending events, nothing happens except possibly a final per-step
 publish call (if enabled) followed by a call to the monitor() function
 (if one has been provided).</p>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function.</dd>
@@ -2774,16 +2768,16 @@ function.</dd>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd].AdvanceTo">
 <code class="descname">AdvanceTo</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd], boundary_time: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.analysis.SimulatorStatus<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].AdvanceTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Advances the System’s trajectory until <code class="docutils literal"><span class="pre">boundary_time</span></code> is reached in
+<dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
 the context or some other termination condition occurs. A variety of
-<code class="docutils literal"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
+<code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
 conditions that may be thrown by the System when it is asked to
 perform computations. Be sure to enclose your simulation in a
-<code class="docutils literal"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal"><span class="pre">what()</span></code> message.</p>
+<code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal notranslate"><span class="pre">what()</span></code> message.</p>
 <p>We recommend that you call Initialize() prior to making the first call
 to AdvanceTo(). However, if you don’t it will be called for you the
 first time that you attempt a step, possibly resulting in unexpected
-error conditions. See documentation for <code class="docutils literal"><span class="pre">Initialize()</span></code> for the error
+error conditions. See documentation for <code class="docutils literal notranslate"><span class="pre">Initialize()</span></code> for the error
 conditions it might produce.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -2792,12 +2786,12 @@ Context or Simulator options between successive AdvanceTo() calls.
 See Initialize() for more information.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">boundary_time</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt>
 <dd>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
 the monitor function requests termination or reports an error
 condition.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function. The time in the context will be set either to the
@@ -2831,12 +2825,12 @@ time. A return of 1 means the simulation just matched real time, 2
 means the simulation was twice as fast as real time, 0.5 means it was
 running in 2X slow motion, etc.</p>
 <p>The value returned here is calculated as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
   <span class="n">rate</span> <span class="o">=</span> <span class="o">-------------------------------------------</span>
                <span class="n">realtime_now</span> <span class="o">-</span> <span class="n">initial_realtime</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">initial</span></code> times are recorded when Initialize() or
+<p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
 ResetStatistics() is called. The returned rate is undefined if
 Initialize() has not yet been called.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2919,8 +2913,8 @@ the target with set_target_realtime_rate().</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd].has_context">
 <code class="descname">has_context</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].has_context" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if this Simulator has an internally-maintained
-Context. This is always true unless <code class="docutils literal"><span class="pre">reset_context()</span></code> has been
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if this Simulator has an internally-maintained
+Context. This is always true unless <code class="docutils literal notranslate"><span class="pre">reset_context()</span></code> has been
 called.</p>
 </dd></dl>
 
@@ -2960,11 +2954,11 @@ responsible for ensuring the correctness of the initial state.</p>
 constraints – it is up to you to make sure that constraints are
 satisfied by the initial conditions.</p>
 </div>
-<p>This method will throw <code class="docutils literal"><span class="pre">RuntimeError</span></code> if the combination of options
+<p>This method will throw <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if the combination of options
 doesn’t make sense. Other failures are possible from the System and
 integrator in use.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">params</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt>
 <dd>(optional) a parameter structure (</dd>
 </dl>
 <div class="admonition seealso">
@@ -2972,7 +2966,7 @@ integrator in use.</p>
 <p class="last">InitializeParams).</p>
 </div>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function.</dd>
@@ -2991,7 +2985,7 @@ current Context is deleted. This is useful for supplying a new set of
 initial conditions. You should invoke Initialize() after replacing the
 Context.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The new context, which may be null. If the context is null, a new
 context must be set before attempting to step the system forward.</dd>
 </dl>
@@ -3001,7 +2995,7 @@ context must be set before attempting to step the system forward.</dd>
 <dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd].ResetStatistics">
 <code class="descname">ResetStatistics</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].ResetStatistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forget accumulated statistics. Statistics are reset to the values they
-have post construction or immediately after <code class="docutils literal"><span class="pre">Initialize()</span></code>.</p>
+have post construction or immediately after <code class="docutils literal notranslate"><span class="pre">Initialize()</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3023,11 +3017,11 @@ of Initialize() and AdvancePendingEvents(). (See the Simulator class
 documentation for more detail about what happens when in these
 methods.) The monitor receives the top-level (root) Context, from
 which any sub-Context can be obtained using
-<code class="docutils literal"><span class="pre">subsystem.GetMyContextFromRoot()</span></code>, provided the necessary subsystem
+<code class="docutils literal notranslate"><span class="pre">subsystem.GetMyContextFromRoot()</span></code>, provided the necessary subsystem
 reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span>
             <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
             <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
@@ -3037,7 +3031,7 @@ is advanced:</p>
 </div>
 <p>Terminate early but successfully on a condition in a subsystem of the
 System diagram being simulated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">subcontext</span> <span class="o">=</span>
       <span class="n">my_subsystem</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">my_subsystem</span><span class="o">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span> <span class="p">{</span>
@@ -3054,7 +3048,7 @@ returned status will indicate the termination reason, and a
 human-readable termination message containing the message provided by
 the monitor can be obtained with status.FormatMessage().</p>
 <p>Failure due to plant center of mass falling below a threshold:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">plant_context</span> <span class="o">=</span>
       <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
   <span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">com</span> <span class="o">=</span>
@@ -3097,7 +3091,7 @@ forced-publish event handler, that will be called. Otherwise, nothing
 will happen unless the DoPublish() dispatcher has been overridden.</p>
 <p>Enabling this option does not cause a forced-publish to be triggered
 at initialization; if you want that you should also call
-<code class="docutils literal"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
+<code class="docutils literal notranslate"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
 at the end of every step, you will usually also want one at the end of
 initialization, requiring both options to be enabled.</p>
 <div class="admonition seealso">
@@ -3132,7 +3126,7 @@ integration accuracy, using a faster integration method or fixed
 time step, or using a simpler model.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">realtime_rate</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">realtime_rate</span></code>:</dt>
 <dd>Desired rate relative to real time. Set to 1 to track real time, 2
 to run twice as fast as real time, 0.5 for half speed, etc. Zero
 or negative restores the rate to its default of 0, meaning the
@@ -3146,7 +3140,7 @@ simulation will proceed as fast as possible.</dd>
 <dt id="pydrake.systems.analysis.Simulator_[float]">
 <em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">Simulator_[float]</code><a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for advancing the state of hybrid dynamic systems, represented
-by <code class="docutils literal"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
+by <code class="docutils literal notranslate"><span class="pre">System&lt;T&gt;</span></code> objects, forward in time. Starting with an initial
 Context for a given System, Simulator advances time and produces a
 series of Context values that forms a trajectory satisfying the
 system’s dynamic equations to a specified accuracy. Only the Context
@@ -3192,7 +3186,7 @@ advances from {t, x⁻(t)} to {t, x⁺(t)} as a result of the update.
 While those Context values are user-visible, the details of stepping
 here require an intermediate value which we’ll denote {t, x*(t)}.</p>
 <p>Recall that Drake’s state x is partitioned into continuous, discrete,
-and abstract partitions xc, xd, and xa, so <code class="docutils literal"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
+and abstract partitions xc, xd, and xa, so <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">xc,</span> <span class="pre">xd,</span> <span class="pre">xa</span> <span class="pre">}</span></code>.
 Within a single step, these are updated in three stages: -</p>
 <p>Unrestricted update (can change x) -</p>
 <p>Discrete update (can change only xd) -</p>
@@ -3214,9 +3208,9 @@ report errors or detect a termination condition; that is not shown in
 the pseudocode below.</p>
 <p>The pseudocode will clarify the effects on time and state of each of
 the update stages above. This algorithm is given a starting Context
-value <code class="docutils literal"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal"><span class="pre">{tₑ,</span>
+value <code class="docutils literal notranslate"><span class="pre">{tₛ,</span> <span class="pre">x⁻(tₛ)}</span></code> and returns an end Context value <code class="docutils literal notranslate"><span class="pre">{tₑ,</span>
 <span class="pre">x⁻(tₑ)}</span></code>, where tₑ is <em>no later</em> than a given tₘₐₓ.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the trajectory (time and state) from start value {tₛ, x⁻(tₛ)} to an
 // end value {tₑ, x⁻(tₑ)}, where tₛ ≤ tₑ ≤ tₘₐₓ.
 procedure Step(tₛ, x⁻(tₛ), tₘₐₓ)
 
@@ -3262,7 +3256,7 @@ return {tₑ, x⁻(tₑ)}
 AdvancePendingEvents(), and Initialize() functions. Termination and
 error conditions detected by event handlers or the monitor are
 reported as status returns from these methods.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// Advance the simulation until time tₘₐₓ.
 procedure AdvanceTo(tₘₐₓ) → status
 t ← current_time
 while t &lt; tₘₐₓ
@@ -3301,7 +3295,7 @@ performs pending updates (in this case only initialization events can
 be “pending”, and even those may be optionally suppressed). Time
 doesn’t advance so there is no continuous update phase and witnesses
 cannot trigger. Finally, again like Step(), the initial trajectory
-point <code class="docutils literal"><span class="pre">{t₀,</span> <span class="pre">x⁻(t₀)}</span></code> is provided to the handlers for any triggered
+point <code class="docutils literal notranslate"><span class="pre">{t₀,</span> <span class="pre">x⁻(t₀)}</span></code> is provided to the handlers for any triggered
 publish events. That includes initialization publish events (if not
 suppressed), per-step publish events, and periodic or timed publish
 events that trigger at t₀, followed by a call to the monitor()
@@ -3318,11 +3312,11 @@ System must not have unresolved input ports if the values of those
 ports are necessary for computations performed during simulation (see
 class documentation).</p>
 <p>The Simulator holds an internal, non-owned reference to the System
-object so you must ensure that <code class="docutils literal"><span class="pre">system</span></code> has a longer lifetime than
+object so you must ensure that <code class="docutils literal notranslate"><span class="pre">system</span></code> has a longer lifetime than
 the Simulator. It also owns a compatible Context internally that takes
 on each of the trajectory values. You may optionally provide a Context
 that will be used as the initial condition for the simulation;
-otherwise the Simulator will obtain a default Context from <code class="docutils literal"><span class="pre">system</span></code>.</p>
+otherwise the Simulator will obtain a default Context from <code class="docutils literal notranslate"><span class="pre">system</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3332,19 +3326,19 @@ otherwise the Simulator will obtain a default Context from <code class="docutils
 pending from the previous AdvanceTo() call, without advancing time.
 See the Simulator class description for details about how Simulator
 advances time and handles events. In the terminology used there, this
-method advances the internal Context from <code class="docutils literal"><span class="pre">{t,</span> <span class="pre">x⁻(t)}</span></code> to <code class="docutils literal"><span class="pre">{t,</span>
+method advances the internal Context from <code class="docutils literal notranslate"><span class="pre">{t,</span> <span class="pre">x⁻(t)}</span></code> to <code class="docutils literal notranslate"><span class="pre">{t,</span>
 <span class="pre">x⁺(t)}</span></code>.</p>
 <p>Normally, these update events would be handled at the start of the
 next AdvanceTo() call, so this method is rarely needed. It can be
 useful at the end of a simulation or to get intermediate results when
-you are specifically interested in the <code class="docutils literal"><span class="pre">x⁺(t)</span></code> result.</p>
-<p>This method is equivalent to <code class="docutils literal"><span class="pre">AdvanceTo(current_time)</span></code>, where
-<code class="docutils literal"><span class="pre">current_time=simulator.get_context().get_time())</span></code>. If there are no
+you are specifically interested in the <code class="docutils literal notranslate"><span class="pre">x⁺(t)</span></code> result.</p>
+<p>This method is equivalent to <code class="docutils literal notranslate"><span class="pre">AdvanceTo(current_time)</span></code>, where
+<code class="docutils literal notranslate"><span class="pre">current_time=simulator.get_context().get_time())</span></code>. If there are no
 pending events, nothing happens except possibly a final per-step
 publish call (if enabled) followed by a call to the monitor() function
 (if one has been provided).</p>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function.</dd>
@@ -3358,16 +3352,16 @@ function.</dd>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[float].AdvanceTo">
 <code class="descname">AdvanceTo</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], boundary_time: float</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.analysis.SimulatorStatus<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].AdvanceTo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Advances the System’s trajectory until <code class="docutils literal"><span class="pre">boundary_time</span></code> is reached in
+<dd><p>Advances the System’s trajectory until <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code> is reached in
 the context or some other termination condition occurs. A variety of
-<code class="docutils literal"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
+<code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> conditions are possible here, as well as error
 conditions that may be thrown by the System when it is asked to
 perform computations. Be sure to enclose your simulation in a
-<code class="docutils literal"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal"><span class="pre">what()</span></code> message.</p>
+<code class="docutils literal notranslate"><span class="pre">try-catch</span></code> block and display the <code class="docutils literal notranslate"><span class="pre">what()</span></code> message.</p>
 <p>We recommend that you call Initialize() prior to making the first call
 to AdvanceTo(). However, if you don’t it will be called for you the
 first time that you attempt a step, possibly resulting in unexpected
-error conditions. See documentation for <code class="docutils literal"><span class="pre">Initialize()</span></code> for the error
+error conditions. See documentation for <code class="docutils literal notranslate"><span class="pre">Initialize()</span></code> for the error
 conditions it might produce.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -3376,12 +3370,12 @@ Context or Simulator options between successive AdvanceTo() calls.
 See Initialize() for more information.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">boundary_time</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">boundary_time</span></code>:</dt>
 <dd>The maximum time to which the trajectory will be advanced by this
 call to AdvanceTo(). The method may return earlier if an event or
 the monitor function requests termination or reports an error
 condition.</dd>
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function. The time in the context will be set either to the
@@ -3415,12 +3409,12 @@ time. A return of 1 means the simulation just matched real time, 2
 means the simulation was twice as fast as real time, 0.5 means it was
 running in 2X slow motion, etc.</p>
 <p>The value returned here is calculated as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulated_time_now</span> <span class="o">-</span> <span class="n">initial_simulated_time</span>
   <span class="n">rate</span> <span class="o">=</span> <span class="o">-------------------------------------------</span>
                <span class="n">realtime_now</span> <span class="o">-</span> <span class="n">initial_realtime</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">initial</span></code> times are recorded when Initialize() or
+<p>The <code class="docutils literal notranslate"><span class="pre">initial</span></code> times are recorded when Initialize() or
 ResetStatistics() is called. The returned rate is undefined if
 Initialize() has not yet been called.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -3503,8 +3497,8 @@ the target with set_target_realtime_rate().</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[float].has_context">
 <code class="descname">has_context</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].has_context" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <code class="docutils literal"><span class="pre">True</span></code> if this Simulator has an internally-maintained
-Context. This is always true unless <code class="docutils literal"><span class="pre">reset_context()</span></code> has been
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if this Simulator has an internally-maintained
+Context. This is always true unless <code class="docutils literal notranslate"><span class="pre">reset_context()</span></code> has been
 called.</p>
 </dd></dl>
 
@@ -3544,11 +3538,11 @@ responsible for ensuring the correctness of the initial state.</p>
 constraints – it is up to you to make sure that constraints are
 satisfied by the initial conditions.</p>
 </div>
-<p>This method will throw <code class="docutils literal"><span class="pre">RuntimeError</span></code> if the combination of options
+<p>This method will throw <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if the combination of options
 doesn’t make sense. Other failures are possible from the System and
 integrator in use.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">params</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">params</span></code>:</dt>
 <dd>(optional) a parameter structure (</dd>
 </dl>
 <div class="admonition seealso">
@@ -3556,7 +3550,7 @@ integrator in use.</p>
 <p class="last">InitializeParams).</p>
 </div>
 <dl class="docutils">
-<dt>Returns <code class="docutils literal"><span class="pre">status</span></code>:</dt>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">status</span></code>:</dt>
 <dd>A SimulatorStatus object indicating success, termination, or an
 error condition as reported by event handlers or the monitor
 function.</dd>
@@ -3575,7 +3569,7 @@ current Context is deleted. This is useful for supplying a new set of
 initial conditions. You should invoke Initialize() after replacing the
 Context.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>The new context, which may be null. If the context is null, a new
 context must be set before attempting to step the system forward.</dd>
 </dl>
@@ -3585,7 +3579,7 @@ context must be set before attempting to step the system forward.</dd>
 <dt id="pydrake.systems.analysis.Simulator_[float].ResetStatistics">
 <code class="descname">ResetStatistics</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].ResetStatistics" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forget accumulated statistics. Statistics are reset to the values they
-have post construction or immediately after <code class="docutils literal"><span class="pre">Initialize()</span></code>.</p>
+have post construction or immediately after <code class="docutils literal notranslate"><span class="pre">Initialize()</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3607,11 +3601,11 @@ of Initialize() and AdvancePendingEvents(). (See the Simulator class
 documentation for more detail about what happens when in these
 methods.) The monitor receives the top-level (root) Context, from
 which any sub-Context can be obtained using
-<code class="docutils literal"><span class="pre">subsystem.GetMyContextFromRoot()</span></code>, provided the necessary subsystem
+<code class="docutils literal notranslate"><span class="pre">subsystem.GetMyContextFromRoot()</span></code>, provided the necessary subsystem
 reference has been captured for use in the monitor.</p>
 <p>** Examples Output time and continuous states whenever the trajectory
 is advanced:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">std</span><span class="p">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot; &quot;</span>
             <span class="o">&lt;&lt;</span> <span class="n">root_context</span><span class="o">.</span><span class="n">get_continuous_state_vector</span><span class="p">()</span>
             <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="p">::</span><span class="n">endl</span><span class="p">;</span>
@@ -3621,7 +3615,7 @@ is advanced:</p>
 </div>
 <p>Terminate early but successfully on a condition in a subsystem of the
 System diagram being simulated:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">my_subsystem</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">subcontext</span> <span class="o">=</span>
       <span class="n">my_subsystem</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
   <span class="k">if</span> <span class="p">(</span><span class="n">my_subsystem</span><span class="o">.</span><span class="n">GoalReached</span><span class="p">(</span><span class="n">subcontext</span><span class="p">))</span> <span class="p">{</span>
@@ -3638,7 +3632,7 @@ returned status will indicate the termination reason, and a
 human-readable termination message containing the message provided by
 the monitor can be obtained with status.FormatMessage().</p>
 <p>Failure due to plant center of mass falling below a threshold:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">simulator</span><span class="o">.</span><span class="n">set_monitor</span><span class="p">([</span><span class="o">&amp;</span><span class="n">plant</span><span class="p">](</span><span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">root_context</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">const</span> <span class="n">Context</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&amp;</span> <span class="n">plant_context</span> <span class="o">=</span>
       <span class="n">plant</span><span class="o">.</span><span class="n">GetMyContextFromRoot</span><span class="p">(</span><span class="n">root_context</span><span class="p">);</span>
   <span class="n">const</span> <span class="n">Vector3</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">com</span> <span class="o">=</span>
@@ -3681,7 +3675,7 @@ forced-publish event handler, that will be called. Otherwise, nothing
 will happen unless the DoPublish() dispatcher has been overridden.</p>
 <p>Enabling this option does not cause a forced-publish to be triggered
 at initialization; if you want that you should also call
-<code class="docutils literal"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
+<code class="docutils literal notranslate"><span class="pre">set_publish_at_initialization(true)</span></code>. If you want a forced-publish
 at the end of every step, you will usually also want one at the end of
 initialization, requiring both options to be enabled.</p>
 <div class="admonition seealso">
@@ -3716,7 +3710,7 @@ integration accuracy, using a faster integration method or fixed
 time step, or using a simpler model.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">realtime_rate</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">realtime_rate</span></code>:</dt>
 <dd>Desired rate relative to real time. Set to 1 to track real time, 2
 to run twice as fast as real time, 0.5 for half speed, etc. Zero
 or negative restores the rate to its default of 0, meaning the
@@ -3765,8 +3759,8 @@ advance time, that is, Initialize() and AdvancePendingEvents().</p>
 <dl class="method">
 <dt id="pydrake.systems.analysis.SimulatorStatus.IsIdenticalStatus">
 <code class="descname">IsIdenticalStatus</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.SimulatorStatus</em>, <em>other: pydrake.systems.analysis.SimulatorStatus</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.analysis.SimulatorStatus.IsIdenticalStatus" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true if the <code class="docutils literal"><span class="pre">other</span></code> status contains exactly the same
-information as <code class="docutils literal"><span class="pre">this</span></code> status. This is likely only useful for unit
+<dd><p>Returns true if the <code class="docutils literal notranslate"><span class="pre">other</span></code> status contains exactly the same
+information as <code class="docutils literal notranslate"><span class="pre">this</span></code> status. This is likely only useful for unit
 testing of SimulatorStatus.</p>
 </dd></dl>
 
@@ -3862,9 +3856,7 @@ should be attributed to the System as a whole.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -3873,7 +3865,7 @@ should be attributed to the System as a whole.</p>
         <a href="pydrake.systems.controllers.html" class="btn btn-neutral float-right" title="pydrake.systems.controllers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.all.html" class="btn btn-neutral" title="pydrake.systems.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.all.html" class="btn btn-neutral float-left" title="pydrake.systems.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -3897,37 +3889,15 @@ should be attributed to the System as a whole.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

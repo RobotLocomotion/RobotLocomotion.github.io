@@ -424,18 +424,18 @@ trace. As an example:</p>
         <span class="n">ignoredirs</span> <span class="o">=</span> <span class="p">[</span><span class="s">"/usr"</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">prefix</span><span class="p">]</span>
     <span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">Trace</span><span class="p">(</span><span class="n">trace</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignoredirs</span><span class="o">=</span><span class="n">ignoredirs</span><span class="p">)</span>
 
-    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="o">@</span><span class="n">functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">tracer</span><span class="o">.</span><span class="n">runfunc</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">wrapped</span>
 
 
-<span class="c"># NOTE: You don't have to trace all of your code. If you can identify a</span>
-<span class="c"># single function, then you can just decorate it with this. If you're</span>
-<span class="c"># decorating a class method, then be sure to declare these functions above</span>
-<span class="c"># it.</span>
-<span class="nd">@traced</span>
+<span class="c1"># NOTE: You don't have to trace all of your code. If you can identify a
+# single function, then you can just decorate it with this. If you're
+# decorating a class method, then be sure to declare these functions above
+# it.
+</span><span class="o">@</span><span class="n">traced</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">insert_awesome_code_here</span><span class="p">()</span>
 
@@ -461,7 +461,7 @@ actively inspect the context (like <code class="highlighter-rouge">dbstop if err
 <span class="kn">import</span> <span class="nn">traceback</span>
 
 
-<span class="nd">@contextmanager</span>
+<span class="o">@</span><span class="n">contextmanager</span>
 <span class="k">def</span> <span class="nf">launch_pdb_on_exception</span><span class="p">():</span>
     <span class="s">"""
     Provides a context that will launch interactive pdb console automatically
@@ -477,21 +477,21 @@ actively inspect the context (like <code class="highlighter-rouge">dbstop if err
         my_bad_function()
         # Should bring up debugger at `assert` statement.
     """</span>
-    <span class="c"># Adapted from:</span>
-    <span class="c"># https://github.com/gotcha/ipdb/blob/fc83b4f5f/ipdb/__main__.py#L219-L232</span>
-
+    <span class="c1"># Adapted from:
+</span>    <span class="c1"># https://github.com/gotcha/ipdb/blob/fc83b4f5f/ipdb/__main__.py#L219-L232
+</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="k">yield</span>
     <span class="k">except</span> <span class="nb">Exception</span><span class="p">:</span>
         <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
         <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">tb</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()</span>
         <span class="n">pdb</span><span class="o">.</span><span class="n">post_mortem</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-        <span class="c"># Resume original execution.</span>
-        <span class="k">raise</span>
+        <span class="c1"># Resume original execution.
+</span>        <span class="k">raise</span>
 
 
-<span class="c"># Mirror `@ipdb.iex` decorator. See docs for `launch_pdb_on_exception()`.</span>
-<span class="n">iex</span> <span class="o">=</span> <span class="n">launch_pdb_on_exception</span><span class="p">()</span>
+<span class="c1"># Mirror `@ipdb.iex` decorator. See docs for `launch_pdb_on_exception()`.
+</span><span class="n">iex</span> <span class="o">=</span> <span class="n">launch_pdb_on_exception</span><span class="p">()</span>
 </code></pre></div>  </div>
 
   <p>This generally should help you trace where the code is dying. However, if you

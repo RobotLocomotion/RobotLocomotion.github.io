@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.manipulation" href="pydrake.manipulation.html"/>
-        <link rel="next" title="pydrake.math" href="pydrake.math.html"/>
-        <link rel="prev" title="pydrake.manipulation.schunk_wsg" href="pydrake.manipulation.schunk_wsg.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.math" href="pydrake.math.html" />
+    <link rel="prev" title="pydrake.manipulation.schunk_wsg" href="pydrake.manipulation.schunk_wsg.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -130,7 +123,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -138,9 +131,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -189,7 +183,7 @@ and potentially other robotics) applications.</p>
 <dl class="class">
 <dt id="pydrake.manipulation.simple_ui.JointSliders">
 <em class="property">class </em><code class="descclassname">pydrake.manipulation.simple_ui.</code><code class="descname">JointSliders</code><span class="sig-paren">(</span><em>robot</em>, <em>lower_limit=-10.0</em>, <em>upper_limit=10.0</em>, <em>resolution=-1</em>, <em>length=200</em>, <em>update_period_sec=0.005</em>, <em>window=None</em>, <em>title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.simple_ui.JointSliders" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_[float]" title="pydrake.systems.framework.VectorSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.VectorSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.VectorSystem_[float]" title="pydrake.systems.framework.VectorSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.VectorSystem_[float]</span></code></a></p>
 <p>Provides a simple tcl/tk gui with one slider per joint of the
 MultibodyPlant.  Any positions that are not associated with joints (e.g.
 floating-base “mobilizers”) are held constant at the default value
@@ -283,7 +277,7 @@ that floating-base position, but not to any joint.</p>
 <dl class="class">
 <dt id="pydrake.manipulation.simple_ui.SchunkWsgButtons">
 <em class="property">class </em><code class="descclassname">pydrake.manipulation.simple_ui.</code><code class="descname">SchunkWsgButtons</code><span class="sig-paren">(</span><em>window=None</em>, <em>open_position=0.107</em>, <em>closed_position=0.002</em>, <em>force_limit=40</em>, <em>update_period_sec=0.05</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.manipulation.simple_ui.SchunkWsgButtons" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Adds buttons to open/close the Schunk WSG gripper to an existing Tkinter
 window.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>SchunkWsgButtons</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; position</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; max_force</td></tr></table></td></tr></table><dl class="method">
@@ -339,9 +333,7 @@ gets called.</li>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -350,7 +342,7 @@ gets called.</li>
         <a href="pydrake.math.html" class="btn btn-neutral float-right" title="pydrake.math" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.manipulation.schunk_wsg.html" class="btn btn-neutral" title="pydrake.manipulation.schunk_wsg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.manipulation.schunk_wsg.html" class="btn btn-neutral float-left" title="pydrake.manipulation.schunk_wsg" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -374,37 +366,15 @@ gets called.</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

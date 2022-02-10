@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.systems.primitives" href="pydrake.systems.primitives.html"/>
-        <link rel="prev" title="pydrake.systems.perception" href="pydrake.systems.perception.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.primitives" href="pydrake.systems.primitives.html" />
+    <link rel="prev" title="pydrake.systems.perception" href="pydrake.systems.perception.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -230,8 +224,8 @@ port.</li>
 
 <dl class="class">
 <dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer">
-<em class="property">class </em><code class="descclassname">pydrake.systems.planar_scenegraph_visualizer.</code><code class="descname">PlanarSceneGraphVisualizer</code><span class="sig-paren">(</span><em>scene_graph, draw_period=None, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.pyplot_visualizer.html#pydrake.systems.pyplot_visualizer.PyPlotVisualizer" title="pydrake.systems.pyplot_visualizer.PyPlotVisualizer"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.pyplot_visualizer.PyPlotVisualizer</span></code></a></p>
+<em class="property">class </em><code class="descclassname">pydrake.systems.planar_scenegraph_visualizer.</code><code class="descname">PlanarSceneGraphVisualizer</code><span class="sig-paren">(</span><em>scene_graph, draw_period=None, T_VW=array([[1., 0., 0., 0.],        [0., 0., 1., 0.],        [0., 0., 0., 1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.pyplot_visualizer.html#pydrake.systems.pyplot_visualizer.PyPlotVisualizer" title="pydrake.systems.pyplot_visualizer.PyPlotVisualizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.pyplot_visualizer.PyPlotVisualizer</span></code></a></p>
 <p>Given a SceneGraph and a view plane, provides a view of the robot by
 projecting all geometry onto the view plane.</p>
 <p>This is intended to be used for robots that operate in the plane, but
@@ -268,7 +262,7 @@ easier to keep handling scaling with xlim, ylim, and view plane selection
 and <em>maybe</em> offsetting with the projection matrix.</p>
 <dl class="method">
 <dt id="pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph, draw_period=None, T_VW=array([[ 1.,  0.,  0.,  0.],        [ 0.,  0.,  1.,  0.],        [ 0.,  0.,  0.,  1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scene_graph, draw_period=None, T_VW=array([[1., 0., 0., 0.],        [0., 0., 1., 0.],        [0., 0., 0., 1.]]), xlim=[-1.0, 1], ylim=[-1, 1], facecolor=[1, 1, 1], use_random_colors=False, substitute_collocated_mesh_files=True, ax=None, show=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.planar_scenegraph_visualizer.PlanarSceneGraphVisualizer.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -327,9 +321,7 @@ matplotlib.get_backend() is ‘template’.</li>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -338,7 +330,7 @@ matplotlib.get_backend() is ‘template’.</li>
         <a href="pydrake.systems.primitives.html" class="btn btn-neutral float-right" title="pydrake.systems.primitives" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.perception.html" class="btn btn-neutral" title="pydrake.systems.perception" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.perception.html" class="btn btn-neutral float-left" title="pydrake.systems.perception" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -362,37 +354,15 @@ matplotlib.get_backend() is ‘template’.</li>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.examples" href="pydrake.examples.html"/>
-        <link rel="next" title="pydrake.examples.multibody" href="pydrake.examples.multibody.html"/>
-        <link rel="prev" title="pydrake.examples.compass_gait" href="pydrake.examples.compass_gait.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.examples.multibody" href="pydrake.examples.multibody.html" />
+    <link rel="prev" title="pydrake.examples.compass_gait" href="pydrake.examples.compass_gait.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -133,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -141,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -242,7 +236,7 @@ ManipulationStation.</p>
 <dl class="class">
 <dt id="pydrake.examples.manipulation_station.ManipulationStation">
 <em class="property">class </em><code class="descclassname">pydrake.examples.manipulation_station.</code><code class="descname">ManipulationStation</code><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>A system that represents the complete manipulation station, including
 exactly one robotic arm (a Kuka IIWA LWR), one gripper (a Schunk WSG
 50), and anything a user might want to load into the model.
@@ -250,7 +244,7 @@ SetupDefaultStation() provides the setup that is used in the MIT
 Intelligent Robot Manipulation class, which includes the supporting
 structure for IIWA and several RGBD cameras. Alternative Setup___()
 methods are provided, as well.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">iiwa_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">iiwa_feedforward_torque (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">wsg_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">wsg_force_limit (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ManipulationStation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_position_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_position_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_velocity_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_state_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_external</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; wsg_state_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; wsg_force_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">query_object</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">contact_results</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">plant_continuous_state</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">geometry_poses</b></td></tr></table></td></tr></table><p>Each pixel in the output image from <code class="docutils literal"><span class="pre">depth_image</span></code> is a 16bit
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">iiwa_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">iiwa_feedforward_torque (optional)&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">wsg_position&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">wsg_force_limit (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ManipulationStation</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_position_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_position_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_velocity_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_state_estimated</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_commanded</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; iiwa_torque_external</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; wsg_state_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; wsg_force_measured</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_rgb_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; camera_[NAME]_depth_image</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_label_image</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">camera_[NAME]_point_cloud</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">query_object</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">contact_results</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">plant_continuous_state</b></td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <b style="color:orange">geometry_poses</b></td></tr></table></td></tr></table><p>Each pixel in the output image from <code class="docutils literal notranslate"><span class="pre">depth_image</span></code> is a 16bit
 unsigned short in millimeters.</p>
 <p>Note that outputs in &lt;b style=”color:orange”&gt;orange&lt;/b&gt; are available
 in the simulation, but not on the real robot. The distinction between
@@ -266,8 +260,8 @@ errors per issue
 + τ_joint_friction + τ_external, where q == position, v == velocity,
 and τ == torque.</p>
 <p>This model of the IIWA internal controller in the FRI software’s
-<code class="docutils literal"><span class="pre">JointImpedanceControlMode</span></code> is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">τ_commanded</span> <span class="o">=</span> <span class="n">Mₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">)</span><span class="n">vdot_desired</span> <span class="o">+</span> <span class="n">Cₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">,</span> <span class="n">vₑ</span><span class="p">)</span><span class="n">vₑ</span> <span class="o">-</span> <span class="n">τₑ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span>
+<code class="docutils literal notranslate"><span class="pre">JointImpedanceControlMode</span></code> is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">τ_commanded</span> <span class="o">=</span> <span class="n">Mₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">)</span><span class="n">vdot_desired</span> <span class="o">+</span> <span class="n">Cₑ</span><span class="p">(</span><span class="n">qₑ</span><span class="p">,</span> <span class="n">vₑ</span><span class="p">)</span><span class="n">vₑ</span> <span class="o">-</span> <span class="n">τₑ_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span>
                 <span class="n">τₑ_joint_friction</span> <span class="o">+</span> <span class="n">τ_feedforward</span>
   <span class="n">vdot_desired</span> <span class="o">=</span> <span class="n">PID</span><span class="p">(</span><span class="n">q_commanded</span><span class="p">,</span> <span class="n">qₑ</span><span class="p">,</span> <span class="n">v_commanded</span><span class="p">,</span> <span class="n">vₑ</span><span class="p">)</span>
 </pre></div>
@@ -276,7 +270,7 @@ and τ == torque.</p>
 of the true model, qₑ and vₑ are measured/estimation, and v_commanded
 must be obtained from an online (causal) derivative of q_commanded.
 The result is</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>M(q)vdot ≈ Mₑ(q)vdot_desired + τ_feedforward + τ_external,
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>M(q)vdot ≈ Mₑ(q)vdot_desired + τ_feedforward + τ_external,
 </pre></div>
 </div>
 <p>where the “approximately equal” comes from the differences due to the
@@ -295,7 +289,7 @@ are welded).</p>
 </div>
 <p>To add objects into the environment for the robot to manipulate, use,
 e.g.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ManipulationStation</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">station</span><span class="p">;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ManipulationStation</span><span class="o">&lt;</span><span class="n">double</span><span class="o">&gt;</span> <span class="n">station</span><span class="p">;</span>
 <span class="n">Parser</span> <span class="n">parser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">station</span><span class="o">.</span><span class="n">get_mutable_multibody_plant</span><span class="p">(),</span>
                <span class="o">&amp;</span><span class="n">station</span><span class="o">.</span><span class="n">get_mutable_scene_graph</span><span class="p">());</span>
 <span class="n">parser</span><span class="o">.</span><span class="n">AddModelFromFile</span><span class="p">(</span><span class="s2">&quot;my.sdf&quot;</span><span class="p">,</span> <span class="s2">&quot;my_model&quot;</span><span class="p">);</span>
@@ -311,7 +305,7 @@ a System.</p>
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation</em>, <em>time_step: float = 0.002</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Construct the EMPTY station model.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">time_step</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt>
 <dd>The time step used by MultibodyPlant&lt;T&gt;, and by the discrete
 derivative used to approximate velocity from the position command
 inputs.</dd>
@@ -327,9 +321,9 @@ inputs.</dd>
 <p class="last">Must be called before Finalize().</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">model_file</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_file</span></code>:</dt>
 <dd>The path to the .sdf model file of the object.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">X_WObject</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WObject</span></code>:</dt>
 <dd>The pose of the object in world frame.</dd>
 </dl>
 </dd></dl>
@@ -456,17 +450,17 @@ model.</dd>
 </ol>
 <p>Registers an RGBD sensor. Must be called before Finalize().</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">name</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">name</span></code>:</dt>
 <dd>Name for the camera.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">parent_frame</span></code>:</dt>
-<dd>The parent frame (frame P). The body that <code class="docutils literal"><span class="pre">parent_frame</span></code> is
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parent_frame</span></code>:</dt>
+<dd>The parent frame (frame P). The body that <code class="docutils literal notranslate"><span class="pre">parent_frame</span></code> is
 attached to must have a corresponding geometry::FrameId.
 Otherwise, an exception will be thrown in Finalize().</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">X_PCameraBody</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_PCameraBody</span></code>:</dt>
 <dd>Transformation between frame P and the camera body. see
 systems::sensors:::RgbdSensor for descriptions about how the
 camera body, RGB, and depth image frames are related.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">depth_camera</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">depth_camera</span></code>:</dt>
 <dd>Specification for the RGBD camera. The color render camera is
 inferred from the depth_camera. The color camera will share the
 RenderCameraCore and be configured to <em>not</em> show its window.</dd>
@@ -502,7 +496,7 @@ depth cameras.</p>
 <code class="descname">SetIiwaPosition</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStation, station_context: pydrake.systems.framework.Context_[float], q: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStation.SetIiwaPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience method for setting all of the joint angles of the Kuka
 IIWA. Also sets the position history in the velocity command
-generator. <code class="docutils literal"><span class="pre">q</span></code> must have size num_iiwa_joints().</p>
+generator. <code class="docutils literal notranslate"><span class="pre">q</span></code> must have size num_iiwa_joints().</p>
 </dd></dl>
 
 <dl class="method">
@@ -552,14 +546,14 @@ the appropriate arguments.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Only one of the <code class="docutils literal"><span class="pre">Setup___()</span></code> methods should be called.</p>
+<p class="last">Only one of the <code class="docutils literal notranslate"><span class="pre">Setup___()</span></code> methods should be called.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">X_WCameraBody</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WCameraBody</span></code>:</dt>
 <dd>Transformation between the world and the camera body.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">collision_model</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_model</span></code>:</dt>
 <dd>Determines which sdf is loaded for the IIWA.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">schunk_model</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">schunk_model</span></code>:</dt>
 <dd>Determines which sdf is loaded for the Schunk.</dd>
 </dl>
 </dd></dl>
@@ -577,12 +571,12 @@ the appropriate arguments.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Only one of the <code class="docutils literal"><span class="pre">Setup___()</span></code> methods should be called.</p>
+<p class="last">Only one of the <code class="docutils literal notranslate"><span class="pre">Setup___()</span></code> methods should be called.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">collision_model</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">collision_model</span></code>:</dt>
 <dd>Determines which sdf is loaded for the IIWA.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">schunk_model</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">schunk_model</span></code>:</dt>
 <dd>Determines which sdf is loaded for the Schunk.</dd>
 </dl>
 </dd></dl>
@@ -602,10 +596,10 @@ manipulands) will still potentially move in 3D.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Only one of the <code class="docutils literal"><span class="pre">Setup___()</span></code> methods should be called.</p>
+<p class="last">Only one of the <code class="docutils literal notranslate"><span class="pre">Setup___()</span></code> methods should be called.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">schunk_model</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">schunk_model</span></code>:</dt>
 <dd>Determines which sdf is loaded for the Schunk.</dd>
 </dl>
 </dd></dl>
@@ -644,7 +638,7 @@ state of the fingers individually).</p>
 <dl class="class">
 <dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface">
 <em class="property">class </em><code class="descclassname">pydrake.examples.manipulation_station.</code><code class="descname">ManipulationStationHardwareInterface</code><a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>A System that connects via message-passing to the hardware
 manipulation station.</p>
 <p>Note: Users must call Connect() after initialization.</p>
@@ -652,7 +646,7 @@ manipulation station.</p>
 <dt id="pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.manipulation_station.ManipulationStationHardwareInterface</em>, <em>camera_names: List[str] = []</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.manipulation_station.ManipulationStationHardwareInterface.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Subscribes to an incoming camera message on the channel
-DRAKE_RGBD_CAMERA_IMAGES_&lt;camera_id&gt; where <code class="docutils literal"><span class="pre">camera_name</span></code> contains
+DRAKE_RGBD_CAMERA_IMAGES_&lt;camera_id&gt; where <code class="docutils literal notranslate"><span class="pre">camera_name</span></code> contains
 the names/unique ids, typically serial numbers, and declares the
 output ports camera_%s_rgb_image and camera_%s_depth_image, where s is
 the camera name.</p>
@@ -732,9 +726,7 @@ box collision geometry on the fingers.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -743,7 +735,7 @@ box collision geometry on the fingers.</p>
         <a href="pydrake.examples.multibody.html" class="btn btn-neutral float-right" title="pydrake.examples.multibody" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.examples.compass_gait.html" class="btn btn-neutral" title="pydrake.examples.compass_gait" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.examples.compass_gait.html" class="btn btn-neutral float-left" title="pydrake.examples.compass_gait" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -767,37 +759,15 @@ box collision geometry on the fingers.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

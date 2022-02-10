@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.systems.perception" href="pydrake.systems.perception.html"/>
-        <link rel="prev" title="pydrake.systems.lcm" href="pydrake.systems.lcm.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.perception" href="pydrake.systems.perception.html" />
+    <link rel="prev" title="pydrake.systems.lcm" href="pydrake.systems.lcm.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -261,7 +255,7 @@ port.</li>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Passing a scene_graph object also makes it possible to call
-<code class="docutils literal"><span class="pre">visualizer.load()</span></code>, without passing a <code class="docutils literal"><span class="pre">Context</span></code> to the
+<code class="docutils literal notranslate"><span class="pre">visualizer.load()</span></code>, without passing a <code class="docutils literal notranslate"><span class="pre">Context</span></code> to the
 constructed visualizer.</p>
 </div>
 </dd></dl>
@@ -269,7 +263,7 @@ constructed visualizer.</p>
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface">
 <em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">HydroTriSurface</code><span class="sig-paren">(</span><em>vertices</em>, <em>normals</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">meshcat.geometry.Geometry</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">meshcat.geometry.Geometry</span></code></p>
 <p>Unique representation of the triangle surface mesh associated with
 hydroelastic mesh representations. In this case, it’s important that we
 support per-face normals (we want as honest a representation of the
@@ -304,7 +298,8 @@ mesh = HydroTriSurface(vertices, normals)</p>
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>vertices</em>, <em>normals</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.HydroTriSurface.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.HydroTriSurface.lower">
@@ -326,7 +321,7 @@ mesh = HydroTriSurface(vertices, normals)</p>
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer">
 <em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatContactVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz</em>, <em>force_threshold=0.01</em>, <em>contact_force_scale=10</em>, <em>plant=None</em>, <em>contact_force_radius=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>MeshcatContactVisualizer is a System block that visualizes contact
 forces. It is connected to the contact results output port of
 SceneGraph’s associated MultibodyPlant.</p>
@@ -356,29 +351,49 @@ to visualize the forces.</li>
 
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.DoPublish">
-<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.Context_[float], arg1: List[pydrake.systems.framework.PublishEvent_[float]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived-class event dispatcher for all simultaneous publish events in
+<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
+require behavior other than the default dispatch behavior (not
+common). The default behavior is to traverse events in the arbitrary
+order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
+callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
+event.</p>
+<p>Do not override this just to handle an event – instead declare the
+event and a handler callback for it using one of the
+<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
+<p>This method is called only from the virtual DispatchPublishHandler,
+which is only called from the public non-virtual Publish(), which will
+have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
+valid.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Const current context.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt>
+<dd>All the publish events that need handling.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer">
 <em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatPointCloudVisualizer</code><span class="sig-paren">(</span><em>meshcat_viz, draw_period=0.03125, name='point_cloud', X_WP=RigidTransform(   R=RotationMatrix([     [1.0, 0.0, 0.0],     [0.0, 1.0, 0.0],     [0.0, 0.0, 1.0],   ]),   p=[0.0, 0.0, 0.0], ), default_rgb=[255.0, 255.0, 255.0]</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>MeshcatPointCloudVisualizer is a System block that visualizes a
 PointCloud in meshcat. The PointCloud:</p>
 <ul class="simple">
-<li>Must have XYZ values. Assumed to be in point cloud frame, <code class="docutils literal"><span class="pre">P</span></code>.</li>
+<li>Must have XYZ values. Assumed to be in point cloud frame, <code class="docutils literal notranslate"><span class="pre">P</span></code>.</li>
 <li>RGB values are optional; if provided, they must be on the range [0..255].</li>
 </ul>
 <p>An example using a pydrake MeshcatVisualizer:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">MeshcatVisualizer</span><span class="p">(</span><span class="n">scene_graph</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">MeshcatVisualizer</span><span class="p">(</span><span class="n">scene_graph</span><span class="p">))</span>
 <span class="n">pc_viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span>
     <span class="n">MeshcatPointCloudVisualizer</span><span class="p">(</span><span class="n">viz</span><span class="p">,</span> <span class="n">viz</span><span class="o">.</span><span class="n">draw_period</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Using a native meshcat.Visualizer:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">viz</span> <span class="o">=</span> <span class="n">meshcat</span><span class="o">.</span><span class="n">Visualizer</span><span class="p">()</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">viz</span> <span class="o">=</span> <span class="n">meshcat</span><span class="o">.</span><span class="n">Visualizer</span><span class="p">()</span>
 <span class="n">pc_viz</span> <span class="o">=</span> <span class="n">builder</span><span class="o">.</span><span class="n">AddSystem</span><span class="p">(</span><span class="n">MeshcatPointCloudVisualizer</span><span class="p">(</span><span class="n">viz</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -395,7 +410,7 @@ MeshcatVisualizer object.</li>
 <li><strong>draw_period</strong> – The rate at which this class publishes to the
 visualizer.</li>
 <li><strong>name</strong> – The string name of the meshcat object.</li>
-<li><strong>X_WP</strong> – Pose of point cloud frame <code class="docutils literal"><span class="pre">P</span></code> in meshcat world frame <code class="docutils literal"><span class="pre">W</span></code>.
+<li><strong>X_WP</strong> – Pose of point cloud frame <code class="docutils literal notranslate"><span class="pre">P</span></code> in meshcat world frame <code class="docutils literal notranslate"><span class="pre">W</span></code>.
 Default is identity.</li>
 <li><strong>default_rgb</strong> – RGB value for published points if the PointCloud does
 not provide RGB values.</li>
@@ -408,19 +423,39 @@ not provide RGB values.</li>
 
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.DoPublish">
-<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.Context_[float], arg1: List[pydrake.systems.framework.PublishEvent_[float]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived-class event dispatcher for all simultaneous publish events in
+<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
+require behavior other than the default dispatch behavior (not
+common). The default behavior is to traverse events in the arbitrary
+order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
+callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
+event.</p>
+<p>Do not override this just to handle an event – instead declare the
+event and a handler callback for it using one of the
+<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
+<p>This method is called only from the virtual DispatchPublishHandler,
+which is only called from the public non-virtual Publish(), which will
+have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
+valid.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Const current context.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt>
+<dd>All the publish events that need handling.</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer">
 <em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">MeshcatVisualizer</code><span class="sig-paren">(</span><em>scene_graph=None</em>, <em>draw_period=0.03125</em>, <em>prefix='drake'</em>, <em>zmq_url='default'</em>, <em>open_browser=None</em>, <em>frames_to_draw=[]</em>, <em>frames_opacity=1.0</em>, <em>axis_length=0.15</em>, <em>axis_radius=0.006</em>, <em>delete_prefix_on_load=True</em>, <em>role=&lt;Role.kIllustration: 2&gt;</em>, <em>prefer_hydro=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>MeshcatVisualizer is a System block that connects to the query output port
 of a SceneGraph and visualizes the scene in Meshcat.</p>
 <p>The most common workflow would be to run:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="nd">@meshcat_python</span><span class="o">//</span><span class="p">:</span><span class="n">meshcat</span><span class="o">-</span><span class="n">server</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="nd">@meshcat_python</span><span class="o">//</span><span class="p">:</span><span class="n">meshcat</span><span class="o">-</span><span class="n">server</span>
 </pre></div>
 </div>
 <p>in another terminal, open the url printed in that terminal in your browser,
@@ -435,19 +470,19 @@ default url.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>scene_graph</strong> – A SceneGraph object.  This argument is optional, and
-is only needed to enable calls to <code class="docutils literal"><span class="pre">load()</span></code> without providing
+is only needed to enable calls to <code class="docutils literal notranslate"><span class="pre">load()</span></code> without providing
 a Context.</li>
 <li><strong>draw_period</strong> – The rate at which this class publishes to the
 visualizer.</li>
 <li><strong>prefix</strong> – Appears as the root of the tree structure in the meshcat
 data structure</li>
 <li><strong>zmq_url</strong> – Optionally set a url to connect to the visualizer.
-Use <code class="docutils literal"><span class="pre">zmp_url=&quot;default&quot;</span></code> to the value obtained by running a
-single <code class="docutils literal"><span class="pre">meshcat-server</span></code> in another terminal.
-Use <code class="docutils literal"><span class="pre">zmp_url=None</span></code> or <code class="docutils literal"><span class="pre">zmq_url=&quot;new&quot;</span></code> to start a new server
+Use <code class="docutils literal notranslate"><span class="pre">zmp_url=&quot;default&quot;</span></code> to the value obtained by running a
+single <code class="docutils literal notranslate"><span class="pre">meshcat-server</span></code> in another terminal.
+Use <code class="docutils literal notranslate"><span class="pre">zmp_url=None</span></code> or <code class="docutils literal notranslate"><span class="pre">zmq_url=&quot;new&quot;</span></code> to start a new server
 (as a child of this process); a new web browser will be opened
 (the url will also be printed to the console).
-Use e.g. <code class="docutils literal"><span class="pre">zmq_url=&quot;tcp://127.0.0.1:6000&quot;</span></code> to specify a
+Use e.g. <code class="docutils literal notranslate"><span class="pre">zmq_url=&quot;tcp://127.0.0.1:6000&quot;</span></code> to specify a
 specific address.</li>
 <li><strong>open_browser</strong> – Set to True to open the meshcat browser url in your
 default web browser.  The default value of None will open the
@@ -467,7 +502,7 @@ simulation.  False allows for the possibility of caching object
 meshes on the zmqserver/clients, to avoid repeatedly
 downloading meshes over the websockets link, but will cause
 geometry from previous simulations to remain in the scene.  You
-may call <code class="docutils literal"><span class="pre">delete_prefix()</span></code> manually to clear the scene.</li>
+may call <code class="docutils literal notranslate"><span class="pre">delete_prefix()</span></code> manually to clear the scene.</li>
 <li><strong>role</strong> – Renders geometry of the specified pydrake.geometry.Role
 type – defaults to Role.kIllustration to draw visual geometry,
 and also supports Role.kProximity to draw collision geometry.</li>
@@ -486,7 +521,7 @@ representations of those geometries.</li>
 </table>
 <p>Additional kwargs will be passed to the meshcat.Visualizer constructor.
 .. note:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>This call will not return until it connects to the
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>This call will not return until it connects to the
 ``meshcat-server``.
 </pre></div>
 </div>
@@ -497,7 +532,7 @@ representations of those geometries.</li>
 <em class="property">static </em><code class="descname">add_argparse_argument</code><span class="sig-paren">(</span><em>parser</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.add_argparse_argument" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a common command-line interface for including meshcat support
 in a python executable.  Example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="vm">__doc__</span><span class="p">)</span>
 <span class="o">...</span>
 <span class="n">MeshcatVisualizer</span><span class="o">.</span><span class="n">add_argparse_argument</span><span class="p">(</span><span class="n">parser</span><span class="p">)</span>
 <span class="o">...</span>
@@ -517,14 +552,34 @@ in a python executable.  Example:</p>
 <dd><p>Manually delete the meshcat prefix path specified in the constructor.
 All objects/transforms at or below this path will be removed.  This
 effectively clears all previous visualizations.  You will need to call
-<code class="docutils literal"><span class="pre">load()</span></code> directly, or trigger the initialization event that occurs at
+<code class="docutils literal notranslate"><span class="pre">load()</span></code> directly, or trigger the initialization event that occurs at
 the beginning of a simulation, to see any visualizations.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.DoPublish">
-<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>context</em>, <em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">DoPublish</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.LeafSystem_[float], arg0: pydrake.systems.framework.Context_[float], arg1: List[pydrake.systems.framework.PublishEvent_[float]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.DoPublish" title="Permalink to this definition">¶</a></dt>
+<dd><p>Derived-class event dispatcher for all simultaneous publish events in
+<code class="docutils literal notranslate"><span class="pre">events</span></code>. Override this in your derived LeafSystem only if you
+require behavior other than the default dispatch behavior (not
+common). The default behavior is to traverse events in the arbitrary
+order they appear in <code class="docutils literal notranslate"><span class="pre">events</span></code>, and for each event that has a
+callback function, to invoke the callback with <code class="docutils literal notranslate"><span class="pre">context</span></code> and that
+event.</p>
+<p>Do not override this just to handle an event – instead declare the
+event and a handler callback for it using one of the
+<code class="docutils literal notranslate"><span class="pre">Declare...PublishEvent()</span></code> methods.</p>
+<p>This method is called only from the virtual DispatchPublishHandler,
+which is only called from the public non-virtual Publish(), which will
+have already error-checked <code class="docutils literal notranslate"><span class="pre">context</span></code> so you may assume that it is
+valid.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>Const current context.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">events</span></code>:</dt>
+<dd>All the publish events that need handling.</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.get_geometry_query_input_port">
@@ -534,11 +589,11 @@ the beginning of a simulation, to see any visualizations.</p>
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.MeshcatVisualizer.load">
 <code class="descname">load</code><span class="sig-paren">(</span><em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.MeshcatVisualizer.load" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads <code class="docutils literal"><span class="pre">meshcat</span></code> visualization elements.</p>
+<dd><p>Loads <code class="docutils literal notranslate"><span class="pre">meshcat</span></code> visualization elements.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>Either the context is a valid Context for this system with the
-geometry_query port connected or the <code class="docutils literal"><span class="pre">scene_graph</span></code> passed in the
+geometry_query port connected or the <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> passed in the
 constructor must be a valid SceneGraph.</dd>
 </dl>
 </dd></dl>
@@ -614,13 +669,14 @@ pan and zoom interactively in the browser.</p>
 <dl class="class">
 <dt id="pydrake.systems.meshcat_visualizer.StringToRoleAction">
 <em class="property">class </em><code class="descclassname">pydrake.systems.meshcat_visualizer.</code><code class="descname">StringToRoleAction</code><span class="sig-paren">(</span><em>option_strings</em>, <em>dest</em>, <em>nargs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.StringToRoleAction" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">argparse.Action</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.Action</span></code></p>
 <p>Action that converts the string ‘proximity’ or ‘illustration’ to the
 corresponding Role enumeration value.</p>
 <dl class="method">
 <dt id="pydrake.systems.meshcat_visualizer.StringToRoleAction.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>option_strings</em>, <em>dest</em>, <em>nargs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.meshcat_visualizer.StringToRoleAction.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -628,9 +684,7 @@ corresponding Role enumeration value.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -639,7 +693,7 @@ corresponding Role enumeration value.</p>
         <a href="pydrake.systems.perception.html" class="btn btn-neutral float-right" title="pydrake.systems.perception" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.lcm.html" class="btn btn-neutral" title="pydrake.systems.lcm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.lcm.html" class="btn btn-neutral float-left" title="pydrake.systems.lcm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -663,37 +717,15 @@ corresponding Role enumeration value.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

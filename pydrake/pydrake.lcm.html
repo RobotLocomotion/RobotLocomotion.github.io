@@ -17,44 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="next" title="pydrake.manipulation" href="pydrake.manipulation.html"/>
-        <link rel="prev" title="pydrake.geometry.render" href="pydrake.geometry.render.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.manipulation" href="pydrake.manipulation.html" />
+    <link rel="prev" title="pydrake.geometry.render" href="pydrake.geometry.render.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -122,7 +116,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -130,9 +124,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -177,7 +172,7 @@
 <dl class="class">
 <dt id="pydrake.lcm.DrakeLcm">
 <em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">DrakeLcm</code><a class="headerlink" href="#pydrake.lcm.DrakeLcm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><code class="xref py py-class docutils literal"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.lcm.DrakeLcmInterface" title="pydrake.lcm.DrakeLcmInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.lcm.DrakeLcmInterface</span></code></a></p>
 <p>A wrapper around a <em>real</em> LCM instance.</p>
 <dl class="method">
 <dt id="pydrake.lcm.DrakeLcm.__init__">
@@ -199,13 +194,13 @@ as per the no-argument constructor.</p>
 <p>(Advanced) Constructs using the given URL, but with the ability to
 defer launching the receive thread.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">defer_initialization</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">defer_initialization</span></code>:</dt>
 <dd>controls whether or not LCM’s background receive thread will be
 launched immediately during the constructor (when false) or
 deferred until the first time it’s needed (when true). This can be
 useful if the scheduling configuration for new threads varies
 between the construction time and first use. For other constructor
-overloads, this setting defaults to <code class="docutils literal"><span class="pre">False</span></code> – the thread is
+overloads, this setting defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code> – the thread is
 launched immediately.</dd>
 </dl>
 </dd></dl>
@@ -249,7 +244,7 @@ RFC(s).</p>
 <dt id="pydrake.lcm.DrakeLcmInterface.HandleSubscriptions">
 <code class="descname">HandleSubscriptions</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcmInterface</em>, <em>timeout_millis: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.HandleSubscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Invokes the HandlerFunction callbacks for all subscriptions’ pending
-messages. If <code class="docutils literal"><span class="pre">timeout_millis</span></code> is &gt;0, blocks for up to that long
+messages. If <code class="docutils literal notranslate"><span class="pre">timeout_millis</span></code> is &gt;0, blocks for up to that long
 until at least one message is handled.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -268,17 +263,17 @@ until at least one message is handled.</p>
 <code class="descname">Publish</code><span class="sig-paren">(</span><em>self: pydrake.lcm.DrakeLcmInterface</em>, <em>channel: str</em>, <em>buffer: bytes</em>, <em>time_sec: Optional[float] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.lcm.DrakeLcmInterface.Publish" title="Permalink to this definition">¶</a></dt>
 <dd><p>Most users should use the drake::lcm::Publish() free function, instead
 of this interface method.</p>
-<p>Publishes an LCM message on channel <code class="docutils literal"><span class="pre">channel</span></code>.</p>
+<p>Publishes an LCM message on channel <code class="docutils literal notranslate"><span class="pre">channel</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">channel</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt>
 <dd>The channel on which to publish the message. Must not be the empty
 string.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">data</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">data</span></code>:</dt>
 <dd>A buffer containing the serialized bytes of the message to
 publish.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">data_size</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">data_size</span></code>:</dt>
 <dd>The length of &#64;data in bytes.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">time_sec</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_sec</span></code>:</dt>
 <dd>Time in seconds when the publish event occurred. If unknown, use
 nullopt or a default-constructed optional.</dd>
 </dl>
@@ -289,7 +284,7 @@ nullopt or a default-constructed optional.</dd>
 <dl class="class">
 <dt id="pydrake.lcm.DrakeMockLcm">
 <em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">DrakeMockLcm</code><a class="headerlink" href="#pydrake.lcm.DrakeMockLcm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.lcm.DrakeLcm" title="pydrake.lcm.DrakeLcm"><code class="xref py py-class docutils literal"><span class="pre">pydrake.lcm.DrakeLcm</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.lcm.DrakeLcm" title="pydrake.lcm.DrakeLcm"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.lcm.DrakeLcm</span></code></a></p>
 <p>DrakeMockLcm is deprecated and will be removed from Drake on or after 2022-03-01. Use DrakeLcm(“memq://”) instead.</p>
 <dl class="method">
 <dt id="pydrake.lcm.DrakeMockLcm.__init__">
@@ -302,7 +297,7 @@ nullopt or a default-constructed optional.</dd>
 <dl class="class">
 <dt id="pydrake.lcm.Subscriber">
 <em class="property">class </em><code class="descclassname">pydrake.lcm.</code><code class="descname">Subscriber</code><span class="sig-paren">(</span><em>lcm</em>, <em>channel</em>, <em>lcm_type</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.lcm.Subscriber" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Subscribes to and stores a copy of the most recent message on a given
 channel, for some message type.  This class does NOT provide any mutex
 behavior for multi-threaded locking; it should only be used in cases where
@@ -338,9 +333,7 @@ thread that owns all copies of this object.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -349,7 +342,7 @@ thread that owns all copies of this object.</p>
         <a href="pydrake.manipulation.html" class="btn btn-neutral float-right" title="pydrake.manipulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.geometry.render.html" class="btn btn-neutral" title="pydrake.geometry.render" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.geometry.render.html" class="btn btn-neutral float-left" title="pydrake.geometry.render" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -373,37 +366,15 @@ thread that owns all copies of this object.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

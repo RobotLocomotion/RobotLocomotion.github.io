@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.systems" href="pydrake.systems.html"/>
-        <link rel="next" title="pydrake.systems.drawing" href="pydrake.systems.drawing.html"/>
-        <link rel="prev" title="pydrake.systems.analysis" href="pydrake.systems.analysis.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.systems.drawing" href="pydrake.systems.drawing.html" />
+    <link rel="prev" title="pydrake.systems.analysis" href="pydrake.systems.analysis.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -141,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -149,9 +142,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -200,19 +194,19 @@
 <code class="descclassname">pydrake.systems.controllers.</code><code class="descname">DiscreteTimeLinearQuadraticRegulator</code><span class="sig-paren">(</span><em>A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], B: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[numpy.float64[m, n]], numpy.ndarray[numpy.float64[m, n]]]<a class="headerlink" href="#pydrake.systems.controllers.DiscreteTimeLinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the optimal feedback controller, u=-Kx, and the optimal
 cost-to-go J = x’Sx for the problem:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[x[n+1] = Ax[n] + Bu[n]\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u \sum_0^\infty x'Qx + u'Ru\]</div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
 <dd>The state-space dynamics matrix of size num_states x num_states.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">B</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">B</span></code>:</dt>
 <dd>The state-space input matrix of size num_states x num_inputs.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt>
 <dd>A symmetric positive semi-definite cost matrix of size num_states
 x num_states.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R</span></code>:</dt>
 <dd>A symmetric positive definite cost matrix of size num_inputs x
 num_inputs.</dd>
 </dl>
@@ -305,7 +299,7 @@ has run once), not zero.</p>
 <dd><p>Solves the differential Riccati equation to compute the optimal
 controller and optimal cost-to-go for the finite-horizon linear
 quadratic regulator:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u (x(t_f)-x_d(t_f))'Q_f(x(t_f)-x_d(t_f)) + \int_{t_0}^{t_f}\]</div>
 <p>(x(t)-x_d(t))’Q(x(t)-x_d(t)) dt + int_{t_0}^{t_f}
 (u(t)-u_d(t))’R(u(t)-u_d(t)) dt + int_{t_0}^{t_f}
@@ -314,27 +308,27 @@ u_0(t)) + c(t)</p>
 <p>where A(t), B(t), and c(t) are taken from the gradients of the
 continuous-time dynamics ẋ = f(t,x,u), as A(t) = dfdx(t, x0(t),
 u0(t)), B(t) = dfdu(t, x0(t), u0(t)), and c(t) = f(t, x0(t), u0(t)) -
-ẋ0(t). x0(t) and u0(t) can be specified in <code class="docutils literal"><span class="pre">options</span></code>, otherwise are
-taken to be constant trajectories with values given by <code class="docutils literal"><span class="pre">context</span></code>.</p>
+ẋ0(t). x0(t) and u0(t) can be specified in <code class="docutils literal notranslate"><span class="pre">options</span></code>, otherwise are
+taken to be constant trajectories with values given by <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>a System&lt;double&gt; representing the plant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>a Context&lt;double&gt; used to pass the default input, state, and
-parameters. Note: Use <code class="docutils literal"><span class="pre">options</span></code> to specify time-varying nominal
+parameters. Note: Use <code class="docutils literal notranslate"><span class="pre">options</span></code> to specify time-varying nominal
 state and/or input trajectories.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">t0</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">t0</span></code>:</dt>
 <dd>is the initial time.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">tf</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">tf</span></code>:</dt>
 <dd>is the final time (with tf &gt; t0).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt>
 <dd>is nxn positive semi-definite.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R</span></code>:</dt>
 <dd>is mxm positive definite.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
 <dd>is the optional FiniteHorizonLinearQuadraticRegulatorOptions.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">system</span></code> must be a System&lt;double&gt; with (only) n continuous state
+<dd><code class="docutils literal notranslate"><span class="pre">system</span></code> must be a System&lt;double&gt; with (only) n continuous state
 variables and m inputs. It must be convertable to
 System&lt;AutoDiffXd&gt;.</dd>
 </dl>
@@ -442,7 +436,15 @@ term.</p>
 <dl class="attribute">
 <dt id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K">
 <code class="descname">K</code><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult.K" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Note</em> – This K is the K_x term in the derivation notes.</p>
+<dd><p>This K is the K_x term in the derivation notes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">Note</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="attribute">
@@ -483,34 +485,34 @@ term.</p>
 <dd><p>Implements Fitted Value Iteration on a (triangulated) Barycentric
 Mesh, which designs a state-feedback policy to minimize the
 infinite-horizon cost ∑ γⁿ g(x[n],u[n]), where γ is the discount
-factor in <code class="docutils literal"><span class="pre">options</span></code>.</p>
+factor in <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
 <p>For background, and a description of this algorithm, see
 <a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=dp">http://underactuated.csail.mit.edu/underactuated.html?chapter=dp</a> . It
 currently requires that the system to be optimized has only continuous
 state and it is assumed to be time invariant. This code makes a
-discrete-time approximation (using <code class="docutils literal"><span class="pre">timestep)</span></code> for the value
+discrete-time approximation (using <code class="docutils literal notranslate"><span class="pre">timestep)</span></code> for the value
 iteration update.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>contains the reference to the System being optimized and to a
 Context for that system, which may contain non-default Parameters,
-etc. The <code class="docutils literal"><span class="pre">simulator</span></code> is run for <code class="docutils literal"><span class="pre">timestep</span></code> seconds from every
+etc. The <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is run for <code class="docutils literal notranslate"><span class="pre">timestep</span></code> seconds from every
 point on the mesh in order to approximate the dynamics; all of the
 simulation parameters (integrator, etc) are relevant during that
 evaluation.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">cost_function</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost_function</span></code>:</dt>
 <dd>is the continuous-time instantaneous cost. This implementation of
 the discrete-time formulation above uses the approximation g(x,u)
 = timestep*cost_function(x,u).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">state_grid</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_grid</span></code>:</dt>
 <dd>defines the mesh on the state space used to represent the
 cost-to-go function and the resulting policy.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">input_grid</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_grid</span></code>:</dt>
 <dd>defines the discrete action space used in the value iteration
 update.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">timestep</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timestep</span></code>:</dt>
 <dd>a time in seconds used for the discrete-time approximation.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
 <dd>optional DynamicProgrammingOptions structure.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -519,11 +521,11 @@ update.</dd>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a std::pair containing the resulting policy, implemented as a
 BarycentricMeshSystem, and the RowVectorXd J that defines the
-expected cost-to-go on a BarycentricMesh using <code class="docutils literal"><span class="pre">state_grid</span></code>. The
+expected cost-to-go on a BarycentricMesh using <code class="docutils literal notranslate"><span class="pre">state_grid</span></code>. The
 policy has a single vector input (which is the continuous state of
-the system passed in through <code class="docutils literal"><span class="pre">simulator)</span></code> and a single vector
+the system passed in through <code class="docutils literal notranslate"><span class="pre">simulator)</span></code> and a single vector
 output (which is the input of the system passed in through
-<code class="docutils literal"><span class="pre">simulator)</span></code>.</td>
+<code class="docutils literal notranslate"><span class="pre">simulator)</span></code>.</td>
 </tr>
 </tbody>
 </table>
@@ -532,11 +534,11 @@ output (which is the input of the system passed in through
 <dl class="class">
 <dt id="pydrake.systems.controllers.InverseDynamics">
 <em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">InverseDynamics</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Solves inverse dynamics with no consideration for joint actuator force
 limits. The system also provides a pure gravity compensation mode.
-This system provides a BasicVector input port for the state <code class="docutils literal"><span class="pre">(q,</span>
-<span class="pre">v)</span></code>, where <code class="docutils literal"><span class="pre">q</span></code> is the generalized position and <code class="docutils literal"><span class="pre">v</span></code> is the
+This system provides a BasicVector input port for the state <code class="docutils literal notranslate"><span class="pre">(q,</span>
+<span class="pre">v)</span></code>, where <code class="docutils literal notranslate"><span class="pre">q</span></code> is the generalized position and <code class="docutils literal notranslate"><span class="pre">v</span></code> is the
 generalized velocity, and a BasicVector output port for the computed
 generalized forces. There is an additional BasicVector input port for
 desired acceleration when configured to be <strong>not</strong> in pure gravity
@@ -550,37 +552,37 @@ differently.</p>
 <p class="last">Constructors for descriptions of how (and which) forces are
 incorporated into the inverse dynamics computation.</p>
 </div>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamics</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Port <code class="docutils literal"><span class="pre">u0</span></code> accepts system state; port <code class="docutils literal"><span class="pre">y0</span></code> emits generalized
-forces. Port <code class="docutils literal"><span class="pre">u1</span></code> is only present when the <code class="docutils literal"><span class="pre">mode</span></code> at construction
-is not <code class="docutils literal"><span class="pre">kGravityCompensation</span></code>. When present, <code class="docutils literal"><span class="pre">u1</span></code> accepts desired
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">u0&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">u1</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamics</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; y0</td></tr></table></td></tr></table><p>Port <code class="docutils literal notranslate"><span class="pre">u0</span></code> accepts system state; port <code class="docutils literal notranslate"><span class="pre">y0</span></code> emits generalized
+forces. Port <code class="docutils literal notranslate"><span class="pre">u1</span></code> is only present when the <code class="docutils literal notranslate"><span class="pre">mode</span></code> at construction
+is not <code class="docutils literal notranslate"><span class="pre">kGravityCompensation</span></code>. When present, <code class="docutils literal notranslate"><span class="pre">u1</span></code> accepts desired
 accelerations.</p>
 <dl class="method">
 <dt id="pydrake.systems.controllers.InverseDynamics.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamics, plant: pydrake.multibody.plant.MultibodyPlant_[float], mode: drake::systems::controllers::InverseDynamics&lt;double&gt;::InverseDynamicsMode</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamics.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Computes the generalized force <code class="docutils literal"><span class="pre">tau_id</span></code> that needs to be applied so
-that the multibody system undergoes a desired acceleration <code class="docutils literal"><span class="pre">vd_d</span></code>.
-That is, <code class="docutils literal"><span class="pre">tau_id</span></code> is the result of an inverse dynamics computation
+<dd><p>Computes the generalized force <code class="docutils literal notranslate"><span class="pre">tau_id</span></code> that needs to be applied so
+that the multibody system undergoes a desired acceleration <code class="docutils literal notranslate"><span class="pre">vd_d</span></code>.
+That is, <code class="docutils literal notranslate"><span class="pre">tau_id</span></code> is the result of an inverse dynamics computation
 according to:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tau_id</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">-</span> <span class="n">tau_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="n">tau_app</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tau_id</span> <span class="o">=</span> <span class="n">M</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="n">vd_d</span> <span class="o">+</span> <span class="n">C</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span><span class="n">v</span> <span class="o">-</span> <span class="n">tau_g</span><span class="p">(</span><span class="n">q</span><span class="p">)</span> <span class="o">-</span> <span class="n">tau_app</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">M(q)</span></code> is the mass matrix, <code class="docutils literal"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias term
-containing Coriolis and gyroscopic effects, <code class="docutils literal"><span class="pre">tau_g(q)</span></code> is the vector
-of generalized forces due to gravity and <code class="docutils literal"><span class="pre">tau_app</span></code> contains applied
+<p>where <code class="docutils literal notranslate"><span class="pre">M(q)</span></code> is the mass matrix, <code class="docutils literal notranslate"><span class="pre">C(q,</span> <span class="pre">v)v</span></code> is the bias term
+containing Coriolis and gyroscopic effects, <code class="docutils literal notranslate"><span class="pre">tau_g(q)</span></code> is the vector
+of generalized forces due to gravity and <code class="docutils literal notranslate"><span class="pre">tau_app</span></code> contains applied
 forces from force elements added to the multibody model (this can
 include damping, springs, etc. See
 MultibodyPlant::CalcForceElementsContribution()).</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
-<dd>Pointer to the multibody plant model. The life span of <code class="docutils literal"><span class="pre">plant</span></code>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>Pointer to the multibody plant model. The life span of <code class="docutils literal notranslate"><span class="pre">plant</span></code>
 must be longer than that of this instance.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">mode</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mode</span></code>:</dt>
 <dd>If set to kGravityCompensation, this instance will only consider
 the gravity term. It also will NOT have the desired acceleration
 input port.</dd>
 <dt>Precondition:</dt>
 <dd>The plant must be finalized (i.e., plant.is_finalized() must
-return <code class="docutils literal"><span class="pre">True</span></code>).</dd>
+return <code class="docutils literal notranslate"><span class="pre">True</span></code>).</dd>
 </dl>
 </dd></dl>
 
@@ -637,23 +639,23 @@ return <code class="docutils literal"><span class="pre">True</span></code>).</dd
 <dl class="class">
 <dt id="pydrake.systems.controllers.InverseDynamicsController">
 <em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">InverseDynamicsController</code><a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>A state feedback controller that uses a PidController to generate
 desired accelerations, which are then converted into torques using
 InverseDynamics. More specifically, the output of this controller is:
-<code class="docutils literal"><span class="pre">torque</span> <span class="pre">=</span> <span class="pre">inverse_dynamics(q,</span> <span class="pre">v,</span> <span class="pre">vd_d)</span></code>, where <code class="docutils literal"><span class="pre">vd_d</span> <span class="pre">=</span> <span class="pre">kp(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span>
-<span class="pre">kd(v*</span> <span class="pre">-</span> <span class="pre">v)</span> <span class="pre">+</span> <span class="pre">ki</span> <span class="pre">int(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span> <span class="pre">vd*</span></code>. <cite>q</cite> and <code class="docutils literal"><span class="pre">v</span></code> stand for the
-generalized position and velocity, and <code class="docutils literal"><span class="pre">vd</span></code> is the generalized
-acceleration. <code class="docutils literal"><span class="pre">*</span></code> indicates reference values.</p>
+<code class="docutils literal notranslate"><span class="pre">torque</span> <span class="pre">=</span> <span class="pre">inverse_dynamics(q,</span> <span class="pre">v,</span> <span class="pre">vd_d)</span></code>, where <code class="docutils literal notranslate"><span class="pre">vd_d</span> <span class="pre">=</span> <span class="pre">kp(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span>
+<span class="pre">kd(v*</span> <span class="pre">-</span> <span class="pre">v)</span> <span class="pre">+</span> <span class="pre">ki</span> <span class="pre">int(q*</span> <span class="pre">-</span> <span class="pre">q)</span> <span class="pre">+</span> <span class="pre">vd*</span></code>. <cite>q</cite> and <code class="docutils literal notranslate"><span class="pre">v</span></code> stand for the
+generalized position and velocity, and <code class="docutils literal notranslate"><span class="pre">vd</span></code> is the generalized
+acceleration. <code class="docutils literal notranslate"><span class="pre">*</span></code> indicates reference values.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:gray">desired_acceleration</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>InverseDynamicsController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; force</td></tr></table></td></tr></table><p>Ports show in &lt;span style=”color:gray”&gt;gray&lt;/span&gt; may be absent,
 depending on how the system is constructed.</p>
 <p>This controller always has a BasicVector input port for estimated
-robot state <code class="docutils literal"><span class="pre">(q,</span> <span class="pre">v)</span></code>, a BasicVector input port for reference robot
-state <code class="docutils literal"><span class="pre">(q*,</span> <span class="pre">v*)</span></code> and a BasicVector output port for computed torque
-<code class="docutils literal"><span class="pre">torque</span></code>. A constructor flag can be set to track reference
-acceleration <code class="docutils literal"><span class="pre">vd*</span></code> as well. When set, a BasicVector input port is
-also declared, and it’s content is used as <code class="docutils literal"><span class="pre">vd*</span></code>. When unset,
-<code class="docutils literal"><span class="pre">vd*</span></code> is be treated as zero.</p>
+robot state <code class="docutils literal notranslate"><span class="pre">(q,</span> <span class="pre">v)</span></code>, a BasicVector input port for reference robot
+state <code class="docutils literal notranslate"><span class="pre">(q*,</span> <span class="pre">v*)</span></code> and a BasicVector output port for computed torque
+<code class="docutils literal notranslate"><span class="pre">torque</span></code>. A constructor flag can be set to track reference
+acceleration <code class="docutils literal notranslate"><span class="pre">vd*</span></code> as well. When set, a BasicVector input port is
+also declared, and it’s content is used as <code class="docutils literal notranslate"><span class="pre">vd*</span></code>. When unset,
+<code class="docutils literal notranslate"><span class="pre">vd*</span></code> is be treated as zero.</p>
 <p>Note that this class assumes the robot is fully actuated, its position
 and velocity have the same dimension, and it does not have a floating
 base. If violated, the program will abort. This controller was not
@@ -668,27 +670,27 @@ the inverse dynamics computation.</p>
 <dl class="method">
 <dt id="pydrake.systems.controllers.InverseDynamicsController.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamicsController, robot: pydrake.multibody.plant.MultibodyPlant_[float], kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]], has_reference_acceleration: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs an inverse dynamics controller for the given <code class="docutils literal"><span class="pre">plant</span></code>
+<dd><p>Constructs an inverse dynamics controller for the given <code class="docutils literal notranslate"><span class="pre">plant</span></code>
 model. The InverseDynamicsController holds an internal, non-owned
 reference to the MultibodyPlant object so you must ensure that
-<code class="docutils literal"><span class="pre">plant</span></code> has a longer lifetime than <code class="docutils literal"><span class="pre">this</span></code>
+<code class="docutils literal notranslate"><span class="pre">plant</span></code> has a longer lifetime than <code class="docutils literal notranslate"><span class="pre">this</span></code>
 InverseDynamicsController.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>The model of the plant for control.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kp</span></code>:</dt>
 <dd>Position gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ki</span></code>:</dt>
 <dd>Integral gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kd</span></code>:</dt>
 <dd>Velocity gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">has_reference_acceleration</span></code>:</dt>
-<dd>If true, there is an extra BasicVector input port for <code class="docutils literal"><span class="pre">vd*</span></code>. If
-false, <code class="docutils literal"><span class="pre">vd*</span></code> is treated as zero, and no extra input port is
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">has_reference_acceleration</span></code>:</dt>
+<dd>If true, there is an extra BasicVector input port for <code class="docutils literal notranslate"><span class="pre">vd*</span></code>. If
+false, <code class="docutils literal notranslate"><span class="pre">vd*</span></code> is treated as zero, and no extra input port is
 declared.</dd>
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">plant</span></code> has been finalized (plant.is_finalized() returns
-<code class="docutils literal"><span class="pre">True</span></code>).</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">plant</span></code> has been finalized (plant.is_finalized() returns
+<code class="docutils literal notranslate"><span class="pre">True</span></code>).</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -740,7 +742,7 @@ declared.</dd>
 <dl class="method">
 <dt id="pydrake.systems.controllers.InverseDynamicsController.set_integral_value">
 <code class="descname">set_integral_value</code><span class="sig-paren">(</span><em>self: pydrake.systems.controllers.InverseDynamicsController, arg0: pydrake.systems.framework.Context_[float], arg1: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.controllers.InverseDynamicsController.set_integral_value" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the integral part of the PidController to <code class="docutils literal"><span class="pre">value</span></code>. <code class="docutils literal"><span class="pre">value</span></code>
+<dd><p>Sets the integral part of the PidController to <code class="docutils literal notranslate"><span class="pre">value</span></code>. <code class="docutils literal notranslate"><span class="pre">value</span></code>
 must be a column vector of the appropriate size.</p>
 </dd></dl>
 
@@ -754,40 +756,40 @@ programming. It optimizes the linear program</p>
 <p>maximize ∑ Jₚ(x). subject to ∀x, ∀u, Jₚ(x) ≤ g(x,u) + γJₚ(f(x,u)),</p>
 <p>where g(x,u) is the one-step cost, Jₚ(x) is a (linearly) parameterized
 cost-to-go function with parameter vector p, and γ is the discount
-factor in <code class="docutils literal"><span class="pre">options</span></code>.</p>
+factor in <code class="docutils literal notranslate"><span class="pre">options</span></code>.</p>
 <p>For background, and a description of this algorithm, see
 <a class="reference external" href="http://underactuated.csail.mit.edu/underactuated.html?chapter=dp">http://underactuated.csail.mit.edu/underactuated.html?chapter=dp</a> . It
 currently requires that the system to be optimized has only continuous
 state and it is assumed to be time invariant. This code makes a
-discrete-time approximation (using <code class="docutils literal"><span class="pre">timestep)</span></code> for the value
+discrete-time approximation (using <code class="docutils literal notranslate"><span class="pre">timestep)</span></code> for the value
 iteration update.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">simulator</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
 <dd>contains the reference to the System being optimized and to a
 Context for that system, which may contain non-default Parameters,
-etc. The <code class="docutils literal"><span class="pre">simulator</span></code> is run for <code class="docutils literal"><span class="pre">timestep</span></code> seconds from every
+etc. The <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is run for <code class="docutils literal notranslate"><span class="pre">timestep</span></code> seconds from every
 pair of input/state sample points in order to approximate the
 dynamics; all of the simulation parameters (integrator, etc) are
 relevant during that evaluation.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">cost_function</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost_function</span></code>:</dt>
 <dd>is the continuous-time instantaneous cost. This implementation of
 the discrete-time formulation above uses the approximation g(x,u)
 = timestep*cost_function(x,u).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">linearly_parameterized_cost_to_go_function</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">linearly_parameterized_cost_to_go_function</span></code>:</dt>
 <dd>must define a function to approximate the cost-to-go, which takes
 the state vector as the first input and the parameter vector as
 the second input. This can be any function of the form Jₚ(x) = ∑
 pᵢ φᵢ(x). This algorithm will pass in a VectorX of
 symbolic::Variable in order to set up the linear program.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">state_samples</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_samples</span></code>:</dt>
 <dd>is a list of sample states (one per column) at which to apply the
 optimization constraints and the objective.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">input_samples</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">input_samples</span></code>:</dt>
 <dd>is a list of inputs (one per column) which are evaluated <em>at every
 sample point</em>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">timestep</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">timestep</span></code>:</dt>
 <dd>a time in seconds used for the discrete-time approximation.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
 <dd>optional DynamicProgrammingOptions structure.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -810,22 +812,22 @@ cost-to-go function.</td>
 </ol>
 <p>Computes the optimal feedback controller, u=-Kx, and the optimal
 cost-to-go J = x’Sx for the problem:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\dot{x} = Ax + Bu\]</div>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u \int_0^\infty x'Qx + u'Ru + 2x'Nu dt\]</div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">A</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">A</span></code>:</dt>
 <dd>The state-space dynamics matrix of size num_states x num_states.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">B</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">B</span></code>:</dt>
 <dd>The state-space input matrix of size num_states x num_inputs.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt>
 <dd>A symmetric positive semi-definite cost matrix of size num_states
 x num_states.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R</span></code>:</dt>
 <dd>A symmetric positive definite cost matrix of size num_inputs x
 num_inputs.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">N</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">N</span></code>:</dt>
 <dd>A cost matrix of size num_states x num_inputs. If the matrix is
 zero-sized, N will be treated as a num_states x num_inputs zero
 matrix.</dd>
@@ -845,24 +847,24 @@ quadratic cost term S. The optimal feedback control is u = -Kx;</td>
 <li>LinearQuadraticRegulator(system: pydrake.systems.primitives.LinearSystem_[float], Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], N: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous] = array([], shape=(0, 0), dtype=float64)) -&gt; pydrake.systems.primitives.LinearSystem_[float]</li>
 </ol>
 <p>Creates a system that implements the optimal time-invariant linear
-quadratic regulator (LQR). If <code class="docutils literal"><span class="pre">system</span></code> is a continuous-time system,
+quadratic regulator (LQR). If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a continuous-time system,
 then solves the continuous-time LQR problem:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u \int_0^\infty x^T(t)Qx(t) + u^T(t)Ru(t) + + 2x^T(t)Nu(t) dt.\]</div>
-<p>If <code class="docutils literal"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
+<p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
 LQR problem:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u \sum_0^\infty x^T[n]Qx[n] + u^T[n]Ru[n] + 2x^T[n]Nu[n].\]</div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>The System to be controlled.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt>
 <dd>A symmetric positive semi-definite cost matrix of size num_states
 x num_states.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R</span></code>:</dt>
 <dd>A symmetric positive definite cost matrix of size num_inputs x
 num_inputs.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">N</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">N</span></code>:</dt>
 <dd>A cost matrix of size num_states x num_inputs.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -882,37 +884,37 @@ system coordinates.</td>
 <p>Linearizes the System around the specified Context, computes the
 optimal time-invariant linear quadratic regulator (LQR), and returns a
 System which implements that regulator in the original System’s
-coordinates. If <code class="docutils literal"><span class="pre">system</span></code> is a continuous-time system, then solves
+coordinates. If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a continuous-time system, then solves
 the continuous-time LQR problem:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u \int_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0) + 2
 (x-x_0)^TN(u-u_0) dt.\]</div>
-<p>If <code class="docutils literal"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
+<p>If <code class="docutils literal notranslate"><span class="pre">system</span></code> is a discrete-time system, then solves the discrete-time
 LQR problem:</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[\min_u \sum_0^\infty (x-x_0)^TQ(x-x_0) + (u-u_0)^TR(u-u_0) +
 2(x-x_0)^TN(u-u_0),\]</div>
-<p>where <span class="math">\(x_0\)</span> is the nominal state and <span class="math">\(u_0\)</span> is the nominal
+<p>where <span class="math notranslate nohighlight">\(x_0\)</span> is the nominal state and <span class="math notranslate nohighlight">\(u_0\)</span> is the nominal
 input. The system is considered discrete if it has a single discrete
 state vector and a single unique periodic update event declared.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">system</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">system</span></code>:</dt>
 <dd>The System to be controlled.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
 <dd>Defines the desired state and control input to regulate the system
 to. Note that this state/input must be an equilibrium point of the
 system. See drake::systems::Linearize for more details.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Q</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Q</span></code>:</dt>
 <dd>A symmetric positive semi-definite cost matrix of size num_states
 x num_states.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">R</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">R</span></code>:</dt>
 <dd>A symmetric positive definite cost matrix of size num_inputs x
 num_inputs.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">N</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">N</span></code>:</dt>
 <dd>A cost matrix of size num_states x num_inputs. If the matrix is
 zero-sized, N will be treated as a num_states x num_inputs zero
 matrix.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">int_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">int_port_index</span></code>:</dt>
 <dd>The index of the input port to linearize around.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -961,12 +963,12 @@ for angles that are wrapped around at 2π.</p>
 <dl class="class">
 <dt id="pydrake.systems.controllers.PidControlledSystem">
 <em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">PidControlledSystem</code><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.Diagram_[float]" title="pydrake.systems.framework.Diagram_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.Diagram_[float]</span></code></a></p>
 <p>A system that encapsulates a PidController and a controlled System
 (a.k.a the “plant”).</p>
 <p>The passed in plant must meet the following properties:</p>
 <ul class="simple">
-<li>Input port <code class="docutils literal"><span class="pre">plant_input_port_index</span></code> must be all of the control inputs
+<li>Input port <code class="docutils literal notranslate"><span class="pre">plant_input_port_index</span></code> must be all of the control inputs
 (size U). When the plant is a dynamics model, this is typically the
 generalized effort (e.g., force or torque) command.</li>
 <li>The output port passed to the PidControlledSystem constructor must be
@@ -988,14 +990,14 @@ are the <em>controlled</em> velocities.</li>
 PidControlledSystem in the same order (and therefore with the same
 index) as they appear in the plant.</p>
 <p>Some of the constructors include a parameter called
-<code class="docutils literal"><span class="pre">feedback_selector</span></code>. It is used to select the <em>controlled</em> states
-from the plant’s state output port. Let <code class="docutils literal"><span class="pre">S</span></code> be the gain matrix in
-parameter <code class="docutils literal"><span class="pre">feedback_selector</span></code>. <cite>S</cite> must have dimensions of <code class="docutils literal"><span class="pre">(2</span> <span class="pre">*</span> <span class="pre">U,</span>
-<span class="pre">2</span> <span class="pre">*</span> <span class="pre">Q)</span></code>. Typically, <code class="docutils literal"><span class="pre">S</span></code> contains one <code class="docutils literal"><span class="pre">1</span></code> in each row, and zeros
-everywhere else. <code class="docutils literal"><span class="pre">S</span></code> does not affect the desired state input. Let
+<code class="docutils literal notranslate"><span class="pre">feedback_selector</span></code>. It is used to select the <em>controlled</em> states
+from the plant’s state output port. Let <code class="docutils literal notranslate"><span class="pre">S</span></code> be the gain matrix in
+parameter <code class="docutils literal notranslate"><span class="pre">feedback_selector</span></code>. <cite>S</cite> must have dimensions of <code class="docutils literal notranslate"><span class="pre">(2</span> <span class="pre">*</span> <span class="pre">U,</span>
+<span class="pre">2</span> <span class="pre">*</span> <span class="pre">Q)</span></code>. Typically, <code class="docutils literal notranslate"><span class="pre">S</span></code> contains one <code class="docutils literal notranslate"><span class="pre">1</span></code> in each row, and zeros
+everywhere else. <code class="docutils literal notranslate"><span class="pre">S</span></code> does not affect the desired state input. Let
 ‘x’ be the full state of the plant (size 2 * Q), and ‘x_d’ be the
-desired state (size 2 * U), <code class="docutils literal"><span class="pre">S</span></code> is used to compute the state error
-as <code class="docutils literal"><span class="pre">x_err</span> <span class="pre">=</span> <span class="pre">S</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">x_d</span></code>.</p>
+desired state (size 2 * U), <code class="docutils literal notranslate"><span class="pre">S</span></code> is used to compute the state error
+as <code class="docutils literal notranslate"><span class="pre">x_err</span> <span class="pre">=</span> <span class="pre">S</span> <span class="pre">*</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">x_d</span></code>.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">feedforward_control&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PidControlledSystem</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; (exported output port of plant, with same name)</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; ...</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; (exported output port of plant, with same name)</td></tr></table></td></tr></table><dl class="method">
 <dt id="pydrake.systems.controllers.PidControlledSystem.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.PidControlledSystem.__init__" title="Permalink to this definition">¶</a></dt>
@@ -1003,43 +1005,43 @@ as <code class="docutils literal"><span class="pre">x_err</span> <span class="pr
 <ol class="arabic simple">
 <li>__init__(self: pydrake.systems.controllers.PidControlledSystem, plant: pydrake.systems.framework.System_[float], kp: float, ki: float, kd: float, state_output_port_index: int = 0, plant_input_port_index: int = 0) -&gt; None</li>
 </ol>
-<p><code class="docutils literal"><span class="pre">plant</span></code> full state is used for feedback control, and all the
-dimensions have homogeneous gains specified by <code class="docutils literal"><span class="pre">Kp</span></code>, <code class="docutils literal"><span class="pre">Kd</span></code> and
-<code class="docutils literal"><span class="pre">Ki</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">plant</span></code> full state is used for feedback control, and all the
+dimensions have homogeneous gains specified by <code class="docutils literal notranslate"><span class="pre">Kp</span></code>, <code class="docutils literal notranslate"><span class="pre">Kd</span></code> and
+<code class="docutils literal notranslate"><span class="pre">Ki</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
-<dd>The system to be controlled. This must not be <code class="docutils literal"><span class="pre">nullptr</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The system to be controlled. This must not be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kp</span></code>:</dt>
 <dd>the proportional constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Ki</span></code>:</dt>
 <dd>the integral constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kd</span></code>:</dt>
 <dd>the derivative constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">state_output_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_output_port_index</span></code>:</dt>
 <dd>identifies the output port on the plant that contains the (full)
 state information.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">plant_input_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_input_port_index</span></code>:</dt>
 <dd>identifies the input port on the plant that takes in the input
 (computed as the output of the PID controller).</dd>
 </dl>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.systems.controllers.PidControlledSystem, plant: pydrake.systems.framework.System_[float], kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]], state_output_port_index: int = 0, plant_input_port_index: int = 0) -&gt; None</li>
 </ol>
-<p><code class="docutils literal"><span class="pre">plant</span></code> full state is used for feedback control, and the vectorized
-gains are specified by <code class="docutils literal"><span class="pre">Kp</span></code>, <code class="docutils literal"><span class="pre">Kd</span></code> and <code class="docutils literal"><span class="pre">Ki</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">plant</span></code> full state is used for feedback control, and the vectorized
+gains are specified by <code class="docutils literal notranslate"><span class="pre">Kp</span></code>, <code class="docutils literal notranslate"><span class="pre">Kd</span></code> and <code class="docutils literal notranslate"><span class="pre">Ki</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
-<dd>The system to be controlled. This must not be <code class="docutils literal"><span class="pre">nullptr</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The system to be controlled. This must not be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kp</span></code>:</dt>
 <dd>the proportional vector constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Ki</span></code>:</dt>
 <dd>the integral vector constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kd</span></code>:</dt>
 <dd>the derivative vector constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">state_output_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_output_port_index</span></code>:</dt>
 <dd>identifies the output port on the plant that contains the (full)
 state information.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">plant_input_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_input_port_index</span></code>:</dt>
 <dd>identifies the input port on the plant that takes in the input
 (computed as the output of the PID controller).</dd>
 </dl>
@@ -1048,24 +1050,24 @@ state information.</dd>
 </ol>
 <p>A constructor where the gains are scalar values and some of the
 plant’s output is part of the feedback signal as specified by
-<code class="docutils literal"><span class="pre">feedback_selector</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">feedback_selector</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
-<dd>The system to be controlled. This must not be <code class="docutils literal"><span class="pre">nullptr</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">feedback_selector</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The system to be controlled. This must not be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">feedback_selector</span></code>:</dt>
 <dd>The matrix that selects which part of the plant’s full state is
 fed back to the PID controller. For semantic details of this
 parameter, see this class’s description.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kp</span></code>:</dt>
 <dd>the proportional constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Ki</span></code>:</dt>
 <dd>the integral constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kd</span></code>:</dt>
 <dd>the derivative constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">state_output_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_output_port_index</span></code>:</dt>
 <dd>identifies the output port on the plant that contains the (full)
 state information.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">plant_input_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_input_port_index</span></code>:</dt>
 <dd>identifies the input port on the plant that takes in the input
 (computed as the output of the PID controller).</dd>
 </dl>
@@ -1074,24 +1076,24 @@ state information.</dd>
 </ol>
 <p>A constructor where the gains are vector values and some of the
 plant’s output is part of the feedback signal as specified by
-<code class="docutils literal"><span class="pre">feedback_selector</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">feedback_selector</span></code>.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
-<dd>The system to be controlled. This must not be <code class="docutils literal"><span class="pre">nullptr</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">feedback_selector</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The system to be controlled. This must not be <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">feedback_selector</span></code>:</dt>
 <dd>The matrix that selects which part of the plant’s full state is
 fed back to the PID controller. For semantic details of this
 parameter, see this class’s description.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kp</span></code>:</dt>
 <dd>the proportional vector constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Ki</span></code>:</dt>
 <dd>the integral vector constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">Kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">Kd</span></code>:</dt>
 <dd>the derivative vector constant.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">state_output_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_output_port_index</span></code>:</dt>
 <dd>identifies the output port on the plant that contains the (full)
 state information.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">plant_input_port_index</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_input_port_index</span></code>:</dt>
 <dd>identifies the input port on the plant that takes in the input
 (computed as the output of the PID controller).</dd>
 </dl>
@@ -1133,22 +1135,22 @@ state information.</dd>
 <dl class="class">
 <dt id="pydrake.systems.controllers.PidController">
 <em class="property">class </em><code class="descclassname">pydrake.systems.controllers.</code><code class="descname">PidController</code><a class="headerlink" href="#pydrake.systems.controllers.PidController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
-<p>Implements the PID controller. Given estimated state <code class="docutils literal"><span class="pre">x_in</span> <span class="pre">=</span> <span class="pre">(q_in,</span>
-<span class="pre">v_in)</span></code>, the controlled state <code class="docutils literal"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">(q_c,</span> <span class="pre">v_c)</span></code> is computed by
-<code class="docutils literal"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">P_x</span> <span class="pre">*</span> <span class="pre">x_in</span></code>, where <code class="docutils literal"><span class="pre">P_x</span></code> is a state projection matrix. The
-desired state <code class="docutils literal"><span class="pre">x_d</span> <span class="pre">=</span> <span class="pre">(q_d,</span> <span class="pre">v_d)</span></code>, is in the same space as <code class="docutils literal"><span class="pre">x_c</span></code>.
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<p>Implements the PID controller. Given estimated state <code class="docutils literal notranslate"><span class="pre">x_in</span> <span class="pre">=</span> <span class="pre">(q_in,</span>
+<span class="pre">v_in)</span></code>, the controlled state <code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">(q_c,</span> <span class="pre">v_c)</span></code> is computed by
+<code class="docutils literal notranslate"><span class="pre">x_c</span> <span class="pre">=</span> <span class="pre">P_x</span> <span class="pre">*</span> <span class="pre">x_in</span></code>, where <code class="docutils literal notranslate"><span class="pre">P_x</span></code> is a state projection matrix. The
+desired state <code class="docutils literal notranslate"><span class="pre">x_d</span> <span class="pre">=</span> <span class="pre">(q_d,</span> <span class="pre">v_d)</span></code>, is in the same space as <code class="docutils literal notranslate"><span class="pre">x_c</span></code>.
 The output of this controller is:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">P_y</span> <span class="o">*</span> <span class="p">(</span><span class="n">kp</span> <span class="o">*</span> <span class="p">(</span><span class="n">q_d</span> <span class="o">-</span> <span class="n">q_c</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span> <span class="o">*</span> <span class="p">(</span><span class="n">v_d</span> <span class="o">-</span> <span class="n">v_c</span><span class="p">)</span> <span class="o">+</span> <span class="n">ki</span> <span class="o">*</span> <span class="n">integral</span><span class="p">(</span><span class="n">q_d</span> <span class="o">-</span> <span class="n">q_c</span><span class="p">)),</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">P_y</span> <span class="o">*</span> <span class="p">(</span><span class="n">kp</span> <span class="o">*</span> <span class="p">(</span><span class="n">q_d</span> <span class="o">-</span> <span class="n">q_c</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span> <span class="o">*</span> <span class="p">(</span><span class="n">v_d</span> <span class="o">-</span> <span class="n">v_c</span><span class="p">)</span> <span class="o">+</span> <span class="n">ki</span> <span class="o">*</span> <span class="n">integral</span><span class="p">(</span><span class="n">q_d</span> <span class="o">-</span> <span class="n">q_c</span><span class="p">)),</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">P_y</span></code> is the output projection matrix.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">P_y</span></code> is the output projection matrix.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">estimated_state&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">desired_state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PidController</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; control</td></tr></table></td></tr></table><p>This system has one continuous state, which is the integral of
-position error, two input ports: estimated state <code class="docutils literal"><span class="pre">x_in</span></code> and desired
-state <code class="docutils literal"><span class="pre">x_d</span></code>, and one output port <code class="docutils literal"><span class="pre">y</span></code>. Note that this class assumes
-<code class="docutils literal"><span class="pre">|q_c|</span> <span class="pre">=</span> <span class="pre">|v_c|</span></code> and <code class="docutils literal"><span class="pre">|q_d|</span> <span class="pre">=</span> <span class="pre">|v_d|</span></code>. However, <code class="docutils literal"><span class="pre">|q_c|</span></code> does not
-have to equal to <code class="docutils literal"><span class="pre">|q_d|</span></code>. One typical use case for non-identity
-<code class="docutils literal"><span class="pre">P_x</span></code> and <code class="docutils literal"><span class="pre">P_y</span></code> is to select a subset of state for feedback.</p>
+position error, two input ports: estimated state <code class="docutils literal notranslate"><span class="pre">x_in</span></code> and desired
+state <code class="docutils literal notranslate"><span class="pre">x_d</span></code>, and one output port <code class="docutils literal notranslate"><span class="pre">y</span></code>. Note that this class assumes
+<code class="docutils literal notranslate"><span class="pre">|q_c|</span> <span class="pre">=</span> <span class="pre">|v_c|</span></code> and <code class="docutils literal notranslate"><span class="pre">|q_d|</span> <span class="pre">=</span> <span class="pre">|v_d|</span></code>. However, <code class="docutils literal notranslate"><span class="pre">|q_c|</span></code> does not
+have to equal to <code class="docutils literal notranslate"><span class="pre">|q_d|</span></code>. One typical use case for non-identity
+<code class="docutils literal notranslate"><span class="pre">P_x</span></code> and <code class="docutils literal notranslate"><span class="pre">P_y</span></code> is to select a subset of state for feedback.</p>
 <dl class="method">
 <dt id="pydrake.systems.controllers.PidController.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.controllers.PidController.__init__" title="Permalink to this definition">¶</a></dt>
@@ -1156,15 +1158,15 @@ have to equal to <code class="docutils literal"><span class="pre">|q_d|</span></
 <ol class="arabic simple">
 <li>__init__(self: pydrake.systems.controllers.PidController, kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
-<p>Constructs a PID controller. <code class="docutils literal"><span class="pre">P_x</span></code> and <code class="docutils literal"><span class="pre">P_y</span></code> are identity matrices
+<p>Constructs a PID controller. <code class="docutils literal notranslate"><span class="pre">P_x</span></code> and <code class="docutils literal notranslate"><span class="pre">P_y</span></code> are identity matrices
 of proper sizes. The estimated and desired state inputs are 2 *
-<code class="docutils literal"><span class="pre">kp</span></code>’s size, and the control output has <code class="docutils literal"><span class="pre">kp</span></code>’s size.</p>
+<code class="docutils literal notranslate"><span class="pre">kp</span></code>’s size, and the control output has <code class="docutils literal notranslate"><span class="pre">kp</span></code>’s size.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kp</span></code>:</dt>
 <dd>P gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ki</span></code>:</dt>
 <dd>I gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kd</span></code>:</dt>
 <dd>D gain.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1172,8 +1174,8 @@ of proper sizes. The estimated and desired state inputs are 2 *
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">kp</span></code>, <code class="docutils literal"><span class="pre">ki</span></code> and <code class="docutils literal"><span class="pre">kd</span></code> have different</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">dimensions.</span></code></li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">kp</span></code>, <code class="docutils literal notranslate"><span class="pre">ki</span></code> and <code class="docutils literal notranslate"><span class="pre">kd</span></code> have different</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">dimensions.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -1183,15 +1185,15 @@ of proper sizes. The estimated and desired state inputs are 2 *
 <li>__init__(self: pydrake.systems.controllers.PidController, state_projection: numpy.ndarray[numpy.float64[m, n]], kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs a PID controller. Calls the full constructor, with the
-output projection matrix <code class="docutils literal"><span class="pre">P_y</span></code> being the identity matrix.</p>
+output projection matrix <code class="docutils literal notranslate"><span class="pre">P_y</span></code> being the identity matrix.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">state_projection</span></code>:</dt>
-<dd>The state projection matrix <code class="docutils literal"><span class="pre">P_x</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_projection</span></code>:</dt>
+<dd>The state projection matrix <code class="docutils literal notranslate"><span class="pre">P_x</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kp</span></code>:</dt>
 <dd>P gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ki</span></code>:</dt>
 <dd>I gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kd</span></code>:</dt>
 <dd>D gain.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1199,7 +1201,7 @@ output projection matrix <code class="docutils literal"><span class="pre">P_y</s
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">kp</span></code>, <code class="docutils literal"><span class="pre">ki</span></code> and <code class="docutils literal"><span class="pre">kd</span></code> have different</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">kp</span></code>, <code class="docutils literal notranslate"><span class="pre">ki</span></code> and <code class="docutils literal notranslate"><span class="pre">kd</span></code> have different</li>
 <li>dimensions or <a href="#id7"><span class="problematic" id="id8">`</span></a>P_x.row() != 2 * <a href="#id9"><span class="problematic" id="id10">|kp|</span></a>’.</li>
 </ul>
 </td>
@@ -1210,7 +1212,7 @@ output projection matrix <code class="docutils literal"><span class="pre">P_y</s
 <li>__init__(self: pydrake.systems.controllers.PidController, state_projection: numpy.ndarray[numpy.float64[m, n]], output_projection: numpy.ndarray[numpy.float64[m, n]], kp: numpy.ndarray[numpy.float64[m, 1]], ki: numpy.ndarray[numpy.float64[m, 1]], kd: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs a PID controller. This assumes that</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="o">|</span><span class="n">kp</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">kd</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">ki</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">q_d</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">v_d</span><span class="o">|</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="o">|</span><span class="n">kp</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">kd</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">ki</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">q_d</span><span class="o">|</span> <span class="o">=</span> <span class="o">|</span><span class="n">v_d</span><span class="o">|</span>
   <span class="mf">2.</span> <span class="mi">2</span> <span class="o">*</span> <span class="o">|</span><span class="n">q_d</span><span class="o">|</span> <span class="o">=</span> <span class="n">P_x</span><span class="o">.</span><span class="n">rows</span>
   <span class="mf">3.</span> <span class="o">|</span><span class="n">x_in</span><span class="o">|</span> <span class="o">=</span> <span class="n">P_x</span><span class="o">.</span><span class="n">cols</span>
   <span class="mf">4.</span> <span class="o">|</span><span class="n">y</span><span class="o">|</span> <span class="o">=</span> <span class="n">P_y</span><span class="o">.</span><span class="n">rows</span>
@@ -1218,15 +1220,15 @@ output projection matrix <code class="docutils literal"><span class="pre">P_y</s
 </pre></div>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">state_projection</span></code>:</dt>
-<dd>The state projection matrix <code class="docutils literal"><span class="pre">P_x</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">output_projection</span></code>:</dt>
-<dd>The output projection matrix <code class="docutils literal"><span class="pre">P_y</span></code>.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kp</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">state_projection</span></code>:</dt>
+<dd>The state projection matrix <code class="docutils literal notranslate"><span class="pre">P_x</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">output_projection</span></code>:</dt>
+<dd>The output projection matrix <code class="docutils literal notranslate"><span class="pre">P_y</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kp</span></code>:</dt>
 <dd>P gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">ki</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">ki</span></code>:</dt>
 <dd>I gain.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">kd</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">kd</span></code>:</dt>
 <dd>V gain.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1281,9 +1283,7 @@ output projection matrix <code class="docutils literal"><span class="pre">P_y</s
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1292,7 +1292,7 @@ output projection matrix <code class="docutils literal"><span class="pre">P_y</s
         <a href="pydrake.systems.drawing.html" class="btn btn-neutral float-right" title="pydrake.systems.drawing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.systems.analysis.html" class="btn btn-neutral" title="pydrake.systems.analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.systems.analysis.html" class="btn btn-neutral float-left" title="pydrake.systems.analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1316,37 +1316,15 @@ output projection matrix <code class="docutils literal"><span class="pre">P_y</s
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

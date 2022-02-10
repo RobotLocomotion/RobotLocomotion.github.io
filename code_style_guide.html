@@ -183,7 +183,7 @@ syntax. Rationale: exceptions raised in lazy formatting get printed to
 via Bazel-generated Python proxy scripts. (The proxy scripts are those
 run via <code class="highlighter-rouge">bazel run</code>, <code class="highlighter-rouge">bazel test</code>, or <code class="highlighter-rouge">./bazel-bin/...</code>.)
 If a script qualifies, use the following “shebang” line:<br />
-<code class="highlighter-rouge"><span class="c">#!/usr/bin/env python3</span></code><br />
+<code class="highlighter-rouge"><span class="c1">#!/usr/bin/env python3</span></code><br />
 Rationale: <code class="highlighter-rouge">/usr/bin/env</code> enables a <code class="highlighter-rouge">PATH</code> search for the Python 3
 executable. This is also recommended by
 <a href="https://www.python.org/dev/peps/pep-0394/">PEP 394</a>.</li>

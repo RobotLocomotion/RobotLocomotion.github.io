@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.examples" href="pydrake.examples.html"/>
-        <link rel="next" title="pydrake.examples.quadrotor" href="pydrake.examples.quadrotor.html"/>
-        <link rel="prev" title="pydrake.examples.multibody.cart_pole_passive_simulation" href="pydrake.examples.multibody.cart_pole_passive_simulation.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.examples.quadrotor" href="pydrake.examples.quadrotor.html" />
+    <link rel="prev" title="pydrake.examples.multibody.cart_pole_passive_simulation" href="pydrake.examples.multibody.cart_pole_passive_simulation.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -133,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -141,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -191,7 +185,7 @@
 <dl class="class">
 <dt id="pydrake.examples.pendulum.PendulumGeometry">
 <em class="property">class </em><code class="descclassname">pydrake.examples.pendulum.</code><code class="descname">PendulumGeometry</code><a class="headerlink" href="#pydrake.examples.pendulum.PendulumGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>Expresses a PendulumPlants’s geometry to a SceneGraph.</p>
 <table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">state&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>PendulumGeometry</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; geometry_pose</td></tr></table></td></tr></table><p>This class has no public constructor; instead use the AddToBuilder()
 static method to create and add it to a DiagramBuilder directly.</p>
@@ -205,12 +199,12 @@ static method to create and add it to a DiagramBuilder directly.</p>
 <dt id="pydrake.examples.pendulum.PendulumGeometry.AddToBuilder">
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>builder: pydrake.systems.framework.DiagramBuilder_[float], pendulum_state_port: pydrake.systems.framework.OutputPort_[float], scene_graph: pydrake.geometry.SceneGraph_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumGeometry<a class="headerlink" href="#pydrake.examples.pendulum.PendulumGeometry.AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates, adds, and connects a PendulumGeometry system into the given
-<code class="docutils literal"><span class="pre">builder</span></code>. Both the <code class="docutils literal"><span class="pre">pendulum_state.get_system()</span></code> and
-<code class="docutils literal"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal"><span class="pre">builder</span></code>
+<code class="docutils literal notranslate"><span class="pre">builder</span></code>. Both the <code class="docutils literal notranslate"><span class="pre">pendulum_state.get_system()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> systems must have been added to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>
 already.</p>
-<p>The <code class="docutils literal"><span class="pre">scene_graph</span></code> pointer is not retained by the PendulumGeometry
+<p>The <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code> pointer is not retained by the PendulumGeometry
 system. The return value pointer is an alias of the new
-PendulumGeometry system that is owned by the <code class="docutils literal"><span class="pre">builder</span></code>.</p>
+PendulumGeometry system that is owned by the <code class="docutils literal notranslate"><span class="pre">builder</span></code>.</p>
 </dd></dl>
 
 </dd></dl>
@@ -218,14 +212,14 @@ PendulumGeometry system that is owned by the <code class="docutils literal"><spa
 <dl class="class">
 <dt id="pydrake.examples.pendulum.PendulumInput">
 <em class="property">class </em><code class="descclassname">pydrake.examples.pendulum.</code><code class="descname">PendulumInput</code><a class="headerlink" href="#pydrake.examples.pendulum.PendulumInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumInput.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumInput</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.pendulum.PendulumInput.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">tau</span></code> defaults to 0.0 Newton-meters.</li>
+<li><code class="docutils literal notranslate"><span class="pre">tau</span></code> defaults to 0.0 Newton-meters.</li>
 </ul>
 </dd></dl>
 
@@ -241,14 +235,14 @@ PendulumGeometry system that is owned by the <code class="docutils literal"><spa
 <dd><p>Torque at the joint.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">tau</span></code> is expressed in units of Newton-meters.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">tau</span></code> is expressed in units of Newton-meters.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumInput.with_tau">
 <code class="descname">with_tau</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumInput</em>, <em>tau: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumInput<a class="headerlink" href="#pydrake.examples.pendulum.PendulumInput.with_tau" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches tau(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with tau
+<dd><p>Fluent setter that matches tau(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with tau
 set to a new value.</p>
 </dd></dl>
 
@@ -257,17 +251,17 @@ set to a new value.</p>
 <dl class="class">
 <dt id="pydrake.examples.pendulum.PendulumParams">
 <em class="property">class </em><code class="descclassname">pydrake.examples.pendulum.</code><code class="descname">PendulumParams</code><a class="headerlink" href="#pydrake.examples.pendulum.PendulumParams" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumParams.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumParams</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.pendulum.PendulumParams.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">mass</span></code> defaults to 1.0 kg.</li>
-<li><code class="docutils literal"><span class="pre">length</span></code> defaults to 0.5 m.</li>
-<li><code class="docutils literal"><span class="pre">damping</span></code> defaults to 0.1 kg m^2/s.</li>
-<li><code class="docutils literal"><span class="pre">gravity</span></code> defaults to 9.81 m/s^2.</li>
+<li><code class="docutils literal notranslate"><span class="pre">mass</span></code> defaults to 1.0 kg.</li>
+<li><code class="docutils literal notranslate"><span class="pre">length</span></code> defaults to 0.5 m.</li>
+<li><code class="docutils literal notranslate"><span class="pre">damping</span></code> defaults to 0.1 kg m^2/s.</li>
+<li><code class="docutils literal notranslate"><span class="pre">gravity</span></code> defaults to 9.81 m/s^2.</li>
 </ul>
 </dd></dl>
 
@@ -277,11 +271,11 @@ set to a new value.</p>
 <dd><p>The damping friction coefficient relating angular velocity to torque.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">damping</span></code> is expressed in units of kg m^2/s.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">damping</span></code> is expressed in units of kg m^2/s.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">damping</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">damping</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -291,11 +285,11 @@ set to a new value.</p>
 <dd><p>An approximate value for gravitational acceleration.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">gravity</span></code> is expressed in units of m/s^2.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">gravity</span></code> is expressed in units of m/s^2.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">gravity</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">gravity</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -305,11 +299,11 @@ set to a new value.</p>
 <dd><p>The length of the pendulum arm.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">length</span></code> is expressed in units of m.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">length</span></code> is expressed in units of m.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">length</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">length</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -319,11 +313,11 @@ set to a new value.</p>
 <dd><p>The simple pendulum has a single point mass at the end of the arm.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">mass</span></code> is expressed in units of kg.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">mass</span></code> is expressed in units of kg.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">mass</span></code> has a limited domain of [0.0, +Inf].</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">mass</span></code> has a limited domain of [0.0, +Inf].</p>
 </div>
 </dd></dl>
 
@@ -354,28 +348,28 @@ set to a new value.</p>
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumParams.with_damping">
 <code class="descname">with_damping</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumParams</em>, <em>damping: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumParams<a class="headerlink" href="#pydrake.examples.pendulum.PendulumParams.with_damping" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches damping(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with
+<dd><p>Fluent setter that matches damping(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with
 damping set to a new value.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumParams.with_gravity">
 <code class="descname">with_gravity</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumParams</em>, <em>gravity: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumParams<a class="headerlink" href="#pydrake.examples.pendulum.PendulumParams.with_gravity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches gravity(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with
+<dd><p>Fluent setter that matches gravity(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with
 gravity set to a new value.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumParams.with_length">
 <code class="descname">with_length</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumParams</em>, <em>length: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumParams<a class="headerlink" href="#pydrake.examples.pendulum.PendulumParams.with_length" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches length(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with
+<dd><p>Fluent setter that matches length(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with
 length set to a new value.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumParams.with_mass">
 <code class="descname">with_mass</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumParams</em>, <em>mass: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumParams<a class="headerlink" href="#pydrake.examples.pendulum.PendulumParams.with_mass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches mass(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with
+<dd><p>Fluent setter that matches mass(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with
 mass set to a new value.</p>
 </dd></dl>
 
@@ -384,9 +378,9 @@ mass set to a new value.</p>
 <dl class="class">
 <dt id="pydrake.examples.pendulum.PendulumPlant">
 <em class="property">class </em><code class="descclassname">pydrake.examples.pendulum.</code><code class="descname">PendulumPlant</code><a class="headerlink" href="#pydrake.examples.pendulum.PendulumPlant" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>A model of a simple pendulum</p>
-<div class="math">
+<div class="math notranslate nohighlight">
 \[ml^2 \ddot\theta + b\dot\theta + mgl\sin\theta = \tau\]</div>
 <p>name: PendulumPlant input_ports: - tau output_ports: - state</p>
 <dl class="method">
@@ -426,15 +420,15 @@ mass set to a new value.</p>
 <dl class="class">
 <dt id="pydrake.examples.pendulum.PendulumState">
 <em class="property">class </em><code class="descclassname">pydrake.examples.pendulum.</code><code class="descname">PendulumState</code><a class="headerlink" href="#pydrake.examples.pendulum.PendulumState" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.BasicVector_[float]" title="pydrake.systems.framework.BasicVector_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.BasicVector_[float]</span></code></a></p>
 <p>Specializes BasicVector with specific getters and setters.</p>
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumState.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumState</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.examples.pendulum.PendulumState.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Default constructor. Sets all rows to their default value:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">theta</span></code> defaults to 0.0 radians.</li>
-<li><code class="docutils literal"><span class="pre">thetadot</span></code> defaults to 0.0 radians/sec.</li>
+<li><code class="docutils literal notranslate"><span class="pre">theta</span></code> defaults to 0.0 radians.</li>
+<li><code class="docutils literal notranslate"><span class="pre">thetadot</span></code> defaults to 0.0 radians/sec.</li>
 </ul>
 </dd></dl>
 
@@ -456,7 +450,7 @@ mass set to a new value.</p>
 <dd><p>The angle of the pendulum.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">theta</span></code> is expressed in units of radians.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">theta</span></code> is expressed in units of radians.</p>
 </div>
 </dd></dl>
 
@@ -466,21 +460,21 @@ mass set to a new value.</p>
 <dd><p>The angular velocity of the pendulum.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><code class="docutils literal"><span class="pre">thetadot</span></code> is expressed in units of radians/sec.</p>
+<p class="last"><code class="docutils literal notranslate"><span class="pre">thetadot</span></code> is expressed in units of radians/sec.</p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumState.with_theta">
 <code class="descname">with_theta</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumState</em>, <em>theta: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumState<a class="headerlink" href="#pydrake.examples.pendulum.PendulumState.with_theta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches theta(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with
+<dd><p>Fluent setter that matches theta(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with
 theta set to a new value.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.examples.pendulum.PendulumState.with_thetadot">
 <code class="descname">with_thetadot</code><span class="sig-paren">(</span><em>self: pydrake.examples.pendulum.PendulumState</em>, <em>thetadot: float</em><span class="sig-paren">)</span> &#x2192; pydrake.examples.pendulum.PendulumState<a class="headerlink" href="#pydrake.examples.pendulum.PendulumState.with_thetadot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fluent setter that matches thetadot(). Returns a copy of <code class="docutils literal"><span class="pre">this</span></code> with
+<dd><p>Fluent setter that matches thetadot(). Returns a copy of <code class="docutils literal notranslate"><span class="pre">this</span></code> with
 thetadot set to a new value.</p>
 </dd></dl>
 
@@ -490,9 +484,7 @@ thetadot set to a new value.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -501,7 +493,7 @@ thetadot set to a new value.</p>
         <a href="pydrake.examples.quadrotor.html" class="btn btn-neutral float-right" title="pydrake.examples.quadrotor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.examples.multibody.cart_pole_passive_simulation.html" class="btn btn-neutral" title="pydrake.examples.multibody.cart_pole_passive_simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.examples.multibody.cart_pole_passive_simulation.html" class="btn btn-neutral float-left" title="pydrake.examples.multibody.cart_pole_passive_simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -525,37 +517,15 @@ thetadot set to a new value.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

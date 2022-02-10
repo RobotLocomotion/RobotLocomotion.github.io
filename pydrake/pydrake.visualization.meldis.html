@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.visualization" href="pydrake.visualization.html"/>
-        <link rel="next" title="pydrake.visualization.plotting" href="pydrake.visualization.plotting.html"/>
-        <link rel="prev" title="pydrake.visualization.all" href="pydrake.visualization.all.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.visualization.plotting" href="pydrake.visualization.plotting.html" />
+    <link rel="prev" title="pydrake.visualization.all" href="pydrake.visualization.all.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -128,7 +121,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -136,9 +129,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -185,7 +179,7 @@
 <p>MeshCat LCM Display Server (MeLDiS)</p>
 <p>A standalone program that can display Drake visualizations in MeshCat
 by listing for LCM messages that are broadcast by the simulation.</p>
-<p>This can stand in for the legacy <code class="docutils literal"><span class="pre">drake-visualizer</span></code> application of
+<p>This can stand in for the legacy <code class="docutils literal notranslate"><span class="pre">drake-visualizer</span></code> application of
 days past.</p>
 <p>From a Drake source build, run this as:</p>
 <blockquote>
@@ -193,14 +187,14 @@ days past.</p>
 <p>From a Drake binary release, run this as:</p>
 <blockquote>
 <div>python3 -m pydrake.visualization.meldis</div></blockquote>
-<p>In many cases, passing <code class="docutils literal"><span class="pre">-w</span></code> (i.e., <code class="docutils literal"><span class="pre">--open-window</span></code>) to the program will be
+<p>In many cases, passing <code class="docutils literal notranslate"><span class="pre">-w</span></code> (i.e., <code class="docutils literal notranslate"><span class="pre">--open-window</span></code>) to the program will be
 convenient.</p>
 <blockquote>
 <div>bazel run //tools:meldis – -w &amp;</div></blockquote>
 <dl class="class">
 <dt id="pydrake.visualization.meldis.Meldis">
 <em class="property">class </em><code class="descclassname">pydrake.visualization.meldis.</code><code class="descname">Meldis</code><span class="sig-paren">(</span><em>*</em>, <em>meshcat_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>MeshCat LCM Display Server (MeLDiS)</p>
 <p>Offers a MeshCat vizualization server that listens for and draws Drake’s
 legacy LCM vizualization messages.</p>
@@ -208,7 +202,8 @@ legacy LCM vizualization messages.</p>
 <dl class="method">
 <dt id="pydrake.visualization.meldis.Meldis.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*</em>, <em>meshcat_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.visualization.meldis.Meldis.serve_forever">
@@ -225,9 +220,7 @@ connections.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -236,7 +229,7 @@ connections.</p>
         <a href="pydrake.visualization.plotting.html" class="btn btn-neutral float-right" title="pydrake.visualization.plotting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.visualization.all.html" class="btn btn-neutral" title="pydrake.visualization.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.visualization.all.html" class="btn btn-neutral float-left" title="pydrake.visualization.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -260,37 +253,15 @@ connections.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

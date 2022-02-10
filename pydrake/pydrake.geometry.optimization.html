@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.geometry" href="pydrake.geometry.html"/>
-        <link rel="next" title="pydrake.geometry.render" href="pydrake.geometry.render.html"/>
-        <link rel="prev" title="pydrake.geometry.all" href="pydrake.geometry.all.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.geometry.render" href="pydrake.geometry.render.html" />
+    <link rel="prev" title="pydrake.geometry.all" href="pydrake.geometry.all.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -128,7 +121,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -136,9 +129,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -186,7 +180,7 @@
 <dl class="class">
 <dt id="pydrake.geometry.optimization.CartesianProduct">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">CartesianProduct</code><a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>The Cartesian product of convex sets is a convex set: S = X₁ × X₂ × ⋯
 × Xₙ = {(x₁, x₂, …, xₙ) | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈ Xₙ} We
 currently require the sets X to be bounded.</p>
@@ -208,20 +202,20 @@ must be bounded.</p>
 <ol class="arabic simple" start="2">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</li>
 </ol>
-<p>Constructs the product from a pair of convex sets. <code class="docutils literal"><span class="pre">setA</span></code> and
-<code class="docutils literal"><span class="pre">setB</span></code> must be bounded.</p>
+<p>Constructs the product from a pair of convex sets. <code class="docutils literal notranslate"><span class="pre">setA</span></code> and
+<code class="docutils literal notranslate"><span class="pre">setB</span></code> must be bounded.</p>
 <ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, sets: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet], A: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Constructs the product of convex sets in the transformed coordinates:
-{x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. <code class="docutils literal"><span class="pre">A</span></code> must be full column
+{x | y = Ax + b, y ∈ Y₁ × Y₂ × ⋯ × Yₙ}. <code class="docutils literal notranslate"><span class="pre">A</span></code> must be full column
 rank, and all of the sets must be bounded.</p>
 <ol class="arabic simple" start="4">
 <li>__init__(self: pydrake.geometry.optimization.CartesianProduct, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
 <p>Constructs a CartesianProduct from a SceneGraph geometry and pose in
-the <code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+the <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
 in the world frame.</p>
 <p>Although any geometry that can be used as a ConvexSet could also be a
 (trivial) CartesianProduct, we restrict this constructor to handling
@@ -242,7 +236,7 @@ constructors.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.CartesianProduct.factor">
 <code class="descname">factor</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.CartesianProduct</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.CartesianProduct.factor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal"><span class="pre">index</span></code> factor in
+<dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal notranslate"><span class="pre">index</span></code> factor in
 the product.</p>
 </dd></dl>
 
@@ -269,7 +263,7 @@ the product.</p>
 <code class="descname">AddPointInNonnegativeScalingConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet, prog: drake::solvers::MathematicalProgram, x: numpy.ndarray[object[m, 1]], t: pydrake.symbolic.Variable</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.AddPointInNonnegativeScalingConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Let S be this convex set. When S is bounded, this method adds the
 convex constraints to imply</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>x ∈ t S,
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>x ∈ t S,
 t ≥ 0,
 </pre></div>
 </div>
@@ -293,12 +287,12 @@ the point defined by vars is inside the set.</p>
 <dt id="pydrake.geometry.optimization.ConvexSet.ambient_dimension">
 <code class="descname">ambient_dimension</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.ambient_dimension" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the dimension of the vector space in which the elements of
-this set are evaluated. Contrast this with the <code class="docutils literal"><span class="pre">affine</span> <span class="pre">dimension</span></code>:
+this set are evaluated. Contrast this with the <code class="docutils literal notranslate"><span class="pre">affine</span> <span class="pre">dimension</span></code>:
 the dimension of the smallest affine subset of the ambient space that
-contains our set. For example, if we define a set using <code class="docutils literal"><span class="pre">A*x</span> <span class="pre">=</span> <span class="pre">b</span></code>,
-where <code class="docutils literal"><span class="pre">A</span></code> has linearly independent rows, then the ambient dimension
-is the dimension of <code class="docutils literal"><span class="pre">x</span></code>, but the affine dimension of the set is
-<code class="docutils literal"><span class="pre">ambient_dimension()</span> <span class="pre">-</span> <span class="pre">rank(A)</span></code>.</p>
+contains our set. For example, if we define a set using <code class="docutils literal notranslate"><span class="pre">A*x</span> <span class="pre">=</span> <span class="pre">b</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">A</span></code> has linearly independent rows, then the ambient dimension
+is the dimension of <code class="docutils literal notranslate"><span class="pre">x</span></code>, but the affine dimension of the set is
+<code class="docutils literal notranslate"><span class="pre">ambient_dimension()</span> <span class="pre">-</span> <span class="pre">rank(A)</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -310,15 +304,15 @@ is the dimension of <code class="docutils literal"><span class="pre">x</span></c
 <dl class="method">
 <dt id="pydrake.geometry.optimization.ConvexSet.IntersectsWith">
 <code class="descname">IntersectsWith</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.ConvexSet</em>, <em>other: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.optimization.ConvexSet.IntersectsWith" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns true iff the intersection between <code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code> is
+<dd><p>Returns true iff the intersection between <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> is
 non-empty.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if the ambient dimension of <code class="docutils literal"><span class="pre">other</span></code> is not the same</li>
-<li>as that of <code class="docutils literal"><span class="pre">this</span></code>.</li>
+<li>RuntimeError if the ambient dimension of <code class="docutils literal notranslate"><span class="pre">other</span></code> is not the same</li>
+<li>as that of <code class="docutils literal notranslate"><span class="pre">this</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -414,29 +408,29 @@ get translated in non-trivial ways to the underlying program.</p>
 <ol class="arabic simple">
 <li>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, v_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, name: str = ‘’) -&gt; drake::geometry::optimization::GraphOfConvexSets::Edge</li>
 </ol>
-<p>Adds an edge to the graph from VertexId <code class="docutils literal"><span class="pre">u_id</span></code> to VertexId <code class="docutils literal"><span class="pre">v_id</span></code>.
-The ids must refer to valid vertices in this graph. If <code class="docutils literal"><span class="pre">name</span></code> is
+<p>Adds an edge to the graph from VertexId <code class="docutils literal notranslate"><span class="pre">u_id</span></code> to VertexId <code class="docutils literal notranslate"><span class="pre">v_id</span></code>.
+The ids must refer to valid vertices in this graph. If <code class="docutils literal notranslate"><span class="pre">name</span></code> is
 empty then a default name will be provided.</p>
 <ol class="arabic simple" start="2">
 <li>AddEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, u: drake::geometry::optimization::GraphOfConvexSets::Vertex, v: drake::geometry::optimization::GraphOfConvexSets::Vertex, name: str = ‘’) -&gt; drake::geometry::optimization::GraphOfConvexSets::Edge</li>
 </ol>
-<p>Adds an edge to the graph from Vertex <code class="docutils literal"><span class="pre">u</span></code> to Vertex <code class="docutils literal"><span class="pre">v</span></code>. The
+<p>Adds an edge to the graph from Vertex <code class="docutils literal notranslate"><span class="pre">u</span></code> to Vertex <code class="docutils literal notranslate"><span class="pre">v</span></code>. The
 vertex references must refer to valid vertices in this graph. If
-<code class="docutils literal"><span class="pre">name</span></code> is empty then a default name will be provided.</p>
+<code class="docutils literal notranslate"><span class="pre">name</span></code> is empty then a default name will be provided.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.AddVertex">
 <code class="descname">AddVertex</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets</em>, <em>set: pydrake.geometry.optimization.ConvexSet</em>, <em>name: str = ''</em><span class="sig-paren">)</span> &#x2192; drake::geometry::optimization::GraphOfConvexSets::Vertex<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.AddVertex" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds a vertex to the graph. A copy of <code class="docutils literal"><span class="pre">set</span></code> is cloned and stored
-inside the graph. If <code class="docutils literal"><span class="pre">name</span></code> is empty then a default name will be
+<dd><p>Adds a vertex to the graph. A copy of <code class="docutils literal notranslate"><span class="pre">set</span></code> is cloned and stored
+inside the graph. If <code class="docutils literal notranslate"><span class="pre">name</span></code> is empty then a default name will be
 provided.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge">
 <em class="property">class </em><code class="descname">Edge</code><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge" title="Permalink to this definition">¶</a></dt>
-<dd><p>An edge in the graph connects between vertex <code class="docutils literal"><span class="pre">u</span></code> and vertex <code class="docutils literal"><span class="pre">v</span></code>.
+<dd><p>An edge in the graph connects between vertex <code class="docutils literal notranslate"><span class="pre">u</span></code> and vertex <code class="docutils literal notranslate"><span class="pre">v</span></code>.
 The edge also holds a list of cost and constraints associated with the
 continuous variables.</p>
 <dl class="attribute">
@@ -452,7 +446,7 @@ continuous variables.</p>
 <ol class="arabic simple">
 <li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, f: pydrake.symbolic.Formula) -&gt; drake::solvers::Binding&lt;drake::solvers::Constraint&gt;</li>
 </ol>
-<p>Adds a cost to this edge, described by a symbolic::Formula <code class="docutils literal"><span class="pre">f</span></code>
+<p>Adds a cost to this edge, described by a symbolic::Formula <code class="docutils literal notranslate"><span class="pre">f</span></code>
 containing <em>only</em> elements of xu() and xv() as variables.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -460,7 +454,7 @@ containing <em>only</em> elements of xu() and xv() as variables.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if f.GetFreeVariables() is not a subset of xu() ∪</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">xv().</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">xv().</span></code></li>
 </ul>
 </td>
 </tr>
@@ -469,11 +463,11 @@ containing <em>only</em> elements of xu() and xv() as variables.</p>
 <ol class="arabic simple" start="2">
 <li>AddConstraint(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: drake::solvers::Binding&lt;drake::solvers::Constraint&gt;) -&gt; drake::solvers::Binding&lt;drake::solvers::Constraint&gt;</li>
 </ol>
-<p>Adds a cost to this edge. <code class="docutils literal"><span class="pre">binding</span></code> must contain <em>only</em> elements of
+<p>Adds a cost to this edge. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements of
 xu() and xv() as variables. For technical reasons relating to being
 able to “turn-off” the cost on inactive edges, all costs are
 eventually implemented with a slack variable and a constraint:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -485,7 +479,7 @@ eventually implemented with a slack variable and a constraint:</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if binding.variables() is not a subset of xu() ∪</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">xv().</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">xv().</span></code></li>
 </ul>
 </td>
 </tr>
@@ -500,12 +494,12 @@ eventually implemented with a slack variable and a constraint:</p>
 <ol class="arabic simple">
 <li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, e: pydrake.symbolic.Expression) -&gt; Tuple[pydrake.symbolic.Variable, drake::solvers::Binding&lt;drake::solvers::Cost&gt;]</li>
 </ol>
-<p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal"><span class="pre">e</span></code>
+<p>Adds a cost to this edge, described by a symbolic::Expression <code class="docutils literal notranslate"><span class="pre">e</span></code>
 containing <em>only</em> elements of xu() and xv() as variables. For
 technical reasons relating to being able to “turn-off” the cost on
 inactive edges, all costs are eventually implemented with a slack
 variable and a constraint:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -521,11 +515,11 @@ variable and a constraint:</p>
 <ol class="arabic simple" start="2">
 <li>AddCost(self: pydrake.geometry.optimization.GraphOfConvexSets.Edge, binding: drake::solvers::Binding&lt;drake::solvers::Cost&gt;) -&gt; Tuple[pydrake.symbolic.Variable, drake::solvers::Binding&lt;drake::solvers::Cost&gt;]</li>
 </ol>
-<p>Adds a cost to this edge. <code class="docutils literal"><span class="pre">binding</span></code> must contain <em>only</em> elements of
+<p>Adds a cost to this edge. <code class="docutils literal notranslate"><span class="pre">binding</span></code> must contain <em>only</em> elements of
 xu() and xv() as variables. For technical reasons relating to being
 able to “turn-off” the cost on inactive edges, all costs are
 eventually implemented with a slack variable and a constraint:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -537,7 +531,7 @@ eventually implemented with a slack variable and a constraint:</p>
 </tr>
 <tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if binding.variables() is not a subset of xu() ∪</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">xv().</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">xv().</span></code></li>
 </ul>
 </td>
 </tr>
@@ -623,7 +617,7 @@ connects to.</p>
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.xu">
 <code class="descname">xu</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.xu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the continuous decision variables associated with vertex
-<code class="docutils literal"><span class="pre">u</span></code>. This can be used for constructing symbolic::Expression costs
+<code class="docutils literal notranslate"><span class="pre">u</span></code>. This can be used for constructing symbolic::Expression costs
 and constraints.</p>
 </dd></dl>
 
@@ -631,7 +625,7 @@ and constraints.</p>
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.xv">
 <code class="descname">xv</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.xv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the continuous decision variables associated with vertex
-<code class="docutils literal"><span class="pre">v</span></code>. This can be used for constructing symbolic::Expression costs
+<code class="docutils literal notranslate"><span class="pre">v</span></code>. This can be used for constructing symbolic::Expression costs
 and constraints.</p>
 </dd></dl>
 
@@ -681,16 +675,16 @@ builds.</p>
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString">
 <code class="descname">GetGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets, result: Optional[drake::solvers::MathematicalProgramResult], show_slacks: bool = True, precision: int = 3, scientific: bool = False</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.GetGraphvizString" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Graphviz string describing the graph vertices and edges. If
-<code class="docutils literal"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
+<code class="docutils literal notranslate"><span class="pre">results</span></code> is supplied, then the graph will be annotated with the
 solution values.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">show_slacks</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">show_slacks</span></code>:</dt>
 <dd>determines whether the values of the intermediate (slack)
 variables are also displayed in the graph.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">precision</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">precision</span></code>:</dt>
 <dd>sets the floating point precision (how many digits are generated)
 of the annotations.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">scientific</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scientific</span></code>:</dt>
 <dd>sets the floating point formatting to scientific (if true) or
 fixed (if false).</dd>
 </dl>
@@ -703,7 +697,7 @@ fixed (if false).</dd>
 <ol class="arabic simple">
 <li>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge_id: drake::Identifier&lt;drake::geometry::optimization::EdgeTag&gt;) -&gt; None</li>
 </ol>
-<p>Removes edge <code class="docutils literal"><span class="pre">edge_id</span></code> from the graph.</p>
+<p>Removes edge <code class="docutils literal notranslate"><span class="pre">edge_id</span></code> from the graph.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>The edge must be part of the graph.</dd>
@@ -711,7 +705,7 @@ fixed (if false).</dd>
 <ol class="arabic simple" start="2">
 <li>RemoveEdge(self: pydrake.geometry.optimization.GraphOfConvexSets, edge: drake::geometry::optimization::GraphOfConvexSets::Edge) -&gt; None</li>
 </ol>
-<p>Removes edge <code class="docutils literal"><span class="pre">edge</span></code> from the graph.</p>
+<p>Removes edge <code class="docutils literal notranslate"><span class="pre">edge</span></code> from the graph.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>The edge must be part of the graph.</dd>
@@ -725,7 +719,7 @@ fixed (if false).</dd>
 <ol class="arabic simple">
 <li>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;) -&gt; None</li>
 </ol>
-<p>Removes vertex <code class="docutils literal"><span class="pre">vertex_id</span></code> from the graph as well as any edges from
+<p>Removes vertex <code class="docutils literal notranslate"><span class="pre">vertex_id</span></code> from the graph as well as any edges from
 or to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in
 the graph.</p>
 <dl class="docutils">
@@ -735,7 +729,7 @@ the graph.</p>
 <ol class="arabic simple" start="2">
 <li>RemoveVertex(self: pydrake.geometry.optimization.GraphOfConvexSets, vertex: drake::geometry::optimization::GraphOfConvexSets::Vertex) -&gt; None</li>
 </ol>
-<p>Removes vertex <code class="docutils literal"><span class="pre">vertex</span></code> from the graph as well as any edges from or
+<p>Removes vertex <code class="docutils literal notranslate"><span class="pre">vertex</span></code> from the graph as well as any edges from or
 to the vertex. Runtime is O(nₑ) where nₑ is the number of edges in the
 graph.</p>
 <dl class="docutils">
@@ -757,14 +751,14 @@ shortest path problem on the graph, as discussed in detail in</p>
 Umenberger, Pablo A. Parrilo, Russ Tedrake.
 <a class="reference external" href="https://arxiv.org/abs/2101.11565">https://arxiv.org/abs/2101.11565</a></p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">source</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">source</span></code>:</dt>
 <dd>specifies the source set. The solver will choose any point in that
 set; to start at a particular continuous state consider adding a
 Point set to the graph and using that as the source.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">target</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">target</span></code>:</dt>
 <dd>specifies the target set. The solver will choose any point in that
 set.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">convex_relaxation</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">convex_relaxation</span></code>:</dt>
 <dd>will solve the relaxed version of the problem. As discussed in the
 paper, we know that this relaxation cannot solve the original
 NP-hard problem for all instances, but there are also many
@@ -887,9 +881,9 @@ builds.</p>
 <dl class="class">
 <dt id="pydrake.geometry.optimization.HPolyhedron">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">HPolyhedron</code><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>Implements a polyhedral convex set using the half-space
-representation: <code class="docutils literal"><span class="pre">{x|</span> <span class="pre">A</span> <span class="pre">x</span> <span class="pre">≤</span> <span class="pre">b}</span></code>. Note: This set may be unbounded.</p>
+representation: <code class="docutils literal notranslate"><span class="pre">{x|</span> <span class="pre">A</span> <span class="pre">x</span> <span class="pre">≤</span> <span class="pre">b}</span></code>. Note: This set may be unbounded.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.__init__" title="Permalink to this definition">¶</a></dt>
@@ -906,8 +900,8 @@ representation: <code class="docutils literal"><span class="pre">{x|</span> <spa
 <li>__init__(self: pydrake.geometry.optimization.HPolyhedron, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
 <p>Constructs a new HPolyhedron from a SceneGraph geometry and pose in
-the <code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+the <code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
 in the world frame.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -934,7 +928,7 @@ in the world frame.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.CartesianPower">
 <code class="descname">CartesianPower</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>n: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.CartesianPower" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the <code class="docutils literal"><span class="pre">n</span></code>-ary Cartesian power of <code class="docutils literal"><span class="pre">this</span></code>. The n-ary Cartesian
+<dd><p>Returns the <code class="docutils literal notranslate"><span class="pre">n</span></code>-ary Cartesian power of <code class="docutils literal notranslate"><span class="pre">this</span></code>. The n-ary Cartesian
 power of a set H is the set H ⨉ H ⨉ … ⨉ H, where H is repeated n
 times.</p>
 </dd></dl>
@@ -942,7 +936,7 @@ times.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.HPolyhedron.CartesianProduct">
 <code class="descname">CartesianProduct</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.CartesianProduct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the Cartesian product of <code class="docutils literal"><span class="pre">this</span></code> and <code class="docutils literal"><span class="pre">other</span></code>.</p>
+<dd><p>Returns the Cartesian product of <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -957,7 +951,7 @@ conform to the point that one might consider the “visual center” of
 the set. For example, for a long thin rectangle, any point in the
 center line segment illustrated below would be a valid center point.
 The solver may return any point on that line segment.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>┌──────────────────────────────────┐
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>┌──────────────────────────────────┐
 │                                  │
 │   ────────────────────────────   │
 │                                  │
@@ -987,7 +981,7 @@ upper corners.</p>
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.HPolyhedron.MakeUnitBox">
 <em class="property">static </em><code class="descname">MakeUnitBox</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeUnitBox" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal"><span class="pre">dim</span></code> dimensions, {x | <a href="#id1"><span class="problematic" id="id2">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id1"><span class="problematic" id="id2">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>
@@ -997,7 +991,7 @@ length 2.</p>
 <code class="descname">MaximumVolumeInscribedEllipsoid</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; drake::geometry::optimization::Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MaximumVolumeInscribedEllipsoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solves a semi-definite program to compute the inscribed ellipsoid.
 From Section 8.4.2 in Boyd and Vandenberghe, 2004, we solve</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>max_{C,d} log det (C)
 s.t. |aᵢC|₂ ≤ bᵢ - aᵢd, ∀i
 C ≽ 0
 </pre></div>
@@ -1023,14 +1017,14 @@ Cx + d | <a href="#id3"><span class="problematic" id="id4">|</span></a>x|₂ ≤
 <dl class="class">
 <dt id="pydrake.geometry.optimization.Hyperellipsoid">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Hyperellipsoid</code><a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>Implements an ellipsoidal convex set represented by the quadratic form
-<code class="docutils literal"><span class="pre">{x</span> <span class="pre">|</span> <span class="pre">(x-center)ᵀAᵀA(x-center)</span> <span class="pre">≤</span> <span class="pre">1}</span></code>. Note that <code class="docutils literal"><span class="pre">A</span></code> need not be
+<code class="docutils literal notranslate"><span class="pre">{x</span> <span class="pre">|</span> <span class="pre">(x-center)ᵀAᵀA(x-center)</span> <span class="pre">≤</span> <span class="pre">1}</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">A</span></code> need not be
 square; we require only that the matrix AᵀA is positive semi-definite.</p>
 <p>Compare this with an alternative (very useful) parameterization of the
-ellipsoid: <code class="docutils literal"><span class="pre">{Bu</span> <span class="pre">+</span> <span class="pre">center</span> <span class="pre">|</span> <span class="pre">|u|₂</span> <span class="pre">≤</span> <span class="pre">1}</span></code>, which is an affine scaling of
-the unit ball. This is related to the quadratic form by <code class="docutils literal"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">A⁻¹</span></code>,
-when <code class="docutils literal"><span class="pre">A</span></code> is invertible, but the quadratic form can also represent
+ellipsoid: <code class="docutils literal notranslate"><span class="pre">{Bu</span> <span class="pre">+</span> <span class="pre">center</span> <span class="pre">|</span> <span class="pre">|u|₂</span> <span class="pre">≤</span> <span class="pre">1}</span></code>, which is an affine scaling of
+the unit ball. This is related to the quadratic form by <code class="docutils literal notranslate"><span class="pre">B</span> <span class="pre">=</span> <span class="pre">A⁻¹</span></code>,
+when <code class="docutils literal notranslate"><span class="pre">A</span></code> is invertible, but the quadratic form can also represent
 unbounded sets.</p>
 <p>Note: the name Hyperellipsoid was taken here to avoid conflicting with
 geometry::Ellipsoid and to distinguish that this class supports N
@@ -1051,8 +1045,8 @@ dimensions.</p>
 <li>__init__(self: pydrake.geometry.optimization.Hyperellipsoid, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
 <p>Constructs a Hyperellipsoid from a SceneGraph geometry and pose in the
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
 in the world frame.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1085,19 +1079,19 @@ in the world frame.</p>
 <em class="property">static </em><code class="descname">MakeAxisAligned</code><span class="sig-paren">(</span><em>radius: numpy.ndarray[numpy.float64[m, 1]], center: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeAxisAligned" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs the an axis-aligned Hyperellipsoid with the implicit form
 (x₀-c₀)²/r₀² + (x₁-c₁)²/r₁² + … + (x_N - c_N)²/r_N² ≤ 1, where c is
-shorthand for <code class="docutils literal"><span class="pre">center</span></code> and r is shorthand for <code class="docutils literal"><span class="pre">radius</span></code>.</p>
+shorthand for <code class="docutils literal notranslate"><span class="pre">center</span></code> and r is shorthand for <code class="docutils literal notranslate"><span class="pre">radius</span></code>.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.Hyperellipsoid.MakeHypersphere">
 <em class="property">static </em><code class="descname">MakeHypersphere</code><span class="sig-paren">(</span><em>radius: float, center: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeHypersphere" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a hypersphere with <code class="docutils literal"><span class="pre">radius</span></code> and <code class="docutils literal"><span class="pre">center</span></code>.</p>
+<dd><p>Constructs a hypersphere with <code class="docutils literal notranslate"><span class="pre">radius</span></code> and <code class="docutils literal notranslate"><span class="pre">center</span></code>.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall">
 <em class="property">static </em><code class="descname">MakeUnitBall</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.Hyperellipsoid<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MakeUnitBall" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal"><span class="pre">dim</span></code> dimensions, {x | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₂ &lt;= 1
+<dd><p>Constructs the L₂-norm unit ball in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id5"><span class="problematic" id="id6">|</span></a>x|₂ &lt;= 1
 }.</p>
 </dd></dl>
 
@@ -1105,12 +1099,12 @@ shorthand for <code class="docutils literal"><span class="pre">center</span></co
 <dt id="pydrake.geometry.optimization.Hyperellipsoid.MinimumUniformScalingToTouch">
 <code class="descname">MinimumUniformScalingToTouch</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em>, <em>other: pydrake.geometry.optimization.ConvexSet</em><span class="sig-paren">)</span> &#x2192; Tuple[float, numpy.ndarray[numpy.float64[m, 1]]]<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.MinimumUniformScalingToTouch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes the smallest uniform scaling of this ellipsoid for which it
-still intersects <code class="docutils literal"><span class="pre">other</span></code>. √ minₓ (x-center)ᵀAᵀA(x-center) s.t. x ∈
+still intersects <code class="docutils literal notranslate"><span class="pre">other</span></code>. √ minₓ (x-center)ᵀAᵀA(x-center) s.t. x ∈
 other. Note that if center ∈ other, then we expect scaling = 0 and x =
 center (up to precision).</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">other</span></code> must have the same ambient_dimension as this.</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">other</span></code> must have the same ambient_dimension as this.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1147,21 +1141,21 @@ ellipsoid. It alternates between finding separating hyperplanes
 between the ellipsoid and the obstacles and then finding a new
 maximum-volume inscribed ellipsoid.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">obstacles</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">obstacles</span></code>:</dt>
 <dd>is a vector of convex sets representing the occupied space.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">sample</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">sample</span></code>:</dt>
 <dd>provides a point in the space; the algorithm is initialized using
 a tiny sphere around this point. The algorithm is only guaranteed
 to succeed if this sample point is collision free (outside of all
 obstacles), but in practice the algorithm can often escape bad
 initialization (assuming the require_sample_point_is_contained
 option is false).</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">domain</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">domain</span></code>:</dt>
 <dd>describes the total region of interest; computed IRIS regions will
 be inside this domain. It must be bounded, and is typically a
 simple bounding box (e.g. from HPolyhedron::MakeBox).</dd>
 </dl>
-<p>The <code class="docutils literal"><span class="pre">obstacles</span></code>, <code class="docutils literal"><span class="pre">sample</span></code>, and the <code class="docutils literal"><span class="pre">domain</span></code> must describe
+<p>The <code class="docutils literal notranslate"><span class="pre">obstacles</span></code>, <code class="docutils literal notranslate"><span class="pre">sample</span></code>, and the <code class="docutils literal notranslate"><span class="pre">domain</span></code> must describe
 elements in the same ambient dimension (but that dimension can be any
 positive integer).</p>
 </dd></dl>
@@ -1175,7 +1169,7 @@ positive integer).</p>
 </ol>
 <p>A variation of the Iris (Iterative Region Inflation by Semidefinite
 programming) algorithm which finds collision-free regions in the
-<em>configuration space</em> of <code class="docutils literal"><span class="pre">plant</span></code>.</p>
+<em>configuration space</em> of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">Iris for details on the original algorithm. The possibility of
@@ -1185,15 +1179,15 @@ address the non-convexity of configuration-space obstacles; these
 will be documented in a forth-coming publication.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">plant</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
 <dd>describes the kinematics of configuration space. It must be
 connected to a SceneGraph in a systems::Diagram.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">context</span></code>:</dt>
-<dd>is a context of the <code class="docutils literal"><span class="pre">plant</span></code>. The context must have the positions
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>is a context of the <code class="docutils literal notranslate"><span class="pre">plant</span></code>. The context must have the positions
 of the plant set to the initialIRIS seed configuration.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">options</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">options</span></code>:</dt>
 <dd>provides additional configuration options. In particular,
-<code class="docutils literal"><span class="pre">options.enabled_ibex</span></code> may have a significant impact on the
+<code class="docutils literal notranslate"><span class="pre">options.enabled_ibex</span></code> may have a significant impact on the
 runtime of the algorithm.</dd>
 </dl>
 <ol class="arabic simple" start="2">
@@ -1291,7 +1285,7 @@ IRIS algorithm.</p>
 <dl class="class">
 <dt id="pydrake.geometry.optimization.MinkowskiSum">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">MinkowskiSum</code><a class="headerlink" href="#pydrake.geometry.optimization.MinkowskiSum" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>A convex set that represents the Minkowski sum of multiple sets: S =
 X₁ ⨁ X₂ ⨁ … ⨁ Xₙ = {x₁ + x₂ + … + xₙ | x₁ ∈ X₁, x₂ ∈ X₂, …, xₙ ∈
 Xₙ}</p>
@@ -1311,8 +1305,8 @@ Xₙ}</p>
 <li>__init__(self: pydrake.geometry.optimization.MinkowskiSum, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None) -&gt; None</li>
 </ol>
 <p>Constructs a MinkowskiSum from a SceneGraph geometry and pose in the
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
 in the world frame.</p>
 <p>Although in principle a MinkowskiSum can represent any ConvexSet as
 the sum of a single set, here we only support Capsule geometry, which
@@ -1338,7 +1332,7 @@ at least one of the ConvexSet class constructors.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.MinkowskiSum.term">
 <code class="descname">term</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.MinkowskiSum</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.MinkowskiSum.term" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal"><span class="pre">index</span></code> term in
+<dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal notranslate"><span class="pre">index</span></code> term in
 the sum.</p>
 </dd></dl>
 
@@ -1347,7 +1341,7 @@ the sum.</p>
 <dl class="class">
 <dt id="pydrake.geometry.optimization.Point">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Point</code><a class="headerlink" href="#pydrake.geometry.optimization.Point" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>A convex set that contains exactly one element. Also known as a
 singleton or unit set.</p>
 <dl class="method">
@@ -1362,8 +1356,8 @@ singleton or unit set.</p>
 <li>__init__(self: pydrake.geometry.optimization.Point, query_object: pydrake.geometry.QueryObject_[float], geometry_id: pydrake.geometry.GeometryId, reference_frame: Optional[pydrake.geometry.FrameId] = None, maximum_allowable_radius: float = 0.0) -&gt; None</li>
 </ol>
 <p>Constructs a Point from a SceneGraph geometry and pose in the
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
-<code class="docutils literal"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame, obtained via the QueryObject. If
+<code class="docutils literal notranslate"><span class="pre">reference_frame</span></code> frame is std::nullopt, then it will be expressed
 in the world frame.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1371,7 +1365,7 @@ in the world frame.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if geometry_id does not correspond to a Sphere or if</li>
-<li>the Sphere has radius greater than <code class="docutils literal"><span class="pre">maximum_allowable_radius</span></code>.</li>
+<li>the Sphere has radius greater than <code class="docutils literal notranslate"><span class="pre">maximum_allowable_radius</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -1382,10 +1376,10 @@ in the world frame.</p>
 <dl class="method">
 <dt id="pydrake.geometry.optimization.Point.set_x">
 <code class="descname">set_x</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Point, x: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.optimization.Point.set_x" title="Permalink to this definition">¶</a></dt>
-<dd><p>Changes the element <code class="docutils literal"><span class="pre">x</span></code> describing the set.</p>
+<dd><p>Changes the element <code class="docutils literal notranslate"><span class="pre">x</span></code> describing the set.</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
-<dd><code class="docutils literal"><span class="pre">x</span></code> must be of size ambient_dimension().</dd>
+<dd><code class="docutils literal notranslate"><span class="pre">x</span></code> must be of size ambient_dimension().</dd>
 </dl>
 </dd></dl>
 
@@ -1400,7 +1394,7 @@ in the world frame.</p>
 <dl class="class">
 <dt id="pydrake.geometry.optimization.VPolytope">
 <em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">VPolytope</code><a class="headerlink" href="#pydrake.geometry.optimization.VPolytope" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
 <p>A polytope described using the vertex representation. The set is
 defined as the convex hull of the vertices. The vertices are not
 guaranteed to be in any particular order, nor to be minimal (some
@@ -1429,7 +1423,7 @@ convex hull).</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if H is unbounded or if Qhull terminates with an</li>
-<li><code class="xref py py-exc docutils literal"><span class="pre">error.</span></code></li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">error.</span></code></li>
 </ul>
 </td>
 </tr>
@@ -1461,7 +1455,7 @@ upper corners.</p>
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.VPolytope.MakeUnitBox">
 <em class="property">static </em><code class="descname">MakeUnitBox</code><span class="sig-paren">(</span><em>dim: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.VPolytope<a class="headerlink" href="#pydrake.geometry.optimization.VPolytope.MakeUnitBox" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal"><span class="pre">dim</span></code> dimensions, {x | <a href="#id7"><span class="problematic" id="id8">|</span></a>x|∞ &lt;= 1
+<dd><p>Constructs the L∞-norm unit box in <code class="docutils literal notranslate"><span class="pre">dim</span></code> dimensions, {x | <a href="#id7"><span class="problematic" id="id8">|</span></a>x|∞ &lt;= 1
 }. This is an axis-aligned box, centered at the origin, with edge
 length 2.</p>
 </dd></dl>
@@ -1479,9 +1473,7 @@ dimension, and n is the number of vertices.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -1490,7 +1482,7 @@ dimension, and n is the number of vertices.</p>
         <a href="pydrake.geometry.render.html" class="btn btn-neutral float-right" title="pydrake.geometry.render" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.geometry.all.html" class="btn btn-neutral" title="pydrake.geometry.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.geometry.all.html" class="btn btn-neutral float-left" title="pydrake.geometry.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1514,37 +1506,15 @@ dimension, and n is the number of vertices.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

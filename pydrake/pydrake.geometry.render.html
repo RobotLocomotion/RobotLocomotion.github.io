@@ -17,45 +17,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pydrake  documentation" href="index.html"/>
-        <link rel="up" title="pydrake.geometry" href="pydrake.geometry.html"/>
-        <link rel="next" title="pydrake.lcm" href="pydrake.lcm.html"/>
-        <link rel="prev" title="pydrake.geometry.optimization" href="pydrake.geometry.optimization.html"/> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.lcm" href="pydrake.lcm.html" />
+    <link rel="prev" title="pydrake.geometry.optimization" href="pydrake.geometry.optimization.html" /> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -128,7 +121,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pydrake</a>
@@ -136,9 +129,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -392,7 +386,7 @@ getter methods for documentation of parameters.</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.render.MakeRenderEngineGl">
-<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7fe57937e430&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.geometry.render.</code><code class="descname">MakeRenderEngineGl</code><span class="sig-paren">(</span><em>params: pydrake.geometry.render.RenderEngineGlParams = &lt;pydrake.geometry.render.RenderEngineGlParams object at 0x7f685c93ba70&gt;</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.render.RenderEngine<a class="headerlink" href="#pydrake.geometry.render.MakeRenderEngineGl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructs a RenderEngine implementation which uses a purely OpenGL
 renderer. The engine only works under Ubuntu. If called on a Mac, it
 will produce a “dummy” implementation.</p>
@@ -439,19 +433,19 @@ changed to a different value at construction.</p>
 <p>² If no path is specified, or the file cannot be read, the diffuse
 rgba value is used (or its default).</p>
 <p>³ RenderEngineVtk implements a legacy feature for associating textures
-with <em>meshes</em>. If <em>no</em> <code class="docutils literal"><span class="pre">(phong,</span> <span class="pre">diffuse_map)</span></code> property is provided
+with <em>meshes</em>. If <em>no</em> <code class="docutils literal notranslate"><span class="pre">(phong,</span> <span class="pre">diffuse_map)</span></code> property is provided
 (or it refers to a file that doesn’t exist), for a mesh named
-<code class="docutils literal"><span class="pre">/path/to/mesh.obj</span></code>, RenderEngineVtk will search for a file
-<code class="docutils literal"><span class="pre">/path/to/mesh.png</span></code> (replacing “obj” with “png”). If that image
+<code class="docutils literal notranslate"><span class="pre">/path/to/mesh.obj</span></code>, RenderEngineVtk will search for a file
+<code class="docutils literal notranslate"><span class="pre">/path/to/mesh.png</span></code> (replacing “obj” with “png”). If that image
 exists, it will be used as a texture on the mesh object.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">RenderEngineVtk does not support the OBJ format <code class="docutils literal"><span class="pre">usemtl</span></code>
+<p class="last">RenderEngineVtk does not support the OBJ format <code class="docutils literal notranslate"><span class="pre">usemtl</span></code>
 directive. Instead, it has two ways to associate a color texture
 with an obj file: - File name matching; see footnote 3 above. -
 Explicit assignment of arbitrary texture files from within model
 files. In SDFormat, use the tag tag_drake_diffuse_map. In URDF,
-use <code class="docutils literal"><span class="pre">//visual/material/texture</span></code>.</p>
+use <code class="docutils literal notranslate"><span class="pre">//visual/material/texture</span></code>.</p>
 </div>
 <p><strong>Depth images</strong></p>
 <p>No specific properties required.</p>
@@ -569,20 +563,20 @@ to use.</p>
 <dl class="staticmethod">
 <dt id="pydrake.geometry.render.RenderEngine.GetColorDFromLabel">
 <em class="property">static </em><code class="descname">GetColorDFromLabel</code><span class="sig-paren">(</span><em>label: drake::geometry::render::RenderLabel</em><span class="sig-paren">)</span> &#x2192; drake::systems::sensors::Color&lt;double&gt;<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.GetColorDFromLabel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transforms <code class="docutils literal"><span class="pre">this</span></code> render label into a double-valued RGB color.</p>
+<dd><p>Transforms <code class="docutils literal notranslate"><span class="pre">this</span></code> render label into a double-valued RGB color.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="pydrake.geometry.render.RenderEngine.GetColorIFromLabel">
 <em class="property">static </em><code class="descname">GetColorIFromLabel</code><span class="sig-paren">(</span><em>label: drake::geometry::render::RenderLabel</em><span class="sig-paren">)</span> &#x2192; drake::systems::sensors::Color&lt;int&gt;<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.GetColorIFromLabel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Transforms <code class="docutils literal"><span class="pre">this</span></code> render label into a byte-valued RGB color.</p>
+<dd><p>Transforms <code class="docutils literal notranslate"><span class="pre">this</span></code> render label into a byte-valued RGB color.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.geometry.render.RenderEngine.GetRenderLabelOrThrow">
 <code class="descname">GetRenderLabelOrThrow</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderEngine</em>, <em>properties: pydrake.geometry.PerceptionProperties</em><span class="sig-paren">)</span> &#x2192; drake::geometry::render::RenderLabel<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.GetRenderLabelOrThrow" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extracts the <code class="docutils literal"><span class="pre">(label,</span> <span class="pre">id)</span></code> RenderLabel property from the given
-<code class="docutils literal"><span class="pre">properties</span></code> and validates it (or the configured default if no such
+<dd><p>Extracts the <code class="docutils literal notranslate"><span class="pre">(label,</span> <span class="pre">id)</span></code> RenderLabel property from the given
+<code class="docutils literal notranslate"><span class="pre">properties</span></code> and validates it (or the configured default if no such
 property is defined).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -597,8 +591,8 @@ property is defined).</p>
 <dl class="method">
 <dt id="pydrake.geometry.render.RenderEngine.has_geometry">
 <code class="descname">has_geometry</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderEngine</em>, <em>id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.has_geometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reports true if a geometry with the given <code class="docutils literal"><span class="pre">id</span></code> has been registered
-with <code class="docutils literal"><span class="pre">this</span></code> engine.</p>
+<dd><p>Reports true if a geometry with the given <code class="docutils literal notranslate"><span class="pre">id</span></code> has been registered
+with <code class="docutils literal notranslate"><span class="pre">this</span></code> engine.</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -612,24 +606,24 @@ corresponding RenderLabel.</p>
 <dt id="pydrake.geometry.render.RenderEngine.RegisterVisual">
 <code class="descname">RegisterVisual</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderEngine, id: pydrake.geometry.GeometryId, shape: pydrake.geometry.Shape, properties: pydrake.geometry.PerceptionProperties, X_WG: pydrake.math.RigidTransform_[float], needs_updates: bool = True</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.RegisterVisual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Requests registration of the given shape with this render engine. The
-geometry is uniquely identified by the given <code class="docutils literal"><span class="pre">id</span></code>. The renderer is
-allowed to examine the given <code class="docutils literal"><span class="pre">properties</span></code> and choose to <em>not</em>
+geometry is uniquely identified by the given <code class="docutils literal notranslate"><span class="pre">id</span></code>. The renderer is
+allowed to examine the given <code class="docutils literal notranslate"><span class="pre">properties</span></code> and choose to <em>not</em>
 register the geometry.</p>
 <p>Typically, derived classes will attempt to validate the RenderLabel
-value stored in the <code class="docutils literal"><span class="pre">(label,</span> <span class="pre">id)</span></code> property (or its configured
+value stored in the <code class="docutils literal notranslate"><span class="pre">(label,</span> <span class="pre">id)</span></code> property (or its configured
 default value if no such property exists). In that case, attempting to
 assign RenderLabel::kEmpty or RenderLabel::kUnspecified will cause an
 exception to be thrown (as reserved_render_label “documented”).</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">id</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt>
 <dd>The geometry id of the shape to register.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">shape</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">shape</span></code>:</dt>
 <dd>The shape specification to add to the render engine.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">properties</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">properties</span></code>:</dt>
 <dd>The perception properties provided for this geometry.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">X_WG</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WG</span></code>:</dt>
 <dd>The pose of the geometry relative to the world frame W.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">needs_updates</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">needs_updates</span></code>:</dt>
 <dd>If true, the geometry’s pose will be updated via UpdatePoses().</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -644,7 +638,7 @@ registration.</p>
 <li>RuntimeError if the shape is an unsupported type, the shape’s</li>
 <li>RenderLabel value is RenderLabel::kUnspecified or</li>
 <li>RenderLabel::kEmpty, or a geometry has already been registered</li>
-<li>with the given <code class="docutils literal"><span class="pre">id</span></code>.</li>
+<li>with the given <code class="docutils literal notranslate"><span class="pre">id</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -655,9 +649,9 @@ registration.</p>
 <dl class="method">
 <dt id="pydrake.geometry.render.RenderEngine.RemoveGeometry">
 <code class="descname">RemoveGeometry</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderEngine</em>, <em>id: pydrake.geometry.GeometryId</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.RemoveGeometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Removes the geometry indicated by the given <code class="docutils literal"><span class="pre">id</span></code> from the engine.</p>
+<dd><p>Removes the geometry indicated by the given <code class="docutils literal notranslate"><span class="pre">id</span></code> from the engine.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">id</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">id</span></code>:</dt>
 <dd>The id of the geometry to remove.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -677,9 +671,9 @@ wasn’t registered with this engine).</td>
 <dd><p>Renders the registered geometry into the given color (rgb) image based
 on a <em>fully</em> specified camera.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">camera</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">camera</span></code>:</dt>
 <dd>The <em>render engine</em> camera properties.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">color_image_out</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">color_image_out</span></code>:</dt>
 <dd>The rendered color image.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -687,9 +681,9 @@ on a <em>fully</em> specified camera.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">color_image_out</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code> or the size of</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">color_image_out</span></code> is <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> or the size of</li>
 <li>the given input image doesn’t match the size declared in</li>
-<li><code class="docutils literal"><span class="pre">camera</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">camera</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -705,9 +699,9 @@ on a <em>fully</em> specified camera.</p>
 operations, depth images don’t have an option to display the window;
 generally, basic depth images are not readily communicative to humans.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">camera</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">camera</span></code>:</dt>
 <dd>The <em>render engine</em> camera properties.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">depth_image_out</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">depth_image_out</span></code>:</dt>
 <dd>The rendered depth image.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -715,9 +709,9 @@ generally, basic depth images are not readily communicative to humans.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">depth_image_out</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code> or the size of</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">depth_image_out</span></code> is <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> or the size of</li>
 <li>the given input image doesn’t match the size declared in</li>
-<li><code class="docutils literal"><span class="pre">camera</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">camera</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -737,9 +731,9 @@ rendered to be exactly registered with a corresponding color
 image.</p>
 </div>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">camera</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">camera</span></code>:</dt>
 <dd>The <em>render engine</em> camera properties.</dd>
-<dt>Parameter <code class="docutils literal"><span class="pre">label_image_out</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">label_image_out</span></code>:</dt>
 <dd>The rendered label image.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
@@ -747,9 +741,9 @@ image.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if <code class="docutils literal"><span class="pre">label_image_out</span></code> is <code class="docutils literal"><span class="pre">nullptr</span></code> or the size of</li>
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">label_image_out</span></code> is <code class="docutils literal notranslate"><span class="pre">nullptr</span></code> or the size of</li>
 <li>the given input image doesn’t match the size declared in</li>
-<li><code class="docutils literal"><span class="pre">camera</span></code>.</li>
+<li><code class="docutils literal notranslate"><span class="pre">camera</span></code>.</li>
 </ul>
 </td>
 </tr>
@@ -765,7 +759,7 @@ currently bound to the camera position. This is a temporary measure to
 facilitate benchmarking and create visible shadows, and should not be
 used publicly.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">X_DL</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_DL</span></code>:</dt>
 <dd>The pose of the light in a frame D that is attached to the camera
 position. In this frame D, the camera is located at (0, 0, 1),
 looking towards (0, 0, 0) at a distance of 1, with up being (0, 1,
@@ -789,7 +783,7 @@ looking towards (0, 0, 0) at a distance of 1, with up being (0, 1,
 <code class="descname">UpdateViewpoint</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderEngine, X_WR: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.render.RenderEngine.UpdateViewpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates the renderer’s viewpoint with given pose X_WR.</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal"><span class="pre">X_WR</span></code>:</dt>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_WR</span></code>:</dt>
 <dd>The pose of renderer’s viewpoint in the world coordinate system.</dd>
 </dl>
 </dd></dl>
@@ -869,23 +863,23 @@ labels in a manner that is meaningful for their application.</p>
 meaning in the context of the rendering ecosystem and are globally
 available to all applications. They are:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">empty</span></code>: a pixel with the <code class="docutils literal"><span class="pre">empty</span></code> RenderLabel value indicates that <em>no</em></li>
+<li><code class="docutils literal notranslate"><span class="pre">empty</span></code>: a pixel with the <code class="docutils literal notranslate"><span class="pre">empty</span></code> RenderLabel value indicates that <em>no</em></li>
 </ul>
 <p>geometry rendered to that pixel. Implemented as RenderLabel::kEmpty.
-- <code class="docutils literal"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">render</span></code>: any geometry assigned the <code class="docutils literal"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">render</span></code> tag will <em>not</em> be
+- <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">render</span></code>: any geometry assigned the <code class="docutils literal notranslate"><span class="pre">do</span> <span class="pre">not</span> <span class="pre">render</span></code> tag will <em>not</em> be
 rendered into a label image. This is a clear declaration that a geometry
 should be omitted. Useful for marking, e.g., glass windows so that the
 visible geometry behind the glass is what is included in the label image.
 Implemented as RenderLabel::kDoNotRender.
-- <code class="docutils literal"><span class="pre">don't</span> <span class="pre">care</span></code>: the <code class="docutils literal"><span class="pre">don't</span> <span class="pre">care</span></code> label is intended as a convenient dumping
+- <code class="docutils literal notranslate"><span class="pre">don't</span> <span class="pre">care</span></code>: the <code class="docutils literal notranslate"><span class="pre">don't</span> <span class="pre">care</span></code> label is intended as a convenient dumping
 ground. This would be for geometry that <em>should</em> render into the label image,
 but whose class is irrelevant (e.g., the walls of a room a robot is working
 in or the background terrain in driving simulation). Implemented as
 RenderLabel::kDontCare.
-- <code class="docutils literal"><span class="pre">unspecified</span></code>: a default-constructed RenderLabel has an <code class="docutils literal"><span class="pre">unspecified</span></code> value.
+- <code class="docutils literal notranslate"><span class="pre">unspecified</span></code>: a default-constructed RenderLabel has an <code class="docutils literal notranslate"><span class="pre">unspecified</span></code> value.
 Implemented as RenderLabel::kUnspecified.</p>
-<p>Generally, there is no good reason to assign <code class="docutils literal"><span class="pre">empty</span></code> or
-<code class="docutils literal"><span class="pre">unspecified</span></code> labels to a geometry. A RenderEngine implementation is
+<p>Generally, there is no good reason to assign <code class="docutils literal notranslate"><span class="pre">empty</span></code> or
+<code class="docutils literal notranslate"><span class="pre">unspecified</span></code> labels to a geometry. A RenderEngine implementation is
 entitled to throw an exception if you attempt to do so.</p>
 <p>An application can simply instantiate RenderLabel with an arbitrary
 value. This allows the application to define a particular mapping from
@@ -905,13 +899,13 @@ label image more compact but means there are only, approximately,
 <dl class="method">
 <dt id="pydrake.geometry.render.RenderLabel.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.render.RenderLabel</em>, <em>value: int</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.render.RenderLabel.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a label with the given <code class="docutils literal"><span class="pre">value</span></code>.</p>
+<dd><p>Constructs a label with the given <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if a) is negative, or b) the <code class="docutils literal"><span class="pre">value</span></code> is one of the</li>
+<li>RuntimeError if a) is negative, or b) the <code class="docutils literal notranslate"><span class="pre">value</span></code> is one of the</li>
 <li>reserved values.</li>
 </ul>
 </td>
@@ -956,9 +950,7 @@ label image more compact but means there are only, approximately,
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -967,7 +959,7 @@ label image more compact but means there are only, approximately,
         <a href="pydrake.lcm.html" class="btn btn-neutral float-right" title="pydrake.lcm" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.geometry.optimization.html" class="btn btn-neutral" title="pydrake.geometry.optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.geometry.optimization.html" class="btn btn-neutral float-left" title="pydrake.geometry.optimization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -991,37 +983,15 @@ label image more compact but means there are only, approximately,
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>
