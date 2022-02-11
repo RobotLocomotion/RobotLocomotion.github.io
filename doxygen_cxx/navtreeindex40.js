@@ -1,5 +1,6 @@
 var NAVTREEINDEX40 =
 {
+"depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1],
 "depth__shaders_8h.html#a7e1ae93b96cfb8ae4df5ee57a3371be2":[4,0,0,4,4,1,0,0],
 "detail__common_8h.html":[4,0,0,8,9,0],
 "detail__ignition_8h.html":[4,0,0,8,9,1],
@@ -61,6 +62,7 @@ var NAVTREEINDEX40 =
 "dir_4d6afa0018d27b03aafc768625d5f8d5.html":[4,0,0,8,11],
 "dir_4e7f59081b2683f4314b7e1101ce9a3e.html":[4,0,0,8,7],
 "dir_55f8630d5466d97e74952e939680a0a0.html":[4,0,0,11,6],
+"dir_563cbebf3859612cccbc3edeae15a602.html":[4,0,0,8,2,0],
 "dir_5d8dbe7a82c2c188fa06f6391bb290bd.html":[4,0,0,8,0],
 "dir_5f7a2023092b91a1e02609fa2c012f50.html":[4,0,0,1,3],
 "dir_5fa915364d7caf39d2fac1314fb2fd74.html":[4,0,0,3,15],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "eigen__types_8h.html#afc54e1f7aa3341a5f6b305705452d9bd":[4,0,0,1,26,24],
 "equality__constrained__qp__solver_8h.html":[4,0,0,10,18],
 "evaluator__base_8h.html":[4,0,0,10,19],
-"evaluator__base_8h.html#a82dddde3ce550bdc321a2240ab12cec0":[4,0,0,10,19,4],
-"evenly__distributed__pts__on__sphere_8h.html":[4,0,0,7,12],
-"evenly__distributed__pts__on__sphere_8h.html#a33baecb77517d26dcea8ab1fb880fcbe":[4,0,0,7,12,0]
+"evaluator__base_8h.html#a82dddde3ce550bdc321a2240ab12cec0":[4,0,0,10,19,4]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX41 =
 {
+"evenly__distributed__pts__on__sphere_8h.html":[4,0,0,7,12],
+"evenly__distributed__pts__on__sphere_8h.html#a33baecb77517d26dcea8ab1fb880fcbe":[4,0,0,7,12,0],
 "event_8h.html":[4,0,0,11,3,19],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9":[4,0,0,11,3,19,15],
 "event_8h.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a04a6eca450c24af0269212fb90c57d9f":[4,0,0,11,3,19,15,5],
@@ -118,8 +120,8 @@ var NAVTREEINDEX41 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,2,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,10,20],
-"functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
+"functions.html":[3,3,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -127,8 +129,8 @@ var NAVTREEINDEX41 =
 "functions_enum.html":[3,3,4],
 "functions_eval.html":[3,3,5],
 "functions_f.html":[3,3,0,5],
-"functions_func.html":[3,3,1],
 "functions_func.html":[3,3,1,0],
+"functions_func.html":[3,3,1],
 "functions_func_b.html":[3,3,1,1],
 "functions_func_c.html":[3,3,1,2],
 "functions_func_d.html":[3,3,1,3],
@@ -167,8 +169,8 @@ var NAVTREEINDEX41 =
 "functions_p.html":[3,3,0,15],
 "functions_q.html":[3,3,0,16],
 "functions_r.html":[3,3,0,17],
-"functions_rela.html":[3,3,6,0],
 "functions_rela.html":[3,3,6],
+"functions_rela.html":[3,3,6,0],
 "functions_rela_b.html":[3,3,6,1],
 "functions_rela_c.html":[3,3,6,2],
 "functions_rela_d.html":[3,3,6,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX41 =
 "geometry__py_8h.html#a1e2a66cb1a4fec05d8ec8f5d2dd7b6de":[4,0,0,0,0,4,2],
 "geometry__py_8h.html#a1e766f9fb38d0bcd69a4d11f7fc2efb3":[4,0,0,0,0,4,4],
 "geometry__py_8h.html#a7429d58f69452750233eb29092d6e679":[4,0,0,0,0,4,0],
-"geometry__py_8h.html#ad3fdf83dabca18e8bee66c72ce462fdc":[4,0,0,0,0,4,3],
-"geometry__py_8h.html#aeeb190e42e2f696d5ed3f8d319db6459":[4,0,0,0,0,4,1],
-"geometry__py_8h.html#af1dd02f74528f84556c55239d82ab9b3":[4,0,0,0,0,4,5]
+"geometry__py_8h.html#ad3fdf83dabca18e8bee66c72ce462fdc":[4,0,0,0,0,4,3]
 };

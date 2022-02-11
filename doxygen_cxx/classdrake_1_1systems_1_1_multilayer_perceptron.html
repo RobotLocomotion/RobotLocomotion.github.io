@@ -116,6 +116,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_multilayer_p
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_multilayer_perceptron-members.html">List of all members</a>  </div>
@@ -209,9 +210,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6dcf0923d191401ac1ebc31d909087d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ad6dcf0923d191401ac1ebc31d909087d">SetBiases</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; params, <a class="el" href="classint.html">int</a> layer, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;b) const</td></tr>
 <tr class="memdesc:ad6dcf0923d191401ac1ebc31d909087d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the biases in <code>params</code> used in the mapping from <code>layer</code> to <code>layer+1</code>.  <a href="#ad6dcf0923d191401ac1ebc31d909087d">More...</a><br /></td></tr>
 <tr class="separator:ad6dcf0923d191401ac1ebc31d909087d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3111dd1e16e0f95fe98915ce8a8630d0"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a3111dd1e16e0f95fe98915ce8a8630d0">Backpropagation</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, std::function&lt; T(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;Y, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; dloss_dY)&gt; loss, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
-<tr class="memdesc:a3111dd1e16e0f95fe98915ce8a8630d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the Backpropagation algorithm for the MLP to compute the gradients of a scalar loss function with respect to the network parameters.  <a href="#a3111dd1e16e0f95fe98915ce8a8630d0">More...</a><br /></td></tr>
-<tr class="separator:a3111dd1e16e0f95fe98915ce8a8630d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a8e2ac13f8c5f7f6edcc2c04dde042a"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a">Backpropagation</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, const std::function&lt; T(const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;Y, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; dloss_dY)&gt; &amp;loss, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
+<tr class="memdesc:a8a8e2ac13f8c5f7f6edcc2c04dde042a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements the Backpropagation algorithm for the MLP to compute the gradients of a scalar loss function with respect to the network parameters.  <a href="#a8a8e2ac13f8c5f7f6edcc2c04dde042a">More...</a><br /></td></tr>
+<tr class="separator:a8a8e2ac13f8c5f7f6edcc2c04dde042a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8">BackpropagationMeanSquaredError</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;Y_desired, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
 <tr class="memdesc:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Backpropagation with the mean-squared error loss function: loss = 1/N ∑ᵢ |yᵢ−yᵢᵈ|², where yᵈ is the desired values for y.  <a href="#a69ea02ed461f2cdb6e997d7f55319ef8">More...</a><br /></td></tr>
 <tr class="separator:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1438,8 +1439,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a3111dd1e16e0f95fe98915ce8a8630d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3111dd1e16e0f95fe98915ce8a8630d0">&#9670;&nbsp;</a></span>Backpropagation()</h2>
+<a id="a8a8e2ac13f8c5f7f6edcc2c04dde042a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a8e2ac13f8c5f7f6edcc2c04dde042a">&#9670;&nbsp;</a></span>Backpropagation()</h2>
 
 <div class="memitem">
 <div class="memproto">

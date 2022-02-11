@@ -209,6 +209,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0dfc0f09507bae90b63752a1eb4f28b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a0dfc0f09507bae90b63752a1eb4f28b8">ConnectInput</a> (<a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> diagram_port_index, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;input)</td></tr>
 <tr class="memdesc:a0dfc0f09507bae90b63752a1eb4f28b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects an input to the entire <a class="el" href="classdrake_1_1systems_1_1_diagram.html" title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">Diagram</a>, indicated by <code>diagram_port_index</code>, to the given <code>input</code> port of a constituent system.  <a href="#a0dfc0f09507bae90b63752a1eb4f28b8">More...</a><br /></td></tr>
 <tr class="separator:a0dfc0f09507bae90b63752a1eb4f28b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a296cb1240c7fb37649652c3190d8a22f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a296cb1240c7fb37649652c3190d8a22f">ConnectToSame</a> (const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;exemplar, const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;dest)</td></tr>
+<tr class="memdesc:a296cb1240c7fb37649652c3190d8a22f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects <code>dest</code> to the same source as <code>exemplar</code> is connected to.  <a href="#a296cb1240c7fb37649652c3190d8a22f">More...</a><br /></td></tr>
+<tr class="separator:a296cb1240c7fb37649652c3190d8a22f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eb25ed5b825b50aadf96f3c0f0e54d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1systems.html#afb427ae7d4f36f7a3cfe34eb5a3d51aa">OutputPortIndex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_diagram_builder.html#a1eb25ed5b825b50aadf96f3c0f0e54d6">ExportOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_output_port.html">OutputPort</a>&lt; T &gt; &amp;output, std::variant&lt; std::string, <a class="el" href="structdrake_1_1systems_1_1_use_default_name.html">UseDefaultName</a> &gt; name=<a class="el" href="namespacedrake_1_1systems.html#a399dec16d9f072ee3a256c35ba3379fa">kUseDefaultName</a>)</td></tr>
 <tr class="memdesc:a1eb25ed5b825b50aadf96f3c0f0e54d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares that the given <code>output</code> port of a constituent system is an output of the entire diagram.  <a href="#a1eb25ed5b825b50aadf96f3c0f0e54d6">More...</a><br /></td></tr>
 <tr class="separator:a1eb25ed5b825b50aadf96f3c0f0e54d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -802,6 +805,39 @@ Public Member Functions</h2></td></tr>
 
 <p>(Advanced) Returns a reference to the map of connections between Systems. </p>
 <p>The reference becomes invalid upon any call to Build or BuildInto. </p>
+
+</div>
+</div>
+<a id="a296cb1240c7fb37649652c3190d8a22f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296cb1240c7fb37649652c3190d8a22f">&#9670;&nbsp;</a></span>ConnectToSame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ConnectToSame </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>exemplar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">InputPort</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>dest</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connects <code>dest</code> to the same source as <code>exemplar</code> is connected to. </p>
+<p>If <code>exemplar</code> was connected to an output port, then <code>dest</code> is connected to that same output. Or, if <code>exemplar</code> was exported as an input of this diagram, then <code>dest</code> will be connected to that same diagram input. Or, if <code>exemplar</code> was neither connected or exported, then this function is a no-op.</p>
+<p>Both <code>exemplar</code> and <code>dest</code> must be ports of constituent systems that have already been added to this diagram.</p>
+<dl class="section return"><dt>Returns</dt><dd>True iff any connection or was made; or false when a no-op. </dd></dl>
 
 </div>
 </div>

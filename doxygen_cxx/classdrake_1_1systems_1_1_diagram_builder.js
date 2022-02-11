@@ -20,6 +20,7 @@ var classdrake_1_1systems_1_1_diagram_builder =
     [ "ConnectInput", "classdrake_1_1systems_1_1_diagram_builder.html#a012c3506eca742cfc49748788fc65f0c", null ],
     [ "ConnectInput", "classdrake_1_1systems_1_1_diagram_builder.html#a0dfc0f09507bae90b63752a1eb4f28b8", null ],
     [ "connection_map", "classdrake_1_1systems_1_1_diagram_builder.html#adbc3f35c7cd5f2a99c88deb5829655c6", null ],
+    [ "ConnectToSame", "classdrake_1_1systems_1_1_diagram_builder.html#a296cb1240c7fb37649652c3190d8a22f", null ],
     [ "empty", "classdrake_1_1systems_1_1_diagram_builder.html#a644718bb2fb240de962dc3c9a1fdf0dc", null ],
     [ "ExportInput", "classdrake_1_1systems_1_1_diagram_builder.html#a1db762bc34903d5e5eb8f1c26ec2f255", null ],
     [ "ExportOutput", "classdrake_1_1systems_1_1_diagram_builder.html#a1eb25ed5b825b50aadf96f3c0f0e54d6", null ],

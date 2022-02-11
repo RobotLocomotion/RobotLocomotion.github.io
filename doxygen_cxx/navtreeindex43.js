@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"image_8h.html#a0558960d25000bd7cc8607cef2fd223b":[4,0,0,11,8,5,5],
+"image_8h.html#a12ae113c6f13e4c9c37430a988afeef8":[4,0,0,11,8,5,4],
 "image_8h.html#a1d38997213d63bf974b9ea19fc5abf0d":[4,0,0,11,8,5,7],
 "image_8h.html#a48e75e9f3da7e6ca9cc886086e177d2a":[4,0,0,11,8,5,9],
 "image_8h.html#a6393b712a3bad92da3403b2fe09c4dad":[4,0,0,11,8,5,6],
@@ -142,7 +144,7 @@ var NAVTREEINDEX43 =
 "linear__bushing__roll__pitch__yaw_8h.html":[4,0,0,8,13,16],
 "linear__constitutive__model__data_8h.html":[4,0,0,8,3,5],
 "linear__model__predictive__controller_8h.html":[4,0,0,11,1,5],
-"linear__operator_8h.html":[4,0,0,8,2,5],
+"linear__operator_8h.html":[4,0,0,8,2,6],
 "linear__quadratic__regulator_8h.html":[4,0,0,11,1,6],
 "linear__quadratic__regulator_8h.html#ga048915783bddb58606c84332b91dad6c":[4,0,0,11,1,6,4],
 "linear__quadratic__regulator_8h.html#ga0fdf8e6372fa9c822431fb5b0a5e5bd9":[4,0,0,11,1,6,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "meshcat__point__cloud__visualizer_8h.html":[4,0,0,4,25],
 "meshcat__point__cloud__visualizer_8h.html#a13b4d36d0491327603af75e4f6d0c52a":[4,0,0,4,25,2],
 "meshcat__types_8h.html":[4,0,0,4,26],
-"meshcat__types_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,26,0],
-"meshcat__visualizer_8h.html":[4,0,0,4,27],
-"meshcat__visualizer_8h.html#acfc5928f9ddabb01ca8a0f2cdabbffa3":[4,0,0,4,27,2]
+"meshcat__types_8h.html#afe8ec907f964a8766d5919a30f60cc57":[4,0,0,4,26,0]
 };

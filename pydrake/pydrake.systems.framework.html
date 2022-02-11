@@ -4540,6 +4540,27 @@ BuildInto.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].ConnectToSame">
+<code class="descname">ConnectToSame</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], exemplar: drake::systems::InputPort&lt;double&gt;, dest: drake::systems::InputPort&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].ConnectToSame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects <code class="docutils literal notranslate"><span class="pre">dest</span></code> to the same source as <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> is connected to.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was connected to an output port, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> is
+connected to that same output. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was exported as an
+input of this diagram, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> will be connected to that same
+diagram input. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was neither connected or exported,
+then this function is a no-op.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> must be ports of constituent systems
+that have already been added to this diagram.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff any connection or was made; or false when a no-op.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].empty">
 <code class="descname">empty</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_.DiagramBuilder_[float].empty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns whether any Systems have been added yet.</p>
@@ -4770,6 +4791,27 @@ been previously built via ExportInput().</dd>
 <dd><p>(Advanced) Returns a reference to the map of connections between
 Systems. The reference becomes invalid upon any call to Build or
 BuildInto.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].ConnectToSame">
+<code class="descname">ConnectToSame</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], exemplar: drake::systems::InputPort&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;, dest: drake::systems::InputPort&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[AutoDiffXd].ConnectToSame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects <code class="docutils literal notranslate"><span class="pre">dest</span></code> to the same source as <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> is connected to.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was connected to an output port, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> is
+connected to that same output. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was exported as an
+input of this diagram, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> will be connected to that same
+diagram input. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was neither connected or exported,
+then this function is a no-op.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> must be ports of constituent systems
+that have already been added to this diagram.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff any connection or was made; or false when a no-op.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -5004,6 +5046,27 @@ BuildInto.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[Expression].ConnectToSame">
+<code class="descname">ConnectToSame</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[Expression], exemplar: drake::systems::InputPort&lt;drake::symbolic::Expression&gt;, dest: drake::systems::InputPort&lt;drake::symbolic::Expression&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression].ConnectToSame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects <code class="docutils literal notranslate"><span class="pre">dest</span></code> to the same source as <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> is connected to.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was connected to an output port, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> is
+connected to that same output. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was exported as an
+input of this diagram, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> will be connected to that same
+diagram input. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was neither connected or exported,
+then this function is a no-op.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> must be ports of constituent systems
+that have already been added to this diagram.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff any connection or was made; or false when a no-op.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.framework.DiagramBuilder_[Expression].empty">
 <code class="descname">empty</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[Expression].empty" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns whether any Systems have been added yet.</p>
@@ -5232,6 +5295,27 @@ been previously built via ExportInput().</dd>
 <dd><p>(Advanced) Returns a reference to the map of connections between
 Systems. The reference becomes invalid upon any call to Build or
 BuildInto.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.systems.framework.DiagramBuilder_[float].ConnectToSame">
+<code class="descname">ConnectToSame</code><span class="sig-paren">(</span><em>self: pydrake.systems.framework.DiagramBuilder_[float], exemplar: drake::systems::InputPort&lt;double&gt;, dest: drake::systems::InputPort&lt;double&gt;</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.systems.framework.DiagramBuilder_[float].ConnectToSame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connects <code class="docutils literal notranslate"><span class="pre">dest</span></code> to the same source as <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> is connected to.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was connected to an output port, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> is
+connected to that same output. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was exported as an
+input of this diagram, then <code class="docutils literal notranslate"><span class="pre">dest</span></code> will be connected to that same
+diagram input. Or, if <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> was neither connected or exported,
+then this function is a no-op.</p>
+<p>Both <code class="docutils literal notranslate"><span class="pre">exemplar</span></code> and <code class="docutils literal notranslate"><span class="pre">dest</span></code> must be ports of constituent systems
+that have already been added to this diagram.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True iff any connection or was made; or false when a no-op.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

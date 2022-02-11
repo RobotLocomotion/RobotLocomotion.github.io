@@ -4,7 +4,7 @@ var searchData=
   ['b1',['b1',['../classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#aa957fa6217a0e60aed096794d9ef531d',1,'drake::multibody::benchmarks::acrobot::AcrobotParameters']]],
   ['b2',['b2',['../classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a5c7ca38c01ab1565e93150420ac85123',1,'drake::multibody::benchmarks::acrobot::AcrobotParameters']]],
   ['b_5f',['B_',['../structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228',1,'drake::solvers::MixedIntegerRotationConstraintGenerator::ReturnType']]],
-  ['backpropagation',['Backpropagation',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a3111dd1e16e0f95fe98915ce8a8630d0',1,'drake::systems::MultilayerPerceptron']]],
+  ['backpropagation',['Backpropagation',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a',1,'drake::systems::MultilayerPerceptron']]],
   ['backpropagationmeansquarederror',['BackpropagationMeanSquaredError',['../classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8',1,'drake::systems::MultilayerPerceptron']]],
   ['balancequadraticforms',['BalanceQuadraticForms',['../namespacedrake_1_1math.html#a8c66e16411c4f0d53e005658a49ccf6a',1,'drake::math']]],
   ['balancinglqrcontroller',['BalancingLQRController',['../group__acrobot__systems.html#gafb2ab3ad52a7daf958473b205ceb8877',1,'drake::examples::acrobot']]],

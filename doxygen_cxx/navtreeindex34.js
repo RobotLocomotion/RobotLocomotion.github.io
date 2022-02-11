@@ -1,5 +1,6 @@
 var NAVTREEINDEX34 =
 {
+"classdrake_1_1systems_1_1_system.html#afed229e14777bd82382dc3ed6e715bd3":[3,0,0,14,105,86],
 "classdrake_1_1systems_1_1_system.html#affb56df9a1e83ab8cef21c9b122d6346":[3,0,0,14,105,51],
 "classdrake_1_1systems_1_1_system_base.html":[3,0,0,14,106],
 "classdrake_1_1systems_1_1_system_base.html#a0232523ac7f8337a392b321ffd282187":[3,0,0,14,106,58],
@@ -248,6 +249,5 @@ var NAVTREEINDEX34 =
 "classdrake_1_1systems_1_1_time_varying_linear_system.html#a9897c05efd63b1dd511248dd36031298":[1,2,1,13,1],
 "classdrake_1_1systems_1_1_time_varying_linear_system.html#ab9c33f46353b873a90d78b8a467b05cb":[1,2,1,13,4],
 "classdrake_1_1systems_1_1_time_varying_linear_system.html#ae71a02e204947f866d7a37f931db855a":[1,2,1,13,0],
-"classdrake_1_1systems_1_1_trajectory_affine_system.html":[1,2,1,23],
-"classdrake_1_1systems_1_1_trajectory_affine_system.html#a076147c8e4d6818575b8e504438417b3":[1,2,1,23,5]
+"classdrake_1_1systems_1_1_trajectory_affine_system.html":[1,2,1,23]
 };

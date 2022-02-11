@@ -6,7 +6,7 @@ var classdrake_1_1systems_1_1_multilayer_perceptron =
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ab6d92a60f96df3756ac29808fd8bd1c1", null ],
     [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad018e0a1ac62facba097fa20704046da", null ],
     [ "activation_type", "classdrake_1_1systems_1_1_multilayer_perceptron.html#adc5e02708e2899b3a85c98a8ce8b3ef6", null ],
-    [ "Backpropagation", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a3111dd1e16e0f95fe98915ce8a8630d0", null ],
+    [ "Backpropagation", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a", null ],
     [ "BackpropagationMeanSquaredError", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8", null ],
     [ "BatchOutput", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a2377729b655dd819b56450c0d290c6d8", null ],
     [ "GetBiases", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad987717e0092f8c8b9b2970c8104c075", null ],

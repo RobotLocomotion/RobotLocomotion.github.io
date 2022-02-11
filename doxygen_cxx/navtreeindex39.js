@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#adff893a14b498f0e779c90305602e44d":[3,0,0,16,5,16],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae09cf8e8ad481f69f3cc1969ef491d60":[3,0,0,16,5,20],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#ae6ebde0f5bcaf6df51d6a4d1acc162b5":[3,0,0,16,5,12],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#af360987538c584ed2a7c5ad8e2f3d6e4":[3,0,0,16,5,1],
@@ -160,9 +161,9 @@ var NAVTREEINDEX39 =
 "contact__results__to__meshcat_8h.html#abdcc7c49e7ddb912031c85d2788b338d":[4,0,0,8,10,6,0],
 "contact__results__to__meshcat__params_8h.html":[4,0,0,8,10,7],
 "contact__results__to__meshcat__params_8h.html#a48997ca3a6b7f8e1a0202e5ec214d750":[4,0,0,8,10,7,0],
-"contact__solver_8h.html":[4,0,0,8,2,2],
-"contact__solver__results_8h.html":[4,0,0,8,2,3],
-"contact__solver__utils_8h.html":[4,0,0,8,2,4],
+"contact__solver_8h.html":[4,0,0,8,2,3],
+"contact__solver__results_8h.html":[4,0,0,8,2,4],
+"contact__solver__utils_8h.html":[4,0,0,8,2,5],
 "contact__surface_8h.html":[4,0,0,4,3,0],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
 "contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "deprecation__pybind_8h.html#aa542768548608eefe8534a3bdc5c1cd4":[4,0,0,0,0,0,3,1],
 "deprecation__pybind_8h.html#ab0b68ce63cf178e7d4e91f95e0e483e1":[4,0,0,0,0,0,3,0],
 "depth__image__to__point__cloud_8h.html":[4,0,0,9,0],
-"depth__shaders_8h.html":[4,0,0,4,4,1,0],
-"depth__shaders_8h.html#a5a1001f7895bceeeb06a6944b0789691":[4,0,0,4,4,1,0,1]
+"depth__shaders_8h.html":[4,0,0,4,4,1,0]
 };
