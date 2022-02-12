@@ -75,6 +75,7 @@ var searchData=
   ['periodiceventdatacomparator',['PeriodicEventDataComparator',['../structdrake_1_1systems_1_1_periodic_event_data_comparator.html',1,'drake::systems']]],
   ['perspectivecamera',['PerspectiveCamera',['../structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html',1,'drake::geometry::Meshcat']]],
   ['perturbation_5fsize',['perturbation_size',['../classdrake_1_1math_1_1_numerical_gradient_option.html#a42db421362be5c1e41414f3a3aedae04',1,'drake::math::NumericalGradientOption']]],
+  ['petsc_5fsymmetric_5fblock_5fsparse_5fmatrix_2eh',['petsc_symmetric_block_sparse_matrix.h',['../petsc__symmetric__block__sparse__matrix_8h.html',1,'']]],
   ['pgs_5fsolver_2eh',['pgs_solver.h',['../pgs__solver_8h.html',1,'']]],
   ['phase',['phase',['../classdrake_1_1systems_1_1_sine.html#aea1d7812e603f5c67bae19da90797778',1,'drake::systems::Sine']]],
   ['phase_5fvector',['phase_vector',['../classdrake_1_1systems_1_1_sine.html#a5bd08c73d2ebeaa1c676a7d4c2c49d18',1,'drake::systems::Sine']]],

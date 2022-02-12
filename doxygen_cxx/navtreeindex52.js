@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__generic__polynomial_8h.html#a580ca04916246340e08ec69b45276827":[4,0,0,1,61,20],
 "symbolic__generic__polynomial_8h.html#a5935b2c56af883d2bacdfa61998c0d2e":[4,0,0,1,61,10],
 "symbolic__generic__polynomial_8h.html#a5e9f5fa3d4c2770a38947956973fe27e":[4,0,0,1,61,22],
 "symbolic__generic__polynomial_8h.html#a673a4c5428fa87d2279c587959d5e3e7":[4,0,0,1,61,34],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "type__pack_8h.html#aca2ad496fcfd4aab65f4f9eaf50759cb":[4,0,0,0,0,0,10,8],
 "type__safe__index_8h.html":[4,0,0,1,77],
 "type__safe__index_8h.html#a1bc6fee0f84a9d283d208d778fcefe34":[4,0,0,1,77,5],
-"type__safe__index_8h.html#a2400c6e4da6e035486720985558890cb":[4,0,0,1,77,6],
-"type__safe__index_8h.html#a4a46686cf3db66aa614a6f5abb705765":[4,0,0,1,77,2]
+"type__safe__index_8h.html#a2400c6e4da6e035486720985558890cb":[4,0,0,1,77,6]
 };

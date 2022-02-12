@@ -8,6 +8,7 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "linear_constitutive_model_data.h", "linear__constitutive__model__data_8h.html", null ],
     [ "linear_simplex_element.h", "linear__simplex__element_8h.html", null ],
     [ "matrix_utilities.h", "matrix__utilities_8h.html", null ],
+    [ "petsc_symmetric_block_sparse_matrix.h", "petsc__symmetric__block__sparse__matrix_8h.html", null ],
     [ "quadrature.h", "quadrature_8h.html", null ],
     [ "schur_complement.h", "schur__complement_8h.html", null ],
     [ "simplex_gaussian_quadrature.h", "simplex__gaussian__quadrature_8h.html", null ]

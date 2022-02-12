@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673":[3,0,0,12,1,1],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a6a5bbd029474a02bec2c1aa89035acf9":[3,0,0,12,1,3],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aa494540905d721e5f639176cde33795a":[3,0,0,12,1,2],
 "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#aee9e567dff5d8f017d7705118d22d31d":[3,0,0,12,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,14,7,5],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,14,7,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,14,7,7],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,14,7,8],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,14,7,11]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,14,7,8]
 };
