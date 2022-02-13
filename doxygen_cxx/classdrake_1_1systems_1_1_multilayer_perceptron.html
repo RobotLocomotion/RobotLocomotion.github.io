@@ -116,7 +116,6 @@ $(document).ready(function(){initNavTree('classdrake_1_1systems_1_1_multilayer_p
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1systems_1_1_multilayer_perceptron-members.html">List of all members</a>  </div>
@@ -216,9 +215,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8">BackpropagationMeanSquaredError</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;Y_desired, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; dloss_dparams) const</td></tr>
 <tr class="memdesc:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls Backpropagation with the mean-squared error loss function: loss = 1/N ∑ᵢ |yᵢ−yᵢᵈ|², where yᵈ is the desired values for y.  <a href="#a69ea02ed461f2cdb6e997d7f55319ef8">More...</a><br /></td></tr>
 <tr class="separator:a69ea02ed461f2cdb6e997d7f55319ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2377729b655dd819b56450c0d290c6d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a2377729b655dd819b56450c0d290c6d8">BatchOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Y) const</td></tr>
-<tr class="memdesc:a2377729b655dd819b56450c0d290c6d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the batch output for the MLP with a batch input vector.  <a href="#a2377729b655dd819b56450c0d290c6d8">More...</a><br /></td></tr>
-<tr class="separator:a2377729b655dd819b56450c0d290c6d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9134388a0d1f117fea323346f07466c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ad9134388a0d1f117fea323346f07466c">BatchOutput</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">Context</a>&lt; T &gt; &amp;context, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; &amp;X, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; Y, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt; dYdX=nullptr) const</td></tr>
+<tr class="memdesc:ad9134388a0d1f117fea323346f07466c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the batch output for the MLP with a batch input vector.  <a href="#ad9134388a0d1f117fea323346f07466c">More...</a><br /></td></tr>
+<tr class="separator:ad9134388a0d1f117fea323346f07466c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a612b74ebd5fb20e1881d7d3fcd6fed6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a612b74ebd5fb20e1881d7d3fcd6fed6b">MultilayerPerceptron</a> (const <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html">MultilayerPerceptron</a> &amp;)=delete</td></tr>
 <tr class="separator:a612b74ebd5fb20e1881d7d3fcd6fed6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1523,8 +1522,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a2377729b655dd819b56450c0d290c6d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2377729b655dd819b56450c0d290c6d8">&#9670;&nbsp;</a></span>BatchOutput()</h2>
+<a id="ad9134388a0d1f117fea323346f07466c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9134388a0d1f117fea323346f07466c">&#9670;&nbsp;</a></span>BatchOutput()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1545,7 +1544,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt;&#160;</td>
-          <td class="paramname"><em>Y</em>&#160;</td>
+          <td class="paramname"><em>Y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>dYdX</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1557,8 +1562,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Evaluates the batch output for the MLP with a batch input vector. </p>
 <p>Each column of <code>X</code> represents an input, and each column of <code>Y</code> will be assigned the corresponding output.</p>
-<p>Note: In python, use numpy.asfortranarray() to allocate the writeable matrix <code>Y</code>.</p>
-<p>This methods shares the cache with Backpropagation. If the size of X changes here or in Backpropagation, it may force dynamic memory allocations. </p>
+<p>If the output layer of the network has size 1 (scalar output), and <code>dYdX != nullptr</code>, then <code>dYdX</code> is populated with the batch gradients of the scalar output <code>Y</code> relative to the input <code>X</code>: the (i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable matrices <code>Y</code> and (if needed) <code>dYdX</code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X changes here or in Backpropagation, it may force dynamic memory allocations.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if dYdX != nullptr and the network has more than one output. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

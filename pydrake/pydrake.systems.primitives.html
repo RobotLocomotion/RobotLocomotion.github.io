@@ -3513,12 +3513,55 @@ Backpropagation for details.</p>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
 assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
 <p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrix <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
 <p>This methods shares the cache with Backpropagation. If the size of X
 changes here or in Backpropagation, it may force dynamic memory
 allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -3743,12 +3786,55 @@ Backpropagation for details.</p>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
 assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
 <p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrix <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
 <p>This methods shares the cache with Backpropagation. If the size of X
 changes here or in Backpropagation, it may force dynamic memory
 allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -3971,12 +4057,55 @@ Backpropagation for details.</p>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
 assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
 <p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrix <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
 <p>This methods shares the cache with Backpropagation. If the size of X
 changes here or in Backpropagation, it may force dynamic memory
 allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -4199,12 +4328,55 @@ Backpropagation for details.</p>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
 assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
 <p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrix <code class="docutils literal notranslate"><span class="pre">Y</span></code>.</p>
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
 <p>This methods shares the cache with Backpropagation. If the size of X
 changes here or in Backpropagation, it may force dynamic memory
 allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <ol class="arabic simple" start="2">
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+</ol>
+<p>Evaluates the batch output for the MLP with a batch input vector. Each
+column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
+assigned the corresponding output.</p>
+<p>If the output layer of the network has size 1 (scalar output), and
+<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
+gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
+(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
+<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
+matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
+<p>This methods shares the cache with Backpropagation. If the size of X
+changes here or in Backpropagation, it may force dynamic memory
+allocations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
