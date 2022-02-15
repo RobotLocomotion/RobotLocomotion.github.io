@@ -319,6 +319,72 @@ be created and used.</dd>
 <dt>Precondition:</dt>
 <dd><code class="docutils literal notranslate"><span class="pre">builder</span></code> must be non-null.</dd>
 </dl>
+<ol class="arabic simple" start="5">
+<li>AddMultibodyPlantSceneGraph(builder: pydrake.systems.framework.DiagramBuilder_[Expression], plant: pydrake.multibody.plant.MultibodyPlant_[Expression], scene_graph: pydrake.geometry.SceneGraph_[Expression] = None) -&gt; tuple</li>
+</ol>
+<p>Adds a MultibodyPlant and a SceneGraph instance to a diagram builder,
+connecting the geometry ports.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Usage examples in add_multibody_plant_scene_graph
+“AddMultibodyPlantSceneGraph”.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">builder</span></code>:</dt>
+<dd>Builder to add to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>Plant to be added to the builder.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt>
+<dd>(optional) Constructed scene graph. If none is provided, one will
+be created and used.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Pair of the registered plant and scene graph.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">builder</span></code> and <code class="docutils literal notranslate"><span class="pre">plant</span></code> must be non-null.</dd>
+</dl>
+<ol class="arabic simple" start="6">
+<li>AddMultibodyPlantSceneGraph(builder: pydrake.systems.framework.DiagramBuilder_[Expression], time_step: float, scene_graph: pydrake.geometry.SceneGraph_[Expression] = None) -&gt; tuple</li>
+</ol>
+<p>Makes a new MultibodyPlant with discrete update period <code class="docutils literal notranslate"><span class="pre">time_step</span></code>
+and adds it to a diagram builder together with the provided SceneGraph
+instance, connecting the geometry ports.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Usage examples in add_multibody_plant_scene_graph
+“AddMultibodyPlantSceneGraph”.</p>
+</div>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">builder</span></code>:</dt>
+<dd>Builder to add to.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>:</dt>
+<dd>The discrete update period for the new MultibodyPlant to be added.
+Please refer to the documentation provided in
+MultibodyPlant::MultibodyPlant(double) for further details on the
+parameter <code class="docutils literal notranslate"><span class="pre">time_step</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">scene_graph</span></code>:</dt>
+<dd>(optional) Constructed scene graph. If none is provided, one will
+be created and used.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Pair of the registered plant and scene graph.</td>
+</tr>
+</tbody>
+</table>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">builder</span></code> must be non-null.</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">

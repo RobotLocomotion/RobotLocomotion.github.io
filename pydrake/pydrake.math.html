@@ -2018,6 +2018,31 @@ sqrt condition number.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RigidTransform_.RigidTransform_[float].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RigidTransform. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the transform X_AB, and
+<code class="docutils literal notranslate"><span class="pre">other</span></code> to be X_AC, then this method returns X_BC = X_AB⁻¹ * X_AC.
+For T==double, this method can be <em>much</em> faster than inverting first
+and then performing the composition, because it can take advantage of
+the special structure of a rigid transform to avoid unnecessary memory
+and floating point operations. On some platforms it can use SIMD
+instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_BC</span></code>:</dt>
+<dd>where X_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rigid
+transform by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyIdentity">
 <code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_.RigidTransform_[float].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
@@ -2694,6 +2719,31 @@ sqrt condition number.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RigidTransform_[AutoDiffXd].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd], other: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[AutoDiffXd]<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RigidTransform. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the transform X_AB, and
+<code class="docutils literal notranslate"><span class="pre">other</span></code> to be X_AC, then this method returns X_BC = X_AB⁻¹ * X_AC.
+For T==double, this method can be <em>much</em> faster than inverting first
+and then performing the composition, because it can take advantage of
+the special structure of a rigid transform to avoid unnecessary memory
+and floating point operations. On some platforms it can use SIMD
+instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_BC</span></code>:</dt>
+<dd>where X_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rigid
+transform by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyIdentity">
 <code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RigidTransform_[AutoDiffXd].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly the identity RigidTransform.</p>
@@ -3364,6 +3414,31 @@ expressed in frame B).</p>
 roughly the magnitude of the position vector. The accuracy of the
 calculation for the inverse of a RigidTransform drops off with the
 sqrt condition number.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[Expression].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[Expression], other: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.math.RigidTransform_[Expression].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RigidTransform. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the transform X_AB, and
+<code class="docutils literal notranslate"><span class="pre">other</span></code> to be X_AC, then this method returns X_BC = X_AB⁻¹ * X_AC.
+For T==double, this method can be <em>much</em> faster than inverting first
+and then performing the composition, because it can take advantage of
+the special structure of a rigid transform to avoid unnecessary memory
+and floating point operations. On some platforms it can use SIMD
+instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_BC</span></code>:</dt>
+<dd>where X_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rigid
+transform by accumulating round-off error with a large number of
+multiplies.</p>
 </div>
 </dd></dl>
 
@@ -4086,6 +4161,31 @@ expressed in frame B).</p>
 roughly the magnitude of the position vector. The accuracy of the
 calculation for the inverse of a RigidTransform drops off with the
 sqrt condition number.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RigidTransform_[float].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RigidTransform_[float], other: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.math.RigidTransform_[float].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RigidTransform. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the transform X_AB, and
+<code class="docutils literal notranslate"><span class="pre">other</span></code> to be X_AC, then this method returns X_BC = X_AB⁻¹ * X_AC.
+For T==double, this method can be <em>much</em> faster than inverting first
+and then performing the composition, because it can take advantage of
+the special structure of a rigid transform to avoid unnecessary memory
+and floating point operations. On some platforms it can use SIMD
+instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RigidTransform that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">X_BC</span></code>:</dt>
+<dd>where X_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rigid
+transform by accumulating round-off error with a large number of
+multiplies.</p>
 </div>
 </dd></dl>
 
@@ -6100,6 +6200,30 @@ quantity can be assigned in various ways, e.g., as <code class="docutils literal
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RotationMatrix_.RotationMatrix_[float].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float], other: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_.RotationMatrix_[float].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RotationMatrix. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the rotation matrix
+R_AB, and <code class="docutils literal notranslate"><span class="pre">other</span></code> to be R_AC, then this method returns R_BC = R_AB⁻¹
+* R_AC. For T==double, this method can be <em>much</em> faster than inverting
+first and then performing the composition because it can take
+advantage of the orthogonality of rotation matrices. On some platforms
+it can use SIMD instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RotationMatrix that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_BC</span></code>:</dt>
+<dd>where R_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rotation
+matrix by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RotationMatrix_.RotationMatrix_[float].IsExactlyIdentity">
 <code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RotationMatrix_.RotationMatrix_[float].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to the identity matrix.</p>
@@ -6791,6 +6915,30 @@ quantity can be assigned in various ways, e.g., as <code class="docutils literal
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.RotationMatrix_[AutoDiffXd].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[AutoDiffXd], other: pydrake.math.RotationMatrix_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[AutoDiffXd]<a class="headerlink" href="#pydrake.math.RotationMatrix_[AutoDiffXd].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RotationMatrix. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the rotation matrix
+R_AB, and <code class="docutils literal notranslate"><span class="pre">other</span></code> to be R_AC, then this method returns R_BC = R_AB⁻¹
+* R_AC. For T==double, this method can be <em>much</em> faster than inverting
+first and then performing the composition because it can take
+advantage of the orthogonality of rotation matrices. On some platforms
+it can use SIMD instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RotationMatrix that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_BC</span></code>:</dt>
+<dd>where R_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rotation
+matrix by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.RotationMatrix_[AutoDiffXd].IsExactlyIdentity">
 <code class="descname">IsExactlyIdentity</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.math.RotationMatrix_[AutoDiffXd].IsExactlyIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">this</span></code> is exactly equal to the identity matrix.</p>
@@ -7478,6 +7626,30 @@ quantity can be assigned in various ways, e.g., as <code class="docutils literal
 <dt id="pydrake.math.RotationMatrix_[Expression].inverse">
 <code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[Expression]<a class="headerlink" href="#pydrake.math.RotationMatrix_[Expression].inverse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix_[Expression].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[Expression], other: pydrake.math.RotationMatrix_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[Expression]<a class="headerlink" href="#pydrake.math.RotationMatrix_[Expression].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RotationMatrix. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the rotation matrix
+R_AB, and <code class="docutils literal notranslate"><span class="pre">other</span></code> to be R_AC, then this method returns R_BC = R_AB⁻¹
+* R_AC. For T==double, this method can be <em>much</em> faster than inverting
+first and then performing the composition because it can take
+advantage of the orthogonality of rotation matrices. On some platforms
+it can use SIMD instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RotationMatrix that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_BC</span></code>:</dt>
+<dd>where R_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rotation
+matrix by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.math.RotationMatrix_[Expression].IsExactlyIdentity">
@@ -8215,6 +8387,30 @@ quantity can be assigned in various ways, e.g., as <code class="docutils literal
 <dt id="pydrake.math.RotationMatrix_[float].inverse">
 <code class="descname">inverse</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_[float].inverse" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.RotationMatrix_[float].InvertAndCompose">
+<code class="descname">InvertAndCompose</code><span class="sig-paren">(</span><em>self: pydrake.math.RotationMatrix_[float], other: pydrake.math.RotationMatrix_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RotationMatrix_[float]<a class="headerlink" href="#pydrake.math.RotationMatrix_[float].InvertAndCompose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the product of <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted and another
+RotationMatrix. If you consider <code class="docutils literal notranslate"><span class="pre">this</span></code> to be the rotation matrix
+R_AB, and <code class="docutils literal notranslate"><span class="pre">other</span></code> to be R_AC, then this method returns R_BC = R_AB⁻¹
+* R_AC. For T==double, this method can be <em>much</em> faster than inverting
+first and then performing the composition because it can take
+advantage of the orthogonality of rotation matrices. On some platforms
+it can use SIMD instructions for further speedups.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>:</dt>
+<dd>RotationMatrix that post-multiplies <code class="docutils literal notranslate"><span class="pre">this</span></code> inverted.</dd>
+<dt>Returns <code class="docutils literal notranslate"><span class="pre">R_BC</span></code>:</dt>
+<dd>where R_BC = this⁻¹ * other.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is possible (albeit improbable) to create an invalid rotation
+matrix by accumulating round-off error with a large number of
+multiplies.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.math.RotationMatrix_[float].IsExactlyIdentity">
