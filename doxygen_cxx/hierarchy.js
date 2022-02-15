@@ -582,8 +582,8 @@ var hierarchy =
         [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
       ] ]
     ] ],
-    [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
+    [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],

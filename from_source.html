@@ -238,7 +238,7 @@ setup steps:</p>
 
 <p>See <a href="#supported-configurations">above</a>
 for the configurations and platforms that Drake officially supports.
-All else being equal, we would recommend developers use Ubuntu Bionic.</p>
+All else being equal, we would recommend developers use Ubuntu Focal.</p>
 
 <h1 id="build-with-bazel">Build with Bazel</h1>
 
@@ -265,13 +265,13 @@ make <span class="nt">-j</span>
 
 <ul>
   <li><code class="highlighter-rouge">-DWITH_GUROBI={ON, [OFF]}</code> - Build with Gurobi enabled.</li>
-  <li><code class="highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK enabled.</li>
+  <li><code class="highlighter-rouge">-DWITH_MOSEK={ON, [OFF]}</code> - Build with MOSEK<a href="/tm.html">™</a> enabled.</li>
   <li><code class="highlighter-rouge">-DWITH_SNOPT={ON, [OFF]}</code> - Build with SNOPT enabled.</li>
 </ul>
 
 <p><code class="highlighter-rouge">{...}</code> means a list of options, and the option surrounded by <code class="highlighter-rouge">[...]</code> is
 the default option. An example of building <code class="highlighter-rouge">pydrake</code> with both Gurobi and
-MOSEK, without building tests:</p>
+MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cmake <span class="nt">-DWITH_GUROBI</span><span class="o">=</span>ON <span class="nt">-DWITH_MOSEK</span><span class="o">=</span>ON ../drake
 </code></pre></div></div>

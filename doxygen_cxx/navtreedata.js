@@ -111,13 +111,13 @@ var NAVTREEINDEX =
 "meshcat__visualizer_8h.html",
 "namespacedrake_1_1systems_1_1scalar__conversion.html",
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8",
-"solution__result_8h.html#acb1201a087105dc635e2bd748486171c",
-"structdrake_1_1math_1_1_gradient_3_01_derived_00_01nq_00_011_01_4.html",
-"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#a5fb1522ebe7e354d0ee6abc526454673",
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html",
-"symbolic__expression_8h.html#aa12b990bcc72a788e6d8176894d0d8a2",
-"symbolic__generic__polynomial_8h.html#a580ca04916246340e08ec69b45276827",
-"type__safe__index_8h.html#a4a46686cf3db66aa614a6f5abb705765"
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fae1f645d6b81b09a506f807a18d5e1d4b",
+"structdrake_1_1math_1_1_gradient.html#a9313c120423caca056641271c39df68d",
+"structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html",
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html",
+"symbolic__expression_8h.html#aa12acbb0b86d35d1de9280e699d3999d",
+"symbolic__generic__polynomial_8h.html#a51133160077bdcba90013d1f21b88410",
+"type__safe__index_8h.html#a2400c6e4da6e035486720985558890cb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

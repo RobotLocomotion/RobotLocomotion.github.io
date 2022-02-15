@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"/>
+    <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
+    <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <title>Drake: Drake Stability Guidelines</title>
+    <meta
+      name="description"
+      content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
+Locomotion Group at the MIT Computer Science and Artificial Intelligence
+Lab (CSAIL). The development team has now grown significantly, with core
+development led by the Toyota Research Institute. It is a collection of
+tools for analyzing the dynamics of our robots and building control
+systems for them, with a heavy emphasis on optimization-based design/
+analysis.
+"/>
+    <!--
+    The "Work Sans" font is licensed under the SIL Open Font License (OFL). For
+    more information, see:
+    - https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about
+    - https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+    -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/third_party/github-styling/github-markdown.css"/>
+    <link rel="stylesheet" href="/third_party/dracula/syntax.css"/>
+    <link rel="stylesheet" href="/third_party/pylons/pylons.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body>
+    <header class="site-header">
+  <div class="site-header-inner contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo-white.svg">
+    </a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        
+        <li class="site-menu-item">
+          <a href="/" class="site-menu-item">Home</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/installation.html" class="site-menu-item">Installation</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          <a href="/gallery.html" class="site-menu-item">Gallery</a>
+
+          
+        </li>
+        
+        <li class="site-menu-item">
+          API Documentation
+
+          
+            <div class="sub">
+            
+              <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+            
+              <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+            
+            </div>
+          
+        </li>
+        
+        <li class="site-menu-item">
+          Resources
+
+          
+            <div class="sub">
+            
+              <a href="/getting_help.html" class="site-menu-item">Getting Help</a>
+            
+              <a href="https://github.com/RobotLocomotion/drake/tree/master/tutorials" class="site-menu-item">Tutorials</a>
+            
+              <a href="/python_bindings.html" class="site-menu-item">Python Bindings</a>
+            
+              <a href="/developers.html" class="site-menu-item">For Developers</a>
+            
+              <a href="/credits.html" class="site-menu-item">Credits</a>
+            
+            </div>
+          
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png" /></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="page">
+      <div class="content">
+        <div class="drake-page">
+  <header class="drake-page-header">
+    <div class="contain">
+      <h1>Drake Stability Guidelines</h1>
+    </div>
+  </header>
+  <section class="padding">
+    <div class="contain">
+      <article class="markdown-body">
+        <p>We want to move fast and bring out exciting new ideas quickly. We also
+appreciate users’ need for a solid, stable foundation to build on. This
+document explains what kind of stability the Drake project aims to provide,
+and what you can do to minimize the impact of the inevitable changes to Drake
+on your own work.</p>
+
+<h1 id="rolling-releases">Rolling releases</h1>
+
+<p>Drake ships a new stable version approximately once per month. The versions are
+numbered “1.x.y”, where “x” increases by one for each stable version, and “y”
+reflects the patch version (typically zero). Drake does <strong>not</strong> follow
+<a href="https://semver.org/">SemVer</a>. Instead, we use a rolling deprecation window.
+In each release, new deprecations might be announced, and then those changes
+will be finalized 3+ minor versions later, without changing the major version
+number.</p>
+
+<p>Deprecation announcements appear in the <a href="/release_notes.html">release notes</a>
+for each stable release. For C++ and Python API changes, we will also use the
+language mechanism to highlight the change when possible (<code class="highlighter-rouge">[[deprecated]]</code> for
+C++; <code class="highlighter-rouge">warnings.warn</code> for Python). However, those mechanisms will not always
+trigger in every case, and some deprecations will reach beyond what those tools
+can denote. Therefore, we still recommend that you monitor the release notes as
+the final arbiter of deprecation announcements.</p>
+
+<p>Due to our 3-month announcement window, we recommend upgrading your pinned
+version of Drake at least that frequently. If you wish to upgrade less
+frequently, you still might benefit from rolling forward a few minor versions
+at a time, in order to obtain the built-in C++ and Python deprecation
+suggestions to guide you.</p>
+
+<p>In general, we do not plan to backport fixes into prior stable releases.</p>
+
+<h1 id="stable-api">Stable API</h1>
+
+<p>We define a large portion of Drake as our “Stable API” that you can rely
+on. For the Stable API, we aim to give at least 3 months of notice ahead of any
+disruption (via deprecation announcements in Drake’s
+<a href="/release_notes.html">release notes</a>, and with compile-time or run-time
+warnings when feasible). Any element of Drake that is not explicitly documented
+to be part of the Stable API is deemed “unstable” and is subject to change or
+removal without prior notice.</p>
+
+<p>The sub-headings below explain the Stable API for various facets of Drake.</p>
+
+<p>Specific code or tools beyond what is listed here can also opt-in to be part of
+the Stable API in its local documentation. Those opt-ins are not enumerated
+here.</p>
+
+<p>On very rare occasions it is impractical, too expensive, or logically unsound
+to meet the full three month deprecation window. In these cases the change will
+be announced in the “Breaking changes” section of the release notes.</p>
+
+<h2 id="c">C++</h2>
+
+<p>The C++ Stable API covers all C++ library code within <code class="highlighter-rouge">namespace drake</code> whose
+header files are distributed in a
+<a href="/from_binary.html#stable-releases">Drake pre-compiled binary image</a>.</p>
+
+<ul>
+  <li>Excluding the <code class="highlighter-rouge">drake/examples/...</code> directory tree.</li>
+  <li>Excluding code within <code class="highlighter-rouge">namespace internal</code>.</li>
+  <li>Excluding code documented as “internal use only”.</li>
+  <li>Excluding code documented with an “experimental” warning.</li>
+</ul>
+
+<p>In particular, note that any
+<a href="https://drake.mit.edu/directory_structure.html">directory named “dev”</a>
+is necessarily excluded, because its header files are not installed.</p>
+
+<h2 id="python">Python</h2>
+
+<p>The Python Stable API covers all Python library code under <code class="highlighter-rouge">import drake</code> or
+<code class="highlighter-rouge">import pydrake</code> that is distributed in a
+<a href="/pip.html#stable-releases">Drake PyPI wheel</a>:</p>
+
+<ul>
+  <li>Excluding the <code class="highlighter-rouge">pydrake.examples...</code> module tree.</li>
+  <li>Excluding names that begin with a leading underscore, which denotes “internal
+use only” by convention of
+<a href="https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles">PEP-8</a>.</li>
+  <li>Excluding code documented as “internal use only”.</li>
+  <li>Excluding code documented with an “experimental” warning.</li>
+  <li>Excluding the “all” modules such as <code class="highlighter-rouge">pydrake.all</code>, <code class="highlighter-rouge">pydrake.systems.all</code>,
+etc. These are intended to be shortcuts for temporary hacking only, and so
+are not Stable.
+    <ul>
+      <li>However, the existence of the <code class="highlighter-rouge">pydrake.all</code> module is part of the Stable
+API (we will not remove it without notice), but the specific list of items
+contained within it is not Stable.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="build-system">Build system</h2>
+
+<p>The Bazel Stable API covers all Drake Bazel targets (e.g., <code class="highlighter-rouge">@drake//common</code>)
+with public visibility that refer to C++ or Python library code that is itself
+part of the “Stable API”:</p>
+
+<ul>
+  <li>This <strong>includes</strong>
+<a href="https://docs.bazel.build/versions/main/build-ref.html#dependencies">depending on</a>
+those labels (e.g., <code class="highlighter-rouge">deps = ["@drake//common"]</code>).</li>
+  <li>This <strong>excludes</strong>
+<a href="https://docs.bazel.build/versions/main/build-ref.html#load">loading</a>
+Drake’s bzl macros (e.g., <code class="highlighter-rouge">load("@drake//foo:bar.bzl", "bar_macro")</code>.</li>
+</ul>
+
+<p>For Drake’s dependencies:</p>
+
+<ul>
+  <li>The <code class="highlighter-rouge">add_default_...</code> macros defined in <code class="highlighter-rouge">@drake//tools/workspace:default.bzl</code>
+are all part of the Stable API.
+    <ul>
+      <li>For any Bazel external loaded by these functions (e.g., <code class="highlighter-rouge">"@eigen"</code>), we
+will deprecate it prior to removing our definition of the dependency.
+        <ul>
+          <li>Excluding any items documented as “internal use only”.</li>
+          <li>Excluding any items documented with an “experimental” warning.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>We may upgrade any of our dependencies to a newer version without prior notice.
+If you require an older version, you will need to rebuild Drake from source and
+pin your own WORKSPACE to refer to the older version of the dependency.</p>
+
+<p>We may add new dependencies without prior notice. All of our dependencies will
+either be installed via the host system via our <code class="highlighter-rouge">install_prereqs</code> scripts,
+and/or downloaded at build-time via our <code class="highlighter-rouge">add_default_...</code> macros, and/or
+specified via packaging metadata in the case of <code class="highlighter-rouge">apt</code> or <code class="highlighter-rouge">pip</code>.</p>
+
+<h2 id="lcm-messages">LCM messages</h2>
+
+<p>Our Stable API covers all of Drake’s
+<a href="https://github.com/RobotLocomotion/drake/tree/master/lcmtypes">LCM message definitions</a>:</p>
+
+<ul>
+  <li>Excluding messages with “internal” as part of the message name.</li>
+  <li>Excluding messages with “experimental” as part of the message name.</li>
+  <li>Excluding messages documented as “internal use only”.</li>
+  <li>Excluding messages documented as “experimental”.</li>
+</ul>
+
+<p>Regarding changes to message definitions:</p>
+
+<ul>
+  <li>LCM messages provide no mechanism for schema evolution or versioning.</li>
+  <li>If we need to change a message definition (e.g., <code class="highlighter-rouge">lcmt_schunk_wsg_command</code>),
+we will fork it into a newly-named <code class="highlighter-rouge">lcmt_schunk_wsg_command2</code> with the
+change, and deprecate the original <code class="highlighter-rouge">lcmt_schunk_wsg_command</code>.</li>
+  <li>Drake code that uses that message type (e.g., <code class="highlighter-rouge">SchunkWsgCommandSender</code>) will
+immediately switch to use the revised message, without deprecation.</li>
+  <li>This means that independent, direct use of the LCM message by users will have
+a smooth transition like any other library code, but any dependency on
+Drake’s sending or receiving a particular schema is not part of our “Stable
+API” promise.</li>
+</ul>
+
+<h2 id="behavioral-changes">Behavioral changes</h2>
+
+<p>Even if Drake does not change its API, sometimes its implementation may evolve
+in ways that affect your use. In the limit,
+<a href="https://xkcd.com/1172/">any implementation change can be a breaking change</a>.</p>
+
+<p>Our goal is to keep our implementation within its documented API promises
+(<a href="https://drake.mit.edu/doxygen_cxx/">C++</a>,
+<a href="https://drake.mit.edu/pydrake/">Python</a>).
+Any significant changes to the API documentation should be announced via
+deprecation with 3 months of advance notice.</p>
+
+<p>Sometimes our software will choose a default value when nothing more specific
+is provided. Those defaults may change as we find better heuristics, without
+prior notice. Similarly, our numerical algorithms may change in ways that alter
+the calculated results. There is no guarantee that Drake’s output is
+bitwise-identical from one version to the next.</p>
+
+<h2 id="exemptions">Exemptions</h2>
+
+<p>Any new API will have these requirements waived for the first version where
+that API appears. (In other words, the second release of the API is the one
+where the Stable guarantees come into effect.) However, we will make a best
+effort to adhere to these guidelines as we resolve any issues with the new API,
+even in the first release.</p>
+
+<p>Drake’s nightly builds are exempt from any stability guarantees.</p>
+
+<p>Within the Stable API, we also expect you to meet certain requirements in order
+to obtain the stability guarantee:</p>
+
+<ul>
+  <li>Include what you use.
+    <ul>
+      <li>Drake’s <code class="highlighter-rouge">#include</code> graph will change over time; always <code class="highlighter-rouge">#include</code> the
+header that matches each Drake class that you use.</li>
+      <li>Relatedly, do not include headers that you don’t use. Our C++ or Python
+deprecation warnings typically only trigger on <strong>call</strong> into the API, not
+mere inclusion or importing.</li>
+    </ul>
+  </li>
+  <li>For Bazel users, <code class="highlighter-rouge">deps</code> what you use.
+    <ul>
+      <li>Drake’s <code class="highlighter-rouge">deps</code> graph will change over time; always list out your Drake
+library dependencies (to match what you <code class="highlighter-rouge">#include</code> or <code class="highlighter-rouge">import</code>); do not rely
+on transitive dependencies to bring them in.</li>
+    </ul>
+  </li>
+  <li>In C++, do not forward-declare anything from Drake.</li>
+  <li>In C++, do not depend on the exact signature of Drake functions, as we may
+add new, defaulted arguments without prior notice (i.e., do not take the
+address of any Drake function, or assign it to a <code class="highlighter-rouge">std::function</code>).</li>
+</ul>
+
+<h3 id="model-files">Model files</h3>
+
+<p>Note in particular that any data files provided by Drake (e.g., SDFormat or
+URDF models) are not incorporated into the “Stable API”, even though some of
+those files are distributed in our stable releases for demonstration
+purposes. We may alter the models (e.g., changing the collision geometry or
+joint limits) or remove a model entirely, without prior notice.</p>
+
+<h1 id="abi">ABI</h1>
+
+<p>Drake does not offer any stable ABI
+(<a href="https://en.wikipedia.org/wiki/Application_binary_interface">Application Binary Interface</a>).
+We expect any C++ code linked against Drake within the same program to use the
+identical source revision and build flags of Drake as all other code within
+that program.</p>
+
+<p>Refer to <a href="/installation.html">Installation</a> for the current details.</p>
+
+<h1 id="os-support">OS Support</h1>
+
+<p>Drake intends to support the two most recent versions of Ubuntu LTS and macOS
+on an ongoing basis. That generally means that your OS must be no more than
+~2-4 years old for Ubuntu, or ~2 years old for macOS.</p>
+
+<p>Refer to <a href="/installation.html">Installation</a> for the current details.</p>
+
+      </article>
+    </div>
+  </section>
+</div>
+
+        <footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        
+        <li>
+          <a href="https://drake.mit.edu/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        
+        <li>
+          <a href="https://drake.mit.edu/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        
+
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png" /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TODO(eric.cousineau): Consider placing copyright here. -->
+
+</footer>
+
+      </div>
+    </div>
+    <script src="/assets/js/mobile.js"></script>
+  </body>
+</html>

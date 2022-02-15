@@ -8,7 +8,7 @@
     <link rel="manifest" type="application/manifest+json" href="/site.webmanifest"/>
     <link rel="mask-icon" type="image/svg+xml" href="/mask-icon.svg" color="#990000"/>
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
-    <title>Drake: Installation via Pip</title>
+    <title>Drake: Trademarks</title>
     <meta
       name="description"
       content="Drake (&quot;dragon&quot; in Middle English) is a C++ toolbox started by the Robot
@@ -109,87 +109,17 @@ analysis.
         <div class="drake-page">
   <header class="drake-page-header">
     <div class="contain">
-      <h1>Installation via Pip</h1>
+      <h1>Trademarks</h1>
     </div>
   </header>
   <section class="padding">
     <div class="contain">
       <article class="markdown-body">
-        <h1 id="pip-packages">Pip Packages</h1>
+        <p>All trademarks, logos and brand names are the property of their respective
+owners.</p>
 
-<p>Drake publishes pre-compiled binaries as
-<a href="https://pypi.org/project/drake/">PyPI wheel packages</a>.  Refer to
-<a href="/installation.html#supported-configurations">Supported Configurations</a>
-for additional compatibility details.  Drake wheels require a <code class="highlighter-rouge">pip</code>
-version of <code class="highlighter-rouge">pip &gt;= 20.3</code>.</p>
-
-<p>To learn about other installation methods, refer to
-<a href="/installation.html">Installation and Quickstart</a>.</p>
-
-<p>If you experience any problems or questions with Drake, please
-<a href="/getting_help.html">ask for help on Stack Overflow</a>.</p>
-
-<p>Drake binary releases incorporate a pre-compiled version of
-<a href="https://ccom.ucsd.edu/~optimizers/solvers/snopt/">SNOPT</a> as part of the
-<a href="https://drake.mit.edu/doxygen_cxx/group__solvers.html">Mathematical Program toolbox</a>.
-Thanks to Philip E. Gill and Elizabeth Wong for their kind support.</p>
-
-<p>Drake’s pip packages do not support the MOSEK<a href="/tm.html">™</a> nor Gurobi solvers. To use
-MOSEK<a href="/tm.html">™</a> or Gurobi, you will need to <a href="/from_source.html">build Drake from source</a>.</p>
-
-<h2 id="stable-releases">Stable Releases</h2>
-
-<div class="warning">
-  <p>Drake’s support for pip has only just recently been introduced (as of October
-2021), so still has some known issues (see
-<a href="https://github.com/RobotLocomotion/drake/issues/15954">issue #15954</a>).
-Please <a href="/getting_help.html">let us know</a> if you
-experience any additional problems. To fall back to other installation methods
-in the meantime, refer to <a href="/installation.html">Installation and Quickstart</a>
-for more choices.</p>
-</div>
-
-<div class="warning">
-  <p>Drake’s pip wheels are only published for CPython 3.6 through CPython 3.9
-running on Linux.  In the future, we intend to publish macOS wheel builds.</p>
-</div>
-
-<div class="warning">
-  <p>Support for CPython 3.6 and CPython 3.7 will end on 2022-04-01.</p>
-</div>
-
-<p>We recommend installing drake into a
-<a href="https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment">virtual environment</a>
-directory.  In the example below, we will name that directory <code class="highlighter-rouge">env</code>, but you
-can choose any name.</p>
-
-<p>Create a virtual environment and install Drake:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 <span class="nt">-m</span> venv <span class="nb">env
-env</span>/bin/pip <span class="nb">install</span> <span class="nt">--upgrade</span> pip
-<span class="nb">env</span>/bin/pip <span class="nb">install </span>drake
-</code></pre></div></div>
-
-<p>Drake requires certain basic runtime libraries from the host linux distribution.</p>
-
-<p>For Ubuntu 18.04, install these additional libraries:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
-  libpython3.6 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
-</code></pre></div></div>
-
-<p>For Ubuntu 20.04, install these additional libraries:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> <span class="se">\</span>
-  libpython3.8 python3-tk libx11-6 libsm6 libxt6 libglib2.0-0
-</code></pre></div></div>
-
-<p>Activate the virtual environment:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source env</span>/bin/activate
-</code></pre></div></div>
-
-<p>Refer to <a href="/installation.html#quickstart">Quickstart</a> for next steps.</p>
+<p>MOSEK<a href="/tm.html">™</a> is a trademark of <a href="https://www.mosek.com/">MOSEK</a> and is mentioned in
+Drake’s documentation under a license from <a href="https://www.mosek.com/">MOSEK</a>.</p>
 
       </article>
     </div>

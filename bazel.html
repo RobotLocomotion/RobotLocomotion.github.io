@@ -141,7 +141,7 @@ page.</li>
 <p>To build or test Drake, run <strong>bazel build</strong> or <strong>bazel test</strong> with the desired
 target label (and optional configuration options if desired).  We give some
 typical examples below; for more reading about target patterns, see:
-<a href="https://docs.bazel.build/versions/master/user-manual.html#target-patterns">https://docs.bazel.build/versions/master/user-manual.html#target-patterns</a>.</p>
+<a href="https://docs.bazel.build/versions/main/user-manual.html#target-patterns">https://docs.bazel.build/versions/main/user-manual.html#target-patterns</a>.</p>
 
 <p>On Ubuntu, the default compiler is the first <code class="highlighter-rouge">gcc</code> compiler in the
 <code class="highlighter-rouge">PATH</code>, usually GCC 7.5 on Bionic and GCC 9.3 on Focal. On macOS, the default
@@ -228,21 +228,29 @@ prerequisite libraries are also compiled and linked in <code class="highlighter-
 
 <h2 id="running-with-flags">Running with Flags</h2>
 
+<h3 id="example-programs">Example programs</h3>
+
 <p>In general, to figure out what binary-specific arguments are available, add
-“<code class="highlighter-rouge">-- --help</code>” to your <code class="highlighter-rouge">bazel run</code> command. If the binary can only run via
-<code class="highlighter-rouge">bazel test</code>, look at <a href="https://docs.bazel.build/versions/master/user-manual.html#flag--test_arg">–test_arg</a>.</p>
+“<code class="highlighter-rouge">-- --help</code>” to your <code class="highlighter-rouge">bazel run</code> command. An an example,</p>
 
-<p>If a C++ unittest uses <code class="highlighter-rouge">gtest</code> (e.g. using <code class="highlighter-rouge">drake_cc_googletest</code>),
-you can specify gtest-specific flags. As an example:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run multibody/plant:multibody_plant_test -- --gtest_filter='*SimpleModelCreation*'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run //examples/acrobot:run_passive -- --help
 </code></pre></div></div>
 
-<p>If a Python unittest is run via <code class="highlighter-rouge">drake_py_unittest_main.py</code> (e.g. using
-<code class="highlighter-rouge">drake_py_unittest</code>), you can specify flags such as <code class="highlighter-rouge">--trace</code> or
-<code class="highlighter-rouge">--deprecation_action</code>. As an example:</p>
+<p>The bare <code class="highlighter-rouge">--</code> separates Bazel arguments from the program’s arguments.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel run bindings/pydrake:py/symbolic_test -- --trace=user --deprecation_action=error
+<h2 id="unit-tests">Unit tests</h2>
+
+<p>For running tests, you may pass custom arguments to the test program via
+<a href="https://docs.bazel.build/versions/main/user-manual.html#flag--test_arg">–test_arg</a>.</p>
+
+<p>For a C++ unittest that uses <code class="highlighter-rouge">drake_cc_googletest</code>, for example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test multibody/plant:multibody_plant_test --test_output=streamed --nocache_test_results --test_arg=--gtest_filter='*SimpleModelCreation*'
+</code></pre></div></div>
+
+<p>For a Python unittest that uses <code class="highlighter-rouge">drake_py_unittest</code>, for example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test bindings/pydrake:py/symbolic_test --test_output=streamed --nocache_test_results --test_arg=--trace=user --test_arg=TestSymbolicVariable
 </code></pre></div></div>
 
 <h2 id="debugging-and-profiling-on-macos">Debugging and profiling on macOS</h2>
@@ -289,7 +297,7 @@ bazel build //tools/lint:buildifier
 
 <ul>
   <li>Gurobi 9.0.2</li>
-  <li>MOSEK 9.2</li>
+  <li>MOSEK<a href="/tm.html">™</a> 9.2</li>
   <li>SNOPT 7.4</li>
 </ul>
 
@@ -322,23 +330,23 @@ bazel build //tools/lint:buildifier
 <p>The default value of <code class="highlighter-rouge">--test_tag_filters</code> in Drake’s <code class="highlighter-rouge">bazel.rc</code> excludes
 these tests.  If you will be developing with Gurobi regularly, you may wish
 to specify a more convenient <code class="highlighter-rouge">--test_tag_filters</code> in a local <code class="highlighter-rouge">.bazelrc</code>.
-See <a href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+See <a href="https://docs.bazel.build/versions/main/user-manual.html#bazelrc">https://docs.bazel.build/versions/main/user-manual.html#bazelrc</a>.</p>
 
 <h2 id="mosek">MOSEK</h2>
 
-<p>The Drake Bazel build system downloads MOSEK 9.2.33 automatically.  No manual
+<p>The Drake Bazel build system downloads MOSEK<a href="/tm.html">™</a> 9.2.33 automatically. No manual
 installation is required.  Set the location of your license file as follows:</p>
 
 <p><code class="highlighter-rouge">export MOSEKLM_LICENSE_FILE=/path/to/mosek.lic</code></p>
 
-<p>To confirm that your setup was successful, run the tests that require MOSEK:</p>
+<p>To confirm that your setup was successful, run the tests that require MOSEK<a href="/tm.html">™</a>:</p>
 
 <p><code class="highlighter-rouge">bazel test --config mosek --test_tag_filters=mosek //...</code></p>
 
 <p>The default value of <code class="highlighter-rouge">--test_tag_filters</code> in Drake’s <code class="highlighter-rouge">bazel.rc</code> excludes
-these tests.  If you will be developing with MOSEK regularly, you may wish
+these tests.  If you will be developing with MOSEK<a href="/tm.html">™</a> regularly, you may wish
 to specify a more convenient <code class="highlighter-rouge">--test_tag_filters</code> in a local <code class="highlighter-rouge">.bazelrc</code>.
-See <a href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+See <a href="https://docs.bazel.build/versions/main/user-manual.html#bazelrc">https://docs.bazel.build/versions/main/user-manual.html#bazelrc</a>.</p>
 
 <h2 id="snopt">SNOPT</h2>
 
@@ -371,7 +379,7 @@ named <code class="highlighter-rouge">snopt7.4.tar.gz</code>).</li>
 <p>The default value of <code class="highlighter-rouge">--test_tag_filters</code> in Drake’s <code class="highlighter-rouge">bazel.rc</code> excludes
 these tests.  If you will be developing with SNOPT regularly, you may wish
 to specify a more convenient <code class="highlighter-rouge">--test_tag_filters</code> in a local <code class="highlighter-rouge">.bazelrc</code>.
-See <a href="https://docs.bazel.build/versions/master/user-manual.html#bazelrc">https://docs.bazel.build/versions/master/user-manual.html#bazelrc</a>.</p>
+See <a href="https://docs.bazel.build/versions/main/user-manual.html#bazelrc">https://docs.bazel.build/versions/main/user-manual.html#bazelrc</a>.</p>
 
 <p>SNOPT support has some known problems on certain programs (see drake issue
 <a href="https://github.com/RobotLocomotion/drake/issues/10422">#10422</a> for a summary).</p>
