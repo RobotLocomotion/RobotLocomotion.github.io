@@ -163,7 +163,7 @@ var searchData=
   ['_7erungekutta3integrator',['~RungeKutta3Integrator',['../classdrake_1_1systems_1_1_runge_kutta3_integrator.html#a6feb774094471a9ae52b7611699f11c6',1,'drake::systems::RungeKutta3Integrator']]],
   ['_7erungekutta5integrator',['~RungeKutta5Integrator',['../classdrake_1_1systems_1_1_runge_kutta5_integrator.html#a11090b32db6a94ddf4da30f7f6913724',1,'drake::systems::RungeKutta5Integrator']]],
   ['_7escalardenseoutput',['~ScalarDenseOutput',['../classdrake_1_1systems_1_1_scalar_dense_output.html#a687a48016f7da72e6a4bc234718fe144',1,'drake::systems::ScalarDenseOutput']]],
-  ['_7escenegraph',['~SceneGraph',['../classdrake_1_1geometry_1_1_scene_graph.html#a429524230341a954c869b1e3e022e806',1,'drake::geometry::SceneGraph']]],
+  ['_7escenegraph',['~SceneGraph',['../classdrake_1_1geometry_1_1_scene_graph.html#a501e0cb17bd7045989598772a2518778',1,'drake::geometry::SceneGraph']]],
   ['_7escopeexit',['~ScopeExit',['../classdrake_1_1_scope_exit.html#a79e115721c27b70df7123efa70744bd9',1,'drake::ScopeExit']]],
   ['_7escssolver',['~ScsSolver',['../classdrake_1_1solvers_1_1_scs_solver.html#a04f2c256c317ac6c69ef7c1010b3edfd',1,'drake::solvers::ScsSolver']]],
   ['_7esemiexpliciteulerintegrator',['~SemiExplicitEulerIntegrator',['../classdrake_1_1systems_1_1_semi_explicit_euler_integrator.html#a780fa5f8fa4dc5416f986db48acb2749',1,'drake::systems::SemiExplicitEulerIntegrator']]],

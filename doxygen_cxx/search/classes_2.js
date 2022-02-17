@@ -25,6 +25,7 @@ var searchData=
   ['compassgait',['CompassGait',['../classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html',1,'drake::examples::compass_gait']]],
   ['compassgaitgeometry',['CompassGaitGeometry',['../classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html',1,'drake::examples::compass_gait']]],
   ['compositeeventcollection',['CompositeEventCollection',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
+  ['compositeeventcollection_3c_20autodiffxd_20_3e',['CompositeEventCollection&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['compositeeventcollection_3c_20double_20_3e',['CompositeEventCollection&lt; double &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['compositionconstraint',['ComPositionConstraint',['../classdrake_1_1multibody_1_1_com_position_constraint.html',1,'drake::multibody']]],
   ['conditiontraits_3c_20symbolic_3a_3aformula_20_3e',['ConditionTraits&lt; symbolic::Formula &gt;',['../structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html',1,'drake::assert']]],

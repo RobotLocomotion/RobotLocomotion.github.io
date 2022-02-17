@@ -65,6 +65,9 @@ var hierarchy =
       [ "DiagramCompositeEventCollection< T >", "classdrake_1_1systems_1_1_diagram_composite_event_collection.html", null ],
       [ "LeafCompositeEventCollection< T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
+    [ "CompositeEventCollection< AutoDiffXd >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
+      [ "LeafCompositeEventCollection< AutoDiffXd >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
+    ] ],
     [ "CompositeEventCollection< double >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "LeafCompositeEventCollection< double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
@@ -582,12 +585,12 @@ var hierarchy =
         [ "OutputPort< double >", "classdrake_1_1systems_1_1_output_port.html", null ]
       ] ]
     ] ],
-    [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "TrigPoly< T >::Product< Rhs, Lhs >", "structdrake_1_1_trig_poly_1_1_product.html", null ],
+    [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
+    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
@@ -841,11 +844,14 @@ var hierarchy =
               [ "RotaryEncoders< T >", "classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html", null ]
             ] ],
             [ "WrapToSystem< T >", "classdrake_1_1systems_1_1_wrap_to_system.html", null ],
-            [ "ZeroOrderHold< T >", "classdrake_1_1systems_1_1_zero_order_hold.html", null ],
+            [ "ZeroOrderHold< T >", "classdrake_1_1systems_1_1_zero_order_hold.html", null ]
+          ] ]
+        ] ],
+        [ "System< AutoDiffXd >", "classdrake_1_1systems_1_1_system.html", [
+          [ "LeafSystem< AutoDiffXd >", "classdrake_1_1systems_1_1_leaf_system.html", [
             [ "SceneGraph< AutoDiffXd >", "classdrake_1_1geometry_1_1_scene_graph.html", null ]
           ] ]
         ] ],
-        [ "System< AutoDiffXd >", "classdrake_1_1systems_1_1_system.html", null ],
         [ "System< double >", "classdrake_1_1systems_1_1_system.html", [
           [ "Diagram< double >", "classdrake_1_1systems_1_1_diagram.html", [
             [ "LcmPlanInterpolator", "classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_lcm_plan_interpolator.html", null ],

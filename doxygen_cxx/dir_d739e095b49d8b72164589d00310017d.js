@@ -66,11 +66,8 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "rgba.h", "rgba_8h.html", [
       [ "Rgba", "classdrake_1_1geometry_1_1_rgba.html", "classdrake_1_1geometry_1_1_rgba" ]
     ] ],
-    [ "scene_graph.h", "scene__graph_8h.html", [
-      [ "QueryObject", "classdrake_1_1geometry_1_1_query_object.html", "classdrake_1_1geometry_1_1_query_object" ]
-    ] ],
+    [ "scene_graph.h", "scene__graph_8h.html", null ],
     [ "scene_graph_inspector.h", "scene__graph__inspector_8h.html", [
-      [ "QueryObject", "classdrake_1_1geometry_1_1_query_object.html", "classdrake_1_1geometry_1_1_query_object" ],
       [ "SceneGraphInspector", "classdrake_1_1geometry_1_1_scene_graph_inspector.html", "classdrake_1_1geometry_1_1_scene_graph_inspector" ]
     ] ],
     [ "shape_specification.h", "shape__specification_8h.html", "shape__specification_8h" ],

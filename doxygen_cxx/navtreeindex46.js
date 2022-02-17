@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"proximity__engine_8h.html":[4,0,0,4,29],
+"proximity__properties_8h.html":[4,0,0,4,30],
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,30,2],
 "proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,30,1],
 "proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,30,0],
@@ -22,7 +24,7 @@ var NAVTREEINDEX46 =
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
-"quadrature_8h.html":[4,0,0,8,3,9],
+"quadrature_8h.html":[4,0,0,8,3,10],
 "quadrotor__geometry_8h.html":[4,0,0,3,13,0],
 "quadrotor__plant_8h.html":[4,0,0,3,13,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,13,1,2],
@@ -146,8 +148,8 @@ var NAVTREEINDEX46 =
 "runge__kutta2__integrator_8h.html":[4,0,0,11,0,14],
 "runge__kutta3__integrator_8h.html":[4,0,0,11,0,15],
 "runge__kutta5__integrator_8h.html":[4,0,0,11,0,16],
-"sap__constraint_8h.html":[4,0,0,8,2,0,0],
-"sap__contact__problem_8h.html":[4,0,0,8,2,0,1],
+"sap__constraint_8h.html":[4,0,0,8,2,0,1],
+"sap__contact__problem_8h.html":[4,0,0,8,2,0,2],
 "sap__solver_8h.html":[4,0,0,8,2,9],
 "saturate_8h.html":[4,0,0,7,30],
 "saturate_8h.html#adecdf6a7ef606861457807da4b56e7ff":[4,0,0,7,30,0],
@@ -183,7 +185,7 @@ var NAVTREEINDEX46 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
-"schur__complement_8h.html":[4,0,0,8,3,10],
+"schur__complement_8h.html":[4,0,0,8,3,11],
 "scope__exit_8h.html":[4,0,0,1,46],
 "scoped__names_8h.html":[4,0,0,8,9,14],
 "scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,14,5],
@@ -213,7 +215,7 @@ var NAVTREEINDEX46 =
 "shape__to__string_8h.html":[4,0,0,4,37],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,11],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,12],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3":[4,0,0,10,47,0,5],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8":[4,0,0,10,47,0,3],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,10,47,0,2],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,10,47,0,1],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa97600ae7efdb5c8fecf91e99463ef4ef":[4,0,0,10,47,0,6],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fabca339897d605430456c35a1a10a4a9f":[4,0,0,10,47,0,4]
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,10,47,0,1]
 };
