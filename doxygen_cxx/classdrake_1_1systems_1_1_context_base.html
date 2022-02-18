@@ -205,9 +205,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e5b79c6956cdd2299c24e63dde0191e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html">FixedInputPortValue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_context_base.html#a9e5b79c6956cdd2299c24e63dde0191e">MaybeGetMutableFixedInputPortValue</a> (<a class="el" href="classint.html">int</a> index)</td></tr>
 <tr class="memdesc:a9e5b79c6956cdd2299c24e63dde0191e"><td class="mdescLeft">&#160;</td><td class="mdescRight">For input port <code>index</code>, returns a mutable <a class="el" href="classdrake_1_1systems_1_1_fixed_input_port_value.html" title="A FixedInputPortValue encapsulates a vector or abstract value for use as an internal value source for...">FixedInputPortValue</a> if the port is fixed, otherwise nullptr.  <a href="#a9e5b79c6956cdd2299c24e63dde0191e">More...</a><br /></td></tr>
 <tr class="separator:a9e5b79c6956cdd2299c24e63dde0191e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a935eb27196f288fe4344307a20c09d8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint64__t.html">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_context_base.html#a935eb27196f288fe4344307a20c09d8d">start_new_change_event</a> ()</td></tr>
-<tr class="memdesc:a935eb27196f288fe4344307a20c09d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the next change event serial number that is unique for this entire <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> tree, not just this subcontext.  <a href="#a935eb27196f288fe4344307a20c09d8d">More...</a><br /></td></tr>
-<tr class="separator:a935eb27196f288fe4344307a20c09d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91891869813dd9fc54377c9d8b5a9682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint64__t.html">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_context_base.html#a91891869813dd9fc54377c9d8b5a9682">start_new_change_event</a> () const</td></tr>
+<tr class="memdesc:a91891869813dd9fc54377c9d8b5a9682"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Returns the next change event serial number that is unique for this entire <a class="el" href="classdrake_1_1systems_1_1_context.html" title="Context is an abstract class template that represents all the typed values that are used in a System&#39;...">Context</a> tree, not just this subcontext.  <a href="#a91891869813dd9fc54377c9d8b5a9682">More...</a><br /></td></tr>
+<tr class="separator:a91891869813dd9fc54377c9d8b5a9682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbb8a99fdf4edf4bf0bf58c4d89ebb18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_context_base.html#abbb8a99fdf4edf4bf0bf58c4d89ebb18">is_root_context</a> () const</td></tr>
 <tr class="memdesc:abbb8a99fdf4edf4bf0bf58c4d89ebb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this context has no parent.  <a href="#abbb8a99fdf4edf4bf0bf58c4d89ebb18">More...</a><br /></td></tr>
 <tr class="separator:abbb8a99fdf4edf4bf0bf58c4d89ebb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,7 +272,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a8baf45fc00901dc9fb93cad0fb491bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Change notification methods (Internal use only)</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>These "Note" methods are used by framework-internal derived classes to effect change notifications that propagate down from a <a class="el" href="classdrake_1_1systems_1_1_diagram_context.html" title="The DiagramContext is a container for all of the data necessary to uniquely determine the computation...">DiagramContext</a> (where the change is initiated) through all its subcontexts, recursively.</p>
-<p><a class="anchor" id="context_base_change_notification_methods"></a>Such notification sweeps result in the "out of date" flag being set in each of the affected cache entry values. Each of these "Note" methods affects only the local context, but all have identical signatures so can be passed down the context tree to operate on every subcontext. The <code>change_event</code> argument should be the result of the <a class="el" href="classdrake_1_1systems_1_1_context_base.html#a935eb27196f288fe4344307a20c09d8d" title="(Internal use only) Returns the next change event serial number that is unique for this entire Contex...">start_new_change_event()</a> method. </p>
+<p><a class="anchor" id="context_base_change_notification_methods"></a>Such notification sweeps result in the "out of date" flag being set in each of the affected cache entry values. Each of these "Note" methods affects only the local context, but all have identical signatures so can be passed down the context tree to operate on every subcontext. The <code>change_event</code> argument should be the result of the <a class="el" href="classdrake_1_1systems_1_1_context_base.html#a91891869813dd9fc54377c9d8b5a9682" title="(Internal use only) Returns the next change event serial number that is unique for this entire Contex...">start_new_change_event()</a> method. </p>
 </div></td></tr>
 <tr class="memitem:a0509f45f1d82b5d3dc2642556a7775d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_context_base.html#a0509f45f1d82b5d3dc2642556a7775d7">NoteTimeChanged</a> (<a class="el" href="classint64__t.html">int64_t</a> change_event)</td></tr>
 <tr class="memdesc:a0509f45f1d82b5d3dc2642556a7775d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the local time tracker that time may have changed.  <a href="#a0509f45f1d82b5d3dc2642556a7775d7">More...</a><br /></td></tr>
@@ -2058,8 +2058,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a935eb27196f288fe4344307a20c09d8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a935eb27196f288fe4344307a20c09d8d">&#9670;&nbsp;</a></span>start_new_change_event()</h2>
+<a id="a91891869813dd9fc54377c9d8b5a9682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91891869813dd9fc54377c9d8b5a9682">&#9670;&nbsp;</a></span>start_new_change_event()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2068,7 +2068,7 @@ Friends</h2></td></tr>
           <td class="memname"><a class="el" href="classint64__t.html">int64_t</a> start_new_change_event </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">

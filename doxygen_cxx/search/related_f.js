@@ -1,9 +1,9 @@
 var searchData=
 [
   ['randomsource',['RandomSource',['../classdrake_1_1systems_1_1_random_source.html#a0c17a580c791415c09f8709e5700280b',1,'drake::systems::RandomSource']]],
-  ['renderclientgltf',['RenderClientGltf',['../classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#abe2f0ee9ad9d7dac08f17c0e8551b177',1,'drake::geometry::render::RenderEngineVtk']]],
   ['renderengine',['RenderEngine',['../classdrake_1_1geometry_1_1render_1_1_render_label.html#aa773678cbb94f82a77841659bfb4dd6a',1,'drake::geometry::render::RenderLabel']]],
   ['renderenginegltester',['RenderEngineGlTester',['../classdrake_1_1geometry_1_1render_1_1_render_engine_gl.html#a06329447111799aee0fbcf9d18f357d7',1,'drake::geometry::render::RenderEngineGl']]],
+  ['renderenginegltfclient',['RenderEngineGltfClient',['../classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ab7040001a76725400946a3d79eff0144',1,'drake::geometry::render::RenderEngineVtk']]],
   ['renderenginetester',['RenderEngineTester',['../classdrake_1_1geometry_1_1render_1_1_render_engine.html#ab75b0ec1eaa46dd3c8f374cef721d567',1,'drake::geometry::render::RenderEngine']]],
   ['revolutejoint',['RevoluteJoint',['../classdrake_1_1multibody_1_1_revolute_joint.html#a47733949e40b86ffe8776dea4a154459',1,'drake::multibody::RevoluteJoint']]],
   ['revolutespring',['RevoluteSpring',['../classdrake_1_1multibody_1_1_revolute_spring.html#a863039c18117243374b3411d76fc8b20',1,'drake::multibody::RevoluteSpring']]],

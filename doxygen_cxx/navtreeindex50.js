@@ -1,5 +1,6 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,14,7,5],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,14,7,6],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,14,7,7],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,14,7,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX50 =
 "symbolic__expression_8h.html#a979582c00c744ebe1c719e57c6f738b8":[4,0,0,1,55,26],
 "symbolic__expression_8h.html#a986094e62cf81f5b0c1d4f33df8f8e3f":[4,0,0,1,55,123],
 "symbolic__expression_8h.html#a993384c5125c55ca3f5a11586a9bb675":[4,0,0,1,55,54],
-"symbolic__expression_8h.html#a996064aacae33fb26d67c20617c764ee":[4,0,0,1,55,95],
-"symbolic__expression_8h.html#a9d4ba82d6dffb1c0c6f40a768f86eae7":[4,0,0,1,55,18]
+"symbolic__expression_8h.html#a996064aacae33fb26d67c20617c764ee":[4,0,0,1,55,95]
 };

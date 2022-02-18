@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"proximity__doxygen_8h.html":[4,0,0,4,2,41],
 "proximity__engine_8h.html":[4,0,0,4,29],
 "proximity__properties_8h.html":[4,0,0,4,30],
 "proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,30,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[4,0,0,10,47,0,0],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3":[4,0,0,10,47,0,5],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8":[4,0,0,10,47,0,3],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,10,47,0,2],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,10,47,0,1]
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,10,47,0,2]
 };

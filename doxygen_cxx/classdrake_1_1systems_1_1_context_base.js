@@ -61,7 +61,7 @@ var classdrake_1_1systems_1_1_context_base =
     [ "PropagateCachingChange", "classdrake_1_1systems_1_1_context_base.html#a7a2bab0165b60d8aaadee530d78029f1", null ],
     [ "set_parent", "classdrake_1_1systems_1_1_context_base.html#a1b001db248ae5159d7aa3bf3c89df111", null ],
     [ "SetAllCacheEntriesOutOfDate", "classdrake_1_1systems_1_1_context_base.html#ac0a9310eb1266e264f69ed803358deac", null ],
-    [ "start_new_change_event", "classdrake_1_1systems_1_1_context_base.html#a935eb27196f288fe4344307a20c09d8d", null ],
+    [ "start_new_change_event", "classdrake_1_1systems_1_1_context_base.html#a91891869813dd9fc54377c9d8b5a9682", null ],
     [ "UnfreezeCache", "classdrake_1_1systems_1_1_context_base.html#abb3e9df7a99f4d1b7d6aaefdadac28cd", null ],
     [ "internal::SystemBaseContextBaseAttorney", "classdrake_1_1systems_1_1_context_base.html#afbf57f9a9ba557220adf6f9c6436c548", null ]
 ];

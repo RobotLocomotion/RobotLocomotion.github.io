@@ -18,5 +18,5 @@ var classdrake_1_1geometry_1_1render_1_1_render_engine_vtk =
     [ "operator=", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#aaa0981a4cafa2db60957d182cccd5bfd", null ],
     [ "operator=", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a8169cca4018a438cc0012dbca354201d", null ],
     [ "UpdateViewpoint", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a81e26b02c3a6d32b4187fc3f14261cbf", null ],
-    [ "RenderClientGltf", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#abe2f0ee9ad9d7dac08f17c0e8551b177", null ]
+    [ "RenderEngineGltfClient", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ab7040001a76725400946a3d79eff0144", null ]
 ];

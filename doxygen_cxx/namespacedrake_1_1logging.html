@@ -143,7 +143,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:aed13fee35863fff48d177f80c979bca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Retrieves the default sink for all Drake logs.  <a href="#aed13fee35863fff48d177f80c979bca0">More...</a><br /></td></tr>
 <tr class="separator:aed13fee35863fff48d177f80c979bca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0fe856459e2ca7ef105677ef381da55"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55">set_log_level</a> (const std::string &amp;level)</td></tr>
-<tr class="memdesc:ae0fe856459e2ca7ef105677ef381da55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes <code><a class="el" href="namespacedrake.html#ae32fd151ebc2dab30d9546f1dbef0c79" title="Retrieve an instance of a logger to use for logging; for example:">drake::log()</a>-&gt;set_level(level)</code>.  <a href="#ae0fe856459e2ca7ef105677ef381da55">More...</a><br /></td></tr>
+<tr class="memdesc:ae0fe856459e2ca7ef105677ef381da55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the log threshold used by Drake's C++ code.  <a href="#ae0fe856459e2ca7ef105677ef381da55">More...</a><br /></td></tr>
 <tr class="separator:ae0fe856459e2ca7ef105677ef381da55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83987c1d52b74115b933adef64972af7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#a83987c1d52b74115b933adef64972af7">set_log_pattern</a> (const std::string &amp;pattern)</td></tr>
 <tr class="memdesc:a83987c1d52b74115b933adef64972af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invokes <code><a class="el" href="namespacedrake.html#ae32fd151ebc2dab30d9546f1dbef0c79" title="Retrieve an instance of a logger to use for logging; for example:">drake::log()</a>-&gt;set_pattern(pattern)</code>.  <a href="#a83987c1d52b74115b933adef64972af7">More...</a><br /></td></tr>
@@ -155,10 +155,10 @@ Variables</h2></td></tr>
 <tr class="memdesc:a43a4a42dcea3143d400de1575cb5758c"><td class="mdescLeft">&#160;</td><td class="mdescRight">True only if spdlog is enabled in this build.  <a href="#a43a4a42dcea3143d400de1575cb5758c">More...</a><br /></td></tr>
 <tr class="separator:a43a4a42dcea3143d400de1575cb5758c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6e439f4584cc1f0a6dd0990378604a5"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#ae6e439f4584cc1f0a6dd0990378604a5">kSetLogLevelUnchanged</a></td></tr>
-<tr class="memdesc:ae6e439f4584cc1f0a6dd0990378604a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "unchanged" string to pass to <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Invokes drake::log()-&gt;set_level(level).">set_log_level()</a> so as to achieve a no-op.  <a href="#ae6e439f4584cc1f0a6dd0990378604a5">More...</a><br /></td></tr>
+<tr class="memdesc:ae6e439f4584cc1f0a6dd0990378604a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "unchanged" string to pass to <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Sets the log threshold used by Drake&#39;s C++ code.">set_log_level()</a> so as to achieve a no-op.  <a href="#ae6e439f4584cc1f0a6dd0990378604a5">More...</a><br /></td></tr>
 <tr class="separator:ae6e439f4584cc1f0a6dd0990378604a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc074aead70b88bf38e18993bf9c28c3"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#abc074aead70b88bf38e18993bf9c28c3">kSetLogLevelHelpMessage</a></td></tr>
-<tr class="memdesc:abc074aead70b88bf38e18993bf9c28c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An end-user help string suitable to describe the effects of <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Invokes drake::log()-&gt;set_level(level).">set_log_level()</a>.  <a href="#abc074aead70b88bf38e18993bf9c28c3">More...</a><br /></td></tr>
+<tr class="memdesc:abc074aead70b88bf38e18993bf9c28c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An end-user help string suitable to describe the effects of <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Sets the log threshold used by Drake&#39;s C++ code.">set_log_level()</a>.  <a href="#abc074aead70b88bf38e18993bf9c28c3">More...</a><br /></td></tr>
 <tr class="separator:abc074aead70b88bf38e18993bf9c28c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60321c9dbf7c1ebe763371ab00262d68"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1logging.html#a60321c9dbf7c1ebe763371ab00262d68">kSetLogPatternHelpMessage</a></td></tr>
 <tr class="memdesc:a60321c9dbf7c1ebe763371ab00262d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">An end-user help string suitable to describe the effects of <a class="el" href="namespacedrake_1_1logging.html#a83987c1d52b74115b933adef64972af7" title="Invokes drake::log()-&gt;set_pattern(pattern).">set_log_pattern()</a>.  <a href="#a60321c9dbf7c1ebe763371ab00262d68">More...</a><br /></td></tr>
@@ -219,7 +219,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Invokes <code><a class="el" href="namespacedrake.html#ae32fd151ebc2dab30d9546f1dbef0c79" title="Retrieve an instance of a logger to use for logging; for example:">drake::log()</a>-&gt;set_level(level)</code>. </p>
+<p>Sets the log threshold used by Drake's C++ code. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">level</td><td>Must be a string from spdlog enumerations: <code>trace</code>, <code>debug</code>, <code>info</code>, <code>warn</code>, <code>err</code>, <code>critical</code>, <code>off</code>, or <code>unchanged</code> (not an enum, but useful for command-line). </td></tr>
@@ -285,7 +285,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>An end-user help string suitable to describe the effects of <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Invokes drake::log()-&gt;set_level(level).">set_log_level()</a>. </p>
+<p>An end-user help string suitable to describe the effects of <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Sets the log threshold used by Drake&#39;s C++ code.">set_log_level()</a>. </p>
 
 </div>
 </div>
@@ -301,7 +301,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The "unchanged" string to pass to <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Invokes drake::log()-&gt;set_level(level).">set_log_level()</a> so as to achieve a no-op. </p>
+<p>The "unchanged" string to pass to <a class="el" href="namespacedrake_1_1logging.html#ae0fe856459e2ca7ef105677ef381da55" title="Sets the log threshold used by Drake&#39;s C++ code.">set_log_level()</a> so as to achieve a no-op. </p>
 
 </div>
 </div>

@@ -174,6 +174,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; <a class="el" href="namespacedrake_1_1geometry.html#a74b8d905842571b365085fdd17378772">promoted_numerical_t</a>&lt; T, FieldValue &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#a6a402c8710c3a71fffbbc2223e0a8eb4">CalcGradientVectorOfLinearField</a> (const std::array&lt; FieldValue, 4 &gt; &amp;field_value, <a class="el" href="classint.html">int</a> e) const</td></tr>
 <tr class="memdesc:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the gradient ∇u of a linear field u on the tetrahedron <code>e</code>.  <a href="#a6a402c8710c3a71fffbbc2223e0a8eb4">More...</a><br /></td></tr>
 <tr class="separator:a6a402c8710c3a71fffbbc2223e0a8eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac685055b3b2cea1095025dd4c05465cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ac685055b3b2cea1095025dd4c05465cd">TransformVertices</a> (const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;transform)</td></tr>
+<tr class="memdesc:ac685055b3b2cea1095025dd4c05465cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the vertices of this mesh from its initial frame M to the new frame N.  <a href="#ac685055b3b2cea1095025dd4c05465cd">More...</a><br /></td></tr>
+<tr class="separator:ac685055b3b2cea1095025dd4c05465cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:ae1f54ec7a16209f802cc46f406f5764b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html#ae1f54ec7a16209f802cc46f406f5764b">VolumeMesh</a> (const <a class="el" href="classdrake_1_1geometry_1_1_volume_mesh.html">VolumeMesh</a> &amp;)=default</td></tr>
 <tr class="separator:ae1f54ec7a16209f802cc46f406f5764b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -595,6 +598,32 @@ Mesh type traits</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac685055b3b2cea1095025dd4c05465cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac685055b3b2cea1095025dd4c05465cd">&#9670;&nbsp;</a></span>TransformVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TransformVertices </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html">math::RigidTransform</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>transform</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Transforms the vertices of this mesh from its initial frame M to the new frame N. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>The transform X_NM relating the mesh in frame M to the new frame N. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

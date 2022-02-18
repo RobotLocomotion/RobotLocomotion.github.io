@@ -16,6 +16,7 @@ var classdrake_1_1geometry_1_1_volume_mesh =
     [ "operator=", "classdrake_1_1geometry_1_1_volume_mesh.html#a6e573ccac8cb33547bebe17dce6f44da", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_volume_mesh.html#a0c8f11a6a2352b818ce7eb7cbe0d7c1f", null ],
     [ "tetrahedra", "classdrake_1_1geometry_1_1_volume_mesh.html#a895d67540aff2cb88a555048a1fa7e90", null ],
+    [ "TransformVertices", "classdrake_1_1geometry_1_1_volume_mesh.html#ac685055b3b2cea1095025dd4c05465cd", null ],
     [ "vertex", "classdrake_1_1geometry_1_1_volume_mesh.html#aa8388a3f4417bdec45042a7fd2166a6a", null ],
     [ "vertices", "classdrake_1_1geometry_1_1_volume_mesh.html#ae7f810a1d8f914db3d27e1fb817e7341", null ],
     [ "internal::MeshDeformer< VolumeMesh< T > >", "classdrake_1_1geometry_1_1_volume_mesh.html#ad5fa7e42f3d3992a89ade0cf5846fc21", null ],
