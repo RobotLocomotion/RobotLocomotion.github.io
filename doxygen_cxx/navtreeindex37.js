@@ -1,5 +1,10 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a8992a6f5a255f8779359520bbf8fa482":[1,2,6,1,13],
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a8ce5a8cbdacaeee5d22e1bd156557b44":[1,2,6,1,7],
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#a8f06790934444bbec0f97ba8dcdd011c":[1,2,6,1,11],
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ab9088a7af754da8d0ec334ddc03a8d22":[1,2,6,1,1],
+"classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ac42fab9776a2a4c0573eb31f091fd875":[1,2,6,1,6],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ad52e88e4200c2cf0a094a08faff8583c":[1,2,6,1,10],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#af142c9c35836b98f67b234861650f5cc":[1,2,6,1,0],
 "classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#af7527be0e4177959b67a5b28e1d550f2":[1,2,6,1,9],
@@ -244,10 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4af045674d7737ba9da18fbe2b604743":[1,4,2,6,5],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e0d5526b3c774c0c2d0b743e896078e":[1,4,2,6,6],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a4e7e2451f0e6ee53d4bd8444a5e368f2":[1,4,2,6,1],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,4,2,6,4],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a732aeddf39ef1457d22d5629dca4e41c":[1,4,2,6,3],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a91b3d512821b5f210669cef35d8e4859":[1,4,2,6,0],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html":[1,1,0,38],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a198bf2c564777ff4d7d5acd711e5e349":[1,1,0,38,8],
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation_constraint.html#a3cbd3e24f7648ab7712c803ca8a63f3e":[1,1,0,38,9]
+"classdrake_1_1systems_1_1trajectory__optimization_1_1_direct_collocation.html#a6b919734963d0c38356747786ca44f55":[1,4,2,6,4]
 };

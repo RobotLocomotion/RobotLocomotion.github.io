@@ -1,5 +1,10 @@
 var NAVTREEINDEX48 =
 {
+"structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html":[3,0,0,6,3,3],
+"structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aac0e5776ad59e265686244006b0be308":[3,0,0,6,3,3,0],
+"structdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_result.html#aaf6a8034fc68445c84db4f8d0fcabc79":[3,0,0,6,3,3,1],
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html":[3,0,0,7,2],
+"structdrake_1_1math_1_1_get_sub_matrix_gradient_array.html#a49c4cd96758b9a7158941e142fd156b9":[3,0,0,7,2,0],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html":[3,0,0,7,3],
 "structdrake_1_1math_1_1_get_sub_matrix_gradient_single_element.html#a2a3fbd89c3970167a18d02ef2263914d":[3,0,0,7,3,0],
 "structdrake_1_1math_1_1_gradient.html":[3,0,0,7,4],
@@ -244,10 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a48fd1a491d4b55da113c50ad56ac0e0b":[3,0,0,11,6,2,3],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a6513041bec80f06f80601420be193a69":[3,0,0,11,6,2,0],
 "structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a81fc1edc9be7f6ca52a5c9f2d1f284a6":[3,0,0,11,6,2,4],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,6,2,5],
-"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,11,6,2,6],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,11,6,3],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[3,0,0,11,6,3,0],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,11,6,3,4],
-"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[3,0,0,11,6,3,2]
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,6,2,5]
 };

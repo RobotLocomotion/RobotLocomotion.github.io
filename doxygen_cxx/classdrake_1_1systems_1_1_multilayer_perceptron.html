@@ -160,6 +160,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6d92a60f96df3756ac29808fd8bd1c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ab6d92a60f96df3756ac29808fd8bd1c1">MultilayerPerceptron</a> (const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;<a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ac97d652ba13b9b387850ba184cae362a">layers</a>, const std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">PerceptronActivationType</a> &gt; &amp;activation_types)</td></tr>
 <tr class="memdesc:ab6d92a60f96df3756ac29808fd8bd1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the MLP with an activation_type specified for each non-input layer.  <a href="#ab6d92a60f96df3756ac29808fd8bd1c1">More...</a><br /></td></tr>
 <tr class="separator:ab6d92a60f96df3756ac29808fd8bd1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49474184e9c2a6455a65e9331739d776"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#a49474184e9c2a6455a65e9331739d776">MultilayerPerceptron</a> (const std::vector&lt; bool &gt; &amp;use_sin_cos_for_input, const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;remaining_layers, const std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">PerceptronActivationType</a> &gt; &amp;activation_types)</td></tr>
+<tr class="memdesc:a49474184e9c2a6455a65e9331739d776"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the MLP with an additional option to transform the input vector so that the function is periodic in 2π.  <a href="#a49474184e9c2a6455a65e9331739d776">More...</a><br /></td></tr>
+<tr class="separator:a49474184e9c2a6455a65e9331739d776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad018e0a1ac62facba097fa20704046da"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:ad018e0a1ac62facba097fa20704046da"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ad018e0a1ac62facba097fa20704046da">MultilayerPerceptron</a> (const <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html">MultilayerPerceptron</a>&lt; U &gt; &amp;)</td></tr>
 <tr class="memdesc:ad018e0a1ac62facba097fa20704046da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scalar-converting copy constructor.  <a href="#ad018e0a1ac62facba097fa20704046da">More...</a><br /></td></tr>
@@ -1262,7 +1265,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a612b74ebd5fb20e1881d7d3fcd6fed6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a612b74ebd5fb20e1881d7d3fcd6fed6b">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a612b74ebd5fb20e1881d7d3fcd6fed6b">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1288,7 +1291,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="a25a17b87a402d6813d808f1f189fbc77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25a17b87a402d6813d808f1f189fbc77">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a17b87a402d6813d808f1f189fbc77">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1314,7 +1317,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="aa1830877a7cd94e0fa0240a4dfbc18f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa1830877a7cd94e0fa0240a4dfbc18f3">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1830877a7cd94e0fa0240a4dfbc18f3">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1342,7 +1345,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs the MLP with the same activation type for every layer (except the output). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the number of inputs, and the last layer specifies the number of outputs. We require at least 3 layers (to be considered an MLP). </td></tr>
+    <tr><td class="paramname">layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the number of inputs, and the last layer specifies the number of outputs. </td></tr>
     <tr><td class="paramname">activation_type</td><td>specifies an activation function, σ(), used in <em>every</em> hidden layer of the network. kIdentity will be used for the output. </td></tr>
   </table>
   </dd>
@@ -1351,7 +1354,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <a id="ab6d92a60f96df3756ac29808fd8bd1c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d92a60f96df3756ac29808fd8bd1c1">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6d92a60f96df3756ac29808fd8bd1c1">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1379,7 +1382,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Constructs the MLP with an activation_type specified for each non-input layer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the number of inputs, and the last layer specifies the number of outputs. We require at least 3 layers (to be considered an MLP). </td></tr>
+    <tr><td class="paramname">layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the number of inputs, and the last layer specifies the number of outputs. </td></tr>
     <tr><td class="paramname">activation_type</td><td>specifies the activation function, σ(), used in <em>each</em> non-input layer of the network (including the last layer).</td></tr>
   </table>
   </dd>
@@ -1388,8 +1391,55 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a49474184e9c2a6455a65e9331739d776"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49474184e9c2a6455a65e9331739d776">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html">MultilayerPerceptron</a> </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; bool &gt; &amp;&#160;</td>
+          <td class="paramname"><em>use_sin_cos_for_input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="classint.html">int</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>remaining_layers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="namespacedrake_1_1systems.html#a30ed135f597ef0f136767f629a0472b0">PerceptronActivationType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>activation_types</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs the MLP with an additional option to transform the input vector so that the function is periodic in 2π. </p>
+<p>For instance, for a rotary joint on a robot, this could be used to apply the transform [x, y] =&gt; [sin x, cos x, y]. This would be accomplished by passing <code>use_sin_cos_for_input = [true, false]</code>.</p>
+<p>Note that when this transformation is applied, <code>num_inputs() != <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ac97d652ba13b9b387850ba184cae362a" title="Returns the number of elements in each layer of the network.">layers()</a>[0]</code>. <code>num_inputs() == 2 != <a class="el" href="classdrake_1_1systems_1_1_multilayer_perceptron.html#ac97d652ba13b9b387850ba184cae362a" title="Returns the number of elements in each layer of the network.">layers()</a>[0] == 3</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">use_sin_cos_for_input</td><td>is a boolean vector that determines whether the sin/cos transform is applied to each element. </td></tr>
+    <tr><td class="paramname">remaining_layers</td><td>is the number of elements in each layer of the network (the activation function does <em>not</em> count as an additional layer). The first element specifies the size of the first hidden layer, and the last layer specifies the number of outputs. </td></tr>
+    <tr><td class="paramname">activation_type</td><td>specifies the activation function, σ(), used in <em>each</em> non-input layer of the network (including the last layer).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p><code>activation_type</code> should have the same number of elements as <code>remaining_layers</code>. </p>
+
+</div>
+</div>
 <a id="ad018e0a1ac62facba097fa20704046da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad018e0a1ac62facba097fa20704046da">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad018e0a1ac62facba097fa20704046da">&#9670;&nbsp;</a></span>MultilayerPerceptron() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

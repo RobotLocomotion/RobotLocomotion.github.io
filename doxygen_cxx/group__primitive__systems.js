@@ -211,6 +211,7 @@ var group__primitive__systems =
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a25a17b87a402d6813d808f1f189fbc77", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#aa1830877a7cd94e0fa0240a4dfbc18f3", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ab6d92a60f96df3756ac29808fd8bd1c1", null ],
+      [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a49474184e9c2a6455a65e9331739d776", null ],
       [ "MultilayerPerceptron", "classdrake_1_1systems_1_1_multilayer_perceptron.html#ad018e0a1ac62facba097fa20704046da", null ],
       [ "activation_type", "classdrake_1_1systems_1_1_multilayer_perceptron.html#adc5e02708e2899b3a85c98a8ce8b3ef6", null ],
       [ "Backpropagation", "classdrake_1_1systems_1_1_multilayer_perceptron.html#a8a8e2ac13f8c5f7f6edcc2c04dde042a", null ],

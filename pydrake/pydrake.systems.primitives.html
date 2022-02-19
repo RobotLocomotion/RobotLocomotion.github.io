@@ -3430,8 +3430,7 @@ for simulation.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies an activation function, σ(), used in <em>every</em> hidden
 layer of the network. kIdentity will be used for the output.</dd>
@@ -3446,13 +3445,37 @@ non-input layer.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.systems.primitives.MultilayerPerceptron_[float], use_sin_cos_for_input: List[bool], remaining_layers: List[int], activation_types: List[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</li>
+</ol>
+<p>Constructs the MLP with an additional option to transform the input
+vector so that the function is periodic in 2π.</p>
+<p>For instance, for a rotary joint on a robot, this could be used to
+apply the transform [x, y] =&gt; [sin x, cos x, y]. This would be
+accomplished by passing <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span> <span class="pre">=</span> <span class="pre">[true,</span> <span class="pre">false]</span></code>.</p>
+<p>Note that when this transformation is applied, <code class="docutils literal notranslate"><span class="pre">num_inputs()</span> <span class="pre">!=</span>
+<span class="pre">layers()[0]</span></code>. <cite>num_inputs() == 2 != layers()[0] == 3</cite>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span></code>:</dt>
+<dd>is a boolean vector that determines whether the sin/cos transform
+is applied to each element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>:</dt>
+<dd>is the number of elements in each layer of the network (the
+activation function does <em>not</em> count as an additional layer). The
+first element specifies the size of the first hidden layer, and
+the last layer specifies the number of outputs.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
+<dd>specifies the activation function, σ(), used in <em>each</em> non-input
+layer of the network (including the last layer).</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3703,8 +3726,7 @@ for simulation.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies an activation function, σ(), used in <em>every</em> hidden
 layer of the network. kIdentity will be used for the output.</dd>
@@ -3719,13 +3741,37 @@ non-input layer.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], use_sin_cos_for_input: List[bool], remaining_layers: List[int], activation_types: List[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</li>
+</ol>
+<p>Constructs the MLP with an additional option to transform the input
+vector so that the function is periodic in 2π.</p>
+<p>For instance, for a rotary joint on a robot, this could be used to
+apply the transform [x, y] =&gt; [sin x, cos x, y]. This would be
+accomplished by passing <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span> <span class="pre">=</span> <span class="pre">[true,</span> <span class="pre">false]</span></code>.</p>
+<p>Note that when this transformation is applied, <code class="docutils literal notranslate"><span class="pre">num_inputs()</span> <span class="pre">!=</span>
+<span class="pre">layers()[0]</span></code>. <cite>num_inputs() == 2 != layers()[0] == 3</cite>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span></code>:</dt>
+<dd>is a boolean vector that determines whether the sin/cos transform
+is applied to each element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>:</dt>
+<dd>is the number of elements in each layer of the network (the
+activation function does <em>not</em> count as an additional layer). The
+first element specifies the size of the first hidden layer, and
+the last layer specifies the number of outputs.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
+<dd>specifies the activation function, σ(), used in <em>each</em> non-input
+layer of the network (including the last layer).</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -3974,8 +4020,7 @@ for simulation.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies an activation function, σ(), used in <em>every</em> hidden
 layer of the network. kIdentity will be used for the output.</dd>
@@ -3990,13 +4035,37 @@ non-input layer.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], use_sin_cos_for_input: List[bool], remaining_layers: List[int], activation_types: List[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</li>
+</ol>
+<p>Constructs the MLP with an additional option to transform the input
+vector so that the function is periodic in 2π.</p>
+<p>For instance, for a rotary joint on a robot, this could be used to
+apply the transform [x, y] =&gt; [sin x, cos x, y]. This would be
+accomplished by passing <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span> <span class="pre">=</span> <span class="pre">[true,</span> <span class="pre">false]</span></code>.</p>
+<p>Note that when this transformation is applied, <code class="docutils literal notranslate"><span class="pre">num_inputs()</span> <span class="pre">!=</span>
+<span class="pre">layers()[0]</span></code>. <cite>num_inputs() == 2 != layers()[0] == 3</cite>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span></code>:</dt>
+<dd>is a boolean vector that determines whether the sin/cos transform
+is applied to each element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>:</dt>
+<dd>is the number of elements in each layer of the network (the
+activation function does <em>not</em> count as an additional layer). The
+first element specifies the size of the first hidden layer, and
+the last layer specifies the number of outputs.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
+<dd>specifies the activation function, σ(), used in <em>each</em> non-input
+layer of the network (including the last layer).</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4245,8 +4314,7 @@ for simulation.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies an activation function, σ(), used in <em>every</em> hidden
 layer of the network. kIdentity will be used for the output.</dd>
@@ -4261,13 +4329,37 @@ non-input layer.</p>
 <dd>is the number of elements in each layer of the network (the
 activation function does <em>not</em> count as an additional layer). The
 first element specifies the number of inputs, and the last layer
-specifies the number of outputs. We require at least 3 layers (to
-be considered an MLP).</dd>
+specifies the number of outputs.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
 <dd>specifies the activation function, σ(), used in <em>each</em> non-input
 layer of the network (including the last layer).</dd>
 </dl>
 <p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have one less element than <code class="docutils literal notranslate"><span class="pre">layers</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li>__init__(self: pydrake.systems.primitives.MultilayerPerceptron_[float], use_sin_cos_for_input: List[bool], remaining_layers: List[int], activation_types: List[pydrake.systems.primitives.PerceptronActivationType]) -&gt; None</li>
+</ol>
+<p>Constructs the MLP with an additional option to transform the input
+vector so that the function is periodic in 2π.</p>
+<p>For instance, for a rotary joint on a robot, this could be used to
+apply the transform [x, y] =&gt; [sin x, cos x, y]. This would be
+accomplished by passing <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span> <span class="pre">=</span> <span class="pre">[true,</span> <span class="pre">false]</span></code>.</p>
+<p>Note that when this transformation is applied, <code class="docutils literal notranslate"><span class="pre">num_inputs()</span> <span class="pre">!=</span>
+<span class="pre">layers()[0]</span></code>. <cite>num_inputs() == 2 != layers()[0] == 3</cite>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">use_sin_cos_for_input</span></code>:</dt>
+<dd>is a boolean vector that determines whether the sin/cos transform
+is applied to each element.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>:</dt>
+<dd>is the number of elements in each layer of the network (the
+activation function does <em>not</em> count as an additional layer). The
+first element specifies the size of the first hidden layer, and
+the last layer specifies the number of outputs.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">activation_type</span></code>:</dt>
+<dd>specifies the activation function, σ(), used in <em>each</em> non-input
+layer of the network (including the last layer).</dd>
+</dl>
+<p><code class="docutils literal notranslate"><span class="pre">activation_type</span></code> should have the same number of elements as
+<code class="docutils literal notranslate"><span class="pre">remaining_layers</span></code>.</p>
 </dd></dl>
 
 <dl class="method">

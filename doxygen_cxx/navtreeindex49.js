@@ -1,5 +1,10 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1schema_1_1_rotation_1_1_rpy.html#ad5c7ce055d37fc3f1ae1dbd5af47e3a5":[3,0,0,11,6,2,6],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html":[3,0,0,11,6,3],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a49dae1193d3c056d1b5022e1890e269f":[3,0,0,11,6,3,0],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,11,6,3,4],
+"structdrake_1_1schema_1_1_rotation_1_1_uniform.html#a5a4b1a9b42c67f7c1adcc7630c6f6d2d":[3,0,0,11,6,3,2],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#aa3b4b0360b49f499d1d0996b08940f1c":[3,0,0,11,6,3,5],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,11,6,3,3],
 "structdrake_1_1schema_1_1_rotation_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,11,6,3,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html#a585e598ef14189082cf26030c07b2db4":[3,0,0,14,7,1,0],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html":[3,0,0,14,7,2],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits.html#a76dde5043e78ffb5c870d4979d17e758":[3,0,0,14,7,2,0],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,14,7,9],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_random_source_01_4.html":[3,0,0,14,7,10],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_affine_system_01_4.html":[3,0,0,14,7,12],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_trajectory_linear_system_01_4.html":[3,0,0,14,7,13],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,14,7,3],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,14,7,4]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01_linear_transform_density_01_4.html":[3,0,0,14,7,9]
 };
