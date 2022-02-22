@@ -14,7 +14,7 @@ var classdrake_1_1solvers_1_1_constraint =
     [ "num_constraints", "classdrake_1_1solvers_1_1_constraint.html#a23f1475b0c301d9d78814fce265fd6ea", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_constraint.html#a1be60c3d434760ec3875aa9b5f2680c7", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_constraint.html#a51c139cdb5e8e6375de7d90767d2ed70", null ],
-    [ "set_bounds", "classdrake_1_1solvers_1_1_constraint.html#a12fec16fedabfd3fd596ead9580a9bf7", null ],
+    [ "set_bounds", "classdrake_1_1solvers_1_1_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111", null ],
     [ "UpdateLowerBound", "classdrake_1_1solvers_1_1_constraint.html#a4f01849f46f82b2f890dd1264125d52f", null ],
     [ "UpdateUpperBound", "classdrake_1_1solvers_1_1_constraint.html#af4a741d62e930b18c9250e5c65a854be", null ],
     [ "upper_bound", "classdrake_1_1solvers_1_1_constraint.html#a451749e9965610a12833a0252edc7803", null ]

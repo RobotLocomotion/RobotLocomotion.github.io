@@ -338,11 +338,13 @@ discussion), use e.g.</p>
 <ol class="arabic simple">
 <li>__init__(self: pydrake.common._module_py.RandomGenerator) -&gt; None</li>
 </ol>
-<p>Default constructor. Seeds the engine with the default_seed.</p>
+<p>Creates a generator using the <code class="docutils literal notranslate"><span class="pre">default_seed</span></code>. Actual creation of the
+generator is deferred until first use so this constructor is fast and
+does not allocate any heap memory.</p>
 <ol class="arabic simple" start="2">
-<li>__init__(self: pydrake.common._module_py.RandomGenerator, arg0: int) -&gt; None</li>
+<li>__init__(self: pydrake.common._module_py.RandomGenerator, seed: int) -&gt; None</li>
 </ol>
-<p>Constructs the engine and initializes the state with a given value.</p>
+<p>Creates a generator using given <code class="docutils literal notranslate"><span class="pre">seed</span></code>.</p>
 </dd></dl>
 
 </dd></dl>

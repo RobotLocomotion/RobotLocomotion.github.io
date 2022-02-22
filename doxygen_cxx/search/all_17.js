@@ -5,6 +5,7 @@ var searchData=
   ['warn',['Warn',['../structdrake_1_1logging_1_1_warn.html',1,'Warn'],['../structdrake_1_1logging_1_1_warn.html#adfebb4989e81d5d715e9ef669de87dfe',1,'drake::logging::Warn::Warn()']]],
   ['warndeprecated',['WarnDeprecated',['../namespacedrake_1_1pydrake.html#a88a20567ddf6e5978a874a3cb46353f4',1,'drake::pydrake']]],
   ['web_5furl',['web_url',['../classdrake_1_1geometry_1_1_meshcat.html#a3dfb466d67a1d1d068c1b8017b2d14c5',1,'drake::geometry::Meshcat']]],
+  ['web_5furl_5fpattern',['web_url_pattern',['../structdrake_1_1geometry_1_1_meshcat_params.html#a13d2ccebff386877ee5fa1fbe2351a0f',1,'drake::geometry::MeshcatParams']]],
   ['weights',['weights',['../classdrake_1_1multibody_1_1_triangle_quadrature_rule.html#ae29fd4c3e258ed5911347b41bcf0c3f5',1,'drake::multibody::TriangleQuadratureRule']]],
   ['weld_5fjoint_2eh',['weld_joint.h',['../weld__joint_8h.html',1,'']]],
   ['weld_5fmobilizer_2eh',['weld_mobilizer.h',['../weld__mobilizer_8h.html',1,'']]],

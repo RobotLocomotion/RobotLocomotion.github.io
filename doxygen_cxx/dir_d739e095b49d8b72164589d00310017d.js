@@ -42,6 +42,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "internal_frame.h", "internal__frame_8h.html", null ],
     [ "internal_geometry.h", "internal__geometry_8h.html", null ],
     [ "meshcat.h", "meshcat_8h.html", [
+      [ "MeshcatParams", "structdrake_1_1geometry_1_1_meshcat_params.html", "structdrake_1_1geometry_1_1_meshcat_params" ],
       [ "Meshcat", "classdrake_1_1geometry_1_1_meshcat.html", "classdrake_1_1geometry_1_1_meshcat" ],
       [ "PerspectiveCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera" ],
       [ "OrthographicCamera", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html", "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera" ]

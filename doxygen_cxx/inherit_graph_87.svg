@@ -9,132 +9,132 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 5210)">
 <title>Graphical Class Hierarchy</title>
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-5210 1506,-5210 1506,4 -4,4"/>
-<!-- Node827 -->
+<!-- Node829 -->
 <g id="node1" class="node">
-<title>Node827</title>
+<title>Node829</title>
 <g id="a_node1"><a xlink:href="classdrake_1_1lcm_1_1_drake_lcm_interface.html" target="_top" xlink:title="A pure virtual interface that enables LCM to be mocked.">
 <polygon fill="white" stroke="black" points="539,-5148.5 539,-5167.5 648,-5167.5 648,-5148.5 539,-5148.5"/>
 <text text-anchor="middle" x="593.5" y="-5155.5" font-family="Helvetica,sans-Serif" font-size="10.00">DrakeLcmInterface</text>
 </a>
 </g>
 </g>
-<!-- Node828 -->
+<!-- Node830 -->
 <g id="node2" class="node">
-<title>Node828</title>
+<title>Node830</title>
 <g id="a_node2"><a xlink:href="classdrake_1_1lcm_1_1_drake_lcm.html" target="_top" xlink:title="A wrapper around a real LCM instance.">
 <polygon fill="white" stroke="black" points="803,-5148.5 803,-5167.5 868,-5167.5 868,-5148.5 803,-5148.5"/>
 <text text-anchor="middle" x="835.5" y="-5155.5" font-family="Helvetica,sans-Serif" font-size="10.00">DrakeLcm</text>
 </a>
 </g>
 </g>
-<!-- Node827&#45;&gt;Node828 -->
+<!-- Node829&#45;&gt;Node830 -->
 <g id="edge1" class="edge">
-<title>Node827&#45;&gt;Node828</title>
+<title>Node829&#45;&gt;Node830</title>
 <path fill="none" stroke="midnightblue" d="M658.08,-5158C704.73,-5158 766.1,-5158 802.8,-5158"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="658.06,-5154.5 648.06,-5158 658.06,-5161.5 658.06,-5154.5"/>
 </g>
-<!-- Node830 -->
+<!-- Node832 -->
 <g id="node4" class="node">
-<title>Node830</title>
+<title>Node832</title>
 <g id="a_node4"><a xlink:href="classdrake_1_1lcm_1_1_drake_lcm_log.html" target="_top" xlink:title="A LCM interface for logging LCM messages to a file or playing back from a existing log.">
 <polygon fill="white" stroke="black" points="794,-5186.5 794,-5205.5 877,-5205.5 877,-5186.5 794,-5186.5"/>
 <text text-anchor="middle" x="835.5" y="-5193.5" font-family="Helvetica,sans-Serif" font-size="10.00">DrakeLcmLog</text>
 </a>
 </g>
 </g>
-<!-- Node827&#45;&gt;Node830 -->
+<!-- Node829&#45;&gt;Node832 -->
 <g id="edge3" class="edge">
-<title>Node827&#45;&gt;Node830</title>
+<title>Node829&#45;&gt;Node832</title>
 <path fill="none" stroke="midnightblue" d="M658.15,-5168.08C701.15,-5174.89 756.64,-5183.67 793.78,-5189.55"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="658.49,-5164.59 648.06,-5166.48 657.39,-5171.5 658.49,-5164.59"/>
 </g>
-<!-- Node279 -->
+<!-- Node280 -->
 <g id="node5" class="node">
-<title>Node279</title>
+<title>Node280</title>
 <g id="a_node5"><a xlink:href="classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html" target="_top" xlink:title="LcmInterfaceSystem acts within a Diagram to allow LcmSubscriberSystem instances to receive data from ...">
 <polygon fill="white" stroke="black" points="777,-4744.5 777,-4763.5 894,-4763.5 894,-4744.5 777,-4744.5"/>
 <text text-anchor="middle" x="835.5" y="-4751.5" font-family="Helvetica,sans-Serif" font-size="10.00">LcmInterfaceSystem</text>
 </a>
 </g>
 </g>
-<!-- Node827&#45;&gt;Node279 -->
+<!-- Node829&#45;&gt;Node280 -->
 <g id="edge4" class="edge">
-<title>Node827&#45;&gt;Node279</title>
+<title>Node829&#45;&gt;Node280</title>
 <path fill="none" stroke="midnightblue" d="M607.08,-5139.79C629.05,-5107.13 674.29,-5035.74 698,-4969 727.65,-4885.54 671.54,-4835.79 734,-4773 745.27,-4761.67 761.04,-4755.96 776.75,-4753.31"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="604.03,-5138.05 601.3,-5148.29 609.82,-5141.99 604.03,-5138.05"/>
 </g>
-<!-- Node829 -->
+<!-- Node831 -->
 <g id="node3" class="node">
-<title>Node829</title>
+<title>Node831</title>
 <g id="a_node3"><a xlink:href="classdrake_1_1lcm_1_1_drake_mock_lcm.html" target="_top" xlink:title="An implementation of DrakeLcmInterface that manipulates LCM messages in memory, not on the wire.">
 <polygon fill="white" stroke="black" points="1015.5,-5148.5 1015.5,-5167.5 1107.5,-5167.5 1107.5,-5148.5 1015.5,-5148.5"/>
 <text text-anchor="middle" x="1061.5" y="-5155.5" font-family="Helvetica,sans-Serif" font-size="10.00">DrakeMockLcm</text>
 </a>
 </g>
 </g>
-<!-- Node828&#45;&gt;Node829 -->
+<!-- Node830&#45;&gt;Node831 -->
 <g id="edge2" class="edge">
-<title>Node828&#45;&gt;Node829</title>
+<title>Node830&#45;&gt;Node831</title>
 <path fill="none" stroke="midnightblue" d="M878.6,-5158C917.64,-5158 975.56,-5158 1015.5,-5158"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="878.12,-5154.5 868.12,-5158 878.12,-5161.5 878.12,-5154.5"/>
 </g>
-<!-- Node313 -->
+<!-- Node314 -->
 <g id="node6" class="node">
-<title>Node313</title>
+<title>Node314</title>
 <g id="a_node6"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html" target="_top" xlink:title="Interface for state feedback controllers.">
 <polygon fill="white" stroke="black" points="489,-4542.5 489,-4561.5 698,-4561.5 698,-4542.5 489,-4542.5"/>
 <text text-anchor="middle" x="593.5" y="-4549.5" font-family="Helvetica,sans-Serif" font-size="10.00">StateFeedbackControllerInterface&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node138 -->
+<!-- Node139 -->
 <g id="node7" class="node">
-<title>Node138</title>
+<title>Node139</title>
 <g id="a_node7"><a xlink:href="classdrake_1_1examples_1_1kuka__iiwa__arm_1_1_kuka_torque_controller.html" target="_top" xlink:title="Controller that take emulates the kuka_iiwa_arm when operated in torque control mode.">
 <polygon fill="white" stroke="black" points="761,-4580.5 761,-4599.5 910,-4599.5 910,-4580.5 761,-4580.5"/>
 <text text-anchor="middle" x="835.5" y="-4587.5" font-family="Helvetica,sans-Serif" font-size="10.00">KukaTorqueController&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node313&#45;&gt;Node138 -->
+<!-- Node314&#45;&gt;Node139 -->
 <g id="edge5" class="edge">
-<title>Node313&#45;&gt;Node138</title>
+<title>Node314&#45;&gt;Node139</title>
 <path fill="none" stroke="midnightblue" d="M664.82,-4563.13C699.53,-4568.63 740.98,-4575.19 774.22,-4580.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="665.18,-4559.65 654.75,-4561.54 664.08,-4566.56 665.18,-4559.65"/>
 </g>
-<!-- Node140 -->
+<!-- Node141 -->
 <g id="node8" class="node">
-<title>Node140</title>
+<title>Node141</title>
 <g id="a_node8"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html" target="_top" xlink:title="A state feedback controller that uses a PidController to generate desired accelerations,...">
 <polygon fill="white" stroke="black" points="746.5,-4542.5 746.5,-4561.5 924.5,-4561.5 924.5,-4542.5 746.5,-4542.5"/>
 <text text-anchor="middle" x="835.5" y="-4549.5" font-family="Helvetica,sans-Serif" font-size="10.00">InverseDynamicsController&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node313&#45;&gt;Node140 -->
+<!-- Node314&#45;&gt;Node141 -->
 <g id="edge6" class="edge">
-<title>Node313&#45;&gt;Node140</title>
+<title>Node314&#45;&gt;Node141</title>
 <path fill="none" stroke="midnightblue" d="M708.26,-4552C721.07,-4552 733.97,-4552 746.38,-4552"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="708.02,-4548.5 698.02,-4552 708.02,-4555.5 708.02,-4548.5"/>
 </g>
-<!-- Node186 -->
+<!-- Node187 -->
 <g id="node9" class="node">
-<title>Node186</title>
+<title>Node187</title>
 <g id="a_node9"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_pid_controller.html" target="_top" xlink:title="Implements the PID controller.">
 <polygon fill="white" stroke="black" points="781.5,-4504.5 781.5,-4523.5 889.5,-4523.5 889.5,-4504.5 781.5,-4504.5"/>
 <text text-anchor="middle" x="835.5" y="-4511.5" font-family="Helvetica,sans-Serif" font-size="10.00">PidController&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node313&#45;&gt;Node186 -->
+<!-- Node314&#45;&gt;Node187 -->
 <g id="edge7" class="edge">
-<title>Node313&#45;&gt;Node186</title>
+<title>Node314&#45;&gt;Node187</title>
 <path fill="none" stroke="midnightblue" d="M665.01,-4540.84C702.15,-4534.96 746.96,-4527.86 781.18,-4522.44"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="664.08,-4537.44 654.75,-4542.46 665.18,-4544.35 664.08,-4537.44"/>
 </g>
-<!-- Node312 -->
+<!-- Node313 -->
 <g id="node10" class="node">
-<title>Node312</title>
+<title>Node313</title>
 <g id="a_node10"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_state_feedback_controller_interface.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="503.5,-4853 503.5,-4883 683.5,-4883 683.5,-4853 503.5,-4853"/>
 <text text-anchor="start" x="511.5" y="-4871" font-family="Helvetica,sans-Serif" font-size="10.00">StateFeedbackControllerInterface</text>
@@ -151,84 +151,84 @@
 </a>
 </g>
 </g>
-<!-- Node312&#45;&gt;Node4 -->
+<!-- Node313&#45;&gt;Node4 -->
 <g id="edge8" class="edge">
-<title>Node312&#45;&gt;Node4</title>
+<title>Node313&#45;&gt;Node4</title>
 <path fill="none" stroke="midnightblue" d="M693.73,-4868C716.9,-4868 741.14,-4868 762.84,-4868"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="693.53,-4864.5 683.53,-4868 693.53,-4871.5 693.53,-4864.5"/>
 </g>
-<!-- Node146 -->
+<!-- Node147 -->
 <g id="node12" class="node">
-<title>Node146</title>
+<title>Node147</title>
 <g id="a_node12"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="0,-3997.5 0,-4016.5 140,-4016.5 140,-3997.5 0,-3997.5"/>
 <text text-anchor="middle" x="70" y="-4004.5" font-family="Helvetica,sans-Serif" font-size="10.00">SystemMessageInterface</text>
 </a>
 </g>
 </g>
-<!-- Node147 -->
+<!-- Node148 -->
 <g id="node13" class="node">
-<title>Node147</title>
+<title>Node148</title>
 <g id="a_node13"><a xlink:href="classdrake_1_1systems_1_1_system_base.html" target="_top" xlink:title="Provides non&#45;templatized functionality shared by the templatized System classes.">
 <polygon fill="white" stroke="black" points="176,-3997.5 176,-4016.5 253,-4016.5 253,-3997.5 176,-3997.5"/>
 <text text-anchor="middle" x="214.5" y="-4004.5" font-family="Helvetica,sans-Serif" font-size="10.00">SystemBase</text>
 </a>
 </g>
 </g>
-<!-- Node146&#45;&gt;Node147 -->
+<!-- Node147&#45;&gt;Node148 -->
 <g id="edge9" class="edge">
-<title>Node146&#45;&gt;Node147</title>
+<title>Node147&#45;&gt;Node148</title>
 <path fill="none" stroke="midnightblue" d="M150.27,-4007C159.19,-4007 167.94,-4007 175.95,-4007"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="150.16,-4003.5 140.16,-4007 150.16,-4010.5 150.16,-4003.5"/>
 </g>
-<!-- Node148 -->
+<!-- Node149 -->
 <g id="node14" class="node">
-<title>Node148</title>
+<title>Node149</title>
 <g id="a_node14"><a xlink:href="classdrake_1_1systems_1_1_system.html" target="_top" xlink:title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">
 <polygon fill="white" stroke="black" points="330,-3978.5 330,-3997.5 412,-3997.5 412,-3978.5 330,-3978.5"/>
 <text text-anchor="middle" x="371" y="-3985.5" font-family="Helvetica,sans-Serif" font-size="10.00">System&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node147&#45;&gt;Node148 -->
+<!-- Node148&#45;&gt;Node149 -->
 <g id="edge10" class="edge">
-<title>Node147&#45;&gt;Node148</title>
+<title>Node148&#45;&gt;Node149</title>
 <path fill="none" stroke="midnightblue" d="M263.44,-4001.1C284.76,-3998.48 309.58,-3995.43 329.9,-3992.93"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="262.79,-3997.66 253.29,-4002.35 263.65,-4004.61 262.79,-3997.66"/>
 </g>
-<!-- Node228 -->
+<!-- Node229 -->
 <g id="node99" class="node">
-<title>Node228</title>
+<title>Node229</title>
 <g id="a_node99"><a xlink:href="classdrake_1_1systems_1_1_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="306.5,-1961.5 306.5,-1980.5 435.5,-1980.5 435.5,-1961.5 306.5,-1961.5"/>
 <text text-anchor="middle" x="371" y="-1968.5" font-family="Helvetica,sans-Serif" font-size="10.00">System&lt; AutoDiffXd &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node147&#45;&gt;Node228 -->
+<!-- Node148&#45;&gt;Node229 -->
 <g id="edge98" class="edge">
-<title>Node147&#45;&gt;Node228</title>
+<title>Node148&#45;&gt;Node229</title>
 <path fill="none" stroke="midnightblue" d="M217,-3987.25C232.22,-3786.64 358.49,-2122.7 369.27,-1980.66"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="213.49,-3987.23 216.22,-3997.47 220.47,-3987.76 213.49,-3987.23"/>
 </g>
-<!-- Node231 -->
+<!-- Node232 -->
 <g id="node102" class="node">
-<title>Node231</title>
+<title>Node232</title>
 <g id="a_node102"><a xlink:href="classdrake_1_1systems_1_1_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="316.5,-4016.5 316.5,-4035.5 425.5,-4035.5 425.5,-4016.5 316.5,-4016.5"/>
 <text text-anchor="middle" x="371" y="-4023.5" font-family="Helvetica,sans-Serif" font-size="10.00">System&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node147&#45;&gt;Node231 -->
+<!-- Node148&#45;&gt;Node232 -->
 <g id="edge101" class="edge">
-<title>Node147&#45;&gt;Node231</title>
+<title>Node148&#45;&gt;Node232</title>
 <path fill="none" stroke="midnightblue" d="M263.41,-4012.89C280.16,-4014.95 299.07,-4017.28 316.26,-4019.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="263.65,-4009.39 253.29,-4011.65 262.79,-4016.34 263.65,-4009.39"/>
 </g>
-<!-- Node299 -->
+<!-- Node300 -->
 <g id="node176" class="node">
-<title>Node299</title>
+<title>Node300</title>
 <g id="a_node176"><a xlink:href="classdrake_1_1systems_1_1_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="300,-4685 300,-4715 442,-4715 442,-4685 300,-4685"/>
 <text text-anchor="start" x="308" y="-4703" font-family="Helvetica,sans-Serif" font-size="10.00">System&lt; drake::symbolic</text>
@@ -236,117 +236,117 @@
 </a>
 </g>
 </g>
-<!-- Node147&#45;&gt;Node299 -->
+<!-- Node148&#45;&gt;Node300 -->
 <g id="edge177" class="edge">
-<title>Node147&#45;&gt;Node299</title>
+<title>Node148&#45;&gt;Node300</title>
 <path fill="none" stroke="midnightblue" d="M216.4,-4026.78C221.34,-4132.04 246.56,-4623.63 289,-4675 292.19,-4678.86 295.96,-4682.13 300.1,-4684.91"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="219.88,-4026.44 215.93,-4016.61 212.89,-4026.76 219.88,-4026.44"/>
 </g>
-<!-- Node136 -->
+<!-- Node137 -->
 <g id="node15" class="node">
-<title>Node136</title>
+<title>Node137</title>
 <g id="a_node15"><a xlink:href="classdrake_1_1systems_1_1_diagram.html" target="_top" xlink:title="Diagram is a System composed of one or more constituent Systems, arranged in a directed graph where t...">
 <polygon fill="white" stroke="black" points="550,-4646.5 550,-4665.5 637,-4665.5 637,-4646.5 550,-4646.5"/>
 <text text-anchor="middle" x="593.5" y="-4653.5" font-family="Helvetica,sans-Serif" font-size="10.00">Diagram&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node148&#45;&gt;Node136 -->
+<!-- Node149&#45;&gt;Node137 -->
 <g id="edge11" class="edge">
-<title>Node148&#45;&gt;Node136</title>
+<title>Node149&#45;&gt;Node137</title>
 <path fill="none" stroke="midnightblue" d="M422.12,-3989.7C433.86,-3992.56 445.2,-3997.78 453,-4007 534.1,-4102.89 431.73,-4459.23 489,-4571 507.34,-4606.8 548.16,-4633.03 572.7,-4646.28"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="422.71,-3986.25 412.23,-3987.82 421.41,-3993.13 422.71,-3986.25"/>
 </g>
-<!-- Node149 -->
+<!-- Node150 -->
 <g id="node21" class="node">
-<title>Node149</title>
+<title>Node150</title>
 <g id="a_node21"><a xlink:href="classdrake_1_1systems_1_1_leaf_system.html" target="_top" xlink:title="A superclass template that extends System with some convenience utilities that are not applicable to ...">
 <polygon fill="white" stroke="black" points="542,-1121.5 542,-1140.5 645,-1140.5 645,-1121.5 542,-1121.5"/>
 <text text-anchor="middle" x="593.5" y="-1128.5" font-family="Helvetica,sans-Serif" font-size="10.00">LeafSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node148&#45;&gt;Node149 -->
+<!-- Node149&#45;&gt;Node150 -->
 <g id="edge19" class="edge">
-<title>Node148&#45;&gt;Node149</title>
+<title>Node149&#45;&gt;Node150</title>
 <path fill="none" stroke="midnightblue" d="M373.52,-3968.32C392.27,-3725.42 578.48,-1312.68 591.75,-1140.67"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="370.01,-3968.25 372.73,-3978.49 376.99,-3968.79 370.01,-3968.25"/>
 </g>
-<!-- Node136&#45;&gt;Node138 -->
+<!-- Node137&#45;&gt;Node139 -->
 <g id="edge13" class="edge">
-<title>Node136&#45;&gt;Node138</title>
+<title>Node137&#45;&gt;Node139</title>
 <path fill="none" stroke="midnightblue" d="M629.91,-4642.99C657.9,-4633.04 698.09,-4619.46 734,-4610 748.88,-4606.08 765.18,-4602.53 780.24,-4599.54"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="628.42,-4639.81 620.18,-4646.48 630.78,-4646.4 628.42,-4639.81"/>
 </g>
-<!-- Node136&#45;&gt;Node140 -->
+<!-- Node137&#45;&gt;Node141 -->
 <g id="edge15" class="edge">
-<title>Node136&#45;&gt;Node140</title>
+<title>Node137&#45;&gt;Node141</title>
 <path fill="none" stroke="midnightblue" d="M614.77,-4640.37C640.87,-4621.05 688.34,-4588.56 734,-4571 744.11,-4567.11 755.11,-4564 766,-4561.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.66,-4637.58 606.77,-4646.38 616.86,-4643.18 612.66,-4637.58"/>
 </g>
-<!-- Node137 -->
+<!-- Node138 -->
 <g id="node16" class="node">
-<title>Node137</title>
+<title>Node138</title>
 <g id="a_node16"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_w_encoder.html" target="_top" xlink:title="Constructs the Acrobot with (only) encoder outputs.">
 <polygon fill="white" stroke="black" points="770,-4820.5 770,-4839.5 901,-4839.5 901,-4820.5 770,-4820.5"/>
 <text text-anchor="middle" x="835.5" y="-4827.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotWEncoder&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node136&#45;&gt;Node137 -->
+<!-- Node137&#45;&gt;Node138 -->
 <g id="edge12" class="edge">
-<title>Node136&#45;&gt;Node137</title>
+<title>Node137&#45;&gt;Node138</title>
 <path fill="none" stroke="midnightblue" d="M605.21,-4674.28C625.68,-4707.41 673.69,-4777.07 734,-4811 744.91,-4817.14 757.43,-4821.34 769.85,-4824.2"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="608.14,-4672.35 599.98,-4665.6 602.15,-4675.97 608.14,-4672.35"/>
 </g>
-<!-- Node139 -->
+<!-- Node140 -->
 <g id="node17" class="node">
-<title>Node139</title>
+<title>Node140</title>
 <g id="a_node17"><a xlink:href="classdrake_1_1examples_1_1manipulation__station_1_1_manipulation_station.html" target="_top" xlink:title="A system that represents the complete manipulation station, including exactly one robotic arm (a Kuka...">
 <polygon fill="white" stroke="black" points="764,-4782.5 764,-4801.5 907,-4801.5 907,-4782.5 764,-4782.5"/>
 <text text-anchor="middle" x="835.5" y="-4789.5" font-family="Helvetica,sans-Serif" font-size="10.00">ManipulationStation&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node136&#45;&gt;Node139 -->
+<!-- Node137&#45;&gt;Node140 -->
 <g id="edge14" class="edge">
-<title>Node136&#45;&gt;Node139</title>
+<title>Node137&#45;&gt;Node140</title>
 <path fill="none" stroke="midnightblue" d="M609.59,-4673.39C633.29,-4699.48 681.93,-4748.34 734,-4773 743.31,-4777.41 753.56,-4780.8 763.84,-4783.4"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.07,-4670.91 602.8,-4665.77 606.84,-4675.57 612.07,-4670.91"/>
 </g>
-<!-- Node141 -->
+<!-- Node142 -->
 <g id="node18" class="node">
-<title>Node141</title>
+<title>Node142</title>
 <g id="a_node18"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html" target="_top" xlink:title="A system that encapsulates a PidController and a controlled System (a.k.a the &quot;plant&quot;).">
 <polygon fill="white" stroke="black" points="762,-4706.5 762,-4725.5 909,-4725.5 909,-4706.5 762,-4706.5"/>
 <text text-anchor="middle" x="835.5" y="-4713.5" font-family="Helvetica,sans-Serif" font-size="10.00">PidControlledSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node136&#45;&gt;Node141 -->
+<!-- Node137&#45;&gt;Node142 -->
 <g id="edge16" class="edge">
-<title>Node136&#45;&gt;Node141</title>
+<title>Node137&#45;&gt;Node142</title>
 <path fill="none" stroke="midnightblue" d="M633.68,-4668.64C661.48,-4677.34 699.79,-4688.76 734,-4697 748.41,-4700.47 764.12,-4703.7 778.74,-4706.47"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="634.52,-4665.24 623.93,-4665.57 632.42,-4671.92 634.52,-4665.24"/>
 </g>
-<!-- Node142 -->
+<!-- Node143 -->
 <g id="node19" class="node">
-<title>Node142</title>
+<title>Node143</title>
 <g id="a_node19"><a xlink:href="classdrake_1_1systems_1_1_pid_controlled_spring_mass_system.html" target="_top" xlink:title="A model of a one&#45;dimensional spring&#45;mass system controlled to achieve a given target position using a...">
 <polygon fill="white" stroke="black" points="734,-4668.5 734,-4687.5 937,-4687.5 937,-4668.5 734,-4668.5"/>
 <text text-anchor="middle" x="835.5" y="-4675.5" font-family="Helvetica,sans-Serif" font-size="10.00">PidControlledSpringMassSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node136&#45;&gt;Node142 -->
+<!-- Node137&#45;&gt;Node143 -->
 <g id="edge17" class="edge">
-<title>Node136&#45;&gt;Node142</title>
+<title>Node137&#45;&gt;Node143</title>
 <path fill="none" stroke="midnightblue" d="M647.3,-4660.84C672.76,-4663.17 704.18,-4666.05 733.96,-4668.78"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="647.41,-4657.34 637.13,-4659.91 646.77,-4664.31 647.41,-4657.34"/>
 </g>
-<!-- Node143 -->
+<!-- Node144 -->
 <g id="node20" class="node">
-<title>Node143</title>
+<title>Node144</title>
 <g id="a_node20"><a xlink:href="classdrake_1_1systems_1_1_state_interpolator_with_discrete_derivative.html" target="_top" xlink:title="Supports the common pattern of combining a (feed&#45;through) position with a velocity estimated with the...">
 <polygon fill="white" stroke="black" points="754.5,-4619 754.5,-4649 916.5,-4649 916.5,-4619 754.5,-4619"/>
 <text text-anchor="start" x="762.5" y="-4637" font-family="Helvetica,sans-Serif" font-size="10.00">StateInterpolatorWithDiscrete</text>
@@ -354,651 +354,651 @@
 </a>
 </g>
 </g>
-<!-- Node136&#45;&gt;Node143 -->
+<!-- Node137&#45;&gt;Node144 -->
 <g id="edge18" class="edge">
-<title>Node136&#45;&gt;Node143</title>
+<title>Node137&#45;&gt;Node144</title>
 <path fill="none" stroke="midnightblue" d="M647.41,-4651.15C678.8,-4648.27 719.21,-4644.57 754.44,-4641.34"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="646.77,-4647.69 637.13,-4652.09 647.41,-4654.66 646.77,-4647.69"/>
 </g>
-<!-- Node149&#45;&gt;Node186 -->
+<!-- Node150&#45;&gt;Node187 -->
 <g id="edge56" class="edge">
-<title>Node149&#45;&gt;Node186</title>
+<title>Node150&#45;&gt;Node187</title>
 <path fill="none" stroke="midnightblue" d="M595.52,-1150.82C603.91,-1313.73 661.93,-2448.82 698,-3371 700.44,-3433.43 693.37,-4447.54 734,-4495 745.66,-4508.62 763.77,-4514.46 781.41,-4516.52"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.02,-1150.6 595.01,-1140.79 592.03,-1150.96 599.02,-1150.6"/>
 </g>
-<!-- Node150 -->
+<!-- Node151 -->
 <g id="node22" class="node">
-<title>Node150</title>
+<title>Node151</title>
 <g id="a_node22"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_plant.html" target="_top" xlink:title="The Acrobot &#45; a canonical underactuated system as described in Chapter 3 of Underactuated Robotics.">
 <polygon fill="white" stroke="black" points="782,-1444.5 782,-1463.5 889,-1463.5 889,-1444.5 782,-1444.5"/>
 <text text-anchor="middle" x="835.5" y="-1451.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotPlant&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node150 -->
+<!-- Node150&#45;&gt;Node151 -->
 <g id="edge20" class="edge">
-<title>Node149&#45;&gt;Node150</title>
+<title>Node150&#45;&gt;Node151</title>
 <path fill="none" stroke="midnightblue" d="M597.26,-1150.69C606.02,-1205.43 638.56,-1360.36 734,-1435 747.5,-1445.56 765.1,-1450.85 781.79,-1453.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="600.68,-1149.95 595.73,-1140.59 593.76,-1151 600.68,-1149.95"/>
 </g>
-<!-- Node151 -->
+<!-- Node152 -->
 <g id="node23" class="node">
-<title>Node151</title>
+<title>Node152</title>
 <g id="a_node23"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_spong_controller.html" target="_top" xlink:title="The Spong acrobot swing&#45;up controller as described in: Spong, Mark W.">
 <polygon fill="white" stroke="black" points="755,-1406.5 755,-1425.5 916,-1425.5 916,-1406.5 755,-1406.5"/>
 <text text-anchor="middle" x="835.5" y="-1413.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotSpongController&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node151 -->
+<!-- Node150&#45;&gt;Node152 -->
 <g id="edge21" class="edge">
-<title>Node149&#45;&gt;Node151</title>
+<title>Node150&#45;&gt;Node152</title>
 <path fill="none" stroke="midnightblue" d="M598.6,-1150.55C610.14,-1200.49 647.89,-1333.25 734,-1397 740.28,-1401.65 747.37,-1405.26 754.8,-1408.06"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="602,-1149.72 596.42,-1140.71 595.16,-1151.23 602,-1149.72"/>
 </g>
-<!-- Node152 -->
+<!-- Node153 -->
 <g id="node24" class="node">
-<title>Node152</title>
+<title>Node153</title>
 <g id="a_node24"><a xlink:href="classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html" target="_top" xlink:title="Dynamical system of a point (unit) mass constrained to lie on a wire.">
 <polygon fill="white" stroke="black" points="779,-1368.5 779,-1387.5 892,-1387.5 892,-1368.5 779,-1368.5"/>
 <text text-anchor="middle" x="835.5" y="-1375.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeadOnAWire&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node152 -->
+<!-- Node150&#45;&gt;Node153 -->
 <g id="edge22" class="edge">
-<title>Node149&#45;&gt;Node152</title>
+<title>Node150&#45;&gt;Node153</title>
 <path fill="none" stroke="midnightblue" d="M600.34,-1150.45C614.86,-1195.24 657.09,-1305.9 734,-1359 747.08,-1368.03 763.3,-1373.07 778.86,-1375.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="603.64,-1149.28 597.31,-1140.78 596.96,-1151.37 603.64,-1149.28"/>
 </g>
-<!-- Node153 -->
+<!-- Node154 -->
 <g id="node25" class="node">
-<title>Node153</title>
+<title>Node154</title>
 <g id="a_node25"><a xlink:href="classdrake_1_1examples_1_1bouncing__ball_1_1_bouncing_ball.html" target="_top" xlink:title="Dynamical representation of the idealized hybrid dynamics of a ball dropping from a height and bounci...">
 <polygon fill="white" stroke="black" points="781,-1330.5 781,-1349.5 890,-1349.5 890,-1330.5 781,-1330.5"/>
 <text text-anchor="middle" x="835.5" y="-1337.5" font-family="Helvetica,sans-Serif" font-size="10.00">BouncingBall&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node153 -->
+<!-- Node150&#45;&gt;Node154 -->
 <g id="edge23" class="edge">
-<title>Node149&#45;&gt;Node153</title>
+<title>Node150&#45;&gt;Node154</title>
 <path fill="none" stroke="midnightblue" d="M602.59,-1150.11C620.21,-1189.18 665.98,-1278.15 734,-1321 747.9,-1329.75 764.87,-1334.66 780.89,-1337.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="605.77,-1148.64 598.55,-1140.9 599.36,-1151.46 605.77,-1148.64"/>
 </g>
-<!-- Node154 -->
+<!-- Node155 -->
 <g id="node26" class="node">
-<title>Node154</title>
+<title>Node155</title>
 <g id="a_node26"><a xlink:href="classdrake_1_1examples_1_1compass__gait_1_1_compass_gait.html" target="_top" xlink:title="Dynamical representation of the idealized hybrid dynamics of a &quot;compass gait&quot;, as described in http:/...">
 <polygon fill="white" stroke="black" points="780.5,-1292.5 780.5,-1311.5 890.5,-1311.5 890.5,-1292.5 780.5,-1292.5"/>
 <text text-anchor="middle" x="835.5" y="-1299.5" font-family="Helvetica,sans-Serif" font-size="10.00">CompassGait&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node154 -->
+<!-- Node150&#45;&gt;Node155 -->
 <g id="edge24" class="edge">
-<title>Node149&#45;&gt;Node154</title>
+<title>Node150&#45;&gt;Node155</title>
 <path fill="none" stroke="midnightblue" d="M605.6,-1149.39C626.38,-1182.06 674.46,-1249.88 734,-1283 748.04,-1290.81 764.72,-1295.47 780.41,-1298.24"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="608.52,-1147.45 600.26,-1140.81 602.58,-1151.15 608.52,-1147.45"/>
 </g>
-<!-- Node155 -->
+<!-- Node156 -->
 <g id="node27" class="node">
-<title>Node155</title>
+<title>Node156</title>
 <g id="a_node27"><a xlink:href="classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model.html" target="_top" xlink:title="A system that models a rectangular piece of cloth using as a model a structured grid of springs and d...">
 <polygon fill="white" stroke="black" points="770,-1254.5 770,-1273.5 901,-1273.5 901,-1254.5 770,-1254.5"/>
 <text text-anchor="middle" x="835.5" y="-1261.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClothSpringModel&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node155 -->
+<!-- Node150&#45;&gt;Node156 -->
 <g id="edge25" class="edge">
-<title>Node149&#45;&gt;Node155</title>
+<title>Node150&#45;&gt;Node156</title>
 <path fill="none" stroke="midnightblue" d="M609.69,-1147.93C633.52,-1173.34 682.32,-1220.92 734,-1245 745.11,-1250.17 757.53,-1253.94 769.75,-1256.68"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.21,-1145.5 602.86,-1140.52 607.06,-1150.24 612.21,-1145.5"/>
 </g>
-<!-- Node156 -->
+<!-- Node157 -->
 <g id="node28" class="node">
-<title>Node156</title>
+<title>Node157</title>
 <g id="a_node28"><a xlink:href="classdrake_1_1examples_1_1particles_1_1_particle.html" target="_top" xlink:title="A linear 1DOF particle system.">
 <polygon fill="white" stroke="black" points="794.5,-1216.5 794.5,-1235.5 876.5,-1235.5 876.5,-1216.5 794.5,-1216.5"/>
 <text text-anchor="middle" x="835.5" y="-1223.5" font-family="Helvetica,sans-Serif" font-size="10.00">Particle&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node156 -->
+<!-- Node150&#45;&gt;Node157 -->
 <g id="edge26" class="edge">
-<title>Node149&#45;&gt;Node156</title>
+<title>Node150&#45;&gt;Node157</title>
 <path fill="none" stroke="midnightblue" d="M617.07,-1146.19C643.83,-1163.5 690.32,-1191.41 734,-1207 753.23,-1213.86 775.47,-1218.4 794.12,-1221.31"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="618.74,-1143.11 608.46,-1140.55 614.91,-1148.96 618.74,-1143.11"/>
 </g>
-<!-- Node157 -->
+<!-- Node158 -->
 <g id="node29" class="node">
-<title>Node157</title>
+<title>Node158</title>
 <g id="a_node29"><a xlink:href="classdrake_1_1examples_1_1pendulum_1_1_pendulum_plant.html" target="_top" xlink:title="A model of a simple pendulum .">
 <polygon fill="white" stroke="black" points="776,-1178.5 776,-1197.5 895,-1197.5 895,-1178.5 776,-1178.5"/>
 <text text-anchor="middle" x="835.5" y="-1185.5" font-family="Helvetica,sans-Serif" font-size="10.00">PendulumPlant&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node157 -->
+<!-- Node150&#45;&gt;Node158 -->
 <g id="edge27" class="edge">
-<title>Node149&#45;&gt;Node157</title>
+<title>Node150&#45;&gt;Node158</title>
 <path fill="none" stroke="midnightblue" d="M636.45,-1143.36C664.03,-1151.25 701,-1161.4 734,-1169 748.79,-1172.41 764.92,-1175.66 779.83,-1178.48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="637.31,-1139.96 626.73,-1140.56 635.37,-1146.69 637.31,-1139.96"/>
 </g>
-<!-- Node158 -->
+<!-- Node159 -->
 <g id="node30" class="node">
-<title>Node158</title>
+<title>Node159</title>
 <g id="a_node30"><a xlink:href="classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_plant.html" target="_top" xlink:title="The Quadrotor &#45; an underactuated aerial vehicle.">
 <polygon fill="white" stroke="black" points="776,-1140.5 776,-1159.5 895,-1159.5 895,-1140.5 776,-1140.5"/>
 <text text-anchor="middle" x="835.5" y="-1147.5" font-family="Helvetica,sans-Serif" font-size="10.00">QuadrotorPlant&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node158 -->
+<!-- Node150&#45;&gt;Node159 -->
 <g id="edge28" class="edge">
-<title>Node149&#45;&gt;Node158</title>
+<title>Node150&#45;&gt;Node159</title>
 <path fill="none" stroke="midnightblue" d="M655.26,-1135.81C692.28,-1138.74 739.33,-1142.47 775.94,-1145.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="655.35,-1132.31 645.1,-1135.01 654.8,-1139.28 655.35,-1132.31"/>
 </g>
-<!-- Node159 -->
+<!-- Node160 -->
 <g id="node31" class="node">
-<title>Node159</title>
+<title>Node160</title>
 <g id="a_node31"><a xlink:href="classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel.html" target="_top" xlink:title="Dynamical representation of the idealized hybrid dynamics of a &quot;rimless wheel&quot;, as described in http:...">
 <polygon fill="white" stroke="black" points="778,-1102.5 778,-1121.5 893,-1121.5 893,-1102.5 778,-1102.5"/>
 <text text-anchor="middle" x="835.5" y="-1109.5" font-family="Helvetica,sans-Serif" font-size="10.00">RimlessWheel&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node159 -->
+<!-- Node150&#45;&gt;Node160 -->
 <g id="edge29" class="edge">
-<title>Node149&#45;&gt;Node159</title>
+<title>Node150&#45;&gt;Node160</title>
 <path fill="none" stroke="midnightblue" d="M655.41,-1126.18C692.99,-1123.2 740.86,-1119.41 777.66,-1116.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="654.8,-1122.72 645.1,-1126.99 655.35,-1129.69 654.8,-1122.72"/>
 </g>
-<!-- Node160 -->
+<!-- Node161 -->
 <g id="node32" class="node">
-<title>Node160</title>
+<title>Node161</title>
 <g id="a_node32"><a xlink:href="classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html" target="_top" xlink:title="Dynamical system representation of a rod contacting a half&#45;space in two dimensions.">
 <polygon fill="white" stroke="black" points="797,-1064.5 797,-1083.5 874,-1083.5 874,-1064.5 797,-1064.5"/>
 <text text-anchor="middle" x="835.5" y="-1071.5" font-family="Helvetica,sans-Serif" font-size="10.00">Rod2D&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node160 -->
+<!-- Node150&#45;&gt;Node161 -->
 <g id="edge30" class="edge">
-<title>Node149&#45;&gt;Node160</title>
+<title>Node150&#45;&gt;Node161</title>
 <path fill="none" stroke="midnightblue" d="M636.45,-1118.64C664.03,-1110.75 701,-1100.6 734,-1093 754.59,-1088.26 777.76,-1083.82 796.65,-1080.43"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="635.37,-1115.31 626.73,-1121.44 637.31,-1122.04 635.37,-1115.31"/>
 </g>
-<!-- Node161 -->
+<!-- Node162 -->
 <g id="node33" class="node">
-<title>Node161</title>
+<title>Node162</title>
 <g id="a_node33"><a xlink:href="classdrake_1_1examples_1_1scene__graph_1_1bouncing__ball_1_1_bouncing_ball_plant.html" target="_top" xlink:title="A model of a bouncing ball with Hunt&#45;Crossley compliant contact model.">
 <polygon fill="white" stroke="black" points="768.5,-1026.5 768.5,-1045.5 902.5,-1045.5 902.5,-1026.5 768.5,-1026.5"/>
 <text text-anchor="middle" x="835.5" y="-1033.5" font-family="Helvetica,sans-Serif" font-size="10.00">BouncingBallPlant&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node161 -->
+<!-- Node150&#45;&gt;Node162 -->
 <g id="edge31" class="edge">
-<title>Node149&#45;&gt;Node161</title>
+<title>Node150&#45;&gt;Node162</title>
 <path fill="none" stroke="midnightblue" d="M617.07,-1115.81C643.83,-1098.5 690.32,-1070.59 734,-1055 744.87,-1051.12 756.7,-1047.99 768.3,-1045.47"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="614.91,-1113.04 608.46,-1121.45 618.74,-1118.89 614.91,-1113.04"/>
 </g>
-<!-- Node162 -->
+<!-- Node163 -->
 <g id="node34" class="node">
-<title>Node162</title>
+<title>Node163</title>
 <g id="a_node34"><a xlink:href="classdrake_1_1examples_1_1solar__system_1_1_solar_system.html" target="_top" xlink:title="A model of an orrery – a simple mechanical model of the solar system.">
 <polygon fill="white" stroke="black" points="782,-988.5 782,-1007.5 889,-1007.5 889,-988.5 782,-988.5"/>
 <text text-anchor="middle" x="835.5" y="-995.5" font-family="Helvetica,sans-Serif" font-size="10.00">SolarSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node162 -->
+<!-- Node150&#45;&gt;Node163 -->
 <g id="edge32" class="edge">
-<title>Node149&#45;&gt;Node162</title>
+<title>Node150&#45;&gt;Node163</title>
 <path fill="none" stroke="midnightblue" d="M609.69,-1114.07C633.52,-1088.66 682.32,-1041.08 734,-1017 748.81,-1010.1 765.95,-1005.71 781.84,-1002.91"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="607.06,-1111.76 602.86,-1121.48 612.21,-1116.5 607.06,-1111.76"/>
 </g>
-<!-- Node163 -->
+<!-- Node164 -->
 <g id="node35" class="node">
-<title>Node163</title>
+<title>Node164</title>
 <g id="a_node35"><a xlink:href="classdrake_1_1examples_1_1van__der__pol_1_1_van_der_pol_oscillator.html" target="_top" xlink:title="van der Pol oscillator">
 <polygon fill="white" stroke="black" points="764,-950.5 764,-969.5 907,-969.5 907,-950.5 764,-950.5"/>
 <text text-anchor="middle" x="835.5" y="-957.5" font-family="Helvetica,sans-Serif" font-size="10.00">VanDerPolOscillator&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node163 -->
+<!-- Node150&#45;&gt;Node164 -->
 <g id="edge33" class="edge">
-<title>Node149&#45;&gt;Node163</title>
+<title>Node150&#45;&gt;Node164</title>
 <path fill="none" stroke="midnightblue" d="M605.6,-1112.61C626.38,-1079.94 674.46,-1012.12 734,-979 743.16,-973.91 753.43,-970.15 763.82,-967.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="602.58,-1110.85 600.26,-1121.19 608.52,-1114.55 602.58,-1110.85"/>
 </g>
-<!-- Node164 -->
+<!-- Node165 -->
 <g id="node36" class="node">
-<title>Node164</title>
+<title>Node165</title>
 <g id="a_node36"><a xlink:href="classdrake_1_1geometry_1_1_drake_visualizer.html" target="_top" xlink:title="A system that publishes LCM messages compatible with the drake_visualizer application representing th...">
 <polygon fill="white" stroke="black" points="774.5,-912.5 774.5,-931.5 896.5,-931.5 896.5,-912.5 774.5,-912.5"/>
 <text text-anchor="middle" x="835.5" y="-919.5" font-family="Helvetica,sans-Serif" font-size="10.00">DrakeVisualizer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node164 -->
+<!-- Node150&#45;&gt;Node165 -->
 <g id="edge34" class="edge">
-<title>Node149&#45;&gt;Node164</title>
+<title>Node150&#45;&gt;Node165</title>
 <path fill="none" stroke="midnightblue" d="M602.59,-1111.89C620.21,-1072.82 665.98,-983.85 734,-941 746.02,-933.43 760.34,-928.73 774.35,-925.86"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.36,-1110.54 598.55,-1121.1 605.77,-1113.36 599.36,-1110.54"/>
 </g>
-<!-- Node165 -->
+<!-- Node166 -->
 <g id="node37" class="node">
-<title>Node165</title>
+<title>Node166</title>
 <g id="a_node37"><a xlink:href="classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html" target="_top" xlink:title="MeshcatPointCloudVisualizer is a systems::LeafSystem that publishes a perception::PointCloud from its...">
 <polygon fill="white" stroke="black" points="742,-874.5 742,-893.5 929,-893.5 929,-874.5 742,-874.5"/>
 <text text-anchor="middle" x="835.5" y="-881.5" font-family="Helvetica,sans-Serif" font-size="10.00">MeshcatPointCloudVisualizer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node165 -->
+<!-- Node150&#45;&gt;Node166 -->
 <g id="edge35" class="edge">
-<title>Node149&#45;&gt;Node165</title>
+<title>Node150&#45;&gt;Node166</title>
 <path fill="none" stroke="midnightblue" d="M600.34,-1111.55C614.86,-1066.76 657.09,-956.1 734,-903 739.55,-899.17 745.67,-896.05 752.07,-893.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="596.96,-1110.63 597.31,-1121.22 603.64,-1112.72 596.96,-1110.63"/>
 </g>
-<!-- Node166 -->
+<!-- Node167 -->
 <g id="node38" class="node">
-<title>Node166</title>
+<title>Node167</title>
 <g id="a_node38"><a xlink:href="classdrake_1_1geometry_1_1_meshcat_visualizer.html" target="_top" xlink:title="A system wrapper for Meshcat that publishes the current state of a SceneGraph instance (whose QueryOb...">
 <polygon fill="white" stroke="black" points="768.5,-836.5 768.5,-855.5 902.5,-855.5 902.5,-836.5 768.5,-836.5"/>
 <text text-anchor="middle" x="835.5" y="-843.5" font-family="Helvetica,sans-Serif" font-size="10.00">MeshcatVisualizer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node166 -->
+<!-- Node150&#45;&gt;Node167 -->
 <g id="edge36" class="edge">
-<title>Node149&#45;&gt;Node166</title>
+<title>Node150&#45;&gt;Node167</title>
 <path fill="none" stroke="midnightblue" d="M598.6,-1111.45C610.14,-1061.51 647.89,-928.75 734,-865 743.99,-857.6 756.03,-852.83 768.25,-849.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.16,-1110.77 596.42,-1121.29 602,-1112.28 595.16,-1110.77"/>
 </g>
-<!-- Node167 -->
+<!-- Node168 -->
 <g id="node39" class="node">
-<title>Node167</title>
+<title>Node168</title>
 <g id="a_node39"><a xlink:href="classdrake_1_1geometry_1_1_scene_graph.html" target="_top" xlink:title="SceneGraph serves as the nexus for all geometry (and geometry&#45;based operations) in a Diagram.">
 <polygon fill="white" stroke="black" points="783.5,-798.5 783.5,-817.5 887.5,-817.5 887.5,-798.5 783.5,-798.5"/>
 <text text-anchor="middle" x="835.5" y="-805.5" font-family="Helvetica,sans-Serif" font-size="10.00">SceneGraph&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node167 -->
+<!-- Node150&#45;&gt;Node168 -->
 <g id="edge37" class="edge">
-<title>Node149&#45;&gt;Node167</title>
+<title>Node150&#45;&gt;Node168</title>
 <path fill="none" stroke="midnightblue" d="M597.26,-1111.31C606.02,-1056.57 638.56,-901.64 734,-827 747.92,-816.12 766.2,-810.82 783.35,-808.42"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.76,-1111 595.73,-1121.41 600.68,-1112.05 593.76,-1111"/>
 </g>
-<!-- Node168 -->
+<!-- Node169 -->
 <g id="node40" class="node">
-<title>Node168</title>
+<title>Node169</title>
 <g id="a_node40"><a xlink:href="classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html" target="_top" xlink:title="A System that encodes ContactResults into a lcmt_contact_results_for_viz message.">
 <polygon fill="white" stroke="black" points="742.5,-760.5 742.5,-779.5 928.5,-779.5 928.5,-760.5 742.5,-760.5"/>
 <text text-anchor="middle" x="835.5" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">ContactResultsToLcmSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node168 -->
+<!-- Node150&#45;&gt;Node169 -->
 <g id="edge38" class="edge">
-<title>Node149&#45;&gt;Node168</title>
+<title>Node150&#45;&gt;Node169</title>
 <path fill="none" stroke="midnightblue" d="M596.17,-1111.29C602.3,-1052.12 629.03,-874.79 734,-789 738.54,-785.29 743.57,-782.22 748.91,-779.69"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.66,-1111.2 595.2,-1121.49 599.63,-1111.87 592.66,-1111.2"/>
 </g>
-<!-- Node169 -->
+<!-- Node170 -->
 <g id="node41" class="node">
-<title>Node169</title>
+<title>Node170</title>
 <g id="a_node41"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="760,-722.5 760,-741.5 911,-741.5 911,-722.5 760,-722.5"/>
 <text text-anchor="middle" x="835.5" y="-729.5" font-family="Helvetica,sans-Serif" font-size="10.00">MultibodyTreeSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node169 -->
+<!-- Node150&#45;&gt;Node170 -->
 <g id="edge39" class="edge">
-<title>Node149&#45;&gt;Node169</title>
+<title>Node150&#45;&gt;Node170</title>
 <path fill="none" stroke="midnightblue" d="M595.28,-1111.26C598.93,-1047.88 619.42,-848.08 734,-751 741.52,-744.63 750.5,-740.13 759.96,-736.98"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.78,-1111.29 594.78,-1121.45 598.77,-1111.63 591.78,-1111.29"/>
 </g>
-<!-- Node174 -->
+<!-- Node175 -->
 <g id="node46" class="node">
-<title>Node174</title>
+<title>Node175</title>
 <g id="a_node46"><a xlink:href="classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html" target="_top" xlink:title="ContactVisualizer is a system that publishes a ContactResults to geometry::Meshcat; it draws double&#45;s...">
 <polygon fill="white" stroke="black" points="770,-684.5 770,-703.5 901,-703.5 901,-684.5 770,-684.5"/>
 <text text-anchor="middle" x="835.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">ContactVisualizer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node174 -->
+<!-- Node150&#45;&gt;Node175 -->
 <g id="edge44" class="edge">
-<title>Node149&#45;&gt;Node174</title>
+<title>Node150&#45;&gt;Node175</title>
 <path fill="none" stroke="midnightblue" d="M594.54,-1111.1C595.85,-1043.58 609.79,-821.45 734,-713 744.03,-704.24 756.81,-698.98 769.87,-695.93"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.04,-1111.17 594.43,-1121.21 598.04,-1111.25 591.04,-1111.17"/>
 </g>
-<!-- Node175 -->
+<!-- Node176 -->
 <g id="node47" class="node">
-<title>Node175</title>
+<title>Node176</title>
 <g id="a_node47"><a xlink:href="classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html" target="_top" xlink:title="JointSliders adds slider bars to the Meshcat control panel for the joints of a MultibodyPlant.">
 <polygon fill="white" stroke="black" points="785.5,-646.5 785.5,-665.5 885.5,-665.5 885.5,-646.5 785.5,-646.5"/>
 <text text-anchor="middle" x="835.5" y="-653.5" font-family="Helvetica,sans-Serif" font-size="10.00">JointSliders&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node175 -->
+<!-- Node150&#45;&gt;Node176 -->
 <g id="edge45" class="edge">
-<title>Node149&#45;&gt;Node175</title>
+<title>Node150&#45;&gt;Node176</title>
 <path fill="none" stroke="midnightblue" d="M593.91,-1111.21C592.97,-1040.06 599.93,-795.07 734,-675 747.89,-662.56 767.29,-657.13 785.35,-655.05"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.42,-1111.5 594.13,-1121.43 597.42,-1111.36 590.42,-1111.5"/>
 </g>
-<!-- Node176 -->
+<!-- Node177 -->
 <g id="node48" class="node">
-<title>Node176</title>
+<title>Node177</title>
 <g id="a_node48"><a xlink:href="classdrake_1_1multibody_1_1_propeller.html" target="_top" xlink:title="A System that connects to the MultibodyPlant in order to model the effects of one or more controlled ...">
 <polygon fill="white" stroke="black" points="791,-608.5 791,-627.5 880,-627.5 880,-608.5 791,-608.5"/>
 <text text-anchor="middle" x="835.5" y="-615.5" font-family="Helvetica,sans-Serif" font-size="10.00">Propeller&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node176 -->
+<!-- Node150&#45;&gt;Node177 -->
 <g id="edge46" class="edge">
-<title>Node149&#45;&gt;Node176</title>
+<title>Node150&#45;&gt;Node177</title>
 <path fill="none" stroke="midnightblue" d="M597.28,-1111.31C609.47,-1027.79 660.86,-703.95 734,-637 749.19,-623.09 771.25,-617.89 790.84,-616.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.78,-1111.06 595.82,-1121.45 600.71,-1112.05 593.78,-1111.06"/>
 </g>
-<!-- Node177 -->
+<!-- Node178 -->
 <g id="node49" class="node">
-<title>Node177</title>
+<title>Node178</title>
 <g id="a_node49"><a xlink:href="classdrake_1_1systems_1_1_adder.html" target="_top" xlink:title="An adder for arbitrarily many inputs of equal size.">
 <polygon fill="white" stroke="black" points="798.5,-570.5 798.5,-589.5 872.5,-589.5 872.5,-570.5 798.5,-570.5"/>
 <text text-anchor="middle" x="835.5" y="-577.5" font-family="Helvetica,sans-Serif" font-size="10.00">Adder&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node177 -->
+<!-- Node150&#45;&gt;Node178 -->
 <g id="edge47" class="edge">
-<title>Node149&#45;&gt;Node177</title>
+<title>Node150&#45;&gt;Node178</title>
 <path fill="none" stroke="midnightblue" d="M596.87,-1111.2C607.78,-1023.59 655.9,-671.84 734,-599 751.01,-583.13 776.93,-578.53 798.18,-577.82"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.4,-1110.8 595.65,-1121.16 600.34,-1111.66 593.4,-1110.8"/>
 </g>
-<!-- Node178 -->
+<!-- Node179 -->
 <g id="node50" class="node">
-<title>Node178</title>
+<title>Node179</title>
 <g id="a_node50"><a xlink:href="classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html" target="_top" xlink:title="Robertson&#39;s stiff chemical reaction problem.">
 <polygon fill="white" stroke="black" points="770,-532.5 770,-551.5 901,-551.5 901,-532.5 770,-532.5"/>
 <text text-anchor="middle" x="835.5" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">RobertsonSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node178 -->
+<!-- Node150&#45;&gt;Node179 -->
 <g id="edge48" class="edge">
-<title>Node149&#45;&gt;Node178</title>
+<title>Node150&#45;&gt;Node179</title>
 <path fill="none" stroke="midnightblue" d="M596.5,-1111.27C606.14,-1020.01 650.87,-639.82 734,-561 743.79,-551.71 756.63,-546.27 769.84,-543.2"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593,-1111.05 595.45,-1121.35 599.97,-1111.77 593,-1111.05"/>
 </g>
-<!-- Node179 -->
+<!-- Node180 -->
 <g id="node51" class="node">
-<title>Node179</title>
+<title>Node180</title>
 <g id="a_node51"><a xlink:href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html" target="_top" xlink:title="A coupled, mass spring system taken from the SD/FAST user&#39;s manual.">
 <polygon fill="white" stroke="black" points="739,-494.5 739,-513.5 932,-513.5 932,-494.5 739,-494.5"/>
 <text text-anchor="middle" x="835.5" y="-501.5" font-family="Helvetica,sans-Serif" font-size="10.00">StiffDoubleMassSpringSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node179 -->
+<!-- Node150&#45;&gt;Node180 -->
 <g id="edge49" class="edge">
-<title>Node149&#45;&gt;Node179</title>
+<title>Node150&#45;&gt;Node180</title>
 <path fill="none" stroke="midnightblue" d="M596.19,-1111.18C604.68,-1016.08 645.88,-607.78 734,-523 737.84,-519.31 742.16,-516.22 746.79,-513.64"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.7,-1110.91 595.31,-1121.18 599.67,-1111.52 592.7,-1110.91"/>
 </g>
-<!-- Node180 -->
+<!-- Node181 -->
 <g id="node52" class="node">
-<title>Node180</title>
+<title>Node181</title>
 <g id="a_node52"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_logistic_system.html" target="_top" xlink:title="System with state evolution yielding a logistic function, for purposes of witness function testing us...">
 <polygon fill="white" stroke="black" points="776,-456.5 776,-475.5 895,-475.5 895,-456.5 776,-456.5"/>
 <text text-anchor="middle" x="835.5" y="-463.5" font-family="Helvetica,sans-Serif" font-size="10.00">LogisticSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node180 -->
+<!-- Node150&#45;&gt;Node181 -->
 <g id="edge50" class="edge">
-<title>Node149&#45;&gt;Node180</title>
+<title>Node150&#45;&gt;Node181</title>
 <path fill="none" stroke="midnightblue" d="M597.47,-1111.08C613.13,-1007.21 687.17,-530.64 734,-485 745.19,-474.09 760.56,-468.44 775.92,-465.72"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.98,-1110.74 595.96,-1121.15 600.9,-1111.78 593.98,-1110.74"/>
 </g>
-<!-- Node181 -->
+<!-- Node182 -->
 <g id="node53" class="node">
-<title>Node181</title>
+<title>Node182</title>
 <g id="a_node53"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_stateless_system.html" target="_top" xlink:title="System with no state for testing a simplistic witness function.">
 <polygon fill="white" stroke="black" points="772,-418.5 772,-437.5 899,-437.5 899,-418.5 772,-418.5"/>
 <text text-anchor="middle" x="835.5" y="-425.5" font-family="Helvetica,sans-Serif" font-size="10.00">StatelessSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node181 -->
+<!-- Node150&#45;&gt;Node182 -->
 <g id="edge51" class="edge">
-<title>Node149&#45;&gt;Node181</title>
+<title>Node150&#45;&gt;Node182</title>
 <path fill="none" stroke="midnightblue" d="M597.85,-1111.49C616.66,-1002.35 709.23,-471.42 734,-447 744.18,-436.97 757.9,-431.36 771.92,-428.4"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="594.38,-1111 596.13,-1121.45 601.28,-1112.19 594.38,-1111"/>
 </g>
-<!-- Node182 -->
+<!-- Node183 -->
 <g id="node54" class="node">
-<title>Node182</title>
+<title>Node183</title>
 <g id="a_node54"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_stationary_system.html" target="_top" xlink:title="System with no state evolution for testing numerical differencing in integrators that use it.">
 <polygon fill="white" stroke="black" points="769.5,-380.5 769.5,-399.5 901.5,-399.5 901.5,-380.5 769.5,-380.5"/>
 <text text-anchor="middle" x="835.5" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">StationarySystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node182 -->
+<!-- Node150&#45;&gt;Node183 -->
 <g id="edge52" class="edge">
-<title>Node149&#45;&gt;Node182</title>
+<title>Node150&#45;&gt;Node183</title>
 <path fill="none" stroke="midnightblue" d="M598.03,-1111.08C618.45,-996.11 720.98,-421.97 734,-409 743.56,-399.48 756.3,-393.93 769.5,-390.85"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="594.53,-1110.8 596.22,-1121.26 601.42,-1112.03 594.53,-1110.8"/>
 </g>
-<!-- Node183 -->
+<!-- Node184 -->
 <g id="node55" class="node">
-<title>Node183</title>
+<title>Node184</title>
 <g id="a_node55"><a xlink:href="classdrake_1_1systems_1_1_constant_value_source.html" target="_top" xlink:title="A source block that always outputs a constant value.">
 <polygon fill="white" stroke="black" points="761,-342.5 761,-361.5 910,-361.5 910,-342.5 761,-342.5"/>
 <text text-anchor="middle" x="835.5" y="-349.5" font-family="Helvetica,sans-Serif" font-size="10.00">ConstantValueSource&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node183 -->
+<!-- Node150&#45;&gt;Node184 -->
 <g id="edge53" class="edge">
-<title>Node149&#45;&gt;Node183</title>
+<title>Node150&#45;&gt;Node184</title>
 <path fill="none" stroke="midnightblue" d="M598.03,-1111.54C619.57,-992.99 732.29,-372.72 734,-371 741.45,-363.51 750.87,-358.47 760.93,-355.16"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="594.58,-1110.95 596.24,-1121.41 601.47,-1112.2 594.58,-1110.95"/>
 </g>
-<!-- Node184 -->
+<!-- Node185 -->
 <g id="node56" class="node">
-<title>Node184</title>
+<title>Node185</title>
 <g id="a_node56"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html" target="_top" xlink:title="Solves inverse dynamics with no consideration for joint actuator force limits.">
 <polygon fill="white" stroke="black" points="770.5,-304.5 770.5,-323.5 900.5,-323.5 900.5,-304.5 770.5,-304.5"/>
 <text text-anchor="middle" x="835.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">InverseDynamics&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node184 -->
+<!-- Node150&#45;&gt;Node185 -->
 <g id="edge54" class="edge">
-<title>Node149&#45;&gt;Node184</title>
+<title>Node150&#45;&gt;Node185</title>
 <path fill="none" stroke="midnightblue" d="M598.27,-1111.18C612.12,-1038.14 661.34,-777.01 698,-561 706.58,-510.43 698.28,-369.81 734,-333 743.64,-323.06 756.74,-317.41 770.29,-314.37"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="594.78,-1110.78 596.36,-1121.26 601.66,-1112.09 594.78,-1110.78"/>
 </g>
-<!-- Node185 -->
+<!-- Node186 -->
 <g id="node57" class="node">
-<title>Node185</title>
+<title>Node186</title>
 <g id="a_node57"><a xlink:href="classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html" target="_top" xlink:title="Implements a basic Model Predictive Controller that linearizes the system about an equilibrium condit...">
 <polygon fill="white" stroke="black" points="734.5,-266.5 734.5,-285.5 936.5,-285.5 936.5,-266.5 734.5,-266.5"/>
 <text text-anchor="middle" x="835.5" y="-273.5" font-family="Helvetica,sans-Serif" font-size="10.00">LinearModelPredictiveController&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node185 -->
+<!-- Node150&#45;&gt;Node186 -->
 <g id="edge55" class="edge">
-<title>Node149&#45;&gt;Node185</title>
+<title>Node150&#45;&gt;Node186</title>
 <path fill="none" stroke="midnightblue" d="M598.43,-1111.21C612.84,-1038.26 663.73,-777.4 698,-561 707.33,-502.08 692.94,-338.27 734,-295 737.54,-291.26 741.58,-288.13 745.94,-285.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="594.95,-1110.78 596.44,-1121.27 601.81,-1112.14 594.95,-1110.78"/>
 </g>
-<!-- Node187 -->
+<!-- Node188 -->
 <g id="node58" class="node">
-<title>Node187</title>
+<title>Node188</title>
 <g id="a_node58"><a xlink:href="classdrake_1_1systems_1_1_demultiplexer.html" target="_top" xlink:title="This system splits a vector valued signal on its input into multiple outputs.">
 <polygon fill="white" stroke="black" points="778,-228.5 778,-247.5 893,-247.5 893,-228.5 778,-228.5"/>
 <text text-anchor="middle" x="835.5" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">Demultiplexer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node187 -->
+<!-- Node150&#45;&gt;Node188 -->
 <g id="edge57" class="edge">
-<title>Node149&#45;&gt;Node187</title>
+<title>Node150&#45;&gt;Node188</title>
 <path fill="none" stroke="midnightblue" d="M598.55,-1111.23C613.37,-1038.34 665.53,-777.68 698,-561 708.08,-493.72 687.58,-306.73 734,-257 745.27,-244.93 761.61,-239.12 777.86,-236.62"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.07,-1110.78 596.5,-1121.28 601.93,-1112.18 595.07,-1110.78"/>
 </g>
-<!-- Node188 -->
+<!-- Node189 -->
 <g id="node59" class="node">
-<title>Node188</title>
+<title>Node189</title>
 <g id="a_node59"><a xlink:href="classdrake_1_1systems_1_1_discrete_derivative.html" target="_top" xlink:title="System that outputs the discrete&#45;time derivative of its input: y(t) = (u[n] &#45; u[n&#45;1])/h,...">
 <polygon fill="white" stroke="black" points="767,-190.5 767,-209.5 904,-209.5 904,-190.5 767,-190.5"/>
 <text text-anchor="middle" x="835.5" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscreteDerivative&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node188 -->
+<!-- Node150&#45;&gt;Node189 -->
 <g id="edge58" class="edge">
-<title>Node149&#45;&gt;Node188</title>
+<title>Node150&#45;&gt;Node189</title>
 <path fill="none" stroke="midnightblue" d="M598.64,-1111.24C613.79,-1038.41 666.94,-777.89 698,-561 708.83,-485.35 682.22,-275.21 734,-219 742.66,-209.6 754.4,-203.98 766.8,-200.76"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.16,-1110.78 596.55,-1121.29 602.02,-1112.21 595.16,-1110.78"/>
 </g>
-<!-- Node189 -->
+<!-- Node190 -->
 <g id="node60" class="node">
-<title>Node189</title>
+<title>Node190</title>
 <g id="a_node60"><a xlink:href="classdrake_1_1systems_1_1_discrete_time_delay.html" target="_top" xlink:title="A discrete time delay block with input u, which is vector&#45;valued (discrete or continuous) or abstract...">
 <polygon fill="white" stroke="black" points="766.5,-152.5 766.5,-171.5 904.5,-171.5 904.5,-152.5 766.5,-152.5"/>
 <text text-anchor="middle" x="835.5" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">DiscreteTimeDelay&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node189 -->
+<!-- Node150&#45;&gt;Node190 -->
 <g id="edge59" class="edge">
-<title>Node149&#45;&gt;Node189</title>
+<title>Node150&#45;&gt;Node190</title>
 <path fill="none" stroke="midnightblue" d="M598.72,-1111.25C614.13,-1038.45 668.07,-778.05 698,-561 709.59,-476.97 676.86,-243.68 734,-181 742.55,-171.62 754.17,-165.99 766.47,-162.76"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.24,-1110.78 596.58,-1121.29 602.09,-1112.24 595.24,-1110.78"/>
 </g>
-<!-- Node190 -->
+<!-- Node191 -->
 <g id="node61" class="node">
-<title>Node190</title>
+<title>Node191</title>
 <g id="a_node61"><a xlink:href="classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html" target="_top" xlink:title="A simple state observer for a dynamical system of the form: &#160;&#160;the observer dynamics takes the form &#160;w...">
 <polygon fill="white" stroke="black" points="763.5,-114.5 763.5,-133.5 907.5,-133.5 907.5,-114.5 763.5,-114.5"/>
 <text text-anchor="middle" x="835.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">LuenbergerObserver&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node190 -->
+<!-- Node150&#45;&gt;Node191 -->
 <g id="edge60" class="edge">
-<title>Node149&#45;&gt;Node190</title>
+<title>Node150&#45;&gt;Node191</title>
 <path fill="none" stroke="midnightblue" d="M598.78,-1111.26C614.41,-1038.49 669,-778.17 698,-561 704.17,-514.79 702.74,-177.58 734,-143 741.8,-134.37 752.19,-128.91 763.33,-125.57"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.3,-1110.78 596.62,-1121.3 602.14,-1112.26 595.3,-1110.78"/>
 </g>
-<!-- Node191 -->
+<!-- Node192 -->
 <g id="node62" class="node">
-<title>Node191</title>
+<title>Node192</title>
 <g id="a_node62"><a xlink:href="classdrake_1_1systems_1_1_linear_transform_density.html" target="_top" xlink:title="Performs linear transformation on the random signal w_in as w_out = A*w_in + b.">
 <polygon fill="white" stroke="black" points="754.5,-76.5 754.5,-95.5 916.5,-95.5 916.5,-76.5 754.5,-76.5"/>
 <text text-anchor="middle" x="835.5" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">LinearTransformDensity&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node191 -->
+<!-- Node150&#45;&gt;Node192 -->
 <g id="edge61" class="edge">
-<title>Node149&#45;&gt;Node191</title>
+<title>Node150&#45;&gt;Node192</title>
 <path fill="none" stroke="midnightblue" d="M598.83,-1111.27C614.64,-1038.52 669.77,-778.28 698,-561 704.55,-510.6 700.06,-142.83 734,-105 739.57,-98.79 746.49,-94.22 754.06,-90.89"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.35,-1110.78 596.64,-1121.3 602.19,-1112.28 595.35,-1110.78"/>
 </g>
-<!-- Node192 -->
+<!-- Node193 -->
 <g id="node63" class="node">
-<title>Node192</title>
+<title>Node193</title>
 <g id="a_node63"><a xlink:href="classdrake_1_1systems_1_1_multilayer_perceptron.html" target="_top" xlink:title="The MultilayerPerceptron (MLP) is one of the most common forms of neural networks used in reinforceme...">
 <polygon fill="white" stroke="black" points="762,-38.5 762,-57.5 909,-57.5 909,-38.5 762,-38.5"/>
 <text text-anchor="middle" x="835.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">MultilayerPerceptron&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node192 -->
+<!-- Node150&#45;&gt;Node193 -->
 <g id="edge62" class="edge">
-<title>Node149&#45;&gt;Node192</title>
+<title>Node150&#45;&gt;Node193</title>
 <path fill="none" stroke="midnightblue" d="M598.87,-1111.27C614.83,-1038.55 670.43,-778.36 698,-561 704.93,-506.4 697.37,-108.07 734,-67 741.45,-58.65 751.31,-53.26 761.96,-49.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="595.4,-1110.78 596.66,-1121.3 602.23,-1112.29 595.4,-1110.78"/>
 </g>
-<!-- Node193 -->
+<!-- Node194 -->
 <g id="node64" class="node">
-<title>Node193</title>
+<title>Node194</title>
 <g id="a_node64"><a xlink:href="classdrake_1_1systems_1_1_multiplexer.html" target="_top" xlink:title="This system combines multiple vector&#45;valued inputs into a vector&#45;valued output.">
 <polygon fill="white" stroke="black" points="785,-2140.5 785,-2159.5 886,-2159.5 886,-2140.5 785,-2140.5"/>
 <text text-anchor="middle" x="835.5" y="-2147.5" font-family="Helvetica,sans-Serif" font-size="10.00">Multiplexer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node193 -->
+<!-- Node150&#45;&gt;Node194 -->
 <g id="edge63" class="edge">
-<title>Node149&#45;&gt;Node193</title>
+<title>Node150&#45;&gt;Node194</title>
 <path fill="none" stroke="midnightblue" d="M594.26,-1151.02C593.13,-1279.13 593.43,-1983.48 734,-2131 746.98,-2144.63 766.45,-2150.23 784.8,-2152.11"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.76,-1150.77 594.36,-1140.74 590.76,-1150.7 597.76,-1150.77"/>
 </g>
-<!-- Node194 -->
+<!-- Node195 -->
 <g id="node65" class="node">
-<title>Node194</title>
+<title>Node195</title>
 <g id="a_node65"><a xlink:href="classdrake_1_1systems_1_1_pass_through.html" target="_top" xlink:title="A pass through system with input u and output y = u.">
 <polygon fill="white" stroke="black" points="782,-2102.5 782,-2121.5 889,-2121.5 889,-2102.5 782,-2102.5"/>
 <text text-anchor="middle" x="835.5" y="-2109.5" font-family="Helvetica,sans-Serif" font-size="10.00">PassThrough&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node194 -->
+<!-- Node150&#45;&gt;Node195 -->
 <g id="edge64" class="edge">
-<title>Node149&#45;&gt;Node194</title>
+<title>Node150&#45;&gt;Node195</title>
 <path fill="none" stroke="midnightblue" d="M594.38,-1151.03C594.04,-1276.32 598.56,-1951.63 734,-2093 746.35,-2105.89 764.49,-2111.58 781.97,-2113.75"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.88,-1150.67 594.42,-1140.66 590.88,-1150.64 597.88,-1150.67"/>
 </g>
-<!-- Node195 -->
+<!-- Node196 -->
 <g id="node66" class="node">
-<title>Node195</title>
+<title>Node196</title>
 <g id="a_node66"><a xlink:href="classdrake_1_1systems_1_1_port_switch.html" target="_top" xlink:title="A simple system that passes through the value from just one of its input ports to the output.">
 <polygon fill="white" stroke="black" points="787,-2064.5 787,-2083.5 884,-2083.5 884,-2064.5 787,-2064.5"/>
 <text text-anchor="middle" x="835.5" y="-2071.5" font-family="Helvetica,sans-Serif" font-size="10.00">PortSwitch&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node195 -->
+<!-- Node150&#45;&gt;Node196 -->
 <g id="edge65" class="edge">
-<title>Node149&#45;&gt;Node195</title>
+<title>Node150&#45;&gt;Node196</title>
 <path fill="none" stroke="midnightblue" d="M594.51,-1150.62C594.96,-1271.99 603.54,-1919.62 734,-2055 747.55,-2069.06 768.02,-2074.55 786.95,-2076.23"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.01,-1150.55 594.48,-1140.55 591.01,-1150.56 598.01,-1150.55"/>
 </g>
-<!-- Node196 -->
+<!-- Node197 -->
 <g id="node67" class="node">
-<title>Node196</title>
+<title>Node197</title>
 <g id="a_node67"><a xlink:href="classdrake_1_1systems_1_1_random_source.html" target="_top" xlink:title="A source block which generates random numbers at a fixed sampling interval, with a zero&#45;order hold be...">
 <polygon fill="white" stroke="black" points="776,-2026.5 776,-2045.5 895,-2045.5 895,-2026.5 776,-2026.5"/>
 <text text-anchor="middle" x="835.5" y="-2033.5" font-family="Helvetica,sans-Serif" font-size="10.00">RandomSource&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node196 -->
+<!-- Node150&#45;&gt;Node197 -->
 <g id="edge66" class="edge">
-<title>Node149&#45;&gt;Node196</title>
+<title>Node150&#45;&gt;Node197</title>
 <path fill="none" stroke="midnightblue" d="M594.67,-1150.88C596.1,-1269.81 609.51,-1886.41 734,-2016 744.97,-2027.42 760.46,-2033.31 776,-2036.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.17,-1150.65 594.56,-1140.69 591.17,-1150.73 598.17,-1150.65"/>
 </g>
-<!-- Node197 -->
+<!-- Node198 -->
 <g id="node68" class="node">
-<title>Node197</title>
+<title>Node198</title>
 <g id="a_node68"><a xlink:href="classdrake_1_1systems_1_1rendering_1_1_multibody_position_to_geometry_pose.html" target="_top" xlink:title="A direct&#45;feedthrough system that converts a vector of joint positions directly to a geometry::FramePo...">
 <polygon fill="white" stroke="black" points="753.5,-1977 753.5,-2007 917.5,-2007 917.5,-1977 753.5,-1977"/>
 <text text-anchor="start" x="761.5" y="-1995" font-family="Helvetica,sans-Serif" font-size="10.00">MultibodyPositionToGeometry</text>
@@ -1006,255 +1006,255 @@
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node197 -->
+<!-- Node150&#45;&gt;Node198 -->
 <g id="edge67" class="edge">
-<title>Node149&#45;&gt;Node197</title>
+<title>Node150&#45;&gt;Node198</title>
 <path fill="none" stroke="midnightblue" d="M594.96,-1150.76C598,-1265.25 618.96,-1842.56 734,-1967 739.49,-1972.94 746.16,-1977.57 753.42,-1981.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.45,-1150.55 594.7,-1140.64 591.45,-1150.73 598.45,-1150.55"/>
 </g>
-<!-- Node198 -->
+<!-- Node199 -->
 <g id="node69" class="node">
-<title>Node198</title>
+<title>Node199</title>
 <g id="a_node69"><a xlink:href="classdrake_1_1systems_1_1_saturation.html" target="_top" xlink:title="An element&#45;wise hard saturation block with inputs signal u, saturation values &#160;and/or ,...">
 <polygon fill="white" stroke="black" points="788,-1938.5 788,-1957.5 883,-1957.5 883,-1938.5 788,-1938.5"/>
 <text text-anchor="middle" x="835.5" y="-1945.5" font-family="Helvetica,sans-Serif" font-size="10.00">Saturation&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node198 -->
+<!-- Node150&#45;&gt;Node199 -->
 <g id="edge68" class="edge">
-<title>Node149&#45;&gt;Node198</title>
+<title>Node150&#45;&gt;Node199</title>
 <path fill="none" stroke="midnightblue" d="M595.02,-1150.65C598.35,-1262.12 620.49,-1813.92 734,-1929 747.9,-1943.1 768.76,-1948.52 787.88,-1950.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.51,-1150.41 594.73,-1140.51 591.51,-1150.61 598.51,-1150.41"/>
 </g>
-<!-- Node199 -->
+<!-- Node200 -->
 <g id="node70" class="node">
-<title>Node199</title>
+<title>Node200</title>
 <g id="a_node70"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_accelerometer.html" target="_top" xlink:title="Sensor to represent an ideal accelerometer sensor.">
 <polygon fill="white" stroke="black" points="777.5,-1900.5 777.5,-1919.5 893.5,-1919.5 893.5,-1900.5 777.5,-1900.5"/>
 <text text-anchor="middle" x="835.5" y="-1907.5" font-family="Helvetica,sans-Serif" font-size="10.00">Accelerometer&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node199 -->
+<!-- Node150&#45;&gt;Node200 -->
 <g id="edge69" class="edge">
-<title>Node149&#45;&gt;Node199</title>
+<title>Node150&#45;&gt;Node200</title>
 <path fill="none" stroke="midnightblue" d="M595.2,-1150.73C599.49,-1259.2 625.61,-1782.03 734,-1891 745.4,-1902.46 761.39,-1908.17 777.27,-1910.77"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.7,-1150.42 594.82,-1140.56 591.7,-1150.69 598.7,-1150.42"/>
 </g>
-<!-- Node200 -->
+<!-- Node201 -->
 <g id="node71" class="node">
-<title>Node200</title>
+<title>Node201</title>
 <g id="a_node71"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_beam_model.html" target="_top" xlink:title="Implements the &quot;Beam Models of Range Finders&quot; from section 6.3 of Probabilistic Robotics (2006),...">
 <polygon fill="white" stroke="black" points="783.5,-1862.5 783.5,-1881.5 887.5,-1881.5 887.5,-1862.5 783.5,-1862.5"/>
 <text text-anchor="middle" x="835.5" y="-1869.5" font-family="Helvetica,sans-Serif" font-size="10.00">BeamModel&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node200 -->
+<!-- Node150&#45;&gt;Node201 -->
 <g id="edge70" class="edge">
-<title>Node149&#45;&gt;Node200</title>
+<title>Node150&#45;&gt;Node201</title>
 <path fill="none" stroke="midnightblue" d="M595.41,-1150.73C600.67,-1255.95 630.68,-1750.1 734,-1853 746.9,-1865.84 765.58,-1871.45 783.34,-1873.55"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.9,-1150.4 594.92,-1140.58 591.91,-1150.73 598.9,-1150.4"/>
 </g>
-<!-- Node201 -->
+<!-- Node202 -->
 <g id="node72" class="node">
-<title>Node201</title>
+<title>Node202</title>
 <g id="a_node72"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_gyroscope.html" target="_top" xlink:title="Sensor to represent an ideal gyroscopic sensor.">
 <polygon fill="white" stroke="black" points="787,-1824.5 787,-1843.5 884,-1843.5 884,-1824.5 787,-1824.5"/>
 <text text-anchor="middle" x="835.5" y="-1831.5" font-family="Helvetica,sans-Serif" font-size="10.00">Gyroscope&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node201 -->
+<!-- Node150&#45;&gt;Node202 -->
 <g id="edge71" class="edge">
-<title>Node149&#45;&gt;Node201</title>
+<title>Node150&#45;&gt;Node202</title>
 <path fill="none" stroke="midnightblue" d="M595.63,-1150.65C601.91,-1252.36 635.73,-1718.13 734,-1815 747.78,-1828.59 768.05,-1834.05 786.78,-1835.84"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.12,-1150.32 595.03,-1140.55 592.13,-1150.74 599.12,-1150.32"/>
 </g>
-<!-- Node202 -->
+<!-- Node203 -->
 <g id="node73" class="node">
-<title>Node202</title>
+<title>Node203</title>
 <g id="a_node73"><a xlink:href="classdrake_1_1systems_1_1_sine.html" target="_top" xlink:title="A sine system which outputs y = a * sin(f * t + p) and first and second derivatives w....">
 <polygon fill="white" stroke="black" points="802.5,-1786.5 802.5,-1805.5 868.5,-1805.5 868.5,-1786.5 802.5,-1786.5"/>
 <text text-anchor="middle" x="835.5" y="-1793.5" font-family="Helvetica,sans-Serif" font-size="10.00">Sine&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node202 -->
+<!-- Node150&#45;&gt;Node203 -->
 <g id="edge72" class="edge">
-<title>Node149&#45;&gt;Node202</title>
+<title>Node150&#45;&gt;Node203</title>
 <path fill="none" stroke="midnightblue" d="M595.92,-1151.1C603.34,-1250.29 640.93,-1686.3 734,-1777 751.8,-1794.35 780.19,-1798.41 802.26,-1798.52"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.4,-1150.67 595.18,-1140.95 592.42,-1151.18 599.4,-1150.67"/>
 </g>
-<!-- Node203 -->
+<!-- Node204 -->
 <g id="node74" class="node">
-<title>Node203</title>
+<title>Node204</title>
 <g id="a_node74"><a xlink:href="classdrake_1_1systems_1_1_single_output_vector_source.html" target="_top" xlink:title="A base class that specializes LeafSystem for use with no input ports, and only a single,...">
 <polygon fill="white" stroke="black" points="749,-1748.5 749,-1767.5 922,-1767.5 922,-1748.5 749,-1748.5"/>
 <text text-anchor="middle" x="835.5" y="-1755.5" font-family="Helvetica,sans-Serif" font-size="10.00">SingleOutputVectorSource&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node203 -->
+<!-- Node150&#45;&gt;Node204 -->
 <g id="edge73" class="edge">
-<title>Node149&#45;&gt;Node203</title>
+<title>Node150&#45;&gt;Node204</title>
 <path fill="none" stroke="midnightblue" d="M596.19,-1150.82C604.68,-1245.92 645.88,-1654.22 734,-1739 738.35,-1743.19 743.32,-1746.59 748.66,-1749.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.67,-1150.48 595.31,-1140.82 592.7,-1151.09 599.67,-1150.48"/>
 </g>
-<!-- Node206 -->
+<!-- Node207 -->
 <g id="node77" class="node">
-<title>Node206</title>
+<title>Node207</title>
 <g id="a_node77"><a xlink:href="classdrake_1_1systems_1_1_spring_mass_system.html" target="_top" xlink:title="A model of a one&#45;dimensional spring&#45;mass system.">
 <polygon fill="white" stroke="black" points="766.5,-1710.5 766.5,-1729.5 904.5,-1729.5 904.5,-1710.5 766.5,-1710.5"/>
 <text text-anchor="middle" x="835.5" y="-1717.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpringMassSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node206 -->
+<!-- Node150&#45;&gt;Node207 -->
 <g id="edge76" class="edge">
-<title>Node149&#45;&gt;Node206</title>
+<title>Node150&#45;&gt;Node207</title>
 <path fill="none" stroke="midnightblue" d="M596.5,-1150.73C606.14,-1241.99 650.87,-1622.18 734,-1701 742.96,-1709.49 754.46,-1714.77 766.46,-1717.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.97,-1150.23 595.45,-1140.65 593,-1150.95 599.97,-1150.23"/>
 </g>
-<!-- Node210 -->
+<!-- Node211 -->
 <g id="node81" class="node">
-<title>Node210</title>
+<title>Node211</title>
 <g id="a_node81"><a xlink:href="classdrake_1_1systems_1_1_symbolic_vector_system.html" target="_top" xlink:title="A LeafSystem that is defined by vectors of symbolic::Expression representing the dynamics and output.">
 <polygon fill="white" stroke="black" points="756.5,-1672.5 756.5,-1691.5 914.5,-1691.5 914.5,-1672.5 756.5,-1672.5"/>
 <text text-anchor="middle" x="835.5" y="-1679.5" font-family="Helvetica,sans-Serif" font-size="10.00">SymbolicVectorSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node210 -->
+<!-- Node150&#45;&gt;Node211 -->
 <g id="edge80" class="edge">
-<title>Node149&#45;&gt;Node210</title>
+<title>Node150&#45;&gt;Node211</title>
 <path fill="none" stroke="midnightblue" d="M596.87,-1150.8C607.78,-1238.41 655.9,-1590.16 734,-1663 740.36,-1668.93 747.97,-1673.29 756.12,-1676.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="600.34,-1150.34 595.65,-1140.84 593.4,-1151.2 600.34,-1150.34"/>
 </g>
-<!-- Node211 -->
+<!-- Node212 -->
 <g id="node82" class="node">
-<title>Node211</title>
+<title>Node212</title>
 <g id="a_node82"><a xlink:href="classdrake_1_1systems_1_1_time_varying_affine_system.html" target="_top" xlink:title="Base class for a discrete&#45; or continuous&#45;time, time&#45;varying affine system, with potentially time&#45;vary...">
 <polygon fill="white" stroke="black" points="749.5,-1634.5 749.5,-1653.5 921.5,-1653.5 921.5,-1634.5 749.5,-1634.5"/>
 <text text-anchor="middle" x="835.5" y="-1641.5" font-family="Helvetica,sans-Serif" font-size="10.00">TimeVaryingAffineSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node211 -->
+<!-- Node150&#45;&gt;Node212 -->
 <g id="edge81" class="edge">
-<title>Node149&#45;&gt;Node211</title>
+<title>Node150&#45;&gt;Node212</title>
 <path fill="none" stroke="midnightblue" d="M597.28,-1150.69C609.47,-1234.21 660.86,-1558.05 734,-1625 738.58,-1629.2 743.79,-1632.6 749.37,-1635.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="600.71,-1149.95 595.82,-1140.55 593.78,-1150.94 600.71,-1149.95"/>
 </g>
-<!-- Node218 -->
+<!-- Node219 -->
 <g id="node89" class="node">
-<title>Node218</title>
+<title>Node219</title>
 <g id="a_node89"><a xlink:href="classdrake_1_1systems_1_1_vector_log_sink.html" target="_top" xlink:title="A discrete sink block which logs its vector&#45;valued input to per&#45;context memory.">
 <polygon fill="white" stroke="black" points="778,-1596.5 778,-1615.5 893,-1615.5 893,-1596.5 778,-1596.5"/>
 <text text-anchor="middle" x="835.5" y="-1603.5" font-family="Helvetica,sans-Serif" font-size="10.00">VectorLogSink&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node218 -->
+<!-- Node150&#45;&gt;Node219 -->
 <g id="edge88" class="edge">
-<title>Node149&#45;&gt;Node218</title>
+<title>Node150&#45;&gt;Node219</title>
 <path fill="none" stroke="midnightblue" d="M593.91,-1150.79C592.97,-1221.94 599.93,-1466.93 734,-1587 745.97,-1597.72 762.04,-1603.24 777.81,-1605.89"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.42,-1150.64 594.13,-1140.57 590.42,-1150.5 597.42,-1150.64"/>
 </g>
-<!-- Node219 -->
+<!-- Node220 -->
 <g id="node90" class="node">
-<title>Node219</title>
+<title>Node220</title>
 <g id="a_node90"><a xlink:href="classdrake_1_1systems_1_1_vector_system.html" target="_top" xlink:title="A base class that specializes LeafSystem for use with only zero or one vector input ports,...">
 <polygon fill="white" stroke="black" points="779,-1558.5 779,-1577.5 892,-1577.5 892,-1558.5 779,-1558.5"/>
 <text text-anchor="middle" x="835.5" y="-1565.5" font-family="Helvetica,sans-Serif" font-size="10.00">VectorSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node219 -->
+<!-- Node150&#45;&gt;Node220 -->
 <g id="edge89" class="edge">
-<title>Node149&#45;&gt;Node219</title>
+<title>Node150&#45;&gt;Node220</title>
 <path fill="none" stroke="midnightblue" d="M594.54,-1150.9C595.85,-1218.42 609.79,-1440.55 734,-1549 746.31,-1559.74 762.75,-1565.22 778.76,-1567.83"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.04,-1150.75 594.43,-1140.79 591.04,-1150.83 598.04,-1150.75"/>
 </g>
-<!-- Node226 -->
+<!-- Node227 -->
 <g id="node97" class="node">
-<title>Node226</title>
+<title>Node227</title>
 <g id="a_node97"><a xlink:href="classdrake_1_1systems_1_1_wrap_to_system.html" target="_top" xlink:title="An element&#45;wise wrapping block that transforms the specified indices of the input signal u into the i...">
 <polygon fill="white" stroke="black" points="776.5,-1520.5 776.5,-1539.5 894.5,-1539.5 894.5,-1520.5 776.5,-1520.5"/>
 <text text-anchor="middle" x="835.5" y="-1527.5" font-family="Helvetica,sans-Serif" font-size="10.00">WrapToSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node226 -->
+<!-- Node150&#45;&gt;Node227 -->
 <g id="edge96" class="edge">
-<title>Node149&#45;&gt;Node226</title>
+<title>Node150&#45;&gt;Node227</title>
 <path fill="none" stroke="midnightblue" d="M595.28,-1150.74C598.93,-1214.12 619.42,-1413.92 734,-1511 745.79,-1520.99 761.17,-1526.38 776.34,-1529.15"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.77,-1150.37 594.78,-1140.55 591.78,-1150.71 598.77,-1150.37"/>
 </g>
-<!-- Node227 -->
+<!-- Node228 -->
 <g id="node98" class="node">
-<title>Node227</title>
+<title>Node228</title>
 <g id="a_node98"><a xlink:href="classdrake_1_1systems_1_1_zero_order_hold.html" target="_top" xlink:title="A zero order hold block with input u, which may be vector&#45;valued (discrete or continuous) or abstract...">
 <polygon fill="white" stroke="black" points="777,-1482.5 777,-1501.5 894,-1501.5 894,-1482.5 777,-1482.5"/>
 <text text-anchor="middle" x="835.5" y="-1489.5" font-family="Helvetica,sans-Serif" font-size="10.00">ZeroOrderHold&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node149&#45;&gt;Node227 -->
+<!-- Node150&#45;&gt;Node228 -->
 <g id="edge97" class="edge">
-<title>Node149&#45;&gt;Node227</title>
+<title>Node150&#45;&gt;Node228</title>
 <path fill="none" stroke="midnightblue" d="M596.17,-1150.71C602.3,-1209.88 629.03,-1387.21 734,-1473 746.03,-1482.83 761.58,-1488.16 776.83,-1490.92"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.63,-1150.13 595.2,-1140.51 592.66,-1150.8 599.63,-1150.13"/>
 </g>
-<!-- Node170 -->
+<!-- Node171 -->
 <g id="node42" class="node">
-<title>Node170</title>
+<title>Node171</title>
 <g id="a_node42"><a xlink:href="classdrake_1_1multibody_1_1_multibody_plant.html" target="_top" xlink:title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">
 <polygon fill="white" stroke="black" points="1002,-722.5 1002,-741.5 1121,-741.5 1121,-722.5 1002,-722.5"/>
 <text text-anchor="middle" x="1061.5" y="-729.5" font-family="Helvetica,sans-Serif" font-size="10.00">MultibodyPlant&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node169&#45;&gt;Node170 -->
+<!-- Node170&#45;&gt;Node171 -->
 <g id="edge40" class="edge">
-<title>Node169&#45;&gt;Node170</title>
+<title>Node170&#45;&gt;Node171</title>
 <path fill="none" stroke="midnightblue" d="M921.26,-732C948.12,-732 977.2,-732 1001.81,-732"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="921.09,-728.5 911.09,-732 921.09,-735.5 921.09,-728.5"/>
 </g>
-<!-- Node172 -->
+<!-- Node173 -->
 <g id="node44" class="node">
-<title>Node172</title>
+<title>Node173</title>
 <g id="a_node44"><a xlink:href="classdrake_1_1multibody_1_1_multibody_plant.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="978.5,-684.5 978.5,-703.5 1144.5,-703.5 1144.5,-684.5 978.5,-684.5"/>
 <text text-anchor="middle" x="1061.5" y="-691.5" font-family="Helvetica,sans-Serif" font-size="10.00">MultibodyPlant&lt; AutoDiffXd &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node169&#45;&gt;Node172 -->
+<!-- Node170&#45;&gt;Node173 -->
 <g id="edge42" class="edge">
-<title>Node169&#45;&gt;Node172</title>
+<title>Node170&#45;&gt;Node173</title>
 <path fill="none" stroke="midnightblue" d="M902.97,-720.72C935.19,-715.26 973.48,-708.76 1004.24,-703.54"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="902.01,-717.34 892.74,-722.46 903.18,-724.24 902.01,-717.34"/>
 </g>
-<!-- Node173 -->
+<!-- Node174 -->
 <g id="node45" class="node">
-<title>Node173</title>
+<title>Node174</title>
 <g id="a_node45"><a xlink:href="classdrake_1_1multibody_1_1_multibody_plant.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="988.5,-760.5 988.5,-779.5 1134.5,-779.5 1134.5,-760.5 988.5,-760.5"/>
 <text text-anchor="middle" x="1061.5" y="-767.5" font-family="Helvetica,sans-Serif" font-size="10.00">MultibodyPlant&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node169&#45;&gt;Node173 -->
+<!-- Node170&#45;&gt;Node174 -->
 <g id="edge43" class="edge">
-<title>Node169&#45;&gt;Node173</title>
+<title>Node170&#45;&gt;Node174</title>
 <path fill="none" stroke="midnightblue" d="M902.97,-743.28C935.19,-748.74 973.48,-755.24 1004.24,-760.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="903.18,-739.76 892.74,-741.54 902.01,-746.66 903.18,-739.76"/>
 </g>
-<!-- Node171 -->
+<!-- Node172 -->
 <g id="node43" class="node">
-<title>Node171</title>
+<title>Node172</title>
 <g id="a_node43"><a xlink:href="classdrake_1_1multibody_1_1test_1_1_axially_symmetric_free_body_plant.html" target="_top" xlink:title="This plant models the free motion of a torque free body in space.">
 <polygon fill="white" stroke="black" points="1202,-717 1202,-747 1351,-747 1351,-717 1202,-717"/>
 <text text-anchor="start" x="1210" y="-735" font-family="Helvetica,sans-Serif" font-size="10.00">AxiallySymmetricFreeBody</text>
@@ -1262,75 +1262,75 @@
 </a>
 </g>
 </g>
-<!-- Node170&#45;&gt;Node171 -->
+<!-- Node171&#45;&gt;Node172 -->
 <g id="edge41" class="edge">
-<title>Node170&#45;&gt;Node171</title>
+<title>Node171&#45;&gt;Node172</title>
 <path fill="none" stroke="midnightblue" d="M1131.39,-732C1153.86,-732 1178.89,-732 1201.7,-732"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1131.27,-728.5 1121.27,-732 1131.27,-735.5 1131.27,-728.5"/>
 </g>
-<!-- Node204 -->
+<!-- Node205 -->
 <g id="node75" class="node">
-<title>Node204</title>
+<title>Node205</title>
 <g id="a_node75"><a xlink:href="classdrake_1_1systems_1_1_constant_vector_source.html" target="_top" xlink:title="A source block with a constant output port at all times.">
 <polygon fill="white" stroke="black" points="985,-1824.5 985,-1843.5 1138,-1843.5 1138,-1824.5 985,-1824.5"/>
 <text text-anchor="middle" x="1061.5" y="-1831.5" font-family="Helvetica,sans-Serif" font-size="10.00">ConstantVectorSource&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node203&#45;&gt;Node204 -->
+<!-- Node204&#45;&gt;Node205 -->
 <g id="edge74" class="edge">
-<title>Node203&#45;&gt;Node204</title>
+<title>Node204&#45;&gt;Node205</title>
 <path fill="none" stroke="midnightblue" d="M923.77,-1770.89C928.35,-1772.68 932.79,-1774.7 937,-1777 957.42,-1788.15 952.73,-1803.58 973,-1815 979.91,-1818.89 987.53,-1821.99 995.32,-1824.45"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="924.81,-1767.55 914.22,-1767.56 922.51,-1774.16 924.81,-1767.55"/>
 </g>
-<!-- Node205 -->
+<!-- Node206 -->
 <g id="node76" class="node">
-<title>Node205</title>
+<title>Node206</title>
 <g id="a_node76"><a xlink:href="classdrake_1_1systems_1_1_trajectory_source.html" target="_top" xlink:title="A source block that generates the value of a Trajectory for a given time.">
 <polygon fill="white" stroke="black" points="998,-1786.5 998,-1805.5 1125,-1805.5 1125,-1786.5 998,-1786.5"/>
 <text text-anchor="middle" x="1061.5" y="-1793.5" font-family="Helvetica,sans-Serif" font-size="10.00">TrajectorySource&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node203&#45;&gt;Node205 -->
+<!-- Node204&#45;&gt;Node206 -->
 <g id="edge75" class="edge">
-<title>Node203&#45;&gt;Node205</title>
+<title>Node204&#45;&gt;Node206</title>
 <path fill="none" stroke="midnightblue" d="M902.97,-1769.28C935.19,-1774.74 973.48,-1781.24 1004.24,-1786.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="903.18,-1765.76 892.74,-1767.54 902.01,-1772.66 903.18,-1765.76"/>
 </g>
-<!-- Node207 -->
+<!-- Node208 -->
 <g id="node78" class="node">
-<title>Node207</title>
+<title>Node208</title>
 <g id="a_node78"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="985,-1748.5 985,-1767.5 1138,-1767.5 1138,-1748.5 985,-1748.5"/>
 <text text-anchor="middle" x="1061.5" y="-1755.5" font-family="Helvetica,sans-Serif" font-size="10.00">MySpringMassSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node206&#45;&gt;Node207 -->
+<!-- Node207&#45;&gt;Node208 -->
 <g id="edge77" class="edge">
-<title>Node206&#45;&gt;Node207</title>
+<title>Node207&#45;&gt;Node208</title>
 <path fill="none" stroke="midnightblue" d="M902.97,-1731.28C935.19,-1736.74 973.48,-1743.24 1004.24,-1748.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="903.18,-1727.76 892.74,-1729.54 902.01,-1734.66 903.18,-1727.76"/>
 </g>
-<!-- Node208 -->
+<!-- Node209 -->
 <g id="node79" class="node">
-<title>Node208</title>
+<title>Node209</title>
 <g id="a_node79"><a xlink:href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="973,-1710.5 973,-1729.5 1150,-1729.5 1150,-1710.5 973,-1710.5"/>
 <text text-anchor="middle" x="1061.5" y="-1717.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpringMassDamperSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node206&#45;&gt;Node208 -->
+<!-- Node207&#45;&gt;Node209 -->
 <g id="edge78" class="edge">
-<title>Node206&#45;&gt;Node208</title>
+<title>Node207&#45;&gt;Node209</title>
 <path fill="none" stroke="midnightblue" d="M914.87,-1720C933.6,-1720 953.71,-1720 972.83,-1720"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="914.62,-1716.5 904.62,-1720 914.62,-1723.5 914.62,-1716.5"/>
 </g>
-<!-- Node209 -->
+<!-- Node210 -->
 <g id="node80" class="node">
-<title>Node209</title>
+<title>Node210</title>
 <g id="a_node80"><a xlink:href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1186,-1708 1186,-1738 1367,-1738 1367,-1708 1186,-1708"/>
 <text text-anchor="start" x="1194" y="-1726" font-family="Helvetica,sans-Serif" font-size="10.00">DiscontinuousSpringMassDamper</text>
@@ -1338,105 +1338,105 @@
 </a>
 </g>
 </g>
-<!-- Node208&#45;&gt;Node209 -->
+<!-- Node209&#45;&gt;Node210 -->
 <g id="edge79" class="edge">
-<title>Node208&#45;&gt;Node209</title>
+<title>Node209&#45;&gt;Node210</title>
 <path fill="none" stroke="midnightblue" d="M1160.09,-1721.37C1168.68,-1721.5 1177.35,-1721.62 1185.87,-1721.74"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1160.11,-1717.87 1150.06,-1721.23 1160.01,-1724.87 1160.11,-1717.87"/>
 </g>
-<!-- Node212 -->
+<!-- Node213 -->
 <g id="node83" class="node">
-<title>Node212</title>
+<title>Node213</title>
 <g id="a_node83"><a xlink:href="classdrake_1_1systems_1_1_affine_system.html" target="_top" xlink:title="A discrete OR continuous affine system (with constant coefficients).">
 <polygon fill="white" stroke="black" points="1006.5,-1596.5 1006.5,-1615.5 1116.5,-1615.5 1116.5,-1596.5 1006.5,-1596.5"/>
 <text text-anchor="middle" x="1061.5" y="-1603.5" font-family="Helvetica,sans-Serif" font-size="10.00">AffineSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node212 -->
+<!-- Node212&#45;&gt;Node213 -->
 <g id="edge82" class="edge">
-<title>Node211&#45;&gt;Node212</title>
+<title>Node212&#45;&gt;Node213</title>
 <path fill="none" stroke="midnightblue" d="M902.74,-1632.76C935.69,-1627.17 975.03,-1620.5 1006.18,-1615.22"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="902.01,-1629.34 892.74,-1634.46 903.18,-1636.24 902.01,-1629.34"/>
 </g>
-<!-- Node215 -->
+<!-- Node216 -->
 <g id="node86" class="node">
-<title>Node215</title>
+<title>Node216</title>
 <g id="a_node86"><a xlink:href="classdrake_1_1systems_1_1_time_varying_linear_system.html" target="_top" xlink:title="Base class for a discrete or continuous linear time&#45;varying (LTV) system.">
 <polygon fill="white" stroke="black" points="975,-1672.5 975,-1691.5 1148,-1691.5 1148,-1672.5 975,-1672.5"/>
 <text text-anchor="middle" x="1061.5" y="-1679.5" font-family="Helvetica,sans-Serif" font-size="10.00">TimeVaryingLinearSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node215 -->
+<!-- Node212&#45;&gt;Node216 -->
 <g id="edge85" class="edge">
-<title>Node211&#45;&gt;Node215</title>
+<title>Node212&#45;&gt;Node216</title>
 <path fill="none" stroke="midnightblue" d="M902.97,-1655.28C935.19,-1660.74 973.48,-1667.24 1004.24,-1672.46"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="903.18,-1651.76 892.74,-1653.54 902.01,-1658.66 903.18,-1651.76"/>
 </g>
-<!-- Node217 -->
+<!-- Node218 -->
 <g id="node88" class="node">
-<title>Node217</title>
+<title>Node218</title>
 <g id="a_node88"><a xlink:href="classdrake_1_1systems_1_1_trajectory_affine_system.html" target="_top" xlink:title="A continuous&#45; or discrete&#45;time Affine Time&#45;Varying system with system matrices described by trajector...">
 <polygon fill="white" stroke="black" points="982,-1634.5 982,-1653.5 1141,-1653.5 1141,-1634.5 982,-1634.5"/>
 <text text-anchor="middle" x="1061.5" y="-1641.5" font-family="Helvetica,sans-Serif" font-size="10.00">TrajectoryAffineSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node211&#45;&gt;Node217 -->
+<!-- Node212&#45;&gt;Node218 -->
 <g id="edge87" class="edge">
-<title>Node211&#45;&gt;Node217</title>
+<title>Node212&#45;&gt;Node218</title>
 <path fill="none" stroke="midnightblue" d="M931.81,-1644C948.48,-1644 965.66,-1644 981.82,-1644"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="931.5,-1640.5 921.5,-1644 931.5,-1647.5 931.5,-1640.5"/>
 </g>
-<!-- Node213 -->
+<!-- Node214 -->
 <g id="node84" class="node">
-<title>Node213</title>
+<title>Node214</title>
 <g id="a_node84"><a xlink:href="classdrake_1_1systems_1_1_linear_system.html" target="_top" xlink:title="A discrete OR continuous linear system.">
 <polygon fill="white" stroke="black" points="1220.5,-1596.5 1220.5,-1615.5 1332.5,-1615.5 1332.5,-1596.5 1220.5,-1596.5"/>
 <text text-anchor="middle" x="1276.5" y="-1603.5" font-family="Helvetica,sans-Serif" font-size="10.00">LinearSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node212&#45;&gt;Node213 -->
+<!-- Node213&#45;&gt;Node214 -->
 <g id="edge83" class="edge">
-<title>Node212&#45;&gt;Node213</title>
+<title>Node213&#45;&gt;Node214</title>
 <path fill="none" stroke="midnightblue" d="M1126.84,-1606C1156.69,-1606 1191.81,-1606 1220.42,-1606"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1126.52,-1602.5 1116.52,-1606 1126.52,-1609.5 1126.52,-1602.5"/>
 </g>
-<!-- Node214 -->
+<!-- Node215 -->
 <g id="node85" class="node">
-<title>Node214</title>
+<title>Node215</title>
 <g id="a_node85"><a xlink:href="classdrake_1_1systems_1_1_matrix_gain.html" target="_top" xlink:title="A system that specializes LinearSystem by setting coefficient matrices A, B, and C to all be zero.">
 <polygon fill="white" stroke="black" points="1403,-1596.5 1403,-1615.5 1502,-1615.5 1502,-1596.5 1403,-1596.5"/>
 <text text-anchor="middle" x="1452.5" y="-1603.5" font-family="Helvetica,sans-Serif" font-size="10.00">MatrixGain&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node213&#45;&gt;Node214 -->
+<!-- Node214&#45;&gt;Node215 -->
 <g id="edge84" class="edge">
-<title>Node213&#45;&gt;Node214</title>
+<title>Node214&#45;&gt;Node215</title>
 <path fill="none" stroke="midnightblue" d="M1342.82,-1606C1362.77,-1606 1384.34,-1606 1402.97,-1606"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1342.55,-1602.5 1332.55,-1606 1342.55,-1609.5 1342.55,-1602.5"/>
 </g>
-<!-- Node216 -->
+<!-- Node217 -->
 <g id="node87" class="node">
-<title>Node216</title>
+<title>Node217</title>
 <g id="a_node87"><a xlink:href="classdrake_1_1systems_1_1_trajectory_linear_system.html" target="_top" xlink:title="A continuous&#45; or discrete&#45;time Linear Time&#45;Varying system with system matrices described by trajector...">
 <polygon fill="white" stroke="black" points="1196,-1669.5 1196,-1688.5 1357,-1688.5 1357,-1669.5 1196,-1669.5"/>
 <text text-anchor="middle" x="1276.5" y="-1676.5" font-family="Helvetica,sans-Serif" font-size="10.00">TrajectoryLinearSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node215&#45;&gt;Node216 -->
+<!-- Node216&#45;&gt;Node217 -->
 <g id="edge86" class="edge">
-<title>Node215&#45;&gt;Node216</title>
+<title>Node216&#45;&gt;Node217</title>
 <path fill="none" stroke="midnightblue" d="M1158.23,-1680.65C1170.8,-1680.47 1183.56,-1680.29 1195.82,-1680.12"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1158.16,-1677.15 1148.21,-1680.79 1158.26,-1684.15 1158.16,-1677.15"/>
 </g>
-<!-- Node220 -->
+<!-- Node221 -->
 <g id="node91" class="node">
-<title>Node220</title>
+<title>Node221</title>
 <g id="a_node91"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_multibody_force_to_wsg_force_system.html" target="_top" xlink:title="Extract the gripper measured force from the generalized forces on the two fingers.">
 <polygon fill="white" stroke="black" points="987,-1471 987,-1501 1136,-1501 1136,-1471 987,-1471"/>
 <text text-anchor="start" x="995" y="-1489" font-family="Helvetica,sans-Serif" font-size="10.00">MultibodyForceToWsgForce</text>
@@ -1444,114 +1444,114 @@
 </a>
 </g>
 </g>
-<!-- Node219&#45;&gt;Node220 -->
+<!-- Node220&#45;&gt;Node221 -->
 <g id="edge90" class="edge">
-<title>Node219&#45;&gt;Node220</title>
+<title>Node220&#45;&gt;Node221</title>
 <path fill="none" stroke="midnightblue" d="M902.16,-1561.71C914.21,-1558.88 926.35,-1554.82 937,-1549 957.42,-1537.85 953.11,-1523.07 973,-1511 979.35,-1507.15 986.31,-1503.87 993.46,-1501.08"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="901.15,-1558.35 892.08,-1563.82 902.58,-1565.2 901.15,-1558.35"/>
 </g>
-<!-- Node221 -->
+<!-- Node222 -->
 <g id="node92" class="node">
-<title>Node221</title>
+<title>Node222</title>
 <g id="a_node92"><a xlink:href="classdrake_1_1systems_1_1_barycentric_mesh_system.html" target="_top" xlink:title="A (stateless) vector system implemented as a multi&#45;linear (barycentric) interpolation on a mesh over ...">
 <polygon fill="white" stroke="black" points="979.5,-1432.5 979.5,-1451.5 1143.5,-1451.5 1143.5,-1432.5 979.5,-1432.5"/>
 <text text-anchor="middle" x="1061.5" y="-1439.5" font-family="Helvetica,sans-Serif" font-size="10.00">BarycentricMeshSystem&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node219&#45;&gt;Node221 -->
+<!-- Node220&#45;&gt;Node222 -->
 <g id="edge91" class="edge">
-<title>Node219&#45;&gt;Node221</title>
+<title>Node220&#45;&gt;Node222</title>
 <path fill="none" stroke="midnightblue" d="M902.17,-1565.22C914.75,-1562.15 927.07,-1557.11 937,-1549 969.73,-1522.28 940.63,-1488.16 973,-1461 977.53,-1457.2 982.63,-1454.11 988.06,-1451.61"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="901.17,-1561.85 892.07,-1567.27 902.57,-1568.71 901.17,-1561.85"/>
 </g>
-<!-- Node222 -->
+<!-- Node223 -->
 <g id="node93" class="node">
-<title>Node222</title>
+<title>Node223</title>
 <g id="a_node93"><a xlink:href="classdrake_1_1systems_1_1_first_order_low_pass_filter.html" target="_top" xlink:title="An element&#45;wise first order low pass filter system that filters the i&#45;th input uᵢ into the i&#45;th outpu...">
 <polygon fill="white" stroke="black" points="982.5,-1394.5 982.5,-1413.5 1140.5,-1413.5 1140.5,-1394.5 982.5,-1394.5"/>
 <text text-anchor="middle" x="1061.5" y="-1401.5" font-family="Helvetica,sans-Serif" font-size="10.00">FirstOrderLowPassFilter&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node219&#45;&gt;Node222 -->
+<!-- Node220&#45;&gt;Node223 -->
 <g id="edge92" class="edge">
-<title>Node219&#45;&gt;Node222</title>
+<title>Node220&#45;&gt;Node223</title>
 <path fill="none" stroke="midnightblue" d="M901.89,-1566.29C914.76,-1563.2 927.28,-1557.87 937,-1549 980.02,-1509.74 930.51,-1462.83 973,-1423 976.97,-1419.28 981.49,-1416.22 986.33,-1413.71"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="901.14,-1562.87 892.01,-1568.24 902.5,-1569.74 901.14,-1562.87"/>
 </g>
-<!-- Node223 -->
+<!-- Node224 -->
 <g id="node94" class="node">
-<title>Node223</title>
+<title>Node224</title>
 <g id="a_node94"><a xlink:href="classdrake_1_1systems_1_1_gain.html" target="_top" xlink:title="An element&#45;wise gain block with input u and output y = k * u with k a constant vector.">
 <polygon fill="white" stroke="black" points="1027.5,-1356.5 1027.5,-1375.5 1095.5,-1375.5 1095.5,-1356.5 1027.5,-1356.5"/>
 <text text-anchor="middle" x="1061.5" y="-1363.5" font-family="Helvetica,sans-Serif" font-size="10.00">Gain&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node219&#45;&gt;Node223 -->
+<!-- Node220&#45;&gt;Node224 -->
 <g id="edge93" class="edge">
-<title>Node219&#45;&gt;Node223</title>
+<title>Node220&#45;&gt;Node224</title>
 <path fill="none" stroke="midnightblue" d="M902.11,-1566.79C915.03,-1563.68 927.51,-1558.22 937,-1549 990.53,-1497.01 920.17,-1437.71 973,-1385 987.09,-1370.95 1008.96,-1366.2 1027.31,-1364.96"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="901.32,-1563.38 892.18,-1568.73 902.66,-1570.25 901.32,-1563.38"/>
 </g>
-<!-- Node224 -->
+<!-- Node225 -->
 <g id="node95" class="node">
-<title>Node224</title>
+<title>Node225</title>
 <g id="a_node95"><a xlink:href="classdrake_1_1systems_1_1_integrator.html" target="_top" xlink:title="An integrator for a continuous vector input.">
 <polygon fill="white" stroke="black" points="1015,-1558.5 1015,-1577.5 1108,-1577.5 1108,-1558.5 1015,-1558.5"/>
 <text text-anchor="middle" x="1061.5" y="-1565.5" font-family="Helvetica,sans-Serif" font-size="10.00">Integrator&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node219&#45;&gt;Node224 -->
+<!-- Node220&#45;&gt;Node225 -->
 <g id="edge94" class="edge">
-<title>Node219&#45;&gt;Node224</title>
+<title>Node220&#45;&gt;Node225</title>
 <path fill="none" stroke="midnightblue" d="M902.62,-1568C938.76,-1568 982.62,-1568 1014.92,-1568"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="902.16,-1564.5 892.16,-1568 902.16,-1571.5 902.16,-1564.5"/>
 </g>
-<!-- Node225 -->
+<!-- Node226 -->
 <g id="node96" class="node">
-<title>Node225</title>
+<title>Node226</title>
 <g id="a_node96"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_rotary_encoders.html" target="_top" xlink:title="Simple model to capture the quantization and calibration offset effects of a rotary encoder.">
 <polygon fill="white" stroke="black" points="1000.5,-1520.5 1000.5,-1539.5 1122.5,-1539.5 1122.5,-1520.5 1000.5,-1520.5"/>
 <text text-anchor="middle" x="1061.5" y="-1527.5" font-family="Helvetica,sans-Serif" font-size="10.00">RotaryEncoders&lt; T &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node219&#45;&gt;Node225 -->
+<!-- Node220&#45;&gt;Node226 -->
 <g id="edge95" class="edge">
-<title>Node219&#45;&gt;Node225</title>
+<title>Node220&#45;&gt;Node226</title>
 <path fill="none" stroke="midnightblue" d="M902.43,-1556.81C934.81,-1551.32 973.4,-1544.78 1004.35,-1539.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="901.43,-1553.43 892.16,-1558.56 902.6,-1560.34 901.43,-1553.43"/>
 </g>
-<!-- Node229 -->
+<!-- Node230 -->
 <g id="node100" class="node">
-<title>Node229</title>
+<title>Node230</title>
 <g id="a_node100"><a xlink:href="classdrake_1_1systems_1_1_leaf_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="518.5,-532.5 518.5,-551.5 668.5,-551.5 668.5,-532.5 518.5,-532.5"/>
 <text text-anchor="middle" x="593.5" y="-539.5" font-family="Helvetica,sans-Serif" font-size="10.00">LeafSystem&lt; AutoDiffXd &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node228&#45;&gt;Node229 -->
+<!-- Node229&#45;&gt;Node230 -->
 <g id="edge99" class="edge">
-<title>Node228&#45;&gt;Node229</title>
+<title>Node229&#45;&gt;Node230</title>
 <path fill="none" stroke="midnightblue" d="M374.38,-1951.11C385.71,-1856.96 435.86,-1446.62 489,-1112 525.2,-884.03 579.68,-606.7 590.57,-551.73"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="370.88,-1950.87 373.17,-1961.22 377.83,-1951.71 370.88,-1950.87"/>
 </g>
-<!-- Node230 -->
+<!-- Node231 -->
 <g id="node101" class="node">
-<title>Node230</title>
+<title>Node231</title>
 <g id="a_node101"><a xlink:href="classdrake_1_1geometry_1_1_scene_graph.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="760,-0.5 760,-19.5 911,-19.5 911,-0.5 760,-0.5"/>
 <text text-anchor="middle" x="835.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">SceneGraph&lt; AutoDiffXd &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node229&#45;&gt;Node230 -->
+<!-- Node230&#45;&gt;Node231 -->
 <g id="edge100" class="edge">
-<title>Node229&#45;&gt;Node230</title>
+<title>Node230&#45;&gt;Node231</title>
 <path fill="none" stroke="midnightblue" d="M597.09,-522.09C608.67,-436.24 658.43,-98.85 734,-29 741.37,-22.19 750.38,-17.46 759.95,-14.23"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.61,-521.72 595.76,-532.09 600.55,-522.64 593.61,-521.72"/>
 </g>
@@ -1564,24 +1564,24 @@
 </a>
 </g>
 </g>
-<!-- Node231&#45;&gt;Node0 -->
+<!-- Node232&#45;&gt;Node0 -->
 <g id="edge102" class="edge">
-<title>Node231&#45;&gt;Node0</title>
+<title>Node232&#45;&gt;Node0</title>
 <path fill="none" stroke="midnightblue" d="M374.59,-4045.68C391.54,-4174.16 485.87,-4888.44 489,-4893 505.47,-4917.03 535.51,-4931.94 559,-4940.45"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="378.05,-4045.14 373.28,-4035.68 371.11,-4046.05 378.05,-4045.14"/>
 </g>
-<!-- Node232 -->
+<!-- Node233 -->
 <g id="node110" class="node">
-<title>Node232</title>
+<title>Node233</title>
 <g id="a_node110"><a xlink:href="classdrake_1_1systems_1_1_leaf_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="528.5,-3380.5 528.5,-3399.5 658.5,-3399.5 658.5,-3380.5 528.5,-3380.5"/>
 <text text-anchor="middle" x="593.5" y="-3387.5" font-family="Helvetica,sans-Serif" font-size="10.00">LeafSystem&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node231&#45;&gt;Node232 -->
+<!-- Node232&#45;&gt;Node233 -->
 <g id="edge110" class="edge">
-<title>Node231&#45;&gt;Node232</title>
+<title>Node232&#45;&gt;Node233</title>
 <path fill="none" stroke="midnightblue" d="M435.44,-4018.69C441.96,-4015.83 448.01,-4012.03 453,-4007 543.88,-3915.39 585.46,-3472.04 591.67,-3399.93"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="433.83,-4015.54 425.61,-4022.23 436.21,-4022.13 433.83,-4015.54"/>
 </g>
@@ -1683,15 +1683,15 @@
 <path fill="none" stroke="midnightblue" d="M622.1,-4964.26C649.81,-4978.14 694.03,-4999.13 734,-5013 744.53,-5016.65 755.86,-5020.01 766.97,-5022.98"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="623.52,-4961.05 613.01,-4959.66 620.36,-4967.3 623.52,-4961.05"/>
 </g>
-<!-- Node232&#45;&gt;Node279 -->
+<!-- Node233&#45;&gt;Node280 -->
 <g id="edge157" class="edge">
-<title>Node232&#45;&gt;Node279</title>
+<title>Node233&#45;&gt;Node280</title>
 <path fill="none" stroke="midnightblue" d="M596.25,-3410.06C610.69,-3575.53 710.43,-4709.37 734,-4735 745,-4746.96 760.97,-4752.8 776.96,-4755.36"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.71,-3409.51 595.36,-3399.85 592.74,-3410.12 599.71,-3409.51"/>
 </g>
-<!-- Node233 -->
+<!-- Node234 -->
 <g id="node111" class="node">
-<title>Node233</title>
+<title>Node234</title>
 <g id="a_node111"><a xlink:href="classdrake_1_1systems_1_1_discrete_derivative.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="781.5,-2179 781.5,-2209 889.5,-2209 889.5,-2179 781.5,-2179"/>
 <text text-anchor="start" x="789.5" y="-2197" font-family="Helvetica,sans-Serif" font-size="10.00">DiscreteDerivative</text>
@@ -1699,450 +1699,450 @@
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node233 -->
+<!-- Node233&#45;&gt;Node234 -->
 <g id="edge111" class="edge">
-<title>Node232&#45;&gt;Node233</title>
+<title>Node233&#45;&gt;Node234</title>
 <path fill="none" stroke="midnightblue" d="M595.51,-3370.16C603.15,-3223.28 653.82,-2308.06 734,-2218 745.93,-2204.6 763.87,-2198.01 781.31,-2194.95"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592,-3370.2 594.98,-3380.37 598.99,-3370.56 592,-3370.2"/>
 </g>
-<!-- Node234 -->
+<!-- Node235 -->
 <g id="node112" class="node">
-<title>Node234</title>
+<title>Node235</title>
 <g id="a_node112"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_receiver.html" target="_top" xlink:title="Receives the output of an LcmSubscriberSystem that subscribes to the acrobot input channel with LCM t...">
 <polygon fill="white" stroke="black" points="762,-4466.5 762,-4485.5 909,-4485.5 909,-4466.5 762,-4466.5"/>
 <text text-anchor="middle" x="835.5" y="-4473.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotCommandReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node234 -->
+<!-- Node233&#45;&gt;Node235 -->
 <g id="edge112" class="edge">
-<title>Node232&#45;&gt;Node234</title>
+<title>Node233&#45;&gt;Node235</title>
 <path fill="none" stroke="midnightblue" d="M595.7,-3409.79C604.36,-3548.96 658.82,-4377.42 734,-4457 741.56,-4465 751.35,-4470.24 761.85,-4473.59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.19,-3409.48 595.08,-3399.72 592.21,-3409.91 599.19,-3409.48"/>
 </g>
-<!-- Node235 -->
+<!-- Node236 -->
 <g id="node113" class="node">
-<title>Node235</title>
+<title>Node236</title>
 <g id="a_node113"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_command_sender.html" target="_top" xlink:title="Receives the output of an acrobot controller, and outputs it as an LCM message with type lcm_acrobot_...">
 <polygon fill="white" stroke="black" points="766.5,-4428.5 766.5,-4447.5 904.5,-4447.5 904.5,-4428.5 766.5,-4428.5"/>
 <text text-anchor="middle" x="835.5" y="-4435.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotCommandSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node235 -->
+<!-- Node233&#45;&gt;Node236 -->
 <g id="edge113" class="edge">
-<title>Node232&#45;&gt;Node235</title>
+<title>Node233&#45;&gt;Node236</title>
 <path fill="none" stroke="midnightblue" d="M594.17,-3409.79C592.46,-3539.42 589.43,-4266.69 734,-4419 742.62,-4428.08 754.11,-4433.6 766.24,-4436.83"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.67,-3409.77 594.32,-3399.72 590.68,-3409.67 597.67,-3409.77"/>
 </g>
-<!-- Node236 -->
+<!-- Node237 -->
 <g id="node114" class="node">
-<title>Node236</title>
+<title>Node237</title>
 <g id="a_node114"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_geometry.html" target="_top" xlink:title="Expresses an AcrobotPlant&#39;s geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="784,-4390.5 784,-4409.5 887,-4409.5 887,-4390.5 784,-4390.5"/>
 <text text-anchor="middle" x="835.5" y="-4397.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node236 -->
+<!-- Node233&#45;&gt;Node237 -->
 <g id="edge114" class="edge">
-<title>Node232&#45;&gt;Node236</title>
+<title>Node233&#45;&gt;Node237</title>
 <path fill="none" stroke="midnightblue" d="M594.29,-3409.84C593.34,-3536.81 594.58,-4234.87 734,-4381 746.75,-4394.36 765.72,-4400 783.77,-4401.99"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.79,-3409.68 594.38,-3399.65 590.79,-3409.62 597.79,-3409.68"/>
 </g>
-<!-- Node237 -->
+<!-- Node238 -->
 <g id="node115" class="node">
-<title>Node237</title>
+<title>Node238</title>
 <g id="a_node115"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_receiver.html" target="_top" xlink:title="Receives the output of an LcmSubsriberSystem that subsribes to the acrobot state channel with LCM typ...">
 <polygon fill="white" stroke="black" points="774.5,-4352.5 774.5,-4371.5 896.5,-4371.5 896.5,-4352.5 774.5,-4352.5"/>
 <text text-anchor="middle" x="835.5" y="-4359.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotStateReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node237 -->
+<!-- Node233&#45;&gt;Node238 -->
 <g id="edge115" class="edge">
-<title>Node232&#45;&gt;Node237</title>
+<title>Node233&#45;&gt;Node238</title>
 <path fill="none" stroke="midnightblue" d="M594.41,-3409.84C594.25,-3533.98 599.71,-4203.02 734,-4343 744.57,-4354.02 759.38,-4359.78 774.39,-4362.57"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.91,-3409.58 594.44,-3399.57 590.91,-3409.56 597.91,-3409.58"/>
 </g>
-<!-- Node238 -->
+<!-- Node239 -->
 <g id="node116" class="node">
-<title>Node238</title>
+<title>Node239</title>
 <g id="a_node116"><a xlink:href="classdrake_1_1examples_1_1acrobot_1_1_acrobot_state_sender.html" target="_top" xlink:title="Receives the output of an acrobot_plant, and outputs it as an LCM message with type lcm_acrobot_x.">
 <polygon fill="white" stroke="black" points="779,-4314.5 779,-4333.5 892,-4333.5 892,-4314.5 779,-4314.5"/>
 <text text-anchor="middle" x="835.5" y="-4321.5" font-family="Helvetica,sans-Serif" font-size="10.00">AcrobotStateSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node238 -->
+<!-- Node233&#45;&gt;Node239 -->
 <g id="edge116" class="edge">
-<title>Node232&#45;&gt;Node238</title>
+<title>Node233&#45;&gt;Node239</title>
 <path fill="none" stroke="midnightblue" d="M594.54,-3409.81C595.2,-3530.97 604.82,-4171.14 734,-4305 745.65,-4317.07 762.4,-4322.82 778.89,-4325.27"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.04,-3409.73 594.5,-3399.74 591.04,-3409.75 598.04,-3409.73"/>
 </g>
-<!-- Node239 -->
+<!-- Node240 -->
 <g id="node117" class="node">
-<title>Node239</title>
+<title>Node240</title>
 <g id="a_node117"><a xlink:href="classdrake_1_1examples_1_1allegro__hand_1_1_allegro_command_receiver.html" target="_top" xlink:title="Handles lcmt_allegro_command messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="763.5,-4276.5 763.5,-4295.5 907.5,-4295.5 907.5,-4276.5 763.5,-4276.5"/>
 <text text-anchor="middle" x="835.5" y="-4283.5" font-family="Helvetica,sans-Serif" font-size="10.00">AllegroCommandReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node239 -->
+<!-- Node233&#45;&gt;Node240 -->
 <g id="edge117" class="edge">
-<title>Node232&#45;&gt;Node239</title>
+<title>Node233&#45;&gt;Node240</title>
 <path fill="none" stroke="midnightblue" d="M594.68,-3409.72C596.18,-3527.68 609.9,-4139.24 734,-4267 741.98,-4275.22 752.32,-4280.5 763.32,-4283.8"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.18,-3409.57 594.57,-3399.61 591.18,-3409.65 598.18,-3409.57"/>
 </g>
-<!-- Node240 -->
+<!-- Node241 -->
 <g id="node118" class="node">
-<title>Node240</title>
+<title>Node241</title>
 <g id="a_node118"><a xlink:href="classdrake_1_1examples_1_1allegro__hand_1_1_allegro_status_sender.html" target="_top" xlink:title="Creates and outputs lcmt_allegro_status messages.">
 <polygon fill="white" stroke="black" points="777.5,-4238.5 777.5,-4257.5 893.5,-4257.5 893.5,-4238.5 777.5,-4238.5"/>
 <text text-anchor="middle" x="835.5" y="-4245.5" font-family="Helvetica,sans-Serif" font-size="10.00">AllegroStatusSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node240 -->
+<!-- Node233&#45;&gt;Node241 -->
 <g id="edge118" class="edge">
-<title>Node232&#45;&gt;Node240</title>
+<title>Node233&#45;&gt;Node241</title>
 <path fill="none" stroke="midnightblue" d="M594.84,-3409.94C597.23,-3525.4 615.09,-4107.43 734,-4229 745.36,-4240.61 761.44,-4246.35 777.41,-4248.93"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.33,-3409.66 594.64,-3399.73 591.34,-3409.79 598.33,-3409.66"/>
 </g>
-<!-- Node241 -->
+<!-- Node242 -->
 <g id="node119" class="node">
-<title>Node241</title>
+<title>Node242</title>
 <g id="a_node119"><a xlink:href="classdrake_1_1examples_1_1compass__gait_1_1_compass_gait_geometry.html" target="_top" xlink:title="Expresses a CompassGait&#39;s geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="770,-4200.5 770,-4219.5 901,-4219.5 901,-4200.5 770,-4200.5"/>
 <text text-anchor="middle" x="835.5" y="-4207.5" font-family="Helvetica,sans-Serif" font-size="10.00">CompassGaitGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node241 -->
+<!-- Node233&#45;&gt;Node242 -->
 <g id="edge119" class="edge">
-<title>Node232&#45;&gt;Node241</title>
+<title>Node233&#45;&gt;Node242</title>
 <path fill="none" stroke="midnightblue" d="M595,-3409.73C598.28,-3521.61 620.11,-4075.46 734,-4191 743.6,-4200.74 756.51,-4206.34 769.88,-4209.41"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.5,-3409.45 594.72,-3399.55 591.5,-3409.64 598.5,-3409.45"/>
 </g>
-<!-- Node242 -->
+<!-- Node243 -->
 <g id="node120" class="node">
-<title>Node242</title>
+<title>Node243</title>
 <g id="a_node120"><a xlink:href="classdrake_1_1examples_1_1fibonacci_1_1_fibonacci_difference_equation.html" target="_top" xlink:title="A pure discrete system that generates the Fibonacci sequence F_n using a difference equation.">
 <polygon fill="white" stroke="black" points="758,-4162.5 758,-4181.5 913,-4181.5 913,-4162.5 758,-4162.5"/>
 <text text-anchor="middle" x="835.5" y="-4169.5" font-family="Helvetica,sans-Serif" font-size="10.00">FibonacciDifferenceEquation</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node242 -->
+<!-- Node233&#45;&gt;Node243 -->
 <g id="edge120" class="edge">
-<title>Node232&#45;&gt;Node242</title>
+<title>Node233&#45;&gt;Node243</title>
 <path fill="none" stroke="midnightblue" d="M595.19,-3409.81C599.41,-3518.7 625.23,-4043.57 734,-4153 740.7,-4159.74 748.98,-4164.49 757.9,-4167.79"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.68,-3409.46 594.81,-3399.6 591.69,-3409.72 598.68,-3409.46"/>
 </g>
-<!-- Node243 -->
+<!-- Node244 -->
 <g id="node121" class="node">
-<title>Node243</title>
+<title>Node244</title>
 <g id="a_node121"><a xlink:href="classdrake_1_1examples_1_1mass__spring__cloth_1_1_cloth_spring_model_geometry.html" target="_top" xlink:title="Expresses a ClothSpringModel&#39;s visualization geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="759.5,-4124.5 759.5,-4143.5 911.5,-4143.5 911.5,-4124.5 759.5,-4124.5"/>
 <text text-anchor="middle" x="835.5" y="-4131.5" font-family="Helvetica,sans-Serif" font-size="10.00">ClothSpringModelGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node243 -->
+<!-- Node233&#45;&gt;Node244 -->
 <g id="edge121" class="edge">
-<title>Node232&#45;&gt;Node243</title>
+<title>Node233&#45;&gt;Node244</title>
 <path fill="none" stroke="midnightblue" d="M595.4,-3409.81C600.59,-3515.46 630.31,-4011.65 734,-4115 741.11,-4122.08 749.97,-4126.96 759.47,-4130.27"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.88,-3409.44 594.91,-3399.62 591.89,-3409.77 598.88,-3409.44"/>
 </g>
-<!-- Node244 -->
+<!-- Node245 -->
 <g id="node122" class="node">
-<title>Node244</title>
+<title>Node245</title>
 <g id="a_node122"><a xlink:href="classdrake_1_1examples_1_1particles_1_1_particle_geometry.html" target="_top" xlink:title="Expresses a Particle system&#39;s visualization geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="784.5,-4086.5 784.5,-4105.5 886.5,-4105.5 886.5,-4086.5 784.5,-4086.5"/>
 <text text-anchor="middle" x="835.5" y="-4093.5" font-family="Helvetica,sans-Serif" font-size="10.00">ParticleGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node244 -->
+<!-- Node233&#45;&gt;Node245 -->
 <g id="edge122" class="edge">
-<title>Node232&#45;&gt;Node244</title>
+<title>Node233&#45;&gt;Node245</title>
 <path fill="none" stroke="midnightblue" d="M595.62,-3409.73C601.82,-3511.88 635.35,-3979.68 734,-4077 747.21,-4090.03 766.38,-4095.59 784.45,-4097.61"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.1,-3409.37 595.02,-3399.59 592.12,-3409.78 599.1,-3409.37"/>
 </g>
-<!-- Node245 -->
+<!-- Node246 -->
 <g id="node123" class="node">
-<title>Node245</title>
+<title>Node246</title>
 <g id="a_node123"><a xlink:href="classdrake_1_1examples_1_1pendulum_1_1_pendulum_geometry.html" target="_top" xlink:title="Expresses a PendulumPlants&#39;s geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="778.5,-4048.5 778.5,-4067.5 892.5,-4067.5 892.5,-4048.5 778.5,-4048.5"/>
 <text text-anchor="middle" x="835.5" y="-4055.5" font-family="Helvetica,sans-Serif" font-size="10.00">PendulumGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node245 -->
+<!-- Node233&#45;&gt;Node246 -->
 <g id="edge123" class="edge">
-<title>Node232&#45;&gt;Node245</title>
+<title>Node233&#45;&gt;Node246</title>
 <path fill="none" stroke="midnightblue" d="M595.86,-3409.57C603.1,-3507.97 640.36,-3947.66 734,-4039 745.76,-4050.47 762.14,-4056.13 778.27,-4058.68"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.35,-3409.25 595.14,-3399.53 592.36,-3409.75 599.35,-3409.25"/>
 </g>
-<!-- Node246 -->
+<!-- Node247 -->
 <g id="node124" class="node">
-<title>Node246</title>
+<title>Node247</title>
 <g id="a_node124"><a xlink:href="classdrake_1_1examples_1_1planar__gripper_1_1_gripper_command_decoder.html" target="_top" xlink:title="Handles lcmt_planar_gripper_command messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="764,-4010.5 764,-4029.5 907,-4029.5 907,-4010.5 764,-4010.5"/>
 <text text-anchor="middle" x="835.5" y="-4017.5" font-family="Helvetica,sans-Serif" font-size="10.00">GripperCommandDecoder</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node246 -->
+<!-- Node233&#45;&gt;Node247 -->
 <g id="edge124" class="edge">
-<title>Node232&#45;&gt;Node246</title>
+<title>Node233&#45;&gt;Node247</title>
 <path fill="none" stroke="midnightblue" d="M596.17,-3409.92C604.59,-3505.48 645.51,-3915.78 734,-4001 742.25,-4008.94 752.72,-4014.09 763.77,-4017.35"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.65,-3409.53 595.3,-3399.87 592.68,-3410.13 599.65,-3409.53"/>
 </g>
-<!-- Node247 -->
+<!-- Node248 -->
 <g id="node125" class="node">
-<title>Node247</title>
+<title>Node248</title>
 <g id="a_node125"><a xlink:href="classdrake_1_1examples_1_1planar__gripper_1_1_gripper_command_encoder.html" target="_top" xlink:title="Creates and outputs lcmt_planar_gripper_command messages.">
 <polygon fill="white" stroke="black" points="764.5,-3972.5 764.5,-3991.5 906.5,-3991.5 906.5,-3972.5 764.5,-3972.5"/>
 <text text-anchor="middle" x="835.5" y="-3979.5" font-family="Helvetica,sans-Serif" font-size="10.00">GripperCommandEncoder</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node247 -->
+<!-- Node233&#45;&gt;Node248 -->
 <g id="edge125" class="edge">
-<title>Node232&#45;&gt;Node247</title>
+<title>Node233&#45;&gt;Node248</title>
 <path fill="none" stroke="midnightblue" d="M596.48,-3409.83C606.06,-3501.57 650.51,-3883.74 734,-3963 742.44,-3971.01 753.13,-3976.16 764.38,-3979.4"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.94,-3409.29 595.44,-3399.7 592.98,-3410 599.94,-3409.29"/>
 </g>
-<!-- Node248 -->
+<!-- Node249 -->
 <g id="node126" class="node">
-<title>Node248</title>
+<title>Node249</title>
 <g id="a_node126"><a xlink:href="classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_decoder.html" target="_top" xlink:title="Handles lcmt_planar_gripper_status messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="773.5,-3934.5 773.5,-3953.5 897.5,-3953.5 897.5,-3934.5 773.5,-3934.5"/>
 <text text-anchor="middle" x="835.5" y="-3941.5" font-family="Helvetica,sans-Serif" font-size="10.00">GripperStatusDecoder</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node248 -->
+<!-- Node233&#45;&gt;Node249 -->
 <g id="edge126" class="edge">
-<title>Node232&#45;&gt;Node248</title>
+<title>Node233&#45;&gt;Node249</title>
 <path fill="none" stroke="midnightblue" d="M596.86,-3409.91C607.68,-3498.01 655.54,-3851.72 734,-3925 744.71,-3935 758.95,-3940.53 773.34,-3943.43"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="600.32,-3409.41 595.65,-3399.9 593.37,-3410.25 600.32,-3409.41"/>
 </g>
-<!-- Node249 -->
+<!-- Node250 -->
 <g id="node127" class="node">
-<title>Node249</title>
+<title>Node250</title>
 <g id="a_node127"><a xlink:href="classdrake_1_1examples_1_1planar__gripper_1_1_gripper_status_encoder.html" target="_top" xlink:title="Creates and outputs lcmt_planar_gripper_status messages.">
 <polygon fill="white" stroke="black" points="774.5,-3896.5 774.5,-3915.5 896.5,-3915.5 896.5,-3896.5 774.5,-3896.5"/>
 <text text-anchor="middle" x="835.5" y="-3903.5" font-family="Helvetica,sans-Serif" font-size="10.00">GripperStatusEncoder</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node249 -->
+<!-- Node233&#45;&gt;Node250 -->
 <g id="edge127" class="edge">
-<title>Node232&#45;&gt;Node249</title>
+<title>Node233&#45;&gt;Node250</title>
 <path fill="none" stroke="midnightblue" d="M597.22,-3409.55C609.27,-3493.17 660.42,-3819.55 734,-3887 744.99,-3897.08 759.59,-3902.59 774.25,-3905.44"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="600.68,-3409.01 595.81,-3399.61 593.75,-3410 600.68,-3409.01"/>
 </g>
-<!-- Node250 -->
+<!-- Node251 -->
 <g id="node128" class="node">
-<title>Node250</title>
+<title>Node251</title>
 <g id="a_node128"><a xlink:href="classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_decoder.html" target="_top" xlink:title="Handles lcmt_planar_manipuland_status messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="747.5,-3858.5 747.5,-3877.5 923.5,-3877.5 923.5,-3858.5 747.5,-3858.5"/>
 <text text-anchor="middle" x="835.5" y="-3865.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlanarManipulandStatusDecoder</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node250 -->
+<!-- Node233&#45;&gt;Node251 -->
 <g id="edge128" class="edge">
-<title>Node232&#45;&gt;Node250</title>
+<title>Node233&#45;&gt;Node251</title>
 <path fill="none" stroke="midnightblue" d="M593.87,-3409.91C592.76,-3481.52 599.23,-3728.08 734,-3849 738.1,-3852.68 742.68,-3855.74 747.56,-3858.29"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.37,-3409.71 594.1,-3399.63 590.37,-3409.55 597.37,-3409.71"/>
 </g>
-<!-- Node251 -->
+<!-- Node252 -->
 <g id="node129" class="node">
-<title>Node251</title>
+<title>Node252</title>
 <g id="a_node129"><a xlink:href="classdrake_1_1examples_1_1planar__gripper_1_1_planar_manipuland_status_encoder.html" target="_top" xlink:title="Creates and outputs lcmt_planar_manipuland_status messages.">
 <polygon fill="white" stroke="black" points="748.5,-3820.5 748.5,-3839.5 922.5,-3839.5 922.5,-3820.5 748.5,-3820.5"/>
 <text text-anchor="middle" x="835.5" y="-3827.5" font-family="Helvetica,sans-Serif" font-size="10.00">PlanarManipulandStatusEncoder</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node251 -->
+<!-- Node233&#45;&gt;Node252 -->
 <g id="edge129" class="edge">
-<title>Node232&#45;&gt;Node251</title>
+<title>Node233&#45;&gt;Node252</title>
 <path fill="none" stroke="midnightblue" d="M594.49,-3409.6C595.57,-3477.05 608.83,-3701.48 734,-3811 738.28,-3814.74 743.05,-3817.85 748.14,-3820.41"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="597.98,-3409.49 594.4,-3399.52 590.99,-3409.55 597.98,-3409.49"/>
 </g>
-<!-- Node252 -->
+<!-- Node253 -->
 <g id="node130" class="node">
-<title>Node252</title>
+<title>Node253</title>
 <g id="a_node130"><a xlink:href="classdrake_1_1examples_1_1quadrotor_1_1_quadrotor_geometry.html" target="_top" xlink:title="Expresses a QuadrotorPlant&#39;s geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="778.5,-3782.5 778.5,-3801.5 892.5,-3801.5 892.5,-3782.5 778.5,-3782.5"/>
 <text text-anchor="middle" x="835.5" y="-3789.5" font-family="Helvetica,sans-Serif" font-size="10.00">QuadrotorGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node252 -->
+<!-- Node233&#45;&gt;Node253 -->
 <g id="edge130" class="edge">
-<title>Node232&#45;&gt;Node252</title>
+<title>Node233&#45;&gt;Node253</title>
 <path fill="none" stroke="midnightblue" d="M595.23,-3409.9C598.7,-3473.76 618.74,-3675.09 734,-3773 746.32,-3783.46 762.57,-3788.89 778.42,-3791.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.71,-3409.45 594.75,-3399.63 591.72,-3409.78 598.71,-3409.45"/>
 </g>
-<!-- Node253 -->
+<!-- Node254 -->
 <g id="node131" class="node">
-<title>Node253</title>
+<title>Node254</title>
 <g id="a_node131"><a xlink:href="classdrake_1_1examples_1_1rimless__wheel_1_1_rimless_wheel_geometry.html" target="_top" xlink:title="Expresses a RimlessWheel&#39;s geometry to a SceneGraph.">
 <polygon fill="white" stroke="black" points="768,-3744.5 768,-3763.5 903,-3763.5 903,-3744.5 768,-3744.5"/>
 <text text-anchor="middle" x="835.5" y="-3751.5" font-family="Helvetica,sans-Serif" font-size="10.00">RimlessWheelGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node253 -->
+<!-- Node233&#45;&gt;Node254 -->
 <g id="edge131" class="edge">
-<title>Node232&#45;&gt;Node253</title>
+<title>Node233&#45;&gt;Node254</title>
 <path fill="none" stroke="midnightblue" d="M596.11,-3409.88C602.07,-3469.56 628.37,-3648.41 734,-3735 743.68,-3742.94 755.65,-3747.94 767.92,-3751.03"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="599.56,-3409.23 595.17,-3399.59 592.59,-3409.87 599.56,-3409.23"/>
 </g>
-<!-- Node254 -->
+<!-- Node255 -->
 <g id="node132" class="node">
-<title>Node254</title>
+<title>Node255</title>
 <g id="a_node132"><a xlink:href="classdrake_1_1examples_1_1rod2d_1_1_rod2d_geometry.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="787.5,-3706.5 787.5,-3725.5 883.5,-3725.5 883.5,-3706.5 787.5,-3706.5"/>
 <text text-anchor="middle" x="835.5" y="-3713.5" font-family="Helvetica,sans-Serif" font-size="10.00">Rod2dGeometry</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node254 -->
+<!-- Node233&#45;&gt;Node255 -->
 <g id="edge132" class="edge">
-<title>Node232&#45;&gt;Node254</title>
+<title>Node233&#45;&gt;Node255</title>
 <path fill="none" stroke="midnightblue" d="M597.19,-3409.87C605.79,-3465.15 637.92,-3621.57 734,-3697 749.01,-3708.79 769.14,-3714.03 787.44,-3716.14"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="600.61,-3409.07 595.7,-3399.68 593.68,-3410.08 600.61,-3409.07"/>
 </g>
-<!-- Node255 -->
+<!-- Node256 -->
 <g id="node133" class="node">
-<title>Node255</title>
+<title>Node256</title>
 <g id="a_node133"><a xlink:href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html" target="_top" xlink:title="Creates and outputs lcmt_jaco_command messages.">
 <polygon fill="white" stroke="black" points="775,-3668.5 775,-3687.5 896,-3687.5 896,-3668.5 775,-3668.5"/>
 <text text-anchor="middle" x="835.5" y="-3675.5" font-family="Helvetica,sans-Serif" font-size="10.00">JacoCommandSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node255 -->
+<!-- Node233&#45;&gt;Node256 -->
 <g id="edge133" class="edge">
-<title>Node232&#45;&gt;Node255</title>
+<title>Node233&#45;&gt;Node256</title>
 <path fill="none" stroke="midnightblue" d="M598.45,-3409.43C609.73,-3459.65 647.08,-3594.34 734,-3659 745.75,-3667.74 760.37,-3672.83 774.78,-3675.7"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="601.85,-3408.59 596.32,-3399.55 595,-3410.06 601.85,-3408.59"/>
 </g>
-<!-- Node256 -->
+<!-- Node257 -->
 <g id="node134" class="node">
-<title>Node256</title>
+<title>Node257</title>
 <g id="a_node134"><a xlink:href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_receiver.html" target="_top" xlink:title="Handles lcmt_jaco_status messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="780.5,-3630.5 780.5,-3649.5 890.5,-3649.5 890.5,-3630.5 780.5,-3630.5"/>
 <text text-anchor="middle" x="835.5" y="-3637.5" font-family="Helvetica,sans-Serif" font-size="10.00">JacoStatusReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node256 -->
+<!-- Node233&#45;&gt;Node257 -->
 <g id="edge134" class="edge">
-<title>Node232&#45;&gt;Node256</title>
+<title>Node233&#45;&gt;Node257</title>
 <path fill="none" stroke="midnightblue" d="M600.26,-3409.7C614.61,-3455.07 656.51,-3567.17 734,-3621 747.49,-3630.37 764.35,-3635.45 780.39,-3638.12"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="603.53,-3408.45 597.26,-3399.91 596.84,-3410.49 603.53,-3408.45"/>
 </g>
-<!-- Node257 -->
+<!-- Node258 -->
 <g id="node135" class="node">
-<title>Node257</title>
+<title>Node258</title>
 <g id="a_node135"><a xlink:href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html" target="_top" xlink:title="Creates and outputs lcmt_jaco_status messages.">
 <polygon fill="white" stroke="black" points="785,-3592.5 785,-3611.5 886,-3611.5 886,-3592.5 785,-3592.5"/>
 <text text-anchor="middle" x="835.5" y="-3599.5" font-family="Helvetica,sans-Serif" font-size="10.00">JacoStatusSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node257 -->
+<!-- Node233&#45;&gt;Node258 -->
 <g id="edge135" class="edge">
-<title>Node232&#45;&gt;Node257</title>
+<title>Node233&#45;&gt;Node258</title>
 <path fill="none" stroke="midnightblue" d="M602.26,-3408.85C619.53,-3448.25 665.12,-3539.25 734,-3583 749.06,-3592.57 767.79,-3597.55 784.98,-3600.08"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="605.46,-3407.42 598.31,-3399.6 599.02,-3410.17 605.46,-3407.42"/>
 </g>
-<!-- Node258 -->
+<!-- Node259 -->
 <g id="node136" class="node">
-<title>Node258</title>
+<title>Node259</title>
 <g id="a_node136"><a xlink:href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_receiver.html" target="_top" xlink:title="Handles lcmt_iiwa_command message from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="770.5,-3554.5 770.5,-3573.5 900.5,-3573.5 900.5,-3554.5 770.5,-3554.5"/>
 <text text-anchor="middle" x="835.5" y="-3561.5" font-family="Helvetica,sans-Serif" font-size="10.00">IiwaCommandReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node258 -->
+<!-- Node233&#45;&gt;Node259 -->
 <g id="edge136" class="edge">
-<title>Node232&#45;&gt;Node258</title>
+<title>Node233&#45;&gt;Node259</title>
 <path fill="none" stroke="midnightblue" d="M605.21,-3408.28C625.68,-3441.41 673.69,-3511.07 734,-3545 745.07,-3551.22 757.79,-3555.45 770.38,-3558.32"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="608.14,-3406.35 599.98,-3399.6 602.15,-3409.97 608.14,-3406.35"/>
 </g>
-<!-- Node259 -->
+<!-- Node260 -->
 <g id="node137" class="node">
-<title>Node259</title>
+<title>Node260</title>
 <g id="a_node137"><a xlink:href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html" target="_top" xlink:title="Creates and outputs lcmt_iiwa_command messages.">
 <polygon fill="white" stroke="black" points="775,-3516.5 775,-3535.5 896,-3535.5 896,-3516.5 775,-3516.5"/>
 <text text-anchor="middle" x="835.5" y="-3523.5" font-family="Helvetica,sans-Serif" font-size="10.00">IiwaCommandSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node259 -->
+<!-- Node233&#45;&gt;Node260 -->
 <g id="edge137" class="edge">
-<title>Node232&#45;&gt;Node259</title>
+<title>Node233&#45;&gt;Node260</title>
 <path fill="none" stroke="midnightblue" d="M609.59,-3407.39C633.29,-3433.48 681.93,-3482.34 734,-3507 746.68,-3513.01 761.1,-3517.11 774.99,-3519.92"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.07,-3404.91 602.8,-3399.77 606.84,-3409.57 612.07,-3404.91"/>
 </g>
-<!-- Node260 -->
+<!-- Node261 -->
 <g id="node138" class="node">
-<title>Node260</title>
+<title>Node261</title>
 <g id="a_node138"><a xlink:href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html" target="_top" xlink:title="Handles lcmt_iiwa_status messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="780.5,-3478.5 780.5,-3497.5 890.5,-3497.5 890.5,-3478.5 780.5,-3478.5"/>
 <text text-anchor="middle" x="835.5" y="-3485.5" font-family="Helvetica,sans-Serif" font-size="10.00">IiwaStatusReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node260 -->
+<!-- Node233&#45;&gt;Node261 -->
 <g id="edge138" class="edge">
-<title>Node232&#45;&gt;Node260</title>
+<title>Node233&#45;&gt;Node261</title>
 <path fill="none" stroke="midnightblue" d="M616.55,-3405.54C643.15,-3423.55 689.81,-3452.82 734,-3469 748.67,-3474.37 765.13,-3478.3 780.42,-3481.13"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="618.24,-3402.46 608.01,-3399.68 614.28,-3408.23 618.24,-3402.46"/>
 </g>
-<!-- Node261 -->
+<!-- Node262 -->
 <g id="node139" class="node">
-<title>Node261</title>
+<title>Node262</title>
 <g id="a_node139"><a xlink:href="classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html" target="_top" xlink:title="Creates and outputs lcmt_iiwa_status messages.">
 <polygon fill="white" stroke="black" points="785,-3440.5 785,-3459.5 886,-3459.5 886,-3440.5 785,-3440.5"/>
 <text text-anchor="middle" x="835.5" y="-3447.5" font-family="Helvetica,sans-Serif" font-size="10.00">IiwaStatusSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node261 -->
+<!-- Node233&#45;&gt;Node262 -->
 <g id="edge139" class="edge">
-<title>Node232&#45;&gt;Node261</title>
+<title>Node233&#45;&gt;Node262</title>
 <path fill="none" stroke="midnightblue" d="M633.68,-3402.64C661.48,-3411.34 699.79,-3422.76 734,-3431 750.49,-3434.97 768.66,-3438.62 784.96,-3441.64"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="634.52,-3399.24 623.93,-3399.57 632.42,-3405.92 634.52,-3399.24"/>
 </g>
-<!-- Node262 -->
+<!-- Node263 -->
 <g id="node140" class="node">
-<title>Node262</title>
+<title>Node263</title>
 <g id="a_node140"><a xlink:href="classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html" target="_top" xlink:title="This class accepts the pose of a rigid body (composed by a Eigen::Isometry3d) and returns a smoothed ...">
 <polygon fill="white" stroke="black" points="792,-3402.5 792,-3421.5 879,-3421.5 879,-3402.5 792,-3402.5"/>
 <text text-anchor="middle" x="835.5" y="-3409.5" font-family="Helvetica,sans-Serif" font-size="10.00">PoseSmoother</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node262 -->
+<!-- Node233&#45;&gt;Node263 -->
 <g id="edge140" class="edge">
-<title>Node232&#45;&gt;Node262</title>
+<title>Node233&#45;&gt;Node263</title>
 <path fill="none" stroke="midnightblue" d="M668.6,-3396.79C709.07,-3400.5 757.74,-3404.96 791.86,-3408.09"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="668.78,-3393.29 658.5,-3395.87 668.14,-3400.27 668.78,-3393.29"/>
 </g>
-<!-- Node263 -->
+<!-- Node264 -->
 <g id="node141" class="node">
-<title>Node263</title>
+<title>Node264</title>
 <g id="a_node141"><a xlink:href="classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html" target="_top" xlink:title="A LeafSystem which uses DoDifferentialInverseKinematics to produce joint position commands.">
 <polygon fill="white" stroke="black" points="754,-3353 754,-3383 917,-3383 917,-3353 754,-3353"/>
 <text text-anchor="start" x="762" y="-3371" font-family="Helvetica,sans-Serif" font-size="10.00">DifferentialInverseKinematics</text>
@@ -2150,420 +2150,420 @@
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node263 -->
+<!-- Node233&#45;&gt;Node264 -->
 <g id="edge141" class="edge">
-<title>Node232&#45;&gt;Node263</title>
+<title>Node233&#45;&gt;Node264</title>
 <path fill="none" stroke="midnightblue" d="M668.66,-3383.2C695.69,-3380.72 726.36,-3377.91 753.92,-3375.39"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="668.14,-3379.73 658.5,-3384.13 668.78,-3386.71 668.14,-3379.73"/>
 </g>
-<!-- Node264 -->
+<!-- Node265 -->
 <g id="node142" class="node">
-<title>Node264</title>
+<title>Node265</title>
 <g id="a_node142"><a xlink:href="classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html" target="_top" xlink:title="This class implements a source of joint positions for a robot.">
 <polygon fill="white" stroke="black" points="774,-3314.5 774,-3333.5 897,-3333.5 897,-3314.5 774,-3314.5"/>
 <text text-anchor="middle" x="835.5" y="-3321.5" font-family="Helvetica,sans-Serif" font-size="10.00">RobotPlanInterpolator</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node264 -->
+<!-- Node233&#45;&gt;Node265 -->
 <g id="edge142" class="edge">
-<title>Node232&#45;&gt;Node264</title>
+<title>Node233&#45;&gt;Node265</title>
 <path fill="none" stroke="midnightblue" d="M629.09,-3376.86C657.08,-3366.59 697.67,-3352.51 734,-3343 747.66,-3339.43 762.52,-3336.24 776.53,-3333.55"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="627.55,-3373.7 619.38,-3380.45 629.98,-3380.26 627.55,-3373.7"/>
 </g>
-<!-- Node265 -->
+<!-- Node266 -->
 <g id="node143" class="node">
-<title>Node265</title>
+<title>Node266</title>
 <g id="a_node143"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html" target="_top" xlink:title="Handles the command for the Schunk WSG gripper from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="752.5,-3276.5 752.5,-3295.5 918.5,-3295.5 918.5,-3276.5 752.5,-3276.5"/>
 <text text-anchor="middle" x="835.5" y="-3283.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgCommandReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node265 -->
+<!-- Node233&#45;&gt;Node266 -->
 <g id="edge143" class="edge">
-<title>Node232&#45;&gt;Node265</title>
+<title>Node233&#45;&gt;Node266</title>
 <path fill="none" stroke="midnightblue" d="M614.77,-3374.37C640.87,-3355.05 688.34,-3322.56 734,-3305 744.11,-3301.11 755.11,-3298 766,-3295.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="612.66,-3371.58 606.77,-3380.38 616.86,-3377.18 612.66,-3371.58"/>
 </g>
-<!-- Node266 -->
+<!-- Node267 -->
 <g id="node144" class="node">
-<title>Node266</title>
+<title>Node267</title>
 <g id="a_node144"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_sender.html" target="_top" xlink:title="Send lcmt_schunk_wsg_command messages for a Schunk WSG gripper.">
 <polygon fill="white" stroke="black" points="757,-3238.5 757,-3257.5 914,-3257.5 914,-3238.5 757,-3238.5"/>
 <text text-anchor="middle" x="835.5" y="-3245.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgCommandSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node266 -->
+<!-- Node233&#45;&gt;Node267 -->
 <g id="edge144" class="edge">
-<title>Node232&#45;&gt;Node266</title>
+<title>Node233&#45;&gt;Node267</title>
 <path fill="none" stroke="midnightblue" d="M608.7,-3372.51C631.87,-3345.26 680.6,-3293.11 734,-3267 741.98,-3263.1 750.67,-3260 759.5,-3257.53"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="605.82,-3370.5 602.1,-3380.42 611.2,-3374.98 605.82,-3370.5"/>
 </g>
-<!-- Node267 -->
+<!-- Node268 -->
 <g id="node145" class="node">
-<title>Node267</title>
+<title>Node268</title>
 <g id="a_node145"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_pd_controller.html" target="_top" xlink:title="This class implements a controller for a Schunk WSG gripper in position control mode.">
 <polygon fill="white" stroke="black" points="769,-3200.5 769,-3219.5 902,-3219.5 902,-3200.5 769,-3200.5"/>
 <text text-anchor="middle" x="835.5" y="-3207.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgPdController</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node267 -->
+<!-- Node233&#45;&gt;Node268 -->
 <g id="edge145" class="edge">
-<title>Node232&#45;&gt;Node267</title>
+<title>Node233&#45;&gt;Node268</title>
 <path fill="none" stroke="midnightblue" d="M604.74,-3371.5C624.73,-3337.29 672.43,-3264.4 734,-3229 744.62,-3222.89 756.82,-3218.7 768.97,-3215.83"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="601.56,-3370.01 599.64,-3380.43 607.64,-3373.48 601.56,-3370.01"/>
 </g>
-<!-- Node268 -->
+<!-- Node269 -->
 <g id="node146" class="node">
-<title>Node268</title>
+<title>Node269</title>
 <g id="a_node146"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_receiver.html" target="_top" xlink:title="Handles lcmt_schunk_wsg_status messages from a LcmSubscriberSystem.">
 <polygon fill="white" stroke="black" points="762.5,-3162.5 762.5,-3181.5 908.5,-3181.5 908.5,-3162.5 762.5,-3162.5"/>
 <text text-anchor="middle" x="835.5" y="-3169.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgStatusReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node268 -->
+<!-- Node233&#45;&gt;Node269 -->
 <g id="edge146" class="edge">
-<title>Node232&#45;&gt;Node268</title>
+<title>Node233&#45;&gt;Node269</title>
 <path fill="none" stroke="midnightblue" d="M601.98,-3370.83C618.84,-3330.36 663.89,-3236.25 734,-3191 742.58,-3185.46 752.37,-3181.46 762.41,-3178.57"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="598.74,-3369.52 598.22,-3380.11 605.22,-3372.15 598.74,-3369.52"/>
 </g>
-<!-- Node269 -->
+<!-- Node270 -->
 <g id="node147" class="node">
-<title>Node269</title>
+<title>Node270</title>
 <g id="a_node147"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_status_sender.html" target="_top" xlink:title="Sends lcmt_schunk_wsg_status messages for a Schunk WSG.">
 <polygon fill="white" stroke="black" points="767,-3124.5 767,-3143.5 904,-3143.5 904,-3124.5 767,-3124.5"/>
 <text text-anchor="middle" x="835.5" y="-3131.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgStatusSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node269 -->
+<!-- Node233&#45;&gt;Node270 -->
 <g id="edge147" class="edge">
-<title>Node232&#45;&gt;Node269</title>
+<title>Node233&#45;&gt;Node270</title>
 <path fill="none" stroke="midnightblue" d="M599.82,-3370.73C613.56,-3324.82 654.81,-3208.68 734,-3153 743.73,-3146.16 755.25,-3141.59 766.96,-3138.59"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="596.45,-3369.77 597.04,-3380.35 603.18,-3371.71 596.45,-3369.77"/>
 </g>
-<!-- Node270 -->
+<!-- Node271 -->
 <g id="node148" class="node">
-<title>Node270</title>
+<title>Node271</title>
 <g id="a_node148"><a xlink:href="classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_trajectory_generator.html" target="_top" xlink:title="This system defines input ports for the desired finger position represented as the desired distance b...">
 <polygon fill="white" stroke="black" points="750.5,-3086.5 750.5,-3105.5 920.5,-3105.5 920.5,-3086.5 750.5,-3086.5"/>
 <text text-anchor="middle" x="835.5" y="-3093.5" font-family="Helvetica,sans-Serif" font-size="10.00">SchunkWsgTrajectoryGenerator</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node270 -->
+<!-- Node233&#45;&gt;Node271 -->
 <g id="edge148" class="edge">
-<title>Node232&#45;&gt;Node270</title>
+<title>Node233&#45;&gt;Node271</title>
 <path fill="none" stroke="midnightblue" d="M598.31,-3370.15C609.25,-3318.84 645.85,-3181.2 734,-3115 738.97,-3111.27 744.46,-3108.2 750.23,-3105.69"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="594.82,-3369.75 596.25,-3380.24 601.68,-3371.14 594.82,-3369.75"/>
 </g>
-<!-- Node271 -->
+<!-- Node272 -->
 <g id="node149" class="node">
-<title>Node271</title>
+<title>Node272</title>
 <g id="a_node149"><a xlink:href="classdrake_1_1perception_1_1_depth_image_to_point_cloud.html" target="_top" xlink:title="Converts a depth image to a point cloud.">
 <polygon fill="white" stroke="black" points="765.5,-3048.5 765.5,-3067.5 905.5,-3067.5 905.5,-3048.5 765.5,-3048.5"/>
 <text text-anchor="middle" x="835.5" y="-3055.5" font-family="Helvetica,sans-Serif" font-size="10.00">DepthImageToPointCloud</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node271 -->
+<!-- Node233&#45;&gt;Node272 -->
 <g id="edge149" class="edge">
-<title>Node232&#45;&gt;Node271</title>
+<title>Node233&#45;&gt;Node272</title>
 <path fill="none" stroke="midnightblue" d="M596.95,-3370.47C605.04,-3314.8 636.21,-3154.34 734,-3077 743.05,-3069.84 753.99,-3065.09 765.26,-3061.99"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.48,-3370.04 595.59,-3380.43 600.41,-3370.99 593.48,-3370.04"/>
 </g>
-<!-- Node272 -->
+<!-- Node273 -->
 <g id="node150" class="node">
-<title>Node272</title>
+<title>Node273</title>
 <g id="a_node150"><a xlink:href="classdrake_1_1perception_1_1_point_cloud_to_lcm.html" target="_top" xlink:title="Converts PointCloud inputs to lcmt_point_cloud output messages.">
 <polygon fill="white" stroke="black" points="785.5,-3010.5 785.5,-3029.5 885.5,-3029.5 885.5,-3010.5 785.5,-3010.5"/>
 <text text-anchor="middle" x="835.5" y="-3017.5" font-family="Helvetica,sans-Serif" font-size="10.00">PointCloudToLcm</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node272 -->
+<!-- Node233&#45;&gt;Node273 -->
 <g id="edge150" class="edge">
-<title>Node232&#45;&gt;Node272</title>
+<title>Node233&#45;&gt;Node273</title>
 <path fill="none" stroke="midnightblue" d="M595.95,-3370.17C601.5,-3309.85 626.83,-3127.39 734,-3039 748.25,-3027.25 767.5,-3021.91 785.35,-3019.71"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.46,-3369.99 595.11,-3380.25 599.43,-3370.57 592.46,-3369.99"/>
 </g>
-<!-- Node273 -->
+<!-- Node274 -->
 <g id="node151" class="node">
-<title>Node273</title>
+<title>Node274</title>
 <g id="a_node151"><a xlink:href="classdrake_1_1systems_1_1analysis_1_1test_1_1_pleides_system.html" target="_top" xlink:title="A system of ODEs that can be used to test performance of the initial value problem (IVP) solvers.">
 <polygon fill="white" stroke="black" points="791,-2972.5 791,-2991.5 880,-2991.5 880,-2972.5 791,-2972.5"/>
 <text text-anchor="middle" x="835.5" y="-2979.5" font-family="Helvetica,sans-Serif" font-size="10.00">PleidesSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node273 -->
+<!-- Node233&#45;&gt;Node274 -->
 <g id="edge151" class="edge">
-<title>Node232&#45;&gt;Node273</title>
+<title>Node233&#45;&gt;Node274</title>
 <path fill="none" stroke="midnightblue" d="M595.1,-3370.2C598.18,-3305.81 617.15,-3100.76 734,-3001 749.53,-2987.74 771.39,-2982.56 790.76,-2980.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.6,-3370.09 594.7,-3380.23 598.59,-3370.37 591.6,-3370.09"/>
 </g>
-<!-- Node274 -->
+<!-- Node275 -->
 <g id="node152" class="node">
-<title>Node274</title>
+<title>Node275</title>
 <g id="a_node152"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_cubic_scalar_system.html" target="_top" xlink:title="System where the state at (scalar) time t corresponds to the cubic equation t³ + t² + 12t + 5.">
 <polygon fill="white" stroke="black" points="780.5,-2934.5 780.5,-2953.5 890.5,-2953.5 890.5,-2934.5 780.5,-2934.5"/>
 <text text-anchor="middle" x="835.5" y="-2941.5" font-family="Helvetica,sans-Serif" font-size="10.00">CubicScalarSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node274 -->
+<!-- Node233&#45;&gt;Node275 -->
 <g id="edge152" class="edge">
-<title>Node232&#45;&gt;Node274</title>
+<title>Node233&#45;&gt;Node275</title>
 <path fill="none" stroke="midnightblue" d="M594.38,-3370.13C595.14,-3301.74 607.46,-3074.2 734,-2963 746.67,-2951.86 763.78,-2946.38 780.28,-2943.88"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.88,-3370.34 594.35,-3380.35 597.88,-3370.36 590.88,-3370.34"/>
 </g>
-<!-- Node275 -->
+<!-- Node276 -->
 <g id="node153" class="node">
-<title>Node275</title>
+<title>Node276</title>
 <g id="a_node153"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_linear_scalar_system.html" target="_top" xlink:title="System where the state at (scalar) time t corresponds to the linear equation St + 3,...">
 <polygon fill="white" stroke="black" points="779,-2896.5 779,-2915.5 892,-2915.5 892,-2896.5 779,-2896.5"/>
 <text text-anchor="middle" x="835.5" y="-2903.5" font-family="Helvetica,sans-Serif" font-size="10.00">LinearScalarSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node275 -->
+<!-- Node233&#45;&gt;Node276 -->
 <g id="edge153" class="edge">
-<title>Node232&#45;&gt;Node275</title>
+<title>Node233&#45;&gt;Node276</title>
 <path fill="none" stroke="midnightblue" d="M593.77,-3369.83C592.34,-3297.32 597.84,-3047.61 734,-2925 746.21,-2914.01 762.71,-2908.48 778.82,-2905.9"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.28,-3370.34 594.05,-3380.24 597.28,-3370.15 590.28,-3370.34"/>
 </g>
-<!-- Node276 -->
+<!-- Node277 -->
 <g id="node154" class="node">
-<title>Node276</title>
+<title>Node277</title>
 <g id="a_node154"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_quadratic_scalar_system.html" target="_top" xlink:title="System where the state at (scalar) time t corresponds to the quadratic equation St² + St + 3,...">
 <polygon fill="white" stroke="black" points="770,-2858.5 770,-2877.5 901,-2877.5 901,-2858.5 770,-2858.5"/>
 <text text-anchor="middle" x="835.5" y="-2865.5" font-family="Helvetica,sans-Serif" font-size="10.00">QuadraticScalarSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node276 -->
+<!-- Node233&#45;&gt;Node277 -->
 <g id="edge154" class="edge">
-<title>Node232&#45;&gt;Node276</title>
+<title>Node233&#45;&gt;Node277</title>
 <path fill="none" stroke="midnightblue" d="M597.19,-3370.22C609.08,-3285.6 659.7,-2955.32 734,-2887 743.87,-2877.93 756.66,-2872.55 769.79,-2869.48"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.7,-3369.89 595.79,-3380.28 600.63,-3370.85 593.7,-3369.89"/>
 </g>
-<!-- Node277 -->
+<!-- Node278 -->
 <g id="node155" class="node">
-<title>Node277</title>
+<title>Node278</title>
 <g id="a_node155"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_quartic_scalar_system.html" target="_top" xlink:title="System where the state at (scalar) time t corresponds to the quartic equation t⁴ + 2t³ + 3t² + 4t + 5...">
 <polygon fill="white" stroke="black" points="776,-2820.5 776,-2839.5 895,-2839.5 895,-2820.5 776,-2820.5"/>
 <text text-anchor="middle" x="835.5" y="-2827.5" font-family="Helvetica,sans-Serif" font-size="10.00">QuarticScalarSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node277 -->
+<!-- Node233&#45;&gt;Node278 -->
 <g id="edge155" class="edge">
-<title>Node232&#45;&gt;Node277</title>
+<title>Node233&#45;&gt;Node278</title>
 <path fill="none" stroke="midnightblue" d="M596.75,-3370.44C607.3,-3282.32 654.65,-2923.32 734,-2849 745.34,-2838.38 760.67,-2832.8 775.94,-2830.05"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="593.27,-3370.08 595.58,-3380.42 600.22,-3370.9 593.27,-3370.08"/>
 </g>
-<!-- Node278 -->
+<!-- Node279 -->
 <g id="node156" class="node">
-<title>Node278</title>
+<title>Node279</title>
 <g id="a_node156"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_quintic_scalar_system.html" target="_top" xlink:title="System where the state at (scalar) time t corresponds to the quintic equation t⁵ + 2t⁴ + 3t³ + 4t² + ...">
 <polygon fill="white" stroke="black" points="776.5,-2782.5 776.5,-2801.5 894.5,-2801.5 894.5,-2782.5 776.5,-2782.5"/>
 <text text-anchor="middle" x="835.5" y="-2789.5" font-family="Helvetica,sans-Serif" font-size="10.00">QuinticScalarSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node278 -->
+<!-- Node233&#45;&gt;Node279 -->
 <g id="edge156" class="edge">
-<title>Node232&#45;&gt;Node278</title>
+<title>Node233&#45;&gt;Node279</title>
 <path fill="none" stroke="midnightblue" d="M596.42,-3370.25C605.79,-3278.07 649.69,-2891.23 734,-2811 745.38,-2800.17 760.91,-2794.55 776.35,-2791.84"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.94,-3369.9 595.43,-3380.2 599.9,-3370.6 592.94,-3369.9"/>
 </g>
-<!-- Node280 -->
+<!-- Node281 -->
 <g id="node157" class="node">
-<title>Node280</title>
+<title>Node281</title>
 <g id="a_node157"><a xlink:href="classdrake_1_1systems_1_1lcm_1_1_lcm_log_playback_system.html" target="_top" xlink:title="Advances the cursor of a drake::lcm::DrakeLcmLog based on the timestamps seen the Context that is use...">
 <polygon fill="white" stroke="black" points="768,-2744.5 768,-2763.5 903,-2763.5 903,-2744.5 768,-2744.5"/>
 <text text-anchor="middle" x="835.5" y="-2751.5" font-family="Helvetica,sans-Serif" font-size="10.00">LcmLogPlaybackSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node280 -->
+<!-- Node233&#45;&gt;Node281 -->
 <g id="edge158" class="edge">
-<title>Node232&#45;&gt;Node280</title>
+<title>Node233&#45;&gt;Node281</title>
 <path fill="none" stroke="midnightblue" d="M596.09,-3370.5C604.24,-3275.17 644.59,-2859.29 734,-2773 743.26,-2764.06 755.34,-2758.66 767.89,-2755.51"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.6,-3370.23 595.25,-3380.49 599.57,-3370.82 592.6,-3370.23"/>
 </g>
-<!-- Node281 -->
+<!-- Node282 -->
 <g id="node158" class="node">
-<title>Node281</title>
+<title>Node282</title>
 <g id="a_node158"><a xlink:href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html" target="_top" xlink:title="Publishes an LCM message containing information from its input port.">
 <polygon fill="white" stroke="black" points="776,-2706.5 776,-2725.5 895,-2725.5 895,-2706.5 776,-2706.5"/>
 <text text-anchor="middle" x="835.5" y="-2713.5" font-family="Helvetica,sans-Serif" font-size="10.00">LcmPublisherSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node281 -->
+<!-- Node233&#45;&gt;Node282 -->
 <g id="edge159" class="edge">
-<title>Node232&#45;&gt;Node281</title>
+<title>Node233&#45;&gt;Node282</title>
 <path fill="none" stroke="midnightblue" d="M595.83,-3370.25C602.93,-3270.95 639.62,-2827.24 734,-2735 745.18,-2724.08 760.54,-2718.42 775.9,-2715.7"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.33,-3370.17 595.12,-3380.39 599.31,-3370.65 592.33,-3370.17"/>
 </g>
-<!-- Node282 -->
+<!-- Node283 -->
 <g id="node159" class="node">
-<title>Node282</title>
+<title>Node283</title>
 <g id="a_node159"><a xlink:href="classdrake_1_1systems_1_1lcm_1_1_lcm_scope_system.html" target="_top" xlink:title="LcmScopeSystem provides the ability to convert any vector output port to a simple LCM message and pub...">
 <polygon fill="white" stroke="black" points="784,-2668.5 784,-2687.5 887,-2687.5 887,-2668.5 784,-2668.5"/>
 <text text-anchor="middle" x="835.5" y="-2675.5" font-family="Helvetica,sans-Serif" font-size="10.00">LcmScopeSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node282 -->
+<!-- Node233&#45;&gt;Node283 -->
 <g id="edge160" class="edge">
-<title>Node232&#45;&gt;Node282</title>
+<title>Node233&#45;&gt;Node283</title>
 <path fill="none" stroke="midnightblue" d="M595.59,-3370.1C601.66,-3267.06 634.61,-2795.23 734,-2697 747.07,-2684.08 766,-2678.5 783.92,-2676.44"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.08,-3370.14 595.01,-3380.33 599.07,-3370.54 592.08,-3370.14"/>
 </g>
-<!-- Node283 -->
+<!-- Node284 -->
 <g id="node160" class="node">
-<title>Node283</title>
+<title>Node284</title>
 <g id="a_node160"><a xlink:href="classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html" target="_top" xlink:title="Receives LCM messages from a given channel and outputs them to a System&lt;double&gt;&#39;s port.">
 <polygon fill="white" stroke="black" points="773,-2630.5 773,-2649.5 898,-2649.5 898,-2630.5 773,-2630.5"/>
 <text text-anchor="middle" x="835.5" y="-2637.5" font-family="Helvetica,sans-Serif" font-size="10.00">LcmSubscriberSystem</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node283 -->
+<!-- Node233&#45;&gt;Node284 -->
 <g id="edge161" class="edge">
-<title>Node232&#45;&gt;Node283</title>
+<title>Node233&#45;&gt;Node284</title>
 <path fill="none" stroke="midnightblue" d="M595.37,-3370.03C600.43,-3263.51 629.56,-2763.26 734,-2659 744.37,-2648.65 758.49,-2643 772.87,-2640.09"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.86,-3370.16 594.9,-3380.31 598.85,-3370.48 591.86,-3370.16"/>
 </g>
-<!-- Node284 -->
+<!-- Node285 -->
 <g id="node161" class="node">
-<title>Node284</title>
+<title>Node285</title>
 <g id="a_node161"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_image_to_lcm_image_array_t.html" target="_top" xlink:title="An ImageToLcmImageArrayT takes as input an ImageRgba8U, ImageDepth32F and ImageLabel16I.">
 <polygon fill="white" stroke="black" points="765,-2592.5 765,-2611.5 906,-2611.5 906,-2592.5 765,-2592.5"/>
 <text text-anchor="middle" x="835.5" y="-2599.5" font-family="Helvetica,sans-Serif" font-size="10.00">ImageToLcmImageArrayT</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node284 -->
+<!-- Node233&#45;&gt;Node285 -->
 <g id="edge162" class="edge">
-<title>Node232&#45;&gt;Node284</title>
+<title>Node233&#45;&gt;Node285</title>
 <path fill="none" stroke="midnightblue" d="M595.17,-3370.04C599.25,-3260.3 624.48,-2731.33 734,-2621 742.38,-2612.56 753.26,-2607.23 764.75,-2603.97"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.66,-3370.21 594.8,-3380.32 598.65,-3370.45 591.66,-3370.21"/>
 </g>
-<!-- Node285 -->
+<!-- Node286 -->
 <g id="node162" class="node">
-<title>Node285</title>
+<title>Node286</title>
 <g id="a_node162"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_image_writer.html" target="_top" xlink:title="A system for periodically writing images to the file system.">
 <polygon fill="white" stroke="black" points="797,-2554.5 797,-2573.5 874,-2573.5 874,-2554.5 797,-2554.5"/>
 <text text-anchor="middle" x="835.5" y="-2561.5" font-family="Helvetica,sans-Serif" font-size="10.00">ImageWriter</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node285 -->
+<!-- Node233&#45;&gt;Node286 -->
 <g id="edge163" class="edge">
-<title>Node232&#45;&gt;Node285</title>
+<title>Node233&#45;&gt;Node286</title>
 <path fill="none" stroke="midnightblue" d="M594.98,-3370.13C598.12,-3257.42 619.36,-2699.45 734,-2583 750.07,-2566.68 775.46,-2561.98 796.7,-2561.34"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.47,-3370.29 594.71,-3380.38 598.47,-3370.48 591.47,-3370.29"/>
 </g>
-<!-- Node286 -->
+<!-- Node287 -->
 <g id="node163" class="node">
-<title>Node286</title>
+<title>Node287</title>
 <g id="a_node163"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_lcm_image_array_to_images.html" target="_top" xlink:title="An LcmImageArrayToImages takes as input an AbstractValue containing a Value&lt;lcmt_image_array&gt; LCM mes...">
 <polygon fill="white" stroke="black" points="765.5,-2516.5 765.5,-2535.5 905.5,-2535.5 905.5,-2516.5 765.5,-2516.5"/>
 <text text-anchor="middle" x="835.5" y="-2523.5" font-family="Helvetica,sans-Serif" font-size="10.00">LcmImageArrayToImages</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node286 -->
+<!-- Node233&#45;&gt;Node287 -->
 <g id="edge164" class="edge">
-<title>Node232&#45;&gt;Node286</title>
+<title>Node233&#45;&gt;Node287</title>
 <path fill="none" stroke="midnightblue" d="M594.81,-3370.29C597.04,-3254.88 614.2,-2667.61 734,-2545 742.5,-2536.3 753.65,-2530.9 765.42,-2527.65"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.31,-3370.41 594.63,-3380.47 598.31,-3370.54 591.31,-3370.41"/>
 </g>
-<!-- Node287 -->
+<!-- Node288 -->
 <g id="node164" class="node">
-<title>Node287</title>
+<title>Node288</title>
 <g id="a_node164"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html" target="_top" xlink:title="The system has one abstract&#45;valued input port and one abstract&#45;valued output port.">
 <polygon fill="white" stroke="black" points="762.5,-2478.5 762.5,-2497.5 908.5,-2497.5 908.5,-2478.5 762.5,-2478.5"/>
 <text text-anchor="middle" x="835.5" y="-2485.5" font-family="Helvetica,sans-Serif" font-size="10.00">OptitrackLcmFrameSender</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node287 -->
+<!-- Node233&#45;&gt;Node288 -->
 <g id="edge165" class="edge">
-<title>Node232&#45;&gt;Node287</title>
+<title>Node233&#45;&gt;Node288</title>
 <path fill="none" stroke="midnightblue" d="M594.66,-3370.15C596.03,-3251.38 609.14,-2635.68 734,-2507 741.73,-2499.04 751.67,-2493.83 762.29,-2490.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.16,-3370.29 594.56,-3380.32 598.16,-3370.36 591.16,-3370.29"/>
 </g>
-<!-- Node288 -->
+<!-- Node289 -->
 <g id="node165" class="node">
-<title>Node288</title>
+<title>Node289</title>
 <g id="a_node165"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html" target="_top" xlink:title="Converts LCM optitrack_frame_t message data on an input port to RigidTransform data on per&#45;body outpu...">
 <polygon fill="white" stroke="black" points="783.5,-2440.5 783.5,-2459.5 887.5,-2459.5 887.5,-2440.5 783.5,-2440.5"/>
 <text text-anchor="middle" x="835.5" y="-2447.5" font-family="Helvetica,sans-Serif" font-size="10.00">OptitrackReceiver</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node288 -->
+<!-- Node233&#45;&gt;Node289 -->
 <g id="edge166" class="edge">
-<title>Node232&#45;&gt;Node288</title>
+<title>Node233&#45;&gt;Node289</title>
 <path fill="none" stroke="midnightblue" d="M594.52,-3370.44C595.03,-3249.47 603.92,-2603.92 734,-2469 746.69,-2455.83 765.44,-2450.19 783.32,-2448.14"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="591.02,-3370.47 594.49,-3380.48 598.02,-3370.49 591.02,-3370.47"/>
 </g>
-<!-- Node289 -->
+<!-- Node290 -->
 <g id="node166" class="node">
-<title>Node289</title>
+<title>Node290</title>
 <g id="a_node166"><a xlink:href="classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html" target="_top" xlink:title="A meta&#45;sensor that houses RGB, depth, and label cameras, producing their corresponding images based o...">
 <polygon fill="white" stroke="black" points="798.5,-2402.5 798.5,-2421.5 872.5,-2421.5 872.5,-2402.5 798.5,-2402.5"/>
 <text text-anchor="middle" x="835.5" y="-2409.5" font-family="Helvetica,sans-Serif" font-size="10.00">RgbdSensor</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node289 -->
+<!-- Node233&#45;&gt;Node290 -->
 <g id="edge167" class="edge">
-<title>Node232&#45;&gt;Node289</title>
+<title>Node233&#45;&gt;Node290</title>
 <path fill="none" stroke="midnightblue" d="M594.39,-3370.03C594.11,-3245.12 598.95,-2571.91 734,-2431 750.22,-2414.08 776.43,-2409.56 798.02,-2409.14"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.89,-3370.39 594.43,-3380.37 597.89,-3370.36 590.89,-3370.39"/>
 </g>
-<!-- Node290 -->
+<!-- Node291 -->
 <g id="node167" class="node">
-<title>Node290</title>
+<title>Node291</title>
 <g id="a_node167"><a xlink:href="classdrake_1_1geometry_1_1_scene_graph.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="770,-2364.5 770,-2383.5 901,-2383.5 901,-2364.5 770,-2364.5"/>
 <text text-anchor="middle" x="835.5" y="-2371.5" font-family="Helvetica,sans-Serif" font-size="10.00">SceneGraph&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node290 -->
+<!-- Node233&#45;&gt;Node291 -->
 <g id="edge168" class="edge">
-<title>Node232&#45;&gt;Node290</title>
+<title>Node233&#45;&gt;Node291</title>
 <path fill="none" stroke="midnightblue" d="M594.27,-3370.04C593.2,-3242.31 593.81,-2540.06 734,-2393 743.5,-2383.04 756.45,-2377.37 769.9,-2374.3"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.77,-3370.33 594.37,-3380.29 597.77,-3370.26 590.77,-3370.33"/>
 </g>
-<!-- Node291 -->
+<!-- Node292 -->
 <g id="node168" class="node">
-<title>Node291</title>
+<title>Node292</title>
 <g id="a_node168"><a xlink:href="classdrake_1_1systems_1_1_spring_mass_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="753,-2326.5 753,-2345.5 918,-2345.5 918,-2326.5 753,-2326.5"/>
 <text text-anchor="middle" x="835.5" y="-2333.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpringMassSystem&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node291 -->
+<!-- Node233&#45;&gt;Node292 -->
 <g id="edge169" class="edge">
-<title>Node232&#45;&gt;Node291</title>
+<title>Node233&#45;&gt;Node292</title>
 <path fill="none" stroke="midnightblue" d="M594.16,-3370.1C592.32,-3239.72 588.66,-2508.24 734,-2355 739.38,-2349.33 745.87,-2345.05 752.95,-2341.85"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.66,-3370.28 594.31,-3380.23 597.66,-3370.17 590.66,-3370.28"/>
 </g>
-<!-- Node295 -->
+<!-- Node296 -->
 <g id="node172" class="node">
-<title>Node295</title>
+<title>Node296</title>
 <g id="a_node172"><a xlink:href="classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="753.5,-2277 753.5,-2307 917.5,-2307 917.5,-2277 753.5,-2277"/>
 <text text-anchor="start" x="761.5" y="-2295" font-family="Helvetica,sans-Serif" font-size="10.00">StiffDoubleMassSpringSystem</text>
@@ -2571,15 +2571,15 @@
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node295 -->
+<!-- Node233&#45;&gt;Node296 -->
 <g id="edge173" class="edge">
-<title>Node232&#45;&gt;Node295</title>
+<title>Node233&#45;&gt;Node296</title>
 <path fill="none" stroke="midnightblue" d="M594.15,-3369.89C592.28,-3236.58 588.23,-2480.5 734,-2317 739.38,-2310.96 745.98,-2306.27 753.2,-2302.65"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="590.66,-3370.28 594.31,-3380.23 597.66,-3370.18 590.66,-3370.28"/>
 </g>
-<!-- Node296 -->
+<!-- Node297 -->
 <g id="node173" class="node">
-<title>Node296</title>
+<title>Node297</title>
 <g id="a_node173"><a xlink:href="classdrake_1_1systems_1_1_time_varying_affine_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="764,-2228 764,-2258 907,-2258 907,-2228 764,-2228"/>
 <text text-anchor="start" x="772" y="-2246" font-family="Helvetica,sans-Serif" font-size="10.00">TimeVaryingAffineSystem</text>
@@ -2587,15 +2587,15 @@
 </a>
 </g>
 </g>
-<!-- Node232&#45;&gt;Node296 -->
+<!-- Node233&#45;&gt;Node297 -->
 <g id="edge174" class="edge">
-<title>Node232&#45;&gt;Node296</title>
+<title>Node233&#45;&gt;Node297</title>
 <path fill="none" stroke="midnightblue" d="M595.62,-3370.12C603.87,-3226.66 657.06,-2352.97 734,-2267 741.96,-2258.11 752.56,-2252.22 763.9,-2248.37"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="592.1,-3370.27 595.03,-3380.45 599.09,-3370.67 592.1,-3370.27"/>
 </g>
-<!-- Node292 -->
+<!-- Node293 -->
 <g id="node169" class="node">
-<title>Node292</title>
+<title>Node293</title>
 <g id="a_node169"><a xlink:href="classdrake_1_1systems_1_1analysis__test_1_1_my_spring_mass_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="999,-2345 999,-2375 1124,-2375 1124,-2345 999,-2345"/>
 <text text-anchor="start" x="1007" y="-2363" font-family="Helvetica,sans-Serif" font-size="10.00">MySpringMassSystem</text>
@@ -2603,15 +2603,15 @@
 </a>
 </g>
 </g>
-<!-- Node291&#45;&gt;Node292 -->
+<!-- Node292&#45;&gt;Node293 -->
 <g id="edge170" class="edge">
-<title>Node291&#45;&gt;Node292</title>
+<title>Node292&#45;&gt;Node293</title>
 <path fill="none" stroke="midnightblue" d="M928.1,-2345.81C951.87,-2348.36 976.9,-2351.04 998.73,-2353.38"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="928.32,-2342.32 918,-2344.73 927.57,-2349.28 928.32,-2342.32"/>
 </g>
-<!-- Node293 -->
+<!-- Node294 -->
 <g id="node170" class="node">
-<title>Node293</title>
+<title>Node294</title>
 <g id="a_node170"><a xlink:href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_spring_mass_damper_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="987,-2296 987,-2326 1136,-2326 1136,-2296 987,-2296"/>
 <text text-anchor="start" x="995" y="-2314" font-family="Helvetica,sans-Serif" font-size="10.00">SpringMassDamperSystem</text>
@@ -2619,15 +2619,15 @@
 </a>
 </g>
 </g>
-<!-- Node291&#45;&gt;Node293 -->
+<!-- Node292&#45;&gt;Node294 -->
 <g id="edge171" class="edge">
-<title>Node291&#45;&gt;Node293</title>
+<title>Node292&#45;&gt;Node294</title>
 <path fill="none" stroke="midnightblue" d="M928.13,-2325.77C947.68,-2323.59 968.09,-2321.31 986.86,-2319.22"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="927.55,-2322.32 918,-2326.9 928.33,-2329.27 927.55,-2322.32"/>
 </g>
-<!-- Node294 -->
+<!-- Node295 -->
 <g id="node171" class="node">
-<title>Node294</title>
+<title>Node295</title>
 <g id="a_node171"><a xlink:href="classdrake_1_1systems_1_1implicit__integrator__test_1_1_discontinuous_spring_mass_damper_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1186,-2296 1186,-2326 1367,-2326 1367,-2296 1186,-2296"/>
 <text text-anchor="start" x="1194" y="-2314" font-family="Helvetica,sans-Serif" font-size="10.00">DiscontinuousSpringMassDamper</text>
@@ -2635,60 +2635,60 @@
 </a>
 </g>
 </g>
-<!-- Node293&#45;&gt;Node294 -->
+<!-- Node294&#45;&gt;Node295 -->
 <g id="edge172" class="edge">
-<title>Node293&#45;&gt;Node294</title>
+<title>Node294&#45;&gt;Node295</title>
 <path fill="none" stroke="midnightblue" d="M1146.35,-2311C1159.28,-2311 1172.67,-2311 1185.72,-2311"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1146.1,-2307.5 1136.1,-2311 1146.1,-2314.5 1146.1,-2307.5"/>
 </g>
-<!-- Node297 -->
+<!-- Node298 -->
 <g id="node174" class="node">
-<title>Node297</title>
+<title>Node298</title>
 <g id="a_node174"><a xlink:href="classdrake_1_1systems_1_1_affine_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="993,-2233.5 993,-2252.5 1130,-2252.5 1130,-2233.5 993,-2233.5"/>
 <text text-anchor="middle" x="1061.5" y="-2240.5" font-family="Helvetica,sans-Serif" font-size="10.00">AffineSystem&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node296&#45;&gt;Node297 -->
+<!-- Node297&#45;&gt;Node298 -->
 <g id="edge175" class="edge">
-<title>Node296&#45;&gt;Node297</title>
+<title>Node297&#45;&gt;Node298</title>
 <path fill="none" stroke="midnightblue" d="M917.19,-2243C942.03,-2243 969.1,-2243 992.96,-2243"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="917.07,-2239.5 907.07,-2243 917.07,-2246.5 917.07,-2239.5"/>
 </g>
-<!-- Node298 -->
+<!-- Node299 -->
 <g id="node175" class="node">
-<title>Node298</title>
+<title>Node299</title>
 <g id="a_node175"><a xlink:href="classdrake_1_1systems_1_1_linear_system.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="1207,-2233.5 1207,-2252.5 1346,-2252.5 1346,-2233.5 1207,-2233.5"/>
 <text text-anchor="middle" x="1276.5" y="-2240.5" font-family="Helvetica,sans-Serif" font-size="10.00">LinearSystem&lt; double &gt;</text>
 </a>
 </g>
 </g>
-<!-- Node297&#45;&gt;Node298 -->
+<!-- Node298&#45;&gt;Node299 -->
 <g id="edge176" class="edge">
-<title>Node297&#45;&gt;Node298</title>
+<title>Node298&#45;&gt;Node299</title>
 <path fill="none" stroke="midnightblue" d="M1140.39,-2243C1162.18,-2243 1185.69,-2243 1206.89,-2243"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="1140.19,-2239.5 1130.19,-2243 1140.19,-2246.5 1140.19,-2239.5"/>
 </g>
-<!-- Node127 -->
+<!-- Node128 -->
 <g id="node177" class="node">
-<title>Node127</title>
+<title>Node128</title>
 <g id="a_node177"><a xlink:title=" ">
 <polygon fill="white" stroke="#bfbfbf" points="289,-4646.5 289,-4665.5 453,-4665.5 453,-4646.5 289,-4646.5"/>
 <text text-anchor="middle" x="371" y="-4653.5" font-family="Helvetica,sans-Serif" font-size="10.00">SystemParentServiceInterface</text>
 </a>
 </g>
 </g>
-<!-- Node127&#45;&gt;Node136 -->
+<!-- Node128&#45;&gt;Node137 -->
 <g id="edge179" class="edge">
-<title>Node127&#45;&gt;Node136</title>
+<title>Node128&#45;&gt;Node137</title>
 <path fill="none" stroke="#8b1a1a" d="M463.26,-4656C493.27,-4656 525.22,-4656 549.84,-4656"/>
 <polygon fill="#8b1a1a" stroke="#8b1a1a" points="463.17,-4652.5 453.17,-4656 463.17,-4659.5 463.17,-4652.5"/>
 </g>
-<!-- Node127&#45;&gt;Node0 -->
+<!-- Node128&#45;&gt;Node0 -->
 <g id="edge178" class="edge">
-<title>Node127&#45;&gt;Node0</title>
+<title>Node128&#45;&gt;Node0</title>
 <path fill="none" stroke="#8b1a1a" d="M447.86,-4671.22C449.68,-4672.68 451.4,-4674.27 453,-4676 519.39,-4747.76 432.52,-4813.2 489,-4893 505.95,-4916.94 536.26,-4931.92 559.71,-4940.48"/>
 <polygon fill="#8b1a1a" stroke="#8b1a1a" points="449.56,-4668.16 439.28,-4665.6 445.73,-4674.01 449.56,-4668.16"/>
 </g>

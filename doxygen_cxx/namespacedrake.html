@@ -559,6 +559,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ab4011b0ee72e60112bfd3aee950765e8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ab4011b0ee72e60112bfd3aee950765e8">none_of</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const std::function&lt; <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; typename Derived::Scalar &gt;(const typename Derived::Scalar &amp;)&gt; &amp;pred)</td></tr>
 <tr class="memdesc:ab4011b0ee72e60112bfd3aee950765e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if unary predicate <code>pred</code> holds for no elements in the matrix <code>m</code>.  <a href="#ab4011b0ee72e60112bfd3aee950765e8">More...</a><br /></td></tr>
 <tr class="separator:ab4011b0ee72e60112bfd3aee950765e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4171afca9615cfca42e59dd116d0bfb"><td class="memTemplParams" colspan="2">template&lt;typename T , int Rows&gt; </td></tr>
+<tr class="memitem:ae4171afca9615cfca42e59dd116d0bfb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae4171afca9615cfca42e59dd116d0bfb">if_then_else</a> (const <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; &amp;f_cond, const Eigen::Matrix&lt; T, Rows, 1 &gt; &amp;m_then, const Eigen::Matrix&lt; T, Rows, 1 &gt; &amp;m_else)</td></tr>
+<tr class="memdesc:ae4171afca9615cfca42e59dd116d0bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads if_then_else for Eigen vectors of <code>m_then</code> and <code>m_else</code> values with with a single <code>f_cond</code> condition to toggle them all at once.  <a href="#ae4171afca9615cfca42e59dd116d0bfb">More...</a><br /></td></tr>
+<tr class="separator:ae4171afca9615cfca42e59dd116d0bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="memItemLeft" align="right" valign="top">std::optional&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake.html#a3d3b9fa09763df2a9013eec2cf87df7b">MaybeGetDrakePath</a> ()</td></tr>
 <tr class="memdesc:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Returns the fully-qualified path to the first folder containing Drake resources as located by FindResource, or nullopt if none is found.  <a href="#a3d3b9fa09763df2a9013eec2cf87df7b">More...</a><br /></td></tr>
 <tr class="separator:a3d3b9fa09763df2a9013eec2cf87df7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2728,7 +2732,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ad14dd00683f82b89dc0f08f9adec904e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad14dd00683f82b89dc0f08f9adec904e">&#9670;&nbsp;</a></span>if_then_else() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14dd00683f82b89dc0f08f9adec904e">&#9670;&nbsp;</a></span>if_then_else() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2764,8 +2768,44 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae4171afca9615cfca42e59dd116d0bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4171afca9615cfca42e59dd116d0bfb">&#9670;&nbsp;</a></span>if_then_else() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto drake::if_then_else </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a1f1c657c4d2cf400649123a7c2573d5b">boolean</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>f_cond</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Matrix&lt; T, Rows, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m_then</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Matrix&lt; T, Rows, 1 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m_else</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads if_then_else for Eigen vectors of <code>m_then</code> and <code>m_else</code> values with with a single <code>f_cond</code> condition to toggle them all at once. </p>
+
+</div>
+</div>
 <a id="af52cba62721f6b29c99a83ec9b192873"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af52cba62721f6b29c99a83ec9b192873">&#9670;&nbsp;</a></span>if_then_else() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af52cba62721f6b29c99a83ec9b192873">&#9670;&nbsp;</a></span>if_then_else() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

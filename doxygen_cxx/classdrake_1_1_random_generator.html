@@ -139,10 +139,13 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a225b04ff27646e6105e31c25687fce3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_random_generator.html#a225b04ff27646e6105e31c25687fce3d">RandomGenerator</a> ()=default</td></tr>
+<tr class="memdesc:a225b04ff27646e6105e31c25687fce3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a generator using the <code>default_seed</code>.  <a href="#a225b04ff27646e6105e31c25687fce3d">More...</a><br /></td></tr>
 <tr class="separator:a225b04ff27646e6105e31c25687fce3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a528a94da8ddce6eea385b93757b3fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_random_generator.html#a0a528a94da8ddce6eea385b93757b3fa">RandomGenerator</a> (<a class="el" href="classdrake_1_1_random_generator.html#ac066f83d3ffd2d412e6e5acc0f687ef3">result_type</a> value)</td></tr>
-<tr class="separator:a0a528a94da8ddce6eea385b93757b3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6034eac7db31b5f92cfc91e808f2fed2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_random_generator.html#a6034eac7db31b5f92cfc91e808f2fed2">RandomGenerator</a> (<a class="el" href="classdrake_1_1_random_generator.html#ac066f83d3ffd2d412e6e5acc0f687ef3">result_type</a> seed)</td></tr>
+<tr class="memdesc:a6034eac7db31b5f92cfc91e808f2fed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a generator using given <code>seed</code>.  <a href="#a6034eac7db31b5f92cfc91e808f2fed2">More...</a><br /></td></tr>
+<tr class="separator:a6034eac7db31b5f92cfc91e808f2fed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaead712fe7dc29c1799e7d8f77d1cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1_random_generator.html#ac066f83d3ffd2d412e6e5acc0f687ef3">result_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_random_generator.html#aaaead712fe7dc29c1799e7d8f77d1cfb">operator()</a> ()</td></tr>
+<tr class="memdesc:aaaead712fe7dc29c1799e7d8f77d1cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a pseudo-random value.  <a href="#aaaead712fe7dc29c1799e7d8f77d1cfb">More...</a><br /></td></tr>
 <tr class="separator:aaaead712fe7dc29c1799e7d8f77d1cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a2cdcb3683599478b35326a45c926c35d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1_random_generator.html#a2cdcb3683599478b35326a45c926c35d">RandomGenerator</a> (const <a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> &amp;)=default</td></tr>
@@ -257,10 +260,13 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Creates a generator using the <code>default_seed</code>. </p>
+<p>Actual creation of the generator is deferred until first use so this constructor is fast and does not allocate any heap memory. </p>
+
 </div>
 </div>
-<a id="a0a528a94da8ddce6eea385b93757b3fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a528a94da8ddce6eea385b93757b3fa">&#9670;&nbsp;</a></span>RandomGenerator() <span class="overload">[4/4]</span></h2>
+<a id="a6034eac7db31b5f92cfc91e808f2fed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6034eac7db31b5f92cfc91e808f2fed2">&#9670;&nbsp;</a></span>RandomGenerator() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,7 +278,7 @@ Static Public Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1_random_generator.html">RandomGenerator</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1_random_generator.html#ac066f83d3ffd2d412e6e5acc0f687ef3">result_type</a>&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramname"><em>seed</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -282,6 +288,8 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates a generator using given <code>seed</code>. </p>
 
 </div>
 </div>
@@ -350,6 +358,8 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generates a pseudo-random value. </p>
 
 </div>
 </div>

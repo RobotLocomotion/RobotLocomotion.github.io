@@ -192,12 +192,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abaa78142cb95f355d2dfcc0032738f07"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#abaa78142cb95f355d2dfcc0032738f07">GetGraphvizString</a> (const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a> &gt; &amp;result=std::nullopt, bool show_slacks=true, <a class="el" href="classint.html">int</a> precision=3, bool scientific=false) const</td></tr>
 <tr class="memdesc:abaa78142cb95f355d2dfcc0032738f07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Graphviz string describing the graph vertices and edges.  <a href="#abaa78142cb95f355d2dfcc0032738f07">More...</a><br /></td></tr>
 <tr class="separator:abaa78142cb95f355d2dfcc0032738f07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7da0acea1912b56496a1a5d83d0ed841"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a7da0acea1912b56496a1a5d83d0ed841">SolveShortestPath</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> target_id, bool convex_relaxation=false) const</td></tr>
-<tr class="memdesc:a7da0acea1912b56496a1a5d83d0ed841"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph, as discussed in detail in.  <a href="#a7da0acea1912b56496a1a5d83d0ed841">More...</a><br /></td></tr>
-<tr class="separator:a7da0acea1912b56496a1a5d83d0ed841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9aac92c45a2a9f8b02ef817cad7aa6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#af9aac92c45a2a9f8b02ef817cad7aa6e">SolveShortestPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, bool convex_relaxation=false) const</td></tr>
-<tr class="memdesc:af9aac92c45a2a9f8b02ef817cad7aa6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that takes const reference arguments for source and target.  <a href="#af9aac92c45a2a9f8b02ef817cad7aa6e">More...</a><br /></td></tr>
-<tr class="separator:af9aac92c45a2a9f8b02ef817cad7aa6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28756c0f6191e07959ce2c049e0c1522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a28756c0f6191e07959ce2c049e0c1522">SolveShortestPath</a> (<a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> source_id, <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a40866c7a0f18b425f096b14788af5301">VertexId</a> target_id, bool convex_relaxation=false, const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *solver=nullptr, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt; &amp;solver_options=std::nullopt) const</td></tr>
+<tr class="memdesc:a28756c0f6191e07959ce2c049e0c1522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Formulates and solves the mixed-integer convex formulation of the shortest path problem on the graph, as discussed in detail in.  <a href="#a28756c0f6191e07959ce2c049e0c1522">More...</a><br /></td></tr>
+<tr class="separator:a28756c0f6191e07959ce2c049e0c1522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63d195ed7ed539d24b3601c61fb37966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program_result.html">solvers::MathematicalProgramResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#a63d195ed7ed539d24b3601c61fb37966">SolveShortestPath</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;source, const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html">Vertex</a> &amp;target, bool convex_relaxation=false, const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *solver=nullptr, const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt; &amp;solver_options=std::nullopt) const</td></tr>
+<tr class="memdesc:a63d195ed7ed539d24b3601c61fb37966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience overload that takes const reference arguments for source and target.  <a href="#a63d195ed7ed539d24b3601c61fb37966">More...</a><br /></td></tr>
+<tr class="separator:a63d195ed7ed539d24b3601c61fb37966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:aee71a4d66e8a29651242b12019c0a30e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html#aee71a4d66e8a29651242b12019c0a30e">GraphOfConvexSets</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets.html">GraphOfConvexSets</a> &amp;)=delete</td></tr>
 <tr class="separator:aee71a4d66e8a29651242b12019c0a30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -672,8 +672,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7da0acea1912b56496a1a5d83d0ed841"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7da0acea1912b56496a1a5d83d0ed841">&#9670;&nbsp;</a></span>SolveShortestPath() <span class="overload">[1/2]</span></h2>
+<a id="a28756c0f6191e07959ce2c049e0c1522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28756c0f6191e07959ce2c049e0c1522">&#9670;&nbsp;</a></span>SolveShortestPath() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -694,7 +694,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>convex_relaxation</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>convex_relaxation</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td>
+          <td class="paramname"><em>solver</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solver_options</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -710,7 +722,9 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">source</td><td>specifies the source set. The solver will choose any point in that set; to start at a particular continuous state consider adding a <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_point.html" title="A convex set that contains exactly one element.">Point</a> set to the graph and using that as the source. </td></tr>
     <tr><td class="paramname">target</td><td>specifies the target set. The solver will choose any point in that set. </td></tr>
-    <tr><td class="paramname">convex_relaxation</td><td>will solve the relaxed version of the problem. As discussed in the paper, we know that this relaxation cannot solve the original NP-hard problem for all instances, but there are also many instances for which the convex relaxation is tight.</td></tr>
+    <tr><td class="paramname">convex_relaxation</td><td>will solve the relaxed version of the problem. As discussed in the paper, we know that this relaxation cannot solve the original NP-hard problem for all instances, but there are also many instances for which the convex relaxation is tight. </td></tr>
+    <tr><td class="paramname">solver</td><td>provides the optimizer to be used to solve the shortest path optimization problem. If not set, the best solver for the given problem is selected. Note that if the solver cannot handle the type of optimization problem generated, it will throw. </td></tr>
+    <tr><td class="paramname">solver_options</td><td>are passed to the solver once the problem is generated to set the solver settings.</td></tr>
   </table>
   </dd>
 </dl>
@@ -723,8 +737,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af9aac92c45a2a9f8b02ef817cad7aa6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9aac92c45a2a9f8b02ef817cad7aa6e">&#9670;&nbsp;</a></span>SolveShortestPath() <span class="overload">[2/2]</span></h2>
+<a id="a63d195ed7ed539d24b3601c61fb37966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63d195ed7ed539d24b3601c61fb37966">&#9670;&nbsp;</a></span>SolveShortestPath() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,7 +759,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>convex_relaxation</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>convex_relaxation</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_solver_interface.html">solvers::SolverInterface</a> *&#160;</td>
+          <td class="paramname"><em>solver</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::optional&lt; <a class="el" href="classdrake_1_1solvers_1_1_solver_options.html">solvers::SolverOptions</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solver_options</em> = <code>std::nullopt</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

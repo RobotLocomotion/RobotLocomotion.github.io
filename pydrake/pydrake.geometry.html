@@ -3886,9 +3886,13 @@ are welcome to use absolute paths to organize your data, but the
 burden on tracking and cleaning them up lie on you.</p>
 <dl class="method">
 <dt id="pydrake.geometry.Meshcat.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>port: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs the Meshcat instance on <code class="docutils literal notranslate"><span class="pre">port</span></code>. If no port is specified,
-the it will listen on the first available port starting at 7000 (up to
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.Meshcat.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.Meshcat, port: Optional[int] = None) -&gt; None</li>
+</ol>
+<p>Constructs the Meshcat instance on <code class="docutils literal notranslate"><span class="pre">port</span></code>. If no port is specified,
+it will listen on the first available port starting at 7000 (up to
 7099).</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
@@ -3902,6 +3906,10 @@ the it will listen on the first available port starting at 7000 (up to
 </tr>
 </tbody>
 </table>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.Meshcat, params: pydrake.geometry.MeshcatParams) -&gt; None</li>
+</ol>
+<p>Constructs the Meshcat instance using the given <code class="docutils literal notranslate"><span class="pre">params</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4671,6 +4679,42 @@ in any renderings, proximity queries, or other visualizers.</p>
 <dt id="pydrake.geometry.MeshcatCone.height">
 <code class="descname">height</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatCone</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.MeshcatCone.height" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.MeshcatParams">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.</code><code class="descname">MeshcatParams</code><a class="headerlink" href="#pydrake.geometry.MeshcatParams" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of parameters for configuring Meshcat.</p>
+<dl class="method">
+<dt id="pydrake.geometry.MeshcatParams.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.geometry.MeshcatParams</em>, <em>**kwargs</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.MeshcatParams.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatParams.port">
+<code class="descname">port</code><a class="headerlink" href="#pydrake.geometry.MeshcatParams.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Meshcat will listen on the given http <code class="docutils literal notranslate"><span class="pre">port</span></code>. If no port is
+specified, then it will listen on the first available port starting at
+7000 (up to 7099).</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>We require <code class="docutils literal notranslate"><span class="pre">port</span></code> &gt;= 1024.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.geometry.MeshcatParams.web_url_pattern">
+<code class="descname">web_url_pattern</code><a class="headerlink" href="#pydrake.geometry.MeshcatParams.web_url_pattern" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">web_url_pattern</span></code> may be used to change the web_url() (and
+therefore the ws_url()) reported by Meshcat. This may be useful in
+case Meshcat sits behind a firewall or proxy.</p>
+<p>The pattern follows the <a class="reference external" href="https://en.cppreference.com/w/cpp/utility/format">std::format</a> specification
+language, except that <code class="docutils literal notranslate"><span class="pre">arg-id</span></code> substitutions are performed using
+named arguments instead of positional indices.</p>
+<p>There is only a single argument available to the pattern: <code class="docutils literal notranslate"><span class="pre">{port}</span></code>
+will be substitued with the Meshcat server’s listen port number.</p>
+</dd></dl>
 
 </dd></dl>
 

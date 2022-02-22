@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"classdrake_1_1multibody_1_1_contact_results_to_lcm_system.html#aaccb65a551c978a2987efc277a771d8f":[1,2,11,2,6],
 "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html":[3,0,0,8,20],
 "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html#a02335c3389e5e5afab308647cdd0100c":[3,0,0,8,20,9],
 "classdrake_1_1multibody_1_1_contact_wrench_evaluator.html#a0c0856215086f339e2eff1aa0f9817b9":[3,0,0,8,20,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_joint_actuator.html#a46550a493387368d4c5244ea6e0d49f9":[3,0,0,8,39,20],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a51aefd06d016c29ee25018216a7d5ff2":[3,0,0,8,39,0],
 "classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503":[3,0,0,8,39,5],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a544e5bac743e6b9fa43ce300a4386f21":[3,0,0,8,39,9],
-"classdrake_1_1multibody_1_1_joint_actuator.html#a54bc3724965cc59e714c64cbeb147b86":[3,0,0,8,39,11]
+"classdrake_1_1multibody_1_1_joint_actuator.html#a544e5bac743e6b9fa43ce300a4386f21":[3,0,0,8,39,9]
 };

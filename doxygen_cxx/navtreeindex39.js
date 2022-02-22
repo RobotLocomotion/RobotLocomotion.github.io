@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a4ff5241db765b5a4de7c88bb996d39a8":[3,0,0,16,5,10],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,16,5,8],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a65dc25e24cd2903a0861b9589065c897":[3,0,0,16,5,2],
 "classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a80ed62d7a0f2d3eee401cdd29e47d534":[3,0,0,16,5,0],
@@ -198,6 +199,8 @@ var NAVTREEINDEX39 =
 "convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,1,0],
 "convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1],
 "copyable__unique__ptr_8h.html":[4,0,0,1,12],
+"corotated__model_8h.html":[4,0,0,8,3,2],
+"corotated__model__data_8h.html":[4,0,0,8,3,3],
 "cost_8h.html":[4,0,0,10,11],
 "cost_8h.html#ga5f972e77c40a9afab91907620c621e11":[4,0,0,10,11,2],
 "cost_8h.html#ga62744a5e355fa26fa97169acfc946128":[4,0,0,10,11,0],
@@ -220,8 +223,8 @@ var NAVTREEINDEX39 =
 "csdp__solver_8h.html":[4,0,0,10,14],
 "csdp__solver__internal_8h.html":[4,0,0,10,15],
 "cubic__scalar__system_8h.html":[4,0,0,11,0,0,1],
-"damping__model_8h.html":[4,0,0,8,3,2],
-"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,2,1],
+"damping__model_8h.html":[4,0,0,8,3,4],
+"damping__model_8h.html#a637b32bd5b13e55117670a553e19c54f":[4,0,0,8,3,4,1],
 "decision__variable_8h.html":[4,0,0,10,16],
 "decision__variable_8h.html#a062b182db5c52f5a71221a4c5958ea0b":[4,0,0,10,16,3],
 "decision__variable_8h.html#a8f304c33d467b0bf0ad02e25a2ced143":[4,0,0,10,16,6],
@@ -238,7 +241,7 @@ var NAVTREEINDEX39 =
 "default__scalars__pybind_8h.html#aa69fa97ca5615e75170ca0274e32cba2":[4,0,0,0,0,0,2,1],
 "default__scalars__pybind_8h.html#ad65f25e300d8d606958b3df57c29f5fe":[4,0,0,0,0,0,2,4],
 "deformable__volume__mesh_8h.html":[4,0,0,4,2,8],
-"deformation__gradient__data_8h.html":[4,0,0,8,3,3],
+"deformation__gradient__data_8h.html":[4,0,0,8,3,5],
 "demultiplexer_8h.html":[4,0,0,11,6,5],
 "dense__data_8h.html":[4,0,0,10,0,0,0],
 "dense__feasibility_8h.html":[4,0,0,10,0,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX39 =
 "dense__output_8h.html":[4,0,0,11,0,3],
 "dense__residual_8h.html":[4,0,0,10,0,0,3],
 "dense__variable_8h.html":[4,0,0,10,0,0,4],
-"dependency__tracker_8h.html":[4,0,0,11,3,10],
-"deprecated.html":[0],
-"deprecation__pybind_8h.html":[4,0,0,0,0,0,3],
-"deprecation__pybind_8h.html#a13cd6cd963823cafbc0068bacc7eeadd":[4,0,0,0,0,0,3,5]
+"dependency__tracker_8h.html":[4,0,0,11,3,10]
 };

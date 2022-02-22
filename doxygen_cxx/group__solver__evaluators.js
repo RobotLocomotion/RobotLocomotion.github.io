@@ -151,7 +151,7 @@ var group__solver__evaluators =
       [ "num_constraints", "classdrake_1_1solvers_1_1_constraint.html#a23f1475b0c301d9d78814fce265fd6ea", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_constraint.html#a1be60c3d434760ec3875aa9b5f2680c7", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_constraint.html#a51c139cdb5e8e6375de7d90767d2ed70", null ],
-      [ "set_bounds", "classdrake_1_1solvers_1_1_constraint.html#a12fec16fedabfd3fd596ead9580a9bf7", null ],
+      [ "set_bounds", "classdrake_1_1solvers_1_1_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111", null ],
       [ "UpdateLowerBound", "classdrake_1_1solvers_1_1_constraint.html#a4f01849f46f82b2f890dd1264125d52f", null ],
       [ "UpdateUpperBound", "classdrake_1_1solvers_1_1_constraint.html#af4a741d62e930b18c9250e5c65a854be", null ],
       [ "upper_bound", "classdrake_1_1solvers_1_1_constraint.html#a451749e9965610a12833a0252edc7803", null ]
@@ -205,7 +205,7 @@ var group__solver__evaluators =
       [ "evaluator", "classdrake_1_1solvers_1_1_evaluator_constraint.html#aa02a7941f0a2cb1fd510c6e7774421bd", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_evaluator_constraint.html#a830c3f81aac647c351d0a3f170c00f6b", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_evaluator_constraint.html#a9e976c1f2572bab91cb2e4caa9b3e0e5", null ],
-      [ "set_bounds", "classdrake_1_1solvers_1_1_evaluator_constraint.html#a12fec16fedabfd3fd596ead9580a9bf7", null ],
+      [ "set_bounds", "classdrake_1_1solvers_1_1_evaluator_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111", null ],
       [ "UpdateLowerBound", "classdrake_1_1solvers_1_1_evaluator_constraint.html#a4f01849f46f82b2f890dd1264125d52f", null ],
       [ "UpdateUpperBound", "classdrake_1_1solvers_1_1_evaluator_constraint.html#af4a741d62e930b18c9250e5c65a854be", null ]
     ] ],
@@ -232,7 +232,7 @@ var group__solver__evaluators =
       [ "GetSparseMatrix", "classdrake_1_1solvers_1_1_linear_constraint.html#ab7814fd66b140e44a21a1830bfd5dfbf", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#aa21495d4d797f18f8acd9dad11fdfdfc", null ],
       [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#ac5f497b0878226fd242af88c65f593ba", null ],
-      [ "set_bounds", "classdrake_1_1solvers_1_1_linear_constraint.html#a12fec16fedabfd3fd596ead9580a9bf7", null ],
+      [ "set_bounds", "classdrake_1_1solvers_1_1_linear_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111", null ],
       [ "UpdateCoefficients", "classdrake_1_1solvers_1_1_linear_constraint.html#ad93d31c8868180061523dee4d6373933", null ],
       [ "UpdateLowerBound", "classdrake_1_1solvers_1_1_linear_constraint.html#a4f01849f46f82b2f890dd1264125d52f", null ],
       [ "UpdateUpperBound", "classdrake_1_1solvers_1_1_linear_constraint.html#af4a741d62e930b18c9250e5c65a854be", null ],

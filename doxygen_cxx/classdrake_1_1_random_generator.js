@@ -4,7 +4,7 @@ var classdrake_1_1_random_generator =
     [ "RandomGenerator", "classdrake_1_1_random_generator.html#a2cdcb3683599478b35326a45c926c35d", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html#a229f4c6190dd60c0d2876fb702199101", null ],
     [ "RandomGenerator", "classdrake_1_1_random_generator.html#a225b04ff27646e6105e31c25687fce3d", null ],
-    [ "RandomGenerator", "classdrake_1_1_random_generator.html#a0a528a94da8ddce6eea385b93757b3fa", null ],
+    [ "RandomGenerator", "classdrake_1_1_random_generator.html#a6034eac7db31b5f92cfc91e808f2fed2", null ],
     [ "max", "classdrake_1_1_random_generator.html#a91c0b5c3c85db40461bf25037ee5e4cf", null ],
     [ "min", "classdrake_1_1_random_generator.html#ab180b1a9d812ecf803845f4ca551a310", null ],
     [ "operator()", "classdrake_1_1_random_generator.html#aaaead712fe7dc29c1799e7d8f77d1cfb", null ],

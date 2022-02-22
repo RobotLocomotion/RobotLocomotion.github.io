@@ -1144,6 +1144,45 @@ constraint.</dd>
 <p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PositionConstraint.set_bounds">
+<code class="descname">set_bounds</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.PositionConstraint, new_lb: numpy.ndarray[numpy.float64[m, 1]], new_ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint.set_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the upper and lower bounds of the constraint.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_lb</span></code>:</dt>
+<dd>. A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_ub</span></code>:</dt>
+<dd>. A <code class="docutils literal notranslate"><span class="pre">num_constraints</span></code> x 1 vector.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the users want to expose this method in a sub-class, do using
+Constraint::set_bounds, as in LinearConstraint.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PositionConstraint.UpdateLowerBound">
+<code class="descname">UpdateLowerBound</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.PositionConstraint, new_lb: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint.UpdateLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the lower bound.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">if the users want to expose this method in a sub-class, do using
+Constraint::UpdateLowerBound, as in LinearConstraint.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.inverse_kinematics.PositionConstraint.UpdateUpperBound">
+<code class="descname">UpdateUpperBound</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.PositionConstraint, new_ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.PositionConstraint.UpdateUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the upper bound.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">if the users want to expose this method in a sub-class, do using
+Constraint::UpdateUpperBound, as in LinearConstraint.</p>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">

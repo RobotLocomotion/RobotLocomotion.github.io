@@ -1,5 +1,6 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1symbolic_1_1_expression_if_then_else.html#a2e651ea95f82c46049d7b75ae4480786":[3,0,0,13,22,0],
 "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a3ef4381c3fe2cdb5b514865f6e66dcff":[3,0,0,13,22,11],
 "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a45207bd2c22d782aebd24d1624bf1174":[3,0,0,13,22,8],
 "classdrake_1_1symbolic_1_1_expression_if_then_else.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,13,22,10],
@@ -248,6 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1symbolic_1_1_formula_isnan.html#a5142aa659ccee8923995daf6883581ec":[3,0,0,13,45,6],
 "classdrake_1_1symbolic_1_1_formula_isnan.html#a9dcdd6bf4debc6328cfd48051c2cbcbe":[3,0,0,13,45,3],
 "classdrake_1_1symbolic_1_1_formula_isnan.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,45,1],
-"classdrake_1_1symbolic_1_1_formula_isnan.html#ad66ef14f5c0b153b91989fccf3a38920":[3,0,0,13,45,8],
-"classdrake_1_1symbolic_1_1_formula_isnan.html#aeabbbb6c69ba676155d0965880d6c8dd":[3,0,0,13,45,7]
+"classdrake_1_1symbolic_1_1_formula_isnan.html#ad66ef14f5c0b153b91989fccf3a38920":[3,0,0,13,45,8]
 };

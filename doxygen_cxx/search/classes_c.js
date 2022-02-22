@@ -13,6 +13,7 @@ var searchData=
   ['meshcat',['Meshcat',['../classdrake_1_1geometry_1_1_meshcat.html',1,'drake::geometry']]],
   ['meshcatanimation',['MeshcatAnimation',['../classdrake_1_1geometry_1_1_meshcat_animation.html',1,'drake::geometry']]],
   ['meshcatcone',['MeshcatCone',['../classdrake_1_1geometry_1_1_meshcat_cone.html',1,'drake::geometry']]],
+  ['meshcatparams',['MeshcatParams',['../structdrake_1_1geometry_1_1_meshcat_params.html',1,'drake::geometry']]],
   ['meshcatpointcloudvisualizer',['MeshcatPointCloudVisualizer',['../classdrake_1_1geometry_1_1_meshcat_point_cloud_visualizer.html',1,'drake::geometry']]],
   ['meshcatvisualizer',['MeshcatVisualizer',['../classdrake_1_1geometry_1_1_meshcat_visualizer.html',1,'drake::geometry']]],
   ['meshcatvisualizerparams',['MeshcatVisualizerParams',['../structdrake_1_1geometry_1_1_meshcat_visualizer_params.html',1,'drake::geometry']]],

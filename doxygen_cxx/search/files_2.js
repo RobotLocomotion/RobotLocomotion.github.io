@@ -63,6 +63,8 @@ var searchData=
   ['convert_5ftime_5fderivative_2eh',['convert_time_derivative.h',['../convert__time__derivative_8h.html',1,'']]],
   ['convex_5fset_2eh',['convex_set.h',['../convex__set_8h.html',1,'']]],
   ['copyable_5funique_5fptr_2eh',['copyable_unique_ptr.h',['../copyable__unique__ptr_8h.html',1,'']]],
+  ['corotated_5fmodel_2eh',['corotated_model.h',['../corotated__model_8h.html',1,'']]],
+  ['corotated_5fmodel_5fdata_2eh',['corotated_model_data.h',['../corotated__model__data_8h.html',1,'']]],
   ['cost_2eh',['cost.h',['../cost_8h.html',1,'']]],
   ['coulomb_5ffriction_2eh',['coulomb_friction.h',['../coulomb__friction_8h.html',1,'']]],
   ['cpp_5fparam_5fpybind_2eh',['cpp_param_pybind.h',['../cpp__param__pybind_8h.html',1,'']]],

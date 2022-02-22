@@ -126,10 +126,12 @@ $(document).ready(function(){initNavTree('drake__bool_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
 <code>#include &lt;Eigen/Core&gt;</code><br />
+<code>#include &quot;<a class="el" href="double__overloads_8h.html">drake/common/double_overloads.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="drake__throw_8h.html">drake/common/drake_throw.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for drake_bool.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="drake__bool_8h__incl.svg" width="219" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="drake__bool_8h__incl.svg" width="496" height="306"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -183,6 +185,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ab4011b0ee72e60112bfd3aee950765e8"><td class="memTemplItemLeft" align="right" valign="top">boolean&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ab4011b0ee72e60112bfd3aee950765e8">none_of</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const std::function&lt; boolean&lt; typename Derived::Scalar &gt;(const typename Derived::Scalar &amp;)&gt; &amp;pred)</td></tr>
 <tr class="memdesc:ab4011b0ee72e60112bfd3aee950765e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if unary predicate <code>pred</code> holds for no elements in the matrix <code>m</code>.  <a href="namespacedrake.html#ab4011b0ee72e60112bfd3aee950765e8">More...</a><br /></td></tr>
 <tr class="separator:ab4011b0ee72e60112bfd3aee950765e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4171afca9615cfca42e59dd116d0bfb"><td class="memTemplParams" colspan="2">template&lt;typename T , int Rows&gt; </td></tr>
+<tr class="memitem:ae4171afca9615cfca42e59dd116d0bfb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake.html#ae4171afca9615cfca42e59dd116d0bfb">if_then_else</a> (const boolean&lt; T &gt; &amp;f_cond, const Eigen::Matrix&lt; T, Rows, 1 &gt; &amp;m_then, const Eigen::Matrix&lt; T, Rows, 1 &gt; &amp;m_else)</td></tr>
+<tr class="memdesc:ae4171afca9615cfca42e59dd116d0bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads if_then_else for Eigen vectors of <code>m_then</code> and <code>m_else</code> values with with a single <code>f_cond</code> condition to toggle them all at once.  <a href="namespacedrake.html#ae4171afca9615cfca42e59dd116d0bfb">More...</a><br /></td></tr>
+<tr class="separator:ae4171afca9615cfca42e59dd116d0bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

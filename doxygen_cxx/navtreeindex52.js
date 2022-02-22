@@ -1,5 +1,13 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__formula__cell_8h.html#ad60a650ffd29c64c25be2dc84bfefccc":[4,0,0,1,59,18],
+"symbolic__formula__cell_8h.html#adfca6086d970d576d51fa5364416a297":[4,0,0,1,59,27],
+"symbolic__formula__visitor_8h.html":[4,0,0,1,60],
+"symbolic__formula__visitor_8h.html#aa2748b5dc34bc17a6c6e98ac1d0cc1ad":[4,0,0,1,60,0],
+"symbolic__generic__polynomial_8h.html":[4,0,0,1,61],
+"symbolic__generic__polynomial_8h.html#a120ae90dfc24dd3f7b4f42aededbabfd":[4,0,0,1,61,31],
+"symbolic__generic__polynomial_8h.html#a1504176a6220b744ee8b07a0ed920f15":[4,0,0,1,61,33],
+"symbolic__generic__polynomial_8h.html#a173be3cb77f72bb9481db5c8fd04741e":[4,0,0,1,61,5],
 "symbolic__generic__polynomial_8h.html#a2176f7eb786ddec5cd9ea0683a019482":[4,0,0,1,61,15],
 "symbolic__generic__polynomial_8h.html#a21d8313aa6cdb78da3f2cd6d84b92e39":[4,0,0,1,61,21],
 "symbolic__generic__polynomial_8h.html#a2296b14ee573d8deafe90b3615281e68":[4,0,0,1,61,14],
@@ -241,13 +249,5 @@ var NAVTREEINDEX52 =
 "trajectory__linear__system_8h.html":[4,0,0,11,6,23],
 "trajectory__source_8h.html":[4,0,0,11,6,24],
 "transform_8h.html":[4,0,0,1,1,2],
-"triangle__quadrature_8h.html":[4,0,0,8,14,1],
-"triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,45],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,46],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,46,0],
-"trig__poly_8h.html":[4,0,0,1,76],
-"trig__poly_8h.html#a43c35aa3bb5ef6f19e6316bb98cc2daf":[4,0,0,1,76,4],
-"trig__poly_8h.html#a69f6fee91b95862e81e39506cae6dc22":[4,0,0,1,76,3],
-"trig__poly_8h.html#a726304f0129c6db7864e4ff5cfe4cdd7":[4,0,0,1,76,5]
+"triangle__quadrature_8h.html":[4,0,0,8,14,1]
 };

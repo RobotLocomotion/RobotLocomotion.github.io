@@ -766,7 +766,7 @@ graph.</p>
 <code class="descname">SolveShortestPath</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.SolveShortestPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, convex_relaxation: bool = False) -&gt; drake::solvers::MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, target_id: drake::Identifier&lt;drake::geometry::optimization::VertexTag&gt;, convex_relaxation: bool = False, solver: drake::solvers::SolverInterface = None, solver_options: Optional[drake::solvers::SolverOptions] = None) -&gt; drake::solvers::MathematicalProgramResult</li>
 </ol>
 <p>Formulates and solves the mixed-integer convex formulation of the
 shortest path problem on the graph, as discussed in detail in</p>
@@ -786,6 +786,14 @@ set.</dd>
 paper, we know that this relaxation cannot solve the original
 NP-hard problem for all instances, but there are also many
 instances for which the convex relaxation is tight.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">solver</span></code>:</dt>
+<dd>provides the optimizer to be used to solve the shortest path
+optimization problem. If not set, the best solver for the given
+problem is selected. Note that if the solver cannot handle the
+type of optimization problem generated, it will throw.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">solver_options</span></code>:</dt>
+<dd>are passed to the solver once the problem is generated to set the
+solver settings.</dd>
 </dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -802,7 +810,7 @@ instances for which the convex relaxation is tight.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, convex_relaxation: bool = False) -&gt; drake::solvers::MathematicalProgramResult</li>
+<li>SolveShortestPath(self: pydrake.geometry.optimization.GraphOfConvexSets, source: drake::geometry::optimization::GraphOfConvexSets::Vertex, target: drake::geometry::optimization::GraphOfConvexSets::Vertex, convex_relaxation: bool = False, solver: drake::solvers::SolverInterface = None, solver_options: Optional[drake::solvers::SolverOptions] = None) -&gt; drake::solvers::MathematicalProgramResult</li>
 </ol>
 <p>Convenience overload that takes const reference arguments for source
 and target.</p>
