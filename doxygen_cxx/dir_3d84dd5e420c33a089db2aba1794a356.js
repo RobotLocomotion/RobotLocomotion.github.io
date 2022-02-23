@@ -8,6 +8,7 @@ var dir_3d84dd5e420c33a089db2aba1794a356 =
     ] ],
     [ "hpolyhedron.h", "hpolyhedron_8h.html", null ],
     [ "hyperellipsoid.h", "hyperellipsoid_8h.html", null ],
+    [ "intersection.h", "intersection_8h.html", null ],
     [ "iris.h", "iris_8h.html", "iris_8h" ],
     [ "minkowski_sum.h", "minkowski__sum_8h.html", null ],
     [ "point.h", "point_8h.html", null ],

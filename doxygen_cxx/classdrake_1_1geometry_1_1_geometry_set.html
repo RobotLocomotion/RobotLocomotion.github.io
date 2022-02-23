@@ -117,6 +117,7 @@ $(document).ready(function(){initNavTree('classdrake_1_1geometry_1_1_geometry_se
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classdrake_1_1geometry_1_1_geometry_set-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">GeometrySet Class Reference</div>  </div>
@@ -147,7 +148,7 @@ Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p>Various workflows may arise for operating on GeometrySet instances, e.g.</p>
 <p>:</p>
 <div class="fragment"><div class="line"><span class="comment">// Perform operation on previously existing collection of frame ids.</span></div><div class="line">std::vector&lt;FrameId&gt; my_ids{...};  <span class="comment">// Previously-defined vector of ids.</span></div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a> geometry_set;</div><div class="line">geometry_set.Add(my_ids);</div><div class="line">UnaryOperation(geometry_set);</div></div><!-- fragment --><p>or</p>
-<div class="fragment"><div class="line"><span class="comment">// Perform operation between two frames.</span></div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a> set1;</div><div class="line">set1.add(frame1);</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a> set2;</div><div class="line">set2.add(frame2);</div><div class="line">BinaryOperation(set1, set2);</div></div><!-- fragment --><p>This set of constructors allow on-the-fly construction at the call site to create temporary instances when the group membership is a single id or a previously existing id. By doing so, the above cases become:</p>
+<div class="fragment"><div class="line"><span class="comment">// Perform operation between two frames.</span></div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a> set1;</div><div class="line">set1.Add(frame1);</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a> set2;</div><div class="line">set2.Add(frame2);</div><div class="line">BinaryOperation(set1, set2);</div></div><!-- fragment --><p>This set of constructors allow on-the-fly construction at the call site to create temporary instances when the group membership is a single id or a previously existing id. By doing so, the above cases become:</p>
 <div class="fragment"><div class="line"><span class="comment">// Perform operation on previously existing collection of frame ids.</span></div><div class="line">std::vector&lt;FrameId&gt; my_ids{...};  <span class="comment">// Previously-defined vector of ids.</span></div><div class="line">UnaryOperation(<a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(my_ids));</div><div class="line"></div><div class="line"><span class="comment">// Perform operation between two frames.</span></div><div class="line">BinaryOperation(<a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(frame1), <a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(frame2));</div></div><!-- fragment --><p>The following are all valid constructions &ndash; this is <em>not</em> an exhaustive list but a representative sampling:</p>
 <div class="fragment"><div class="line"><span class="comment">// Assume that g_* and f_* are valid GeometryId and FrameId instances,</span></div><div class="line"><span class="comment">// respectively.</span></div><div class="line">std::vector&lt;GeometryId&gt; g_vector{g_0, g_1, g_2};</div><div class="line">std::set&lt;GeometryId&gt; g_set{g_3, g_4, g_5};</div><div class="line">std::unordered_set&lt;FrameId&gt; f_set{f_0, f_1};</div><div class="line"><span class="keyword">auto</span> f_list = {f_2, f_3, f_4};</div><div class="line"></div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(g_0);</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(f_0);</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>({g_0, g_1});</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>({f_0, f_1});</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(g_vector, f_set);</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>(g_set, f_list);</div><div class="line"><span class="comment">// Note: construction on values of both geometry and frame identifiers</span></div><div class="line"><span class="comment">// requires passing in &quot;collections&quot; of ids; the initializer list is the</span></div><div class="line"><span class="comment">// simplest collection that serves the purpose. When both are provided,</span></div><div class="line"><span class="comment">// GeometryId always comes before FrameId.</span></div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>({g_0}, {f_1});</div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a>({g_0}, f_set);</div><div class="line"><span class="comment">// etc.</span></div></div><!-- fragment --> </div></td></tr>
 <tr class="memitem:ab3087d65f5c12e0ac7e7458bdc0843be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#ab3087d65f5c12e0ac7e7458bdc0843be">GeometrySet</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
@@ -171,6 +172,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac91c339dd03b4291a934104ef7aa7c82"><td class="memTemplParams" colspan="2">template&lt;typename ContainerG , typename ContainerF , typename  = typename std::enable_if_t&lt;          std::is_same_v&lt;typename ContainerG::value_type, GeometryId&gt; &amp;&amp;          std::is_same_v&lt;typename ContainerF::value_type, FrameId&gt;&gt;&gt; </td></tr>
 <tr class="memitem:ac91c339dd03b4291a934104ef7aa7c82"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#ac91c339dd03b4291a934104ef7aa7c82">GeometrySet</a> (const ContainerG &amp;geometry_ids, const ContainerF &amp;frame_ids)</td></tr>
 <tr class="separator:ac91c339dd03b4291a934104ef7aa7c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Methods for adding to the set</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p>The interface for adding geometries to the set is simply an overload of the <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a35870ecdfa53e890e94055960210ead9">Add()</a> method.</p>
+<p>For maximum flexibility, the Add method can take:</p>
+<ul>
+<li>a single geometry id</li>
+<li>a single frame id</li>
+<li>an iterable object containing geometry ids</li>
+<li>an iterable object containing frame ids</li>
+<li>two iterable objects, the first containing geometry ids, the second containing frame ids.</li>
+<li>another GeometrySet instance.</li>
+</ul>
+<p>NOTE: the iterable objects don't have to be the same type. The "iterable" can also be an initializer list. All of the following invocations are valid (this isn't an exhaustive list, but a representative set):</p>
+<div class="fragment"><div class="line"><span class="comment">// Assuming that f_* are valid FrameId instances and g_* are valid GeometryId</span></div><div class="line"><span class="comment">// instances.</span></div><div class="line"><a class="code" href="classdrake_1_1geometry_1_1_geometry_set.html#a9b600eab503c91657969bc6b186e98f1">GeometrySet</a> group;</div><div class="line">group.Add(f_1);</div><div class="line">group.Add(g_1);</div><div class="line"></div><div class="line">std::vector&lt;FrameId&gt; frame_ids{f_2, f_3, f_4};</div><div class="line">group.Add(frame_ids);</div><div class="line">std::vector&lt;GeometryId&gt; geometry_ids{g_2, g_3, g_4};</div><div class="line">group.Add(geometry_ids);</div><div class="line"></div><div class="line"><span class="comment">// This is valid, but redundant; the ids in those vectors have already been</span></div><div class="line"><span class="comment">// added.</span></div><div class="line">group.Add(geometry_ids, frame_ids);</div><div class="line"></div><div class="line"><span class="comment">// Mismatched iterable types.</span></div><div class="line">std::set&lt;FrameId&gt; frame_set{f_5, f_6, f_7};</div><div class="line">group.Add({g_7, g_8}, frame_set);</div></div><!-- fragment --> </div></td></tr>
+<tr class="memitem:a35870ecdfa53e890e94055960210ead9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a35870ecdfa53e890e94055960210ead9">Add</a> (<a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> geometry_id)</td></tr>
+<tr class="separator:a35870ecdfa53e890e94055960210ead9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d5b3fcf5753bc482c72f218a1c79fa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a4d5b3fcf5753bc482c72f218a1c79fa9">Add</a> (<a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> frame_id)</td></tr>
+<tr class="separator:a4d5b3fcf5753bc482c72f218a1c79fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa667157b0736061748790c587e04e5ce"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
+<tr class="memitem:aa667157b0736061748790c587e04e5ce"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Container::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#aa667157b0736061748790c587e04e5ce">Add</a> (const Container &amp;geometry_ids)</td></tr>
+<tr class="separator:aa667157b0736061748790c587e04e5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a017d8bfc979ad7e238c538d55174a8"><td class="memTemplParams" colspan="2">template&lt;typename Container &gt; </td></tr>
+<tr class="memitem:a3a017d8bfc979ad7e238c538d55174a8"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename Container::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a3a017d8bfc979ad7e238c538d55174a8">Add</a> (const Container &amp;frame_ids)</td></tr>
+<tr class="separator:a3a017d8bfc979ad7e238c538d55174a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fa12a87724b62be9dbd69ff9b65ad12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a4fa12a87724b62be9dbd69ff9b65ad12">Add</a> (std::initializer_list&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; frame_ids)</td></tr>
+<tr class="separator:a4fa12a87724b62be9dbd69ff9b65ad12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53ce36fbfc61dbd62bb5b15ecb842796"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a53ce36fbfc61dbd62bb5b15ecb842796">Add</a> (std::initializer_list&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; geometry_ids)</td></tr>
+<tr class="separator:a53ce36fbfc61dbd62bb5b15ecb842796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ce056c966823ab8ac4529a507ef8cc"><td class="memTemplParams" colspan="2">template&lt;typename ContainerG , typename ContainerF &gt; </td></tr>
+<tr class="memitem:a00ce056c966823ab8ac4529a507ef8cc"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename ContainerG::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &amp;&amp;std::is_same_v&lt; typename ContainerF::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a00ce056c966823ab8ac4529a507ef8cc">Add</a> (const ContainerG &amp;geometry_ids, const ContainerF &amp;frame_ids)</td></tr>
+<tr class="separator:a00ce056c966823ab8ac4529a507ef8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921024bdf5a8ff998ac64ea9aa187e36"><td class="memTemplParams" colspan="2">template&lt;typename ContainerF &gt; </td></tr>
+<tr class="memitem:a921024bdf5a8ff998ac64ea9aa187e36"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename ContainerF::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a921024bdf5a8ff998ac64ea9aa187e36">Add</a> (std::initializer_list&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; geometry_ids, const ContainerF &amp;frame_ids)</td></tr>
+<tr class="separator:a921024bdf5a8ff998ac64ea9aa187e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cdee6b3da39560eb365956608b8cd05"><td class="memTemplParams" colspan="2">template&lt;typename ContainerG &gt; </td></tr>
+<tr class="memitem:a5cdee6b3da39560eb365956608b8cd05"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; std::is_same_v&lt; typename ContainerG::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a5cdee6b3da39560eb365956608b8cd05">Add</a> (const ContainerG &amp;geometry_ids, std::initializer_list&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt; frame_ids)</td></tr>
+<tr class="separator:a5cdee6b3da39560eb365956608b8cd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c8e48efd0055e81ceecd673a1e8c94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#a52c8e48efd0055e81ceecd673a1e8c94">Add</a> (const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;other)</td></tr>
+<tr class="separator:a52c8e48efd0055e81ceecd673a1e8c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:af7821e8cae937469a3ee5e271b5cd96b"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#af7821e8cae937469a3ee5e271b5cd96b">GeometrySetTester</a></td></tr>
+<tr class="separator:af7821e8cae937469a3ee5e271b5cd96b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a"><td class="memTemplParams" colspan="2">template&lt;typename &gt; </td></tr>
+<tr class="memitem:acc1754da53dee9bbe4755e63d8a55f5a"><td class="memTemplItemLeft" align="right" valign="top">class&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html#acc1754da53dee9bbe4755e63d8a55f5a">GeometryState</a></td></tr>
+<tr class="separator:acc1754da53dee9bbe4755e63d8a55f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6da0b3a5315d29a7b422b0f5f7b4f06f"></a>
@@ -491,6 +538,216 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a35870ecdfa53e890e94055960210ead9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35870ecdfa53e890e94055960210ead9">&#9670;&nbsp;</a></span>Add() <span class="overload">[1/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&#160;</td>
+          <td class="paramname"><em>geometry_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d5b3fcf5753bc482c72f218a1c79fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d5b3fcf5753bc482c72f218a1c79fa9">&#9670;&nbsp;</a></span>Add() <span class="overload">[2/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&#160;</td>
+          <td class="paramname"><em>frame_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa667157b0736061748790c587e04e5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa667157b0736061748790c587e04e5ce">&#9670;&nbsp;</a></span>Add() <span class="overload">[3/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Container::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; &gt; Add </td>
+          <td>(</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
+          <td class="paramname"><em>geometry_ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a017d8bfc979ad7e238c538d55174a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a017d8bfc979ad7e238c538d55174a8">&#9670;&nbsp;</a></span>Add() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Container::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&gt; &gt; Add </td>
+          <td>(</td>
+          <td class="paramtype">const Container &amp;&#160;</td>
+          <td class="paramname"><em>frame_ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4fa12a87724b62be9dbd69ff9b65ad12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fa12a87724b62be9dbd69ff9b65ad12">&#9670;&nbsp;</a></span>Add() <span class="overload">[5/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt;&#160;</td>
+          <td class="paramname"><em>frame_ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53ce36fbfc61dbd62bb5b15ecb842796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53ce36fbfc61dbd62bb5b15ecb842796">&#9670;&nbsp;</a></span>Add() <span class="overload">[6/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td>
+          <td class="paramname"><em>geometry_ids</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a00ce056c966823ab8ac4529a507ef8cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ce056c966823ab8ac4529a507ef8cc">&#9670;&nbsp;</a></span>Add() <span class="overload">[7/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename ContainerG::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; &amp;&amp; std::is_same_v&lt;typename ContainerF::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&gt; &gt; Add </td>
+          <td>(</td>
+          <td class="paramtype">const ContainerG &amp;&#160;</td>
+          <td class="paramname"><em>geometry_ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ContainerF &amp;&#160;</td>
+          <td class="paramname"><em>frame_ids</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a921024bdf5a8ff998ac64ea9aa187e36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921024bdf5a8ff998ac64ea9aa187e36">&#9670;&nbsp;</a></span>Add() <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename ContainerF::value_type, <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a>&gt; &gt; Add </td>
+          <td>(</td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a> &gt;&#160;</td>
+          <td class="paramname"><em>geometry_ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ContainerF &amp;&#160;</td>
+          <td class="paramname"><em>frame_ids</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cdee6b3da39560eb365956608b8cd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cdee6b3da39560eb365956608b8cd05">&#9670;&nbsp;</a></span>Add() <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename ContainerG::value_type, <a class="el" href="classdrake_1_1geometry_1_1_geometry_id.html">GeometryId</a>&gt; &gt; Add </td>
+          <td>(</td>
+          <td class="paramtype">const ContainerG &amp;&#160;</td>
+          <td class="paramname"><em>geometry_ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::initializer_list&lt; <a class="el" href="namespacedrake_1_1geometry.html#a43b41363b37fadf8cce0977d500e13cb">FrameId</a> &gt;&#160;</td>
+          <td class="paramname"><em>frame_ids</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52c8e48efd0055e81ceecd673a1e8c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52c8e48efd0055e81ceecd673a1e8c94">&#9670;&nbsp;</a></span>Add() <span class="overload">[10/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1_geometry_set.html">GeometrySet</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a064c5aa3178a22410fb7f3112d80e123"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a064c5aa3178a22410fb7f3112d80e123">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
@@ -537,6 +794,51 @@ Public Member Functions</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="af7821e8cae937469a3ee5e271b5cd96b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7821e8cae937469a3ee5e271b5cd96b">&#9670;&nbsp;</a></span>GeometrySetTester</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1geometry_1_1_geometry_set_tester.html">GeometrySetTester</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc1754da53dee9bbe4755e63d8a55f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc1754da53dee9bbe4755e63d8a55f5a">&#9670;&nbsp;</a></span>GeometryState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="classdrake_1_1geometry_1_1_geometry_state.html">GeometryState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

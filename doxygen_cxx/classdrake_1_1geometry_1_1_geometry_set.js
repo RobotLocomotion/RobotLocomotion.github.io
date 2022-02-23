@@ -11,6 +11,18 @@ var classdrake_1_1geometry_1_1_geometry_set =
     [ "GeometrySet", "classdrake_1_1geometry_1_1_geometry_set.html#a0cd4b2523e6c3bf2d924a71b5724e34b", null ],
     [ "GeometrySet", "classdrake_1_1geometry_1_1_geometry_set.html#aac297a0c63e9b43fa5f88400ca120adf", null ],
     [ "GeometrySet", "classdrake_1_1geometry_1_1_geometry_set.html#ac91c339dd03b4291a934104ef7aa7c82", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a35870ecdfa53e890e94055960210ead9", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a4d5b3fcf5753bc482c72f218a1c79fa9", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#aa667157b0736061748790c587e04e5ce", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a3a017d8bfc979ad7e238c538d55174a8", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a4fa12a87724b62be9dbd69ff9b65ad12", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a53ce36fbfc61dbd62bb5b15ecb842796", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a00ce056c966823ab8ac4529a507ef8cc", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a921024bdf5a8ff998ac64ea9aa187e36", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a5cdee6b3da39560eb365956608b8cd05", null ],
+    [ "Add", "classdrake_1_1geometry_1_1_geometry_set.html#a52c8e48efd0055e81ceecd673a1e8c94", null ],
     [ "operator=", "classdrake_1_1geometry_1_1_geometry_set.html#a064c5aa3178a22410fb7f3112d80e123", null ],
-    [ "operator=", "classdrake_1_1geometry_1_1_geometry_set.html#af0b30d9d9c8df0e0a8023ada7f67c86e", null ]
+    [ "operator=", "classdrake_1_1geometry_1_1_geometry_set.html#af0b30d9d9c8df0e0a8023ada7f67c86e", null ],
+    [ "GeometrySetTester", "classdrake_1_1geometry_1_1_geometry_set.html#af7821e8cae937469a3ee5e271b5cd96b", null ],
+    [ "GeometryState", "classdrake_1_1geometry_1_1_geometry_set.html#acc1754da53dee9bbe4755e63d8a55f5a", null ]
 ];

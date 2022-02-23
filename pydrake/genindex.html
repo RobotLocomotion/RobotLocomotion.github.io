@@ -103,6 +103,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
 </ul>
 
@@ -946,6 +947,8 @@
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.__init__">(pydrake.geometry.optimization.HPolyhedron method)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Hyperellipsoid.__init__">(pydrake.geometry.optimization.Hyperellipsoid method)</a>
+</li>
+        <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Intersection.__init__">(pydrake.geometry.optimization.Intersection method)</a>
 </li>
         <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.IrisOptions.__init__">(pydrake.geometry.optimization.IrisOptions method)</a>
 </li>
@@ -6024,9 +6027,11 @@
         <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.JointActuator_[float].effort_limit">(pydrake.multibody.tree.JointActuator_[float] method)</a>
 </li>
       </ul></li>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].element">element() (pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float] method)</a>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Intersection.element">element() (pydrake.geometry.optimization.Intersection method)</a>
 
       <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].element">(pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float] method)</a>
+</li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].element">(pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_[float].element">(pydrake.geometry.PolygonSurfaceMesh_[float] method)</a>
@@ -11036,6 +11041,10 @@
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.intersect">intersect() (in module pydrake.symbolic)</a>
 </li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Intersection">Intersection (class in pydrake.geometry.optimization)</a>
+</li>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.HPolyhedron.Intersection">Intersection() (pydrake.geometry.optimization.HPolyhedron method)</a>
+</li>
       <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.ConvexSet.IntersectsWith">IntersectsWith() (pydrake.geometry.optimization.ConvexSet method)</a>
 </li>
       <li><a href="pydrake.solvers.mixed_integer_rotation_constraint.html#pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator.interval_binning">interval_binning() (pydrake.solvers.mixed_integer_rotation_constraint.MixedIntegerRotationConstraintGenerator method)</a>
@@ -13268,16 +13277,18 @@
         <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.SystemBase.num_discrete_state_groups">(pydrake.systems.framework.SystemBase method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_elements">num_elements() (pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float] method)</a>
+      <li><a href="pydrake.geometry.optimization.html#pydrake.geometry.optimization.Intersection.num_elements">num_elements() (pydrake.geometry.optimization.Intersection method)</a>
 
       <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float].num_elements">(pydrake.geometry.PolygonSurfaceMesh_.PolygonSurfaceMesh_[float] method)</a>
+</li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd].num_elements">(pydrake.geometry.PolygonSurfaceMesh_[AutoDiffXd] method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.PolygonSurfaceMesh_[float].num_elements">(pydrake.geometry.PolygonSurfaceMesh_[float] method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.geometry.html#pydrake.geometry.ContactSurface_.ContactSurface_[float].num_faces">num_faces() (pydrake.geometry.ContactSurface_.ContactSurface_[float] method)</a>
 
       <ul>
@@ -14507,6 +14518,8 @@
       <li><a href="pydrake.systems.trajectory_optimization.html#module-pydrake.systems.trajectory_optimization">pydrake.systems.trajectory_optimization (module)</a>
 </li>
       <li><a href="pydrake.trajectories.html#module-pydrake.trajectories">pydrake.trajectories (module)</a>
+</li>
+      <li><a href="pydrake.tutorials.html#module-pydrake.tutorials">pydrake.tutorials (module)</a>
 </li>
       <li><a href="pydrake.visualization.html#module-pydrake.visualization">pydrake.visualization (module)</a>
 </li>

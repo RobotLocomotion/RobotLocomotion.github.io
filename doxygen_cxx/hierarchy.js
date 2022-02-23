@@ -590,8 +590,8 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
+    [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
@@ -658,6 +658,7 @@ var hierarchy =
         [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_cartesian_product.html", null ],
         [ "HPolyhedron", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html", null ],
         [ "Hyperellipsoid", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html", null ],
+        [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", null ],
         [ "MinkowskiSum", "classdrake_1_1geometry_1_1optimization_1_1_minkowski_sum.html", null ],
         [ "Point", "classdrake_1_1geometry_1_1optimization_1_1_point.html", null ],
         [ "VPolytope", "classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html", null ]

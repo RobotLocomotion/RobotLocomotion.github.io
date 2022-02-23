@@ -109,6 +109,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
 </ul>
 
@@ -1002,6 +1003,12 @@ of the returned Hyperellipsoid.</p>
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.Intersection">
+<code class="descname">Intersection</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.Intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the intersection of <code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="pydrake.geometry.optimization.HPolyhedron.MakeBox">
 <em class="property">static </em><code class="descname">MakeBox</code><span class="sig-paren">(</span><em>lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.MakeBox" title="Permalink to this definition">¶</a></dt>
@@ -1151,6 +1158,41 @@ center (up to precision).</p>
 <dt id="pydrake.geometry.optimization.Hyperellipsoid.Volume">
 <code class="descname">Volume</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Hyperellipsoid</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.Hyperellipsoid.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the volume of the hyperellipsoid (in Euclidean space).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.geometry.optimization.Intersection">
+<em class="property">class </em><code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">Intersection</code><a class="headerlink" href="#pydrake.geometry.optimization.Intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pydrake.geometry.optimization.ConvexSet" title="pydrake.geometry.optimization.ConvexSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.geometry.optimization.ConvexSet</span></code></a></p>
+<p>A convex set that represents the intersection of multiple sets: S = X₁
+∩ X₂ ∩ … ∩ Xₙ = {x | x ∈ X₁, x ∈ X₂, …, x ∈ Xₙ}</p>
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Intersection.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.Intersection.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.geometry.optimization.Intersection, sets: List[pydrake.geometry.optimization.CopyableUniquePtrConvexSet]) -&gt; None</li>
+</ol>
+<p>Constructs the intersection from a vector of convex sets.</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.geometry.optimization.Intersection, setA: pydrake.geometry.optimization.ConvexSet, setB: pydrake.geometry.optimization.ConvexSet) -&gt; None</li>
+</ol>
+<p>Constructs the intersection from a pair of convex sets.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Intersection.element">
+<code class="descname">element</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Intersection</em>, <em>index: int</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.ConvexSet<a class="headerlink" href="#pydrake.geometry.optimization.Intersection.element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reference to the ConvexSet defining the <code class="docutils literal notranslate"><span class="pre">index</span></code> element in
+the intersection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.Intersection.num_elements">
+<code class="descname">num_elements</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.Intersection</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.geometry.optimization.Intersection.num_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of elements (or sets) used in the intersection.</p>
 </dd></dl>
 
 </dd></dl>

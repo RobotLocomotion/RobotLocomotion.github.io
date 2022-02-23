@@ -3,6 +3,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "detail_common.h", "detail__common_8h.html", null ],
     [ "detail_ignition.h", "detail__ignition_8h.html", null ],
     [ "detail_mujoco_parser.h", "detail__mujoco__parser_8h.html", null ],
+    [ "detail_parsing_workspace.h", "detail__parsing__workspace_8h.html", null ],
     [ "detail_path_utils.h", "detail__path__utils_8h.html", null ],
     [ "detail_sdf_geometry.h", "detail__sdf__geometry_8h.html", null ],
     [ "detail_sdf_parser.h", "detail__sdf__parser_8h.html", null ],

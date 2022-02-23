@@ -30,6 +30,7 @@ var searchData=
   ['internal_5fframe_2eh',['internal_frame.h',['../internal__frame_8h.html',1,'']]],
   ['internal_5fgeometry_2eh',['internal_geometry.h',['../internal__geometry_8h.html',1,'']]],
   ['internal_5fgeometry_5fnames_2eh',['internal_geometry_names.h',['../internal__geometry__names_8h.html',1,'']]],
+  ['intersection_2eh',['intersection.h',['../intersection_8h.html',1,'']]],
   ['inverse_5fdynamics_2eh',['inverse_dynamics.h',['../inverse__dynamics_8h.html',1,'']]],
   ['inverse_5fdynamics_5fcontroller_2eh',['inverse_dynamics_controller.h',['../inverse__dynamics__controller_8h.html',1,'']]],
   ['inverse_5fkinematics_2eh',['inverse_kinematics.h',['../inverse__kinematics_8h.html',1,'']]],

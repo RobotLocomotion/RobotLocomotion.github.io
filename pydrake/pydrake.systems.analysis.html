@@ -122,6 +122,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
 </ul>
 
@@ -1386,7 +1387,7 @@ integrator anymore.</dd>
 <dl class="function">
 <dt id="pydrake.systems.analysis.MonteCarloSimulation">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">MonteCarloSimulation</code><span class="sig-paren">(</span><em>make_simulator: Callable[[pydrake.common._module_py.RandomGenerator], pydrake.systems.analysis.Simulator_[float]], output: Callable[[pydrake.systems.framework.System_[float], pydrake.systems.framework.Context_[float]], float], final_time: float, num_samples: int, generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; List[pydrake.systems.analysis.RandomSimulationResult]<a class="headerlink" href="#pydrake.systems.analysis.MonteCarloSimulation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate samples of a scalar random variable output by running many
+<dd><p>Generates samples of a scalar random variable output by running many
 random simulations drawn from independent samples of the distributions
 governing the stochastic simulation.</p>
 <p>In pseudo-code, this algorithm implements:</p>
@@ -1525,10 +1526,7 @@ Use, e.g.,</p>
   <span class="n">RandomSimulation</span><span class="p">(</span><span class="n">make_simulator</span><span class="p">,</span> <span class="n">output</span><span class="p">,</span> <span class="n">final_time</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">generator</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>for a deterministic playback of the sampled simulation. Use the
-operator&lt;&lt;() operator&gt;&gt;() methods provided for the generator, which
-implements the Standard Template Library &lt;a href=
-“<a class="reference external" href="https://en.cppreference.com/w/cpp/named_req/RandomNumberEngine">https://en.cppreference.com/w/cpp/named_req/RandomNumberEngine</a>”&gt;
+<p>for a deterministic playback of the sampled simulation.
 RandomNumberEngine concept&lt;/a&gt;, if you wish to serialize the results.
 Note that performing any non-const operations on generator_snapshot
 may advance the state of the generator and make it no longer capable

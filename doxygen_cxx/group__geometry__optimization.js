@@ -112,6 +112,7 @@ var group__geometry__optimization =
       [ "CartesianPower", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a9fe5996b5d76685d63e077a95f7a8a94", null ],
       [ "CartesianProduct", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a41dbe3e953c0721ed00d5e74e0280b31", null ],
       [ "ChebyshevCenter", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a8f101502c5626e477259a06f4acd97e1", null ],
+      [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a1e43911f06f9c31a7ad6b9d87b11430c", null ],
       [ "IsBounded", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65", null ],
       [ "MakeBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a90a3c53754fc20d77419aae25ed1b1c1", null ],
       [ "MakeUnitBox", "classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#ad362319489a2c5507a34d9b5c0a6e696", null ],
@@ -135,6 +136,17 @@ var group__geometry__optimization =
       [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a31236f7fa2323eab3ac92db5e4d89829", null ],
       [ "ToShapeWithPose", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#af7add202067720eb1a04fac8f1781c87", null ],
       [ "Volume", "classdrake_1_1geometry_1_1optimization_1_1_hyperellipsoid.html#a678f606b1ff10c8959240d2985e022ad", null ]
+    ] ],
+    [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html", [
+      [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#aecaa71c6fa73805192424c08eed6db2b", null ],
+      [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a4bb118650a6b2616e008bdc642d043d8", null ],
+      [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a975d99900951b2a2cfee5777e32e329c", null ],
+      [ "Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a2a3f4bf8aea1252265f088592342060a", null ],
+      [ "~Intersection", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#ae68336f6101d2c47cee1a1eb7dc926f6", null ],
+      [ "element", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a06cf8fec3d41afb4398baccb7d9ce347", null ],
+      [ "num_elements", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a98f8a4ac27c2c8008728ae504e8e68bc", null ],
+      [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#a7b576c6ef0a29307ea834724937fef6b", null ],
+      [ "operator=", "classdrake_1_1geometry_1_1optimization_1_1_intersection.html#abe5efeb5bbc62b365d01c7c4b09e9686", null ]
     ] ],
     [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html", [
       [ "IrisOptions", "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac", null ],
