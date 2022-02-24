@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a47b7fc7e1512bd8c6cd76d9813e64668":[3,0,0,8,0,0,0,12],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a4d353cbb4968e31da37a033d0175fa8e":[3,0,0,8,0,0,0,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a57a8b84bcac5c62cf01216727f8fb2a6":[3,0,0,8,0,0,0,22],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a57e0ebdf6efdd5554cc03afb076f1e62":[3,0,0,8,0,0,0,15],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a94e6c4bd14b6d3e976e80baeb1431bb0":[3,0,0,9,0,1,11],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#aa598ef9840321885b4d72cfa132d99bb":[3,0,0,9,0,1,13],
 "classdrake_1_1perception_1_1pc__flags_1_1_fields.html#abd8fdedb8e406b3974a42490eae381c4":[3,0,0,9,0,1,6],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad3025de6b4ed83a68f573cd3e203cc4e":[3,0,0,9,0,1,15],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad3c1e869350aab59e84b977b7d5a341c":[3,0,0,9,0,1,9]
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad3025de6b4ed83a68f573cd3e203cc4e":[3,0,0,9,0,1,15]
 };

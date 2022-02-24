@@ -157,6 +157,7 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_parser.html#a818199bfa51f6b3d5e9a8660bc4e486c":[3,0,0,8,51,5],
 "classdrake_1_1multibody_1_1_parser.html#a874a4b22e398a11c45d9f3530c9add35":[3,0,0,8,51,0],
 "classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2":[3,0,0,8,51,3],
+"classdrake_1_1multibody_1_1_parser.html#adbcfdbffd423372fd0b6ece742437971":[3,0,0,8,51,9],
 "classdrake_1_1multibody_1_1_parser.html#aeebdf7001a0290c2891454d506c67a74":[3,0,0,8,51,6],
 "classdrake_1_1multibody_1_1_parser.html#afb031b4b56411c477d6f19f9f1dc65f0":[3,0,0,8,51,8],
 "classdrake_1_1multibody_1_1_planar_joint.html":[3,0,0,8,52],
@@ -248,6 +249,5 @@ var NAVTREEINDEX13 =
 "classdrake_1_1multibody_1_1_propeller.html#a280fde2ed6d0906edaa37c422fd7f410":[1,2,7,0,7],
 "classdrake_1_1multibody_1_1_propeller.html#a3eef44c7936aab51f7f0ee330892277c":[1,2,7,0,2],
 "classdrake_1_1multibody_1_1_propeller.html#a4f89cbd2b0c2cdd6cbd69555aaf94501":[1,2,7,0,8],
-"classdrake_1_1multibody_1_1_propeller.html#a7a1acac5cd79500cabe361e1203d1706":[1,2,7,0,3],
-"classdrake_1_1multibody_1_1_propeller.html#a88266abb81081f12190360acabfec8aa":[1,2,7,0,4]
+"classdrake_1_1multibody_1_1_propeller.html#a7a1acac5cd79500cabe361e1203d1706":[1,2,7,0,3]
 };

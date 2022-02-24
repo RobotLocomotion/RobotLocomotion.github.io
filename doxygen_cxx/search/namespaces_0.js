@@ -5,6 +5,7 @@ var searchData=
   ['analysis',['analysis',['../namespacedrake_1_1systems_1_1analysis.html',1,'drake::systems']]],
   ['analysis_5ftest',['analysis_test',['../namespacedrake_1_1systems_1_1analysis__test.html',1,'drake::systems']]],
   ['assert',['assert',['../namespacedrake_1_1assert.html',1,'drake']]],
+  ['ball_5fplate',['ball_plate',['../namespacedrake_1_1examples_1_1ball__plate.html',1,'drake::examples']]],
   ['bead_5fon_5fa_5fwire',['bead_on_a_wire',['../namespacedrake_1_1examples_1_1bead__on__a__wire.html',1,'drake::examples']]],
   ['benchmarks',['benchmarks',['../namespacedrake_1_1multibody_1_1benchmarks.html',1,'drake::multibody']]],
   ['bouncing_5fball',['bouncing_ball',['../namespacedrake_1_1examples_1_1bouncing__ball.html',1,'drake::examples::bouncing_ball'],['../namespacedrake_1_1examples_1_1multibody_1_1bouncing__ball.html',1,'drake::examples::multibody::bouncing_ball'],['../namespacedrake_1_1examples_1_1scene__graph_1_1bouncing__ball.html',1,'drake::examples::scene_graph::bouncing_ball']]],

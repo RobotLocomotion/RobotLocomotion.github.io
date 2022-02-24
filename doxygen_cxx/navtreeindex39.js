@@ -1,5 +1,6 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b":[3,0,0,16,3,7],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html":[3,0,0,16,4],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a0737945305cf88496fc289776515e0d9":[3,0,0,16,4,16],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,16,4,21],
@@ -139,8 +140,8 @@ var NAVTREEINDEX39 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ac6b633da6524d9de1afa712a666e1c39":[3,0,1,31,8],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ad20897c5c8bd47f5d4005989bead0e55":[3,0,1,31,14],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aee364209a9c4b4b23c7cb32c9d0119b6":[3,0,1,31,2],
-"cloth__spring__model_8h.html":[4,0,0,3,8,0],
-"cloth__spring__model__geometry_8h.html":[4,0,0,3,8,1],
+"cloth__spring__model_8h.html":[4,0,0,3,9,0],
+"cloth__spring__model__geometry_8h.html":[4,0,0,3,9,1],
 "clp__solver_8h.html":[4,0,0,10,8],
 "collision__filter_8h.html":[4,0,0,4,2,4],
 "collision__filter__declaration_8h.html":[4,0,0,4,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX39 =
 "cpp__template__pybind_8h.html#a0ed2ec474b72c29e46e599da52c385dc":[4,0,0,0,0,0,1,0],
 "cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,0,1,4],
 "cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,0,1,1],
-"cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2],
-"cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3]
+"cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2]
 };
