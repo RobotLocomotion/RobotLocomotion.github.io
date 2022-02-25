@@ -3765,7 +3765,7 @@ indeterminates.</p>
 <code class="descname">SetDecisionVariableValueInVector</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.SetDecisionVariableValueInVector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>SetDecisionVariableValueInVector(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, decision_variable: pydrake.symbolic.Variable, decision_variable_new_value: float, values: numpy.ndarray[numpy.float64[m, 1], flags.writeable]) -&gt; None</li>
+<li>SetDecisionVariableValueInVector(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, decision_variable: pydrake.symbolic.Variable, decision_variable_new_value: float, values: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]) -&gt; None</li>
 </ol>
 <p>Updates the value of a single <code class="docutils literal notranslate"><span class="pre">decision_variable</span></code> inside the
 <code class="docutils literal notranslate"><span class="pre">values</span></code> vector to be <code class="docutils literal notranslate"><span class="pre">decision_variable_new_value</span></code>. The other
@@ -3779,7 +3779,7 @@ decision variables’ values in <code class="docutils literal notranslate"><span
 <dd>The vector to be tweaked; must be of size num_vars().</dd>
 </dl>
 <ol class="arabic simple" start="2">
-<li>SetDecisionVariableValueInVector(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, decision_variables: numpy.ndarray[object[m, n], flags.f_contiguous], decision_variables_new_values: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], values: numpy.ndarray[numpy.float64[m, 1], flags.writeable]) -&gt; None</li>
+<li>SetDecisionVariableValueInVector(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, decision_variables: numpy.ndarray[object[m, n], flags.f_contiguous], decision_variables_new_values: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], values: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]) -&gt; None</li>
 </ol>
 <p>Updates the values of some <code class="docutils literal notranslate"><span class="pre">decision_variables</span></code> inside the
 <code class="docutils literal notranslate"><span class="pre">values</span></code> vector to be <code class="docutils literal notranslate"><span class="pre">decision_variables_new_values</span></code>. The other

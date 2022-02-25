@@ -3487,7 +3487,7 @@ layer of the network (including the last layer).</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].Backpropagation">
-<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]], float], dloss_dparams: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].Backpropagation" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Optional[numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]]], float], dloss_dparams: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].Backpropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements the Backpropagation algorithm for the MLP to compute the
 gradients of a scalar loss function with respect to the network
 parameters.</p>
@@ -3521,7 +3521,7 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].BackpropagationMeanSquaredError">
-<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], dloss_dparams: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
+<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], dloss_dparams: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id9"><span class="problematic" id="id10">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
@@ -3532,7 +3532,7 @@ Backpropagation for details.</p>
 <code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_.MultilayerPerceptron_[float].BatchOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: Optional[numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]], dYdX: Optional[numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]] = None) -&gt; None</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
@@ -3559,33 +3559,6 @@ allocations.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
-</ol>
-<p>Evaluates the batch output for the MLP with a batch input vector. Each
-column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
-assigned the corresponding output.</p>
-<p>If the output layer of the network has size 1 (scalar output), and
-<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
-gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
-(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
-<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
-<p>This methods shares the cache with Backpropagation. If the size of X
-changes here or in Backpropagation, it may force dynamic memory
-allocations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -3658,7 +3631,7 @@ weights and biases.</p>
 <p>Sets the biases in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: numpy.ndarray[numpy.float64[m, 1], flags.writeable], layer: int, b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]], layer: int, b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Sets the biases in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -3681,7 +3654,7 @@ single vector. Use SetWeights and SetBiases to extract the components.</p>
 <p>Sets the weights in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: numpy.ndarray[numpy.float64[m, 1], flags.writeable], layer: int, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</li>
+<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]], layer: int, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</li>
 </ol>
 <p>Sets the weights in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -3783,7 +3756,7 @@ layer of the network (including the last layer).</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].Backpropagation">
-<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[object[m, n], flags.f_contiguous], numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]], pydrake.autodiffutils.AutoDiffXd], dloss_dparams: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].Backpropagation" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[object[m, n], flags.f_contiguous], Optional[numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]]], pydrake.autodiffutils.AutoDiffXd], dloss_dparams: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].Backpropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements the Backpropagation algorithm for the MLP to compute the
 gradients of a scalar loss function with respect to the network
 parameters.</p>
@@ -3817,7 +3790,7 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].BackpropagationMeanSquaredError">
-<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[object[m, n], flags.f_contiguous], dloss_dparams: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
+<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[object[m, n], flags.f_contiguous], dloss_dparams: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id11"><span class="problematic" id="id12">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
@@ -3828,7 +3801,7 @@ Backpropagation for details.</p>
 <code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd].BatchOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: Optional[numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]], dYdX: Optional[numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]] = None) -&gt; None</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
@@ -3855,33 +3828,6 @@ allocations.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
-</ol>
-<p>Evaluates the batch output for the MLP with a batch input vector. Each
-column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
-assigned the corresponding output.</p>
-<p>If the output layer of the network has size 1 (scalar output), and
-<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
-gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
-(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
-<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
-<p>This methods shares the cache with Backpropagation. If the size of X
-changes here or in Backpropagation, it may force dynamic memory
-allocations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -3954,7 +3900,7 @@ weights and biases.</p>
 <p>Sets the biases in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], params: numpy.ndarray[object[m, 1], flags.writeable], layer: int, b: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], params: Optional[numpy.ndarray[object[m, 1], flags.writeable]], layer: int, b: numpy.ndarray[object[m, 1]]) -&gt; None</li>
 </ol>
 <p>Sets the biases in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -3977,7 +3923,7 @@ single vector. Use SetWeights and SetBiases to extract the components.</p>
 <p>Sets the weights in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], params: numpy.ndarray[object[m, 1], flags.writeable], layer: int, W: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; None</li>
+<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[AutoDiffXd], params: Optional[numpy.ndarray[object[m, 1], flags.writeable]], layer: int, W: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; None</li>
 </ol>
 <p>Sets the weights in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -4077,7 +4023,7 @@ layer of the network (including the last layer).</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_[Expression].Backpropagation">
-<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[object[m, n], flags.f_contiguous], numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]], pydrake.symbolic.Expression], dloss_dparams: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[Expression].Backpropagation" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[object[m, n], flags.f_contiguous], Optional[numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]]], pydrake.symbolic.Expression], dloss_dparams: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[Expression].Backpropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements the Backpropagation algorithm for the MLP to compute the
 gradients of a scalar loss function with respect to the network
 parameters.</p>
@@ -4111,7 +4057,7 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_[Expression].BackpropagationMeanSquaredError">
-<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[object[m, n], flags.f_contiguous], dloss_dparams: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[Expression].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
+<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[object[m, n], flags.f_contiguous], dloss_dparams: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[Expression].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id13"><span class="problematic" id="id14">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
@@ -4122,7 +4068,7 @@ Backpropagation for details.</p>
 <code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[Expression].BatchOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: Optional[numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]], dYdX: Optional[numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]] = None) -&gt; None</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
@@ -4149,33 +4095,6 @@ allocations.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous], Y: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[object[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
-</ol>
-<p>Evaluates the batch output for the MLP with a batch input vector. Each
-column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
-assigned the corresponding output.</p>
-<p>If the output layer of the network has size 1 (scalar output), and
-<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
-gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
-(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
-<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
-<p>This methods shares the cache with Backpropagation. If the size of X
-changes here or in Backpropagation, it may force dynamic memory
-allocations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], context: pydrake.systems.framework.Context_[Expression], X: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[object[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -4248,7 +4167,7 @@ weights and biases.</p>
 <p>Sets the biases in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], params: numpy.ndarray[object[m, 1], flags.writeable], layer: int, b: numpy.ndarray[object[m, 1]]) -&gt; None</li>
+<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], params: Optional[numpy.ndarray[object[m, 1], flags.writeable]], layer: int, b: numpy.ndarray[object[m, 1]]) -&gt; None</li>
 </ol>
 <p>Sets the biases in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -4271,7 +4190,7 @@ single vector. Use SetWeights and SetBiases to extract the components.</p>
 <p>Sets the weights in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], params: numpy.ndarray[object[m, 1], flags.writeable], layer: int, W: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; None</li>
+<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[Expression], params: Optional[numpy.ndarray[object[m, 1], flags.writeable]], layer: int, W: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; None</li>
 </ol>
 <p>Sets the weights in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -4371,7 +4290,7 @@ layer of the network (including the last layer).</dd>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_[float].Backpropagation">
-<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]], float], dloss_dparams: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[float].Backpropagation" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Backpropagation</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], loss: Callable[[numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Optional[numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]]], float], dloss_dparams: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[float].Backpropagation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Implements the Backpropagation algorithm for the MLP to compute the
 gradients of a scalar loss function with respect to the network
 parameters.</p>
@@ -4405,7 +4324,7 @@ It uses analytical gradients; AutoDiffXd is not required.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.primitives.MultilayerPerceptron_[float].BackpropagationMeanSquaredError">
-<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], dloss_dparams: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[float].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
+<code class="descname">BackpropagationMeanSquaredError</code><span class="sig-paren">(</span><em>self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y_desired: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], dloss_dparams: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[float].BackpropagationMeanSquaredError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls Backpropagation with the mean-squared error loss function: loss
 = 1/N ∑ᵢ <a href="#id15"><span class="problematic" id="id16">|</span></a>yᵢ−yᵢᵈ|², where yᵈ is the desired values for y. See
 Backpropagation for details.</p>
@@ -4416,7 +4335,7 @@ Backpropagation for details.</p>
 <code class="descname">BatchOutput</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.primitives.MultilayerPerceptron_[float].BatchOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
+<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: Optional[numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]], dYdX: Optional[numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]] = None) -&gt; None</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. Each
 column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
@@ -4443,33 +4362,6 @@ allocations.</p>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
-<li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], Y: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous], dYdX: numpy.ndarray[numpy.float64[m, n], flags.writeable, flags.f_contiguous]) -&gt; None</li>
-</ol>
-<p>Evaluates the batch output for the MLP with a batch input vector. Each
-column of <code class="docutils literal notranslate"><span class="pre">X</span></code> represents an input, and each column of <code class="docutils literal notranslate"><span class="pre">Y</span></code> will be
-assigned the corresponding output.</p>
-<p>If the output layer of the network has size 1 (scalar output), and
-<code class="docutils literal notranslate"><span class="pre">dYdX</span> <span class="pre">!=</span> <span class="pre">nullptr</span></code>, then <code class="docutils literal notranslate"><span class="pre">dYdX</span></code> is populated with the batch
-gradients of the scalar output <code class="docutils literal notranslate"><span class="pre">Y</span></code> relative to the input <code class="docutils literal notranslate"><span class="pre">X</span></code>: the
-(i,j)th element represents the gradient dY(0,j) / dX(i,j).</p>
-<p>Note: In python, use numpy.asfortranarray() to allocate the writeable
-matrices <code class="docutils literal notranslate"><span class="pre">Y</span></code> and (if needed) <code class="docutils literal notranslate"><span class="pre">dYdX</span></code>.</p>
-<p>This methods shares the cache with Backpropagation. If the size of X
-changes here or in Backpropagation, it may force dynamic memory
-allocations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if dYdX != nullptr and the network has more than one</li>
-<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">output.</span></code></li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<ol class="arabic simple" start="3">
 <li>BatchOutput(self: pydrake.systems.primitives.MultilayerPerceptron_[float], context: pydrake.systems.framework.Context_[float], X: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, n]]</li>
 </ol>
 <p>Evaluates the batch output for the MLP with a batch input vector. See BatchOutput(context, X, Y) for a version that can avoid dynamic memory allocations of Y (e.g. if this is used inside an optimization loop).</p>
@@ -4542,7 +4434,7 @@ weights and biases.</p>
 <p>Sets the biases in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: numpy.ndarray[numpy.float64[m, 1], flags.writeable], layer: int, b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+<li>SetBiases(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]], layer: int, b: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
 </ol>
 <p>Sets the biases in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
@@ -4565,7 +4457,7 @@ single vector. Use SetWeights and SetBiases to extract the components.</p>
 <p>Sets the weights in the <code class="docutils literal notranslate"><span class="pre">context</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code>
 to <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>
 <ol class="arabic simple" start="2">
-<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: numpy.ndarray[numpy.float64[m, 1], flags.writeable], layer: int, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</li>
+<li>SetWeights(self: pydrake.systems.primitives.MultilayerPerceptron_[float], params: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]], layer: int, W: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; None</li>
 </ol>
 <p>Sets the weights in <code class="docutils literal notranslate"><span class="pre">params</span></code> used in the mapping from <code class="docutils literal notranslate"><span class="pre">layer</span></code> to
 <code class="docutils literal notranslate"><span class="pre">layer+1</span></code>.</p>

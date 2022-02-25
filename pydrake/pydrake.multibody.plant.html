@@ -5207,7 +5207,7 @@ be smaller than this value. See also stribeck_approximation.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetActuationInArray">
-<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[numpy.float64[m, 1]], u: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[numpy.float64[m, 1]], u: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_instance</span></code> for all actuators in
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, this method sets the actuation vector u for the
 entire model to which this actuator belongs to. This method throws an
@@ -5392,7 +5392,7 @@ vector [q; v] for a specified model instance in a given Context.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetPositionsInArray">
-<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]], q: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]], q: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized positions for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">q</span></code> using <code class="docutils literal notranslate"><span class="pre">q_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">q</span></code> is not of size
@@ -5445,7 +5445,7 @@ given Context from a given vector.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetVelocitiesInArray">
-<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[numpy.float64[m, 1]], v: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[numpy.float64[m, 1]], v: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
@@ -9166,7 +9166,7 @@ be smaller than this value. See also stribeck_approximation.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetActuationInArray">
-<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[object[m, 1]], u: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_instance</span></code> for all actuators in
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, this method sets the actuation vector u for the
 entire model to which this actuator belongs to. This method throws an
@@ -9351,7 +9351,7 @@ vector [q; v] for a specified model instance in a given Context.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetPositionsInArray">
-<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[object[m, 1]], q: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[object[m, 1]], q: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized positions for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">q</span></code> using <code class="docutils literal notranslate"><span class="pre">q_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">q</span></code> is not of size
@@ -9404,7 +9404,7 @@ given Context from a given vector.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetVelocitiesInArray">
-<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[object[m, 1]], v: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[object[m, 1]], v: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
@@ -13123,7 +13123,7 @@ be smaller than this value. See also stribeck_approximation.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetActuationInArray">
-<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[object[m, 1]], u: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[object[m, 1]], u: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_instance</span></code> for all actuators in
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, this method sets the actuation vector u for the
 entire model to which this actuator belongs to. This method throws an
@@ -13308,7 +13308,7 @@ vector [q; v] for a specified model instance in a given Context.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetPositionsInArray">
-<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[object[m, 1]], q: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[object[m, 1]], q: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized positions for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">q</span></code> using <code class="docutils literal notranslate"><span class="pre">q_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">q</span></code> is not of size
@@ -13361,7 +13361,7 @@ given Context from a given vector.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].SetVelocitiesInArray">
-<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[object[m, 1]], v: numpy.ndarray[object[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[object[m, 1]], v: Optional[numpy.ndarray[object[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
@@ -17080,7 +17080,7 @@ be smaller than this value. See also stribeck_approximation.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].SetActuationInArray">
-<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[numpy.float64[m, 1]], u: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetActuationInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, u_instance: numpy.ndarray[numpy.float64[m, 1]], u: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetActuationInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the actuation values <code class="docutils literal notranslate"><span class="pre">u_instance</span></code> for all actuators in
 <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>, this method sets the actuation vector u for the
 entire model to which this actuator belongs to. This method throws an
@@ -17265,7 +17265,7 @@ vector [q; v] for a specified model instance in a given Context.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].SetPositionsInArray">
-<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]], q: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetPositionsInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, q_instance: numpy.ndarray[numpy.float64[m, 1]], q: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetPositionsInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized positions for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">q</span></code> using <code class="docutils literal notranslate"><span class="pre">q_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">q</span></code> is not of size
@@ -17318,7 +17318,7 @@ given Context from a given vector.</p>
 
 <dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].SetVelocitiesInArray">
-<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[numpy.float64[m, 1]], v: numpy.ndarray[numpy.float64[m, 1], flags.writeable]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
+<code class="descname">SetVelocitiesInArray</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float], model_instance: pydrake.multibody.tree.ModelInstanceIndex, v_instance: numpy.ndarray[numpy.float64[m, 1]], v: Optional[numpy.ndarray[numpy.float64[m, 1], flags.writeable]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].SetVelocitiesInArray" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the vector of generalized velocities for <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> in
 <code class="docutils literal notranslate"><span class="pre">v</span></code> using <code class="docutils literal notranslate"><span class="pre">v_instance</span></code>, leaving all other elements in the array
 untouched. This method throws an exception if <code class="docutils literal notranslate"><span class="pre">v</span></code> is not of size
