@@ -195,7 +195,11 @@ Building and running directly on arm64 is not yet supported; plans
 for any future arm64 support on macOS and/or Ubuntu are discussed in
 <a href="https://github.com/RobotLocomotion/drake/issues/13514">issue #13514</a>.</p>
 
-<p>⁽³⁾ CPython is the only Python implementation supported.</p>
+<p>⁽³⁾ CPython is the only Python implementation supported.
+Drake does not support the Python environment supplied by Anaconda. Before
+installing or using Drake, please <code class="highlighter-rouge">conda deactivate</code> (repeatedly, until even
+the conda base environment has been deactivated) such that none of the paths
+reported <code class="highlighter-rouge">which -a python python3</code> refer to conda.</p>
 
 <p>⁽⁴⁾ Drake features that perform image rendering (e.g., camera simulation)
 require a working display server.  Most personal computers will have this

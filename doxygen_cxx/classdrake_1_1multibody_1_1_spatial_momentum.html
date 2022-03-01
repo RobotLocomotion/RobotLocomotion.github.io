@@ -168,9 +168,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44c99dee3119fc8e7afc1f92231e641d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a44c99dee3119fc8e7afc1f92231e641d">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_PQ_E) const</td></tr>
 <tr class="memdesc:a44c99dee3119fc8e7afc1f92231e641d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift of a SpatialMomentum from one application point to another.  <a href="#a44c99dee3119fc8e7afc1f92231e641d">More...</a><br /></td></tr>
 <tr class="separator:a44c99dee3119fc8e7afc1f92231e641d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd8e98e3a57032170201fb044bd6d72d"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#acd8e98e3a57032170201fb044bd6d72d">dot</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;V_NBp_E) const</td></tr>
-<tr class="memdesc:acd8e98e3a57032170201fb044bd6d72d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given <code>this</code> spatial momentum <code>L_NBp_E</code> of a rigid body B, about point P and, expressed in a frame E, this method computes the dot product with the spatial velocity <code>V_NBp_E</code> of body B frame shifted to point P, measured in an inertial (or Newtonian) frame N and expressed in the same frame E in which the spatial momentum is expressed.  <a href="#acd8e98e3a57032170201fb044bd6d72d">More...</a><br /></td></tr>
-<tr class="separator:acd8e98e3a57032170201fb044bd6d72d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953c5a97a970a6e96fa6f609e147dcda"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a953c5a97a970a6e96fa6f609e147dcda">dot</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;velocity) const</td></tr>
+<tr class="memdesc:a953c5a97a970a6e96fa6f609e147dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates twice (2x) a body B's kinetic energy measured in a frame M.  <a href="#a953c5a97a970a6e96fa6f609e147dcda">More...</a><br /></td></tr>
+<tr class="separator:a953c5a97a970a6e96fa6f609e147dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a6042fc1fe4f8b4f29d50a5f73c506ee0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a6042fc1fe4f8b4f29d50a5f73c506ee0">SpatialMomentum</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html">SpatialMomentum</a> &amp;)=default</td></tr>
 <tr class="separator:a6042fc1fe4f8b4f29d50a5f73c506ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -426,8 +426,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="acd8e98e3a57032170201fb044bd6d72d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd8e98e3a57032170201fb044bd6d72d">&#9670;&nbsp;</a></span>dot()</h2>
+<a id="a953c5a97a970a6e96fa6f609e147dcda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a953c5a97a970a6e96fa6f609e147dcda">&#9670;&nbsp;</a></span>dot()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,16 +436,27 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">T dot </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>V_NBp_E</em></td><td>)</td>
+          <td class="paramname"><em>velocity</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Given <code>this</code> spatial momentum <code>L_NBp_E</code> of a rigid body B, about point P and, expressed in a frame E, this method computes the dot product with the spatial velocity <code>V_NBp_E</code> of body B frame shifted to point P, measured in an inertial (or Newtonian) frame N and expressed in the same frame E in which the spatial momentum is expressed. </p>
-<p>This dot-product is twice the kinetic energy <code>ke_NB</code> of body B in reference frame N. The kinetic energy <code>ke_NB</code> is independent of the about-point P and so is this dot product. Therefore it is always true that: </p><pre>
-  ke_NB = 1/2 (L_NBp⋅V_NBp) = 1/2 (L_NBcm⋅V_NBcm)
-</pre><p> where <code>L_NBcm</code> is the spatial momentum about the center of mass of body B and <code>V_NBcm</code> is the spatial velocity of frame B shifted to its center of mass. The above is true due to how spatial momentum and velocity shift when changing point P, see <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a44c99dee3119fc8e7afc1f92231e641d" title="Shift of a SpatialMomentum from one application point to another.">SpatialMomentum::Shift()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a6f3d914695e66945fc14bb098058b1f3" title="Shift of a SpatialVelocity from one point on a rigid body or frame to another point on the same body ...">SpatialVelocity::Shift()</a>. </p>
+<p>Calculates twice (2x) a body B's kinetic energy measured in a frame M. </p>
+<p>For any frame (e.g., an <a class="el" href="group__multibody__frames__and__bodies.html">offset frame</a>) Bp that is fixed to a rigid body B, calculates the dot-product of <code>this</code> = L_MBp_E (body B's spatial momentum measured in frame M, about Bp's origin, expressed in frame E) with V_MBp_E (frame Bp's spatial velocity measured in frame M, expressed in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">velocity</td><td>which is V_MBp_E, frame Bp's spatial velocity measured in frame M, and expressed in the same frame E as <code>this</code> = L_MBp_E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>2*K_MB, twice (2x) body B's kinetic energy measured in frame M. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In general, kinetic energy calculations are only useful when frame M is a world frame (also called a Newtonian or inertial frame). Hence, it is unusual to use this method unless frame M is the world frame W. </dd>
+<dd>
+Although the spatial vectors V_MBp_E and L_MBp_E must have the same expressed-in frame E, the resulting scalar K_MB is independent of frame E. </dd>
+<dd>
+As shown below, K_MB can be calculated from any frame Bp fixed on B, including body B's center of mass frame Bcm. This is due to how spatial momentum and spatial velocity shift from Bcm to Bp. For more information, see <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a44c99dee3119fc8e7afc1f92231e641d" title="Shift of a SpatialMomentum from one application point to another.">SpatialMomentum::Shift()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">SpatialVelocity::Shift()</a>. <pre>
+  K_MB = 1/2 (L_MBp · V_MBp) = 1/2 (L_MBcm · V_MBcm)
+</pre> </dd></dl>
 
 </div>
 </div>
@@ -563,7 +574,7 @@ Additional Inherited Members</h2></td></tr>
 </pre><p> where <code>Φ(p_PQ)</code> is the linear operator: </p><pre>
   Φ(p_PQ) = | I₃ p_PQx |
             | 0     I₃ |
-</pre><p> where <code>p_PQx</code> denotes the cross product, skew-symmetric, matrix such that <code>p_PQx v = p_PQ x v</code>. This same operator shifts spatial forces in analogous way (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#aac6191ea5169aaac3b7097dbed1b88cb" title="Shift of a SpatialForce from one application point to another.">SpatialForce::Shift()</a>) while the transpose of this operator allow us to shift spatial velocities, see <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a6f3d914695e66945fc14bb098058b1f3" title="Shift of a SpatialVelocity from one point on a rigid body or frame to another point on the same body ...">SpatialVelocity::Shift()</a>.</p>
+</pre><p> where <code>p_PQx</code> denotes the cross product, skew-symmetric, matrix such that <code>p_PQx v = p_PQ x v</code>. This same operator shifts spatial forces in analogous way (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#aac6191ea5169aaac3b7097dbed1b88cb" title="Shift of a SpatialForce from one application point to another.">SpatialForce::Shift()</a>) while the transpose of this operator allow us to shift spatial velocities, see <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">SpatialVelocity::Shift()</a>.</p>
 <ul>
 <li>[Jain 2010] Jain, A., 2010. Robot and multibody dynamics: analysis and algorithms. Springer Science &amp; Business Media, pp. 123-130.</li>
 </ul>

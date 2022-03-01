@@ -1,6 +1,5 @@
 var NAVTREEINDEX47 =
 {
-"screw__mobilizer_8h.html":[4,0,0,8,13,41],
 "scs__solver_8h.html":[4,0,0,10,44],
 "sdpa__free__format_8h.html":[4,0,0,10,45],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,10,45,0],
@@ -29,8 +28,6 @@ var NAVTREEINDEX47 =
 "simulator__config__functions_8h.html#gad32461bc90073aac39049d636974a04b":[4,0,0,11,0,23,3],
 "simulator__gflags_8h.html":[4,0,0,11,0,24],
 "simulator__gflags_8h.html#a03ad7235991b77cba364074f82049d31":[4,0,0,11,0,24,2],
-"simulator__gflags_8h.html#a0985d020df74af5d4cdb0296951b5c68":[4,0,0,11,0,24,7],
-"simulator__gflags_8h.html#a0a6e4906135fe23f2a8f8f9cd68f3385":[4,0,0,11,0,24,6],
 "simulator__gflags_8h.html#a0cc9deeb95a8594918a525db7ac445c2":[4,0,0,11,0,24,3],
 "simulator__gflags_8h.html#a1de575cbf61e7155e7ed13858b9ce177":[4,0,0,11,0,24,5],
 "simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd":[4,0,0,11,0,24,1],
@@ -249,5 +246,8 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#aa439b0d89e38b17d00d217c56b047737":[3,0,0,3,46,9],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd":[3,0,0,3,46,1],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,3,46,2],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,3,46,3]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,3,46,3],
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,3,46,12],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,3,47],
+"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,3,47,9]
 };

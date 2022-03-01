@@ -391,22 +391,11 @@ and the original path is kept.</p>
 <dl class="method">
 <dt id="pydrake.multibody.parsing.PackageMap.PopulateUpstreamToDrake">
 <code class="descname">PopulateUpstreamToDrake</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.PackageMap</em>, <em>model_file: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.PopulateUpstreamToDrake" title="Permalink to this definition">¶</a></dt>
-<dd><p>Crawls up the directory tree from <code class="docutils literal notranslate"><span class="pre">model_file</span></code> to <code class="docutils literal notranslate"><span class="pre">drake</span></code>
-searching for <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files. Adds the packages described by
-these <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files. If <code class="docutils literal notranslate"><span class="pre">model_file</span></code> is not in <code class="docutils literal notranslate"><span class="pre">drake</span></code>,
-this method returns without doing anything.</p>
+<dd><p>(Deprecated.)</p>
 <dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">model_file</span></code>:</dt>
-<dd>The model file whose directory is the start of the search for
-<code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files. This file must be an SDF or URDF file.
-(Deprecated.)</dd>
 <dt>Deprecated:</dt>
-<dd>You should remove all calls to this function. There is no
-replacement, because the feature should be irrelevant. This
-function is a no-op unless you are also using one of the
-deprecated package.xml files internal to Drake without using
-Drake’s multibody::Parser class. This will be removed from Drake
-on or after 2022-05-01.</dd>
+<dd>This function is a no-op; you should remove any calls to it. This
+will be removed from Drake on or after 2022-05-01.</dd>
 </dl>
 </dd></dl>
 

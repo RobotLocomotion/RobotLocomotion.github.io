@@ -122,10 +122,7 @@ $(document).ready(function(){initNavTree('simulator__gflags_8h.html','');});
 <div class="title">simulator_gflags.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This file defines gflags settings to control Simulator settings. </p>
-<p>Only include this from translation units that declare a <code>main</code> function. </p>
-</div><div class="textblock"><code>#include &lt;memory&gt;</code><br />
+<div class="textblock"><code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;gflags/gflags.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="integrator__base_8h.html">drake/systems/analysis/integrator_base.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="simulator_8h.html">drake/systems/analysis/simulator.h</a>&quot;</code><br />
@@ -157,14 +154,6 @@ Functions</h2></td></tr>
 <tr class="separator:aae7184a96835fe5037011cff956df981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ddf6e3d8e5f2ecb32db146fad3ce6bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simulator__gflags_8h.html#a2ddf6e3d8e5f2ecb32db146fad3ce6bd">DECLARE_bool</a> (simulator_publish_every_time_step)</td></tr>
 <tr class="separator:a2ddf6e3d8e5f2ecb32db146fad3ce6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0985d020df74af5d4cdb0296951b5c68"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0985d020df74af5d4cdb0296951b5c68"><td class="memTemplItemLeft" align="right" valign="top">IntegratorBase&lt; T &gt; &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a0985d020df74af5d4cdb0296951b5c68">ResetIntegratorFromGflags</a> (Simulator&lt; T &gt; *simulator)</td></tr>
-<tr class="memdesc:a0985d020df74af5d4cdb0296951b5c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the integrator used to advanced the continuous time dynamics of the system associated with <code>simulator</code> according to the gflags declared in this file.  <a href="namespacedrake_1_1systems.html#a0985d020df74af5d4cdb0296951b5c68">More...</a><br /></td></tr>
-<tr class="separator:a0985d020df74af5d4cdb0296951b5c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; Simulator&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1systems.html#a0a6e4906135fe23f2a8f8f9cd68f3385">MakeSimulatorFromGflags</a> (const System&lt; T &gt; &amp;system, std::unique_ptr&lt; Context&lt; T &gt;&gt; context=nullptr)</td></tr>
-<tr class="memdesc:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes a new simulator according to the gflags declared in this file.  <a href="namespacedrake_1_1systems.html#a0a6e4906135fe23f2a8f8f9cd68f3385">More...</a><br /></td></tr>
-<tr class="separator:a0a6e4906135fe23f2a8f8f9cd68f3385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a612cd2f0112fbe6b3f1465cdc6f90b0e"></a>

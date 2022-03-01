@@ -1,7 +1,5 @@
 var NAVTREEINDEX41 =
 {
-"eigen__matrix__compare_8h.html#a487584d4d770172ae2f665bde7462de2adc4d53aa0d117d8b189b36d161af4e96":[4,0,0,1,2,0,0,0],
-"eigen__matrix__compare_8h.html#a886235c479e3d60c4d088505191293bc":[4,0,0,1,2,0,1],
 "eigen__pybind_8h.html":[4,0,0,0,0,0,5],
 "eigen__pybind_8h.html#a0d7582877591057ceea633df19d910fa":[4,0,0,0,0,0,5,2],
 "eigen__pybind_8h.html#ae8c72466dd0066fa6ff539d65eaf1a01":[4,0,0,0,0,0,5,0],
@@ -247,7 +245,9 @@ var NAVTREEINDEX41 =
 "functions_type.html":[3,3,3],
 "functions_u.html":[3,3,0,20],
 "functions_v.html":[3,3,0,21],
-"functions_vars.html":[3,3,2],
 "functions_vars.html":[3,3,2,0],
-"functions_vars_b.html":[3,3,2,1]
+"functions_vars.html":[3,3,2],
+"functions_vars_b.html":[3,3,2,1],
+"functions_vars_c.html":[3,3,2,2],
+"functions_vars_d.html":[3,3,2,3]
 };
