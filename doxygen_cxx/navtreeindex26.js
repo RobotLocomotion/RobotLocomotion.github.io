@@ -1,5 +1,12 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#ab3a790dc3e4b639bd6e958b6e220904f":[3,0,0,13,59,7],
+"classdrake_1_1symbolic_1_1_polynomial.html#acaa87c27bae38b0daed338c482de9a0e":[3,0,0,13,59,16],
+"classdrake_1_1symbolic_1_1_polynomial.html#acc4910bf00dec7e9b5ea6b91530ab79a":[3,0,0,13,59,24],
+"classdrake_1_1symbolic_1_1_polynomial.html#ad4fc8f2e6a67575f78cb74e9163fd5e3":[3,0,0,13,59,2],
+"classdrake_1_1symbolic_1_1_polynomial.html#ad7a3fb26530d992d7b2278a5f6281c09":[3,0,0,13,59,30],
+"classdrake_1_1symbolic_1_1_polynomial.html#adb6379c53bbbfcac28d757e0ef4d9bc3":[3,0,0,13,59,18],
+"classdrake_1_1symbolic_1_1_polynomial.html#adeaa4f722744d397b42ff26f50f443bf":[3,0,0,13,59,38],
 "classdrake_1_1symbolic_1_1_polynomial.html#ae973070e668be3703cc3e26eba36d1ba":[3,0,0,13,59,35],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html":[3,0,0,13,60],
 "classdrake_1_1symbolic_1_1_polynomial_basis_element.html#a071a669b72be2962a38ce2d5142495ed":[3,0,0,13,60,2],
@@ -242,12 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1systems_1_1_basic_vector.html#ac43b67aeccccdf32a43e66474cb65a0a":[3,0,0,14,15,5],
 "classdrake_1_1systems_1_1_basic_vector.html#ad2ef2a2e119e1ed3716c9a3cca58df4e":[3,0,0,14,15,19],
 "classdrake_1_1systems_1_1_basic_vector.html#ad8578f2ad77a7caa79d07ff13625e029":[3,0,0,14,15,6],
-"classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc":[3,0,0,14,15,26],
-"classdrake_1_1systems_1_1_basic_vector.html#adbc9deb6f6763e26cb2b9e352f3cce2a":[3,0,0,14,15,28],
-"classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a":[3,0,0,14,15,12],
-"classdrake_1_1systems_1_1_basic_vector.html#ae5c3719f3037e71b9bb2f11900929cfe":[3,0,0,14,15,0],
-"classdrake_1_1systems_1_1_basic_vector.html#aec21da26d184ce4b88c6182e1b4c66cf":[3,0,0,14,15,17],
-"classdrake_1_1systems_1_1_basic_vector.html#af03087c0283bcc486873e7870881d2cd":[3,0,0,14,15,15],
-"classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c":[3,0,0,14,15,10],
-"classdrake_1_1systems_1_1_bogacki_shampine3_integrator.html":[1,4,0,0,0]
+"classdrake_1_1systems_1_1_basic_vector.html#ada7a60115ea815aaacb024409e2eb3bc":[3,0,0,14,15,26]
 };

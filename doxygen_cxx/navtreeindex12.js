@@ -1,12 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"classdrake_1_1multibody_1_1_joint.html#a9b1986cb6e6fa41d4711ae88f7b3fb85":[3,0,0,8,38,10],
-"classdrake_1_1multibody_1_1_joint.html#a9bd306c3dbd70fed97a6efd1013660ef":[3,0,0,8,38,13],
-"classdrake_1_1multibody_1_1_joint.html#a9d890273ed7f3558445686959beb1e35":[3,0,0,8,38,17],
-"classdrake_1_1multibody_1_1_joint.html#aa36685cdf67af4255bffc827eebb0575":[3,0,0,8,38,43],
-"classdrake_1_1multibody_1_1_joint.html#aa7e3799ff0a2d7f2dd697c7f71e522a2":[3,0,0,8,38,11],
-"classdrake_1_1multibody_1_1_joint.html#aa9f0a027f73bf8ed5a1d4fc23c6ad89f":[3,0,0,8,38,50],
-"classdrake_1_1multibody_1_1_joint.html#aaa791aaf45d7556c3af317fb6040bb2c":[3,0,0,8,38,3],
 "classdrake_1_1multibody_1_1_joint.html#ab32090578b51c6ab7f0c67de63b08276":[3,0,0,8,38,32],
 "classdrake_1_1multibody_1_1_joint.html#ab439f0c4dd275d8dd9abff2a114a4961":[3,0,0,8,38,46],
 "classdrake_1_1multibody_1_1_joint.html#aba2887f0ca1fbbdfb49cf6b0ee21e553":[3,0,0,8,38,38],
@@ -249,5 +242,12 @@ var NAVTREEINDEX12 =
 "classdrake_1_1multibody_1_1_multibody_plant.html#a830e17ff113f70e86e1c6a8b1b60d662":[1,2,14,40],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a8377774b012b4975b46941b3197f29c3":[1,2,14,43],
 "classdrake_1_1multibody_1_1_multibody_plant.html#a843e1ba389c017c706df10935784b4e5":[1,2,14,15],
-"classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc":[1,2,14,150]
+"classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc":[1,2,14,150],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a88f6962ac18a44af116a57249fd0b8d4":[1,2,14,112],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a8979cb69b0e716ea4bd3ab21198996fb":[1,2,14,37],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a89e6e2bebbf492386bdfabafd7c883cb":[1,2,14,109],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a8c9e7974ae1d996a6ca3430893bd5df2":[1,2,14,48],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a8daceb7a3c384d6ad9f305e42b5fc1c6":[1,2,14,203],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a8df9a2d4c286d8da80719d8ed314fcdc":[1,2,14,64],
+"classdrake_1_1multibody_1_1_multibody_plant.html#a8e168e4ff2ffdf90285819ca0553ba8c":[1,2,14,42]
 };

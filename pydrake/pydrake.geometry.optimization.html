@@ -494,6 +494,12 @@ eventually implemented with a slack variable and a constraint:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Linear costs lead to negative costs if decision variables are not
+properly constrained. Users may want to check that the solution
+does not contain negative costs.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -526,6 +532,12 @@ variable and a constraint:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Linear costs lead to negative costs if decision variables are not
+properly constrained. Users may want to check that the solution
+does not contain negative costs.</p>
+</div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -545,6 +557,12 @@ able to “turn-off” the cost on inactive edges, all costs are
 eventually implemented with a slack variable and a constraint:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>min g(xu, xv) ⇒ min ℓ, s.t. ℓ ≥ g(xu,xv)
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Linear costs lead to negative costs if decision variables are not
+properly constrained. Users may want to check that the solution
+does not contain negative costs.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1235,12 +1253,8 @@ positive integer).</p>
 
 <dl class="function">
 <dt id="pydrake.geometry.optimization.IrisInConfigurationSpace">
-<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>IrisInConfigurationSpace(plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=True)) -&gt; pydrake.geometry.optimization.HPolyhedron</li>
-</ol>
-<p>A variation of the Iris (Iterative Region Inflation by Semidefinite
+<code class="descclassname">pydrake.geometry.optimization.</code><code class="descname">IrisInConfigurationSpace</code><span class="sig-paren">(</span><em>plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=True)</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.IrisInConfigurationSpace" title="Permalink to this definition">¶</a></dt>
+<dd><p>A variation of the Iris (Iterative Region Inflation by Semidefinite
 programming) algorithm which finds collision-free regions in the
 <em>configuration space</em> of <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</p>
 <div class="admonition seealso">
@@ -1262,18 +1276,6 @@ of the plant set to the initialIRIS seed configuration.</dd>
 <dd>provides additional configuration options. In particular,
 <code class="docutils literal notranslate"><span class="pre">options.enabled_ibex</span></code> may have a significant impact on the
 runtime of the algorithm.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>IrisInConfigurationSpace(plant: drake::multibody::MultibodyPlant&lt;double&gt;, context: pydrake.systems.framework.Context_[float], sample: numpy.ndarray[numpy.float64[m, 1]], options: pydrake.geometry.optimization.IrisOptions = IrisOptions(require_sample_point_is_contained=False, iteration_limit=100, termination_threshold=0.02, relative_termination_threshold=0.001, configuration_space_margin=0.01, enable_ibex=True)) -&gt; pydrake.geometry.optimization.HPolyhedron</li>
-</ol>
-<p>A deprecated variation of the IrisInConfigurationSpace method where
-the initial Iris seed configuration is provided explicitly instead of
-via the context.</p>
-<p>/ (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use IrisInConfigurationSpace() with sample set in context. This
-will be removed from Drake on or after 2022-03-01.</dd>
 </dl>
 </dd></dl>
 

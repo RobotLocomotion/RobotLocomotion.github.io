@@ -1,5 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"group__visualization.html":[1,2,11],
+"group__visualization.html#ga34c9c8f0a78446ac29edf4a3202127c3":[1,2,11,4],
+"group__visualization.html#ga732349f929601b37e30b15ad557057e7":[1,2,11,5],
 "group__yaml__serialization.html":[1,6,4],
 "gurobi__solver_8h.html":[4,0,0,10,22],
 "gyroscope_8h.html":[4,0,0,11,8,4],
@@ -127,8 +130,7 @@ var NAVTREEINDEX43 =
 "ipopt__solver_8h.html":[4,0,0,10,28],
 "iris_8h.html":[4,0,0,4,1,6],
 "iris_8h.html#ga3a51e0fec449a0abcf498f78a2a390a8":[4,0,0,4,1,6,1],
-"iris_8h.html#gab9b0c6c4d66a67dc762139761e0c751b":[4,0,0,4,1,6,2],
-"iris_8h.html#gad54a224f37c1a0dc86eaec300ef874af":[4,0,0,4,1,6,3],
+"iris_8h.html#gad54a224f37c1a0dc86eaec300ef874af":[4,0,0,4,1,6,2],
 "iris_8h.html#gafd8111a93cb3461e05bec3477ee736f6":[4,0,0,4,1,6,0],
 "is__approx__equal__abstol_8h.html":[4,0,0,1,35],
 "is__approx__equal__abstol_8h.html#a3cd8151cc95b5b95de9a9b882e27ed84":[4,0,0,1,35,0],
@@ -173,10 +175,10 @@ var NAVTREEINDEX43 =
 "lcm__image__traits_8h.html":[4,0,0,11,8,9],
 "lcm__interface__system_8h.html":[4,0,0,11,4,0],
 "lcm__log__playback__system_8h.html":[4,0,0,11,4,1],
-"lcm__messages_8h.html":[4,0,0,5,4],
-"lcm__messages_8h.html#a3410f8215ef08138021e839ab12535fe":[4,0,0,5,4,1],
-"lcm__messages_8h.html#ac73c46ff1f2d1fe789314be3fe200e64":[4,0,0,5,4,0],
-"lcm__messages_8h.html#adcda0f8a699ead06121a53903686013d":[4,0,0,5,4,2],
+"lcm__messages_8h.html":[4,0,0,5,3],
+"lcm__messages_8h.html#a3410f8215ef08138021e839ab12535fe":[4,0,0,5,3,1],
+"lcm__messages_8h.html#ac73c46ff1f2d1fe789314be3fe200e64":[4,0,0,5,3,0],
+"lcm__messages_8h.html#adcda0f8a699ead06121a53903686013d":[4,0,0,5,3,2],
 "lcm__plan__interpolator_8h.html":[4,0,0,3,7,3],
 "lcm__publisher__system_8h.html":[4,0,0,11,4,2],
 "lcm__py__bind__cpp__serializers_8h.html":[4,0,0,0,0,2,3],
@@ -185,8 +187,8 @@ var NAVTREEINDEX43 =
 "lcm__pybind_8h.html#a693c3984e0969506fd589ff21f08409b":[4,0,0,0,0,2,4,0],
 "lcm__scope__system_8h.html":[4,0,0,11,4,3],
 "lcm__subscriber__system_8h.html":[4,0,0,11,4,4],
-"lcmt__drake__signal__utils_8h.html":[4,0,0,5,5],
-"lcmt__drake__signal__utils_8h.html#ad07460eef2c31323d507deca93c0ab4a":[4,0,0,5,5,0],
+"lcmt__drake__signal__utils_8h.html":[4,0,0,5,4],
+"lcmt__drake__signal__utils_8h.html#ad07460eef2c31323d507deca93c0ab4a":[4,0,0,5,4,0],
 "leaf__context_8h.html":[4,0,0,11,3,26],
 "leaf__output__port_8h.html":[4,0,0,11,3,27],
 "leaf__system_8h.html":[4,0,0,11,3,28],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "make__rolling__sphere__plant_8h.html#a71f0d16bece761c6642485c0b5b696e7":[4,0,0,3,10,1,0,0],
 "make__sphere__field_8h.html":[4,0,0,4,2,23],
 "make__sphere__mesh_8h.html":[4,0,0,4,2,24],
-"manipulation__station_8h.html":[4,0,0,3,8,0],
-"manipulation__station_8h.html#a03a45bcb13e3495c10e2bbd63e351d63":[4,0,0,3,8,0,2],
-"manipulation__station_8h.html#a03a45bcb13e3495c10e2bbd63e351d63a35c3ace1970663a16e5c65baa5941b13":[4,0,0,3,8,0,2,0]
+"manipulation__station_8h.html":[4,0,0,3,8,0]
 };

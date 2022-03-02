@@ -120,33 +120,30 @@ $(document).ready(function(){initNavTree('deprecated.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="group__geometry__optimization.html#gab9b0c6c4d66a67dc762139761e0c751b">drake::geometry::optimization::IrisInConfigurationSpace</a>  (const multibody::MultibodyPlant&lt; double &gt; &amp;plant, const systems::Context&lt; double &gt; &amp;context, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;sample, const <a class="el" href="structdrake_1_1geometry_1_1optimization_1_1_iris_options.html" title="Configuration options for the IRIS algorithm.">IrisOptions</a> &amp;options=IrisOptions())</dt>
-<dd><a class="anchor" id="_deprecated000001"></a>Use IrisInConfigurationSpace() with sample set in context. <br />
- This will be removed from Drake on or after 2022-03-01. </dd>
+<dt>Member <a class="el" href="namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3">drake::solvers::kInfeasible_Or_Unbounded</a>  </dt>
+<dd><a class="anchor" id="_deprecated000008"></a>Use kInfeasibleOrUnbounded instead. <br />
+ This will be removed from Drake on or after 2022-07-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#aa3c4d6b9048536662622e58584c3a8df">MathematicalProgram::AddMaximizeLogDeterminantSymmetricMatrixCost</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt; symbolic::Expression &gt;</a>&gt; &amp;X)</dt>
-<dd><a class="anchor" id="_deprecated000008"></a>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
+<dd><a class="anchor" id="_deprecated000007"></a>AddMaximizeLogDeterminantSymmetricMatrixCost has been  renamed to AddMaximizeLogDeterminantCost. <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a789535f4318138071bb47f2ffb265407">MathematicalProgram::NewNonnegativePolynomial</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95" title="A matrix of dynamic size, templated on scalar type.">MatrixX&lt; symbolic::Variable &gt;</a>&gt; &amp;gramian, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt; symbolic::Monomial &gt;</a>&gt; &amp;monomial_basis, NonnegativePolynomial type)</dt>
-<dd><a class="anchor" id="_deprecated000006"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
- This will be removed from Drake on or after 2022-05-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a903fd7b5970fb835030958fe57d8cd6e">MathematicalProgram::NewNonnegativePolynomial</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt; symbolic::Monomial &gt;</a>&gt; &amp;monomial_basis, NonnegativePolynomial type)</dt>
 <dd><a class="anchor" id="_deprecated000005"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
+<dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a903fd7b5970fb835030958fe57d8cd6e">MathematicalProgram::NewNonnegativePolynomial</a>  (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85" title="A column vector of any size, templated on scalar type.">VectorX&lt; symbolic::Monomial &gt;</a>&gt; &amp;monomial_basis, NonnegativePolynomial type)</dt>
+<dd><a class="anchor" id="_deprecated000004"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+ This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a60415069ede137e871e1edd1f8194fe2">MathematicalProgram::NewNonnegativePolynomial</a>  (const <a class="el" href="classdrake_1_1symbolic_1_1_variables.html" title="Represents a set of variables.">symbolic::Variables</a> &amp;indeterminates, int degree, NonnegativePolynomial type)</dt>
-<dd><a class="anchor" id="_deprecated000007"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
+<dd><a class="anchor" id="_deprecated000006"></a>Use NewSosPolynomial instead of NewNonnegativePolynomial <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a5e2fbb72a84c2c5527f8d2b452918602">PackageMap::PopulateUpstreamToDrake</a>  (const std::string &amp;model_file)</dt>
-<dd><a class="anchor" id="_deprecated000004"></a>This function is a no-op; you should remove any calls to it. <br />
+<dd><a class="anchor" id="_deprecated000003"></a>This function is a no-op; you should remove any calls to it. <br />
  This will be removed from Drake on or after 2022-05-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1math_1_1_rigid_transform.html#ae4c29dcfbeeb594af24ae82cff87f35f">RigidTransform&lt; T &gt;::IsIdentityToEpsilon</a>  (double translation_tolerance) const</dt>
-<dd><a class="anchor" id="_deprecated000002"></a>Use RigidTransform::IsNearlyIdentity() <br />
+<dd><a class="anchor" id="_deprecated000001"></a>Use RigidTransform::IsNearlyIdentity() <br />
  This will be removed from Drake on or after 2022-06-01. </dd>
 <dt>Member <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html#a143570ba23e5a444790c7070a7447f09">RotationMatrix&lt; T &gt;::IsIdentityToInternalTolerance</a>  () const</dt>
-<dd><a class="anchor" id="_deprecated000003"></a>Use RotationMatrix::IsNearlyIdentity() <br />
- This will be removed from Drake on or after 2022-06-01. </dd>
-<dt>Member <a class="el" href="classdrake_1_1systems_1_1_system.html#a02557f96761f5c65d36e55bb2084c8c5">System&lt; T &gt;::EvalEigenVectorInput</a>  (const Context&lt; T &gt; &amp;context, int port_index) const</dt>
-<dd><a class="anchor" id="_deprecated000009"></a>Use get_input_port(index).Eval(context) instead. <br />
- This will be removed from Drake on or after 2022-03-01.</dd>
+<dd><a class="anchor" id="_deprecated000002"></a>Use RotationMatrix::IsNearlyIdentity() <br />
+ This will be removed from Drake on or after 2022-06-01.</dd>
 </dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

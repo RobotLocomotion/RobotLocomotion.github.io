@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"screw__joint_8h.html":[4,0,0,8,13,40],
+"screw__mobilizer_8h.html":[4,0,0,8,13,41],
 "scs__solver_8h.html":[4,0,0,10,44],
 "sdpa__free__format_8h.html":[4,0,0,10,45],
 "sdpa__free__format_8h.html#a121673ddbdadd10b2e3ceab52a93f5d3":[4,0,0,10,45,0],
@@ -47,7 +49,8 @@ var NAVTREEINDEX47 =
 "solution__result_8h.html#a269b7066a168f80390ed6c496829ffcd":[4,0,0,10,47,1],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136f":[4,0,0,10,47,0],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa15e1c4845b9467d880999c78de6afe45":[4,0,0,10,47,0,0],
-"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3":[4,0,0,10,47,0,5],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520":[4,0,0,10,47,0,5],
+"solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3":[4,0,0,10,47,0,8],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4b9de95ee3087851acd98262e09f0be8":[4,0,0,10,47,0,3],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9":[4,0,0,10,47,0,2],
 "solution__result_8h.html#a331f41a3139a87d16e1422bc818c136fa78cb430cc349315a2ba0f3602ef64b6d":[4,0,0,10,47,0,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#aa439b0d89e38b17d00d217c56b047737":[3,0,0,3,46,9],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ab2f3197be7cd4b4cecd2d173e15561fd":[3,0,0,3,46,1],
 "structdrake_1_1geometry_1_1_signed_distance_pair.html#ac7b001303ef94448442c885d0854f99e":[3,0,0,3,46,2],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,3,46,3],
-"structdrake_1_1geometry_1_1_signed_distance_pair.html#af12d609d561a11a0cec7a6fe270cce28":[3,0,0,3,46,12],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html":[3,0,0,3,47],
-"structdrake_1_1geometry_1_1_signed_distance_to_point.html#a23a9fc35d4f73bd7cfb0470efbce6f64":[3,0,0,3,47,9]
+"structdrake_1_1geometry_1_1_signed_distance_pair.html#ad7be539d413dd4d5146310c350a2d858":[3,0,0,3,46,3]
 };

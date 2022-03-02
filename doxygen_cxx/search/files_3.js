@@ -67,7 +67,6 @@ var searchData=
   ['drake_5flcm_5finterface_2eh',['drake_lcm_interface.h',['../drake__lcm__interface_8h.html',1,'']]],
   ['drake_5flcm_5flog_2eh',['drake_lcm_log.h',['../drake__lcm__log_8h.html',1,'']]],
   ['drake_5fmarker_2eh',['drake_marker.h',['../drake__marker_8h.html',1,'']]],
-  ['drake_5fmock_5flcm_2eh',['drake_mock_lcm.h',['../drake__mock__lcm_8h.html',1,'']]],
   ['drake_5fpath_2eh',['drake_path.h',['../drake__path_8h.html',1,'']]],
   ['drake_5fthrow_2eh',['drake_throw.h',['../drake__throw_8h.html',1,'']]],
   ['drake_5fvisualizer_2eh',['drake_visualizer.h',['../drake__visualizer_8h.html',1,'']]],

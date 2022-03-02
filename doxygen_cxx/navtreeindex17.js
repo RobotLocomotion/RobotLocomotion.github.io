@@ -1,12 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad3c1e869350aab59e84b977b7d5a341c":[3,0,0,9,0,1,9],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ad8d606e7bf5b9d8d19a44f7afbc13c6e":[3,0,0,9,0,1,7],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#ade172343f1359b2ae8e1015421afffd8":[3,0,0,9,0,1,4],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#af0929f1ccc56315dac6591869fb9ea24":[3,0,0,9,0,1,5],
-"classdrake_1_1pydrake_1_1_object.html":[3,0,0,10,1],
-"classdrake_1_1pydrake_1_1_object.html#a10c9c721becb9258cc70cd2ad039e653":[3,0,0,10,1,2],
-"classdrake_1_1pydrake_1_1_object.html#a1191c49f416bc97af24dc08e356756ed":[3,0,0,10,1,7],
 "classdrake_1_1pydrake_1_1_object.html#a20b167c073ba22d5e93817f3669785de":[3,0,0,10,1,5],
 "classdrake_1_1pydrake_1_1_object.html#a3efab0ebe76d7a9134a862c6ef6c4894":[3,0,0,10,1,6],
 "classdrake_1_1pydrake_1_1_object.html#a6b2ca30633c352c35ee83d66bf3fe474":[3,0,0,10,1,3],
@@ -249,5 +242,12 @@ var NAVTREEINDEX17 =
 "classdrake_1_1solvers_1_1_cost.html#a7b9f49304c49f28ade4c1cc4b24b592a":[1,1,0,29,0],
 "classdrake_1_1solvers_1_1_cost.html#a9316f2ac6c7ee0f1f609573af3a8c503":[1,1,0,29,1],
 "classdrake_1_1solvers_1_1_csdp_solver.html":[3,0,0,12,9],
-"classdrake_1_1solvers_1_1_csdp_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,12,9,12]
+"classdrake_1_1solvers_1_1_csdp_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,12,9,12],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a00d171013db74e01b6e6ce6e7f1b1dd7":[3,0,0,12,9,0],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,12,9,6],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,12,9,7],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a3c710e5fed7041dda0e3391dd5d3171b":[3,0,0,12,9,2],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,12,9,5],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a585e2207e56c0f66b497f4cf38a84971":[3,0,0,12,9,8],
+"classdrake_1_1solvers_1_1_csdp_solver.html#a6262e61690fa2ac35515c9bfdecb51fd":[3,0,0,12,9,3]
 };

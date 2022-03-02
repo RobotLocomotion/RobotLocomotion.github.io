@@ -144,9 +144,7 @@ var hierarchy =
     [ "DoorHingeConfig", "structdrake_1_1multibody_1_1_door_hinge_config.html", null ],
     [ "DrakeKukaIIwaRobot< T >", "classdrake_1_1multibody_1_1benchmarks_1_1kuka__iiwa__robot_1_1_drake_kuka_i_iwa_robot.html", null ],
     [ "DrakeLcmInterface", "classdrake_1_1lcm_1_1_drake_lcm_interface.html", [
-      [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html", [
-        [ "DrakeMockLcm", "classdrake_1_1lcm_1_1_drake_mock_lcm.html", null ]
-      ] ],
+      [ "DrakeLcm", "classdrake_1_1lcm_1_1_drake_lcm.html", null ],
       [ "DrakeLcmLog", "classdrake_1_1lcm_1_1_drake_lcm_log.html", null ],
       [ "LcmInterfaceSystem", "classdrake_1_1systems_1_1lcm_1_1_lcm_interface_system.html", null ]
     ] ],
@@ -215,6 +213,7 @@ var hierarchy =
         [ "L2NormCost", "classdrake_1_1solvers_1_1_l2_norm_cost.html", null ],
         [ "LinearCost", "classdrake_1_1solvers_1_1_linear_cost.html", null ],
         [ "LInfNormCost", "classdrake_1_1solvers_1_1_l_inf_norm_cost.html", null ],
+        [ "PerspectiveQuadraticCost", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html", null ],
         [ "QuadraticCost", "classdrake_1_1solvers_1_1_quadratic_cost.html", null ],
         [ "EvaluatorCost< PolynomialEvaluator >", "classdrake_1_1solvers_1_1_evaluator_cost.html", [
           [ "PolynomialCost", "classdrake_1_1solvers_1_1_polynomial_cost.html", null ]

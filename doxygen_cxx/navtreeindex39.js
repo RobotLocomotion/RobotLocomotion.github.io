@@ -1,5 +1,11 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#abe9bbc905bd05580ba6943a89d530b4b":[3,0,0,16,3,3],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ac80c5bfd4c7165e52988d167dc3f24dc":[3,0,0,16,3,6],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,3,5],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#ae2f8a49b642aecb5c19ef3625be5e61d":[3,0,0,16,3,12],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#aec3c151ab7b4b34d667c50ec9d229003":[3,0,0,16,3,1],
+"classdrake_1_1trajectories_1_1_piecewise_pose.html#af33e9a993aeb52079b4310e7fd43638e":[3,0,0,16,3,14],
 "classdrake_1_1trajectories_1_1_piecewise_pose.html#af3ed665c279c199edc05b05413deb70b":[3,0,0,16,3,7],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html":[3,0,0,16,4],
 "classdrake_1_1trajectories_1_1_piecewise_quaternion_slerp.html#a0737945305cf88496fc289776515e0d9":[3,0,0,16,4,16],
@@ -243,11 +249,5 @@ var NAVTREEINDEX39 =
 "coulomb__friction_8h.html#ad1adacac02531fd546981067a851d1be":[4,0,0,8,10,8,2],
 "cpp__param__pybind_8h.html":[4,0,0,0,0,0,0],
 "cpp__param__pybind_8h.html#a2274d953c5404b3021085ef6c9891603":[4,0,0,0,0,0,0,1],
-"cpp__template__pybind_8h.html":[4,0,0,0,0,0,1],
-"cpp__template__pybind_8h.html#a0ed2ec474b72c29e46e599da52c385dc":[4,0,0,0,0,0,1,0],
-"cpp__template__pybind_8h.html#a4790743839a4b041b37dc3820e2475ae":[4,0,0,0,0,0,1,4],
-"cpp__template__pybind_8h.html#a590ec0531f7c675e373909bb758740db":[4,0,0,0,0,0,1,1],
-"cpp__template__pybind_8h.html#a9ab5a60c764576412e9362aaf18cad93":[4,0,0,0,0,0,1,2],
-"cpp__template__pybind_8h.html#ab8504fe03e622fa78dbbd4e7ce19fdb6":[4,0,0,0,0,0,1,3],
-"create__constraint_8h.html":[4,0,0,10,12]
+"cpp__template__pybind_8h.html":[4,0,0,0,0,0,1]
 };

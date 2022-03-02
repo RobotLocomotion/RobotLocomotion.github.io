@@ -111,6 +111,7 @@ var searchData=
   ['kinequality',['kInequality',['../namespacedrake_1_1systems.html#aae3110b50a7cad6f8b6d2842f2177e0faad3bf38271b2a03f735e67b88923c432',1,'drake::systems']]],
   ['kinfeasible_5for_5funbounded',['kInfeasible_Or_Unbounded',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3',1,'drake::solvers']]],
   ['kinfeasibleconstraints',['kInfeasibleConstraints',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa4f17cb26e989bf3f8c2990cd51fcede9',1,'drake::solvers']]],
+  ['kinfeasibleorunbounded',['kInfeasibleOrUnbounded',['../namespacedrake_1_1solvers.html#a331f41a3139a87d16e1422bc818c136fa2bfbc12cb546f78bd0080b8df5b26520',1,'drake::solvers']]],
   ['kinherit',['kInherit',['../namespacedrake_1_1perception_1_1pc__flags.html#ac6b11bb7c847d6211b1f4d4720a683afa60bc914dc1d7f672ffe8799bd04d7ea4',1,'drake::perception::pc_flags']]],
   ['kinitialization',['kInitialization',['../namespacedrake_1_1systems.html#a59b7f49353f2a99b6c22d2eaae0fe9e9a1800fd44ac807b793ceba2dd9cef1e25',1,'drake::systems']]],
   ['kinitialstepsize',['kInitialStepSize',['../classdrake_1_1systems_1_1_initial_value_problem.html#a65a1dfc9f24c0d2e21e9cfcdf3565ee5',1,'drake::systems::InitialValueProblem']]],
