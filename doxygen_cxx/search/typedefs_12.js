@@ -6,6 +6,7 @@ var searchData=
   ['seed',['Seed',['../classdrake_1_1systems_1_1_random_source.html#af2020f36164c39afda259dabe269dac2',1,'drake::systems::RandomSource']]],
   ['simulatorfactory',['SimulatorFactory',['../namespacedrake_1_1systems_1_1analysis.html#a093baffca68144967ca38da942917459',1,'drake::systems::analysis']]],
   ['sincosmap',['SinCosMap',['../classdrake_1_1_trig_poly.html#a4a0ea7527b8ec344ff03879a6c08db0c',1,'drake::TrigPoly']]],
+  ['sincossubstitution',['SinCosSubstitution',['../namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf',1,'drake::symbolic']]],
   ['size_5ftype',['size_type',['../classdrake_1_1symbolic_1_1_variables.html#a5c82069142d85ac6de1f90ef01c62fd7',1,'drake::symbolic::Variables']]],
   ['solutiontype',['SolutionType',['../classdrake_1_1math_1_1_linear_solver.html#a1f9a4c83a4c3643c9f2ac3f04ee0d0f0',1,'drake::math::LinearSolver']]],
   ['solvertype',['SolverType',['../classdrake_1_1math_1_1_linear_solver.html#a9a813708b474b1a7b658a1373cd0c3a2',1,'drake::math::LinearSolver']]],

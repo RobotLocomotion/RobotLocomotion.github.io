@@ -325,6 +325,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_rewriting_rule.html">RewritingRule</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <code><a class="el" href="classdrake_1_1symbolic_1_1_rewriting_rule.html" title="A RewritingRule, lhs =&gt; rhs, consists of two Patterns lhs and rhs.">RewritingRule</a></code>, <code>lhs =&gt; rhs</code>, consists of two Patterns <code>lhs</code> and <code>rhs</code>.  <a href="classdrake_1_1symbolic_1_1_rewriting_rule.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html">SinCos</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a pair of <a class="el" href="classdrake_1_1symbolic_1_1_variables.html" title="Represents a set of variables.">Variables</a> corresponding to sin(q) and cos(q).  <a href="structdrake_1_1symbolic_1_1_sin_cos.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_unary_expression_cell.html">UnaryExpressionCell</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents the base class for unary expressions.  <a href="classdrake_1_1symbolic_1_1_unary_expression_cell.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,6 +352,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a134e54042165751a5e5369b4631c90eb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a134e54042165751a5e5369b4631c90eb">Rewriter</a> = std::function&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>(const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;)&gt;</td></tr>
 <tr class="memdesc:a134e54042165751a5e5369b4631c90eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A <code>Rewriter</code> is a function from an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> to an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>.  <a href="#a134e54042165751a5e5369b4631c90eb">More...</a><br /></td></tr>
 <tr class="separator:a134e54042165751a5e5369b4631c90eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13c5d9eccfc9643fdd5764d6e72b8faf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> = std::unordered_map&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html">SinCos</a> &gt;</td></tr>
+<tr class="separator:a13c5d9eccfc9643fdd5764d6e72b8faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -1470,6 +1475,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a697784ea0eafd05039e3a0c97b7c1415"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1symbolic.html#a134e54042165751a5e5369b4631c90eb">Rewriter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a697784ea0eafd05039e3a0c97b7c1415">MakeRuleRewriter</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_rewriting_rule.html">RewritingRule</a> &amp;r)</td></tr>
 <tr class="memdesc:a697784ea0eafd05039e3a0c97b7c1415"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a rewriter based on a rewriting rule <code>r</code>.  <a href="#a697784ea0eafd05039e3a0c97b7c1415">More...</a><br /></td></tr>
 <tr class="separator:a697784ea0eafd05039e3a0c97b7c1415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6639ded5e13e34eee457b3ceb92a1d62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a6639ded5e13e34eee457b3ceb92a1d62">Substitute</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;e, const <a class="el" href="namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> &amp;subs)</td></tr>
+<tr class="memdesc:a6639ded5e13e34eee457b3ceb92a1d62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a substitution map q =&gt; {s, c}, substitutes instances of sin(q) and cos(q) in <code>e</code> with <code>s</code> and <code>c</code>, with partial support for trigonometric expansions.  <a href="#a6639ded5e13e34eee457b3ceb92a1d62">More...</a><br /></td></tr>
+<tr class="separator:a6639ded5e13e34eee457b3ceb92a1d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a19a8d5ebbbc294ffa607973b2385f0f6">Substitute</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;m, const <a class="el" href="namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> &amp;subs)</td></tr>
+<tr class="memdesc:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix version of sin/cos substitution.  <a href="#a19a8d5ebbbc294ffa607973b2385f0f6">More...</a><br /></td></tr>
+<tr class="separator:a19a8d5ebbbc294ffa607973b2385f0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6e0055c99275292d22eb59c103fb0ae"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#ab6e0055c99275292d22eb59c103fb0ae">operator&lt;&lt;</a> (std::ostream &amp;os, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7">Variable::Type</a> type)</td></tr>
 <tr class="separator:ab6e0055c99275292d22eb59c103fb0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b2869ab43577cdf4d1641ef1d832ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a28c58d881c60e96f48a7a4e32a699b95">MatrixX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a90b2869ab43577cdf4d1641ef1d832ef">MakeMatrixVariable</a> (<a class="el" href="classint.html">int</a> rows, <a class="el" href="classint.html">int</a> cols, const std::string &amp;name, <a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7">Variable::Type</a> type=<a class="el" href="classdrake_1_1symbolic_1_1_variable.html#a1d1cfd8ffb84e947f82999c682b666a7ab1fa9dd3af034b3ef4291579aa673c07">Variable::Type::CONTINUOUS</a>)</td></tr>
@@ -1625,6 +1637,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A <code>Rewriter</code> is a function from an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a> to an <a class="el" href="classdrake_1_1symbolic_1_1_expression.html" title="Represents a symbolic form of an expression.">Expression</a>. </p>
+
+</div>
+</div>
+<a id="a13c5d9eccfc9643fdd5764d6e72b8faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13c5d9eccfc9643fdd5764d6e72b8faf">&#9670;&nbsp;</a></span>SinCosSubstitution</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> =  std::unordered_map&lt;<a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a>, <a class="el" href="structdrake_1_1symbolic_1_1_sin_cos.html">SinCos</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -10244,39 +10270,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a528367e2321df46235c2fed21eb0d433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[4/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt; ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt; </td>
-          <td>(</td>
-          <td class="paramtype">const Derived &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ScalarType &amp;&#160;</td>
-          <td class="paramname"><em>v</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
-<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
-
-</div>
-</div>
 <a id="aa4f5aab12f951d127ecfaf06b4f175c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4f5aab12f951d127ecfaf06b4f175c5">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f5aab12f951d127ecfaf06b4f175c5">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10303,6 +10298,37 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 <p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between a scalar <code>v</code> and an array <code>using</code> less-than operator (&lt;). </p>
 <p>That is, for all i and j, the (i, j)-th entry of <code>(v &lt; a)</code> has a symbolic formula <code>v &lt; a(i, j)</code>. </p>
+
+</div>
+</div>
+<a id="a528367e2321df46235c2fed21eb0d433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528367e2321df46235c2fed21eb0d433">&#9670;&nbsp;</a></span>operator&lt;() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if_t&lt; std::is_same_v&lt;typename Eigen::internal::traits&lt;Derived&gt;::XprKind, Eigen::ArrayXpr&gt; &amp;&amp; std::is_same_v&lt;decltype(typename Derived::Scalar() &lt; ScalarType()), <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>&gt;, Eigen::Array&lt;<a class="el" href="classdrake_1_1symbolic_1_1_formula.html">Formula</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime&gt; &gt; drake::symbolic::operator&lt; </td>
+          <td>(</td>
+          <td class="paramtype">const Derived &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ScalarType &amp;&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an Eigen array of symbolic formulas where each element includes element-wise comparison between an array <code>a</code> and a scalar <code>v</code> using less-than operator (&lt;). </p>
+<p>That is, for all i and j, the (i, j)-th entry of <code>(a &lt; v)</code> has a symbolic formula <code>a(i, j) &lt; v</code>. </p>
 
 </div>
 </div>
@@ -10434,36 +10460,8 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
-<a id="a8505db5f6e70df16a3cecda394bdcb24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8505db5f6e70df16a3cecda394bdcb24">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/9]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::ostream&amp; drake::symbolic::operator&lt;&lt; </td>
-          <td>(</td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>out</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="af975c2571c59b1d8b03b213a15096336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af975c2571c59b1d8b03b213a15096336">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/9]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af975c2571c59b1d8b03b213a15096336">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/9]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10478,6 +10476,34 @@ we do not provide operator*= function for this class, since operator*= would ret
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_chebyshev_basis_element.html">ChebyshevBasisElement</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8505db5f6e70df16a3cecda394bdcb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8505db5f6e70df16a3cecda394bdcb24">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/9]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; drake::symbolic::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;&#160;</td>
           <td class="paramname"><em>m</em>&#160;</td>
         </tr>
         <tr>
@@ -11804,8 +11830,81 @@ we do not provide operator*= function for this class, since operator*= would ret
 
 </div>
 </div>
+<a id="a6639ded5e13e34eee457b3ceb92a1d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6639ded5e13e34eee457b3ceb92a1d62">&#9670;&nbsp;</a></span>Substitute() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> drake::symbolic::Substitute </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> &amp;&#160;</td>
+          <td class="paramname"><em>subs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Given a substitution map q =&gt; {s, c}, substitutes instances of sin(q) and cos(q) in <code>e</code> with <code>s</code> and <code>c</code>, with partial support for trigonometric expansions. </p>
+<p>For instance, </p><pre class="fragment">  Variable x{"x"}, y{"y"};
+  Variable sx{"sx"}, cx{"cx"}, sy{"sy"}, cy{"cy"};
+  SinCosSubstitution subs;
+  subs.emplace(x, SinCos(sx, cx));
+  subs.emplace(y, SinCos(sy, cy));
+  Expression e = Substitute(x * sin(x + y), subs);
+</pre><p> will result in the expression <code>x * (sx*cy + cx*sy)</code>.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if a trigonometric function is not a trigonometric polynomial in <code>q</code> or if the <code>e</code> requires a trigonometric expansion that not supported yet. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a19a8d5ebbbc294ffa607973b2385f0f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a8d5ebbbc294ffa607973b2385f0f6">&#9670;&nbsp;</a></span>Substitute() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt;<a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a>, Derived::RowsAtCompileTime, Derived::ColsAtCompileTime, 0, Derived::MaxRowsAtCompileTime, Derived::MaxColsAtCompileTime&gt; drake::symbolic::Substitute </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacedrake_1_1symbolic.html#a13c5d9eccfc9643fdd5764d6e72b8faf">SinCosSubstitution</a> &amp;&#160;</td>
+          <td class="paramname"><em>subs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Matrix version of sin/cos substitution. </p>
+
+</div>
+</div>
 <a id="a6d9d2f72a70233db108561adf734ecdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d9d2f72a70233db108561adf734ecdd">&#9670;&nbsp;</a></span>Substitute() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d9d2f72a70233db108561adf734ecdd">&#9670;&nbsp;</a></span>Substitute() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11842,7 +11941,7 @@ we do not provide operator*= function for this class, since operator*= would ret
 </div>
 </div>
 <a id="a7d45b86ae4b7872576bb3fac8b22ca94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d45b86ae4b7872576bb3fac8b22ca94">&#9670;&nbsp;</a></span>Substitute() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d45b86ae4b7872576bb3fac8b22ca94">&#9670;&nbsp;</a></span>Substitute() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -39,6 +39,7 @@ var searchData=
   ['simulator',['Simulator',['../classdrake_1_1systems_1_1_simulator.html',1,'drake::systems']]],
   ['simulatorconfig',['SimulatorConfig',['../structdrake_1_1systems_1_1_simulator_config.html',1,'drake::systems']]],
   ['simulatorstatus',['SimulatorStatus',['../classdrake_1_1systems_1_1_simulator_status.html',1,'drake::systems']]],
+  ['sincos',['SinCos',['../structdrake_1_1symbolic_1_1_sin_cos.html',1,'drake::symbolic']]],
   ['sincosvars',['SinCosVars',['../structdrake_1_1_trig_poly_1_1_sin_cos_vars.html',1,'drake::TrigPoly']]],
   ['sine',['Sine',['../classdrake_1_1systems_1_1_sine.html',1,'drake::systems']]],
   ['singleoutputvectorsource',['SingleOutputVectorSource',['../classdrake_1_1systems_1_1_single_output_vector_source.html',1,'drake::systems']]],

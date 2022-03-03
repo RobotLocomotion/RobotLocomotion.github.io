@@ -91,6 +91,7 @@ var dir_a36da230f0956f48b11c85f7d599788f =
     ] ],
     [ "symbolic_rational_function.h", "symbolic__rational__function_8h.html", "symbolic__rational__function_8h" ],
     [ "symbolic_simplification.h", "symbolic__simplification_8h.html", "symbolic__simplification_8h" ],
+    [ "symbolic_trigonometric_polynomial.h", "symbolic__trigonometric__polynomial_8h.html", "symbolic__trigonometric__polynomial_8h" ],
     [ "symbolic_variable.h", "symbolic__variable_8h.html", "symbolic__variable_8h" ],
     [ "symbolic_variables.h", "symbolic__variables_8h.html", "symbolic__variables_8h" ],
     [ "temp_directory.h", "temp__directory_8h.html", "temp__directory_8h" ],

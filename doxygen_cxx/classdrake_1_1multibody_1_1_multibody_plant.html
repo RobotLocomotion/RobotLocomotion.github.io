@@ -6858,7 +6858,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 </div><div class="memdoc">
 
 <p>Sets the contact model to be used by <code>this</code> MultibodyPlant, see ContactModel for available options. </p>
-<p>The default contact model is <a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea20e722b15a1b587c30633f0a136b7009" title="Contact forces are computed using a point contact model, see Numerical Approximation of Point Contact...">ContactModel::kPoint</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
+<p>The default contact model is <a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a" title="Contact forces are computed using the hydroelastic model, where possible.">ContactModel::kHydroelasticWithFallback</a>. </p><dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>iff called post-finalize. </td></tr>
   </table>

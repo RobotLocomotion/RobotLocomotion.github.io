@@ -63,6 +63,7 @@ var searchData=
   ['copyable_5funique_5fptr_3c_20drake_3a_3ageometry_3a_3arender_3a_3arenderengine_20_3e',['copyable_unique_ptr&lt; drake::geometry::render::RenderEngine &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3ageometry_3a_3ashape_20_3e',['copyable_unique_ptr&lt; drake::geometry::Shape &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3asystems_3a_3acacheentryvalue_20_3e',['copyable_unique_ptr&lt; drake::systems::CacheEntryValue &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
+  ['copyable_5funique_5fptr_3c_20drake_3a_3asystems_3a_3acontext_3c_20t_20_3e_20_3e',['copyable_unique_ptr&lt; drake::systems::Context&lt; T &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3asystems_3a_3aeventdata_20_3e',['copyable_unique_ptr&lt; drake::systems::EventData &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3asystems_3a_3afixedinputportvalue_20_3e',['copyable_unique_ptr&lt; drake::systems::FixedInputPortValue &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],
   ['copyable_5funique_5fptr_3c_20drake_3a_3asystems_3a_3aparameters_3c_20autodiffxd_20_3e_20_3e',['copyable_unique_ptr&lt; drake::systems::Parameters&lt; AutoDiffXd &gt; &gt;',['../classdrake_1_1copyable__unique__ptr.html',1,'drake']]],

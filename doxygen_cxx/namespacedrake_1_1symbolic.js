@@ -64,6 +64,7 @@ var namespacedrake_1_1symbolic =
     [ "RationalFunction", "classdrake_1_1symbolic_1_1_rational_function.html", "classdrake_1_1symbolic_1_1_rational_function" ],
     [ "RelationalFormulaCell", "classdrake_1_1symbolic_1_1_relational_formula_cell.html", "classdrake_1_1symbolic_1_1_relational_formula_cell" ],
     [ "RewritingRule", "classdrake_1_1symbolic_1_1_rewriting_rule.html", "classdrake_1_1symbolic_1_1_rewriting_rule" ],
+    [ "SinCos", "structdrake_1_1symbolic_1_1_sin_cos.html", "structdrake_1_1symbolic_1_1_sin_cos" ],
     [ "UnaryExpressionCell", "classdrake_1_1symbolic_1_1_unary_expression_cell.html", "classdrake_1_1symbolic_1_1_unary_expression_cell" ],
     [ "Variable", "classdrake_1_1symbolic_1_1_variable.html", "classdrake_1_1symbolic_1_1_variable" ],
     [ "Variables", "classdrake_1_1symbolic_1_1_variables.html", "classdrake_1_1symbolic_1_1_variables" ]
