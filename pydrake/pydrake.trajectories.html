@@ -4591,11 +4591,10 @@ trajectory that is represented by simpler logic in each segment or
 <dd><p>A Trajectory represents a time-varying matrix, indexed by a single
 scalar time.</p>
 <p>&#64;tparam_default_scalars</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.trajectories.Trajectory_.Trajectory_[float].__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.trajectories.Trajectory_.Trajectory_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.Trajectory_.Trajectory_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.trajectories.Trajectory_.Trajectory_[float].cols">
@@ -4624,6 +4623,15 @@ the nth derivative, where <code class="docutils literal notranslate"><span class
 <dt>Precondition:</dt>
 <dd>derivative_order must be non-negative.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.Trajectory_.Trajectory_[float].has_derivative">
+<code class="descname">has_derivative</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.trajectories.Trajectory_.Trajectory_[float].has_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the Trajectory provides and implementation for
+EvalDerivative() and MakeDerivative(). The derivative need not be
+continuous, but should return a result for all t for which value(t)
+returns a result.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4708,11 +4716,10 @@ row corresponding to the ith time.</p>
 <dd><p>A Trajectory represents a time-varying matrix, indexed by a single
 scalar time.</p>
 <p>&#64;tparam_default_scalars</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.trajectories.Trajectory_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.trajectories.Trajectory_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.Trajectory_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.trajectories.Trajectory_[AutoDiffXd].cols">
@@ -4741,6 +4748,15 @@ the nth derivative, where <code class="docutils literal notranslate"><span class
 <dt>Precondition:</dt>
 <dd>derivative_order must be non-negative.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.Trajectory_[AutoDiffXd].has_derivative">
+<code class="descname">has_derivative</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.trajectories.Trajectory_[AutoDiffXd].has_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the Trajectory provides and implementation for
+EvalDerivative() and MakeDerivative(). The derivative need not be
+continuous, but should return a result for all t for which value(t)
+returns a result.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4823,11 +4839,10 @@ row corresponding to the ith time.</p>
 <dd><p>A Trajectory represents a time-varying matrix, indexed by a single
 scalar time.</p>
 <p>&#64;tparam_default_scalars</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.trajectories.Trajectory_[Expression].__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.trajectories.Trajectory_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[Expression]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.Trajectory_[Expression].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.trajectories.Trajectory_[Expression].cols">
@@ -4856,6 +4871,15 @@ the nth derivative, where <code class="docutils literal notranslate"><span class
 <dt>Precondition:</dt>
 <dd>derivative_order must be non-negative.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.Trajectory_[Expression].has_derivative">
+<code class="descname">has_derivative</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[Expression]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.trajectories.Trajectory_[Expression].has_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the Trajectory provides and implementation for
+EvalDerivative() and MakeDerivative(). The derivative need not be
+continuous, but should return a result for all t for which value(t)
+returns a result.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4938,11 +4962,10 @@ row corresponding to the ith time.</p>
 <dd><p>A Trajectory represents a time-varying matrix, indexed by a single
 scalar time.</p>
 <p>&#64;tparam_default_scalars</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="pydrake.trajectories.Trajectory_[float].__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.trajectories.Trajectory_[float].__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-</dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.trajectories.Trajectory_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="pydrake.trajectories.Trajectory_[float].cols">
@@ -4971,6 +4994,15 @@ the nth derivative, where <code class="docutils literal notranslate"><span class
 <dt>Precondition:</dt>
 <dd>derivative_order must be non-negative.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.trajectories.Trajectory_[float].has_derivative">
+<code class="descname">has_derivative</code><span class="sig-paren">(</span><em>self: pydrake.trajectories.Trajectory_[float]</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.trajectories.Trajectory_[float].has_derivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true iff the Trajectory provides and implementation for
+EvalDerivative() and MakeDerivative(). The derivative need not be
+continuous, but should return a result for all t for which value(t)
+returns a result.</p>
 </dd></dl>
 
 <dl class="method">
