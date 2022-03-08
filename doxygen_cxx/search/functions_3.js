@@ -56,6 +56,7 @@ var searchData=
   ['decomposepsdmatrixintoxtransposetimesx',['DecomposePSDmatrixIntoXtransposeTimesX',['../namespacedrake_1_1math.html#a2fccff311f09a5a35afac17388541c7f',1,'drake::math']]],
   ['decomposequadraticpolynomial',['DecomposeQuadraticPolynomial',['../namespacedrake_1_1symbolic.html#a168045cc4df5fee36f317095c2a9f891',1,'drake::symbolic']]],
   ['decomposex',['DecomposeX',['../classdrake_1_1multibody_1_1_static_friction_cone_constraint.html#a0e09b7d3395e104e15d0dc34f78a5643',1,'drake::multibody::StaticFrictionConeConstraint']]],
+  ['defattributesusingserialize',['DefAttributesUsingSerialize',['../namespacedrake_1_1pydrake.html#a0b3e8f87bda821cd1fa9a52586e25f1e',1,'drake::pydrake::DefAttributesUsingSerialize(PyClass *ppy_class, const Docs &amp;cls_docs)'],['../namespacedrake_1_1pydrake.html#a68be3d37cf9d6c6fcc2afb98d04c046f',1,'drake::pydrake::DefAttributesUsingSerialize(PyClass *ppy_class)']]],
   ['default_5fcom',['default_com',['../classdrake_1_1multibody_1_1_rigid_body.html#ad23b378c3ceb3cef4d3a586f48710d92',1,'drake::multibody::RigidBody']]],
   ['default_5fdiffuse',['default_diffuse',['../classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a42d85756ac9f5c62314108e554591064',1,'drake::geometry::render::RenderEngineVtk']]],
   ['default_5fgear_5fratio',['default_gear_ratio',['../classdrake_1_1multibody_1_1_joint_actuator.html#a5434b36ff862492d2aed1ba6a5dbe503',1,'drake::multibody::JointActuator']]],

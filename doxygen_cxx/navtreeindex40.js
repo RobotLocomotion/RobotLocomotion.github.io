@@ -1,5 +1,7 @@
 var NAVTREEINDEX40 =
 {
+"convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,7,0],
+"convex__set_8h.html":[4,0,0,4,1,1],
 "convex__set_8h.html#a3c7f9b75df3ac22becb7bb5cb03bf956":[4,0,0,4,1,1,0],
 "convex__set_8h.html#a648b8ba350611eefa73db9327240049b":[4,0,0,4,1,1,1],
 "copyable__unique__ptr_8h.html":[4,0,0,1,12],
@@ -205,6 +207,7 @@ var NAVTREEINDEX40 =
 "discrete__lyapunov__equation_8h.html#a41733a5b284046800224cd293e055ff7":[4,0,0,7,10,0],
 "discrete__systems_8h.html":[4,0,0,11,10],
 "discrete__time__delay_8h.html":[4,0,0,11,6,7],
+"discrete__time__integrator_8h.html":[4,0,0,8,3,6],
 "discrete__time__trajectory_8h.html":[4,0,0,1,3,1],
 "discrete__update__manager_8h.html":[4,0,0,8,10,10],
 "discrete__update__manager_8h.html#a873b31894c71d649596f62315eff5bb4":[4,0,0,8,10,10,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX40 =
 "drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,1,5],
 "drake__lcm__log_8h.html":[4,0,0,5,2],
 "drake__marker_8h.html":[4,0,0,1,22],
-"drake__path_8h.html":[4,0,0,1,23],
-"drake__path_8h.html#a3d3b9fa09763df2a9013eec2cf87df7b":[4,0,0,1,23,0],
-"drake__throw_8h.html":[4,0,0,1,24],
-"drake__throw_8h.html#a4d9c29b101212c8a886c7f4f1a8b71ca":[4,0,0,1,24,0]
+"drake__path_8h.html":[4,0,0,1,23]
 };

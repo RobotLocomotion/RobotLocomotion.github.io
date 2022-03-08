@@ -141,6 +141,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aaeb33e652a26580e0b4af48b12fff998"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#aaeb33e652a26580e0b4af48b12fff998">state_variables</a> {}</td></tr>
 <tr class="memdesc:aaeb33e652a26580e0b4af48b12fff998"><td class="mdescLeft">&#160;</td><td class="mdescRight">If non-empty, a list of Variable that associates the variable name with the elements of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>'s continuous state vector.  <a href="#aaeb33e652a26580e0b4af48b12fff998">More...</a><br /></td></tr>
 <tr class="separator:aaeb33e652a26580e0b4af48b12fff998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56768addea5ab57a9e5d7e37e66460af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1analysis_1_1_region_of_attraction_options.html#a56768addea5ab57a9e5d7e37e66460af">use_implicit_dynamics</a> {false}</td></tr>
+<tr class="memdesc:a56768addea5ab57a9e5d7e37e66460af"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, the system dynamics will be evaluated using CalcImplicitTimeDerivativesResidual instead of CalcTimeDerivatives to obtain g(x,ẋ) = 0 (instead of ẋ = f(x)).  <a href="#a56768addea5ab57a9e5d7e37e66460af">More...</a><br /></td></tr>
+<tr class="separator:a56768addea5ab57a9e5d7e37e66460af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adf3c6b6e481d6acc45e87b93d10d8f96"></a>
@@ -199,6 +202,24 @@ Public Attributes</h2></td></tr>
 
 <p>If non-empty, a list of Variable that associates the variable name with the elements of the <a class="el" href="classdrake_1_1systems_1_1_system.html" title="Base class for all System functionality that is dependent on the templatized scalar type T for input,...">System</a>'s continuous state vector. </p>
 <p>Must be empty or have size equal to the number of continuous state variables in the system. </p>
+
+</div>
+</div>
+<a id="a56768addea5ab57a9e5d7e37e66460af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56768addea5ab57a9e5d7e37e66460af">&#9670;&nbsp;</a></span>use_implicit_dynamics</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool use_implicit_dynamics {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If true, the system dynamics will be evaluated using CalcImplicitTimeDerivativesResidual instead of CalcTimeDerivatives to obtain g(x,ẋ) = 0 (instead of ẋ = f(x)). </p>
+<p>The Lyapunov conditions will also be evaluated in the implicit form. This is more expensive than analysis in the explicit form, as it requires more indeterminates, but it enables analysis of systems with rational polynomial dynamics.</p>
+<p>See <a href="https://underactuated.csail.mit.edu/lyapunov.html#ex:implicit">https://underactuated.csail.mit.edu/lyapunov.html#ex:implicit</a> for more details. </p>
 
 </div>
 </div>

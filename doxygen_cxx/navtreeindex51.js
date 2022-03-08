@@ -1,5 +1,12 @@
 var NAVTREEINDEX51 =
 {
+"structstd_1_1tuple__size_3_01drake_1_1_sorted_pair_3_01_t_01_4_01_4.html":[3,0,1,30],
+"subvector_8h.html":[4,0,0,11,3,37],
+"supernodal__solver_8h.html":[4,0,0,8,2,11],
+"supervector_8h.html":[4,0,0,11,3,38],
+"symbolic_8h.html":[4,0,0,1,50],
+"symbolic_8h.html#a789c18b4944958dff3f102a1bd47c425":[4,0,0,1,50,0],
+"symbolic__chebyshev__basis__element_8h.html":[4,0,0,1,51],
 "symbolic__chebyshev__basis__element_8h.html#a76deccd3cd3f64d9b875dd5116792c07":[4,0,0,1,51,2],
 "symbolic__chebyshev__basis__element_8h.html#af975c2571c59b1d8b03b213a15096336":[4,0,0,1,51,3],
 "symbolic__chebyshev__polynomial_8h.html":[4,0,0,1,52],
@@ -242,12 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a1fbc164d3e50b7fd20690a21f1b7b2f2":[4,0,0,1,59,5,14],
 "symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a3718b5ecf60aa0dba49e150e96cb1fc3":[4,0,0,1,59,5,3],
 "symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a3a2d5fe857d8f9541136a124c2edec6c":[4,0,0,1,59,5,10],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a43cfe3c750a08acb91df1e3384548078":[4,0,0,1,59,5,12],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a50033c15af7795cd6617f117b29d6922":[4,0,0,1,59,5,7],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a5a92344ee95acf10c31901b36418be77":[4,0,0,1,59,5,2],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a5dabfebb89e6e45a8cf8573d92746ed3":[4,0,0,1,59,5,6],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6aa74c05d080620f087c4e523977230666":[4,0,0,1,59,5,11],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6abe5721bf93d718a79358217ec9b88176":[4,0,0,1,59,5,8],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6ac33315685a0cba3ce53be378b3c7874b":[4,0,0,1,59,5,9],
-"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6ae4ecc5da3c6dbb4448f25990dc609727":[4,0,0,1,59,5,4]
+"symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6a43cfe3c750a08acb91df1e3384548078":[4,0,0,1,59,5,12]
 };

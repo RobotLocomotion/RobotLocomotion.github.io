@@ -94,6 +94,8 @@ var searchData=
   ['calcprobabilitydensity',['CalcProbabilityDensity',['../namespacedrake.html#adc2cd15bd61a427917d479a38a1a3580',1,'drake']]],
   ['calcprojectionmatrix',['CalcProjectionMatrix',['../classdrake_1_1geometry_1_1render_1_1_render_camera_core.html#ace93c95f8bd9c73e41aa6f53686b7b72',1,'drake::geometry::render::RenderCameraCore']]],
   ['calcrelativerotationmatrix',['CalcRelativeRotationMatrix',['../classdrake_1_1multibody_1_1_multibody_plant.html#af8e779bd785d02c0b0e14264b9055391',1,'drake::multibody::MultibodyPlant']]],
+  ['calcrelativespatialvelocity',['CalcRelativeSpatialVelocity',['../classdrake_1_1multibody_1_1_frame.html#aeac9d900ff6c765ebcba3434a06e3db9',1,'drake::multibody::Frame']]],
+  ['calcrelativespatialvelocityinworld',['CalcRelativeSpatialVelocityInWorld',['../classdrake_1_1multibody_1_1_frame.html#a67e81785294e03f63cff0e9dd20a10da',1,'drake::multibody::Frame']]],
   ['calcrelativetransform',['CalcRelativeTransform',['../classdrake_1_1multibody_1_1_multibody_plant.html#a8ff38c1d07aa9cbaf82c256dace67f29',1,'drake::multibody::MultibodyPlant']]],
   ['calcrodendpoint',['CalcRodEndpoint',['../classdrake_1_1examples_1_1rod2d_1_1_rod2_d.html#a63e22b4e4f8ed33bcea380dfa57c96a8',1,'drake::examples::rod2d::Rod2D']]],
   ['calcrotationalinertia',['CalcRotationalInertia',['../classdrake_1_1multibody_1_1_spatial_inertia.html#a025a1eb3a6fcfd673edc15b7ba85de9e',1,'drake::multibody::SpatialInertia']]],

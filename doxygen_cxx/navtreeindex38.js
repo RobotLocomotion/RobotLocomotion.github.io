@@ -1,5 +1,7 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a34029c46365f69a7e79464875c2c381a":[3,0,0,14,8,38,4],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a76f2b4648210017e02d8d8c71c506e9f":[3,0,0,14,8,38,1],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#ae80886c0d730e38957d934299e0a6ae1":[3,0,0,14,8,38,3],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html":[1,2,4,3],
 "classdrake_1_1systems_1_1sensors_1_1_rgbd_sensor.html#a1deddcad5222f6e052feb1a624a9c1e4":[1,2,4,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,16,2,37],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,2,12],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae4fce930000d6d534df56d2f94212298":[3,0,0,16,2,40],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,16,2,22],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aed61fed2b1bff79c2fb7b083d159a61b":[3,0,0,16,2,20],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af9607087f0b9ae63e285094756e4ac1c":[3,0,0,16,2,39]
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,16,2,22]
 };

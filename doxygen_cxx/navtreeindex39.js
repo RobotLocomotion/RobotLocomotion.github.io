@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aed61fed2b1bff79c2fb7b083d159a61b":[3,0,0,16,2,20],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af9607087f0b9ae63e285094756e4ac1c":[3,0,0,16,2,39],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#af99a17f5dcb1100c81ee61a088a69db0":[3,0,0,16,2,30],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afca7568bb098808d681cb14d7fa09f99":[3,0,0,16,2,50],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#afe3341f2b051ca0d1d376d1da25574b9":[3,0,0,16,2,19],
@@ -247,7 +249,5 @@ var NAVTREEINDEX39 =
 "continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0],
 "continuous__state_8h.html":[4,0,0,11,3,9],
 "controlled__spring__mass__system_8h.html":[4,0,0,11,0,0,0],
-"convert__time__derivative_8h.html":[4,0,0,7,7],
-"convert__time__derivative_8h.html#a7ad7ab2561d0c05591eb9720adccc7d5":[4,0,0,7,7,0],
-"convex__set_8h.html":[4,0,0,4,1,1]
+"convert__time__derivative_8h.html":[4,0,0,7,7]
 };

@@ -235,6 +235,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a3791768bef1f65b7d83bcd7767e0b307"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a3791768bef1f65b7d83bcd7767e0b307">BindIdentifier</a> (ModuleOrClass m, const std::string &amp;name, const char *id_doc)</td></tr>
 <tr class="memdesc:a3791768bef1f65b7d83bcd7767e0b307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds an <a class="el" href="classdrake_1_1_identifier.html" title="A simple identifier class.">Identifier</a> instantiation.  <a href="#a3791768bef1f65b7d83bcd7767e0b307">More...</a><br /></td></tr>
 <tr class="separator:a3791768bef1f65b7d83bcd7767e0b307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3e8f87bda821cd1fa9a52586e25f1e"><td class="memTemplParams" colspan="2">template&lt;typename PyClass , typename Docs &gt; </td></tr>
+<tr class="memitem:a0b3e8f87bda821cd1fa9a52586e25f1e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a0b3e8f87bda821cd1fa9a52586e25f1e">DefAttributesUsingSerialize</a> (PyClass *ppy_class, const Docs &amp;cls_docs)</td></tr>
+<tr class="memdesc:a0b3e8f87bda821cd1fa9a52586e25f1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the attributes visited by a C++ class Serialize function as readwrite on properties its ppy_class.  <a href="#a0b3e8f87bda821cd1fa9a52586e25f1e">More...</a><br /></td></tr>
+<tr class="separator:a0b3e8f87bda821cd1fa9a52586e25f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68be3d37cf9d6c6fcc2afb98d04c046f"><td class="memTemplParams" colspan="2">template&lt;typename PyClass &gt; </td></tr>
+<tr class="memitem:a68be3d37cf9d6c6fcc2afb98d04c046f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a68be3d37cf9d6c6fcc2afb98d04c046f">DefAttributesUsingSerialize</a> (PyClass *ppy_class)</td></tr>
+<tr class="memdesc:a68be3d37cf9d6c6fcc2afb98d04c046f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) An overload that doesn't bind docstrings.  <a href="#a68be3d37cf9d6c6fcc2afb98d04c046f">More...</a><br /></td></tr>
+<tr class="separator:a68be3d37cf9d6c6fcc2afb98d04c046f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a236143263d0a18d6ec439f707140d7e1"><td class="memTemplParams" colspan="2">template&lt;typename Class &gt; </td></tr>
 <tr class="memitem:a236143263d0a18d6ec439f707140d7e1"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1pydrake.html#a236143263d0a18d6ec439f707140d7e1">BindTypeSafeIndex</a> (py::module m, const std::string &amp;name, const std::string &amp;class_doc=&quot;&quot;)</td></tr>
 <tr class="memdesc:a236143263d0a18d6ec439f707140d7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds a <a class="el" href="classdrake_1_1_type_safe_index.html" title="A type-safe non-negative index class.">TypeSafeIndex</a> instantiation.  <a href="#a236143263d0a18d6ec439f707140d7e1">More...</a><br /></td></tr>
@@ -701,6 +709,58 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a0b3e8f87bda821cd1fa9a52586e25f1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3e8f87bda821cd1fa9a52586e25f1e">&#9670;&nbsp;</a></span>DefAttributesUsingSerialize() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::pydrake::DefAttributesUsingSerialize </td>
+          <td>(</td>
+          <td class="paramtype">PyClass *&#160;</td>
+          <td class="paramname"><em>ppy_class</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Docs &amp;&#160;</td>
+          <td class="paramname"><em>cls_docs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Binds the attributes visited by a C++ class Serialize function as readwrite on properties its ppy_class. </p>
+<p>This function only works for classes with a trivial Serialize function that uses DRAKE_NVP on each of its member fields; Serialize functions that use DRAKE_NVP on temporary stack variables are not supported. The class also must be default-constructible. </p>
+
+</div>
+</div>
+<a id="a68be3d37cf9d6c6fcc2afb98d04c046f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68be3d37cf9d6c6fcc2afb98d04c046f">&#9670;&nbsp;</a></span>DefAttributesUsingSerialize() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drake::pydrake::DefAttributesUsingSerialize </td>
+          <td>(</td>
+          <td class="paramtype">PyClass *&#160;</td>
+          <td class="paramname"><em>ppy_class</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Advanced) An overload that doesn't bind docstrings. </p>
+<p>We expect that pydrake bindings should always pass a Docs class (i.e., use the other overload), in some cases (especially downstream projects) that might not be possible. </p>
 
 </div>
 </div>

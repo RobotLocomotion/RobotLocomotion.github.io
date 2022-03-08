@@ -517,6 +517,26 @@ strictly zero at this point.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.BsplineBasis_.BsplineBasis_[float].EvaluateCurve">
+<code class="descname">EvaluateCurve</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[float], control_points: List[numpy.ndarray[numpy.float64[m, 1]]], parameter_value: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.math.BsplineBasis_.BsplineBasis_[float].EvaluateCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the B-spline curve defined by <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code> at the given <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">control_points</span></code>:</dt>
+<dd>Control points of the B-spline curve.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>:</dt>
+<dd>Parameter value at which to evaluate the B-spline curve defined by
+<code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>control_points.size() == num_basis_functions()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≥ initial_parameter_value()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≤ final_parameter_value()</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.BsplineBasis_.BsplineBasis_[float].final_parameter_value">
 <code class="descname">final_parameter_value</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.BsplineBasis_.BsplineBasis_[float].final_parameter_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowable parameter value for B-spline curves using this
@@ -679,6 +699,26 @@ strictly zero at this point.</p>
 <code class="descname">EvaluateBasisFunctionI</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[AutoDiffXd], i: int, parameter_value: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; pydrake.autodiffutils.AutoDiffXd<a class="headerlink" href="#pydrake.math.BsplineBasis_[AutoDiffXd].EvaluateBasisFunctionI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the value of the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th basis function evaluated at
 <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BsplineBasis_[AutoDiffXd].EvaluateCurve">
+<code class="descname">EvaluateCurve</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[AutoDiffXd], control_points: List[numpy.ndarray[object[m, 1]]], parameter_value: pydrake.autodiffutils.AutoDiffXd</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.math.BsplineBasis_[AutoDiffXd].EvaluateCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the B-spline curve defined by <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code> at the given <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">control_points</span></code>:</dt>
+<dd>Control points of the B-spline curve.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>:</dt>
+<dd>Parameter value at which to evaluate the B-spline curve defined by
+<code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>control_points.size() == num_basis_functions()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≥ initial_parameter_value()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≤ final_parameter_value()</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -845,6 +885,26 @@ strictly zero at this point.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.math.BsplineBasis_[Expression].EvaluateCurve">
+<code class="descname">EvaluateCurve</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[Expression], control_points: List[numpy.ndarray[object[m, 1]]], parameter_value: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, 1]]<a class="headerlink" href="#pydrake.math.BsplineBasis_[Expression].EvaluateCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the B-spline curve defined by <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code> at the given <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">control_points</span></code>:</dt>
+<dd>Control points of the B-spline curve.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>:</dt>
+<dd>Parameter value at which to evaluate the B-spline curve defined by
+<code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>control_points.size() == num_basis_functions()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≥ initial_parameter_value()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≤ final_parameter_value()</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.math.BsplineBasis_[Expression].final_parameter_value">
 <code class="descname">final_parameter_value</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.math.BsplineBasis_[Expression].final_parameter_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>The maximum allowable parameter value for B-spline curves using this
@@ -1005,6 +1065,26 @@ strictly zero at this point.</p>
 <code class="descname">EvaluateBasisFunctionI</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[float], i: int, parameter_value: float</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.math.BsplineBasis_[float].EvaluateBasisFunctionI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the value of the <code class="docutils literal notranslate"><span class="pre">i</span></code>-th basis function evaluated at
 <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.math.BsplineBasis_[float].EvaluateCurve">
+<code class="descname">EvaluateCurve</code><span class="sig-paren">(</span><em>self: pydrake.math.BsplineBasis_[float], control_points: List[numpy.ndarray[numpy.float64[m, 1]]], parameter_value: float</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.math.BsplineBasis_[float].EvaluateCurve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the B-spline curve defined by <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">control_points</span></code> at the given <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">control_points</span></code>:</dt>
+<dd>Control points of the B-spline curve.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">parameter_value</span></code>:</dt>
+<dd>Parameter value at which to evaluate the B-spline curve defined by
+<code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">control_points</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>control_points.size() == num_basis_functions()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≥ initial_parameter_value()</dd>
+<dt>Precondition:</dt>
+<dd>parameter_value ≤ final_parameter_value()</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
