@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__variable_8h.html#a2ab43ed8981b8575f24e83fdf4b26295":[4,0,0,1,74,8],
+"symbolic__variable_8h.html#a3abc75a1263e517c17a4fcb5944ba474":[4,0,0,1,74,19],
 "symbolic__variable_8h.html#a3d8075d8a54d9c85d7b0cdcdff660ee1":[4,0,0,1,74,23],
 "symbolic__variable_8h.html#a486a6cf03a93f8f8693c94e57d29e0ea":[4,0,0,1,74,15],
 "symbolic__variable_8h.html#a4a8fedc6cdc53869462f7aebaafa32c0":[4,0,0,1,74,7],

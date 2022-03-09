@@ -191,6 +191,70 @@
 <span id="pydrake-systems-analysis"></span><h1>pydrake.systems.analysis<a class="headerlink" href="#module-pydrake.systems.analysis" title="Permalink to this headline">¶</a></h1>
 <p>Bindings for the analysis portion of the Systems framework.</p>
 <dl class="function">
+<dt id="pydrake.systems.analysis.ApplySimulatorConfig">
+<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">ApplySimulatorConfig</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.ApplySimulatorConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ApplySimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[float], config: pydrake.systems.analysis.SimulatorConfig) -&gt; None</li>
+</ol>
+<p>Modifies the <code class="docutils literal notranslate"><span class="pre">simulator</span></code> to use the given config. (Always replaces
+the Integrator with a new one; be careful not to keep old references
+around.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
+<dd>On input, a valid pointer to a Simulator. On output the integretor
+for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given <code class="docutils literal notranslate"><span class="pre">config</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
+<dd>Configuration to be used. Contains values for both the integrator
+and the simulator.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>ApplySimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd], config: pydrake.systems.analysis.SimulatorConfig) -&gt; None</li>
+</ol>
+<p>Modifies the <code class="docutils literal notranslate"><span class="pre">simulator</span></code> to use the given config. (Always replaces
+the Integrator with a new one; be careful not to keep old references
+around.)</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
+<dd>On input, a valid pointer to a Simulator. On output the integretor
+for <code class="docutils literal notranslate"><span class="pre">simulator</span></code> is reset according to the given <code class="docutils literal notranslate"><span class="pre">config</span></code>.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">config</span></code>:</dt>
+<dd>Configuration to be used. Contains values for both the integrator
+and the simulator.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydrake.systems.analysis.ExtractSimulatorConfig">
+<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">ExtractSimulatorConfig</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.ExtractSimulatorConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ExtractSimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[float]) -&gt; pydrake.systems.analysis.SimulatorConfig</li>
+</ol>
+<p>Reports the simulator’s current configuration, including the
+configuration of the integrator.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
+<dd>The Simulator to extract the configuration from. $Note:</dd>
+</dl>
+<p>For non-double T (T=AutoDiffXd), doing ExtractSimulatorConfig will
+discard the integrator’s scalar type’s extra information such as
+gradients.</p>
+<ol class="arabic simple" start="2">
+<li>ExtractSimulatorConfig(simulator: pydrake.systems.analysis.Simulator_[AutoDiffXd]) -&gt; pydrake.systems.analysis.SimulatorConfig</li>
+</ol>
+<p>Reports the simulator’s current configuration, including the
+configuration of the integrator.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">simulator</span></code>:</dt>
+<dd>The Simulator to extract the configuration from. $Note:</dd>
+</dl>
+<p>For non-double T (T=AutoDiffXd), doing ExtractSimulatorConfig will
+discard the integrator’s scalar type’s extra information such as
+gradients.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.systems.analysis.GetIntegrationSchemes">
 <code class="descclassname">pydrake.systems.analysis.</code><code class="descname">GetIntegrationSchemes</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[str]<a class="headerlink" href="#pydrake.systems.analysis.GetIntegrationSchemes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the allowed string values for the <code class="docutils literal notranslate"><span class="pre">scheme</span></code> parameter in
@@ -3714,6 +3778,56 @@ or negative restores the rate to its default of 0, meaning the
 simulation will proceed as fast as possible.</dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.systems.analysis.SimulatorConfig">
+<em class="property">class </em><code class="descclassname">pydrake.systems.analysis.</code><code class="descname">SimulatorConfig</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of all configurable properties on a Simulator and
+IntegratorBase.</p>
+<dl class="method">
+<dt id="pydrake.systems.analysis.SimulatorConfig.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.analysis.SimulatorConfig) -&gt; None</li>
+<li>__init__(self: pydrake.systems.analysis.SimulatorConfig, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.SimulatorConfig.accuracy">
+<code class="descname">accuracy</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.accuracy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.SimulatorConfig.integration_scheme">
+<code class="descname">integration_scheme</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.integration_scheme" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.SimulatorConfig.max_step_size">
+<code class="descname">max_step_size</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.max_step_size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.SimulatorConfig.publish_every_time_step">
+<code class="descname">publish_every_time_step</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.publish_every_time_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets Simulator::set_publish_at_initialization() in addition to
+Simulator::set_publish_every_time_step() when applied by
+ApplySimulatorConfig().</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.SimulatorConfig.target_realtime_rate">
+<code class="descname">target_realtime_rate</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.target_realtime_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.SimulatorConfig.use_error_control">
+<code class="descname">use_error_control</code><a class="headerlink" href="#pydrake.systems.analysis.SimulatorConfig.use_error_control" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

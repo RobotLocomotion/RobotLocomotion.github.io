@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaa75cd65c9c6667325634e0d31778b41e":[4,0,0,9,2,3,4],
+"point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaba0ec049309fcce2fbb0aa588bacce66":[4,0,0,9,2,3,3],
 "point__cloud__flags_8h.html#ac6b11bb7c847d6211b1f4d4720a683afaf7838358503ffc19f4ed15a03804b7f1":[4,0,0,9,2,3,2],
 "point__cloud__flags_8h.html#acff44cbce439811c7213d1bb4e295e4c":[4,0,0,9,2,6],
 "point__cloud__to__lcm_8h.html":[4,0,0,9,3],
@@ -102,7 +104,7 @@ var NAVTREEINDEX46 =
 "quadratic__form_8h.html#a2fccff311f09a5a35afac17388541c7f":[4,0,0,7,23,2],
 "quadratic__form_8h.html#a8c66e16411c4f0d53e005658a49ccf6a":[4,0,0,7,23,0],
 "quadratic__scalar__system_8h.html":[4,0,0,11,0,0,10],
-"quadrature_8h.html":[4,0,0,8,3,16],
+"quadrature_8h.html":[4,0,0,8,3,17],
 "quadrotor__geometry_8h.html":[4,0,0,3,14,0],
 "quadrotor__plant_8h.html":[4,0,0,3,14,1],
 "quadrotor__plant_8h.html#aa6256a6ff0f305345c9d8b99a5392739":[4,0,0,3,14,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "scene__graph_8h.html":[4,0,0,4,34],
 "scene__graph__inspector_8h.html":[4,0,0,4,35],
 "schunk__wsg__constants_8h.html":[4,0,0,6,4,0],
-"schunk__wsg__constants_8h.html#a2d50206e40178bb516bf578b4418af0a":[4,0,0,6,4,0,6],
-"schunk__wsg__constants_8h.html#a2fbb9739d01b7281a1633aa49c419d6e":[4,0,0,6,4,0,3],
-"schunk__wsg__constants_8h.html#a6126372efa2dc4a18a1731c2853fdb5d":[4,0,0,6,4,0,7]
+"schunk__wsg__constants_8h.html#a2d50206e40178bb516bf578b4418af0a":[4,0,0,6,4,0,6]
 };

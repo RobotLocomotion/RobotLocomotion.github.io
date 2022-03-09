@@ -3918,6 +3918,18 @@ it will listen on the first available port starting at 7000 (up to
 <code class="descname">AddButton</code><span class="sig-paren">(</span><em>self: pydrake.geometry.Meshcat</em>, <em>name: str</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.geometry.Meshcat.AddButton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a button with the label <code class="docutils literal notranslate"><span class="pre">name</span></code> to the meshcat browser controls
 GUI.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">name</span></code> has already been added as any type of</li>
+<li>control (e.g., either button or slider).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -3929,6 +3941,18 @@ smallest increment by which the slider can change values (and
 therefore send updates back to this Meshcat instance). <code class="docutils literal notranslate"><span class="pre">value</span></code>
 specifies the initial value; it will be truncated to the slider range
 and rounded to the nearest increment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>RuntimeError if <code class="docutils literal notranslate"><span class="pre">name</span></code> has already been added as any type of</li>
+<li>control (e.g., either button or slider).</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

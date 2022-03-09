@@ -185,6 +185,14 @@
 <span id="pydrake-multibody-plant"></span><h1>pydrake.multibody.plant<a class="headerlink" href="#module-pydrake.multibody.plant" title="Permalink to this headline">¶</a></h1>
 <p>Bindings for MultibodyPlant and related classes.</p>
 <dl class="function">
+<dt id="pydrake.multibody.plant.AddMultibodyPlant">
+<code class="descclassname">pydrake.multibody.plant.</code><code class="descname">AddMultibodyPlant</code><span class="sig-paren">(</span><em>config: pydrake.multibody.plant.MultibodyPlantConfig, builder: pydrake.systems.framework.DiagramBuilder_[float]</em><span class="sig-paren">)</span> &#x2192; tuple<a class="headerlink" href="#pydrake.multibody.plant.AddMultibodyPlant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a new MultibodyPlant and SceneGraph to the given <code class="docutils literal notranslate"><span class="pre">builder</span></code>. The
+plant’s settings such as <code class="docutils literal notranslate"><span class="pre">time_step</span></code> are set using the given
+<code class="docutils literal notranslate"><span class="pre">config</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.multibody.plant.AddMultibodyPlantSceneGraph">
 <code class="descclassname">pydrake.multibody.plant.</code><code class="descname">AddMultibodyPlantSceneGraph</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.AddMultibodyPlantSceneGraph" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -2712,7 +2720,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The world_body() is ignored. <a href="#id113"><span class="problematic" id="id114">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p class="last">The world_body() is ignored. <a href="#id115"><span class="problematic" id="id116">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -6671,7 +6679,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The world_body() is ignored. <a href="#id115"><span class="problematic" id="id116">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p class="last">The world_body() is ignored. <a href="#id117"><span class="problematic" id="id118">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -10628,7 +10636,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The world_body() is ignored. <a href="#id117"><span class="problematic" id="id118">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p class="last">The world_body() is ignored. <a href="#id119"><span class="problematic" id="id120">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -14585,7 +14593,7 @@ in 𝑠. The Jacobian is a function of only generalized positions q
 </table>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The world_body() is ignored. <a href="#id119"><span class="problematic" id="id120">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
+<p class="last">The world_body() is ignored. <a href="#id121"><span class="problematic" id="id122">J𝑠_v_ACcm_</span></a> = ∑ (mᵢ Jᵢ) / mₛ, where mₛ
 = ∑ mᵢ, mᵢ is the mass of the iᵗʰ body contained in
 model_instances, and Jᵢ is Bcm’s translational velocity Jacobian
 in frame A, expressed in frame E (Bcm is the center of mass of the
@@ -17384,6 +17392,65 @@ C.name().</p>
 <dt id="pydrake.multibody.plant.MultibodyPlant_[float].world_frame">
 <code class="descname">world_frame</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.BodyFrame_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].world_frame" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a constant reference to the <em>world</em> frame.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig">
+<em class="property">class </em><code class="descclassname">pydrake.multibody.plant.</code><code class="descname">MultibodyPlantConfig</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>The set of configurable properties on a MultibodyPlant.</p>
+<p>The field names and defaults here match MultibodyPlant’s defaults
+exactly, with the exception of time_step.</p>
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.multibody.plant.MultibodyPlantConfig) -&gt; None</li>
+<li>__init__(self: pydrake.multibody.plant.MultibodyPlantConfig, <a href="#id113"><span class="problematic" id="id114">**</span></a>kwargs) -&gt; None</li>
+</ol>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.contact_model">
+<code class="descname">contact_model</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.contact_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::set_contact_model(). Refer to
+drake::multibody::ContactModel for details. Valid strings are: -
+“point” - “hydroelastic” - “hydroelastic_with_fallback”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.contact_surface_representation">
+<code class="descname">contact_surface_representation</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.contact_surface_representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::set_contact_surface_representation().
+Refer to drake::geometry::HydroelasticContactRepresentation for
+details. Valid strings are: - “triangle” - “polygon”</p>
+<p>The default value used here is consistent with the default time_step
+chosen above; keep this consistent with
+MultibodyPlant::GetDefaultContactSurfaceRepresentation().</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.penetration_allowance">
+<code class="descname">penetration_allowance</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.penetration_allowance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::set_penetration_allowance().</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.stiction_tolerance">
+<code class="descname">stiction_tolerance</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.stiction_tolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::set_stiction_tolerance().</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.plant.MultibodyPlantConfig.time_step">
+<code class="descname">time_step</code><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlantConfig.time_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures the MultibodyPlant::MultibodyPlant() constructor time_step.</p>
+<p>There is no default value for this within MultibodyPlant itself, so
+here we choose a nominal value (a discrete system, with a 1ms periodic
+update) as a reasonably conservative estimate that works in many
+cases.</p>
 </dd></dl>
 
 </dd></dl>

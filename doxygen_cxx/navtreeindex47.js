@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"schunk__wsg__constants_8h.html#a2fbb9739d01b7281a1633aa49c419d6e":[4,0,0,6,4,0,3],
+"schunk__wsg__constants_8h.html#a6126372efa2dc4a18a1731c2853fdb5d":[4,0,0,6,4,0,7],
 "schunk__wsg__constants_8h.html#a61bd2a6df7e108de0e18d2cc85a1eb43":[4,0,0,6,4,0,0],
 "schunk__wsg__constants_8h.html#a711e5cc36bb4a36b15f109e28b623d28":[4,0,0,6,4,0,4],
 "schunk__wsg__constants_8h.html#a80a43febe2b6239f4d48a63094288d1b":[4,0,0,6,4,0,5],
@@ -14,7 +16,7 @@ var NAVTREEINDEX47 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
-"schur__complement_8h.html":[4,0,0,8,3,17],
+"schur__complement_8h.html":[4,0,0,8,3,18],
 "scope__exit_8h.html":[4,0,0,1,47],
 "scoped__names_8h.html":[4,0,0,8,9,15],
 "scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,15,5],
@@ -47,7 +49,7 @@ var NAVTREEINDEX47 =
 "shape__to__string_8h.html":[4,0,0,4,37],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,18],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,19],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[3,0,0,3,31],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,3,31,4],
 "structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,3,31,3],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,3,31,0],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a78fb15511f687fe7fdb8e3ba9613648b":[3,0,0,3,31,2],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,3,31,1]
+"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,3,31,0]
 };

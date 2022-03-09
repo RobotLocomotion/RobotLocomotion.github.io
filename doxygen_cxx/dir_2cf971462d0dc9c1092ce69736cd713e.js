@@ -7,6 +7,7 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "damping_model.h", "damping__model_8h.html", "damping__model_8h" ],
     [ "deformation_gradient_data.h", "deformation__gradient__data_8h.html", null ],
     [ "discrete_time_integrator.h", "discrete__time__integrator_8h.html", null ],
+    [ "fem_element.h", "fem__element_8h.html", null ],
     [ "fem_indexes.h", "fem__indexes_8h.html", "fem__indexes_8h" ],
     [ "fem_state.h", "fem__state_8h.html", [
       [ "FemState", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html", "classdrake_1_1multibody_1_1fem_1_1_fem_state" ]
