@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a99fd5bfdf69925c53ed14a93a238065f":[3,0,0,8,3,1,0],
+"structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#aa320d63d28f6de621da0a93f91d6ed9f":[3,0,0,8,3,1,1],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#ae3c085d0521d5da888d23da447ae4328":[3,0,0,8,3,1,2],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html":[3,0,0,8,4,0],
 "structdrake_1_1multibody_1_1parsing_1_1_add_directives.html#a7928432abfdcccb409e49b309ebf3026":[3,0,0,8,4,0,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1_simulator_config.html":[3,0,0,14,93],
 "structdrake_1_1systems_1_1_simulator_config.html#a18b1f02b49adcc233f5e23845b8c90fe":[3,0,0,14,93,5],
 "structdrake_1_1systems_1_1_simulator_config.html#a6d19fbfb5574d3ff27ca14c74141824f":[3,0,0,14,93,2],
-"structdrake_1_1systems_1_1_simulator_config.html#a6e55b938786bd86846860397d25c10bd":[3,0,0,14,93,1],
-"structdrake_1_1systems_1_1_simulator_config.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,14,93,0],
-"structdrake_1_1systems_1_1_simulator_config.html#a952be0fb54cfff1d4d56de3caf4b3d31":[3,0,0,14,93,3]
+"structdrake_1_1systems_1_1_simulator_config.html#a6e55b938786bd86846860397d25c10bd":[3,0,0,14,93,1]
 };
