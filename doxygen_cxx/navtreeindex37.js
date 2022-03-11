@@ -1,5 +1,8 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#aee66491db467d41bd5a9f765c106c15d":[1,4,2,5,2],
+"classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html#af6a6dfd04b282d5703c7b6d357621085":[1,4,2,5,1],
+"classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html":[1,2,3,0],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a192f47dbd206ccbc9593332a30dbf4f7":[1,2,3,0,9],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a2d369537575baf5f2628190a821155ce":[1,2,3,0,8],
 "classdrake_1_1systems_1_1estimators_1_1_luenberger_observer.html#a4b2fdb835b8e4f54c55aba0bf765d57f":[1,2,3,0,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a7a889f43e88e25251192aac8cf48ff4e":[3,0,0,14,8,37,1],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#a91776575e2de77fce01c5bc4a3edab09":[3,0,0,14,8,37,6],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#aa517ec718cb4a5f3edc247227e7b1f09":[3,0,0,14,8,37,3],
-"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#ada9851e4749a9925c1bf20054fb1a056":[3,0,0,14,8,37,5],
-"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html":[3,0,0,14,8,38],
-"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a06e97babcf5a1b73c06cc9cdff8feee7":[3,0,0,14,8,38,0],
-"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a24193e21cfeec22611f61a6fb0e799bd":[3,0,0,14,8,38,2]
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_lcm_frame_sender.html#ada9851e4749a9925c1bf20054fb1a056":[3,0,0,14,8,37,5]
 };

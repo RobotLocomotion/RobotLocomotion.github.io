@@ -1,5 +1,6 @@
 var dir_2cf971462d0dc9c1092ce69736cd713e =
 [
+    [ "acceleration_newmark_scheme.h", "acceleration__newmark__scheme_8h.html", null ],
     [ "calc_lame_parameters.h", "calc__lame__parameters_8h.html", null ],
     [ "constitutive_model.h", "constitutive__model_8h.html", null ],
     [ "corotated_model.h", "corotated__model_8h.html", null ],
@@ -18,8 +19,11 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "linear_constitutive_model_data.h", "linear__constitutive__model__data_8h.html", null ],
     [ "linear_simplex_element.h", "linear__simplex__element_8h.html", null ],
     [ "matrix_utilities.h", "matrix__utilities_8h.html", null ],
+    [ "newmark_scheme.h", "newmark__scheme_8h.html", null ],
     [ "petsc_symmetric_block_sparse_matrix.h", "petsc__symmetric__block__sparse__matrix_8h.html", null ],
     [ "quadrature.h", "quadrature_8h.html", null ],
     [ "schur_complement.h", "schur__complement_8h.html", null ],
-    [ "simplex_gaussian_quadrature.h", "simplex__gaussian__quadrature_8h.html", null ]
+    [ "simplex_gaussian_quadrature.h", "simplex__gaussian__quadrature_8h.html", null ],
+    [ "velocity_newmark_scheme.h", "velocity__newmark__scheme_8h.html", null ],
+    [ "volumetric_element.h", "volumetric__element_8h.html", null ]
 ];

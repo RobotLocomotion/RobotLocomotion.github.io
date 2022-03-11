@@ -679,6 +679,7 @@ var searchData=
   ['getmeasureoforthonormality',['GetMeasureOfOrthonormality',['../classdrake_1_1math_1_1_rotation_matrix.html#a6ca9317cbeb6cef80d12e0dee4fd179d',1,'drake::math::RotationMatrix']]],
   ['getmemoryobjectname',['GetMemoryObjectName',['../classdrake_1_1systems_1_1_system.html#a9714aaf76aca9169da6de7fbcb8339fb',1,'drake::systems::System']]],
   ['getmessagecount',['GetMessageCount',['../classdrake_1_1systems_1_1lcm_1_1_lcm_subscriber_system.html#aa915127fa059ee7f2f82cf95fc9115e2',1,'drake::systems::lcm::LcmSubscriberSystem']]],
+  ['getminimalrepresentation',['GetMinimalRepresentation',['../classdrake_1_1geometry_1_1optimization_1_1_v_polytope.html#ad5d589780714066f1e6a1118a8e5a83e',1,'drake::geometry::optimization::VPolytope']]],
   ['getmodelinstancebyname',['GetModelInstanceByName',['../classdrake_1_1multibody_1_1_multibody_plant.html#ae6d03c873e08ade99e59d68af8375355',1,'drake::multibody::MultibodyPlant']]],
   ['getmodelinstancename',['GetModelInstanceName',['../classdrake_1_1multibody_1_1_multibody_plant.html#ab99be499eb59f00037b05ec60b51e177',1,'drake::multibody::MultibodyPlant']]],
   ['getmonomials',['GetMonomials',['../classdrake_1_1_polynomial.html#a3cb360c5667c073fe8f1b8a1271e56ba',1,'drake::Polynomial']]],

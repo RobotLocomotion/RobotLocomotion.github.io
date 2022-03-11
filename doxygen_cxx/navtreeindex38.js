@@ -1,5 +1,8 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html":[3,0,0,14,8,38],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a06e97babcf5a1b73c06cc9cdff8feee7":[3,0,0,14,8,38,0],
+"classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a24193e21cfeec22611f61a6fb0e799bd":[3,0,0,14,8,38,2],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a34029c46365f69a7e79464875c2c381a":[3,0,0,14,8,38,4],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#a76f2b4648210017e02d8d8c71c506e9f":[3,0,0,14,8,38,1],
 "classdrake_1_1systems_1_1sensors_1_1_optitrack_receiver.html#ae80886c0d730e38957d934299e0a6ae1":[3,0,0,14,8,38,3],
@@ -246,8 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac5d300d23d5911b73ccdf36ef9168e5b":[3,0,0,16,2,27],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57":[3,0,0,16,2,8],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,16,2,2],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,16,2,37],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,2,12],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae4fce930000d6d534df56d2f94212298":[3,0,0,16,2,40],
-"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,16,2,22]
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,16,2,37]
 };

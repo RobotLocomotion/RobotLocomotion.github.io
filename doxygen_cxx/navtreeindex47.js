@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"scalar__initial__value__problem_8h.html":[4,0,0,11,0,18],
+"scalar__view__dense__output_8h.html":[4,0,0,11,0,19],
+"scene__graph_8h.html":[4,0,0,4,34],
+"scene__graph__inspector_8h.html":[4,0,0,4,35],
 "schunk__wsg__constants_8h.html":[4,0,0,6,4,0],
 "schunk__wsg__constants_8h.html#a2d50206e40178bb516bf578b4418af0a":[4,0,0,6,4,0,6],
 "schunk__wsg__constants_8h.html#a2fbb9739d01b7281a1633aa49c419d6e":[4,0,0,6,4,0,3],
@@ -18,7 +22,7 @@ var NAVTREEINDEX47 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
-"schur__complement_8h.html":[4,0,0,8,3,18],
+"schur__complement_8h.html":[4,0,0,8,3,20],
 "scope__exit_8h.html":[4,0,0,1,47],
 "scoped__names_8h.html":[4,0,0,8,9,15],
 "scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,15,5],
@@ -51,7 +55,7 @@ var NAVTREEINDEX47 =
 "shape__to__string_8h.html":[4,0,0,4,37],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,19],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,21],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -245,9 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,3,25,1,2],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,3,25,1,1],
 "structdrake_1_1geometry_1_1_meshcat_params.html":[3,0,0,3,28],
-"structdrake_1_1geometry_1_1_meshcat_params.html#a13d2ccebff386877ee5fa1fbe2351a0f":[3,0,0,3,28,2],
-"structdrake_1_1geometry_1_1_meshcat_params.html#a37117f2a3803b9cfd665be53b850fee7":[3,0,0,3,28,1],
-"structdrake_1_1geometry_1_1_meshcat_params.html#a696b1086704b0858059129b61eaa4a9f":[3,0,0,3,28,0],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html":[3,0,0,3,31],
-"structdrake_1_1geometry_1_1_meshcat_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,3,31,4]
+"structdrake_1_1geometry_1_1_meshcat_params.html#a13d2ccebff386877ee5fa1fbe2351a0f":[3,0,0,3,28,2]
 };
