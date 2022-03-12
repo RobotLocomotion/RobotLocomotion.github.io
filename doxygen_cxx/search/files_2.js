@@ -72,7 +72,9 @@ var searchData=
   ['create_5fconstraint_2eh',['create_constraint.h',['../create__constraint_8h.html',1,'']]],
   ['create_5fcost_2eh',['create_cost.h',['../create__cost_8h.html',1,'']]],
   ['cross_5fproduct_2eh',['cross_product.h',['../cross__product_8h.html',1,'']]],
+  ['csdp_5fcpp_5fwrapper_2eh',['csdp_cpp_wrapper.h',['../csdp__cpp__wrapper_8h.html',1,'']]],
   ['csdp_5fsolver_2eh',['csdp_solver.h',['../csdp__solver_8h.html',1,'']]],
+  ['csdp_5fsolver_5ferror_5fhandling_2eh',['csdp_solver_error_handling.h',['../csdp__solver__error__handling_8h.html',1,'']]],
   ['csdp_5fsolver_5finternal_2eh',['csdp_solver_internal.h',['../csdp__solver__internal_8h.html',1,'']]],
   ['cubic_5fscalar_5fsystem_2eh',['cubic_scalar_system.h',['../cubic__scalar__system_8h.html',1,'']]]
 ];

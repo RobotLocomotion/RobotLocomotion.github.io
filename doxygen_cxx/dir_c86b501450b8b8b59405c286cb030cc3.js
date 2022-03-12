@@ -22,10 +22,12 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "cost.h", "cost_8h.html", "cost_8h" ],
     [ "create_constraint.h", "create__constraint_8h.html", null ],
     [ "create_cost.h", "create__cost_8h.html", null ],
+    [ "csdp_cpp_wrapper.h", "csdp__cpp__wrapper_8h.html", null ],
     [ "csdp_solver.h", "csdp__solver_8h.html", [
       [ "CsdpSolverDetails", "structdrake_1_1solvers_1_1_csdp_solver_details.html", "structdrake_1_1solvers_1_1_csdp_solver_details" ],
       [ "CsdpSolver", "classdrake_1_1solvers_1_1_csdp_solver.html", "classdrake_1_1solvers_1_1_csdp_solver" ]
     ] ],
+    [ "csdp_solver_error_handling.h", "csdp__solver__error__handling_8h.html", null ],
     [ "csdp_solver_internal.h", "csdp__solver__internal_8h.html", null ],
     [ "decision_variable.h", "decision__variable_8h.html", "decision__variable_8h" ],
     [ "dreal_solver.h", "dreal__solver_8h.html", [

@@ -1,5 +1,7 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__formula_8h.html#a642d11dbe47e027614a5a3bcfe12d34e":[4,0,0,1,59,71],
+"symbolic__formula_8h.html#a648f540fa40e1e281133b972e394574a":[4,0,0,1,59,80],
 "symbolic__formula_8h.html#a665bbf538eb986af44631f116c34a83d":[4,0,0,1,59,48],
 "symbolic__formula_8h.html#a6718d0b755c47edc3fade14221574a03":[4,0,0,1,59,59],
 "symbolic__formula_8h.html#a6869e7044dd90be5d972ee7dd4e821b6":[4,0,0,1,59,5],
@@ -247,7 +249,5 @@ var NAVTREEINDEX52 =
 "symbolic__trigonometric__polynomial_8h.html#a19a8d5ebbbc294ffa607973b2385f0f6":[4,0,0,1,73,3],
 "symbolic__trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,73,2],
 "symbolic__types__pybind_8h.html":[4,0,0,0,0,9],
-"symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,9,4],
-"symbolic__types__pybind_8h.html#a368506c847873cc7fae62074bdebf337":[4,0,0,0,0,9,2],
-"symbolic__types__pybind_8h.html#a694fa2ee2cdef72bcfcffdb381053dbe":[4,0,0,0,0,9,3]
+"symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,9,4]
 };
