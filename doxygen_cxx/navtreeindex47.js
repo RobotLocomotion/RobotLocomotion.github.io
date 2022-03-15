@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"scalar__conversion__traits_8h.html":[4,0,0,11,3,34],
 "scalar__convertible__component_8h.html":[4,0,0,8,10,24],
 "scalar__dense__output_8h.html":[4,0,0,11,0,17],
 "scalar__initial__value__problem_8h.html":[4,0,0,11,0,18],
@@ -26,13 +27,13 @@ var NAVTREEINDEX47 =
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
 "schur__complement_8h.html":[4,0,0,8,3,20],
 "scope__exit_8h.html":[4,0,0,1,47],
-"scoped__names_8h.html":[4,0,0,8,9,15],
-"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,15,5],
-"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,9,15,6],
-"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,15,3],
-"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,9,15,4],
-"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,9,15,1],
-"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,15,2],
+"scoped__names_8h.html":[4,0,0,8,9,16],
+"scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,16,5],
+"scoped__names_8h.html#abcb2da7ff1e0248aaa1eab6e19e41af9":[4,0,0,8,9,16,6],
+"scoped__names_8h.html#ad0442d59f36dad1157430528e91d147f":[4,0,0,8,9,16,3],
+"scoped__names_8h.html#ad59da48dd3e20a1ee37bddcd64a23b16":[4,0,0,8,9,16,4],
+"scoped__names_8h.html#aea5d08d1947ebcdbde413331fd55d323":[4,0,0,8,9,16,1],
+"scoped__names_8h.html#aea5ef9ce73e6aad999339261567758eb":[4,0,0,8,9,16,2],
 "scoped__singleton_8h.html":[4,0,0,1,48],
 "screw__joint_8h.html":[4,0,0,8,13,40],
 "screw__mobilizer_8h.html":[4,0,0,8,13,41],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[3,0,0,3,25,1,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,3,25,1,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,3,25,1,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,3,25,1,2],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,3,25,1,1]
+"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,3,25,1,2]
 };

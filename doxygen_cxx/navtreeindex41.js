@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"drake__lcm__interface_8h.html#a6db1a743c5ddeef2341da48dbf5ab027":[4,0,0,5,1,3],
 "drake__lcm__interface_8h.html#a7f10e39fd5048940095d76f21bdf760d":[4,0,0,5,1,4],
 "drake__lcm__interface_8h.html#ac0dd1948e81c44942a67677e6cc43d07":[4,0,0,5,1,5],
 "drake__lcm__log_8h.html":[4,0,0,5,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "functions_l.html":[3,3,0,11],
 "functions_m.html":[3,3,0,12],
 "functions_n.html":[3,3,0,13],
-"functions_o.html":[3,3,0,14],
-"functions_p.html":[3,3,0,15]
+"functions_o.html":[3,3,0,14]
 };

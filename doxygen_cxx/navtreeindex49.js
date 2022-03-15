@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#ad03bc5722287da0acf149346388fa1b0":[3,0,0,8,1,2,14],
 "structdrake_1_1multibody_1_1constraint_1_1_constraint_vel_problem_data.html#aecfdc8cfc228ee64e73c891738c3863d":[3,0,0,8,1,2,20],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html":[3,0,0,8,3,1],
 "structdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer_params.html#a0d562bb51530219612deccbd4319091f":[3,0,0,8,3,1,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1systems_1_1_periodic_event_data_comparator.html#a427c5f42d5940b0e40fba4abe2b3111a":[3,0,0,14,77,0],
 "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html":[3,0,0,14,89,0],
 "structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html#a23f82ce075e13b4c8f4efecd0adc28b0":[3,0,0,14,89,0,3],
-"structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html#a3a43609f2141dd054cba511b1ea2ac42":[3,0,0,14,89,0,0],
-"structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html#a77cf87e7af6a44fdf4889ba93f7734c7":[3,0,0,14,89,0,1]
+"structdrake_1_1systems_1_1_scalar_initial_value_problem_1_1_scalar_ode_context.html#a3a43609f2141dd054cba511b1ea2ac42":[3,0,0,14,89,0,0]
 };

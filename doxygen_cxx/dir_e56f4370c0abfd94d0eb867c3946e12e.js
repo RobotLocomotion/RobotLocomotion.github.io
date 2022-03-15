@@ -8,6 +8,7 @@ var dir_e56f4370c0abfd94d0eb867c3946e12e =
     [ "detail_sdf_geometry.h", "detail__sdf__geometry_8h.html", null ],
     [ "detail_sdf_parser.h", "detail__sdf__parser_8h.html", null ],
     [ "detail_tinyxml.h", "detail__tinyxml_8h.html", null ],
+    [ "detail_tinyxml2_diagnostic.h", "detail__tinyxml2__diagnostic_8h.html", null ],
     [ "detail_urdf_geometry.h", "detail__urdf__geometry_8h.html", null ],
     [ "detail_urdf_parser.h", "detail__urdf__parser_8h.html", null ],
     [ "model_directives.h", "model__directives_8h.html", [
