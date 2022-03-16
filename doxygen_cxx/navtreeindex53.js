@@ -1,5 +1,13 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__test__util_8h.html#af842ed89ccb0acfd93b9704b6daa7d16":[4,0,0,1,2,8,4],
+"symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,2,8,25],
+"symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,2,8,23],
+"symbolic__trigonometric__polynomial_8h.html":[4,0,0,1,73],
+"symbolic__trigonometric__polynomial_8h.html#a13c5d9eccfc9643fdd5764d6e72b8faf":[4,0,0,1,73,1],
+"symbolic__trigonometric__polynomial_8h.html#a19a8d5ebbbc294ffa607973b2385f0f6":[4,0,0,1,73,3],
+"symbolic__trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,73,2],
+"symbolic__types__pybind_8h.html":[4,0,0,0,0,9],
 "symbolic__types__pybind_8h.html#a286c3ee0103856c04c2efe05db710605":[4,0,0,0,0,9,4],
 "symbolic__types__pybind_8h.html#a368506c847873cc7fae62074bdebf337":[4,0,0,0,0,9,2],
 "symbolic__types__pybind_8h.html#a694fa2ee2cdef72bcfcffdb381053dbe":[4,0,0,0,0,9,3],

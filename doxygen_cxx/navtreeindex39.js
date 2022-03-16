@@ -1,5 +1,13 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa360cbd2285db12eb014dc6e34868814":[3,0,0,16,2,17],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa5a111a1944f16bb21873433d4b7b31d":[3,0,0,16,2,29],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#aa77d19bf3de0a1c93d54679d0ba86bef":[3,0,0,16,2,16],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac3fb3016c2ae2b3bc37459710539e1fa":[3,0,0,16,2,42],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac5d300d23d5911b73ccdf36ef9168e5b":[3,0,0,16,2,27],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ac93013774f250920857c17c083350b57":[3,0,0,16,2,8],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#acd5823d88e611200dc63daaf05eeb9d9":[3,0,0,16,2,2],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ad838f10606e844eac52b6553ba5acfd0":[3,0,0,16,2,37],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,2,12],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae4fce930000d6d534df56d2f94212298":[3,0,0,16,2,40],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#ae9172b5dec49b4fdc1a94684a25677d2":[3,0,0,16,2,22],
@@ -241,13 +249,5 @@ var NAVTREEINDEX39 =
 "contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1],
 "contact__visualizer__params_8h.html":[4,0,0,8,7,1],
 "contact__wrench_8h.html":[4,0,0,8,8,1],
-"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2],
-"context_8h.html":[4,0,0,11,3,7],
-"context_8h.html#a28d54aeb4ed10ced064d5b36f5aa8b67":[4,0,0,11,3,7,1],
-"context__base_8h.html":[4,0,0,11,3,8],
-"continuous__algebraic__riccati__equation_8h.html":[4,0,0,7,5],
-"continuous__algebraic__riccati__equation_8h.html#a44ee9a3e4b4fa7d4359e3b05af563979":[4,0,0,7,5,1],
-"continuous__algebraic__riccati__equation_8h.html#a527ab4851f7449ff47374855c79b8413":[4,0,0,7,5,0],
-"continuous__lyapunov__equation_8h.html":[4,0,0,7,6],
-"continuous__lyapunov__equation_8h.html#a781bfc30740843ad1203fa68b7497401":[4,0,0,7,6,0]
+"contact__wrench__evaluator_8h.html":[4,0,0,8,8,2]
 };

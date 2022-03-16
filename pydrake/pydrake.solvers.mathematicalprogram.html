@@ -1628,8 +1628,18 @@ the use of a significantly more expensive solver.</p>
 <ol class="arabic simple" start="5">
 <li>AddConstraint(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, formulas: numpy.ndarray[object[m, n], flags.f_contiguous]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
 </ol>
-<p>Add a constraint represented by an Eigen::Matrix&lt;symbolic::Formula&gt; to
-the program.</p>
+<p>Adds a constraint represented by an Eigen::Matrix&lt;symbolic::Formula&gt;
+or Eigen::Array&lt;symbolic::Formula&gt; to the program. A common use-case
+of this function is to add a constraint with the element-wise
+comparison between two Eigen matrices, using <code class="docutils literal notranslate"><span class="pre">A.array()</span> <span class="pre">&lt;=</span>
+<span class="pre">B.array()</span></code>. See the following example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MathematicalProgram</span> <span class="n">prog</span><span class="p">;</span>
+  <span class="n">Eigen</span><span class="p">::</span><span class="n">Matrix</span><span class="o">&lt;</span><span class="n">double</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">A</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+  <span class="n">Eigen</span><span class="p">::</span><span class="n">Vector2d</span> <span class="n">b</span> <span class="o">=</span> <span class="o">...</span><span class="p">;</span>
+  <span class="n">auto</span> <span class="n">x</span> <span class="o">=</span> <span class="n">prog</span><span class="o">.</span><span class="n">NewContinuousVariables</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">);</span>
+  <span class="n">prog</span><span class="o">.</span><span class="n">AddConstraint</span><span class="p">((</span><span class="n">A</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">array</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="o">.</span><span class="n">array</span><span class="p">());</span>
+</pre></div>
+</div>
 <p>A formula in <code class="docutils literal notranslate"><span class="pre">formulas</span></code> can be of the following forms:</p>
 <ol class="arabic simple">
 <li>e1 &lt;= e2</li>
@@ -1637,10 +1647,12 @@ the program.</p>
 <li>e1 == e2</li>
 </ol>
 <p>It throws an exception if AddConstraint(const symbolic::Formula&amp; f)
-throws an exception for any f ∈ formulas.</p>
+throws an exception for f ∈ <code class="docutils literal notranslate"><span class="pre">formulas</span></code>.</p>
+<p>&#64;overload Binding&lt;Constraint&gt; AddConstraint(const symbolic::Formula&amp;
+f)</p>
 <dl class="docutils">
 <dt>Template parameter <code class="docutils literal notranslate"><span class="pre">Derived</span></code>:</dt>
-<dd>An Eigen Matrix type of Formula.</dd>
+<dd>Eigen::Matrix or Eigen::Array with Formula as the Scalar.</dd>
 </dl>
 </dd></dl>
 
@@ -4016,7 +4028,7 @@ solution.</p>
    <span class="n">GurobiSolver</span> <span class="n">solver</span><span class="p">;</span>
    <span class="o">//</span> <span class="n">Explicitly</span> <span class="n">tell</span> <span class="n">the</span> <span class="n">solver</span> <span class="n">to</span> <span class="n">compute</span> <span class="n">the</span> <span class="n">dual</span> <span class="n">solution</span> <span class="k">for</span> <span class="n">Lorentz</span>
    <span class="o">//</span> <span class="n">cone</span> <span class="ow">or</span> <span class="n">rotated</span> <span class="n">Lorentz</span> <span class="n">cone</span> <span class="n">constraint</span><span class="p">,</span> <span class="n">check</span>
-   <span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gurobi</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="mf">9.0</span><span class="o">/</span><span class="n">refman</span><span class="o">/</span><span class="n">qcpdual</span><span class="o">.</span><span class="n">html</span> <span class="k">for</span>
+   <span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gurobi</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">documentation</span><span class="o">/</span><span class="mf">9.5</span><span class="o">/</span><span class="n">refman</span><span class="o">/</span><span class="n">qcpdual</span><span class="o">.</span><span class="n">html</span> <span class="k">for</span>
    <span class="o">//</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
    <span class="n">SolverOptions</span> <span class="n">options</span><span class="p">;</span>
    <span class="n">options</span><span class="o">.</span><span class="n">SetOption</span><span class="p">(</span><span class="n">GurobiSolver</span><span class="p">::</span><span class="nb">id</span><span class="p">(),</span> <span class="s2">&quot;QCPDual&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
@@ -5030,7 +5042,7 @@ guide section “Options Reference”
 <a class="reference external" href="http://www.coin-or.org/Ipopt/documentation/node40.html">http://www.coin-or.org/Ipopt/documentation/node40.html</a></p>
 <p>“GUROBI” – Parameter name and values as specified in Gurobi Reference
 Manual, section 10.2 “Parameter Descriptions”
-<a class="reference external" href="https://www.gurobi.com/documentation/9.0/refman/parameters.html">https://www.gurobi.com/documentation/9.0/refman/parameters.html</a></p>
+<a class="reference external" href="https://www.gurobi.com/documentation/9.5/refman/parameters.html">https://www.gurobi.com/documentation/9.5/refman/parameters.html</a></p>
 <p>“SCS” – Parameter name and values as specified in the struct
 SCS_SETTINGS in SCS header file
 <a class="reference external" href="https://github.com/cvxgrp/scs/blob/master/include/scs.h">https://github.com/cvxgrp/scs/blob/master/include/scs.h</a> Note that the

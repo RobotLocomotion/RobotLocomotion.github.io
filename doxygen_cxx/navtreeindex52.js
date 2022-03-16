@@ -1,5 +1,13 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__formula_8h.html#a514b594b37dbb603af40803e175b5f6a":[4,0,0,1,59,81],
+"symbolic__formula_8h.html#a52208f3bf9cb2720f5d99223c20382f9":[4,0,0,1,59,16],
+"symbolic__formula_8h.html#a52479ecb229048e750782273796768c2":[4,0,0,1,59,57],
+"symbolic__formula_8h.html#a528367e2321df46235c2fed21eb0d433":[4,0,0,1,59,53],
+"symbolic__formula_8h.html#a571adc7bcdc056eec761a657f9354cd7":[4,0,0,1,59,32],
+"symbolic__formula_8h.html#a5a12a5db3a9b2e8520e002e437354717":[4,0,0,1,59,66],
+"symbolic__formula_8h.html#a5aaadf953e1753ea5c2ff78a3bb030ec":[4,0,0,1,59,36],
+"symbolic__formula_8h.html#a600c585cf975dd9a8dd94b118f0bd161":[4,0,0,1,59,76],
 "symbolic__formula_8h.html#a6035c678aac2dd9201f9e8e294ece8d6":[4,0,0,1,59,68],
 "symbolic__formula_8h.html#a642d11dbe47e027614a5a3bcfe12d34e":[4,0,0,1,59,71],
 "symbolic__formula_8h.html#a648f540fa40e1e281133b972e394574a":[4,0,0,1,59,80],
@@ -241,13 +249,5 @@ var NAVTREEINDEX52 =
 "symbolic__test__util_8h.html#ad7cee2f49aca9d7d87803728389fdfae":[4,0,0,1,2,8,15],
 "symbolic__test__util_8h.html#adb8b893205178f5d6b6d50f7421ec51a":[4,0,0,1,2,8,5],
 "symbolic__test__util_8h.html#ade9bc3fff93c686d4776771a8e0249af":[4,0,0,1,2,8,7],
-"symbolic__test__util_8h.html#af647b0d3ff5da746607f765a0f7e212d":[4,0,0,1,2,8,24],
-"symbolic__test__util_8h.html#af842ed89ccb0acfd93b9704b6daa7d16":[4,0,0,1,2,8,4],
-"symbolic__test__util_8h.html#af936eee6e6ccab95c3d4597af366c73e":[4,0,0,1,2,8,25],
-"symbolic__test__util_8h.html#afdad08477a5777cd81c0d08dbd2009e6":[4,0,0,1,2,8,23],
-"symbolic__trigonometric__polynomial_8h.html":[4,0,0,1,73],
-"symbolic__trigonometric__polynomial_8h.html#a13c5d9eccfc9643fdd5764d6e72b8faf":[4,0,0,1,73,1],
-"symbolic__trigonometric__polynomial_8h.html#a19a8d5ebbbc294ffa607973b2385f0f6":[4,0,0,1,73,3],
-"symbolic__trigonometric__polynomial_8h.html#a6639ded5e13e34eee457b3ceb92a1d62":[4,0,0,1,73,2],
-"symbolic__types__pybind_8h.html":[4,0,0,0,0,9]
+"symbolic__test__util_8h.html#af647b0d3ff5da746607f765a0f7e212d":[4,0,0,1,2,8,24]
 };

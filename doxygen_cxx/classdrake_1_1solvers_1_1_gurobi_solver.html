@@ -282,7 +282,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Users can supply a callback to be called when the Gurobi solver finds an intermediate solution node, which may not be feasible. </p>
-<p>See Gurobi reference manual for more detail on callbacks: <a href="https://www.gurobi.com/documentation/9.0/refman/callback_codes.html">https://www.gurobi.com/documentation/9.0/refman/callback_codes.html</a>. The user may supply a partial solution in the VectorXd and VectorXDecisionVariable arguments that will be passed to Gurobi as a candidate feasible solution. See gurobi_solver_test.cc for an example of using std::bind to create a callback of this signature, while allowing additional data to be passed through. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>See Gurobi reference manual for more detail on callbacks: <a href="https://www.gurobi.com/documentation/9.5/refman/callback_codes.html">https://www.gurobi.com/documentation/9.5/refman/callback_codes.html</a>. The user may supply a partial solution in the VectorXd and VectorXDecisionVariable arguments that will be passed to Gurobi as a candidate feasible solution. See gurobi_solver_test.cc for an example of using std::bind to create a callback of this signature, while allowing additional data to be passed through. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">MathematicalProgram&amp;</td><td>The optimization wrapper, whose current variable values (accessible via MathematicalProgram::GetSolution) will be set to the intermediate solution values. </td></tr>
     <tr><td class="paramname">SolveStatusInfo&amp;</td><td>Intermediate solution status information values queried from Gurobi. </td></tr>
@@ -307,7 +307,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Users can supply a callback to be called when the Gurobi solver finds a feasible solution. </p>
-<p>See Gurobi reference manual for more detail on callbacks: <a href="https://www.gurobi.com/documentation/9.0/refman/callback_codes.html">https://www.gurobi.com/documentation/9.0/refman/callback_codes.html</a>. See gurobi_solver_test.cc for an example of using std::bind to create a callback of this signature, while allowing additional data to be passed through. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>See Gurobi reference manual for more detail on callbacks: <a href="https://www.gurobi.com/documentation/9.5/refman/callback_codes.html">https://www.gurobi.com/documentation/9.5/refman/callback_codes.html</a>. See gurobi_solver_test.cc for an example of using std::bind to create a callback of this signature, while allowing additional data to be passed through. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">MathematicalProgram&amp;</td><td>The optimization wrapper, whose current variable values (accessible via MathematicalProgram::GetSolution) will be set to the intermediate solution values. </td></tr>
     <tr><td class="paramname">SolveStatusInfo&amp;</td><td>Intermediate solution status information values queried from Gurobi. </td></tr>

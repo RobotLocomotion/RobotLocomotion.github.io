@@ -357,13 +357,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8d9bfe34ef20a9f343e518fccc40bd6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae8d9bfe34ef20a9f343e518fccc40bd6">AddConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f)</td></tr>
 <tr class="memdesc:ae8d9bfe34ef20a9f343e518fccc40bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constraint represented by a symbolic formula to the program.  <a href="#ae8d9bfe34ef20a9f343e518fccc40bd6">More...</a><br /></td></tr>
 <tr class="separator:ae8d9bfe34ef20a9f343e518fccc40bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2083a96f13bbcfe15d98a59a3bcc5ad"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:ad2083a96f13bbcfe15d98a59a3bcc5ad"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ad2083a96f13bbcfe15d98a59a3bcc5ad">AddConstraint</a> (const Eigen::ArrayBase&lt; Derived &gt; &amp;formulas)</td></tr>
-<tr class="separator:ad2083a96f13bbcfe15d98a59a3bcc5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a079afd40258b8f29766ec2259d9a809c"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a079afd40258b8f29766ec2259d9a809c"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a079afd40258b8f29766ec2259d9a809c">AddConstraint</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;formulas)</td></tr>
-<tr class="memdesc:a079afd40258b8f29766ec2259d9a809c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a constraint represented by an Eigen::Matrix&lt;symbolic::Formula&gt; to the program.  <a href="#a079afd40258b8f29766ec2259d9a809c">More...</a><br /></td></tr>
-<tr class="separator:a079afd40258b8f29766ec2259d9a809c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf94f38f3b4c3bbbbb89ce5ef5a66c6"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:a9cf94f38f3b4c3bbbbb89ce5ef5a66c6"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a9cf94f38f3b4c3bbbbb89ce5ef5a66c6">AddConstraint</a> (const Eigen::DenseBase&lt; Derived &gt; &amp;formulas)</td></tr>
+<tr class="separator:a9cf94f38f3b4c3bbbbb89ce5ef5a66c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c28156f900997a8fb1b0079e30fce6d"><td class="memTemplParams" colspan="2">template&lt;typename C &gt; </td></tr>
 <tr class="memitem:a0c28156f900997a8fb1b0079e30fce6d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a0c28156f900997a8fb1b0079e30fce6d">AddConstraint</a> (std::shared_ptr&lt; C &gt; con, const <a class="el" href="namespacedrake_1_1solvers.html#a062b182db5c52f5a71221a4c5958ea0b">VariableRefList</a> &amp;vars)</td></tr>
 <tr class="memdesc:a0c28156f900997a8fb1b0079e30fce6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a generic constraint to the program.  <a href="#a0c28156f900997a8fb1b0079e30fce6d">More...</a><br /></td></tr>
@@ -396,10 +392,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade4bcd993d4cefb458564896160eebd2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ade4bcd993d4cefb458564896160eebd2">AddLinearConstraint</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &amp;f)</td></tr>
 <tr class="memdesc:ade4bcd993d4cefb458564896160eebd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a linear constraint represented by a symbolic formula to the program.  <a href="#ade4bcd993d4cefb458564896160eebd2">More...</a><br /></td></tr>
 <tr class="separator:ade4bcd993d4cefb458564896160eebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dffc57c73249da004a7da3264446970"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
-<tr class="memitem:a5dffc57c73249da004a7da3264446970"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt; Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a> &gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a5dffc57c73249da004a7da3264446970">AddLinearConstraint</a> (const Eigen::ArrayBase&lt; Derived &gt; &amp;formulas)</td></tr>
-<tr class="memdesc:a5dffc57c73249da004a7da3264446970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a linear constraint represented by an Eigen::Array&lt;symbolic::Formula&gt; to the program.  <a href="#a5dffc57c73249da004a7da3264446970">More...</a><br /></td></tr>
-<tr class="separator:a5dffc57c73249da004a7da3264446970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db87ec5cd8f61d6ab5d689d181cd587"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a3db87ec5cd8f61d6ab5d689d181cd587">AddLinearConstraint</a> (const Eigen::Ref&lt; const Eigen::Array&lt; <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a>, Eigen::Dynamic, Eigen::Dynamic &gt;&gt; &amp;formulas)</td></tr>
+<tr class="memdesc:a3db87ec5cd8f61d6ab5d689d181cd587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a linear constraint represented by an Eigen::Array&lt;symbolic::Formula&gt; to the program.  <a href="#a3db87ec5cd8f61d6ab5d689d181cd587">More...</a><br /></td></tr>
+<tr class="separator:a3db87ec5cd8f61d6ab5d689d181cd587"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0884020fd41a68dfd00265226118685"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html">LinearEqualityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ab0884020fd41a68dfd00265226118685">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_equality_constraint.html">LinearEqualityConstraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:ab0884020fd41a68dfd00265226118685"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds linear equality constraints referencing potentially a subset of the decision variables.  <a href="#ab0884020fd41a68dfd00265226118685">More...</a><br /></td></tr>
 <tr class="separator:ab0884020fd41a68dfd00265226118685"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1319,7 +1314,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a13e9e45a96eb6158f483aa0c81d2c7ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13e9e45a96eb6158f483aa0c81d2c7ae">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[1/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e9e45a96eb6158f483aa0c81d2c7ae">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[1/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1340,7 +1335,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ae4c9655545a804d2a37a78e4225d8bde"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4c9655545a804d2a37a78e4225d8bde">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[2/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4c9655545a804d2a37a78e4225d8bde">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[2/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1395,7 +1390,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="aa9245481a949ae2a1af84809f4d81d30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9245481a949ae2a1af84809f4d81d30">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[3/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9245481a949ae2a1af84809f4d81d30">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[3/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1429,7 +1424,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ae8d9bfe34ef20a9f343e518fccc40bd6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8d9bfe34ef20a9f343e518fccc40bd6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[4/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8d9bfe34ef20a9f343e518fccc40bd6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[4/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1460,7 +1455,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </ol>
 <p>This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.</p>
 <p>A common use-case of this function is to add a constraint with the element-wise comparison between two Eigen matrices, using <code>A.array() &lt;= B.array()</code>. See the following example.</p>
-<div class="fragment"><div class="line"><a class="code" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac577d0f44c9c07256230cf2642ec6822">MathematicalProgram</a> prog;</div><div class="line">Eigen::Matrix&lt;double, 2, 2&gt; A;</div><div class="line"><span class="keyword">auto</span> x = prog.NewContinuousVariables(2, <span class="stringliteral">&quot;x&quot;</span>);</div><div class="line"><a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b;</div><div class="line">... <span class="comment">// set up A and b</span></div><div class="line">prog.AddConstraint((A * x).array() &lt;= b.array());</div></div><!-- fragment --><p>A formula in <code>formulas</code> can be of the following forms:</p>
+<div class="fragment"><div class="line"><a class="code" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac577d0f44c9c07256230cf2642ec6822">MathematicalProgram</a> prog;</div><div class="line">Eigen::Matrix&lt;double, 2, 2&gt; A = ...;</div><div class="line"><a class="code" href="namespacedrake_1_1systems_1_1analysis_1_1test.html#a322dbcada3667894a629fe3f1a476f2a">Eigen::Vector2d</a> b = ...;</div><div class="line"><span class="keyword">auto</span> x = prog.NewContinuousVariables(2, <span class="stringliteral">&quot;x&quot;</span>);</div><div class="line">prog.AddConstraint((A * x).array() &lt;= b.array());</div></div><!-- fragment --><p>A formula in <code>formulas</code> can be of the following forms:</p>
 <ol type="1">
 <li>e1 &lt;= e2</li>
 <li>e1 &gt;= e2</li>
@@ -1469,15 +1464,15 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 <p>It throws an exception if <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae8d9bfe34ef20a9f343e518fccc40bd6" title="Add a constraint represented by a symbolic formula to the program.">AddConstraint(const symbolic::Formula&amp; f)</a> throws an exception for f ∈ <code>formulas</code>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">Derived</td><td>An Eigen Array type of Formula. </td></tr>
+    <tr><td class="paramname">Derived</td><td>Eigen::Matrix or Eigen::Array with Formula as the Scalar. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ad2083a96f13bbcfe15d98a59a3bcc5ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2083a96f13bbcfe15d98a59a3bcc5ad">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[5/18]</span></h2>
+<a id="a9cf94f38f3b4c3bbbbb89ce5ef5a66c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf94f38f3b4c3bbbbb89ce5ef5a66c6">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[5/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1485,50 +1480,17 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
         <tr>
           <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a>&gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a>&gt; &gt; AddConstraint </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::ArrayBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::DenseBase&lt; Derived &gt; &amp;&#160;</td>
           <td class="paramname"><em>formulas</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a079afd40258b8f29766ec2259d9a809c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a079afd40258b8f29766ec2259d9a809c">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[6/18]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a>&gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_constraint.html">Constraint</a>&gt; &gt; AddConstraint </td>
-          <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
-          <td class="paramname"><em>formulas</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add a constraint represented by an Eigen::Matrix&lt;symbolic::Formula&gt; to the program. </p>
-<p>A formula in <code>formulas</code> can be of the following forms:</p>
-<ol type="1">
-<li>e1 &lt;= e2</li>
-<li>e1 &gt;= e2</li>
-<li>e1 == e2</li>
-</ol>
-<p>It throws an exception if <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ae8d9bfe34ef20a9f343e518fccc40bd6" title="Add a constraint represented by a symbolic formula to the program.">AddConstraint(const symbolic::Formula&amp; f)</a> throws an exception for any f ∈ formulas.</p>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">Derived</td><td>An Eigen Matrix type of Formula. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
 <a id="a0c28156f900997a8fb1b0079e30fce6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0c28156f900997a8fb1b0079e30fce6d">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[7/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c28156f900997a8fb1b0079e30fce6d">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[6/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1559,7 +1521,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a8d26f3d31c9cfba7144b9a0d96aebdd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d26f3d31c9cfba7144b9a0d96aebdd0">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[8/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d26f3d31c9cfba7144b9a0d96aebdd0">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[7/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1590,7 +1552,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ae677a49f65053b49a623e9b99bceff07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae677a49f65053b49a623e9b99bceff07">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[9/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae677a49f65053b49a623e9b99bceff07">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[8/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1610,7 +1572,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ab0884020fd41a68dfd00265226118685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0884020fd41a68dfd00265226118685">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[10/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0884020fd41a68dfd00265226118685">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[9/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1630,7 +1592,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="aadbd3feebe9cd0d5acf67dd4947c7994"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadbd3feebe9cd0d5acf67dd4947c7994">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[11/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbd3feebe9cd0d5acf67dd4947c7994">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[10/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1656,7 +1618,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a12c149981283b0e251f55055c5ea4b40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12c149981283b0e251f55055c5ea4b40">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[12/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c149981283b0e251f55055c5ea4b40">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[11/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1680,7 +1642,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a8b16dc5af33d4fd617a189a905d02173"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b16dc5af33d4fd617a189a905d02173">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[13/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b16dc5af33d4fd617a189a905d02173">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[12/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1704,7 +1666,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="af4ce06116cc0cd7c681258befa944240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4ce06116cc0cd7c681258befa944240">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[14/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ce06116cc0cd7c681258befa944240">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[13/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1724,7 +1686,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="aed941c57116fdf9186a3f0ad7f55b5a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed941c57116fdf9186a3f0ad7f55b5a8">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[15/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed941c57116fdf9186a3f0ad7f55b5a8">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[14/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1744,7 +1706,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a46c66d4086096ed5206e2168d8a6fe3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46c66d4086096ed5206e2168d8a6fe3f">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[16/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c66d4086096ed5206e2168d8a6fe3f">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[15/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1774,7 +1736,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="a204ca1afa3b89cbcacb88162fb4007d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a204ca1afa3b89cbcacb88162fb4007d7">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[17/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a204ca1afa3b89cbcacb88162fb4007d7">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[16/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1794,7 +1756,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div>
 </div>
 <a id="ad3c8d9a4008399136a7f997d8b5be55c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3c8d9a4008399136a7f997d8b5be55c">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[18/18]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c8d9a4008399136a7f997d8b5be55c">&#9670;&nbsp;</a></span>AddConstraint() <span class="overload">[17/17]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2781,16 +2743,16 @@ Each entry in new_indeterminates should be of CONTINUOUS type. </dd></dl>
 
 </div>
 </div>
-<a id="a5dffc57c73249da004a7da3264446970"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dffc57c73249da004a7da3264446970">&#9670;&nbsp;</a></span>AddLinearConstraint() <span class="overload">[8/8]</span></h2>
+<a id="a3db87ec5cd8f61d6ab5d689d181cd587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3db87ec5cd8f61d6ab5d689d181cd587">&#9670;&nbsp;</a></span>AddLinearConstraint() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::enable_if_t&lt; <a class="el" href="structdrake_1_1is__eigen__scalar__same.html">is_eigen_scalar_same</a>&lt;Derived, <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a>&gt;::value, <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt; &gt; AddLinearConstraint </td>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a>&gt; AddLinearConstraint </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::ArrayBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::Array&lt; <a class="el" href="classdrake_1_1symbolic_1_1_formula.html">symbolic::Formula</a>, Eigen::Dynamic, Eigen::Dynamic &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>formulas</em></td><td>)</td>
           <td></td>
         </tr>
@@ -7099,8 +7061,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7111,7 +7073,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7125,8 +7087,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7137,7 +7099,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

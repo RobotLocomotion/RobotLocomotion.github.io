@@ -193,6 +193,7 @@ Properties for hydroelastic contact</h4>
 </li>
 </ul>
 </li>
+<li>Resolution hint has no effect on Box.</li>
 </ul>
 </li>
 </ul>
@@ -350,7 +351,6 @@ Pitfalls/Troubleshooting</h2>
 <li>Stiff and coarse is seldom a good thing. The stiffer an object is, the more the details of the discrete tessellation will directly contribute to the dynamics.</li>
 <li>Getting moments out of the contact depends on how many elements are in the contact surface. If the elements of the two contributing meshes are much larger than the actual contact surface, the contact can become, in essence, point contact.</li>
 <li>Half spaces are not represented by meshes. They don’t contribute <em>any</em> geometry to the resultant contact surface. The contact surface’s refinement will depend on the other geometry’s level of refinement.</li>
-<li>Resolution hint (<code>drake:mesh_resolution_hint</code>) has no effect on Box.</li>
 </ul>
 <h3><a class="anchor" id="hug_tips"></a>
 Tips and Tricks</h3>

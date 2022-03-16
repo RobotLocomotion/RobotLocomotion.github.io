@@ -1,5 +1,13 @@
 var NAVTREEINDEX47 =
 {
+"saturate_8h.html#adecdf6a7ef606861457807da4b56e7ff":[4,0,0,7,30,0],
+"saturation_8h.html":[4,0,0,11,6,19],
+"scalar__conversion_8h.html":[4,0,0,11,3,0,2],
+"scalar__conversion_8h.html#a1554ae89bd2d64bc17e7b23ac2729e9f":[4,0,0,11,3,0,2,1],
+"scalar__conversion_8h.html#a19e6b9a3faf658a8c05271bcb6d800ea":[4,0,0,11,3,0,2,3],
+"scalar__conversion_8h.html#a6db02f9af804fcddb0d613e703e8c4fb":[4,0,0,11,3,0,2,0],
+"scalar__conversion_8h.html#ab7eb9f17930349a33024bcbce629e491":[4,0,0,11,3,0,2,4],
+"scalar__conversion_8h.html#ac7ed4cbbc75e344a25b9a6638ee008ff":[4,0,0,11,3,0,2,2],
 "scalar__conversion__traits_8h.html":[4,0,0,11,3,34],
 "scalar__convertible__component_8h.html":[4,0,0,8,10,24],
 "scalar__dense__output_8h.html":[4,0,0,11,0,17],
@@ -241,13 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,3,25,0,0],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,3,25,0,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,3,25,0,5],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,3,25,0,2],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,3,25,0,6],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#ab833bacb3fa8d1a189efcbba74f10fa1":[3,0,0,3,25,0,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#add1a608db25e8e3befb6775a16867611":[3,0,0,3,25,0,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html":[3,0,0,3,25,1],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a11926af9280d70fd96e47b07c90cf0ed":[3,0,0,3,25,1,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,3,25,1,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#a9c59ed4a7b6bdc2b1207e39fabf379a4":[3,0,0,3,25,1,4],
-"structdrake_1_1geometry_1_1_meshcat_1_1_perspective_camera.html#aaf72b1fe5ab339da8e67c2253fa7f92a":[3,0,0,3,25,1,2]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a5eeeb20fab9ff0f54568882b94d57921":[3,0,0,3,25,0,2]
 };

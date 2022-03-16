@@ -124,9 +124,10 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_minimum_di
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Constrain the signed distance between all candidate pairs of geometries (according to the logic of SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a specified minimum distance. </p>
+<p>This constraint should be bound to decision variables corresponding to the configuration vector, q, of the associate <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html" title="MultibodyPlant is a Drake system framework representation (see systems::System) for the model of a ph...">MultibodyPlant</a>.</p>
 <p>The formulation of the constraint is</p>
-<p>0 ≤ SmoothMax( φ((dᵢ - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) ) ≤ 1</p>
-<p>where dᵢ is the signed distance of the i-th pair, dₘᵢₙ is the minimum allowable distance, d_influence is the "influence distance" (the distance below which a pair of geometries influences the constraint), φ is a <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864" title="Computes the penalty function φ(x) and its derivatives dφ(x)/dx.">multibody::MinimumDistancePenaltyFunction</a>, and SmoothMax(d) is smooth approximation of max(d). We require that dₘᵢₙ &lt; d_influence. The input scaling (dᵢ - d_influence)/(d_influence - dₘᵢₙ) ensures that at the boundary of the feasible set (when dᵢ == dₘᵢₙ), we evaluate the penalty function at -1, where it is required to have a non-zero gradient. </p>
+<p>0 ≤ SmoothMax( φ((dᵢ(q) - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) ) ≤ 1</p>
+<p>where dᵢ(q) is the signed distance of the i-th pair, dₘᵢₙ is the minimum allowable distance, d_influence is the "influence distance" (the distance below which a pair of geometries influences the constraint), φ is a <a class="el" href="namespacedrake_1_1multibody.html#a9b7dce3eb33772802af322ca25ef4864" title="Computes the penalty function φ(x) and its derivatives dφ(x)/dx.">multibody::MinimumDistancePenaltyFunction</a>, and SmoothMax(d) is smooth approximation of max(d). We require that dₘᵢₙ &lt; d_influence. The input scaling (dᵢ(q) - d_influence)/(d_influence - dₘᵢₙ) ensures that at the boundary of the feasible set (when dᵢ(q) == dₘᵢₙ), we evaluate the penalty function at -1, where it is required to have a non-zero gradient. </p>
 </div>
 <p><code>#include &lt;drake/multibody/inverse_kinematics/minimum_distance_constraint.h&gt;</code></p>
 <table class="memberdecls">

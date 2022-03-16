@@ -889,19 +889,21 @@ of the robot.</p>
 <p>Constrain the signed distance between all candidate pairs of
 geometries (according to the logic of
 SceneGraphInspector::GetCollisionCandidates()) to be no smaller than a
-specified minimum distance.</p>
+specified minimum distance. This constraint should be bound to
+decision variables corresponding to the configuration vector, q, of
+the associate MultibodyPlant.</p>
 <p>The formulation of the constraint is</p>
-<p>0 ≤ SmoothMax( φ((dᵢ - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) ) ≤
-1</p>
-<p>where dᵢ is the signed distance of the i-th pair, dₘᵢₙ is the minimum
-allowable distance, d_influence is the “influence distance” (the
-distance below which a pair of geometries influences the constraint),
-φ is a multibody::MinimumDistancePenaltyFunction, and SmoothMax(d) is
-smooth approximation of max(d). We require that dₘᵢₙ &lt; d_influence.
-The input scaling (dᵢ - d_influence)/(d_influence - dₘᵢₙ) ensures that
-at the boundary of the feasible set (when dᵢ == dₘᵢₙ), we evaluate the
-penalty function at -1, where it is required to have a non-zero
-gradient.</p>
+<p>0 ≤ SmoothMax( φ((dᵢ(q) - d_influence)/(d_influence - dₘᵢₙ)) / φ(-1) )
+≤ 1</p>
+<p>where dᵢ(q) is the signed distance of the i-th pair, dₘᵢₙ is the
+minimum allowable distance, d_influence is the “influence distance”
+(the distance below which a pair of geometries influences the
+constraint), φ is a multibody::MinimumDistancePenaltyFunction, and
+SmoothMax(d) is smooth approximation of max(d). We require that dₘᵢₙ &lt;
+d_influence. The input scaling (dᵢ(q) - d_influence)/(d_influence -
+dₘᵢₙ) ensures that at the boundary of the feasible set (when dᵢ(q) ==
+dₘᵢₙ), we evaluate the penalty function at -1, where it is required to
+have a non-zero gradient.</p>
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.MinimumDistanceConstraint.__init__" title="Permalink to this definition">¶</a></dt>
