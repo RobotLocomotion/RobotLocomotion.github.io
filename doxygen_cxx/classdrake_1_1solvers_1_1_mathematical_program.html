@@ -795,7 +795,7 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 <tr class="memdesc:a5ebc792721a0a9dca1079e093428655a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the mapping from a decision variable index to its scaling factor.  <a href="#a5ebc792721a0a9dca1079e093428655a">More...</a><br /></td></tr>
 <tr class="separator:a5ebc792721a0a9dca1079e093428655a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4b4542d7067f6d60ea801b3b00c591f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af4b4542d7067f6d60ea801b3b00c591f">SetVariableScaling</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &amp;var, double s)</td></tr>
-<tr class="memdesc:af4b4542d7067f6d60ea801b3b00c591f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for the scaling of decision variables starting from index <code>idx_start</code> to <code>idx_end</code> (including <code>idx_end</code>).  <a href="#af4b4542d7067f6d60ea801b3b00c591f">More...</a><br /></td></tr>
+<tr class="memdesc:af4b4542d7067f6d60ea801b3b00c591f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter for the scaling <code>s</code> of decision variable <code>var</code>.  <a href="#af4b4542d7067f6d60ea801b3b00c591f">More...</a><br /></td></tr>
 <tr class="separator:af4b4542d7067f6d60ea801b3b00c591f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2079c8eee90c77853f4a9a96c14715a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#ac2079c8eee90c77853f4a9a96c14715a">ClearVariableScaling</a> ()</td></tr>
 <tr class="memdesc:ac2079c8eee90c77853f4a9a96c14715a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the scaling factors for decision variables.  <a href="#ac2079c8eee90c77853f4a9a96c14715a">More...</a><br /></td></tr>
@@ -7590,7 +7590,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
       </table>
 </div><div class="memdoc">
 
-<p>Setter for the scaling of decision variables starting from index <code>idx_start</code> to <code>idx_end</code> (including <code>idx_end</code>). </p>
+<p>Setter for the scaling <code>s</code> of decision variable <code>var</code>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">var</td><td>the decision variable to be scaled. </td></tr>

@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"drake__bool_8h.html#ae4171afca9615cfca42e59dd116d0bfb":[4,0,0,1,19,6],
 "drake__copyable_8h.html":[4,0,0,1,20],
 "drake__copyable_8h.html#a3ee22789c29a46dddd6a7fd2b982731c":[4,0,0,1,20,1],
 "drake__copyable_8h.html#ae6322b9e40935343a422cbdfb41e310e":[4,0,0,1,20,0],
@@ -212,8 +213,8 @@ var NAVTREEINDEX41 =
 "framework__py__values_8h.html#ae073851bc679a64d47dc27c133b8d89d":[4,0,0,0,0,2,2,0],
 "free__body_8h.html":[4,0,0,8,0,1,0],
 "function_8h.html":[4,0,0,10,22],
-"functions.html":[3,3,0],
 "functions.html":[3,3,0,0],
+"functions.html":[3,3,0],
 "functions_b.html":[3,3,0,1],
 "functions_c.html":[3,3,0,2],
 "functions_d.html":[3,3,0,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "functions_func_x.html":[3,3,1,23],
 "functions_func_y.html":[3,3,1,24],
 "functions_func_z.html":[3,3,1,25],
-"functions_func_~.html":[3,3,1,26],
-"functions_g.html":[3,3,0,6]
+"functions_func_~.html":[3,3,1,26]
 };

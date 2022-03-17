@@ -125,6 +125,7 @@ $(document).ready(function(){initNavTree('yaml__io_8h.html','');});
 <div class="textblock"><code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="yaml__io__options_8h.html">drake/common/yaml/yaml_io_options.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="yaml__read__archive_8h.html">drake/common/yaml/yaml_read_archive.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="yaml__write__archive_8h.html">drake/common/yaml/yaml_write_archive.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -143,14 +144,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a622c33e0bb8c19665bf527b03fe9703c"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
-<tr class="memitem:a622c33e0bb8c19665bf527b03fe9703c"><td class="memTemplItemLeft" align="right" valign="top">static Serializable&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#a622c33e0bb8c19665bf527b03fe9703c">LoadYamlFile</a> (const std::string &amp;filename, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt, const std::optional&lt; YamlReadArchive::Options &gt; &amp;options=std::nullopt)</td></tr>
-<tr class="memdesc:a622c33e0bb8c19665bf527b03fe9703c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML-formatted file.  <a href="namespacedrake_1_1yaml.html#a622c33e0bb8c19665bf527b03fe9703c">More...</a><br /></td></tr>
-<tr class="separator:a622c33e0bb8c19665bf527b03fe9703c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd8dfac059b6803bdfdc0bc09b634538"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
-<tr class="memitem:acd8dfac059b6803bdfdc0bc09b634538"><td class="memTemplItemLeft" align="right" valign="top">static Serializable&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#acd8dfac059b6803bdfdc0bc09b634538">LoadYamlString</a> (const std::string &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt, const std::optional&lt; YamlReadArchive::Options &gt; &amp;options=std::nullopt)</td></tr>
-<tr class="memdesc:acd8dfac059b6803bdfdc0bc09b634538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML-formatted string.  <a href="namespacedrake_1_1yaml.html#acd8dfac059b6803bdfdc0bc09b634538">More...</a><br /></td></tr>
-<tr class="separator:acd8dfac059b6803bdfdc0bc09b634538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43b0aad3a987a2b97f89a68d934fb982"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:a43b0aad3a987a2b97f89a68d934fb982"><td class="memTemplItemLeft" align="right" valign="top">static Serializable&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#a43b0aad3a987a2b97f89a68d934fb982">LoadYamlFile</a> (const std::string &amp;filename, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt, const std::optional&lt; LoadYamlOptions &gt; &amp;options=std::nullopt)</td></tr>
+<tr class="memdesc:a43b0aad3a987a2b97f89a68d934fb982"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML-formatted file.  <a href="namespacedrake_1_1yaml.html#a43b0aad3a987a2b97f89a68d934fb982">More...</a><br /></td></tr>
+<tr class="separator:a43b0aad3a987a2b97f89a68d934fb982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad38f7b06115765153b8434cff70a597f"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
+<tr class="memitem:ad38f7b06115765153b8434cff70a597f"><td class="memTemplItemLeft" align="right" valign="top">static Serializable&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ad38f7b06115765153b8434cff70a597f">LoadYamlString</a> (const std::string &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt, const std::optional&lt; LoadYamlOptions &gt; &amp;options=std::nullopt)</td></tr>
+<tr class="memdesc:ad38f7b06115765153b8434cff70a597f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads data from a YAML-formatted string.  <a href="namespacedrake_1_1yaml.html#ad38f7b06115765153b8434cff70a597f">More...</a><br /></td></tr>
+<tr class="separator:ad38f7b06115765153b8434cff70a597f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplParams" colspan="2">template&lt;typename Serializable &gt; </td></tr>
 <tr class="memitem:ab3b6d04d37236596751e626ed6aa3b5e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e">SaveYamlFile</a> (const std::string &amp;filename, const Serializable &amp;data, const std::optional&lt; std::string &gt; &amp;child_name=std::nullopt, const std::optional&lt; Serializable &gt; &amp;defaults=std::nullopt)</td></tr>
 <tr class="memdesc:ab3b6d04d37236596751e626ed6aa3b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves data as a YAML-formatted file.  <a href="namespacedrake_1_1yaml.html#ab3b6d04d37236596751e626ed6aa3b5e">More...</a><br /></td></tr>

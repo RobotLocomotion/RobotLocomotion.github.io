@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_formula_01_4.html":[3,0,1,13],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_generic_polynomial_3_01_basis_element_01_4_01_4.html":[3,0,1,14],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_01_4.html":[3,0,1,15],
 "structstd_1_1hash_3_01drake_1_1symbolic_1_1_monomial_basis_element_01_4.html":[3,0,1,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic__formula_8h.html#a4758fb8f36a1a85b9fa932003216fe2e":[4,0,0,1,59,41],
 "symbolic__formula_8h.html#a47616389df9ab060d41105d51db82be4":[4,0,0,1,59,74],
 "symbolic__formula_8h.html#a486a9821c4235aeda4e39ff0652f72e7":[4,0,0,1,59,15],
-"symbolic__formula_8h.html#a489c472556030b17c10028a04ba70aad":[4,0,0,1,59,42],
-"symbolic__formula_8h.html#a50548d8092f6c0fa9796daf743a91d56":[4,0,0,1,59,24]
+"symbolic__formula_8h.html#a489c472556030b17c10028a04ba70aad":[4,0,0,1,59,42]
 };
