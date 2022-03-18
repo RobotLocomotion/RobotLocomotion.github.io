@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"sap__model_8h.html":[4,0,0,8,2,0,6],
+"sap__solver_8h.html":[4,0,0,8,2,9],
 "saturate_8h.html":[4,0,0,7,30],
 "saturate_8h.html#adecdf6a7ef606861457807da4b56e7ff":[4,0,0,7,30,0],
 "saturation_8h.html":[4,0,0,11,6,19],
@@ -149,7 +151,7 @@ var NAVTREEINDEX47 =
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,49,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,49,9],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
-"sorted__triplet_8h.html":[4,0,0,4,2,43],
+"sorted__triplet_8h.html":[4,0,0,4,2,45],
 "sos__basis__generator_8h.html":[4,0,0,10,57],
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,10,57,0],
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,13,42],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,3,10,0],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,3,10,3],
 "structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,3,25,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,3,25,0,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a3b79efd873843125dabba312ddde65a3":[3,0,0,3,25,0,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a4467598fbba812fe1339ab4e83806573":[3,0,0,3,25,0,5]
+"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,3,25,0,0]
 };

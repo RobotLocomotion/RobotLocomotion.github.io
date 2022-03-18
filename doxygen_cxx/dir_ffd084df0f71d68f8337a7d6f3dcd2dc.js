@@ -19,6 +19,8 @@ var dir_ffd084df0f71d68f8337a7d6f3dcd2dc =
     [ "make_box_mesh.h", "make__box__mesh_8h.html", null ],
     [ "make_capsule_field.h", "make__capsule__field_8h.html", null ],
     [ "make_capsule_mesh.h", "make__capsule__mesh_8h.html", null ],
+    [ "make_convex_field.h", "make__convex__field_8h.html", null ],
+    [ "make_convex_mesh.h", "make__convex__mesh_8h.html", null ],
     [ "make_cylinder_field.h", "make__cylinder__field_8h.html", null ],
     [ "make_cylinder_mesh.h", "make__cylinder__mesh_8h.html", null ],
     [ "make_ellipsoid_field.h", "make__ellipsoid__field_8h.html", null ],

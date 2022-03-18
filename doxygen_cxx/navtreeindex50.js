@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#a96cec615ca4dba3e4544c71f7f8300d4":[3,0,0,14,56,0,0],
+"structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#ab853a3a6d8692d0994a854ad92b6ab3d":[3,0,0,14,56,0,4],
 "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#adf1d22081db0a89308fb34077071cf71":[3,0,0,14,56,0,1],
 "structdrake_1_1systems_1_1_initial_value_problem_1_1_ode_context.html#aef990c4b0f5f5b03d6ebe637c2dab762":[3,0,0,14,56,0,6],
 "structdrake_1_1systems_1_1_initialize_params.html":[1,4,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structstd_1_1hash_3_01drake_1_1geometry_1_1render_1_1_render_label_01_4.html":[3,0,1,5],
 "structstd_1_1hash_3_01drake_1_1solvers_1_1_binding_3_01_c_01_4_01_4.html":[3,0,1,7],
 "structstd_1_1hash_3_01drake_1_1solvers_1_1_solver_id_01_4.html":[3,0,1,8],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,1,10],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_polynomial_01_4.html":[3,0,1,11],
-"structstd_1_1hash_3_01drake_1_1symbolic_1_1_expression_01_4.html":[3,0,1,12]
+"structstd_1_1hash_3_01drake_1_1symbolic_1_1_chebyshev_basis_element_01_4.html":[3,0,1,10]
 };
