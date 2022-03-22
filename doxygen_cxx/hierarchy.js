@@ -17,6 +17,7 @@ var hierarchy =
     [ "Rotation::AngleAxis", "structdrake_1_1schema_1_1_rotation_1_1_angle_axis.html", null ],
     [ "AntiderivativeFunction< T >", "classdrake_1_1systems_1_1_antiderivative_function.html", null ],
     [ "ArticulatedBodyInertia< T >", "classdrake_1_1multibody_1_1_articulated_body_inertia.html", null ],
+    [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", null ],
     [ "BarycentricMesh< T >", "classdrake_1_1math_1_1_barycentric_mesh.html", null ],
     [ "BasisElementGradedReverseLexOrder< VariableOrder, BasisElement >", "structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html", null ],
     [ "Binding< C >", "classdrake_1_1solvers_1_1_binding.html", null ],
@@ -452,8 +453,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
+    [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -526,7 +527,6 @@ var hierarchy =
     [ "NewVariableNames< Size >", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html", null ],
     [ "NiceTypeName", "classdrake_1_1_nice_type_name.html", null ],
     [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", null ],
-    [ "NonsmoothAugmentedLagrangian", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html", null ],
     [ "NonSymbolicTraits", "structdrake_1_1systems_1_1scalar__conversion_1_1_non_symbolic_traits.html", [
       [ "Traits< drake::multibody::meshcat::ContactVisualizer >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html", null ],
       [ "Traits< examples::quadrotor::QuadrotorPlant >", "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html", null ],

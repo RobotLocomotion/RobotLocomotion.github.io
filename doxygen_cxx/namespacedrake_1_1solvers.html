@@ -138,6 +138,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html">AddRotationMatrixBoxSphereIntersectionReturn</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some of the newly added variables in function AddRotationMatrixBoxSphereIntersectionMilpConstraints.  <a href="structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html">AugmentedLagrangianNonsmooth</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the augmented Lagrangian (AL) of a given mathematical program.  <a href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A binding on constraint type C is a mapping of the decision variables onto the inputs of C.  <a href="classdrake_1_1solvers_1_1_binding.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,9 +292,6 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_nlopt_solver_details.html">NloptSolverDetails</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The NLopt solver details after calling <a class="el" href="namespacedrake_1_1solvers.html#a07bf1722e3e347d7878ae44be98b4b92" title="Solves an optimization program, with optional initial guess and solver options.">Solve()</a> function.  <a href="structdrake_1_1solvers_1_1_nlopt_solver_details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html">NonsmoothAugmentedLagrangian</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the augmented Lagrangian (AL) of a given mathematical program.  <a href="classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_osqp_solver.html">OsqpSolver</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1solvers_1_1_osqp_solver_details.html">OsqpSolverDetails</a></td></tr>
@@ -368,6 +368,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a4ae3860f84fa0c2eac8c21ee2e91c4cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#a4ae3860f84fa0c2eac8c21ee2e91c4cd">NonsmoothAugmentedLagrangian</a> = <a class="el" href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html">AugmentedLagrangianNonsmooth</a></td></tr>
+<tr class="separator:a4ae3860f84fa0c2eac8c21ee2e91c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa708f80d971209e3d46c1e41f05c1393"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1solvers.html#aa708f80d971209e3d46c1e41f05c1393">DecisionVariable</a> = <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a></td></tr>
 <tr class="separator:aa708f80d971209e3d46c1e41f05c1393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf84184cb10b49233b007295d1880e17"><td class="memTemplParams" colspan="2">template&lt;int rows, int cols&gt; </td></tr>
@@ -835,6 +837,20 @@ Choice" model.  <a href="#a81f7d44186352e1090de1343d468cad2">More...</a><br /></
 
 </div>
 </div>
+<a id="a4ae3860f84fa0c2eac8c21ee2e91c4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae3860f84fa0c2eac8c21ee2e91c4cd">&#9670;&nbsp;</a></span>NonsmoothAugmentedLagrangian</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="namespacedrake_1_1solvers.html#a4ae3860f84fa0c2eac8c21ee2e91c4cd">NonsmoothAugmentedLagrangian</a> =  <a class="el" href="classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html">AugmentedLagrangianNonsmooth</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5617ec1dc3b70cd1683d8850fe69585d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5617ec1dc3b70cd1683d8850fe69585d">&#9670;&nbsp;</a></span>ProgramAttributes</h2>
 
@@ -1235,7 +1251,7 @@ s.t tr(FᵢX̂) = (Nᵀa)(i)
 <p>In this case we cannot infer the status of the primal problem. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a331f41a3139a87d16e1422bc818c136fa49c70e81a2c58028009dbd993fd85dd3"></a>kInfeasible_Or_Unbounded&#160;</td><td class="fielddoc"><p>(Deprecated.) </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>Use kInfeasibleOrUnbounded instead. <br />
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use kInfeasibleOrUnbounded instead. <br />
  This will be removed from Drake on or after 2022-07-01.</dd></dl>
 </td></tr>
 </table>

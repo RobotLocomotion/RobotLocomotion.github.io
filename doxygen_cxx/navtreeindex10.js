@@ -1,5 +1,6 @@
 var NAVTREEINDEX10 =
 {
+"classdrake_1_1math_1_1_rigid_transform.html#a2ff306c43d124f530d5dfbf6793a3741":[3,0,0,7,11,23],
 "classdrake_1_1math_1_1_rigid_transform.html#a391249f5a5f48f189c7ff6572d6e3a19":[3,0,0,7,11,5],
 "classdrake_1_1math_1_1_rigid_transform.html#a3e39a200466c08cbbe985741fb3b9964":[3,0,0,7,11,27],
 "classdrake_1_1math_1_1_rigid_transform.html#a3e953a8287f40248d4d2c1030ef72cef":[3,0,0,7,11,37],
@@ -248,6 +249,5 @@ var NAVTREEINDEX10 =
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a425cea2dae1c28a29b4cfa3836620111":[3,0,0,8,15,4],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#aa022aff626b9a3d772eb059ffd62a519":[3,0,0,8,15,2],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#aa402e3a656b34e6ff890110b0e7b0d68":[3,0,0,8,15,0],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#ac33bc6a8682677549c709561d97840ed":[3,0,0,8,15,6],
-"classdrake_1_1multibody_1_1_com_position_constraint.html":[1,1,0,1]
+"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#ac33bc6a8682677549c709561d97840ed":[3,0,0,8,15,6]
 };

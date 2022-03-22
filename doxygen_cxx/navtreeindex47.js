@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"sap__contact__problem_8h.html":[4,0,0,8,2,0,4],
+"sap__friction__cone__constraint_8h.html":[4,0,0,8,2,0,5],
 "sap__model_8h.html":[4,0,0,8,2,0,6],
 "sap__solver_8h.html":[4,0,0,8,2,9],
 "saturate_8h.html":[4,0,0,7,30],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,3,10,2],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,3,10,1],
 "structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,3,10,0],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,3,10,3],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html":[3,0,0,3,25,0],
-"structdrake_1_1geometry_1_1_meshcat_1_1_orthographic_camera.html#a24c109489bdfad4b0937c2d19d9c0e20":[3,0,0,3,25,0,0]
+"structdrake_1_1geometry_1_1_drake_visualizer_params.html#ae7f364184aa2780e090858d0b3cfda14":[3,0,0,3,10,3]
 };

@@ -36,6 +36,7 @@ var NAVTREEINDEX0 =
 "articulated__body__inertia_8h.html":[4,0,0,8,13,2],
 "articulated__body__inertia__cache_8h.html":[4,0,0,8,13,3],
 "augmented__lagrangian_8h.html":[4,0,0,10,3],
+"augmented__lagrangian_8h.html#a4ae3860f84fa0c2eac8c21ee2e91c4cd":[4,0,0,10,3,1],
 "autodiff__gradient_8h.html":[4,0,0,7,1],
 "autodiff__gradient_8h.html#a099a62886c181d6f9b917f0215a1a947":[4,0,0,7,1,2],
 "autodiff__gradient_8h.html#a1ea20cd66ae96c7e1390e7ebb3e2f8a8":[4,0,0,7,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classdrake_1_1_polynomial_1_1_monomial.html#a3619cde92a69a87f2ab626deed0423bb":[3,0,0,40,0,2],
 "classdrake_1_1_polynomial_1_1_monomial.html#a50db1dbc4ba83abeeaa830f4c8442bf1":[3,0,0,40,0,8],
 "classdrake_1_1_polynomial_1_1_monomial.html#a88e2ca1fa7efb383c5d61833fdae264c":[3,0,0,40,0,6],
-"classdrake_1_1_polynomial_1_1_monomial.html#a8d2a0b0dd246af6385d78567af484840":[3,0,0,40,0,1],
-"classdrake_1_1_polynomial_1_1_monomial.html#a8e7b10a07a1df37f95789d09cfe0e831":[3,0,0,40,0,5]
+"classdrake_1_1_polynomial_1_1_monomial.html#a8d2a0b0dd246af6385d78567af484840":[3,0,0,40,0,1]
 };

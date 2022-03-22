@@ -235,8 +235,38 @@ MUST NOT start the receive thread on this object.</p>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <dl class="method">
 <dt id="pydrake.systems.lcm.LcmPublisherSystem.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.systems.lcm.LcmPublisherSystem</em>, <em>channel: str</em>, <em>serializer: pydrake.systems.lcm.SerializerInterface</em>, <em>lcm: pydrake.lcm.DrakeLcmInterface</em>, <em>publish_period: float = 0.0</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>A constructor for an LcmPublisherSystem that takes LCM message objects
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>A constructor for an LcmPublisherSystem that takes LCM message objects
+on its sole abstract-valued input port. The LCM message type is
+determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>. Will publish on forced
+events and either periodic or per-step events, as determined by
+publish_period.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">channel</span></code>:</dt>
+<dd>The LCM channel on which to publish.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">serializer</span></code>:</dt>
+<dd>The serializer that converts between byte vectors and LCM message
+objects.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lcm</span></code>:</dt>
+<dd>A pointer to the LCM subsystem to use, which must remain valid for
+the lifetime of this object. If null, a drake::lcm::DrakeLcm
+object is allocated and maintained internally, but see the note in
+the class comments.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">publish_period</span></code>:</dt>
+<dd>Period that messages will be published (optional). If the publish
+period is zero, LcmPublisherSystem will use per-step publishing
+instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
+<dt>Precondition:</dt>
+<dd>publish_period is non-negative.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.systems.lcm.LcmPublisherSystem, channel: str, serializer: pydrake.systems.lcm.SerializerInterface, lcm: pydrake.lcm.DrakeLcmInterface, publish_triggers: Set[pydrake.systems.framework.TriggerType], publish_period: float = 0.0) -&gt; None</li>
+</ol>
+<p>A constructor for an LcmPublisherSystem that takes LCM message objects
 on its sole abstract-valued input port. The LCM message type is
 determined by the provided <code class="docutils literal notranslate"><span class="pre">serializer</span></code>. Will publish on forced
 events and either periodic or per-step events, as determined by
@@ -263,7 +293,7 @@ instead; see LeafSystem::DeclarePerStepPublishEvent().</dd>
 
 <dl class="staticmethod">
 <dt id="pydrake.systems.lcm.LcmPublisherSystem.Make">
-<em class="property">static </em><code class="descname">Make</code><span class="sig-paren">(</span><em>channel</em>, <em>lcm_type</em>, <em>lcm</em>, <em>publish_period=0.0</em>, <em>use_cpp_serializer=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.Make" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">Make</code><span class="sig-paren">(</span><em>channel</em>, <em>lcm_type</em>, <em>lcm</em>, <em>publish_period=0.0</em>, <em>use_cpp_serializer=False</em>, <em>*</em>, <em>publish_triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.lcm.LcmPublisherSystem.Make" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience to create an LCM publisher system with a concrete type.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

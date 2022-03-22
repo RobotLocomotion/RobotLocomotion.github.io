@@ -3,9 +3,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
     [ "fbstab", "dir_fb9a140248c02c8b3a74e805be9cb92d.html", "dir_fb9a140248c02c8b3a74e805be9cb92d" ],
     [ "test_utilities", "dir_3e1bf9ce46085c0e3ff6de174f1555d7.html", "dir_3e1bf9ce46085c0e3ff6de174f1555d7" ],
     [ "aggregate_costs_constraints.h", "aggregate__costs__constraints_8h.html", "aggregate__costs__constraints_8h" ],
-    [ "augmented_lagrangian.h", "augmented__lagrangian_8h.html", [
-      [ "NonsmoothAugmentedLagrangian", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian" ]
-    ] ],
+    [ "augmented_lagrangian.h", "augmented__lagrangian_8h.html", "augmented__lagrangian_8h" ],
     [ "bilinear_product_util.h", "bilinear__product__util_8h.html", "bilinear__product__util_8h" ],
     [ "binding.h", "binding_8h.html", "binding_8h" ],
     [ "branch_and_bound.h", "branch__and__bound_8h.html", [

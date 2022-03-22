@@ -1,5 +1,7 @@
 var NAVTREEINDEX46 =
 {
+"planar__gripper__lcm_8h.html#a45bb02e62ab70fa88d0b8983a5713391":[4,0,0,3,13,4,5],
+"planar__gripper__lcm_8h.html#a912bfe40f5046c670e716025d6678d9c":[4,0,0,3,13,4,4],
 "planar__joint_8h.html":[4,0,0,8,13,29],
 "planar__manipuland__lcm_8h.html":[4,0,0,3,13,5],
 "planar__manipuland__lcm_8h.html#a909c985f8e6897a3936dda06c9648da4":[4,0,0,3,13,5,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX46 =
 "runge__kutta3__integrator_8h.html":[4,0,0,11,0,15],
 "runge__kutta5__integrator_8h.html":[4,0,0,11,0,16],
 "sap__constraint_8h.html":[4,0,0,8,2,0,2],
-"sap__constraint__bundle_8h.html":[4,0,0,8,2,0,3],
-"sap__contact__problem_8h.html":[4,0,0,8,2,0,4],
-"sap__friction__cone__constraint_8h.html":[4,0,0,8,2,0,5]
+"sap__constraint__bundle_8h.html":[4,0,0,8,2,0,3]
 };

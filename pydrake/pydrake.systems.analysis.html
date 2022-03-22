@@ -2555,8 +2555,16 @@ precise isolation.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].set_publish_at_initialization">
+<code class="descname">set_publish_at_initialization</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], publish: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].set_publish_at_initialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the simulation should trigger a forced-Publish at the end
+of Initialize(). See set_publish_every_time_step() documentation for
+more information.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].set_publish_every_time_step">
-<code class="descname">set_publish_every_time_step</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].set_publish_every_time_step" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_publish_every_time_step</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], publish: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].set_publish_every_time_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets whether the simulation should trigger a forced-Publish event on
 the System under simulation at the end of every trajectory-advancing
 step. Specifically, that means the System::Publish() event dispatcher
@@ -2577,7 +2585,7 @@ initialization, requiring both options to be enabled.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_.Simulator_[float].set_target_realtime_rate">
-<code class="descname">set_target_realtime_rate</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].set_target_realtime_rate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_target_realtime_rate</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], realtime_rate: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_.Simulator_[float].set_target_realtime_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Slow the simulation down to <em>approximately</em> synchronize with real time
 when it would otherwise run too fast. Normally the Simulator takes
 steps as quickly as it can. You can request that it slow down to
@@ -3141,8 +3149,16 @@ precise isolation.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_at_initialization">
+<code class="descname">set_publish_at_initialization</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd], publish: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_at_initialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the simulation should trigger a forced-Publish at the end
+of Initialize(). See set_publish_every_time_step() documentation for
+more information.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_every_time_step">
-<code class="descname">set_publish_every_time_step</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd], arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_every_time_step" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_publish_every_time_step</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd], publish: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].set_publish_every_time_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets whether the simulation should trigger a forced-Publish event on
 the System under simulation at the end of every trajectory-advancing
 step. Specifically, that means the System::Publish() event dispatcher
@@ -3163,7 +3179,7 @@ initialization, requiring both options to be enabled.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[AutoDiffXd].set_target_realtime_rate">
-<code class="descname">set_target_realtime_rate</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].set_target_realtime_rate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_target_realtime_rate</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[AutoDiffXd], realtime_rate: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[AutoDiffXd].set_target_realtime_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Slow the simulation down to <em>approximately</em> synchronize with real time
 when it would otherwise run too fast. Normally the Simulator takes
 steps as quickly as it can. You can request that it slow down to
@@ -3725,8 +3741,16 @@ precise isolation.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.systems.analysis.Simulator_[float].set_publish_at_initialization">
+<code class="descname">set_publish_at_initialization</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], publish: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].set_publish_at_initialization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets whether the simulation should trigger a forced-Publish at the end
+of Initialize(). See set_publish_every_time_step() documentation for
+more information.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[float].set_publish_every_time_step">
-<code class="descname">set_publish_every_time_step</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], arg0: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].set_publish_every_time_step" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_publish_every_time_step</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], publish: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].set_publish_every_time_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets whether the simulation should trigger a forced-Publish event on
 the System under simulation at the end of every trajectory-advancing
 step. Specifically, that means the System::Publish() event dispatcher
@@ -3747,7 +3771,7 @@ initialization, requiring both options to be enabled.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.analysis.Simulator_[float].set_target_realtime_rate">
-<code class="descname">set_target_realtime_rate</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], arg0: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].set_target_realtime_rate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_target_realtime_rate</code><span class="sig-paren">(</span><em>self: pydrake.systems.analysis.Simulator_[float], realtime_rate: float</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.systems.analysis.Simulator_[float].set_target_realtime_rate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Slow the simulation down to <em>approximately</em> synchronize with real time
 when it would otherwise run too fast. Normally the Simulator takes
 steps as quickly as it can. You can request that it slow down to

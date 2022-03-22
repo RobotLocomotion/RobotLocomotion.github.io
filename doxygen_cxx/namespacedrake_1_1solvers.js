@@ -2,6 +2,7 @@ var namespacedrake_1_1solvers =
 [
     [ "fbstab", "namespacedrake_1_1solvers_1_1fbstab.html", "namespacedrake_1_1solvers_1_1fbstab" ],
     [ "AddRotationMatrixBoxSphereIntersectionReturn", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return.html", "structdrake_1_1solvers_1_1_add_rotation_matrix_box_sphere_intersection_return" ],
+    [ "AugmentedLagrangianNonsmooth", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth.html", "classdrake_1_1solvers_1_1_augmented_lagrangian_nonsmooth" ],
     [ "Binding", "classdrake_1_1solvers_1_1_binding.html", "classdrake_1_1solvers_1_1_binding" ],
     [ "Bound", "structdrake_1_1solvers_1_1_bound.html", "structdrake_1_1solvers_1_1_bound" ],
     [ "BoundingBoxConstraint", "classdrake_1_1solvers_1_1_bounding_box_constraint.html", "classdrake_1_1solvers_1_1_bounding_box_constraint" ],
@@ -51,7 +52,6 @@ var namespacedrake_1_1solvers =
     [ "NewVariableNames< Size >", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html", "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4" ],
     [ "NloptSolver", "classdrake_1_1solvers_1_1_nlopt_solver.html", "classdrake_1_1solvers_1_1_nlopt_solver" ],
     [ "NloptSolverDetails", "structdrake_1_1solvers_1_1_nlopt_solver_details.html", "structdrake_1_1solvers_1_1_nlopt_solver_details" ],
-    [ "NonsmoothAugmentedLagrangian", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian.html", "classdrake_1_1solvers_1_1_nonsmooth_augmented_lagrangian" ],
     [ "OsqpSolver", "classdrake_1_1solvers_1_1_osqp_solver.html", "classdrake_1_1solvers_1_1_osqp_solver" ],
     [ "OsqpSolverDetails", "structdrake_1_1solvers_1_1_osqp_solver_details.html", "structdrake_1_1solvers_1_1_osqp_solver_details" ],
     [ "PerspectiveQuadraticCost", "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html", "classdrake_1_1solvers_1_1_perspective_quadratic_cost" ],
