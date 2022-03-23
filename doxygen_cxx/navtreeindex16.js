@@ -1,5 +1,6 @@
 var NAVTREEINDEX16 =
 {
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a36dad58405ab26f4d87b46dc42f41acc":[3,0,0,8,0,0,0,18],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a47b7fc7e1512bd8c6cd76d9813e64668":[3,0,0,8,0,0,0,12],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a4d353cbb4968e31da37a033d0175fa8e":[3,0,0,8,0,0,0,3],
 "classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a57a8b84bcac5c62cf01216727f8fb2a6":[3,0,0,8,0,0,0,22],
@@ -248,6 +249,5 @@ var NAVTREEINDEX16 =
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae08813a2f9523107c7137d6cc53a01ad":[3,0,0,9,0,0,4],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#ae52ff1d18f3e64fcde51887b0e800aac":[3,0,0,9,0,0,7],
 "classdrake_1_1perception_1_1pc__flags_1_1_descriptor_type.html#af9593d4a5ff4274efaf429cb4f9e57cc":[3,0,0,9,0,0,8],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[3,0,0,9,0,1],
-"classdrake_1_1perception_1_1pc__flags_1_1_fields.html#a21cd0e435664c94c6517641c7a98bc7b":[3,0,0,9,0,1,14]
+"classdrake_1_1perception_1_1pc__flags_1_1_fields.html":[3,0,0,9,0,1]
 };

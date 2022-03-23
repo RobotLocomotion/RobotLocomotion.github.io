@@ -1330,7 +1330,8 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </div><div class="memdoc">
 
 <p>Adds a generic constraint to the program. </p>
-<p>This should only be used if a more specific type of constraint is not available, as it may require the use of a significantly more expensive solver. </p>
+<p>This should only be used if a more specific type of constraint is not available, as it may require the use of a significantly more expensive solver.</p>
+<dl class="section note"><dt>Note</dt><dd>If <code>binding.evaluator()-&gt;num_constraints()</code> == 0, then this constraint is not added into the <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html" title="MathematicalProgram stores the decision variables, the constraints and costs of an optimization probl...">MathematicalProgram</a>. We return <code>binding</code> directly. </dd></dl>
 
 </div>
 </div>

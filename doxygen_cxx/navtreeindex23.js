@@ -1,5 +1,6 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1symbolic_1_1_environment.html":[3,0,0,13,5],
 "classdrake_1_1symbolic_1_1_environment.html#a153880e8b1e045676f1b093093fec91c":[3,0,0,13,5,22],
 "classdrake_1_1symbolic_1_1_environment.html#a228ca65a053b15ce17ff50ccbcc1f878":[3,0,0,13,5,27],
 "classdrake_1_1symbolic_1_1_environment.html#a231088519ec2ff5cfeacac5ae590570b":[3,0,0,13,5,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1symbolic_1_1_expression_ceiling.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,14,2],
 "classdrake_1_1symbolic_1_1_expression_ceiling.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,13,14,3],
 "classdrake_1_1symbolic_1_1_expression_cell.html":[3,0,0,13,15],
-"classdrake_1_1symbolic_1_1_expression_cell.html#a0d6daf9c55dc7d28c7e881455da37198":[3,0,0,13,15,2],
-"classdrake_1_1symbolic_1_1_expression_cell.html#a15f8e41006efcde346bf1f2700d4db4c":[3,0,0,13,15,16]
+"classdrake_1_1symbolic_1_1_expression_cell.html#a0d6daf9c55dc7d28c7e881455da37198":[3,0,0,13,15,2]
 };

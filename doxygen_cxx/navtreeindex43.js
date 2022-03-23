@@ -1,5 +1,6 @@
 var NAVTREEINDEX43 =
 {
+"group__multibody__spatial__pose.html":[1,0,1,4,0],
 "group__multibody__spatial__vectors.html":[1,0,1,4,1],
 "group__multibody__systems.html":[1,2,7],
 "group__perception__systems.html":[1,2,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX43 =
 "linear__scalar__system_8h.html":[4,0,0,11,0,0,6],
 "linear__simplex__element_8h.html":[4,0,0,8,3,15],
 "linear__solve_8h.html":[4,0,0,7,20],
-"linear__solve_8h.html#a058825f71b44c44e61dd90c3b89ec87d":[4,0,0,7,20,2],
-"linear__solve_8h.html#a145b102b8109265146ea4a0c63596873":[4,0,0,7,20,1]
+"linear__solve_8h.html#a058825f71b44c44e61dd90c3b89ec87d":[4,0,0,7,20,2]
 };

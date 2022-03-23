@@ -1,5 +1,6 @@
 var NAVTREEINDEX41 =
 {
+"drake__bool_8h.html#ab4011b0ee72e60112bfd3aee950765e8":[4,0,0,1,19,8],
 "drake__bool_8h.html#ac05a0ff629ccf3c38724b6d7f95e3bce":[4,0,0,1,19,3],
 "drake__bool_8h.html#adcc2d90ce6051e150effadd72fac548c":[4,0,0,1,19,2],
 "drake__bool_8h.html#ae4171afca9615cfca42e59dd116d0bfb":[4,0,0,1,19,6],
@@ -248,6 +249,5 @@ var NAVTREEINDEX41 =
 "functions_func_u.html":[3,3,1,20],
 "functions_func_v.html":[3,3,1,21],
 "functions_func_w.html":[3,3,1,22],
-"functions_func_x.html":[3,3,1,23],
-"functions_func_y.html":[3,3,1,24]
+"functions_func_x.html":[3,3,1,23]
 };
