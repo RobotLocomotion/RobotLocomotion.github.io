@@ -156,6 +156,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0e3cbe33d19f96def02ebd180f9267a0"><td class="memItemLeft" align="right" valign="top">std::variant&lt; <a class="el" href="namespacedrake_1_1systems.html#a5484375bdbfb17f525cd2ed396d747f9">systems::InputPortSelection</a>, <a class="el" href="namespacedrake_1_1systems.html#aa53feaf560f7ff6cfa4add8dc6ff0db0">InputPortIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a0e3cbe33d19f96def02ebd180f9267a0">input_port_index</a></td></tr>
 <tr class="memdesc:a0e3cbe33d19f96def02ebd180f9267a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">For systems with multiple input ports, we must specify which input port is being used in the control design.  <a href="#a0e3cbe33d19f96def02ebd180f9267a0">More...</a><br /></td></tr>
 <tr class="separator:a0e3cbe33d19f96def02ebd180f9267a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdrake_1_1systems_1_1controllers_1_1_finite_horizon_linear_quadratic_regulator_options.html#a92fc34e0decbd0e19c08c8aa004c98a4">use_square_root_method</a> {false}</td></tr>
+<tr class="memdesc:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables the "square-root" method solution to the Ricatti equation.  <a href="#a92fc34e0decbd0e19c08c8aa004c98a4">More...</a><br /></td></tr>
+<tr class="separator:a92fc34e0decbd0e19c08c8aa004c98a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a29017aee3204b230b5884faaf2fac289"></a>
@@ -266,6 +269,23 @@ Public Attributes</h2></td></tr>
 
 <p>A desired input trajectory. </p>
 <p>The objective is to regulate to this trajectory &ndash; the input component of the quadratic running cost is (u-ud(t))'<em>R</em>(u-ud(t)). If null, then ud(t) = u0(t). </p>
+
+</div>
+</div>
+<a id="a92fc34e0decbd0e19c08c8aa004c98a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92fc34e0decbd0e19c08c8aa004c98a4">&#9670;&nbsp;</a></span>use_square_root_method</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool use_square_root_method {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enables the "square-root" method solution to the Ricatti equation. </p>
+<p>This is slightly more expensive and potentially less numerically accurate (errors are bounded on the square root), but is more numerically robust. When <code>true</code>, then you must also set a (positive definite and symmetric) Qf in this options struct. </p>
 
 </div>
 </div>

@@ -1,5 +1,12 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_spatial_vector.html#a0956f52a2d65962e383a87b3e6c3a30b":[3,0,0,8,70,16],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a09b2415a4b0787515507518d9c0dd4e5":[3,0,0,8,70,27],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a0cb40ed6a35143cdd6f683075a1dac18":[3,0,0,8,70,23],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a1e1aab695295b4f88e6f0bfd5271357c":[3,0,0,8,70,15],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a3ec0b46e26e4295575e966033fb79f4c":[3,0,0,8,70,13],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a49cceba168b76c123d5da2eca8b2fdd1":[3,0,0,8,70,37],
+"classdrake_1_1multibody_1_1_spatial_vector.html#a520e7186918c44e7d3f5971ee87ceee6":[3,0,0,8,70,31],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0":[3,0,0,8,70,38],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a55ef3f82fae301899d9bb544a7ea2de0":[3,0,0,8,70,6],
 "classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d":[3,0,0,8,70,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#aedd9e5f19cb6e54ee59a0f82059967a6":[3,0,0,8,0,5,0],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#af79bb349e7f805159cc268dba69b847c":[3,0,0,8,0,5,4],
 "classdrake_1_1multibody_1_1benchmarks_1_1_mass_damper_spring_analytical_solution.html#afa066ebd39d93abd3cb0487769ab2e1d":[3,0,0,8,0,5,1],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html":[3,0,0,8,0,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a03099360262748cd998175ca60abf26f":[3,0,0,8,0,0,0,2],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1a3992e1b22120aa3e84dbdf5187557b":[3,0,0,8,0,0,0,19],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a1c96c484fc90e224def3000dedfbe08d":[3,0,0,8,0,0,0,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a20e45c25697497d9741c632a673bebfa":[3,0,0,8,0,0,0,21],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a22899889fb8a91c6c17ecce04bdf69f8":[3,0,0,8,0,0,0,20],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a264f439a113b5cd82be61ba4de3f8c2a":[3,0,0,8,0,0,0,23],
-"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html#a283cd03cea6fa0bb6b2b4755a77c86e0":[3,0,0,8,0,0,0,24]
+"classdrake_1_1multibody_1_1benchmarks_1_1acrobot_1_1_acrobot_parameters.html":[3,0,0,8,0,0,0]
 };

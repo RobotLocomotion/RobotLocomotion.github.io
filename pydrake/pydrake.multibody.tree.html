@@ -7481,6 +7481,21 @@ velocity variables of joint().</td>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_.JointActuator_[float].input_start">
+<code class="descname">input_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_.JointActuator_[float].input_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index to the first element for this joint actuator /
+within the vector of actuation inputs for the full multibody / system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.JointActuator_.JointActuator_[float].joint">
 <code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.Joint_[float]<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_.JointActuator_[float].joint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
@@ -7495,6 +7510,20 @@ velocity variables of joint().</td>
 <dt id="pydrake.multibody.tree.JointActuator_.JointActuator_[float].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_.JointActuator_[float].name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the name of the actuator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_.JointActuator_[float].num_inputs">
+<code class="descname">num_inputs</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_.JointActuator_[float].num_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of inputs associated with this actuator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -7587,6 +7616,21 @@ velocity variables of joint().</td>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].input_start">
+<code class="descname">input_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[AutoDiffXd].input_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index to the first element for this joint actuator /
+within the vector of actuation inputs for the full multibody / system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].joint">
 <code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.Joint_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[AutoDiffXd].joint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
@@ -7601,6 +7645,20 @@ velocity variables of joint().</td>
 <dt id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[AutoDiffXd].name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the name of the actuator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_[AutoDiffXd].num_inputs">
+<code class="descname">num_inputs</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[AutoDiffXd].num_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of inputs associated with this actuator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -7691,6 +7749,21 @@ velocity variables of joint().</td>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_[Expression].input_start">
+<code class="descname">input_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[Expression].input_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index to the first element for this joint actuator /
+within the vector of actuation inputs for the full multibody / system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.JointActuator_[Expression].joint">
 <code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.Joint_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[Expression].joint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
@@ -7705,6 +7778,20 @@ velocity variables of joint().</td>
 <dt id="pydrake.multibody.tree.JointActuator_[Expression].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[Expression]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[Expression].name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the name of the actuator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_[Expression].num_inputs">
+<code class="descname">num_inputs</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[Expression]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[Expression].num_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of inputs associated with this actuator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -7795,6 +7882,21 @@ velocity variables of joint().</td>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_[float].input_start">
+<code class="descname">input_start</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[float].input_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index to the first element for this joint actuator /
+within the vector of actuation inputs for the full multibody / system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.JointActuator_[float].joint">
 <code class="descname">joint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.tree.Joint_[float]<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[float].joint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reference to the joint actuated by this JointActuator.</p>
@@ -7809,6 +7911,20 @@ velocity variables of joint().</td>
 <dt id="pydrake.multibody.tree.JointActuator_[float].name">
 <code class="descname">name</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[float].name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the name of the actuator.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.JointActuator_[float].num_inputs">
+<code class="descname">num_inputs</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.JointActuator_[float]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.multibody.tree.JointActuator_[float].num_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the number of inputs associated with this actuator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the MultibodyTree model is not finalized.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

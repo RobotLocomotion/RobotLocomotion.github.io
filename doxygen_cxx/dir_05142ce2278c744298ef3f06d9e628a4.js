@@ -14,7 +14,8 @@ var dir_05142ce2278c744298ef3f06d9e628a4 =
       [ "RenderEngine", "classdrake_1_1geometry_1_1render_1_1_render_engine.html", "classdrake_1_1geometry_1_1render_1_1_render_engine" ]
     ] ],
     [ "render_engine_vtk.h", "render__engine__vtk_8h.html", [
-      [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk" ]
+      [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk" ],
+      [ "RenderingPipeline", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline" ]
     ] ],
     [ "render_engine_vtk_base.h", "render__engine__vtk__base_8h.html", "render__engine__vtk__base_8h" ],
     [ "render_engine_vtk_factory.h", "render__engine__vtk__factory_8h.html", "render__engine__vtk__factory_8h" ],

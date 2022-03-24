@@ -602,6 +602,7 @@ var hierarchy =
     [ "RenderCameraCore", "classdrake_1_1geometry_1_1render_1_1_render_camera_core.html", null ],
     [ "RenderEngineGlParams", "structdrake_1_1geometry_1_1render_1_1_render_engine_gl_params.html", null ],
     [ "RenderEngineVtkParams", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_params.html", null ],
+    [ "RenderEngineVtk::RenderingPipeline", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html", null ],
     [ "RenderLabel", "classdrake_1_1geometry_1_1render_1_1_render_label.html", null ],
     [ "reset_after_move< T >", "classdrake_1_1reset__after__move.html", null ],
     [ "reset_after_move< int >", "classdrake_1_1reset__after__move.html", null ],

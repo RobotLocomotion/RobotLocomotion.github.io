@@ -295,7 +295,7 @@ has run once), not zero.</p>
 
 <dl class="function">
 <dt id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator">
-<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">FiniteHorizonLinearQuadraticRegulator</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], t0: float, tf: float, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], options: pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions = FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None, N=None, input_port_index=InputPortSelection.kUseFirstInputIfItExists)</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult<a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">FiniteHorizonLinearQuadraticRegulator</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], t0: float, tf: float, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], options: pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions = FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None, N=None, input_port_index=InputPortSelection.kUseFirstInputIfItExists, use_square_root_method=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorResult<a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Solves the differential Riccati equation to compute the optimal
 controller and optimal cost-to-go for the finite-horizon linear
 quadratic regulator:</p>
@@ -396,6 +396,16 @@ specified by the context passed into the LQR method).</p>
 <dd><p>A desired input trajectory. The objective is to regulate to this
 trajectory – the input component of the quadratic running cost is
 (u-ud(t))’<a href="#id1"><span class="problematic" id="id2">*</span></a>R*(u-ud(t)). If null, then ud(t) = u0(t).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method">
+<code class="descname">use_square_root_method</code><a class="headerlink" href="#pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions.use_square_root_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the “square-root” method solution to the Ricatti equation.
+This is slightly more expensive and potentially less numerically
+accurate (errors are bounded on the square root), but is more
+numerically robust. When <code class="docutils literal notranslate"><span class="pre">True</span></code>, then you must also set a (positive
+definite and symmetric) Qf in this options struct.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -933,7 +943,7 @@ system coordinates.</td>
 
 <dl class="function">
 <dt id="pydrake.systems.controllers.MakeFiniteHorizonLinearQuadraticRegulator">
-<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">MakeFiniteHorizonLinearQuadraticRegulator</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], t0: float, tf: float, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], options: pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions = FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None, N=None, input_port_index=InputPortSelection.kUseFirstInputIfItExists)</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[float]<a class="headerlink" href="#pydrake.systems.controllers.MakeFiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.systems.controllers.</code><code class="descname">MakeFiniteHorizonLinearQuadraticRegulator</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], t0: float, tf: float, Q: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], R: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous], options: pydrake.systems.controllers.FiniteHorizonLinearQuadraticRegulatorOptions = FiniteHorizonLinearQuadraticRegulatorOptions(Qf=None, N=None, input_port_index=InputPortSelection.kUseFirstInputIfItExists, use_square_root_method=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.System_[float]<a class="headerlink" href="#pydrake.systems.controllers.MakeFiniteHorizonLinearQuadraticRegulator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variant of FiniteHorizonLinearQuadraticRegulator that returns a System
 implementing the regulator (controller) as a System, with a single
 “plant_state” input for the estimated plant state, and a single

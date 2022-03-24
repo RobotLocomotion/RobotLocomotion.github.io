@@ -1,5 +1,6 @@
 var classdrake_1_1geometry_1_1render_1_1_render_engine_vtk =
 [
+    [ "RenderingPipeline", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline.html", "structdrake_1_1geometry_1_1render_1_1_render_engine_vtk_1_1_rendering_pipeline" ],
     [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7cee58a6cd51d89cd3dfc5cbc0c0c88a", null ],
     [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a15297ff63dabeaf7f082962634bda8b2", null ],
     [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#af70dd3ac8981ebabb0e508ee041ef2b7", null ],
@@ -7,6 +8,7 @@ var classdrake_1_1geometry_1_1render_1_1_render_engine_vtk =
     [ "actors", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ae7e7742c1fc3324e9cd80e62fd65095f", null ],
     [ "default_diffuse", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a42d85756ac9f5c62314108e554591064", null ],
     [ "default_render_label", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a88a7096a316e3d2340941ddcc0a89832", null ],
+    [ "get_mutable_pipeline", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a0ec4b1adce8d0b64dc28987da43a30f9", null ],
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a859d9645a6882e4e2d9dd1fd04f284c4", null ],
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a26647d202bf3306f48a7fefbf09e4e91", null ],
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a883142613402429f357102b1835d180a", null ],
@@ -17,6 +19,8 @@ var classdrake_1_1geometry_1_1render_1_1_render_engine_vtk =
     [ "ImplementGeometry", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a7e3d19bd99a23652bcc1079d6aabe3a6", null ],
     [ "operator=", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#aaa0981a4cafa2db60957d182cccd5bfd", null ],
     [ "operator=", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a8169cca4018a438cc0012dbca354201d", null ],
+    [ "PerformVtkUpdate", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a858f71a1e4ae1e1930566f957a1328a9", null ],
     [ "UpdateViewpoint", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a81e26b02c3a6d32b4187fc3f14261cbf", null ],
-    [ "RenderEngineGltfClient", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ab7040001a76725400946a3d79eff0144", null ]
+    [ "UpdateWindow", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#ad763e59b19dbec4d1d554d7572a243b9", null ],
+    [ "UpdateWindow", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html#a0737c926a2dbca9014926c0b5c03cde6", null ]
 ];

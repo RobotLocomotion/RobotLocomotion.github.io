@@ -1,5 +1,12 @@
 var NAVTREEINDEX26 =
 {
+"classdrake_1_1symbolic_1_1_polynomial.html#a26f55e6d78730b68a8d404a772d4c8a1":[3,0,0,13,59,11],
+"classdrake_1_1symbolic_1_1_polynomial.html#a33a7dcb4d957bb77cc4c3776751ecfa4":[3,0,0,13,59,27],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3511471a7ce9d6ea4bffe9536187f855":[3,0,0,13,59,10],
+"classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a":[3,0,0,13,59,40],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3964b57f6f9f9957e6000b10a0383a34":[3,0,0,13,59,6],
+"classdrake_1_1symbolic_1_1_polynomial.html#a3c2344073950451dcc9f2676cd9bf6e8":[3,0,0,13,59,44],
+"classdrake_1_1symbolic_1_1_polynomial.html#a464c802c8b3157e578c64b7930859242":[3,0,0,13,59,4],
 "classdrake_1_1symbolic_1_1_polynomial.html#a55826a916b7c6f12060f7ff4e590813f":[3,0,0,13,59,9],
 "classdrake_1_1symbolic_1_1_polynomial.html#a6ad606c2af3cbfde8ce56a4fa1b93f8f":[3,0,0,13,59,20],
 "classdrake_1_1symbolic_1_1_polynomial.html#a714081178880dda3a70720c80f807471":[3,0,0,13,59,0],
@@ -242,12 +249,5 @@ var NAVTREEINDEX26 =
 "classdrake_1_1systems_1_1_antiderivative_function.html#ac06613de734241b2536b03beff33204f":[3,0,0,14,13,13],
 "classdrake_1_1systems_1_1_antiderivative_function.html#adbc3bf152afe75736c6b8b3ecf8cd65e":[3,0,0,14,13,8],
 "classdrake_1_1systems_1_1_antiderivative_function.html#adc6c208ef46d4561ac6d112afaa3e337":[3,0,0,14,13,2],
-"classdrake_1_1systems_1_1_antiderivative_function.html#af7c4ee8378a24e575a176dfb7d308ae9":[3,0,0,14,13,9],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html":[3,0,0,14,14],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a0bedcc503f4245db1613bc50f9b5513a":[3,0,0,14,14,5],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a4a91a957f8b4d3605b0b50c05121ddc8":[3,0,0,14,14,1],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#a835d34f781eb5533f38b428eb484c2be":[3,0,0,14,14,3],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#ad636949d2565d577c4d7b5aa666a704d":[3,0,0,14,14,0],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#ae65f0edd7a0eb07a2f818850fefd9d36":[3,0,0,14,14,2],
-"classdrake_1_1systems_1_1_barycentric_mesh_system.html#aef5feb3fc99a7cb89e4c956858b9eaf9":[3,0,0,14,14,4]
+"classdrake_1_1systems_1_1_antiderivative_function.html#af7c4ee8378a24e575a176dfb7d308ae9":[3,0,0,14,13,9]
 };

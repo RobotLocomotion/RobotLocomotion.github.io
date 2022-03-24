@@ -158,6 +158,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0124c80b63b5acc2980e3a57107c43be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a0124c80b63b5acc2980e3a57107c43be">set_actuation_vector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; &amp;u_instance, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&gt; u) const</td></tr>
 <tr class="memdesc:a0124c80b63b5acc2980e3a57107c43be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given the actuation values u_instance for <code>this</code> actuator, this method sets the actuation vector u for the entire MultibodyTree model to which this actuator belongs to.  <a href="#a0124c80b63b5acc2980e3a57107c43be">More...</a><br /></td></tr>
 <tr class="separator:a0124c80b63b5acc2980e3a57107c43be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d883dde11e65819319f8060b0843b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a42d883dde11e65819319f8060b0843b4">input_start</a> () const</td></tr>
+<tr class="memdesc:a42d883dde11e65819319f8060b0843b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the index to the first element for this joint actuator / within the vector of actuation inputs for the full multibody / system.  <a href="#a42d883dde11e65819319f8060b0843b4">More...</a><br /></td></tr>
+<tr class="separator:a42d883dde11e65819319f8060b0843b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a198bf2c564777ff4d7d5acd711e5e349"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a198bf2c564777ff4d7d5acd711e5e349">num_inputs</a> () const</td></tr>
+<tr class="memdesc:a198bf2c564777ff4d7d5acd711e5e349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of inputs associated with this actuator.  <a href="#a198bf2c564777ff4d7d5acd711e5e349">More...</a><br /></td></tr>
+<tr class="separator:a198bf2c564777ff4d7d5acd711e5e349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_joint_actuator.html#a5e00d5f4ea204b3bab3d733b8a64b9eb">effort_limit</a> () const</td></tr>
 <tr class="memdesc:a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the actuator effort limit.  <a href="#a5e00d5f4ea204b3bab3d733b8a64b9eb">More...</a><br /></td></tr>
 <tr class="separator:a5e00d5f4ea204b3bab3d733b8a64b9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -561,6 +567,31 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a42d883dde11e65819319f8060b0843b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d883dde11e65819319f8060b0843b4">&#9670;&nbsp;</a></span>input_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> input_start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the index to the first element for this joint actuator / within the vector of actuation inputs for the full multibody / system. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyTree model is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a54bc3724965cc59e714c64cbeb147b86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a54bc3724965cc59e714c64cbeb147b86">&#9670;&nbsp;</a></span>joint()</h2>
 
@@ -596,6 +627,31 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the name of the actuator. </p>
+
+</div>
+</div>
+<a id="a198bf2c564777ff4d7d5acd711e5e349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a198bf2c564777ff4d7d5acd711e5e349">&#9670;&nbsp;</a></span>num_inputs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classint.html">int</a> num_inputs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of inputs associated with this actuator. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the MultibodyTree model is not finalized. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

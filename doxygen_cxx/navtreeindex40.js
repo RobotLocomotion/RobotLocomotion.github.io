@@ -1,5 +1,13 @@
 var NAVTREEINDEX40 =
 {
+"contact__solver__utils_8h.html":[4,0,0,8,2,5],
+"contact__surface_8h.html":[4,0,0,4,3,0],
+"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
+"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
+"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
+"contact__surface__doxygen_8h.html":[4,0,0,4,2,6],
+"contact__surface__utility_8h.html":[4,0,0,4,2,7],
+"contact__visualizer_8h.html":[4,0,0,8,7,0],
 "contact__visualizer_8h.html#aaef19a49dabf0bd3fe0fd47e32a84706":[4,0,0,8,7,0,1],
 "contact__visualizer__params_8h.html":[4,0,0,8,7,1],
 "contact__wrench_8h.html":[4,0,0,8,8,1],
@@ -241,13 +249,5 @@ var NAVTREEINDEX40 =
 "doxygen__cxx_8h.html":[4,0,0,1,16],
 "drake__assert_8h.html":[4,0,0,1,17],
 "drake__assert_8h.html#a0d126d5c79d6e74d5f03f8c81e4b3a63":[4,0,0,1,17,0],
-"drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,17,1],
-"drake__assert_8h.html#a90a6aa22721ddd3bc514c45d8e1d8674":[4,0,0,1,17,2],
-"drake__assert_8h.html#aaf9506c208e2a7d09f67d1a9ab84992a":[4,0,0,1,17,3],
-"drake__assertion__error_8h.html":[4,0,0,1,18],
-"drake__bool_8h.html":[4,0,0,1,19],
-"drake__bool_8h.html#a01aa931c5cbfd4b09d847cc4d7b4c699":[4,0,0,1,19,7],
-"drake__bool_8h.html#a1f1c657c4d2cf400649123a7c2573d5b":[4,0,0,1,19,1],
-"drake__bool_8h.html#a624916a36af99a1ddfed08a25047cbea":[4,0,0,1,19,4],
-"drake__bool_8h.html#a66f0ced433e025116cf38c1cf2db6b76":[4,0,0,1,19,5]
+"drake__assert_8h.html#a53797785bb2511ded7061028fcca65c5":[4,0,0,1,17,1]
 };

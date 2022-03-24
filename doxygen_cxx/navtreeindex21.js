@@ -1,5 +1,12 @@
 var NAVTREEINDEX21 =
 {
+"classdrake_1_1solvers_1_1_osqp_solver.html#a4dc451b7db72a168d9f0da1746011b45":[3,0,0,12,52,5],
+"classdrake_1_1solvers_1_1_osqp_solver.html#a606861b43d96b23fe439c905aaf715a0":[3,0,0,12,52,13],
+"classdrake_1_1solvers_1_1_osqp_solver.html#a793b4bef71b184ac87f03d80b21c04d2":[3,0,0,12,52,10],
+"classdrake_1_1solvers_1_1_osqp_solver.html#a7ac8ab830c4d723c3b657635030dafb6":[3,0,0,12,52,2],
+"classdrake_1_1solvers_1_1_osqp_solver.html#a8ed370bb9c586abb237c55a5f36a4815":[3,0,0,12,52,4],
+"classdrake_1_1solvers_1_1_osqp_solver.html#aad3b86a30c6110a46792f5451e1df046":[3,0,0,12,52,3],
+"classdrake_1_1solvers_1_1_osqp_solver.html#af2ff6a250a78bb79ef64f7527c51b01c":[3,0,0,12,52,12],
 "classdrake_1_1solvers_1_1_osqp_solver.html#afa135bc8b8d84cf608c982037e707e09":[3,0,0,12,52,8],
 "classdrake_1_1solvers_1_1_osqp_solver.html#afdbc2d66c43c508fe956c4a18e531c76":[3,0,0,12,52,0],
 "classdrake_1_1solvers_1_1_perspective_quadratic_cost.html":[1,1,0,35],
@@ -242,12 +249,5 @@ var NAVTREEINDEX21 =
 "classdrake_1_1solvers_1_1_visualization_callback.html#a5fa45d53bebf11979efd742f76a681e8":[3,0,0,12,74,5],
 "classdrake_1_1solvers_1_1_visualization_callback.html#a84c15b60ba647eabef0aaa2d5dd3943e":[3,0,0,12,74,0],
 "classdrake_1_1solvers_1_1_visualization_callback.html#aae423efa4c08f31318cd34874fe4b0d1":[3,0,0,12,74,3],
-"classdrake_1_1solvers_1_1_visualization_callback.html#ae11083911dbcad2967daaf67bfa77feb":[3,0,0,12,74,6],
-"classdrake_1_1solvers_1_1_visualization_callback.html#af063c900fa41f81f31f1250991a72411":[3,0,0,12,74,2],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html":[3,0,0,12,0,0],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html#a1d20f14f0970b4200741bf085c2e3074":[3,0,0,12,0,0,2],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html#a1f5da75dd03d0584ffb9aa51421049b2":[3,0,0,12,0,0,14],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html#a23f1475b0c301d9d78814fce265fd6ea":[3,0,0,12,0,0,7],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html#a3430fb0b2ce0bc6f2936bfeced8cfc60":[3,0,0,12,0,0,13],
-"classdrake_1_1solvers_1_1fbstab_1_1_dense_data.html#a38931497090eca987dab77e0cc9d2c75":[3,0,0,12,0,0,12]
+"classdrake_1_1solvers_1_1_visualization_callback.html#ae11083911dbcad2967daaf67bfa77feb":[3,0,0,12,74,6]
 };

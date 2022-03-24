@@ -883,6 +883,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a99f96a969efb888b8528a43fdb19108b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a99f96a969efb888b8528a43fdb19108b">GetAccelerationUpperLimits</a> () const</td></tr>
 <tr class="memdesc:a99f96a969efb888b8528a43fdb19108b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper limit analog of GetAccelerationsLowerLimits(), where any unbounded or unspecified limits will be +infinity.  <a href="#a99f96a969efb888b8528a43fdb19108b">More...</a><br /></td></tr>
 <tr class="separator:a99f96a969efb888b8528a43fdb19108b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ba00d3cda29df375aefa5a73a6140f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad6ba00d3cda29df375aefa5a73a6140f">GetEffortLowerLimits</a> () const</td></tr>
+<tr class="memdesc:ad6ba00d3cda29df375aefa5a73a6140f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a vector of size <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc" title="Returns the number of joint actuators in the model.">num_actuators()</a></code> containing the lower effort limits for every actuator.  <a href="#ad6ba00d3cda29df375aefa5a73a6140f">More...</a><br /></td></tr>
+<tr class="separator:ad6ba00d3cda29df375aefa5a73a6140f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c9ef552f3eb454086bf3bdddff0eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a94c9ef552f3eb454086bf3bdddff0eb9">GetEffortUpperLimits</a> () const</td></tr>
+<tr class="memdesc:a94c9ef552f3eb454086bf3bdddff0eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper limit analog of GetAccelerationsLowerLimits(), where any unbounded or unspecified limits will be +infinity.  <a href="#a94c9ef552f3eb454086bf3bdddff0eb9">More...</a><br /></td></tr>
+<tr class="separator:a94c9ef552f3eb454086bf3bdddff0eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94d1093944c929bd5ca5322836b91bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake_1_1multibody.html#a6f6e054758d34b83e86bea87d65dfe4e">ContactModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a94d1093944c929bd5ca5322836b91bd4">get_contact_model</a> () const</td></tr>
 <tr class="memdesc:a94d1093944c929bd5ca5322836b91bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model used for contact. See documentation for ContactModel.  <a href="#a94d1093944c929bd5ca5322836b91bd4">More...</a><br /></td></tr>
 <tr class="separator:a94d1093944c929bd5ca5322836b91bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4308,6 +4314,51 @@ PenetrationAsPointPair for further details on the returned data. </dd></dl>
 
 </div>
 </div>
+<a id="ad6ba00d3cda29df375aefa5a73a6140f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ba00d3cda29df375aefa5a73a6140f">&#9670;&nbsp;</a></span>GetEffortLowerLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;double&gt; GetEffortLowerLimits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a vector of size <code><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#a8601c026e9807127b4dd41e7585d2cfc" title="Returns the number of joint actuators in the model.">num_actuators()</a></code> containing the lower effort limits for every actuator. </p>
+<p>Any unbounded or unspecified limits will be -infinity. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if called pre-finalize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a94c9ef552f3eb454086bf3bdddff0eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c9ef552f3eb454086bf3bdddff0eb9">&#9670;&nbsp;</a></span>GetEffortUpperLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt;double&gt; GetEffortUpperLimits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Upper limit analog of GetAccelerationsLowerLimits(), where any unbounded or unspecified limits will be +infinity. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#ad6ba00d3cda29df375aefa5a73a6140f" title="Returns a vector of size num_actuators() containing the lower effort limits for every actuator.">GetEffortLowerLimits()</a> for more information. </dd></dl>
+
+</div>
+</div>
 <a id="a6a2813d5472e88bc58bbb9c3129811f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a2813d5472e88bc58bbb9c3129811f5">&#9670;&nbsp;</a></span>GetFloatingBaseBodies()</h2>
 
@@ -6465,8 +6516,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6477,7 +6528,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6491,8 +6542,8 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
 
 </div>
 </div>
-<a id="aecc2576d314d5baf56ad6ad593b26f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aecc2576d314d5baf56ad6ad593b26f9f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="af4f43a6f72128af8e926d32c37ed7580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f43a6f72128af8e926d32c37ed7580">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6503,7 +6554,7 @@ Mobilizer::MapVelocityToQDot() </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html">MultibodyPlant</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

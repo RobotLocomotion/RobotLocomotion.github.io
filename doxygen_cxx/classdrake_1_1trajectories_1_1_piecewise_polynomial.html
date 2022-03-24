@@ -191,6 +191,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a39001029f6f2e13a8890f233254c4709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a39001029f6f2e13a8890f233254c4709">Reshape</a> (<a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9">rows</a>, <a class="el" href="classint.html">int</a> <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b">cols</a>)</td></tr>
 <tr class="memdesc:a39001029f6f2e13a8890f233254c4709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reshapes the dimensions of the Eigen::MatrixX&lt;T&gt; returned by <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a19b632df0f98f9aaf224e534fac69ec8" title="Evaluates the PiecewisePolynomial at the given time t.">value()</a>, <a class="el" href="classdrake_1_1trajectories_1_1_trajectory.html#af2e2fa698b2c37469f44381ec7ae3344" title="Evaluates the derivative of this at the given time t.">EvalDerivative()</a>, etc.  <a href="#a39001029f6f2e13a8890f233254c4709">More...</a><br /></td></tr>
 <tr class="separator:a39001029f6f2e13a8890f233254c4709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f4f35bd9afa91ca14283e7c865918f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a59f4f35bd9afa91ca14283e7c865918f">Transpose</a> () const</td></tr>
+<tr class="memdesc:a59f4f35bd9afa91ca14283e7c865918f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html" title="A scalar multi-variate piecewise polynomial.">PiecewisePolynomial</a> for which value(t) == this.value(t).transpose().  <a href="#a59f4f35bd9afa91ca14283e7c865918f">More...</a><br /></td></tr>
+<tr class="separator:a59f4f35bd9afa91ca14283e7c865918f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45001b70f1a92e1d01778b69bb61adf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a45001b70f1a92e1d01778b69bb61adf3">Block</a> (<a class="el" href="classint.html">int</a> start_row, <a class="el" href="classint.html">int</a> start_col, <a class="el" href="classint.html">int</a> block_rows, <a class="el" href="classint.html">int</a> block_cols) const</td></tr>
 <tr class="memdesc:a45001b70f1a92e1d01778b69bb61adf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts a trajectory representing a block of size (block_rows, block_cols) starting at (start_row, start_col) from the <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html" title="A scalar multi-variate piecewise polynomial.">PiecewisePolynomial</a>.  <a href="#a45001b70f1a92e1d01778b69bb61adf3">More...</a><br /></td></tr>
 <tr class="separator:a45001b70f1a92e1d01778b69bb61adf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2241,6 +2244,25 @@ interpolation" and/or "Lagrange polynomial" on Wikipedia for more information. <
 
 <p>Returns the PiecewisePolynomial comprising the <code>num_segments</code> segments starting at the specified <code>start_segment_index</code>. </p>
 <dl class="section note"><dt>Note</dt><dd>Calls <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_trajectory.html#a0a4ac30a258a47b6ea610f16f4accece">PiecewiseTrajectory&lt;T&gt;::segment_number_range_check()</a> to validate <code>segment_index</code>. </dd></dl>
+
+</div>
+</div>
+<a id="a59f4f35bd9afa91ca14283e7c865918f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f4f35bd9afa91ca14283e7c865918f">&#9670;&nbsp;</a></span>Transpose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html">PiecewisePolynomial</a> Transpose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new <a class="el" href="classdrake_1_1trajectories_1_1_piecewise_polynomial.html" title="A scalar multi-variate piecewise polynomial.">PiecewisePolynomial</a> for which value(t) == this.value(t).transpose(). </p>
 
 </div>
 </div>

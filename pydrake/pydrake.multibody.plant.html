@@ -3949,6 +3949,33 @@ systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetEffortLowerLimits">
+<code class="descname">GetEffortLowerLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetEffortLowerLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_actuators()</span></code> containing the lower
+effort limits for every actuator. Any unbounded or unspecified limits
+will be -infinity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetEffortUpperLimits">
+<code class="descname">GetEffortUpperLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetEffortUpperLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper limit analog of GetAccelerationsLowerLimits(), where any
+unbounded or unspecified limits will be +infinity.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetEffortLowerLimits() for more information.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetFloatingBaseBodies">
 <code class="descname">GetFloatingBaseBodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; Set[pydrake.multibody.tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetFloatingBaseBodies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the set of body indexes corresponding to the free (floating)
@@ -7905,6 +7932,33 @@ systems default to use triangles.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt>
 <dd>Body whose default pose will be retrieved.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetEffortLowerLimits">
+<code class="descname">GetEffortLowerLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetEffortLowerLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_actuators()</span></code> containing the lower
+effort limits for every actuator. Any unbounded or unspecified limits
+will be -infinity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetEffortUpperLimits">
+<code class="descname">GetEffortUpperLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetEffortUpperLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper limit analog of GetAccelerationsLowerLimits(), where any
+unbounded or unspecified limits will be +infinity.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetEffortLowerLimits() for more information.</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -11865,6 +11919,33 @@ systems default to use triangles.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetEffortLowerLimits">
+<code class="descname">GetEffortLowerLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetEffortLowerLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_actuators()</span></code> containing the lower
+effort limits for every actuator. Any unbounded or unspecified limits
+will be -infinity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetEffortUpperLimits">
+<code class="descname">GetEffortUpperLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetEffortUpperLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper limit analog of GetAccelerationsLowerLimits(), where any
+unbounded or unspecified limits will be +infinity.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetEffortLowerLimits() for more information.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetFloatingBaseBodies">
 <code class="descname">GetFloatingBaseBodies</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; Set[pydrake.multibody.tree.BodyIndex]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetFloatingBaseBodies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the set of body indexes corresponding to the free (floating)
@@ -15819,6 +15900,33 @@ systems default to use triangles.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">body</span></code>:</dt>
 <dd>Body whose default pose will be retrieved.</dd>
 </dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].GetEffortLowerLimits">
+<code class="descname">GetEffortLowerLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].GetEffortLowerLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a vector of size <code class="docutils literal notranslate"><span class="pre">num_actuators()</span></code> containing the lower
+effort limits for every actuator. Any unbounded or unspecified limits
+will be -infinity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called pre-finalize.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].GetEffortUpperLimits">
+<code class="descname">GetEffortUpperLimits</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].GetEffortUpperLimits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upper limit analog of GetAccelerationsLowerLimits(), where any
+unbounded or unspecified limits will be +infinity.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">GetEffortLowerLimits() for more information.</p>
+</div>
 </dd></dl>
 
 <dl class="method">

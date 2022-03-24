@@ -1,5 +1,13 @@
 var NAVTREEINDEX47 =
 {
+"rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,29,1],
+"rotational__inertia_8h.html":[4,0,0,8,13,39],
+"rpc__pipe__temp__directory_8h.html":[4,0,0,1,0,1],
+"rpc__pipe__temp__directory_8h.html#a650cbe453cd80d0752cc0c91e857789a":[4,0,0,1,0,1,0],
+"runge__kutta2__integrator_8h.html":[4,0,0,11,0,14],
+"runge__kutta3__integrator_8h.html":[4,0,0,11,0,15],
+"runge__kutta5__integrator_8h.html":[4,0,0,11,0,16],
+"sap__constraint_8h.html":[4,0,0,8,2,0,2],
 "sap__constraint__bundle_8h.html":[4,0,0,8,2,0,3],
 "sap__contact__problem_8h.html":[4,0,0,8,2,0,4],
 "sap__friction__cone__constraint_8h.html":[4,0,0,8,2,0,5],
@@ -241,13 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#a21baa24a4589f8f8576826791116a32f":[3,0,0,0,0,0],
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf":[3,0,0,0,0,1],
 "structdrake_1_1dummy__value.html":[3,0,0,21],
-"structdrake_1_1dummy__value.html#a72a5372833437d5493b91087dd74c903":[3,0,0,21,0],
-"structdrake_1_1dummy__value_3_01int_01_4.html":[3,0,0,22],
-"structdrake_1_1dummy__value_3_01int_01_4.html#a88985a0444cc6e887f3c57b56eda792d":[3,0,0,22,0],
-"structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html":[3,0,0,23],
-"structdrake_1_1dummy__value_3_01symbolic_1_1_expression_01_4.html#a0bc222e26c2e949909b7f7845e9cff18":[3,0,0,23,0],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html":[3,0,0,3,10],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a2d836029fd25573125bd231e1ad19ecb":[3,0,0,3,10,2],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3a415b5e7e1f412ec0002e0251ced626":[3,0,0,3,10,1],
-"structdrake_1_1geometry_1_1_drake_visualizer_params.html#a3fa2976e721c8d9ed2ed3c79c6fdab2e":[3,0,0,3,10,0]
+"structdrake_1_1dummy__value.html#a72a5372833437d5493b91087dd74c903":[3,0,0,21,0]
 };

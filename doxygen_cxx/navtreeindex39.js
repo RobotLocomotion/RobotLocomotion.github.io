@@ -1,5 +1,13 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[3,0,0,16,2,48],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c09a6d35797ae0eed1de62a97433b9e":[3,0,0,16,2,21],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[3,0,0,16,2,3],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9145f61319cb888cb71fc58cebc8fe38":[3,0,0,16,2,5],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a923a4ac5ef6f85f444519188d9dbd3e1":[3,0,0,16,2,53],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a97030415f23deb1b1244d33b95c1b0fb":[3,0,0,16,2,46],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9a7863e6bf8a3ccb5335563370305add":[3,0,0,16,2,54],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,2,51],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9bd57b84091cef3694aee370fa189735":[3,0,0,16,2,43],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9c5cbf1ba95055937fdb8283769df797":[3,0,0,16,2,0],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a9fc93abbb14c2b7d6702fadcc72baff6":[3,0,0,16,2,45],
@@ -241,13 +249,5 @@ var NAVTREEINDEX39 =
 "contact__results__to__meshcat__params_8h.html":[4,0,0,8,10,7],
 "contact__results__to__meshcat__params_8h.html#a48997ca3a6b7f8e1a0202e5ec214d750":[4,0,0,8,10,7,0],
 "contact__solver_8h.html":[4,0,0,8,2,3],
-"contact__solver__results_8h.html":[4,0,0,8,2,4],
-"contact__solver__utils_8h.html":[4,0,0,8,2,5],
-"contact__surface_8h.html":[4,0,0,4,3,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979":[4,0,0,4,3,0,1],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a3a53496ffe96227ef579995d332425c1":[4,0,0,4,3,0,1,0],
-"contact__surface_8h.html#a227f80cb57c9c87f6ecc4e839e364979a64edd70c85c6854f380a0cbbc3db3cbb":[4,0,0,4,3,0,1,1],
-"contact__surface__doxygen_8h.html":[4,0,0,4,2,6],
-"contact__surface__utility_8h.html":[4,0,0,4,2,7],
-"contact__visualizer_8h.html":[4,0,0,8,7,0]
+"contact__solver__results_8h.html":[4,0,0,8,2,4]
 };
