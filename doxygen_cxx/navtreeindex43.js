@@ -1,5 +1,7 @@
 var NAVTREEINDEX43 =
 {
+"group__module__contact__surface.html":[1,5,2,0,0],
+"group__module__penetration__queries.html":[1,5,2,0],
 "group__multibody.html":[1,3],
 "group__multibody__frames__and__bodies.html":[1,0,1,1],
 "group__multibody__notation.html":[1,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "linear__bushing__roll__pitch__yaw_8h.html":[4,0,0,8,13,16],
 "linear__constitutive__model_8h.html":[4,0,0,8,3,13],
 "linear__constitutive__model__data_8h.html":[4,0,0,8,3,14],
-"linear__model__predictive__controller_8h.html":[4,0,0,11,1,5],
-"linear__operator_8h.html":[4,0,0,8,2,6],
-"linear__quadratic__regulator_8h.html":[4,0,0,11,1,6]
+"linear__model__predictive__controller_8h.html":[4,0,0,11,1,5]
 };

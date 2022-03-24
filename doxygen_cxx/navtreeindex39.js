@@ -1,5 +1,7 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,2,11],
+"classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a87952ec710e902557114a6d53d39734e":[3,0,0,16,2,38],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a88e900c12b23dd1cb0bccb6d0357db5f":[3,0,0,16,2,48],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c09a6d35797ae0eed1de62a97433b9e":[3,0,0,16,2,21],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a8c9575eec7fd062e42ed17407a337abc":[3,0,0,16,2,3],
@@ -247,7 +249,5 @@ var NAVTREEINDEX39 =
 "contact__results__to__meshcat_8h.html":[4,0,0,8,10,6],
 "contact__results__to__meshcat_8h.html#abdcc7c49e7ddb912031c85d2788b338d":[4,0,0,8,10,6,0],
 "contact__results__to__meshcat__params_8h.html":[4,0,0,8,10,7],
-"contact__results__to__meshcat__params_8h.html#a48997ca3a6b7f8e1a0202e5ec214d750":[4,0,0,8,10,7,0],
-"contact__solver_8h.html":[4,0,0,8,2,3],
-"contact__solver__results_8h.html":[4,0,0,8,2,4]
+"contact__results__to__meshcat__params_8h.html#a48997ca3a6b7f8e1a0202e5ec214d750":[4,0,0,8,10,7,0]
 };

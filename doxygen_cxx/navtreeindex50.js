@@ -1,5 +1,7 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1symbolic_1_1_graded_reverse_lex_order.html#af1b666b4bbbf1ba4ad66a257f92e73a4":[3,0,0,13,55,0],
+"structdrake_1_1symbolic_1_1_sin_cos.html":[3,0,0,13,64],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a0bee03f130c602c5c1fd0521c716ebbd":[3,0,0,13,64,5],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a146ddad7c7cfd8f6b187cc72cec49025":[3,0,0,13,64,2],
 "structdrake_1_1symbolic_1_1_sin_cos.html#a1c36ee4d69b2b1e95ea82cc4fff7fad6":[3,0,0,13,64,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1uhash.html":[3,0,0,57],
 "structdrake_1_1uhash.html#ac98906b29c4381d0121f715fac155440":[3,0,0,57,1],
 "structdrake_1_1uhash.html#aec09227295d6a2c005ec578d42120039":[3,0,0,57,0],
-"structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,17,0],
-"structdrake_1_1yaml_1_1_load_yaml_options.html#a121abbb69f58eeb8186f484386d65b9d":[3,0,0,17,0,3],
-"structdrake_1_1yaml_1_1_load_yaml_options.html#a41075284801afdfd502cd4c5f73f363d":[3,0,0,17,0,0]
+"structdrake_1_1yaml_1_1_load_yaml_options.html":[3,0,0,17,0]
 };

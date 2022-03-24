@@ -449,8 +449,12 @@ programming solver as the default solver.</p>
 
 <dl class="method">
 <dt id="pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints">
-<code class="descname">AddConstraintToAllKnotPoints</code><span class="sig-paren">(</span><em>self: pydrake.systems.trajectory_optimization.MultipleShooting</em>, <em>f: pydrake.symbolic.Formula</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]<a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds a constraint to all breakpoints, where any instances of time(),
+<code class="descname">AddConstraintToAllKnotPoints</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.systems.trajectory_optimization.MultipleShooting.AddConstraintToAllKnotPoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddConstraintToAllKnotPoints(self: pydrake.systems.trajectory_optimization.MultipleShooting, f: pydrake.symbolic.Formula) -&gt; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]</li>
+</ol>
+<p>Adds a constraint to all breakpoints, where any instances of time(),
 state(), and/or input() placeholder variables, as well as placeholder
 variables returned by calls to NewSequentialVariable(), are
 substituted with the relevant variables for each time index.</p>
@@ -458,7 +462,72 @@ substituted with the relevant variables for each time index.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the constraints added to each knot point.</td>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the bindings added to each knot point.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>AddConstraintToAllKnotPoints(self: pydrake.systems.trajectory_optimization.MultipleShooting, f: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]</li>
+</ol>
+<p>Variant of AddConstraintToAllKnotPoints that accepts a vector of
+formulas.</p>
+<ol class="arabic simple" start="3">
+<li>AddConstraintToAllKnotPoints(self: pydrake.systems.trajectory_optimization.MultipleShooting, constraint: pydrake.solvers.mathematicalprogram.BoundingBoxConstraint, vars: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.mathematicalprogram.Binding[BoundingBoxConstraint]]</li>
+</ol>
+<p>Adds a constraint to all breakpoints, where any instances in <code class="docutils literal notranslate"><span class="pre">vars</span></code>
+of time(), state(), and/or input() placeholder variables, as well as
+placeholder variables returned by calls to NewSequentialVariable(),
+are substituted with the relevant variables for each time index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the bindings added to each knot point.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="4">
+<li>AddConstraintToAllKnotPoints(self: pydrake.systems.trajectory_optimization.MultipleShooting, constraint: pydrake.solvers.mathematicalprogram.LinearEqualityConstraint, vars: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]]</li>
+</ol>
+<p>Adds a constraint to all breakpoints, where any instances in <code class="docutils literal notranslate"><span class="pre">vars</span></code>
+of time(), state(), and/or input() placeholder variables, as well as
+placeholder variables returned by calls to NewSequentialVariable(),
+are substituted with the relevant variables for each time index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the bindings added to each knot point.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="5">
+<li>AddConstraintToAllKnotPoints(self: pydrake.systems.trajectory_optimization.MultipleShooting, constraint: pydrake.solvers.mathematicalprogram.LinearConstraint, vars: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.mathematicalprogram.Binding[LinearConstraint]]</li>
+</ol>
+<p>Adds a constraint to all breakpoints, where any instances in <code class="docutils literal notranslate"><span class="pre">vars</span></code>
+of time(), state(), and/or input() placeholder variables, as well as
+placeholder variables returned by calls to NewSequentialVariable(),
+are substituted with the relevant variables for each time index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the bindings added to each knot point.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="6">
+<li>AddConstraintToAllKnotPoints(self: pydrake.systems.trajectory_optimization.MultipleShooting, constraint: pydrake.solvers.mathematicalprogram.Constraint, vars: numpy.ndarray[object[m, 1]]) -&gt; List[pydrake.solvers.mathematicalprogram.Binding[Constraint]]</li>
+</ol>
+<p>Adds a constraint to all breakpoints, where any instances in <code class="docutils literal notranslate"><span class="pre">vars</span></code>
+of time(), state(), and/or input() placeholder variables, as well as
+placeholder variables returned by calls to NewSequentialVariable(),
+are substituted with the relevant variables for each time index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A vector of the bindings added to each knot point.</td>
 </tr>
 </tbody>
 </table>

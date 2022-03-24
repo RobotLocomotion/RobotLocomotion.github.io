@@ -1,5 +1,7 @@
 var NAVTREEINDEX47 =
 {
+"rotation__conversion__gradient_8h.html#adee0d3618f370d3b31682a8ca479376e":[4,0,0,7,28,2],
+"rotation__matrix_8h.html":[4,0,0,7,29],
 "rotation__matrix_8h.html#ab095ea87a1517bb9bae78d221f5d34da":[4,0,0,7,29,1],
 "rotational__inertia_8h.html":[4,0,0,8,13,39],
 "rpc__pipe__temp__directory_8h.html":[4,0,0,1,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX47 =
 "structdrake_1_1_trig_poly_1_1_sin_cos_vars.html#a90750fce45ce737e9327a002744d2800":[3,0,0,49,1,0],
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html":[3,0,0,0,0],
 "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#a21baa24a4589f8f8576826791116a32f":[3,0,0,0,0,0],
-"structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf":[3,0,0,0,0,1],
-"structdrake_1_1dummy__value.html":[3,0,0,21],
-"structdrake_1_1dummy__value.html#a72a5372833437d5493b91087dd74c903":[3,0,0,21,0]
+"structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html#ac40e2f6b16673621ee11f794813446bf":[3,0,0,0,0,1]
 };
