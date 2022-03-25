@@ -27,6 +27,7 @@ var searchData=
   ['compositeeventcollection',['CompositeEventCollection',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['compositeeventcollection_3c_20autodiffxd_20_3e',['CompositeEventCollection&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['compositeeventcollection_3c_20double_20_3e',['CompositeEventCollection&lt; double &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
+  ['compositeeventcollection_3c_20element_3a_3at_20_3e',['CompositeEventCollection&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_composite_event_collection.html',1,'drake::systems']]],
   ['compositionconstraint',['ComPositionConstraint',['../classdrake_1_1multibody_1_1_com_position_constraint.html',1,'drake::multibody']]],
   ['conditiontraits_3c_20symbolic_3a_3aformula_20_3e',['ConditionTraits&lt; symbolic::Formula &gt;',['../structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html',1,'drake::assert']]],
   ['connectresult',['ConnectResult',['../structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html',1,'drake::systems::controllers::PidControlledSystem']]],

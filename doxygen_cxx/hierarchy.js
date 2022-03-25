@@ -48,6 +48,7 @@ var hierarchy =
     ] ],
     [ "Bound", "structdrake_1_1solvers_1_1_bound.html", null ],
     [ "BsplineBasis< T >", "classdrake_1_1math_1_1_bspline_basis.html", null ],
+    [ "FemModel< T >::Builder", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html", null ],
     [ "Cache", "classdrake_1_1systems_1_1_cache.html", null ],
     [ "CacheEntry", "classdrake_1_1systems_1_1_cache_entry.html", null ],
     [ "CacheEntryValue", "classdrake_1_1systems_1_1_cache_entry_value.html", null ],
@@ -71,6 +72,9 @@ var hierarchy =
     ] ],
     [ "CompositeEventCollection< double >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
       [ "LeafCompositeEventCollection< double >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
+    ] ],
+    [ "CompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_composite_event_collection.html", [
+      [ "LeafCompositeEventCollection< Element::T >", "classdrake_1_1systems_1_1_leaf_composite_event_collection.html", null ]
     ] ],
     [ "ConditionTraits< symbolic::Formula >", "structdrake_1_1assert_1_1_condition_traits_3_01symbolic_1_1_formula_01_4.html", null ],
     [ "PidControlledSystem< T >::ConnectResult", "structdrake_1_1systems_1_1controllers_1_1_pid_controlled_system_1_1_connect_result.html", null ],
@@ -131,6 +135,7 @@ var hierarchy =
     [ "DiscreteValues< AutoDiffXd >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< double >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "DiscreteValues< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
+    [ "DiscreteValues< Element::T >", "classdrake_1_1systems_1_1_discrete_values.html", null ],
     [ "Distribution", "classdrake_1_1schema_1_1_distribution.html", [
       [ "Deterministic", "classdrake_1_1schema_1_1_deterministic.html", null ],
       [ "Gaussian", "classdrake_1_1schema_1_1_gaussian.html", null ],
@@ -236,14 +241,17 @@ var hierarchy =
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
+    [ "EventCollection< drake::systems::DiscreteUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::DiscreteUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
+    [ "EventCollection< drake::systems::PublishEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::PublishEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< AutoDiffXd > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< double > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< drake::symbolic::Expression > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
+    [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< Element::T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventCollection< drake::systems::UnrestrictedUpdateEvent< T > >", "classdrake_1_1systems_1_1_event_collection.html", null ],
     [ "EventData", "classdrake_1_1systems_1_1_event_data.html", [
       [ "PeriodicEventData", "classdrake_1_1systems_1_1_periodic_event_data.html", null ],
@@ -292,6 +300,8 @@ var hierarchy =
     [ "FBstabAlgorithm< Variable, Residual, Data, LinearSolver, Feasibility >", "classdrake_1_1solvers_1_1fbstab_1_1_f_bstab_algorithm.html", null ],
     [ "FBstabDense", "classdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense.html", null ],
     [ "FBstabMpc", "classdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc.html", null ],
+    [ "FemModel< T >", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html", null ],
+    [ "FemModel< Element::T >", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html", null ],
     [ "FemState< T >", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html", null ],
     [ "Fields", "classdrake_1_1perception_1_1pc__flags_1_1_fields.html", null ],
     [ "FindResourceResult", "classdrake_1_1_find_resource_result.html", null ],
@@ -453,8 +463,8 @@ var hierarchy =
     [ "ModuleInitVtkRenderingOpenGL2", null, [
       [ "RenderEngineVtk", "classdrake_1_1geometry_1_1render_1_1_render_engine_vtk.html", null ]
     ] ],
-    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html", null ],
+    [ "Polynomial< T >::Monomial", "classdrake_1_1_polynomial_1_1_monomial.html", null ],
     [ "MosekSolverDetails", "structdrake_1_1solvers_1_1_mosek_solver_details.html", null ],
     [ "MoveIkDemoBase", "classdrake_1_1manipulation_1_1util_1_1_move_ik_demo_base.html", null ],
     [ "MovingAverageFilter< T >", "classdrake_1_1manipulation_1_1util_1_1_moving_average_filter.html", null ],
@@ -565,8 +575,8 @@ var hierarchy =
     [ "PointCloud", "classdrake_1_1perception_1_1_point_cloud.html", null ],
     [ "PointPairContactInfo< T >", "classdrake_1_1multibody_1_1_point_pair_contact_info.html", null ],
     [ "PolygonSurfaceMesh< T >", "classdrake_1_1geometry_1_1_polygon_surface_mesh.html", null ],
-    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "Polynomial", "classdrake_1_1symbolic_1_1_polynomial.html", null ],
+    [ "Polynomial< T >", "classdrake_1_1_polynomial.html", null ],
     [ "PolynomialBasisElement", "classdrake_1_1symbolic_1_1_polynomial_basis_element.html", [
       [ "ChebyshevBasisElement", "classdrake_1_1symbolic_1_1_chebyshev_basis_element.html", null ],
       [ "MonomialBasisElement", "classdrake_1_1symbolic_1_1_monomial_basis_element.html", null ]
@@ -744,6 +754,7 @@ var hierarchy =
     [ "SystemConstraint< AutoDiffXd >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< double >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraint< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
+    [ "SystemConstraint< Element::T >", "classdrake_1_1systems_1_1_system_constraint.html", null ],
     [ "SystemConstraintAdapter", "classdrake_1_1systems_1_1_system_constraint_adapter.html", null ],
     [ "SystemConstraintBounds", "classdrake_1_1systems_1_1_system_constraint_bounds.html", null ],
     [ "SystemIdentification< T >", "classdrake_1_1solvers_1_1_system_identification.html", null ],
@@ -939,7 +950,10 @@ var hierarchy =
             ] ]
           ] ]
         ] ],
-        [ "System< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system.html", null ]
+        [ "System< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_system.html", null ],
+        [ "System< Element::T >", "classdrake_1_1systems_1_1_system.html", [
+          [ "LeafSystem< Element::T >", "classdrake_1_1systems_1_1_leaf_system.html", null ]
+        ] ]
       ] ]
     ] ],
     [ "SystemOutput< T >", "classdrake_1_1systems_1_1_system_output.html", null ],
@@ -1080,6 +1094,9 @@ var hierarchy =
     [ "VectorBase< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_vector_base.html", [
       [ "BasicVector< drake::symbolic::Expression >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
     ] ],
+    [ "VectorBase< Element::T >", "classdrake_1_1systems_1_1_vector_base.html", [
+      [ "BasicVector< Element::T >", "classdrake_1_1systems_1_1_basic_vector.html", null ]
+    ] ],
     [ "VectorLog< T >", "classdrake_1_1systems_1_1_vector_log.html", null ],
     [ "GraphOfConvexSets::Vertex", "classdrake_1_1geometry_1_1optimization_1_1_graph_of_convex_sets_1_1_vertex.html", null ],
     [ "VolumeElement", "classdrake_1_1geometry_1_1_volume_element.html", null ],
@@ -1092,12 +1109,16 @@ var hierarchy =
     [ "YamlWriteArchive", "classdrake_1_1yaml_1_1_yaml_write_archive.html", null ],
     [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", null ],
     [ "const ContextConstraintCalc< double >", "classconst_01_context_constraint_calc_3_01double_01_4.html", null ],
+    [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "const SystemConstraintCalc< double >", "classconst_01_system_constraint_calc_3_01double_01_4.html", null ],
+    [ "const SystemConstraintCalc< Element::T >", "classconst_01_system_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
     [ "InputPortLocator", "class_input_port_locator.html", null ],
     [ "int", "classint.html", null ],
     [ "int64_t", "classint64__t.html", null ],
     [ "OutputPortLocator", "class_output_port_locator.html", null ],
     [ "pair< drake::systems::PeriodicEventData, std::unique_ptr< drake::systems::Event< double > > >", "classstd_1_1pair_3_01drake_1_1systems_1_1_periodic_event_data_00_01std_1_1unique__ptr_3_01drake_16d119f6a6720feeebeb6adeab3c76ee.html", null ],
+    [ "pair< drake::systems::PeriodicEventData, std::unique_ptr< drake::systems::Event< Element::T > > >", "classstd_1_1pair_3_01drake_1_1systems_1_1_periodic_event_data_00_01std_1_1unique__ptr_3_01drake_349c18b295ba89f5be2395110b502d9c.html", null ],
     [ "Vector6< T >", "class_vector6_3_01_t_01_4.html", null ],
-    [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ]
+    [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ],
+    [ "VectorX< Element::T >", "class_vector_x_3_01_element_1_1_t_01_4.html", null ]
 ];

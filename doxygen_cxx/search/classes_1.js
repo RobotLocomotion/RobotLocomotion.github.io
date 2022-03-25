@@ -7,6 +7,7 @@ var searchData=
   ['basicvector_3c_20autodiffxd_20_3e',['BasicVector&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basicvector_3c_20double_20_3e',['BasicVector&lt; double &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basicvector_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['BasicVector&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
+  ['basicvector_3c_20element_3a_3at_20_3e',['BasicVector&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_basic_vector.html',1,'drake::systems']]],
   ['basiselementgradedreverselexorder',['BasisElementGradedReverseLexOrder',['../structdrake_1_1symbolic_1_1_basis_element_graded_reverse_lex_order.html',1,'drake::symbolic']]],
   ['beadonawire',['BeadOnAWire',['../classdrake_1_1examples_1_1bead__on__a__wire_1_1_bead_on_a_wire.html',1,'drake::examples::bead_on_a_wire']]],
   ['beammodel',['BeamModel',['../classdrake_1_1systems_1_1sensors_1_1_beam_model.html',1,'drake::systems::sensors']]],
@@ -41,5 +42,6 @@ var searchData=
   ['box',['Box',['../classdrake_1_1geometry_1_1_box.html',1,'drake::geometry']]],
   ['brickstaticequilibriumnonlinearconstraint',['BrickStaticEquilibriumNonlinearConstraint',['../classdrake_1_1examples_1_1planar__gripper_1_1_brick_static_equilibrium_nonlinear_constraint.html',1,'drake::examples::planar_gripper']]],
   ['bsplinebasis',['BsplineBasis',['../classdrake_1_1math_1_1_bspline_basis.html',1,'drake::math']]],
-  ['bsplinetrajectory',['BsplineTrajectory',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html',1,'drake::trajectories']]]
+  ['bsplinetrajectory',['BsplineTrajectory',['../classdrake_1_1trajectories_1_1_bspline_trajectory.html',1,'drake::trajectories']]],
+  ['builder',['Builder',['../classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html',1,'drake::multibody::fem::FemModel']]]
 ];

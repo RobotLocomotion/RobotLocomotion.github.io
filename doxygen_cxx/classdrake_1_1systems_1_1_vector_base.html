@@ -391,7 +391,7 @@ Protected Member Functions</h2></td></tr>
 <p>Copies this entire VectorBase into a contiguous Eigen Vector. </p>
 <p>Implementations should ensure this operation is O(N) in the size of the value and allocates only the O(N) memory that it returns. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a02900660573acdccd6d1e4b711a1e5e0">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -422,7 +422,7 @@ Protected Member Functions</h2></td></tr>
 <p>Implementations should ensure this operation is O(1) and allocates no memory. </p>
 <p>The index has already been checked for negative, but not size. Implementations must throw an exception when index &gt;= <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#a36b716289158c33f86a8cf30219be68c" title="Returns the number of elements in the vector.">size()</a>. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a231bafed6568f8fc83a4ae79e3ea3f90">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -453,7 +453,7 @@ Protected Member Functions</h2></td></tr>
 <p>Implementations should ensure this operation is O(1) and allocates no memory. </p>
 <p>The index has already been checked for negative, but not size. Implementations must throw an exception when index &gt;= <a class="el" href="classdrake_1_1systems_1_1_vector_base.html#a36b716289158c33f86a8cf30219be68c" title="Returns the number of elements in the vector.">size()</a>. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#afde9e3e5646700550315ebaa3a789e9c">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -484,7 +484,7 @@ Protected Member Functions</h2></td></tr>
 <p>Implementations should ensure this operation is O(1) and allocates no memory. </p>
 <p>The index need not be validated when in release mode. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#ac2c19d7f23c9a1b94e52ebba1559a498">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -515,7 +515,7 @@ Protected Member Functions</h2></td></tr>
 <p>Implementations should ensure this operation is O(1) and allocates no memory. </p>
 <p>The index need not be validated when in release mode. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#adde7e8b36d83e491ad99d514e5e2d01a">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -891,7 +891,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <p>Implementations should ensure this operation remains O(N) in the size of the value and allocates no memory. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a343fa4902e5cfcf181706fd72abdf5d0">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -999,7 +999,7 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <p>Implementations should ensure this operation is O(N) in the size of the value and allocates no memory. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a0a9c44911481db46e0c8c8ee8708ae70">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1028,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Sets all elements of this vector to zero. </p>
 
-<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; AutoDiffXd &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a15f4b55a146f2033a2a1d44054829f3f">BasicVector&lt; drake::symbolic::Expression &gt;</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +1058,7 @@ Protected Member Functions</h2></td></tr>
 <p>Returns the number of elements in the vector. </p>
 <p>Implementations should ensure this operation is O(1) and allocates no memory. </p>
 
-<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; AutoDiffXd &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; drake::symbolic::Expression &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_subvector.html#a00f794bc20ca26b81a247bcee7c7f6a4">Subvector&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_supervector.html#a00f794bc20ca26b81a247bcee7c7f6a4">Supervector&lt; T &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; Element::T &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; double &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; AutoDiffXd &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_basic_vector.html#a00f794bc20ca26b81a247bcee7c7f6a4">BasicVector&lt; drake::symbolic::Expression &gt;</a>, <a class="el" href="classdrake_1_1systems_1_1_subvector.html#a00f794bc20ca26b81a247bcee7c7f6a4">Subvector&lt; T &gt;</a>, and <a class="el" href="classdrake_1_1systems_1_1_supervector.html#a00f794bc20ca26b81a247bcee7c7f6a4">Supervector&lt; T &gt;</a>.</p>
 
 </div>
 </div>

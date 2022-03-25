@@ -43,6 +43,7 @@ var searchData=
   ['discretevalues_3c_20autodiffxd_20_3e',['DiscreteValues&lt; AutoDiffXd &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['discretevalues_3c_20double_20_3e',['DiscreteValues&lt; double &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['discretevalues_3c_20drake_3a_3asymbolic_3a_3aexpression_20_3e',['DiscreteValues&lt; drake::symbolic::Expression &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
+  ['discretevalues_3c_20element_3a_3at_20_3e',['DiscreteValues&lt; Element::T &gt;',['../classdrake_1_1systems_1_1_discrete_values.html',1,'drake::systems']]],
   ['distanceconstraint',['DistanceConstraint',['../classdrake_1_1multibody_1_1_distance_constraint.html',1,'drake::multibody']]],
   ['distribution',['Distribution',['../classdrake_1_1schema_1_1_distribution.html',1,'drake::schema']]],
   ['distributionvector',['DistributionVector',['../classdrake_1_1schema_1_1_distribution_vector.html',1,'drake::schema']]],

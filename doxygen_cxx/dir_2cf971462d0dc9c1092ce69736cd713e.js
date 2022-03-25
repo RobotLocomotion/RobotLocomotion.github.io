@@ -10,6 +10,11 @@ var dir_2cf971462d0dc9c1092ce69736cd713e =
     [ "discrete_time_integrator.h", "discrete__time__integrator_8h.html", null ],
     [ "fem_element.h", "fem__element_8h.html", null ],
     [ "fem_indexes.h", "fem__indexes_8h.html", "fem__indexes_8h" ],
+    [ "fem_model.h", "fem__model_8h.html", [
+      [ "FemModel", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html", "classdrake_1_1multibody_1_1fem_1_1_fem_model" ],
+      [ "Builder", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder.html", "classdrake_1_1multibody_1_1fem_1_1_fem_model_1_1_builder" ]
+    ] ],
+    [ "fem_model_impl.h", "fem__model__impl_8h.html", null ],
     [ "fem_state.h", "fem__state_8h.html", [
       [ "FemState", "classdrake_1_1multibody_1_1fem_1_1_fem_state.html", "classdrake_1_1multibody_1_1fem_1_1_fem_state" ]
     ] ],
