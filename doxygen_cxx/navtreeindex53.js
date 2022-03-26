@@ -1,6 +1,5 @@
 var NAVTREEINDEX53 =
 {
-"symbolic__polynomial_8h.html#af38134e3394d8c40a7a91490154de2b3":[4,0,0,1,68,6],
 "symbolic__polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,68,14],
 "symbolic__polynomial__basis_8h.html":[4,0,0,1,69],
 "symbolic__polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,69,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX53 =
 "yaml__io_8h.html#aaf418985a2d3d598d6191b2dc7576e4a":[4,0,0,1,4,1,3],
 "yaml__io_8h.html#ab3b6d04d37236596751e626ed6aa3b5e":[4,0,0,1,4,1,2],
 "yaml__io_8h.html#ad38f7b06115765153b8434cff70a597f":[4,0,0,1,4,1,1],
-"yaml__io__options_8h.html":[4,0,0,1,4,2]
+"yaml__io__options_8h.html":[4,0,0,1,4,2],
+"yaml__node_8h.html":[4,0,0,1,4,3]
 };

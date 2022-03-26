@@ -1,7 +1,6 @@
 var NAVTREEINDEX43 =
 {
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
-"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -249,5 +248,6 @@ var NAVTREEINDEX43 =
 "joint_8h.html":[4,0,0,8,13,14],
 "joint__actuator_8h.html":[4,0,0,8,13,15],
 "joint__sliders_8h.html":[4,0,0,8,7,2],
-"kalman__filter_8h.html":[4,0,0,11,2,0]
+"kalman__filter_8h.html":[4,0,0,11,2,0],
+"kalman__filter_8h.html#ga3949eebe88ae99b71a997dfa0bad5cff":[4,0,0,11,2,0,1]
 };
