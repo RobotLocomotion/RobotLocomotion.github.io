@@ -1,6 +1,8 @@
 var NAVTREEINDEX43 =
 {
+"group__default__scalars.html#gab6234c37b7596964a364d799933f4a17":[4,0,0,1,13,2],
 "group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[4,0,0,1,13,3],
+"group__default__scalars.html#gad69d96bfd76d7750f2d40ebe0a546b3c":[1,6,1,3],
 "group__discrete__systems.html":[1,2,9],
 "group__discretization.html":[1,3,0,5],
 "group__drake__contacts.html":[1,3,3],
@@ -231,7 +233,7 @@ var NAVTREEINDEX43 =
 "is__less__than__comparable_8h.html":[4,0,0,1,37],
 "is__memcpy__movable_8h.html":[4,0,0,1,2,4],
 "is__memcpy__movable_8h.html#a6f982e28ff81290b698e4d73e2fb6751":[4,0,0,1,2,4,0],
-"isoparametric__element_8h.html":[4,0,0,8,3,14],
+"isoparametric__element_8h.html":[4,0,0,8,3,15],
 "jaco__command__receiver_8h.html":[4,0,0,6,0,0],
 "jaco__command__sender_8h.html":[4,0,0,6,0,1],
 "jaco__constants_8h.html":[4,0,0,6,0,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX43 =
 "jacobian_8h.html#a6dce37732e3e532f7b87cd517789da7f":[4,0,0,7,18,0],
 "joint_8h.html":[4,0,0,8,13,14],
 "joint__actuator_8h.html":[4,0,0,8,13,15],
-"joint__sliders_8h.html":[4,0,0,8,7,2],
-"kalman__filter_8h.html":[4,0,0,11,2,0],
-"kalman__filter_8h.html#ga3949eebe88ae99b71a997dfa0bad5cff":[4,0,0,11,2,0,1]
+"joint__sliders_8h.html":[4,0,0,8,7,2]
 };

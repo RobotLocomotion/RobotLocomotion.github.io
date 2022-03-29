@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__polynomial_8h.html#af04dff9a90e39ac9985d520d3e66f5c3":[4,0,0,1,68,17],
+"symbolic__polynomial_8h.html#af38134e3394d8c40a7a91490154de2b3":[4,0,0,1,68,6],
 "symbolic__polynomial_8h.html#affb3773f2d585ffce0253cb15c8c00a0":[4,0,0,1,68,14],
 "symbolic__polynomial__basis_8h.html":[4,0,0,1,69],
 "symbolic__polynomial__basis_8h.html#a83a29f70485ada14c4bba67192ac4efc":[4,0,0,1,69,0],
@@ -208,7 +210,7 @@ var NAVTREEINDEX53 =
 "vector__system_8h.html":[4,0,0,11,3,54],
 "velocity__implicit__euler__integrator_8h.html":[4,0,0,11,0,28],
 "velocity__kinematics__cache_8h.html":[4,0,0,8,13,50],
-"velocity__newmark__scheme_8h.html":[4,0,0,8,3,24],
+"velocity__newmark__scheme_8h.html":[4,0,0,8,3,25],
 "volume__mesh_8h.html":[4,0,0,4,2,49],
 "volume__mesh_8h.html#a15599d92370af7b991c4a593f6103376":[4,0,0,4,2,49,3],
 "volume__mesh_8h.html#a2134db5f8753db883df9439aa2c38814":[4,0,0,4,2,49,4],
@@ -216,7 +218,7 @@ var NAVTREEINDEX53 =
 "volume__mesh__field_8h.html#a6f0a99208aa3dea5d4a3094f4fdf9274":[4,0,0,4,2,50,0],
 "volume__to__surface__mesh_8h.html":[4,0,0,4,2,51],
 "volume__to__surface__mesh_8h.html#a5245b5a993317d0c83f529c74f0838e8":[4,0,0,4,2,51,0],
-"volumetric__element_8h.html":[4,0,0,8,3,25],
+"volumetric__element_8h.html":[4,0,0,8,3,26],
 "vpolytope_8h.html":[4,0,0,4,1,10],
 "vtk__util_8h.html":[4,0,0,4,4,9],
 "vtk__util_8h.html#a511bb7c86c3d48ddec05b470ba3adb2c":[4,0,0,4,4,9,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "yaml__io_8h.html#a43b0aad3a987a2b97f89a68d934fb982":[4,0,0,1,4,1,0],
 "yaml__io_8h.html#aaf418985a2d3d598d6191b2dc7576e4a":[4,0,0,1,4,1,3],
 "yaml__io_8h.html#ab3b6d04d37236596751e626ed6aa3b5e":[4,0,0,1,4,1,2],
-"yaml__io_8h.html#ad38f7b06115765153b8434cff70a597f":[4,0,0,1,4,1,1],
-"yaml__io__options_8h.html":[4,0,0,1,4,2],
-"yaml__node_8h.html":[4,0,0,1,4,3]
+"yaml__io_8h.html#ad38f7b06115765153b8434cff70a597f":[4,0,0,1,4,1,1]
 };
