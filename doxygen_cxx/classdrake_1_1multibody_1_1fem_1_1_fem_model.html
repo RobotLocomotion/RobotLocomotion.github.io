@@ -198,9 +198,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2bcebe0224e78e72f3c664de4801e8dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2bcebe0224e78e72f3c664de4801e8dd">FemModel</a> ()</td></tr>
 <tr class="memdesc:a2bcebe0224e78e72f3c664de4801e8dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an empty FEM model.  <a href="#a2bcebe0224e78e72f3c664de4801e8dd">More...</a><br /></td></tr>
 <tr class="separator:a2bcebe0224e78e72f3c664de4801e8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4434374d7d370d152c757b33611fbd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ad4434374d7d370d152c757b33611fbd0">ThrowIfModelDataIncompatible</a> (const char *func, const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
-<tr class="memdesc:ad4434374d7d370d152c757b33611fbd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception to report a mismatch between the FEM model and state that were passed to API method <code>func</code>.  <a href="#ad4434374d7d370d152c757b33611fbd0">More...</a><br /></td></tr>
-<tr class="separator:ad4434374d7d370d152c757b33611fbd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f9e9287217253c4148bcff802b0fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6">ThrowIfModelStateIncompatible</a> (const char *func, const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; &amp;fem_state) const</td></tr>
+<tr class="memdesc:a93f9e9287217253c4148bcff802b0fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Internal use only) Throws std::exception to report a mismatch between the FEM model and state that were passed to API method <code>func</code>.  <a href="#a93f9e9287217253c4148bcff802b0fd6">More...</a><br /></td></tr>
+<tr class="separator:a93f9e9287217253c4148bcff802b0fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1255ca32db4bae2e53394d503b563c00"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1255ca32db4bae2e53394d503b563c00">MakeReferencePositions</a> () const =0</td></tr>
 <tr class="memdesc:a1255ca32db4bae2e53394d503b563c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reference positions of this model.  <a href="#a1255ca32db4bae2e53394d503b563c00">More...</a><br /></td></tr>
 <tr class="separator:a1255ca32db4bae2e53394d503b563c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -771,8 +771,8 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 
 </div>
 </div>
-<a id="ad4434374d7d370d152c757b33611fbd0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4434374d7d370d152c757b33611fbd0">&#9670;&nbsp;</a></span>ThrowIfModelDataIncompatible()</h2>
+<a id="a93f9e9287217253c4148bcff802b0fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f9e9287217253c4148bcff802b0fd6">&#9670;&nbsp;</a></span>ThrowIfModelStateIncompatible()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -781,7 +781,7 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ThrowIfModelDataIncompatible </td>
+          <td class="memname">void ThrowIfModelStateIncompatible </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>func</em>, </td>
