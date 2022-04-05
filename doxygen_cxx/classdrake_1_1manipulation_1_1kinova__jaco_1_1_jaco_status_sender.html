@@ -125,14 +125,16 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kinova__
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates and outputs lcmt_jaco_status messages. </p>
 <p>Note that this system does not actually send the message to an LCM channel. To send the message, the output of this system should be connected to a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ad52e88e4200c2cf0a094a08faff8583c" title="A factory method that returns an LcmPublisherSystem that takes Value&lt;LcmMessage&gt; message objects on i...">systems::lcm::LcmPublisherSystem::Make&lt;lcmt_jaco_status&gt;()</a>.</p>
-<p>This system has many vector-valued input ports. State input ports (q, v) will have (num_joints + num_fingers) * 2 elements. Torque, torque external and current input ports will have num_joints + num_fingers elements. If the torque, torque_external, or current input ports are not connected, the output message will use zeros. Finger velocities will be translated to the values used by the Kinova SDK from values appropriate for the finger joints in the Jaco description (see <a class="el" href="jaco__constants_8h.html">jaco_constants.h</a>).</p>
+<p>This system has many vector-valued input ports. All input ports are of size num_joints + num_fingers. The elements in the ports are the joints of the arm from the base to the tip, followed by the fingers in the same order as used by the Kinova SDK (consult the URDF model for a visual example). If the torque, torque_external, or current input ports are not connected, the output message will use zeros. Finger velocities will be translated to the values used by the Kinova SDK from values appropriate for the finger joints in the Jaco description (see <a class="el" href="jaco__constants_8h.html">jaco_constants.h</a>).</p>
 <p>This system has one abstract-valued output port of type lcmt_jaco_status.</p>
 <p>This system is presently only used in simulation. The robot hardware drivers publish directly to LCM and do not make use of this system.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">state&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px">position&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">velocity&rarr;</td></tr>
 <tr>
 <td align="right" style="padding:5px 0px 5px 0px">torque (optional)&rarr;</td></tr>
 <tr>
@@ -154,6 +156,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kinova__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6752ddebc3042c2052d04274d436f93"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#ad6752ddebc3042c2052d04274d436f93">JacoStatusSender</a> (<a class="el" href="classint.html">int</a> num_joints=<a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html#a688a61fff7d08168bac255b9573991c1">kJacoDefaultArmNumJoints</a>, <a class="el" href="classint.html">int</a> num_fingers=<a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html#adea794626896ab94d6dc0a2b81590681">kJacoDefaultArmNumFingers</a>)</td></tr>
 <tr class="separator:ad6752ddebc3042c2052d04274d436f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71ec23b5b9d1a45e490c54d445c78d94"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a71ec23b5b9d1a45e490c54d445c78d94">get_state_input_port</a> () const</td></tr>
+<tr class="memdesc:a71ec23b5b9d1a45e490c54d445c78d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a71ec23b5b9d1a45e490c54d445c78d94">More...</a><br /></td></tr>
+<tr class="separator:a71ec23b5b9d1a45e490c54d445c78d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:a7e4c5ac1cf2a03519f75baa5849cab14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a7e4c5ac1cf2a03519f75baa5849cab14">JacoStatusSender</a> (const <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html">JacoStatusSender</a> &amp;)=delete</td></tr>
 <tr class="separator:a7e4c5ac1cf2a03519f75baa5849cab14"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,8 +169,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0d27de795b6e27379ea83683f6245bc2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html">JacoStatusSender</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a0d27de795b6e27379ea83683f6245bc2">operator=</a> (<a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html">JacoStatusSender</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a0d27de795b6e27379ea83683f6245bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Named accessors for this System's input and output ports.</div></td></tr>
-<tr class="memitem:a71ec23b5b9d1a45e490c54d445c78d94"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a71ec23b5b9d1a45e490c54d445c78d94">get_state_input_port</a> () const</td></tr>
-<tr class="separator:a71ec23b5b9d1a45e490c54d445c78d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1ed8ee39243bb0838733c08376ad2b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a7f1ed8ee39243bb0838733c08376ad2b">get_position_input_port</a> () const</td></tr>
+<tr class="separator:a7f1ed8ee39243bb0838733c08376ad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e93f33f1399a91a3fd96447ec5a7e38"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a9e93f33f1399a91a3fd96447ec5a7e38">get_velocity_input_port</a> () const</td></tr>
+<tr class="separator:a9e93f33f1399a91a3fd96447ec5a7e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe68bebb9e28899091653f0106c8840"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#adbe68bebb9e28899091653f0106c8840">get_torque_input_port</a> () const</td></tr>
 <tr class="separator:adbe68bebb9e28899091653f0106c8840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d81bd2af8271dd69785654f7dba7fc3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_status_sender.html#a5d81bd2af8271dd69785654f7dba7fc3">get_torque_external_input_port</a> () const</td></tr>
@@ -1258,6 +1265,23 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a7f1ed8ee39243bb0838733c08376ad2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1ed8ee39243bb0838733c08376ad2b">&#9670;&nbsp;</a></span>get_position_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;double&gt;&amp; get_position_input_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a71ec23b5b9d1a45e490c54d445c78d94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71ec23b5b9d1a45e490c54d445c78d94">&#9670;&nbsp;</a></span>get_state_input_port()</h2>
 
@@ -1272,6 +1296,10 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000004">Deprecated:</a></b></dt><dd>Use position/velocity input ports instead. <br />
+ This will be removed from Drake on or after 2022-08-01.</dd></dl>
 
 </div>
 </div>
@@ -1300,6 +1328,23 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;double&gt;&amp; get_torque_input_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e93f33f1399a91a3fd96447ec5a7e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e93f33f1399a91a3fd96447ec5a7e38">&#9670;&nbsp;</a></span>get_velocity_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;double&gt;&amp; get_velocity_input_port </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

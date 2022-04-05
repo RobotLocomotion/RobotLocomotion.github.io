@@ -600,8 +600,8 @@ var hierarchy =
     [ "Polynomial< T >::Product< Rhs, Lhs >", "structdrake_1_1_polynomial_1_1_product.html", null ],
     [ "promoted_numerical< T, U >", "structdrake_1_1geometry_1_1promoted__numerical.html", null ],
     [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", null ],
-    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_data.html", null ],
+    [ "FBstabDense::QPData", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_data.html", null ],
     [ "FBstabMpc::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_mpc_1_1_q_p_variable.html", null ],
     [ "FBstabDense::QPVariable", "structdrake_1_1solvers_1_1fbstab_1_1_f_bstab_dense_1_1_q_p_variable.html", null ],
     [ "QueryObject< T >", "classdrake_1_1geometry_1_1_query_object.html", null ],
@@ -1118,6 +1118,7 @@ var hierarchy =
     [ "OutputPortLocator", "class_output_port_locator.html", null ],
     [ "pair< drake::systems::PeriodicEventData, std::unique_ptr< drake::systems::Event< double > > >", "classstd_1_1pair_3_01drake_1_1systems_1_1_periodic_event_data_00_01std_1_1unique__ptr_3_01drake_16d119f6a6720feeebeb6adeab3c76ee.html", null ],
     [ "pair< drake::systems::PeriodicEventData, std::unique_ptr< drake::systems::Event< Element::T > > >", "classstd_1_1pair_3_01drake_1_1systems_1_1_periodic_event_data_00_01std_1_1unique__ptr_3_01drake_349c18b295ba89f5be2395110b502d9c.html", null ],
+    [ "Vector3< Element::T >", "class_vector3_3_01_element_1_1_t_01_4.html", null ],
     [ "Vector6< T >", "class_vector6_3_01_t_01_4.html", null ],
     [ "VectorX< double >", "class_vector_x_3_01double_01_4.html", null ],
     [ "VectorX< Element::T >", "class_vector_x_3_01_element_1_1_t_01_4.html", null ]

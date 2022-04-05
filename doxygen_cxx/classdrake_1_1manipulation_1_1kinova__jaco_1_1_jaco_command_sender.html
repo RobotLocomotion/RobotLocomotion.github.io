@@ -125,13 +125,15 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kinova__
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creates and outputs lcmt_jaco_command messages. </p>
 <p>Note that this system does not actually send the message to an LCM channel. To send the message, the output of this system should be connected to a <a class="el" href="classdrake_1_1systems_1_1lcm_1_1_lcm_publisher_system.html#ad52e88e4200c2cf0a094a08faff8583c" title="A factory method that returns an LcmPublisherSystem that takes Value&lt;LcmMessage&gt; message objects on i...">systems::lcm::LcmPublisherSystem::Make&lt;lcmt_jaco_command&gt;()</a>.</p>
-<p>This system has one vector-valued input port containing the desired position and velocity. Finger velocities will be translated to the values used by the Kinova SDK from values appropriate for the finger joints in the Jaco description (see <a class="el" href="jaco__constants_8h.html">jaco_constants.h</a>).</p>
+<p>This system has two vector-valued input ports containing the desired position and velocity. Finger velocities will be translated to the values used by the Kinova SDK from values appropriate for the finger joints in the Jaco description (see <a class="el" href="jaco__constants_8h.html">jaco_constants.h</a>).</p>
 <p>This system has one abstract-valued output port of type lcmt_jaco_command.</p>
 <table align="center" cellpadding="0" cellspacing="0">
 <tr align="center">
 <td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
-<td align="right" style="padding:5px 0px 5px 0px">state&rarr;</td></tr>
+<td align="right" style="padding:5px 0px 5px 0px">position&rarr;</td></tr>
+<tr>
+<td align="right" style="padding:5px 0px 5px 0px">velocity&rarr;</td></tr>
 </table>
 </td><td align="center" style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor="#F0F0F0"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html" title="Creates and outputs lcmt_jaco_command messages.">JacoCommandSender</a></td><td style="vertical-align:middle"><table cellspacing="0" cellpadding="0">
 <tr>
@@ -147,6 +149,13 @@ $(document).ready(function(){initNavTree('classdrake_1_1manipulation_1_1kinova__
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f65b194a09c993efa502fc06fb9915d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a8f65b194a09c993efa502fc06fb9915d">JacoCommandSender</a> (<a class="el" href="classint.html">int</a> num_joints=<a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html#a688a61fff7d08168bac255b9573991c1">kJacoDefaultArmNumJoints</a>, <a class="el" href="classint.html">int</a> num_fingers=<a class="el" href="namespacedrake_1_1manipulation_1_1kinova__jaco.html#adea794626896ab94d6dc0a2b81590681">kJacoDefaultArmNumFingers</a>)</td></tr>
 <tr class="separator:a8f65b194a09c993efa502fc06fb9915d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a191b9f7bf704e7e69bb569f6bf819c33"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a191b9f7bf704e7e69bb569f6bf819c33">get_input_port</a> () const</td></tr>
+<tr class="memdesc:a191b9f7bf704e7e69bb569f6bf819c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#a191b9f7bf704e7e69bb569f6bf819c33">More...</a><br /></td></tr>
+<tr class="separator:a191b9f7bf704e7e69bb569f6bf819c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1ed8ee39243bb0838733c08376ad2b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a7f1ed8ee39243bb0838733c08376ad2b">get_position_input_port</a> () const</td></tr>
+<tr class="separator:a7f1ed8ee39243bb0838733c08376ad2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e93f33f1399a91a3fd96447ec5a7e38"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#a9e93f33f1399a91a3fd96447ec5a7e38">get_velocity_input_port</a> () const</td></tr>
+<tr class="separator:a9e93f33f1399a91a3fd96447ec5a7e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:ac729fa3f0a996804cc0ebf8c5f328c4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html#ac729fa3f0a996804cc0ebf8c5f328c4a">JacoCommandSender</a> (const <a class="el" href="classdrake_1_1manipulation_1_1kinova__jaco_1_1_jaco_command_sender.html">JacoCommandSender</a> &amp;)=delete</td></tr>
 <tr class="separator:ac729fa3f0a996804cc0ebf8c5f328c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1225,6 +1234,61 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a191b9f7bf704e7e69bb569f6bf819c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a191b9f7bf704e7e69bb569f6bf819c33">&#9670;&nbsp;</a></span>get_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;double&gt;&amp; get_input_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use the other input ports instead. <br />
+ This will be removed from Drake on or after 2022-08-01.</dd></dl>
+
+</div>
+</div>
+<a id="a7f1ed8ee39243bb0838733c08376ad2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1ed8ee39243bb0838733c08376ad2b">&#9670;&nbsp;</a></span>get_position_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;double&gt;&amp; get_position_input_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e93f33f1399a91a3fd96447ec5a7e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e93f33f1399a91a3fd96447ec5a7e38">&#9670;&nbsp;</a></span>get_velocity_input_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classdrake_1_1systems_1_1_input_port.html">systems::InputPort</a>&lt;double&gt;&amp; get_velocity_input_port </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a84cea16331dc249400960dd7a8159318"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84cea16331dc249400960dd7a8159318">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 

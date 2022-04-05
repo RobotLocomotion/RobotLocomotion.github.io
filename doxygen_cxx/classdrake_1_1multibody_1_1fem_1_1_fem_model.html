@@ -135,7 +135,7 @@ A(⋅,t) = ∂²ϕ(⋅,t)/∂t².
 </pre><p>We call Ω⁰ the reference domain and Ωᵗ the current domain. We use upper case letters to denote states (positions, velocities, and accelerations) in reference domain (X, V, A) and lower case letters to denote their current domain counterparts (x, v, a). In particular, x(X,t) = ϕ(X,t). The deformation gradient F(X,t) is given by ∂ϕ(X,t)/∂X.</p>
 <p>The governing equations of interest are conservation of mass and conservation of momentum: </p><pre class="fragment">R(X,t)J(X,t) = R(X,0),
 R(X,0)A(X,t) = fᵢₙₜ(X,t) + fₑₓₜ(X,t),
-</pre><p>where R is mass density, fᵢₙₜ and fₑₓₜ are internal and external force densities respectively, and J is the determinant of the deformation gradient. Using finite element method to discretize in space, one gets </p><pre class="fragment">ϕ(X,t) = ∑ᵢ xᵢ(t)Nᵢ(X)
+</pre><p>where R is mass density, fᵢₙₜ and fₑₓₜ are internal and external force (only gravity for now) densities respectively, and J is the determinant of the deformation gradient. Using finite element method to discretize in space, one gets </p><pre class="fragment">ϕ(X,t) = ∑ᵢ xᵢ(t)Nᵢ(X)
 V(X,t) = ∑ᵢ vᵢ(t)Nᵢ(X)
 A(X,t) = ∑ᵢ aᵢ(t)Nᵢ(X)
 </pre><p>where xᵢ, vᵢ, aᵢ ∈ R³ are nodal values of the spatially discretized position, velocity and acceleration, and Nᵢ(X):Ω⁰ → R are the the basis functions. With this spatial discretization, the PDE is turned into an ODE of the form </p><pre class="fragment">G(x, v, a) = 0,            (1)
@@ -145,7 +145,7 @@ A(X,t) = ∑ᵢ aᵢ(t)Nᵢ(X)
 deformable solids." Synthesis Lectures on Visual Computing: Computer Graphics, Animation, Computational Photography, and Imaging 1.1 (2015): 1-69.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>The scalar type, which must be <code>double</code>. </td></tr>
+    <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default nonsymbolic scalars</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -183,6 +183,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bedc095ca6d9b111016dc52ce60b355"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; internal::PetscSymmetricBlockSparseMatrix &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a5bedc095ca6d9b111016dc52ce60b355">MakePetscSymmetricBlockSparseTangentMatrix</a> () const</td></tr>
 <tr class="memdesc:a5bedc095ca6d9b111016dc52ce60b355"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a PetscSymmetricBlockSparseMatrix that has the sparsity pattern of the tangent matrix of this FEM model.  <a href="#a5bedc095ca6d9b111016dc52ce60b355">More...</a><br /></td></tr>
 <tr class="separator:a5bedc095ca6d9b111016dc52ce60b355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a8f7cd0b02dc8b1f09fa0b3f17c2df1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2a8f7cd0b02dc8b1f09fa0b3f17c2df1">set_gravity_vector</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;gravity)</td></tr>
+<tr class="memdesc:a2a8f7cd0b02dc8b1f09fa0b3f17c2df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the gravity vector for all elements in this model.  <a href="#a2a8f7cd0b02dc8b1f09fa0b3f17c2df1">More...</a><br /></td></tr>
+<tr class="separator:a2a8f7cd0b02dc8b1f09fa0b3f17c2df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd39c2fd943159f17578fc4a6d3a71e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#affd39c2fd943159f17578fc4a6d3a71e">gravity_vector</a> () const</td></tr>
+<tr class="memdesc:affd39c2fd943159f17578fc4a6d3a71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the gravity vector for all elements in this model.  <a href="#affd39c2fd943159f17578fc4a6d3a71e">More...</a><br /></td></tr>
+<tr class="separator:affd39c2fd943159f17578fc4a6d3a71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af7127cb41cf465a47db9080be52cbf91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af7127cb41cf465a47db9080be52cbf91">FemModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a> &amp;)=delete</td></tr>
 <tr class="separator:af7127cb41cf465a47db9080be52cbf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -416,6 +422,7 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
+    <tr><td class="paramname">std::exception</td><td>if T is not double. </td></tr>
   </table>
   </dd>
 </dl>
@@ -485,7 +492,7 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 </div><div class="memdoc">
 
 <p>FemModelImpl must override this method to provide an implementation for the NVI <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#afb7ba3a5b7f7fdc4d7aa6ffd34334639" title="Calculates the residual G(x, v, a) (see class doc) evaluated at the given FEM state.">CalcResidual()</a>. </p>
-<p>The input <code>fem_state</code> is guaranteed to be compatible with <code>this</code> FEM model, and the input <code>residual</code> is guaranteed to be non-null. </p>
+<p>The input <code>fem_state</code> is guaranteed to be compatible with <code>this</code> FEM model, and the input <code>residual</code> is guaranteed to be non-null and properly sized. </p>
 
 </div>
 </div>
@@ -588,6 +595,25 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 
 </div>
 </div>
+<a id="affd39c2fd943159f17578fc4a6d3a71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd39c2fd943159f17578fc4a6d3a71e">&#9670;&nbsp;</a></span>gravity_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; gravity_vector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the gravity vector for all elements in this model. </p>
+
+</div>
+</div>
 <a id="aef81f0727ef93e6f31d39e6521c30198"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef81f0727ef93e6f31d39e6521c30198">&#9670;&nbsp;</a></span>MakeFemState()</h2>
 
@@ -623,7 +649,12 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 </div><div class="memdoc">
 
 <p>Creates a PetscSymmetricBlockSparseMatrix that has the sparsity pattern of the tangent matrix of this FEM model. </p>
-<p>In particular, the size of the tangent matrix is <code><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af4e031e8d885172740f7f66f07234f7f" title="The number of degrees of freedom in this model.">num_dofs()</a></code> by <code><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af4e031e8d885172740f7f66f07234f7f" title="The number of degrees of freedom in this model.">num_dofs()</a></code>. All entries are initialized to zero. </p>
+<p>In particular, the size of the tangent matrix is <code><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af4e031e8d885172740f7f66f07234f7f" title="The number of degrees of freedom in this model.">num_dofs()</a></code> by <code><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af4e031e8d885172740f7f66f07234f7f" title="The number of degrees of freedom in this model.">num_dofs()</a></code>. All entries are initialized to zero. </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if T is not double. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -768,6 +799,26 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a8f7cd0b02dc8b1f09fa0b3f17c2df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8f7cd0b02dc8b1f09fa0b3f17c2df1">&#9670;&nbsp;</a></span>set_gravity_vector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_gravity_vector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>gravity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the gravity vector for all elements in this model. </p>
 
 </div>
 </div>

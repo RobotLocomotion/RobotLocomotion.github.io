@@ -1,5 +1,15 @@
 var NAVTREEINDEX36 =
 {
+"classdrake_1_1systems_1_1_vector_log_sink.html":[1,2,1,26],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a01791f7cae0729bd71cdbe701b132427":[1,2,1,26,10],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a021106c5eb21e08b8fce9400e5ed8721":[1,2,1,26,5],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a0bbb6c5977630907a351671283c2d3ea":[1,2,1,26,2],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a4f024aaf2bc04974691b9f3b225d71a3":[1,2,1,26,0],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a75fdac8e950bc94f385eb038c7766308":[1,2,1,26,11],
+"classdrake_1_1systems_1_1_vector_log_sink.html#a9de981eb2a9808a55fda656f1504eee2":[1,2,1,26,3],
+"classdrake_1_1systems_1_1_vector_log_sink.html#ab1109c98ab95c577808ffb5ca9b958aa":[1,2,1,26,9],
+"classdrake_1_1systems_1_1_vector_log_sink.html#abbb32001c248cadaf541a05f661fa7fb":[1,2,1,26,8],
+"classdrake_1_1systems_1_1_vector_log_sink.html#ac79c48120767475fddd63c8eb4f96caf":[1,2,1,26,4],
 "classdrake_1_1systems_1_1_vector_log_sink.html#adbebf78a6b8619cee90d5bffc463dfe5":[1,2,1,26,1],
 "classdrake_1_1systems_1_1_vector_log_sink.html#ae63d08ab7e3c669eec276019e4f2dbcb":[1,2,1,26,7],
 "classdrake_1_1systems_1_1_vector_log_sink.html#afc2871c939bcabe7583c01099d00747c":[1,2,1,26,6],
@@ -239,15 +249,5 @@ var NAVTREEINDEX36 =
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#acc730c554b00093275d508db2e162811":[1,2,2,3,10],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ad6b5fa29bdb989a329452732e99e33cc":[1,2,2,3,16],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae26ddd47fd25a35c40bbd44645688e9e":[1,2,2,3,9],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae9cff84eb45694f21f7ae47845feda97":[1,2,2,3,13],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#af691e7d9a50b9962186e28c7ba632868":[1,2,2,3,2],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#af95989258d9fda0b966b9aa840d82532":[1,2,2,3,6],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#afbfabab0617c24411212c4c1ab81381e":[1,2,2,3,11],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html":[1,2,2,4],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a0892a07c842f924653542d20b8f3b09e":[1,2,2,4,8],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a0e5a1137933f4ecd4ebb2dd860a8b136":[1,2,2,4,12],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a122d0af5d042189b33629d1295fb17c7":[1,2,2,4,3],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a156ea1ba36b533f126071089b8963842":[1,2,2,4,0],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a18737529bba0537a9fa06a649378b1a8":[1,2,2,4,6],
-"classdrake_1_1systems_1_1controllers_1_1_pid_controller.html#a2cdc3bbfd20618923a844cb668660b52":[1,2,2,4,14]
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#ae9cff84eb45694f21f7ae47845feda97":[1,2,2,3,13]
 };

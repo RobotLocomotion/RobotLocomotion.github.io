@@ -12,6 +12,7 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_model =
     [ "DoCalcTangentMatrix", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a539075a144b96a126aee2e0b2963db95", null ],
     [ "DoMakePetscSymmetricBlockSparseTangentMatrix", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a5170f577cbc8446b3969e9e308019bdf", null ],
     [ "fem_state_system", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a007a1278d4d247d81ed980ab3652e65d", null ],
+    [ "gravity_vector", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#affd39c2fd943159f17578fc4a6d3a71e", null ],
     [ "MakeFemState", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aef81f0727ef93e6f31d39e6521c30198", null ],
     [ "MakePetscSymmetricBlockSparseTangentMatrix", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a5bedc095ca6d9b111016dc52ce60b355", null ],
     [ "MakeReferencePositions", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1255ca32db4bae2e53394d503b563c00", null ],
@@ -20,6 +21,7 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_model =
     [ "num_nodes", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a90e3616a403cd3f26b9aae1ffe0ec76c", null ],
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a22e6cae04151e6b39cf8ceecfc7f4cf9", null ],
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a52811120b5134c610e2af3fc096c92af", null ],
+    [ "set_gravity_vector", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2a8f7cd0b02dc8b1f09fa0b3f17c2df1", null ],
     [ "ThrowIfModelStateIncompatible", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6", null ],
     [ "UpdateFemStateSystem", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a7bd928c1298c6e5939d3bd2559e18e71", null ]
 ];

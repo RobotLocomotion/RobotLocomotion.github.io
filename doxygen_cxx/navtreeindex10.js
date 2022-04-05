@@ -1,5 +1,13 @@
 var NAVTREEINDEX10 =
 {
+"classdrake_1_1math_1_1_numerical_gradient_option.html#a42db421362be5c1e41414f3a3aedae04":[3,0,0,7,10,2],
+"classdrake_1_1math_1_1_numerical_gradient_option.html#a4a865e4411f8c79f280a51d9141d1dd4":[3,0,0,7,10,1],
+"classdrake_1_1math_1_1_rigid_transform.html":[3,0,0,7,11],
+"classdrake_1_1math_1_1_rigid_transform.html#a0780a9ce724867fa65c009f0fbf82dc5":[3,0,0,7,11,6],
+"classdrake_1_1math_1_1_rigid_transform.html#a079ca01bad5c04328237cfc47c73f7c6":[3,0,0,7,11,3],
+"classdrake_1_1math_1_1_rigid_transform.html#a08c8cdccdeb018584d05a3d7557bf42c":[3,0,0,7,11,40],
+"classdrake_1_1math_1_1_rigid_transform.html#a10a6bee63e97e5697d2f4dac49cde380":[3,0,0,7,11,45],
+"classdrake_1_1math_1_1_rigid_transform.html#a1bc2d96e26802c52ea92f21a40540681":[3,0,0,7,11,14],
 "classdrake_1_1math_1_1_rigid_transform.html#a1fe4dc36c56c493ac1e956ec185bdfea":[3,0,0,7,11,41],
 "classdrake_1_1math_1_1_rigid_transform.html#a257f755b0f58f8958f8827b0651e205c":[3,0,0,7,11,33],
 "classdrake_1_1math_1_1_rigid_transform.html#a25d3e276d5e4e1fad974214851ce0b46":[3,0,0,7,11,46],
@@ -241,13 +249,5 @@ var NAVTREEINDEX10 =
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#a48049f4688cc7bbe9544cf8296d749c4":[1,1,0,9,3],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#aa267d16b53913084dba91f5ccce9d2e3":[1,1,0,9,2],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#aad70470b810dee3ec34bbbd2bd26d6e4":[1,1,0,9,1],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#ab331046482d2d3ec842a3872c4844d7f":[1,1,0,9,5],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#acf42aa2fb9eca6792639ac8f6dbc614e":[1,1,0,9,0],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af072288a5a5bfc6a933a9b10b108b4be":[1,1,0,9,6],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af57e3c05d25389a8fb0096a06cbbe288":[1,1,0,9,4],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html":[3,0,0,8,15],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a1537fee11210c74bf9fb74b0641bba58":[3,0,0,8,15,1],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a38b84c42a00adfb7c8780eb6b0e4a898":[3,0,0,8,15,3],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a4016969e054ab87c4dea4f2e5dd3441a":[3,0,0,8,15,5],
-"classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a425cea2dae1c28a29b4cfa3836620111":[3,0,0,8,15,4]
+"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#ab331046482d2d3ec842a3872c4844d7f":[1,1,0,9,5]
 };

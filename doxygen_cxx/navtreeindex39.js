@@ -1,5 +1,15 @@
 var NAVTREEINDEX39 =
 {
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a8743b4bccdaf5d24987b1f76403bbe41":[3,0,0,16,1,6],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,1,11],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#a9f9ca6881495c3e9ce261df8ca9b5514":[3,0,0,16,1,0],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ab72583d843169e9123e0aa7b87439bda":[3,0,0,16,1,9],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#abfc9a61381e3e22126ab92fff4a9bc33":[3,0,0,16,1,5],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#adca8eca2ee324f57170dedfb4b06160b":[3,0,0,16,1,7],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#ae7aaaebd7e27434069ba5af047713628":[3,0,0,16,1,12],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#aee0d01536c69b892fb45553cf4b67bb7":[3,0,0,16,1,2],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afb48be114e596b51430d94200ca3b821":[3,0,0,16,1,4],
+"classdrake_1_1trajectories_1_1_exponential_plus_piecewise_polynomial.html#afd774c050097f45948fa77e181ec8a19":[3,0,0,16,1,8],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html":[3,0,0,16,2],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a0295b8466f7ead211653b8cddafd8815":[3,0,0,16,2,47],
 "classdrake_1_1trajectories_1_1_piecewise_polynomial.html#a06278ca4588ba1adb004b84fdfc62f3c":[3,0,0,16,2,59],
@@ -239,15 +249,5 @@ var NAVTREEINDEX39 =
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40a222307df6fb67d2a524cade7227ca4f8":[4,0,0,10,9,0,0],
 "common__solver__option_8h.html#ae07229124cd16e9d8b62fe359c7d0b40aca5719f05d0aceacc42e256644394100":[4,0,0,10,9,0,1],
 "common__solver__option_8h.html#aed794af38e7da9270528fd2185861862":[4,0,0,10,9,1],
-"compass__gait_8h.html":[4,0,0,3,4,0],
-"compass__gait__geometry_8h.html":[4,0,0,3,4,1],
-"compliant__contact__manager_8h.html":[4,0,0,8,10,1],
-"compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577":[4,0,0,8,10,1,0],
-"compute__numerical__gradient_8h.html":[4,0,0,7,4],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400a":[4,0,0,7,4,1],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa39209ccaab9620e08ec04483c22a7eda":[4,0,0,7,4,1,2],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aa5cc7cc1518100eae9e3f2d83673a74ed":[4,0,0,7,4,1,1],
-"compute__numerical__gradient_8h.html#a33f67c50b300b399043477a51861400aae7c3602dce09c755e09250077a601a51":[4,0,0,7,4,1,0],
-"compute__numerical__gradient_8h.html#a480ac0ac10adfac21eab2d72f8694704":[4,0,0,7,4,2],
-"compute__torque_8h.html":[4,0,0,11,1,0,0]
+"compass__gait_8h.html":[4,0,0,3,4,0]
 };

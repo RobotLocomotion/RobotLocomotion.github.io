@@ -36,7 +36,7 @@ var classdrake_1_1multibody_1_1_spatial_vector =
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_vector.html#ad0d7127cbe1d6be05f4bd47af2508c89", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_vector.html#a737b765a7a5d6b950a2c70193c0af642", null ],
     [ "operator *", "classdrake_1_1multibody_1_1_spatial_vector.html#abfcc7772c9a75439b094cd2477f45e2f", null ],
-    [ "operator+", "classdrake_1_1multibody_1_1_spatial_vector.html#ab13f5ae55803f77298c3bb1ca0cc6f36", null ],
+    [ "operator+", "classdrake_1_1multibody_1_1_spatial_vector.html#af9b6d1e0263d3452d1c21934c89e4a5b", null ],
     [ "operator-", "classdrake_1_1multibody_1_1_spatial_vector.html#a49cceba168b76c123d5da2eca8b2fdd1", null ],
     [ "operator<<", "classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0", null ]
 ];

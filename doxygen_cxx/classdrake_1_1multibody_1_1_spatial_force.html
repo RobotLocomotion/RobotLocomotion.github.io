@@ -128,8 +128,9 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_spatial_fo
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class drake::multibody::SpatialForce&lt; T &gt;</h3>
 
-<p>This class is used to represent a <em>spatial force</em> (also called a <em>wrench</em>) that combines both rotational (torque) and translational force components. </p>
-<p>Spatial forces are 6-element quantities that are pairs of ordinary 3-vectors. Elements 0-2 are the torque component while elements 3-5 are the force component. Both vectors must be expressed in the same frame, and the translational force is applied to a particular point of a body, but neither the frame nor the point are stored with a SpatialForce object; they must be understood from context. It is the responsibility of the user to keep track of the application point and the expressed-in frame. That is best accomplished through disciplined notation. In source code we use monogram notation where capital F is used to designate a spatial force quantity. We write a point P fixed to body (or frame) B as \(B_P\) which appears in code and comments as <code>Bp</code>. Then we write a particular spatial force as <code>F_Bp_E</code> where the <code>_E</code> suffix indicates that the expressed-in frame is E. This symbol represents a torque applied to body B, and a force applied to point P on B, with both vectors expressed in E. Very often the application point will be the body origin <code>Bo</code>; if no point is shown the origin is understood, so <code>F_B_E</code> means <code>F_Bo_E</code>. For a more detailed introduction on spatial vectors and the monogram notation please refer to section <a class="el" href="group__multibody__spatial__vectors.html">Spatial Vectors</a>.</p>
+<p>This class represents a <em>spatial force</em> F (also called a <em>wrench</em>) and has 6 elements with a torque 𝛕 (3-element vector) on top of a force 𝐟 (3-element vector). </p>
+<p>Frequently, a spatial force represents the replacement of a set S of forces on a frame B with an equivalent set consisting of a torque 𝛕 applied to frame B which is equal to the moment of the set S about a point Bp of B together with a force 𝐟 applied to Bp, where 𝐟 is equal to set S's resultant force. This class assumes that both the torque 𝛕 and force 𝐟 have the same <em>expressed-in</em> frame E. This class only stores 6 elements (namely 𝛕 and 𝐟) and does not store the underlying frame B, application point Bp, or expressed-in frame E. The user is responsible for explicitly tracking these underlying quantities with <a class="el" href="group__multibody__quantities.html">monogram notation</a>. For example, F_B_E denotes a spatial force on frame B with application point Bo (frame B's origin), expressed in frame E and contains tau_B_E (torque 𝛕 applied to frame B, expressed in frame E) and f_Bo_E (force 𝐟 applied to Bo, expressed in frame E).</p>
+<p>The monogram notation F_Bp has a typeset equivalent \({F^{Bp}}\) which denotes the spatial force applied to point Bp of frame B. F_Bp contains a torque tau_B ( \({\tau^B}\)) applied to frame B and a force f_Bp ( \({f^{Bp}}\)) applied to point Bp of frame B. Details on spatial vectors and monogram notation are in sections <a class="el" href="group__multibody__spatial__vectors.html">Spatial Vectors</a> and <a class="el" href="group__multibody__quantities.html">Multibody Quantities</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T</td><td>The scalar type, which must be one of the <a class="el" href="group__default__scalars.html">default scalars</a>. </td></tr>
@@ -145,18 +146,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8602c8746b6a12c4c66c628df61b2619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a8602c8746b6a12c4c66c628df61b2619">More...</a><br /></td></tr>
 <tr class="separator:a8602c8746b6a12c4c66c628df61b2619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23d1353c23201a3614ae5f555fef38e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a23d1353c23201a3614ae5f555fef38e4">SpatialForce</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;tau, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;f)</td></tr>
-<tr class="memdesc:a23d1353c23201a3614ae5f555fef38e4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class is used to represent a spatial force (also called a wrench) that combines both rotational ...">SpatialForce</a> constructor from a torque <code>tau</code> and a force <code>f</code>.  <a href="#a23d1353c23201a3614ae5f555fef38e4">More...</a><br /></td></tr>
+<tr class="memdesc:a23d1353c23201a3614ae5f555fef38e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial force F from a torque 𝛕 (tau) and a force 𝐟.  <a href="#a23d1353c23201a3614ae5f555fef38e4">More...</a><br /></td></tr>
 <tr class="separator:a23d1353c23201a3614ae5f555fef38e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64b5dc902072c535393a8f018caffb12"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a64b5dc902072c535393a8f018caffb12"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a64b5dc902072c535393a8f018caffb12">SpatialForce</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;F)</td></tr>
-<tr class="memdesc:a64b5dc902072c535393a8f018caffb12"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class is used to represent a spatial force (also called a wrench) that combines both rotational ...">SpatialForce</a> constructor from an Eigen expression that represents a six-dimensional vector.  <a href="#a64b5dc902072c535393a8f018caffb12">More...</a><br /></td></tr>
+<tr class="memdesc:a64b5dc902072c535393a8f018caffb12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial force F from an Eigen expression that represents a 6-element vector, i.e., a 3-element torque 𝛕 and a 3-element force 𝐟.  <a href="#a64b5dc902072c535393a8f018caffb12">More...</a><br /></td></tr>
 <tr class="separator:a64b5dc902072c535393a8f018caffb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2000b1386ff9eefcdf503ccb73fec59e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a2000b1386ff9eefcdf503ccb73fec59e">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BpBq_E)</td></tr>
-<tr class="memdesc:a2000b1386ff9eefcdf503ccb73fec59e"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place shift of a SpatialForce from one application point to another.  <a href="#a2000b1386ff9eefcdf503ccb73fec59e">More...</a><br /></td></tr>
-<tr class="separator:a2000b1386ff9eefcdf503ccb73fec59e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac6191ea5169aaac3b7097dbed1b88cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#aac6191ea5169aaac3b7097dbed1b88cb">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BpBq_E) const</td></tr>
-<tr class="memdesc:aac6191ea5169aaac3b7097dbed1b88cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shift of a SpatialForce from one application point to another.  <a href="#aac6191ea5169aaac3b7097dbed1b88cb">More...</a><br /></td></tr>
-<tr class="separator:aac6191ea5169aaac3b7097dbed1b88cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8981af1db01730cff9d845e41b3bfc87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87">ShiftInPlace</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset)</td></tr>
+<tr class="memdesc:a8981af1db01730cff9d845e41b3bfc87"><td class="mdescLeft">&#160;</td><td class="mdescRight">In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.  <a href="#a8981af1db01730cff9d845e41b3bfc87">More...</a><br /></td></tr>
+<tr class="separator:a8981af1db01730cff9d845e41b3bfc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70018645246d1214c2f73c8d80b6e766"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766">Shift</a> (const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset) const</td></tr>
+<tr class="memdesc:a70018645246d1214c2f73c8d80b6e766"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.  <a href="#a70018645246d1214c2f73c8d80b6e766">More...</a><br /></td></tr>
+<tr class="separator:a70018645246d1214c2f73c8d80b6e766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a953c5a97a970a6e96fa6f609e147dcda"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a953c5a97a970a6e96fa6f609e147dcda">dot</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt; &amp;velocity) const</td></tr>
 <tr class="memdesc:a953c5a97a970a6e96fa6f609e147dcda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the power generated by a spatial force.  <a href="#a953c5a97a970a6e96fa6f609e147dcda">More...</a><br /></td></tr>
 <tr class="separator:a953c5a97a970a6e96fa6f609e147dcda"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,19 +175,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7ef3ca98bf83a4e8ee30147de1ce201d inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a7ef3ca98bf83a4e8ee30147de1ce201d">More...</a><br /></td></tr>
 <tr class="separator:a7ef3ca98bf83a4e8ee30147de1ce201d inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadedf5dde48c214001423e185449e233 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233">SpatialVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;w, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;v)</td></tr>
-<tr class="memdesc:aadedf5dde48c214001423e185449e233 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">SpatialVector constructor from an rotational component <code>w</code> and a linear component <code>v</code>.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233">More...</a><br /></td></tr>
+<tr class="memdesc:aadedf5dde48c214001423e185449e233 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial vector from a rotational component w and a translational component v.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233">More...</a><br /></td></tr>
 <tr class="separator:aadedf5dde48c214001423e185449e233 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa831e731779635166d20d016b8ba686b inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b">SpatialVector</a> (const Eigen::MatrixBase&lt; OtherDerived &gt; &amp;V)</td></tr>
-<tr class="memdesc:aa831e731779635166d20d016b8ba686b inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">SpatialVector constructor from an Eigen expression that represents a six-dimensional vector.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b">More...</a><br /></td></tr>
+<tr class="memdesc:aa831e731779635166d20d016b8ba686b inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial vector V from an Eigen expression that represents a 6-element vector (3-element rotational vector on top of a 3-element translational vector).  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b">More...</a><br /></td></tr>
 <tr class="separator:aa831e731779635166d20d016b8ba686b inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
-<tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total size of the concatenation of the angular and linear components.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
+<tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">For 3D (three-dimensional) analysis, the total size of the concatenated rotational vector (3 elements) and translational vector (3 elements) is six (6), which is known at compile time.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
 <tr class="separator:af9593d4a5ff4274efaf429cb4f9e57cc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cb40ed6a35143cdd6f683075a1dac18 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a0cb40ed6a35143cdd6f683075a1dac18">operator[]</a> (<a class="el" href="classint.html">int</a> i) const</td></tr>
-<tr class="memdesc:a0cb40ed6a35143cdd6f683075a1dac18 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the i-th component of this spatial vector.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a0cb40ed6a35143cdd6f683075a1dac18">More...</a><br /></td></tr>
+<tr class="memdesc:a0cb40ed6a35143cdd6f683075a1dac18 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the i-th element of this spatial vector.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a0cb40ed6a35143cdd6f683075a1dac18">More...</a><br /></td></tr>
 <tr class="separator:a0cb40ed6a35143cdd6f683075a1dac18 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0534e977fc9fee424b3ef94f27a9ed61 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a0534e977fc9fee424b3ef94f27a9ed61">operator[]</a> (<a class="el" href="classint.html">int</a> i)</td></tr>
-<tr class="memdesc:a0534e977fc9fee424b3ef94f27a9ed61 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable access to the i-th component of this spatial vector.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a0534e977fc9fee424b3ef94f27a9ed61">More...</a><br /></td></tr>
+<tr class="memdesc:a0534e977fc9fee424b3ef94f27a9ed61 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable access to the i-th element of this spatial vector.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a0534e977fc9fee424b3ef94f27a9ed61">More...</a><br /></td></tr>
 <tr class="separator:a0534e977fc9fee424b3ef94f27a9ed61 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d09ceb2acbdee33c80ac3a32751c43 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43">rotational</a> () const</td></tr>
 <tr class="memdesc:ab8d09ceb2acbdee33c80ac3a32751c43 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the rotational component of this spatial vector.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43">More...</a><br /></td></tr>
@@ -213,16 +214,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1e1aab695295b4f88e6f0bfd5271357c inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the rotational and translational parts of <code>this</code> and <code>other</code> to check if they are the same to within specified absolute differences.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a1e1aab695295b4f88e6f0bfd5271357c">More...</a><br /></td></tr>
 <tr class="separator:a1e1aab695295b4f88e6f0bfd5271357c inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adecee900de2aa10bca5a4e9e36121b25 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">decltype(T()&lt; T())&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25">IsApprox</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;other, double tolerance=std::numeric_limits&lt; double &gt;::epsilon()) const</td></tr>
-<tr class="memdesc:adecee900de2aa10bca5a4e9e36121b25 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares <code>this</code> spatial vector to the provided spatial vector <code>other</code> within a specified tolerance.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25">More...</a><br /></td></tr>
+<tr class="memdesc:adecee900de2aa10bca5a4e9e36121b25 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether all six corresponding elements of two spatial vectors are equal to each other to within a specified tolerance epsilon.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25">More...</a><br /></td></tr>
 <tr class="separator:adecee900de2aa10bca5a4e9e36121b25 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b2415a4b0787515507518d9c0dd4e5 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a09b2415a4b0787515507518d9c0dd4e5">SetNaN</a> ()</td></tr>
-<tr class="memdesc:a09b2415a4b0787515507518d9c0dd4e5 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all entries in <code>this</code> SpatialVector to NaN.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a09b2415a4b0787515507518d9c0dd4e5">More...</a><br /></td></tr>
+<tr class="memdesc:a09b2415a4b0787515507518d9c0dd4e5 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the elements in <code>this</code> SpatialVector to NaN.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a09b2415a4b0787515507518d9c0dd4e5">More...</a><br /></td></tr>
 <tr class="separator:a09b2415a4b0787515507518d9c0dd4e5 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d910cbcc53e1f9e2c4bcf24f0f61fc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc">SetZero</a> ()</td></tr>
-<tr class="memdesc:aa4d910cbcc53e1f9e2c4bcf24f0f61fc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both rotational and translational components of <code>this</code> SpatialVector to zero.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc">More...</a><br /></td></tr>
+<tr class="memdesc:aa4d910cbcc53e1f9e2c4bcf24f0f61fc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both the rotational and translational components of <code>this</code> SpatialVector to zero.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc">More...</a><br /></td></tr>
 <tr class="separator:aa4d910cbcc53e1f9e2c4bcf24f0f61fc inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab09bd8d0cfc7e7ae4853c5f57973254a inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d">CoeffsEigenType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a">get_coeffs</a> ()</td></tr>
-<tr class="memdesc:ab09bd8d0cfc7e7ae4853c5f57973254a inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the underlying storage.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a">More...</a><br /></td></tr>
+<tr class="memdesc:ab09bd8d0cfc7e7ae4853c5f57973254a inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the underlying storage.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a">More...</a><br /></td></tr>
 <tr class="separator:ab09bd8d0cfc7e7ae4853c5f57973254a inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a929ee35f2e827f504f3557b18b3c40c8 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d">CoeffsEigenType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a929ee35f2e827f504f3557b18b3c40c8">get_coeffs</a> () const</td></tr>
 <tr class="memdesc:a929ee35f2e827f504f3557b18b3c40c8 inherit pub_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the underlying storage.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a929ee35f2e827f504f3557b18b3c40c8">More...</a><br /></td></tr>
@@ -250,29 +251,29 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a870ac8e42f8816667f55e6200e319850"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a870ac8e42f8816667f55e6200e319850">ShiftInPlace</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; F_Bp_E_all, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BpBq_E)</td></tr>
-<tr class="memdesc:a870ac8e42f8816667f55e6200e319850"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a rigid in-place shift of each column of 6 x n matrix <code>F_Bp_E_all</code> as if each column were a SpatialForce.  <a href="#a870ac8e42f8816667f55e6200e319850">More...</a><br /></td></tr>
-<tr class="separator:a870ac8e42f8816667f55e6200e319850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6745e40b25190e963a6773e17fee9810"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a6745e40b25190e963a6773e17fee9810">Shift</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; &amp;F_Bp_E_all, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;p_BpBq_E, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; F_Bq_E_all)</td></tr>
-<tr class="memdesc:a6745e40b25190e963a6773e17fee9810"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a rigid shift of each column of 6 x n matrix <code>F_Bp_E_all</code> into <code>F_Bq_E_all</code> as if each column were a SpatialForce.  <a href="#a6745e40b25190e963a6773e17fee9810">More...</a><br /></td></tr>
-<tr class="separator:a6745e40b25190e963a6773e17fee9810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64d344ae595bff27f9e0afb858ec993"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#ac64d344ae595bff27f9e0afb858ec993">ShiftInPlace</a> (<a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; spatial_forces, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset)</td></tr>
+<tr class="memdesc:ac64d344ae595bff27f9e0afb858ec993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a matrix of spatial forces from one point fixed on frame B to another point fixed on frame B.  <a href="#ac64d344ae595bff27f9e0afb858ec993">More...</a><br /></td></tr>
+<tr class="separator:ac64d344ae595bff27f9e0afb858ec993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8585a0225e5b2a312f99f17d410790d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#aa8585a0225e5b2a312f99f17d410790d">Shift</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; &amp;spatial_forces, const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;offset, <a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; shifted_forces)</td></tr>
+<tr class="memdesc:aa8585a0225e5b2a312f99f17d410790d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shifts a matrix of spatial forces from one point fixed on frame B to another point fixed on frame B.  <a href="#aa8585a0225e5b2a312f99f17d410790d">More...</a><br /></td></tr>
+<tr class="separator:aa8585a0225e5b2a312f99f17d410790d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classdrake_1_1multibody_1_1_spatial_vector"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classdrake_1_1multibody_1_1_spatial_vector')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector&lt; SpatialForce, T &gt;</a></td></tr>
 <tr class="memitem:a73f248b5cef3cf345c59fe794472fc4c inherit pub_static_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a73f248b5cef3cf345c59fe794472fc4c">Zero</a> ()</td></tr>
-<tr class="memdesc:a73f248b5cef3cf345c59fe794472fc4c inherit pub_static_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create a <em>zero</em> SpatialVector, i.e.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a73f248b5cef3cf345c59fe794472fc4c">More...</a><br /></td></tr>
+<tr class="memdesc:a73f248b5cef3cf345c59fe794472fc4c inherit pub_static_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose rotational and translational components are both zero.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a73f248b5cef3cf345c59fe794472fc4c">More...</a><br /></td></tr>
 <tr class="separator:a73f248b5cef3cf345c59fe794472fc4c inherit pub_static_methods_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
 Related Functions</h2></td></tr>
 <tr><td class="ititle" colspan="2"><p>(Note that these are not member functions.) </p>
 </td></tr>
-<tr class="memitem:a45127a810cb019441dc10a43ef88f8a8"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a45127a810cb019441dc10a43ef88f8a8"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a45127a810cb019441dc10a43ef88f8a8">operator+</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F1_Sp_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F2_Sp_E)</td></tr>
-<tr class="memdesc:a45127a810cb019441dc10a43ef88f8a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the resultant spatial force as the addition of two spatial forces <code>F1_Sp_E</code> and <code>F2_Sp_E</code> on a same system or body S, at the same point P and expressed in the same frame E.  <a href="#a45127a810cb019441dc10a43ef88f8a8">More...</a><br /></td></tr>
-<tr class="separator:a45127a810cb019441dc10a43ef88f8a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d0528e3cf5b7dcd25aedffe760321a1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8d0528e3cf5b7dcd25aedffe760321a1"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8d0528e3cf5b7dcd25aedffe760321a1">operator-</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F1_Sp_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F2_Sp_E)</td></tr>
-<tr class="memdesc:a8d0528e3cf5b7dcd25aedffe760321a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts spatial force <code>F2_Sp_E</code> from <code>F1_Sp_E</code>.  <a href="#a8d0528e3cf5b7dcd25aedffe760321a1">More...</a><br /></td></tr>
-<tr class="separator:a8d0528e3cf5b7dcd25aedffe760321a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9fa46955ef29c4610b335fafd4bec2"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9f9fa46955ef29c4610b335fafd4bec2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a9f9fa46955ef29c4610b335fafd4bec2">operator+</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F1_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F2_E)</td></tr>
+<tr class="memdesc:a9f9fa46955ef29c4610b335fafd4bec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two spatial forces by simply adding their 6 underlying elements.  <a href="#a9f9fa46955ef29c4610b335fafd4bec2">More...</a><br /></td></tr>
+<tr class="separator:a9f9fa46955ef29c4610b335fafd4bec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a926e7942ee6aa465359174e2f30a0cf5"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a926e7942ee6aa465359174e2f30a0cf5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a926e7942ee6aa465359174e2f30a0cf5">operator-</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F1_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;F2_E)</td></tr>
+<tr class="memdesc:a926e7942ee6aa465359174e2f30a0cf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts spatial forces by simply subtracting their 6 underlying elements.  <a href="#a926e7942ee6aa465359174e2f30a0cf5">More...</a><br /></td></tr>
+<tr class="separator:a926e7942ee6aa465359174e2f30a0cf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header related_classdrake_1_1multibody_1_1_spatial_vector"><td colspan="2" onclick="javascript:toggleInherit('related_classdrake_1_1multibody_1_1_spatial_vector')"><img src="closed.png" alt="-"/>&#160;Related Functions inherited from <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector&lt; SpatialForce, T &gt;</a></td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0 inherit related_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector</a>&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;V)</td></tr>
 <tr class="memdesc:a5348c349330782440dbdd2e600cd31c0 inherit related_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write SpatialVector objects into a <code>std::ostream</code>.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0">More...</a><br /></td></tr>
@@ -282,7 +283,7 @@ Related Functions</h2></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_types_classdrake_1_1multibody_1_1_spatial_vector"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classdrake_1_1multibody_1_1_spatial_vector')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector&lt; SpatialForce, T &gt;</a></td></tr>
 <tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7 inherit pub_types_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"></td></tr>
-<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sizes for spatial quantities and its components in three dimensions.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br /></td></tr>
+<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sizes for spatial quantities and its components in 3D (three dimensions).  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br /></td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7 inherit pub_types_classdrake_1_1multibody_1_1_spatial_vector"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e320858f0854b7842fbd11edeeca62c inherit pub_types_classdrake_1_1multibody_1_1_spatial_vector"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> = <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt;</td></tr>
 <tr class="memdesc:a9e320858f0854b7842fbd11edeeca62c inherit pub_types_classdrake_1_1multibody_1_1_spatial_vector"><td class="mdescLeft">&#160;</td><td class="mdescRight">The more specialized spatial vector class templated on the scalar type T.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">More...</a><br /></td></tr>
@@ -360,7 +361,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
-<p>In Release builds the elements of the newly constructed spatial force are left uninitialized resulting in a zero cost operation. However in Debug builds those entries are set to NaN so that operations using this uninitialized spatial force fail fast, allowing fast bug detection. </p>
+<p>In Release builds, all 6 elements of a newly constructed spatial force are uninitialized (for speed). In Debug builds, the 6 elements are set to NaN so that invalid operations on an uninitialized spatial force fail fast (fast bug detection). </p>
 
 </div>
 </div>
@@ -390,7 +391,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class is used to represent a spatial force (also called a wrench) that combines both rotational ...">SpatialForce</a> constructor from a torque <code>tau</code> and a force <code>f</code>. </p>
+<p>Constructs a spatial force F from a torque 𝛕 (tau) and a force 𝐟. </p>
 
 </div>
 </div>
@@ -418,8 +419,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class is used to represent a spatial force (also called a wrench) that combines both rotational ...">SpatialForce</a> constructor from an Eigen expression that represents a six-dimensional vector. </p>
-<p>This constructor will assert the size of F is six (6) at compile-time for fixed sized Eigen expressions and at run-time for dynamic sized Eigen expressions. </p>
+<p>Constructs a spatial force F from an Eigen expression that represents a 6-element vector, i.e., a 3-element torque 𝛕 and a 3-element force 𝐟. </p>
+<p>This constructor will assert the size of F is six (6) either at compile-time for fixed sized Eigen expressions or at run-time for dynamic sized Eigen expressions. </p>
 
 </div>
 </div>
@@ -506,8 +507,8 @@ Although the spatial vectors F_B_E and V_MB_E must have the same expressed-in fr
 
 </div>
 </div>
-<a id="aac6191ea5169aaac3b7097dbed1b88cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac6191ea5169aaac3b7097dbed1b88cb">&#9670;&nbsp;</a></span>Shift() <span class="overload">[1/2]</span></h2>
+<a id="a70018645246d1214c2f73c8d80b6e766"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70018645246d1214c2f73c8d80b6e766">&#9670;&nbsp;</a></span>Shift() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,32 +517,31 @@ Although the spatial vectors F_B_E and V_MB_E must have the same expressed-in fr
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt;T&gt; Shift </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BpBq_E</em></td><td>)</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shift of a SpatialForce from one application point to another. </p>
-<p>This is an alternate signature for shifting a spatial force's application point that does not change the original object. See <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a2000b1386ff9eefcdf503ccb73fec59e" title="In-place shift of a SpatialForce from one application point to another.">ShiftInPlace()</a> for more information.</p>
+<p>Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_BpBq_E</td><td>Shift vector from point P of body B to point Q of B, expressed in frame E. The "from" point <code>Bp</code> must be the current application point of <code>this</code> spatial force, and E must be the same expressed-in frame as for this spatial force.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_BpBq_E from point Bp (fixed on frame B) to point Bq (fixed on frame B), expressed in frame E. p_BpBq_E must have the same expressed-in frame E as <code>this</code> spatial force, where <code>this</code> is F_Bp_E (spatial force on Bp, expressed in frame E). </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">F_Bq_E</td><td>The equivalent shifted spatial force, now applied at point Q rather than P.</td></tr>
+    <tr><td class="paramname">F_Bq_E</td><td>which is the spatial force on Bq, expressed in frame E. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a2000b1386ff9eefcdf503ccb73fec59e" title="In-place shift of a SpatialForce from one application point to another.">ShiftInPlace()</a> to compute the shifted spatial force in-place modifying the original object. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Member function <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a> to shift one spatial force (modifying <code>this</code>) and static functions <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> to shift multiple spatial forces (with or without modifying the input parameter spatial_forces). </dd></dl>
 
 </div>
 </div>
-<a id="a6745e40b25190e963a6773e17fee9810"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6745e40b25190e963a6773e17fee9810">&#9670;&nbsp;</a></span>Shift() <span class="overload">[2/2]</span></h2>
+<a id="aa8585a0225e5b2a312f99f17d410790d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8585a0225e5b2a312f99f17d410790d">&#9670;&nbsp;</a></span>Shift() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,19 +553,19 @@ Although the spatial vectors F_B_E and V_MB_E must have the same expressed-in fr
           <td class="memname">static void Shift </td>
           <td>(</td>
           <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>F_Bp_E_all</em>, </td>
+          <td class="paramname"><em>spatial_forces</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BpBq_E</em>, </td>
+          <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt;&#160;</td>
-          <td class="paramname"><em>F_Bq_E_all</em>&#160;</td>
+          <td class="paramname"><em>shifted_forces</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -580,26 +580,23 @@ Although the spatial vectors F_B_E and V_MB_E must have the same expressed-in fr
 </table>
 </div><div class="memdoc">
 
-<p>Performs a rigid shift of each column of 6 x n matrix <code>F_Bp_E_all</code> into <code>F_Bq_E_all</code> as if each column were a SpatialForce. </p>
-<p>The spatial forces are assumed to be applied at point P of a body B, and we shift them to point Q of that body by modifying the moment appropriately (translational forces are unchanged). The first three elements of each column must store the torque (rotational) component while the last three elements store the force (translational) component. All quantities are expressed in the same common frame E.</p>
+<p>Shifts a matrix of spatial forces from one point fixed on frame B to another point fixed on frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">F_Bp_E_all</td><td>A 6 x n matrix of spatial forces at point Bp on input, shifted to point Bq on output. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_BpBq_E</td><td>The vector from point Bp to point Bq. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">F_Bq_E_all</td><td>A 6 x n matrix of spatial forces shifted from Bp to Bq.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">spatial_forces</td><td>which is the 6 x n matrix F_Bp_E_all, where each of the n columns is a spatial force applied to a point Bp of frame B, and where each spatial forces is expressed in a frame E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_BpBq_E from point Bp (fixed on frame B) to a point Bq (fixed on frame B), expressed in frame E. p_BpBq_E must have the same expressed-in frame E as in spatial_forces. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">shifted_forces</td><td>which is the 6 x n matrix F_Bq_E_all, where each of the n columns is a spatial force which was shifted from point Bp (fixed on B) to point Bq (fixed on B). On output, each spatial force contained in shifted_forces is expressed in frame E. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Columns are spatial forces with torque first, then force. </dd>
-<dd>
-F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input matrix). </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Although this method will function if the input and output are the same matrix, it is faster to use <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a2000b1386ff9eefcdf503ccb73fec59e" title="In-place shift of a SpatialForce from one application point to another.">ShiftInPlace()</a> in that case since the translational components don't need to be copied. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a2000b1386ff9eefcdf503ccb73fec59e" title="In-place shift of a SpatialForce from one application point to another.">ShiftInPlace(const Vector3&lt;T&gt;&amp;)</a> for details. </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>shifted_forces must be non-null and must point to a 6 x n matrix (i.e., it must be the same size as the input matrix spatial_forces). </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Static function <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a> to shift multiple spatial forces with modification to the input parameter spatial_forces and member functions <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> to shift one spatial force (with or without modifying <code>this</code>). </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Although this <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> function will work properly if the input and output matrices are the same (i.e., spatial_forces = shifted_forces), it is faster and more efficient (avoids copying) to use <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a>. </dd></dl>
 
 </div>
 </div>
-<a id="a2000b1386ff9eefcdf503ccb73fec59e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2000b1386ff9eefcdf503ccb73fec59e">&#9670;&nbsp;</a></span>ShiftInPlace() <span class="overload">[1/2]</span></h2>
+<a id="a8981af1db01730cff9d845e41b3bfc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8981af1db01730cff9d845e41b3bfc87">&#9670;&nbsp;</a></span>ShiftInPlace() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -608,43 +605,34 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt;T&gt;&amp; ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BpBq_E</em></td><td>)</td>
+          <td class="paramname"><em>offset</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>In-place shift of a SpatialForce from one application point to another. </p>
-<p><code>this</code> spatial force <code>F_Bp_E</code>, which applies its translational force component to point P of body B, is modified to become the equivalent spatial force <code>F_Bq_E</code> that considers the force to be applied to point Q of body B instead (see class comment for more about this notation). This requires adjusting the torque component to account for the change in moment caused by the force shift.</p>
-<p>We are given the vector from point P to point Q, as a position vector <code>p_BpBq_E</code> (or <code>p_PQ_E</code>) expressed in the same frame E as the spatial force. The operation performed, in coordinate-free form, is: </p><pre>
-  τ_B  = τ_B -  p_BpBq x f_Bp
-  f_Bq = f_Bp,  i.e. the force as applied to body B at Q is the
-                same as was applied to B at P.
-</pre><p> where τ and f represent the torque and force components respectively.</p>
-<p>Notice this operation is linear. [Jain 2010], (§1.5, page 15) uses the "rigid body transformation operator" to write this as: </p><pre>
-  F_Bq = Φ(p_BqBp)F_Bp = Φ(-p_BpBq)F_Bp
-</pre><p> where <code>Φ(p_PQ)</code> is the linear operator: </p><pre>
-  Φ(p_PQ) = | I₃ p_PQx |
-            | 0     I₃ |
-</pre><p> where <code>p_PQx</code> denotes the cross product, skew-symmetric, matrix such that <code>p_PQx v = p_PQ x v</code>. The transpose of this operator allow us to shift spatial velocities, see <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html#a2d20926f2bbbdc2f74b5e88de92e8579" title="Shifts a SpatialVelocity from a frame B to a frame C, where both B and C are fixed to the same frame ...">SpatialVelocity::Shift()</a>.</p>
-<ul>
-<li>[Jain 2010] Jain, A., 2010. Robot and multibody dynamics: analysis and algorithms. Springer Science &amp; Business Media, pp. 123-130.</li>
-</ul>
-<p>For computation, all quantities above must be expressed in a common frame E; we add an <code>_E</code> suffix to each symbol to indicate that.</p>
-<p>This operation is performed in-place modifying the original object.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B. </p>
+<p>On entry, <code>this</code> is F_Bp_E (spatial force on point Bp of frame B, expressed in a frame E). On return <code>this</code> is modified to F_Bq_E (spatial force on point Bq of frame B, expressed in frame E). </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_BpBq_E</td><td>Shift vector from point P of body B to point Q of B, expressed in frame E. The "from" point <code>Bp</code> must be the current application point of <code>this</code> spatial force, and E must be the same expressed-in frame as for this spatial force.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_BpBq_E from point Bp (fixed on frame B) to point Bq (fixed on frame B), expressed in frame E. p_BpBq_E must have the same expressed-in frame E as <code>this</code> spatial force. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A reference to <code>this</code> spatial force which is now <code>F_Bq_E</code>, that is, the force is now applied at point Q rather than P.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#aac6191ea5169aaac3b7097dbed1b88cb" title="Shift of a SpatialForce from one application point to another.">Shift()</a> to compute the shifted spatial force without modifying this original object. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">F_Bq_E</td><td>reference to <code>this</code> spatial force which has been modified to be the spatial force on point Bq of B, expressed in frame E. The components of F_Bq_E are calculated as: <pre>
+   τ_B  = τ_B -  p_BpBq x f_Bp    (the torque 𝛕 stored in `this` changes).
+ f_Bq_E = f_Bp_E              (the force 𝐟 stored in `this` is unchanged).
+</pre> Note: There are related functions that shift spatial momentum and spatial velocity (see <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832" title="Shifts a SpatialMomentum from an about-point P to an about-point Q.">SpatialMomentum::Shift()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>:<a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>Member function <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> to shift one spatial force without modifying <code>this</code> and static functions <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> to shift multiple spatial forces (with or without modifying the input parameter spatial_forces). </dd></dl>
 
 </div>
 </div>
-<a id="a870ac8e42f8816667f55e6200e319850"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a870ac8e42f8816667f55e6200e319850">&#9670;&nbsp;</a></span>ShiftInPlace() <span class="overload">[2/2]</span></h2>
+<a id="ac64d344ae595bff27f9e0afb858ec993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64d344ae595bff27f9e0afb858ec993">&#9670;&nbsp;</a></span>ShiftInPlace() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -656,13 +644,13 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
           <td class="memname">static void ShiftInPlace </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classdrake_1_1_eigen_ptr.html">EigenPtr</a>&lt; <a class="el" href="namespacedrake.html#a668e1152f8b876967b9093ae4d95298b">Matrix6X</a>&lt; T &gt;&gt;&#160;</td>
-          <td class="paramname"><em>F_Bp_E_all</em>, </td>
+          <td class="paramname"><em>spatial_forces</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>p_BpBq_E</em>&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -677,23 +665,21 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
 </table>
 </div><div class="memdoc">
 
-<p>Performs a rigid in-place shift of each column of 6 x n matrix <code>F_Bp_E_all</code> as if each column were a SpatialForce. </p>
-<p>The spatial forces are assumed to be applied at point P of a body B, and we shift them to point Q of that body by modifying the moment appropriately (translational forces are unchanged). Hence on output the matrix should be renamed F_Bq_E_all (conceptually). The first three elements of each column must store the torque (rotational) component while the last three elements store the force (translational) component. All quantities are expressed in the same common frame E.</p>
+<p>Shifts a matrix of spatial forces from one point fixed on frame B to another point fixed on frame B. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">F_Bp_E_all</td><td>A 6 x n matrix of spatial forces at point Bp on input, shifted to point Bq on output. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_BpBq_E</td><td>The vector from point Bp to point Bq.</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">spatial_forces</td><td>which is the 6 x n matrix F_Bp_E_all, where each of the n columns is a spatial force expressed in a frame E. On input, each spatial force is applied to a point Bp of frame B. On output, each spatial force has been shifted to a point Bq of frame B. In other words, on output, spatial_forces = F_Bq_E_all. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>which is the position vector p_BpBq_E from point Bp (fixed on frame B) to a point Bq (fixed on frame B), expressed in frame E. p_BpBq_E must have the same expressed-in frame E as in spatial_forces. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Columns are spatial forces with torque first, then force. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a2000b1386ff9eefcdf503ccb73fec59e" title="In-place shift of a SpatialForce from one application point to another.">ShiftInPlace(const Vector3&lt;T&gt;&amp;)</a> for details. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Static function <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> to shift multiple spatial forces without modifying the input parameter spatial_forces and member functions <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a8981af1db01730cff9d845e41b3bfc87" title="In-place shift of a SpatialForce from one point fixed on frame B to another fixed on frame B.">ShiftInPlace()</a> and <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a70018645246d1214c2f73c8d80b6e766" title="Shifts a SpatialForce from one point fixed on frame B to another point fixed on frame B.">Shift()</a> to shift one spatial force (with or without modifying <code>this</code>). </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a id="a45127a810cb019441dc10a43ef88f8a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45127a810cb019441dc10a43ef88f8a8">&#9670;&nbsp;</a></span>operator+()</h2>
+<a id="a9f9fa46955ef29c4610b335fafd4bec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9fa46955ef29c4610b335fafd4bec2">&#9670;&nbsp;</a></span>operator+()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -705,13 +691,13 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>F1_Sp_E</em>, </td>
+          <td class="paramname"><em>F1_E</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>F2_Sp_E</em>&#160;</td>
+          <td class="paramname"><em>F2_E</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -726,18 +712,20 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
 </table>
 </div><div class="memdoc">
 
-<p>Computes the resultant spatial force as the addition of two spatial forces <code>F1_Sp_E</code> and <code>F2_Sp_E</code> on a same system or body S, at the same point P and expressed in the same frame E. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">Fr_Sp_E</td><td>The resultant spatial force on system or body S from combining <code>F1_Sp_E</code> and <code>F2_Sp_E</code>, applied at the same point P and in the same expressed-in frame E as the operand spatial forces. </td></tr>
+<p>Adds two spatial forces by simply adding their 6 underlying elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">F1_E</td><td>spatial force expressed in the same frame E as F2_E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">F2_E</td><td>spatial force expressed in the same frame E as F1_E. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>The general utility of this <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a9f9fa46955ef29c4610b335fafd4bec2" title="Adds two spatial forces by simply adding their 6 underlying elements.">operator+()</a> function seems limited to situations when F1 and F2 are associated with different sets of forces, but are applied to the same frame B, with same application point Bp, and have the same expressed-in frame E. </dd></dl>
 
 </div>
 </div>
-<a id="a8d0528e3cf5b7dcd25aedffe760321a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d0528e3cf5b7dcd25aedffe760321a1">&#9670;&nbsp;</a></span>operator-()</h2>
+<a id="a926e7942ee6aa465359174e2f30a0cf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a926e7942ee6aa465359174e2f30a0cf5">&#9670;&nbsp;</a></span>operator-()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,13 +737,13 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; operator- </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>F1_Sp_E</em>, </td>
+          <td class="paramname"><em>F1_E</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html">SpatialForce</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>F2_Sp_E</em>&#160;</td>
+          <td class="paramname"><em>F2_E</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -770,8 +758,15 @@ F_Bq_E_all must be non-null and point to a 6 x n matrix (same size as the input 
 </table>
 </div><div class="memdoc">
 
-<p>Subtracts spatial force <code>F2_Sp_E</code> from <code>F1_Sp_E</code>. </p>
-<p>Both spatial forces act on the same system or body S, at point P and are expressed in the same frame E. </p>
+<p>Subtracts spatial forces by simply subtracting their 6 underlying elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">F1_E</td><td>spatial force expressed in the same frame E as F2_E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">F2_E</td><td>spatial force expressed in the same frame E as F1_E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The general utility of this <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html#a926e7942ee6aa465359174e2f30a0cf5" title="Subtracts spatial forces by simply subtracting their 6 underlying elements.">operator-()</a> function seems limited to situations when F1 and F2 are associated with different sets of forces, but are applied to the same frame B, with same application point Bp, and have the same expressed-in frame E. </dd></dl>
 
 </div>
 </div>

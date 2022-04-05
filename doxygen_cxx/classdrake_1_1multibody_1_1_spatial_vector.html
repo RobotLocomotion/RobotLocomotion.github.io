@@ -130,8 +130,8 @@ $(document).ready(function(){initNavTree('classdrake_1_1multibody_1_1_spatial_ve
 <div class="textblock"><h3>template&lt;template&lt; typename &gt; class SV, typename T&gt;<br />
 class drake::multibody::SpatialVector&lt; SV, T &gt;</h3>
 
-<p>This class is used to represent physical quantities that correspond to spatial vectors such as spatial velocities, spatial accelerations and spatial forces. </p>
-<p>Spatial vectors are 6-element quantities that are pairs of ordinary 3-vectors. Elements 0-2 are always the rotational component while elements 3-5 are always the translational component. For a more detailed introduction on spatial vectors please refer to section <a class="el" href="group__multibody__spatial__vectors.html">Spatial Vectors</a>.</p>
+<p>This class represents a <em>spatial vector</em> and has 6 elements, with a 3-element rotational vector on top of a 3-element translational vector. </p>
+<p>Important subclasses of SpatialVector include <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html" title="This class represents a spatial acceleration A and has 6 elements with an angular (rotational) accele...">SpatialAcceleration</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a>, and <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html" title="This class represents a spatial momentum L and has 6 elements with an angular (rotational) momentum 𝐡...">SpatialMomentum</a>. Each of the 3-element vectors is assumed to be expressed in the same <em>expressed-in</em> frame E. This class only stores 6 elements and does not store the underlying expressed-in frame E or other information. The user is responsible for explicitly tracking the underlying frames with <a class="el" href="group__multibody__quantities.html">monogram notation</a>. For example, Foo_E denotes an arbitrary spatial vector Foo expressed in a frame E. Details on spatial vectors and monogram notation are in sections <a class="el" href="group__multibody__spatial__vectors.html">Spatial Vectors</a> and <a class="el" href="group__multibody__quantities.html">monogram notation</a>.</p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">SV</td><td>The type of the more specialized spatial vector class. It must be a template on the scalar type T. </td></tr>
@@ -148,7 +148,7 @@ Public Types</h2></td></tr>
 <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a1e16824cb2e47cdb67d49d3d8fb18adc">kRotationSize</a> = 3, 
 <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7a132f1d424bdc477e9a068a3804743afc">kTranslationSize</a> = 3
  }</td></tr>
-<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sizes for spatial quantities and its components in three dimensions.  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br /></td></tr>
+<tr class="memdesc:adf764cbdea00d65edcd07bb9953ad2b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sizes for spatial quantities and its components in 3D (three dimensions).  <a href="classdrake_1_1multibody_1_1_spatial_vector.html#adf764cbdea00d65edcd07bb9953ad2b7">More...</a><br /></td></tr>
 <tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e320858f0854b7842fbd11edeeca62c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> = SV&lt; T &gt;</td></tr>
 <tr class="memdesc:a9e320858f0854b7842fbd11edeeca62c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The more specialized spatial vector class templated on the scalar type T.  <a href="#a9e320858f0854b7842fbd11edeeca62c">More...</a><br /></td></tr>
@@ -163,20 +163,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7ef3ca98bf83a4e8ee30147de1ce201d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#a7ef3ca98bf83a4e8ee30147de1ce201d">More...</a><br /></td></tr>
 <tr class="separator:a7ef3ca98bf83a4e8ee30147de1ce201d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadedf5dde48c214001423e185449e233"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#aadedf5dde48c214001423e185449e233">SpatialVector</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;w, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&gt; &amp;v)</td></tr>
-<tr class="memdesc:aadedf5dde48c214001423e185449e233"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> constructor from an rotational component <code>w</code> and a linear component <code>v</code>.  <a href="#aadedf5dde48c214001423e185449e233">More...</a><br /></td></tr>
+<tr class="memdesc:aadedf5dde48c214001423e185449e233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial vector from a rotational component w and a translational component v.  <a href="#aadedf5dde48c214001423e185449e233">More...</a><br /></td></tr>
 <tr class="separator:aadedf5dde48c214001423e185449e233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa831e731779635166d20d016b8ba686b"><td class="memTemplParams" colspan="2">template&lt;typename OtherDerived &gt; </td></tr>
 <tr class="memitem:aa831e731779635166d20d016b8ba686b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#aa831e731779635166d20d016b8ba686b">SpatialVector</a> (const Eigen::MatrixBase&lt; OtherDerived &gt; &amp;V)</td></tr>
-<tr class="memdesc:aa831e731779635166d20d016b8ba686b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> constructor from an Eigen expression that represents a six-dimensional vector.  <a href="#aa831e731779635166d20d016b8ba686b">More...</a><br /></td></tr>
+<tr class="memdesc:aa831e731779635166d20d016b8ba686b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a spatial vector V from an Eigen expression that represents a 6-element vector (3-element rotational vector on top of a 3-element translational vector).  <a href="#aa831e731779635166d20d016b8ba686b">More...</a><br /></td></tr>
 <tr class="separator:aa831e731779635166d20d016b8ba686b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classint.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#af9593d4a5ff4274efaf429cb4f9e57cc">size</a> () const</td></tr>
-<tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total size of the concatenation of the angular and linear components.  <a href="#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
+<tr class="memdesc:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">For 3D (three-dimensional) analysis, the total size of the concatenated rotational vector (3 elements) and translational vector (3 elements) is six (6), which is known at compile time.  <a href="#af9593d4a5ff4274efaf429cb4f9e57cc">More...</a><br /></td></tr>
 <tr class="separator:af9593d4a5ff4274efaf429cb4f9e57cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cb40ed6a35143cdd6f683075a1dac18"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a0cb40ed6a35143cdd6f683075a1dac18">operator[]</a> (<a class="el" href="classint.html">int</a> i) const</td></tr>
-<tr class="memdesc:a0cb40ed6a35143cdd6f683075a1dac18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the i-th component of this spatial vector.  <a href="#a0cb40ed6a35143cdd6f683075a1dac18">More...</a><br /></td></tr>
+<tr class="memdesc:a0cb40ed6a35143cdd6f683075a1dac18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the i-th element of this spatial vector.  <a href="#a0cb40ed6a35143cdd6f683075a1dac18">More...</a><br /></td></tr>
 <tr class="separator:a0cb40ed6a35143cdd6f683075a1dac18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0534e977fc9fee424b3ef94f27a9ed61"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a0534e977fc9fee424b3ef94f27a9ed61">operator[]</a> (<a class="el" href="classint.html">int</a> i)</td></tr>
-<tr class="memdesc:a0534e977fc9fee424b3ef94f27a9ed61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable access to the i-th component of this spatial vector.  <a href="#a0534e977fc9fee424b3ef94f27a9ed61">More...</a><br /></td></tr>
+<tr class="memdesc:a0534e977fc9fee424b3ef94f27a9ed61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutable access to the i-th element of this spatial vector.  <a href="#a0534e977fc9fee424b3ef94f27a9ed61">More...</a><br /></td></tr>
 <tr class="separator:a0534e977fc9fee424b3ef94f27a9ed61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8d09ceb2acbdee33c80ac3a32751c43"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#ab8d09ceb2acbdee33c80ac3a32751c43">rotational</a> () const</td></tr>
 <tr class="memdesc:ab8d09ceb2acbdee33c80ac3a32751c43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Const access to the rotational component of this spatial vector.  <a href="#ab8d09ceb2acbdee33c80ac3a32751c43">More...</a><br /></td></tr>
@@ -203,16 +203,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1e1aab695295b4f88e6f0bfd5271357c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares the rotational and translational parts of <code>this</code> and <code>other</code> to check if they are the same to within specified absolute differences.  <a href="#a1e1aab695295b4f88e6f0bfd5271357c">More...</a><br /></td></tr>
 <tr class="separator:a1e1aab695295b4f88e6f0bfd5271357c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adecee900de2aa10bca5a4e9e36121b25"><td class="memItemLeft" align="right" valign="top">decltype(T()&lt; T())&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#adecee900de2aa10bca5a4e9e36121b25">IsApprox</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;other, double tolerance=std::numeric_limits&lt; double &gt;::epsilon()) const</td></tr>
-<tr class="memdesc:adecee900de2aa10bca5a4e9e36121b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares <code>this</code> spatial vector to the provided spatial vector <code>other</code> within a specified tolerance.  <a href="#adecee900de2aa10bca5a4e9e36121b25">More...</a><br /></td></tr>
+<tr class="memdesc:adecee900de2aa10bca5a4e9e36121b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines whether all six corresponding elements of two spatial vectors are equal to each other to within a specified tolerance epsilon.  <a href="#adecee900de2aa10bca5a4e9e36121b25">More...</a><br /></td></tr>
 <tr class="separator:adecee900de2aa10bca5a4e9e36121b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b2415a4b0787515507518d9c0dd4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a09b2415a4b0787515507518d9c0dd4e5">SetNaN</a> ()</td></tr>
-<tr class="memdesc:a09b2415a4b0787515507518d9c0dd4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all entries in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> to NaN.  <a href="#a09b2415a4b0787515507518d9c0dd4e5">More...</a><br /></td></tr>
+<tr class="memdesc:a09b2415a4b0787515507518d9c0dd4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all the elements in <code>this</code> SpatialVector to NaN.  <a href="#a09b2415a4b0787515507518d9c0dd4e5">More...</a><br /></td></tr>
 <tr class="separator:a09b2415a4b0787515507518d9c0dd4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d910cbcc53e1f9e2c4bcf24f0f61fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#aa4d910cbcc53e1f9e2c4bcf24f0f61fc">SetZero</a> ()</td></tr>
-<tr class="memdesc:aa4d910cbcc53e1f9e2c4bcf24f0f61fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both rotational and translational components of <code>this</code> SpatialVector to zero.  <a href="#aa4d910cbcc53e1f9e2c4bcf24f0f61fc">More...</a><br /></td></tr>
+<tr class="memdesc:aa4d910cbcc53e1f9e2c4bcf24f0f61fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets both the rotational and translational components of <code>this</code> SpatialVector to zero.  <a href="#aa4d910cbcc53e1f9e2c4bcf24f0f61fc">More...</a><br /></td></tr>
 <tr class="separator:aa4d910cbcc53e1f9e2c4bcf24f0f61fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab09bd8d0cfc7e7ae4853c5f57973254a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d">CoeffsEigenType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#ab09bd8d0cfc7e7ae4853c5f57973254a">get_coeffs</a> ()</td></tr>
-<tr class="memdesc:ab09bd8d0cfc7e7ae4853c5f57973254a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a reference to the underlying storage.  <a href="#ab09bd8d0cfc7e7ae4853c5f57973254a">More...</a><br /></td></tr>
+<tr class="memdesc:ab09bd8d0cfc7e7ae4853c5f57973254a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a mutable reference to the underlying storage.  <a href="#ab09bd8d0cfc7e7ae4853c5f57973254a">More...</a><br /></td></tr>
 <tr class="separator:ab09bd8d0cfc7e7ae4853c5f57973254a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a929ee35f2e827f504f3557b18b3c40c8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5783654d7b96144dd0f50344fbfc909d">CoeffsEigenType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a929ee35f2e827f504f3557b18b3c40c8">get_coeffs</a> () const</td></tr>
 <tr class="memdesc:a929ee35f2e827f504f3557b18b3c40c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant reference to the underlying storage.  <a href="#a929ee35f2e827f504f3557b18b3c40c8">More...</a><br /></td></tr>
@@ -242,19 +242,19 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a73f248b5cef3cf345c59fe794472fc4c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a73f248b5cef3cf345c59fe794472fc4c">Zero</a> ()</td></tr>
-<tr class="memdesc:a73f248b5cef3cf345c59fe794472fc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create a <em>zero</em> SpatialVector, i.e.  <a href="#a73f248b5cef3cf345c59fe794472fc4c">More...</a><br /></td></tr>
+<tr class="memdesc:a73f248b5cef3cf345c59fe794472fc4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose rotational and translational components are both zero.  <a href="#a73f248b5cef3cf345c59fe794472fc4c">More...</a><br /></td></tr>
 <tr class="separator:a73f248b5cef3cf345c59fe794472fc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ab13f5ae55803f77298c3bb1ca0cc6f36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#ab13f5ae55803f77298c3bb1ca0cc6f36">operator+</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V1, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V2)</td></tr>
-<tr class="memdesc:ab13f5ae55803f77298c3bb1ca0cc6f36"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Addition operator.  <a href="#ab13f5ae55803f77298c3bb1ca0cc6f36">More...</a><br /></td></tr>
-<tr class="separator:ab13f5ae55803f77298c3bb1ca0cc6f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9b6d1e0263d3452d1c21934c89e4a5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#af9b6d1e0263d3452d1c21934c89e4a5b">operator+</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V1_E, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V2_E)</td></tr>
+<tr class="memdesc:af9b6d1e0263d3452d1c21934c89e4a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds two spatial vectors by simply adding their 6 underlying elements.  <a href="#af9b6d1e0263d3452d1c21934c89e4a5b">More...</a><br /></td></tr>
+<tr class="separator:af9b6d1e0263d3452d1c21934c89e4a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49cceba168b76c123d5da2eca8b2fdd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a49cceba168b76c123d5da2eca8b2fdd1">operator-</a> (const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V1, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V2)</td></tr>
-<tr class="memdesc:a49cceba168b76c123d5da2eca8b2fdd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) Subtraction operator.  <a href="#a49cceba168b76c123d5da2eca8b2fdd1">More...</a><br /></td></tr>
+<tr class="memdesc:a49cceba168b76c123d5da2eca8b2fdd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtracts two spatial vectors by simply subtracting their 6 underlying elements.  <a href="#a49cceba168b76c123d5da2eca8b2fdd1">More...</a><br /></td></tr>
 <tr class="separator:a49cceba168b76c123d5da2eca8b2fdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfcc7772c9a75439b094cd2477f45e2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#abfcc7772c9a75439b094cd2477f45e2f">operator *</a> (const <a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt; &amp;R_FE, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;V_E)</td></tr>
-<tr class="memdesc:abfcc7772c9a75439b094cd2477f45e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This operation re-expresses the spatial vector <code>V_E</code> originally expressed in frame E, into <code>V_F</code>, the same spatial vector expresed in another frame F.  <a href="#abfcc7772c9a75439b094cd2477f45e2f">More...</a><br /></td></tr>
+<tr class="memdesc:abfcc7772c9a75439b094cd2477f45e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expresses a spatial vector in another frame.  <a href="#abfcc7772c9a75439b094cd2477f45e2f">More...</a><br /></td></tr>
 <tr class="separator:abfcc7772c9a75439b094cd2477f45e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="related"></a>
@@ -269,7 +269,7 @@ Related Functions</h2></td></tr>
 <tr class="separator:a737b765a7a5d6b950a2c70193c0af642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename &gt; class SpatialQuantity, typename T &gt; </td></tr>
 <tr class="memitem:a5348c349330782440dbdd2e600cd31c0"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a5348c349330782440dbdd2e600cd31c0">operator&lt;&lt;</a> (std::ostream &amp;o, const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html">SpatialVector</a>&lt; <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a>, T &gt; &amp;V)</td></tr>
-<tr class="memdesc:a5348c349330782440dbdd2e600cd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> objects into a <code>std::ostream</code>.  <a href="#a5348c349330782440dbdd2e600cd31c0">More...</a><br /></td></tr>
+<tr class="memdesc:a5348c349330782440dbdd2e600cd31c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <code>std::ostream</code>.  <a href="#a5348c349330782440dbdd2e600cd31c0">More...</a><br /></td></tr>
 <tr class="separator:a5348c349330782440dbdd2e600cd31c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
@@ -318,7 +318,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sizes for spatial quantities and its components in three dimensions. </p>
+<p>Sizes for spatial quantities and its components in 3D (three dimensions). </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a38ca6e91f04c4a5339893a4461e2985a"></a>kSpatialVectorSize&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a1e16824cb2e47cdb67d49d3d8fb18adc"></a>kRotationSize&#160;</td><td class="fielddoc"></td></tr>
@@ -396,7 +396,7 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Default constructor. </p>
-<p>In Release builds the elements of the newly constructed spatial vector are left uninitialized resulting in a zero cost operation. However in Debug builds those entries are set to NaN so that operations using this uninitialized spatial vector fail fast, allowing fast bug detection. </p>
+<p>In Release builds, all 6 elements of a newly constructed spatial vector are uninitialized (for speed). In Debug builds, the 6 elements are set to NaN so that invalid operations on an uninitialized spatial vector fail fast (fast bug detection). </p>
 
 </div>
 </div>
@@ -426,7 +426,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> constructor from an rotational component <code>w</code> and a linear component <code>v</code>. </p>
+<p>Constructs a spatial vector from a rotational component w and a translational component v. </p>
 
 </div>
 </div>
@@ -454,8 +454,8 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> constructor from an Eigen expression that represents a six-dimensional vector. </p>
-<p>This constructor will assert the size of V is six (6) at compile-time for fixed sized Eigen expressions and at run-time for dynamic sized Eigen expressions. </p>
+<p>Constructs a spatial vector V from an Eigen expression that represents a 6-element vector (3-element rotational vector on top of a 3-element translational vector). </p>
+<p>This constructor asserts the size of V is six (6) either at compile-time for fixed sized Eigen expressions or at run-time for dynamic sized Eigen expressions. </p>
 
 </div>
 </div>
@@ -495,7 +495,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns a reference to the underlying storage. </p>
+<p>Returns a mutable reference to the underlying storage. </p>
 
 </div>
 </div>
@@ -535,7 +535,13 @@ Related Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the maximum absolute values of the differences in the rotational and translational components of <code>this</code> and <code>other</code> (i.e., the infinity norms of the difference in rotational and translational components). </p>
-<p>These quantities are returned in a tuple, in the order below. </p><table class="markdownTable">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>spatial vector to subtract from <code>this</code> spatial vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The following quantities in a tuple, in the order below. <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">std::tuple  </th><th class="markdownTableHeadNone">Description   </th></tr>
 <tr class="markdownTableRowOdd">
@@ -543,6 +549,7 @@ Related Functions</h2></td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">v_max_difference  </td><td class="markdownTableBodyNone">Maximum absolute difference in translation components   </td></tr>
 </table>
+</dd></dl>
 
 </div>
 </div>
@@ -572,8 +579,15 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Compares <code>this</code> spatial vector to the provided spatial vector <code>other</code> within a specified tolerance. </p>
-<p>Mathematically, if <code>this</code> is the spatial vector U and <code>other</code> is the spatial vector V, then this method returns <code>true</code> if <code>‖U-V‖∞ &lt; ε</code> and <code>false</code> otherwise. </p>
+<p>Determines whether all six corresponding elements of two spatial vectors are equal to each other to within a specified tolerance epsilon. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>spatial vector to compare to <code>this</code> spatial vector. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">epsilon</td><td>specified tolerance for this test. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if ‖this - other‖∞ &lt; epsilon, otherwise returns false. Note: the infinity norm ‖this - other‖∞ is simply the maximum of the six absolute values in (this - other). </dd></dl>
 
 </div>
 </div>
@@ -612,12 +626,13 @@ Related Functions</h2></td></tr>
 <p>Compares the rotational and translational parts of <code>this</code> and <code>other</code> to check if they are the same to within specified absolute differences. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">other</td><td>spatial vector to compare to <code>this</code> spatial vector. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">rotational_tolerance</td><td>maximum allowable absolute difference between the rotational parts of <code>this</code> and <code>other</code>. The units depend on the underlying class. For example, spatial velocity, acceleration, and force have units of rad/sec, rad/sec^2, and N*m, respectively. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">translational_tolerance</td><td>maximum allowable absolute difference between the translational parts of <code>this</code> and <code>other</code>. The units depend on the underlying class. For example, spatial velocity, acceleration, and force have units of meter/sec, meter/sec^2, and Newton, respectively. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the rotational part of <code>this</code> and <code>other</code> are equal within <code>rotational_tolerance</code> and the translational part of <code>this</code> and <code>other</code> are equal within <code>translational_tolerance</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if all three rotational elements of <code>this</code> and <code>other</code> are equal within rotational_tolerance and all three translational elements of <code>this</code> and <code>other</code> are equal within translational_tolerance. </dd></dl>
 
 </div>
 </div>
@@ -788,8 +803,8 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Const access to the i-th component of this spatial vector. </p>
-<p>Bounds are only checked in Debug builds for a zero overhead implementation in Release builds. </p>
+<p>Const access to the i-th element of this spatial vector. </p>
+<p>In Debug builds, this function asserts that i is in bounds whereas for release builds, no bounds-check on i is performed (for speed). </p>
 
 </div>
 </div>
@@ -809,8 +824,8 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mutable access to the i-th component of this spatial vector. </p>
-<p>Bounds are only checked in Debug builds for a zero overhead implementation in Release builds. </p>
+<p>Mutable access to the i-th element of this spatial vector. </p>
+<p>In Debug builds, this function asserts that i is in bounds whereas for release builds, no bounds-check on i is performed (for speed). </p>
 
 </div>
 </div>
@@ -867,8 +882,8 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets all entries in <code>this</code> <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> to NaN. </p>
-<p>Typically used to quickly detect uninitialized values since NaN will trigger a chain of invalid computations that can then be tracked back to the source. </p>
+<p>Sets all the elements in <code>this</code> SpatialVector to NaN. </p>
+<p>This is typically used to quickly detect uninitialized values since NaN will trigger a chain of invalid computations that can be tracked back to their source. </p>
 
 </div>
 </div>
@@ -887,7 +902,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets both rotational and translational components of <code>this</code> SpatialVector to zero. </p>
+<p>Sets both the rotational and translational components of <code>this</code> SpatialVector to zero. </p>
 
 </div>
 </div>
@@ -906,8 +921,7 @@ Related Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The total size of the concatenation of the angular and linear components. </p>
-<p>In three dimensions this is six (6) and it is known at compile time. </p>
+<p>For 3D (three-dimensional) analysis, the total size of the concatenated rotational vector (3 elements) and translational vector (3 elements) is six (6), which is known at compile time. </p>
 
 </div>
 </div>
@@ -972,8 +986,7 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Factory to create a <em>zero</em> SpatialVector, i.e. </p>
-<p>rotational and translational components are both zero. </p>
+<p>Factory to create a <em>zero</em> spatial vector, i.e., a SpatialVector whose rotational and translational components are both zero. </p>
 
 </div>
 </div>
@@ -1088,16 +1101,23 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This operation re-expresses the spatial vector <code>V_E</code> originally expressed in frame E, into <code>V_F</code>, the same spatial vector expresed in another frame F. </p>
-<p>The transformation requires the rotation matrix <code>R_FE</code> representing the orientation of the original frame E with respect to frame F. The operation performed is: </p><pre>
+<p>Expresses a spatial vector in another frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">R_FE</td><td>RotationMatrix relating a frame F to a frame E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">V_E</td><td>spatial vector expressed in frame E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>V_F spatial vector expressed in frame F, calculated from: <pre>
   V_F.rotational()    = R_FE * V_E.rotational(),
   V_F.translational() = R_FE * V_E.translational()
-</pre> <dl class="section return"><dt>Returns</dt><dd>V_F The same spatial vector re-expressed in frame F. </dd></dl>
+</pre> </dd></dl>
 
 </div>
 </div>
-<a id="ab13f5ae55803f77298c3bb1ca0cc6f36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab13f5ae55803f77298c3bb1ca0cc6f36">&#9670;&nbsp;</a></span>operator+</h2>
+<a id="af9b6d1e0263d3452d1c21934c89e4a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9b6d1e0263d3452d1c21934c89e4a5b">&#9670;&nbsp;</a></span>operator+</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1109,13 +1129,13 @@ Related Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> operator+ </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;&#160;</td>
-          <td class="paramname"><em>V1</em>, </td>
+          <td class="paramname"><em>V1_E</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#a9e320858f0854b7842fbd11edeeca62c">SpatialQuantity</a> &amp;&#160;</td>
-          <td class="paramname"><em>V2</em>&#160;</td>
+          <td class="paramname"><em>V2_E</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1130,8 +1150,15 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Addition operator. </p>
-<p>Implements the addition of V1 and V2 as elements in ℝ⁶. </p><dl class="section warning"><dt>Warning</dt><dd>This operation might not be physical for certain spatial quantities. For instance, combining the spatial accelerations of two frames does not correspond to this operation. </dd></dl>
+<p>Adds two spatial vectors by simply adding their 6 underlying elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">V1_E</td><td>spatial vector expressed in the same frame E as V2_E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">V2_E</td><td>spatial vector expressed in the same frame E as V1_E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The general utility of this <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#af9b6d1e0263d3452d1c21934c89e4a5b" title="Adds two spatial vectors by simply adding their 6 underlying elements.">operator+()</a> function is questionable and it should only be used if you are sure it makes sense. Please refer to documentation for the appropriate spatial quantity subclass (e.g., <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html" title="This class represents a spatial acceleration A and has 6 elements with an angular (rotational) accele...">SpatialAcceleration</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a>, or <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html" title="This class represents a spatial momentum L and has 6 elements with an angular (rotational) momentum 𝐡...">SpatialMomentum</a>). </dd></dl>
 
 </div>
 </div>
@@ -1169,8 +1196,15 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>(Advanced) Subtraction operator. </p>
-<p>Implements the subtraction of V1 and V2 as elements in ℝ⁶. </p><dl class="section warning"><dt>Warning</dt><dd>This operation might not be physical for certain spatial quantities. </dd></dl>
+<p>Subtracts two spatial vectors by simply subtracting their 6 underlying elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">V1_E</td><td>spatial vector expressed in the same frame E as V2_E. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">V2_E</td><td>spatial vector expressed in the same frame E as V1_E. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The general utility of this <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html#afb0c32d939e868db06857e7c940083bb" title="Unary minus operator.">operator-()</a> function is questionable and it should only be used if you are sure it makes sense. Please refer to documentation for the appropriate spatial quantity subclass (e.g., <a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html" title="This class represents a spatial velocity V (also called a twist) and has 6 elements with an angular (...">SpatialVelocity</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html" title="This class represents a spatial acceleration A and has 6 elements with an angular (rotational) accele...">SpatialAcceleration</a>, <a class="el" href="classdrake_1_1multibody_1_1_spatial_force.html" title="This class represents a spatial force F (also called a wrench) and has 6 elements with a torque 𝛕 (3-...">SpatialForce</a>, or <a class="el" href="classdrake_1_1multibody_1_1_spatial_momentum.html" title="This class represents a spatial momentum L and has 6 elements with an angular (rotational) momentum 𝐡...">SpatialMomentum</a>). </dd></dl>
 
 </div>
 </div>
@@ -1208,7 +1242,7 @@ Related Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class is used to represent physical quantities that correspond to spatial vectors such as spatia...">SpatialVector</a> objects into a <code>std::ostream</code>. </p>
+<p>Stream insertion operator to write <a class="el" href="classdrake_1_1multibody_1_1_spatial_vector.html" title="This class represents a spatial vector and has 6 elements, with a 3-element rotational vector on top ...">SpatialVector</a> objects into a <code>std::ostream</code>. </p>
 <p>Especially useful for debugging.</p>
 
 </div>

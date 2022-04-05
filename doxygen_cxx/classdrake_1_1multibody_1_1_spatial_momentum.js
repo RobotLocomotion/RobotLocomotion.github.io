@@ -8,8 +8,8 @@ var classdrake_1_1multibody_1_1_spatial_momentum =
     [ "dot", "classdrake_1_1multibody_1_1_spatial_momentum.html#a953c5a97a970a6e96fa6f609e147dcda", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_spatial_momentum.html#a795da21c81556a246f849e181ec6a622", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_spatial_momentum.html#a9e31b095e0f5acd3faeaa62381b03d83", null ],
-    [ "Shift", "classdrake_1_1multibody_1_1_spatial_momentum.html#a44c99dee3119fc8e7afc1f92231e641d", null ],
-    [ "ShiftInPlace", "classdrake_1_1multibody_1_1_spatial_momentum.html#a0ec5bf8e478ee9107bc9c58275e4d162", null ],
-    [ "operator+", "classdrake_1_1multibody_1_1_spatial_momentum.html#ad0184c49c41091b6710af662cd14078f", null ],
-    [ "operator-", "classdrake_1_1multibody_1_1_spatial_momentum.html#a9ac5bf06e16f053925943d0cac224968", null ]
+    [ "Shift", "classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832", null ],
+    [ "ShiftInPlace", "classdrake_1_1multibody_1_1_spatial_momentum.html#aa91737d065e467e0606561e201cc9394", null ],
+    [ "operator+", "classdrake_1_1multibody_1_1_spatial_momentum.html#ad3ff325ca21d5d06e048aa09efac5ad6", null ],
+    [ "operator-", "classdrake_1_1multibody_1_1_spatial_momentum.html#aa2c0781d3d6e650d99072938e2469c99", null ]
 ];
