@@ -142,7 +142,7 @@ Figure 3: Stribeck function for stiction</div></div>
 <li><code>s ∈ [3, ∞)</code>: Coefficient of friction is held constant at μd.</li>
 </ul>
 <p>Other than the residual "creep" velocity limited by <code>vₛ</code>, which can be arbitrarily small (in theory; see <a class="el" href="classdrake_1_1multibody_1_1_multibody_plant.html#afa94cf2eeba3e27ad35132211ae6d074">set_stiction_tolerance()</a> for practical considerations), this model produces a reasonably good approximation of Coulomb friction. Its primary drawback is that the model is numerically very stiff in the stiction region, which requires either small step sizes with an explicit integrator, or use of a more-stable implicit integrator.</p>
-<dl class="section note"><dt>Note</dt><dd>When modeling the multibody system as discrete (refer to the <a class="el" href="group__contact__engineering.html#time_advancement_strategy">Choice of Time Advancement Strategy</a> section), we regularize Coulomb friction and only use the static coefficient of friction μₛ for better numerical stability. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When modeling the multibody system as discrete (refer to the <a class="el" href="group__contact__engineering.html#time_advancement_strategy">Choice of Time Advancement Strategy</a> section), the model assumes both static and kinetic coefficients of friction to be equal and the static coefficient of friction is ignored. </dd></dl>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- footer -->
