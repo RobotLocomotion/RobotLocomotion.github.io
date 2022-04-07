@@ -1,5 +1,12 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,14,8,2,6],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html":[3,0,0,14,8,4],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a08b99a946df9e7c6adf92fb670168f99":[3,0,0,14,8,4,4],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a1737d43eea136c062b45f5011cbaf4e3":[3,0,0,14,8,4,1],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a30b949f7ebb9c29f2c4aa6bfed03111a":[3,0,0,14,8,4,5],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a34e05e16a9d48f75b5ec30d10befd800":[3,0,0,14,8,4,3],
+"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a410f02cf1142eae8eb8101aa24389b35":[3,0,0,14,8,4,2],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a4eaba3244f893af6b6cf6863832a9041":[3,0,0,14,8,4,0],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a53509ac0b40f94e8384c1de22d2c949b":[3,0,0,14,8,4,7],
 "classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a7f7f1b899a73a10ee66389c12ea84f3e":[3,0,0,14,8,4,6],
@@ -242,12 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a34cedb829a75120bfb60c98f376c4c19":[3,0,0,16,0,10],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a3d0f848e23c2d6e2ff99c8838ad439f8":[3,0,0,16,0,4],
 "classdrake_1_1trajectories_1_1_bspline_trajectory.html#a576612a037dee8597b5975d3525b3a48":[3,0,0,16,0,6],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,16,0,13],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a76b00967f0f33d809b58469e8301e4cb":[3,0,0,16,0,15],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7bf41e0881035d3f5e879b99ff8fc4c5":[3,0,0,16,0,17],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a7f8590290a608aae75e64e1037063a1e":[3,0,0,16,0,2],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8ba65f057b09f645ebefbccd5b490fcc":[3,0,0,16,0,20],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,16,0,22],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9066afc9f6c06932c20b1f9688523603":[3,0,0,16,0,5],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a9aa1f1cfff6dcb352d5fbb15a80ee1a9":[3,0,0,16,0,21]
+"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a641bfb18296d6976a000cf31c213dfdf":[3,0,0,16,0,13]
 };

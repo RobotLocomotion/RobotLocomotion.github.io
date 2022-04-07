@@ -600,6 +600,18 @@ modifications to its bounds (i.e. requiring phi == 0.5).</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetConstraints">
+<code class="descname">GetConstraints</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::Constraint&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetConstraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all constraints on this edge.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts">
+<code class="descname">GetCosts</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em><span class="sig-paren">)</span> &#x2192; List[drake::solvers::Binding&lt;drake::solvers::Cost&gt;]<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetCosts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all costs on this edge.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost">
 <code class="descname">GetSolutionCost</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.GraphOfConvexSets.Edge</em>, <em>result: drake::solvers::MathematicalProgramResult</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.geometry.optimization.GraphOfConvexSets.Edge.GetSolutionCost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the sum of the costs associated with this edge in a

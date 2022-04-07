@@ -1,5 +1,12 @@
 var NAVTREEINDEX23 =
 {
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#aabab6367e152ffc5861cc5f9cc011e68":[3,0,0,12,0,11,17],
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#aacfcc6c727169aa82516a6d7aec7253e":[3,0,0,12,0,11,8],
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#aaf08d12bea4c15c7183c363bc9ecba80":[3,0,0,12,0,11,4],
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#ab1914adce82be6e6f074f0bfdaf63563":[3,0,0,12,0,11,25],
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#ad05c64d768af4a6cb95cef2c224fb694":[3,0,0,12,0,11,16],
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#ad0f07540f4ef9b28e955b5e197145a70":[3,0,0,12,0,11,3],
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#ad4b3490063b9e511b24da5dd1d8ae34d":[3,0,0,12,0,11,20],
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#add52a2fc9edbb6864aad068e0cd7bd98":[3,0,0,12,0,11,7],
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#ae57bdb491b71c7908b6678f42099daad":[3,0,0,12,0,11,19],
 "classdrake_1_1solvers_1_1fbstab_1_1_riccati_linear_solver.html":[3,0,0,12,0,12],
@@ -242,12 +249,5 @@ var NAVTREEINDEX23 =
 "classdrake_1_1symbolic_1_1_expression.html#aed34f1f4b3b0d95aff592cc364b847a6":[3,0,0,13,6,5],
 "classdrake_1_1symbolic_1_1_expression.html#af208e5f109a14eae18e12eb779e11c28":[3,0,0,13,6,52],
 "classdrake_1_1symbolic_1_1_expression.html#af3cd13d5472028f31c2e70f1b0e08b5d":[3,0,0,13,6,87],
-"classdrake_1_1symbolic_1_1_expression.html#af797bf3c9e94932b58d5dc4034cb08c3":[3,0,0,13,6,98],
-"classdrake_1_1symbolic_1_1_expression.html#afc96983527a63546031099e00ae381a7":[3,0,0,13,6,97],
-"classdrake_1_1symbolic_1_1_expression.html#afdc240e7723370da93ddc746e7d0d3f3":[3,0,0,13,6,123],
-"classdrake_1_1symbolic_1_1_expression.html#afe17aaabeed7dd1379cbfae4515c2c38":[3,0,0,13,6,139],
-"classdrake_1_1symbolic_1_1_expression.html#afe53025cf028e115e987c3c955f3bc36":[3,0,0,13,6,128],
-"classdrake_1_1symbolic_1_1_expression_abs.html":[3,0,0,13,7],
-"classdrake_1_1symbolic_1_1_expression_abs.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,7,4],
-"classdrake_1_1symbolic_1_1_expression_abs.html#a44e11b5fa4c16951b30b26e43a316569":[3,0,0,13,7,5]
+"classdrake_1_1symbolic_1_1_expression.html#af797bf3c9e94932b58d5dc4034cb08c3":[3,0,0,13,6,98]
 };

@@ -1,5 +1,12 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3ed94567c4365ecb7253a9f4b0df5cc6":[1,2,2,2,3],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a575cafd239d48f8fe814d550d368b1bf":[1,2,2,2,4],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82":[1,2,2,2,1],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#acdebbe41c8d9735aeee1920ac69b07e1":[1,2,2,2,6],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#ae549539f28012cd0081d886d117aed5a":[1,2,2,2,0],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#aefeee400d114825d8db97204a6999101":[1,2,2,2,2],
+"classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html":[1,2,2,3],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a146f7ab66f76d0b5ca62e305cc070436":[1,2,2,3,17],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a2684fb1c9068b9503a1cfd12f7b09256":[1,2,2,3,4],
 "classdrake_1_1systems_1_1controllers_1_1_pid_controlled_system.html#a31d6809bd4837dbc26ad2ff734737a21":[1,2,2,3,5],
@@ -242,12 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321":[3,0,0,14,8,2,9],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aca5377a1606d0d69d2a9365fafd51476":[3,0,0,14,8,2,12],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f":[3,0,0,14,8,2,11],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf":[3,0,0,14,8,2,15],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c":[3,0,0,14,8,2,6],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html":[3,0,0,14,8,4],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a08b99a946df9e7c6adf92fb670168f99":[3,0,0,14,8,4,4],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a1737d43eea136c062b45f5011cbaf4e3":[3,0,0,14,8,4,1],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a30b949f7ebb9c29f2c4aa6bfed03111a":[3,0,0,14,8,4,5],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a34e05e16a9d48f75b5ec30d10befd800":[3,0,0,14,8,4,3],
-"classdrake_1_1systems_1_1sensors_1_1_color_palette.html#a410f02cf1142eae8eb8101aa24389b35":[3,0,0,14,8,4,2]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf":[3,0,0,14,8,2,15]
 };

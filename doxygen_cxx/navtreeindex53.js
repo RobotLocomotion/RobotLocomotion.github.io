@@ -1,5 +1,12 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__polynomial_8h.html#a0e4fa4bbef7ce58efc247dd1717a2ded":[4,0,0,1,68,29],
+"symbolic__polynomial_8h.html#a1a0eab276a88883d8e2607630cb93bc5":[4,0,0,1,68,11],
+"symbolic__polynomial_8h.html#a1aa3f21ab39b7fb01be90ed9255df5f9":[4,0,0,1,68,25],
+"symbolic__polynomial_8h.html#a289b47480364e01b67e3c86aa33a0fe4":[4,0,0,1,68,20],
+"symbolic__polynomial_8h.html#a30f8eee8c5c646b5f3fc43baf3ce5854":[4,0,0,1,68,34],
+"symbolic__polynomial_8h.html#a369ea32ea396cc86951892020d5c4a4b":[4,0,0,1,68,30],
+"symbolic__polynomial_8h.html#a42522d07a4a9c32a89e8b4eea9a00a60":[4,0,0,1,68,22],
 "symbolic__polynomial_8h.html#a448e985024e32143f3ca12d8596211d4":[4,0,0,1,68,32],
 "symbolic__polynomial_8h.html#a46fe276a728b54ce277fcc972fd28d78":[4,0,0,1,68,9],
 "symbolic__polynomial_8h.html#a48f8b6bfe08648f4a0dac518e1abb0bd":[4,0,0,1,68,27],
@@ -242,12 +249,5 @@ var NAVTREEINDEX53 =
 "volume__mesh__field_8h.html#a6f0a99208aa3dea5d4a3094f4fdf9274":[4,0,0,4,2,50,0],
 "volume__to__surface__mesh_8h.html":[4,0,0,4,2,51],
 "volume__to__surface__mesh_8h.html#a5245b5a993317d0c83f529c74f0838e8":[4,0,0,4,2,51,0],
-"volumetric__element_8h.html":[4,0,0,8,3,26],
-"volumetric__model_8h.html":[4,0,0,8,3,27],
-"vpolytope_8h.html":[4,0,0,4,1,10],
-"vtk__util_8h.html":[4,0,0,4,4,9],
-"vtk__util_8h.html#a511bb7c86c3d48ddec05b470ba3adb2c":[4,0,0,4,4,9,0],
-"vtk__util_8h.html#a69d2c70a67e99a23688272654071e2b6":[4,0,0,4,4,9,2],
-"vtk__util_8h.html#abdb94acdad86ca639785432a868abbd0":[4,0,0,4,4,9,1],
-"vtk__util_8h.html#abfb696bdfb8aca5a7cec2ab0e167c889":[4,0,0,4,4,9,3]
+"volumetric__element_8h.html":[4,0,0,8,3,26]
 };

@@ -12,11 +12,12 @@ var classdrake_1_1multibody_1_1_inverse_kinematics =
     [ "AddOrientationConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a693b3a9627e08ae92d2978b4ca516b3c", null ],
     [ "AddPointToPointDistanceConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#ae52548b9b4f07c155cb5ecf46d1088ae", null ],
     [ "AddPositionConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a7c669013ee2890d3a8c457668541cdba", null ],
+    [ "AddPositionConstraint", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a40698b48da797019a237056d066f95da", null ],
     [ "context", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a45a9785ab329b6bc3294b6720a29a167", null ],
     [ "get_mutable_context", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a598885fb0868bd7d67fde74776cc2b9e", null ],
     [ "get_mutable_prog", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a727804209642a450777a561df6d98d9b", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a069b08fb67eeeb99c807dfc823ea3154", null ],
     [ "operator=", "classdrake_1_1multibody_1_1_inverse_kinematics.html#acb09a7496a0b0ed1c358fb31a21ab4c1", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_inverse_kinematics.html#a069b08fb67eeeb99c807dfc823ea3154", null ],
     [ "prog", "classdrake_1_1multibody_1_1_inverse_kinematics.html#afcc8c6b2091ff4447ee2951bb7907de8", null ],
     [ "q", "classdrake_1_1multibody_1_1_inverse_kinematics.html#af0d4dcb28c6cfb63f69b03e0d3e98571", null ]
 ];

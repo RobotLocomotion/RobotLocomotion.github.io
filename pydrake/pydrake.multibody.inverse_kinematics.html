@@ -826,8 +826,12 @@ documentation. <code class="docutils literal notranslate"><span class="pre">thet
 
 <dl class="method">
 <dt id="pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint">
-<code class="descname">AddPositionConstraint</code><span class="sig-paren">(</span><em>self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameA: pydrake.multibody.tree.Frame_[float], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.Binding[Constraint]<a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds the kinematic constraint that a point Q, fixed in frame B, should
+<code class="descname">AddPositionConstraint</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.inverse_kinematics.InverseKinematics.AddPositionConstraint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>AddPositionConstraint(self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameA: pydrake.multibody.tree.Frame_[float], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
+</ol>
+<p>Adds the kinematic constraint that a point Q, fixed in frame B, should
 lie within a bounding box expressed in another frame A as p_AQ_lower
 &lt;= p_AQ &lt;= p_AQ_upper, where p_AQ is the position of point Q measured
 and expressed in frame A.</p>
@@ -840,6 +844,32 @@ and expressed in frame B.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameA</span></code>:</dt>
 <dd>The frame in which the bounding box p_AQ_lower &lt;= p_AQ &lt;=
 p_AQ_upper is expressed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_lower</span></code>:</dt>
+<dd>The lower bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_upper</span></code>:</dt>
+<dd>The upper bound on the position of point Q, measured and expressed
+in frame A.</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li>AddPositionConstraint(self: pydrake.multibody.inverse_kinematics.InverseKinematics, frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], frameAbar: pydrake.multibody.tree.Frame_[float], X_AbarA: Optional[pydrake.math.RigidTransform_[float]], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]]) -&gt; pydrake.solvers.mathematicalprogram.Binding[Constraint]</li>
+</ol>
+<p>Adds the kinematic constraint that a point Q, fixed in frame B, should
+lie within a bounding box expressed in another frame A as p_AQ_lower
+&lt;= p_AQ &lt;= p_AQ_upper, where p_AQ is the position of point Q measured
+and expressed in frame A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame in which point Q is fixed.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q, rigidly attached to frame B, measured
+and expressed in frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameAbar</span></code>:</dt>
+<dd>We will compute frame A from frame Abar. The bounding box
+p_AQ_lower &lt;= p_AQ &lt;= p_AQ_upper is expressed in frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AbarAThe</span></code>:</dt>
+<dd>relative transform between frame Abar and A. If empty, then we use
+the identity transform.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_lower</span></code>:</dt>
 <dd>The lower bound on the position of point Q, measured and expressed
 in frame A.</dd>
@@ -1142,7 +1172,58 @@ constraint.</dd>
 </tbody>
 </table>
 <ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[float], frameAbar: pydrake.multibody.tree.Frame_[float], X_AbarA: Optional[pydrake.math.RigidTransform_[float]], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[float], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[float]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Except that the constructor takes in a frame
+A̅ and a pose X_AAbar between the frame A and A̅. We will constrain
+the position of point Q expressed in the frame A to lie within a
+bounding box of A.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant</span></code>:</dt>
+<dd>The MultibodyPlant on which the constraint is imposed. <code class="docutils literal notranslate"><span class="pre">plant</span></code>
+should be alive during the lifetime of this constraint.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameAbar</span></code>:</dt>
+<dd>The frame A̅ in which point Q’s position is measured.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X_AbarA</span></code>:</dt>
+<dd>relative transform between the frame A̅ and A. If empty, then we
+use identity transform.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_lower</span></code>:</dt>
+<dd>The lower bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_AQ_upper</span></code>:</dt>
+<dd>The upper bound on the position of point Q, measured and expressed
+in frame A.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">frameB</span></code>:</dt>
+<dd>The frame to which point Q is rigidly attached.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">p_BQ</span></code>:</dt>
+<dd>The position of the point Q, rigidly attached to frame B, measured
+and expressed in frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">plant_context</span></code>:</dt>
+<dd>The Context that has been allocated for this <code class="docutils literal notranslate"><span class="pre">plant</span></code>. We will
+update the context when evaluating the constraint.
+<code class="docutils literal notranslate"><span class="pre">plant_context</span></code> should be alive during the lifetime of this
+constraint.</dd>
+<dt>Precondition:</dt>
+<dd><code class="docutils literal notranslate"><span class="pre">frameA</span></code> and <code class="docutils literal notranslate"><span class="pre">frameB</span></code> must belong to <code class="docutils literal notranslate"><span class="pre">plant</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>p_AQ_lower(i) &lt;= p_AQ_upper(i) for i = 1, 2, 3.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant</span></code> is nullptr.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">plant_context</span></code> is nullptr.</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameA: pydrake.multibody.tree.Frame_[AutoDiffXd], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
+</ol>
+<p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
+<ol class="arabic simple" start="4">
+<li>__init__(self: pydrake.multibody.inverse_kinematics.PositionConstraint, plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], frameAbar: pydrake.multibody.tree.Frame_[AutoDiffXd], X_AbarA: Optional[pydrake.math.RigidTransform_[float]], p_AQ_lower: numpy.ndarray[numpy.float64[3, 1]], p_AQ_upper: numpy.ndarray[numpy.float64[3, 1]], frameB: pydrake.multibody.tree.Frame_[AutoDiffXd], p_BQ: numpy.ndarray[numpy.float64[3, 1]], plant_context: pydrake.systems.framework.Context_[AutoDiffXd]) -&gt; None</li>
 </ol>
 <p>Overloaded constructor. Constructs the constraint using MultibodyPlant&lt;AutoDiffXd&gt;</p>
 </dd></dl>
