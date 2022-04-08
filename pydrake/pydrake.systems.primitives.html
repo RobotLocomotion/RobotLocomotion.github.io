@@ -6717,6 +6717,9 @@ or equal to zero.</dd>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">zero_derivatives_beyond_limits</span></code>:</dt>
 <dd>All derivatives will be zero before the start time or after the
 end time of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code>.</dd>
+<dt>Precondition:</dt>
+<dd>The value of <code class="docutils literal notranslate"><span class="pre">trajectory</span></code> is a column vector. More precisely,
+trajectory.cols() == 1.</dd>
 </dl>
 </dd></dl>
 
