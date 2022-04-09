@@ -183,15 +183,18 @@ by listing for LCM messages that are broadcast by the simulation.</p>
 <p>This can stand in for the legacy <code class="docutils literal notranslate"><span class="pre">drake-visualizer</span></code> application of
 days past.</p>
 <p>From a Drake source build, run this as:</p>
-<blockquote>
-<div>bazel run //tools:meldis &amp;</div></blockquote>
-<p>From a Drake binary release, run this as:</p>
-<blockquote>
-<div>python3 -m pydrake.visualization.meldis</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">meldis</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+<p>From a Drake binary release (including pip releases), run this as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pydrake</span><span class="o">.</span><span class="n">visualization</span><span class="o">.</span><span class="n">meldis</span>
+</pre></div>
+</div>
 <p>In many cases, passing <code class="docutils literal notranslate"><span class="pre">-w</span></code> (i.e., <code class="docutils literal notranslate"><span class="pre">--open-window</span></code>) to the program will be
-convenient.</p>
-<blockquote>
-<div>bazel run //tools:meldis – -w &amp;</div></blockquote>
+convenient:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bazel</span> <span class="n">run</span> <span class="o">//</span><span class="n">tools</span><span class="p">:</span><span class="n">meldis</span> <span class="o">--</span> <span class="o">-</span><span class="n">w</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
 <dl class="class">
 <dt id="pydrake.visualization.meldis.Meldis">
 <em class="property">class </em><code class="descclassname">pydrake.visualization.meldis.</code><code class="descname">Meldis</code><span class="sig-paren">(</span><em>*</em>, <em>meshcat_port=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.visualization.meldis.Meldis" title="Permalink to this definition">¶</a></dt>
