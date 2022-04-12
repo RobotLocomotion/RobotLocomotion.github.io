@@ -189,6 +189,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affd39c2fd943159f17578fc4a6d3a71e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#affd39c2fd943159f17578fc4a6d3a71e">gravity_vector</a> () const</td></tr>
 <tr class="memdesc:affd39c2fd943159f17578fc4a6d3a71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the gravity vector for all elements in this model.  <a href="#affd39c2fd943159f17578fc4a6d3a71e">More...</a><br /></td></tr>
 <tr class="separator:affd39c2fd943159f17578fc4a6d3a71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee02de44d4dbf0f45954abf319447b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2ee02de44d4dbf0f45954abf319447b9">ApplyBoundaryCondition</a> (<a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; *fem_state) const</td></tr>
+<tr class="memdesc:a2ee02de44d4dbf0f45954abf319447b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies boundary condition set for this FemModel to the input <code>state</code>.  <a href="#a2ee02de44d4dbf0f45954abf319447b9">More...</a><br /></td></tr>
+<tr class="separator:a2ee02de44d4dbf0f45954abf319447b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1357e343129ca9171b658d68b9f551"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1e1357e343129ca9171b658d68b9f551">SetDirichletBoundaryCondition</a> (internal::DirichletBoundaryCondition&lt; T &gt; dirichlet_bc)</td></tr>
+<tr class="memdesc:a1e1357e343129ca9171b658d68b9f551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Dirichlet boundary condition that this model is subject to.  <a href="#a1e1357e343129ca9171b658d68b9f551">More...</a><br /></td></tr>
+<tr class="separator:a1e1357e343129ca9171b658d68b9f551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05415c859297c32d4fc415ea438680f"><td class="memItemLeft" align="right" valign="top">const internal::DirichletBoundaryCondition&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ab05415c859297c32d4fc415ea438680f">dirichlet_boundary_condition</a> () const</td></tr>
+<tr class="memdesc:ab05415c859297c32d4fc415ea438680f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Dirichlet boundary condition that this model is subject to.  <a href="#ab05415c859297c32d4fc415ea438680f">More...</a><br /></td></tr>
+<tr class="separator:ab05415c859297c32d4fc415ea438680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Does not allow copy, move, or assignment</div></td></tr>
 <tr class="memitem:af7127cb41cf465a47db9080be52cbf91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html#af7127cb41cf465a47db9080be52cbf91">FemModel</a> (const <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_model.html">FemModel</a> &amp;)=delete</td></tr>
 <tr class="separator:af7127cb41cf465a47db9080be52cbf91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -335,6 +344,33 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2ee02de44d4dbf0f45954abf319447b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee02de44d4dbf0f45954abf319447b9">&#9670;&nbsp;</a></span>ApplyBoundaryCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApplyBoundaryCondition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html">FemState</a>&lt; T &gt; *&#160;</td>
+          <td class="paramname"><em>fem_state</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies boundary condition set for this FemModel to the input <code>state</code>. </p>
+<p>No-op if no boundary condition is set. </p><dl class="section pre"><dt>Precondition</dt><dd>fem_state != nullptr. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="afb7ba3a5b7f7fdc4d7aa6ffd34334639"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb7ba3a5b7f7fdc4d7aa6ffd34334639">&#9670;&nbsp;</a></span>CalcResidual()</h2>
 
@@ -362,7 +398,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates the residual G(x, v, a) (see class doc) evaluated at the given FEM state. </p>
-<dl class="section pre"><dt>Precondition</dt><dd>residual != nullptr. </dd></dl>
+<p>The residual for degrees of freedom with Dirichlet boundary conditions is set to zero. Therefore their residual should not be used as a metric for the error on the boundary condition. </p><dl class="section pre"><dt>Precondition</dt><dd>residual != nullptr. </dd></dl>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if the FEM state is incompatible with this model. </td></tr>
@@ -405,7 +441,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculates an approximated tangent matrix evaluated at the given FEM state (or an approximation thereof). </p>
-<p>The tangent matrix is given by a weighted sum of stiffness matrix (∂G/∂x), damping matrix (∂G/∂v), and mass matrix (∂G/∂a). </p><dl class="params"><dt>Parameters</dt><dd>
+<p>The tangent matrix is given by a weighted sum of stiffness matrix (∂G/∂x), damping matrix (∂G/∂v), and mass matrix (∂G/∂a). The corresponding row and column for a degree of freedom with Dirichlet boundary condition in the tangent matrix is set to zero with the exception of the diagonal entry which is set to 1. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">fem_state</td><td>The <a class="el" href="classdrake_1_1multibody_1_1fem_1_1_fem_state.html" title="FemState provides access to private workspace FEM state and per-element state-dependent data.">FemState</a> used to evaluate the tangent matrix. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">weights</td><td>The weights used to combine stiffness, damping, and mass matrices (in that order) into the tangent matrix. </td></tr>
@@ -454,6 +490,25 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 </div><div class="memdoc">
 
 <p>Derived classes should override this method to declare cache entries in the given <code>fem_state_system</code>. </p>
+
+</div>
+</div>
+<a id="ab05415c859297c32d4fc415ea438680f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05415c859297c32d4fc415ea438680f">&#9670;&nbsp;</a></span>dirichlet_boundary_condition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const internal::DirichletBoundaryCondition&lt;T&gt;&amp; dirichlet_boundary_condition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the Dirichlet boundary condition that this model is subject to. </p>
 
 </div>
 </div>
@@ -819,6 +874,26 @@ All nonzero entries in the resulting tangent matrix have been allocated. See Mak
 </div><div class="memdoc">
 
 <p>Sets the gravity vector for all elements in this model. </p>
+
+</div>
+</div>
+<a id="a1e1357e343129ca9171b658d68b9f551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1357e343129ca9171b658d68b9f551">&#9670;&nbsp;</a></span>SetDirichletBoundaryCondition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetDirichletBoundaryCondition </td>
+          <td>(</td>
+          <td class="paramtype">internal::DirichletBoundaryCondition&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>dirichlet_bc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the Dirichlet boundary condition that this model is subject to. </p>
 
 </div>
 </div>

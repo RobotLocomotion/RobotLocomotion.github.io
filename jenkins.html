@@ -250,7 +250,6 @@ most likely fail. To test new prerequisites, you should first request
 unprovisioned experimental builds, e.g.:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-bionic-unprovisioned-gcc-bazel-experimental-release please</code></li>
   <li><code class="highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-release please</code></li>
   <li><code class="highlighter-rouge">@drake-jenkins-bot mac-big-sur-unprovisioned-clang-bazel-experimental-release please</code></li>
 </ul>
@@ -265,7 +264,6 @@ updated. She will then respond on when it is appropriate to merge the PR.</p>
 comment on an open pull request as follows:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">@drake-jenkins-bot linux-bionic-unprovisioned-gcc-bazel-experimental-snopt-packaging please</code></li>
   <li><code class="highlighter-rouge">@drake-jenkins-bot linux-focal-unprovisioned-gcc-bazel-experimental-snopt-packaging please</code></li>
   <li><code class="highlighter-rouge">@drake-jenkins-bot mac-big-sur-unprovisioned-clang-bazel-experimental-snopt-packaging please</code></li>
 </ul>
@@ -275,7 +273,6 @@ to schedule a build of one of the following jobs from the Jenkins user
 interface:</p>
 
 <ul>
-  <li>linux-bionic-unprovisioned-gcc-bazel-experimental-snopt-packaging</li>
   <li>linux-focal-unprovisioned-gcc-bazel-experimental-snopt-packaging</li>
   <li>mac-big-sur-unprovisioned-clang-bazel-experimental-snopt-packaging</li>
 </ul>
@@ -292,7 +289,7 @@ upload: drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz to s3
 upload: drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz.sha512 to s3://drake-packages/drake/experimental/drake-&lt;yyymmddhhmmss&gt;-&lt;commit&gt;-&lt;platform&gt;.tar.gz.sha512
 </code></pre></div></div>
 
-<p>where <code class="highlighter-rouge">&lt;platform&gt;</code> is <code class="highlighter-rouge">bionic</code>, <code class="highlighter-rouge">focal</code>, or <code class="highlighter-rouge">mac</code>.</p>
+<p>where <code class="highlighter-rouge">&lt;platform&gt;</code> is <code class="highlighter-rouge">focal</code>, or <code class="highlighter-rouge">mac</code>.</p>
 
       </article>
     </div>

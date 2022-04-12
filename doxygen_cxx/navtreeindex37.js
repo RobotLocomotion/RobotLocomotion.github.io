@@ -1,5 +1,8 @@
 var NAVTREEINDEX37 =
 {
+"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics_controller.html#ac1f946b742285b20a12ed0e0e2ebad9d":[1,2,2,1,6],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html":[1,2,2,2],
+"classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3229f07b7f9c224cc442fe7921cfb44a":[1,2,2,2,5],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a3ed94567c4365ecb7253a9f4b0df5cc6":[1,2,2,2,3],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a575cafd239d48f8fe814d550d368b1bf":[1,2,2,2,4],
 "classdrake_1_1systems_1_1controllers_1_1_linear_model_predictive_controller.html#a5c008dea690853955447d85df934fa82":[1,2,2,2,1],
@@ -246,8 +249,5 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,14,8,2,8],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abb1027925f543f3d11d45ee908a6fbad":[3,0,0,14,8,2,14],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abc9ba081bfe31e8224d9e40b96f0f717":[3,0,0,14,8,2,10],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321":[3,0,0,14,8,2,9],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aca5377a1606d0d69d2a9365fafd51476":[3,0,0,14,8,2,12],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f":[3,0,0,14,8,2,11],
-"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf":[3,0,0,14,8,2,15]
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321":[3,0,0,14,8,2,9]
 };

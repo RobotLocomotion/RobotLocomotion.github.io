@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#a7b9aa884cf273e49da0dd0de4cbfbb8b":[1,4,2,1,1,2],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#ab882a795ac2ee341cce7a9d85981f155":[1,4,2,1,1,0],
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html":[3,0,0,8,36],
+"structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a01704b4700155ed98ed7358fd3e99ed6":[3,0,0,8,36,1],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#a17306652175cc5f61e86f203b86bd9e4":[3,0,0,8,36,0],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#aaf34c01d86da78bb1b48beb433506466":[3,0,0,8,36,3],
 "structdrake_1_1multibody_1_1_hydroelastic_quadrature_point_data.html#ac40878d3fef16be760e6104ad9c13666":[3,0,0,8,36,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,12,50],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,12,50,0],
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,12,52],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,52,0],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html":[3,0,0,12,54],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a0eff91e1e435ad1b7f404b01a93c908f":[3,0,0,12,54,4],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a175a256729d92d673605def5f6eac769":[3,0,0,12,54,8],
-"structdrake_1_1solvers_1_1_osqp_solver_details.html#a26a18a3b5918fa06c2808f74aec256c0":[3,0,0,12,54,2]
+"structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,52,0]
 };

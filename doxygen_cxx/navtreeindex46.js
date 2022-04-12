@@ -1,5 +1,8 @@
 var NAVTREEINDEX46 =
 {
+"nice__type__name_8h.html":[4,0,0,1,40],
+"nice__type__name__override_8h.html":[4,0,0,1,41],
+"nlopt__solver_8h.html":[4,0,0,10,41],
 "non__convex__optimization__util_8h.html":[4,0,0,10,42],
 "non__convex__optimization__util_8h.html#af6b2d302506a6a2fe144c79bd2598131":[4,0,0,10,42,1],
 "non__convex__optimization__util_8h.html#gaea88a3c59172c77e8537633348a057a9":[4,0,0,10,42,0],
@@ -246,8 +249,5 @@ var NAVTREEINDEX46 =
 "random__source_8h.html":[4,0,0,11,6,18],
 "random__source_8h.html#a0545ab65838b464875abb7385495531a":[4,0,0,11,6,18,2],
 "random__source_8h.html#a17d9785a5cf7db65cd70670c892101f9":[4,0,0,11,6,18,1],
-"read__obj_8h.html":[4,0,0,4,32],
-"region__of__attraction_8h.html":[4,0,0,11,0,13],
-"region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,11,0,13,1],
-"render__benchmark__doxygen_8h.html":[4,0,0,4,0,0]
+"read__obj_8h.html":[4,0,0,4,32]
 };

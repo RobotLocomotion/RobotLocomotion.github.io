@@ -5,9 +5,11 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_model =
     [ "FemModel", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a3c8ae430d8de186fa6b8125c1e182906", null ],
     [ "~FemModel", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4534d41423f7c3fd5763b65f0421e3af", null ],
     [ "FemModel", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2bcebe0224e78e72f3c664de4801e8dd", null ],
+    [ "ApplyBoundaryCondition", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2ee02de44d4dbf0f45954abf319447b9", null ],
     [ "CalcResidual", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#afb7ba3a5b7f7fdc4d7aa6ffd34334639", null ],
     [ "CalcTangentMatrix", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#aeea8e3ba0e177fce247656c15183cdc3", null ],
     [ "DeclareCacheEntries", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a4e0e23b8877740039d58b314565edf8b", null ],
+    [ "dirichlet_boundary_condition", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#ab05415c859297c32d4fc415ea438680f", null ],
     [ "DoCalcResidual", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a9c156c34378cf3221bc26e474ac10327", null ],
     [ "DoCalcTangentMatrix", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a539075a144b96a126aee2e0b2963db95", null ],
     [ "DoMakePetscSymmetricBlockSparseTangentMatrix", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a5170f577cbc8446b3969e9e308019bdf", null ],
@@ -22,6 +24,7 @@ var classdrake_1_1multibody_1_1fem_1_1_fem_model =
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a22e6cae04151e6b39cf8ceecfc7f4cf9", null ],
     [ "operator=", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a52811120b5134c610e2af3fc096c92af", null ],
     [ "set_gravity_vector", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a2a8f7cd0b02dc8b1f09fa0b3f17c2df1", null ],
+    [ "SetDirichletBoundaryCondition", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a1e1357e343129ca9171b658d68b9f551", null ],
     [ "ThrowIfModelStateIncompatible", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a93f9e9287217253c4148bcff802b0fd6", null ],
     [ "UpdateFemStateSystem", "classdrake_1_1multibody_1_1fem_1_1_fem_model.html#a7bd928c1298c6e5939d3bd2559e18e71", null ]
 ];
