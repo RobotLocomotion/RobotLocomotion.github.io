@@ -1,5 +1,6 @@
 var NAVTREEINDEX47 =
 {
+"read__obj_8h.html":[4,0,0,4,32],
 "region__of__attraction_8h.html":[4,0,0,11,0,13],
 "region__of__attraction_8h.html#gaafb17ca05a19fe7365d28f8a105cff76":[4,0,0,11,0,13,1],
 "render__benchmark__doxygen_8h.html":[4,0,0,4,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,11,2,1],
 "spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,11,2,0],
 "spatial__force_8h.html":[4,0,0,8,6,2],
-"spatial__inertia_8h.html":[4,0,0,8,13,44],
-"spatial__kinematics_8h.html":[4,0,0,8,11,3]
+"spatial__inertia_8h.html":[4,0,0,8,13,44]
 };

@@ -1071,8 +1071,12 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 
 <dl class="function">
 <dt id="pydrake.symbolic.ExtractVariablesFromExpression">
-<code class="descclassname">pydrake.symbolic.</code><code class="descname">ExtractVariablesFromExpression</code><span class="sig-paren">(</span><em>e: pydrake.symbolic.Expression</em><span class="sig-paren">)</span> &#x2192; Tuple[numpy.ndarray[object[m, 1]], Dict[int, int]]<a class="headerlink" href="#pydrake.symbolic.ExtractVariablesFromExpression" title="Permalink to this definition">¶</a></dt>
-<dd><p>Given an expression <code class="docutils literal notranslate"><span class="pre">e</span></code>, extracts all variables inside <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
+<code class="descclassname">pydrake.symbolic.</code><code class="descname">ExtractVariablesFromExpression</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.ExtractVariablesFromExpression" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>ExtractVariablesFromExpression(e: pydrake.symbolic.Expression) -&gt; Tuple[numpy.ndarray[object[m, 1]], Dict[int, int]]</li>
+</ol>
+<p>Given an expression <code class="docutils literal notranslate"><span class="pre">e</span></code>, extracts all variables inside <code class="docutils literal notranslate"><span class="pre">e</span></code>.</p>
 <dl class="docutils">
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">e</span></code>:</dt>
 <dd>A symbolic expression.</dd>
@@ -1081,6 +1085,11 @@ e.get_kind(); do not try to infer it from the returned ctor’s identity.</p>
 from the variable ID to the index in pair.first, such that
 pair.second[pair.first(i).get_id()] = i</dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li>ExtractVariablesFromExpression(expressions: numpy.ndarray[object[m, 1]]) -&gt; Tuple[numpy.ndarray[object[m, 1]], Dict[int, int]]</li>
+</ol>
+<p>Overloads ExtractVariablesFromExpression but with a vector of
+expressions.</p>
 </dd></dl>
 
 <dl class="function">

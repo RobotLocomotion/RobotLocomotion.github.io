@@ -126,6 +126,7 @@ $(document).ready(function(){initNavTree('symbolic__decompose_8h.html','');});
 <code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
+<code>#include &quot;<a class="el" href="drake__deprecated_8h.html">drake/common/drake_deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="eigen__types_8h.html">drake/common/eigen_types.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="symbolic_8h.html">drake/common/symbolic.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -156,6 +157,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4f9f98ac0c3db06d72227b0502cf8934"><td class="memItemLeft" align="right" valign="top">std::pair&lt; VectorX&lt; Variable &gt;, std::unordered_map&lt; symbolic::Variable::Id, <a class="el" href="classint.html">int</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934">ExtractVariablesFromExpression</a> (const symbolic::Expression &amp;e)</td></tr>
 <tr class="memdesc:a4f9f98ac0c3db06d72227b0502cf8934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given an expression <code>e</code>, extracts all variables inside <code>e</code>.  <a href="namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934">More...</a><br /></td></tr>
 <tr class="separator:a4f9f98ac0c3db06d72227b0502cf8934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9ab6787ea570003b69621c52bfa5cc"><td class="memItemLeft" align="right" valign="top">std::pair&lt; VectorX&lt; Variable &gt;, std::unordered_map&lt; Variable::Id, <a class="el" href="classint.html">int</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#acd9ab6787ea570003b69621c52bfa5cc">ExtractVariablesFromExpression</a> (const Eigen::Ref&lt; const VectorX&lt; Expression &gt;&gt; &amp;expressions)</td></tr>
+<tr class="memdesc:acd9ab6787ea570003b69621c52bfa5cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads ExtractVariablesFromExpression but with a vector of expressions.  <a href="namespacedrake_1_1symbolic.html#acd9ab6787ea570003b69621c52bfa5cc">More...</a><br /></td></tr>
+<tr class="separator:acd9ab6787ea570003b69621c52bfa5cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a168045cc4df5fee36f317095c2a9f891"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1symbolic.html#a168045cc4df5fee36f317095c2a9f891">DecomposeQuadraticPolynomial</a> (const symbolic::Polynomial &amp;poly, const std::unordered_map&lt; symbolic::Variable::Id, <a class="el" href="classint.html">int</a> &gt; &amp;map_var_to_index, Eigen::MatrixXd *Q, Eigen::VectorXd *b, double *c)</td></tr>
 <tr class="memdesc:a168045cc4df5fee36f317095c2a9f891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a quadratic polynomial <code>poly</code>, decomposes it into the form 0.5 * x' Q * x + b' * x + c.  <a href="namespacedrake_1_1symbolic.html#a168045cc4df5fee36f317095c2a9f891">More...</a><br /></td></tr>
 <tr class="separator:a168045cc4df5fee36f317095c2a9f891"><td class="memSeparator" colspan="2">&#160;</td></tr>

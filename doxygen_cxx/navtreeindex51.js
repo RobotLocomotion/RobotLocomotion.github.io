@@ -1,5 +1,6 @@
 var NAVTREEINDEX51 =
 {
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,14,2],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html":[3,0,0,14,8,15],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,15,1],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_label16_i_01_4.html#ab8e216583fec393487ca0b011a6fecea":[3,0,0,14,8,15,0],
@@ -134,6 +135,7 @@ var NAVTREEINDEX51 =
 "symbolic__decompose_8h.html#a3b1b3967fa1010c4e10b2bd804453f10":[4,0,0,1,54,0],
 "symbolic__decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934":[4,0,0,1,54,7],
 "symbolic__decompose_8h.html#aa6c01361f464b3eae396f7d1a0e92c85":[4,0,0,1,54,3],
+"symbolic__decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc":[4,0,0,1,54,8],
 "symbolic__decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b":[4,0,0,1,54,6],
 "symbolic__decompose_8h.html#ae3c6a31812dc3e509644dbbc95c9778e":[4,0,0,1,54,2],
 "symbolic__decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c":[4,0,0,1,54,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX51 =
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa0986d137604183312e6d3599578bc6cd":[4,0,0,1,56,12,10],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa1266b4e6f81e60733ec6c717e0181f60":[4,0,0,1,56,12,12],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa1e34af023adeb7d5f484f8eb4b9826b6":[4,0,0,1,56,12,6],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa2e59a51ac43bc3415c1b8ce7b3f98579":[4,0,0,1,56,12,26],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa4371c3565b771b40c187487cc0190392":[4,0,0,1,56,12,18],
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa43d11850893d2fe84a1e618121c1cc0a":[4,0,0,1,56,12,4]
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa2e59a51ac43bc3415c1b8ce7b3f98579":[4,0,0,1,56,12,26]
 };

@@ -157,15 +157,6 @@ integration. Any other configurations are provided on a best-effort basis.</p>
   </thead>
   <tbody>
     <tr>
-      <td>Ubuntu 18.04 LTS (Bionic Beaver)</td>
-      <td>x86_64 ⁽¹⁾</td>
-      <td>3.6 ⁽³⁾</td>
-      <td>5.1</td>
-      <td>3.10</td>
-      <td>GCC 7.5 (default) or Clang 9</td>
-      <td>OpenJDK 11</td>
-    </tr>
-    <tr>
       <td>Ubuntu 20.04 LTS (Focal Fossa)</td>
       <td>x86_64 ⁽¹⁾</td>
       <td>3.8 ⁽³⁾</td>
@@ -299,12 +290,6 @@ MOSEK<a href="/tm.html">™</a>, without building tests:</p>
 </code></pre></div></div>
 
 <p>You will also need to have your <code class="highlighter-rouge">PYTHONPATH</code> configured correctly.</p>
-
-<p><em>Ubuntu 18.04 (Bionic):</em></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>drake-build
-<span class="nb">export </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="k">}</span>/install/lib/python3.6/site-packages:<span class="k">${</span><span class="nv">PYTHONPATH</span><span class="k">}</span>
-</code></pre></div></div>
 
 <p><em>Ubuntu 20.04 (Focal):</em></p>
 

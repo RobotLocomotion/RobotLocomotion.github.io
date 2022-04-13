@@ -146,5 +146,5 @@ var searchData=
   ['extractgradient',['ExtractGradient',['../namespacedrake_1_1math.html#a099a62886c181d6f9b917f0215a1a947',1,'drake::math']]],
   ['extractsimulatorconfig',['ExtractSimulatorConfig',['../group__simulator__configuration.html#ga00b67f54aba155c982e8a1038278eed6',1,'drake::systems']]],
   ['extractvalue',['ExtractValue',['../namespacedrake_1_1math.html#abb0cd738c70309748ff3cbc5c6b2d50e',1,'drake::math']]],
-  ['extractvariablesfromexpression',['ExtractVariablesFromExpression',['../namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934',1,'drake::symbolic']]]
+  ['extractvariablesfromexpression',['ExtractVariablesFromExpression',['../namespacedrake_1_1symbolic.html#a4f9f98ac0c3db06d72227b0502cf8934',1,'drake::symbolic::ExtractVariablesFromExpression(const symbolic::Expression &amp;e)'],['../namespacedrake_1_1symbolic.html#acd9ab6787ea570003b69621c52bfa5cc',1,'drake::symbolic::ExtractVariablesFromExpression(const Eigen::Ref&lt; const VectorX&lt; Expression &gt;&gt; &amp;expressions)']]]
 ];

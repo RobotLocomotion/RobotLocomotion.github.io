@@ -7,5 +7,6 @@ var symbolic__decompose_8h =
     [ "DecomposeLumpedParameters", "symbolic__decompose_8h.html#ae8c85e424b3109ed84a5bb309238bc3c", null ],
     [ "DecomposeQuadraticPolynomial", "symbolic__decompose_8h.html#a168045cc4df5fee36f317095c2a9f891", null ],
     [ "ExtractAndAppendVariablesFromExpression", "symbolic__decompose_8h.html#ad528f8f92173863f5029b979b9c5f36b", null ],
-    [ "ExtractVariablesFromExpression", "symbolic__decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934", null ]
+    [ "ExtractVariablesFromExpression", "symbolic__decompose_8h.html#a4f9f98ac0c3db06d72227b0502cf8934", null ],
+    [ "ExtractVariablesFromExpression", "symbolic__decompose_8h.html#acd9ab6787ea570003b69621c52bfa5cc", null ]
 ];

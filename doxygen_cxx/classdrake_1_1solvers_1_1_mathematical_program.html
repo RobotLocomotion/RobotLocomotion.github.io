@@ -491,6 +491,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af5a5ef4b6da552936dabb22caae98f4b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af5a5ef4b6da552936dabb22caae98f4b">AddRotatedLorentzConeConstraint</a> (const Eigen::MatrixBase&lt; <a class="el" href="namespacedrake_1_1solvers.html#aa20d09ae94d1e722c2961fbaca37f967">VectorDecisionVariable</a>&lt; rows &gt;&gt; &amp;vars)</td></tr>
 <tr class="memdesc:af5a5ef4b6da552936dabb22caae98f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Impose that a vector \( x\in\mathbb{R}^m \) is in rotated Lorentz cone.  <a href="#af5a5ef4b6da552936dabb22caae98f4b">More...</a><br /></td></tr>
 <tr class="separator:af5a5ef4b6da552936dabb22caae98f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78407bc8ee2ca56e65a6d5faca4c5b72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#a78407bc8ee2ca56e65a6d5faca4c5b72">AddQuadraticAsRotatedLorentzConeConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;b, double c, const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;vars)</td></tr>
+<tr class="memdesc:a78407bc8ee2ca56e65a6d5faca4c5b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated Lorentz cone.  <a href="#a78407bc8ee2ca56e65a6d5faca4c5b72">More...</a><br /></td></tr>
+<tr class="separator:a78407bc8ee2ca56e65a6d5faca4c5b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ce06116cc0cd7c681258befa944240"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html#af4ce06116cc0cd7c681258befa944240">AddConstraint</a> (const <a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt; <a class="el" href="classdrake_1_1solvers_1_1_linear_complementarity_constraint.html">LinearComplementarityConstraint</a> &gt; &amp;binding)</td></tr>
 <tr class="memdesc:af4ce06116cc0cd7c681258befa944240"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a linear complementarity constraints referencing a subset of the decision variables.  <a href="#af4ce06116cc0cd7c681258befa944240">More...</a><br /></td></tr>
 <tr class="separator:af4ce06116cc0cd7c681258befa944240"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4018,6 +4021,63 @@ Alternatives to Sum of Squares and Semidefinite Optimization" by Amir Ali Ahmadi
 </pre><p> The user could call </p><div class="fragment"><div class="line">Matrix3&lt;symbolic::Expression&gt; e</div><div class="line">e &lt;&lt; x+1, 2*x+3, x+y,</div><div class="line">     2*x+3,   2,   0,</div><div class="line">     x+y,     0,   x;</div><div class="line">prog.AddPositiveSemidefiniteConstraint(e);</div></div><!-- fragment --> 
 </div>
 </div>
+<a id="a78407bc8ee2ca56e65a6d5faca4c5b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78407bc8ee2ca56e65a6d5faca4c5b72">&#9670;&nbsp;</a></span>AddQuadraticAsRotatedLorentzConeConstraint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_binding.html">Binding</a>&lt;<a class="el" href="classdrake_1_1solvers_1_1_rotated_lorentz_cone_constraint.html">RotatedLorentzConeConstraint</a>&gt; AddQuadraticAsRotatedLorentzConeConstraint </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>Q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add the convex quadratic constraint 0.5xᵀQx + bᵀx + c &lt;= 0 as a rotated Lorentz cone constraint [rᵀx+s, 1, Px+q] is in the rotated Lorentz cone. </p>
+<p>When solving the optimization problem using conic solvers (like Mosek, Gurobi, SCS, etc), it is numerically preferrable to impose the convex quadratic constraint as rotated Lorentz cone constraint. See <a href="https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation">https://docs.mosek.com/latest/capi/prob-def-quadratic.html#a-recommendation</a> </p><dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">exception</td><td>if this quadratic constraint is not convex (Q is not positive semidefinite) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Q</td><td>The Hessian of the quadratic constraint. Should be positive semidefinite. </td></tr>
+    <tr><td class="paramname">b</td><td>The linear coefficient of the quadratic constraint. </td></tr>
+    <tr><td class="paramname">c</td><td>The constant term of the quadratic constraint. </td></tr>
+    <tr><td class="paramname">vars</td><td>x in the documentation above. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae9107a03b1a967f0efe1a7ad0d01dedd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9107a03b1a967f0efe1a7ad0d01dedd">&#9670;&nbsp;</a></span>AddQuadraticCost() <span class="overload">[1/4]</span></h2>
 
@@ -7062,8 +7122,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7074,7 +7134,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -7088,8 +7148,8 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
 
 </div>
 </div>
-<a id="a751cdda7529e03736fc7530fad6bd7fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a751cdda7529e03736fc7530fad6bd7fa">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ad6bf33171369a5b673c956f7e21e1c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6bf33171369a5b673c956f7e21e1c5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7100,7 +7160,7 @@ Symmetric(rows-1,0) Symmetric(rows-1,1) ... Symmetric(rows-1, rows-1)
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1solvers_1_1_mathematical_program.html">MathematicalProgram</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

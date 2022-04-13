@@ -1,5 +1,6 @@
 var NAVTREEINDEX31 =
 {
+"classdrake_1_1systems_1_1_integrator_base.html#a0ca73e48fb4c24fcf1893459f57eb86a":[1,4,0,0,3,17],
 "classdrake_1_1systems_1_1_integrator_base.html#a0cdd4796b7f98a09da058b9764f13b86":[1,4,0,0,3,67],
 "classdrake_1_1systems_1_1_integrator_base.html#a0dafbc057f2a5a4828813e7ea5e3f99e":[1,4,0,0,3,26],
 "classdrake_1_1systems_1_1_integrator_base.html#a0e5d79c4be26ab9ff12fac51584dd3f5":[1,4,0,0,3,52],
@@ -248,6 +249,5 @@ var NAVTREEINDEX31 =
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#a4203b6254bcd02ce5a385c42adc8a621":[1,2,1,16,26],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#a49474184e9c2a6455a65e9331739d776":[1,2,1,16,4],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#a5bdd4d4f07c9c594d136288d3156ed57":[1,2,1,16,13],
-"classdrake_1_1systems_1_1_multilayer_perceptron.html#a612b74ebd5fb20e1881d7d3fcd6fed6b":[1,2,1,16,0],
-"classdrake_1_1systems_1_1_multilayer_perceptron.html#a69ea02ed461f2cdb6e997d7f55319ef8":[1,2,1,16,8]
+"classdrake_1_1systems_1_1_multilayer_perceptron.html#a612b74ebd5fb20e1881d7d3fcd6fed6b":[1,2,1,16,0]
 };

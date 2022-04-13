@@ -1,0 +1,677 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pydrake.solvers.augmented_lagrangian &mdash; pydrake  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydrake.solvers.branch_and_bound" href="pydrake.solvers.branch_and_bound.html" />
+    <link rel="prev" title="pydrake.solvers.all" href="pydrake.solvers.all.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pydrake
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search pydrake only…" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+    <input type="text" name="q" placeholder="Search all of Drake…" />
+    <input type="hidden" name="sites" value="drake.mit.edu" />
+  </form>
+</div>
+
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pydrake.all.html">pydrake.all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.autodiffutils.html">pydrake.autodiffutils</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.common.html">pydrake.common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.examples.html">pydrake.examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.forwarddiff.html">pydrake.forwarddiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.geometry.html">pydrake.geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.lcm.html">pydrake.lcm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.manipulation.html">pydrake.manipulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.math.html">pydrake.math</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.multibody.html">pydrake.multibody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.perception.html">pydrake.perception</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.polynomial.html">pydrake.polynomial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="pydrake.solvers.html">pydrake.solvers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.all.html">pydrake.solvers.all</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.solvers.augmented_lagrangian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.branch_and_bound.html">pydrake.solvers.branch_and_bound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.dreal.html">pydrake.solvers.dreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mathematicalprogram.html">pydrake.solvers.mathematicalprogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_rotation_constraint.html">pydrake.solvers.mixed_integer_rotation_constraint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.nlopt.html">pydrake.solvers.nlopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.scs.html">pydrake.solvers.scs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.sdpa_free_format.html">pydrake.solvers.sdpa_free_format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.snopt.html">pydrake.solvers.snopt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.symbolic.html">pydrake.symbolic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.systems.html">pydrake.systems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.trajectories.html">pydrake.trajectories</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.tutorials.html">pydrake.tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydrake.visualization.html">pydrake.visualization</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pydrake</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="pydrake.solvers.html">pydrake.solvers</a> &raquo;</li>
+        
+      <li>pydrake.solvers.augmented_lagrangian</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pydrake.solvers.augmented_lagrangian">
+<span id="pydrake-solvers-augmented-lagrangian"></span><h1>pydrake.solvers.augmented_lagrangian<a class="headerlink" href="#module-pydrake.solvers.augmented_lagrangian" title="Permalink to this headline">¶</a></h1>
+<p>Augmented Lagrangian solver bindings for MathematicalProgram</p>
+<dl class="class">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.augmented_lagrangian.</code><code class="descname">AugmentedLagrangianNonsmooth</code><a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the augmented Lagrangian (AL) of a given mathematical program</p>
+<p>min f(x) s.t h(x) = 0 l &lt;= g(x) &lt;= u x_lo &lt;= x &lt;= x_up</p>
+<p>We first turn it into an equality constrained program with
+non-negative slack variable s as follows</p>
+<p>min f(x) s.t h(x) = 0 c(x) - s = 0 s &gt;= 0</p>
+<p>Depending on the option include_x_bounds, the constraint h(x)=0,
+c(x)&gt;=0 may or may not include the bounding box constraint x_lo &lt;= x
+&lt;= x_up.</p>
+<p>the (non-smooth) augmented Lagrangian is defined as</p>
+<p>L(x, λ, μ) = f(x) − λ₁ᵀh(x) + μ/2 h(x)ᵀh(x) - λ₂ᵀ(c(x)-s) + μ/2
+(c(x)-s)ᵀ(c(x)-s)</p>
+<p>where s = max(c(x) - λ₂/μ, 0).</p>
+<p>For more details, refer to section 17.4 of Numerical Optimization by
+Jorge Nocedal and Stephen Wright, Edition 1, 1999 (This formulation
+isn’t presented in Edition 2, but to stay consistent with Edition 2,
+we use μ/2 as the coefficient of the quadratic penalty term instead of
+1/(2μ) in Edition 1). Note that the augmented Lagrangian L(x, λ, μ) is
+NOT a smooth function of x, since s = max(c(x) - λ₂/μ, 0) is
+non-smooth at c(x) - λ₂/μ = 0.</p>
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em>, <em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>include_x_bounds: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt>
+<dd>The mathematical program we will evaluate.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">include_x_bounds</span></code>:</dt>
+<dd>. Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x
+&lt;= x_up are included in the augmented Lagrangian L(x, λ, μ) or
+not.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.Eval">
+<code class="descname">Eval</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.Eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>Eval(self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth, x: numpy.ndarray[numpy.float64[m, 1]], lambda_val: numpy.ndarray[numpy.float64[m, 1]], mu: float) -&gt; Tuple[float, numpy.ndarray[numpy.float64[m, 1]], float]</li>
+</ol>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
+<dd>The value of all the decision variables.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lambda_val</span></code>:</dt>
+<dd>The estimated Lagrangian multipliers. The order of the Lagrangian
+multiplier is as this: We first call to evaluate all constraints.
+Then for each row of the constraint, if it is an equality
+constraint, we append one single Lagrangian multiplier. Otherwise
+we append the Lagrangian multiplier for the lower and upper bounds
+(where the lower comes before the upper), if the corresponding
+bound is not ±∞. The order of evaluating all the constraints is
+the same as prog.GetAllConstraints() except for
+prog.bounding_box_constraints(). If include_x_bounds=true, then we
+aggregate all the bounding_box_constraints() and evaluate them at
+the end of all constraints.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mu</span></code>:</dt>
+<dd>μ in the documentation above. The constant for penalty term
+weight. This should be a strictly positive number.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code>:</dt>
+<dd>The value of the all the constraints. For an equality constraint
+c(x)=0 or the inequality constraint c(x)&gt;= 0, the residue is c(x).
+Depending on include_x_bounds, <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code> may or may
+not contain the residue for bounding box constraints x_lo &lt;= x &lt;=
+x_up at the end.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost</span></code>:</dt>
+<dd>The value of the cost function f(x).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The evaluated Augmented Lagrangian (AL) L(x, λ, μ).</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>Eval(self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth, x: numpy.ndarray[object[m, 1]], lambda_val: numpy.ndarray[numpy.float64[m, 1]], mu: float) -&gt; Tuple[pydrake.autodiffutils.AutoDiffXd, numpy.ndarray[object[m, 1]], pydrake.autodiffutils.AutoDiffXd]</li>
+</ol>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
+<dd>The value of all the decision variables.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lambda_val</span></code>:</dt>
+<dd>The estimated Lagrangian multipliers. The order of the Lagrangian
+multiplier is as this: We first call to evaluate all constraints.
+Then for each row of the constraint, if it is an equality
+constraint, we append one single Lagrangian multiplier. Otherwise
+we append the Lagrangian multiplier for the lower and upper bounds
+(where the lower comes before the upper), if the corresponding
+bound is not ±∞. The order of evaluating all the constraints is
+the same as prog.GetAllConstraints() except for
+prog.bounding_box_constraints(). If include_x_bounds=true, then we
+aggregate all the bounding_box_constraints() and evaluate them at
+the end of all constraints.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mu</span></code>:</dt>
+<dd>μ in the documentation above. The constant for penalty term
+weight. This should be a strictly positive number.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code>:</dt>
+<dd>The value of the all the constraints. For an equality constraint
+c(x)=0 or the inequality constraint c(x)&gt;= 0, the residue is c(x).
+Depending on include_x_bounds, <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code> may or may
+not contain the residue for bounding box constraints x_lo &lt;= x &lt;=
+x_up at the end.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost</span></code>:</dt>
+<dd>The value of the cost function f(x).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The evaluated Augmented Lagrangian (AL) L(x, λ, μ).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.include_x_bounds">
+<code class="descname">include_x_bounds</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.include_x_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Whether the bounding box constraint x_lo &lt;= x &lt;= x_up is included
+in the augmented Lagrangian L(x, λ, μ).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.is_equality">
+<code class="descname">is_equality</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em><span class="sig-paren">)</span> &#x2192; List[bool]<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.is_equality" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Whether each constraint is equality or not. The order of the
+constraint is explained in the class documentation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.lagrangian_size">
+<code class="descname">lagrangian_size</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.lagrangian_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The size of the Lagrangian multiplier λ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.prog" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The mathematical program for which the augmented Lagrangian is
+computed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.x_lo">
+<code class="descname">x_lo</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.x_lo" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">all the lower bounds of x.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.x_up">
+<code class="descname">x_up</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianNonsmooth.x_up" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">all the upper bounds of x.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.augmented_lagrangian.</code><code class="descname">AugmentedLagrangianSmooth</code><a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the augmented Lagrangian (AL) of a given mathematical program</p>
+<p>min f(x) s.t h(x) = 0 l &lt;= g(x) &lt;= u x_lo &lt;= x &lt;= x_up</p>
+<p>We first turn it into an equality constrained program with
+non-negative slack variable s as follows</p>
+<p>min f(x) s.t h(x) = 0 c(x) - s = 0 s &gt;= 0</p>
+<p>We regard this as an optimization problem on variable (x, s), with
+equality constraints h(x) = 0, c(x)-s = 0, and the bound constraint s
+&gt;= 0.</p>
+<p>Depending on the option include_x_bounds, the constraint h(x)=0,
+c(x)&gt;=0 may or may not include the bounding box constraint x_lo &lt;= x
+&lt;= x_up.</p>
+<p>The (smooth) augmented Lagrangian is defined as</p>
+<p>L(x, s, λ, μ) = f(x) − λ₁ᵀh(x) + μ/2 h(x)ᵀh(x) - λ₂ᵀ(c(x)-s) + μ/2
+(c(x)-s)ᵀ(c(x)-s)</p>
+<p>For more details, refer to section 17.4 of Numerical Optimization by
+Jorge Nocedal and Stephen Wright, Edition 2, 2006. Note that the
+augmented Lagrangian L(x, s, λ, μ) is a smooth function of (x, s),</p>
+<p>This is the implementation used in LANCELOT. To solve the nonlinear
+optimization through this Augmented Lagrangian, the nonlinear solve
+should be able to handle bounding box constraints on the decision
+variables.</p>
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em>, <em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>include_x_bounds: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">prog</span></code>:</dt>
+<dd>The mathematical program we will evaluate.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">include_x_bounds</span></code>:</dt>
+<dd>. Whether the Lagrangian and the penalty for the bounds x_lo &lt;= x
+&lt;= x_up are included in the augmented Lagrangian L(x, s, λ, μ) or
+not.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.Eval">
+<code class="descname">Eval</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.Eval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>Eval(self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth, x: numpy.ndarray[numpy.float64[m, 1]], s: numpy.ndarray[numpy.float64[m, 1]], lambda_val: numpy.ndarray[numpy.float64[m, 1]], mu: float) -&gt; Tuple[float, numpy.ndarray[numpy.float64[m, 1]], float]</li>
+</ol>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
+<dd>The value of all the decision variables in prog().</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s</span></code>:</dt>
+<dd>The value of all slack variables s.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lambda_val</span></code>:</dt>
+<dd>The estimated Lagrangian multipliers. The order of the Lagrangian
+multiplier is as follows: We first call to evaluate all
+constraints. Then for each row of the constraint, if it is an
+equality constraint, we append one single Lagrangian multiplier.
+Otherwise we append the Lagrangian multiplier for the lower and
+upper bounds (where the lower comes before the upper), if the
+corresponding bound is not ±∞. The order of evaluating all the
+constraints is the same as prog.GetAllConstraints() except for
+prog.bounding_box_constraints(). If include_x_bounds=true, then we
+aggregate all the bounding_box_constraints() and evaluate them at
+the end of all constraints.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mu</span></code>:</dt>
+<dd>μ in the documentation above. The constant for penalty term
+weight. This should be a strictly positive number.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code>:</dt>
+<dd>The value of the all the constraints. For an equality constraint
+c(x)=0, the residue is c(x); for an inequality constraint c(x)&gt;=0,
+the residue is c(x)-s where s is the corresponding slack variable.
+Depending on include_x_bounds, <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code> may or may
+not contain the residue for bounding box constraints x_lo &lt;= x &lt;=
+x_up at the end.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost</span></code>:</dt>
+<dd>The value of the cost function f(x).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The evaluated Augmented Lagrangian (AL) L(x, s, λ, μ).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This Eval function differs from
+AugmentedLagrangianNonsmooth::Eval() function as <code class="docutils literal notranslate"><span class="pre">s</span></code> is an input
+argument.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>Eval(self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth, x: numpy.ndarray[object[m, 1]], s: numpy.ndarray[object[m, 1]], lambda_val: numpy.ndarray[numpy.float64[m, 1]], mu: float) -&gt; Tuple[pydrake.autodiffutils.AutoDiffXd, numpy.ndarray[object[m, 1]], pydrake.autodiffutils.AutoDiffXd]</li>
+</ol>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">x</span></code>:</dt>
+<dd>The value of all the decision variables in prog().</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">s</span></code>:</dt>
+<dd>The value of all slack variables s.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">lambda_val</span></code>:</dt>
+<dd>The estimated Lagrangian multipliers. The order of the Lagrangian
+multiplier is as follows: We first call to evaluate all
+constraints. Then for each row of the constraint, if it is an
+equality constraint, we append one single Lagrangian multiplier.
+Otherwise we append the Lagrangian multiplier for the lower and
+upper bounds (where the lower comes before the upper), if the
+corresponding bound is not ±∞. The order of evaluating all the
+constraints is the same as prog.GetAllConstraints() except for
+prog.bounding_box_constraints(). If include_x_bounds=true, then we
+aggregate all the bounding_box_constraints() and evaluate them at
+the end of all constraints.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">mu</span></code>:</dt>
+<dd>μ in the documentation above. The constant for penalty term
+weight. This should be a strictly positive number.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code>:</dt>
+<dd>The value of the all the constraints. For an equality constraint
+c(x)=0, the residue is c(x); for an inequality constraint c(x)&gt;=0,
+the residue is c(x)-s where s is the corresponding slack variable.
+Depending on include_x_bounds, <code class="docutils literal notranslate"><span class="pre">constraint_residue</span></code> may or may
+not contain the residue for bounding box constraints x_lo &lt;= x &lt;=
+x_up at the end.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">cost</span></code>:</dt>
+<dd>The value of the cost function f(x).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The evaluated Augmented Lagrangian (AL) L(x, s, λ, μ).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This Eval function differs from
+AugmentedLagrangianNonsmooth::Eval() function as <code class="docutils literal notranslate"><span class="pre">s</span></code> is an input
+argument.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.include_x_bounds">
+<code class="descname">include_x_bounds</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.include_x_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Whether the bounding box constraint x_lo &lt;= x &lt;= x_up is included
+in the augmented Lagrangian L(x, λ, μ).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.is_equality">
+<code class="descname">is_equality</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; List[bool]<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.is_equality" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Whether each constraint is equality or not. The order of the
+constraint is explained in the class documentation.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.lagrangian_size">
+<code class="descname">lagrangian_size</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.lagrangian_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The size of the Lagrangian multiplier λ.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.prog">
+<code class="descname">prog</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgram<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.prog" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The mathematical program for which the augmented Lagrangian is
+computed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.s_size">
+<code class="descname">s_size</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.s_size" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The size of the slack variable s.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.x_lo">
+<code class="descname">x_lo</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.x_lo" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">All the lower bounds of x.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.x_up">
+<code class="descname">x_up</code><span class="sig-paren">(</span><em>self: pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.solvers.augmented_lagrangian.AugmentedLagrangianSmooth.x_up" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">All the upper bounds of x.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pydrake.solvers.branch_and_bound.html" class="btn btn-neutral float-right" title="pydrake.solvers.branch_and_bound" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pydrake.solvers.all.html" class="btn btn-neutral float-left" title="pydrake.solvers.all" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

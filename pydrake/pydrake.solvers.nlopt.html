@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pydrake.solvers.csdp &mdash; pydrake  documentation</title>
+  <title>pydrake.solvers.nlopt &mdash; pydrake  documentation</title>
   
 
   
@@ -37,8 +37,8 @@
   <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pydrake.solvers.dreal" href="pydrake.solvers.dreal.html" />
-    <link rel="prev" title="pydrake.solvers.clp" href="pydrake.solvers.clp.html" /> 
+    <link rel="next" title="pydrake.solvers.osqp" href="pydrake.solvers.osqp.html" />
+    <link rel="prev" title="pydrake.solvers.mosek" href="pydrake.solvers.mosek.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -105,7 +105,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.augmented_lagrangian.html">pydrake.solvers.augmented_lagrangian</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.branch_and_bound.html">pydrake.solvers.branch_and_bound</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.clp.html">pydrake.solvers.clp</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.solvers.csdp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.csdp.html">pydrake.solvers.csdp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.dreal.html">pydrake.solvers.dreal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.gurobi.html">pydrake.solvers.gurobi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.ipopt.html">pydrake.solvers.ipopt</a></li>
@@ -113,7 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_optimization_util.html">pydrake.solvers.mixed_integer_optimization_util</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mixed_integer_rotation_constraint.html">pydrake.solvers.mixed_integer_rotation_constraint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.mosek.html">pydrake.solvers.mosek</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.nlopt.html">pydrake.solvers.nlopt</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">pydrake.solvers.nlopt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.osqp.html">pydrake.solvers.osqp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.scs.html">pydrake.solvers.scs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pydrake.solvers.sdpa_free_format.html">pydrake.solvers.sdpa_free_format</a></li>
@@ -172,7 +172,7 @@
         
           <li><a href="pydrake.solvers.html">pydrake.solvers</a> &raquo;</li>
         
-      <li>pydrake.solvers.csdp</li>
+      <li>pydrake.solvers.nlopt</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -189,74 +189,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pydrake.solvers.csdp">
-<span id="pydrake-solvers-csdp"></span><h1>pydrake.solvers.csdp<a class="headerlink" href="#module-pydrake.solvers.csdp" title="Permalink to this headline">¶</a></h1>
-<p>Csdp solver bindings for MathematicalProgram</p>
+  <div class="section" id="module-pydrake.solvers.nlopt">
+<span id="pydrake-solvers-nlopt"></span><h1>pydrake.solvers.nlopt<a class="headerlink" href="#module-pydrake.solvers.nlopt" title="Permalink to this headline">¶</a></h1>
+<p>NLopt solver bindings for MathematicalProgram</p>
 <dl class="class">
-<dt id="pydrake.solvers.csdp.CsdpSolver">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.csdp.</code><code class="descname">CsdpSolver</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolver" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.nlopt.NloptSolver">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.nlopt.</code><code class="descname">NloptSolver</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.SolverInterface" title="pydrake.solvers.mathematicalprogram.SolverInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.SolverInterface</span></code></a></p>
 <dl class="method">
-<dt id="pydrake.solvers.csdp.CsdpSolver.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.csdp.CsdpSolver</em>, <em>method: pydrake.solvers.sdpa_free_format.RemoveFreeVariableMethod = &lt;RemoveFreeVariableMethod.kNullspace: 1&gt;</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolver.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.nlopt.NloptSolver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.nlopt.NloptSolver</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolver.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
-<dt id="pydrake.solvers.csdp.CsdpSolver.id">
-<em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverId<a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolver.id" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.nlopt.NloptSolver.id">
+<em class="property">static </em><code class="descname">id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.SolverId<a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolver.id" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails">
-<em class="property">class </em><code class="descclassname">pydrake.solvers.csdp.</code><code class="descname">CsdpSolverDetails</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>The CSDP solver details after calling Solve() function. The user can
-call MathematicalProgramResult::get_solver_details&lt;CsdpSolver&gt;() to
+<dt id="pydrake.solvers.nlopt.NloptSolverDetails">
+<em class="property">class </em><code class="descclassname">pydrake.solvers.nlopt.</code><code class="descname">NloptSolverDetails</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolverDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>The NLopt solver details after calling Solve() function. The user can
+call MathematicalProgramResult::get_solver_details&lt;NloptSolver&gt;() to
 obtain the details.</p>
 <dl class="attribute">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails.__init__">
-<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails.__init__" title="Permalink to this definition">¶</a></dt>
+<dt id="pydrake.solvers.nlopt.NloptSolverDetails.__init__">
+<code class="descname">__init__</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolverDetails.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails.dual_objective">
-<code class="descname">dual_objective</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails.dual_objective" title="Permalink to this definition">¶</a></dt>
-<dd><p>The dual objective value.</p>
+<dt id="pydrake.solvers.nlopt.NloptSolverDetails.status">
+<code class="descname">status</code><a class="headerlink" href="#pydrake.solvers.nlopt.NloptSolverDetails.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The return status of NLopt solver. Please refer to
+<a class="reference external" href="https://nlopt.readthedocs.io/en/latest/NLopt_Reference/#return-values">https://nlopt.readthedocs.io/en/latest/NLopt_Reference/#return-values</a>.</p>
 </dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails.primal_objective">
-<code class="descname">primal_objective</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails.primal_objective" title="Permalink to this definition">¶</a></dt>
-<dd><p>The primal objective value.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails.return_code">
-<code class="descname">return_code</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails.return_code" title="Permalink to this definition">¶</a></dt>
-<dd><p>Refer to the Return Codes section of CSDP 6.2.0 User’s Guide for
-explanation on the return code. Some of the common return codes are</p>
-<p>0 Problem is solved to optimality. 1 Problem is primal infeasible. 2
-Problem is dual infeasible. 3 Problem solved to near optimality. 4
-Maximum iterations reached.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails.y_val">
-<code class="descname">y_val</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails.y_val" title="Permalink to this definition">¶</a></dt>
-<dd><p>CSDP solves a primal problem of the form</p>
-<p>max tr(C*X) s.t tr(Aᵢ*X) = aᵢ X ≽ 0</p>
-<p>The dual form is</p>
-<p>min aᵀy s.t ∑ᵢ yᵢAᵢ - C = Z Z ≽ 0</p>
-<p>y, Z are the variables for the dual problem. y_val, Z_val are the
-solutions to the dual problem.</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pydrake.solvers.csdp.CsdpSolverDetails.Z_val">
-<code class="descname">Z_val</code><a class="headerlink" href="#pydrake.solvers.csdp.CsdpSolverDetails.Z_val" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
 
 </dd></dl>
 
@@ -270,10 +239,10 @@ solutions to the dual problem.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pydrake.solvers.dreal.html" class="btn btn-neutral float-right" title="pydrake.solvers.dreal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pydrake.solvers.osqp.html" class="btn btn-neutral float-right" title="pydrake.solvers.osqp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pydrake.solvers.clp.html" class="btn btn-neutral float-left" title="pydrake.solvers.clp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pydrake.solvers.mosek.html" class="btn btn-neutral float-left" title="pydrake.solvers.mosek" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
