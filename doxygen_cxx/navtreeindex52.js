@@ -1,5 +1,6 @@
 var NAVTREEINDEX52 =
 {
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa2e59a51ac43bc3415c1b8ce7b3f98579":[4,0,0,1,56,12,26],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa4371c3565b771b40c187487cc0190392":[4,0,0,1,56,12,18],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa43d11850893d2fe84a1e618121c1cc0a":[4,0,0,1,56,12,4],
 "symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa5816dfcaf3b6dbb486ef9c8c006ff613":[4,0,0,1,56,12,16],
@@ -248,6 +249,5 @@ var NAVTREEINDEX52 =
 "symbolic__monomial__basis__element_8h.html#aec1d54669ca8ae5ea474b5904c50e85e":[4,0,0,1,66,4],
 "symbolic__monomial__basis__element_8h.html#af71ffcec2b8e06d52b7c6e8f53106160":[4,0,0,1,66,3],
 "symbolic__monomial__util_8h.html":[4,0,0,1,67],
-"symbolic__monomial__util_8h.html#a04c0029b04f957181b0cb2bdae701514":[4,0,0,1,67,2],
-"symbolic__monomial__util_8h.html#aa40528027cce753aacb377913342f536":[4,0,0,1,67,4]
+"symbolic__monomial__util_8h.html#a04c0029b04f957181b0cb2bdae701514":[4,0,0,1,67,2]
 };

@@ -69,6 +69,7 @@ var searchData=
   ['sos_5fbasis_5fgenerator_2eh',['sos_basis_generator.h',['../sos__basis__generator_8h.html',1,'']]],
   ['space_5fxyz_5ffloating_5fmobilizer_2eh',['space_xyz_floating_mobilizer.h',['../space__xyz__floating__mobilizer_8h.html',1,'']]],
   ['space_5fxyz_5fmobilizer_2eh',['space_xyz_mobilizer.h',['../space__xyz__mobilizer_8h.html',1,'']]],
+  ['sparse_5fand_5fdense_5fmatrix_2eh',['sparse_and_dense_matrix.h',['../sparse__and__dense__matrix_8h.html',1,'']]],
   ['sparse_5flinear_5foperator_2eh',['sparse_linear_operator.h',['../sparse__linear__operator_8h.html',1,'']]],
   ['spatial_5facceleration_2eh',['spatial_acceleration.h',['../spatial__acceleration_8h.html',1,'']]],
   ['spatial_5falgebra_2eh',['spatial_algebra.h',['../spatial__algebra_8h.html',1,'']]],

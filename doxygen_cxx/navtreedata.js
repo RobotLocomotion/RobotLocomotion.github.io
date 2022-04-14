@@ -112,13 +112,13 @@ var NAVTREEINDEX =
 "multibody__tree-inl_8h.html",
 "newmark__scheme_8h.html",
 "read__obj_8h.html",
-"spatial__kinematics_8h.html",
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#a4536120bd982cc479d398466140732ba",
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00",
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a",
-"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa4371c3565b771b40c187487cc0190392",
-"symbolic__monomial__util_8h.html#ade6ac4e26dcd9023a9f8146aa75454c7",
-"volume__mesh_8h.html#a2134db5f8753db883df9439aa2c38814"
+"spatial__inertia_8h.html",
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html",
+"structdrake_1_1solvers_1_1_nlopt_solver_details.html",
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#adc250b4c9ae780fa619885b581260e43",
+"symbolic__expression_8h.html#aebde9bdda9a428ef1bab6175954d30faa2e59a51ac43bc3415c1b8ce7b3f98579",
+"symbolic__monomial__util_8h.html#aa40528027cce753aacb377913342f536",
+"volume__mesh_8h.html#a15599d92370af7b991c4a593f6103376"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

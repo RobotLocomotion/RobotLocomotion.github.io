@@ -241,6 +241,7 @@ var NAVTREEINDEX47 =
 "sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,10,57,0],
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,13,42],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,13,43],
+"sparse__and__dense__matrix_8h.html":[4,0,0,10,58],
 "sparse__linear__operator_8h.html":[4,0,0,8,2,9],
 "spatial__acceleration_8h.html":[4,0,0,8,6,0],
 "spatial__algebra_8h.html":[4,0,0,8,6,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX47 =
 "spatial__derivative_8h.html":[4,0,0,8,11,2],
 "spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,11,2,1],
 "spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,11,2,0],
-"spatial__force_8h.html":[4,0,0,8,6,2],
-"spatial__inertia_8h.html":[4,0,0,8,13,44]
+"spatial__force_8h.html":[4,0,0,8,6,2]
 };

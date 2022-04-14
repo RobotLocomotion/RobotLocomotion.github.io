@@ -107,6 +107,7 @@ var dir_c86b501450b8b8b59405c286cb030cc3 =
       [ "SolverTypeConverter", "classdrake_1_1solvers_1_1_solver_type_converter.html", "classdrake_1_1solvers_1_1_solver_type_converter" ]
     ] ],
     [ "sos_basis_generator.h", "sos__basis__generator_8h.html", "sos__basis__generator_8h" ],
+    [ "sparse_and_dense_matrix.h", "sparse__and__dense__matrix_8h.html", null ],
     [ "system_identification.h", "system__identification_8h.html", [
       [ "SystemIdentification", "classdrake_1_1solvers_1_1_system_identification.html", "classdrake_1_1solvers_1_1_system_identification" ],
       [ "SystemIdentificationResult", "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result.html", "structdrake_1_1solvers_1_1_system_identification_1_1_system_identification_result" ]

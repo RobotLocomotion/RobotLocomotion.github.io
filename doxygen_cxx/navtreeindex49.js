@@ -1,5 +1,6 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html":[1,4,2,1,1],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#a4536120bd982cc479d398466140732ba":[1,4,2,1,1,1],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#a7b9aa884cf273e49da0dd0de4cbfbb8b":[1,4,2,1,1,2],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html#ab882a795ac2ee341cce7a9d85981f155":[1,4,2,1,1,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,12,48],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,12,49],
 "structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,12,50],
-"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,12,50,0],
-"structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,12,52]
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,12,50,0]
 };
