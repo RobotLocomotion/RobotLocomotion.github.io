@@ -1,5 +1,11 @@
 var NAVTREEINDEX20 =
 {
+"classdrake_1_1solvers_1_1_mathematical_program.html#a5c41563c9fea14a00330000b42a682fc":[1,1,2,10],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a5e8c7c4993cbaa6cc2ca30874be835d7":[1,1,2,11],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a5ebc792721a0a9dca1079e093428655a":[1,1,2,139],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a5ef1689f39c06dc1a2520276fcd47c5b":[1,1,2,86],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a5febe285490e9ce74e824de29f2ecd9f":[1,1,2,146],
+"classdrake_1_1solvers_1_1_mathematical_program.html#a60415069ede137e871e1edd1f8194fe2":[1,1,2,175],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a6060c77125050d8c1b479a83d983a569":[1,1,2,48],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a60e141e79d84c40fbc83ea8e3aab7823":[1,1,2,32],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a63a221ef50ba7ccdff7222a5a0fb38b7":[1,1,2,128],
@@ -243,11 +249,5 @@ var NAVTREEINDEX20 =
 "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffa4f968049bc5e5f7c6e0d89946366fff2":[3,0,0,12,42,1,2],
 "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffa5b12e59f761d85cb5b86f4188ad5556c":[3,0,0,12,42,1,1],
 "classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a50cc1069474becb0998889b417d7b4ffaad4db861a558a10f24800a8ce8a31e05":[3,0,0,12,42,1,0],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a5140e062971363cc6f3b55cfef5dd4e0":[3,0,0,12,42,12],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a847390df2880e376e2d34e3cb8126d60":[3,0,0,12,42,9],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a99156f31969224847a5514e0f1fd47d0":[3,0,0,12,42,8],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#aa6df5af978129e2a5c7e9cea590ae208":[3,0,0,12,42,7],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#ad48cd766fd69e534747352670b320229":[3,0,0,12,42,6],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#afce3b9c40715a21aa37836c53b126c76":[3,0,0,12,42,2],
-"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#afe1238e78ea2779fde9edfa2d2d41c58":[3,0,0,12,42,4]
+"classdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator.html#a5140e062971363cc6f3b55cfef5dd4e0":[3,0,0,12,42,12]
 };

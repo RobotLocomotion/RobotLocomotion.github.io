@@ -1,4 +1,4 @@
 var compliant__contact__manager_8h =
 [
-    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_SCALARS", "compliant__contact__manager_8h.html#ac599f4f3a6b1e2f688346350cd2d5577", null ]
+    [ "DRAKE_DECLARE_CLASS_TEMPLATE_INSTANTIATIONS_ON_DEFAULT_NONSYMBOLIC_SCALARS", "compliant__contact__manager_8h.html#aae47cefb23deac8f4c80e3b2f26281a1", null ]
 ];

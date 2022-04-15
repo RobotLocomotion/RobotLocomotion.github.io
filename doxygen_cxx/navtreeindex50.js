@@ -1,5 +1,12 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a3bd18d95fc284969ff5703de05b5a9f5":[3,0,0,12,46,0],
+"structdrake_1_1solvers_1_1_mosek_solver_details.html#a4036e6e47f77a14497bc9f6c007193a0":[3,0,0,12,46,2],
+"structdrake_1_1solvers_1_1_new_symmetric_variable_names.html":[3,0,0,12,47],
+"structdrake_1_1solvers_1_1_new_variable_names.html":[3,0,0,12,48],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_rows_00_01_cols_01_4.html":[3,0,0,12,49],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html":[3,0,0,12,50],
+"structdrake_1_1solvers_1_1_new_variable_names_3_01_size_01_4.html#ac921af9184702dd3a3baba941c7361aa":[3,0,0,12,50,0],
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html":[3,0,0,12,52],
 "structdrake_1_1solvers_1_1_nlopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,52,0],
 "structdrake_1_1solvers_1_1_osqp_solver_details.html":[3,0,0,12,54],
@@ -242,12 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a09ebd10735aaa1583c86ff17479eb9f8":[3,0,0,14,8,12,3],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a0ad45d355aa0c88b07500cec8faa94b5":[3,0,0,14,8,12,4],
 "structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,12,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ad57b2d00f790a83a293e9712d5c1805c":[3,0,0,14,8,12,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,12,2],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html":[3,0,0,14,8,13],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a3fc5a3db41247932de0536acb4a82a6d":[3,0,0,14,8,13,0],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,13,1],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_expr_01_4.html#afe6901f952a36afe20ac9b9e21e1a22a":[3,0,0,14,8,13,2],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html":[3,0,0,14,8,14],
-"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_grey8_u_01_4.html#a770fd0c30a2b985c180ebffb9747a07a":[3,0,0,14,8,14,1]
+"structdrake_1_1systems_1_1sensors_1_1_image_traits_3_01_pixel_type_1_1k_depth32_f_01_4.html#ad57b2d00f790a83a293e9712d5c1805c":[3,0,0,14,8,12,0]
 };

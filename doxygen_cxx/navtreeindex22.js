@@ -1,5 +1,11 @@
 var NAVTREEINDEX22 =
 {
+"classdrake_1_1solvers_1_1_solver_options.html#a9df62381db112d3b359cd2a5e1111fdf":[3,0,0,12,70,13],
+"classdrake_1_1solvers_1_1_solver_options.html#aac20432da1daa9805e9448e151f2b552":[3,0,0,12,70,12],
+"classdrake_1_1solvers_1_1_solver_options.html#ac1ab5717db6c3382362d3622a187cfaa":[3,0,0,12,70,19],
+"classdrake_1_1solvers_1_1_solver_options.html#ac2adda584ed29a23b6e0bced598f22c3":[3,0,0,12,70,6],
+"classdrake_1_1solvers_1_1_solver_options.html#ac54f45d8221218d66a7f603bee90d21f":[3,0,0,12,70,21],
+"classdrake_1_1solvers_1_1_solver_options.html#ac5d150aa10bfd49088ecc4bc42a5e77b":[3,0,0,12,70,2],
 "classdrake_1_1solvers_1_1_solver_options.html#acb87af9112ed258476895120cfa178e9":[3,0,0,12,70,11],
 "classdrake_1_1solvers_1_1_solver_options.html#acf436474c8cf3ddc0ab64013b833e6a7":[3,0,0,12,70,5],
 "classdrake_1_1solvers_1_1_solver_options.html#ae735ec2f66f7ac2bdc79307be1841cb5":[3,0,0,12,70,3],
@@ -243,11 +249,5 @@ var NAVTREEINDEX22 =
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a18cb23d912e6cb9b58e64e6c80a3ae51":[3,0,0,12,0,11,10],
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a1c60716223a3f473cd4fbdc55266e999":[3,0,0,12,0,11,0],
 "classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a383823617915edfa7bb74cd8bde39f1a":[3,0,0,12,0,11,15],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a51ef1f0de8ddf315bf73199b2ea04584":[3,0,0,12,0,11,9],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a5297d87a5bec0b5c9de7270671dddbfa":[3,0,0,12,0,11,13],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a77480a0d6e56628d0f03556bfe8f5d6e":[3,0,0,12,0,11,18],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a778484fa74c24cf6076aecbffb4be0ce":[3,0,0,12,0,11,1],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a781161697189ed3b7a9adbdf819f6789":[3,0,0,12,0,11,2],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a818324f5f756a41dd4fe79adff4700f7":[3,0,0,12,0,11,22],
-"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a8d61e900e8ec3a2743bf435a4001f814":[3,0,0,12,0,11,23]
+"classdrake_1_1solvers_1_1fbstab_1_1_mpc_variable.html#a51ef1f0de8ddf315bf73199b2ea04584":[3,0,0,12,0,11,9]
 };

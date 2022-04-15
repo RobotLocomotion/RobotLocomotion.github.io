@@ -1,5 +1,12 @@
 var NAVTREEINDEX48 =
 {
+"spatial__acceleration_8h.html":[4,0,0,8,6,0],
+"spatial__algebra_8h.html":[4,0,0,8,6,1],
+"spatial__algebra_8h.html#a20c5b057eb2bb3c32004a09588193538":[4,0,0,8,6,1,0],
+"spatial__derivative_8h.html":[4,0,0,8,11,2],
+"spatial__derivative_8h.html#ace570bf1fadd64470c0fda6c73981cc9":[4,0,0,8,11,2,1],
+"spatial__derivative_8h.html#afebf465d77636f970101b962f87460af":[4,0,0,8,11,2,0],
+"spatial__force_8h.html":[4,0,0,8,6,2],
 "spatial__inertia_8h.html":[4,0,0,8,13,44],
 "spatial__kinematics_8h.html":[4,0,0,8,11,3],
 "spatial__momentum_8h.html":[4,0,0,8,6,3],
@@ -153,8 +160,8 @@ var NAVTREEINDEX48 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,5,4,6,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,6,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,6,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,5,4,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,1,1,6,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,5,4,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,4,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,6,4],
@@ -242,12 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,8,26,0],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html":[3,0,0,8,33],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a686ecfe3314ad57f5e31caf2ff5f69e9":[3,0,0,8,33,0],
-"structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a7b9cdbe2581368f7be7b952fff45b58e":[3,0,0,8,33,1],
-"structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#ad7bdb8b88983c9548bd9b85ad7b8e8da":[3,0,0,8,33,2],
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html":[1,4,2,1,0],
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a070d67fe6a2aec68937b130e4e36afbf":[1,4,2,1,0,1],
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a0d6fc2daabf951fe18a222fab56c2ba6":[1,4,2,1,0,4],
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a12c9ae23f7c0c50dc5417ea2d15dd48b":[1,4,2,1,0,3],
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[1,4,2,1,0,0],
-"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a70e95748d802a0f66bba15e61dc5fb0e":[1,4,2,1,0,2]
+"structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html#a7b9cdbe2581368f7be7b952fff45b58e":[3,0,0,8,33,1]
 };

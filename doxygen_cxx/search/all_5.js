@@ -58,6 +58,7 @@ var searchData=
   ['evalabstractcallback',['EvalAbstractCallback',['../classdrake_1_1systems_1_1_input_port_base.html#a7f8954776b80d1be380b0ef18b39fcae',1,'drake::systems::InputPortBase']]],
   ['evalabstractinput',['EvalAbstractInput',['../classdrake_1_1systems_1_1_system_base.html#a2cb18001bedce2dfaf75b0ae8a14375e',1,'drake::systems::SystemBase']]],
   ['evalabstractinputimpl',['EvalAbstractInputImpl',['../classdrake_1_1systems_1_1_system_base.html#a73ba174e02b52a477c081f79da514c0b',1,'drake::systems::SystemBase']]],
+  ['evalangularvelocityinworld',['EvalAngularVelocityInWorld',['../classdrake_1_1multibody_1_1_frame.html#a771e61be4b212f85aa8f00951ded51e6',1,'drake::multibody::Frame']]],
   ['evalbarycentricweights',['EvalBarycentricWeights',['../classdrake_1_1math_1_1_barycentric_mesh.html#a29f6050f9d7eee48c6475c53071d71db',1,'drake::math::BarycentricMesh']]],
   ['evalbinding',['EvalBinding',['../classdrake_1_1solvers_1_1_mathematical_program.html#af9d07051ef1c3778a15b117060f65ac5',1,'drake::solvers::MathematicalProgram::EvalBinding()'],['../classdrake_1_1solvers_1_1_mathematical_program_result.html#a5477c6d7b8af6a3be55e58d0d5e2d768',1,'drake::solvers::MathematicalProgramResult::EvalBinding()']]],
   ['evalbindingatinitialguess',['EvalBindingAtInitialGuess',['../classdrake_1_1solvers_1_1_mathematical_program.html#a0eb46a0ff11d6f6d22d69d9c16bfce94',1,'drake::solvers::MathematicalProgram']]],

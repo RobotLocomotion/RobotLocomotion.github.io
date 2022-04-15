@@ -1,5 +1,11 @@
 var NAVTREEINDEX38 =
 {
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a840e2471b3f05b98dbb7d9ec51f6efd7":[3,0,0,14,8,2,0],
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a91be32204a8f6bb1a73d2cebccac0035":[3,0,0,14,8,2,13],
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a9da086ab0710c0415d4c68d4bb1ab4ba":[3,0,0,14,8,2,1],
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aa1d16b9fcf585fe75becb5357c74ba72":[3,0,0,14,8,2,8],
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abb1027925f543f3d11d45ee908a6fbad":[3,0,0,14,8,2,14],
+"classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abc9ba081bfe31e8224d9e40b96f0f717":[3,0,0,14,8,2,10],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321":[3,0,0,14,8,2,9],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aca5377a1606d0d69d2a9365fafd51476":[3,0,0,14,8,2,12],
 "classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f":[3,0,0,14,8,2,11],
@@ -243,11 +249,5 @@ var NAVTREEINDEX38 =
 "classdrake_1_1test_1_1_limit_malloc.html#a923eedb579481aa1bab9babf206d3ead":[3,0,0,15,0,3],
 "classdrake_1_1test_1_1_limit_malloc.html#aab5411a4588acfe4e13675e9234adedf":[3,0,0,15,0,7],
 "classdrake_1_1test_1_1_limit_malloc.html#afcdbfd967bf9091f3554dc4b5609c288":[3,0,0,15,0,5],
-"classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,15,0,1],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html":[3,0,0,16,0],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0acbf3fa1589153652739854f168b63e":[3,0,0,16,0,11],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a0d37069b2edc37d7662aa809b6070e4e":[3,0,0,16,0,7],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a16a1ff64460e6742849e539887626cea":[3,0,0,16,0,9],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a1ffd5b82508f158e6e2d5b85be11bacc":[3,0,0,16,0,24],
-"classdrake_1_1trajectories_1_1_bspline_trajectory.html#a2a8a7c06f6f68cd4e58721aab4eb5885":[3,0,0,16,0,18]
+"classdrake_1_1test_1_1_limit_malloc.html#afef229bd4c5ea3baf6feca1c8720d9da":[3,0,0,15,0,1]
 };

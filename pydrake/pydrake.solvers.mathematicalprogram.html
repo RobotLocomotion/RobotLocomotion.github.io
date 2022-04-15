@@ -1120,12 +1120,33 @@ slack values at a given solution x, use Eval(x).</p>
 <p>Implements a constraint of the form <span class="math notranslate nohighlight">\(lb &lt;= Ax &lt;= ub\)</span></p>
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint, A: numpy.ndarray[numpy.float64[m, n]], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>__init__(self: pydrake.solvers.mathematicalprogram.LinearConstraint, A: numpy.ndarray[numpy.float64[m, n]], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Construct the linear constraint lb &lt;= A*x &lt;= ub</p>
+<ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.solvers.mathematicalprogram.LinearConstraint, A: scipy.sparse.csc_matrix[numpy.float64], lb: numpy.ndarray[numpy.float64[m, 1]], ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Overloads constructor with a sparse A matrix.</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.A">
 <code class="descname">A</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the coefficient matrix A as a dense matrix.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function will allocate new memory on the heap. For better
+performance you should call get_sparse_A() which returns a sparse
+matrix.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.get_sparse_A">
+<code class="descname">get_sparse_A</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint</em><span class="sig-paren">)</span> &#x2192; scipy.sparse.csc_matrix[numpy.float64]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.get_sparse_A" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1147,8 +1168,12 @@ Constraint::set_bounds, as in LinearConstraint.</p>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.UpdateCoefficients">
-<code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint, new_A: numpy.ndarray[numpy.float64[m, n]], new_lb: numpy.ndarray[numpy.float64[m, 1]], new_ub: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
-<dd><p>Updates the linear term, upper and lower bounds in the linear
+<code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>UpdateCoefficients(self: pydrake.solvers.mathematicalprogram.LinearConstraint, new_A: numpy.ndarray[numpy.float64[m, n]], new_lb: numpy.ndarray[numpy.float64[m, 1]], new_ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Updates the linear term, upper and lower bounds in the linear
 constraint. The updated constraint is: new_lb &lt;= new_A * x &lt;= new_ub
 Note that the size of constraints (number of rows) can change, but the
 number of variables (number of cols) cannot.</p>
@@ -1160,6 +1185,10 @@ number of variables (number of cols) cannot.</p>
 <dt>Parameter <code class="docutils literal notranslate"><span class="pre">new_up</span></code>:</dt>
 <dd>new upper bound</dd>
 </dl>
+<ol class="arabic simple" start="2">
+<li>UpdateCoefficients(self: pydrake.solvers.mathematicalprogram.LinearConstraint, new_A: scipy.sparse.csc_matrix[numpy.float64], new_lb: numpy.ndarray[numpy.float64[m, 1]], new_ub: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Overloads UpdateCoefficients but with a sparse A matrix.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1248,6 +1277,10 @@ variables (size of a) cannot change.</p>
 </ol>
 <p>Constructs the linear equality constraint Aeq * x = beq</p>
 <ol class="arabic simple" start="2">
+<li>__init__(self: pydrake.solvers.mathematicalprogram.LinearEqualityConstraint, Aeq: scipy.sparse.csc_matrix[numpy.float64], beq: numpy.ndarray[numpy.float64[m, 1]]) -&gt; None</li>
+</ol>
+<p>Overloads the constructor with a sparse matrix Aeq.</p>
+<ol class="arabic simple" start="3">
 <li>__init__(self: pydrake.solvers.mathematicalprogram.LinearEqualityConstraint, a: numpy.ndarray[numpy.float64[1, n]], beq: float) -&gt; None</li>
 </ol>
 <p>Constructs the linear equality constraint a.dot(x) = beq</p>
@@ -1256,7 +1289,8 @@ variables (size of a) cannot change.</p>
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearEqualityConstraint.UpdateCoefficients">
 <code class="descname">UpdateCoefficients</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearEqualityConstraint, Aeq: numpy.ndarray[numpy.float64[m, n]], beq: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearEqualityConstraint.UpdateCoefficients" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Overloads UpdateCoefficients but with a sparse A matrix.</p>
+</dd></dl>
 
 </dd></dl>
 

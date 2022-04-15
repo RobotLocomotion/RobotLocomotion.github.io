@@ -3740,6 +3740,38 @@ object’s kinematics) from a given Context.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_.Frame_[float].CalcAngularVelocity">
+<code class="descname">CalcAngularVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].CalcAngularVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured in a frame M,
+expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M (the frame in which <code class="docutils literal notranslate"><span class="pre">this</span></code> angular velocity is
+to be measured).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E (the frame in which the returned angular velocity
+is to be expressed).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity ω measured in frame M,
+expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalAngularVelocityInWorld() to evaluate ω_WF_W (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame
+F’s angular velocity ω measured and expressed in the world frame
+W).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_.Frame_[float].CalcOffsetPoseInBody">
 <code class="descname">CalcOffsetPoseInBody</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], X_FQ: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].CalcOffsetPoseInBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given the offset pose <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code> of a frame Q in <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F, this
@@ -4035,6 +4067,32 @@ CalcSpatialAccelerationInWorld().</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_.Frame_[float].EvalAngularVelocityInWorld">
+<code class="descname">EvalAngularVelocityInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].EvalAngularVelocityInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured and expressed
+in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_WF_W (frame F’s angular velocity ω measured and expressed in the
+world frame W).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcAngularVelocity() to calculate ω_MF_E (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+angular velocity ω measured in a frame M and expressed in a frame
+E).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_.Frame_[float].GetFixedOffsetPoseInBody">
 <code class="descname">GetFixedOffsetPoseInBody</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], X_FQ: pydrake.math.RigidTransform_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].GetFixedOffsetPoseInBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variant of CalcOffsetPoseInBody() that given the offset pose <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>
@@ -4213,6 +4271,38 @@ object’s kinematics) from a given Context.</p>
 <dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].body">
 <code class="descname">body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::Body&lt;Eigen::AutoDiffScalar&lt;Eigen::Matrix&lt;double, -1, 1, 0, -1, 1&gt; &gt; &gt;<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const reference to the body associated to this Frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].CalcAngularVelocity">
+<code class="descname">CalcAngularVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], measured_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], expressed_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].CalcAngularVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured in a frame M,
+expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M (the frame in which <code class="docutils literal notranslate"><span class="pre">this</span></code> angular velocity is
+to be measured).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E (the frame in which the returned angular velocity
+is to be expressed).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity ω measured in frame M,
+expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalAngularVelocityInWorld() to evaluate ω_WF_W (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame
+F’s angular velocity ω measured and expressed in the world frame
+W).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -4511,6 +4601,32 @@ CalcSpatialAccelerationInWorld().</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].EvalAngularVelocityInWorld">
+<code class="descname">EvalAngularVelocityInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].EvalAngularVelocityInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured and expressed
+in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_WF_W (frame F’s angular velocity ω measured and expressed in the
+world frame W).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcAngularVelocity() to calculate ω_MF_E (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+angular velocity ω measured in a frame M and expressed in a frame
+E).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].GetFixedOffsetPoseInBody">
 <code class="descname">GetFixedOffsetPoseInBody</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], X_FQ: pydrake.math.RigidTransform_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].GetFixedOffsetPoseInBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variant of CalcOffsetPoseInBody() that given the offset pose <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>
@@ -4687,6 +4803,38 @@ object’s kinematics) from a given Context.</p>
 <dt id="pydrake.multibody.tree.Frame_[Expression].body">
 <code class="descname">body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::Body&lt;drake::symbolic::Expression&gt;<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const reference to the body associated to this Frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[Expression].CalcAngularVelocity">
+<code class="descname">CalcAngularVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], context: pydrake.systems.framework.Context_[Expression], measured_in_frame: pydrake.multibody.tree.Frame_[Expression], expressed_in_frame: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].CalcAngularVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured in a frame M,
+expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M (the frame in which <code class="docutils literal notranslate"><span class="pre">this</span></code> angular velocity is
+to be measured).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E (the frame in which the returned angular velocity
+is to be expressed).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity ω measured in frame M,
+expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalAngularVelocityInWorld() to evaluate ω_WF_W (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame
+F’s angular velocity ω measured and expressed in the world frame
+W).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -4985,6 +5133,32 @@ CalcSpatialAccelerationInWorld().</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[Expression].EvalAngularVelocityInWorld">
+<code class="descname">EvalAngularVelocityInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], context: pydrake.systems.framework.Context_[Expression]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].EvalAngularVelocityInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured and expressed
+in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_WF_W (frame F’s angular velocity ω measured and expressed in the
+world frame W).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcAngularVelocity() to calculate ω_MF_E (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+angular velocity ω measured in a frame M and expressed in a frame
+E).</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[Expression].GetFixedOffsetPoseInBody">
 <code class="descname">GetFixedOffsetPoseInBody</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], X_FQ: pydrake.math.RigidTransform_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.math.RigidTransform_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].GetFixedOffsetPoseInBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Variant of CalcOffsetPoseInBody() that given the offset pose <code class="docutils literal notranslate"><span class="pre">X_FQ</span></code>
@@ -5161,6 +5335,38 @@ object’s kinematics) from a given Context.</p>
 <dt id="pydrake.multibody.tree.Frame_[float].body">
 <code class="descname">body</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; drake::multibody::Body&lt;double&gt;<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].body" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a const reference to the body associated to this Frame.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[float].CalcAngularVelocity">
+<code class="descname">CalcAngularVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].CalcAngularVelocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured in a frame M,
+expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M (the frame in which <code class="docutils literal notranslate"><span class="pre">this</span></code> angular velocity is
+to be measured).</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E (the frame in which the returned angular velocity
+is to be expressed).</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity ω measured in frame M,
+expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">EvalAngularVelocityInWorld() to evaluate ω_WF_W (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame
+F’s angular velocity ω measured and expressed in the world frame
+W).</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -5455,6 +5661,32 @@ frame.</p>
 <p class="first admonition-title">See also</p>
 <p class="last">CalcSpatialVelocity(), CalcRelativeSpatialVelocityInWorld(), and
 CalcSpatialAccelerationInWorld().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[float].EvalAngularVelocityInWorld">
+<code class="descname">EvalAngularVelocityInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[3, 1]]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].EvalAngularVelocityInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s angular velocity measured and expressed
+in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">ω_WF_W (frame F’s angular velocity ω measured and expressed in the
+world frame W).</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcAngularVelocity() to calculate ω_MF_E (<code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s
+angular velocity ω measured in a frame M and expressed in a frame
+E).</p>
 </div>
 </dd></dl>
 

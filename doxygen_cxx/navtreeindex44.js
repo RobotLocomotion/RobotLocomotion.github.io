@@ -1,5 +1,11 @@
 var NAVTREEINDEX44 =
 {
+"internal__frame_8h.html":[4,0,0,4,21],
+"internal__geometry_8h.html":[4,0,0,4,22],
+"internal__geometry__names_8h.html":[4,0,0,8,10,15],
+"intersection_8h.html":[4,0,0,4,1,5],
+"inverse__dynamics_8h.html":[4,0,0,11,1,3],
+"inverse__dynamics__controller_8h.html":[4,0,0,11,1,4],
 "inverse__kinematics_8h.html":[4,0,0,8,5,7],
 "ipopt__solver_8h.html":[4,0,0,10,30],
 "iris_8h.html":[4,0,0,4,1,6],
@@ -243,11 +249,5 @@ var NAVTREEINDEX44 =
 "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea20e722b15a1b587c30633f0a136b7009":[4,0,0,8,10,16,2,1],
 "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea24d742e384e4b818c113620a6aebe0e5":[4,0,0,8,10,16,2,4],
 "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea873aefb0d70a0478c541b2d98484595d":[4,0,0,8,10,16,2,0],
-"multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a":[4,0,0,8,10,16,2,2],
-"multibody__plant__config_8h.html":[4,0,0,8,10,17],
-"multibody__plant__config__functions_8h.html":[4,0,0,8,10,18],
-"multibody__plant__config__functions_8h.html#a7e468aa35ef6a84196ac20a13065ca0c":[4,0,0,8,10,18,0],
-"multibody__plant__discrete__update__manager__attorney_8h.html":[4,0,0,8,10,19],
-"multibody__plant__model__attorney_8h.html":[4,0,0,8,10,20],
-"multibody__position__to__geometry__pose_8h.html":[4,0,0,11,7,0]
+"multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a":[4,0,0,8,10,16,2,2]
 };

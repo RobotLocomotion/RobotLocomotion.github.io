@@ -131,19 +131,28 @@ $(document).ready(function(){initNavTree('classdrake_1_1solvers_1_1_linear_const
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab87aa6bcba267401aa60e394b1c31e2e"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedLB , typename DerivedUB &gt; </td></tr>
-<tr class="memitem:ab87aa6bcba267401aa60e394b1c31e2e"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#ab87aa6bcba267401aa60e394b1c31e2e">LinearConstraint</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;a, const Eigen::MatrixBase&lt; DerivedLB &gt; &amp;lb, const Eigen::MatrixBase&lt; DerivedUB &gt; &amp;ub)</td></tr>
-<tr class="separator:ab87aa6bcba267401aa60e394b1c31e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f856e69dc977f8302dc2e735690205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a62f856e69dc977f8302dc2e735690205">LinearConstraint</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a49caacdd74dd193972c7aab01caf4a15">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:a62f856e69dc977f8302dc2e735690205"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the linear constraint lb &lt;= A*x &lt;= ub.  <a href="#a62f856e69dc977f8302dc2e735690205">More...</a><br /></td></tr>
+<tr class="separator:a62f856e69dc977f8302dc2e735690205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d516afa270ccf7776d5832f82c25007"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1d516afa270ccf7776d5832f82c25007">LinearConstraint</a> (const Eigen::SparseMatrix&lt; double &gt; &amp;<a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a49caacdd74dd193972c7aab01caf4a15">A</a>, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;ub)</td></tr>
+<tr class="memdesc:a1d516afa270ccf7776d5832f82c25007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads constructor with a sparse A matrix.  <a href="#a1d516afa270ccf7776d5832f82c25007">More...</a><br /></td></tr>
+<tr class="separator:a1d516afa270ccf7776d5832f82c25007"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec4535d41aed8500779acbaec5095f9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#aec4535d41aed8500779acbaec5095f9e">~LinearConstraint</a> () override</td></tr>
 <tr class="separator:aec4535d41aed8500779acbaec5095f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7814fd66b140e44a21a1830bfd5dfbf"><td class="memItemLeft" align="right" valign="top">virtual Eigen::SparseMatrix&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#ab7814fd66b140e44a21a1830bfd5dfbf">GetSparseMatrix</a> () const</td></tr>
+<tr class="memdesc:ab7814fd66b140e44a21a1830bfd5dfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Deprecated.)  <a href="#ab7814fd66b140e44a21a1830bfd5dfbf">More...</a><br /></td></tr>
 <tr class="separator:ab7814fd66b140e44a21a1830bfd5dfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad091acc47c7bfc849f286116d7a31d46"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::Matrix&lt; double, Eigen::Dynamic, Eigen::Dynamic &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#ad091acc47c7bfc849f286116d7a31d46">A</a> () const</td></tr>
-<tr class="separator:ad091acc47c7bfc849f286116d7a31d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad93d31c8868180061523dee4d6373933"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedL , typename DerivedU &gt; </td></tr>
-<tr class="memitem:ad93d31c8868180061523dee4d6373933"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#ad93d31c8868180061523dee4d6373933">UpdateCoefficients</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;new_A, const Eigen::MatrixBase&lt; DerivedL &gt; &amp;new_lb, const Eigen::MatrixBase&lt; DerivedU &gt; &amp;new_ub)</td></tr>
-<tr class="memdesc:ad93d31c8868180061523dee4d6373933"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the linear term, upper and lower bounds in the linear constraint.  <a href="#ad93d31c8868180061523dee4d6373933">More...</a><br /></td></tr>
-<tr class="separator:ad93d31c8868180061523dee4d6373933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c266571ce951e63d66d582a62854908"><td class="memItemLeft" align="right" valign="top">const Eigen::SparseMatrix&lt; double &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908">get_sparse_A</a> () const</td></tr>
+<tr class="separator:a1c266571ce951e63d66d582a62854908"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49caacdd74dd193972c7aab01caf4a15"><td class="memItemLeft" align="right" valign="top">virtual const Eigen::MatrixXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a49caacdd74dd193972c7aab01caf4a15">A</a> () const</td></tr>
+<tr class="memdesc:a49caacdd74dd193972c7aab01caf4a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the coefficient matrix A as a dense matrix.  <a href="#a49caacdd74dd193972c7aab01caf4a15">More...</a><br /></td></tr>
+<tr class="separator:a49caacdd74dd193972c7aab01caf4a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f85645baa2bea4381cab675169d8c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a37f85645baa2bea4381cab675169d8c8">UpdateCoefficients</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_ub)</td></tr>
+<tr class="memdesc:a37f85645baa2bea4381cab675169d8c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the linear term, upper and lower bounds in the linear constraint.  <a href="#a37f85645baa2bea4381cab675169d8c8">More...</a><br /></td></tr>
+<tr class="separator:a37f85645baa2bea4381cab675169d8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab284845936766f5ea479b268697ca466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#ab284845936766f5ea479b268697ca466">UpdateCoefficients</a> (const Eigen::SparseMatrix&lt; double &gt; &amp;new_A, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_ub)</td></tr>
+<tr class="memdesc:ab284845936766f5ea479b268697ca466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloads UpdateCoefficients but with a sparse A matrix.  <a href="#ab284845936766f5ea479b268697ca466">More...</a><br /></td></tr>
+<tr class="separator:ab284845936766f5ea479b268697ca466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2414f0b23b4a8d0df4d7beea22ab9111"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a2414f0b23b4a8d0df4d7beea22ab9111">set_bounds</a> (const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_lb, const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;new_ub)</td></tr>
 <tr class="memdesc:a2414f0b23b4a8d0df4d7beea22ab9111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the upper and lower bounds of the constraint.  <a href="#a2414f0b23b4a8d0df4d7beea22ab9111">More...</a><br /></td></tr>
 <tr class="separator:a2414f0b23b4a8d0df4d7beea22ab9111"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,12 +285,12 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:abc6556d9d9df387aa13021de16431566"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; double, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#abc6556d9d9df387aa13021de16431566">A_</a></td></tr>
-<tr class="separator:abc6556d9d9df387aa13021de16431566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6829aceb21be4fae9e8d1495e037d51e"><td class="memItemLeft" align="right" valign="top">internal::SparseAndDenseMatrix&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a6829aceb21be4fae9e8d1495e037d51e">A_</a></td></tr>
+<tr class="separator:a6829aceb21be4fae9e8d1495e037d51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1188d1e1d043a6687c7a0b4dcff8b0be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1188d1e1d043a6687c7a0b4dcff8b0be">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1188d1e1d043a6687c7a0b4dcff8b0be">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -307,7 +316,7 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a1e9b4b76746b199b5d28c770c4a86e1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e9b4b76746b199b5d28c770c4a86e1d">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9b4b76746b199b5d28c770c4a86e1d">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,8 +341,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab87aa6bcba267401aa60e394b1c31e2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab87aa6bcba267401aa60e394b1c31e2e">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[3/3]</span></h2>
+<a id="a62f856e69dc977f8302dc2e735690205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f856e69dc977f8302dc2e735690205">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,19 +350,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedLB &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>lb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedUB &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>ub</em>&#160;</td>
         </tr>
         <tr>
@@ -363,6 +372,44 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Construct the linear constraint lb &lt;= A*x &lt;= ub. </p>
+
+</div>
+</div>
+<a id="a1d516afa270ccf7776d5832f82c25007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d516afa270ccf7776d5832f82c25007">&#9670;&nbsp;</a></span>LinearConstraint() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html">LinearConstraint</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads constructor with a sparse A matrix. </p>
 
 </div>
 </div>
@@ -392,8 +439,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad091acc47c7bfc849f286116d7a31d46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad091acc47c7bfc849f286116d7a31d46">&#9670;&nbsp;</a></span>A()</h2>
+<a id="a49caacdd74dd193972c7aab01caf4a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49caacdd74dd193972c7aab01caf4a15">&#9670;&nbsp;</a></span>A()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -402,7 +449,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const Eigen::Matrix&lt;double, Eigen::Dynamic, Eigen::Dynamic&gt;&amp; A </td>
+          <td class="memname">virtual const Eigen::MatrixXd&amp; A </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -414,6 +461,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the coefficient matrix A as a dense matrix. </p>
+<dl class="section note"><dt>Note</dt><dd>This function will allocate new memory on the heap. For better performance you should call <a class="el" href="classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908">get_sparse_A()</a> which returns a sparse matrix. </dd></dl>
 
 </div>
 </div>
@@ -605,6 +655,23 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a1c266571ce951e63d66d582a62854908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c266571ce951e63d66d582a62854908">&#9670;&nbsp;</a></span>get_sparse_A()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::SparseMatrix&lt;double&gt;&amp; get_sparse_A </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab7814fd66b140e44a21a1830bfd5dfbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7814fd66b140e44a21a1830bfd5dfbf">&#9670;&nbsp;</a></span>GetSparseMatrix()</h2>
 
@@ -627,6 +694,10 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>(Deprecated.) </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>Use get_sparse_A() instead of GetSparseMatrix() <br />
+ This will be removed from Drake on or after 2022-08-01.</dd></dl>
 
 </div>
 </div>
@@ -706,8 +777,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad93d31c8868180061523dee4d6373933"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad93d31c8868180061523dee4d6373933">&#9670;&nbsp;</a></span>UpdateCoefficients()</h2>
+<a id="a37f85645baa2bea4381cab675169d8c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f85645baa2bea4381cab675169d8c8">&#9670;&nbsp;</a></span>UpdateCoefficients() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -715,19 +786,19 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void UpdateCoefficients </td>
           <td>(</td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>new_A</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedL &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>new_lb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedU &gt; &amp;&#160;</td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
           <td class="paramname"><em>new_ub</em>&#160;</td>
         </tr>
         <tr>
@@ -747,6 +818,42 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab284845936766f5ea479b268697ca466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab284845936766f5ea479b268697ca466">&#9670;&nbsp;</a></span>UpdateCoefficients() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdateCoefficients </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::SparseMatrix&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_lb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>new_ub</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloads UpdateCoefficients but with a sparse A matrix. </p>
 
 </div>
 </div>
@@ -785,8 +892,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="abc6556d9d9df387aa13021de16431566"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc6556d9d9df387aa13021de16431566">&#9670;&nbsp;</a></span>A_</h2>
+<a id="a6829aceb21be4fae9e8d1495e037d51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6829aceb21be4fae9e8d1495e037d51e">&#9670;&nbsp;</a></span>A_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -795,7 +902,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::Matrix&lt;double, Eigen::Dynamic, Eigen::Dynamic&gt; A_</td>
+          <td class="memname">internal::SparseAndDenseMatrix A_</td>
         </tr>
       </table>
   </td>

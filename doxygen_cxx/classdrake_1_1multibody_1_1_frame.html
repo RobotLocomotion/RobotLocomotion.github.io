@@ -190,6 +190,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8d6b793a9b933ba18d670f763ca90eb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1math_1_1_rotation_matrix.html">math::RotationMatrix</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a8d6b793a9b933ba18d670f763ca90eb4">CalcRotationMatrixInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a8d6b793a9b933ba18d670f763ca90eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and returns the rotation matrix <code>R_WF</code> that relates the world frame W and <code>this</code> frame F as a function of the state stored in <code>context</code>.  <a href="#a8d6b793a9b933ba18d670f763ca90eb4">More...</a><br /></td></tr>
 <tr class="separator:a8d6b793a9b933ba18d670f763ca90eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771e61be4b212f85aa8f00951ded51e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a771e61be4b212f85aa8f00951ded51e6">EvalAngularVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
+<tr class="memdesc:a771e61be4b212f85aa8f00951ded51e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates <code>this</code> frame F's angular velocity measured and expressed in the world frame W.  <a href="#a771e61be4b212f85aa8f00951ded51e6">More...</a><br /></td></tr>
+<tr class="separator:a771e61be4b212f85aa8f00951ded51e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43224c3fb081d06cc200109ea913c9dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a43224c3fb081d06cc200109ea913c9dd">CalcAngularVelocity</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;measured_in_frame, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;expressed_in_frame) const</td></tr>
+<tr class="memdesc:a43224c3fb081d06cc200109ea913c9dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> frame F's angular velocity measured in a frame M, expressed in a frame E.  <a href="#a43224c3fb081d06cc200109ea913c9dd">More...</a><br /></td></tr>
+<tr class="separator:a43224c3fb081d06cc200109ea913c9dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e26d78710628e036f86e991d3434d4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_velocity.html">SpatialVelocity</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2e26d78710628e036f86e991d3434d4b">CalcSpatialVelocityInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context) const</td></tr>
 <tr class="memdesc:a2e26d78710628e036f86e991d3434d4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> frame F's spatial velocity measured and expressed in the world frame W.  <a href="#a2e26d78710628e036f86e991d3434d4b">More...</a><br /></td></tr>
 <tr class="separator:a2e26d78710628e036f86e991d3434d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -437,6 +443,52 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a const reference to the body associated to this Frame. </p>
+
+</div>
+</div>
+<a id="a43224c3fb081d06cc200109ea913c9dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43224c3fb081d06cc200109ea913c9dd">&#9670;&nbsp;</a></span>CalcAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt; CalcAngularVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>measured_in_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>expressed_in_frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculates <code>this</code> frame F's angular velocity measured in a frame M, expressed in a frame E. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">measured_in_frame</td><td>which is frame M (the frame in which <code>this</code> angular velocity is to be measured). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expressed_in_frame</td><td>which is frame E (the frame in which the returned angular velocity is to be expressed). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ω_MF_E, <code>this</code> frame F's angular velocity ω measured in frame M, expressed in frame E. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a771e61be4b212f85aa8f00951ded51e6" title="Evaluates this frame F&#39;s angular velocity measured and expressed in the world frame W.">EvalAngularVelocityInWorld()</a> to evaluate ω_WF_W (<code>this</code> frame F's angular velocity ω measured and expressed in the world frame W). </dd></dl>
 
 </div>
 </div>
@@ -1055,6 +1107,34 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
+<a id="a771e61be4b212f85aa8f00951ded51e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771e61be4b212f85aa8f00951ded51e6">&#9670;&nbsp;</a></span>EvalAngularVelocityInWorld()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacedrake.html#a0ad29daab565ce347c4d1c5aae6a76c2">Vector3</a>&lt;T&gt;&amp; EvalAngularVelocityInWorld </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates <code>this</code> frame F's angular velocity measured and expressed in the world frame W. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ω_WF_W (frame F's angular velocity ω measured and expressed in the world frame W). </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a43224c3fb081d06cc200109ea913c9dd" title="Calculates this frame F&#39;s angular velocity measured in a frame M, expressed in a frame E.">CalcAngularVelocity()</a> to calculate ω_MF_E (<code>this</code> frame F's angular velocity ω measured in a frame M and expressed in a frame E). </dd></dl>
+
+</div>
+</div>
 <a id="a4a070ee83deb89bd6cca65946a5f8f37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4a070ee83deb89bd6cca65946a5f8f37">&#9670;&nbsp;</a></span>GetFixedOffsetPoseInBody()</h2>
 
@@ -1260,8 +1340,8 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
-<a id="a8e197bedf7aa897596ace36baca53361"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="a486765b5bb3145d29946d6dae95a9332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1272,7 +1352,7 @@ When cached values are out of sync with the state stored in context, this method
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1286,8 +1366,8 @@ When cached values are out of sync with the state stored in context, this method
 
 </div>
 </div>
-<a id="a486765b5bb3145d29946d6dae95a9332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a486765b5bb3145d29946d6dae95a9332">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="a8e197bedf7aa897596ace36baca53361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e197bedf7aa897596ace36baca53361">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1298,7 +1378,7 @@ When cached values are out of sync with the state stored in context, this method
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

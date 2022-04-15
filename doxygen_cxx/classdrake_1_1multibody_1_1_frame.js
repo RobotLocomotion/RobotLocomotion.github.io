@@ -5,6 +5,7 @@ var classdrake_1_1multibody_1_1_frame =
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html#a8a0a86b14a720059603e2529def64353", null ],
     [ "Frame", "classdrake_1_1multibody_1_1_frame.html#a930d3e9d3ee5044dde9f4aaaec16b78a", null ],
     [ "body", "classdrake_1_1multibody_1_1_frame.html#aeb41e2fea35bd8efcbcd67c896bc5766", null ],
+    [ "CalcAngularVelocity", "classdrake_1_1multibody_1_1_frame.html#a43224c3fb081d06cc200109ea913c9dd", null ],
     [ "CalcOffsetPoseInBody", "classdrake_1_1multibody_1_1_frame.html#a5d48b5a6c31b367eb3fff952fcefe648", null ],
     [ "CalcOffsetRotationMatrixInBody", "classdrake_1_1multibody_1_1_frame.html#a693cd211e3eb5fc7d2ffdaa5af8b3e4a", null ],
     [ "CalcPose", "classdrake_1_1multibody_1_1_frame.html#a09e6bc147aee91d64b153cbd7cdb5d01", null ],
@@ -23,6 +24,7 @@ var classdrake_1_1multibody_1_1_frame =
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_frame.html#a0162ba098d0c07be12d3a7244914de38", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_frame.html#a652a1d7c4d9d502fffcec5b9d27dd3ec", null ],
     [ "DoCloneToScalar", "classdrake_1_1multibody_1_1_frame.html#a21a1267a3cceabc6d0bec7768cd6f2c7", null ],
+    [ "EvalAngularVelocityInWorld", "classdrake_1_1multibody_1_1_frame.html#a771e61be4b212f85aa8f00951ded51e6", null ],
     [ "GetFixedOffsetPoseInBody", "classdrake_1_1multibody_1_1_frame.html#a4a070ee83deb89bd6cca65946a5f8f37", null ],
     [ "GetFixedPoseInBodyFrame", "classdrake_1_1multibody_1_1_frame.html#a9f41fe43f53ca7807f256f0d5daa0734", null ],
     [ "GetFixedRotationMatrixInBody", "classdrake_1_1multibody_1_1_frame.html#aaff50422b2283b8cc9b6560092b80803", null ],
@@ -30,6 +32,6 @@ var classdrake_1_1multibody_1_1_frame =
     [ "is_body_frame", "classdrake_1_1multibody_1_1_frame.html#a6681a8def9431af1311063721c46fe14", null ],
     [ "is_world_frame", "classdrake_1_1multibody_1_1_frame.html#a64d83126860c9766c12c88786177cf22", null ],
     [ "name", "classdrake_1_1multibody_1_1_frame.html#ad8227ba86a01f26e4f173cd5e219d5d1", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361", null ],
-    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332", null ]
+    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a486765b5bb3145d29946d6dae95a9332", null ],
+    [ "operator=", "classdrake_1_1multibody_1_1_frame.html#a8e197bedf7aa897596ace36baca53361", null ]
 ];

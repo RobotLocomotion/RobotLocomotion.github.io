@@ -99,7 +99,6 @@ var searchData=
   ['_7elinearcomplementarityconstraint',['~LinearComplementarityConstraint',['../classdrake_1_1solvers_1_1_linear_complementarity_constraint.html#a9c4f493fa4486e9c56bb0a94029cb942',1,'drake::solvers::LinearComplementarityConstraint']]],
   ['_7elinearconstraint',['~LinearConstraint',['../classdrake_1_1solvers_1_1_linear_constraint.html#aec4535d41aed8500779acbaec5095f9e',1,'drake::solvers::LinearConstraint']]],
   ['_7elinearcost',['~LinearCost',['../classdrake_1_1solvers_1_1_linear_cost.html#a4a3ccac22c046cbcd35eb0a65a0c1891',1,'drake::solvers::LinearCost']]],
-  ['_7elinearequalityconstraint',['~LinearEqualityConstraint',['../classdrake_1_1solvers_1_1_linear_equality_constraint.html#ad59df81f59771bbdde3dc5f66ea3aae1',1,'drake::solvers::LinearEqualityConstraint']]],
   ['_7elinearmatrixinequalityconstraint',['~LinearMatrixInequalityConstraint',['../classdrake_1_1solvers_1_1_linear_matrix_inequality_constraint.html#ab37e9a6561784595afc928dfc5657c8e',1,'drake::solvers::LinearMatrixInequalityConstraint']]],
   ['_7elinearsystemsolver',['~LinearSystemSolver',['../classdrake_1_1solvers_1_1_linear_system_solver.html#a4c7420aded6ba851545bb5be0f05fa2f',1,'drake::solvers::LinearSystemSolver']]],
   ['_7elinfnormcost',['~LInfNormCost',['../classdrake_1_1solvers_1_1_l_inf_norm_cost.html#a230e57a52e0dd0105a445a9477a9c1f1',1,'drake::solvers::LInfNormCost']]],
