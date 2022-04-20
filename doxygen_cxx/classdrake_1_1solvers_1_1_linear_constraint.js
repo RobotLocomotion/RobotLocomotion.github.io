@@ -11,6 +11,7 @@ var classdrake_1_1solvers_1_1_linear_constraint =
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#aa2431c2dbd82437d8f621033d8af8231", null ],
     [ "DoEval", "classdrake_1_1solvers_1_1_linear_constraint.html#a5eea9354674efc1c07bf537319628ead", null ],
     [ "get_sparse_A", "classdrake_1_1solvers_1_1_linear_constraint.html#a1c266571ce951e63d66d582a62854908", null ],
+    [ "GetDenseA", "classdrake_1_1solvers_1_1_linear_constraint.html#a38e25e75fd44159789b93a0c7f180c39", null ],
     [ "GetSparseMatrix", "classdrake_1_1solvers_1_1_linear_constraint.html#ab7814fd66b140e44a21a1830bfd5dfbf", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#aa21495d4d797f18f8acd9dad11fdfdfc", null ],
     [ "operator=", "classdrake_1_1solvers_1_1_linear_constraint.html#ac5f497b0878226fd242af88c65f593ba", null ],

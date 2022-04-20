@@ -11,6 +11,7 @@ var classdrake_1_1symbolic_1_1_monomial =
     [ "Monomial", "classdrake_1_1symbolic_1_1_monomial.html#ab04fc6ead2d43fab379f4fec2d5090d6", null ],
     [ "degree", "classdrake_1_1symbolic_1_1_monomial.html#a57c09c7813b347ff0419a64ca7642e92", null ],
     [ "Evaluate", "classdrake_1_1symbolic_1_1_monomial.html#acaa87c27bae38b0daed338c482de9a0e", null ],
+    [ "Evaluate", "classdrake_1_1symbolic_1_1_monomial.html#a1dcf0748daabdb165757d2aa3674c082", null ],
     [ "EvaluatePartial", "classdrake_1_1symbolic_1_1_monomial.html#a551cc6131366e79e2cd0aeab92092c9c", null ],
     [ "get_powers", "classdrake_1_1symbolic_1_1_monomial.html#a1d0553f396185535b2ba95351ac4902c", null ],
     [ "GetVariables", "classdrake_1_1symbolic_1_1_monomial.html#aca292ec8785171cf537afdb339a26113", null ],

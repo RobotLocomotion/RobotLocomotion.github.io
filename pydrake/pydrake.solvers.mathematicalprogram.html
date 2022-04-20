@@ -1140,14 +1140,31 @@ slack values at a given solution x, use Eval(x).</p>
 <p class="first admonition-title">Note</p>
 <p class="last">This function will allocate new memory on the heap. For better
 performance you should call get_sparse_A() which returns a sparse
-matrix.</p>
+matrix. / (Deprecated.)</p>
 </div>
+<dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Use GetDenseA() instead of A() This will be removed from Drake on
+or after 2022-08-01.</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.get_sparse_A">
 <code class="descname">get_sparse_A</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint</em><span class="sig-paren">)</span> &#x2192; scipy.sparse.csc_matrix[numpy.float64]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.get_sparse_A" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.GetDenseA">
+<code class="descname">GetDenseA</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.LinearConstraint</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.LinearConstraint.GetDenseA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the matrix A as a dense matrix.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">this might involve memory allocation to convert a sparse matrix to
+a dense one, for better performance you should call get_sparse_A()
+which returns a sparse matrix.</p>
+</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.LinearConstraint.set_bounds">

@@ -1,5 +1,9 @@
 var NAVTREEINDEX47 =
 {
+"random__polynomial__matrix_8h.html":[4,0,0,1,2,7],
+"random__polynomial__matrix_8h.html#ac4fc5709db8aa88c23fc8f401ee3d2de":[4,0,0,1,2,7,0],
+"random__rotation_8h.html":[4,0,0,7,25],
+"random__rotation_8h.html#a6c92561b046b32c1ebe172bd32dc8276":[4,0,0,7,25,1],
 "random__rotation_8h.html#acc24ae9bbbf0b9d253f3344b97a9f3d4":[4,0,0,7,25,3],
 "random__rotation_8h.html#ae6aefde593f0fbe2f9ef04f40979827f":[4,0,0,7,25,0],
 "random__rotation_8h.html#af27920d083eb816f24f832091a662f28":[4,0,0,7,25,2],
@@ -128,7 +132,7 @@ var NAVTREEINDEX47 =
 "schunk__wsg__plain__controller_8h.html#aee3ea37f4f505980157cf93a84687bcbaea78f90b3c3afd64e139a391d6fdd88a":[4,0,0,6,4,3,0,0],
 "schunk__wsg__position__controller_8h.html":[4,0,0,6,4,4],
 "schunk__wsg__trajectory__generator_8h.html":[4,0,0,6,4,5],
-"schur__complement_8h.html":[4,0,0,8,3,23],
+"schur__complement_8h.html":[4,0,0,8,3,24],
 "scope__exit_8h.html":[4,0,0,1,47],
 "scoped__names_8h.html":[4,0,0,8,9,16],
 "scoped__names_8h.html#aaebefff3e06f5d98706559ea03666f4c":[4,0,0,8,9,16,5],
@@ -161,7 +165,7 @@ var NAVTREEINDEX47 =
 "shape__to__string_8h.html":[4,0,0,4,37],
 "signed__distance__pair_8h.html":[4,0,0,4,3,2],
 "signed__distance__to__point_8h.html":[4,0,0,4,3,3],
-"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,24],
+"simplex__gaussian__quadrature_8h.html":[4,0,0,8,3,25],
 "simulator_8h.html":[4,0,0,11,0,21],
 "simulator__config_8h.html":[4,0,0,11,0,22],
 "simulator__config__functions_8h.html":[4,0,0,11,0,23],
@@ -243,11 +247,7 @@ var NAVTREEINDEX47 =
 "sorted__pair_8h.html#abfec653508bbfb544860dbfd0677bfa3":[4,0,0,1,49,6],
 "sorted__pair_8h.html#ae8b6812b1ccb5ba802e724ef1082569c":[4,0,0,1,49,9],
 "sorted__pair__pybind_8h.html":[4,0,0,0,0,0,9],
-"sorted__triplet_8h.html":[4,0,0,4,2,45],
+"sorted__triplet_8h.html":[4,0,0,4,2,46],
 "sos__basis__generator_8h.html":[4,0,0,10,57],
-"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,10,57,0],
-"space__xyz__floating__mobilizer_8h.html":[4,0,0,8,13,42],
-"space__xyz__mobilizer_8h.html":[4,0,0,8,13,43],
-"sparse__and__dense__matrix_8h.html":[4,0,0,10,58],
-"sparse__linear__operator_8h.html":[4,0,0,8,2,9]
+"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,10,57,0]
 };

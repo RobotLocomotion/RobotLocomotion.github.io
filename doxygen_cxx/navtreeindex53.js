@@ -1,5 +1,9 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__ldlt_8h.html":[4,0,0,1,64],
+"symbolic__monomial_8h.html":[4,0,0,1,65],
+"symbolic__monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,65,2],
+"symbolic__monomial_8h.html#a8505db5f6e70df16a3cecda394bdcb24":[4,0,0,1,65,3],
 "symbolic__monomial_8h.html#a8b3d409cea5e6c6495394208c8c8c6ee":[4,0,0,1,65,4],
 "symbolic__monomial__basis__element_8h.html":[4,0,0,1,66],
 "symbolic__monomial__basis__element_8h.html#a5885669a7b9958dc209c13778d48e6ef":[4,0,0,1,66,2],
@@ -182,7 +186,7 @@ var NAVTREEINDEX53 =
 "tamsi__solver_8h.html#a6144c2c8d4494bcb283f3f9e5841bfd2a8c632159fa131f09d04f94e3cbcd8782":[4,0,0,8,10,25,3,0],
 "temp__directory_8h.html":[4,0,0,1,76],
 "temp__directory_8h.html#a107ff2f218f356d05f8cdc3b7d254eb2":[4,0,0,1,76,0],
-"tessellation__strategy_8h.html":[4,0,0,4,2,46],
+"tessellation__strategy_8h.html":[4,0,0,4,2,47],
 "test__utilities_8h.html":[4,0,0,4,1,9],
 "text__logging_8h.html":[4,0,0,1,77],
 "text__logging_8h.html#a43a4a42dcea3143d400de1575cb5758c":[4,0,0,1,77,6],
@@ -207,9 +211,9 @@ var NAVTREEINDEX53 =
 "transform_8h.html":[4,0,0,1,1,2],
 "triangle__quadrature_8h.html":[4,0,0,8,14,1],
 "triangle__quadrature__rule_8h.html":[4,0,0,8,14,2],
-"triangle__surface__mesh_8h.html":[4,0,0,4,2,47],
-"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,48],
-"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,48,0],
+"triangle__surface__mesh_8h.html":[4,0,0,4,2,48],
+"triangle__surface__mesh__field_8h.html":[4,0,0,4,2,49],
+"triangle__surface__mesh__field_8h.html#a982d81c894c425051f4cbb03cd3ca4dd":[4,0,0,4,2,49,0],
 "trig__poly_8h.html":[4,0,0,1,78],
 "trig__poly_8h.html#a43c35aa3bb5ef6f19e6316bb98cc2daf":[4,0,0,1,78,4],
 "trig__poly_8h.html#a69f6fee91b95862e81e39506cae6dc22":[4,0,0,1,78,3],
@@ -245,9 +249,5 @@ var NAVTREEINDEX53 =
 "value__pybind_8h.html":[4,0,0,0,0,0,13],
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,13,0],
 "value__to__abstract__value_8h.html":[4,0,0,11,3,52],
-"van__der__pol_8h.html":[4,0,0,3,18,0],
-"vector__base_8h.html":[4,0,0,11,3,53],
-"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
-"vector__log_8h.html":[4,0,0,11,6,25],
-"vector__log__sink_8h.html":[4,0,0,11,6,26]
+"van__der__pol_8h.html":[4,0,0,3,18,0]
 };

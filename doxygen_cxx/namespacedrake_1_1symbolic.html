@@ -11600,8 +11600,39 @@ we do not provide operator*= function for this class, since operator*= would ret
 <div class="fragment"><div class="line">Eigen::Matrix&lt;Expression, 2, 2&gt; m;</div><div class="line">m &lt;&lt; 1.0, 2.0,</div><div class="line">     3.0, 4.0;</div><div class="line"></div><div class="line">Formula psd{<a class="code" href="namespacedrake_1_1symbolic.html#a648f540fa40e1e281133b972e394574a">positive_semidefinite</a>(m.triangularView&lt;Eigen::Upper&gt;())};</div><div class="line"><span class="comment">// psd includes [1.0 2.0]</span></div><div class="line"><span class="comment">//              [2.0 4.0].</span></div></div><!-- fragment --> 
 </div>
 </div>
+<a id="a43d86ae3f21714ef199febddf60550fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43d86ae3f21714ef199febddf60550fe">&#9670;&nbsp;</a></span>pow() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> drake::symbolic::pow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the rational function <code>f</code> raised to <code>n</code>. </p>
+<p>If n is positive, (f/g)ⁿ = fⁿ / gⁿ; If n is negative, (f/g)ⁿ = g⁻ⁿ / f⁻ⁿ; (f/g)⁰ = 1 / 1. </p>
+
+</div>
+</div>
 <a id="a8b3d409cea5e6c6495394208c8c8c6ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b3d409cea5e6c6495394208c8c8c6ee">&#9670;&nbsp;</a></span>pow() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3d409cea5e6c6495394208c8c8c6ee">&#9670;&nbsp;</a></span>pow() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -11633,37 +11664,6 @@ we do not provide operator*= function for this class, since operator*= would ret
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a43d86ae3f21714ef199febddf60550fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43d86ae3f21714ef199febddf60550fe">&#9670;&nbsp;</a></span>pow() <span class="overload">[2/6]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> drake::symbolic::pow </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_rational_function.html">RationalFunction</a> &amp;&#160;</td>
-          <td class="paramname"><em>f</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classint.html">int</a>&#160;</td>
-          <td class="paramname"><em>n</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the rational function <code>f</code> raised to <code>n</code>. </p>
-<p>If n is positive, (f/g)ⁿ = fⁿ / gⁿ; If n is negative, (f/g)ⁿ = g⁻ⁿ / f⁻ⁿ; (f/g)⁰ = 1 / 1. </p>
 
 </div>
 </div>

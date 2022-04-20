@@ -167,6 +167,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acaa87c27bae38b0daed338c482de9a0e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_monomial.html#acaa87c27bae38b0daed338c482de9a0e">Evaluate</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:acaa87c27bae38b0daed338c482de9a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates under a given environment <code>env</code>.  <a href="#acaa87c27bae38b0daed338c482de9a0e">More...</a><br /></td></tr>
 <tr class="separator:acaa87c27bae38b0daed338c482de9a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcf0748daabdb165757d2aa3674c082"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_monomial.html#a1dcf0748daabdb165757d2aa3674c082">Evaluate</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;vars, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;vars_values) const</td></tr>
+<tr class="memdesc:a1dcf0748daabdb165757d2aa3674c082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the monomial for a batch of data.  <a href="#a1dcf0748daabdb165757d2aa3674c082">More...</a><br /></td></tr>
+<tr class="separator:a1dcf0748daabdb165757d2aa3674c082"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a551cc6131366e79e2cd0aeab92092c9c"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_monomial.html#a551cc6131366e79e2cd0aeab92092c9c">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_environment.html">Environment</a> &amp;env) const</td></tr>
 <tr class="memdesc:a551cc6131366e79e2cd0aeab92092c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially evaluates using a given environment <code>env</code>.  <a href="#a551cc6131366e79e2cd0aeab92092c9c">More...</a><br /></td></tr>
 <tr class="separator:a551cc6131366e79e2cd0aeab92092c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -495,7 +498,7 @@ Friends</h2></td></tr>
 </div>
 </div>
 <a id="acaa87c27bae38b0daed338c482de9a0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acaa87c27bae38b0daed338c482de9a0e">&#9670;&nbsp;</a></span>Evaluate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa87c27bae38b0daed338c482de9a0e">&#9670;&nbsp;</a></span>Evaluate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -514,6 +517,49 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if there is a variable in this monomial whose assignment is not provided by <code>env</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dcf0748daabdb165757d2aa3674c082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcf0748daabdb165757d2aa3674c082">&#9670;&nbsp;</a></span>Evaluate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd Evaluate </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vars_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the monomial for a batch of data. </p>
+<p>We return monomial_vals such that monomial_vals(j) is obtained by substituting <code>vars(i)</code> with <code>vars_values(i, j)</code>, note that vars_values.rows() == vars.rows() and vars_values.cols() == monomial_vals.rows(). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vars</td><td>The variables whose value will be substituted. <code>vars</code> must contain all variables in this-&gt;<a class="el" href="classdrake_1_1symbolic_1_1_monomial.html#aca292ec8785171cf537afdb339a26113" title="Returns the set of variables in this monomial.">GetVariables()</a>. Also <code>vars</code> cannot contain any duplicate variables, namely vars(i) != vars(j) if i != j. </td></tr>
+    <tr><td class="paramname">vars_values</td><td>The i'th column of <code>vars_values</code> is the i'th data for <code>vars</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">an</td><td>exception if <code>vars</code> doesn't contain all the variables in this-&gt;GetVariables. </td></tr>
   </table>
   </dd>
 </dl>

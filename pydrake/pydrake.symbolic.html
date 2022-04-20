@@ -1796,8 +1796,12 @@ corresponding integer exponents <code class="docutils literal notranslate"><span
 
 <dl class="method">
 <dt id="pydrake.symbolic.Monomial.Evaluate">
-<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Monomial, env: Dict[pydrake.symbolic.Variable, float]</em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#pydrake.symbolic.Monomial.Evaluate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Evaluates under a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
+<code class="descname">Evaluate</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Monomial.Evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>Evaluate(self: pydrake.symbolic.Monomial, env: Dict[pydrake.symbolic.Variable, float]) -&gt; float</li>
+</ol>
+<p>Evaluates under a given environment <code class="docutils literal notranslate"><span class="pre">env</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1805,6 +1809,34 @@ corresponding integer exponents <code class="docutils literal notranslate"><span
 <tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
 <li>RuntimeError if there is a variable in this monomial whose</li>
 <li>assignment is not provided by <code class="docutils literal notranslate"><span class="pre">env</span></code>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li>Evaluate(self: pydrake.symbolic.Monomial, vars: numpy.ndarray[object[m, 1]], vars_values: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]) -&gt; numpy.ndarray[numpy.float64[m, 1]]</li>
+</ol>
+<p>Evaluates the monomial for a batch of data. We return monomial_vals
+such that monomial_vals(j) is obtained by substituting <code class="docutils literal notranslate"><span class="pre">vars(i)</span></code>
+with <code class="docutils literal notranslate"><span class="pre">vars_values(i,</span> <span class="pre">j)</span></code>, note that vars_values.rows() ==
+vars.rows() and vars_values.cols() == monomial_vals.rows().</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars</span></code>:</dt>
+<dd>The variables whose value will be substituted. <code class="docutils literal notranslate"><span class="pre">vars</span></code> must
+contain all variables in this-&gt;GetVariables(). Also <code class="docutils literal notranslate"><span class="pre">vars</span></code>
+cannot contain any duplicate variables, namely vars(i) != vars(j)
+if i != j.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">vars_values</span></code>:</dt>
+<dd>The i’th column of <code class="docutils literal notranslate"><span class="pre">vars_values</span></code> is the i’th data for <code class="docutils literal notranslate"><span class="pre">vars</span></code>.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li>an exception if <code class="docutils literal notranslate"><span class="pre">vars</span></code> doesn’t contain all the variables in</li>
+<li><code class="xref py py-exc docutils literal notranslate"><span class="pre">this-&gt;GetVariables.</span></code></li>
 </ul>
 </td>
 </tr>

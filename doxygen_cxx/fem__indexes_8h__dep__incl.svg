@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 671;
+var viewWidth = 836;
 var viewHeight = 396;
 var sectionId = 'dynsection-1';
 </script>
@@ -54,14 +54,14 @@ var sectionId = 'dynsection-1';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>drake/multibody/fem/fem_indexes.h</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-392 666.95,-392 666.95,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-392 832,-392 832,4 -4,4"/>
 <!-- Node26 -->
 <g id="node1" class="node">
 <title>Node26</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="239.78,-357.5 239.78,-387.5 358.78,-387.5 358.78,-357.5 239.78,-357.5"/>
-<text text-anchor="start" x="247.78" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="299.28" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_indexes.h</text>
+<polygon fill="#bfbfbf" stroke="black" points="643,-357.5 643,-387.5 762,-387.5 762,-357.5 643,-357.5"/>
+<text text-anchor="start" x="651" y="-375.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="702.5" y="-364.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_indexes.h</text>
 </a>
 </g>
 </g>
@@ -69,209 +69,237 @@ var sectionId = 'dynsection-1';
 <g id="node2" class="node">
 <title>Node27</title>
 <g id="a_node2"><a xlink:href="fem__state_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="239.78,-290.5 239.78,-320.5 358.78,-320.5 358.78,-290.5 239.78,-290.5"/>
-<text text-anchor="start" x="247.78" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="299.28" y="-297.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_state.h</text>
+<polygon fill="white" stroke="black" points="462,-290.5 462,-320.5 581,-320.5 581,-290.5 462,-290.5"/>
+<text text-anchor="start" x="470" y="-308.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="521.5" y="-297.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_state.h</text>
 </a>
 </g>
 </g>
 <!-- Node26&#45;&gt;Node27 -->
 <g id="edge1" class="edge">
 <title>Node26&#45;&gt;Node27</title>
-<path fill="none" stroke="midnightblue" d="M299.28,-347.11C299.28,-338.15 299.28,-328.32 299.28,-320.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="295.78,-347.4 299.28,-357.4 302.78,-347.4 295.78,-347.4"/>
+<path fill="none" stroke="midnightblue" d="M653.64,-353.96C624.49,-343.48 587.96,-330.37 560.7,-320.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="652.63,-357.31 663.23,-357.4 655,-350.72 652.63,-357.31"/>
 </g>
-<!-- Node34 -->
-<g id="node9" class="node">
-<title>Node34</title>
-<g id="a_node9"><a xlink:href="fem__model__impl_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="253.78,-67.5 253.78,-97.5 372.78,-97.5 372.78,-67.5 253.78,-67.5"/>
-<text text-anchor="start" x="261.78" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="313.28" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_model_impl.h</text>
+<!-- Node35 -->
+<g id="node10" class="node">
+<title>Node35</title>
+<g id="a_node10"><a xlink:href="fem__model__impl_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="709,-67.5 709,-97.5 828,-97.5 828,-67.5 709,-67.5"/>
+<text text-anchor="start" x="717" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="768.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_model_impl.h</text>
 </a>
 </g>
 </g>
-<!-- Node26&#45;&gt;Node34 -->
-<g id="edge16" class="edge">
-<title>Node26&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M229.56,-360.11C167.72,-346.17 80.02,-316.23 32.28,-254 -0.35,-211.47 -14.25,-174.99 20.28,-134 49.5,-99.31 176.7,-88.45 253.57,-85.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="229.12,-363.6 239.63,-362.3 230.6,-356.76 229.12,-363.6"/>
+<!-- Node26&#45;&gt;Node35 -->
+<g id="edge19" class="edge">
+<title>Node26&#45;&gt;Node35</title>
+<path fill="none" stroke="midnightblue" d="M720.49,-349.27C737.43,-326.79 761.64,-290.27 771.5,-254 786.8,-197.72 776.78,-127.09 771.34,-97.53"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="717.52,-347.39 714.18,-357.45 723.06,-351.67 717.52,-347.39"/>
 </g>
-<!-- Node36 -->
-<g id="node11" class="node">
-<title>Node36</title>
-<g id="a_node11"><a xlink:href="fem__element_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="524.78,-218 524.78,-248 643.78,-248 643.78,-218 524.78,-218"/>
-<text text-anchor="start" x="532.78" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="584.28" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_element.h</text>
+<!-- Node37 -->
+<g id="node12" class="node">
+<title>Node37</title>
+<g id="a_node12"><a xlink:href="fem__element_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="643,-218 643,-248 762,-248 762,-218 643,-218"/>
+<text text-anchor="start" x="651" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="702.5" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_element.h</text>
 </a>
 </g>
 </g>
-<!-- Node26&#45;&gt;Node36 -->
-<g id="edge15" class="edge">
-<title>Node26&#45;&gt;Node36</title>
-<path fill="none" stroke="midnightblue" d="M337.58,-353.02C395.24,-325.2 503.08,-273.17 554.95,-248.15"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="335.93,-349.93 328.44,-357.43 338.97,-356.24 335.93,-349.93"/>
+<!-- Node26&#45;&gt;Node37 -->
+<g id="edge18" class="edge">
+<title>Node26&#45;&gt;Node37</title>
+<path fill="none" stroke="midnightblue" d="M702.5,-347.29C702.5,-318.61 702.5,-271.78 702.5,-248.33"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="699,-347.3 702.5,-357.3 706,-347.3 699,-347.3"/>
 </g>
 <!-- Node28 -->
 <g id="node3" class="node">
 <title>Node28</title>
 <g id="a_node3"><a xlink:href="discrete__time__integrator_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="287.78,-218 287.78,-248 436.78,-248 436.78,-218 287.78,-218"/>
-<text text-anchor="start" x="295.78" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="362.28" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00">/discrete_time_integrator.h</text>
+<polygon fill="white" stroke="black" points="232,-218 232,-248 381,-248 381,-218 232,-218"/>
+<text text-anchor="start" x="240" y="-236" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="306.5" y="-225" font-family="Helvetica,sans-Serif" font-size="10.00">/discrete_time_integrator.h</text>
 </a>
 </g>
 </g>
 <!-- Node27&#45;&gt;Node28 -->
 <g id="edge2" class="edge">
 <title>Node27&#45;&gt;Node28</title>
-<path fill="none" stroke="midnightblue" d="M318.9,-282.54C328.9,-271.36 340.76,-258.08 349.55,-248.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="316.08,-280.44 312.03,-290.23 321.3,-285.11 316.08,-280.44"/>
+<path fill="none" stroke="midnightblue" d="M469.22,-287.36C432.51,-275.32 384,-259.41 349.52,-248.11"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="468.17,-290.7 478.77,-290.49 470.35,-284.05 468.17,-290.7"/>
 </g>
-<!-- Node32 -->
-<g id="node7" class="node">
-<title>Node32</title>
-<g id="a_node7"><a xlink:href="dirichlet__boundary__condition_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="40.78,-212.5 40.78,-253.5 159.78,-253.5 159.78,-212.5 40.78,-212.5"/>
-<text text-anchor="start" x="48.78" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="start" x="48.78" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">/dirichlet_boundary</text>
-<text text-anchor="middle" x="100.28" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">_condition.h</text>
+<!-- Node30 -->
+<g id="node5" class="node">
+<title>Node30</title>
+<g id="a_node5"><a xlink:href="fem__solver_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="0,-67.5 0,-97.5 119,-97.5 119,-67.5 0,-67.5"/>
+<text text-anchor="start" x="8" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="59.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_solver.h</text>
 </a>
 </g>
 </g>
-<!-- Node27&#45;&gt;Node32 -->
-<g id="edge6" class="edge">
-<title>Node27&#45;&gt;Node32</title>
-<path fill="none" stroke="midnightblue" d="M249.69,-286.93C221.06,-276.79 184.98,-264.01 155.45,-253.55"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="248.89,-290.36 259.49,-290.4 251.23,-283.76 248.89,-290.36"/>
+<!-- Node27&#45;&gt;Node30 -->
+<g id="edge17" class="edge">
+<title>Node27&#45;&gt;Node30</title>
+<path fill="none" stroke="midnightblue" d="M451.98,-298.17C390.57,-291.31 299.12,-277.98 222.5,-254 144.7,-229.65 100.2,-244.81 56.5,-176 41.25,-151.99 48.52,-116.96 54.46,-97.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="451.63,-301.65 461.95,-299.26 452.39,-294.69 451.63,-301.65"/>
 </g>
 <!-- Node33 -->
 <g id="node8" class="node">
 <title>Node33</title>
-<g id="a_node8"><a xlink:href="fem__model_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="28.78,-140 28.78,-170 147.78,-170 147.78,-140 28.78,-140"/>
-<text text-anchor="start" x="36.78" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="88.28" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_model.h</text>
+<g id="a_node8"><a xlink:href="dirichlet__boundary__condition_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="506,-212.5 506,-253.5 625,-253.5 625,-212.5 506,-212.5"/>
+<text text-anchor="start" x="514" y="-241.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="start" x="514" y="-230.5" font-family="Helvetica,sans-Serif" font-size="10.00">/dirichlet_boundary</text>
+<text text-anchor="middle" x="565.5" y="-219.5" font-family="Helvetica,sans-Serif" font-size="10.00">_condition.h</text>
 </a>
 </g>
 </g>
 <!-- Node27&#45;&gt;Node33 -->
-<g id="edge14" class="edge">
+<g id="edge7" class="edge">
 <title>Node27&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M271.17,-284.34C244.89,-265.52 204.53,-236.72 169.28,-212 148.84,-197.67 125.37,-181.47 108.97,-170.19"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="269.35,-287.33 279.52,-290.31 273.42,-281.64 269.35,-287.33"/>
+<path fill="none" stroke="midnightblue" d="M535.73,-281.7C541.39,-272.63 547.83,-262.31 553.27,-253.59"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="532.73,-279.9 530.4,-290.23 538.67,-283.6 532.73,-279.9"/>
 </g>
-<!-- Node27&#45;&gt;Node36 -->
-<g id="edge10" class="edge">
-<title>Node27&#45;&gt;Node36</title>
-<path fill="none" stroke="midnightblue" d="M365.8,-288.05C414.77,-275.93 480.67,-259.63 527.25,-248.11"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="364.79,-284.69 355.93,-290.49 366.47,-291.48 364.79,-284.69"/>
+<!-- Node34 -->
+<g id="node9" class="node">
+<title>Node34</title>
+<g id="a_node9"><a xlink:href="fem__model_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="555,-140 555,-170 674,-170 674,-140 555,-140"/>
+<text text-anchor="start" x="563" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="614.5" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">/fem_model.h</text>
+</a>
+</g>
+</g>
+<!-- Node27&#45;&gt;Node34 -->
+<g id="edge16" class="edge">
+<title>Node27&#45;&gt;Node34</title>
+<path fill="none" stroke="midnightblue" d="M506.17,-281.65C495.03,-261.92 484.06,-233.33 497.5,-212 506.35,-197.95 543.85,-181.5 574.04,-170.08"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="503.21,-283.53 511.37,-290.28 509.21,-279.91 503.21,-283.53"/>
+</g>
+<!-- Node27&#45;&gt;Node37 -->
+<g id="edge12" class="edge">
+<title>Node27&#45;&gt;Node37</title>
+<path fill="none" stroke="midnightblue" d="M567.32,-286.65C598.03,-274.69 637.9,-259.16 666.37,-248.07"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="565.74,-283.51 557.69,-290.4 568.28,-290.03 565.74,-283.51"/>
 </g>
 <!-- Node29 -->
 <g id="node4" class="node">
 <title>Node29</title>
 <g id="a_node4"><a xlink:href="acceleration__newmark__scheme_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="165.78,-134.5 165.78,-175.5 296.78,-175.5 296.78,-134.5 165.78,-134.5"/>
-<text text-anchor="start" x="173.78" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="start" x="173.78" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">/acceleration_newmark</text>
-<text text-anchor="middle" x="231.28" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">_scheme.h</text>
+<polygon fill="white" stroke="black" points="406,-134.5 406,-175.5 537,-175.5 537,-134.5 406,-134.5"/>
+<text text-anchor="start" x="414" y="-163.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="start" x="414" y="-152.5" font-family="Helvetica,sans-Serif" font-size="10.00">/acceleration_newmark</text>
+<text text-anchor="middle" x="471.5" y="-141.5" font-family="Helvetica,sans-Serif" font-size="10.00">_scheme.h</text>
 </a>
 </g>
 </g>
 <!-- Node28&#45;&gt;Node29 -->
 <g id="edge3" class="edge">
 <title>Node28&#45;&gt;Node29</title>
-<path fill="none" stroke="midnightblue" d="M329.11,-212.75C309.61,-201.44 285.01,-187.17 265.36,-175.77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="327.54,-215.89 337.95,-217.88 331.05,-209.84 327.54,-215.89"/>
-</g>
-<!-- Node30 -->
-<g id="node5" class="node">
-<title>Node30</title>
-<g id="a_node5"><a xlink:href="newmark__scheme_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="314.78,-140 314.78,-170 433.78,-170 433.78,-140 314.78,-140"/>
-<text text-anchor="start" x="322.78" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="374.28" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">/newmark_scheme.h</text>
-</a>
-</g>
+<path fill="none" stroke="midnightblue" d="M346.33,-213.65C371.28,-202.16 403.42,-187.36 428.89,-175.63"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="344.77,-210.52 337.15,-217.88 347.7,-216.88 344.77,-210.52"/>
 </g>
 <!-- Node28&#45;&gt;Node30 -->
 <g id="edge4" class="edge">
 <title>Node28&#45;&gt;Node30</title>
-<path fill="none" stroke="midnightblue" d="M366.13,-207.59C368.08,-195.26 370.38,-180.72 372.03,-170.23"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="362.64,-207.28 364.54,-217.7 369.55,-208.37 362.64,-207.28"/>
+<path fill="none" stroke="midnightblue" d="M221.91,-220.79C165.6,-211.6 98.43,-196.71 78.5,-176 58.15,-154.86 56.97,-118.06 58.1,-97.83"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="221.5,-224.27 231.92,-222.39 222.6,-217.36 221.5,-224.27"/>
 </g>
 <!-- Node31 -->
 <g id="node6" class="node">
 <title>Node31</title>
-<g id="a_node6"><a xlink:href="velocity__newmark__scheme_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="452.28,-140 452.28,-170 614.28,-170 614.28,-140 452.28,-140"/>
-<text text-anchor="start" x="460.28" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="533.28" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">/velocity_newmark_scheme.h</text>
+<g id="a_node6"><a xlink:href="newmark__scheme_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="88,-140 88,-170 207,-170 207,-140 88,-140"/>
+<text text-anchor="start" x="96" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="147.5" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">/newmark_scheme.h</text>
 </a>
 </g>
 </g>
 <!-- Node28&#45;&gt;Node31 -->
 <g id="edge5" class="edge">
 <title>Node28&#45;&gt;Node31</title>
-<path fill="none" stroke="midnightblue" d="M403.46,-213.7C433.65,-200.28 474.02,-182.34 501.69,-170.04"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="401.76,-210.62 394.04,-217.88 404.6,-217.02 401.76,-210.62"/>
+<path fill="none" stroke="midnightblue" d="M267.85,-213.52C239.82,-200.13 202.49,-182.28 176.88,-170.04"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="266.43,-216.73 276.97,-217.88 269.45,-210.41 266.43,-216.73"/>
 </g>
-<!-- Node32&#45;&gt;Node33 -->
-<g id="edge7" class="edge">
-<title>Node32&#45;&gt;Node33</title>
-<path fill="none" stroke="midnightblue" d="M95.59,-202.28C93.85,-191.25 91.95,-179.25 90.53,-170.23"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="92.17,-203.1 97.19,-212.43 99.09,-202 92.17,-203.1"/>
+<!-- Node32 -->
+<g id="node7" class="node">
+<title>Node32</title>
+<g id="a_node7"><a xlink:href="velocity__newmark__scheme_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="225.5,-140 225.5,-170 387.5,-170 387.5,-140 225.5,-140"/>
+<text text-anchor="start" x="233.5" y="-158" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="306.5" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">/velocity_newmark_scheme.h</text>
+</a>
+</g>
+</g>
+<!-- Node28&#45;&gt;Node32 -->
+<g id="edge6" class="edge">
+<title>Node28&#45;&gt;Node32</title>
+<path fill="none" stroke="midnightblue" d="M306.5,-207.59C306.5,-195.26 306.5,-180.72 306.5,-170.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="303,-207.7 306.5,-217.7 310,-207.71 303,-207.7"/>
 </g>
 <!-- Node33&#45;&gt;Node34 -->
 <g id="edge8" class="edge">
 <title>Node33&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M142.99,-136.86C181.41,-124.82 232.18,-108.91 268.26,-97.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="141.5,-133.66 133,-139.99 143.59,-140.34 141.5,-133.66"/>
+<path fill="none" stroke="midnightblue" d="M583.57,-203.98C590.97,-192.5 599.21,-179.71 605.33,-170.23"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="580.6,-202.13 578.12,-212.43 586.48,-205.92 580.6,-202.13"/>
 </g>
-<!-- Node35 -->
-<g id="node10" class="node">
-<title>Node35</title>
-<g id="a_node10"><a xlink:href="volumetric__model_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="323.78,-0.5 323.78,-30.5 442.78,-30.5 442.78,-0.5 323.78,-0.5"/>
-<text text-anchor="start" x="331.78" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="383.28" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/volumetric_model.h</text>
-</a>
-</g>
+<!-- Node34&#45;&gt;Node30 -->
+<g id="edge11" class="edge">
+<title>Node34&#45;&gt;Node30</title>
+<path fill="none" stroke="midnightblue" d="M560.97,-137.27C556.11,-136.05 551.23,-134.93 546.5,-134 394.3,-103.99 211.61,-91.1 119.24,-86.18"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="560.33,-140.72 570.9,-139.9 562.13,-133.95 560.33,-140.72"/>
 </g>
 <!-- Node34&#45;&gt;Node35 -->
 <g id="edge9" class="edge">
 <title>Node34&#45;&gt;Node35</title>
-<path fill="none" stroke="midnightblue" d="M336.1,-60.31C346.6,-50.56 358.77,-39.26 368.12,-30.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="333.41,-58.03 328.47,-67.4 338.18,-63.16 333.41,-58.03"/>
+<path fill="none" stroke="midnightblue" d="M654.5,-135.69C680.49,-123.79 713.85,-108.52 737.76,-97.57"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="652.93,-132.56 645.29,-139.9 655.84,-138.92 652.93,-132.56"/>
 </g>
-<!-- Node36&#45;&gt;Node34 -->
-<g id="edge11" class="edge">
-<title>Node36&#45;&gt;Node34</title>
-<path fill="none" stroke="midnightblue" d="M604.75,-210.25C622.38,-188.86 642.21,-156.27 623.28,-134 607.27,-115.18 458.54,-97.69 373.04,-89.09"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="602.08,-208 598.2,-217.86 607.38,-212.57 602.08,-208"/>
-</g>
-<!-- Node37 -->
-<g id="node12" class="node">
-<title>Node37</title>
-<g id="a_node12"><a xlink:href="volumetric__element_8h.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="black" points="503.78,-67.5 503.78,-97.5 630.78,-97.5 630.78,-67.5 503.78,-67.5"/>
-<text text-anchor="start" x="511.78" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
-<text text-anchor="middle" x="567.28" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/volumetric_element.h</text>
+<!-- Node36 -->
+<g id="node11" class="node">
+<title>Node36</title>
+<g id="a_node11"><a xlink:href="volumetric__model_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="638,-0.5 638,-30.5 757,-30.5 757,-0.5 638,-0.5"/>
+<text text-anchor="start" x="646" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="697.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">/volumetric_model.h</text>
 </a>
 </g>
 </g>
-<!-- Node36&#45;&gt;Node37 -->
-<g id="edge12" class="edge">
-<title>Node36&#45;&gt;Node37</title>
-<path fill="none" stroke="midnightblue" d="M621.94,-212.34C635.34,-203.23 648.92,-191.05 656.28,-176 664.48,-159.23 665.67,-150.13 656.28,-134 646.44,-117.11 628.63,-105.41 611.51,-97.56"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="619.79,-209.56 613.23,-217.88 623.55,-215.46 619.79,-209.56"/>
+<!-- Node35&#45;&gt;Node36 -->
+<g id="edge10" class="edge">
+<title>Node35&#45;&gt;Node36</title>
+<path fill="none" stroke="midnightblue" d="M745.67,-60.6C734.95,-50.78 722.45,-39.34 712.88,-30.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="743.35,-63.22 753.09,-67.4 748.08,-58.06 743.35,-63.22"/>
 </g>
 <!-- Node37&#45;&gt;Node35 -->
 <g id="edge13" class="edge">
 <title>Node37&#45;&gt;Node35</title>
-<path fill="none" stroke="midnightblue" d="M517.61,-63.96C487.97,-53.48 450.84,-40.37 423.13,-30.58"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="516.76,-67.37 527.35,-67.4 519.09,-60.76 516.76,-67.37"/>
+<path fill="none" stroke="midnightblue" d="M712.93,-208.54C726.74,-177.46 750.68,-123.59 762.09,-97.91"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="709.69,-207.2 708.83,-217.76 716.09,-210.04 709.69,-207.2"/>
+</g>
+<!-- Node38 -->
+<g id="node13" class="node">
+<title>Node38</title>
+<g id="a_node13"><a xlink:href="volumetric__element_8h.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="black" points="564,-67.5 564,-97.5 691,-97.5 691,-67.5 564,-67.5"/>
+<text text-anchor="start" x="572" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">drake/multibody/fem</text>
+<text text-anchor="middle" x="627.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">/volumetric_element.h</text>
+</a>
+</g>
+</g>
+<!-- Node37&#45;&gt;Node38 -->
+<g id="edge14" class="edge">
+<title>Node37&#45;&gt;Node38</title>
+<path fill="none" stroke="midnightblue" d="M702.03,-207.52C700.66,-186.74 696.36,-156.77 683.5,-134 675.19,-119.3 661.04,-106.59 649.04,-97.6"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="698.54,-207.91 702.51,-217.73 705.53,-207.58 698.54,-207.91"/>
+</g>
+<!-- Node38&#45;&gt;Node36 -->
+<g id="edge15" class="edge">
+<title>Node38&#45;&gt;Node36</title>
+<path fill="none" stroke="midnightblue" d="M650.32,-60.31C660.82,-50.56 672.99,-39.26 682.34,-30.58"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="647.64,-58.03 642.69,-67.4 652.4,-63.16 647.64,-58.03"/>
 </g>
 </g>
 </svg>

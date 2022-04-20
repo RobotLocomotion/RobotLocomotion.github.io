@@ -427,12 +427,13 @@ What can you do with hydroelastic contact?</h2>
 <li>You can visualize the contact surfaces, their pressure fields, and the resultant contact forces in Drake Visualizer (see <a class="el" href="group__hydroelastic__user__guide.html#hug_visualizing">Visualizing hydroelastic contact</a>).</li>
 <li>All Drake Shape types can be used to create rigid hydroelastic bodies (this includes arbitrary meshes defined as OBJs).</li>
 <li>Drake primitive Shape types (Box, Capsule, Cylinder, Ellipsoid, HalfSpace, and Cylinder) can all be used to create compliant hydroelastic bodies.</li>
+<li>The Drake Convex Shape type can be used as a compliant hydroelastic body.</li>
 </ul>
 <h2><a class="anchor" id="hug_not_yet_implemented"></a>
 What can’t you do with hydroelastic contact?</h2>
 <ul>
 <li>You can’t get contact surfaces between two rigid geometries. The contact surface between rigid geometries is ill defined and will most likely never be supported. If you need rigid-rigid contact, consider hydroelastics with fallback (kHydroelasticWithFallback). See <a class="el" href="group__hydroelastic__user__guide.html#hug_enabling">Enabling Hydroelastic contact in your simulation</a> on how to deal with contact in these cases.</li>
-<li>Drake Mesh and Convex types cannot currently serve as a compliant hydroelastic geometry.</li>
+<li>The Drake Mesh Shape type cannot currently serve as a compliant hydroelastic geometry. However, if the mesh is convex, one can use the Drake Convex Shape type as a compliant hydroelastic geometry. To do so, add the custom tag <code>&lt;drake:declare_convex/&gt;</code> tag under the <code>&lt;mesh&gt;</code> tag in either an SDF or URDF file.</li>
 <li>Hydroelastics cannot model true deformations given the model does not introduce state. Therefore effects such as tangential compliance or short time scale waves are not captured by the model.</li>
 </ul>
 <h1><a class="anchor" id="hydro_references"></a>
