@@ -1,5 +1,6 @@
 var NAVTREEINDEX46 =
 {
+"namespacemembers_r.html":[2,1,0,17],
 "namespacemembers_s.html":[2,1,0,18],
 "namespacemembers_t.html":[2,1,0,19],
 "namespacemembers_type.html":[2,1,3],
@@ -192,13 +193,13 @@ var NAVTREEINDEX46 =
 "program__attribute_8h.html#adfb26b995d486732f1b2867751dbbee7":[4,0,0,10,44,7],
 "propeller_8h.html":[4,0,0,8,10,23],
 "proximity__doxygen_8h.html":[4,0,0,4,2,44],
-"proximity__engine_8h.html":[4,0,0,4,29],
-"proximity__properties_8h.html":[4,0,0,4,30],
-"proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,30,2],
-"proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,30,1],
-"proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,30,0],
-"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,30,4],
-"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,30,3],
+"proximity__engine_8h.html":[4,0,0,4,30],
+"proximity__properties_8h.html":[4,0,0,4,31],
+"proximity__properties_8h.html#a06f08c367a0ef97e7fc397a8a44d49d8":[4,0,0,4,31,2],
+"proximity__properties_8h.html#a331f457a6ce0d146213faa844725dcda":[4,0,0,4,31,1],
+"proximity__properties_8h.html#a5a4cec840d5cb801271dbe609deaf0fe":[4,0,0,4,31,0],
+"proximity__properties_8h.html#a7d24de26748b70a3c802fd171b150fc2":[4,0,0,4,31,4],
+"proximity__properties_8h.html#af76ed94bef3f81765a1b3ce069562e00":[4,0,0,4,31,3],
 "proximity__utilities_8h.html":[4,0,0,4,2,45],
 "pydrake__doxygen_8h.html":[4,0,0,0,0,6],
 "pydrake__pybind_8h.html":[4,0,0,0,0,7],
@@ -239,7 +240,7 @@ var NAVTREEINDEX46 =
 "quaternion_8h.html#ae2ef93ff1fa2dc788507d6eadb4bb78f":[4,0,0,7,24,10],
 "quaternion__floating__mobilizer_8h.html":[4,0,0,8,13,34],
 "quaternion__integration__constraint_8h.html":[4,0,0,8,8,4],
-"query__object_8h.html":[4,0,0,4,31],
+"query__object_8h.html":[4,0,0,4,32],
 "quintic__scalar__system_8h.html":[4,0,0,11,0,0,12],
 "radau__integrator_8h.html":[4,0,0,11,0,12],
 "radau__integrator_8h.html#a0ef69bdb57d87753b8f827a134371822":[4,0,0,11,0,12,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX46 =
 "random_8h.html#a72383be4710d27584d0821effc6506a5":[4,0,0,1,44,1],
 "random_8h.html#a72383be4710d27584d0821effc6506a5a3ea9f7aca87fd7b64469a0d1119f0b50":[4,0,0,1,44,1,0],
 "random_8h.html#a72383be4710d27584d0821effc6506a5a601bf5851ffd28f5e6219c0f1945c8d6":[4,0,0,1,44,1,2],
-"random_8h.html#a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0":[4,0,0,1,44,1,1],
-"random_8h.html#adc2cd15bd61a427917d479a38a1a3580":[4,0,0,1,44,2]
+"random_8h.html#a72383be4710d27584d0821effc6506a5ab933cd0242085c2dbf804dbf288ce7f0":[4,0,0,1,44,1,1]
 };

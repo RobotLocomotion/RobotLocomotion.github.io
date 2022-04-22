@@ -1,5 +1,6 @@
 var NAVTREEINDEX54 =
 {
+"van__der__pol_8h.html":[4,0,0,3,18,0],
 "vector__base_8h.html":[4,0,0,11,3,53],
 "vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
 "vector__log_8h.html":[4,0,0,11,6,25],

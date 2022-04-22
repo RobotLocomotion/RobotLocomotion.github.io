@@ -323,8 +323,8 @@ appropriate edits as follows:
         </ul>
       </li>
       <li>Into the box labeled “Attach binaries by dropping them here or selecting
-them.”, drag and drop the 9 release binary artifacts from above (the 3
-tarballs, and their 6 checksums)</li>
+them.”, drag and drop the 6 release binary artifacts from above (the 2
+tarballs, and their 3 checksums).</li>
       <li>Choose “Save draft” and take a deep breath.</li>
     </ol>
   </li>
@@ -336,6 +336,8 @@ page actually works.</li>
       <li>Notify <code class="highlighter-rouge">@BetsyMcPhail</code> via a GitHub comment to manually tag docker images
 and upload the releases to S3. Be sure to provide her with the binary
 date, commit SHA, and release tag in the same ping.</li>
+      <li>Notify <code class="highlighter-rouge">@jwnimmer-tri</code> via a Slack DM to manually refresh the Deepnote
+tutorials.</li>
       <li>Announce on Drake Slack, <code class="highlighter-rouge">#general</code>.</li>
       <li>Party on, Wayne.</li>
     </ol>
@@ -425,8 +427,8 @@ instructions to obtain a username and password.</p>
     </ol>
   </li>
   <li>Run <code class="highlighter-rouge">./build-wheels --test 1.N.0</code></li>
-  <li>Wait a long time for it to finish (around 60 minutes on a beefy workstation). It will take over all of your computer’s resources, so don’t plan to do much else concurrently.</li>
-  <li>There should have been exactly four whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to each of the wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64</code>, etc.)
+  <li>Wait a long time for it to finish (around 30 minutes on a beefy workstation). It will take over all of your computer’s resources, so don’t plan to do much else concurrently.</li>
+  <li>There should have been exactly two whl files created. Run <code class="highlighter-rouge">twine upload &lt;...&gt;</code>, replacing the <code class="highlighter-rouge">&lt;...&gt;</code> placeholder with the path to each of the wheels to be uploaded (e.g., <code class="highlighter-rouge">drake-0.35.0b1-cp36-cp36m-manylinux_2_27_x86_64</code>, etc.)
     <ol>
       <li>You will need your PyPI username and password for this. (Do not use drake-robot.)</li>
     </ol>

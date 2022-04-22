@@ -1,5 +1,6 @@
 var NAVTREEINDEX48 =
 {
+"sos__basis__generator_8h.html#a6703c1f6f99f3e06a86f6a54e7dbd63d":[4,0,0,10,57,0],
 "space__xyz__floating__mobilizer_8h.html":[4,0,0,8,13,42],
 "space__xyz__mobilizer_8h.html":[4,0,0,8,13,43],
 "sparse__and__dense__matrix_8h.html":[4,0,0,10,58],
@@ -164,14 +165,14 @@ var NAVTREEINDEX48 =
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a033befdd75124d17abb45b56c75a71db":[1,1,1,6,1],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,5,4,6,6],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a11a479517bfa7e6c3d669c72380924ca":[1,1,1,6,6],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,1,1,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,5,4,6,2],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a177905e4b330d153a1ee016f913dc31b":[1,1,1,6,2],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,1,1,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a20906a34b629e819d5d8a8df41638c2d":[1,5,4,6,5],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,1,1,6,4],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#a49f1367efbb0c0efddaec6ed273e8bb7":[1,5,4,6,4],
-"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,1,1,6,3],
+"structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#ab9404d7dc104e7eb4e27ed7e38ccff72":[1,5,4,6,3],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,1,1,6,0],
 "structdrake_1_1geometry_1_1optimization_1_1_iris_options.html#acb0bda48ae293b2b8a06f159001280ac":[1,5,4,6,0],
 "structdrake_1_1geometry_1_1promoted__numerical.html":[3,0,0,3,36],
@@ -248,6 +249,5 @@ var NAVTREEINDEX48 =
 "structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7":[3,0,0,8,25,3],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77":[3,0,0,8,25,1],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html":[3,0,0,8,26],
-"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa16e72abb129f3fdc036799c6888d06":[3,0,0,8,26,1],
-"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa431e4aae58cdaabaca8b4a4117a20c":[3,0,0,8,26,2]
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa16e72abb129f3fdc036799c6888d06":[3,0,0,8,26,1]
 };

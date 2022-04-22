@@ -1,5 +1,6 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__latex_8h.html#accb78ec8e49199eaff087d9637301041":[4,0,0,1,63,1],
 "symbolic__ldlt_8h.html":[4,0,0,1,64],
 "symbolic__monomial_8h.html":[4,0,0,1,65],
 "symbolic__monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,65,2],
@@ -242,12 +243,11 @@ var NAVTREEINDEX53 =
 "unrevised__lemke__solver_8h.html":[4,0,0,10,60],
 "unused_8h.html":[4,0,0,1,80],
 "unused_8h.html#ade20b7bf635eecb13adbaac4df980af0":[4,0,0,1,80,0],
-"utilities_8h.html":[4,0,0,4,38],
+"utilities_8h.html":[4,0,0,4,39],
 "value_8h.html":[4,0,0,1,81],
 "value__checker_8h.html":[4,0,0,11,3,50],
 "value__producer_8h.html":[4,0,0,11,3,51],
 "value__pybind_8h.html":[4,0,0,0,0,0,13],
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,13,0],
-"value__to__abstract__value_8h.html":[4,0,0,11,3,52],
-"van__der__pol_8h.html":[4,0,0,3,18,0]
+"value__to__abstract__value_8h.html":[4,0,0,11,3,52]
 };

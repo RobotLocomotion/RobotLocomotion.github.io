@@ -42,7 +42,42 @@
 
 <body class="wy-body-for-nav">
 
-   
+  
+<header class="site-header">
+  <div class="site-header-inner contain">
+    <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+    <div class="menu-mobile-toggle">
+      <span></span>
+    </div>
+    <nav class="site-menu">
+      <ul>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/">Home</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/installation.html">Installation</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">
+          <a class="site-menu-item" href="/gallery.html">Gallery</a>
+        </li>
+        <li class="site-menu-item site-menu-item-main">API Documentation
+          <div class="sub">
+            <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a> <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+          </div>
+        </li>
+        <li class="site-menu-item site-menu-item-main">Resources
+          <div class="sub">
+            <a class="site-menu-item" href="/getting_help.html">Getting Help</a> <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a> <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a> <a class="site-menu-item" href="/developers.html">For Developers</a> <a class="site-menu-item" href="/credits.html">Credits</a>
+          </div>
+        </li>
+        <li class="github-link">
+          <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
   <div class="wy-grid-for-nav">
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
@@ -841,6 +876,10 @@
         <li><a href="pydrake.geometry.html#pydrake.geometry.Mesh.__init__">(pydrake.geometry.Mesh method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.__init__">(pydrake.geometry.Meshcat method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.__init__">(pydrake.geometry.Meshcat.OrthographicCamera method)</a>
+</li>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.__init__">(pydrake.geometry.Meshcat.PerspectiveCamera method)</a>
 </li>
         <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatAnimation.__init__">(pydrake.geometry.MeshcatAnimation method)</a>
 </li>
@@ -2945,6 +2984,8 @@
         <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.asin">(pydrake.symbolic.Variable method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.aspect">aspect (pydrake.geometry.Meshcat.PerspectiveCamera attribute)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.SceneGraph_.SceneGraph_[float].AssignRole">AssignRole() (pydrake.geometry.SceneGraph_.SceneGraph_[float] method)</a>
 
       <ul>
@@ -3201,10 +3242,10 @@
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Binding[LinearMatrixInequalityConstraint]">Binding[LinearMatrixInequalityConstraint] (class in pydrake.solvers.mathematicalprogram)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Binding[LInfNormCost]">Binding[LInfNormCost] (class in pydrake.solvers.mathematicalprogram)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Binding[LorentzConeConstraint]">Binding[LorentzConeConstraint] (class in pydrake.solvers.mathematicalprogram)</a>
 </li>
       <li><a href="pydrake.solvers.mathematicalprogram.html#pydrake.solvers.mathematicalprogram.Binding[PerspectiveQuadraticCost]">Binding[PerspectiveQuadraticCost] (class in pydrake.solvers.mathematicalprogram)</a>
@@ -3332,6 +3373,8 @@
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.BodyIndex">BodyIndex (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Variable.Type.BOOLEAN">BOOLEAN (pydrake.symbolic.Variable.Type attribute)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.bottom">bottom (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
 </li>
       <li><a href="pydrake.systems.analysis.html#pydrake.systems.analysis.SimulatorStatus.boundary_time">boundary_time() (pydrake.systems.analysis.SimulatorStatus method)</a>
 </li>
@@ -6667,6 +6710,12 @@
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.Formula.False_">False_() (pydrake.symbolic.Formula static method)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.far">far (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
+
+      <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.far">(pydrake.geometry.Meshcat.PerspectiveCamera attribute)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.far">far() (pydrake.geometry.render.ClippingRange method)</a>
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.Fields">Fields (class in pydrake.perception)</a>
@@ -6831,10 +6880,10 @@
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[AutoDiffXd]">FixedOffsetFrame_[AutoDiffXd] (class in pydrake.multibody.tree)</a>
 </li>
-      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[Expression]">FixedOffsetFrame_[Expression] (class in pydrake.multibody.tree)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[Expression]">FixedOffsetFrame_[Expression] (class in pydrake.multibody.tree)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.FixedOffsetFrame_[float]">FixedOffsetFrame_[float] (class in pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.System_.System_[float].FixInputPortsFrom">FixInputPortsFrom() (pydrake.systems.framework.System_.System_[float] method)</a>
@@ -6964,6 +7013,8 @@
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.FormulaKind">FormulaKind (class in pydrake.symbolic)</a>
 </li>
       <li><a href="pydrake.manipulation.planner.html#pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator.ForwardKinematics">ForwardKinematics() (pydrake.manipulation.planner.DifferentialInverseKinematicsIntegrator method)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.fov">fov (pydrake.geometry.Meshcat.PerspectiveCamera attribute)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.Frame">Frame (in module pydrake.multibody.tree)</a>
 </li>
@@ -12259,6 +12310,8 @@
 </li>
       <li><a href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]">LeafSystem_[float] (class in pydrake.systems.framework)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.left">left (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
+</li>
       <li><a href="pydrake.examples.pendulum.html#pydrake.examples.pendulum.PendulumParams.length">length() (pydrake.examples.pendulum.PendulumParams method)</a>
 
       <ul>
@@ -12769,16 +12822,20 @@
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat">Meshcat (class in pydrake.geometry)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera">Meshcat.OrthographicCamera (class in pydrake.geometry)</a>
+</li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera">Meshcat.PerspectiveCamera (class in pydrake.geometry)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatAnimation">MeshcatAnimation (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatAnimation.LoopMode">MeshcatAnimation.LoopMode (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatCone">MeshcatCone (class in pydrake.geometry)</a>
 </li>
-      <li><a href="pydrake.systems.meshcat_visualizer.html#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer">MeshcatContactVisualizer (class in pydrake.systems.meshcat_visualizer)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="pydrake.systems.meshcat_visualizer.html#pydrake.systems.meshcat_visualizer.MeshcatContactVisualizer">MeshcatContactVisualizer (class in pydrake.systems.meshcat_visualizer)</a>
+</li>
       <li><a href="pydrake.geometry.html#pydrake.geometry.MeshcatParams">MeshcatParams (class in pydrake.geometry)</a>
 </li>
       <li><a href="pydrake.systems.meshcat_visualizer.html#pydrake.systems.meshcat_visualizer.MeshcatPointCloudVisualizer">MeshcatPointCloudVisualizer (class in pydrake.systems.meshcat_visualizer)</a>
@@ -13215,6 +13272,12 @@
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.ExpressionKind.NaN">NaN (pydrake.symbolic.ExpressionKind attribute)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.near">near (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
+
+      <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.near">(pydrake.geometry.Meshcat.PerspectiveCamera attribute)</a>
+</li>
+      </ul></li>
       <li><a href="pydrake.geometry.render.html#pydrake.geometry.render.ClippingRange.near">near() (pydrake.geometry.render.ClippingRange method)</a>
 </li>
       <li><a href="pydrake.symbolic.html#pydrake.symbolic.FormulaKind.Neq">Neq (pydrake.symbolic.FormulaKind attribute)</a>
@@ -15267,6 +15330,8 @@
 </li>
       <li><a href="pydrake.perception.html#pydrake.perception.PointCloud.rgbs">rgbs() (pydrake.perception.PointCloud method)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.right">right (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody">RigidBody (in module pydrake.multibody.tree)</a>
 </li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_.RigidBody_[float]">RigidBody_.RigidBody_[float] (class in pydrake.multibody.tree)</a>
@@ -16683,6 +16748,8 @@
         <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.MultilayerPerceptron_[float].SetBiases">(pydrake.systems.primitives.MultilayerPerceptron_[float] method)</a>
 </li>
       </ul></li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.SetCamera">SetCamera() (pydrake.geometry.Meshcat method)</a>
+</li>
       <li><a href="pydrake.multibody.tree.html#pydrake.multibody.tree.RigidBody_.RigidBody_[float].SetCenterOfMassInBodyFrame">SetCenterOfMassInBodyFrame() (pydrake.multibody.tree.RigidBody_.RigidBody_[float] method)</a>
 
       <ul>
@@ -18197,6 +18264,8 @@
 </li>
       <li><a href="pydrake.common.html#pydrake.common.ToleranceType">ToleranceType (class in pydrake.common)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.top">top (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
+</li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.Toppra">Toppra (class in pydrake.multibody.optimization)</a>
 </li>
       <li><a href="pydrake.multibody.optimization.html#pydrake.multibody.optimization.ToppraDiscretization">ToppraDiscretization (class in pydrake.multibody.optimization)</a>
@@ -19695,6 +19764,12 @@
 </li>
       <li><a href="pydrake.systems.primitives.html#pydrake.systems.primitives.ZeroOrderHold_[float]">ZeroOrderHold_[float] (class in pydrake.systems.primitives)</a>
 </li>
+      <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.OrthographicCamera.zoom">zoom (pydrake.geometry.Meshcat.OrthographicCamera attribute)</a>
+
+      <ul>
+        <li><a href="pydrake.geometry.html#pydrake.geometry.Meshcat.PerspectiveCamera.zoom">(pydrake.geometry.Meshcat.PerspectiveCamera attribute)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -19712,7 +19787,39 @@
     <p>
 
     </p>
-  </div> 
+  </div>
+</footer>
+<script>
+  /* Enables clicking for the mobile "hamburger" (three-line) menu item. */
+  const siteHeader = document.querySelector('.site-header')
+  const mobileButton = document.querySelector('.menu-mobile-toggle')
+  const body = document.querySelector('body')
+
+  mobileButton.addEventListener('click', function(event) {
+    siteHeader.classList.toggle('open');
+    body.classList.toggle('overflow-hidden');
+  })
+</script>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg">
+    </a>
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
 
 </footer>
 
