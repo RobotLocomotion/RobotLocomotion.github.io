@@ -5,6 +5,7 @@ var dir_d739e095b49d8b72164589d00310017d =
     [ "proximity", "dir_ffd084df0f71d68f8337a7d6f3dcd2dc.html", "dir_ffd084df0f71d68f8337a7d6f3dcd2dc" ],
     [ "query_results", "dir_3ff34c62de56b2df4097a6c50ce2d7ff.html", "dir_3ff34c62de56b2df4097a6c50ce2d7ff" ],
     [ "render", "dir_05142ce2278c744298ef3f06d9e628a4.html", "dir_05142ce2278c744298ef3f06d9e628a4" ],
+    [ "render_gltf_client", "dir_ea36fc3ba6e4e5252c7024e61ca2d4a4.html", "dir_ea36fc3ba6e4e5252c7024e61ca2d4a4" ],
     [ "test_utilities", "dir_dd40e4ced6d50249f5b665722b0662c5.html", "dir_dd40e4ced6d50249f5b665722b0662c5" ],
     [ "collision_filter_declaration.h", "collision__filter__declaration_8h.html", [
       [ "CollisionFilterDeclaration", "classdrake_1_1geometry_1_1_collision_filter_declaration.html", "classdrake_1_1geometry_1_1_collision_filter_declaration" ]

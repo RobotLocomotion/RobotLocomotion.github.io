@@ -1,5 +1,6 @@
 var NAVTREEINDEX15 =
 {
+"classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,68,14],
 "classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539":[3,0,0,8,68,24],
 "classdrake_1_1multibody_1_1_spatial_momentum.html":[3,0,0,8,69],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a443c65e3aa700e20cffca0d6530abd2f":[3,0,0,8,69,4],
@@ -248,6 +249,5 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a2d48ccdd3dde78b6d1431ef788ddcafd":[3,0,0,8,0,4,10],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a3435faa90af0e61ae68fd70484032762":[3,0,0,8,0,4,5],
 "classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a4c64f73a489f67a84bc369760635f2cc":[3,0,0,8,0,4,0],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a718e55f6a9874887f021f464179a2798":[3,0,0,8,0,4,1],
-"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a78e561b570fd05dd9d132a3608142970":[3,0,0,8,0,4,6]
+"classdrake_1_1multibody_1_1benchmarks_1_1_acrobot.html#a718e55f6a9874887f021f464179a2798":[3,0,0,8,0,4,1]
 };

@@ -1649,7 +1649,7 @@ of reproducing the simulation.</p>
 
 <dl class="function">
 <dt id="pydrake.systems.analysis.RegionOfAttraction">
-<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RegionOfAttraction</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], options: pydrake.systems.analysis.RegionOfAttractionOptions = RegionOfAttractionOptions(lyapunov_candidate=0, state_variables=[])</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttraction" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pydrake.systems.analysis.</code><code class="descname">RegionOfAttraction</code><span class="sig-paren">(</span><em>system: pydrake.systems.framework.System_[float], context: pydrake.systems.framework.Context_[float], options: pydrake.systems.analysis.RegionOfAttractionOptions = RegionOfAttractionOptions(lyapunov_candidate=0, state_variables=[], use_implicit_dynamics=False)</em><span class="sig-paren">)</span> &#x2192; pydrake.symbolic.Expression<a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttraction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimates the region of attraction of the time-invariant <code class="docutils literal notranslate"><span class="pre">system</span></code> at
 the fixed point defined by <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
 <p>This implementation only searches for the largest level set of the
@@ -1724,6 +1724,20 @@ system being evaluated (or the vector state_variables).</p>
 with the elements of the System’s continuous state vector. Must be
 empty or have size equal to the number of continuous state variables
 in the system.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.systems.analysis.RegionOfAttractionOptions.use_implicit_dynamics">
+<code class="descname">use_implicit_dynamics</code><a class="headerlink" href="#pydrake.systems.analysis.RegionOfAttractionOptions.use_implicit_dynamics" title="Permalink to this definition">¶</a></dt>
+<dd><p>If true, the system dynamics will be evaluated using
+CalcImplicitTimeDerivativesResidual instead of CalcTimeDerivatives to
+obtain g(x,ẋ) = 0 (instead of ẋ = f(x)). The Lyapunov conditions
+will also be evaluated in the implicit form. This is more expensive
+than analysis in the explicit form, as it requires more
+indeterminates, but it enables analysis of systems with rational
+polynomial dynamics.</p>
+<p>See <a class="reference external" href="https://underactuated.csail.mit.edu/lyapunov.html#ex:implicit">https://underactuated.csail.mit.edu/lyapunov.html#ex:implicit</a> for
+more details.</p>
 </dd></dl>
 
 </dd></dl>

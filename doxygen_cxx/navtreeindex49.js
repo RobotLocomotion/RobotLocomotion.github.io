@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7":[3,0,0,8,25,3],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77":[3,0,0,8,25,1],
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html":[3,0,0,8,26],
+"structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa16e72abb129f3fdc036799c6888d06":[3,0,0,8,26,1],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#aaa431e4aae58cdaabaca8b4a4117a20c":[3,0,0,8,26,2],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html#ad703376a8c6bebf64b16bb6b34cfeec0":[3,0,0,8,26,0],
 "structdrake_1_1multibody_1_1_geometry_pair_contact_wrench_evaluator_binding.html":[3,0,0,8,33],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6df89ba323770f788f15768d8e278d1c":[3,0,0,12,25,0],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,25,3],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[3,0,0,12,25,4],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,12,25,5],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#aa4ec74048b458de140ea7c2e2dd8e3f4":[3,0,0,12,25,1],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html":[3,0,0,12,35],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,12,35,0],
-"structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,12,35,1]
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,12,25,5]
 };

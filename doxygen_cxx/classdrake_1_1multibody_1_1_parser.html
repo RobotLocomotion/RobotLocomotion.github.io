@@ -182,6 +182,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afb031b4b56411c477d6f19f9f1dc65f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#afb031b4b56411c477d6f19f9f1dc65f0">package_map</a> ()</td></tr>
 <tr class="memdesc:afb031b4b56411c477d6f19f9f1dc65f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a mutable reference to the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> used by this parser.  <a href="#afb031b4b56411c477d6f19f9f1dc65f0">More...</a><br /></td></tr>
 <tr class="separator:afb031b4b56411c477d6f19f9f1dc65f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80f0b282c1e0ed11863458fa49b448ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a80f0b282c1e0ed11863458fa49b448ae">SetStrictParsing</a> ()</td></tr>
+<tr class="memdesc:a80f0b282c1e0ed11863458fa49b448ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cause all subsequent Add*Model*() operations to use strict parsing; warnings will be treated as errors.  <a href="#a80f0b282c1e0ed11863458fa49b448ae">More...</a><br /></td></tr>
+<tr class="separator:a80f0b282c1e0ed11863458fa49b448ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="namespacedrake_1_1multibody.html#af65439a17091283a89eb12f1955c6db0">ModelInstanceIndex</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_parser.html#a9b40bb492d33e373b3bfcf5d440a36c2">AddAllModelsFromFile</a> (const std::string &amp;file_name)</td></tr>
 <tr class="memdesc:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the SDF or URDF file named in <code>file_name</code> and adds all of its model(s) to <code>plant</code>.  <a href="#a9b40bb492d33e373b3bfcf5d440a36c2">More...</a><br /></td></tr>
 <tr class="separator:a9b40bb492d33e373b3bfcf5d440a36c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -507,6 +510,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets a mutable reference to the plant that will be modified by this parser. </p>
+
+</div>
+</div>
+<a id="a80f0b282c1e0ed11863458fa49b448ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f0b282c1e0ed11863458fa49b448ae">&#9670;&nbsp;</a></span>SetStrictParsing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetStrictParsing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cause all subsequent Add*Model*() operations to use strict parsing; warnings will be treated as errors. </p>
 
 </div>
 </div>
