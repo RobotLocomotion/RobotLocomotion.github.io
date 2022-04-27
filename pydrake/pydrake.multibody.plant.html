@@ -4499,6 +4499,56 @@ or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetRigidBodyByName">
+<code class="descname">GetRigidBodyByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetRigidBodyByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[float], name: str) -&gt; pydrake.multibody.tree.RigidBody_[float]</li>
+</ol>
+<p>Returns a constant reference to a rigid body that is identified by the
+string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the body name occurs in multiple model instances.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[float], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.RigidBody_[float]</li>
+</ol>
+<p>Returns a constant reference to the rigid body that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetTopologyGraphvizString">
 <code class="descname">GetTopologyGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].GetTopologyGraphvizString" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -8480,6 +8530,56 @@ or unspecified limits will be +infinity.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">GetPositionLowerLimits() for more information.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetRigidBodyByName">
+<code class="descname">GetRigidBodyByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].GetRigidBodyByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</li>
+</ol>
+<p>Returns a constant reference to a rigid body that is identified by the
+string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the body name occurs in multiple model instances.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.RigidBody_[AutoDiffXd]</li>
+</ol>
+<p>Returns a constant reference to the rigid body that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
 </div>
 </dd></dl>
 
@@ -12467,6 +12567,56 @@ or unspecified limits will be +infinity.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetRigidBodyByName">
+<code class="descname">GetRigidBodyByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetRigidBodyByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</li>
+</ol>
+<p>Returns a constant reference to a rigid body that is identified by the
+string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the body name occurs in multiple model instances.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[Expression], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.RigidBody_[Expression]</li>
+</ol>
+<p>Returns a constant reference to the rigid body that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].GetTopologyGraphvizString">
 <code class="descname">GetTopologyGraphvizString</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].GetTopologyGraphvizString" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a Graphviz string describing the topology of this plant. To
@@ -16446,6 +16596,56 @@ or unspecified limits will be +infinity.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
 <p class="last">GetPositionLowerLimits() for more information.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].GetRigidBodyByName">
+<code class="descname">GetRigidBodyByName</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].GetRigidBodyByName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic simple">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[float], name: str) -&gt; pydrake.multibody.tree.RigidBody_[float]</li>
+</ol>
+<p>Returns a constant reference to a rigid body that is identified by the
+string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">this</span></code> model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the body name occurs in multiple model instances.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li>GetRigidBodyByName(self: pydrake.multibody.plant.MultibodyPlant_[float], name: str, model_instance: pydrake.multibody.tree.ModelInstanceIndex) -&gt; pydrake.multibody.tree.RigidBody_[float]</li>
+</ol>
+<p>Returns a constant reference to the rigid body that is uniquely
+identified by the string <code class="docutils literal notranslate"><span class="pre">name</span></code> in <code class="docutils literal notranslate"><span class="pre">model_instance</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if there is no body with the requested name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if the requested body is not a RigidBody.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if <code class="docutils literal notranslate"><span class="pre">model_instance</span></code> is not valid for this model.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">HasBodyNamed() to query if there exists a body in <code class="docutils literal notranslate"><span class="pre">this</span></code> model
+with a given specified name.</p>
 </div>
 </dd></dl>
 

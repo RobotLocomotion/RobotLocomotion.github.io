@@ -1,5 +1,9 @@
 var NAVTREEINDEX32 =
 {
+"classdrake_1_1systems_1_1_matrix_gain.html#a555f573bc1c1a0e3da41f1b5bed26b52":[1,2,1,15,2],
+"classdrake_1_1systems_1_1_matrix_gain.html#a5656e511d250b599887b5585810141ba":[1,2,1,15,1],
+"classdrake_1_1systems_1_1_matrix_gain.html#ae2ad684d66598dabe9aaabb3e55b348d":[1,2,1,15,5],
+"classdrake_1_1systems_1_1_matrix_gain.html#aeda9ecd319ed79c6c53845dc76d2eecc":[1,2,1,15,6],
 "classdrake_1_1systems_1_1_matrix_gain.html#af0fa387fe40009b10648c19019b05ff1":[1,2,1,15,4],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html":[1,2,1,16],
 "classdrake_1_1systems_1_1_multilayer_perceptron.html#a1190c98a7f62f1e1dfdc1fb36392bbbc":[1,2,1,16,18],
@@ -245,9 +249,5 @@ var NAVTREEINDEX32 =
 "classdrake_1_1systems_1_1_runge_kutta5_integrator.html#ad39cfca6f1bd46f50789f96a24fe419e":[1,4,0,0,7,0],
 "classdrake_1_1systems_1_1_saturation.html":[1,2,1,21],
 "classdrake_1_1systems_1_1_saturation.html#a061e88d354aa124ca4ab4ee1b965adb8":[1,2,1,21,5],
-"classdrake_1_1systems_1_1_saturation.html#a2f84bb1a9217bcb1a2f464779246b9ed":[1,2,1,21,2],
-"classdrake_1_1systems_1_1_saturation.html#a3c3d4113bb36a4e304b96d0fdf0cd3de":[1,2,1,21,3],
-"classdrake_1_1systems_1_1_saturation.html#a5ad673bae5d26316242203a3425de1f2":[1,2,1,21,8],
-"classdrake_1_1systems_1_1_saturation.html#a67640bc6f033b1f6781758f90a706b1a":[1,2,1,21,6],
-"classdrake_1_1systems_1_1_saturation.html#a87198e44c71388d56697531009915e3b":[1,2,1,21,0]
+"classdrake_1_1systems_1_1_saturation.html#a2f84bb1a9217bcb1a2f464779246b9ed":[1,2,1,21,2]
 };

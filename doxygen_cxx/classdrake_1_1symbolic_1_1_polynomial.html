@@ -249,6 +249,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a376ec1877fc3946abaeddcefa6bf9a0a">RemoveTermsWithSmallCoefficients</a> (double coefficient_tol) const</td></tr>
 <tr class="memdesc:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the terms whose absolute value of the coefficients are smaller than or equal to <code>coefficient_tol</code> For example, if the polynomial is 2x² + 3xy + 10⁻⁴x - 10⁻⁵, then after calling RemoveTermsWithSmallCoefficients(1e-3), the returned polynomial becomes 2x² + 3xy.  <a href="#a376ec1877fc3946abaeddcefa6bf9a0a">More...</a><br /></td></tr>
 <tr class="separator:a376ec1877fc3946abaeddcefa6bf9a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48743d012fd5eb6d0eb9c2f2d34ef588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a48743d012fd5eb6d0eb9c2f2d34ef588">IsEven</a> () const</td></tr>
+<tr class="memdesc:a48743d012fd5eb6d0eb9c2f2d34ef588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the polynomial is even, namely p(x) = p(-x).  <a href="#a48743d012fd5eb6d0eb9c2f2d34ef588">More...</a><br /></td></tr>
+<tr class="separator:a48743d012fd5eb6d0eb9c2f2d34ef588"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab548898f3e47ba517d0513f8ef974da7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#ab548898f3e47ba517d0513f8ef974da7">IsOdd</a> () const</td></tr>
+<tr class="memdesc:ab548898f3e47ba517d0513f8ef974da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the polynomial is odd, namely p(x) = -p(-x).  <a href="#ab548898f3e47ba517d0513f8ef974da7">More...</a><br /></td></tr>
+<tr class="separator:ab548898f3e47ba517d0513f8ef974da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9529d30cb91325a367a10559fd88b06a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a9529d30cb91325a367a10559fd88b06a">operator+=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;p)</td></tr>
 <tr class="separator:a9529d30cb91325a367a10559fd88b06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7a3fb26530d992d7b2278a5f6281c09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#ad7a3fb26530d992d7b2278a5f6281c09">operator+=</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
@@ -889,6 +895,46 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a48743d012fd5eb6d0eb9c2f2d34ef588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48743d012fd5eb6d0eb9c2f2d34ef588">&#9670;&nbsp;</a></span>IsEven()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsEven </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the polynomial is even, namely p(x) = p(-x). </p>
+<p>Meaning that the coefficient for all odd-degree monomials are 0. Returns false otherwise. Note that this is different from the p.TotalDegree() being an even number. </p>
+
+</div>
+</div>
+<a id="ab548898f3e47ba517d0513f8ef974da7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab548898f3e47ba517d0513f8ef974da7">&#9670;&nbsp;</a></span>IsOdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsOdd </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the polynomial is odd, namely p(x) = -p(-x). </p>
+<p>Meaning that the coefficient for all even-degree monomials are 0. Returns false otherwise. Note that this is different from the p.TotalDegree() being an odd number. </p>
+
+</div>
+</div>
 <a id="a240c9c091a816878af16cabb5f7a65ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a240c9c091a816878af16cabb5f7a65ca">&#9670;&nbsp;</a></span>Jacobian()</h2>
 
@@ -1165,8 +1211,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab168243ddedae6540dc7fe18e0fd6f53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab168243ddedae6540dc7fe18e0fd6f53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<a id="adeaa4f722744d397b42ff26f50f443bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeaa4f722744d397b42ff26f50f443bf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1177,7 +1223,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -1191,8 +1237,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adeaa4f722744d397b42ff26f50f443bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeaa4f722744d397b42ff26f50f443bf">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="ab168243ddedae6540dc7fe18e0fd6f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab168243ddedae6540dc7fe18e0fd6f53">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1203,7 +1249,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&amp; operator= </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

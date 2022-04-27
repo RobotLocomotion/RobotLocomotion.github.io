@@ -1,5 +1,9 @@
 var NAVTREEINDEX44 =
 {
+"integer__inequality__solver_8h.html":[4,0,0,10,28],
+"integer__inequality__solver_8h.html#a897158ddd3d5fd975edd151850ecc639":[4,0,0,10,28,0],
+"integer__optimization__util_8h.html":[4,0,0,10,29],
+"integer__optimization__util_8h.html#a1460b4c245321e57b234a724d774fc50":[4,0,0,10,29,0],
 "integer__optimization__util_8h.html#aa7a863c255da14a1441e3ac58d082472":[4,0,0,10,29,3],
 "integer__optimization__util_8h.html#ab3ba521ece6e61a25713f11610b01d97":[4,0,0,10,29,1],
 "integer__optimization__util_8h.html#ada3cfbf9597820039fe2d6c3f175731b":[4,0,0,10,29,2],
@@ -245,9 +249,5 @@ var NAVTREEINDEX44 =
 "moving__average__filter_8h.html":[4,0,0,6,5,1],
 "mpc__data_8h.html":[4,0,0,10,0,0,5],
 "mpc__feasibility_8h.html":[4,0,0,10,0,0,6],
-"mpc__residual_8h.html":[4,0,0,10,0,0,7],
-"mpc__variable_8h.html":[4,0,0,10,0,0,8],
-"multibody__doxygen_8h.html":[4,0,0,8,15],
-"multibody__element_8h.html":[4,0,0,8,13,21],
-"multibody__forces_8h.html":[4,0,0,8,13,22]
+"mpc__residual_8h.html":[4,0,0,10,0,0,7]
 };

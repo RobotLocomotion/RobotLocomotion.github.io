@@ -1,5 +1,9 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a727f367eb7b4a0d5d2b9ba7c72bcfb23":[3,0,0,8,25,4],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a8268d3340ff301fdeb101f319116b2ff":[3,0,0,8,25,6],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#a952e3892ae1c82e97ef660d78fba0db2":[3,0,0,8,25,5],
+"structdrake_1_1multibody_1_1_door_hinge_config.html#aacf351ea5aed0b77d57004ad6f67c5f1":[3,0,0,8,25,2],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#aba281299fb18e40f37c6e1b5dd692da7":[3,0,0,8,25,3],
 "structdrake_1_1multibody_1_1_door_hinge_config.html#ae00f12214c519f05c298f29204677c77":[3,0,0,8,25,1],
 "structdrake_1_1multibody_1_1_externally_applied_spatial_force.html":[3,0,0,8,26],
@@ -245,9 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#a803b799247155d71e47493ac3857b909":[3,0,0,12,22,2],
 "structdrake_1_1solvers_1_1_gurobi_solver_details.html#ad1a44ab70cbada790a810ca324c07797":[3,0,0,12,22,1],
 "structdrake_1_1solvers_1_1_ipopt_solver_details.html":[3,0,0,12,25],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a1377097022dfdec89312e47c9ae9dfc8":[3,0,0,12,25,2],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6df89ba323770f788f15768d8e278d1c":[3,0,0,12,25,0],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,25,3],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a727541d7368d1fa14436bfa193f2292c":[3,0,0,12,25,4],
-"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a7dd4e94a9d3e2b0f80ff9ff8c1971083":[3,0,0,12,25,5]
+"structdrake_1_1solvers_1_1_ipopt_solver_details.html#a1377097022dfdec89312e47c9ae9dfc8":[3,0,0,12,25,2]
 };
