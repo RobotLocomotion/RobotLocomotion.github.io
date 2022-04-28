@@ -802,6 +802,7 @@ var hierarchy =
             [ "ContactVisualizer< T >", "classdrake_1_1multibody_1_1meshcat_1_1_contact_visualizer.html", null ],
             [ "JointSliders< T >", "classdrake_1_1multibody_1_1meshcat_1_1_joint_sliders.html", null ],
             [ "Propeller< T >", "classdrake_1_1multibody_1_1_propeller.html", null ],
+            [ "Wing< T >", "classdrake_1_1multibody_1_1_wing.html", null ],
             [ "Adder< T >", "classdrake_1_1systems_1_1_adder.html", null ],
             [ "RobertsonSystem< T >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_robertson_system.html", null ],
             [ "StiffDoubleMassSpringSystem< T >", "classdrake_1_1systems_1_1analysis_1_1test_1_1_stiff_double_mass_spring_system.html", null ],

@@ -85,5 +85,6 @@ var namespacedrake_1_1multibody =
     [ "UnitInertia", "classdrake_1_1multibody_1_1_unit_inertia.html", "classdrake_1_1multibody_1_1_unit_inertia" ],
     [ "UnitQuaternionConstraint", "classdrake_1_1multibody_1_1_unit_quaternion_constraint.html", "classdrake_1_1multibody_1_1_unit_quaternion_constraint" ],
     [ "UniversalJoint", "classdrake_1_1multibody_1_1_universal_joint.html", "classdrake_1_1multibody_1_1_universal_joint" ],
-    [ "WeldJoint", "classdrake_1_1multibody_1_1_weld_joint.html", "classdrake_1_1multibody_1_1_weld_joint" ]
+    [ "WeldJoint", "classdrake_1_1multibody_1_1_weld_joint.html", "classdrake_1_1multibody_1_1_weld_joint" ],
+    [ "Wing", "classdrake_1_1multibody_1_1_wing.html", "classdrake_1_1multibody_1_1_wing" ]
 ];

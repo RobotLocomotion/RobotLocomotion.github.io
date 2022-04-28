@@ -203,9 +203,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afaa68d5d43369307f840901e3d9fed97"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#afaa68d5d43369307f840901e3d9fed97">GetPackageNames</a> () const</td></tr>
 <tr class="memdesc:afaa68d5d43369307f840901e3d9fed97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the package names in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>.  <a href="#afaa68d5d43369307f840901e3d9fed97">More...</a><br /></td></tr>
 <tr class="separator:afaa68d5d43369307f840901e3d9fed97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa466c277b13b0a0e2ab7c64fa47917da"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#aa466c277b13b0a0e2ab7c64fa47917da">GetPath</a> (const std::string &amp;package_name) const</td></tr>
-<tr class="memdesc:aa466c277b13b0a0e2ab7c64fa47917da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the path associated with package <code>package_name</code>.  <a href="#aa466c277b13b0a0e2ab7c64fa47917da">More...</a><br /></td></tr>
-<tr class="separator:aa466c277b13b0a0e2ab7c64fa47917da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92aba2d00ca04be3c0d858b2c4d862b5"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a92aba2d00ca04be3c0d858b2c4d862b5">GetPath</a> (const std::string &amp;package_name, std::optional&lt; std::string &gt; *deprecated_message=nullptr) const</td></tr>
+<tr class="memdesc:a92aba2d00ca04be3c0d858b2c4d862b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the path associated with package <code>package_name</code>.  <a href="#a92aba2d00ca04be3c0d858b2c4d862b5">More...</a><br /></td></tr>
+<tr class="separator:a92aba2d00ca04be3c0d858b2c4d862b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ab5db13a6fe84a643a043c9347e1bc8d2">AddPackageXml</a> (const std::string &amp;filename)</td></tr>
 <tr class="memdesc:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> for the given <code>package.xml</code> filename.  <a href="#ab5db13a6fe84a643a043c9347e1bc8d2">More...</a><br /></td></tr>
 <tr class="separator:ab5db13a6fe84a643a043c9347e1bc8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -446,8 +446,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="aa466c277b13b0a0e2ab7c64fa47917da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa466c277b13b0a0e2ab7c64fa47917da">&#9670;&nbsp;</a></span>GetPath()</h2>
+<a id="a92aba2d00ca04be3c0d858b2c4d862b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92aba2d00ca04be3c0d858b2c4d862b5">&#9670;&nbsp;</a></span>GetPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -456,14 +456,30 @@ Friends</h2></td></tr>
           <td class="memname">const std::string&amp; GetPath </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>package_name</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>package_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::optional&lt; std::string &gt; *&#160;</td>
+          <td class="paramname"><em>deprecated_message</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Obtains the path associated with package <code>package_name</code>. </p>
-<p>Aborts if no package named <code>package_name</code> exists in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>. </p>
+<p>Aborts if no package named <code>package_name</code> exists in this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">deprecated_message</td><td>When passed as nullptr (it's default value), then in case the <code>package_name</code> is deprecated a deprecation message will be logged. When passed as non-nullptr the deprecation message will be output into this argument and will not be logged; if the <code>package_name</code> is not deprecated, the message will be set to nullopt. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -563,7 +579,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Obtains one or more paths from environment variable <code>environment_variable</code>. </p>
-<p>Crawls downward through the directory tree(s) starting from the path(s) searching for <code>package.xml</code> files. For each of these files, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the value is the path to the <code>package.xml</code> file. Multiple paths can be specified by separating them using the ':' symbol. For example, the environment variable can contain [path 1]:[path 2]:[path 3] to search three different paths. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. This accomodates the expected behavior using ROS_PACKAGE_PATH, where a package path corresponds to the "highest" overlay in which that package is found. </p>
+<p>Crawls downward through the directory tree(s) starting from the path(s) searching for <code>package.xml</code> files. For each of these files, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the value is the path to the <code>package.xml</code> file. Multiple paths can be specified by separating them using the ':' symbol. For example, the environment variable can contain [path 1]:[path 2]:[path 3] to search three different paths. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. This accomodates the expected behavior using ROS_PACKAGE_PATH, where a package path corresponds to the "highest" overlay in which that package is found. If a path does not exist or is unreadable, a warning is logged. </p>
 
 </div>
 </div>
@@ -584,7 +600,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>. </p>
-<p>For each of these directories, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the directory's path is the value. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. </p>
+<p>For each of these directories, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the directory's path is the value. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. If the path does not exist or is unreadable, a warning is logged. </p>
 
 </div>
 </div>

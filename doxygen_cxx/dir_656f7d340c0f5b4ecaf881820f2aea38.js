@@ -37,5 +37,6 @@ var dir_656f7d340c0f5b4ecaf881820f2aea38 =
       [ "PropellerInfo", "structdrake_1_1multibody_1_1_propeller_info.html", "structdrake_1_1multibody_1_1_propeller_info" ]
     ] ],
     [ "scalar_convertible_component.h", "scalar__convertible__component_8h.html", null ],
-    [ "tamsi_solver.h", "tamsi__solver_8h.html", "tamsi__solver_8h" ]
+    [ "tamsi_solver.h", "tamsi__solver_8h.html", "tamsi__solver_8h" ],
+    [ "wing.h", "wing_8h.html", null ]
 ];

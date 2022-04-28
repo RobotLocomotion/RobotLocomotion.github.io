@@ -384,6 +384,15 @@ names returned is unspecified.</p>
 <code class="descname">GetPath</code><span class="sig-paren">(</span><em>self: pydrake.multibody.parsing.PackageMap</em>, <em>package_name: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.multibody.parsing.PackageMap.GetPath" title="Permalink to this definition">¶</a></dt>
 <dd><p>Obtains the path associated with package <code class="docutils literal notranslate"><span class="pre">package_name</span></code>. Aborts if
 no package named <code class="docutils literal notranslate"><span class="pre">package_name</span></code> exists in this PackageMap.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">deprecated_message</span></code>:</dt>
+<dd>When passed as nullptr (it’s default value), then in case the
+<code class="docutils literal notranslate"><span class="pre">package_name</span></code> is deprecated a deprecation message will be
+logged. When passed as non-nullptr the deprecation message will be
+output into this argument and will not be logged; if the
+<code class="docutils literal notranslate"><span class="pre">package_name</span></code> is not deprecated, the message will be set to
+nullopt.</dd>
+</dl>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -408,7 +417,8 @@ already known by the PackageMap is found again with a conflicting
 path, a warning is logged and the original path is kept. This
 accomodates the expected behavior using ROS_PACKAGE_PATH, where a
 package path corresponds to the “highest” overlay in which that
-package is found.</p>
+package is found. If a path does not exist or is unreadable, a warning
+is logged.</p>
 </dd></dl>
 
 <dl class="method">
@@ -420,7 +430,8 @@ directories, this method adds a new entry into this PackageMap where
 the key is the package name as specified within <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> and
 the directory’s path is the value. If a package already known by the
 PackageMap is found again with a conflicting path, a warning is logged
-and the original path is kept.</p>
+and the original path is kept. If the path does not exist or is
+unreadable, a warning is logged.</p>
 </dd></dl>
 
 <dl class="method">
