@@ -234,12 +234,17 @@
 <em class="property">class </em><code class="descname">ContactVisualizer_[float]</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
-geometry::Meshcat; it draws double-sided arrows at the location of the
-contact force with length scaled by the magnitude of the contact
-force. The most common use of this system is to connect its input port
-to the contact results output port of a MultibodyPlant.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
-<div class="admonition warning">
+geometry::Meshcat; For point contact results, it draws double-sided
+arrows at the location of the contact force with length scaled by the
+magnitude of the contact force. For hydroelastic contact, it draws
+single-sided arrows at the centroid of the contact patch, one for
+force and one for the moment of the contact results. The length of
+these vectors are scaled by the magnitude of the contact force/moment.
+The direction of the arrow is essentially arbitrary (based on the
+GeometryIds) but is stable during a simulation. The most common use of
+this system is to connect its input port to the contact results output
+port of a MultibodyPlant.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">In the current implementation, ContactVisualizer methods must be
 called from the same thread where the class instance was
@@ -249,7 +254,7 @@ may generalize this in the future.</p>
 </div>
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of ContactVisualizer</p>
 </dd></dl>
 
@@ -258,19 +263,19 @@ may generalize this in the future.</p>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_.ContactVisualizer_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
 multibody::ContactResults-valued output port and
 geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port and the given
 geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="3">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port.</p>
@@ -320,12 +325,17 @@ geometry.</p>
 <em class="property">class </em><code class="descclassname">pydrake.multibody.meshcat.</code><code class="descname">ContactVisualizer_[AutoDiffXd]</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[AutoDiffXd]" title="pydrake.systems.framework.LeafSystem_[AutoDiffXd]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[AutoDiffXd]</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
-geometry::Meshcat; it draws double-sided arrows at the location of the
-contact force with length scaled by the magnitude of the contact
-force. The most common use of this system is to connect its input port
-to the contact results output port of a MultibodyPlant.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
-<div class="admonition warning">
+geometry::Meshcat; For point contact results, it draws double-sided
+arrows at the location of the contact force with length scaled by the
+magnitude of the contact force. For hydroelastic contact, it draws
+single-sided arrows at the centroid of the contact patch, one for
+force and one for the moment of the contact results. The length of
+these vectors are scaled by the magnitude of the contact force/moment.
+The direction of the arrow is essentially arbitrary (based on the
+GeometryIds) but is stable during a simulation. The most common use of
+this system is to connect its input port to the contact results output
+port of a MultibodyPlant.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">In the current implementation, ContactVisualizer methods must be
 called from the same thread where the class instance was
@@ -335,7 +345,7 @@ may generalize this in the future.</p>
 </div>
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of ContactVisualizer</p>
 </dd></dl>
 
@@ -344,19 +354,19 @@ may generalize this in the future.</p>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], plant: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
 multibody::ContactResults-valued output port and
 geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], query_object_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port and the given
 geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="3">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[AutoDiffXd], contact_results_port: pydrake.systems.framework.OutputPort_[AutoDiffXd], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[AutoDiffXd]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port.</p>
@@ -404,12 +414,17 @@ geometry.</p>
 <em class="property">class </em><code class="descclassname">pydrake.multibody.meshcat.</code><code class="descname">ContactVisualizer_[float]</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[float]" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pydrake.systems.framework.html#pydrake.systems.framework.LeafSystem_[float]" title="pydrake.systems.framework.LeafSystem_[float]"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.systems.framework.LeafSystem_[float]</span></code></a></p>
 <p>ContactVisualizer is a system that publishes a ContactResults to
-geometry::Meshcat; it draws double-sided arrows at the location of the
-contact force with length scaled by the magnitude of the contact
-force. The most common use of this system is to connect its input port
-to the contact results output port of a MultibodyPlant.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><p>Note: This system current only visualizes “point pair” contacts.</p>
-<div class="admonition warning">
+geometry::Meshcat; For point contact results, it draws double-sided
+arrows at the location of the contact force with length scaled by the
+magnitude of the contact force. For hydroelastic contact, it draws
+single-sided arrows at the centroid of the contact patch, one for
+force and one for the moment of the contact results. The length of
+these vectors are scaled by the magnitude of the contact force/moment.
+The direction of the arrow is essentially arbitrary (based on the
+GeometryIds) but is stable during a simulation. The most common use of
+this system is to connect its input port to the contact results output
+port of a MultibodyPlant.</p>
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">contact_results&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">query_object (optional)&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>ContactVisualizer</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0></table></td></tr></table><div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">In the current implementation, ContactVisualizer methods must be
 called from the same thread where the class instance was
@@ -419,7 +434,7 @@ may generalize this in the future.</p>
 </div>
 <dl class="method">
 <dt id="pydrake.multibody.meshcat.ContactVisualizer_[float].__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>self: pydrake.multibody.meshcat.ContactVisualizer_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[float].__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an instance of ContactVisualizer</p>
 </dd></dl>
 
@@ -428,19 +443,19 @@ may generalize this in the future.</p>
 <em class="property">static </em><code class="descname">AddToBuilder</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizer_[float].AddToBuilder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic simple">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], plant: pydrake.multibody.plant.MultibodyPlant_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given MultibodyPlant’s
 multibody::ContactResults-valued output port and
 geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="2">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], query_object_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port and the given
 geometry::QueryObject-valued output port.</p>
 <ol class="arabic simple" start="3">
-<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, newtons_per_meter=10.0, radius=0.01)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
+<li>AddToBuilder(builder: pydrake.systems.framework.DiagramBuilder_[float], contact_results_port: pydrake.systems.framework.OutputPort_[float], meshcat: pydrake.geometry.Meshcat, params: pydrake.multibody.meshcat.ContactVisualizerParams = ContactVisualizerParams(publish_period=0.03125, color=Rgba(r=0.0, g=1.0, b=0.0, a=1.0), hydro_force_color=Rgba(r=1.0, g=0.0, b=0.0, a=1.0), hydro_moment_color=Rgba(r=0.0, g=0.0, b=1.0, a=1.0) prefix=contact_forces, delete_on_initialization_event=True, force_threshold=0.01, moment_threshold=0.01 newtons_per_meter=10.0, newton_meters_per_meter=3.0 radius=0.002)) -&gt; pydrake.multibody.meshcat.ContactVisualizer_[float]</li>
 </ol>
 <p>Adds a ContactVisualizer and connects it to the given
 multibody::ContactResults-valued output port.</p>
@@ -495,7 +510,7 @@ geometry.</p>
 <dl class="attribute">
 <dt id="pydrake.multibody.meshcat.ContactVisualizerParams.color">
 <code class="descname">color</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.color" title="Permalink to this definition">¶</a></dt>
-<dd><p>The color used to draw the contact force arrows.</p>
+<dd><p>The color used to draw the point contact force arrows.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -510,10 +525,37 @@ events” for more information.</p>
 <dl class="attribute">
 <dt id="pydrake.multibody.meshcat.ContactVisualizerParams.force_threshold">
 <code class="descname">force_threshold</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.force_threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>The threshold below which forces will no longer be drawn. The
+<dd><p>The threshold (in N) below which forces will no longer be drawn. The
 ContactVisualizer constructor enforces that this must be strictly
 positive; zero forces do not have a meaningful direction and cannot be
 visualized.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.meshcat.ContactVisualizerParams.hydro_force_color">
+<code class="descname">hydro_force_color</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.hydro_force_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color used to draw the hydroelastic contact force arrows.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.meshcat.ContactVisualizerParams.hydro_moment_color">
+<code class="descname">hydro_moment_color</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.hydro_moment_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color used to draw the hydroelastic contact moment arrows.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.meshcat.ContactVisualizerParams.moment_threshold">
+<code class="descname">moment_threshold</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.moment_threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>The threshold (in N⋅m) below which moments will no longer be drawn.
+The ContactVisualizer constructor enforces that this must be strictly
+positive; zero moments do not have a meaningful direction and cannot
+be visualized.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pydrake.multibody.meshcat.ContactVisualizerParams.newton_meters_per_meter">
+<code class="descname">newton_meters_per_meter</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.newton_meters_per_meter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the length scale of the moment vectors.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -544,7 +586,7 @@ point; see drake#15021 for details.)</p>
 <dl class="attribute">
 <dt id="pydrake.multibody.meshcat.ContactVisualizerParams.radius">
 <code class="descname">radius</code><a class="headerlink" href="#pydrake.multibody.meshcat.ContactVisualizerParams.radius" title="Permalink to this definition">¶</a></dt>
-<dd><p>The radius of cylinder geometry used in the force vector .</p>
+<dd><p>The radius of cylinder geometry used in the force/moment vector.</p>
 </dd></dl>
 
 </dd></dl>

@@ -1,5 +1,10 @@
 var NAVTREEINDEX50 =
 {
+"structdrake_1_1solvers_1_1_clp_solver_details.html#a6e27f49150e9a14580fb313cc2777e00":[3,0,0,12,8,0],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html":[3,0,0,12,12],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a379ea2db61bec306bcb03b29a4d5b1cd":[3,0,0,12,12,0],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a90de5192c60705e7cc5fa526388280e0":[3,0,0,12,12,1],
+"structdrake_1_1solvers_1_1_csdp_solver_details.html#a934c111b1421c6aa91507fabd5c96deb":[3,0,0,12,12,2],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#ab48163f67547336c2aadfc248321044a":[3,0,0,12,12,4],
 "structdrake_1_1solvers_1_1_csdp_solver_details.html#aba4b79949c49a2fcb0e02585d277bd83":[3,0,0,12,12,3],
 "structdrake_1_1solvers_1_1_gurobi_solver_1_1_solve_status_info.html":[3,0,0,12,21,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX50 =
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01drake_1_1multibody_1_1meshcat_1_1_contact_visualizer_01_4.html":[3,0,0,14,7,3],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1quadrotor_1_1_quadrotor_plant_01_4.html":[3,0,0,14,7,4],
 "structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01examples_1_1rimless__wheel_1_1_rimless_wheel_01_4.html":[3,0,0,14,7,5],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,14,7,6],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_point_cloud_visualizer_01_4.html":[3,0,0,14,7,7],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_meshcat_visualizer_01_4.html":[3,0,0,14,7,8],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01sensors_1_1_beam_model_01_4.html":[3,0,0,14,7,11],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html":[3,0,0,14,7,14],
-"structdrake_1_1systems_1_1scalar__conversion_1_1_value_converter.html#a8a63ad999f7b515a27e608907704a113":[3,0,0,14,7,14,0]
+"structdrake_1_1systems_1_1scalar__conversion_1_1_traits_3_01geometry_1_1_drake_visualizer_01_4.html":[3,0,0,14,7,6]
 };
