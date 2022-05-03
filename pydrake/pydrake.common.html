@@ -276,9 +276,16 @@ is no requirement to call it prior to using Drake or generating messages.
 We offer it as a convenience only because Python’s logging defaults are
 more spartan than Drake’s C++ logging format (e.g., Python does not show
 message timestamps by default).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">pydrake logs using Python’s built-in <code class="docutils literal notranslate"><span class="pre">logging</span></code> module. To access
+pydrake’s <code class="docutils literal notranslate"><span class="pre">logging.Logger</span></code>, use <code class="docutils literal notranslate"><span class="pre">logging.getLogger(&quot;drake&quot;)</span></code>.
+You can configure log settings using that object whether or not you
+have called <code class="docutils literal notranslate"><span class="pre">configure_logging()</span></code> first.</p>
+</div>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#pydrake.common.set_log_level" title="pydrake.common.set_log_level"><code class="xref py py-func docutils literal notranslate"><span class="pre">pydrake.common.set_log_level()</span></code></a></p>
+<p class="last"><a class="reference external" href="https://docs.python.org/3/library/logging.html">https://docs.python.org/3/library/logging.html</a></p>
 </div>
 </dd></dl>
 
@@ -394,33 +401,12 @@ does not allocate any heap memory.</p>
 <dl class="function">
 <dt id="pydrake.common.set_log_level">
 <code class="descclassname">pydrake.common.</code><code class="descname">set_log_level</code><span class="sig-paren">(</span><em>level: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#pydrake.common.set_log_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the log threshold used by Drake’s C++ code.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">level</span></code>:</dt>
-<dd>Must be a string from spdlog enumerations: <code class="docutils literal notranslate"><span class="pre">trace</span></code>, <cite>debug</cite>,
-<code class="docutils literal notranslate"><span class="pre">info</span></code>, <cite>warn</cite>, <code class="docutils literal notranslate"><span class="pre">err</span></code>, <cite>critical</cite>, <code class="docutils literal notranslate"><span class="pre">off</span></code>, or <code class="docutils literal notranslate"><span class="pre">unchanged</span></code>
-(not an enum, but useful for command-line).</dd>
+<dd><dl class="docutils">
+<dt>Deprecated:</dt>
+<dd>Do not use <code class="docutils literal notranslate"><span class="pre">pydrake.common.set_log_level(...)</span></code>.
+Instead, use <code class="docutils literal notranslate"><span class="pre">logging.getLogger('drake').setLevel(...)</span></code>.
+This function will be removed from Drake on or after 2022-09-01</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The string value of the previous log level. If SPDLOG is disabled,
-then this returns an empty string.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">When using pydrake, both the C++ level threshold and the Python logging
-level threshold must be satisfied for a message to be displayed. This
-function only adjusts the C++ level. Refer to the Python logging module
-documentation for details on setting the Python level.</p>
-</div>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#pydrake.common.configure_logging" title="pydrake.common.configure_logging"><code class="xref py py-func docutils literal notranslate"><span class="pre">pydrake.common.configure_logging()</span></code></a></p>
-</div>
 </dd></dl>
 
 <dl class="function">

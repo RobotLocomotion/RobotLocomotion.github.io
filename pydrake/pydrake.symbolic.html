@@ -2120,6 +2120,32 @@ indeterminate.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.symbolic.Polynomial.EvaluateIndeterminates">
+<code class="descname">EvaluateIndeterminates</code><span class="sig-paren">(</span><em>self: pydrake.symbolic.Polynomial, indeterminates: numpy.ndarray[object[m, 1]], indeterminates_values: numpy.ndarray[numpy.float64[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, 1]]<a class="headerlink" href="#pydrake.symbolic.Polynomial.EvaluateIndeterminates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluates the polynomial at a batch of indeterminates values.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>:</dt>
+<dd>Must include all this-&gt;indeterminates()</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code>:</dt>
+<dd>Each column of <code class="docutils literal notranslate"><span class="pre">indeterminates_values</span></code> stores one specific value
+of <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>. indeterminates_values.rows() ==
+indeterminates.rows().</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">polynomial_values polynomial_values(j) is obtained by substituting
+indeterminates(i) in this polynomial with indeterminates_values(i,
+j) for all i.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">error if any coefficient in this polynomial is not a constant.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.symbolic.Polynomial.EvaluatePartial">
 <code class="descname">EvaluatePartial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.symbolic.Polynomial.EvaluatePartial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>

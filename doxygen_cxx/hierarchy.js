@@ -909,7 +909,6 @@ var hierarchy =
             [ "IiwaCommandSender", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_command_sender.html", null ],
             [ "IiwaStatusReceiver", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_receiver.html", null ],
             [ "IiwaStatusSender", "classdrake_1_1manipulation_1_1kuka__iiwa_1_1_iiwa_status_sender.html", null ],
-            [ "PoseSmoother", "classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html", null ],
             [ "DifferentialInverseKinematicsIntegrator", "classdrake_1_1manipulation_1_1planner_1_1_differential_inverse_kinematics_integrator.html", null ],
             [ "RobotPlanInterpolator", "classdrake_1_1manipulation_1_1planner_1_1_robot_plan_interpolator.html", null ],
             [ "SchunkWsgCommandReceiver", "classdrake_1_1manipulation_1_1schunk__wsg_1_1_schunk_wsg_command_receiver.html", null ],

@@ -243,6 +243,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb6379c53bbbfcac28d757e0ef4d9bc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#adb6379c53bbbfcac28d757e0ef4d9bc3">EvaluatePartial</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">Variable</a> &amp;var, double c) const</td></tr>
 <tr class="memdesc:adb6379c53bbbfcac28d757e0ef4d9bc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Partially evaluates this polynomial by substituting <code>var</code> with <code>c</code>.  <a href="#adb6379c53bbbfcac28d757e0ef4d9bc3">More...</a><br /></td></tr>
 <tr class="separator:adb6379c53bbbfcac28d757e0ef4d9bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854e025ef6b3a037dc0753004dce284a"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a854e025ef6b3a037dc0753004dce284a">EvaluateIndeterminates</a> (const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339">indeterminates</a>, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;indeterminates_values) const</td></tr>
+<tr class="memdesc:a854e025ef6b3a037dc0753004dce284a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the polynomial at a batch of indeterminates values.  <a href="#a854e025ef6b3a037dc0753004dce284a">More...</a><br /></td></tr>
+<tr class="separator:a854e025ef6b3a037dc0753004dce284a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55826a916b7c6f12060f7ff4e590813f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html">Polynomial</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a55826a916b7c6f12060f7ff4e590813f">AddProduct</a> (const <a class="el" href="classdrake_1_1symbolic_1_1_expression.html">Expression</a> &amp;coeff, const <a class="el" href="classdrake_1_1symbolic_1_1_monomial.html">Monomial</a> &amp;m)</td></tr>
 <tr class="memdesc:a55826a916b7c6f12060f7ff4e590813f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds <code>coeff</code> * <code>m</code> to this polynomial.  <a href="#a55826a916b7c6f12060f7ff4e590813f">More...</a><br /></td></tr>
 <tr class="separator:a55826a916b7c6f12060f7ff4e590813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -740,6 +743,50 @@ Friends</h2></td></tr>
 <dl class="exception"><dt>Exceptions</dt><dd>
   <table class="exception">
     <tr><td class="paramname">std::exception</td><td>if there is a variable in this polynomial whose assignment is not provided by <code>env</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a854e025ef6b3a037dc0753004dce284a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854e025ef6b3a037dc0753004dce284a">&#9670;&nbsp;</a></span>EvaluateIndeterminates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd EvaluateIndeterminates </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Ref&lt; const <a class="el" href="namespacedrake.html#a77dd228fb4dd66a2c17dd3f7f38ffd85">VectorX</a>&lt; <a class="el" href="classdrake_1_1symbolic_1_1_variable.html">symbolic::Variable</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>indeterminates</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>indeterminates_values</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the polynomial at a batch of indeterminates values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates</td><td>Must include all this-&gt;<a class="el" href="classdrake_1_1symbolic_1_1_polynomial.html#a0bc13b2cc5895e55e2bc5622c3fe4339" title="Returns the indeterminates of this polynomial.">indeterminates()</a> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">indeterminates_values</td><td>Each column of <code>indeterminates_values</code> stores one specific value of <code>indeterminates</code>. indeterminates_values.rows() == indeterminates.rows(). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>polynomial_values polynomial_values(j) is obtained by substituting indeterminates(i) in this polynomial with indeterminates_values(i, j) for all i. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">error</td><td>if any coefficient in this polynomial is not a constant. </td></tr>
   </table>
   </dd>
 </dl>

@@ -15,7 +15,6 @@ var classdrake_1_1multibody_1_1_package_map =
     [ "operator=", "classdrake_1_1multibody_1_1_package_map.html#afcdc55946fb2ea46cbe9728bffa8f5f6", null ],
     [ "PopulateFromEnvironment", "classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068", null ],
     [ "PopulateFromFolder", "classdrake_1_1multibody_1_1_package_map.html#a510d35f38c93d44fa6a70d727f55cb8c", null ],
-    [ "PopulateUpstreamToDrake", "classdrake_1_1multibody_1_1_package_map.html#a5e2fbb72a84c2c5527f8d2b452918602", null ],
     [ "Remove", "classdrake_1_1multibody_1_1_package_map.html#ae80251a33cd5622dc2a12b8193ea79e1", null ],
     [ "SetDeprecated", "classdrake_1_1multibody_1_1_package_map.html#a36fa8e81eb4b5a8719afa1452c5951ed", null ],
     [ "size", "classdrake_1_1multibody_1_1_package_map.html#af9593d4a5ff4274efaf429cb4f9e57cc", null ],

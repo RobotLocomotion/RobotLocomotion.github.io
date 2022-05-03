@@ -203,6 +203,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e43911f06f9c31a7ad6b9d87b11430c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a1e43911f06f9c31a7ad6b9d87b11430c">Intersection</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
 <tr class="memdesc:a1e43911f06f9c31a7ad6b9d87b11430c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the intersection of <code>this</code> and <code>other</code>.  <a href="#a1e43911f06f9c31a7ad6b9d87b11430c">More...</a><br /></td></tr>
 <tr class="separator:a1e43911f06f9c31a7ad6b9d87b11430c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba50cc657a0a2c943a9657cb820e8289"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#aba50cc657a0a2c943a9657cb820e8289">PontryaginDifference</a> (const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;other) const</td></tr>
+<tr class="memdesc:aba50cc657a0a2c943a9657cb820e8289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Pontryagin (Minkowski) Difference of <code>this</code> and <code>other</code>.  <a href="#aba50cc657a0a2c943a9657cb820e8289">More...</a><br /></td></tr>
+<tr class="separator:aba50cc657a0a2c943a9657cb820e8289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f010e733bd63adb8352995624362b65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html#a2f010e733bd63adb8352995624362b65">IsBounded</a> () const</td></tr>
 <tr class="memdesc:a2f010e733bd63adb8352995624362b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true iff the set is bounded, e.g.  <a href="#a2f010e733bd63adb8352995624362b65">More...</a><br /></td></tr>
 <tr class="separator:a2f010e733bd63adb8352995624362b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -704,8 +707,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a51cda62fc83874a9e1c021873e9e9a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51cda62fc83874a9e1c021873e9e9a64">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&amp; operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a33511869af259d5a743e9cb70f0f711d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33511869af259d5a743e9cb70f0f711d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a33511869af259d5a743e9cb70f0f711d">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -730,29 +759,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a51cda62fc83874a9e1c021873e9e9a64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51cda62fc83874a9e1c021873e9e9a64">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+<a id="aba50cc657a0a2c943a9657cb820e8289"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba50cc657a0a2c943a9657cb820e8289">&#9670;&nbsp;</a></span>PontryaginDifference()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a>&amp; operator= </td>
+          <td class="memname"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> PontryaginDifference </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&amp;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html">HPolyhedron</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Returns the Pontryagin (Minkowski) Difference of <code>this</code> and <code>other</code>. </p>
+<p>This is the set A ⊖ B = { a|a+ B ⊆ A }. The result is an <a class="el" href="classdrake_1_1geometry_1_1optimization_1_1_h_polyhedron.html" title="Implements a polyhedral convex set using the half-space representation: {x| A x ≤ b}.">HPolyhedron</a> with the same number of inequalities as A. Requires that <code>this</code> and <code>other</code> both be bounded and have the same ambient dimension. This method may throw a runtime error if <code>this</code> or <code>other</code> are ill-conditioned. </p>
 
 </div>
 </div>

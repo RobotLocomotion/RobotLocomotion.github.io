@@ -2392,59 +2392,6 @@ for more details.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddMaximizeLogDeterminantSymmetricMatrixCost">
-<code class="descname">AddMaximizeLogDeterminantSymmetricMatrixCost</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; Tuple[pydrake.solvers.mathematicalprogram.Binding[LinearCost], numpy.ndarray[object[m, 1]], numpy.ndarray[object[m, n]]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddMaximizeLogDeterminantSymmetricMatrixCost" title="Permalink to this definition">¶</a></dt>
-<dd><p>Adds the cost to maximize the log determinant of symmetric matrix X.
-log(det(X)) is a concave function of X, so we can maximize it through
-convex optimization. In order to do that, we introduce slack variables
-t, and a lower triangular matrix Z, with the constraints</p>
-<p>⌈X Z⌉ is positive semidifinite. ⌊Zᵀ diag(Z)⌋</p>
-<p>log(Z(i, i)) &gt;= t(i)</p>
-<p>and we will minimize -∑ᵢt(i).</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">X</span></code>:</dt>
-<dd>A symmetric positive semidefinite matrix X, whose log(det(X)) will
-be maximized.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(cost, t, Z) cost is -∑ᵢt(i), we also return the newly created
-slack variables t and the lower triangular matrix Z. Note that Z
-is not a matrix of symbolic::Variable but symbolic::Expression,
-because the upper-diagonal entries of Z are not variable, but
-expression 0.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>X is a symmetric matrix.</dd>
-</dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We implicitly require that <code class="docutils literal notranslate"><span class="pre">X</span></code> being positive semidefinite (psd)
-(as X is the diagonal entry of the big psd matrix above). If your
-<code class="docutils literal notranslate"><span class="pre">X</span></code> is not necessarily psd, then don’t call this function.</p>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The constraint log(Z(i, i)) &gt;= t(i) is imposed as an exponential
-cone constraint. Please make sure your have a solver that supports
-exponential cone constraint (currently SCS does). Refer to
-<a class="reference external" href="https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant">https://docs.mosek.com/modeling-cookbook/sdo.html#log-determinant</a>
-for more details. / (Deprecated.)</p>
-</div>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>AddMaximizeLogDeterminantSymmetricMatrixCost has been renamed to
-AddMaximizeLogDeterminantCost. This will be removed from Drake on
-or after 2022-05-01.</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint">
 <code class="descname">AddPositiveDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the constraint that a symmetric matrix is diagonally dominant
@@ -3606,90 +3553,6 @@ std::vector&lt;std::string&gt;&amp; names);</p>
 <p class="last">NewIndeterminates(int rows, int cols, const
 std::vector&lt;std::string&gt;&amp; names);</p>
 </div>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.NewNonnegativePolynomial">
-<code class="descname">NewNonnegativePolynomial</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.NewNonnegativePolynomial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
-</ol>
-<p>Returns a pair of nonnegative polynomial p = mᵀQm and the Gramian
-matrix Q, where m is <code class="docutils literal notranslate"><span class="pre">monomial_basis</span></code>. Adds Q as decision variables
-to the program. Depending on the type of the polynomial, we will
-impose different constraint on Q. - if type = kSos, we impose Q being
-positive semidefinite. - if type = kSdsos, we impose Q being scaled
-diagonally dominant. - if type = kDsos, we impose Q being positive
-diagonally dominant.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">monomial_basis</span></code>:</dt>
-<dd>The monomial basis.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">type</span></code>:</dt>
-<dd>The type of the nonnegative polynomial.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(p, Q) The polynomial p and the Gramian matrix Q. Q has been added
-as decision variables to the program. / (Deprecated.)</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use NewSosPolynomial instead of NewNonnegativePolynomial This will
-be removed from Drake on or after 2022-05-01.</dd>
-</dl>
-<ol class="arabic simple" start="2">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, gramian: numpy.ndarray[object[m, n], flags.f_contiguous], monomial_basis: numpy.ndarray[object[m, 1]], type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; pydrake.symbolic.Polynomial</li>
-</ol>
-<p>Overloads NewNonnegativePolynomial(), except the Gramian matrix Q is
-an input instead of an output. Depending on the type of the
-polynomial, we will impose different constraint on the Gramian matrix.
-- if type = kSos, we impose the Gramian matrix being positive
-semidefinite. - if type = kSdsos, we impose the Gramian matrix being
-scaled diagonally dominant. - if type = kDsos, we impose the Gramian
-matrix being positive diagonally dominant. / (Deprecated.)</p>
-<dl class="docutils">
-<dt>Deprecated:</dt>
-<dd>Use NewSosPolynomial instead of NewNonnegativePolynomial This will
-be removed from Drake on or after 2022-05-01.</dd>
-</dl>
-<ol class="arabic simple" start="3">
-<li>NewNonnegativePolynomial(self: pydrake.solvers.mathematicalprogram.MathematicalProgram, indeterminates: pydrake.symbolic.Variables, degree: int, type: pydrake.solvers.mathematicalprogram.MathematicalProgram.NonnegativePolynomial) -&gt; Tuple[pydrake.symbolic.Polynomial, numpy.ndarray[object[m, n]]]</li>
-</ol>
-<p>Overloads NewNonnegativePolynomial(). Instead of passing the monomial
-basis, we use a monomial basis that contains all monomials of
-<code class="docutils literal notranslate"><span class="pre">indeterminates</span></code> of total order up to <code class="docutils literal notranslate"><span class="pre">degree</span></code> / 2, hence the
-returned polynomial p contains all the monomials of <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>
-of total order up to <code class="docutils literal notranslate"><span class="pre">degree</span></code>.</p>
-<dl class="docutils">
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">indeterminates</span></code>:</dt>
-<dd>All the indeterminates in the polynomial p.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">degree</span></code>:</dt>
-<dd>The polynomial p will contain all the monomials up to order
-<code class="docutils literal notranslate"><span class="pre">degree</span></code>.</dd>
-<dt>Parameter <code class="docutils literal notranslate"><span class="pre">type</span></code>:</dt>
-<dd>The type of the nonnegative polynomial.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(p, Q) The polynomial p and the Gramian matrix Q. Q has been added
-as decision variables to the program.</td>
-</tr>
-</tbody>
-</table>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd><code class="docutils literal notranslate"><span class="pre">degree</span></code> is a positive even number. / (Deprecated.)</dd>
-<dt>Deprecated:</dt>
-<dd>Use NewSosPolynomial instead of NewNonnegativePolynomial This will
-be removed from Drake on or after 2022-05-01.</dd>
-</dl>
 </dd></dl>
 
 <dl class="method">
@@ -4984,12 +4847,8 @@ new_b in the rotated Lorentz cone.</p>
 
 <dl class="function">
 <dt id="pydrake.solvers.mathematicalprogram.Solve">
-<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Solve</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Solve" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic simple">
-<li>Solve(prog: pydrake.solvers.mathematicalprogram.MathematicalProgram, initial_guess: Optional[numpy.ndarray[numpy.float64[m, 1]]] = None, solver_options: Optional[pydrake.solvers.mathematicalprogram.SolverOptions] = None) -&gt; pydrake.solvers.mathematicalprogram.MathematicalProgramResult</li>
-</ol>
-<p>Solves an optimization program, with optional initial guess and solver
+<code class="descclassname">pydrake.solvers.mathematicalprogram.</code><code class="descname">Solve</code><span class="sig-paren">(</span><em>prog: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>initial_guess: Optional[numpy.ndarray[numpy.float64[m</em>, <em>1]]] = None</em>, <em>solver_options: Optional[pydrake.solvers.mathematicalprogram.SolverOptions] = None</em><span class="sig-paren">)</span> &#x2192; pydrake.solvers.mathematicalprogram.MathematicalProgramResult<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.Solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solves an optimization program, with optional initial guess and solver
 options. This function first chooses the best solver depending on the
 availability of the solver and the program formulation; it then
 constructs that solver and call the Solve function of that solver. The
@@ -5018,10 +4877,6 @@ argument to Solve</dd>
 </tr>
 </tbody>
 </table>
-<ol class="arabic simple" start="2">
-<li>Solve(trajopt: drake::systems::trajectory_optimization::MultipleShooting) -&gt; pydrake.solvers.mathematicalprogram.MathematicalProgramResult</li>
-</ol>
-<p>This method calls Solve(trajopt.prog()).</p>
 </dd></dl>
 
 <dl class="class">

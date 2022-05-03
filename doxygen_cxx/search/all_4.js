@@ -522,7 +522,7 @@ var searchData=
   ['particles',['particles',['../namespacedrake_1_1examples_1_1particles.html',1,'drake::examples']]],
   ['pc_5fflags',['pc_flags',['../namespacedrake_1_1perception_1_1pc__flags.html',1,'drake::perception']]],
   ['pendulum',['pendulum',['../namespacedrake_1_1examples_1_1pendulum.html',1,'drake::examples::pendulum'],['../namespacedrake_1_1multibody_1_1benchmarks_1_1pendulum.html',1,'drake::multibody::benchmarks::pendulum']]],
-  ['perception',['perception',['../namespacedrake_1_1manipulation_1_1perception.html',1,'drake::manipulation::perception'],['../namespacedrake_1_1perception.html',1,'drake::perception']]],
+  ['perception',['perception',['../namespacedrake_1_1perception.html',1,'drake']]],
   ['planar_5fgripper',['planar_gripper',['../namespacedrake_1_1examples_1_1planar__gripper.html',1,'drake::examples']]],
   ['planner',['planner',['../namespacedrake_1_1manipulation_1_1planner.html',1,'drake::manipulation']]],
   ['proximity',['proximity',['../namespacedrake_1_1geometry_1_1proximity.html',1,'drake::geometry']]],

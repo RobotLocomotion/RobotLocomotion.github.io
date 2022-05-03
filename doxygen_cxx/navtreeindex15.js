@@ -1,12 +1,5 @@
 var NAVTREEINDEX15 =
 {
-"classdrake_1_1multibody_1_1_spatial_inertia.html#ab0efcd599640dacc6ef37cf640143fdc":[3,0,0,8,68,15],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#acc3f6e6102f427a8624f86758eb536fd":[3,0,0,8,68,16],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#acd0afd330ef98eb2418ae915e3a1b024":[3,0,0,8,68,14],
-"classdrake_1_1multibody_1_1_spatial_inertia.html#afd8c5e6a454900028bca003bd5cc9539":[3,0,0,8,68,24],
-"classdrake_1_1multibody_1_1_spatial_momentum.html":[3,0,0,8,69],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#a443c65e3aa700e20cffca0d6530abd2f":[3,0,0,8,69,4],
-"classdrake_1_1multibody_1_1_spatial_momentum.html#a6042fc1fe4f8b4f29d50a5f73c506ee0":[3,0,0,8,69,0],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a65232f2bac94fd25f787168e85246a76":[3,0,0,8,69,3],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a795da21c81556a246f849e181ec6a622":[3,0,0,8,69,6],
 "classdrake_1_1multibody_1_1_spatial_momentum.html#a80adf254abcd794a723b6c43c5e32832":[3,0,0,8,69,8],
@@ -249,5 +242,12 @@ var NAVTREEINDEX15 =
 "classdrake_1_1multibody_1_1_wing.html#a00bb1bf6b619e332e440549f5ae2bcb3":[1,2,7,1,6],
 "classdrake_1_1multibody_1_1_wing.html#a1d92c58f0d99595019eeac780c919654":[1,2,7,1,0],
 "classdrake_1_1multibody_1_1_wing.html#a2ee5cb2ed0bbc9e156eecdb803507b85":[1,2,7,1,9],
-"classdrake_1_1multibody_1_1_wing.html#a30c2af8386010347ab0e75471db8bd5f":[1,2,7,1,1]
+"classdrake_1_1multibody_1_1_wing.html#a30c2af8386010347ab0e75471db8bd5f":[1,2,7,1,1],
+"classdrake_1_1multibody_1_1_wing.html#a35a383af4819cea8937fbd07e24b1c77":[1,2,7,1,10],
+"classdrake_1_1multibody_1_1_wing.html#a45c1f100f951d5be7ed13fab820088c4":[1,2,7,1,4],
+"classdrake_1_1multibody_1_1_wing.html#a7810e59cd7a3b92cabd860b9ae07ed10":[1,2,7,1,13],
+"classdrake_1_1multibody_1_1_wing.html#a7aed27079df7a9abd47defce29b85b66":[1,2,7,1,11],
+"classdrake_1_1multibody_1_1_wing.html#acd7f8abee8149bde049f3bab89d3113c":[1,2,7,1,7],
+"classdrake_1_1multibody_1_1_wing.html#ad16f6945d33d45216dc313e01e71d26d":[1,2,7,1,3],
+"classdrake_1_1multibody_1_1_wing.html#ad8a61762549243f762062683051f14f6":[1,2,7,1,5]
 };

@@ -1115,6 +1115,17 @@ Cx + d | <a href="#id3"><span class="problematic" id="id4">|</span></a>x|₂ ≤
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="pydrake.geometry.optimization.HPolyhedron.PontryaginDifference">
+<code class="descname">PontryaginDifference</code><span class="sig-paren">(</span><em>self: pydrake.geometry.optimization.HPolyhedron</em>, <em>other: pydrake.geometry.optimization.HPolyhedron</em><span class="sig-paren">)</span> &#x2192; pydrake.geometry.optimization.HPolyhedron<a class="headerlink" href="#pydrake.geometry.optimization.HPolyhedron.PontryaginDifference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Pontryagin (Minkowski) Difference of <code class="docutils literal notranslate"><span class="pre">this</span></code> and
+<code class="docutils literal notranslate"><span class="pre">other</span></code>. This is the set A ⊖ B = { a|a+ B ⊆ A }. The result is an
+HPolyhedron with the same number of inequalities as A. Requires that
+<code class="docutils literal notranslate"><span class="pre">this</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code> both be bounded and have the same ambient
+dimension. This method may throw a runtime error if <code class="docutils literal notranslate"><span class="pre">this</span></code> or
+<code class="docutils literal notranslate"><span class="pre">other</span></code> are ill-conditioned.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">

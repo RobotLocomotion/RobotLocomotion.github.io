@@ -47,7 +47,6 @@ var searchData=
   ['polynomial_5ftypes_5fpybind_2eh',['polynomial_types_pybind.h',['../polynomial__types__pybind_8h.html',1,'']]],
   ['port_5fbase_2eh',['port_base.h',['../port__base_8h.html',1,'']]],
   ['port_5fswitch_2eh',['port_switch.h',['../port__switch_8h.html',1,'']]],
-  ['pose_5fsmoother_2eh',['pose_smoother.h',['../pose__smoother_8h.html',1,'']]],
   ['posed_5fhalf_5fspace_2eh',['posed_half_space.h',['../posed__half__space_8h.html',1,'']]],
   ['position_5fconstraint_2eh',['position_constraint.h',['../position__constraint_8h.html',1,'']]],
   ['position_5fkinematics_5fcache_2eh',['position_kinematics_cache.h',['../position__kinematics__cache_8h.html',1,'']]],

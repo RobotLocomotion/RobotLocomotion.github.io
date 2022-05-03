@@ -143,7 +143,6 @@ labels.  Each label uses the format <code class="highlighter-rouge">group: value
 of the following:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">team</code>: Indicates the engineering team that owns the issue.</li>
   <li><code class="highlighter-rouge">component</code>: Indicates the primary affected feature area.</li>
   <li><code class="highlighter-rouge">type</code>: Indicates the nature of the issue.</li>
   <li><code class="highlighter-rouge">priority</code>: Indicates the urgency of resolution.</li>
@@ -158,153 +157,231 @@ The Drake development team will apply appropriate labels later as needed.</p>
 
 <p>Every issue must have at least one owner assigned.</p>
 
-<h1 id="team">Team</h1>
-
-<p>Every issue must have at least one <code class="highlighter-rouge">team</code> label. The teams, their leads, and
-their responsibilities are:</p>
-
-<ul>
-  <li><code class="highlighter-rouge">dynamics</code>
-    <ul>
-      <li>lead: sherm1</li>
-      <li>responsibilities: physical accuracy, numerical methods, collision,
-systems framework</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">kitware</code>
-    <ul>
-      <li>lead: BetsyMcPhail</li>
-      <li>responsibilities: build, continuous integration</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">manipulation</code>
-    <ul>
-      <li>lead: hongkai-dai</li>
-      <li>responsibilities: optimizers, solvers, symbolic analysis,
-<code class="highlighter-rouge">drake/manipulation/</code> subdirectory</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">robot locomotion group</code>
-    <ul>
-      <li>lead: RussTedrake</li>
-      <li>responsibilities: examples/requests from MIT projects / MIT courses</li>
-    </ul>
-  </li>
-</ul>
-
 <h1 id="component">Component</h1>
 
-<p>Every issue must have at most one <code class="highlighter-rouge">component</code> label. The components are:</p>
+<p>Every issue must at least one <code class="highlighter-rouge">component</code> label assigned. Our preference is
+to have exactly one <code class="highlighter-rouge">component</code> per issue, but we allow multiple in case
+several components are equally relevant.</p>
+
+<p>The components are:</p>
+<table>
+
+<tr>
+<th>Component</th>
+<th>Description</th>
+<th>Lead</th>
+<th>Typical Directories</th>
+</tr>
+
+<tr>
+<td><code>build system</code></td>
+<td>Bazel, CMake, dependencies, memory checkers, linters.</td>
+<td>jwnimmer-tri</td>
+<td><small>
+tools
+</small></td>
+</tr>
+
+<tr>
+<td><code>continuous&nbsp;integration</code></td>
+<td>Jenkins, CDash, mirroring of externals, website infrastructure.</td>
+<td>BetsyMcPhail</td>
+<td><small>
+RobotLocomotion/drake-ci
+</small></td>
+</tr>
+
+<tr>
+<td><code>distribution</code></td>
+<td>Nightly binaries, monthly releases, docker, installation
+  via apt or brew.</td>
+<td>jwnimmer-tri</td>
+<td><small>
+tools/install<br />
+tools/wheel
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry general</code></td>
+<td>Geometry infrastructure or topics that defy categorization into other
+  geometry components.</td>
+<td>rpoyner-tri</td>
+<td><small>
+n/a
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry illustration</code></td>
+<td>What and how geometry gets communicated to external visualizers.</td>
+<td>joemasterjohn</td>
+<td><small>
+(portions of) geometry<br />
+multibody/meshcat
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry perception</code></td>
+<td>How geometry appears in color, depth, and label images (via the
+  RenderEngine API).</td>
+<td>zachfang</td>
+<td><small>
+geometry/render<br />
+systems/rendering
+</small></td>
+</tr>
+
+<tr>
+<td><code>geometry proximity</code></td>
+<td>Contact, distance, signed distance queries and related properties.</td>
+<td>DamrongGuoy</td>
+<td><small>
+(portions of) geometry<br />
+geometry/proximity
+</small></td>
+</tr>
+
+<tr>
+<td><code>jupyter</code></td>
+<td>Topics relevant only when running inside a Python notebook. This label does
+  not imply authoring tutorials (use component: tutorials for that).</td>
+<td>RussTedrake</td>
+<td><small>
+n/a
+</small></td>
+</tr>
+
+<tr>
+<td><code>mathematical program</code></td>
+<td>Formulating and solving mathematical programs; our autodiff and symbolic
+  libraries.</td>
+<td>hongkai-dai</td>
+<td><small>
+common/symbolic_**<br />
+solvers
+</small></td>
+</tr>
+
+<tr>
+<td><code>messaging</code></td>
+<td>Message-passing infrastructure, i.e., LCM.</td>
+<td>sammy-tri</td>
+<td><small>
+lcm
+systems/lcm
+</small></td>
+</tr>
+
+<tr>
+<td><code>multibody plant</code></td>
+<td>MultibodyPlant and supporting code.</td>
+<td>amcastro-tri</td>
+<td><small>
+multibody/contact_solvers<br />
+multibody/math<br />
+multibody/plant<br />
+multibody/tree<br />
+</small></td>
+</tr>
+
+<tr>
+<td><code>multibody parsing</code></td>
+<td>Loading models into MultibodyPlant.</td>
+<td>rpoyner-tri</td>
+<td><small>
+multibody/parsing
+</small></td>
+</tr>
+
+<tr>
+<td><code>planning and control</code></td>
+<td>Optimization-based planning and control, and search- and sampling-based
+  planning.</td>
+<td>hongkai-dai</td>
+<td><small>
+geometry/optimization<br />
+multibody/inverse_kinematics<br />
+multibody/optimization<br />
+systems/controllers<br />
+systems/trajectory_optimization
+</small></td>
+</tr>
+
+<tr>
+<td><code>softsim fem</code></td>
+<td>Deformable body simulation using Finite Element Method (FEM).</td>
+<td>xuchenhan-tri</td>
+<td><small>
+multibody/fem
+</small></td>
+</tr>
+
+<tr>
+<td><code>pydrake</code></td>
+<td>Python API and its supporting Starlark macros.</td>
+<td>EricCousineau-TRI</td>
+<td><small>
+bindings/pydrake<br />
+RobotLocomotion/pybind11
+</small></td>
+</tr>
+
+<tr>
+<td><code>simulator</code></td>
+<td>Simulator, integrators, and supporting code.</td>
+<td>sherm1</td>
+<td><small>
+systems/analysis
+</small></td>
+</tr>
+
+<tr>
+<td><code>system framework</code></td>
+<td>System, Context, and supporting code.</td>
+<td>sherm1</td>
+<td><small>
+systems/framework<br />
+systems/primitives
+</small></td>
+</tr>
+
+<tr>
+<td><code>tutorials</code></td>
+<td>Drake's tutorials, examples, and website content.</td>
+<td>jwnimmer-tri</td>
+<td><small>
+examples<br />
+tutorials
+</small></td>
+</tr>
+
+</table>
+
+<p>The responsibilities of the “lead” are to:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">build system</code>
+  <li>Triage newly-filed issues to make sure that the issue:
     <ul>
-      <li>Bazel, CMake, dependencies, memory checkers, linters, etc.</li>
-      <li>typical team: kitware</li>
+      <li>is not a duplicate of an existing issue;</li>
+      <li>contains sufficient information to understand the problem; and</li>
+      <li>has a clear victory condition.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">continuous integration</code>
-    <ul>
-      <li>Jenkins, CDash, mirroring of externals, Drake website, etc.</li>
-      <li>typical team: kitware</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">distribution</code>
-    <ul>
-      <li>Nightly binaries, monthly releases, docker, installation
-via apt or brew, etc.</li>
-      <li>typical team: kitware</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">geometry externals</code>
-    <ul>
-      <li>VTK, FCL, drake_visualizer (core behavior), etc.</li>
-      <li>typical team: kitware</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">geometry general</code>
-    <ul>
-      <li>Geometry infrastructure or topics that defy categorization into other geometry
-components.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">geometry illustration</code>
-    <ul>
-      <li>What and how geometry gets communicated to external visualizers.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">geometry perception</code>
-    <ul>
-      <li>How geometry appears in color, depth, and label images (via the RenderEngine API).</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">geometry proximity</code>
-    <ul>
-      <li>Contact, distance, signed distance queries and related properties.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">jupyter</code>
-    <ul>
-      <li>Jupyter notebook infrastructure, Binder integration, etc.</li>
-      <li><em>Note</em>: This label does not imply content authoring for tutorials.</li>
-      <li>typical team: kitware</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">mathematical program</code>
-    <ul>
-      <li>Formulating and solving mathematical programs through numerical optimization,
-usually in <code class="highlighter-rouge">drake/solvers</code>.</li>
-      <li>typical team: manipulation</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">multibody plant</code>
-    <ul>
-      <li>MultibodyPlant and related code and documentation
-usually in <code class="highlighter-rouge">drake/multibody</code>.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">softsim fem</code>
-    <ul>
-      <li>Deformable body simulation using Finite Element Method (FEM) usually in
-<code class="highlighter-rouge">drake/multibody/fem</code>.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">pydrake</code>
-    <ul>
-      <li>Python API and documentation under <code class="highlighter-rouge">//bindings/pydrake</code> (and
-its supporting Starlark macros), the <code class="highlighter-rouge">RobotLocomotion/pybind11</code> fork, etc.</li>
-      <li>typical team: kitware</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">simulator</code>
-    <ul>
-      <li>Simulator, integrators, and related code and documentation,
-usually in <code class="highlighter-rouge">drake/systems/analysis</code>.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">system framework</code>
-    <ul>
-      <li>System, Context, and related code and documentation,
-usually in <code class="highlighter-rouge">drake/systems/framework</code>.</li>
-      <li>typical team: dynamics</li>
-    </ul>
-  </li>
+  <li>Periodically revisit old issues to see what can be closed.</li>
 </ul>
+
+<p>The lead is the primary point of contact for these tasks, but is free to
+delegate the work to others.</p>
 
 <h1 id="priority">Priority</h1>
 
-<p>The <code class="highlighter-rouge">emergency</code> priority indicates that the owning team should not work
+<p>The <code class="highlighter-rouge">emergency</code> priority indicates that the involved parties should not work
 on anything else until the issue is resolved.</p>
 
-<p>The other priorities are determined by the owning team. The following rules of
-thumb may be useful for issues:</p>
+<p>The other priorities are determined by the lead of the assigned component. The
+following rules of thumb may be useful for issues:</p>
 
 <ul>
   <li><code class="highlighter-rouge">priority: high</code> - planned to receive attention within the month.</li>

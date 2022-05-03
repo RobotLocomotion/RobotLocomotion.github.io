@@ -1,12 +1,5 @@
 var NAVTREEINDEX17 =
 {
-"classdrake_1_1never__destroyed.html#a3e79f3039a5ba580fff20e6153523538":[3,0,0,38,0],
-"classdrake_1_1never__destroyed.html#a54c5e5d1a51055269e08e00e806dc694":[3,0,0,38,5],
-"classdrake_1_1never__destroyed.html#a75b0a6d92982429933c36cc5a6c52986":[3,0,0,38,2],
-"classdrake_1_1never__destroyed.html#a870c17e486af2da212aa1f707d68cdb4":[3,0,0,38,6],
-"classdrake_1_1never__destroyed.html#ac6feb692ac7476f12889dddc877097fc":[3,0,0,38,4],
-"classdrake_1_1perception_1_1_depth_image_to_point_cloud.html":[1,2,8,0],
-"classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a3d91ca6c5d3e11d71d42eb8a366aad19":[1,2,8,0,2],
 "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a4c1dc751274cff6272085cd9d9500aa2":[1,2,8,0,1],
 "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a6abf923eeab16e38c828a27d27561e84":[1,2,8,0,4],
 "classdrake_1_1perception_1_1_depth_image_to_point_cloud.html#a8c4242b23451be08ae3872810d95cad0":[1,2,8,0,6],
@@ -249,5 +242,12 @@ var NAVTREEINDEX17 =
 "classdrake_1_1schema_1_1_uniform.html#a4ee1c36b5f116cb4dc51db62f0c7991f":[3,0,0,11,8,7],
 "classdrake_1_1schema_1_1_uniform.html#a5d491dd0de7c44e0e73342e819ed5f51":[3,0,0,11,8,8],
 "classdrake_1_1schema_1_1_uniform.html#a8e8824802dedfbc36776227f7482b6bc":[3,0,0,11,8,9],
-"classdrake_1_1schema_1_1_uniform.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,11,8,10]
+"classdrake_1_1schema_1_1_uniform.html#aa77a831a9989407ffea0304416c7ae5c":[3,0,0,11,8,10],
+"classdrake_1_1schema_1_1_uniform.html#aad36546e8175d2922bee165fe028fedc":[3,0,0,11,8,12],
+"classdrake_1_1schema_1_1_uniform.html#ab0e112774a2b34d865ab7192e7dcc447":[3,0,0,11,8,3],
+"classdrake_1_1schema_1_1_uniform.html#ab2fdf62aae6216a0920ae351ce1c3020":[3,0,0,11,8,4],
+"classdrake_1_1schema_1_1_uniform.html#ac23c4ac1cbe9a2a85b751fc5957e40a3":[3,0,0,11,8,6],
+"classdrake_1_1schema_1_1_uniform.html#af196ffa310575bf8069e73c164a60871":[3,0,0,11,8,1],
+"classdrake_1_1schema_1_1_uniform_discrete.html":[3,0,0,11,9],
+"classdrake_1_1schema_1_1_uniform_discrete.html#a13884ab1df4ecb9b600a2af9a2cf7eb9":[3,0,0,11,9,5]
 };

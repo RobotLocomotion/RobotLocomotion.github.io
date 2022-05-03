@@ -215,9 +215,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab17a29ee7c846aaca8f0d50248a42068"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#ab17a29ee7c846aaca8f0d50248a42068">PopulateFromEnvironment</a> (const std::string &amp;environment_variable)</td></tr>
 <tr class="memdesc:ab17a29ee7c846aaca8f0d50248a42068"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains one or more paths from environment variable <code>environment_variable</code>.  <a href="#ab17a29ee7c846aaca8f0d50248a42068">More...</a><br /></td></tr>
 <tr class="separator:ab17a29ee7c846aaca8f0d50248a42068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e2fbb72a84c2c5527f8d2b452918602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a5e2fbb72a84c2c5527f8d2b452918602">PopulateUpstreamToDrake</a> (const std::string &amp;model_file)</td></tr>
-<tr class="memdesc:a5e2fbb72a84c2c5527f8d2b452918602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crawls up the directory tree from <code>model_file</code> to <code>drake</code> searching for <code>package.xml</code> files.  <a href="#a5e2fbb72a84c2c5527f8d2b452918602">More...</a><br /></td></tr>
-<tr class="separator:a5e2fbb72a84c2c5527f8d2b452918602"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Implements CopyConstructible, CopyAssignable, MoveConstructible, MoveAssignable</div></td></tr>
 <tr class="memitem:a3a95d2ab663afe987e79dc60edf926e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_package_map.html#a3a95d2ab663afe987e79dc60edf926e8">PackageMap</a> (const <a class="el" href="classdrake_1_1multibody_1_1_package_map.html">PackageMap</a> &amp;)=default</td></tr>
 <tr class="separator:a3a95d2ab663afe987e79dc60edf926e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -601,35 +598,6 @@ Friends</h2></td></tr>
 
 <p>Crawls down the directory tree starting at <code>path</code> searching for directories containing the file <code>package.xml</code>. </p>
 <p>For each of these directories, this method adds a new entry into this <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> where the key is the package name as specified within <code>package.xml</code> and the directory's path is the value. If a package already known by the <a class="el" href="classdrake_1_1multibody_1_1_package_map.html" title="Maps ROS package names to their full path on the local file system.">PackageMap</a> is found again with a conflicting path, a warning is logged and the original path is kept. If the path does not exist or is unreadable, a warning is logged. </p>
-
-</div>
-</div>
-<a id="a5e2fbb72a84c2c5527f8d2b452918602"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e2fbb72a84c2c5527f8d2b452918602">&#9670;&nbsp;</a></span>PopulateUpstreamToDrake()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PopulateUpstreamToDrake </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>model_file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Crawls up the directory tree from <code>model_file</code> to <code>drake</code> searching for <code>package.xml</code> files. </p>
-<p>Adds the packages described by these <code>package.xml</code> files. If <code>model_file</code> is not in <code>drake</code>, this method returns without doing anything.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">model_file</td><td>The model file whose directory is the start of the search for <code>package.xml</code> files. This file must be an SDF or URDF file. (Deprecated.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>This function is a no-op; you should remove any calls to it. <br />
- This will be removed from Drake on or after 2022-05-01.</dd></dl>
 
 </div>
 </div>

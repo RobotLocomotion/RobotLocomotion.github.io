@@ -1,11 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#a48049f4688cc7bbe9544cf8296d749c4":[1,1,0,9,3],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#aa267d16b53913084dba91f5ccce9d2e3":[1,1,0,9,2],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#aad70470b810dee3ec34bbbd2bd26d6e4":[1,1,0,9,1],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#ab331046482d2d3ec842a3872c4844d7f":[1,1,0,9,5],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#acf42aa2fb9eca6792639ac8f6dbc614e":[1,1,0,9,0],
-"classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af072288a5a5bfc6a933a9b10b108b4be":[1,1,0,9,6],
 "classdrake_1_1multibody_1_1_centroidal_momentum_constraint.html#af57e3c05d25389a8fb0096a06cbbe288":[1,1,0,9,4],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html":[3,0,0,8,15],
 "classdrake_1_1multibody_1_1_com_in_polyhedron_constraint.html#a1537fee11210c74bf9fb74b0641bba58":[3,0,0,8,15,1],
@@ -249,5 +243,11 @@ var NAVTREEINDEX11 =
 "classdrake_1_1multibody_1_1_joint.html#a1f44aa73e129b6182670288ecc436e2c":[3,0,0,8,38,28],
 "classdrake_1_1multibody_1_1_joint.html#a2556aa7cb0dfde452bc41c8179ae9fe7":[3,0,0,8,38,16],
 "classdrake_1_1multibody_1_1_joint.html#a29cbe17adde3122d72d7d573152b04c8":[3,0,0,8,38,35],
-"classdrake_1_1multibody_1_1_joint.html#a2d019d4421eedd35dfb908591266f6c1":[3,0,0,8,38,55]
+"classdrake_1_1multibody_1_1_joint.html#a2d019d4421eedd35dfb908591266f6c1":[3,0,0,8,38,55],
+"classdrake_1_1multibody_1_1_joint.html#a31334d7081ca78d14f4681702b072a27":[3,0,0,8,38,8],
+"classdrake_1_1multibody_1_1_joint.html#a404e1937742b0f345d746f2b2043e9e3":[3,0,0,8,38,12],
+"classdrake_1_1multibody_1_1_joint.html#a44881086f20ce7908347f2b6d0e77c2a":[3,0,0,8,38,50],
+"classdrake_1_1multibody_1_1_joint.html#a4f3539f25e5614d6783b5405d034497e":[3,0,0,8,38,32],
+"classdrake_1_1multibody_1_1_joint.html#a50c7f850050d4a94641ed72dd2d1968f":[3,0,0,8,38,37],
+"classdrake_1_1multibody_1_1_joint.html#a522410fdf7fa3aaaeebf2bf5e66b5d5e":[3,0,0,8,38,26]
 };

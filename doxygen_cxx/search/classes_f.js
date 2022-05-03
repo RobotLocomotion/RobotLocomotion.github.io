@@ -49,7 +49,6 @@ var searchData=
   ['polytope3d',['Polytope3D',['../structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_polytope3_d.html',1,'drake::multibody::GlobalInverseKinematics']]],
   ['portbase',['PortBase',['../classdrake_1_1systems_1_1_port_base.html',1,'drake::systems']]],
   ['portswitch',['PortSwitch',['../classdrake_1_1systems_1_1_port_switch.html',1,'drake::systems']]],
-  ['posesmoother',['PoseSmoother',['../classdrake_1_1manipulation_1_1perception_1_1_pose_smoother.html',1,'drake::manipulation::perception']]],
   ['positionconstraint',['PositionConstraint',['../classdrake_1_1multibody_1_1_position_constraint.html',1,'drake::multibody']]],
   ['positivesemidefiniteconstraint',['PositiveSemidefiniteConstraint',['../classdrake_1_1solvers_1_1_positive_semidefinite_constraint.html',1,'drake::solvers']]],
   ['prismaticjoint',['PrismaticJoint',['../classdrake_1_1multibody_1_1_prismatic_joint.html',1,'drake::multibody']]],

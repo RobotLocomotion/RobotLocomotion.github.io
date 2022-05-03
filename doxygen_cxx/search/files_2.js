@@ -42,8 +42,6 @@ var searchData=
   ['contact_5fproblem_5fgraph_2eh',['contact_problem_graph.h',['../contact__problem__graph_8h.html',1,'']]],
   ['contact_5fresults_2eh',['contact_results.h',['../contact__results_8h.html',1,'']]],
   ['contact_5fresults_5fto_5flcm_2eh',['contact_results_to_lcm.h',['../contact__results__to__lcm_8h.html',1,'']]],
-  ['contact_5fresults_5fto_5fmeshcat_2eh',['contact_results_to_meshcat.h',['../contact__results__to__meshcat_8h.html',1,'']]],
-  ['contact_5fresults_5fto_5fmeshcat_5fparams_2eh',['contact_results_to_meshcat_params.h',['../contact__results__to__meshcat__params_8h.html',1,'']]],
   ['contact_5fsolver_2eh',['contact_solver.h',['../contact__solver_8h.html',1,'']]],
   ['contact_5fsolver_5fresults_2eh',['contact_solver_results.h',['../contact__solver__results_8h.html',1,'']]],
   ['contact_5fsolver_5futils_2eh',['contact_solver_utils.h',['../contact__solver__utils_8h.html',1,'']]],
