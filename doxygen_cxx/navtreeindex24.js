@@ -1,5 +1,7 @@
 var NAVTREEINDEX24 =
 {
+"classdrake_1_1symbolic_1_1_expression.html#acfa822cc02f11c43d6a21d13b5fec709":[3,0,0,13,6,16],
+"classdrake_1_1symbolic_1_1_expression.html#acfabbc2372ca9fc8c1888490741ee305":[3,0,0,13,6,18],
 "classdrake_1_1symbolic_1_1_expression.html#acff6ed9fd984d4e124ad2637c42f41c5":[3,0,0,13,6,116],
 "classdrake_1_1symbolic_1_1_expression.html#ad0b1e6a75b95973c6fb6c85a4ae47c7d":[3,0,0,13,6,25],
 "classdrake_1_1symbolic_1_1_expression.html#ad138a32ee051ed06353da9b4d26374ed":[3,0,0,13,6,62],
@@ -247,7 +249,5 @@ var NAVTREEINDEX24 =
 "classdrake_1_1symbolic_1_1_expression_sqrt.html#ac21c54ef15156cd4af1db872faf9b070":[3,0,0,13,32,0],
 "classdrake_1_1symbolic_1_1_expression_sqrt.html#ae4fb457c881d49e1e698120eae9e4c52":[3,0,0,13,32,3],
 "classdrake_1_1symbolic_1_1_expression_tan.html":[3,0,0,13,33],
-"classdrake_1_1symbolic_1_1_expression_tan.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,33,4],
-"classdrake_1_1symbolic_1_1_expression_tan.html#a72ae45ea810c2e68f74e59000dca8337":[3,0,0,13,33,1],
-"classdrake_1_1symbolic_1_1_expression_tan.html#ab022b2a7bc26750aab90eeafb49c2d8a":[3,0,0,13,33,2]
+"classdrake_1_1symbolic_1_1_expression_tan.html#a174e88ea34010c2773c177a2cd3a7371":[3,0,0,13,33,4]
 };

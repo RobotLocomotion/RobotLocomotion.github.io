@@ -3870,6 +3870,104 @@ the pose for a body frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_.Frame_[float].CalcRelativeSpatialAcceleration">
+<code class="descname">CalcRelativeSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], other_frame: pydrake.multibody.tree.Frame_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].CalcRelativeSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured in a frame M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_M_BC_E = A_MC_E - A_MB_E, frame C’s spatial acceleration
+relative to frame B, measured in frame M, expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_M_BC = DtW(V_M_BC), the time-derivative in frame M of
+frame C’s spatial velocity relative to frame B. The rotational part of
+the returned quantity is α_MC_E - α_MB_E = DtM(ω_BC)_E. Note: For 3D
+analysis, DtM(ω_BC) ≠ α_BC. The translational part of the returned
+quantity is a_M_BoCo_E (Co’s translational acceleration relative to
+Bo, measured in frame M, expressed in frame E).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_MC_E - α_MB_E = DtM(ω_MC)_E - DtM(ω_MB)_E = DtM(ω_BC)_E
+ a_M_BoCo_E = a_MCo_E - a_MBo_E = DtM(v_MCo) - DtM(v_MBo) = Dt²M(p_BoCo)_E
+</pre></div>
+</div>
+<p>where Dt²M(p_BoCo)_E is the 2ⁿᵈ time-derivative in frame M of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame E.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The calculation of the 2ⁿᵈ time-derivative of the distance between
+Bo and Co can be done with relative translational acceleration,
+but this calculation does not depend on the measured-in-frame,
+hence in this case, consider
+CalcRelativeSpatialAccelerationInWorld() since it is faster.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(), CalcSpatialAcceleration(), and
+CalcRelativeSpatialAccelerationInWorld().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_.Frame_[float].CalcRelativeSpatialAccelerationInWorld">
+<code class="descname">CalcRelativeSpatialAccelerationInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], other_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].CalcRelativeSpatialAccelerationInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured and expressed in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_W_BC_W = A_WC_W - A_WB_W, frame C’s spatial acceleration
+relative to frame B, measured and expressed in the world frame W.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_W_BC = DtW(V_W_BC), the time-derivative in the world
+frame W of frame C’s spatial velocity relative to frame B. The
+rotational part of the returned quantity is α_WC_W - α_WB_W =
+DtW(ω_BC)_W. For 3D analysis, DtW(ω_BC) ≠ α_BC. The translational part
+of the returned quantity is a_W_BoCo_W (Co’s translational
+acceleration relative to Bo, measured and expressed in world frame W).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_WC_W - α_WB_W = DtW(ω_WC)_W - DtW(ω_WB)_W = DtW(ω_BC)_W
+ a_W_BoCo_W = a_WCo_W - a_WBo_W = DtW(v_WCo) - DtW(v_WBo) = Dt²W(p_BoCo)_W
+</pre></div>
+</div>
+<p>where Dt²W(p_BoCo)_W is the 2ⁿᵈ time-derivative in frame W of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame W.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The method CalcSpatialAccelerationInWorld() is more efficient and
+coherent if any of <code class="docutils literal notranslate"><span class="pre">this</span></code>, other_frame, or the world frame W are
+the same.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(),
+CalcRelativeSpatialAcceleration().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_.Frame_[float].CalcRelativeSpatialVelocity">
 <code class="descname">CalcRelativeSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], other_frame: pydrake.multibody.tree.Frame_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].CalcRelativeSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial velocity relative to another
@@ -3993,6 +4091,45 @@ attached).</p>
 <dd><p>Calculates and returns the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_WF</span></code> that relates the
 world frame W and <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F as a function of the state stored
 in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_.Frame_[float].CalcSpatialAcceleration">
+<code class="descname">CalcSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_.Frame_[float].CalcSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in a frame
+M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in frame
+M, expressed in frame E. The rotational part of the returned
+quantity is α_MF_E (frame F’s angular acceleration α measured in
+frame M, expressed in frame E). The translational part is a_MFo_E
+(translational acceleration of frame F’s origin point Fo, measured
+in frame M, expressed in frame E). Although α_MF is defined below
+in terms of DtM(ω_MF), the time-derivative in frame M of ω_MF, the
+actual calculation of α_MF avoids differentiation. Similarly for
+the definition vs. calculation for a_MFo.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span>           <span class="n">ω_MF</span> <span class="ow">is</span> <span class="n">frame</span> <span class="n">F</span><span class="s1">&#39;s angular velocity in frame M.</span>
+ <span class="n">a_MFo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span>    <span class="n">v_MF</span> <span class="ow">is</span> <span class="n">Fo</span><span class="s1">&#39;s translational acceleration in frame M.</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld() and CalcSpatialVelocity().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -4407,6 +4544,104 @@ the pose for a body frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].CalcRelativeSpatialAcceleration">
+<code class="descname">CalcRelativeSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], other_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], measured_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], expressed_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].CalcRelativeSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured in a frame M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_M_BC_E = A_MC_E - A_MB_E, frame C’s spatial acceleration
+relative to frame B, measured in frame M, expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_M_BC = DtW(V_M_BC), the time-derivative in frame M of
+frame C’s spatial velocity relative to frame B. The rotational part of
+the returned quantity is α_MC_E - α_MB_E = DtM(ω_BC)_E. Note: For 3D
+analysis, DtM(ω_BC) ≠ α_BC. The translational part of the returned
+quantity is a_M_BoCo_E (Co’s translational acceleration relative to
+Bo, measured in frame M, expressed in frame E).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_MC_E - α_MB_E = DtM(ω_MC)_E - DtM(ω_MB)_E = DtM(ω_BC)_E
+ a_M_BoCo_E = a_MCo_E - a_MBo_E = DtM(v_MCo) - DtM(v_MBo) = Dt²M(p_BoCo)_E
+</pre></div>
+</div>
+<p>where Dt²M(p_BoCo)_E is the 2ⁿᵈ time-derivative in frame M of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame E.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The calculation of the 2ⁿᵈ time-derivative of the distance between
+Bo and Co can be done with relative translational acceleration,
+but this calculation does not depend on the measured-in-frame,
+hence in this case, consider
+CalcRelativeSpatialAccelerationInWorld() since it is faster.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(), CalcSpatialAcceleration(), and
+CalcRelativeSpatialAccelerationInWorld().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].CalcRelativeSpatialAccelerationInWorld">
+<code class="descname">CalcRelativeSpatialAccelerationInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], other_frame: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].CalcRelativeSpatialAccelerationInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured and expressed in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_W_BC_W = A_WC_W - A_WB_W, frame C’s spatial acceleration
+relative to frame B, measured and expressed in the world frame W.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_W_BC = DtW(V_W_BC), the time-derivative in the world
+frame W of frame C’s spatial velocity relative to frame B. The
+rotational part of the returned quantity is α_WC_W - α_WB_W =
+DtW(ω_BC)_W. For 3D analysis, DtW(ω_BC) ≠ α_BC. The translational part
+of the returned quantity is a_W_BoCo_W (Co’s translational
+acceleration relative to Bo, measured and expressed in world frame W).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_WC_W - α_WB_W = DtW(ω_WC)_W - DtW(ω_WB)_W = DtW(ω_BC)_W
+ a_W_BoCo_W = a_WCo_W - a_WBo_W = DtW(v_WCo) - DtW(v_WBo) = Dt²W(p_BoCo)_W
+</pre></div>
+</div>
+<p>where Dt²W(p_BoCo)_W is the 2ⁿᵈ time-derivative in frame W of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame W.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The method CalcSpatialAccelerationInWorld() is more efficient and
+coherent if any of <code class="docutils literal notranslate"><span class="pre">this</span></code>, other_frame, or the world frame W are
+the same.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(),
+CalcRelativeSpatialAcceleration().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].CalcRelativeSpatialVelocity">
 <code class="descname">CalcRelativeSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], other_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], measured_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], expressed_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].CalcRelativeSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial velocity relative to another
@@ -4530,6 +4765,45 @@ attached).</p>
 <dd><p>Calculates and returns the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_WF</span></code> that relates the
 world frame W and <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F as a function of the state stored
 in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[AutoDiffXd].CalcSpatialAcceleration">
+<code class="descname">CalcSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[AutoDiffXd], context: pydrake.systems.framework.Context_[AutoDiffXd], measured_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd], expressed_in_frame: pydrake.multibody.tree.Frame_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[AutoDiffXd].CalcSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in a frame
+M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in frame
+M, expressed in frame E. The rotational part of the returned
+quantity is α_MF_E (frame F’s angular acceleration α measured in
+frame M, expressed in frame E). The translational part is a_MFo_E
+(translational acceleration of frame F’s origin point Fo, measured
+in frame M, expressed in frame E). Although α_MF is defined below
+in terms of DtM(ω_MF), the time-derivative in frame M of ω_MF, the
+actual calculation of α_MF avoids differentiation. Similarly for
+the definition vs. calculation for a_MFo.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span>           <span class="n">ω_MF</span> <span class="ow">is</span> <span class="n">frame</span> <span class="n">F</span><span class="s1">&#39;s angular velocity in frame M.</span>
+ <span class="n">a_MFo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span>    <span class="n">v_MF</span> <span class="ow">is</span> <span class="n">Fo</span><span class="s1">&#39;s translational acceleration in frame M.</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld() and CalcSpatialVelocity().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -4942,6 +5216,104 @@ the pose for a body frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[Expression].CalcRelativeSpatialAcceleration">
+<code class="descname">CalcRelativeSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], context: pydrake.systems.framework.Context_[Expression], other_frame: pydrake.multibody.tree.Frame_[Expression], measured_in_frame: pydrake.multibody.tree.Frame_[Expression], expressed_in_frame: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].CalcRelativeSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured in a frame M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_M_BC_E = A_MC_E - A_MB_E, frame C’s spatial acceleration
+relative to frame B, measured in frame M, expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_M_BC = DtW(V_M_BC), the time-derivative in frame M of
+frame C’s spatial velocity relative to frame B. The rotational part of
+the returned quantity is α_MC_E - α_MB_E = DtM(ω_BC)_E. Note: For 3D
+analysis, DtM(ω_BC) ≠ α_BC. The translational part of the returned
+quantity is a_M_BoCo_E (Co’s translational acceleration relative to
+Bo, measured in frame M, expressed in frame E).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_MC_E - α_MB_E = DtM(ω_MC)_E - DtM(ω_MB)_E = DtM(ω_BC)_E
+ a_M_BoCo_E = a_MCo_E - a_MBo_E = DtM(v_MCo) - DtM(v_MBo) = Dt²M(p_BoCo)_E
+</pre></div>
+</div>
+<p>where Dt²M(p_BoCo)_E is the 2ⁿᵈ time-derivative in frame M of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame E.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The calculation of the 2ⁿᵈ time-derivative of the distance between
+Bo and Co can be done with relative translational acceleration,
+but this calculation does not depend on the measured-in-frame,
+hence in this case, consider
+CalcRelativeSpatialAccelerationInWorld() since it is faster.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(), CalcSpatialAcceleration(), and
+CalcRelativeSpatialAccelerationInWorld().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[Expression].CalcRelativeSpatialAccelerationInWorld">
+<code class="descname">CalcRelativeSpatialAccelerationInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], context: pydrake.systems.framework.Context_[Expression], other_frame: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].CalcRelativeSpatialAccelerationInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured and expressed in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_W_BC_W = A_WC_W - A_WB_W, frame C’s spatial acceleration
+relative to frame B, measured and expressed in the world frame W.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_W_BC = DtW(V_W_BC), the time-derivative in the world
+frame W of frame C’s spatial velocity relative to frame B. The
+rotational part of the returned quantity is α_WC_W - α_WB_W =
+DtW(ω_BC)_W. For 3D analysis, DtW(ω_BC) ≠ α_BC. The translational part
+of the returned quantity is a_W_BoCo_W (Co’s translational
+acceleration relative to Bo, measured and expressed in world frame W).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_WC_W - α_WB_W = DtW(ω_WC)_W - DtW(ω_WB)_W = DtW(ω_BC)_W
+ a_W_BoCo_W = a_WCo_W - a_WBo_W = DtW(v_WCo) - DtW(v_WBo) = Dt²W(p_BoCo)_W
+</pre></div>
+</div>
+<p>where Dt²W(p_BoCo)_W is the 2ⁿᵈ time-derivative in frame W of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame W.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The method CalcSpatialAccelerationInWorld() is more efficient and
+coherent if any of <code class="docutils literal notranslate"><span class="pre">this</span></code>, other_frame, or the world frame W are
+the same.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(),
+CalcRelativeSpatialAcceleration().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[Expression].CalcRelativeSpatialVelocity">
 <code class="descname">CalcRelativeSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], context: pydrake.systems.framework.Context_[Expression], other_frame: pydrake.multibody.tree.Frame_[Expression], measured_in_frame: pydrake.multibody.tree.Frame_[Expression], expressed_in_frame: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].CalcRelativeSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial velocity relative to another
@@ -5065,6 +5437,45 @@ attached).</p>
 <dd><p>Calculates and returns the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_WF</span></code> that relates the
 world frame W and <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F as a function of the state stored
 in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[Expression].CalcSpatialAcceleration">
+<code class="descname">CalcSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[Expression], context: pydrake.systems.framework.Context_[Expression], measured_in_frame: pydrake.multibody.tree.Frame_[Expression], expressed_in_frame: pydrake.multibody.tree.Frame_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[Expression]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[Expression].CalcSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in a frame
+M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in frame
+M, expressed in frame E. The rotational part of the returned
+quantity is α_MF_E (frame F’s angular acceleration α measured in
+frame M, expressed in frame E). The translational part is a_MFo_E
+(translational acceleration of frame F’s origin point Fo, measured
+in frame M, expressed in frame E). Although α_MF is defined below
+in terms of DtM(ω_MF), the time-derivative in frame M of ω_MF, the
+actual calculation of α_MF avoids differentiation. Similarly for
+the definition vs. calculation for a_MFo.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span>           <span class="n">ω_MF</span> <span class="ow">is</span> <span class="n">frame</span> <span class="n">F</span><span class="s1">&#39;s angular velocity in frame M.</span>
+ <span class="n">a_MFo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span>    <span class="n">v_MF</span> <span class="ow">is</span> <span class="n">Fo</span><span class="s1">&#39;s translational acceleration in frame M.</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld() and CalcSpatialVelocity().</p>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -5477,6 +5888,104 @@ the pose for a body frame.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[float].CalcRelativeSpatialAcceleration">
+<code class="descname">CalcRelativeSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], other_frame: pydrake.multibody.tree.Frame_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].CalcRelativeSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured in a frame M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_M_BC_E = A_MC_E - A_MB_E, frame C’s spatial acceleration
+relative to frame B, measured in frame M, expressed in frame E.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_M_BC = DtW(V_M_BC), the time-derivative in frame M of
+frame C’s spatial velocity relative to frame B. The rotational part of
+the returned quantity is α_MC_E - α_MB_E = DtM(ω_BC)_E. Note: For 3D
+analysis, DtM(ω_BC) ≠ α_BC. The translational part of the returned
+quantity is a_M_BoCo_E (Co’s translational acceleration relative to
+Bo, measured in frame M, expressed in frame E).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_MC_E - α_MB_E = DtM(ω_MC)_E - DtM(ω_MB)_E = DtM(ω_BC)_E
+ a_M_BoCo_E = a_MCo_E - a_MBo_E = DtM(v_MCo) - DtM(v_MBo) = Dt²M(p_BoCo)_E
+</pre></div>
+</div>
+<p>where Dt²M(p_BoCo)_E is the 2ⁿᵈ time-derivative in frame M of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame E.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The calculation of the 2ⁿᵈ time-derivative of the distance between
+Bo and Co can be done with relative translational acceleration,
+but this calculation does not depend on the measured-in-frame,
+hence in this case, consider
+CalcRelativeSpatialAccelerationInWorld() since it is faster.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(), CalcSpatialAcceleration(), and
+CalcRelativeSpatialAccelerationInWorld().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[float].CalcRelativeSpatialAccelerationInWorld">
+<code class="descname">CalcRelativeSpatialAccelerationInWorld</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], other_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].CalcRelativeSpatialAccelerationInWorld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial acceleration relative to another
+frame B, measured and expressed in the world frame W.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">other_frame</span></code>:</dt>
+<dd>which is frame B.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_W_BC_W = A_WC_W - A_WB_W, frame C’s spatial acceleration
+relative to frame B, measured and expressed in the world frame W.</td>
+</tr>
+</tbody>
+</table>
+<p>In general, A_W_BC = DtW(V_W_BC), the time-derivative in the world
+frame W of frame C’s spatial velocity relative to frame B. The
+rotational part of the returned quantity is α_WC_W - α_WB_W =
+DtW(ω_BC)_W. For 3D analysis, DtW(ω_BC) ≠ α_BC. The translational part
+of the returned quantity is a_W_BoCo_W (Co’s translational
+acceleration relative to Bo, measured and expressed in world frame W).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>α_WC_W - α_WB_W = DtW(ω_WC)_W - DtW(ω_WB)_W = DtW(ω_BC)_W
+ a_W_BoCo_W = a_WCo_W - a_WBo_W = DtW(v_WCo) - DtW(v_WBo) = Dt²W(p_BoCo)_W
+</pre></div>
+</div>
+<p>where Dt²W(p_BoCo)_W is the 2ⁿᵈ time-derivative in frame W of p_BoCo
+(the position vector from Bo to Co), and this result is expressed in
+frame W.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The method CalcSpatialAccelerationInWorld() is more efficient and
+coherent if any of <code class="docutils literal notranslate"><span class="pre">this</span></code>, other_frame, or the world frame W are
+the same.</p>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld(),
+CalcRelativeSpatialAcceleration().</p>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.tree.Frame_[float].CalcRelativeSpatialVelocity">
 <code class="descname">CalcRelativeSpatialVelocity</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], other_frame: pydrake.multibody.tree.Frame_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialVelocity_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].CalcRelativeSpatialVelocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame C’s spatial velocity relative to another
@@ -5600,6 +6109,45 @@ attached).</p>
 <dd><p>Calculates and returns the rotation matrix <code class="docutils literal notranslate"><span class="pre">R_WF</span></code> that relates the
 world frame W and <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F as a function of the state stored
 in <code class="docutils literal notranslate"><span class="pre">context</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.tree.Frame_[float].CalcSpatialAcceleration">
+<code class="descname">CalcSpatialAcceleration</code><span class="sig-paren">(</span><em>self: pydrake.multibody.tree.Frame_[float], context: pydrake.systems.framework.Context_[float], measured_in_frame: pydrake.multibody.tree.Frame_[float], expressed_in_frame: pydrake.multibody.tree.Frame_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.multibody.math.SpatialAcceleration_[float]<a class="headerlink" href="#pydrake.multibody.tree.Frame_[float].CalcSpatialAcceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in a frame
+M, expressed in a frame E.</p>
+<dl class="docutils">
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">context</span></code>:</dt>
+<dd>contains the state of the multibody system.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">measured_in_frame</span></code>:</dt>
+<dd>which is frame M.</dd>
+<dt>Parameter <code class="docutils literal notranslate"><span class="pre">expressed_in_frame</span></code>:</dt>
+<dd>which is frame E.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">A_MF_E, <code class="docutils literal notranslate"><span class="pre">this</span></code> frame F’s spatial acceleration measured in frame
+M, expressed in frame E. The rotational part of the returned
+quantity is α_MF_E (frame F’s angular acceleration α measured in
+frame M, expressed in frame E). The translational part is a_MFo_E
+(translational acceleration of frame F’s origin point Fo, measured
+in frame M, expressed in frame E). Although α_MF is defined below
+in terms of DtM(ω_MF), the time-derivative in frame M of ω_MF, the
+actual calculation of α_MF avoids differentiation. Similarly for
+the definition vs. calculation for a_MFo.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">α_MF</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">ω_MF</span><span class="p">)</span>           <span class="n">ω_MF</span> <span class="ow">is</span> <span class="n">frame</span> <span class="n">F</span><span class="s1">&#39;s angular velocity in frame M.</span>
+ <span class="n">a_MFo</span> <span class="o">=</span> <span class="n">DtM</span><span class="p">(</span><span class="n">v_MFo</span><span class="p">)</span>    <span class="n">v_MF</span> <span class="ow">is</span> <span class="n">Fo</span><span class="s1">&#39;s translational acceleration in frame M.</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last">CalcSpatialAccelerationInWorld() and CalcSpatialVelocity().</p>
+</div>
 </dd></dl>
 
 <dl class="method">

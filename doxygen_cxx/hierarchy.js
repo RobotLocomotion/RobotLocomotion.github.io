@@ -1106,8 +1106,6 @@ var hierarchy =
     [ "Warn", "structdrake_1_1logging_1_1_warn.html", null ],
     [ "WitnessFunction< T >", "classdrake_1_1systems_1_1_witness_function.html", null ],
     [ "wrap_arg_default< T >", "structdrake_1_1pydrake_1_1wrap__arg__default.html", null ],
-    [ "YamlReadArchive", "classdrake_1_1yaml_1_1_yaml_read_archive.html", null ],
-    [ "YamlWriteArchive", "classdrake_1_1yaml_1_1_yaml_write_archive.html", null ],
     [ "ZMPPlanner", "classdrake_1_1systems_1_1controllers_1_1_z_m_p_planner.html", null ],
     [ "const ContextConstraintCalc< double >", "classconst_01_context_constraint_calc_3_01double_01_4.html", null ],
     [ "const ContextConstraintCalc< Element::T >", "classconst_01_context_constraint_calc_3_01_element_1_1_t_01_4.html", null ],
