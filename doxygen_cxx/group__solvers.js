@@ -49,7 +49,7 @@ var group__solvers =
       [ "AddCost", "classdrake_1_1solvers_1_1_mathematical_program.html#a412994ba25326bd8b1955cb180add256", null ],
       [ "AddCost", "classdrake_1_1solvers_1_1_mathematical_program.html#aa8745eb0e81fcbfc031c8e8c57609284", null ],
       [ "AddDecisionVariables", "classdrake_1_1solvers_1_1_mathematical_program.html#af436a548cfc2a209dc21427b328232b2", null ],
-      [ "AddEqualityConstraintBetweenPolynomials", "classdrake_1_1solvers_1_1_mathematical_program.html#a7d5fc755dd3088b2e2d740965dd7a46f", null ],
+      [ "AddEqualityConstraintBetweenPolynomials", "classdrake_1_1solvers_1_1_mathematical_program.html#a046ca21e9764ac1ac1bb52801452b9b2", null ],
       [ "AddExponentialConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a7b08a882bd0f9c823350bf877fe7867f", null ],
       [ "AddExponentialConeConstraint", "classdrake_1_1solvers_1_1_mathematical_program.html#a700caef005988a7711e183b439e20a25", null ],
       [ "AddIndeterminates", "classdrake_1_1solvers_1_1_mathematical_program.html#a1d17877e373279d18488f21836285539", null ],

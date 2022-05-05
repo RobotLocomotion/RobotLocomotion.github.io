@@ -1795,7 +1795,7 @@ variable.</dd>
 
 <dl class="method">
 <dt id="pydrake.solvers.mathematicalprogram.MathematicalProgram.AddEqualityConstraintBetweenPolynomials">
-<code class="descname">AddEqualityConstraintBetweenPolynomials</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>p1: pydrake.symbolic.Polynomial</em>, <em>p2: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddEqualityConstraintBetweenPolynomials" title="Permalink to this definition">¶</a></dt>
+<code class="descname">AddEqualityConstraintBetweenPolynomials</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram</em>, <em>p1: pydrake.symbolic.Polynomial</em>, <em>p2: pydrake.symbolic.Polynomial</em><span class="sig-paren">)</span> &#x2192; List[pydrake.solvers.mathematicalprogram.Binding[LinearEqualityConstraint]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddEqualityConstraintBetweenPolynomials" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constraining that two polynomials are the same (i.e., they have the
 same coefficients for each monomial). This function is often used in
 sum-of-squares optimization. We will impose the linear equality
