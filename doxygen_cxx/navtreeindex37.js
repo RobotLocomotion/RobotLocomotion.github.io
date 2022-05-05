@@ -1,6 +1,5 @@
 var NAVTREEINDEX37 =
 {
-"classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a39bd80e96eb6f2fe4aeee4e62c04dd8aa590c94008feb665db8020f3b53d3f32f":[1,2,2,0,0,0],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a87fbace92efba2a49277e2be09510e57":[1,2,2,0,5],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a886c4d74a756a93f2d3deeac70983cbe":[1,2,2,0,8],
 "classdrake_1_1systems_1_1controllers_1_1_inverse_dynamics.html#a9c30f7c13a4993ef4eb011f26f1e01bb":[1,2,2,0,10],
@@ -249,5 +248,6 @@ var NAVTREEINDEX37 =
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a0b6e739d0155aa20aec56d2fb7e13505":[1,2,4,1,4],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a20d05d184f723deb7a9d9447114a8b1a":[1,2,4,1,0],
 "classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a23a62490645a6a4b334b019c6894c597":[1,2,4,1,11],
-"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,2,4,1,9]
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a2cf60efb957e6713e64fdb2c7ee817e0":[1,2,4,1,9],
+"classdrake_1_1systems_1_1sensors_1_1_beam_model.html#a339a93a49733a0a196b08687a1340ef0":[1,2,4,1,3]
 };

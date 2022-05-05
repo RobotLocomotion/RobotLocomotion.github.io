@@ -1609,7 +1609,7 @@ with <code class="docutils literal notranslate"><span class="pre">contact_surfac
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -3749,6 +3749,30 @@ after that. Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_stacked_actuation_input_port">
+<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_state_output_port">
 <code class="descname">get_state_output_port</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_state_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -5644,7 +5668,7 @@ C.name().</p>
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -7784,6 +7808,30 @@ after that. Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_stacked_actuation_input_port">
+<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_state_output_port">
 <code class="descname">get_state_output_port</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_state_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -9677,7 +9725,7 @@ C.name().</p>
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -11817,6 +11865,30 @@ after that. Post-finalize calls will always return the same value.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_stacked_actuation_input_port">
+<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_state_output_port">
 <code class="descname">get_state_output_port</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_state_output_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overloaded function.</p>
@@ -13710,7 +13782,7 @@ C.name().</p>
 systems::System) for the model of a physical system consisting of a
 collection of interconnected bodies. See multibody for an overview of
 concepts/notation.</p>
-<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
+<table align=center cellpadding=0 cellspacing=0><tr align=center><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=right style="padding:5px 0px 5px 0px">actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_generalized_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px">applied_spatial_force&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><em style="color:gray">model_instance_name[i]</em>_actuation&rarr;</td></tr><tr><td align=right style="padding:5px 0px 5px 0px"><span style="color:green">geometry_query</span>&rarr;</td></tr></table></td><td align=center style="border:solid;padding-left:20px;padding-right:20px;vertical-align:middle" bgcolor=#F0F0F0>MultibodyPlant</td><td style="vertical-align:middle"><table cellspacing=0 cellpadding=0><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_poses</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_velocities</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; body_spatial_accelerations</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; reaction_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; contact_results</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray">model_instance_name[i]</em>_continuous_state</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_acceleration</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <em style="color:gray"> model_instance_name[i]</em>_generalized_contact_forces</td></tr><tr><td align=left style="padding:5px 0px 5px 0px">&rarr; <span style="color:green">geometry_pose</span></td></tr></table></td></tr></table><p>The ports whose names begin with &lt;em style=”color:gray”&gt;
 model_instance_name[i]&lt;/em&gt; represent groups of ports, one for each of
 the model_instances “model instances”, with i ∈ {0, …, N-1} for the
 N model instances. If a model instance does not contain any data of
@@ -15847,6 +15919,30 @@ SceneGraph, either pre- or post-finalize, see Finalize(). However, a
 geometry::SourceId is only assigned once at the first call of any of
 this plant’s geometry registration methods, and it does not change
 after that. Post-finalize calls will always return the same value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pydrake.multibody.plant.MultibodyPlant_[float].get_stacked_actuation_input_port">
+<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
+<dl class="docutils">
+<dt>Precondition:</dt>
+<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">

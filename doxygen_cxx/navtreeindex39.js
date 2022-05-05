@@ -1,6 +1,5 @@
 var NAVTREEINDEX39 =
 {
-"classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af334d3331e06b30983a8c1aff483e16e":[1,4,2,8,47],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#af9709cba7f24bc9a9e84bbd09fdc0cde":[1,4,2,8,25],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#afcc8c6b2091ff4447ee2951bb7907de8":[1,4,2,8,42],
 "classdrake_1_1systems_1_1trajectory__optimization_1_1_multiple_shooting.html#afdb93529350e8cd4872dfc89198e2cfa":[1,4,2,8,34],
@@ -249,5 +248,6 @@ var NAVTREEINDEX39 =
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#a7315c497b305140748d3266adb76cf32":[3,0,1,31,5],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aa7270c55d80df6ea173269cb29c8c917":[3,0,1,31,3],
 "classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#aaaead712fe7dc29c1799e7d8f77d1cfb":[3,0,1,31,10],
-"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab128d4795c1161bafae531dd5c37e4f1":[3,0,1,31,12]
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab128d4795c1161bafae531dd5c37e4f1":[3,0,1,31,12],
+"classstd_1_1uniform__real__distribution_3_01drake_1_1symbolic_1_1_expression_01_4.html#ab8793de21ec055ec53be827b1ccc36b4":[3,0,1,31,1]
 };

@@ -257,12 +257,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aed7abcc6161600ad768cf9415c081993"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#aed7abcc6161600ad768cf9415c081993">CalcSpatialAcceleration</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;measured_in_frame, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;expressed_in_frame) const</td></tr>
 <tr class="memdesc:aed7abcc6161600ad768cf9415c081993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> frame F's spatial acceleration measured in a frame M, expressed in a frame E.  <a href="#aed7abcc6161600ad768cf9415c081993">More...</a><br /></td></tr>
 <tr class="separator:aed7abcc6161600ad768cf9415c081993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30ea2783b7bf9b676d94d20fee1eae26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a30ea2783b7bf9b676d94d20fee1eae26">CalcRelativeSpatialAccelerationInWorld</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;other_frame) const</td></tr>
-<tr class="memdesc:a30ea2783b7bf9b676d94d20fee1eae26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> frame C's spatial acceleration relative to another frame B, measured and expressed in the world frame W.  <a href="#a30ea2783b7bf9b676d94d20fee1eae26">More...</a><br /></td></tr>
-<tr class="separator:a30ea2783b7bf9b676d94d20fee1eae26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a716efa484b147932f7054cc3bb8dabf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a716efa484b147932f7054cc3bb8dabf1">CalcRelativeSpatialAcceleration</a> (const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;context, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;other_frame, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;measured_in_frame, const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;expressed_in_frame) const</td></tr>
-<tr class="memdesc:a716efa484b147932f7054cc3bb8dabf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates <code>this</code> frame C's spatial acceleration relative to another frame B, measured in a frame M, expressed in a frame E.  <a href="#a716efa484b147932f7054cc3bb8dabf1">More...</a><br /></td></tr>
-<tr class="separator:a716efa484b147932f7054cc3bb8dabf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72750ba8b4de6270d8625462a7453e85"><td class="memTemplParams" colspan="2">template&lt;typename ToScalar &gt; </td></tr>
 <tr class="memitem:a72750ba8b4de6270d8625462a7453e85"><td class="memTemplItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; ToScalar &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a72750ba8b4de6270d8625462a7453e85">CloneToScalar</a> (const internal::MultibodyTree&lt; ToScalar &gt; &amp;tree_clone) const</td></tr>
 <tr class="memdesc:a72750ba8b4de6270d8625462a7453e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">(Advanced) NVI to <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a0162ba098d0c07be12d3a7244914de38" title="Clones this Frame (templated on T) to a frame templated on double.">DoCloneToScalar()</a> templated on the scalar type of the new clone to be created.  <a href="#a72750ba8b4de6270d8625462a7453e85">More...</a><br /></td></tr>
@@ -708,106 +702,6 @@ Protected Member Functions</h2></td></tr>
 
 <p>Computes and returns the pose <code>X_WF</code> of <code>this</code> frame F in the world frame W as a function of the state of the model stored in <code>context</code>. </p>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_body.html#adb15f7a08a083af61068735632ada406" title="Returns the pose X_WB of this body B in the world frame W as a function of the state of the model sto...">Body::EvalPoseInWorld()</a> provides a more efficient way to obtain the pose for a body frame. </dd></dl>
-
-</div>
-</div>
-<a id="a716efa484b147932f7054cc3bb8dabf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a716efa484b147932f7054cc3bb8dabf1">&#9670;&nbsp;</a></span>CalcRelativeSpatialAcceleration()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt;T&gt; CalcRelativeSpatialAcceleration </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other_frame</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>measured_in_frame</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>expressed_in_frame</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates <code>this</code> frame C's spatial acceleration relative to another frame B, measured in a frame M, expressed in a frame E. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other_frame</td><td>which is frame B. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">measured_in_frame</td><td>which is frame M. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">expressed_in_frame</td><td>which is frame E. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A_M_BC_E = A_MC_E - A_MB_E, frame C's spatial acceleration relative to frame B, measured in frame M, expressed in frame E.</dd></dl>
-<p>In general, A_M_BC = DtW(V_M_BC), the time-derivative in frame M of frame C's spatial velocity relative to frame B. The rotational part of the returned quantity is α_MC_E - α_MB_E = DtM(ω_BC)_E. Note: For 3D analysis, DtM(ω_BC) ≠ α_BC. The translational part of the returned quantity is a_M_BoCo_E (Co's translational acceleration relative to Bo, measured in frame M, expressed in frame E). </p><pre>
- α_MC_E - α_MB_E = DtM(ω_MC)_E - DtM(ω_MB)_E = DtM(ω_BC)_E
- a_M_BoCo_E = a_MCo_E - a_MBo_E = DtM(v_MCo) - DtM(v_MBo) = Dt²M(p_BoCo)_E
-</pre><p> where Dt²M(p_BoCo)_E is the 2ⁿᵈ time-derivative in frame M of p_BoCo (the position vector from Bo to Co), and this result is expressed in frame E. </p><dl class="section note"><dt>Note</dt><dd>The calculation of the 2ⁿᵈ time-derivative of the distance between Bo and Co can be done with relative translational acceleration, but this calculation does not depend on the measured-in-frame, hence in this case, consider <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a30ea2783b7bf9b676d94d20fee1eae26" title="Calculates this frame C&#39;s spatial acceleration relative to another frame B, measured and expressed in...">CalcRelativeSpatialAccelerationInWorld()</a> since it is faster. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2c96f5b61a2a9047007f24f74b2ad63f" title="Calculates this frame F&#39;s spatial acceleration measured and expressed in the world frame W.">CalcSpatialAccelerationInWorld()</a>, <a class="el" href="classdrake_1_1multibody_1_1_frame.html#aed7abcc6161600ad768cf9415c081993" title="Calculates this frame F&#39;s spatial acceleration measured in a frame M, expressed in a frame E.">CalcSpatialAcceleration()</a>, and <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a30ea2783b7bf9b676d94d20fee1eae26" title="Calculates this frame C&#39;s spatial acceleration relative to another frame B, measured and expressed in...">CalcRelativeSpatialAccelerationInWorld()</a>. </dd></dl>
-
-</div>
-</div>
-<a id="a30ea2783b7bf9b676d94d20fee1eae26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30ea2783b7bf9b676d94d20fee1eae26">&#9670;&nbsp;</a></span>CalcRelativeSpatialAccelerationInWorld()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classdrake_1_1multibody_1_1_spatial_acceleration.html">SpatialAcceleration</a>&lt;T&gt; CalcRelativeSpatialAccelerationInWorld </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1systems_1_1_context.html">systems::Context</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classdrake_1_1multibody_1_1_frame.html">Frame</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>other_frame</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Calculates <code>this</code> frame C's spatial acceleration relative to another frame B, measured and expressed in the world frame W. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">context</td><td>contains the state of the multibody system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">other_frame</td><td>which is frame B. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A_W_BC_W = A_WC_W - A_WB_W, frame C's spatial acceleration relative to frame B, measured and expressed in the world frame W.</dd></dl>
-<p>In general, A_W_BC = DtW(V_W_BC), the time-derivative in the world frame W of frame C's spatial velocity relative to frame B. The rotational part of the returned quantity is α_WC_W - α_WB_W = DtW(ω_BC)_W. For 3D analysis, DtW(ω_BC) ≠ α_BC. The translational part of the returned quantity is a_W_BoCo_W (Co's translational acceleration relative to Bo, measured and expressed in world frame W). </p><pre>
- α_WC_W - α_WB_W = DtW(ω_WC)_W - DtW(ω_WB)_W = DtW(ω_BC)_W
- a_W_BoCo_W = a_WCo_W - a_WBo_W = DtW(v_WCo) - DtW(v_WBo) = Dt²W(p_BoCo)_W
-</pre><p> where Dt²W(p_BoCo)_W is the 2ⁿᵈ time-derivative in frame W of p_BoCo (the position vector from Bo to Co), and this result is expressed in frame W. </p><dl class="section note"><dt>Note</dt><dd>The method <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2c96f5b61a2a9047007f24f74b2ad63f" title="Calculates this frame F&#39;s spatial acceleration measured and expressed in the world frame W.">CalcSpatialAccelerationInWorld()</a> is more efficient and coherent if any of <code>this</code>, other_frame, or the world frame W are the same. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classdrake_1_1multibody_1_1_frame.html#a2c96f5b61a2a9047007f24f74b2ad63f" title="Calculates this frame F&#39;s spatial acceleration measured and expressed in the world frame W.">CalcSpatialAccelerationInWorld()</a>, <a class="el" href="classdrake_1_1multibody_1_1_frame.html#a716efa484b147932f7054cc3bb8dabf1" title="Calculates this frame C&#39;s spatial acceleration relative to another frame B, measured in a frame M,...">CalcRelativeSpatialAcceleration()</a>. </dd></dl>
 
 </div>
 </div>

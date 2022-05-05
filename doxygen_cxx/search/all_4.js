@@ -181,6 +181,7 @@ var searchData=
   ['detail_5fmujoco_5fparser_2eh',['detail_mujoco_parser.h',['../detail__mujoco__parser_8h.html',1,'']]],
   ['detail_5fparsing_5fworkspace_2eh',['detail_parsing_workspace.h',['../detail__parsing__workspace_8h.html',1,'']]],
   ['detail_5fpath_5futils_2eh',['detail_path_utils.h',['../detail__path__utils_8h.html',1,'']]],
+  ['detail_5fsdf_5fdiagnostic_2eh',['detail_sdf_diagnostic.h',['../detail__sdf__diagnostic_8h.html',1,'']]],
   ['detail_5fsdf_5fgeometry_2eh',['detail_sdf_geometry.h',['../detail__sdf__geometry_8h.html',1,'']]],
   ['detail_5fsdf_5fparser_2eh',['detail_sdf_parser.h',['../detail__sdf__parser_8h.html',1,'']]],
   ['detail_5ftinyxml_2eh',['detail_tinyxml.h',['../detail__tinyxml_8h.html',1,'']]],

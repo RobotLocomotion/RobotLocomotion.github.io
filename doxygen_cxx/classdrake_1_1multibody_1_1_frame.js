@@ -11,8 +11,6 @@ var classdrake_1_1multibody_1_1_frame =
     [ "CalcPose", "classdrake_1_1multibody_1_1_frame.html#a09e6bc147aee91d64b153cbd7cdb5d01", null ],
     [ "CalcPoseInBodyFrame", "classdrake_1_1multibody_1_1_frame.html#a823f61b343f8646b35b8035a6a1ee4a9", null ],
     [ "CalcPoseInWorld", "classdrake_1_1multibody_1_1_frame.html#aa83e4f95896da52a0cd6b46dd40853af", null ],
-    [ "CalcRelativeSpatialAcceleration", "classdrake_1_1multibody_1_1_frame.html#a716efa484b147932f7054cc3bb8dabf1", null ],
-    [ "CalcRelativeSpatialAccelerationInWorld", "classdrake_1_1multibody_1_1_frame.html#a30ea2783b7bf9b676d94d20fee1eae26", null ],
     [ "CalcRelativeSpatialVelocity", "classdrake_1_1multibody_1_1_frame.html#aeac9d900ff6c765ebcba3434a06e3db9", null ],
     [ "CalcRelativeSpatialVelocityInWorld", "classdrake_1_1multibody_1_1_frame.html#a67e81785294e03f63cff0e9dd20a10da", null ],
     [ "CalcRotationMatrix", "classdrake_1_1multibody_1_1_frame.html#aa19115a9160df4a7936a333684cc26f4", null ],
