@@ -8998,6 +8998,14 @@ rotation matrix to roll-pitch-yaw angles.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="pydrake.math.ToSymmetricMatrixFromLowerTriangularColumns">
+<code class="descclassname">pydrake.math.</code><code class="descname">ToSymmetricMatrixFromLowerTriangularColumns</code><span class="sig-paren">(</span><em>lower_triangular_columns: numpy.ndarray[numpy.float64[m, 1]]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[numpy.float64[m, n]]<a class="headerlink" href="#pydrake.math.ToSymmetricMatrixFromLowerTriangularColumns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a column vector containing the stacked columns of the lower
+triangular part of a square matrix, returning a symmetric matrix whose
+lower triangular part is the same as the original matrix.</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="pydrake.math.UniformlyRandomAngleAxis">
 <code class="descclassname">pydrake.math.</code><code class="descname">UniformlyRandomAngleAxis</code><span class="sig-paren">(</span><em>generator: pydrake.common._module_py.RandomGenerator</em><span class="sig-paren">)</span> &#x2192; pydrake.common.eigen_geometry.AngleAxis_[float]<a class="headerlink" href="#pydrake.math.UniformlyRandomAngleAxis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generates a rotation (in the axis-angle representation) that rotates a

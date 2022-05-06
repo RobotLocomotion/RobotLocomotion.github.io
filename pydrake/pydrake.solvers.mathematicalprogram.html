@@ -2396,13 +2396,13 @@ for more details.</p>
 <code class="descname">AddPositiveDiagonallyDominantMatrixConstraint</code><span class="sig-paren">(</span><em>self: pydrake.solvers.mathematicalprogram.MathematicalProgram, X: numpy.ndarray[object[m, n], flags.f_contiguous]</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray[object[m, n]]<a class="headerlink" href="#pydrake.solvers.mathematicalprogram.MathematicalProgram.AddPositiveDiagonallyDominantMatrixConstraint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds the constraint that a symmetric matrix is diagonally dominant
 with non-negative diagonal entries. A symmetric matrix X is diagonally
-dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id45"><span class="problematic" id="id46">|X(i, j)|</span></a>
+dominant with non-negative diagonal entries if X(i, i) &gt;= ∑ⱼ <a href="#id47"><span class="problematic" id="id48">|X(i, j)|</span></a>
 ∀ j ≠ i namely in each row, the diagonal entry is larger than the sum
 of the absolute values of all other entries in the same row. A matrix
 being diagonally dominant with non-negative diagonals is a sufficient
 (but not necessary) condition of a matrix being positive semidefinite.
 Internally we will create a matrix Y as slack variables, such that
-Y(i, j) represents the absolute value <a href="#id47"><span class="problematic" id="id48">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
+Y(i, j) represents the absolute value <a href="#id49"><span class="problematic" id="id50">|X(i, j)|</span></a> ∀ j ≠ i. The diagonal
 entries Y(i, i) = X(i, i) The users can refer to “DSOS and SDSOS
 Optimization: More Tractable Alternatives to Sum of Squares and
 Semidefinite Optimization” by Amir Ali Ahmadi and Anirudha Majumdar,
@@ -2416,7 +2416,7 @@ X.</dd>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Y The slack variable. Y(i, j) represents <a href="#id49"><span class="problematic" id="id50">|X(i, j)|</span></a> ∀ j ≠ i, with
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Y The slack variable. Y(i, j) represents <a href="#id51"><span class="problematic" id="id52">|X(i, j)|</span></a> ∀ j ≠ i, with
 the constraint Y(i, j) &gt;= X(i, j) and Y(i, j) &gt;= -X(i, j). Y is a
 symmetric matrix. The diagonal entries Y(i, i) = X(i, i)</td>
 </tr>
@@ -2471,7 +2471,7 @@ variable M that are also newly added.</td>
 </tbody>
 </table>
 <p>For example, to add a constraint that</p>
-<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id51"><span class="problematic" id="id52">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
+<p>⌈x + 1 2x + 3 x+y⌉ <a href="#id53"><span class="problematic" id="id54">|2x+ 3 2 0|</span></a> is positive semidefinite ⌊x + y 0 x⌋
 The user could call</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">cc</span><span class="p">}</span>
 <span class="n">Matrix3</span><span class="o">&lt;</span><span class="n">symbolic</span><span class="p">::</span><span class="n">Expression</span><span class="o">&gt;</span> <span class="n">e</span>
@@ -4039,11 +4039,19 @@ https://docs.mosek.com/9.2/capi/prob-def-conic.html#duality-for-conic-optimizati
 as an explanation.</p>
 <p>The interpretation for the dual variable to conic constraint x ∈ K can
 be different. Here K is a convex cone, including exponential cone,
-power cone, PSD cone, etc. When the problem is solved by a convex
+power cone, psd cone, etc. When the problem is solved by a convex
 solver (like SCS, MOSEK<a href="/tm.html">™</a>, CSDP, etc), often it has a dual variable z ∈
 K*, where K* is the dual cone. Here the dual variable DOESN’T have the
 interpretation of “shadow price”, but should satisfy the KKT
 condition, while the dual variable stays inside the dual cone.</p>
+<p>When K is a psd cone, the returned dual solution is the lower triangle
+of the dual symmetric psd matrix. Namely for the primal problem</p>
+<p>min trace(C*X) s.t A(X) = b X is psd</p>
+<p>the dual is</p>
+<p>max b’<a href="#id43"><span class="problematic" id="id44">*</span></a>y s.t A’(y) - C = Z Z is psd.</p>
+<p>We return the lower triangular part of Z. You can call
+drake::math::ToSymmetricMatrixFromLowerTriangularColumns to get the
+matrix Z.</p>
 </dd></dl>
 
 <dl class="method">
@@ -4596,7 +4604,7 @@ more details.</p>
 <dd><p>Bases: <a class="reference internal" href="#pydrake.solvers.mathematicalprogram.Constraint" title="pydrake.solvers.mathematicalprogram.Constraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">pydrake.solvers.mathematicalprogram.Constraint</span></code></a></p>
 <p>lb ≤ .5 xᵀQx + bᵀx ≤ ub Without loss of generality, the class stores a
 symmetric matrix Q. For a non-symmetric matrix Q₀, we can define Q =
-(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id43"><span class="problematic" id="id44">*</span></a>x. The first
+(Q₀ + Q₀ᵀ) / 2, since xᵀQ₀x = xᵀQ₀ᵀx = xᵀ*(Q₀+Q₀ᵀ)/2 <a href="#id45"><span class="problematic" id="id46">*</span></a>x. The first
 equality holds because the transpose of a scalar is the scalar itself.
 Hence we can always convert a non-symmetric matrix Q₀ to a symmetric
 matrix Q.</p>

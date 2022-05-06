@@ -399,6 +399,24 @@ See <a href="https://docs.bazel.build/versions/main/user-manual.html#bazelrc">ht
 <p>SNOPT support has some known problems on certain programs (see drake issue
 <a href="https://github.com/RobotLocomotion/drake/issues/10422">#10422</a> for a summary).</p>
 
+<h1 id="other-optional-dependencies">Other optional dependencies</h1>
+
+<h2 id="openmp">OpenMP</h2>
+
+<p>Drake is
+<a href="https://github.com/RobotLocomotion/drake/issues/14858">in the process</a>
+of adding support for multiprocessing using
+<a href="https://en.wikipedia.org/wiki/OpenMP">OpenMP</a>.
+At the moment, that support is experimental and is not recommended for Drake’s
+users.</p>
+
+<p>For Drake Developers who wish to enable OpenMP, use this config switch:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bazel test --config omp //...
+</code></pre></div></div>
+
+<p>This switch is enabled in CI under the “Ubuntu Everything” build flavor.</p>
+
 <h1 id="optional-tools">Optional Tools</h1>
 
 <p>The Drake Bazel build system has integration support for some optional
