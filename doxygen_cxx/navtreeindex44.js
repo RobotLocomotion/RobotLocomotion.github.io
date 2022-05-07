@@ -1,5 +1,7 @@
 var NAVTREEINDEX44 =
 {
+"inverse__dynamics_8h.html":[4,0,0,11,1,3],
+"inverse__dynamics__controller_8h.html":[4,0,0,11,1,4],
 "inverse__kinematics_8h.html":[4,0,0,8,5,7],
 "ipopt__solver_8h.html":[4,0,0,10,30],
 "iris_8h.html":[4,0,0,4,1,6],
@@ -247,7 +249,5 @@ var NAVTREEINDEX44 =
 "multibody__plant_8h.html#a6f6e054758d34b83e86bea87d65dfe4ea8ad3adce463edb0d2843e1f1c0057d4a":[4,0,0,8,10,14,2,2],
 "multibody__plant__config_8h.html":[4,0,0,8,10,15],
 "multibody__plant__config__functions_8h.html":[4,0,0,8,10,16],
-"multibody__plant__config__functions_8h.html#a7e468aa35ef6a84196ac20a13065ca0c":[4,0,0,8,10,16,0],
-"multibody__plant__discrete__update__manager__attorney_8h.html":[4,0,0,8,10,17],
-"multibody__plant__model__attorney_8h.html":[4,0,0,8,10,18]
+"multibody__plant__config__functions_8h.html#a7e468aa35ef6a84196ac20a13065ca0c":[4,0,0,8,10,16,0]
 };

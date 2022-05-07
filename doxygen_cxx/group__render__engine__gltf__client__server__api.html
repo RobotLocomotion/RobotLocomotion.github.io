@@ -1,0 +1,334 @@
+<!-- HTML header for doxygen 1.8.15-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Drake: (Experimental) glTF Render Client-Server API</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen_extra.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<header class="site-header">
+ <div class="site-header-inner contain">
+  <a class="drake-logo" href="/"><img src="/images/drake-logo-white.svg"></a>
+  <div class="menu-mobile-toggle">
+   <span></span>
+  </div>
+  <nav class="site-menu">
+   <ul>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/">Home</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/installation.html">Installation</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">
+     <a class="site-menu-item" href="/gallery.html">Gallery</a>
+    </li>
+    <li class="site-menu-item site-menu-item-main">API Documentation
+     <div class="sub">
+      <a class="site-menu-item" href="https://drake.mit.edu/doxygen_cxx/index.html">C++</a>
+      <a class="site-menu-item" href="https://drake.mit.edu/pydrake/index.html">Python</a>
+     </div>
+    </li>
+    <li class="site-menu-item site-menu-item-main">Resources
+     <div class="sub">
+      <a class="site-menu-item" href="/getting_help.html">Getting Help</a>
+      <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake/tree/master/tutorials">Tutorials</a>
+      <a class="site-menu-item" href="/python_bindings.html">Python Bindings</a>
+      <a class="site-menu-item" href="/developers.html">For Developers</a>
+      <a class="site-menu-item" href="/credits.html">Credits</a>
+     </div>
+    </li>
+    <li class="github-link">
+     <a class="site-menu-item" href="https://github.com/RobotLocomotion/drake">GitHub <img src="/third_party/images/GitHub-Mark-Light-64px.png"></a>
+    </li>
+   </ul>
+  </nav>
+ </div>
+</header>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Drake
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+<div class="title-banner">
+ <div class="title-banner__title">
+  Drake C++ Documentation
+ </div>
+ <div id="DDGSearch">
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search C++ API only…">
+   <input type="hidden" name="sites" value="drake.mit.edu/doxygen_cxx">
+  </form>
+  <form id="ddg-search-form" class="wy_form" action="https://duckduckgo.com/" method="get">
+   <input type="text" name="q" placeholder="Search all of Drake…">
+   <input type="hidden" name="sites" value="drake.mit.edu">
+  </form>
+ </div>
+ <div id="MSearchBoxContainer">
+          <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Search" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+ </div>
+</div>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search');
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__render__engine__gltf__client__server__api.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">(Experimental) glTF Render Client-Server API<div class="ingroups"><a class="el" href="group__geometry.html">Geometric Representations</a> &raquo; <a class="el" href="group__render__engines.html">Rendering Engines</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<dl class="section warning"><dt>Warning</dt><dd>This feature is considered to be <b>experimental</b> and may change or be removed at any time, without any deprecation notice ahead of time. Currently, the content of this page is primarily for facilitating code reviews and is subject to change during upcoming pull requests.</dd></dl>
+<p>Drake offers built-in renderers (RenderEngineVtk, RenderEngineGl), but in some cases users may want to use their own custom rendering implementations. One way to accomplish that is to subclass RenderEngine with a custom implementation and link that into Drake, but sometimes that leads to linker compatibility problems. Thus, we also offer another option: rendering using a remote procedure call (RPC). This document specifies the network API for servicing those requests. </p><hr/>
+<p>The <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html">glTF</a> render server API consists of two components: a client, and a server. The client generates and transmits glTF scene files to the server, which then renders and returns an image file back to the client. Drake implements the client side, which can be constructed via MakeRenderEngineGltfClient(). The server must respond with images of a certain type and dimension (width and height), but is otherwise free to produce any rendering desired in however much time it needs to render.</p>
+<p><b>Contents</b>:</p>
+<ul>
+<li><a href="#server-api">Server API</a><ul>
+<li><a href="#render-endpoint">Render Endpoint</a></li>
+<li><a href="#render-endpoint-form-data">Render Endpoint <code>&lt;form&gt;</code> Data</a></li>
+<li><a href="#allowed-image-response-types">Allowed Image Response Types</a></li>
+<li><a href="#notes-on-gltf-camera-specification">Notes on glTF Camera Specification</a></li>
+<li><a href="#notes-on-communicating-errors">Notes on Communicating Errors</a></li>
+</ul>
+</li>
+<li><a href="#developing-your-own-server">Developing your own Server</a></li>
+</ul>
+<h2 id="server-api">Server API</h2>
+<hr/>
+<p>A given server implementation is required to implement a "Render Endpoint" to which the client will issue a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST"><code>POST</code> request</a> with an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form">html <code>&lt;form&gt;</code></a> and then await a rendered image response. The <code>POST</code> from the client will include uploading the scene file, in addition to a variety of other metadata attributes related to the image being rendered (such as <code>width</code> and <code>height</code>), as well as the full specification of the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html" title="Simple class for characterizing the Drake camera model.">systems::sensors::CameraInfo</a> intrinsics being rendered.</p>
+<p>The server is <b>expected to block</b> (delay sending a response) until it is ready to transmit the final rendered image back to the client. This provides for an easier implementation of the server, as well as this single endpoint is the only form of communication the client will initiate with the server. If the server fails to respond with a valid image file, the client will produce an error.</p>
+<p>The server is <b>required</b> to send a valid <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response code</a> in <b>both the event of success and failure</b>. If an HTTP response code indicating success (2XX and 3XX) is received, the client will further require an image response of a supported image type with the correct dimensions. Otherwise, the client will attempt to populate an error message from the file response (if available). As a special note about <code>flask</code> in particular, if the server implementation doesn't return any code, the default response is always <code>200</code> which indicates success. When in doubt, have the server respond with <code>200</code> for a success, <code>400</code> for any failure related to bad requests (e.g., missing <code>min_depth</code> or <code>max_depth</code> for an <code>image_type="depth"</code>), and <code>500</code> for any unhandled errors.</p>
+<h3 id="render-endpoint">Render Endpoint</h3>
+<hr/>
+<p>The render endpoint (by default: <code>/render</code>) is responsible for receiving an uploaded scene file, rendering the scene, and transmitting an image back to the client. In addition to the scene file, the render endpoint is provided with the full specification of the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html" title="Simple class for characterizing the Drake camera model.">systems::sensors::CameraInfo</a> object, and optionally the depth range of the systems::sensors::DepthRange object.</p>
+<h3 id="render-endpoint-form-data">Render Endpoint <code>&lt;form&gt;</code> Data</h3>
+<hr/>
+<p>The client will <code>POST</code> a <code>&lt;form&gt;</code> with an <code>enctype=multipart/form-data</code> to the server with the following field entries:</p>
+<table class="doxtable">
+<tr>
+<th>Field Name </th><th>Field Description  </th></tr>
+<tr>
+<td><b>scene</b> </td><td>The scene file contents. Sent as if from <code>&lt;input type="file" name="scene"&gt;</code>. glTF scenes will have a mime type of <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#_media_type_registrations"><code>model/gltf+json</code></a>.   </td></tr>
+<tr>
+<td><b>scene_sha256</b> </td><td>The sha256 hash of the <code>scene</code> file being uploaded. The server may use this entry to validate that the full file was successfully uploaded. Sent as form data <code>&lt;input type="text" name="scene_sha256"&gt;</code>.   </td></tr>
+<tr>
+<td><b>image_type</b> </td><td>The type of image being rendered. Its value will be one of: <code>"color"</code>, <code>"depth"</code>, or <code>"label"</code>. Sent as form data <code>&lt;input type="text" name="image_type"&gt;</code>.   </td></tr>
+<tr>
+<td><b>min_depth</b> </td><td>The minimum depth range as specified by a depth sensor's DepthRange::min_depth(). <b>Only provided when <code>image_type="depth"</code>.</b> Sent as form data <code>&lt;input type="number" name="min_depth"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>max_depth</b> </td><td>The maximum depth range as specified by a depth sensor's DepthRange::max_depth(). <b>Only provided when <code>image_type="depth"</code>.</b> Sent as form data <code>&lt;input type="number" name="max_depth"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>width</b> </td><td>Width of the desired rendered image in pixels as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad72663daf610f2a0833a2fc3d78e4fdf" title="Returns the width of the image in pixels.">systems::sensors::CameraInfo::width()</a> being rendered, the server <b>must</b> respond with an image of the same width. Sent as form data <code>&lt;input type="number" name="width"&gt;</code>. Integral value.   </td></tr>
+<tr>
+<td><b>height</b> </td><td>Height of the desired rendered image in pixels as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ad3774f6419003470f54fd495124ef51f" title="Returns the height of the image in pixels.">systems::sensors::CameraInfo::height()</a> being rendered, the server <b>must</b> respond with an image of the same height. Sent as form data <code>&lt;input type="number" name="height"&gt;</code>. Integral value.   </td></tr>
+<tr>
+<td><b>near</b> </td><td>The near clipping plane of the camera as specified by the RenderCameraCore's ClippingRange::near() value. Sent as form data <code>&lt;input type="number" name="near"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>far</b> </td><td>The far clipping plane of the camera as specified by the RenderCameraCore's ClippingRange::far() value. Sent as form data <code>&lt;input type="number" name="far"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>focal_x</b> </td><td>The focal length x, in pixels, as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a5260647c6d73b9af547424968d24da09" title="Returns the focal length x in pixels.">systems::sensors::CameraInfo::focal_x()</a> value. Sent as form data <code>&lt;input type="number" name="focal_x"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>focal_y</b> </td><td>The focal length y, in pixels, as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#aa1d16b9fcf585fe75becb5357c74ba72" title="Returns the focal length y in pixels.">systems::sensors::CameraInfo::focal_y()</a> value. Sent as form data <code>&lt;input type="number" name="focal_y"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>fov_x</b> </td><td>The field of view in the x-direction (in radians) as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abf26f8c02fcada355b0278b7934b5321" title="Returns the field of view in the x-direction (in radians).">systems::sensors::CameraInfo::fov_x()</a> value. Sent as form data <code>&lt;input type="number" name="fov_x"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>fov_y</b> </td><td>The field of view in the y-direction (in radians) as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#abc9ba081bfe31e8224d9e40b96f0f717" title="Returns the field of view in the y-direction (in radians).">systems::sensors::CameraInfo::fov_y()</a> value. Sent as form data <code>&lt;input type="number" name="fov_y"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>center_x</b> </td><td>The principal point's x coordinate in pixels as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#a3145619e4a819f4ae2ec061893bef1d5" title="Returns the principal point&#39;s x coordinate in pixels.">systems::sensors::CameraInfo::center_x()</a> value. Sent as form data <code>&lt;input type="number" name="center_x"&gt;</code>. Decimal value.   </td></tr>
+<tr>
+<td><b>center_y</b> </td><td>The principal point's y coordinate in pixels as specified by the <a class="el" href="classdrake_1_1systems_1_1sensors_1_1_camera_info.html#ae03e1d5e4c7f223bcee8712aba25c40c" title="Returns the principal point&#39;s y coordinate in pixels.">systems::sensors::CameraInfo::center_y()</a> value. Sent as form data <code>&lt;input type="number" name="center_y"&gt;</code>. Decimal value.   </td></tr>
+</table>
+<h3 id="allowed-image-response-types">Allowed Image Response Types</h3>
+<hr/>
+<p>The client accepts the following image types from a server render:</p>
+<ul>
+<li>When <code>image_type="color"</code>, the server may return:<ul>
+<li>An RGB (3 channel) unsigned char PNG image.</li>
+<li>An RGBA (4 channel) unsigned char PNG image.</li>
+</ul>
+</li>
+<li>When <code>image_type="depth"</code>, the server may return:<ul>
+<li>A 32 bit float single channel TIFF image. The client will interpret this rendering as units of meters.</li>
+<li>TODO(zachfang): A single channel unsigned short PNG image. The client will interpret this rendering as units of millimeters and will convert to meters.</li>
+</ul>
+</li>
+<li>When <code>image_type="label"</code>, the server may return:<ul>
+<li>A single channel unsigned short PNG image.</li>
+</ul>
+</li>
+</ul>
+<h3 id="notes-on-gltf-camera-specification">Notes on glTF Camera Specification</h3>
+<hr/>
+<p>For a <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html">glTF scene</a> file, note that there are two locations that describe the camera:</p>
+<ol type="1">
+<li>The <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#reference-camera"><code>"cameras"</code> array</a>, which specifies the camera projection matrix. The client will always produce a length one <code>"cameras"</code> array, with a single entry ("camera 0"). This camera will always be of <code>"type": "perspective"</code>, and its <code>"aspectRatio"</code>, <code>"yfov"</code>, <code>"zfar"</code>, and <code>"znear"</code> attributes will accurately represent the drake sensor. However, note that the <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#projection-matrices">glTF perspective projection definition</a> does not include all of the information present in the matrix that would be obtained by <code>RenderCameraCore::CalcProjectionMatrix</code>. While the two matrices will be similar, a given render server must decide based off its choice of render backend how it wishes to model the camera perspective projection transformation &ndash; utilize the glTF definition, or incorporate the remainder of the <code>&lt;form&gt;</code> data to construct its own projection matrix. A sample snippet from a client glTF file: <pre class="fragment"> {
+   "cameras" :
+   [
+     {
+       "perspective" :
+       {
+         "aspectRatio" : 1.3333333333333333,
+         "yfov" : 0.78539816339744828,
+         "zfar" : 10,
+         "znear" : 0.01
+      },
+      "type" : "perspective"
+     }
+   ],
+ }
+</pre></li>
+<li>The <a href="https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#reference-node"><code>"nodes"</code> array</a>, which specifies the camera's global transformation matrix. The <code>"camera": 0</code> entry refers to the index into the <code>"cameras"</code> array from (1). Note that this is <b>not</b> the "model view
+   transformation" (rather, its inverse) &ndash; it is the camera's global transformation matrix which places the camera in the world just like any other entry in <code>"nodes"</code>. Note that the <code>"matrix"</code> is presented in column-major order, as prescribed by the glTF specification. A sample snippet of the camera node specification in the <code>"nodes"</code> array that has no rotation (the identity rotation) and a translation vector <code>[x=0.1, y=0.2, z=0.3]</code> would be provided as: <pre class="fragment"> {
+   "nodes" :
+   [
+     {
+       "camera" : 0,
+       "matrix" :
+       [
+         1.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         1.0,
+         0.0,
+         0.0,
+         0.0,
+         0.0,
+         1.0,
+         0.0,
+         0.1,
+         0.2,
+         0.3,
+         1.0,
+       ],
+       "name" : "Camera Node"
+     },
+   ],
+ }
+</pre></li>
+</ol>
+<h3 id="notes-on-communicating-errors">Notes on Communicating Errors</h3>
+<hr/>
+<p>When errors occur on the server side, the server should explicitly return an HTTP response code indicating a failed transaction.</p>
+<p>Additionally, the server should clearly communicate <em>why</em> there was an upload or render failure as plain text in the file response. Though this is not strictly required, the user of the server will have no hints as to what is going wrong with the client-server communication. When the file response is provided, this information will be included in the exception message produced by the client.</p>
+<h2 id="developing-your-own-server">Developing your own Server</h2>
+<hr/>
+<p>To test the basic client-server communication and rendering, Drake provides a simple server implementation as a reference. For more information about developing your own server or running the prototype, refer to the <a href="https://github.com/RobotLocomotion/drake/blob/master/geometry/render_gltf_client/test">README</a> under <code>//geometry/render_gltf_client/test</code>. </p>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- footer -->
+<div id="nav-path" class="navpath">
+  <ul>
+  </ul>
+</div>
+<footer class="site-footer padding">
+  <div class="contain">
+    <a href="/" class="drake-logo">
+      <img src="/images/drake-logo.svg"/>
+    </a>
+    <div class="footer-menu">
+      <ul>    
+        <li>
+          <a href="/doxygen_cxx/index.html" class="site-menu-item">C++</a>
+        </li>    
+        <li>
+          <a href="/pydrake/index.html" class="site-menu-item">Python</a>
+        </li>
+        <li class="github-link">
+          <a href="https://github.com/RobotLocomotion/drake" class="site-menu-item">GitHub <img src="/third_party/images/GitHub-Mark-64px.png"/></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+searchBox.searchLabel = 'Go to name…';
+searchBox.DOMSearchField().value = searchBox.searchLabel;
+</script>
+</body>
+</html>

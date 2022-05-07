@@ -3307,10 +3307,11 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <ol class="arabic simple">
 <li>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant_[float]) -&gt; pydrake.systems.framework.InputPort_[float]</li>
 </ol>
-<p>Returns a constant reference to the input port for external actuation
-for the case where only one model instance has actuated dofs. This
-input port is a vector valued port, which can be set with
-JointActuator::set_actuation_vector().</p>
+<p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
@@ -3319,12 +3320,9 @@ JointActuator::set_actuation_vector().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if called before Finalize(), if the model does not</li>
-<li>contain any actuators, or if multiple model instances have</li>
-<li>actuated dofs.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
 </tr>
 </tbody>
 </table>
@@ -3746,30 +3744,6 @@ SceneGraph, either pre- or post-finalize, see Finalize(). However, a
 geometry::SourceId is only assigned once at the first call of any of
 this plant’s geometry registration methods, and it does not change
 after that. Post-finalize calls will always return the same value.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_stacked_actuation_input_port">
-<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_.MultibodyPlant_[float].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a constant reference to the input port for external actuations
-for all actuated dofs regardless the number of model instances that
-have actuated dofs. The input actuation is assumed to be ordered
-according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 <dl class="method">
@@ -7366,10 +7340,11 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <ol class="arabic simple">
 <li>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]) -&gt; pydrake.systems.framework.InputPort_[AutoDiffXd]</li>
 </ol>
-<p>Returns a constant reference to the input port for external actuation
-for the case where only one model instance has actuated dofs. This
-input port is a vector valued port, which can be set with
-JointActuator::set_actuation_vector().</p>
+<p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
@@ -7378,12 +7353,9 @@ JointActuator::set_actuation_vector().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if called before Finalize(), if the model does not</li>
-<li>contain any actuators, or if multiple model instances have</li>
-<li>actuated dofs.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
 </tr>
 </tbody>
 </table>
@@ -7805,30 +7777,6 @@ SceneGraph, either pre- or post-finalize, see Finalize(). However, a
 geometry::SourceId is only assigned once at the first call of any of
 this plant’s geometry registration methods, and it does not change
 after that. Post-finalize calls will always return the same value.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_stacked_actuation_input_port">
-<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[AutoDiffXd]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[AutoDiffXd].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a constant reference to the input port for external actuations
-for all actuated dofs regardless the number of model instances that
-have actuated dofs. The input actuation is assumed to be ordered
-according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 <dl class="method">
@@ -11423,10 +11371,11 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <ol class="arabic simple">
 <li>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant_[Expression]) -&gt; pydrake.systems.framework.InputPort_[Expression]</li>
 </ol>
-<p>Returns a constant reference to the input port for external actuation
-for the case where only one model instance has actuated dofs. This
-input port is a vector valued port, which can be set with
-JointActuator::set_actuation_vector().</p>
+<p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
@@ -11435,12 +11384,9 @@ JointActuator::set_actuation_vector().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if called before Finalize(), if the model does not</li>
-<li>contain any actuators, or if multiple model instances have</li>
-<li>actuated dofs.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
 </tr>
 </tbody>
 </table>
@@ -11862,30 +11808,6 @@ SceneGraph, either pre- or post-finalize, see Finalize(). However, a
 geometry::SourceId is only assigned once at the first call of any of
 this plant’s geometry registration methods, and it does not change
 after that. Post-finalize calls will always return the same value.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.plant.MultibodyPlant_[Expression].get_stacked_actuation_input_port">
-<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[Expression]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[Expression]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[Expression].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a constant reference to the input port for external actuations
-for all actuated dofs regardless the number of model instances that
-have actuated dofs. The input actuation is assumed to be ordered
-according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 <dl class="method">
@@ -15480,10 +15402,11 @@ a SceneGraph, either pre- or post-finalize, see Finalize().</p>
 <ol class="arabic simple">
 <li>get_actuation_input_port(self: pydrake.multibody.plant.MultibodyPlant_[float]) -&gt; pydrake.systems.framework.InputPort_[float]</li>
 </ol>
-<p>Returns a constant reference to the input port for external actuation
-for the case where only one model instance has actuated dofs. This
-input port is a vector valued port, which can be set with
-JointActuator::set_actuation_vector().</p>
+<p>Returns a constant reference to the input port for external actuations
+for all actuated dofs regardless the number of model instances that
+have actuated dofs. The input actuation is assumed to be ordered
+according to model instances. This input port is a vector valued port,
+which can be set with JointActuator::set_actuation_vector().</p>
 <dl class="docutils">
 <dt>Precondition:</dt>
 <dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
@@ -15492,12 +15415,9 @@ JointActuator::set_actuation_vector().</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
-<li>RuntimeError if called before Finalize(), if the model does not</li>
-<li>contain any actuators, or if multiple model instances have</li>
-<li>actuated dofs.</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
 </tr>
 </tbody>
 </table>
@@ -15919,30 +15839,6 @@ SceneGraph, either pre- or post-finalize, see Finalize(). However, a
 geometry::SourceId is only assigned once at the first call of any of
 this plant’s geometry registration methods, and it does not change
 after that. Post-finalize calls will always return the same value.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="pydrake.multibody.plant.MultibodyPlant_[float].get_stacked_actuation_input_port">
-<code class="descname">get_stacked_actuation_input_port</code><span class="sig-paren">(</span><em>self: pydrake.multibody.plant.MultibodyPlant_[float]</em><span class="sig-paren">)</span> &#x2192; pydrake.systems.framework.InputPort_[float]<a class="headerlink" href="#pydrake.multibody.plant.MultibodyPlant_[float].get_stacked_actuation_input_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a constant reference to the input port for external actuations
-for all actuated dofs regardless the number of model instances that
-have actuated dofs. The input actuation is assumed to be ordered
-according to model instances. This input port is a vector valued port,
-which can be set with JointActuator::set_actuation_vector().</p>
-<dl class="docutils">
-<dt>Precondition:</dt>
-<dd>Finalize() was already called on <code class="docutils literal notranslate"><span class="pre">this</span></code> plant.</dd>
-</dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if called before Finalize().</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">RuntimeError if individual actuation ports are connected.</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 <dl class="method">

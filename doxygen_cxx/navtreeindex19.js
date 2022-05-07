@@ -1,5 +1,6 @@
 var NAVTREEINDEX19 =
 {
+"classdrake_1_1solvers_1_1_gurobi_solver.html#a00b55f8b4c1c4f19b45621a84deed66c":[3,0,0,12,21,17],
 "classdrake_1_1solvers_1_1_gurobi_solver.html#a060a36d3c72cd6fd5caceff23ea0e3a7":[3,0,0,12,21,2],
 "classdrake_1_1solvers_1_1_gurobi_solver.html#a277134785588d69bb461a4a402877e7a":[3,0,0,12,21,12],
 "classdrake_1_1solvers_1_1_gurobi_solver.html#a2acbb1fddaffbf52c3eaf70f6dfa41bd":[3,0,0,12,21,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX19 =
 "classdrake_1_1solvers_1_1_mathematical_program.html#a3db87ec5cd8f61d6ab5d689d181cd587":[1,1,2,58],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818":[1,1,2,1],
 "classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a26e1dbaa56329cec4d3ba803424aed81":[1,1,2,1,2],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a28b23c4ed46cc23775486c764a920e29":[1,1,2,1,1],
-"classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a9214c59b16e91dfc8e167a26028bc076":[1,1,2,1,0]
+"classdrake_1_1solvers_1_1_mathematical_program.html#a407fb21fc13a5122994e71a05a6a0818a28b23c4ed46cc23775486c764a920e29":[1,1,2,1,1]
 };
