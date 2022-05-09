@@ -1,5 +1,7 @@
 var NAVTREEINDEX53 =
 {
+"symbolic__monomial_8h.html":[4,0,0,1,65],
+"symbolic__monomial_8h.html#a791475e9d37a8e5fd5f1314045428997":[4,0,0,1,65,2],
 "symbolic__monomial_8h.html#a8505db5f6e70df16a3cecda394bdcb24":[4,0,0,1,65,3],
 "symbolic__monomial_8h.html#a8b3d409cea5e6c6495394208c8c8c6ee":[4,0,0,1,65,4],
 "symbolic__monomial__basis__element_8h.html":[4,0,0,1,66],
@@ -247,7 +249,5 @@ var NAVTREEINDEX53 =
 "value__pybind_8h.html#a210546c12706075cdd90f811470ac4b0":[4,0,0,0,0,0,13,0],
 "value__to__abstract__value_8h.html":[4,0,0,11,3,52],
 "van__der__pol_8h.html":[4,0,0,3,18,0],
-"vector__base_8h.html":[4,0,0,11,3,53],
-"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
-"vector__log_8h.html":[4,0,0,11,6,25]
+"vector__base_8h.html":[4,0,0,11,3,53]
 };

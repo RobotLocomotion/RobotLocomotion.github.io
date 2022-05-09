@@ -1,5 +1,7 @@
 var NAVTREEINDEX49 =
 {
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html":[1,4,2,1,0],
+"structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a070d67fe6a2aec68937b130e4e36afbf":[1,4,2,1,0,1],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a0d6fc2daabf951fe18a222fab56c2ba6":[1,4,2,1,0,4],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a12c9ae23f7c0c50dc5417ea2d15dd48b":[1,4,2,1,0,3],
 "structdrake_1_1multibody_1_1_global_inverse_kinematics_1_1_options.html#a28d39a844c3a37ab61d32ab7c6352f09":[1,4,2,1,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX49 =
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#a527da69a2d40b178e693bb585e98506f":[3,0,0,12,35,0],
 "structdrake_1_1solvers_1_1_logarithmic_sos2_new_binary_variables.html#ad7023f370a56939d6a62930614f16911":[3,0,0,12,35,1],
 "structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html":[3,0,0,12,42,0],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,12,42,0,1],
-"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a67361c684f5a0c392169e80bb76e9228":[3,0,0,12,42,0,0],
-"structdrake_1_1solvers_1_1_mosek_solver_details.html":[3,0,0,12,46]
+"structdrake_1_1solvers_1_1_mixed_integer_rotation_constraint_generator_1_1_return_type.html#a558e28b2fea6ebcac661358ea97c7f58":[3,0,0,12,42,0,1]
 };

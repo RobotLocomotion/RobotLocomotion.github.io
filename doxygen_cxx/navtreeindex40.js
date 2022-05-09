@@ -180,6 +180,8 @@ var NAVTREEINDEX40 =
 "diagram__discrete__values_8h.html":[4,0,0,11,3,15],
 "diagram__output__port_8h.html":[4,0,0,11,3,16],
 "diagram__state_8h.html":[4,0,0,11,3,17],
+"differentiable__norm_8h.html":[4,0,0,7,9],
+"differentiable__norm_8h.html#ae918eb0a5749b337a92058e92bd039c9":[4,0,0,7,9,0],
 "differential__inverse__kinematics_8h.html":[4,0,0,6,2,1],
 "differential__inverse__kinematics_8h.html#a0f13a0a8a0d6f3e8e800b27c50f6f7b8":[4,0,0,6,2,1,7],
 "differential__inverse__kinematics_8h.html#a3e26d472253fc2fe452f8b4bb2d1bcdc":[4,0,0,6,2,1,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX40 =
 "dir_892460009e18f4b08a77d36884a88a01.html":[4,0,0,11,8],
 "dir_8d45261e6a2fc0f4521d25819d2b8e68.html":[4,0,0,6,2],
 "dir_8f847be5c0c53e92edc6178d5e17891e.html":[4,0,0,3,18],
-"dir_90a47678bc0a869c6c11f834a8ae1688.html":[4,0,0,11,9],
-"dir_970ffa4dc1494551190363316edbd789.html":[4,0,0,3,8],
-"dir_9acdd6771460017440c69ee654743722.html":[4,0,0,3,10]
+"dir_90a47678bc0a869c6c11f834a8ae1688.html":[4,0,0,11,9]
 };

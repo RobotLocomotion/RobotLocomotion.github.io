@@ -300,6 +300,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a2d78f6f294270fdc03dcb68de424536a"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:a2d78f6f294270fdc03dcb68de424536a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacedrake.html#a3922cc0c6264e8ff225a6aa0dd993667">drake::Matrix3</a>&lt; typename Derived::Scalar &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a2d78f6f294270fdc03dcb68de424536a">VectorToSkewSymmetric</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;p)</td></tr>
 <tr class="separator:a2d78f6f294270fdc03dcb68de424536a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae918eb0a5749b337a92058e92bd039c9"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
+<tr class="memitem:ae918eb0a5749b337a92058e92bd039c9"><td class="memTemplItemLeft" align="right" valign="top">Derived::Scalar&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#ae918eb0a5749b337a92058e92bd039c9">DifferentiableNorm</a> (const Eigen::MatrixBase&lt; Derived &gt; &amp;x)</td></tr>
+<tr class="memdesc:ae918eb0a5749b337a92058e92bd039c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The 2-norm function |x| is not differentiable at x=0 (its gradient is x/|x|, which has a division-by-zero problem).  <a href="#ae918eb0a5749b337a92058e92bd039c9">More...</a><br /></td></tr>
+<tr class="separator:ae918eb0a5749b337a92058e92bd039c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd8a0787e886faf633f2c1f5be2365e"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedrake_1_1math.html#a8cd8a0787e886faf633f2c1f5be2365e">DiscreteAlgebraicRiccatiEquation</a> (const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;A, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;B, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;Q, const Eigen::Ref&lt; const Eigen::MatrixXd &gt; &amp;R)</td></tr>
 <tr class="memdesc:a8cd8a0787e886faf633f2c1f5be2365e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the unique stabilizing solution X to the discrete-time algebraic Riccati equation:  <a href="#a8cd8a0787e886faf633f2c1f5be2365e">More...</a><br /></td></tr>
 <tr class="separator:a8cd8a0787e886faf633f2c1f5be2365e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1305,6 +1309,27 @@ d₁ = P*d
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>We only use the lower triangular part of Y. </dd></dl>
+
+</div>
+</div>
+<a id="ae918eb0a5749b337a92058e92bd039c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae918eb0a5749b337a92058e92bd039c9">&#9670;&nbsp;</a></span>DifferentiableNorm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Derived::Scalar drake::math::DifferentiableNorm </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; Derived &gt; &amp;&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The 2-norm function |x| is not differentiable at x=0 (its gradient is x/|x|, which has a division-by-zero problem). </p>
+<p>On the other hand, x=0 happens very often. Hence we return a subgradient x/(|x| + ε) when x is almost 0, and returns the original gradient, x/|x|, otherwise. </p>
 
 </div>
 </div>

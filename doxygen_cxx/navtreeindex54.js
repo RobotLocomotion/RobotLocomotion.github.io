@@ -1,5 +1,7 @@
 var NAVTREEINDEX54 =
 {
+"vector__base_8h.html#a854a6645678bcf40744ca37effe890b8":[4,0,0,11,3,53,1],
+"vector__log_8h.html":[4,0,0,11,6,25],
 "vector__log__sink_8h.html":[4,0,0,11,6,26],
 "vector__log__sink_8h.html#a91a3fea6ce8db9489e5329587daa11b3":[4,0,0,11,6,26,1],
 "vector__log__sink_8h.html#af2f7dd25823e78194ea36eabbd525cea":[4,0,0,11,6,26,0],
@@ -39,8 +41,8 @@ var NAVTREEINDEX54 =
 "wrap__pybind_8h.html#a3a22cfe187c4d2e58dacdc4fddf69843":[4,0,0,0,0,0,15,0],
 "wrap__pybind_8h.html#a455a0f794f758f800bce946f37c6be29":[4,0,0,0,0,0,15,3],
 "wrap__pybind_8h.html#a50864a5d92c08bf74cf16b6d004aaa6a":[4,0,0,0,0,0,15,1],
-"wrap__to_8h.html":[4,0,0,7,31],
-"wrap__to_8h.html#a64bd1ea33cbb7fd030ff6bf3061eb3fe":[4,0,0,7,31,0],
+"wrap__to_8h.html":[4,0,0,7,32],
+"wrap__to_8h.html#a64bd1ea33cbb7fd030ff6bf3061eb3fe":[4,0,0,7,32,0],
 "wrap__to__system_8h.html":[4,0,0,11,6,27],
 "yaml__doxygen_8h.html":[4,0,0,1,4,0],
 "yaml__io_8h.html":[4,0,0,1,4,1],

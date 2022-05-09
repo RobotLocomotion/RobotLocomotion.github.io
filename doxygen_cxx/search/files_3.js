@@ -38,6 +38,7 @@ var searchData=
   ['diagram_5fdiscrete_5fvalues_2eh',['diagram_discrete_values.h',['../diagram__discrete__values_8h.html',1,'']]],
   ['diagram_5foutput_5fport_2eh',['diagram_output_port.h',['../diagram__output__port_8h.html',1,'']]],
   ['diagram_5fstate_2eh',['diagram_state.h',['../diagram__state_8h.html',1,'']]],
+  ['differentiable_5fnorm_2eh',['differentiable_norm.h',['../differentiable__norm_8h.html',1,'']]],
   ['differential_5finverse_5fkinematics_2eh',['differential_inverse_kinematics.h',['../differential__inverse__kinematics_8h.html',1,'']]],
   ['differential_5finverse_5fkinematics_5fintegrator_2eh',['differential_inverse_kinematics_integrator.h',['../differential__inverse__kinematics__integrator_8h.html',1,'']]],
   ['direct_5fcollocation_2eh',['direct_collocation.h',['../direct__collocation_8h.html',1,'']]],

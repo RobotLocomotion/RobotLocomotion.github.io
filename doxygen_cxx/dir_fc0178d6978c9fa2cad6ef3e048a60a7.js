@@ -13,6 +13,7 @@ var dir_fc0178d6978c9fa2cad6ef3e048a60a7 =
     [ "continuous_lyapunov_equation.h", "continuous__lyapunov__equation_8h.html", "continuous__lyapunov__equation_8h" ],
     [ "convert_time_derivative.h", "convert__time__derivative_8h.html", "convert__time__derivative_8h" ],
     [ "cross_product.h", "cross__product_8h.html", "cross__product_8h" ],
+    [ "differentiable_norm.h", "differentiable__norm_8h.html", "differentiable__norm_8h" ],
     [ "discrete_algebraic_riccati_equation.h", "discrete__algebraic__riccati__equation_8h.html", "discrete__algebraic__riccati__equation_8h" ],
     [ "discrete_lyapunov_equation.h", "discrete__lyapunov__equation_8h.html", "discrete__lyapunov__equation_8h" ],
     [ "eigen_sparse_triplet.h", "eigen__sparse__triplet_8h.html", "eigen__sparse__triplet_8h" ],
